@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import { theme, ThemeProvider, GlobalStyle } from '@g-loot/component-library';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
