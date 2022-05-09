@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { useTheme } from 'styled-components';
 
 const StyledCustomComponent = styled.div`
   width: 200px;
@@ -11,6 +10,5 @@ const StyledCustomComponent = styled.div`
 `;
 
 export default function CustomComponent() {
-  const theme = useTheme();
   return <StyledCustomComponent />;
 }
