@@ -6,7 +6,6 @@ const useFetch = (url, options = {}) => {
     error: null,
     loading: true,
   });
-  const [abort] = useState(new AbortController());
 
   const call = async () => {
     const { onComplete = null, headers, delay = null, ...rest } = options;
@@ -15,7 +14,6 @@ const useFetch = (url, options = {}) => {
     try {
       const resp = await fetch(url, {
         ...rest,
-        signal: abort.signal,
         headers: { ...headers, 'Content-Type': 'application/json' },
       });
       const data = await resp.json();
@@ -29,9 +27,6 @@ const useFetch = (url, options = {}) => {
   };
   useEffect(() => {
     call();
-    return () => {
-      abort.abort();
-    };
   }, []);
   return state;
 };
