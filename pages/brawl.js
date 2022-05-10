@@ -16,6 +16,7 @@ export default function Brawl() {
         <meta name="description" content="Internal playground Brawl Page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <CustomTypography variant="h2" color="premium.main">
         Brawls
       </CustomTypography>
