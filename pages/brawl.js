@@ -1,7 +1,8 @@
-import Head from 'next/head';
-import { Typography, Button } from '@g-loot/component-library';
+import { Button, Progressbar, Typography } from '@g-loot/component-library';
+
 import CustomComponent from '../components/CustomComponent/CustomComponent';
 import CustomTypography from '../components/TypographyOverride/TypographyOverride';
+import Head from 'next/head';
 import useFetch from '../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
@@ -26,6 +27,7 @@ export default function Brawl() {
       <Button variant="secondary" onClick={() => router.push('/')}>
         Go to Home
       </Button>
+      <Progressbar value="50"></Progressbar>
     </div>
   );
 }
