@@ -198,7 +198,7 @@ export default function Home() {
                 </div>
                 <div className='flex-1'>
                   <div className='rounded overflow-hidden'>
-                    <iframe width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/5wcj0vam/embedded/html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    <iframe width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/5wcj0vam/embedded/js,html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                   </div>
                 </div>
               </div>
