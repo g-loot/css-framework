@@ -18,7 +18,7 @@ export default function Brawl() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <CustomTypography variant="h2" color="premium.main">
+      <CustomTypography variant="h2" color="premium.main" className="text-xl">
         Brawls
       </CustomTypography>
 

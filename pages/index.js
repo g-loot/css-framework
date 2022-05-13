@@ -1,9 +1,9 @@
-import { Button, Container, Flex, Progressbar, Tabs, Typography } from '@g-loot/component-library';
 import { compose, flexbox, layout, space } from 'styled-system';
 
 import CustomComponent from '../components/CustomComponent/CustomComponent';
 import Head from 'next/head';
 import Topbar from '../components/Topbar/Topbar';
+import { Typography } from '@g-loot/component-library';
 import styled from 'styled-components';
 import useFetch from '../hooks/use-fetch';
 import { useRouter } from 'next/router';
@@ -38,33 +38,19 @@ export default function Home() {
           <title>Gnog Prototype</title>
           <meta name="description" content="Internal playground" />
           <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Topbar />
-        <Wrapper maxWidth={[ 768, null, null, 1600 ]} m="auto" paddingX={[ 2, 3 ]}>
-          <Flex alignItems='center'>
-            <Wrapper display={[ 'block', 'hidden' ]} width={[ 1, 1/6 ]}>
-             
-              <CustomComponent padding={4} />
-            </Wrapper>
-            <Wrapper width={[ 1, 5/6 ]}>
-              <Typography variant="h1" color="ui.100">
-                {loading ? 'Hello ???' : `Hello ${data.username}`}
-              </Typography>
-              
-              <Button variant="secondary" onClick={() => router.push('/brawl')}>
-                Go to Brawls
-              </Button>
-              <Progressbar value="50"></Progressbar>
-              <Wrapper maxWidth={500}>
-                <Tabs
-                  tabs={tabsArray}
-                  justifyContent="space-evenly"
-                />
-              </Wrapper>
-            </Wrapper>
 
-          </Flex>
-        </Wrapper>
+        </Head>
+       
+        
+        <Topbar />
+        <div>
+          <h1 className="font-headings italic text-5xl">
+            {loading ? 'Hello ???' : `Hello ${data.username}`}
+          </h1>
+          <Typography variant="h1" color="ui.100">
+            {loading ? 'Hello ???' : `Hello ${data.username}`}
+          </Typography>
+        </div>
     </div>
   );
 }

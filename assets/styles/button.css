@@ -1,0 +1,37 @@
+/*----------------------------*/
+/* BUTTON */
+/*----------------------------*/
+
+/*----------------------------*/
+/* BUTTONS */
+/*----------------------------*/
+
+.button-caca {
+  @apply
+  uppercase
+  outline-none
+  font-bold
+  leading-none
+  border-0
+  inline-flex
+  rounded-sm
+  bg-main
+  ;
+}
+
+.button {
+  @apply
+  uppercase
+  outline-none
+  font-bold
+  leading-none
+  border-0
+  inline-flex
+  bg-main
+  ;
+}
+
+
+.prout {
+  @apply block;
+}

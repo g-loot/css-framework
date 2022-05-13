@@ -1,4 +1,7 @@
-import { theme, ThemeProvider, GlobalStyle } from '@g-loot/component-library';
+import "../assets/styles/globals.css";
+
+import { GlobalStyle, ThemeProvider, theme } from '@g-loot/component-library';
+
 import InternalGlobalStyle from '../globalStyle';
 
 function MyApp({ Component, pageProps }) {

@@ -1,0 +1,16 @@
+/*----------------------------*/
+/* TYPOGRAPHY */
+/*----------------------------*/
+
+body,
+p {
+  @apply font-body;
+}
+
+.h1 {
+  @apply font-headings text-4xl md:text-5xl text-center md:text-left;
+}
+
+code {
+  @apply px-2 py-1 bg-ui-600 rounded border border-ui-500 text-sm inline-block mx-1 leading-none;
+}
