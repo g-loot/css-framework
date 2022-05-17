@@ -20,7 +20,7 @@ const Flexer = styled.div`
   ${compose(layout, space, flexbox)};
   gap: 1rem;
   display: flex;
-  @media (max-width: 1024px) {
+  @media (max-width: 1280px) {
     > * {
       flex: 1 1 0% !important;
     }
@@ -66,17 +66,17 @@ export default function Home() {
             <ul className='tabs'>
               <li>
                 <a onClick={() => router.push('/example-typography')}>
-                  Typography
+                  <span>Typography</span>
                 </a>
               </li>
               <li>
                 <a onClick={() => router.push('/example-layout')} className="active">
-                  Layout
+                  <span>Layout</span>
                 </a>
               </li>
               <li>
-                <a onClick={() => router.push('/example-utilities')}>
-                  Utilities
+                <a onClick={() => router.push('/example-perks')}>
+                  <span>Perks</span>
                 </a>
               </li>
             </ul>
@@ -96,12 +96,12 @@ export default function Home() {
                 <div className='flex-1'>
                   <div className='flex flex-col md:flex-row gap-4'>
                     <div className="bg-ui-400 p-12 rounded flex-1"></div>
-                    <div className="bg-ui-400 p-12 rounded flex-1 lg:flex-5"></div>
+                    <div className="bg-ui-400 p-12 rounded flex-1 xl:flex-5"></div>
                   </div>
                 </div>
                 <div className='flex-1'>
                   <div className='rounded overflow-hidden'>
-                    <iframe width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/v7xoug5j/1/embedded/html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    <iframe width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/v7xoug5j/embedded/html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                   </div>
                 </div>
               </div>
@@ -111,7 +111,7 @@ export default function Home() {
 
               <div className="flex flex-col md:flex-row justify-around gap-4">
                 <div className='flex-1'>
-                  <Flexer flex alignItems='center' flexDirection='row'>
+                  <Flexer alignItems='center' flexDirection='row'>
                     <Wrapper flex='1 1 auto'>
                       
                     </Wrapper>
@@ -122,7 +122,7 @@ export default function Home() {
                 </div>
                 <div className='flex-1'>
                   <div className='rounded overflow-hidden'>
-                    <iframe width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/2nd9umyv/5/embedded/js,html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    <iframe width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/2nd9umyv/embedded/js,html/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                   </div>
                 </div>
               </div>

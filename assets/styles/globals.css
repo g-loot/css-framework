@@ -5,10 +5,12 @@
 
 
 @import "./button";
+@import "./card";
 @import "./colors";
 @import "./fonts";
 @import "./general";
 @import "./icons";
+@import "./menu";
 @import "./tabs";
 @import "./typography";
 @import "./variables";

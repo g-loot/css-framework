@@ -37,6 +37,15 @@
 .icon-16 {
   font-size: 16px;
 }
+.icon-20 {
+  font-size: 20px;
+}
+.icon-24 {
+  font-size: 24px;
+}
+.icon-28 {
+  font-size: 28px;
+}
 .icon-32 {
   font-size: 32px;
 }
@@ -1445,10 +1454,6 @@
   content: "\eb57";
 }
 
-.icon-c-question-1::before {
-  content: "\eb58";
-}
-
 .icon-c-warning::before {
   content: "\eb59";
 }
@@ -1983,5 +1988,9 @@
 
 .icon-leave::before {
   content: "\ebe8";
+}
+
+.icon-ic_stars_24px::before {
+  content: "\ebe9";
 }
 

@@ -29,7 +29,7 @@
       format('woff2'), url('https://res.cloudinary.com/gloot/raw/upload/v1647264381/GNOG%20assets/Fonts/Roboto_Condensed/robotocondensed-light-webfont.woff')
       format('woff');
   font-display: swap;
-  font-weight: lighter;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -39,7 +39,17 @@
       format('woff2'), url('https://res.cloudinary.com/gloot/raw/upload/v1647264381/GNOG%20assets/Fonts/Roboto_Condensed/robotocondensed-regular-webfont.woff')
       format('woff');
   font-display: swap;
-  font-weight: normal;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url('https://res.cloudinary.com/gloot/raw/upload/v1647264381/GNOG%20assets/Fonts/Roboto_Condensed/robotocondensed-bold-webfont.woff2')
+      format('woff2'), url('https://res.cloudinary.com/gloot/raw/upload/v1647264381/GNOG%20assets/Fonts/Roboto_Condensed/robotocondensed-bold-webfont.woff')
+      format('woff');
+  font-display: swap;
+  font-weight: 700;
   font-style: normal;
 }
 

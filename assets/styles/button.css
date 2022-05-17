@@ -2,36 +2,90 @@
 /* BUTTON */
 /*----------------------------*/
 
-/*----------------------------*/
-/* BUTTONS */
-/*----------------------------*/
-
-.button-caca {
-  @apply
-  uppercase
-  outline-none
-  font-bold
-  leading-none
-  border-0
-  inline-flex
-  rounded-sm
-  bg-main
-  ;
-}
 
 .button {
+
   @apply
   uppercase
+  rounded
   outline-none
   font-bold
   leading-none
   border-0
   inline-flex
+  items-center
   bg-main
+  cursor-pointer
+  font-body
+  px-3
+  py-3
+  transition-all
+  duration-200
+  ease-in-out
+  text-ui-800
+  scale-100
+  bg-left
+  bg-center
+  space-x-2
+  min-h-4
+  backdrop-blur
+  bg-[length:200%_auto]
   ;
-}
 
+  > * {
+    @apply
+    font-bold
+    font-headings
+    tracking-wide
+    ;
+  }
 
-.prout {
-  @apply block;
+  &:not([disabled]),
+  &:not(.disabled) {
+    &:hover {
+      @apply 
+      scale-105
+      bg-right
+      ;
+    }
+    &:active {
+      @apply
+      opacity-25
+      ;
+    }
+  }
+  
+
+  &.button-primary {
+    @apply 
+    bg-gradient-to-r
+    from-main
+    to-blue
+    shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
+    ;
+
+    &:not([disabled]),
+    &:not(.disabled) {
+      &:hover {
+        @apply
+        shadow-[inset_0_0_0_1px_rgba(255,255,255,1)];
+      }
+    }
+  }
+  &.button-secondary {
+    @apply 
+    bg-ui-700/0
+    text-ui-300
+    shadow-[inset_0_0_0_1px_rgb(var(--color-ui-400))]
+    ;
+
+    &:not([disabled]),
+    &:not(.disabled) {
+      &:hover {
+        @apply
+        text-ui-200
+        shadow-[inset_0_0_0_1px_rgb(var(--color-ui-600))];
+      }
+    }
+  }
 }

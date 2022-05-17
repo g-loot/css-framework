@@ -55,17 +55,17 @@ export default function Home() {
             <ul className='tabs'>
               <li>
                 <a onClick={() => router.push('/example-typography')} className="active">
-                  Typography
+                  <span>Typography</span>
                 </a>
               </li>
               <li>
                 <a onClick={() => router.push('/example-layout')}>
-                  Layout
+                  <span>Layout</span>
                 </a>
               </li>
               <li>
-                <a onClick={() => router.push('/example-utilities')}>
-                  Utilities
+                <a onClick={() => router.push('/example-perks')}>
+                  <span>Perks</span>
                 </a>
               </li>
             </ul>
@@ -89,7 +89,7 @@ export default function Home() {
               <span className="text-ui-300 mb-4">Tailwind:</span>
               <div className="flex flex-col md:flex-row justify-around gap-4">
                 <div className='flex-1'>
-                  <h2 className="font-headings text-3xl md:text-4xl md:text-left">
+                  <h2 className="text-3xl lg:text-4xl text-center lg:text-left">
                     Hello World
                   </h2>
                 </div>
@@ -125,7 +125,7 @@ export default function Home() {
             <div className='p-4'>
               <h2 className="font-headings italic text-3xl text-ui-200">Combining multiple typographic components</h2>
               <p className='text-ui-200 leading-loose'>
-                Passing global parameters to multiple typographic elements is very easy in Tailwind. In this example the left elements have a looser leading than the right ones.
+                Passing global parameters to multiple typographic elements is very easy in Tailwind. In this example the left elements have a tight leading than the right ones.
                 <br />
                 The styled component & system solution makes it impossible since the individual components override the global <code>line-height</code> rule. Moreover it adds additional <code>&lt;div&gt;</code> that can mess up with semantic markup.
               </p>
@@ -134,9 +134,9 @@ export default function Home() {
               <span className="text-ui-300 mb-4">Tailwind:</span>
               <div className="flex flex-col md:flex-row justify-around gap-4">
                 <div className='flex-1'>
-                  <div className='leading-loose'>
-                    <h2 className="font-headings text-3xl md:text-4xl">
-                      I am a title
+                  <div className='leading-none'>
+                    <h2 className="text-3xl md:text-4xl">
+                      I am a<br />two-lines title
                     </h2>
                     <div className='text-ui-200'>
                       <p>
@@ -168,10 +168,10 @@ export default function Home() {
 
               <div className="flex flex-col md:flex-row justify-around gap-4">
                 <div className='flex-1'>
-                  <div className='leading-loose'>
-                    <div style={{ lineHeight: '2'}}>
+                  <div className='leading-none'>
+                    <div style={{ lineHeight: '1'}}>
                       <Typography variant="h2" color="ui.100">
-                        I am a title
+                        I am a<br />two-lines title
                       </Typography>
                       <Typography variant="paragraph" color="ui.200">
                         I am a paragraph

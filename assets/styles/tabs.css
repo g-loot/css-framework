@@ -4,18 +4,30 @@
 
 
 .tabs {
-  @apply flex items-baseline relative;
-
+  @apply
+  flex
+  items-baseline
+  relative
+  ;
 
   li {
-    @apply relative transition duration-300 ease-in-out;
+    @apply
+    relative
+    transition
+    duration-300
+    ease-in-out
+    ;
   }
 
   &:hover {
     li {
-      @apply opacity-50;
+      @apply
+      opacity-50
+      ;
       &:hover {
-        @apply opacity-100;
+        @apply
+        opacity-100
+        ;
       }
     }
   }
@@ -23,24 +35,79 @@
   a,
   button,
   .button {
-    @apply relative block px-4 py-3 uppercase text-ui-300 cursor-pointer select-none transition duration-300 ease-in-out;
+    @apply
+    relative
+    block
+    px-4
+    py-3
+    uppercase
+    text-ui-300
+    cursor-pointer
+    select-none
+    transition
+    duration-300
+    ease-in-out
+    ;
+
+    > span {
+      @apply
+      block
+      transition
+      ease-linear
+      duration-[50ms]
+      ;
+    }
+
+    &:active {
+      > span {
+        @apply 
+        translate-y-0.5
+        ;
+      }
+    }
 
     &.active,
     &:active,
     &:hover {
-      @apply text-white;
+      @apply
+      text-white
+      ;
       &::after {
-        @apply opacity-100 scale-x-100 -skew-x-30;
+        @apply
+        opacity-100
+        scale-x-100
+        -skew-x-30
+        ;
       }
     }
 
     &::after {
-      content: "";
-      @apply absolute block h-1 w-full bottom-0 inset-x-0 bg-main opacity-0 scale-x-0 -skew-x-30 transition duration-300 ease-[cubic-bezier(0.68,0,0.07,1)];
+      @apply
+      content-['']
+      absolute
+      block
+      h-1
+      w-full
+      bottom-0
+      inset-x-0
+      bg-main
+      opacity-0
+      scale-x-0
+      -skew-x-30
+      transition
+      duration-300
+      ease-[cubic-bezier(0.68,0,0.07,1)]
+      ;
     }
   }
   &::after {
-    content: "";
-    @apply h-px w-full bg-ui-800 absolute bottom-0 inset-x-0;
+    @apply
+    content-['']
+    h-px
+    w-full
+    bg-ui-800
+    absolute
+    bottom-0
+    inset-x-0;
   }
 }

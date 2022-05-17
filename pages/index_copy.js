@@ -16,6 +16,16 @@ const Flexer = styled.div`
   ${compose(layout, space, flexbox)};
 `;
 
+const Block = styled.div`
+  ${compose(layout, space, flexbox)};
+  height: 200px;
+  background: red;
+
+  @media (max-width: 768px) {
+      background: green;
+  }
+`;
+
 const TabsWrapper = styled.div`
   position: relative;
   text-align: center;
@@ -47,6 +57,9 @@ export default function Home() {
         <Topbar />
         <Wrapper maxWidth={[ 768, null, null, 1600 ]} m="auto" paddingX={[ 2, 3 ]}>
           <Flex alignItems='center'>
+            <Block width={50}>
+              qsdsqd
+            </Block>
             <Wrapper width={[ 1, 1/6 ]}>
               <CustomComponent padding={4} />
             </Wrapper>

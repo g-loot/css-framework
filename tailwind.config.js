@@ -21,6 +21,12 @@ module.exports = {
       'md': '768px',
       'lg': '1024px',
     },
+    minHeight: {
+      '4': '1rem',
+      '8': '2rem',
+      '10': '2.5rem',
+      '12': '3rem',
+    },
     maxWidth: {
       'xs': '320px',
       'sm': '480px',
@@ -61,7 +67,8 @@ module.exports = {
       colors: {
         main: withOpacityValue('--color-main'),
         white: withOpacityValue('--color-white'),
-        black: withOpacityValue('--color-white'),
+        black: withOpacityValue('--color-black'),
+        blue: withOpacityValue('--color-blue'),
         ui: {
           100: withOpacityValue('--color-ui-100'),
           200: withOpacityValue('--color-ui-200'),

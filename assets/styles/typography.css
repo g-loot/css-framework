@@ -2,15 +2,42 @@
 /* TYPOGRAPHY */
 /*----------------------------*/
 
-body,
-p {
+body {
   @apply font-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .h1 {
-  @apply font-headings text-4xl md:text-5xl text-center md:text-left;
+  @apply
+  font-headings
+  text-4xl
+  md:text-5xl
+  text-center
+  md:text-left
+  ;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply
+  font-headings
+  ;
 }
 
 code {
-  @apply px-2 py-1 bg-ui-600 rounded border border-ui-500 text-sm inline-block mx-1 leading-none;
+  @apply
+  px-2
+  py-1
+  bg-ui-600
+  rounded
+  border
+  border-ui-500
+  text-sm
+  inline-block
+  mx-1
+  leading-none
+  ;
 }
