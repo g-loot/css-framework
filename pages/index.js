@@ -65,6 +65,11 @@ export default function Home() {
 
                 <Button variant="Primary" label="Learn more" icon="home-2" iconSize="16"></Button>
 
+                <div className="flex gap-4 mt-4">
+                  <Button variant="primary" label="save" icon="backup" iconDirection="left" />
+                  <Button variant="secondary" label="save" icon="backup" iconDirection="left" />
+                </div>
+
               </div>
             </div>
           </div>
@@ -82,10 +87,7 @@ export default function Home() {
             Utilities
           </a>
 
-          <div className="flex gap-4">
-            <Button variant="primary" size="sm" label="save" icon="backup" iconDirection="left" iconSize="24" opacity="20" />
-            <Button variant="secondary" label="save" icon="backup" iconDirection="left" iconSize="24" opacity="20" />
-          </div>
+          
         </div>
     </div>
   );

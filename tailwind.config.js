@@ -11,8 +11,9 @@ function withOpacityValue(variable) {
 
 module.exports = {
   content: [
-    "./pages/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./pages/*.{js,ts,jsx,tsx,json}",
+    "./pages/*/*.{js,ts,jsx,tsx,json}",
+    "./components/**/*.{js,ts,jsx,tsx,json}",
   ],
   theme: {
     minWidth: {
@@ -40,8 +41,8 @@ module.exports = {
       'base': '1.75rem',
       'lg': '1.125rem',
       'xl': '1.25rem',
-      '2xl': '1.5rem',
-      '3xl': '1.875rem',
+      '2xl': '1.75rem',
+      '3xl': '2.25rem',
       '4xl': '3rem',
       '5xl': '3.5rem',
       '6xl': '4rem',
@@ -68,7 +69,6 @@ module.exports = {
         main: withOpacityValue('--color-main'),
         white: withOpacityValue('--color-white'),
         black: withOpacityValue('--color-black'),
-        blue: withOpacityValue('--color-blue'),
         ui: {
           100: withOpacityValue('--color-ui-100'),
           200: withOpacityValue('--color-ui-200'),
@@ -78,8 +78,38 @@ module.exports = {
           600: withOpacityValue('--color-ui-600'),
           700: withOpacityValue('--color-ui-700'),
           800: withOpacityValue('--color-ui-800'),
+          850: withOpacityValue('--color-ui-850'),
           900: withOpacityValue('--color-ui-900'),
         },
+        mono: {
+          100: withOpacityValue('--color-mono-100'),
+          900: withOpacityValue('--color-mono-900'),
+        },
+        premium: {
+          300: withOpacityValue('--color-premium-300'),
+          500: withOpacityValue('--color-premium-500'),
+          700: withOpacityValue('--color-premium-700'),
+        },
+        interaction: {
+          300: withOpacityValue('--color-interaction-300'),
+          500: withOpacityValue('--color-interaction-500'),
+          700: withOpacityValue('--color-interaction-700'),
+        },
+        blue: {
+          300: withOpacityValue('--color-blue-300'),
+          500: withOpacityValue('--color-blue-500'),
+          700: withOpacityValue('--color-blue-700'),
+        },
+        purple: {
+          300: withOpacityValue('--color-purple-300'),
+          500: withOpacityValue('--color-purple-500'),
+          700: withOpacityValue('--color-purple-700'),
+        },
+        teal: {
+          300: withOpacityValue('--color-teal-300'),
+          500: withOpacityValue('--color-teal-500'),
+          700: withOpacityValue('--color-teal-700'),
+        }
       },
       spacing: {
         '8xl': '96rem',
@@ -106,5 +136,39 @@ module.exports = {
       }
     }
   },
+  safelist: [
+    'bg-ui-100',
+    'bg-ui-200',
+    'bg-ui-300',
+    'bg-ui-400',
+    'bg-ui-500',
+    'bg-ui-600',
+    'bg-ui-700',
+    'bg-ui-800',
+    'bg-ui-850',
+    'bg-ui-900',
+    'bg-mono-100',
+    'bg-mono-900',
+    'bg-main',
+    'bg-premium-300',
+    'bg-premium-500',
+    'bg-premium-700',
+    'bg-interaction-300',
+    'bg-interaction-500',
+    'bg-interaction-700',
+    'bg-blue-300',
+    'bg-blue-500',
+    'bg-blue-700',
+    'bg-purple-300',
+    'bg-purple-500',
+    'bg-purple-700',
+    'bg-teal-300',
+    'bg-teal-500',
+    'bg-teal-700',
+    'bg-gradient-to-r',
+    'from-teal-500',
+    'to-blue-500',
+    'from-purple-500',
+  ],
   plugins: [],
 }

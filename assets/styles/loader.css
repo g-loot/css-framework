@@ -1,0 +1,60 @@
+/*----------------------------*/
+/* LOADER */
+/*----------------------------*/
+
+
+.loader {
+
+  @apply
+  h-16
+  w-16
+  rounded-full
+  block
+  mx-auto
+  bg-ui-100/0
+  opacity-100
+  content-['']
+  border
+  border-4
+  border-ui-800
+  border-l-main
+  ;
+  
+ 
+  animation: rotate-s-loader 1s linear infinite;
+
+  &.is-xl {
+    @apply 
+    h-32
+    w-32;
+  }
+  &.is-lg {
+    @apply 
+    h-20
+    w-20;
+  }
+  &.is-md {
+    @apply 
+    h-16
+    w-16;
+  }
+  &.is-sm {
+    @apply 
+    h-12
+    w-12;
+  }
+  &.is-xs {
+    @apply
+    h-6
+    w-6;
+  }
+}
+
+@keyframes rotate-s-loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

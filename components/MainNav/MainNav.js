@@ -1,10 +1,18 @@
+import { useRouter } from 'next/router'
+
 export default function MainNav(props) {
-  console.log(props.items);
+  const router = useRouter();
+
+  const handleClick = e => {
+    e.preventDefault()
+    router.push(item.url)
+  };
+
   return (
-    <ul className="menu">
+    <ul className={`menu ${props.style == 'secondary' ? 'menu-secondary' : ''}`}>
       {props.items.map((item, i) => (
         <li>
-          <a>
+          <a href={item.url} className={`${router.pathname.includes(item.url) ? 'is-active' : ''}`}>
             <span className={`icon icon-16 icon-${item.icon}`}></span>
             <span>{item.label}</span>
           </a>

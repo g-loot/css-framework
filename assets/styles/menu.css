@@ -23,7 +23,11 @@
     transition-all
     duration-200
     ease-[cubic-bezier(.7,0,.3,1)]
+    focus-visible:outline
+    focus-visible:outline-1
+    focus-visible:outline-main
     ;
+
     > * {
       @apply
       relative
@@ -43,7 +47,7 @@
         ;
       }
     }
-    
+
     &::after {
       @apply 
       absolute
@@ -59,9 +63,13 @@
       translate-y-2
       ;
     }
-    &:hover {
+
+    &:hover,
+    &:focus-visible,
+    &.is-active {
       @apply
       text-white
+      z-20
       ;
       > *:not(.icon) {
         @apply 
@@ -73,18 +81,31 @@
         opacity-100
         scale-y-100
         translate-y-0
+        duration-75
         ;
       }
     }
+
     &:active {
-      > * {
-       
-      }
       &::after {
        @apply
        bg-ui-700/25
        ; 
       }
     }
+  }
+
+  &.menu-secondary {
+
+    a {
+      > * {
+        @apply
+        normal-case
+        font-body
+        text-sm
+        ;
+      }
+    }
+      
   }
 }

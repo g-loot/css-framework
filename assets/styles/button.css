@@ -7,7 +7,6 @@
 
   @apply
   uppercase
-  rounded
   outline-none
   font-bold
   leading-none
@@ -17,20 +16,27 @@
   bg-main
   cursor-pointer
   font-body
-  px-3
-  py-3
+  p-2.5
   transition-all
   duration-200
   ease-in-out
   text-ui-800
   scale-100
-  bg-left
-  bg-center
   space-x-2
   min-h-4
   backdrop-blur
-  bg-[length:200%_auto]
+  bg-[length:300%_auto]
+  focus-visible:outline
+  focus-visible:outline-offset-2
+  focus-visible:outline-1
+  focus-visible:outline-main
   ;
+
+  &:not([class*='rounded']) {
+    @apply
+    rounded
+    ;
+  }
 
   > * {
     @apply
@@ -42,7 +48,8 @@
 
   &:not([disabled]),
   &:not(.disabled) {
-    &:hover {
+    &:hover,
+    &:focus-visible {
       @apply 
       scale-105
       bg-right
@@ -56,17 +63,21 @@
   }
   
 
+  /* Variants */
+
   &.button-primary {
     @apply 
     bg-gradient-to-r
     from-main
-    to-blue
+    via-main
+    to-blue-500
     shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
     ;
 
     &:not([disabled]),
     &:not(.disabled) {
-      &:hover {
+      &:hover,
+      &:focus-visible {
         @apply
         shadow-[inset_0_0_0_1px_rgba(255,255,255,1)];
       }
@@ -81,11 +92,301 @@
 
     &:not([disabled]),
     &:not(.disabled) {
-      &:hover {
+      &:hover,
+      &:focus-visible {
         @apply
         text-ui-200
         shadow-[inset_0_0_0_1px_rgb(var(--color-ui-600))];
       }
     }
+  }
+  &.button-tertiary {
+    @apply 
+    bg-ui-700
+    text-ui-300
+    ;
+
+    &:not([disabled]),
+    &:not(.disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        bg-ui-600
+        text-ui-200
+        ;
+      }
+    }
+  }
+  &.button-premium {
+    @apply 
+    bg-gradient-to-r
+    from-premium-500
+    via-premium-300
+    to-premium-300
+    shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
+    ;
+
+    &:not([disabled]),
+    &:not(.disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        from-premium-700
+        via-premium-300
+        to-premium-300
+        shadow-[inset_0_0_0_1px_rgba(255,255,255,1)];
+      }
+    }
+  }
+  &.button-claim {
+    @apply 
+    bg-gradient-to-r
+    from-purple-500
+    via-blue-500
+    to-blue-500
+    text-mono-100
+    shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]
+    ;
+
+    &:not([disabled]),
+    &:not(.disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        from-purple-500
+        via-purple-700
+        to-purple-700
+        shadow-[inset_0_0_0_1px_rgba(255,255,255,0.15)];
+      }
+    }
+  }
+
+  /* Sizes */
+
+  &.button-lg {
+    @apply
+    py-3
+    px-3
+    ;
+
+    > * {
+      @apply
+      text-lg
+      ;
+    }
+  }
+  &.button-sm {
+    @apply
+    py-2
+    px-2
+    ;
+
+    > * {
+      @apply
+      text-sm
+      ;
+    }
+  }
+
+  /* Currency */
+
+  &.button-currency {
+    @apply
+    p-px
+    justify-items-stretch
+    ;
+    
+    > div {
+      @apply
+      flex
+      items-center
+      justify-center
+      self-stretch
+      relative;
+
+      &:first-child {
+        @apply
+        flex-1
+        px-2
+        ;
+      }
+
+      &:last-child {
+        @apply
+        bg-gradient-to-b
+        from-ui-800
+        to-ui-700
+        pl-2
+        pr-3
+        m-0
+        transition
+        duration-200
+        rounded-[calc(0.25rem-1px)]
+        ;
+      }
+    }
+    img {
+      @apply
+      transition
+      duration-200
+      ;
+    }
+    &:not([disabled]),
+    &:not(.disabled) {
+      &:hover,
+      &:focus-visible {
+        img {
+          @apply
+          scale-110
+          ;
+        }
+        > div:last-child {
+          @apply
+          bg-gradient-to-b
+          from-ui-800
+          to-ui-800
+          ;
+        }
+      }
+    }
+    &.button-coin {
+      > div:last-child {
+        span {
+          @apply
+          text-premium-500
+          ;
+        }
+      }
+    }
+    &.button-token {
+      > div:last-child {
+        span {
+          @apply
+          text-purple-300
+          ;
+        }
+      }
+    }
+    &.button-ticket {
+      > div:last-child {
+        span {
+          @apply
+          text-premium-700
+          ;
+        }
+      }
+    }
+  }
+
+
+
+  /* loading */
+
+  &.is-loading {
+    @apply
+    pointer-events-none
+    ;
+  }
+
+  &.is-loading:not([class*='currency']) {
+    > span {
+      @apply
+      opacity-0
+      ;
+    }
+    &::after {
+      @apply
+      content-['']
+      absolute
+      h-6
+      w-6
+      block
+      border-2
+      border-ui-800
+      border-l-ui-100
+      opacity-100
+      rounded-full
+      mx-auto
+      left-[calc(50%-0.75rem)];
+      animation: button-loader-rotate 1s linear infinite;
+    }
+
+    &.button-primary {
+      &::after {
+        @apply
+        border-ui-800/25
+        border-l-ui-800
+        ;
+      }
+    }
+    &.button-secondary {
+      &::after {
+        @apply
+        border-ui-700
+        border-l-ui-300
+        ;
+      }
+    }
+    &.button-tertiary {
+      &::after {
+        @apply
+        border-ui-600
+        border-l-ui-300
+        ;
+      }
+    }
+    &.button-premium {
+      &::after {
+        @apply
+        border-ui-800/25
+        border-l-ui-800
+        ;
+      }
+    }
+    &.button-claim {
+      &::after {
+        @apply
+        border-ui-100/25
+        border-l-ui-100
+        ;
+      }
+    }
+  }
+
+  &.is-loading.button-currency {
+    > *:first-child {
+      > * {
+        @apply
+        opacity-0
+        ;
+      }
+      &::after {
+        @apply
+        content-['']
+        absolute
+        h-6
+        w-6
+        block
+        border-2
+        border-ui-800
+        border-l-ui-100
+        opacity-100
+        rounded-full
+        mx-auto
+        left-[calc(50%-0.75rem)];
+        animation: button-loader-rotate 1s linear infinite;
+      }
+    }
+  }
+
+  
+}
+
+@keyframes button-loader-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

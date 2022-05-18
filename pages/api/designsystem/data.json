@@ -1,0 +1,1785 @@
+{
+  "sections": [{
+      "label": "Basics",
+      "icon": "",
+      "pages": [{
+          "label": "Introduction",
+          "url": "introduction"
+        },
+        {
+          "label": "Colors",
+          "url": "colors"
+        },
+        {
+          "label": "Icons",
+          "url": "icons"
+        },
+        {
+          "label": "Typography",
+          "url": "typography"
+        },
+        {
+          "label": "Wrappers",
+          "url": "wrappers"
+        }
+      ]
+    },
+    {
+      "label": "Atoms",
+      "icon": "",
+      "pages": [{
+          "label": "Buttons",
+          "url": "buttons"
+        },
+        {
+          "label": "Text inputs",
+          "url": "textinputs"
+        },
+        {
+          "label": "Toggle switch",
+          "url": "switch"
+        },
+        {
+          "label": "Radio button",
+          "url": "radio"
+        },
+        {
+          "label": "Radio checkbox",
+          "url": "radio"
+        },
+        {
+          "label": "Chips",
+          "url": "chips"
+        },
+        {
+          "label": "Pagination",
+          "url": "pagination"
+        },
+        {
+          "label": "Tabs",
+          "url": "tabs"
+        },
+        {
+          "label": "Scrollbars",
+          "url": "scrollbars"
+        },
+        {
+          "label": "Avatars",
+          "url": "avatars"
+        },
+        {
+          "label": "Progress bars",
+          "url": "progressbars"
+        }
+      ]
+    },
+    {
+      "label": "Molecules",
+      "icon": "",
+      "pages": [{
+          "label": "Cards",
+          "url": "cards"
+        },
+        {
+          "label": "Modals",
+          "url": "modals"
+        },
+        {
+          "label": "Tables",
+          "url": "tables"
+        },
+        {
+          "label": "Accordeons",
+          "url": "accordeons"
+        },
+        {
+          "label": "Tournament brackets",
+          "url": "tournamentbrackets"
+        }
+      ]
+    }
+  ],
+  "colors": [{
+      "title": "Base / UI",
+      "title_short": "Base UI",
+      "title_data": "base.ui",
+      "colors": [{
+          "name": "Base UI",
+          "value": "bg-ui-100",
+          "number": "100",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-200",
+          "number": "200",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-300",
+          "number": "300",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-400",
+          "number": "400",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-500",
+          "number": "500",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-600",
+          "number": "600",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-700",
+          "number": "700",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-800",
+          "number": "800",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-850",
+          "number": "800",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-900",
+          "number": "900",
+          "data": "",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "Base / Mono",
+      "title_short": "Base Mono",
+      "title_data": "base.mono",
+      "colors": [{
+          "name": "Base Mono",
+          "value": "bg-mono-100",
+          "number": "100",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base Mono",
+          "value": "bg-mono-900",
+          "number": "900",
+          "data": "",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "Brand",
+      "title_short": "Brand",
+      "title_data": "brand.main",
+      "colors": [{
+        "name": "Brand",
+        "value": "bg-main",
+        "number": "500",
+        "data": "brand.main",
+        "hex": "#F3F3F6"
+      }]
+    },
+    {
+      "title": "Brand / premium",
+      "title_short": "Brand",
+      "title_data": "brand.premium",
+      "colors": [{
+          "name": "Premium Light",
+          "value": "bg-premium-300",
+          "number": "300",
+          "data": "brand.premium.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Premium Medium",
+          "value": "bg-premium-500",
+          "number": "500",
+          "data": "brand.premium.medium",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Premium Dark",
+          "value": "bg-premium-700",
+          "number": "700",
+          "data": "brand.premium.dark",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "Brand / interaction",
+      "title_short": "Brand",
+      "title_data": "brand.interaction",
+      "colors": [{
+          "name": "Interaction Light",
+          "value": "bg-interaction-300",
+          "number": "300",
+          "data": "brand.interaction.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Interaction Medium",
+          "value": "bg-interaction-500",
+          "number": "500",
+          "data": "brand.interaction.medium",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Interaction Dark",
+          "value": "bg-interaction-700",
+          "number": "700",
+          "data": "brand.interaction.dark",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "Decorative",
+      "title_short": "Decorative",
+      "title_data": "decorative",
+      "colors": [{
+          "name": "Blue Light",
+          "value": "bg-blue-300",
+          "number": "300",
+          "data": "decorative.blue.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Blue Medium",
+          "value": "bg-blue-500",
+          "number": "500",
+          "data": "decorative.blue.medium",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Blue Dark",
+          "value": "bg-blue-700",
+          "number": "700",
+          "data": "decorative.blue.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Purple Light",
+          "value": "bg-purple-300",
+          "number": "300",
+          "data": "decorative.purple.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Purple Medium",
+          "value": "bg-purple-500",
+          "number": "500",
+          "data": "decorative.purple.medium",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Purple Dark",
+          "value": "bg-purple-700",
+          "number": "700",
+          "data": "decorative.purple.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Teal Light",
+          "value": "bg-teal-300",
+          "number": "300",
+          "data": "decorative.teal.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Teal Medium",
+          "value": "bg-teal-500",
+          "number": "500",
+          "data": "decorative.teal.medium",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Teal Dark",
+          "value": "bg-teal-700",
+          "number": "700",
+          "data": "decorative.teal.dark",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "Decorative / gradient",
+      "title_short": "decorative",
+      "colors": [{
+          "name": "Teal blue",
+          "value": "bg-gradient-to-r from-teal-500 to-blue-500",
+          "number": "300",
+          "data": "decorative.gradient.teal-blue",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Purple blue",
+          "value": "bg-gradient-to-r from-purple-500 to-blue-500",
+          "number": "500",
+          "data": "decorative.gradient.purple-blue",
+          "hex": "#F3F3F6"
+        }
+      ]
+    }
+  ],
+  "icons": [{
+      "name": "ic_stars_24px"
+    },
+    {
+      "name": "leave"
+    },
+    {
+      "name": "game-pubg-symbol"
+    },
+    {
+      "name": "google"
+    },
+    {
+      "name": "b-eye"
+    },
+    {
+      "name": "hide"
+    },
+    {
+      "name": "xp-symbol-outline"
+    },
+    {
+      "name": "handheld-console-2"
+    },
+    {
+      "name": "multiple-12"
+    },
+    {
+      "name": "profile-2"
+    },
+    {
+      "name": "missions"
+    },
+    {
+      "name": "menu-5"
+    },
+    {
+      "name": "brawl"
+    },
+    {
+      "name": "showdown"
+    },
+    {
+      "name": "document-copy"
+    },
+    {
+      "name": "i-delete"
+    },
+    {
+      "name": "t-delete"
+    },
+    {
+      "name": "i-remove"
+    },
+    {
+      "name": "t-remove"
+    },
+    {
+      "name": "e-remove"
+    },
+    {
+      "name": "e-delete"
+    },
+    {
+      "name": "alpha-order"
+    },
+    {
+      "name": "sort-tool"
+    },
+    {
+      "name": "selection"
+    },
+    {
+      "name": "filter"
+    },
+    {
+      "name": "game-dota2-symbol"
+    },
+    {
+      "name": "game-leagueoflegends-symbol"
+    },
+    {
+      "name": "game-rocketleague-symbol"
+    },
+    {
+      "name": "xp-symbol"
+    },
+    {
+      "name": "game-valorant-symbol"
+    },
+    {
+      "name": "game-csgo-symbol"
+    },
+    {
+      "name": "game-apexlegends-symbol"
+    },
+    {
+      "name": "circle-ctrl-down"
+    },
+    {
+      "name": "circle-ctrl-right"
+    },
+    {
+      "name": "circle-caret-down"
+    },
+    {
+      "name": "caret-sm-up"
+    },
+    {
+      "name": "arrow-sm-right"
+    },
+    {
+      "name": "arrow-sm-down"
+    },
+    {
+      "name": "arrow-sm-left"
+    },
+    {
+      "name": "reply"
+    },
+    {
+      "name": "curved-arrow-right"
+    },
+    {
+      "name": "ctrl-backward"
+    },
+    {
+      "name": "ctrl-forward"
+    },
+    {
+      "name": "circle-caret-right"
+    },
+    {
+      "name": "circle-caret-left"
+    },
+    {
+      "name": "circle-ctrl-left"
+    },
+    {
+      "name": "circle-ctrl-up"
+    },
+    {
+      "name": "circle-caret-up"
+    },
+    {
+      "name": "mastercard"
+    },
+    {
+      "name": "amazon"
+    },
+    {
+      "name": "game-dota2"
+    },
+    {
+      "name": "mission-herolvlup"
+    },
+    {
+      "name": "mission-buyback"
+    },
+    {
+      "name": "gloot-symbol"
+    },
+    {
+      "name": "coin"
+    },
+    {
+      "name": "game-apexlegends"
+    },
+    {
+      "name": "game-csgo"
+    },
+    {
+      "name": "game-leagueoflegends"
+    },
+    {
+      "name": "game-pubg"
+    },
+    {
+      "name": "game-rocketleague"
+    },
+    {
+      "name": "game-valorant"
+    },
+    {
+      "name": "gloot-logo"
+    },
+    {
+      "name": "mission-road"
+    },
+    {
+      "name": "mission-assist"
+    },
+    {
+      "name": "mission-bosskill"
+    },
+    {
+      "name": "mission-knockouttaken"
+    },
+    {
+      "name": "mission-creepdenie"
+    },
+    {
+      "name": "mission-creepkill"
+    },
+    {
+      "name": "mission-creeplasthit"
+    },
+    {
+      "name": "mission-damagegiven"
+    },
+    {
+      "name": "mission-damataken"
+    },
+    {
+      "name": "mission-doublekill"
+    },
+    {
+      "name": "mission-friendduel"
+    },
+    {
+      "name": "mission-gamematchbattlewon"
+    },
+    {
+      "name": "mission-goal"
+    },
+    {
+      "name": "mission-headshot"
+    },
+    {
+      "name": "mission-revive"
+    },
+    {
+      "name": "mission-herospawn"
+    },
+    {
+      "name": "mission-hitsdealt"
+    },
+    {
+      "name": "mission-hitstaken"
+    },
+    {
+      "name": "mission-kill"
+    },
+    {
+      "name": "mission-killstreak"
+    },
+    {
+      "name": "mission-knockoutdealt"
+    },
+    {
+      "name": "mission-quintuplekill"
+    },
+    {
+      "name": "mission-mvp"
+    },
+    {
+      "name": "mission-oneshot"
+    },
+    {
+      "name": "mission-quadruplekill"
+    },
+    {
+      "name": "ticket"
+    },
+    {
+      "name": "token"
+    },
+    {
+      "name": "mission-ribbon"
+    },
+    {
+      "name": "origin"
+    },
+    {
+      "name": "mission-roundwon"
+    },
+    {
+      "name": "mission-sextuplekill"
+    },
+    {
+      "name": "mission-takedown"
+    },
+    {
+      "name": "mission-triplekill"
+    },
+    {
+      "name": "mission-ultimate"
+    },
+    {
+      "name": "visa"
+    },
+    {
+      "name": "overwolf-symbol"
+    },
+    {
+      "name": "paypal"
+    },
+    {
+      "name": "steam"
+    },
+    {
+      "name": "tagline"
+    },
+    {
+      "name": "ticket-shape"
+    },
+    {
+      "name": "windows-symbol"
+    },
+    {
+      "name": "trophy"
+    },
+    {
+      "name": "podium"
+    },
+    {
+      "name": "podium-trophy"
+    },
+    {
+      "name": "web-hyperlink"
+    },
+    {
+      "name": "web-link"
+    },
+    {
+      "name": "b-check"
+    },
+    {
+      "name": "b-meeting"
+    },
+    {
+      "name": "b-love"
+    },
+    {
+      "name": "url"
+    },
+    {
+      "name": "b-add"
+    },
+    {
+      "name": "fist"
+    },
+    {
+      "name": "flag-diagonal-34"
+    },
+    {
+      "name": "flag-diagonal-33"
+    },
+    {
+      "name": "flag-points-31"
+    },
+    {
+      "name": "chequered-flag"
+    },
+    {
+      "name": "flag-points-32"
+    },
+    {
+      "name": "flag-simple"
+    },
+    {
+      "name": "link"
+    },
+    {
+      "name": "chain"
+    },
+    {
+      "name": "web-url"
+    },
+    {
+      "name": "hyperlink"
+    },
+    {
+      "name": "link-broken"
+    },
+    {
+      "name": "unlink"
+    },
+    {
+      "name": "medal"
+    },
+    {
+      "name": "angry-10"
+    },
+    {
+      "name": "angry-44"
+    },
+    {
+      "name": "c-pulse"
+    },
+    {
+      "name": "s-question"
+    },
+    {
+      "name": "c-warning"
+    },
+    {
+      "name": "s-warning"
+    },
+    {
+      "name": "attach"
+    },
+    {
+      "name": "attachment"
+    },
+    {
+      "name": "add-27"
+    },
+    {
+      "name": "add-29"
+    },
+    {
+      "name": "a-time"
+    },
+    {
+      "name": "a-sync"
+    },
+    {
+      "name": "a-star"
+    },
+    {
+      "name": "a-share"
+    },
+    {
+      "name": "a-security"
+    },
+    {
+      "name": "a-search"
+    },
+    {
+      "name": "a-remove"
+    },
+    {
+      "name": "a-location"
+    },
+    {
+      "name": "a-heart"
+    },
+    {
+      "name": "a-edit"
+    },
+    {
+      "name": "a-delete"
+    },
+    {
+      "name": "a-check"
+    },
+    {
+      "name": "a-add"
+    },
+    {
+      "name": "agenda"
+    },
+    {
+      "name": "c-info"
+    },
+    {
+      "name": "s-info"
+    },
+    {
+      "name": "warning-sign"
+    },
+    {
+      "name": "s-ban"
+    },
+    {
+      "name": "bulb-63"
+    },
+    {
+      "name": "payment-method"
+    },
+    {
+      "name": "calendar-event-create"
+    },
+    {
+      "name": "calendar-2"
+    },
+    {
+      "name": "calendar-event"
+    },
+    {
+      "name": "present"
+    },
+    {
+      "name": "ghost-2"
+    },
+    {
+      "name": "globe"
+    },
+    {
+      "name": "archery-target"
+    },
+    {
+      "name": "goal-65"
+    },
+    {
+      "name": "camera-shooting"
+    },
+    {
+      "name": "heart"
+    },
+    {
+      "name": "view"
+    },
+    {
+      "name": "eye"
+    },
+    {
+      "name": "energy-shaker"
+    },
+    {
+      "name": "energy-drink"
+    },
+    {
+      "name": "energy-supplement"
+    },
+    {
+      "name": "pen-2"
+    },
+    {
+      "name": "i-edit"
+    },
+    {
+      "name": "crown"
+    },
+    {
+      "name": "crosshair"
+    },
+    {
+      "name": "cursor-pointer"
+    },
+    {
+      "name": "countdown-2"
+    },
+    {
+      "name": "check"
+    },
+    {
+      "name": "f-check"
+    },
+    {
+      "name": "f-comment"
+    },
+    {
+      "name": "comment"
+    },
+    {
+      "name": "comments"
+    },
+    {
+      "name": "a-chat"
+    },
+    {
+      "name": "chart-pie-35"
+    },
+    {
+      "name": "chart-growth"
+    },
+    {
+      "name": "b-chart"
+    },
+    {
+      "name": "file-chart-bar"
+    },
+    {
+      "name": "d-chart"
+    },
+    {
+      "name": "g-chart"
+    },
+    {
+      "name": "chart-bar-33"
+    },
+    {
+      "name": "a-chart"
+    },
+    {
+      "name": "card-edit"
+    },
+    {
+      "name": "card-favorite"
+    },
+    {
+      "name": "card-remove"
+    },
+    {
+      "name": "card-update"
+    },
+    {
+      "name": "shopping-cart"
+    },
+    {
+      "name": "cart-simple-remove"
+    },
+    {
+      "name": "cart-simple-add"
+    },
+    {
+      "name": "add-to-cart"
+    },
+    {
+      "name": "instant-camera-2"
+    },
+    {
+      "name": "calendar-date-2"
+    },
+    {
+      "name": "calendar-date"
+    },
+    {
+      "name": "calendar-event-2"
+    },
+    {
+      "name": "calendar"
+    },
+    {
+      "name": "camera"
+    },
+    {
+      "name": "humidity-26"
+    },
+    {
+      "name": "hospital-34"
+    },
+    {
+      "name": "home-2"
+    },
+    {
+      "name": "pen-01"
+    },
+    {
+      "name": "pen-23"
+    },
+    {
+      "name": "pencil"
+    },
+    {
+      "name": "paper"
+    },
+    {
+      "name": "paper-diploma"
+    },
+    {
+      "name": "notification"
+    },
+    {
+      "name": "notes"
+    },
+    {
+      "name": "multiple-11"
+    },
+    {
+      "name": "money-coins"
+    },
+    {
+      "name": "money-bag"
+    },
+    {
+      "name": "money-13"
+    },
+    {
+      "name": "money-12"
+    },
+    {
+      "name": "money-11"
+    },
+    {
+      "name": "file-money"
+    },
+    {
+      "name": "molecule-40"
+    },
+    {
+      "name": "manga-62"
+    },
+    {
+      "name": "manga-63"
+    },
+    {
+      "name": "marker-2"
+    },
+    {
+      "name": "meeting"
+    },
+    {
+      "name": "stack"
+    },
+    {
+      "name": "layers"
+    },
+    {
+      "name": "laptop"
+    },
+    {
+      "name": "laugh-17"
+    },
+    {
+      "name": "language"
+    },
+    {
+      "name": "thumb-up"
+    },
+    {
+      "name": "thumb-down"
+    },
+    {
+      "name": "like"
+    },
+    {
+      "name": "image"
+    },
+    {
+      "name": "handout"
+    },
+    {
+      "name": "favorite"
+    },
+    {
+      "name": "payment"
+    },
+    {
+      "name": "send-message"
+    },
+    {
+      "name": "selfie"
+    },
+    {
+      "name": "halloween-pumpkin"
+    },
+    {
+      "name": "sheep"
+    },
+    {
+      "name": "quote"
+    },
+    {
+      "name": "spiteful"
+    },
+    {
+      "name": "speechless"
+    },
+    {
+      "name": "spider"
+    },
+    {
+      "name": "speaker"
+    },
+    {
+      "name": "loudspeaker"
+    },
+    {
+      "name": "spaceship"
+    },
+    {
+      "name": "sound-wave"
+    },
+    {
+      "name": "socket"
+    },
+    {
+      "name": "smile"
+    },
+    {
+      "name": "smart"
+    },
+    {
+      "name": "skull"
+    },
+    {
+      "name": "skull-2"
+    },
+    {
+      "name": "sleep"
+    },
+    {
+      "name": "sleep-2"
+    },
+    {
+      "name": "account"
+    },
+    {
+      "name": "profile"
+    },
+    {
+      "name": "male"
+    },
+    {
+      "name": "single-position"
+    },
+    {
+      "name": "file-article"
+    },
+    {
+      "name": "silly"
+    },
+    {
+      "name": "sign"
+    },
+    {
+      "name": "sick"
+    },
+    {
+      "name": "shy"
+    },
+    {
+      "name": "quite-happy"
+    },
+    {
+      "name": "network-communication-1"
+    },
+    {
+      "name": "security"
+    },
+    {
+      "name": "satisfied"
+    },
+    {
+      "name": "sad"
+    },
+    {
+      "name": "safe"
+    },
+    {
+      "name": "round-euro"
+    },
+    {
+      "name": "rat-head"
+    },
+    {
+      "name": "radiation"
+    },
+    {
+      "name": "puzzled"
+    },
+    {
+      "name": "pulse"
+    },
+    {
+      "name": "box-arrow-bottom-left"
+    },
+    {
+      "name": "delete"
+    },
+    {
+      "name": "box-arrow-bottom-right"
+    },
+    {
+      "name": "box-ctrl-up"
+    },
+    {
+      "name": "box-arrow-up"
+    },
+    {
+      "name": "box-arrow-right"
+    },
+    {
+      "name": "box-arrow-left"
+    },
+    {
+      "name": "box-arrow-down"
+    },
+    {
+      "name": "box-caret-right"
+    },
+    {
+      "name": "box-ctrl-right"
+    },
+    {
+      "name": "remove"
+    },
+    {
+      "name": "s-remove"
+    },
+    {
+      "name": "square-pin"
+    },
+    {
+      "name": "square-marker"
+    },
+    {
+      "name": "box-caret-left"
+    },
+    {
+      "name": "box-ctrl-left"
+    },
+    {
+      "name": "data-download"
+    },
+    {
+      "name": "box-caret-down"
+    },
+    {
+      "name": "box-ctrl-down"
+    },
+    {
+      "name": "box-arrow-top-left"
+    },
+    {
+      "name": "s-delete"
+    },
+    {
+      "name": "box-arrow-top-right"
+    },
+    {
+      "name": "add"
+    },
+    {
+      "name": "s-add"
+    },
+    {
+      "name": "store"
+    },
+    {
+      "name": "chess-tower"
+    },
+    {
+      "name": "box-caret-up"
+    },
+    {
+      "name": "ctrl-up"
+    },
+    {
+      "name": "surprise"
+    },
+    {
+      "name": "smiling-face-sunglasses"
+    },
+    {
+      "name": "tv-stand"
+    },
+    {
+      "name": "tv"
+    },
+    {
+      "name": "time-machine"
+    },
+    {
+      "name": "stopwatch"
+    },
+    {
+      "name": "time-clock"
+    },
+    {
+      "name": "time-alarm"
+    },
+    {
+      "name": "clock"
+    },
+    {
+      "name": "file-history"
+    },
+    {
+      "name": "screen-touch"
+    },
+    {
+      "name": "trash-can"
+    },
+    {
+      "name": "bin"
+    },
+    {
+      "name": "trash"
+    },
+    {
+      "name": "arrow-up"
+    },
+    {
+      "name": "arrow-right"
+    },
+    {
+      "name": "arrow-down"
+    },
+    {
+      "name": "arrow-left"
+    },
+    {
+      "name": "tap-01"
+    },
+    {
+      "name": "tap-02"
+    },
+    {
+      "name": "tablet"
+    },
+    {
+      "name": "ctrl-right"
+    },
+    {
+      "name": "lifering"
+    },
+    {
+      "name": "sunglasses-48"
+    },
+    {
+      "name": "support"
+    },
+    {
+      "name": "ctrl-left"
+    },
+    {
+      "name": "ctrl-down"
+    },
+    {
+      "name": "video"
+    },
+    {
+      "name": "upset-14"
+    },
+    {
+      "name": "vampire"
+    },
+    {
+      "name": "wolf"
+    },
+    {
+      "name": "wink-69"
+    },
+    {
+      "name": "wink-11"
+    },
+    {
+      "name": "wink-06"
+    },
+    {
+      "name": "window-maximize"
+    },
+    {
+      "name": "window-minimize"
+    },
+    {
+      "name": "world-2"
+    },
+    {
+      "name": "world-pin"
+    },
+    {
+      "name": "world-marker"
+    },
+    {
+      "name": "world"
+    },
+    {
+      "name": "wifi"
+    },
+    {
+      "name": "wifi-router"
+    },
+    {
+      "name": "smartwatch"
+    },
+    {
+      "name": "watch-2"
+    },
+    {
+      "name": "watch-dev"
+    },
+    {
+      "name": "watch"
+    },
+    {
+      "name": "wand-11"
+    },
+    {
+      "name": "wallet"
+    },
+    {
+      "name": "wallet-44"
+    },
+    {
+      "name": "wallet-43"
+    },
+    {
+      "name": "volume"
+    },
+    {
+      "name": "volume-2"
+    },
+    {
+      "name": "film"
+    },
+    {
+      "name": "upset-13"
+    },
+    {
+      "name": "file-user"
+    },
+    {
+      "name": "witch-hat"
+    },
+    {
+      "name": "zoom"
+    },
+    {
+      "name": "magnifier-zoom-in"
+    },
+    {
+      "name": "magnifier-zoom-out"
+    },
+    {
+      "name": "theater"
+    },
+    {
+      "name": "fireworks"
+    },
+    {
+      "name": "incognito"
+    },
+    {
+      "name": "board-game"
+    },
+    {
+      "name": "playing-cards"
+    },
+    {
+      "name": "arcade"
+    },
+    {
+      "name": "handheld-console"
+    },
+    {
+      "name": "low-vision"
+    },
+    {
+      "name": "broken-heart"
+    },
+    {
+      "name": "privacy"
+    },
+    {
+      "name": "finger-snap"
+    },
+    {
+      "name": "cpu"
+    },
+    {
+      "name": "eye-recognition"
+    },
+    {
+      "name": "electronic-circuit"
+    },
+    {
+      "name": "privacy-policy"
+    },
+    {
+      "name": "tags-stack"
+    },
+    {
+      "name": "energy"
+    },
+    {
+      "name": "refresh-01"
+    },
+    {
+      "name": "refresh-02"
+    },
+    {
+      "name": "circle"
+    },
+    {
+      "name": "search"
+    },
+    {
+      "name": "search-zoom-out"
+    },
+    {
+      "name": "search-zoom-in"
+    },
+    {
+      "name": "zoom-out"
+    },
+    {
+      "name": "zoom-in"
+    },
+    {
+      "name": "magnifier"
+    },
+    {
+      "name": "maximize"
+    },
+    {
+      "name": "verified"
+    },
+    {
+      "name": "backup-1"
+    },
+    {
+      "name": "screen-sharing-2"
+    },
+    {
+      "name": "armor"
+    },
+    {
+      "name": "shield"
+    },
+    {
+      "name": "jewel"
+    },
+    {
+      "name": "reading"
+    },
+    {
+      "name": "gaming-console"
+    },
+    {
+      "name": "mario-mushroom"
+    },
+    {
+      "name": "potion"
+    },
+    {
+      "name": "final-score"
+    },
+    {
+      "name": "telescope"
+    },
+    {
+      "name": "pacman"
+    },
+    {
+      "name": "sword"
+    },
+    {
+      "name": "gold-coin"
+    },
+    {
+      "name": "air-bomb"
+    },
+    {
+      "name": "military-medal"
+    },
+    {
+      "name": "missile"
+    },
+    {
+      "name": "chess-king"
+    },
+    {
+      "name": "military-tank"
+    },
+    {
+      "name": "assault-rifle"
+    },
+    {
+      "name": "submachine-gun"
+    },
+    {
+      "name": "shotgun"
+    },
+    {
+      "name": "no-guns"
+    },
+    {
+      "name": "submarine"
+    },
+    {
+      "name": "sniper-rifle"
+    },
+    {
+      "name": "army"
+    },
+    {
+      "name": "military-knife"
+    },
+    {
+      "name": "parachute"
+    },
+    {
+      "name": "military-tag"
+    },
+    {
+      "name": "tnt-explosives"
+    },
+    {
+      "name": "grenade"
+    },
+    {
+      "name": "bullets"
+    },
+    {
+      "name": "military-vest"
+    },
+    {
+      "name": "gas-mask"
+    },
+    {
+      "name": "firearm"
+    },
+    {
+      "name": "logo-youtube"
+    },
+    {
+      "name": "logo-messenger"
+    },
+    {
+      "name": "logo-facebook"
+    },
+    {
+      "name": "logo-whatsapp"
+    },
+    {
+      "name": "logo-twitter"
+    },
+    {
+      "name": "logo-paypal"
+    },
+    {
+      "name": "logo-spotify"
+    },
+    {
+      "name": "tiktok"
+    },
+    {
+      "name": "discord"
+    },
+    {
+      "name": "logo-vk"
+    },
+    {
+      "name": "logo-linkedin"
+    },
+    {
+      "name": "logo-instagram"
+    },
+    {
+      "name": "logo-fb-simple"
+    },
+    {
+      "name": "network-communication"
+    },
+    {
+      "name": "party"
+    },
+    {
+      "name": "settings-gear"
+    },
+    {
+      "name": "settings"
+    },
+    {
+      "name": "file-settings"
+    },
+    {
+      "name": "control-panel"
+    },
+    {
+      "name": "speedometer"
+    },
+    {
+      "name": "f-dashboard"
+    },
+    {
+      "name": "wrench"
+    },
+    {
+      "name": "wrench-tool"
+    },
+    {
+      "name": "gear"
+    },
+    {
+      "name": "cogwheel"
+    },
+    {
+      "name": "preferences"
+    },
+    {
+      "name": "options"
+    },
+    {
+      "name": "layout-11"
+    },
+    {
+      "name": "camera-flash"
+    },
+    {
+      "name": "lightning"
+    },
+    {
+      "name": "padlock-unlocked"
+    },
+    {
+      "name": "padlock"
+    },
+    {
+      "name": "lock"
+    },
+    {
+      "name": "unlocked"
+    },
+    {
+      "name": "c-question"
+    },
+    {
+      "name": "interview"
+    },
+    {
+      "name": "alarm"
+    },
+    {
+      "name": "bell"
+    },
+    {
+      "name": "alarm-disable"
+    },
+    {
+      "name": "circle-08"
+    },
+    {
+      "name": "circle-10"
+    },
+    {
+      "name": "circle-09"
+    },
+    {
+      "name": "file-download-3"
+    },
+    {
+      "name": "backup"
+    },
+    {
+      "name": "cloud-data-download"
+    },
+    {
+      "name": "news"
+    },
+    {
+      "name": "star"
+    },
+    {
+      "name": "shop"
+    }
+  ]
+}
