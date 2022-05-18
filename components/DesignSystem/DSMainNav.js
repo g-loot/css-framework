@@ -8,6 +8,7 @@ export default function DSMainNav(props) {
   
   return (
     <>
+    
     {props.data.sections.map((item, i) => (
       <div className="card md:rounded-lg overflow-hidden mb-4">
         <button className='flex items-center py-2 px-4'>
@@ -16,7 +17,7 @@ export default function DSMainNav(props) {
         </button>
         <div className={`${router.pathname.includes(item.url) ? 'is-active' : ''}`}>
           <div className='border-t border-ui-700'>
-            <MainNav items={item.pages} style="secondary" />
+            <MainNav items={item.pages.sort((a, b) => a.label.localeCompare(b.label))} style="secondary" />
           </div>
         </div>
       </div>

@@ -1,11 +1,18 @@
 {
-  "sections": [{
-      "label": "Basics",
+  "sections": [
+    {
+      "label": "About",
       "icon": "",
       "pages": [{
           "label": "Introduction",
           "url": "introduction"
-        },
+        }
+      ]
+    },
+    {
+      "label": "Basics",
+      "icon": "",
+      "pages": [
         {
           "label": "Colors",
           "url": "colors"
@@ -27,7 +34,12 @@
     {
       "label": "Atoms",
       "icon": "",
-      "pages": [{
+      "pages": [
+        {
+          "label": "Avatars",
+          "url": "avatars"
+        },
+        {
           "label": "Buttons",
           "url": "buttons"
         },
@@ -62,10 +74,6 @@
         {
           "label": "Scrollbars",
           "url": "scrollbars"
-        },
-        {
-          "label": "Avatars",
-          "url": "avatars"
         },
         {
           "label": "Progress bars",
