@@ -37,7 +37,7 @@ export default function DSIntroduction() {
               </h2>
 
               {/* variant: primary */}
-              <div class="card rounded-lg p-4">
+              <div className="card rounded-lg p-4">
                 <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
                   <h3 className='mb-6 lg:mb-10'>
                     Primary
@@ -337,7 +337,7 @@ export default function DSIntroduction() {
                 Sizes
               </h2>
 
-              <div class="card rounded-lg p-4">
+              <div className="card rounded-lg p-4">
                 <div className=''>
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
@@ -411,7 +411,7 @@ export default function DSIntroduction() {
                 Currency
               </h2>
 
-              <div class="card rounded-lg p-4">
+              <div className="card rounded-lg p-4">
                 <div className=''>
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
@@ -420,12 +420,12 @@ export default function DSIntroduction() {
                           Coins:
                         </div>
                         <div className='flex-1 flex flex-wrap gap-2'>
-                          <button class="button button-primary button-currency button-coin">
+                          <button className="button button-primary button-currency button-coin">
                             <div>
                               <span>Purchase</span>
                             </div>
                             <div>
-                              <img class="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png" width="34" height="34" alt="coin" />
+                              <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png" width="34" height="34" alt="coin" />
                               <span>15,000</span>
                             </div>
                           </button>
@@ -436,12 +436,12 @@ export default function DSIntroduction() {
                           Tokens:
                         </div>
                         <div className='flex-1 flex flex-wrap gap-2'>
-                          <button class="button button-primary button-currency button-token">
+                          <button className="button button-primary button-currency button-token">
                             <div>
                               <span>Purchase</span>
                             </div>
                             <div>
-                              <img class="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png" width="34" height="34" alt="coin" />
+                              <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png" width="34" height="34" alt="coin" />
                               <span>10</span>
                             </div>
                           </button>
@@ -452,12 +452,12 @@ export default function DSIntroduction() {
                           Ticket:
                         </div>
                         <div className='flex-1 flex flex-wrap gap-2'>
-                          <button class="button button-primary button-currency button-ticket">
+                          <button className="button button-primary button-currency button-ticket">
                             <div>
                               <span>Purchase</span>
                             </div>
                             <div>
-                              <img class="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tiket.png" width="34" height="34" alt="coin" />
+                              <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tiket.png" width="34" height="34" alt="coin" />
                               <span>2</span>
                             </div>
                           </button>
@@ -488,7 +488,7 @@ export default function DSIntroduction() {
               </h2>
 
               {/* variant: primary */}
-              <div class="card rounded-lg p-4">
+              <div className="card rounded-lg p-4">
                 <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
                   <h3 className='mb-6 lg:mb-10'>
                     Loading
@@ -550,12 +550,12 @@ export default function DSIntroduction() {
                           Currency:
                         </div>
                         <div className='flex-1'>
-                          <button class="button button-primary button-currency button-coin is-loading">
+                          <button className="button button-primary button-currency button-coin is-loading">
                             <div>
                               <span>Purchase</span>
                             </div>
                             <div>
-                              <img class="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png" width="34" height="34" alt="coin" />
+                              <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png" width="34" height="34" alt="coin" />
                               <span>2,000</span>
                             </div>
                           </button>

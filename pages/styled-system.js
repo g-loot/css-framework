@@ -49,7 +49,7 @@ export default function Home() {
         </Wrapper>
 
 
-        <Box width={200}>
+        <Box width={[200, 400, 1024]} margin={2} >
           What's in the box?
         </Box>
 

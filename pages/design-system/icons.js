@@ -28,7 +28,7 @@ export default function DSIntroduction() {
               Icons
             </h1>
 
-            <div class="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2">
             
               {DSdata.icons.map((item, i) => (
 
