@@ -109,6 +109,31 @@ module.exports = {
           300: withOpacityValue('--color-teal-300'),
           500: withOpacityValue('--color-teal-500'),
           700: withOpacityValue('--color-teal-700'),
+        },
+        attention: {
+          300: withOpacityValue('--color-attention-300'),
+          500: withOpacityValue('--color-attention-500'),
+          700: withOpacityValue('--color-attention-700'),
+        },
+        success: {
+          300: withOpacityValue('--color-success-300'),
+          500: withOpacityValue('--color-success-500'),
+          700: withOpacityValue('--color-success-700'),
+        },
+        info: {
+          300: withOpacityValue('--color-info-300'),
+          500: withOpacityValue('--color-info-500'),
+          700: withOpacityValue('--color-info-700'),
+        },
+        error: {
+          300: withOpacityValue('--color-error-300'),
+          500: withOpacityValue('--color-error-500'),
+          700: withOpacityValue('--color-error-700'),
+        },
+        disabled: {
+          300: withOpacityValue('--color-disabled-300'),
+          500: withOpacityValue('--color-disabled-500'),
+          700: withOpacityValue('--color-disabled-700'),
         }
       },
       spacing: {
@@ -133,6 +158,9 @@ module.exports = {
       },
       skew: {
         '30': '30deg',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       }
     }
   },
@@ -169,6 +197,21 @@ module.exports = {
     'from-teal-500',
     'to-blue-500',
     'from-purple-500',
+    'bg-attention-300',
+    'bg-attention-500',
+    'bg-attention-700',
+    'bg-success-300',
+    'bg-success-500',
+    'bg-success-700',
+    'bg-info-300',
+    'bg-info-500',
+    'bg-info-700',
+    'bg-error-300',
+    'bg-error-500',
+    'bg-error-700',
+    'bg-disabled-300',
+    'bg-disabled-500',
+    'bg-disabled-700',
   ],
   plugins: [],
 }

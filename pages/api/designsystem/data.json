@@ -26,8 +26,8 @@
           "url": "typography"
         },
         {
-          "label": "Wrappers",
-          "url": "wrappers"
+          "label": "Cards",
+          "url": "cards"
         }
       ]
     },
@@ -353,6 +353,116 @@
           "value": "bg-gradient-to-r from-purple-500 to-blue-500",
           "number": "500",
           "data": "decorative.gradient.purple-blue",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "System",
+      "title_short": "system",
+      "colors": [{
+          "name": "Attention Light",
+          "value": "bg-attention-300",
+          "number": "300",
+          "data": "system.attention.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Attention Main",
+          "value": "bg-attention-500",
+          "number": "500",
+          "data": "system.attention.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Attention Dark",
+          "value": "bg-attention-700",
+          "number": "700",
+          "data": "system.attention.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Success Light",
+          "value": "bg-success-300",
+          "number": "300",
+          "data": "system.success.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Success Main",
+          "value": "bg-success-500",
+          "number": "500",
+          "data": "system.success.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Success Dark",
+          "value": "bg-success-700",
+          "number": "700",
+          "data": "system.success.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Info Light",
+          "value": "bg-info-300",
+          "number": "300",
+          "data": "system.info.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Info Main",
+          "value": "bg-info-500",
+          "number": "500",
+          "data": "system.info.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Info Dark",
+          "value": "bg-info-700",
+          "number": "700",
+          "data": "system.info.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Error Light",
+          "value": "bg-error-300",
+          "number": "300",
+          "data": "system.error.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Error Main",
+          "value": "bg-error-500",
+          "number": "500",
+          "data": "system.error.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Error Dark",
+          "value": "bg-error-700",
+          "number": "700",
+          "data": "system.error.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Disabled Light",
+          "value": "bg-disabled-300",
+          "number": "300",
+          "data": "system.disabled.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Disabled Main",
+          "value": "bg-disabled-500",
+          "number": "500",
+          "data": "system.disabled.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Disabled Dark",
+          "value": "bg-disabled-700",
+          "number": "700",
+          "data": "system.disabled.dark",
           "hex": "#F3F3F6"
         }
       ]

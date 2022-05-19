@@ -1,0 +1,68 @@
+/*----------------------------*/
+/* AVATAR */
+/*----------------------------*/
+
+.avatar {
+  @apply
+  block
+  relative
+  h-24
+  w-24
+  bg-gradient-to-b
+  from-ui-100
+  via-ui-200
+  to-ui-100
+  shadow-[inset_0_0_0_1px_rgb(var(--color-ui-100))]
+  ;
+
+  > span {
+    @apply
+    absolute
+    inset-1
+    bg-cover
+    bg-ui-900
+    shadow-[inset_0_0_0_1px_rgba(var(--color-ui-300)/0.25)]
+    ;
+  }
+
+  /* shape */
+
+  &:not(.avatar-rounded) {
+    &,
+    > span {
+      @apply
+      rounded-full
+      ;
+    }  
+  }
+
+  &.avatar-square {
+    @apply
+    rounded-xl
+    ;
+    > span {
+      @apply
+      rounded-[calc(0.75rem-0.25rem)]
+      ;
+    }  
+  }
+
+  /* size */
+
+  &.avatar-md {
+    @apply
+    h-20
+    w-20
+    ;
+    &.avatar-square {
+      @apply
+      rounded-lg
+      ;
+      > span {
+        @apply
+        rounded-[calc(0.5rem-0.25rem)]
+        ;
+      }  
+    }
+  }
+}

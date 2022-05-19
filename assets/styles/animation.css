@@ -1,0 +1,11 @@
+/*----------------------------*/
+/* ANIMATION */
+/*----------------------------*/
+
+[class*='rotate'],
+[class*='scale'],
+[class*='translate'] {
+  @apply
+  transform-gpu
+  ;
+}

@@ -44,6 +44,26 @@
   --color-teal-500: 20 247 190;
   --color-teal-700: 2 201 151;
 
+  --color-attention-300: 251 140 0;
+  --color-attention-500: 245 124 0;
+  --color-attention-700: 239 108 0;
+
+  --color-success-300: 153 235 168;
+  --color-success-500: 83 221 108;
+  --color-success-700: 30 153 53;
+
+  --color-info-300: 77 180 255;
+  --color-info-500: 4 150 255;
+  --color-info-700: 3 105 178;
+
+  --color-error-300: 255 89 89;
+  --color-error-500: 255 51 51;
+  --color-error-700: 178 36 36;
+
+  --color-disabled-300: 86 90 107;
+  --color-disabled-500: 52 56 71;
+  --color-disabled-700: 25 26 47;
+
 }
 
 body {

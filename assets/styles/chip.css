@@ -1,0 +1,193 @@
+/*----------------------------*/
+/* CHIP */
+/*----------------------------*/
+
+
+.chip {
+
+  @apply
+  outline-none
+  leading-none
+  border-0
+  inline-flex
+  items-center
+  bg-main
+  cursor-pointer
+  font-body
+  py-2
+  px-2
+  transition-all
+  duration-200
+  ease-in-out
+  text-ui-800
+  scale-100
+  space-x-1.5
+  min-h-4
+  text-sm
+  backdrop-blur
+  bg-[length:300%_auto]
+  focus-visible:outline
+  focus-visible:outline-offset-2
+  focus-visible:outline-1
+  focus-visible:outline-main
+  ;
+
+  &:not([class*='sliced']) {
+    @apply
+    rounded-full
+    px-2
+    ;
+
+    > *:not(.icon) {
+      @apply
+      font-body
+      tracking-wide
+      ;
+    }
+  }
+
+  &:not([disabled]),
+  &:not(.disabled) {
+    &:hover,
+    &:focus-visible {
+      @apply 
+      bg-right
+      ;
+    }
+    &:active {
+      @apply
+      opacity-25
+      ;
+    }
+  }
+  
+
+  /* Variants */
+
+  &.chip-primary {
+    @apply 
+    bg-gradient-to-r
+    from-main
+    via-main
+    to-interaction-300
+    shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
+    ;
+
+    &:not([disabled]),
+    &:not(.disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        shadow-[inset_0_0_0_1px_rgba(255,255,255,1)];
+      }
+    }
+  }
+  &.chip-secondary {
+    @apply 
+    bg-ui-700
+    text-ui-300
+    shadow-[inset_0_0_0_1px_rgb(var(--color-ui-500))]
+    ;
+
+    &:not([disabled]),
+    &:not(.disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        bg-ui-600
+        text-ui-200
+        shadow-[inset_0_0_0_1px_rgb(var(--color-ui-400))];
+      }
+    }
+  }
+
+  /* sliced */
+
+  &.chip-sliced {
+    @apply
+    rounded-tl-sm
+    rounded-bl-sm
+    pr-3
+    py-1
+    bg-interaction-300
+    ;
+    clip-path: polygon(0 0, 100%0, calc(100% - 0.5em) 100%, 0 100%);
+    > *:not(.icon) {
+      @apply
+      text-lg
+      font-headings
+      italic
+      uppercase
+      ;
+    }
+
+    &.chip-blue {
+      @apply
+      bg-interaction-300
+      ;
+    }
+    &.chip-blue {
+      @apply
+      bg-blue-500
+      ;
+    }
+    &.chip-gray {
+      @apply
+      bg-ui-200
+      ;
+    }
+  }
+
+
+  /* status */
+
+  &.chip-status {
+    @apply
+    rounded-lg
+    text-ui-200
+    bg-ui-400/50
+    ;
+    &.chip-green {
+      @apply
+      text-interaction-500
+      bg-interaction-700/25
+      ;
+    }
+    &.chip-attention {
+      @apply
+      text-attention-500
+      bg-attention-700/25
+      ;
+    }
+    &.chip-info {
+      @apply
+      text-info-500
+      bg-info-700/25
+      ;
+    }
+    &.chip-success {
+      @apply
+      text-success-500
+      bg-success-700/25
+      ;
+    }
+    &.chip-error {
+      @apply
+      text-error-500
+      bg-error-700/25
+      ;
+    }
+    
+  }
+
+  /* size */
+
+  &.chip-sm {
+    @apply
+    text-xs
+    py-1.5
+    px-2
+    ;
+  }
+
+}

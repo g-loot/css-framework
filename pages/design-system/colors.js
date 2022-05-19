@@ -34,7 +34,7 @@ export default function DSIntroduction() {
                   <h2 className='text-3xl mb-2'>
                     {item.title}
                   </h2>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">
                     {item.colors.map((item2, i) => (
                         <>
                           <div className='rounded-lg overflow-hidden card'>

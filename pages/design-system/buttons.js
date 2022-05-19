@@ -45,8 +45,8 @@ export default function DSIntroduction() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Text only:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Text only
                         </div>
                         <div className='flex-1'>
                           <button className='button button-primary'>
@@ -55,8 +55,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Icon + text:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Icon + text
                         </div>
                         <div className='flex-1'>
                           <button className='button button-primary'>
@@ -66,8 +66,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Text + icon:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Text + icon
                         </div>
                         <div className='flex-1'>
                           <button className='button button-primary'>
@@ -77,8 +77,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Icon only:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Icon only
                         </div>
                         <div className='flex-1'>
                           <button className='button button-primary rounded-full'>
@@ -101,8 +101,8 @@ export default function DSIntroduction() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Text only:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Text only
                         </div>
                         <div className='flex-1'>
                           <button className='button button-secondary'>
@@ -111,8 +111,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Icon + text:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Icon + text
                         </div>
                         <div className='flex-1'>
                           <button className='button button-secondary'>
@@ -122,8 +122,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Text + icon:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Text + icon
                         </div>
                         <div className='flex-1'>
                           <button className='button button-secondary'>
@@ -133,8 +133,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Icon only:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Icon only
                         </div>
                         <div className='flex-1'>
                           <button className='button button-secondary rounded-full'>
@@ -144,7 +144,7 @@ export default function DSIntroduction() {
                       </div>
                     </div>
                     <div className='flex-1'>
-                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/592j71gs/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/p4aq6z8m/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                     </div>
                   </div>
                 </div>
@@ -158,8 +158,8 @@ export default function DSIntroduction() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Large:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Large
                         </div>
                         <div className='flex-1'>
                           <button className='button button-tertiary'>
@@ -168,8 +168,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Icon + text:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Icon + text
                         </div>
                         <div className='flex-1'>
                           <button className='button button-tertiary'>
@@ -179,8 +179,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Text + icon:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Text + icon
                         </div>
                         <div className='flex-1'>
                           <button className='button button-tertiary'>
@@ -190,8 +190,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Icon only:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Icon only
                         </div>
                         <div className='flex-1'>
                           <button className='button button-tertiary rounded-full'>
@@ -201,7 +201,7 @@ export default function DSIntroduction() {
                       </div>
                     </div>
                     <div className='flex-1'>
-                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/592j71gs/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/y015mrt8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                     </div>
                   </div>
                 </div>
@@ -217,8 +217,8 @@ export default function DSIntroduction() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Large:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Large
                         </div>
                         <div className='flex-1'>
                           <button className='button button-premium'>
@@ -227,8 +227,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Icon + text:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Icon + text
                         </div>
                         <div className='flex-1'>
                           <button className='button button-premium'>
@@ -238,8 +238,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Text + icon:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Text + icon
                         </div>
                         <div className='flex-1'>
                           <button className='button button-premium'>
@@ -249,8 +249,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Icon only:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Icon only
                         </div>
                         <div className='flex-1'>
                           <button className='button button-premium rounded-full'>
@@ -260,7 +260,7 @@ export default function DSIntroduction() {
                       </div>
                     </div>
                     <div className='flex-1'>
-                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/592j71gs/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/ed8xkz2c/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                     </div>
                   </div>
                 </div>
@@ -275,8 +275,8 @@ export default function DSIntroduction() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Large:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Large
                         </div>
                         <div className='flex-1'>
                           <button className='button button-claim'>
@@ -285,8 +285,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Icon + text:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Icon + text
                         </div>
                         <div className='flex-1'>
                           <button className='button button-claim'>
@@ -296,8 +296,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Text + icon:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Text + icon
                         </div>
                         <div className='flex-1'>
                           <button className='button button-claim'>
@@ -307,8 +307,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                        Icon only:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                        Icon only
                         </div>
                         <div className='flex-1'>
                           <button className='button button-claim rounded-full'>
@@ -318,7 +318,7 @@ export default function DSIntroduction() {
                       </div>
                     </div>
                     <div className='flex-1'>
-                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/592j71gs/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/yt6Lds0x/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                     </div>
                   </div>
                 </div>
@@ -342,8 +342,8 @@ export default function DSIntroduction() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Large:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Large
                         </div>
                         <div className='flex-1 flex flex-wrap gap-2'>
                           <button className='button button-lg button-primary'>
@@ -359,8 +359,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Medium:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Medium
                         </div>
                         <div className='flex-1 flex flex-wrap gap-2'>
                           <button className='button button-md button-primary'>
@@ -376,8 +376,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Small:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Small
                         </div>
                         <div className='flex-1 flex flex-wrap gap-2'>
                           <button className='button button-sm button-primary'>
@@ -395,7 +395,7 @@ export default function DSIntroduction() {
                       
                     </div>
                     <div className='flex-1'>
-                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/592j71gs/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/n7b2judx/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                     </div>
                   </div>
                 </div>
@@ -416,8 +416,8 @@ export default function DSIntroduction() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Coins:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Coins
                         </div>
                         <div className='flex-1 flex flex-wrap gap-2'>
                           <button className="button button-primary button-currency button-coin">
@@ -432,8 +432,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Tokens:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Tokens
                         </div>
                         <div className='flex-1 flex flex-wrap gap-2'>
                           <button className="button button-primary button-currency button-token">
@@ -448,8 +448,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Ticket:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Ticket
                         </div>
                         <div className='flex-1 flex flex-wrap gap-2'>
                           <button className="button button-primary button-currency button-ticket">
@@ -466,7 +466,7 @@ export default function DSIntroduction() {
                       
                     </div>
                     <div className='flex-1'>
-                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/592j71gs/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/z1fpx59h/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                     </div>
                   </div>
                 </div>
@@ -487,7 +487,7 @@ export default function DSIntroduction() {
                 Status
               </h2>
 
-              {/* variant: primary */}
+              {/* status: loading */}
               <div className="card rounded-lg p-4">
                 <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
                   <h3 className='mb-6 lg:mb-10'>
@@ -496,8 +496,8 @@ export default function DSIntroduction() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Primary:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Primary
                         </div>
                         <div className='flex-1'>
                           <button className='button button-primary is-loading'>
@@ -506,8 +506,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Secondary:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Secondary
                         </div>
                         <div className='flex-1'>
                           <button className='button button-secondary is-loading'>
@@ -516,8 +516,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Tertiary:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Tertiary
                         </div>
                         <div className='flex-1'>
                           <button className='button button-tertiary is-loading'>
@@ -526,8 +526,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Premium:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Premium
                         </div>
                         <div className='flex-1'>
                           <button className='button button-premium is-loading'>
@@ -536,8 +536,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Claim:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Claim
                         </div>
                         <div className='flex-1'>
                           <button className='button button-claim is-loading'>
@@ -546,8 +546,8 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-300'>
-                          Currency:
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Currency
                         </div>
                         <div className='flex-1'>
                           <button className="button button-primary button-currency button-coin is-loading">
@@ -568,6 +568,91 @@ export default function DSIntroduction() {
                     </div>
                   </div>
                 </div>
+
+
+                <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
+                  <h3 className='mb-6 lg:mb-10'>
+                    Disabled
+                  </h3>
+                  <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+                    <div className='flex-1 space-y-4'>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Primary
+                        </div>
+                        <div className='flex-1'>
+                          <button className='button button-primary is-disabled'>
+                            <span>Label</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Secondary
+                        </div>
+                        <div className='flex-1'>
+                          <button className='button button-secondary is-disabled'>
+                            <span>Label</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Tertiary
+                        </div>
+                        <div className='flex-1'>
+                          <button className='button button-tertiary is-disabled'>
+                            <span>Label</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Premium
+                        </div>
+                        <div className='flex-1'>
+                          <button className='button button-premium is-disabled'>
+                            <span>Label</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Claim
+                        </div>
+                        <div className='flex-1'>
+                          <button className='button button-claim is-disabled'>
+                            <span>Label</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Currency
+                        </div>
+                        <div className='flex-1'>
+                          <button className="button button-primary button-currency button-coin is-disabled">
+                            <div>
+                              <span>Purchase</span>
+                            </div>
+                            <div>
+                              <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png" width="34" height="34" alt="coin" />
+                              <span>2,000</span>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div className='flex-1'>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/592j71gs/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                
 
 
 
