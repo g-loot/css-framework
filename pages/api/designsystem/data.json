@@ -70,6 +70,10 @@
         {
           "label": "Badge",
           "url": "badge"
+        },
+        {
+          "label": "Loaders",
+          "url": "loaders"
         }
       ]
     },
@@ -77,6 +81,10 @@
       "label": "Form",
       "icon": "",
       "pages": [
+        {
+          "label": "Form example",
+          "url": "formexample"
+        },
         {
           "label": "Text inputs",
           "url": "textinputs"
@@ -120,12 +128,12 @@
           "url": "emptystates"
         },
         {
-          "label": "Modals",
-          "url": "modals"
-        },
-        {
           "label": "Toasters",
           "url": "toasters"
+        },
+        {
+          "label": "Notifications",
+          "url": "notifications"
         }
       ]
     }

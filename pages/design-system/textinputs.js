@@ -21,6 +21,9 @@ export default function textinputs() {
 
         <div className="container flex mx-auto xl:px-4 2xl:px-0 md:space-x-12">
           <div className="hidden md:block sticky h-screen w-auto md:w-3/12 lg:w-2/12 py-4">
+            <div className='form-group'>
+              <input 
+            </div>
             <DSMainNav data={DSdata} />
           </div>
           <div className="pt-4 pb-8 w-full md:w-9/12 lg:w-10/12">
@@ -92,9 +95,9 @@ export default function textinputs() {
                             <label for="name">Name</label>
                             <input type="text" name="name" id="name" />
                           </div>
-                          <div className='form-group' data-attention="Your text contains 3 spelling mistakes.">
-                            <label for="about">About</label>
-                            <textarea id="about" name="about" rows="4" placeholder="you@example.com"></textarea>
+                          <div className='form-group' data-attention="The text contains 3 spelling mistakes.">
+                            <label for="summary">Summary</label>
+                            <textarea id="summary" name="summary" rows="4" placeholder=""></textarea>
                           </div>
                         </div>
                       </div>
@@ -121,19 +124,26 @@ export default function textinputs() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='flex-1'>
+                        <div className='flex-1 space-y-4'>
                           <div className='form-group'>
-                            <label for="nickname">Nickname</label>
+                            <label for="teamname">Team name</label>
                             <div className='input-group'>
-                              <span className='icon icon-pen-01'></span>
-                              <input type="text" name="nickname" id="nickname" />
+                              <span className='icon icon-a-chat'></span>
+                              <input type="text" name="teamname" id="teamname" />
+                            </div>
+                          </div>
+                          <div className='form-group'>
+                            <label for="teamurl">Team URL</label>
+                            <div className='input-group'>
+                              <span className='icon icon-right icon-f-check'></span>
+                              <input type="text" name="teamurl" id="teamurl" />
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className='flex-1'>
-                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/z1fpx59h/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/1jL870xb/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                     </div>
                   </div>
                 </div>
@@ -147,266 +157,38 @@ export default function textinputs() {
 
 
 
-            {/* status */}
+            {/* With loader */}
             <div className='mb-12'>
 
-              <h2 className='mb-3'>
-                Status
+              <h2 className='h3 mb-3'>
+                With loader
               </h2>
 
-              {/* status: loading */}
               <div className="card rounded-lg p-4">
-                <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
-                  <h3 className='mb-6 lg:mb-10'>
-                    Loading
-                  </h3>
+                <div className=''>
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Primary
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-primary is-loading'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Secondary
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-secondary is-loading'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Tertiary
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-tertiary is-loading'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Premium
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-premium is-loading'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Claim
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-claim is-loading'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Currency
-                        </div>
-                        <div className='flex-1'>
-                          <button className="button button-primary button-currency button-coin is-loading">
-                            <div>
-                              <span>Purchase</span>
+                        <div className='flex-1 space-y-4'>
+                          <div className='form-group is-loading'>
+                            <label for="streetaddress">Street address</label>
+                            <input type="text" name="streetaddress" id="streetaddress" />
+                          </div>
+                          <div className='form-group is-loading'>
+                            <label for="city">City</label>
+                            <div className='input-group'>
+                              <span className='icon icon-right icon-flag-points-31'></span>
+                              <input type="text" name="city" id="city" />
                             </div>
-                            <div>
-                              <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png" width="34" height="34" alt="coin" />
-                              <span>2,000</span>
-                            </div>
-                          </button>
+                          </div>
                         </div>
                       </div>
-                      
                     </div>
                     <div className='flex-1'>
-                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/xn2y8qfr/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/1jL870xb/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                     </div>
                   </div>
                 </div>
-
-
-                <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
-                  <h3 className='mb-6 lg:mb-10'>
-                    Disabled
-                  </h3>
-                  <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
-                    <div className='flex-1 space-y-4'>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Primary
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-primary is-disabled'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Secondary
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-secondary is-disabled'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Tertiary
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-tertiary is-disabled'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Premium
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-premium is-disabled'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Claim
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-claim is-disabled'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Currency
-                        </div>
-                        <div className='flex-1'>
-                          <button className="button button-primary button-currency button-coin is-disabled">
-                            <div>
-                              <span>Purchase</span>
-                            </div>
-                            <div>
-                              <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png" width="34" height="34" alt="coin" />
-                              <span>2,000</span>
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    <div className='flex-1'>
-                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/futbsxan/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
-                    </div>
-                  </div>
-                </div>
-
-
-
-
-                <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
-                  <h3 className='mb-6 lg:mb-10'>
-                    Shining
-                  </h3>
-                  <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
-                    <div className='flex-1 space-y-4'>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Primary
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-primary is-shining'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Secondary
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-secondary is-shining'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Tertiary
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-tertiary is-shining'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Premium
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-premium is-shining'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Claim
-                        </div>
-                        <div className='flex-1'>
-                          <button className='button button-claim is-shining'>
-                            <span>Label</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
-                          Currency
-                        </div>
-                        <div className='flex-1'>
-                          <button className="button button-primary button-currency button-coin is-shining">
-                            <div>
-                              <span>Purchase</span>
-                            </div>
-                            <div>
-                              <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png" width="34" height="34" alt="coin" />
-                              <span>2,000</span>
-                            </div>
-                          </button>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    <div className='flex-1'>
-                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/futbsxan/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
-                    </div>
-                  </div>
-                </div>
-
-
-
-                
-
-
-
-
               </div>
             </div>
 

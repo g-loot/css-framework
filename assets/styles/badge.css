@@ -4,6 +4,7 @@
 [data-badge] {
   @apply
   relative
+  whitespace-nowrap
   ;
   &::after {
     @apply
@@ -12,8 +13,9 @@
     content-[attr(data-badge)]
     top-0
     -right-1
-    p-1
-    rounded
+    px-1
+    py-0.5
+    rounded-full
     bg-main
     text-xs
     text-ui-800
@@ -22,6 +24,8 @@
     font-bold
     translate-x-[0.35rem]
     -translate-y-4
+    min-w-[1rem]
+    text-center
     ;
   }
 
@@ -39,7 +43,7 @@
       top-0
       right-0
       translate-x-[50%]
-      -translate-y-4
+      -translate-y-2
       ;
     }
   }
@@ -54,4 +58,14 @@
     }
   }
 }
-
+[data-badge="."] {
+  &::after {
+    @apply
+    text-ui-100/0
+    w-2
+    h-2
+    min-w-[0.5rem]
+    -translate-y-3
+    ;
+  }
+}
