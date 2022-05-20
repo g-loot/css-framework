@@ -5,7 +5,7 @@ import Topbar from '../../components/Topbar/Topbar';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
-export default function DSIntroduction() {
+export default function colors() {
   const router = useRouter();
   const { data, loading } = useFetch('/api/designsystem', { delay: 20 });
 

@@ -1,0 +1,132 @@
+/*----------------------------*/
+/* PAGINATION */
+/*----------------------------*/
+
+
+.pagination {
+
+  @apply
+  flex
+  items-baseline
+  justify-center
+  gap-3
+  leading-none
+  uppercase
+  text-ui-400
+  w-full
+  ;
+
+  &:hover {
+    li {
+      @apply
+      opacity-30
+      ;
+      &:hover {
+        @apply
+        opacity-100
+        ;
+      }
+    }
+  }
+
+  > li {
+    &,
+    a {
+      @apply
+      transition-all
+      duration-200
+      ease-in-out
+      ;
+    }
+    a {
+      @apply
+      block
+      relative
+      rounded
+      cursor-pointer
+      px-2.5
+      pt-2.5
+      pb-3
+      text-ui-300
+      focus-visible:outline
+      focus-visible:outline-offset-2
+      focus-visible:outline-1
+      focus-visible:outline-main
+      ;
+
+      &::after {
+        @apply
+        content-['']
+        absolute
+        block
+        h-1
+        w-full
+        bottom-0
+        inset-x-0
+        bg-main
+        opacity-0
+        scale-x-0
+        -skew-x-30
+        transition
+        duration-300
+        ease-[cubic-bezier(0.68,0,0.07,1)]
+        ;
+      }
+    }
+
+    &.is-active > a,
+    & > a:hover,
+    & > a:focus-visible, {
+    @apply 
+      text-ui-100
+      ;
+
+      &::after {
+        @apply 
+        opacity-100
+        scale-x-100
+        -skew-x-30
+        ;
+      }
+    }
+  }
+
+  &.pagination-bullet {
+    @apply
+    text-0
+    ;
+
+    li {
+      > a {
+        @apply
+        p-0
+        h-2.5
+        w-2.5
+        rounded-lg
+        bg-ui-300
+        ;
+        &::after {
+          @apply
+          hidden
+          ;
+        }
+      }
+
+      &.is-active > a,
+      & > a:hover,
+      & > a:focus-visible, {
+        @apply 
+        bg-main
+        ;
+      }
+
+      &.is-active > a {
+        @apply 
+        w-10
+        ;
+      }
+    }
+
+    
+  }
+}

@@ -16,15 +16,15 @@
   bg-main
   cursor-pointer
   p-2.5
+  min-h-4
   transition-all
   duration-200
   ease-in-out
   text-ui-800
   scale-100
   space-x-2
-  min-h-4
   backdrop-blur
-  bg-[length:300%_auto]
+  bg-[length:500%_auto]
   focus-visible:outline
   focus-visible:outline-offset-2
   focus-visible:outline-1
@@ -46,7 +46,7 @@
   }
 
   &:not([disabled]),
-  &:not(.disabled) {
+  &:not(.is-disabled) {
     &:hover,
     &:focus-visible {
       @apply 
@@ -67,14 +67,14 @@
   &.button-primary {
     @apply 
     bg-gradient-to-r
-    from-main
-    via-main
-    to-blue-500
+    from-interaction-500
+    via-interaction-500
+    to-interaction-300
     shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
     ;
 
     &:not([disabled]),
-    &:not(.disabled) {
+    &:not(.is-disabled) {
       &:hover,
       &:focus-visible {
         @apply
@@ -90,7 +90,7 @@
     ;
 
     &:not([disabled]),
-    &:not(.disabled) {
+    &:not(.is-disabled) {
       &:hover,
       &:focus-visible {
         @apply
@@ -106,7 +106,7 @@
     ;
 
     &:not([disabled]),
-    &:not(.disabled) {
+    &:not(.is-disabled) {
       &:hover,
       &:focus-visible {
         @apply
@@ -120,42 +120,76 @@
     @apply 
     bg-gradient-to-r
     from-premium-500
-    via-premium-300
+    via-premium-500
     to-premium-300
-    shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
+    shadow-[inset_0_0_0_1px_rgba(var(--color-premium-300),0)]
     ;
 
+    > * {
+      @apply
+      drop-shadow-[0_-1.5px_0.5px_rgba(var(--color-premium-300)/0.5)]
+      ;
+    }
+
     &:not([disabled]),
-    &:not(.disabled) {
+    &:not(.is-disabled) {
       &:hover,
       &:focus-visible {
         @apply
-        from-premium-700
-        via-premium-300
-        to-premium-300
-        shadow-[inset_0_0_0_1px_rgba(255,255,255,1)];
+        shadow-[inset_0_0_0_1px_rgba(var(--color-premium-300),1)]
+        ;
       }
     }
   }
   &.button-claim {
     @apply 
     bg-gradient-to-r
-    from-purple-500
-    via-blue-500
-    to-blue-500
+    from-blue-700
+    via-purple-500
+    to-purple-500
     text-mono-100
     shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]
     ;
 
+    > * {
+      @apply
+      drop-shadow-[0_-1.5px_0.5px_rgba(var(--color-purple-500)/0.25)]
+      ;
+    }
+
     &:not([disabled]),
-    &:not(.disabled) {
+    &:not(.is-disabled) {
       &:hover,
       &:focus-visible {
         @apply
-        from-purple-500
-        via-purple-700
-        to-purple-700
         shadow-[inset_0_0_0_1px_rgba(255,255,255,0.15)];
+      }
+    }
+  }
+  &.button-play {
+    @apply
+    rounded-full
+    space-x-3
+    ;
+    
+    .icon {
+      @apply
+      transition-transform
+      duration-200
+      ease-in-out
+      scale-150
+      ;
+    }
+
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        .icon {
+          @apply
+          scale-100
+          ;
+        }
       }
     }
   }
@@ -231,7 +265,7 @@
       ;
     }
     &:not([disabled]),
-    &:not(.disabled) {
+    &:not(.is-disabled) {
       &:hover,
       &:focus-visible {
         img {
@@ -371,13 +405,48 @@
     }
   }
 
-  /* Variants */
+  /* Disabled */
+
   &.is-disabled,
   &:disabled {
     @apply
     pointer-events-none
     opacity-50
     ;
+  }
+
+  /* Shining */
+
+  &.is-shining {
+    @apply
+    relative
+    overflow-hidden
+    ;
+
+    &::before,
+    &::after {
+      @apply
+      content-['']
+      absolute
+      w-6
+      h-80
+      bg-gradient-to-r
+      from-mono-100/0
+      to-mono-100/50
+      -left-44
+      border-r
+      border-r-mono-100/75
+      blur-sm
+      ;
+      animation: button-shining-rays 4s cubic-bezier(.5,0,.5,1) infinite;
+    }
+
+    &::before {
+      @apply
+      -left-10
+      ease-[cubic-bezier(.9,0,.9,1)]
+      ;
+    }
   }
 }
 
@@ -387,5 +456,15 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes button-shining-rays {
+  0% {
+    transform: rotate(-30deg) translateX(calc(-20em));
+  }
+  75%,
+  100% {
+    transform: rotate(-30deg) translateX(calc(20em));
+    opacity: 0;
   }
 }

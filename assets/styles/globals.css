@@ -6,6 +6,7 @@
 
 @import "./animation";
 @import "./avatar";
+@import "./badge";
 @import "./button";
 @import "./card";
 @import "./chip";
@@ -15,6 +16,10 @@
 @import "./icons";
 @import "./loader";
 @import "./menu";
+@import "./pagination";
+@import "./progressbar";
+@import "./scrollbar";
 @import "./tabs";
+@import "./textinputs";
 @import "./typography";
 @import "./variables";

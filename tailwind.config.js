@@ -35,6 +35,7 @@ module.exports = {
       'lg': '1024px',
     },
     fontSize: {
+      '0': '0rem',
       'xs': '.75rem',
       'sm': '.875rem',
       'tiny': '.875rem',

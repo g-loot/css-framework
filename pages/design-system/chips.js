@@ -5,7 +5,7 @@ import Topbar from '../../components/Topbar/Topbar';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
-export default function DSIntroduction() {
+export default function chips() {
   const router = useRouter();
   const { data, loading } = useFetch('/api/designsystem', { delay: 20 });
 
@@ -45,7 +45,7 @@ export default function DSIntroduction() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                           Text only
                         </div>
                         <div className='flex-1'>
@@ -55,7 +55,7 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                         Icon + text
                         </div>
                         <div className='flex-1'>
@@ -66,7 +66,7 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                         Text + icon
                         </div>
                         <div className='flex-1'>
@@ -91,7 +91,7 @@ export default function DSIntroduction() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                           Text only
                         </div>
                         <div className='flex-1'>
@@ -101,7 +101,7 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                         Icon + text
                         </div>
                         <div className='flex-1'>
@@ -112,7 +112,7 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                         Text + icon
                         </div>
                         <div className='flex-1'>
@@ -145,7 +145,7 @@ export default function DSIntroduction() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                           Green <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                         </div>
                         <div className='flex-1'>
@@ -155,7 +155,7 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                           Blue
                         </div>
                         <div className='flex-1'>
@@ -165,7 +165,7 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                           Gray
                         </div>
                         <div className='flex-1'>
@@ -196,7 +196,7 @@ export default function DSIntroduction() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                           Default <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                         </div>
                         <div className='flex-1'>
@@ -207,7 +207,7 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                           Attention
                         </div>
                         <div className='flex-1'>
@@ -218,7 +218,7 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                           Success
                         </div>
                         <div className='flex-1'>
@@ -229,7 +229,7 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                           Info
                         </div>
                         <div className='flex-1'>
@@ -240,7 +240,7 @@ export default function DSIntroduction() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/3 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right'>
                           Error
                         </div>
                         <div className='flex-1'>

@@ -9,6 +9,16 @@
   list-none
   ;
 
+  li.separator {
+    @apply
+    bg-ui-700
+    h-px
+    w-full
+    my-2
+    select-none
+    ;
+  }
+
   a {
     @apply
     relative

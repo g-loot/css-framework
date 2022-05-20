@@ -44,22 +44,6 @@
           "url": "buttons"
         },
         {
-          "label": "Text inputs",
-          "url": "textinputs"
-        },
-        {
-          "label": "Toggle switch",
-          "url": "switch"
-        },
-        {
-          "label": "Radio button",
-          "url": "radio"
-        },
-        {
-          "label": "Radio checkbox",
-          "url": "radio"
-        },
-        {
           "label": "Chips",
           "url": "chips"
         },
@@ -78,16 +62,43 @@
         {
           "label": "Progress bars",
           "url": "progressbars"
+        },
+        {
+          "label": "Menu",
+          "url": "menu"
+        },
+        {
+          "label": "Badge",
+          "url": "badge"
+        }
+      ]
+    },
+    {
+      "label": "Form",
+      "icon": "",
+      "pages": [
+        {
+          "label": "Text inputs",
+          "url": "textinputs"
+        },
+        {
+          "label": "Toggle switch",
+          "url": "switch"
+        },
+        {
+          "label": "Radio button",
+          "url": "radio"
+        },
+        {
+          "label": "Radio checkbox",
+          "url": "radio"
         }
       ]
     },
     {
       "label": "Molecules",
       "icon": "",
-      "pages": [{
-          "label": "Cards",
-          "url": "cards"
-        },
+      "pages": [
         {
           "label": "Modals",
           "url": "modals"
@@ -103,6 +114,18 @@
         {
           "label": "Tournament brackets",
           "url": "tournamentbrackets"
+        },
+        {
+          "label": "Empty states",
+          "url": "emptystates"
+        },
+        {
+          "label": "Modals",
+          "url": "modals"
+        },
+        {
+          "label": "Toasters",
+          "url": "toasters"
         }
       ]
     }
