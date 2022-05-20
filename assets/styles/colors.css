@@ -64,6 +64,18 @@
   --color-disabled-500: 52 56 71;
   --color-disabled-700: 25 26 47;
 
+  --color-gold-300: 252 206 90;
+  --color-gold-500: 251 192 45;
+  --color-gold-700: 140 101 3;
+
+  --color-silver-300: 212 213 215;
+  --color-silver-500: 175 177 182;
+  --color-silver-700: 97 100 107;
+
+  --color-bronze-300: 194 160 132;
+  --color-bronze-500: 177 133 98;
+  --color-bronze-700: 109 79 54;
+
 }
 
 body {

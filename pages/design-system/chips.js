@@ -146,7 +146,7 @@ export default function DSIntroduction() {
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                          Green
+                          Green <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                         </div>
                         <div className='flex-1'>
                           <button className='chip chip-sliced'>
@@ -197,7 +197,7 @@ export default function DSIntroduction() {
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                          Default
+                          Default <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                         </div>
                         <div className='flex-1'>
                           <button className='chip chip-status'>

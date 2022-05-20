@@ -20,8 +20,9 @@
     absolute
     inset-1
     bg-cover
-    bg-ui-900
-    shadow-[inset_0_0_0_1px_rgba(var(--color-ui-300)/0.25)]
+    bg-center
+    bg-ui-700
+    shadow-[inset_0_0_0_1px_rgb(var(--color-ui-100))]
     ;
   }
 
@@ -47,6 +48,23 @@
     }  
   }
 
+  &.avatar-diamond {
+
+    @apply
+    h-24
+    w-[calc(6rem-0.75rem)]
+    ;
+
+    &,
+    > span {
+      @apply
+      rounded-none
+      ;
+      clip-path: polygon(50% 0, 100% 22%, 100% 78%, 50% 100%, 0 78%, 0 22%);
+    }
+    
+  }
+
   /* size */
 
   &.avatar-md {
@@ -54,15 +72,148 @@
     h-20
     w-20
     ;
+    > span {
+      @apply
+      inset-[0.2rem]
+      ;
+    }
     &.avatar-square {
       @apply
       rounded-lg
       ;
       > span {
         @apply
-        rounded-[calc(0.5rem-0.25rem)]
+        rounded-[calc(0.5rem-0.2rem)]
         ;
       }  
+    }
+    &.avatar-diamond {
+      @apply
+      w-[calc(5rem-0.5rem)]
+      ;
+    }
+  }
+  &.avatar-sm {
+    @apply
+    h-16
+    w-16
+    ;
+    > span {
+      @apply
+      inset-[0.15rem]
+      ;
+    }
+    &.avatar-square {
+      @apply
+      rounded-lg
+      ;
+      > span {
+        @apply
+        rounded-[calc(0.5rem-0.15rem)]
+        ;
+      }  
+    }
+    &.avatar-diamond {
+      @apply
+      w-[calc(4rem-0.5rem)]
+      ;
+    }
+  }
+  &.avatar-xs {
+    @apply
+    h-12
+    w-12
+    ;
+    > span {
+      @apply
+      inset-[0.125rem]
+      ;
+    }
+    &.avatar-square {
+      @apply
+      rounded-lg
+      ;
+      > span {
+        @apply
+        rounded-[calc(0.5rem-0.125rem)]
+        ;
+      }  
+    }
+    &.avatar-diamond {
+      @apply
+      w-[calc(3rem-0.5rem)]
+      ;
+    }
+  }
+  &.avatar-tiny {
+    @apply
+    h-8
+    w-8
+    ;
+    > span {
+      @apply
+      inset-[0.1rem]
+      ;
+    }
+    &.avatar-square {
+      @apply
+      rounded
+      ;
+      > span {
+        @apply
+        rounded-[calc(0.25rem-0.1rem)]
+        ;
+      }  
+    }
+    &.avatar-diamond {
+      @apply
+      w-[calc(2rem-0.25rem)]
+      ;
+    }
+  }
+
+  /* variant */
+
+  &.avatar-gold {
+    @apply
+    from-gold-300
+    via-gold-700
+    to-gold-300
+    shadow-[inset_0_0_0_1px_rgb(var(--color-gold-300))]
+    ;
+    > span {
+      @apply
+      bg-gold-700
+      shadow-[inset_0_0_0_1px_rgb(var(--color-gold-300))]
+      ;
+    }
+  }
+  &.avatar-silver {
+    @apply
+    from-silver-300
+    via-silver-700
+    to-silver-300
+    shadow-[inset_0_0_0_1px_rgb(var(--color-silver-300))]
+    ;
+    > span {
+      @apply
+      bg-silver-700
+      shadow-[inset_0_0_0_1px_rgb(var(--color-silver-300))]
+      ;
+    }
+  }
+  &.avatar-bronze {
+    @apply
+    from-bronze-300
+    via-bronze-700
+    to-bronze-300
+    shadow-[inset_0_0_0_1px_rgb(var(--color-bronze-300))]
+    ;
+    > span {
+      @apply
+      bg-bronze-700
+      shadow-[inset_0_0_0_1px_rgb(var(--color-bronze-300))]
+      ;
     }
   }
 }

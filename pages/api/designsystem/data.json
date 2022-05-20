@@ -466,6 +466,75 @@
           "hex": "#F3F3F6"
         }
       ]
+    },
+    {
+      "title": "Reward",
+      "title_short": "reward",
+      "colors": [
+        {
+          "name": "Gold Light",
+          "value": "bg-gold-300",
+          "number": "300",
+          "data": "reward.gold.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Gold Main",
+          "value": "bg-gold-500",
+          "number": "500",
+          "data": "reward.gold.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Gold Dark",
+          "value": "bg-gold-700",
+          "number": "700",
+          "data": "reward.gold.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Silver Light",
+          "value": "bg-silver-300",
+          "number": "300",
+          "data": "reward.silver.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Silver Main",
+          "value": "bg-silver-500",
+          "number": "500",
+          "data": "reward.silver.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Silver Dark",
+          "value": "bg-silver-700",
+          "number": "700",
+          "data": "reward.silver.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Bronze Light",
+          "value": "bg-bronze-300",
+          "number": "300",
+          "data": "reward.bronze.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Bronze Main",
+          "value": "bg-bronze-500",
+          "number": "500",
+          "data": "reward.bronze.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Bronze Dark",
+          "value": "bg-bronze-700",
+          "number": "700",
+          "data": "reward.bronze.dark",
+          "hex": "#F3F3F6"
+        }
+      ]
     }
   ],
   "icons": [{

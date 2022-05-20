@@ -32,7 +32,7 @@ export default function DSIntroduction() {
             {/* shape */}
             <div className='mb-12'>
 
-              <h2 className='mb-3'>
+              <h2 className='h3 mb-3'>
                 Shape
               </h2>
 
@@ -42,7 +42,7 @@ export default function DSIntroduction() {
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                          Rounded  <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
+                          Rounded <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                         </div>
                         <div className='flex-1'>
                           <div className='avatar'>
@@ -56,6 +56,16 @@ export default function DSIntroduction() {
                         </div>
                         <div className='flex-1'>
                           <div className='avatar avatar-square'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Diamond
+                        </div>
+                        <div className='flex-1'>
+                          <div className='avatar avatar-diamond'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
                           </div>
                         </div>
@@ -76,7 +86,7 @@ export default function DSIntroduction() {
             {/* size */}
             <div className='mb-12'>
 
-              <h2 className='mb-3'>
+              <h2 className='h3 mb-3'>
                 Size
               </h2>
 
@@ -114,9 +124,54 @@ export default function DSIntroduction() {
                           </div>
                         </div>
                       </div>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Small
+                        </div>
+                        <div className='flex-1'>
+                          <div className='flex gap-4 justify-start'>
+                            <div className='avatar avatar-sm'>
+                              <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            </div>
+                            <div className='avatar avatar-sm avatar-square'>
+                              <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Extra small
+                        </div>
+                        <div className='flex-1'>
+                          <div className='flex gap-4 justify-start'>
+                            <div className='avatar avatar-xs'>
+                              <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            </div>
+                            <div className='avatar avatar-xs avatar-square'>
+                              <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Tiny
+                        </div>
+                        <div className='flex-1'>
+                          <div className='flex gap-4 justify-start'>
+                            <div className='avatar avatar-tiny'>
+                              <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            </div>
+                            <div className='avatar avatar-tiny avatar-square'>
+                              <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div className='flex-1'>
-                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/3m9k845g/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/3o7ztqgw/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                     </div>
                   </div>
                 </div>
@@ -124,6 +179,76 @@ export default function DSIntroduction() {
             </div>
 
 
+
+
+
+            {/* rank */}
+            <div className='mb-12'>
+
+              <h2 className='h3 mb-3'>
+                Rank
+              </h2>
+
+              <div className="card rounded-lg p-4">
+                <div className=''>
+                  <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+                    <div className='flex-1 space-y-4'>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Light <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
+                        </div>
+                        <div className='flex-1'>
+                          <div className='flex gap-4 justify-start'>
+                            <div className='avatar'>
+                              <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Gold
+                        </div>
+                        <div className='flex-1'>
+                          <div className='flex gap-4 justify-start'>
+                            <div className='avatar avatar-gold'>
+                              <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Silver
+                        </div>
+                        <div className='flex-1'>
+                          <div className='flex gap-4 justify-start'>
+                            <div className='avatar avatar-silver'>
+                              <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='w-1/3 text-ui-400 text-right'>
+                          Bronze
+                        </div>
+                        <div className='flex-1'>
+                          <div className='flex gap-4 justify-bronze'>
+                            <div className='avatar avatar-bronze'>
+                              <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='flex-1'>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/3o7ztqgw/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
 

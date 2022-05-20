@@ -134,6 +134,21 @@ module.exports = {
           300: withOpacityValue('--color-disabled-300'),
           500: withOpacityValue('--color-disabled-500'),
           700: withOpacityValue('--color-disabled-700'),
+        },
+        gold: {
+          300: withOpacityValue('--color-gold-300'),
+          500: withOpacityValue('--color-gold-500'),
+          700: withOpacityValue('--color-gold-700'),
+        },
+        silver: {
+          300: withOpacityValue('--color-silver-300'),
+          500: withOpacityValue('--color-silver-500'),
+          700: withOpacityValue('--color-silver-700'),
+        },
+        bronze: {
+          300: withOpacityValue('--color-bronze-300'),
+          500: withOpacityValue('--color-bronze-500'),
+          700: withOpacityValue('--color-bronze-700'),
         }
       },
       spacing: {
@@ -212,6 +227,15 @@ module.exports = {
     'bg-disabled-300',
     'bg-disabled-500',
     'bg-disabled-700',
+    'bg-gold-300',
+    'bg-gold-500',
+    'bg-gold-700',
+    'bg-silver-300',
+    'bg-silver-500',
+    'bg-silver-700',
+    'bg-bronze-300',
+    'bg-bronze-500',
+    'bg-bronze-700',
   ],
   plugins: [],
 }

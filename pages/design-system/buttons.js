@@ -56,7 +56,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Icon + text
+                          Icon + text
                         </div>
                         <div className='flex-1'>
                           <button className='button button-primary'>
@@ -67,7 +67,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Text + icon
+                          Text + icon
                         </div>
                         <div className='flex-1'>
                           <button className='button button-primary'>
@@ -78,7 +78,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Icon only
+                          Icon only
                         </div>
                         <div className='flex-1'>
                           <button className='button button-primary rounded-full'>
@@ -112,7 +112,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Icon + text
+                          Icon + text
                         </div>
                         <div className='flex-1'>
                           <button className='button button-secondary'>
@@ -123,7 +123,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Text + icon
+                          Text + icon
                         </div>
                         <div className='flex-1'>
                           <button className='button button-secondary'>
@@ -134,7 +134,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Icon only
+                          Icon only
                         </div>
                         <div className='flex-1'>
                           <button className='button button-secondary rounded-full'>
@@ -169,7 +169,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Icon + text
+                          Icon + text
                         </div>
                         <div className='flex-1'>
                           <button className='button button-tertiary'>
@@ -180,7 +180,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Text + icon
+                          Text + icon
                         </div>
                         <div className='flex-1'>
                           <button className='button button-tertiary'>
@@ -191,7 +191,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Icon only
+                          Icon only
                         </div>
                         <div className='flex-1'>
                           <button className='button button-tertiary rounded-full'>
@@ -228,7 +228,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Icon + text
+                          Icon + text
                         </div>
                         <div className='flex-1'>
                           <button className='button button-premium'>
@@ -239,7 +239,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Text + icon
+                          Text + icon
                         </div>
                         <div className='flex-1'>
                           <button className='button button-premium'>
@@ -250,7 +250,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Icon only
+                          Icon only
                         </div>
                         <div className='flex-1'>
                           <button className='button button-premium rounded-full'>
@@ -286,7 +286,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Icon + text
+                          Icon + text
                         </div>
                         <div className='flex-1'>
                           <button className='button button-claim'>
@@ -297,7 +297,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Text + icon
+                          Text + icon
                         </div>
                         <div className='flex-1'>
                           <button className='button button-claim'>
@@ -308,7 +308,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                        Icon only
+                          Icon only
                         </div>
                         <div className='flex-1'>
                           <button className='button button-claim rounded-full'>
@@ -360,7 +360,7 @@ export default function DSIntroduction() {
                       </div>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='w-1/3 text-ui-400 text-right'>
-                          Medium
+                          Medium <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                         </div>
                         <div className='flex-1 flex flex-wrap gap-2'>
                           <button className='button button-md button-primary'>
