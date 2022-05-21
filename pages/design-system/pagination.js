@@ -44,11 +44,11 @@ export default function pagination() {
                       <div className='w-full flex gap-4 items-center'>
                        
                         <div className='flex-1'>
-                          <ul class="pagination">
+                          <ul className="pagination">
                             <li>
                               <a href="#" tabindex="-1">Previous</a>
                             </li>
-                            <li class="is-active">
+                            <li className="is-active">
                               <a href="#">1</a>
                             </li>
                             <li>
@@ -94,11 +94,11 @@ export default function pagination() {
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
                         <div className='flex-1 flex flex-wrap gap-2'>
-                          <ul class="pagination pagination-bullet">
+                          <ul className="pagination pagination-bullet">
                             <li>
                               <a href="#" tabindex="-1"></a>
                             </li>
-                            <li class="is-active">
+                            <li className="is-active">
                               <a href="#"></a>
                             </li>
                             <li>

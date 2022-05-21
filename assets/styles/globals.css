@@ -12,6 +12,7 @@
 @import "./chip";
 @import "./colors";
 @import "./fonts";
+@import "./form";
 @import "./general";
 @import "./icons";
 @import "./loader";
@@ -20,6 +21,5 @@
 @import "./progressbar";
 @import "./scrollbar";
 @import "./tabs";
-@import "./textinputs";
 @import "./typography";
 @import "./variables";

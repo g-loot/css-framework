@@ -2,6 +2,15 @@
 /* TYPOGRAPHY */
 /*----------------------------*/
 
+
+::selection {
+  @apply
+  text-ui-100
+  bg-ui-400
+  ;
+}
+
+
 body {
   @apply font-body;
   -webkit-font-smoothing: antialiased;

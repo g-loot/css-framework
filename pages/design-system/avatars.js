@@ -300,23 +300,23 @@ export default function avatars() {
                           <div className='flex gap-4 justify-start items-center'>
                             <figure className='avatar'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="disabled"></i>
+                              <i className="disabled"></i>
                             </figure>
                             <figure className='avatar avatar-md'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="disabled"></i>
+                              <i className="disabled"></i>
                             </figure>
                             <figure className='avatar avatar-sm'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="disabled"></i>
+                              <i className="disabled"></i>
                             </figure>
                             <figure className='avatar avatar-xs'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="disabled"></i>
+                              <i className="disabled"></i>
                             </figure>
                             <figure className='avatar avatar-tiny'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="disabled"></i>
+                              <i className="disabled"></i>
                             </figure>
                           </div>
                         </div>
@@ -329,23 +329,23 @@ export default function avatars() {
                           <div className='flex gap-4 justify-start items-center'>
                             <figure className='avatar'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="error"></i>
+                              <i className="error"></i>
                             </figure>
                             <figure className='avatar avatar-md'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="error"></i>
+                              <i className="error"></i>
                             </figure>
                             <figure className='avatar avatar-sm'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="error"></i>
+                              <i className="error"></i>
                             </figure>
                             <figure className='avatar avatar-xs'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="error"></i>
+                              <i className="error"></i>
                             </figure>
                             <figure className='avatar avatar-tiny'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="error"></i>
+                              <i className="error"></i>
                             </figure>
                           </div>
                         </div>
@@ -358,23 +358,23 @@ export default function avatars() {
                           <div className='flex gap-4 justify-start items-center'>
                             <figure className='avatar'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="attention"></i>
+                              <i className="attention"></i>
                             </figure>
                             <figure className='avatar avatar-md'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="attention"></i>
+                              <i className="attention"></i>
                             </figure>
                             <figure className='avatar avatar-sm'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="attention"></i>
+                              <i className="attention"></i>
                             </figure>
                             <figure className='avatar avatar-xs'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="attention"></i>
+                              <i className="attention"></i>
                             </figure>
                             <figure className='avatar avatar-tiny'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="attention"></i>
+                              <i className="attention"></i>
                             </figure>
                           </div>
                         </div>
@@ -387,23 +387,23 @@ export default function avatars() {
                           <div className='flex gap-4 justify-start items-center'>
                             <figure className='avatar'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="info"></i>
+                              <i className="info"></i>
                             </figure>
                             <figure className='avatar avatar-md'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="info"></i>
+                              <i className="info"></i>
                             </figure>
                             <figure className='avatar avatar-sm'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="info"></i>
+                              <i className="info"></i>
                             </figure>
                             <figure className='avatar avatar-xs'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="info"></i>
+                              <i className="info"></i>
                             </figure>
                             <figure className='avatar avatar-tiny'>
                               <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                              <i class="info"></i>
+                              <i className="info"></i>
                             </figure>
                           </div>
                         </div>

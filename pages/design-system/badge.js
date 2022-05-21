@@ -81,7 +81,7 @@ export default function badge() {
                         <button className='button button-secondary' data-badge="88">
                           <span>Notifications</span>
                         </button>
-                        <figure class='avatar avatar-simple' data-badge="88">
+                        <figure className='avatar avatar-simple' data-badge="88">
                           <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
                         </figure>
                       </div>

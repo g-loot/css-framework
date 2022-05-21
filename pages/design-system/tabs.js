@@ -41,9 +41,9 @@ export default function tabs() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center justify-center'>
-                          <ul class="tabs">
+                          <ul className="tabs">
                             <li>
-                              <a class="active">
+                              <a className="active">
                                 <span>Brawls</span>
                               </a>
                             </li>
@@ -88,9 +88,9 @@ export default function tabs() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center justify-center'>
-                          <ul class="tabs">
+                          <ul className="tabs">
                             <li>
-                              <a class="active">
+                              <a className="active">
                                 <span data-badge="4">Brawls</span>
                               </a>
                             </li>

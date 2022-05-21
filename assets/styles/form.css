@@ -1,0 +1,754 @@
+/*----------------------------*/
+/* FORM */
+/*----------------------------*/
+
+
+
+/*----------------------------*/
+/* GENERAL */
+/*----------------------------*/
+
+input,
+textarea {
+  @apply
+  text-ui-100
+  placeholder:text-ui-300
+  ;
+}
+
+.form-group {
+  @apply
+  flex
+  flex-col
+  ;
+  > label:not(.form-radio):not(.form-checkbox):not(.form-switch) {
+    @apply
+    block
+    text-sm
+    font-body
+    uppercase
+    text-ui-200
+    font-bold
+    mb-1
+    ;
+  }
+}
+
+
+
+/*----------------------------*/
+/* SELECT INPUTS */
+/*----------------------------*/
+
+.form-select {
+  @apply
+  relative
+  ;
+
+  select {
+    &:not([multiple]) {
+      @apply
+      appearance-none
+      pr-8
+      overflow-hidden
+      ;
+      
+    }
+    &[multiple] {
+      @apply
+      h-auto
+      relative
+      ;
+      > option {
+        @apply
+        py-1.5
+        ;
+  
+        &:selected {
+          @apply
+          bg-ui-500
+          rounded-sm
+          ;
+        }
+      }
+    }
+  
+    option {
+      &:disabled {
+        @apply
+        text-ui-300
+        ;
+      }
+    }
+  }
+  
+}
+
+
+/*----------------------------*/
+/* TEXT INPUTS */
+/*----------------------------*/
+
+.form-group {
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  input[type=password],
+  textarea,
+  .input-text {
+    @apply
+    block
+    ;
+  }
+}
+
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=password],
+textarea,
+.input-text,
+.form-select > select {
+  @apply
+  w-full
+  shadow-sm
+  sm:text-sm
+  bg-ui-700
+  border
+  border-ui-500
+  rounded
+  min-h-[2.5rem]
+  focus-visible:outline
+  focus-visible:outline-1
+  focus-visible:outline-ui-300
+  py-1.5
+  px-2
+  ;
+}
+
+/*----------------------------*/
+/* RADIO */
+/*----------------------------*/
+
+.form-radio,
+.form-checkbox,
+.form-switch {
+  @apply
+  block
+  pl-12
+  py-2
+  pr-2
+  relative
+  select-none
+  ;
+
+  &:not(.is-disabled) {
+    @apply
+    cursor-pointer
+    ;
+  }
+
+  /* generic */
+
+  input {
+    @apply
+    h-px
+    w-px
+    -m-px
+    opacity-0
+    overflow-hidden
+    ;
+    clip: rect(0px, 0px, 0px, 0px);
+
+    &:checked {
+      + .form-icon {
+        @apply
+        bg-interaction-500
+        shadow-[0_0_0_1px_rgb(var(--color-interaction-700))]
+        ;
+      }
+    }
+  }
+
+  .form-icon {
+    @apply
+    absolute
+    overflow-hidden
+    inline-block
+    left-0
+    bottom-[calc(50%-0.75rem)]
+    transition-all
+    duration-300
+    ease-[cubic-bezier(.7,0,.3,1)]
+    outline
+    ;
+    &::after {
+      @apply
+      content-['']
+      absolute
+      transition
+      duration-300
+      ease-[cubic-bezier(.7,0,.3,1)]
+      ;
+    }
+  }
+
+
+  input:checked {
+    + .form-icon {
+      @apply
+      bg-gradient-to-b
+      from-interaction-700
+      to-interaction-300
+      outline-interaction-300
+      ;
+    }
+  }
+  input:not(:checked) {
+    + .form-icon {
+      @apply
+      bg-gradient-to-b
+      from-ui-800
+      via-ui-600
+      to-ui-600
+      outline-ui-400/75
+      ;
+    }
+  }
+
+
+  &:not([disabled]),
+  &:not(.is-disabled) {
+    &:hover,
+    &:focus-visible {
+      input {
+        + .form-icon {
+          &::after {
+            @apply
+            scale-75
+            ;
+          }
+        }
+      }
+      input:checked {
+        + .form-icon {
+          
+        }
+      }
+      input:not(:checked) {
+        + .form-icon {
+          
+        }
+      }
+    }
+  }
+
+
+  /* radio */
+
+  &.form-radio {
+    .form-icon {
+      @apply
+      h-6
+      w-6
+      rounded-full
+      left-2
+      shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
+      ;
+
+      &::after {
+        @apply
+        w-4
+        h-4
+        rounded-full
+        left-1
+        top-1
+        ;
+      }
+    }
+
+    input:not(:checked){
+      + .form-icon {
+        &::after {
+          @apply
+          translate-y-2
+          scale-110
+          opacity-0
+          bg-gradient-to-b
+          from-ui-300
+          to-ui-400
+          ;
+        }
+      }
+    }
+
+    input:checked {
+      + .form-icon {
+        &::after {
+          @apply
+          translate-y-0
+          scale-100
+          opacity-100
+         
+          bg-gradient-to-b
+          from-ui-500
+          to-ui-800
+          ;
+        }
+      }
+    }
+  }
+
+  /* switch */
+
+  &.form-switch {
+    .form-icon {
+      @apply
+      h-6
+      w-10
+      rounded-full
+      left-0
+      shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
+      ;
+
+      &::after {
+        @apply
+        w-4
+        h-4
+        rounded-full
+        bg-ui-800
+        left-1
+        top-1
+        ;
+      }
+    }
+
+    input:not(:checked){
+      + .form-icon {
+        &::after {
+          @apply
+          translate-x-0
+          scale-110
+          bg-gradient-to-b
+          from-ui-300
+          to-ui-400
+          ;
+        }
+      }
+    }
+
+    input:checked {
+      + .form-icon {
+        &::after {
+          @apply
+          translate-x-4
+          scale-100
+          bg-gradient-to-b
+          from-ui-500
+          to-ui-800
+          ;
+        }
+      }
+    }
+  }
+
+  /* checkbox */
+
+  &.form-checkbox {
+    .form-icon {
+      @apply
+      h-6
+      w-6
+      rounded
+      left-2
+      shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
+      ;
+
+      &::after {
+        @apply
+        w-4
+        h-2.5
+        border-[3px]
+        border-ui-800/0
+        border-l-ui-800
+        border-b-ui-800
+        left-1
+        top-1
+        ;
+      }
+    }
+
+    input:not(:checked){
+      + .form-icon {
+        &::after {
+          @apply
+          scale-110
+          opacity-0
+          ;
+        }
+      }
+    }
+
+    input:indeterminate {
+      + .form-icon {
+        &::after {
+          @apply
+          h-1
+          border-l-ui-800/0
+          ;
+        }
+      }
+    }
+
+    input:checked,
+    input:indeterminate {
+      + .form-icon {
+        &::after {
+          @apply
+          -rotate-45
+          scale-100
+          opacity-100
+          ;
+        }
+      }
+    }
+  }
+
+
+  /* focus */
+
+  &:not([disabled]),
+  &:not(.is-disabled) {
+    &:focus-visible {
+      @apply
+      outline-none
+      ;
+      .form-icon {
+        @apply
+        outline
+        outline-offset-2
+        outline-1
+        outline-main
+        ;      
+      }
+    }
+  }
+
+
+ 
+  
+}
+
+
+/*----------------------------*/
+/* INPUT GROUP */
+/*----------------------------*/
+
+.input-group {
+  @apply
+  rounded
+  flex
+  relative
+  ;
+  > div:not(.icon),
+  > span:not(.icon) {
+    @apply
+    inline-flex
+    items-center
+    px-3
+    rounded-l-md
+    border
+    border-ui-500
+    bg-ui-500/75
+    text-ui-200
+    text-sm
+    ;
+  }
+
+  > div:not(.icon):first-child,
+  > span:not(.icon):first-child {
+    @apply
+    border-r-0
+    ;
+
+    ~ input:last-child {
+      @apply
+      rounded-none
+      rounded-r
+      ;
+    }
+  }
+
+  > input:first-child {
+    @apply
+    rounded-none
+    rounded-l
+    ;
+    ~ div:not(.icon):last-child,
+    ~ span:not(.icon):last-child {
+      @apply
+      border-l-0
+      rounded-none
+      rounded-r
+      ;
+    }
+  }
+
+/*----------------------------*/
+/* ICON */
+/*----------------------------*/
+
+  > .icon {
+    @apply
+    absolute
+    bottom-[calc(50%-9px)]
+    left-2.5
+    text-lg
+    text-ui-300
+    ;
+
+    ~ input {
+      @apply
+      pl-9
+      ;
+    }
+
+    &.icon-right {
+      @apply
+      right-2.5
+      left-auto
+      ;
+
+      ~ input {
+        @apply
+        pl-2.5
+        pr-9
+        ;
+      }
+    }
+  }
+
+  /* button */
+
+  > button,
+  > .button {
+    &:not(.button-primary) {
+      @apply
+      absolute
+      right-0.5
+      bottom-0.5
+      ;      
+    }
+
+    &.button-sm {
+      @apply
+      right-[5px]
+      bottom-[5px]
+      ;
+    }
+
+    &.button-primary {
+      @apply
+      whitespace-nowrap
+      rounded-none
+      rounded-r
+      order-2;
+
+      ~ input {
+        @apply
+        rounded-none
+        rounded-l
+        ;
+      }
+    }
+  }
+}
+
+/*----------------------------*/
+/* VALIDATION */
+/*----------------------------*/
+
+.form-group {
+  &[data-error],
+  &[data-success],
+  &[data-attention] {
+    &::after {
+      @apply
+      block
+      text-sm
+      mt-1
+      ;
+    }
+  }
+  &[data-error] {
+    &::after {
+      @apply
+      content-[attr(data-error)]
+      text-error-500
+      ;
+    }
+    input[type=text],
+    input[type=number],
+    input[type=email],
+    input[type=password],
+    textarea,
+    .input-text,
+    select {
+      @apply
+      border-error-700
+      focus-visible:outline-error-500
+      ;
+    }
+    .icon,
+    .form-radio,
+    .form-switch,
+    .form-checkbox {
+      @apply
+      text-error-500
+      ;
+    }
+  }
+  &[data-success] {
+    &::after {
+      @apply
+      content-[attr(data-success)]
+      text-success-500
+      ;
+    }
+    input[type=text],
+    input[type=number],
+    input[type=email],
+    input[type=password],
+    textarea,
+    .input-text,
+    select {
+      @apply
+      border-success-700
+      focus-visible:outline-success-500
+      ;
+    }
+     .icon,
+    .form-radio,
+    .form-switch,
+    .form-checkbox {
+      @apply
+      text-success-500
+      ;
+    }
+  }
+  &[data-attention] {
+    &::after {
+      @apply
+      content-[attr(data-attention)]
+      text-attention-500
+      ;
+    }
+    input[type=text],
+    input[type=number],
+    input[type=email],
+    input[type=password],
+    textarea,
+    .input-text,
+    select {
+      @apply
+      border-attention-700
+      focus-visible:outline-attention-500
+      ;
+    }
+     .icon,
+    .form-radio,
+    .form-switch,
+    .form-checkbox {
+      @apply
+      text-attention-500
+      ;
+    }
+  }
+
+
+  /* loading */
+
+  &.is-loading {
+    @apply
+    relative
+    ;
+  }
+
+  &.is-loading {
+
+    &::after {
+      @apply
+      content-['']
+      absolute
+      h-6
+      w-6
+      block
+      border-2
+      border-ui-800
+      border-l-ui-300
+      opacity-100
+      rounded-full
+      mx-auto
+      bottom-2
+      right-2.5
+      ;
+      animation: input-loader-rotate 1s linear infinite;
+    }
+
+    .icon.icon-right {
+      @apply
+      opacity-0
+      ;
+    }
+
+    input[type=text],
+    input[type=number],
+    input[type=email],
+    input[type=password],
+    textarea,
+    .input-text {
+      @apply
+      pr-10
+      ;
+    }
+    select:not([multiple]){
+      @apply
+      bg-none
+      ;
+    }
+  }
+}
+
+@keyframes input-loader-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* disabled */
+
+.form-group.is-disabled input,
+.form-group.is-disabled select,
+input[type=text]:disabled,
+input[type=number]:disabled,
+input[type=email]:disabled,
+input[type=password]:disabled,
+select:disabled,
+textarea:disabled,
+.input-text:disabled,
+input[type=text].is-disabled,
+input[type=number].is-disabled,
+input[type=email].is-disabled,
+input[type=password].is-disabled,
+select.is-disabled,
+textarea.is-disabled,
+.input-text.is-disabled, {
+  @apply
+  opacity-50
+  pointer-events-none
+  ;
+}
+

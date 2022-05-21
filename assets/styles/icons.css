@@ -12,6 +12,7 @@
 /*------------------------
 	base class definition
 -------------------------*/
+
 .icon {
   @apply inline-block;
   font: normal normal normal 1em/1 'glooticons';
@@ -19,7 +20,6 @@
   flex-shrink: 0;
   speak: none;
   text-transform: none;
-  /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

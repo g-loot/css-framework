@@ -64,6 +64,7 @@ module.exports = {
     fontFamily: {
       headings: ['Podium Sharp', 'sans-serif'],
       body: ['Roboto Condensed', 'serif'],
+      icon: ['glooticons', 'serif'],
     },
     extend: {
       colors: {

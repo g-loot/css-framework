@@ -2,16 +2,18 @@
 /* SCROLLBAR */
 /*----------------------------*/
 
-.scrollbar {
+.scrollbar,
+select[multiple] {
   &::-webkit-scrollbar {
     @apply
-    w-2
+    w-1.5
     h-4
+    right-px
     ;
   }
   &::-webkit-scrollbar-thumb {
     @apply
-    bg-interaction-500
+    bg-ui-400
     transition-all
     duration-200
     rounded
@@ -20,7 +22,7 @@
   }
   &::-webkit-scrollbar-thumb:hover {
     @apply
-    bg-interaction-300
+    bg-ui-300
     cursor-pointer
     ;
   }

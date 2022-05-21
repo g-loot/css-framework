@@ -90,16 +90,12 @@
           "url": "textinputs"
         },
         {
-          "label": "Toggle switch",
-          "url": "switch"
+          "label": "Radio, checkbox, switch",
+          "url": "radiocheckboxswitch"
         },
         {
-          "label": "Radio button",
-          "url": "radio"
-        },
-        {
-          "label": "Radio checkbox",
-          "url": "radio"
+          "label": "Select inputs",
+          "url": "selectinputs"
         }
       ]
     },

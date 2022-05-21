@@ -15,7 +15,8 @@
   items-center
   bg-main
   cursor-pointer
-  p-2.5
+  py-2.5
+  px-3
   min-h-4
   transition-all
   duration-200
@@ -199,7 +200,7 @@
   &.button-lg {
     @apply
     py-3
-    px-3
+    px-4
     ;
 
     > * {
@@ -211,7 +212,7 @@
   &.button-sm {
     @apply
     py-2
-    px-2
+    px-2.5
     ;
 
     > * {

@@ -21,8 +21,11 @@ export default function textinputs() {
 
         <div className="container flex mx-auto xl:px-4 2xl:px-0 md:space-x-12">
           <div className="hidden md:block sticky h-screen w-auto md:w-3/12 lg:w-2/12 py-4">
-            <div className='form-group'>
-              <input 
+            <div className="form-group mb-4">
+              <div className="input-group">
+                <span className="icon icon-zoom"></span>
+                <input type="text" name="teamname" id="teamname" />
+              </div>
             </div>
             <DSMainNav data={DSdata} />
           </div>
@@ -58,6 +61,13 @@ export default function textinputs() {
                             </div>
                           </div>
                           <div className='form-group'>
+                            <label for="subdomain">Subdomain</label>
+                            <div className='input-group'>
+                              <input type="text" name="subdomain" id="subdomain" />
+                              <span> .gloot.com </span>
+                            </div>
+                          </div>
+                          <div className='form-group'>
                             <label for="about">About</label>
                             <textarea id="about" name="about" rows="4" placeholder="you@example.com"></textarea>
                           </div>
@@ -78,7 +88,7 @@ export default function textinputs() {
             <div className='mb-12'>
 
               <h2 className='h3 mb-3'>
-                Vaidation
+                Validation
               </h2>
 
               <div className="card rounded-lg p-4">
@@ -161,11 +171,14 @@ export default function textinputs() {
             <div className='mb-12'>
 
               <h2 className='h3 mb-3'>
-                With loader
+                Status
               </h2>
 
               <div className="card rounded-lg p-4">
-                <div className=''>
+                <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
+                  <h3 className='h4 mb-6 lg:mb-10'>
+                    Loading
+                  </h3>
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
@@ -186,6 +199,73 @@ export default function textinputs() {
                     </div>
                     <div className='flex-1'>
                       <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/1jL870xb/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+                <div className=''>
+                  <h3 className='h4 mb-6 lg:mb-10'>
+                    Disabled
+                  </h3>
+                  <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+                    <div className='flex-1 space-y-4'>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='flex-1 space-y-4'>
+                          <div className='form-group is-disabled'>
+                            <label for="country">Country</label>
+                            <input type="text" name="country" id="country" />
+                          </div>
+                          <div className='form-group'>
+                            <label for="bio">Bio</label>
+                            <textarea id="bio" name="bio" rows="4" placeholder="" disabled></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='flex-1'>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/ehp7vfdk/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            {/* With button */}
+            <div className='mb-12'>
+
+              <h2 className='h3 mb-3'>
+                With button
+              </h2>
+
+              <div className="card rounded-lg p-4">
+                <div className=''>
+                  <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+                    <div className='flex-1 space-y-4'>
+                      <div className='w-full flex gap-4 items-center'>
+                        <div className='flex-1 space-y-4'>
+                          <div className='form-group'>
+                            <label for="new-password">New password</label>
+                            <div className='input-group'>
+                              <button className='button button-sm button-tertiary'>
+                                <span>Show</span>
+                              </button>
+                              <input type="password" name="new-password" id="new-password" />
+                            </div>
+                          </div>
+                          <div className='form-group'>
+                            <label for="send-email">Send email</label>
+                            <div className='input-group'>
+                              <button className='button button-primary'>
+                                <span>Send email</span>
+                              </button>
+                              <input type="password" name="send-email" id="send-email" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='flex-1'>
+                      <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/wmgxq8v6/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                     </div>
                   </div>
                 </div>
