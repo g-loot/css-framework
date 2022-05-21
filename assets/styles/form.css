@@ -207,10 +207,7 @@ textarea,
   input:not(:checked) {
     + .form-icon {
       @apply
-      bg-gradient-to-b
-      from-ui-800
-      via-ui-600
-      to-ui-600
+      bg-ui-700
       outline-ui-400/75
       ;
     }
@@ -272,7 +269,6 @@ textarea,
         &::after {
           @apply
           translate-y-2
-          scale-110
           opacity-0
           bg-gradient-to-b
           from-ui-300
@@ -287,7 +283,6 @@ textarea,
         &::after {
           @apply
           translate-y-0
-          scale-100
           opacity-100
          
           bg-gradient-to-b
@@ -328,7 +323,6 @@ textarea,
         &::after {
           @apply
           translate-x-0
-          scale-110
           bg-gradient-to-b
           from-ui-300
           to-ui-400
@@ -342,7 +336,6 @@ textarea,
         &::after {
           @apply
           translate-x-4
-          scale-100
           bg-gradient-to-b
           from-ui-500
           to-ui-800
