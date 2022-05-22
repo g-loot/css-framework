@@ -62,7 +62,7 @@
   }
   
 
-  /* Variants */
+  /* Primary */
 
   &.chip-primary {
     @apply 
@@ -82,6 +82,9 @@
       }
     }
   }
+
+  /* Secondary */
+
   &.chip-secondary {
     @apply 
     bg-ui-700
@@ -97,6 +100,69 @@
         bg-ui-600
         text-ui-200
         shadow-[inset_0_0_0_1px_rgb(var(--color-ui-400))];
+      }
+    }
+  }
+
+  /* Reward */
+
+  &.chip-reward {
+    @apply 
+    bg-ui-700
+    text-gold-500
+    py-0
+    px-2
+    ;
+
+    > .icon {
+      @apply
+      text-3xl
+      -my-1
+      ;
+    }
+
+    > span:not(.icon) {
+      @apply
+      font-headings
+      uppercase
+      text-lg
+      ;
+
+      &::last-child {
+        @apply
+        pr-1
+        ;
+      }
+    }
+
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        bg-ui-600
+        text-gold-300
+        ;
+      }
+    }
+
+    &.chip-inverted {
+      @apply 
+      bg-gradient-to-b
+      from-gold-300
+      via-gold-500
+      to-gold-500
+      text-ui-800
+      ;
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          bg-gold-300
+          text-ui-900
+          ;
+        }
       }
     }
   }

@@ -181,7 +181,10 @@ module.exports = {
       },
       rotate: {
         '135': '135deg',
-      }
+      },
+      aspectRatio: {
+        'story': '16 / 9',
+      },
     }
   },
   safelist: [
