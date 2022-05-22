@@ -2,12 +2,22 @@
 /* CARD */
 /*----------------------------*/
 
-.card {
-  @apply 
-  bg-ui-800
-  border
-  border-ui-700
+
+.card,
+.card-mission {
+  @apply
+  relative
   ;
+
+  &:not([class*='card-ui']) {
+    @apply
+    border
+    bg-ui-800
+    border-ui-700
+    ;
+  }
+}
+.card {
 
   &.card-halo {
     @apply
@@ -65,6 +75,7 @@
   }
 }
 
+/* blur container */
 
 .blurcontainer {
   position: relative;
@@ -199,5 +210,202 @@
         }
       }
     }
+  }
+}
+
+/* colors */
+
+.card-ui-900 {
+  @apply
+  border
+  bg-ui-900
+  border-ui-800
+  ;
+  .progressbar {
+    @apply
+    bg-ui-700
+    ;
+  }
+}
+.card-ui-800 {
+  @apply
+  border
+  bg-ui-800
+  border-ui-700
+  ;
+  .progressbar {
+    @apply
+    bg-ui-600
+    ;
+  }
+}
+.card-ui-700 {
+  @apply
+  border
+  bg-ui-700
+  border-ui-600
+  ;
+  .progressbar {
+    @apply
+    bg-ui-500
+    ;
+  }
+}
+.card-ui-600 {
+  @apply
+  border
+  bg-ui-600
+  border-ui-500
+  ;
+  .progressbar {
+    @apply
+    bg-ui-400
+    ;
+  }
+}
+
+/* card-mission */
+
+.card-mission {
+  @apply
+  aspect-video
+  w-full
+  max-w-sm
+  rounded-xl
+  overflow-hidden
+  flex
+  flex-col
+  items-stretch
+  justify-between
+  mx-auto
+  ;
+
+  .card-info {
+    @apply
+    relative
+    z-20
+    bg-ui-900/50
+    backdrop-blur
+    p-2
+    ;
+
+    .card-title {
+      @apply
+      font-headings
+      italic
+      text-xl
+      leading-none
+      ;
+    }
+    .card-meta {
+      @apply
+      flex
+      items-center
+      justify-between
+      text-sm
+      text-ui-200
+      py-2
+      mb-0.5
+      ;
+
+      > * {
+        &::last-child {
+          @apply
+          text-right
+          ;
+        }
+      }
+    }
+  }
+
+  &.card-locked,
+  &.card-premium {
+    .progressbar {
+      > * {
+        background-image: linear-gradient(to right, rgb(var(--color-premium-300)) 0px, rgb(var(--color-premium-700)) 200px, rgb(var(--color-premium-300)) 400px);
+        
+      }
+    }
+  }
+
+  &.card-locked {
+
+    .card-decoration {
+      @apply 
+      flex
+      flex-1
+      z-20
+      -inset-px
+      drop-shadow-[0_3px_1.5px_rgba(0,0,0,0.5)]
+      ;
+      &::before {
+        @apply
+        content-['']
+        absolute
+        z-0
+        top-0
+        left-0
+        right-0
+        h-10
+        bg-gradient-to-b
+        from-premium-300
+        via-premium-300
+        to-premium-500
+        text-ui-800
+        ;
+        clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
+      }
+      &::after {
+        @apply
+        font-icon
+        content-['\ea12']
+        absolute
+        z-10
+        w-8
+        h-8
+        rounded-full
+        top-1
+        left-[calc(50%-1rem)]
+        bg-gradient-to-b
+        from-ui-900
+        via-ui-800
+        to-ui-700
+        text-premium-300
+        shadow-[0_0_0_1.5px_rgb(var(--color-premium-300))]
+        text-center
+        leading-[2]
+        ;
+      }
+    }
+    .card-bg {
+      
+      * {
+        @apply
+        grayscale
+        ;
+      }
+
+      &::before {
+        @apply
+        content-['']
+        absolute
+        z-10
+        -inset-px
+        bg-ui-800/50
+      }
+    }
+  }
+}
+
+.card-bg {
+  &,
+  > * {
+    @apply
+    absolute
+    z-0
+    bg-cover
+    -inset-px
+    bg-no-repeat
+    ;
   }
 }

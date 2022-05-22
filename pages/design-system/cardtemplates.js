@@ -32,42 +32,158 @@ export default function CardTemplates() {
               Mission card
             </h2>
 
+           
+            {/* Reward: XP */}
             <div className="card rounded-lg p-4">
-              <div className=''>
-                <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+              <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
+                <h3 className='mb-6 lg:mb-10'>
+                  Normal
+                </h3>
+                <div className='flex gap-4 flex-col lg:flex-row'>
                   <div className='flex-1 space-y-4'>
-                    <div className='w-full flex flex-col gap-4 items-center'>
-                      
-                      <div>
-                        Primary
-                      </div>
-                      <div className='card card-mission aspect-video w-full max-w-sm rounded-xl'>
-
-                        <div>
-                          <h4 className='title'>
-                            Get 22 kills
-                          </h4>
-                          <div>
-                          <div class='chip chip-reward'>
+                    <div className='card-mission card-ui-700'>
+                      <div className='card-decoration'></div>
+                      <div className='card-info'>
+                        <div className='card-title'>
+                          Get 22 kills
+                        </div>
+                        <div className='card-meta'>
+                          <div class='chip chip-reward chip-xp chip-sm chip-inverted'>
                             <span class='icon icon-xp-symbol-outline'></span>
-                            <span>Label</span>
+                            <span>100</span>
                           </div>
-
+                          <div>
+                            50/100 kills
                           </div>
                         </div>
-                        <figure>
-
-                        </figure>
-
+                        <div className='progressbar progressbar-sm' style={{"--percent": "75"}}>
+                          <div></div>
+                        </div>
+                      </div>
+                      <div className="card-bg">
+                        <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1638737621/Marketing/202109_gloot2/mission-valorant_3.jpg)`}}></span>
                       </div>
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/eL9patvh/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/05mw2vj6/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              {/* Premium locked */}
+              <div className=''>
+                <h3 className='mb-6 lg:mb-10'>
+                  Premium locked
+                </h3>
+                <div className='flex gap-4 flex-col lg:flex-row'>
+                  <div className='flex-1 space-y-4'>
+                    <div className='card-mission card-ui-700 card-locked'>
+                      <div className='card-decoration'></div>
+                      <div className='card-info'>
+                        <div className='card-title'>
+                          Get 22 kills
+                        </div>
+                        <div className='card-meta'>
+                          <div class='chip chip-reward chip-xp chip-sm chip-inverted'>
+                            <span class='icon icon-xp-symbol-outline'></span>
+                            <span>100</span>
+                          </div>
+                          <div>
+                            50/100 kills
+                          </div>
+                        </div>
+                        <div className='progressbar progressbar-sm' style={{"--percent": "75"}}>
+                          <div></div>
+                        </div>
+                      </div>
+                      <div className="card-bg">
+                        <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1638737621/Marketing/202109_gloot2/mission-valorant_3.jpg)`}}></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='flex-1'>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/jm5q8oap/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Reward: ticket */}
+              <div className=''>
+                <h3 className='mb-6 lg:mb-10'>
+                  Ticket
+                </h3>
+                <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+                  <div className='flex-1 space-y-4'>
+                  <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right'>
+                        Normal
+                      </div>
+                      <div class='chip chip-reward chip-ticket'>
+                        <span class='icon icon-ticket'></span>
+                        <span>1</span>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right'>
+                      Inverted
+                      </div>
+                      <div class='chip chip-reward chip-ticket chip-inverted'>
+                        <span class='icon icon-ticket'></span>
+                        <span>1</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='flex-1'>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/jm5q8oap/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                  </div>
+                </div>
+              </div>
+
+
+              {/* Reward: small */}
+              <div className=''>
+                <h3 className='mb-6 lg:mb-10'>
+                  Small
+                </h3>
+                <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+                  <div className='flex-1 space-y-4'>
+                  <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right'>
+                        Small
+                      </div>
+                      <div class='chip chip-reward chip-ticket chip-inverted chip-sm'>
+                        <span class='icon icon-ticket'></span>
+                        <span>1 ticket</span>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right'>
+                      </div>
+                      <div class='chip chip-reward chip-xp chip-inverted chip-sm'>
+                        <span class='icon icon-xp-symbol-outline'></span>
+                        <span>500 XP</span>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right'>
+                      </div>
+                      <div class='chip chip-reward chip-token chip-inverted chip-sm'>
+                        <span class='icon icon-token'></span>
+                        <span>500 tokens</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='flex-1'>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/jm5q8oap/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
             </div>
+
+            
+
+            
           </div>
 
 

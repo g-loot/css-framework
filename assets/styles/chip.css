@@ -109,15 +109,17 @@
   &.chip-reward {
     @apply 
     bg-ui-700
-    text-gold-500
+    text-premium-500
     py-0
-    px-2
+    pl-2
+    pr-3
+    shadow-[inset_0_0_0_1px_rgb(var(--color-ui-500))]
     ;
 
     > .icon {
       @apply
-      text-3xl
-      -my-1
+      text-xl
+      my-1
       ;
     }
 
@@ -127,12 +129,6 @@
       uppercase
       text-lg
       ;
-
-      &::last-child {
-        @apply
-        pr-1
-        ;
-      }
     }
 
     &:not([disabled]),
@@ -141,7 +137,7 @@
       &:focus-visible {
         @apply
         bg-ui-600
-        text-gold-300
+        text-premium-300
         ;
       }
     }
@@ -149,19 +145,119 @@
     &.chip-inverted {
       @apply 
       bg-gradient-to-b
-      from-gold-300
-      via-gold-500
-      to-gold-500
+      from-premium-700
+      via-premium-300
+      to-premium-500
       text-ui-800
+      shadow-[inset_0_0_0_1px_rgb(var(--color-premium-300))]
       ;
+
+      > * {
+        text-shadow: 0 1.5px 0.5px rgb(var(--color-premium-300));
+      }
       &:not([disabled]),
       &:not(.is-disabled) {
         &:hover,
         &:focus-visible {
           @apply
-          bg-gold-300
+          bg-premium-300
           text-ui-900
           ;
+        }
+      }
+    }
+
+    &.chip-sm {
+      @apply
+      pl-1.5
+      pr-2
+      py-0
+      space-x-1
+      ;
+      > .icon {
+        @apply
+        text-[16px]
+        ;
+      }
+      > span:not(.icon) {
+        @apply
+        text-sm
+        ;
+      }
+    }
+
+    &.chip-xp {
+      > .icon {
+        @apply
+        text-3xl
+        -my-1
+        ;
+      }
+      &.chip-sm {
+        > .icon {
+          @apply
+          text-2xl
+          -my-0.5
+          ;
+        }
+      }
+    }
+
+    &.chip-token {
+      &:not(.chip-inverted){
+        @apply 
+        text-purple-300
+        ;
+      }
+      &.chip-inverted {
+        @apply 
+        bg-gradient-to-b
+        from-purple-700
+        via-purple-300
+        to-purple-500
+        shadow-[inset_0_0_0_1px_rgb(var(--color-purple-300))]
+        ;
+  
+        > * {
+          text-shadow: 0 1.5px 0.5px rgb(var(--color-purple-300));
+        }
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          &:hover,
+          &:focus-visible {
+            @apply
+            bg-purple-300
+            ;
+          }
+        }
+      }
+    }
+    &.chip-ticket {
+      &:not(.chip-inverted){
+        @apply 
+        text-bronze-300
+        ;
+      }
+      &.chip-inverted {
+        @apply 
+        bg-gradient-to-b
+        from-bronze-700
+        via-bronze-300
+        to-bronze-500
+        shadow-[inset_0_0_0_1px_rgb(var(--color-bronze-300))]
+        ;
+  
+        > * {
+          text-shadow: 0 1.5px 0.5px rgb(var(--color-bronze-300));
+        }
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          &:hover,
+          &:focus-visible {
+            @apply
+            bg-bronze-300
+            ;
+          }
         }
       }
     }

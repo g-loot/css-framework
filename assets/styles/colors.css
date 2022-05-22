@@ -36,9 +36,9 @@
   --color-blue-500: 0 225 255;
   --color-blue-700: 0 175 204;
 
-  --color-purple-300: 152 117 209;
-  --color-purple-500: 108 61 184;
-  --color-purple-700: 57 32 97;
+  --color-purple-300: 236 169 250;
+  --color-purple-500: 234 120 253;
+  --color-purple-700: 138 37 200;
 
   --color-teal-300: 46 255 202;
   --color-teal-500: 20 247 190;
@@ -64,17 +64,17 @@
   --color-disabled-500: 52 56 71;
   --color-disabled-700: 25 26 47;
 
-  --color-gold-300: 252 206 90;
-  --color-gold-500: 251 192 45;
-  --color-gold-700: 140 101 3;
+  --color-gold-300: 254 250 68;
+  --color-gold-500: 255 226 1;
+  --color-gold-700: 255 156 4;
 
   --color-silver-300: 212 213 215;
   --color-silver-500: 175 177 182;
   --color-silver-700: 97 100 107;
 
-  --color-bronze-300: 194 160 132;
-  --color-bronze-500: 177 133 98;
-  --color-bronze-700: 109 79 54;
+  --color-bronze-300: 250 234 148;
+  --color-bronze-500: 242 190 81;
+  --color-bronze-700: 188 129 49;
 
 }
 

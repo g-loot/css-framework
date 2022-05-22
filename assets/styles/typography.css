@@ -69,9 +69,19 @@ h4,
 }
 
 h5,
+.h5,
+h6,
+.h6 {
+  &:not(.normal-case) {
+    @apply
+    uppercase
+    ;
+  }
+}
+
+h5,
 .h5 {
   @apply
-  uppercase
   font-bold
   text-xl
   ;
@@ -80,11 +90,9 @@ h5,
 h6,
 .h6 {
   @apply
-  uppercase
   font-bold
   ;
 }
-
 
 .font-headings {
   @apply
@@ -100,7 +108,6 @@ h6,
   underline
   transition
   duration-75
-
   active:text-interaction-300
   ;
 }

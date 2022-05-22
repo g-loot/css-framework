@@ -9,6 +9,7 @@
   rounded-sm
   bg-ui-600
   overflow-hidden
+  w-full
   ;
 
   &,
@@ -32,6 +33,21 @@
     animation: progressbar-gradient 2s linear infinite;
     clip-path: polygon(0% 0%, 100% 0%, calc(100% - 0.5em) 100%, 0% 100%);
     transform: translate3d(calc(-100% + (1% * var(--percent))), 0, 0);
+  }
+}
+
+/* size */
+
+.progressbar.progressbar-sm {
+  @apply
+  rounded-full
+  ;
+  
+  &,
+  > div {
+    @apply
+    h-1.5
+    ;
   }
 }
 
