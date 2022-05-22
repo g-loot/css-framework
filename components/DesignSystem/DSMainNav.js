@@ -5,10 +5,8 @@ export default function DSMainNav(props) {
 
   const router = useRouter();
 
-  
   return (
     <>
-    
     {props.data.sections.map((item, i) => (
       <div className="card md:rounded-lg overflow-hidden mb-4">
         <button className='flex items-center py-2 px-4'>

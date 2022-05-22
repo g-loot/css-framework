@@ -119,3 +119,9 @@ code {
   leading-none
   ;
 }
+
+hr {
+  @apply
+  border-ui-600
+  ;
+}

@@ -1,11 +1,11 @@
-import DSMainNav from '../../components/DesignSystem/DSMainNav';
+import DSStructure from '../../components/DesignSystem/DSStructure';
 import DSdata from '../api/designsystem/data.json'
 import Head from 'next/head';
 import Topbar from '../../components/Topbar/Topbar';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
-export default function cards() {
+export default function Cards() {
   const router = useRouter();
   const { data, loading } = useFetch('/api/designsystem', { delay: 20 });
 
@@ -18,6 +18,12 @@ export default function cards() {
         </Head>
         
         <Topbar />
+
+        <DSStructure data={DSdata}>
+
+
+          
+        </DSStructure>
 
         <div className="container flex mx-auto md:space-x-12">
           <div className="hidden md:block sticky h-screen w-auto md:w-3/12 lg:w-2/12 py-4">
@@ -36,7 +42,7 @@ export default function cards() {
               <div className='flex flex-col lg:flex-row gap-4'>
                 <div className='flex-1 card rounded-lg aspect-square'>
                 </div>
-                <div className='flex-2'>
+                <div className='flex-1'>
                   <iframe className="rounded-lg" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/zvsfkj25/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                 </div>
               </div>
@@ -58,7 +64,7 @@ export default function cards() {
                   <div className='card card-halo halo-t rounded-lg aspect-square'>
                   </div>
                 </div>
-                <div className='flex-2'>
+                <div className='flex-1'>
                   <iframe className="rounded-lg" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/ucvtxz19/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
                 </div>
               </div>

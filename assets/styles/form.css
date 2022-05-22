@@ -17,10 +17,7 @@ textarea {
 }
 
 .form-group {
-  @apply
-  flex
-  flex-col
-  ;
+ 
   > label:not(.form-radio):not(.form-checkbox):not(.form-switch) {
     @apply
     block
@@ -51,24 +48,41 @@ textarea {
       appearance-none
       pr-8
       overflow-hidden
-      ;
-      
+      bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTExLjk5OTkgMTUuMDAwMUMxMS43NDM5IDE1LjAwMDEgMTEuNDg3OSAxNC45MDIxIDExLjI5MjkgMTQuNzA3MUw2LjU4NTk0IDEwLjAwMDFMNy45OTk5NCA4LjU4NjA2TDExLjk5OTkgMTIuNTg2MUwxNS45OTk5IDguNTg2MDZMMTcuNDEzOSAxMC4wMDAxTDEyLjcwNjkgMTQuNzA3MUMxMi41MTE5IDE0LjkwMjEgMTIuMjU1OSAxNS4wMDAxIDExLjk5OTkgMTUuMDAwMVoiIGZpbGw9IiM4NTg1QUQiLz4KPC9zdmc+Cg==')]
+      bg-no-repeat
+      bg-[calc(100%-0.25rem)_center]
+      ;      
     }
     &[multiple] {
       @apply
       h-auto
       relative
+      pr-0.5
+      py-2
+      space-y-0.5
       ;
       > option {
         @apply
         py-1.5
+        
         ;
   
-        &:selected {
+        &:checked {
           @apply
-          bg-ui-500
+          bg-interaction-500
           rounded-sm
+          text-ui-800
           ;
+        }
+      }
+
+      &:focus {
+        > option {
+          &:checked {
+            @apply
+            bg-interaction-300
+            ;
+          }
         }
       }
     }
@@ -208,7 +222,7 @@ textarea,
     + .form-icon {
       @apply
       bg-ui-700
-      outline-ui-400/75
+      outline-ui-500/75
       ;
     }
   }
@@ -220,6 +234,10 @@ textarea,
     &:focus-visible {
       input {
         + .form-icon {
+          @apply
+          bg-ui-800
+          outline-ui-400/75
+          ;
           &::after {
             @apply
             scale-75
@@ -284,7 +302,6 @@ textarea,
           @apply
           translate-y-0
           opacity-100
-         
           bg-gradient-to-b
           from-ui-500
           to-ui-800

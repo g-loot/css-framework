@@ -12,6 +12,7 @@
   leading-none
   border-0
   inline-flex
+  justify-center
   items-center
   bg-main
   cursor-pointer
@@ -447,6 +448,34 @@
       -left-10
       ease-[cubic-bezier(.9,0,.9,1)]
       ;
+    }
+  }
+
+  /* Close */ 
+  &.button-close {
+    @apply
+    h-10
+    w-10
+    rounded-full
+    hover:rotate-45
+    ;
+
+    > .icon {
+      @apply
+      block
+      transition-all
+      duration-200
+      ease-in-out
+      scale-125
+      ;
+    }
+
+    &:hover {
+      > .icon {
+        @apply
+        scale-100
+        ;
+      }
     }
   }
 }

@@ -49,6 +49,9 @@
 .icon-32 {
   font-size: 32px;
 }
+.icon-36 {
+  font-size: 36px;
+}
 
 /*------------------------
   spinning icons
@@ -1994,3 +1997,6 @@
   content: "\ebe9";
 }
 
+.icon-twitch::before {
+  content: "\ebea";
+}

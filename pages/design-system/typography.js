@@ -1,11 +1,11 @@
-import DSMainNav from '../../components/DesignSystem/DSMainNav';
+import DSStructure from '../../components/DesignSystem/DSStructure';
 import DSdata from '../api/designsystem/data.json'
 import Head from 'next/head';
 import Topbar from '../../components/Topbar/Topbar';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
-export default function typography() {
+export default function Typography() {
   const router = useRouter();
   const { data, loading } = useFetch('/api/designsystem', { delay: 20 });
 
@@ -19,17 +19,13 @@ export default function typography() {
         
         <Topbar />
 
-        <div className="container flex mx-auto md:space-x-12">
-          <div className="hidden md:block sticky h-screen w-auto md:w-3/12 lg:w-2/12 py-4">
-            <DSMainNav data={DSdata} />
-          </div>
-          <div className="pt-4 pb-8 w-full md:w-9/12 lg:w-10/12">
+        <DSStructure data={DSdata}>
+
             <h1 className='mb-2'>
               Typography
             </h1>
 
             <div className="card rounded-lg p-4">
-
               <div className='border-b border-ui-700 pb-12 mb-12'>
                 <h2 className='h3 mb-10'>
                   Fonts
@@ -83,255 +79,253 @@ export default function typography() {
               </div>
 
 
-              <div className=''>
-                <h2 className='h3 mb-10'>
-                  Hierarchy
-                </h2>
+            <div className=''>
+              <h2 className='h3 mb-10'>
+                Hierarchy
+              </h2>
 
 
-                <div>
-                  {/* h1 */}
-                  <div className='flex items-stretch gap-6 mb-20'>
-                    <div className='w-24 lg:w-40 flex justify-end items-start pt-4'>
-                      <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
-                        headings
-                      </div>
-                    </div>
-                    <div className='w-3/5'>
-                      <div className='h1'>
-                        You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
-                      </div>
-                      <div className='text-sm text-ui-300 mt-4'>
-                       Our main size for headers, usually H1 or similar.
-                      </div>
-                    </div>
-                    <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
-                      font-family: Podium Sharp;<br />
-                      font-size: 56px;<br />
-                      font-style: italic;<br />
-                      font-weight: 700;<br />
-                      line-height: 125%;<br />
+              <div>
+                {/* h1 */}
+                <div className='flex items-stretch gap-6 mb-20'>
+                  <div className='w-24 lg:w-40 flex justify-end items-start pt-4'>
+                    <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
+                      headings
                     </div>
                   </div>
-
-                  {/* h2 */}
-                  <div className='flex items-stretch gap-6 mb-20'>
-                    <div className='w-24 lg:w-40 flex justify-end items-start pt-4'>
-                      <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
-                        headings
-                      </div>
+                  <div className='w-3/5'>
+                    <div className='h1'>
+                      You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
                     </div>
-                    <div className='w-3/5'>
-                      <div className='h2'>
-                        You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
-                      </div>
-                      <div className='text-sm text-ui-300 mt-4'>
-                       Our main size for headers, usually H1 or similar.
-                      </div>
-                    </div>
-                    <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
-                      font-family: Podium Sharp;<br />
-                      font-size: 56px;<br />
-                      font-style: italic;<br />
-                      font-weight: 700;<br />
-                      line-height: 125%;<br />
+                    <div className='text-sm text-ui-300 mt-4'>
+                      Our main size for headers, usually H1 or similar.
                     </div>
                   </div>
-
-                  {/* h3 */}
-                  <div className='flex items-stretch gap-6 mb-20'>
-                    <div className='w-24 lg:w-40 flex justify-end items-start pt-4'>
-                      <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
-                        headings
-                      </div>
-                    </div>
-                    <div className='w-3/5'>
-                      <div className='h3'>
-                        You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
-                      </div>
-                      <div className='text-sm text-ui-300 mt-4'>
-                       Our main size for headers, usually H1 or similar.
-                      </div>
-                    </div>
-                    <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
-                      font-family: Podium Sharp;<br />
-                      font-size: 56px;<br />
-                      font-style: italic;<br />
-                      font-weight: 700;<br />
-                      line-height: 125%;<br />
-                    </div>
+                  <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
+                    font-family: Podium Sharp;<br />
+                    font-size: 56px;<br />
+                    font-style: italic;<br />
+                    font-weight: 700;<br />
+                    line-height: 125%;<br />
                   </div>
-
-                  {/* h4 */}
-                  <div className='flex items-stretch gap-6 mb-20'>
-                    <div className='w-24 lg:w-40 flex justify-end items-start pt-4'>
-                      <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
-                        headings
-                      </div>
-                    </div>
-                    <div className='w-3/5'>
-                      <div className='h4'>
-                        You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
-                      </div>
-                      <div className='text-sm text-ui-300 mt-4'>
-                       Our main size for headers, usually H1 or similar.
-                      </div>
-                    </div>
-                    <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
-                      font-family: Podium Sharp;<br />
-                      font-size: 56px;<br />
-                      font-style: italic;<br />
-                      font-weight: 700;<br />
-                      line-height: 125%;<br />
-                    </div>
-                  </div>
-
-                  {/* h5 */}
-                  <div className='flex items-stretch gap-6 mb-20'>
-                    <div className='w-24 lg:w-40 flex justify-end items-start pt-4'>
-                      <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
-                        headings
-                      </div>
-                    </div>
-                    <div className='w-3/5'>
-                      <div className='h5'>
-                        You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
-                      </div>
-                      <div className='text-sm text-ui-300 mt-4'>
-                       Our main size for headers, usually H1 or similar.
-                      </div>
-                    </div>
-                    <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
-                      font-family: Podium Sharp;<br />
-                      font-size: 56px;<br />
-                      font-style: italic;<br />
-                      font-weight: 700;<br />
-                      line-height: 125%;<br />
-                    </div>
-                  </div>
-
-                  {/* h6 */}
-                  <div className='flex items-stretch gap-6 mb-20'>
-                    <div className='w-24 lg:w-40 flex justify-end items-start pt-4'>
-                      <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
-                        headings
-                      </div>
-                    </div>
-                    <div className='w-3/5'>
-                      <div className='h6'>
-                        You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
-                      </div>
-                      <div className='text-sm text-ui-300 mt-4'>
-                       Our main size for headers, usually H1 or similar.
-                      </div>
-                    </div>
-                    <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
-                      font-family: Podium Sharp;<br />
-                      font-size: 56px;<br />
-                      font-style: italic;<br />
-                      font-weight: 700;<br />
-                      line-height: 125%;<br />
-                    </div>
-                  </div>
-
-
-                  {/* text-lg */}
-                  <div className='flex items-baseline justify-start gap-6 mb-20 text-lg'>
-                    <div className='w-24 lg:w-40 flex justify-end items-start'>
-                      <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
-                        body
-                      </div>
-                    </div>
-                    <div className='w-20 uppercase text-sm text-ui-300'>
-                      Large
-                    </div>
-                    <div>
-                      You can take the girl
-                    </div>
-                    <div className=' font-bold'>
-                      You can take the girl
-                    </div>
-                    <a className='link '>
-                      You can take the girl
-                    </a>
-                  </div>
-
-                  {/* text-md */}
-                  <div className='flex items-baseline justify-start gap-6 mb-20 text-md'>
-                    <div className='w-24 lg:w-40 flex justify-end items-start'>
-                      <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
-                        body
-                      </div>
-                    </div>
-                    <div className='w-20 uppercase text-sm text-ui-300'>
-                      Medium
-                    </div>
-                    <div>
-                      You can take the girl
-                    </div>
-                    <div className=' font-bold'>
-                      You can take the girl
-                    </div>
-                    <a className='link '>
-                      You can take the girl
-                    </a>
-                  </div>
-
-                  {/* text-sm */}
-                  <div className='flex items-baseline justify-start gap-6 mb-20 text-sm'>
-                    <div className='w-24 lg:w-40 flex justify-end items-start'>
-                      <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
-                        body
-                      </div>
-                    </div>
-                    <div className='w-20 uppercase text-sm text-ui-300'>
-                      Small
-                    </div>
-                    <div>
-                      You can take the girl
-                    </div>
-                    <div className=' font-bold'>
-                      You can take the girl
-                    </div>
-                    <a className='link '>
-                      You can take the girl
-                    </a>
-                  </div>
-
-                  {/* text-xs */}
-                  <div className='flex items-baseline justify-start gap-6 mb-20 text-xs'>
-                    <div className='w-24 lg:w-40 flex justify-end items-start'>
-                      <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
-                        body
-                      </div>
-                    </div>
-                    <div className='w-20 uppercase text-sm text-ui-300'>
-                      Extra small
-                    </div>
-                    <div>
-                      You can take the girl
-                    </div>
-                    <div className=' font-bold'>
-                      You can take the girl
-                    </div>
-                    <a className='link '>
-                      You can take the girl
-                    </a>
-                  </div>
-
-
-
-
                 </div>
-              </div>
 
+                {/* h2 */}
+                <div className='flex items-stretch gap-6 mb-20'>
+                  <div className='w-24 lg:w-40 flex justify-end items-start pt-4'>
+                    <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
+                      headings
+                    </div>
+                  </div>
+                  <div className='w-3/5'>
+                    <div className='h2'>
+                      You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
+                    </div>
+                    <div className='text-sm text-ui-300 mt-4'>
+                      Our main size for headers, usually H1 or similar.
+                    </div>
+                  </div>
+                  <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
+                    font-family: Podium Sharp;<br />
+                    font-size: 56px;<br />
+                    font-style: italic;<br />
+                    font-weight: 700;<br />
+                    line-height: 125%;<br />
+                  </div>
+                </div>
+
+                {/* h3 */}
+                <div className='flex items-stretch gap-6 mb-20'>
+                  <div className='w-24 lg:w-40 flex justify-end items-start pt-4'>
+                    <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
+                      headings
+                    </div>
+                  </div>
+                  <div className='w-3/5'>
+                    <div className='h3'>
+                      You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
+                    </div>
+                    <div className='text-sm text-ui-300 mt-4'>
+                      Our main size for headers, usually H1 or similar.
+                    </div>
+                  </div>
+                  <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
+                    font-family: Podium Sharp;<br />
+                    font-size: 56px;<br />
+                    font-style: italic;<br />
+                    font-weight: 700;<br />
+                    line-height: 125%;<br />
+                  </div>
+                </div>
+
+                {/* h4 */}
+                <div className='flex items-stretch gap-6 mb-20'>
+                  <div className='w-24 lg:w-40 flex justify-end items-start pt-4'>
+                    <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
+                      headings
+                    </div>
+                  </div>
+                  <div className='w-3/5'>
+                    <div className='h4'>
+                      You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
+                    </div>
+                    <div className='text-sm text-ui-300 mt-4'>
+                      Our main size for headers, usually H1 or similar.
+                    </div>
+                  </div>
+                  <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
+                    font-family: Podium Sharp;<br />
+                    font-size: 56px;<br />
+                    font-style: italic;<br />
+                    font-weight: 700;<br />
+                    line-height: 125%;<br />
+                  </div>
+                </div>
+
+                {/* h5 */}
+                <div className='flex items-stretch gap-6 mb-20'>
+                  <div className='w-24 lg:w-40 flex justify-end items-start pt-4'>
+                    <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
+                      headings
+                    </div>
+                  </div>
+                  <div className='w-3/5'>
+                    <div className='h5'>
+                      You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
+                    </div>
+                    <div className='text-sm text-ui-300 mt-4'>
+                      Our main size for headers, usually H1 or similar.
+                    </div>
+                  </div>
+                  <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
+                    font-family: Podium Sharp;<br />
+                    font-size: 56px;<br />
+                    font-style: italic;<br />
+                    font-weight: 700;<br />
+                    line-height: 125%;<br />
+                  </div>
+                </div>
+
+                {/* h6 */}
+                <div className='flex items-stretch gap-6 mb-20'>
+                  <div className='w-24 lg:w-40 flex justify-end items-start pt-4'>
+                    <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
+                      headings
+                    </div>
+                  </div>
+                  <div className='w-3/5'>
+                    <div className='h6'>
+                      You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
+                    </div>
+                    <div className='text-sm text-ui-300 mt-4'>
+                      Our main size for headers, usually H1 or similar.
+                    </div>
+                  </div>
+                  <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
+                    font-family: Podium Sharp;<br />
+                    font-size: 56px;<br />
+                    font-style: italic;<br />
+                    font-weight: 700;<br />
+                    line-height: 125%;<br />
+                  </div>
+                </div>
+
+
+                {/* text-lg */}
+                <div className='flex items-baseline justify-start gap-6 mb-20 text-lg'>
+                  <div className='w-24 lg:w-40 flex justify-end items-start'>
+                    <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
+                      body
+                    </div>
+                  </div>
+                  <div className='w-20 uppercase text-sm text-ui-300'>
+                    Large
+                  </div>
+                  <div>
+                    You can take the girl
+                  </div>
+                  <div className=' font-bold'>
+                    You can take the girl
+                  </div>
+                  <a className='link '>
+                    You can take the girl
+                  </a>
+                </div>
+
+                {/* text-md */}
+                <div className='flex items-baseline justify-start gap-6 mb-20 text-md'>
+                  <div className='w-24 lg:w-40 flex justify-end items-start'>
+                    <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
+                      body
+                    </div>
+                  </div>
+                  <div className='w-20 uppercase text-sm text-ui-300'>
+                    Medium
+                  </div>
+                  <div>
+                    You can take the girl
+                  </div>
+                  <div className=' font-bold'>
+                    You can take the girl
+                  </div>
+                  <a className='link '>
+                    You can take the girl
+                  </a>
+                </div>
+
+                {/* text-sm */}
+                <div className='flex items-baseline justify-start gap-6 mb-20 text-sm'>
+                  <div className='w-24 lg:w-40 flex justify-end items-start'>
+                    <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
+                      body
+                    </div>
+                  </div>
+                  <div className='w-20 uppercase text-sm text-ui-300'>
+                    Small
+                  </div>
+                  <div>
+                    You can take the girl
+                  </div>
+                  <div className=' font-bold'>
+                    You can take the girl
+                  </div>
+                  <a className='link '>
+                    You can take the girl
+                  </a>
+                </div>
+
+                {/* text-xs */}
+                <div className='flex items-baseline justify-start gap-6 mb-20 text-xs'>
+                  <div className='w-24 lg:w-40 flex justify-end items-start'>
+                    <div className='rounded-full bg-ui-600 border border-ui-500 py-1 px-2 uppercase text-xs text-ui-300'>
+                      body
+                    </div>
+                  </div>
+                  <div className='w-20 uppercase text-sm text-ui-300'>
+                    Extra small
+                  </div>
+                  <div>
+                    You can take the girl
+                  </div>
+                  <div className=' font-bold'>
+                    You can take the girl
+                  </div>
+                  <a className='link '>
+                    You can take the girl
+                  </a>
+                </div>
+
+
+
+
+              </div>
             </div>
 
-
-            
           </div>
           
-        </div>
+        </DSStructure>
+
+        
     </div>
   );
 }
