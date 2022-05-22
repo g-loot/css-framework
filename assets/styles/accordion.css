@@ -1,0 +1,116 @@
+/*----------------------------*/
+/* ACCORDION */
+/*----------------------------*/
+
+.accordion {
+  @apply
+  overflow-hidden
+  ;
+  &:not([class*='rounded']) {
+    @apply
+    rounded
+    ;
+  }
+
+  > .accordion-item {
+    &:not(:first-child) {
+      @apply
+      border-t
+      border-ui-700
+      ;
+    }
+  }
+  .accordion-header {
+    @apply
+    px-4
+    py-3
+    leading-none
+    font-headings
+    uppercase
+    text-ui-300
+    flex
+    gap-2
+    items-center
+    select-none
+    ;
+    .icon[class*='down']{
+      @apply
+      transition
+      transform-gpu
+      duration-500
+      text-ui-400
+      ease-[cubic-bezier(.7,0,.3,1)]
+      ;
+    }
+  }
+  .accordion-collapse {
+    @apply
+    overflow-hidden
+    transition-all
+    transform-gpu
+    duration-500
+    ease-[cubic-bezier(.7,0,.3,1)]
+    ;
+
+    > div {
+      @apply
+      border-t
+      border-ui-700
+      ;
+    }
+  }
+
+  .accordion-item {
+    &:hover {
+      [aria-controls] {
+        @apply
+        cursor-pointer
+        transition
+        duration-500
+        ease-[cubic-bezier(.7,0,.3,1)]
+        ;
+    
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          &:hover,
+          &:focus-visible {
+            @apply 
+            opacity-100
+            ;
+          }
+          &:active {
+            @apply
+            opacity-25
+            ;
+          }
+        }
+      }
+      &:not(.is-active) {
+        .accordion-header {
+          @apply
+          bg-ui-700/25
+          ;
+        }
+      }
+    }
+
+    &.is-active {
+      .accordion-header {
+        @apply
+        text-interaction-500
+        bg-ui-700
+        ;
+        .icon[class*='down']{
+          @apply
+          text-ui-300
+          -rotate-180
+          ;
+        }
+      }
+    }
+  }
+
+  
+
+  
+}

@@ -1,5 +1,6 @@
 import DSStructure from '../../components/DesignSystem/DSStructure';
 import DSdata from '../api/designsystem/data.json'
+import DSicons from '../api/designsystem/icons.json'
 import Head from 'next/head';
 import Topbar from '../../components/Topbar/Topbar';
 import useFetch from '../../hooks/use-fetch';
@@ -28,7 +29,7 @@ export default function Icons() {
 
           <div className="flex flex-wrap gap-2">
           
-            {DSdata.icons.map((item, i) => (
+            {DSicons.icons.map((item, i) => (
 
               <div className="card card-alt rounded-lg text-0  w-40 h-40 inline-flex flex-col justify-center items-center relative transition hover:scale(105) hover:opacity-50 cursor-pointer" onClick={() => {navigator.clipboard.writeText(item.name)}}>
                 <span className={`icon block icon-32 color-dark-200 hover:color-white icon-${item.name}`}></span>

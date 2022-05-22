@@ -2,7 +2,6 @@ import DSMainNav from '../../components/DesignSystem/DSMainNav';
 import { useRouter } from 'next/router'
 
 export default function DSStructure({children, data}) {
-  console.log(data);
   const router = useRouter();
   return (
     <>

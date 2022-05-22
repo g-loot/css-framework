@@ -55,7 +55,7 @@ export default function Scrollbars() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/h90quLwa/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/h90quLwa/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
@@ -92,7 +92,7 @@ export default function Scrollbars() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/0um5type/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/0um5type/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>

@@ -234,10 +234,6 @@ textarea,
     &:focus-visible {
       input {
         + .form-icon {
-          @apply
-          bg-ui-800
-          outline-ui-400/75
-          ;
           &::after {
             @apply
             scale-75
@@ -247,12 +243,16 @@ textarea,
       }
       input:checked {
         + .form-icon {
-          
+          @apply
+          outline-interaction-300
+          ;
         }
       }
       input:not(:checked) {
         + .form-icon {
-          
+          @apply
+          bg-ui-800
+          ;
         }
       }
     }

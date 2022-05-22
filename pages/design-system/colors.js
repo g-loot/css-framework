@@ -1,4 +1,5 @@
 import DSStructure from '../../components/DesignSystem/DSStructure';
+import DScolors from '../api/designsystem/colors.json'
 import DSdata from '../api/designsystem/data.json'
 import Head from 'next/head';
 import Topbar from '../../components/Topbar/Topbar';
@@ -25,7 +26,7 @@ export default function Colors() {
             Colors
           </h1>
 
-          {DSdata.colors.map((item, i) => (
+          {DScolors.colors.map((item, i) => (
             <div className="mb-8">
               <div className="">
                 <h2 className='text-3xl mb-2'>

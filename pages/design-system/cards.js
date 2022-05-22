@@ -43,7 +43,7 @@ export default function Cards() {
                 <div className='flex-1 card rounded-lg aspect-square'>
                 </div>
                 <div className='flex-1'>
-                  <iframe className="rounded-lg" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/zvsfkj25/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                  <iframe className="rounded-lg" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/zvsfkj25/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                 </div>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function Cards() {
                   </div>
                 </div>
                 <div className='flex-1'>
-                  <iframe className="rounded-lg" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/ucvtxz19/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+                  <iframe className="rounded-lg" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/ucvtxz19/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                 </div>
               </div>
             </div>

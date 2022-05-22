@@ -16,8 +16,7 @@
   items-center
   bg-main
   cursor-pointer
-  py-2.5
-  px-3
+  p-2.5
   min-h-4
   transition-all
   duration-200
@@ -45,6 +44,21 @@
     font-headings
     tracking-wide
     ;
+    &:first-child {
+      @apply
+      ml-0.5
+      ;
+    }
+    &:last-child {
+      @apply
+      mr-0.5
+      ;
+    }
+    &:first-child:last-child {
+      @apply
+      mx-0
+      ;
+    }
   }
 
   &:not([disabled]),
@@ -180,6 +194,7 @@
       duration-200
       ease-in-out
       scale-150
+      ml-0
       ;
     }
 

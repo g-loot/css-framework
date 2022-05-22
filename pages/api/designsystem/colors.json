@@ -1,0 +1,432 @@
+{
+  "colors": [{
+      "title": "Base / UI",
+      "title_short": "Base UI",
+      "title_data": "base.ui",
+      "colors": [{
+          "name": "Base UI",
+          "value": "bg-ui-100",
+          "number": "100",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-200",
+          "number": "200",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-300",
+          "number": "300",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-400",
+          "number": "400",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-500",
+          "number": "500",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-600",
+          "number": "600",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-700",
+          "number": "700",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-800",
+          "number": "800",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-850",
+          "number": "800",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base UI",
+          "value": "bg-ui-900",
+          "number": "900",
+          "data": "",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "Base / Mono",
+      "title_short": "Base Mono",
+      "title_data": "base.mono",
+      "colors": [{
+          "name": "Base Mono",
+          "value": "bg-mono-100",
+          "number": "100",
+          "data": "",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Base Mono",
+          "value": "bg-mono-900",
+          "number": "900",
+          "data": "",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "Brand",
+      "title_short": "Brand",
+      "title_data": "brand.main",
+      "colors": [{
+        "name": "Brand",
+        "value": "bg-main",
+        "number": "500",
+        "data": "brand.main",
+        "hex": "#F3F3F6"
+      }]
+    },
+    {
+      "title": "Brand / premium",
+      "title_short": "Brand",
+      "title_data": "brand.premium",
+      "colors": [{
+          "name": "Premium Light",
+          "value": "bg-premium-300",
+          "number": "300",
+          "data": "brand.premium.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Premium Medium",
+          "value": "bg-premium-500",
+          "number": "500",
+          "data": "brand.premium.medium",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Premium Dark",
+          "value": "bg-premium-700",
+          "number": "700",
+          "data": "brand.premium.dark",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "Brand / interaction",
+      "title_short": "Brand",
+      "title_data": "brand.interaction",
+      "colors": [{
+          "name": "Interaction Light",
+          "value": "bg-interaction-300",
+          "number": "300",
+          "data": "brand.interaction.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Interaction Medium",
+          "value": "bg-interaction-500",
+          "number": "500",
+          "data": "brand.interaction.medium",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Interaction Dark",
+          "value": "bg-interaction-700",
+          "number": "700",
+          "data": "brand.interaction.dark",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "Decorative",
+      "title_short": "Decorative",
+      "title_data": "decorative",
+      "colors": [{
+          "name": "Blue Light",
+          "value": "bg-blue-300",
+          "number": "300",
+          "data": "decorative.blue.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Blue Medium",
+          "value": "bg-blue-500",
+          "number": "500",
+          "data": "decorative.blue.medium",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Blue Dark",
+          "value": "bg-blue-700",
+          "number": "700",
+          "data": "decorative.blue.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Purple Light",
+          "value": "bg-purple-300",
+          "number": "300",
+          "data": "decorative.purple.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Purple Medium",
+          "value": "bg-purple-500",
+          "number": "500",
+          "data": "decorative.purple.medium",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Purple Dark",
+          "value": "bg-purple-700",
+          "number": "700",
+          "data": "decorative.purple.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Teal Light",
+          "value": "bg-teal-300",
+          "number": "300",
+          "data": "decorative.teal.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Teal Medium",
+          "value": "bg-teal-500",
+          "number": "500",
+          "data": "decorative.teal.medium",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Teal Dark",
+          "value": "bg-teal-700",
+          "number": "700",
+          "data": "decorative.teal.dark",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "Decorative / gradient",
+      "title_short": "decorative",
+      "colors": [{
+          "name": "Teal blue",
+          "value": "bg-gradient-to-r from-teal-500 to-blue-500",
+          "number": "300",
+          "data": "decorative.gradient.teal-blue",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Purple blue",
+          "value": "bg-gradient-to-r from-purple-500 to-blue-500",
+          "number": "500",
+          "data": "decorative.gradient.purple-blue",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "System",
+      "title_short": "system",
+      "colors": [{
+          "name": "Attention Light",
+          "value": "bg-attention-300",
+          "number": "300",
+          "data": "system.attention.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Attention Main",
+          "value": "bg-attention-500",
+          "number": "500",
+          "data": "system.attention.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Attention Dark",
+          "value": "bg-attention-700",
+          "number": "700",
+          "data": "system.attention.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Success Light",
+          "value": "bg-success-300",
+          "number": "300",
+          "data": "system.success.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Success Main",
+          "value": "bg-success-500",
+          "number": "500",
+          "data": "system.success.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Success Dark",
+          "value": "bg-success-700",
+          "number": "700",
+          "data": "system.success.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Info Light",
+          "value": "bg-info-300",
+          "number": "300",
+          "data": "system.info.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Info Main",
+          "value": "bg-info-500",
+          "number": "500",
+          "data": "system.info.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Info Dark",
+          "value": "bg-info-700",
+          "number": "700",
+          "data": "system.info.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Error Light",
+          "value": "bg-error-300",
+          "number": "300",
+          "data": "system.error.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Error Main",
+          "value": "bg-error-500",
+          "number": "500",
+          "data": "system.error.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Error Dark",
+          "value": "bg-error-700",
+          "number": "700",
+          "data": "system.error.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Disabled Light",
+          "value": "bg-disabled-300",
+          "number": "300",
+          "data": "system.disabled.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Disabled Main",
+          "value": "bg-disabled-500",
+          "number": "500",
+          "data": "system.disabled.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Disabled Dark",
+          "value": "bg-disabled-700",
+          "number": "700",
+          "data": "system.disabled.dark",
+          "hex": "#F3F3F6"
+        }
+      ]
+    },
+    {
+      "title": "Reward",
+      "title_short": "reward",
+      "colors": [
+        {
+          "name": "Gold Light",
+          "value": "bg-gold-300",
+          "number": "300",
+          "data": "reward.gold.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Gold Main",
+          "value": "bg-gold-500",
+          "number": "500",
+          "data": "reward.gold.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Gold Dark",
+          "value": "bg-gold-700",
+          "number": "700",
+          "data": "reward.gold.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Silver Light",
+          "value": "bg-silver-300",
+          "number": "300",
+          "data": "reward.silver.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Silver Main",
+          "value": "bg-silver-500",
+          "number": "500",
+          "data": "reward.silver.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Silver Dark",
+          "value": "bg-silver-700",
+          "number": "700",
+          "data": "reward.silver.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Bronze Light",
+          "value": "bg-bronze-300",
+          "number": "300",
+          "data": "reward.bronze.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Bronze Main",
+          "value": "bg-bronze-500",
+          "number": "500",
+          "data": "reward.bronze.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Bronze Dark",
+          "value": "bg-bronze-700",
+          "number": "700",
+          "data": "reward.bronze.dark",
+          "hex": "#F3F3F6"
+        }
+      ]
+    }
+  ]
+}
