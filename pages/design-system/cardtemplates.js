@@ -1,7 +1,7 @@
+import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
+import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
-import Head from 'next/head';
-import Topbar from '../../components/Topbar/Topbar';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
@@ -11,13 +11,9 @@ export default function CardTemplates() {
 
   return (
     <div>
-        <Head>
-          <title>Gnog Prototype</title>
-          <meta name="description" content="Internal playground" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <DSHead title='Card templates' />
         
-        <Topbar />
+        <DSTopBar />
 
         <DSStructure data={DSdata}>
           <h1 className='mb-2'>
@@ -48,8 +44,8 @@ export default function CardTemplates() {
                           Get 22 kills
                         </div>
                         <div className='card-meta'>
-                          <div class='chip chip-reward chip-xp chip-sm chip-inverted'>
-                            <span class='icon icon-xp-symbol-outline'></span>
+                          <div className='chip chip-reward chip-xp chip-sm chip-inverted'>
+                            <span className='icon icon-xp-symbol-outline'></span>
                             <span>100</span>
                           </div>
                           <div>
@@ -66,7 +62,7 @@ export default function CardTemplates() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/05mw2vj6/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/16r43ftn/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
@@ -85,8 +81,8 @@ export default function CardTemplates() {
                           Get 22 kills
                         </div>
                         <div className='card-meta'>
-                          <div class='chip chip-reward chip-xp chip-sm chip-inverted'>
-                            <span class='icon icon-xp-symbol-outline'></span>
+                          <div className='chip chip-reward chip-xp chip-sm chip-inverted'>
+                            <span className='icon icon-xp-symbol-outline'></span>
                             <span>100</span>
                           </div>
                           <div>
@@ -98,7 +94,7 @@ export default function CardTemplates() {
                         </div>
                       </div>
                       <div className="card-bg">
-                        <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1638737621/Marketing/202109_gloot2/mission-valorant_3.jpg)`}}></span>
+                        <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1638737621/Marketing/202109_gloot2/mission-valorant_1.jpg)`}}></span>
                       </div>
                     </div>
                   </div>
@@ -119,8 +115,8 @@ export default function CardTemplates() {
                       <div className='w-1/4 text-ui-400 text-right'>
                         Normal
                       </div>
-                      <div class='chip chip-reward chip-ticket'>
-                        <span class='icon icon-ticket'></span>
+                      <div className='chip chip-reward chip-ticket'>
+                        <span className='icon icon-ticket'></span>
                         <span>1</span>
                       </div>
                     </div>
@@ -128,8 +124,8 @@ export default function CardTemplates() {
                       <div className='w-1/4 text-ui-400 text-right'>
                       Inverted
                       </div>
-                      <div class='chip chip-reward chip-ticket chip-inverted'>
-                        <span class='icon icon-ticket'></span>
+                      <div className='chip chip-reward chip-ticket chip-inverted'>
+                        <span className='icon icon-ticket'></span>
                         <span>1</span>
                       </div>
                     </div>
@@ -152,24 +148,24 @@ export default function CardTemplates() {
                       <div className='w-1/4 text-ui-400 text-right'>
                         Small
                       </div>
-                      <div class='chip chip-reward chip-ticket chip-inverted chip-sm'>
-                        <span class='icon icon-ticket'></span>
+                      <div className='chip chip-reward chip-ticket chip-inverted chip-sm'>
+                        <span className='icon icon-ticket'></span>
                         <span>1 ticket</span>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
                       </div>
-                      <div class='chip chip-reward chip-xp chip-inverted chip-sm'>
-                        <span class='icon icon-xp-symbol-outline'></span>
+                      <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
+                        <span className='icon icon-xp-symbol-outline'></span>
                         <span>500 XP</span>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
                       </div>
-                      <div class='chip chip-reward chip-token chip-inverted chip-sm'>
-                        <span class='icon icon-token'></span>
+                      <div className='chip chip-reward chip-token chip-inverted chip-sm'>
+                        <span className='icon icon-token'></span>
                         <span>500 tokens</span>
                       </div>
                     </div>

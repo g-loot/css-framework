@@ -8,9 +8,7 @@ const StyledLeftMenu = styled.div`
 export default function LeftMenu() {
   return (
     <StyledLeftMenu>
-      <div>
-        qsdqsd
-      </div>
+      
     </StyledLeftMenu>
   );
 }

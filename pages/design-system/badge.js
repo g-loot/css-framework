@@ -1,7 +1,7 @@
+import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
+import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
-import Head from 'next/head';
-import Topbar from '../../components/Topbar/Topbar';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
@@ -11,13 +11,9 @@ export default function Badge() {
 
   return (
     <div>
-        <Head>
-          <title>Gnog Prototype</title>
-          <meta name="description" content="Internal playground" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <DSHead title='Badge' />
         
-        <Topbar />
+        <DSTopBar />
 
         <DSStructure data={DSdata}>
           <h1 className='mb-2'>

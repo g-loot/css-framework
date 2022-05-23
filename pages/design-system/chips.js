@@ -1,7 +1,7 @@
+import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
+import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
-import Head from 'next/head';
-import Topbar from '../../components/Topbar/Topbar';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
@@ -11,13 +11,9 @@ export default function Chips() {
 
   return (
     <div>
-        <Head>
-          <title>Gnog Prototype</title>
-          <meta name="description" content="Internal playground" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <DSHead title='Chips' />
         
-        <Topbar />
+        <DSTopBar />
 
         <DSStructure data={DSdata}>
 
@@ -200,8 +196,8 @@ export default function Chips() {
                       <div className='w-1/4 text-ui-400 text-right'>
                         Normal
                       </div>
-                      <div class='chip chip-reward chip-xp'>
-                        <span class='icon icon-xp-symbol-outline'></span>
+                      <div className='chip chip-reward chip-xp'>
+                        <span className='icon icon-xp-symbol-outline'></span>
                         <span>500</span>
                       </div>
                     </div>
@@ -209,8 +205,8 @@ export default function Chips() {
                       <div className='w-1/4 text-ui-400 text-right'>
                       Inverted
                       </div>
-                      <div class='chip chip-reward chip-xp chip-inverted'>
-                        <span class='icon icon-xp-symbol-outline'></span>
+                      <div className='chip chip-reward chip-xp chip-inverted'>
+                        <span className='icon icon-xp-symbol-outline'></span>
                         <span>500</span>
                       </div>
                     </div>
@@ -232,8 +228,8 @@ export default function Chips() {
                       <div className='w-1/4 text-ui-400 text-right'>
                         Normal
                       </div>
-                      <div class='chip chip-reward chip-token'>
-                        <span class='icon icon-token'></span>
+                      <div className='chip chip-reward chip-token'>
+                        <span className='icon icon-token'></span>
                         <span>10</span>
                       </div>
                     </div>
@@ -241,8 +237,8 @@ export default function Chips() {
                       <div className='w-1/4 text-ui-400 text-right'>
                       Inverted
                       </div>
-                      <div class='chip chip-reward chip-token chip-inverted'>
-                        <span class='icon icon-token'></span>
+                      <div className='chip chip-reward chip-token chip-inverted'>
+                        <span className='icon icon-token'></span>
                         <span>10</span>
                       </div>
                     </div>
@@ -264,8 +260,8 @@ export default function Chips() {
                       <div className='w-1/4 text-ui-400 text-right'>
                         Normal
                       </div>
-                      <div class='chip chip-reward chip-ticket'>
-                        <span class='icon icon-ticket'></span>
+                      <div className='chip chip-reward chip-ticket'>
+                        <span className='icon icon-ticket'></span>
                         <span>1</span>
                       </div>
                     </div>
@@ -273,8 +269,8 @@ export default function Chips() {
                       <div className='w-1/4 text-ui-400 text-right'>
                       Inverted
                       </div>
-                      <div class='chip chip-reward chip-ticket chip-inverted'>
-                        <span class='icon icon-ticket'></span>
+                      <div className='chip chip-reward chip-ticket chip-inverted'>
+                        <span className='icon icon-ticket'></span>
                         <span>1</span>
                       </div>
                     </div>
@@ -297,24 +293,24 @@ export default function Chips() {
                       <div className='w-1/4 text-ui-400 text-right'>
                         Small
                       </div>
-                      <div class='chip chip-reward chip-ticket chip-inverted chip-sm'>
-                        <span class='icon icon-ticket'></span>
+                      <div className='chip chip-reward chip-ticket chip-inverted chip-sm'>
+                        <span className='icon icon-ticket'></span>
                         <span>1 ticket</span>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
                       </div>
-                      <div class='chip chip-reward chip-xp chip-inverted chip-sm'>
-                        <span class='icon icon-xp-symbol-outline'></span>
+                      <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
+                        <span className='icon icon-xp-symbol-outline'></span>
                         <span>500 XP</span>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
                       </div>
-                      <div class='chip chip-reward chip-token chip-inverted chip-sm'>
-                        <span class='icon icon-token'></span>
+                      <div className='chip chip-reward chip-token chip-inverted chip-sm'>
+                        <span className='icon icon-token'></span>
                         <span>500 tokens</span>
                       </div>
                     </div>

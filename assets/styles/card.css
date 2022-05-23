@@ -278,14 +278,15 @@
   items-stretch
   justify-between
   mx-auto
+  min-w-xs
   ;
 
   .card-info {
     @apply
     relative
     z-20
-    bg-ui-900/50
-    backdrop-blur
+    bg-ui-900/75
+    backdrop-blur-sm
     p-2
     ;
 
@@ -295,6 +296,8 @@
       italic
       text-xl
       leading-none
+      mt-1
+      mb-2
       ;
     }
     .card-meta {
@@ -304,8 +307,8 @@
       justify-between
       text-sm
       text-ui-200
-      py-2
-      mb-0.5
+      
+      mb-2.5
       ;
 
       > * {
@@ -329,7 +332,9 @@
   }
 
   &.card-locked {
-
+    @apply
+    pointer-events-none
+    ;
     .card-decoration {
       @apply 
       flex
@@ -349,7 +354,6 @@
         h-10
         bg-gradient-to-b
         from-premium-300
-        via-premium-300
         to-premium-500
         text-ui-800
         ;
@@ -371,7 +375,7 @@
         via-ui-800
         to-ui-700
         text-premium-300
-        shadow-[0_0_0_1.5px_rgb(var(--color-premium-300))]
+        shadow-[0_0_0_1px_rgb(var(--color-premium-300))]
         text-center
         leading-[2]
         ;
@@ -391,7 +395,7 @@
         absolute
         z-10
         -inset-px
-        bg-ui-800/50
+        bg-ui-800/75
       }
     }
   }
@@ -406,6 +410,35 @@
     bg-cover
     -inset-px
     bg-no-repeat
+    ;
+  }
+}
+
+.card-interactive {
+  @apply
+  cursor-pointer
+  ;
+  .card-bg {
+    * {
+      @apply
+      transition-all
+      duration-500
+      ease-[cubic-bezier(0.7,0,0.3,1)]
+      ;
+    }
+  }
+  &:hover {
+    .card-bg {
+      * {
+        @apply
+        scale-110
+        ;
+      }
+    }
+  }
+  &:active {
+    @apply
+    opacity-25
     ;
   }
 }

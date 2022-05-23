@@ -1,8 +1,8 @@
 import Accordion from '../../components/Accordion/Accordion';
+import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
+import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
-import Head from 'next/head';
-import Topbar from '../../components/Topbar/Topbar';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
@@ -12,13 +12,9 @@ export default function AccordionDS() {
 
   return (
     <div>
-        <Head>
-          <title>Gnog Prototype</title>
-          <meta name="description" content="Internal playground" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        
-        <Topbar />
+        <DSHead title='Accordion' />
+
+        <DSTopBar />
 
         <DSStructure data={DSdata}>
 

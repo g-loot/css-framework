@@ -1,7 +1,7 @@
+import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
+import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
-import Head from 'next/head';
-import Topbar from '../../components/Topbar/Topbar';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
@@ -11,13 +11,9 @@ export default function FormExample() {
 
   return (
     <div>
-        <Head>
-          <title>Gnog Prototype</title>
-          <meta name="description" content="Internal playground" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <DSHead title='Form example' />
         
-        <Topbar />
+        <DSTopBar />
 
 
         <DSStructure data={DSdata}>
@@ -40,8 +36,8 @@ export default function FormExample() {
                       </div>
                       <div className="flex-1 form-group">
                         <label for="email">Email</label>
-                        <div class='input-group'>
-                          <button class='button button-sm button-tertiary'>
+                        <div className='input-group'>
+                          <button className='button button-sm button-tertiary'>
                             <span>Change</span>
                           </button>
                           <input type="password" name="password" id="password" />
@@ -60,10 +56,10 @@ export default function FormExample() {
                     <div className='form-group'>
                       <label for="avatar">Avatar</label>
                       <div className='flex items-center gap-4'>
-                        <figure class='avatar avatar-simple'>
+                        <figure className='avatar avatar-simple'>
                           <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
                         </figure>
-                        <button class='button button-sm button-secondary'>
+                        <button className='button button-sm button-secondary'>
                           <span>Change</span>
                         </button>
                       </div>
@@ -74,14 +70,14 @@ export default function FormExample() {
                         <div className='text-ui-500'>
                           <span className='icon icon-image icon-36'></span>
                         </div>
-                        <div class="flex justify-center text-ui-200">
-                          <label for="file-upload" class="relative cursor-pointer rounded-md font-medium text-interaction-500 hover:text-interaction-300 focus-within:outline-none">
+                        <div className="flex justify-center text-ui-200">
+                          <label for="file-upload" className="relative cursor-pointer rounded-md font-medium text-interaction-500 hover:text-interaction-300 focus-within:outline-none">
                             <span>Upload a file</span>
-                            <input id="file-upload" name="file-upload" type="file" class="sr-only" />
+                            <input id="file-upload" name="file-upload" type="file" className="sr-only" />
                           </label>
-                          <p class="pl-1">or drag and drop</p>
+                          <p className="pl-1">or drag and drop</p>
                         </div>
-                        <p class="text-sm text-ui-400">PNG, JPG, GIF up to 10MB</p>
+                        <p className="text-sm text-ui-400">PNG, JPG, GIF up to 10MB</p>
                       </div>
                     </div>
                   </section>
@@ -106,7 +102,7 @@ export default function FormExample() {
                     <div className='form-group flex items-center gap-2'>
                       <label for="social-discord" className='flex-1'>Discord:</label>
                       <div className="flex-3 input-group">
-                        <button class='button button-sm button-tertiary'>
+                        <button className='button button-sm button-tertiary'>
                           <span>Connect</span>
                         </button>
                         <span className="icon icon-discord"></span>
@@ -117,7 +113,7 @@ export default function FormExample() {
                       <label for="social-steam" className='flex-1 -mt-4'>Steam:</label>
                       <div className="flex-3">
                         <div className='input-group'>
-                          <button class='button button-sm button-secondary'>
+                          <button className='button button-sm button-secondary'>
                             <span>Login with steam</span>
                           </button>
                           <span className="icon icon-steam"></span>
@@ -159,10 +155,10 @@ export default function FormExample() {
                     </div>
                   </section>
                   <section className='mt-8 pt-8 border-t border-ui-600 flex gap-4'>
-                    <button class='flex-1 button button-primary'>
+                    <button className='flex-1 button button-primary'>
                       <span>Save</span>
                     </button>
-                    <button class='flex-1 button button-secondary'>
+                    <button className='flex-1 button button-secondary'>
                       <span>Reset</span>
                     </button>
                   </section>
