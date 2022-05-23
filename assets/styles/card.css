@@ -280,7 +280,6 @@
   mx-auto
   min-w-xs
   ;
-
   .card-info {
     @apply
     relative
@@ -322,11 +321,53 @@
   }
 
   &.card-locked,
-  &.card-premium {
+  &.card-unlocked {
     .progressbar {
       > * {
         background-image: linear-gradient(to right, rgb(var(--color-premium-300)) 0px, rgb(var(--color-premium-700)) 200px, rgb(var(--color-premium-300)) 400px);
-        
+      }
+    }
+    .card-decoration {
+      @apply 
+      flex
+      flex-1
+      items-center
+      z-20
+      -inset-px
+      ;
+      > img {
+        @apply
+        relative
+        z-30
+        h-auto
+        max-h-[50%]
+        ;
+      }
+    }
+  }
+
+  &.card-unlocked {
+    .card-decoration {
+      @apply
+      items-start
+      ;
+      &::after {
+        @apply
+        font-icon
+        text-3xl
+        content-['\ebe9']
+        absolute
+        right-1
+        top-1
+        leading-none
+        z-10
+        rounded-full
+        bg-gradient-to-b
+        from-ui-500
+        to-ui-800
+        text-premium-300
+        drop-shadow-[0_3px_1.5px_rgba(0,0,0,0.5)]
+        ;
       }
     }
   }
@@ -335,14 +376,18 @@
     @apply
     pointer-events-none
     ;
+
     .card-decoration {
       @apply 
-      flex
-      flex-1
-      z-20
-      -inset-px
       drop-shadow-[0_3px_1.5px_rgba(0,0,0,0.5)]
       ;
+      > img {
+        @apply
+        w-auto
+        mx-auto
+        translate-y-4
+        ;
+      }
       &::before {
         @apply
         content-['']

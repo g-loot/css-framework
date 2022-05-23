@@ -88,6 +88,7 @@
       &:not(.is-active) {
         .accordion-header {
           @apply
+          text-ui-200
           bg-ui-700/25
           ;
         }

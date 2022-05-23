@@ -23,7 +23,7 @@ export default function Home() {
         </Head>
         
         <div className='absolute z-20 inset-0 flex items-center justify-center'>
-          <div className='backdrop-blur bg-ui-900/50 rounded-3xl p-4'>
+          <div className='backdrop-blur bg-ui-900/50 rounded-3xl p-4 xl:w-1/2'>
             <img className='mx-auto mt-4 mb-8' width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
             <div className='flex flex-col lg:flex-row gap-4'>
               <a href='design-system/introduction' className='card-mission card-interactive card-ui-700'>
