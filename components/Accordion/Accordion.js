@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 
 export default function Button(props) {
 
-
-  const [count, setCount] = useState(0);
   const [isActive, setActive] = useState(false);
   const elementRef = useRef(null);
 

@@ -15,7 +15,7 @@ export default function Brawl() {
       <Head>
         <title>Gnog Prototype | Brawl</title>
         <meta name="description" content="Internal playground Brawl Page" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="https://res.cloudinary.com/gloot/image/upload/v1653321618/Marketing/2022_prototype/favicon.png" />
       </Head>
 
       <CustomTypography variant="h2" color="premium.main" className="text-xl">

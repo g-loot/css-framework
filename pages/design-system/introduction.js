@@ -17,17 +17,11 @@ export default function Introduction() {
 
         <DSStructure data={DSdata}>
 
-          <div className="card sm:rounded-lg overflow-hidden">
+          <div className="">
+            <div className="px-4">
 
-            <div className="px-4 py-12">
-
-              <div className='max-w-md mx-auto aspect-twitter bg-cover bg-center rounded mb-12 border border-ui-700' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289722/Marketing/2022_prototype/cover-designsystem.jpg)`}}></div>
-
-              
+              <div className='max-w-md mx-auto aspect-landscape bg-cover bg-center rounded-lg mb-12 border border-ui-700' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289722/Marketing/2022_prototype/cover-designsystem.jpg)`}}></div>
               <div className='max-w-sm mx-auto space-y-4 text-ui-100 leading-none mb-6'>
-
-              
-
                 <h1 className='leading-none'>
                   G-Loot Framework <small className='text-ui-300 uppercase text-2xl'>introduction</small>
                 </h1>
@@ -38,10 +32,10 @@ export default function Introduction() {
                   G-Loot Framework is a centralized front-end design system that allows any developer to quickly build pages that are in line with the G-Loot brand and its user interface system.
                 </p>
                 <p>
-                  Because its default theme (that can be customized for other projects thanks to its set of variables) is aligned with the G-Loot brand, the framework makes sure all pages you build with it embeds the G-Loot design system.
+                  Based on the utility-first framework <a href='https://tailwindcss.com/' target='_blank'>Tailwind</a>, the G-Loot Framework provides highly composable, low-level utility classes to make it easy to build complex user interfaces as well as pre-defined components listed on this website.
                 </p>
                 <p>
-                  It is a utility-first framework in the sense that it provides highly composable, low-level utility classes to make it easy to build complex user interfaces.
+                  Because its default theme (that can be customized for other projects thanks to its set of variables) is aligned with the G-Loot brand, the framework makes sure all pages you build with it embeds the G-Loot design system.
                 </p>
               </div>
 

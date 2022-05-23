@@ -473,6 +473,7 @@
     w-10
     rounded-full
     hover:rotate-45
+    bg-ui-800/75
     ;
 
     > .icon {

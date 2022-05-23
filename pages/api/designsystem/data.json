@@ -113,8 +113,7 @@
       "pages": [
         {
           "label": "Modals",
-          "url": "modals",
-          "disabled": true
+          "url": "modals"
         },
         {
           "label": "Tables",

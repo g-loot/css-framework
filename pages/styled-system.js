@@ -42,7 +42,7 @@ export default function Home() {
         <Head>
           <title>Gnog Prototype</title>
           <meta name="description" content="Internal playground" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="https://res.cloudinary.com/gloot/image/upload/v1653321618/Marketing/2022_prototype/favicon.png" />
         </Head>
         <Wrapper width={200} margin={20} display={[ 'flex', 'inline-block', 'block' ]} maxWidth={[ 768, null, null, 1024 ]}>
           Wrappertext Wrappertext Wrappertext Wrappertext Wrappertext Wrappertext
