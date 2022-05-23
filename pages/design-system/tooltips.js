@@ -36,7 +36,7 @@ export default function Tooltips() {
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
-                        Top
+                        Top <button className="chip chip-sm chip-secondary pointer-events-none"><span>default</span></button>
                       </div>
                       <div className='flex-1'>
                         <button className='chip chip-primary tooltip' data-tooltip="Lorem ipsum dolor sit amet">

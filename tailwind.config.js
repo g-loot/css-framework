@@ -184,6 +184,7 @@ module.exports = {
       },
       aspectRatio: {
         'story': '9 / 16',
+        'twitter': '10 / 5',
       },
     }
   },

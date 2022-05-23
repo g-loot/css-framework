@@ -28,8 +28,8 @@ export default function Home() {
            
             <div className='flex flex-col lg:flex-row items-stretch '>
               <div className='flex-1 lg:pr-8 lg:mr-8 lg:border-r lg:border-ui-700'>
-                <img className='mb-2' width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
-                <h1 className='text-2xl leading-none pl-9 pb-8 mb-8 border-b border-ui-700'>
+                <img className='mb-1' width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
+                <h1 className='text-xl uppercase not-italic leading-none pl-10 pb-8 mb-8 border-b border-ui-700'>
                   Front-end
                 </h1>
                 <div className='hidden lg:block'>

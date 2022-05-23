@@ -139,4 +139,26 @@
       stroke-dashoffset: calc(var(--percent) - 100);
     }
   }
+
+  &.progressbar-sm {
+    &::before {
+      @apply
+      w-12
+      h-12
+      -bottom-6
+      blur-sm
+      left-[calc(50%-1.5rem)];
+    }
+    > svg {
+      @apply
+      w-20
+      h-20
+      ;
+    }
+    &::after {
+      @apply
+      inset-1.5
+      ;
+    }
+  }
 }
