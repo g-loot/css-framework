@@ -78,6 +78,10 @@
         {
           "label": "Steps",
           "url": "steps"
+        },
+        {
+          "label": "Tooltips",
+          "url": "tooltips"
         }
       ]
     },
@@ -109,35 +113,45 @@
       "pages": [
         {
           "label": "Modals",
-          "url": "modals"
+          "url": "modals",
+          "disabled": true
         },
         {
           "label": "Tables",
-          "url": "tables"
+          "url": "tables",
+          "disabled": true
         },
         {
           "label": "Accordion",
           "url": "accordion"
         },
         {
-          "label": "Cards",
-          "url": "cardtemplates"
+          "label": "Mission cards",
+          "url": "missioncards"
+        },
+        {
+          "label": "Tournament cards",
+          "url": "tournamentcards"
         },
         {
           "label": "Tournament brackets",
-          "url": "tournamentbrackets"
+          "url": "tournamentbrackets",
+          "disabled": true
         },
         {
           "label": "Empty states",
-          "url": "emptystates"
+          "url": "emptystates",
+          "disabled": true
         },
         {
           "label": "Toasters",
-          "url": "toasters"
+          "url": "toasters",
+          "disabled": true
         },
         {
           "label": "Notifications",
-          "url": "notifications"
+          "url": "notifications",
+          "disabled": true
         }
       ]
     }

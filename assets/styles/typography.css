@@ -132,3 +132,8 @@ hr {
   border-ui-600
   ;
 }
+
+.text-gradient {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -188,13 +188,13 @@ export default function Chips() {
             <div className="card rounded-lg p-4">
               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
                 <h3 className='mb-6 lg:mb-10'>
-                  XP
+                  XP <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                 </h3>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
-                        Normal
+                        Normal <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='chip chip-reward chip-xp'>
                         <span className='icon icon-xp-symbol-outline'></span>
@@ -212,7 +212,7 @@ export default function Chips() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/05mw2vj6/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/hoguz0ad/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
@@ -226,7 +226,7 @@ export default function Chips() {
                   <div className='flex-1 space-y-4'>
                   <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
-                        Normal
+                        Normal <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='chip chip-reward chip-token'>
                         <span className='icon icon-token'></span>
@@ -244,7 +244,7 @@ export default function Chips() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/jm5q8oap/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/dqkvh2rm/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
@@ -258,7 +258,7 @@ export default function Chips() {
                   <div className='flex-1 space-y-4'>
                   <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
-                        Normal
+                        Normal <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='chip chip-reward chip-ticket'>
                         <span className='icon icon-ticket'></span>
@@ -276,7 +276,7 @@ export default function Chips() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/jm5q8oap/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/my610f4g/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
@@ -289,7 +289,7 @@ export default function Chips() {
                 </h3>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
-                  <div className='w-full flex gap-4 items-center'>
+                    <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
                         Small
                       </div>
@@ -316,7 +316,7 @@ export default function Chips() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/jm5q8oap/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/5pgext1c/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>

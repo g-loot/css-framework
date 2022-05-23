@@ -65,8 +65,8 @@
       [aria-controls] {
         @apply
         cursor-pointer
-        transition
-        duration-500
+        transition-all
+        duration-200
         ease-[cubic-bezier(.7,0,.3,1)]
         ;
     
@@ -78,11 +78,7 @@
             opacity-100
             ;
           }
-          &:active {
-            @apply
-            opacity-25
-            ;
-          }
+          
         }
       }
       &:not(.is-active) {
@@ -103,7 +99,7 @@
         ;
         .icon[class*='down']{
           @apply
-          text-ui-300
+          text-ui-200
           -rotate-180
           ;
         }

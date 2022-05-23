@@ -105,6 +105,15 @@
     }
   }
 
+  li.is-disabled {
+    a {
+      @apply
+      pointer-events-none
+      text-ui-500
+      ;
+    }
+  }
+
   &.menu-secondary {
 
     a {

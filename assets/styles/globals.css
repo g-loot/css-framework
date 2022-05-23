@@ -22,6 +22,8 @@
 @import "./pagination";
 @import "./progressbar";
 @import "./scrollbar";
+@import "./step";
 @import "./tabs";
+@import "./tooltip";
 @import "./typography";
 @import "./variables";

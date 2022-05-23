@@ -1,0 +1,204 @@
+/*----------------------------*/
+/* STEP */
+/*----------------------------*/
+
+
+.step {
+  @apply
+  flex
+  flex-nowrap
+  list-none
+  p-0
+  ;
+
+  > li {
+    @apply
+    mt-1
+    relative
+    flex-1
+    text-center
+    ;
+
+    &::before {
+      @apply
+      content-['']
+      absolute
+      z-10
+      left-[50%]
+      w-full
+      h-0.5
+      top-[0.3rem]
+      bg-main
+      ;
+    }
+
+    > a {
+      @apply
+      inline-block
+      text-main
+      pt-5
+      px-2
+      ;
+
+      &::before {
+        @apply
+        content-['']
+        rounded-full
+        block
+        absolute
+        z-20
+        left-[50%]
+        top-0
+        -translate-x-[50%]
+        w-3
+        h-3
+        bg-interaction-500
+        border-2
+        border-ui-800
+        ;
+      }      
+    }
+    &:last-child {
+      &::before {
+        @apply
+        hidden
+        ;
+      }
+    }
+
+    &.is-active {
+      &::before {
+        @apply
+        bg-ui-500
+        ;
+      }
+      a {
+        &::before {
+          @apply
+          border-main
+          bg-ui-800
+          ;
+        }
+
+      }
+      ~ li {
+        &::before {
+          @apply
+          bg-ui-500
+          ;
+        }
+        a {
+          @apply
+          text-ui-400
+          ;
+          &::before {
+            @apply
+            bg-ui-500
+            ;
+          }
+        }
+      }
+    }
+  }
+}
+
+.step.step-secondary {
+
+  li::before,
+  a::before {
+    @apply
+    hidden;
+  }
+
+  @apply 
+  gap-4
+  ;
+ 
+  > li {
+    > a {
+      @apply
+      p-0
+      flex
+      items-center
+      gap-4
+      text-ui-200
+      ;
+
+      > i {
+        @apply 
+        h-12
+        w-12
+        rounded-full
+        bg-gradient-to-b
+        from-ui-200
+        to-ui-400
+        text-ui-800
+        text-center
+        text-xl
+        not-italic
+        font-headings
+        leading-[3rem]
+        ;
+      }
+
+      hr {
+        @apply
+        flex-1
+        block
+        h-px
+        rounded
+        border-t
+        border-ui-300
+        ;
+      }
+    }
+    &:last-child {
+      hr {
+        @apply
+        hidden;
+      }
+    }
+    &.is-active {
+      a {
+        @apply
+        text-main
+        ;
+        i {
+          @apply
+          from-interaction-300
+          to-interaction-700
+          text-ui-800;
+        }
+        hr {
+          @apply
+          border-dashed
+          ;
+        }
+      }
+      ~ li {
+        &::before {
+          @apply
+          bg-ui-600
+          ;
+        }
+        a {
+          @apply
+          text-ui-400
+          ;
+          &::before {
+            @apply
+            bg-ui-500
+            ;
+          }
+          i {
+            @apply
+            from-ui-700
+            to-ui-600
+            text-ui-400
+            ;
+          }
+        }
+      }
+    }
+  }
+}

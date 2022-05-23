@@ -12,7 +12,6 @@
   inline-flex
   items-center
   bg-main
-  cursor-pointer
   font-body
   py-2
   px-2
@@ -31,6 +30,12 @@
   focus-visible:outline-1
   focus-visible:outline-main
   ;
+
+  &:not(button, a) {
+    @apply
+    pointer-events-none
+    ;
+  }
 
   &:not([class*='sliced']) {
     @apply

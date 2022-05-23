@@ -183,7 +183,7 @@ module.exports = {
         '135': '135deg',
       },
       aspectRatio: {
-        'story': '16 / 9',
+        'story': '9 / 16',
       },
     }
   },
