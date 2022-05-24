@@ -14,9 +14,10 @@ export default function Home() {
           <div className='carousel-slides'>
 
             <div className='carousel-slide is-active'>
-              <div className='aspect-square bg-ui-200'>
+              <div className='carousel-image'>
 
               </div>
+              
             </div>
 
           </div>
