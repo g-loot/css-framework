@@ -57,11 +57,11 @@ export default function Steps() {
           </div>
 
 
-          {/* With bullets */}
+          {/* Secondary */}
           <div className='mb-12'>
 
             <h2 className='h3 mb-3'>
-              With bullets
+              Secondary
             </h2>
 
             <div className="card rounded-lg p-4">
@@ -93,7 +93,7 @@ export default function Steps() {
                     </ul>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/mxsohytv/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/nx6jp318/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>

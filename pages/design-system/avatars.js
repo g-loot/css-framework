@@ -401,6 +401,35 @@ export default function Avatars() {
                         </div>
                       </div>
                     </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right'>
+                        Radar
+                      </div>
+                      <div className='flex-1'>
+                        <div className='flex gap-4 justify-start items-center'>
+                          <figure className='avatar'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            <i className="radar"></i>
+                          </figure>
+                          <figure className='avatar avatar-md'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            <i className="disabled radar"></i>
+                          </figure>
+                          <figure className='avatar avatar-sm'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            <i className="error radar"></i>
+                          </figure>
+                          <figure className='avatar avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            <i className="attention radar"></i>
+                          </figure>
+                          <figure className='avatar avatar-tiny'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                            <i className="info radar"></i>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
                     
                     
                     

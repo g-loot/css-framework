@@ -321,4 +321,31 @@
     }
   }
 
+
+  /* radar */
+
+  > i {
+    &.radar {
+      @apply
+      z-0
+      inset-0
+      border-0
+      w-full
+      h-full
+      transform-gpu
+      animate-[avatar-radar_2s_cubic-bezier(0.5,0,0.5,1)_infinite]
+      ;
+    }
+  }
+
+}
+@keyframes avatar-radar {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.2);
+    opacity: 0;
+  }
 }

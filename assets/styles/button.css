@@ -454,8 +454,8 @@
       border-r
       border-r-mono-100/75
       blur-sm
+      animate-[button-shining-rays_4s_cubic-bezier(0.5,0,0.5,1)_infinite]
       ;
-      animation: button-shining-rays 4s cubic-bezier(.5,0,.5,1) infinite;
     }
 
     &::before {

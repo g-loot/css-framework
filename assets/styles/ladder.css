@@ -1,0 +1,238 @@
+/*----------------------------*/
+/* LADDER */
+/*----------------------------*/
+
+
+.ladder-container {
+  @apply
+  grid
+  justify-start
+  items-start
+  overflow-x-scroll
+  py-4
+  ;
+}
+
+.ladder-avatar {
+  transform: translate3d( calc(((( 100 / var(--max) ) * (var(--step) - 1)) * 1%) - 0.5rem), 0, 0);
+  @apply
+  transition-all
+  duration-1000
+  ease-[cubic-bezier(0.9,0,0.1,1)]
+  ;
+
+  > div {
+    width: calc(100%/var(--max));
+    @apply
+    flex
+    justify-center
+    ;
+  }
+
+  + .ladder {
+    @apply
+    mt-2
+    ;
+  }
+}
+.ladder {
+  @apply
+  relative
+  flex
+  flex-nowrap
+  gap-4
+  ;
+
+  > li {
+    @apply
+    relative
+    flex
+    flex-col
+    items-stretch
+    justify-items-stretch
+    w-28
+    text-center
+    gap-2
+    ;
+    > .ladder-info {
+      @apply
+      relative
+      ;
+
+      > div {
+        @apply
+        relative
+        z-10
+        rounded-full
+        bg-ui-700
+        p-1
+        inline-flex
+        items-center
+        ;
+
+        > span {
+          &:first-child {
+            @apply
+            px-2
+            bg-gradient-to-b
+            from-ui-700
+            to-ui-500
+            rounded-full
+            text-sm
+            font-bold
+            text-ui-100
+            ;
+            text-shadow: 0 -1.5px 0.5px rgb(var(--color-ui-800));
+          }
+          &:nth-child(2) {
+            @apply
+            px-2
+            text-xs
+            text-ui-300
+            ;
+          }
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      > .ladder-info::after {
+        @apply
+        content-['']
+        absolute
+        z-0
+        h-1.5
+        left-[50%]
+        w-[calc(100%+1rem)]
+        top-[calc(50%-0.2rem)]
+        bg-ui-700
+        -translate-x-1
+        ;
+      }
+    }
+
+    > .ladder-content {
+      @apply
+      flex-1
+      relative
+      z-10
+      bg-gradient-to-b
+      from-ui-900
+      to-ui-800
+      border
+      border-ui-700
+      rounded-lg
+      overflow-hidden
+      flex
+      flex-col
+      leading-none
+      ;
+
+      > .ladder-decoration {
+        @apply
+        relative
+        z-20
+        ;
+      }
+
+      > .ladder-body {
+        @apply
+        p-2
+        text-ui-200
+        text-sm
+        flex-1
+        flex
+        flex-col
+        items-center
+        ;
+
+        > img {
+          @apply
+          my-2
+          w-[90%]
+          h-auto
+          rounded
+          ;
+        }
+      }
+
+    }
+
+    &:not(.is-active) {
+      > .ladder-info > div > span:nth-child(2) {
+        @apply
+        hidden
+        ;
+      }
+    }
+
+    &.is-active {
+      > .ladder-content {
+        @apply
+        border-purple-500/50
+        via-ui-800
+        to-ui-700
+        shadow-[0_0_8px_0_rgba(var(--color-purple-300)/15%)]
+        ;
+      }
+    }
+    &.is-locked {
+      > .ladder-content {
+        @apply
+        border-premium-700/50
+        shadow-[0_0_8px_0_rgba(var(--color-premium-300)/15%)]
+        ;
+        > .ladder-decoration {
+          @apply 
+          drop-shadow-[0_3px_1.5px_rgba(0,0,0,0.5)]
+          ;
+          > img {
+            @apply
+            w-auto
+            mx-auto
+            translate-y-4
+            ;
+          }
+          &::before {
+            @apply
+            content-['']
+            absolute
+            z-0
+            top-0
+            left-0
+            right-0
+            h-10
+            bg-gradient-to-b
+            from-premium-300
+            to-premium-500
+            text-ui-800
+            ;
+            clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
+          }
+          &::after {
+            @apply
+            font-icon
+            content-['\ea12']
+            absolute
+            z-10
+            w-8
+            h-8
+            rounded-full
+            top-1
+            left-[calc(50%-1rem)]
+            bg-gradient-to-b
+            from-ui-900
+            via-ui-800
+            to-ui-700
+            text-premium-300
+            shadow-[0_0_0_1px_rgb(var(--color-premium-300))]
+            text-center
+            leading-[2]
+            ;
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -151,6 +151,10 @@
           "label": "Notifications",
           "url": "notifications",
           "disabled": true
+        },
+        {
+          "label": "Reward ladder",
+          "url": "rewardladder"
         }
       ]
     }
