@@ -12,7 +12,7 @@ export default function MainNav(props) {
     <ul className={`menu ${props.style == 'secondary' ? 'menu-secondary' : ''}`}>
       {props.items.map((item, i) => (
         <li className={`${item.disabled == true ? 'is-disabled' : ''}`}>
-          <a href={item.url} className={`${router.pathname.includes(item.url) ? 'is-active' : ''}`}>
+          <a href={item.url} className={`${router.pathname.includes(item.url) || router.pathname == '' ? 'is-active' : ''}`}>
             <span className={`icon icon-16 icon-${item.icon}`}></span>
             <span>{item.label}</span>
           </a>

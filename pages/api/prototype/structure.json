@@ -1,0 +1,29 @@
+{
+  "pages": [
+    {
+      "label": "home",
+      "icon": "home-2",
+      "url": "url"
+    },
+    {
+      "label": "profile",
+      "icon": "circle-09",
+      "url": "url"
+    },
+    {
+      "label": "teams",
+      "icon": "multiple-12",
+      "url": "url"
+    },
+    {
+      "label": "shop",
+      "icon": "shop",
+      "url": "url"
+    },
+    {
+      "label": "premium",
+      "icon": "ic_stars_24px",
+      "url": "url"
+    }
+  ]
+}
