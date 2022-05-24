@@ -9,30 +9,29 @@
   justify-start
   items-start
   overflow-x-scroll
-  py-4
+  pb-4
   ;
 }
 
 .ladder-avatar {
-  transform: translate3d( calc(((( 100 / var(--max) ) * (var(--step) - 1)) * 1%) - 0.5rem), 0, 0);
   @apply
-  transition-all
-  duration-1000
-  ease-[cubic-bezier(0.9,0,0.1,1)]
+  overflow-hidden
+  py-4
   ;
-
   > div {
-    width: calc(100%/var(--max));
+    transform: translate3d( calc(((( 100 / var(--max) ) * (var(--step) - 1)) * 1%) - 0.25rem), 0, 0);
     @apply
-    flex
-    justify-center
+    transition-all
+    duration-1000
+    ease-[cubic-bezier(0.9,0,0.1,1)]
     ;
-  }
-
-  + .ladder {
-    @apply
-    mt-2
-    ;
+    > div {
+      width: calc(100%/var(--max));
+      @apply
+      flex
+      justify-center
+      ;
+    }
   }
 }
 .ladder {

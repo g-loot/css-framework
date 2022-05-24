@@ -32,10 +32,12 @@ export default function RewardLadder() {
                     <div className='ladder-container scrollbar-desktop'>
                       <div className='ladder-avatar' style={{"--max": "10", "--step": "1"}}>
                         <div>
-                          <figure className='avatar avatar-md'>
-                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
-                            <i className='radar'></i>
-                          </figure>
+                          <div>
+                            <figure className='avatar avatar-md'>
+                              <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                              <i className='radar'></i>
+                            </figure>
+                          </div>
                         </div>
                       </div>
                       <ul className='ladder'>
@@ -256,7 +258,7 @@ export default function RewardLadder() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/c1nbf68L/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="600" src="//jsfiddle.net/augustin_hiebel/c1nbf68L/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
