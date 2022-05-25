@@ -36,6 +36,16 @@
   }
 }
 
+@keyframes progressbar-gradient {
+  0% {
+    background-position: 400px 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
 /* size */
 
 .progressbar.progressbar-sm {
@@ -51,15 +61,8 @@
   }
 }
 
-@keyframes progressbar-gradient {
-  0% {
-    background-position: 400px 0;
-  }
 
-  100% {
-    background-position: 0 0;
-  }
-}
+/* radial */
 
 .progressbar-radial {
   @apply
