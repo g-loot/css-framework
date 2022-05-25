@@ -178,6 +178,8 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-radial-spotlight': 'radial-gradient(45% 45% at 50% 25%, var(--tw-gradient-stops))',
+        'gradient-radial-to-b': 'radial-gradient(100% 100% at 50% 0%, var(--tw-gradient-stops))',
       },
       rotate: {
         '135': '135deg',

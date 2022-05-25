@@ -16,7 +16,7 @@ export default function TournamentCards() {
         <DSTopBar />
 
         <DSStructure data={DSdata}>
-          <h1 className='mb-2'>
+          <h1 className='mb-2 mx-2 md:mx-0'>
             Tournament cards
           </h1>
 
@@ -38,8 +38,8 @@ export default function TournamentCards() {
                     <div className='card-tournament card-premium'>
                       <div className='card-decoration'>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Showdown-sameheight.svg' width='auto' height='auto' alt='G-Loot Showdown' />
-                        <div className='chip chip-secondary chip-sm'>
-                          <span>Global</span>
+                        <div className='chip chip-secondary chip-xs'>
+                          <span>Valorant europe</span>
                         </div>
                       </div>
                       <div className='card-info'>
@@ -94,7 +94,7 @@ export default function TournamentCards() {
                     <div className='card-tournament card-ui-800'>
                       <div className='card-decoration'>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Skirmish-sameheight.svg' width='auto' height='auto' alt='G-Loot Showdown' />
-                        <div className='chip chip-secondary chip-sm'>
+                        <div className='chip chip-secondary chip-xs'>
                           <span>Global</span>
                         </div>
                       </div>
@@ -150,7 +150,7 @@ export default function TournamentCards() {
                     <div className='card-tournament card-ui-800'>
                       <div className='card-decoration'>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg' width='auto' height='auto' alt='G-Loot Showdown' />
-                        <div className='chip chip-secondary chip-sm'>
+                        <div className='chip chip-secondary chip-xs'>
                           <span>Global</span>
                         </div>
                       </div>
@@ -207,7 +207,7 @@ export default function TournamentCards() {
                     <div className='card-tournament is-loading'>
                       <div className='card-decoration'>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg' width='auto' height='auto' alt='G-Loot Showdown' />
-                        <div className='chip chip-secondary chip-sm'>
+                        <div className='chip chip-secondary chip-xs'>
                           <span>Global</span>
                         </div>
                       </div>

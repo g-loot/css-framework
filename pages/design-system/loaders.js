@@ -17,7 +17,7 @@ export default function Loaders() {
 
         <DSStructure data={DSdata}>
 
-          <h1 className='mb-2'>
+          <h1 className='mb-2 mx-2 md:mx-0'>
             Loaders
           </h1>
 
@@ -25,7 +25,7 @@ export default function Loaders() {
           {/* Spinner */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Spinner
             </h2>
           
@@ -88,7 +88,7 @@ export default function Loaders() {
           {/* G-Loot loader */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               G-Loot loader
             </h2>
             

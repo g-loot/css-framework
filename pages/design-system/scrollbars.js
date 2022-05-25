@@ -16,7 +16,7 @@ export default function Scrollbars() {
         <DSTopBar />
 
         <DSStructure data={DSdata}>
-          <h1 className='mb-2'>
+          <h1 className='mb-2 mx-2 md:mx-0'>
             Scrollbars
           </h1>
 
@@ -24,7 +24,7 @@ export default function Scrollbars() {
           {/* Primary */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Primary
             </h2>
           
@@ -61,7 +61,7 @@ export default function Scrollbars() {
           {/* Secondary */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Secondary <button className="chip chip-sm chip-secondary pointer-events-none"><span>default</span></button>
             </h2>
           
@@ -98,7 +98,7 @@ export default function Scrollbars() {
           {/* Desktop only */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Desktop only
             </h2>
           

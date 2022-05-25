@@ -360,8 +360,9 @@
         opacity-100
         rounded-full
         mx-auto
-        left-[calc(50%-0.75rem)];
-        animation: button-loader-rotate 1s linear infinite;
+        left-[calc(50%-0.75rem)]
+        animate-[button-loader-rotate_1s_linear_infinite]
+        ;
       }
     }
 

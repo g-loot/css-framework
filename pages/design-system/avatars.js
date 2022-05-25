@@ -17,7 +17,7 @@ export default function Avatars() {
 
         <DSStructure data={DSdata}>
 
-          <h1 className='mb-2'>
+          <h1 className='mb-2 mx-2 md:mx-0'>
             Avatars
           </h1>
 
@@ -25,7 +25,7 @@ export default function Avatars() {
           {/* shape */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Shape
             </h2>
 
@@ -79,7 +79,7 @@ export default function Avatars() {
           {/* size */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Size
             </h2>
 
@@ -178,7 +178,7 @@ export default function Avatars() {
           {/* rank */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Rank
             </h2>
 
@@ -248,7 +248,7 @@ export default function Avatars() {
           {/* status */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Status
             </h2>
 
@@ -448,7 +448,7 @@ export default function Avatars() {
           {/* simple */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Simple
             </h2>
 

@@ -28,9 +28,9 @@
     duration-1000
     ease-[cubic-bezier(0.9,0,0.1,1)]
     scale-x-110
+    animate-[progressbar-gradient_2s_linear_infinite]
     ;
     background-image: linear-gradient(to right, rgb(var(--color-interaction-300)) 0px, rgb(var(--color-blue-700)) 200px, rgb(var(--color-interaction-300)) 400px);
-    animation: progressbar-gradient 2s linear infinite;
     clip-path: polygon(0% 0%, 100% 0%, calc(100% - 0.5em) 100%, 0% 100%);
     transform: translate3d(calc(-100% + (1% * var(--percent))), 0, 0);
   }

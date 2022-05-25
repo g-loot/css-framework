@@ -344,12 +344,14 @@
     flex
     justify-between
     items-start
-    p-4
+    p-2
     ;
     > img {
       @apply
       justify-self-stretch
       h-20
+      mt-1
+      ml-1
       drop-shadow-lg
       ;
     }

@@ -2,6 +2,7 @@
 /* STEP */
 /*----------------------------*/
 
+/* primary */
 
 .step {
   @apply
@@ -102,6 +103,8 @@
   }
 }
 
+/* secondary */
+
 .step.step-secondary {
 
   li::before,
@@ -115,6 +118,9 @@
   ;
  
   > li {
+    @apply
+    mt-0
+    ;
     > a {
       @apply
       p-0
@@ -129,7 +135,7 @@
         h-12
         w-12
         rounded-full
-        bg-gradient-to-b
+        bg-gradient-radial-to-b
         from-ui-200
         to-ui-400
         text-ui-800
@@ -153,6 +159,9 @@
       }
     }
     &:last-child {
+      @apply
+      flex-none
+      ;
       hr {
         @apply
         hidden;
@@ -192,11 +201,194 @@
           }
           i {
             @apply
-            from-ui-700
-            to-ui-600
+            from-ui-800
+            to-ui-700
             text-ui-400
             ;
           }
+        }
+      }
+    }
+  }
+}
+
+
+/* tertiary */
+
+.step.step-tertiary {
+
+  @apply
+  p-1
+  ;
+
+  li::before,
+  a::before {
+    @apply
+    hidden;
+  }
+ 
+  > li {
+    @apply
+    mt-0
+    ;
+    > a {
+      @apply
+      p-0
+      flex
+      items-center
+      text-ui-200
+      ;
+
+      > i {
+        @apply 
+        h-12
+        w-12
+        rounded-full
+        bg-gradient-radial-to-b
+        from-ui-900
+        to-ui-800
+        text-ui-800
+        relative
+        z-10
+        text-center
+        text-xl
+        not-italic
+        font-headings
+        leading-[3rem]
+        outline-4
+        outline-interaction-500
+        outline
+        overflow-hidden
+        ;
+
+
+        &::before,
+        &::after {
+          @apply
+          absolute
+          transition-all
+          duration-1000
+          ease-[cubic-bezier(0.9,0,0.1,1)]
+          ;
+        }
+
+        &::before {
+          @apply
+          content-['']
+          inset-1
+          rounded-full
+          bg-gradient-radial-to-b
+          from-interaction-300
+          to-interaction-700
+          ;
+        }
+        &::after {
+          @apply
+          font-icon
+          content-['\eb24']
+          z-10
+          inset-0
+          ;
+        }
+      }
+
+      > span {
+        @apply
+        relative
+        z-0
+        h-1
+        flex-1
+        w-full
+        bg-ui-600
+        overflow-hidden
+        ;
+        &::before {
+          @apply
+          content-['']
+          absolute
+          z-0
+          inset-0
+          bg-interaction-500
+          origin-left
+          transition-all
+          duration-1000
+          ease-[cubic-bezier(0.9,0,0.1,1)]
+          ;
+          clip-path: polygon(0% 0%, 100% 0%, calc(100% - 0.25em) 100%, 0% 100%);
+        }
+      }
+      hr {
+        @apply
+        hidden
+        ;
+      }
+    }
+    &:last-child {
+      @apply
+      flex-none
+      ;
+      span {
+        @apply
+        hidden
+        ;
+      }
+    }
+    &.is-active {
+      a {
+        @apply
+        text-main
+        ;
+        span {
+          &::before {
+            @apply
+            -translate-x-[50%]
+            ;
+          }
+        }
+      }
+      ~ li {
+        &::before {
+          @apply
+          bg-ui-600
+          ;
+        }
+        a {
+          @apply
+          text-ui-400
+          ;
+          &::before {
+            @apply
+            bg-ui-500
+            ;
+          }
+          i {
+            @apply
+            outline-ui-600
+            from-ui-800
+            to-ui-700
+            text-ui-400
+            ;
+
+            &::before {
+              @apply
+              translate-y-12
+              ;
+            }
+            &::after {
+              @apply
+              translate-y-12
+              ;
+            }
+          }
+
+          > span {
+            &::before {
+              @apply
+              bg-interaction-500/0
+              ;
+            }
+          }
+          
         }
       }
     }

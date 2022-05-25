@@ -17,7 +17,7 @@ export default function Typography() {
 
         <DSStructure data={DSdata}>
 
-            <h1 className='mb-2'>
+            <h1 className='mb-2 mx-2 md:mx-0'>
               Typography
             </h1>
 

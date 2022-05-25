@@ -17,7 +17,7 @@ export default function Tooltips() {
 
         <DSStructure data={DSdata}>
 
-          <h1 className='mb-2'>
+          <h1 className='mb-2 mx-2 md:mx-0'>
             Tooltips
           </h1>
 
@@ -25,7 +25,7 @@ export default function Tooltips() {
           {/* Small */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Small
             </h2>
 
@@ -87,7 +87,7 @@ export default function Tooltips() {
             {/* Big */}
             {/*
             <div className='mb-12'>
-              <h2 className='h3 mb-3'>
+              <h2 className='h3 mb-3 mx-2 md:mx-0'>
                 Big
               </h2>
 

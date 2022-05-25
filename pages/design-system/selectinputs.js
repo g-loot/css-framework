@@ -16,7 +16,7 @@ export default function SelectInputs() {
         <DSTopBar />
 
         <DSStructure data={DSdata}>
-          <h1 className='mb-2'>
+          <h1 className='mb-2 mx-2 md:mx-0'>
             Select inputs
           </h1>
 
@@ -24,7 +24,7 @@ export default function SelectInputs() {
           {/* single */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Single
             </h2>
 
@@ -58,7 +58,7 @@ export default function SelectInputs() {
           {/* multiple */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Multiple
             </h2>
 
@@ -93,7 +93,7 @@ export default function SelectInputs() {
           {/* Validation */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Validation
             </h2>
 
@@ -168,7 +168,7 @@ export default function SelectInputs() {
           {/* With loader */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Status
             </h2>
 

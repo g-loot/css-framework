@@ -16,7 +16,7 @@ export default function Pagination() {
         <DSTopBar />
 
         <DSStructure data={DSdata}>
-          <h1 className='mb-2'>
+          <h1 className='mb-2 mx-2 md:mx-0'>
             Pagination
           </h1>
 
@@ -24,7 +24,7 @@ export default function Pagination() {
           {/* variant */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Default
             </h2>
           
@@ -76,7 +76,7 @@ export default function Pagination() {
           {/* bullet */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Bullet
             </h2>
 

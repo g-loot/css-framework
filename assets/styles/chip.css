@@ -17,6 +17,7 @@
   transition-all
   duration-200
   ease-in-out
+  text-center
   text-ui-800
   scale-100
   space-x-1.5
@@ -189,6 +190,7 @@
         ;
       }
     }
+    
 
     &.chip-xp {
       > .icon {
@@ -353,6 +355,13 @@
     text-xs
     py-1.5
     px-2
+    ;
+  }
+  &.chip-xs {
+    @apply
+    text-[0.7rem]
+    py-1
+    px-1.5
     ;
   }
 

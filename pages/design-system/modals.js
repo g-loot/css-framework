@@ -17,7 +17,7 @@ export default function Mdodal() {
 
         <DSStructure data={DSdata}>
 
-          <h1 className='mb-2'>
+          <h1 className='mb-2 mx-2 md:mx-0'>
             Modal
           </h1>
 
@@ -25,7 +25,7 @@ export default function Mdodal() {
           {/* Structure */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Structure
             </h2>
 
@@ -73,7 +73,7 @@ export default function Mdodal() {
           {/* Inverted */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Inverted
             </h2>
 
@@ -122,7 +122,7 @@ export default function Mdodal() {
           {/* Inverted */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Inverted
             </h2>
 

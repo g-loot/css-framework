@@ -1,0 +1,134 @@
+/*----------------------------*/
+/* DATA */
+/*----------------------------*/
+
+.gauge,
+.icon-holder {
+  @apply
+  relative
+  ;
+  &::before {
+    @apply
+    content-['']
+    w-8
+    h-8
+    block
+    rounded-full
+    blur
+    absolute
+    top-0
+    left-[calc(50%-1rem)]
+    bg-gradient-radial
+    from-blue-300/50
+    from-blue-500/25
+    to-blue-700/0
+    ;
+  }
+}
+
+
+.gauge {
+
+  --min: 0;
+  --max: 285;
+
+  @apply
+  rounded-full
+  relative
+  p-1.5
+  bg-gradient-to-b
+  from-ui-800
+  to-ui-700
+  overflow-hidden
+  ;
+
+  &::after {
+    @apply
+    content-['']
+    w-8
+    h-8
+    block
+    rounded-full
+    blur
+    absolute
+    top-0
+    left-[calc(50%-1rem)]
+    transition-all
+    duration-1000
+    ease-[cubic-bezier(0.9,0,0.1,1)]
+    bg-gradient-radial
+    from-blue-300/50
+    from-blue-500/25
+    to-blue-700/0
+    ;
+  }
+
+  .gauge-chart {
+
+    @apply
+   
+    origin-[50%_57%]
+    ;
+    
+    
+
+    path {
+      &:nth-child(1) {
+        @apply
+        fill-ui-600
+        ;
+      }
+      &:nth-child(2) {
+        @apply
+        stroke-interaction-500
+        transition-all
+        duration-1000
+        ease-[cubic-bezier(0.9,0,0.1,1)]
+        ;
+        transform-box: fill-box;
+        stroke-dasharray: calc(var(--max) * var(--percent) / 100) var(--max);
+      }
+    }
+  }
+  .gauge-content {
+    @apply
+    absolute
+    z-20
+    inset-0
+    flex
+    flex-col
+    text-center
+    items-center
+    justify-center
+    leading-none
+    ;
+  }
+}
+
+
+.icon-holder {
+  @apply
+  rounded-xl
+  py-4
+  rounded-full
+  h-[6.75rem]
+  w-[6.75rem]
+  flex
+  items-center
+  justify-center
+  bg-gradient-to-b
+  from-ui-900
+  to-ui-800
+  ;
+
+  > .icon {
+    @apply
+    text-7xl
+    bg-gradient-radial-spotlight
+    from-blue-300
+    to-ui-500
+    ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

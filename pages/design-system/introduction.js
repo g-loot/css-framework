@@ -23,16 +23,16 @@ export default function Introduction() {
               <div className='max-w-md mx-auto aspect-landscape bg-cover bg-center rounded-lg mb-12 border border-ui-700' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289722/Marketing/2022_prototype/cover-designsystem.jpg)`}}></div>
               <div className='max-w-sm mx-auto space-y-4 text-ui-100 leading-none mb-6'>
                 <h1 className='leading-none'>
-                  G-Loot Framework <small className='text-ui-300 uppercase text-2xl'>introduction</small>
+                  G-Loot CSS Framework <small className='text-ui-300 uppercase text-2xl'>introduction</small>
                 </h1>
               </div>
               
               <div className='max-w-sm mx-auto space-y-4 text-ui-200'>
                 <p>
-                  G-Loot Framework is a centralized front-end design system that allows any developer to quickly build pages that are in line with the G-Loot brand and its user interface system.
+                  The G-Loot CSS Framework is a centralized front-end design system that allows any developer to quickly build pages that are in line with the G-Loot brand and its user interface system.
                 </p>
                 <p>
-                  Based on the utility-first framework <a href='https://tailwindcss.com/' target='_blank'>Tailwind</a>, the G-Loot Framework provides highly composable, low-level utility classes to make it easy to build complex user interfaces as well as pre-defined components listed on this website.
+                  Based on the utility-first framework <a href='https://tailwindcss.com/' target='_blank'>Tailwind</a>, the G-Loot CSS Framework provides highly composable, low-level utility classes to make it easy to build complex user interfaces as well as pre-defined components listed on this website.
                 </p>
               </div>
 

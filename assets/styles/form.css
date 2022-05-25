@@ -701,8 +701,8 @@ textarea,
       mx-auto
       bottom-2
       right-2.5
+      animate-[input-loader-rotate_1s_linear_infinite]
       ;
-      animation: input-loader-rotate 1s linear infinite;
     }
 
     .icon.icon-right {

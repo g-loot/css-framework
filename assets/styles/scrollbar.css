@@ -2,8 +2,15 @@
 /* SCROLLBAR */
 /*----------------------------*/
 
+
+body {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
 .scrollbar,
 select[multiple] {
+  -webkit-overflow-scrolling: touch;
   &::-webkit-scrollbar {
     @apply
     w-1.5
@@ -70,6 +77,7 @@ select[multiple] {
 }
 
 .scrollbar-hidden {
+  -webkit-overflow-scrolling: touch;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
   scrollbar-width: none;

@@ -80,4 +80,5 @@
 
 body {
   @apply bg-ui-900;
+  background: rgb(var(--color-ui-900)) !important;
 }

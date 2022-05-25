@@ -16,7 +16,7 @@ export default function Menu() {
         <DSTopBar />
 
         <DSStructure data={DSdata}>
-          <h1 className='mb-2'>
+          <h1 className='mb-2 mx-2 md:mx-0'>
             Menu
           </h1>
 
@@ -24,7 +24,7 @@ export default function Menu() {
           {/* primary */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Primary
             </h2>
           
@@ -66,7 +66,7 @@ export default function Menu() {
           {/* secondary */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Secondary
             </h2>
           
@@ -108,7 +108,7 @@ export default function Menu() {
           {/* with icons */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               With icons
             </h2>
           
@@ -154,7 +154,7 @@ export default function Menu() {
           {/* with separators */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               With separators
             </h2>
           

@@ -72,7 +72,9 @@
         > span {
           &:first-child {
             @apply
-            px-2
+            text-center
+            min-h-[1.3rem]
+            min-w-[1.3rem]
             bg-gradient-to-b
             from-ui-700
             to-ui-500
@@ -166,6 +168,15 @@
     }
 
     &.is-active {
+      > .ladder-info > div > span:nth-child(1) {
+        @apply
+        from-premium-700
+        to-premium-300
+        text-ui-800
+        shadow-[inset_0_0_0_1px_rgb(var(--color-premium-300))]
+        ;
+        text-shadow: 0 -1.5px 0.5px rgb(var(--color-premium-500));
+      }
       > .ladder-content {
         @apply
         border-purple-500/50

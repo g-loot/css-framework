@@ -155,6 +155,10 @@
         {
           "label": "Reward ladder",
           "url": "rewardladder"
+        },
+        {
+          "label": "Data & numbers",
+          "url": "datanumbers"
         }
       ]
     }

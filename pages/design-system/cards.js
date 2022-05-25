@@ -16,13 +16,13 @@ export default function Cards() {
         <DSTopBar />
 
         <DSStructure data={DSdata}>
-          <h1 className='mb-2'>
+          <h1 className='mb-2 mx-2 md:mx-0'>
             Cards
           </h1>
 
 
           <div className='mb-10'>
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Normal card
             </h2>
             <div className='flex flex-col lg:flex-row gap-4'>
@@ -36,7 +36,7 @@ export default function Cards() {
 
 
           <div className='mb-10'>
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Halo card
             </h2>
             <div className='flex flex-col lg:flex-row gap-4'>

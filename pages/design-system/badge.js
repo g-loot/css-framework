@@ -16,7 +16,7 @@ export default function Badge() {
         <DSTopBar />
 
         <DSStructure data={DSdata}>
-          <h1 className='mb-2'>
+          <h1 className='mb-2 mx-2 md:mx-0'>
             Badge
           </h1>
 
@@ -24,7 +24,7 @@ export default function Badge() {
           {/* Structure */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Structure
             </h2>
           
@@ -61,7 +61,7 @@ export default function Badge() {
           {/* with badges */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
               Badges everywhere
             </h2>
           

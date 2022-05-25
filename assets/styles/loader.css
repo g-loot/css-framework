@@ -205,7 +205,9 @@
     ;
     background-image: linear-gradient(to right, rgba(var(--color-ui-800) / 100%) 8%, rgba(var(--color-ui-700) / 100%) 18%, rgba(var(--color-ui-800) / 100%) 33%);
 
-    .card-decoration,
+    .card-decoration > img,
+    .card-decoration::before,
+    .card-decoration::after,
     .chip > *,
     .card-bg,
     .card-meta > * > * {
