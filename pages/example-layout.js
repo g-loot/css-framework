@@ -1,4 +1,3 @@
-import { Flex, Typography } from '@g-loot/component-library';
 import { compose, flexbox, layout, space } from 'styled-system';
 
 import CustomComponent from '../components/CustomComponent/CustomComponent';

@@ -1,4 +1,3 @@
-import { Button, Container, Flex, Progressbar, Tabs, Typography } from '@g-loot/component-library';
 import { compose, layout, space } from 'styled-system';
 
 import CustomComponent from '../components/CustomComponent/CustomComponent';

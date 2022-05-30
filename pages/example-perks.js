@@ -3,7 +3,6 @@ import { compose, flexbox, layout, space } from 'styled-system';
 import CustomComponent from '../components/CustomComponent/CustomComponent';
 import Head from 'next/head';
 import Topbar from '../components/Topbar/Topbar';
-import { Typography } from '@g-loot/component-library';
 import styled from 'styled-components';
 import useFetch from '../hooks/use-fetch';
 import { useRouter } from 'next/router';

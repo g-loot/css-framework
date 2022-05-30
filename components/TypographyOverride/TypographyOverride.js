@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { Typography } from '@g-loot/component-library';
 
-const CustomTypography = styled(Typography)`
+const CustomTypography = styled(div)`
   transform: skew(-25deg);
 `;
 
