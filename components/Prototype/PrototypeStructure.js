@@ -3,7 +3,6 @@ import Footer from '../Footer/Footer';
 import Icon from '../Icon/Icon';
 import JSONstructure from '../../pages/api/prototype/structure.json'
 import MainNav from '../MainNav/MainNav';
-import ModalFavoriteGames from '../../pages/prototype/modal-favoritegames'
 import PrototypeHead from './PrototypeHead';
 import Topbar from '../Topbar/Topbar';
 import { useRouter } from 'next/router'
@@ -20,7 +19,7 @@ export default function PrototypeStructure({children, title}) {
             <MainNav items={JSONstructure.pages} />
           </div>
           <div className='text-center'>
-            <Button onClick={ModalFavoriteGames} label='Edit favorite games' variant='secondary' icon='pen-2' size='sm'></Button>
+            <Button label='Edit favorite games' variant='secondary' icon='pen-2' size='sm'></Button>
           </div>
           <div className="rounded-xl overflow-hidden relative">
             <i></i>
