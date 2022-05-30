@@ -10,6 +10,7 @@ function withOpacityValue(variable) {
 }
 
 module.exports = {
+  mode: 'jit',
   content: [
     "./pages/*.{js,ts,jsx,tsx,json}",
     "./pages/*/*.{js,ts,jsx,tsx,json}",
