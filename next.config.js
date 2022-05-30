@@ -1,9 +1,6 @@
 const path = require('path');
 module.exports = {
-  reactStrictMode: true,
-  experimental: {
-    optimizeCss: true,
-  }
+  reactStrictMode: true
   // compiler: {
   //   // ssr and displayName are configured by default
   //   styledComponents: true,
