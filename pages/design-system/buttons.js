@@ -3,7 +3,6 @@ import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
 import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
-import Icon from '../../components/Icon/Icon';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
