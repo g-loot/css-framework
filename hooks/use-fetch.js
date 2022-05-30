@@ -25,7 +25,7 @@ const useFetch = (url, options = {}) => {
       setState((s) => ({ ...s, loading: false }));
     }
   };
-  ect(() => {
+  useEffect(() => {
     call();
   }, []);
   return state;
