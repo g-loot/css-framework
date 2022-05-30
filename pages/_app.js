@@ -1,14 +1,6 @@
 import "../assets/styles/globals.css";
 
-import InternalGlobalStyle from '../globalStyle';
-
-function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <InternalGlobalStyle />
-      <Component {...pageProps} />
-    </>
-  );
+const App = ({ Component, pageProps }) => {
+  return <Component {...pageProps} />
 }
-
-export default MyApp;
+export default App;
