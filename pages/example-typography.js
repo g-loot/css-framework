@@ -167,29 +167,8 @@ export default function Home() {
                 <div className='flex-1'>
                   <div className='leading-none'>
                     <div style={{ lineHeight: '1'}}>
-                      <Typography variant="h2" color="ui.100">
-                        I am a<br />two-lines title
-                      </Typography>
-                      <Typography variant="paragraph" color="ui.200">
-                        I am a paragraph
-                      </Typography>
-                      <Lister>
-                        <li>
-                          <Typography variant="paragraph" color="ui.200">
-                            option 1
-                          </Typography>
-                        </li>
-                        <li>
-                          <Typography variant="paragraph" color="ui.200">
-                            option 2
-                          </Typography>
-                        </li>
-                        <li>
-                          <Typography variant="paragraph" color="ui.200">
-                            option 3
-                          </Typography>
-                        </li>
-                      </Lister>
+                      
+                      
                     </div>
                   </div>
                 </div>

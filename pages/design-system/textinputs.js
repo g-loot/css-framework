@@ -36,25 +36,25 @@ export default function TextInputs() {
                     <div className='w-full flex gap-4 items-center'>
                       <div className='flex-1 space-y-4'>
                         <div className='form-group'>
-                          <label for="first-name">First name</label>
-                          <input type="text" name="first-name" id="first-name" autocomplete="given-name" />
+                          <label htmlFor="first-name">First name</label>
+                          <input type="text" name="first-name" id="first-name" autoComplete="given-name" />
                         </div>
                         <div className='form-group'>
-                          <label for="company-website">Company Website</label>
+                          <label htmlFor="company-website">Company Website</label>
                           <div className='input-group'>
                             <span> http:// </span>
                             <input type="text" name="company-website" id="company-website" />
                           </div>
                         </div>
                         <div className='form-group'>
-                          <label for="subdomain">Subdomain</label>
+                          <label htmlFor="subdomain">Subdomain</label>
                           <div className='input-group'>
                             <input type="text" name="subdomain" id="subdomain" />
                             <span> .gloot.com </span>
                           </div>
                         </div>
                         <div className='form-group'>
-                          <label for="about">About</label>
+                          <label htmlFor="about">About</label>
                           <textarea id="about" name="about" rows="4" placeholder="you@example.com"></textarea>
                         </div>
                       </div>
@@ -84,15 +84,15 @@ export default function TextInputs() {
                     <div className='w-full flex gap-4 items-center'>
                       <div className='flex-1 space-y-4'>
                         <div className='form-group' data-error="Passwords must have at least 8 characters.">
-                          <label for="password">Password</label>
+                          <label htmlFor="password">Password</label>
                           <input type="password" name="password" id="password" />
                         </div>
                         <div className='form-group' data-success="The name is valid.">
-                          <label for="name">Name</label>
+                          <label htmlFor="name">Name</label>
                           <input type="text" name="name" id="name" />
                         </div>
                         <div className='form-group' data-attention="The text contains 3 spelling mistakes.">
-                          <label for="summary">Summary</label>
+                          <label htmlFor="summary">Summary</label>
                           <textarea id="summary" name="summary" rows="4" placeholder=""></textarea>
                         </div>
                       </div>
@@ -122,14 +122,14 @@ export default function TextInputs() {
                     <div className='w-full flex gap-4 items-center'>
                       <div className='flex-1 space-y-4'>
                         <div className='form-group'>
-                          <label for="teamname">Team name</label>
+                          <label htmlFor="teamname">Team name</label>
                           <div className='input-group'>
                             <span className='icon icon-a-chat'></span>
                             <input type="text" name="teamname" id="teamname" />
                           </div>
                         </div>
                         <div className='form-group'>
-                          <label for="teamurl">Team URL</label>
+                          <label htmlFor="teamurl">Team URL</label>
                           <div className='input-group'>
                             <span className='icon icon-right icon-f-check'></span>
                             <input type="text" name="teamurl" id="teamurl" />
@@ -170,11 +170,11 @@ export default function TextInputs() {
                     <div className='w-full flex gap-4 items-center'>
                       <div className='flex-1 space-y-4'>
                         <div className='form-group is-loading'>
-                          <label for="streetaddress">Street address</label>
+                          <label htmlFor="streetaddress">Street address</label>
                           <input type="text" name="streetaddress" id="streetaddress" />
                         </div>
                         <div className='form-group is-loading'>
-                          <label for="city">City</label>
+                          <label htmlFor="city">City</label>
                           <div className='input-group'>
                             <span className='icon icon-right icon-flag-points-31'></span>
                             <input type="text" name="city" id="city" />
@@ -197,11 +197,11 @@ export default function TextInputs() {
                     <div className='w-full flex gap-4 items-center'>
                       <div className='flex-1 space-y-4'>
                         <div className='form-group is-disabled'>
-                          <label for="country">Country</label>
+                          <label htmlFor="country">Country</label>
                           <input type="text" name="country" id="country" />
                         </div>
                         <div className='form-group'>
-                          <label for="bio">Bio</label>
+                          <label htmlFor="bio">Bio</label>
                           <textarea id="bio" name="bio" rows="4" placeholder="" disabled></textarea>
                         </div>
                       </div>
@@ -230,7 +230,7 @@ export default function TextInputs() {
                     <div className='w-full flex gap-4 items-center'>
                       <div className='flex-1 space-y-4'>
                         <div className='form-group'>
-                          <label for="new-password">New password</label>
+                          <label htmlFor="new-password">New password</label>
                           <div className='input-group'>
                             <button className='button button-sm button-tertiary'>
                               <span>Show</span>
@@ -239,7 +239,7 @@ export default function TextInputs() {
                           </div>
                         </div>
                         <div className='form-group'>
-                          <label for="send-email">Send email</label>
+                          <label htmlFor="send-email">Send email</label>
                           <div className='input-group'>
                             <button className='button button-primary'>
                               <span>Send email</span>

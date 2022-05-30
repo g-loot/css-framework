@@ -14,7 +14,6 @@ export default function Brawl() {
         <link rel="icon" href="https://res.cloudinary.com/gloot/image/upload/v1653321618/Marketing/2022_prototype/favicon.png" />
       </Head>
 
-      {!loading && data.map((brawl) => <CustomComponent key={brawl.id} />)}
 
     </div>
   );

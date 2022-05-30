@@ -31,11 +31,11 @@ export default function FormExample() {
                     </h2>
                     <div className='w-full flex flex-col lg:flex-row gap-4 items-stretch lg:items-center'>
                       <div className="flex-1 form-group">
-                        <label for="user-name">User name</label>
+                        <label htmlFor="user-name">User name</label>
                         <input type="text" name="user-name" id="user-name" />
                       </div>
                       <div className="flex-1 form-group">
-                        <label for="email">Email</label>
+                        <label htmlFor="email">Email</label>
                         <div className='input-group'>
                           <button className='button button-sm button-tertiary'>
                             <span>Change</span>
@@ -45,7 +45,7 @@ export default function FormExample() {
                       </div>
                     </div>
                     <div className='form-group'>
-                      <label for="about">About</label>
+                      <label htmlFor="about">About</label>
                       <textarea id="about" name="about" rows="3"></textarea>
                       <p className='text-ui-300 text-sm mt-1'>Brief description for your profile. URLs are hyperlinked.</p>
                     </div>
@@ -54,7 +54,7 @@ export default function FormExample() {
                       <code className='font-bold font-body'>4769554309840896</code>
                     </div>
                     <div className='form-group'>
-                      <label for="avatar">Avatar</label>
+                      <label htmlFor="avatar">Avatar</label>
                       <div className='flex items-center gap-4'>
                         <figure className='avatar avatar-simple'>
                           <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
@@ -65,13 +65,13 @@ export default function FormExample() {
                       </div>
                     </div>
                     <div className='form-group'>
-                      <label for="cover">Cover photo</label>
+                      <label htmlFor="cover">Cover photo</label>
                       <div className='px-6 pt-5 pb-6 border border-ui-500 border-dashed rounded space-y-1 text-center'>
                         <div className='text-ui-500'>
                           <span className='icon icon-image icon-36'></span>
                         </div>
                         <div className="flex justify-center text-ui-200">
-                          <label for="file-upload" className="relative cursor-pointer rounded-md font-medium text-interaction-500 hover:text-interaction-300 focus-within:outline-none">
+                          <label htmlFor="file-upload" className="relative cursor-pointer rounded-md font-medium text-interaction-500 hover:text-interaction-300 focus-within:outline-none">
                             <span>Upload a file</span>
                             <input id="file-upload" name="file-upload" type="file" className="sr-only" />
                           </label>
@@ -86,21 +86,21 @@ export default function FormExample() {
                       Social
                     </h2>
                     <div className='form-group flex items-center gap-2'>
-                      <label for="social-twitter" className='flex-1'>Twitter:</label>
+                      <label htmlFor="social-twitter" className='flex-1'>Twitter:</label>
                       <div className="flex-3 input-group">
                         <span className="icon icon-logo-twitter"></span>
                         <input type="text" name="social-twitter" id="social-twitter" />
                       </div>
                     </div>
                     <div className='form-group flex items-center gap-2'>
-                      <label for="social-twitch" className='flex-1'>Twitch:</label>
+                      <label htmlFor="social-twitch" className='flex-1'>Twitch:</label>
                       <div className="flex-3 input-group">
                         <span className="icon icon-twitch"></span>
                         <input type="text" name="social-twitch" id="social-twitch" />
                       </div>
                     </div>
                     <div className='form-group flex items-center gap-2'>
-                      <label for="social-discord" className='flex-1'>Discord:</label>
+                      <label htmlFor="social-discord" className='flex-1'>Discord:</label>
                       <div className="flex-3 input-group">
                         <button className='button button-sm button-tertiary'>
                           <span>Connect</span>
@@ -110,7 +110,7 @@ export default function FormExample() {
                       </div>
                     </div>
                     <div className='form-group flex items-center gap-2'>
-                      <label for="social-steam" className='flex-1 -mt-4'>Steam:</label>
+                      <label htmlFor="social-steam" className='flex-1 -mt-4'>Steam:</label>
                       <div className="flex-3">
                         <div className='input-group'>
                           <button className='button button-sm button-secondary'>

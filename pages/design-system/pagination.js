@@ -38,7 +38,7 @@ export default function Pagination() {
                       <div className='flex-1'>
                         <ul className="pagination">
                           <li>
-                            <a href="#" tabindex="-1">Previous</a>
+                            <a href="#" tabIndex="-1">Previous</a>
                           </li>
                           <li className="is-active">
                             <a href="#">1</a>
@@ -88,7 +88,7 @@ export default function Pagination() {
                       <div className='flex-1 flex flex-wrap gap-2'>
                         <ul className="pagination pagination-bullet">
                           <li>
-                            <a href="#" tabindex="-1"></a>
+                            <a href="#" tabIndex="-1"></a>
                           </li>
                           <li className="is-active">
                             <a href="#"></a>

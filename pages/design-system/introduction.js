@@ -32,7 +32,7 @@ export default function Introduction() {
                   The G-Loot CSS Framework is a centralized front-end design system that allows any developer to quickly build pages that are in line with the G-Loot brand and its user interface system.
                 </p>
                 <p>
-                  Based on the utility-first framework <a href='https://tailwindcss.com/' target='_blank'>Tailwind</a>, the G-Loot CSS Framework provides highly composable, low-level utility classes to make it easy to build complex user interfaces as well as pre-defined components listed on this website.
+                  Based on the utility-first framework <a href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind</a>, the G-Loot CSS Framework provides highly composable, low-level utility classes to make it easy to build complex user interfaces as well as pre-defined components listed on this website.
                 </p>
               </div>
 
@@ -57,7 +57,7 @@ export default function Introduction() {
                   By creating a G-Loot CSS Framework we are able to centralise all the styling in one place, making sure everything is designed in a consistent and smart way.
                 </p>
                 <p>
-                  And since the G-Loot CSS Framework is based on <a href='https://tailwindcss.com/' target='_blank'>Tailwind</a>, it allows the use of its utility-first class names anywhere. That way new pages and components can be built effortlessly.
+                  And since the G-Loot CSS Framework is based on <a href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind</a>, it allows the use of its utility-first class names anywhere. That way new pages and components can be built effortlessly.
                 </p>
                 <h3 className='h3 my-4'>
                   Benefits
@@ -95,7 +95,7 @@ export default function Introduction() {
                   </strong>
                   <br />
                   <span>
-                    Because it is based on the CSS Framework <a href='https://tailwindcss.com/' target='_blank'>Tailwind</a>, the whole product can use its numerous utility-first class names to build layouts and one-offs with ease and speed.
+                    Because it is based on the CSS Framework <a href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind</a>, the whole product can use its numerous utility-first class names to build layouts and one-offs with ease and speed.
                   </span>
                 </p>
                 <h3 className='h3 my-4'>

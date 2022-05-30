@@ -55,13 +55,13 @@ export default function Footer(props) {
 
             <ul className='text-sm'>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' href='https://gloot.com/company'>About</a>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/company'>About</a>
               </li>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' href='https://investor.gloot.com/'>Investor</a>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' rel='noreferrer' href='https://investor.gloot.com/'>Investor</a>
               </li>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' href='https://career.gloot.com/'>Jobs</a>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' rel='noreferrer' href='https://career.gloot.com/'>Jobs</a>
               </li>
             </ul>
           </li>
@@ -74,19 +74,19 @@ export default function Footer(props) {
 
             <ul className='text-sm'>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' href='https://gloot.com/terms-conditions'>Terms of service</a>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/terms-conditions'>Terms of service</a>
               </li>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' href='https://gloot.com/privacy-policy'>Privacy policy</a>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/privacy-policy'>Privacy policy</a>
               </li>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' href='https://gloot.com/developer-terms'>Developer terms</a>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/developer-terms'>Developer terms</a>
               </li>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' href='https://help.gloot.com/hc/en-us'>Support & FAQ</a>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' rel='noreferrer' href='https://help.gloot.com/hc/en-us'>Support & FAQ</a>
               </li>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' href='https://gloot.com/how-it-works'>How it works</a>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/how-it-works'>How it works</a>
               </li>
             </ul>
           </li>
@@ -97,27 +97,27 @@ export default function Footer(props) {
             </strong>
             <ul className=''>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' href='https://gloot.com/terms-conditions'>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/terms-conditions'>
                   <Icon icon='discord' />
                 </a>
               </li>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' href='https://gloot.com/terms-conditions'>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/terms-conditions'>
                   <Icon icon='logo-facebook' />
                 </a>
               </li>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' href='https://gloot.com/terms-conditions'>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/terms-conditions'>
                   <Icon icon='logo-instagram' />
                 </a>
               </li>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' href='https://gloot.com/terms-conditions'>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/terms-conditions'>
                   <Icon icon='logo-twitter' />
                 </a>
               </li>
               <li>
-                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' href='https://gloot.com/terms-conditions'>
+                <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/terms-conditions'>
                   <Icon icon='logo-youtube' />
                 </a>
               </li> 
