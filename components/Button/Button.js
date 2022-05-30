@@ -1,19 +1,33 @@
+import Icon from '../Icon/Icon';
+import React from 'react';
+import classNames from 'classnames';
+import styles from '../../assets/styles/Button.module.css'
+
 export default function Button(props) {
+  const buttonClass = classNames({
+    [styles["button"]]: true,
+    [styles["button-"+props.variant]]: props.variant,
+    "rounded-full": !props.label
+  });
   const icon = props.icon && (
-    <span className={`icon icon-${props.icon} ${props.iconSize ? `icon-${props.iconSize}` : ''} icon-${props.iconSize}`}></span>
+    <Icon icon={props.icon}></Icon>
   );
-  return (
-  <button className={`button button-${props.variant}`}>
-    {
-      props.iconDirection != 'right' ? icon : ''
-    }
-    <span
-    className={`bg-ui-700/${props.opacity ?? 100}`}>
+  const label = props.label && (
+    <span>
       {props.label}
     </span>
-     {
-        props.iconDirection == 'right' ? icon : ''
-      }
-  </button>
+  );
+  return (
+    <>
+      <button role='button' className={buttonClass}>
+        {
+          props.iconDirection != 'right' ? icon : ''
+        }
+        {label}
+        {
+          props.iconDirection == 'right' ? icon : ''
+        }
+      </button>
+    </>
   );
 }

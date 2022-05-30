@@ -1,33 +1,35 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "tailwindcss/utilities";
 
 
-
-@import "./accordion";
 @import "./animation";
-@import "./avatar";
-@import "./badge";
-@import "./button";
-@import "./card";
-@import "./carousel";
-@import "./chip";
 @import "./colors";
-@import "./data";
 @import "./fonts";
 @import "./form";
 @import "./general";
-@import "./icons";
-@import "./ladder";
-@import "./links";
-@import "./loader";
-@import "./modal";
-@import "./menu";
-@import "./pagination";
-@import "./progressbar";
 @import "./scrollbar";
-@import "./step";
-@import "./tabs";
-@import "./tooltip";
 @import "./typography";
 @import "./variables";
+
+@import "./accordion.module.css";
+@import "./avatar.module.css";
+@import "./badge.module.css";
+@import "./button.module.css";
+@import "./card.module.css";
+@import "./carousel.module.css";
+@import "./chip.module.css";
+@import "./data.module.css";
+@import "./icons.module.css";
+@import "./ladder.module.css";
+@import "./links.module.css";
+@import "./loader.module.css";
+@import "./modal.module.css";
+@import "./menu.module.css";
+@import "./pagination.module.css";
+@import "./progressbar.module.css";
+@import "./step.module.css";
+@import "./tabs.module.css";
+@import "./tooltip.module.css";
+
+
+@import "tailwindcss/utilities";

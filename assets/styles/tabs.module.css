@@ -106,7 +106,7 @@
       -skew-x-30
       transition
       duration-300
-      ease-[cubic-bezier(0.68,0,0.07,1)]
+      ease-[cubic-bezier(0.7,0,0.3,1)]
       ;
     }
   }

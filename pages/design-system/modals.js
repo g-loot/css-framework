@@ -32,7 +32,7 @@ export default function Mdodal() {
             <div className='mb-10'>
               <div className='flex flex-col lg:flex-row gap-4'>
                 <div className='flex-3'>
-                  <div className='modal-container card'>
+                  <div className='modal card'>
                     <button className="button button-secondary button-close">
                       <span className='icon icon-e-remove'></span>
                     </button>
@@ -45,7 +45,7 @@ export default function Mdodal() {
                           Leave party?
                         </h2>
                         <p>
-                        We are looking to find you the best match. Leaving the party means you lose your spot in the queue for the tournament.
+                          We are looking to find you the best match. Leaving the party means you lose your spot in the queue for the tournament.
                         </p>
                       </div>
                       <div className='modal-action'>
@@ -80,7 +80,7 @@ export default function Mdodal() {
             <div className='mb-10'>
               <div className='flex flex-col lg:flex-row gap-4'>
                 <div className='flex-3'>
-                  <div className='modal-container modal-inverted card'>
+                  <div className='modal modal-inverted card'>
                     <button className="button button-secondary button-close">
                       <span className='icon icon-e-remove'></span>
                     </button>
@@ -129,7 +129,7 @@ export default function Mdodal() {
             <div className='mb-10'>
               <div className='flex flex-col lg:flex-row gap-4'>
                 <div className='flex-3'>
-                  <div className='modal-container  card'>
+                  <div className='modal  card'>
                     <button className="button button-secondary button-close">
                       <span className='icon icon-e-remove'></span>
                     </button>

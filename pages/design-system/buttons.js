@@ -1,7 +1,9 @@
+import Button from '../../components/Button/Button';
 import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
 import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
+import Icon from '../../components/Icon/Icon';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
@@ -42,9 +44,7 @@ export default function Buttons() {
                         Text only
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-primary'>
-                          <span>Label</span>
-                        </button>
+                        <Button label='Label' variant='primary'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -52,10 +52,7 @@ export default function Buttons() {
                         Icon + text
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-primary'>
-                          <span className='icon icon-heart'></span>
-                          <span>Label</span>
-                        </button>
+                        <Button label='Label' variant='primary' icon='heart'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -63,10 +60,7 @@ export default function Buttons() {
                         Text + icon
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-primary'>
-                          <span>Label</span>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button label='Label' variant='primary' icon='heart' iconDirection='right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -74,9 +68,7 @@ export default function Buttons() {
                         Icon only
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-primary rounded-full'>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button variant='primary' icon='heart'></Button>
                       </div>
                     </div>
                   </div>
@@ -98,9 +90,12 @@ export default function Buttons() {
                         Text only
                       </div>
                       <div className='flex-1'>
+                        <Button label='Label' variant='secondary'></Button>
+                        {/*
                         <button className='button button-secondary'>
                           <span>Label</span>
                         </button>
+                        */}
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>

@@ -2,7 +2,7 @@
 /* MODAL */
 /*----------------------------*/
 
-.modal-container {
+.modal {
   @apply
   flex
   flex-col

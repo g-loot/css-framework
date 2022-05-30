@@ -7,8 +7,8 @@ export default function DSMainNav(props) {
 
   return (
     <>
-    {props.data.sections.map((item, i) => (
-      <div className="card md:rounded-lg overflow-hidden mb-4">
+    {props.data.sections.map((item, itemIndex) => (
+      <div className="card md:rounded-lg overflow-hidden mb-4" key={itemIndex}>
         <button className='flex items-center py-2 px-4'>
           <span className={`icon icon-16 icon-${item.icon}`}></span>
           <span className='font-headings uppercase text-ui-100'>{item.label}</span>

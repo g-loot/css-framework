@@ -1,5 +1,7 @@
+@import "tailwindcss/components";
+
 /*----------------------------*/
-/* LOADER */
+/* ICONS */
 /*----------------------------*/
 
 @font-face {
@@ -9,13 +11,17 @@
   font-weight: normal;
   font-style: normal;
 }
+
+
 /*------------------------
 	base class definition
 -------------------------*/
 
 .icon {
-  @apply inline-block;
-  font: normal normal normal 1em/1 'glooticons';
+  @apply 
+  inline-block
+  font-icon
+  ;
   color: inherit;
   flex-shrink: 0;
   speak: none;

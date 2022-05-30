@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const useFetch = (url, options = {}) => {
   const [state, setState] = useState({
@@ -25,7 +25,7 @@ const useFetch = (url, options = {}) => {
       setState((s) => ({ ...s, loading: false }));
     }
   };
-  useEffect(() => {
+  ect(() => {
     call();
   }, []);
   return state;

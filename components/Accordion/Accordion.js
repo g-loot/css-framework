@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
-export default function Button(props) {
+export default function Accordion(props) {
 
   const [isActive, setActive] = useState(false);
   const elementRef = useRef(null);

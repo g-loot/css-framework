@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
 import DSTopBar from '../../components/DesignSystem/DSTopBar';
@@ -5,7 +7,20 @@ import DSdata from '../api/designsystem/data.json'
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
-export default function RewardLadder() {
+export default function RewardLadderDS() {
+
+  const [randomNum1, setRandomNum1] = useState(1);
+  const maxNum = 10;
+
+  function clickHandlerNum1(varTarget, max) {
+    if(varTarget === max) {
+      setRandomNum1(varTarget = 1)
+    } else {
+      setRandomNum1(varTarget + 1)
+    }
+  }
+
+
   const router = useRouter();
   const { data, loading } = useFetch('/api/designsystem', { delay: 20 });
 
@@ -29,8 +44,8 @@ export default function RewardLadder() {
                 
                 <div className='flex gap-4 flex-col'>
                   <div className='flex-1 space-y-4'>
-                    <div className='ladder-container scrollbar-desktop'>
-                      <div className='ladder-avatar' style={{"--max": "10", "--step": "1"}}>
+                    <div className='ladder-container scrollbar-desktop' style={{"--max": maxNum, "--step": randomNum1}}>
+                      <div className='ladder-avatar'>
                         <div>
                           <div>
                             <figure className='avatar avatar-md'>
@@ -41,7 +56,7 @@ export default function RewardLadder() {
                         </div>
                       </div>
                       <ul className='ladder'>
-                        <li className='is-active'>
+                        <li className={`${randomNum1 === 1 ? `is-active` : ''}`}>
                           <div className='ladder-info'>
                             <div>
                               <span>1</span>
@@ -62,7 +77,7 @@ export default function RewardLadder() {
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li className={`${randomNum1 === 2 ? `is-active` : ''}`}>
                           <div className='ladder-info'>
                             <div>
                               <span>2</span>
@@ -83,7 +98,7 @@ export default function RewardLadder() {
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li className={`${randomNum1 === 3 ? `is-active` : ''}`}>
                           <div className='ladder-info'>
                             <div>
                               <span>3</span>
@@ -104,7 +119,7 @@ export default function RewardLadder() {
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li className={`${randomNum1 === 4 ? `is-active` : ''}`}>
                           <div className='ladder-info'>
                             <div>
                               <span>4</span>
@@ -125,7 +140,7 @@ export default function RewardLadder() {
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li className={`${randomNum1 === 5 ? `is-active` : ''}`}>
                           <div className='ladder-info'>
                             <div>
                               <span>5</span>
@@ -146,7 +161,7 @@ export default function RewardLadder() {
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li className={`${randomNum1 === 6 ? `is-active` : ''}`}>
                           <div className='ladder-info'>
                             <div>
                               <span>6</span>
@@ -167,7 +182,7 @@ export default function RewardLadder() {
                             </div>
                           </div>
                         </li>
-                        <li>
+                        <li className={`${randomNum1 === 7 ? `is-active` : ''}`}>
                           <div className='ladder-info'>
                             <div>
                               <span>7</span>
@@ -255,6 +270,12 @@ export default function RewardLadder() {
                           </div>
                         </li>
                       </ul>
+                    </div>
+
+                    <div className='text-center'>
+                      <button className='button button-tertiary mx-auto' onClick={clickHandlerNum1.bind(this, randomNum1, maxNum)}>
+                        <span>Next step</span>
+                      </button>
                     </div>
                   </div>
                   <div className='flex-1'>

@@ -1,0 +1,354 @@
+@import "tailwindcss/components";
+
+/*----------------------------*/
+/* CAROUSEL */
+/*----------------------------*/
+
+@layer components {
+  
+  .carousel {
+    @apply
+    flex
+    flex-col
+    lg:flex-row
+    lg:items-stretch
+    ;
+
+    .carousel-slides {
+      @apply
+      relative
+      z-0
+      lg:flex-3
+      xl:flex-3
+      flex
+      items-stretch  
+      h-72
+      lg:h-auto
+      ;
+
+      .carousel-slide {
+        @apply
+        inset-0
+        absolute
+        flex
+        items-stretch
+        transition-all
+        duration-1000
+        ease-[cubic-bezier(0.9,0,0.1,1)]
+        ;
+
+        &:not(.is-active) {
+          @apply
+          pointer-events-none
+          -translate-x-48
+          opacity-0
+          ;
+        }
+
+        &.is-active {
+          .carousel-image {
+            > * {
+              @apply
+              scale-100
+              ;
+            }
+          }
+        }
+
+        .carousel-image {
+          @apply
+          relative
+          z-10
+          flex-2
+          bg-ui-100
+          overflow-hidden
+          ;
+          > * {
+            @apply
+            absolute
+            inset-0
+            bg-cover
+            bg-center
+            transition-transform
+            duration-[1.4s]
+            ease-[cubic-bezier(0.7,0,0.3,1)]
+            scale-125
+            origin-right
+            ;
+          }
+        }
+        .carousel-backdrop {
+          @apply
+          absolute
+          z-0
+          -inset-80
+          blur-sm
+          opacity-0
+          grayscale-0
+          ;
+          > * {
+            @apply
+            absolute
+            inset-0
+            bg-cover
+            bg-center
+            ;
+          }
+        }
+
+        .carousel-content {
+          @apply
+          relative
+          z-20
+          flex-3
+          p-8
+          flex
+          flex-col
+          items-start
+          justify-center
+          ;
+
+          > * {
+            @apply
+            max-w-xs
+            ;
+          }
+        }
+      }
+    } 
+    
+    .carousel-nav {
+      @apply
+      flex
+      flex-none
+      lg:flex-col
+      items-stretch
+      bg-ui-900/50
+      lg:bg-ui-900/0
+      lg:bg-gradient-to-r
+      lg:from-ui-900/0
+      lg:to-ui-900
+      lg:pr-3
+      lg:w-64
+      lg:h-72
+      grow-0
+      relative
+      ;
+    }
+
+    .carousel-control {
+      @apply
+      flex
+      justify-end
+      gap-2
+      py-2
+      px-2
+      lg:gap-3
+      lg:py-3
+      lg:px-0
+      ;
+    }
+
+    .carousel-list {
+      @apply
+      relative
+      z-10
+      flex-1
+      overflow-hidden
+      flex
+      items-stretch
+      lg:block
+      
+      ;
+
+      &:hover {
+        a {
+          @apply
+          opacity-25
+          ;
+          &:hover {
+            @apply
+            opacity-100
+            ;
+          }
+        }
+      }
+
+      > li {
+        @apply
+        w-1/3
+        lg:w-auto
+        lg:h-1/3
+        flex
+        flex-col
+        items-stretch
+        flex-none
+        animate-[carousel-list-slidein_1.5s_cubic-bezier(0.9,0,0.1,1)_forwards]
+        translate-y-[4rem]
+        opacity-0
+        ;
+
+        
+        &:nth-child(2) {
+          @apply
+          animation-delay-100
+          ;
+        }
+        &:nth-child(3) {
+          @apply
+          animation-delay-200
+          ;
+        }
+        &:nth-child(4) {
+          @apply
+          animation-delay-300
+          ;
+        }
+        
+        
+        > a {
+          @apply
+          flex-1
+          flex
+          flex-col
+          justify-center
+          ml-2
+          my-2
+          lg:ml-0
+          lg:mb-0
+          lg:mt-3
+          p-3
+          pr-4
+          leading-none
+          relative
+          cursor-pointer
+          rounded
+          overflow-hidden
+          bg-ui-700
+          text-ui-200
+          gap-1.5
+          transition-all
+          duration-1000
+          ease-[cubic-bezier(0.9,0,0.1,1)]
+          origin-center
+          opacity-25
+          lg:scale-90
+          ;
+
+
+          > span,
+          > div {
+            @apply
+            whitespace-nowrap
+            text-ellipsis
+            overflow-hidden
+            ;
+          }
+
+          > span {
+            @apply
+            text-xs
+            text-ui-300
+            ;
+          }
+
+
+          > i {
+            @apply
+            absolute
+            inset-y-0
+            right-0
+            w-1.5
+            bg-ui-500
+            translate-x-2
+            transition-transform
+            duration-[1.25s]
+            ease-[cubic-bezier(0.8,0,0.2,1)]
+            ;
+
+            &::before {
+              @apply
+              content-['']
+              absolute
+              inset-0
+              bg-interaction-500
+              origin-top
+              scale-y-0
+              opacity-0
+              transition-all
+              duration-300
+              ease-in-out
+              ;
+            }
+          }
+
+          &:hover,
+          &.is-active {
+            &::after {
+              @apply
+              opacity-100
+              scale-y-100
+              translate-y-0
+              duration-75
+              ;
+            }
+          }
+
+          > * {
+            @apply
+            relative
+            z-20
+            ;
+          }
+        }
+        &.is-active {
+          a {
+            @apply
+            opacity-100
+            scale-100
+            ;
+          }
+          i {
+            @apply
+            translate-x-0
+            ;
+            &::before {
+              @apply
+              opacity-100
+              animate-[carousel-list-active_6s_linear_forwards]
+              ;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes carousel-image {
+  0% {
+    transform: scale(1) translate(0, 0);
+    transform-origin: 16% 84%;
+  }
+  100% {
+    transform: scale(1.25) translate(-20px, 15px);
+    transform-origin: left bottom;
+  }
+}
+@keyframes carousel-list-active {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes carousel-list-slidein {
+  from {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -248,5 +248,7 @@ module.exports = {
     'bg-bronze-500',
     'bg-bronze-700',
   ],
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animation-delay")
+  ],
 }

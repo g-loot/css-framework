@@ -1,0 +1,529 @@
+@import "tailwindcss/components";
+
+/*----------------------------*/
+/* BUTTON */
+/*----------------------------*/
+
+@layer components {
+  .button {
+    @apply
+    uppercase
+    outline-none
+    font-bold
+    leading-none
+    border-0
+    inline-flex
+    justify-center
+    items-center
+    bg-main
+    cursor-pointer
+    p-2.5
+    min-h-4
+    transition-all
+    duration-200
+    ease-in-out
+    text-ui-800
+    scale-100
+    space-x-2
+    backdrop-blur
+    bg-[length:500%_auto]
+    focus-visible:outline
+    focus-visible:outline-offset-2
+    focus-visible:outline-1
+    focus-visible:outline-main
+    ;
+
+    &:not([class*='rounded']) {
+      @apply
+      rounded
+      ;
+    }
+
+    > * {
+      @apply
+      font-bold
+      font-headings
+      tracking-wide
+      ;
+      &:first-child {
+        @apply
+        ml-0.5
+        ;
+      }
+      &:last-child {
+        @apply
+        mr-0.5
+        ;
+      }
+      &:first-child:last-child {
+        @apply
+        mx-0
+        ;
+      }
+    }
+
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply 
+        scale-105
+        bg-right
+        ;
+      }
+      &:active {
+        @apply
+        opacity-25
+        ;
+      }
+    }
+    
+
+    /* Variants */
+
+    &.button-primary {
+      @apply 
+      bg-gradient-to-r
+      from-interaction-500
+      via-interaction-500
+      to-interaction-300
+      shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
+      ;
+
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          shadow-[inset_0_0_0_1px_rgba(255,255,255,1)];
+        }
+      }
+    }
+    &.button-secondary {
+      @apply 
+      bg-ui-700/0
+      text-ui-300
+      shadow-[inset_0_0_0_1px_rgb(var(--color-ui-400))]
+      ;
+
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          text-ui-200
+          shadow-[inset_0_0_0_1px_rgb(var(--color-ui-600))];
+        }
+      }
+    }
+    &.button-tertiary {
+      @apply 
+      bg-ui-700
+      text-ui-300
+      ;
+
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          bg-ui-600
+          text-ui-200
+          ;
+        }
+      }
+    }
+    &.button-premium {
+      @apply 
+      bg-gradient-to-r
+      from-premium-500
+      via-premium-500
+      to-premium-300
+      shadow-[inset_0_0_0_1px_rgba(var(--color-premium-300),0)]
+      ;
+
+      > * {
+        @apply
+        drop-shadow-[0_-1.5px_0.5px_rgba(var(--color-premium-300)/0.5)]
+        ;
+      }
+
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          shadow-[inset_0_0_0_1px_rgba(var(--color-premium-300),1)]
+          ;
+        }
+      }
+    }
+    &.button-claim {
+      @apply 
+      bg-gradient-to-r
+      from-blue-700
+      via-purple-700
+      to-purple-700
+      text-mono-100
+      shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]
+      ;
+
+      > * {
+        @apply
+        drop-shadow-[0_-1.5px_0.5px_rgba(var(--color-purple-500)/0.25)]
+        ;
+      }
+
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          shadow-[inset_0_0_0_1px_rgba(255,255,255,0.15)];
+        }
+      }
+    }
+    &.button-play {
+      @apply
+      rounded-full
+      space-x-3
+      ;
+      
+      .icon {
+        @apply
+        transition-transform
+        duration-200
+        ease-in-out
+        scale-150
+        ml-0
+        ;
+      }
+
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          .icon {
+            @apply
+            scale-100
+            ;
+          }
+        }
+      }
+    }
+
+    /* Sizes */
+
+    &.button-lg {
+      @apply
+      py-3
+      px-4
+      ;
+
+      > * {
+        @apply
+        text-lg
+        ;
+      }
+      &[class*='rounded-full']{
+        @apply
+        px-4
+        ;
+      }
+    }
+    &.button-sm {
+      @apply
+      py-2
+      px-2.5
+      ;
+
+      > * {
+        @apply
+        text-sm
+        ;
+      }
+      &[class*='rounded-full']{
+        @apply
+        px-2
+        ;
+      }
+    }
+
+    /* Currency */
+
+    &.button-currency {
+      @apply
+      p-px
+      justify-items-stretch
+      ;
+      
+      > div {
+        @apply
+        flex
+        items-center
+        justify-center
+        self-stretch
+        relative;
+
+        &:first-child {
+          @apply
+          flex-1
+          px-2
+          ;
+        }
+
+        &:last-child {
+          @apply
+          bg-gradient-to-b
+          from-ui-800
+          to-ui-700
+          pl-2
+          pr-3
+          m-0
+          transition
+          duration-200
+          rounded-[calc(0.25rem-1px)]
+          ;
+        }
+      }
+      img {
+        @apply
+        transition
+        duration-200
+        ;
+      }
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          img {
+            @apply
+            scale-110
+            ;
+          }
+          > div:last-child {
+            @apply
+            bg-gradient-to-b
+            from-ui-800
+            to-ui-800
+            ;
+          }
+        }
+      }
+      &.button-coin {
+        > div:last-child {
+          span {
+            @apply
+            text-premium-500
+            ;
+          }
+        }
+      }
+      &.button-token {
+        > div:last-child {
+          span {
+            @apply
+            text-purple-300
+            ;
+          }
+        }
+      }
+      &.button-ticket {
+        > div:last-child {
+          span {
+            @apply
+            text-premium-700
+            ;
+          }
+        }
+      }
+    }
+
+
+
+    /* loading */
+
+    &.is-loading {
+      @apply
+      pointer-events-none
+      ;
+    }
+
+    &.is-loading {
+
+      &:not([class*='currency']),
+      &.button-currency > *:first-child {
+        > span {
+          @apply
+          opacity-0
+          ;
+        }
+        &::after {
+          @apply
+          content-['']
+          absolute
+          h-6
+          w-6
+          block
+          border-2
+          border-ui-800
+          border-l-ui-100
+          opacity-100
+          rounded-full
+          mx-auto
+          left-[calc(50%-0.75rem)]
+          animate-[button-loader-rotate_1s_linear_infinite]
+          ;
+        }
+      }
+
+      &.button-primary {
+        &:not([class*='currency']),
+        &.button-currency > *:first-child {
+          &::after {
+            @apply
+            border-ui-800/25
+            border-l-ui-800
+            ;
+          }
+        }
+      }
+      &.button-secondary {
+        &:not([class*='currency']),
+        &.button-currency > *:first-child {
+          &::after {
+            @apply
+            border-ui-700
+            border-l-ui-300
+            ;
+          }
+        }
+      }
+      &.button-tertiary {
+        &:not([class*='currency']),
+        &.button-currency > *:first-child {
+          &::after {
+            @apply
+            border-ui-600
+            border-l-ui-300
+            ;
+          }
+        }
+      }
+      &.button-premium {
+        &:not([class*='currency']),
+        &.button-currency > *:first-child {
+          &::after {
+            @apply
+            border-ui-800/25
+            border-l-ui-800
+            ;
+          }
+        }
+      }
+      &.button-claim {
+        &:not([class*='currency']),
+        &.button-currency > *:first-child {
+          &::after {
+            @apply
+            border-ui-100/25
+            border-l-ui-100
+            ;
+          }
+        }
+      }
+    }
+
+    /* Disabled */
+
+    &.is-disabled,
+    &:disabled {
+      @apply
+      pointer-events-none
+      opacity-50
+      ;
+    }
+
+    /* Shining */
+
+    &.is-shining {
+      @apply
+      relative
+      overflow-hidden
+      ;
+
+      &::before,
+      &::after {
+        @apply
+        content-['']
+        absolute
+        w-6
+        h-80
+        bg-gradient-to-r
+        from-mono-100/0
+        to-mono-100/50
+        -left-44
+        border-r
+        border-r-mono-100/75
+        blur-sm
+        animate-[button-shining-rays_4s_cubic-bezier(0.5,0,0.5,1)_infinite]
+        ;
+      }
+
+      &::before {
+        @apply
+        -left-10
+        ease-[cubic-bezier(.9,0,.9,1)]
+        ;
+      }
+    }
+
+    /* Close */ 
+    &.button-close {
+      @apply
+      h-10
+      w-10
+      rounded-full
+      hover:rotate-45
+      bg-ui-800/75
+      ;
+
+      > .icon {
+        @apply
+        block
+        transition-all
+        duration-200
+        ease-in-out
+        ;
+      }
+
+      &:hover {
+        > .icon {
+          @apply
+          scale-100
+          ;
+        }
+      }
+    }
+  }
+}
+
+@keyframes button-loader-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes button-shining-rays {
+  0% {
+    transform: rotate(-30deg) translateX(calc(-20em));
+  }
+  75%,
+  100% {
+    transform: rotate(-30deg) translateX(calc(20em));
+    opacity: 0;
+  }
+}

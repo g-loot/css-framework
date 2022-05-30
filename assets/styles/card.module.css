@@ -25,16 +25,11 @@
     overflow-hidden
     ;
 
-    > * {
-      @apply
-      relative
-      z-20
-      ;
-    }
+    
     &::after {
       @apply
       absolute
-      z-10
+      z-0
       content-['']
       block
       -bottom-16
@@ -46,7 +41,8 @@
       h-32
       w-96
       blur-lg
-      left-[calc(50%-12rem)];
+      left-[calc(50%-12rem)]
+      pointer-events-none
       ;
     }
 
