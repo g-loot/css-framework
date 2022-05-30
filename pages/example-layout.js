@@ -10,7 +10,7 @@ import { useRouter } from 'next/router';
 const Wrapper = styled.div`
   ${compose(layout, space, flexbox)};
   
-  background-color: ${(props) => props.theme.colors.ui[400]};
+  background-color: red;
   padding: 3rem;
   border-radius: .25rem;
 `;
