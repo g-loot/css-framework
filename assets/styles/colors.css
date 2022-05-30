@@ -87,6 +87,22 @@
 }
 
 body {
-  @apply bg-ui-900;
+  @apply 
+  text-ui-100
+  bg-ui-900;
   background: rgb(var(--color-ui-900)) !important;
+}
+
+::selection {
+  @apply
+  text-ui-800
+  bg-ui-100
+  ;
+}
+
+a:-webkit-any-link,
+a {
+  @apply
+  text-ui-100
+  ;
 }

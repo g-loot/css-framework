@@ -2,19 +2,9 @@
 /* TYPOGRAPHY */
 /*----------------------------*/
 
-
-::selection {
-  @apply
-  text-ui-100
-  bg-ui-400
-  ;
-}
-
-
 body {
   @apply 
   font-body
-  text-ui-100
   ;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
