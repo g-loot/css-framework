@@ -83,6 +83,15 @@ module.exports = {
           850: withOpacityValue('--color-ui-850'),
           900: withOpacityValue('--color-ui-900'),
         },
+        game: {
+          apexlegends: withOpacityValue('--color-game-apexlegends'),
+          csgo: withOpacityValue('--color-game-csgo'),
+          dota2: withOpacityValue('--color-game-dota2'),
+          leagueoflegends: withOpacityValue('--color-game-leagueoflegends'),
+          pubg: withOpacityValue('--color-game-pubg'),
+          rocketleague: withOpacityValue('--color-game-rocketleague'),
+          valorant: withOpacityValue('--color-game-valorant'),
+        },
         mono: {
           100: withOpacityValue('--color-mono-100'),
           900: withOpacityValue('--color-mono-900'),

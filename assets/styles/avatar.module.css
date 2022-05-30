@@ -148,8 +148,8 @@
   }
   &.avatar-tiny {
     @apply
-    h-8
-    w-8
+    h-[30px]
+    w-[30px]
     ;
     > span {
       @apply

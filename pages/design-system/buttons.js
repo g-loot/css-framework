@@ -84,18 +84,13 @@ export default function Buttons() {
                   Secondary
                 </h3>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
-                  <div className='flex-1 space-y-4'>
+                <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
                         Text only
                       </div>
                       <div className='flex-1'>
                         <Button label='Label' variant='secondary'></Button>
-                        {/*
-                        <button className='button button-secondary'>
-                          <span>Label</span>
-                        </button>
-                        */}
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -103,10 +98,7 @@ export default function Buttons() {
                         Icon + text
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-secondary'>
-                          <span className='icon icon-heart'></span>
-                          <span>Label</span>
-                        </button>
+                        <Button label='Label' variant='secondary' icon='heart'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -114,10 +106,7 @@ export default function Buttons() {
                         Text + icon
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-secondary'>
-                          <span>Label</span>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button label='Label' variant='secondary' icon='heart' iconDirection='right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -125,9 +114,7 @@ export default function Buttons() {
                         Icon only
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-secondary rounded-full'>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button variant='secondary' icon='heart'></Button>
                       </div>
                     </div>
                   </div>
@@ -147,12 +134,10 @@ export default function Buttons() {
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
-                        Large
+                        Text only
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-tertiary'>
-                          <span>Label</span>
-                        </button>
+                        <Button label='Label' variant='tertiary'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -160,10 +145,7 @@ export default function Buttons() {
                         Icon + text
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-tertiary'>
-                          <span className='icon icon-heart'></span>
-                          <span>Label</span>
-                        </button>
+                        <Button label='Label' variant='tertiary' icon='heart'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -171,10 +153,7 @@ export default function Buttons() {
                         Text + icon
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-tertiary'>
-                          <span>Label</span>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button label='Label' variant='tertiary' icon='heart' iconDirection='right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -182,9 +161,7 @@ export default function Buttons() {
                         Icon only
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-tertiary rounded-full'>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button variant='tertiary' icon='heart'></Button>
                       </div>
                     </div>
                   </div>
@@ -206,12 +183,10 @@ export default function Buttons() {
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
-                        Large
+                        Text only
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-premium'>
-                          <span>Label</span>
-                        </button>
+                        <Button label='Label' variant='premium'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -219,10 +194,7 @@ export default function Buttons() {
                         Icon + text
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-premium'>
-                          <span className='icon icon-heart'></span>
-                          <span>Label</span>
-                        </button>
+                        <Button label='Label' variant='premium' icon='heart'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -230,10 +202,7 @@ export default function Buttons() {
                         Text + icon
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-premium'>
-                          <span>Label</span>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button label='Label' variant='premium' icon='heart' iconDirection='right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -241,9 +210,7 @@ export default function Buttons() {
                         Icon only
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-premium rounded-full'>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button variant='premium' icon='heart'></Button>
                       </div>
                     </div>
                   </div>
@@ -264,12 +231,10 @@ export default function Buttons() {
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
-                        Large
+                        Text only
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-claim'>
-                          <span>Label</span>
-                        </button>
+                        <Button label='Label' variant='claim'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -277,10 +242,7 @@ export default function Buttons() {
                         Icon + text
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-claim'>
-                          <span className='icon icon-heart'></span>
-                          <span>Label</span>
-                        </button>
+                        <Button label='Label' variant='claim' icon='heart'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -288,10 +250,7 @@ export default function Buttons() {
                         Text + icon
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-claim'>
-                          <span>Label</span>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button label='Label' variant='claim' icon='heart' iconDirection='right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -299,9 +258,7 @@ export default function Buttons() {
                         Icon only
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-claim rounded-full'>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button variant='claim' icon='heart'></Button>
                       </div>
                     </div>
                   </div>
@@ -323,40 +280,31 @@ export default function Buttons() {
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
-                        Primary:
+                        Primary
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-primary button-play'>
-                          <span className='icon icon-circle-caret-right'></span>
-                          <span>Label</span>
-                        </button>
+                        <Button label='Label' variant='primary' play='true' icon='circle-caret-right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
-                        Secondary:
+                        Secondary
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-secondary button-play'>
-                          <span className='icon icon-circle-caret-right'></span>
-                          <span>Label</span>
-                        </button>
+                        <Button label='Label' variant='secondary' play='true' icon='circle-caret-right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right'>
-                        Tertiary:
+                        Tertiary
                       </div>
                       <div className='flex-1'>
-                        <button className='button button-tertiary button-play'>
-                          <span className='icon icon-circle-caret-right'></span>
-                          <span>Label</span>
-                        </button>
+                        <Button label='Label' variant='tertiary' play='true' icon='circle-caret-right'></Button>
                       </div>
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/yt6Lds0x/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/Lu7ad39o/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
@@ -384,16 +332,9 @@ export default function Buttons() {
                         Large
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
-                        <button className='button button-lg button-primary'>
-                          <span>Label</span>
-                        </button>
-                        <button className='button button-lg button-secondary'>
-                          <span className='icon icon-heart'></span>
-                          <span>Label</span>
-                        </button>
-                        <button className='button button-lg button-tertiary rounded-full'>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button label='Label' variant='primary' size='lg'></Button>
+                        <Button label='Label' variant='secondary' icon='heart' size='lg'></Button>
+                        <Button variant='tertiary' icon='heart' size='lg'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -401,16 +342,9 @@ export default function Buttons() {
                         Medium <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
-                        <button className='button button-md button-primary'>
-                          <span>Label</span>
-                        </button>
-                        <button className='button button-md button-secondary'>
-                          <span className='icon icon-heart'></span>
-                          <span>Label</span>
-                        </button>
-                        <button className='button button-md button-tertiary rounded-full'>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button label='Label' variant='primary' size='md'></Button>
+                        <Button label='Label' variant='secondary' icon='heart' size='md'></Button>
+                        <Button variant='tertiary' icon='heart' size='md'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -418,16 +352,9 @@ export default function Buttons() {
                         Small
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
-                        <button className='button button-sm button-primary'>
-                          <span>Label</span>
-                        </button>
-                        <button className='button button-sm button-secondary'>
-                          <span className='icon icon-heart'></span>
-                          <span>Label</span>
-                        </button>
-                        <button className='button button-sm button-tertiary rounded-full'>
-                          <span className='icon icon-heart'></span>
-                        </button>
+                        <Button label='Label' variant='primary' size='sm'></Button>
+                        <Button label='Label' variant='secondary' icon='heart' size='sm'></Button>
+                        <Button variant='tertiary' icon='heart' size='sm'></Button>
                       </div>
                     </div>
                     
@@ -458,15 +385,7 @@ export default function Buttons() {
                         Coins
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
-                        <button className="button button-primary button-currency button-coin">
-                          <div>
-                            <span>Purchase</span>
-                          </div>
-                          <div>
-                            <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png" width="34" height="34" alt="coin" />
-                            <span>15,000</span>
-                          </div>
-                        </button>
+                        <Button label='Purchase' variant='primary' currency='coin' amount='15,000'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -474,15 +393,7 @@ export default function Buttons() {
                         Tokens
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
-                        <button className="button button-primary button-currency button-token">
-                          <div>
-                            <span>Purchase</span>
-                          </div>
-                          <div>
-                            <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png" width="34" height="34" alt="coin" />
-                            <span>10</span>
-                          </div>
-                        </button>
+                        <Button label='Purchase' variant='primary' currency='token' amount='10'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -490,15 +401,7 @@ export default function Buttons() {
                         Ticket
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
-                        <button className="button button-primary button-currency button-ticket">
-                          <div>
-                            <span>Purchase</span>
-                          </div>
-                          <div>
-                            <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tiket.png" width="34" height="34" alt="coin" />
-                            <span>2</span>
-                          </div>
-                        </button>
+                        <Button label='Purchase' variant='primary' currency='ticket' amount='2'></Button>
                       </div>
                     </div>
                     

@@ -18,8 +18,7 @@
       @apply
       relative
       z-0
-      lg:flex-3
-      xl:flex-3
+      lg:flex-7
       flex
       items-stretch  
       h-72
@@ -59,7 +58,7 @@
           @apply
           relative
           z-10
-          flex-2
+          flex-4
           bg-ui-100
           overflow-hidden
           ;
@@ -100,8 +99,8 @@
           @apply
           relative
           z-20
-          flex-3
-          p-8
+          flex-5
+          p-5
           flex
           flex-col
           items-start
@@ -111,6 +110,7 @@
           > * {
             @apply
             max-w-xs
+            mx-4
             ;
           }
         }
@@ -120,7 +120,6 @@
     .carousel-nav {
       @apply
       flex
-      flex-none
       lg:flex-col
       items-stretch
       bg-ui-900/50
@@ -129,9 +128,8 @@
       lg:from-ui-900/0
       lg:to-ui-900
       lg:pr-3
-      lg:w-64
       lg:h-72
-      grow-0
+      flex-2
       relative
       ;
     }
@@ -158,7 +156,6 @@
       flex
       items-stretch
       lg:block
-      
       ;
 
       &:hover {
@@ -233,7 +230,19 @@
           origin-center
           opacity-25
           lg:scale-90
+          select-none
           ;
+
+          &:not([disabled]),
+          &:not(.is-disabled) {
+            &:active {
+              @apply
+              duration-200
+              ease-in-out
+              opacity-25
+              ;
+            }
+          }
 
 
           > span,

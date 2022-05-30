@@ -12,11 +12,6 @@
   font-style: normal;
 }
 
-
-/*------------------------
-	base class definition
--------------------------*/
-
 .icon {
   @apply 
   inline-block
@@ -29,71 +24,37 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/*------------------------
-  change icon size
--------------------------*/
-/* relative units */
+
 .icon-sm {
   font-size: 0.8em;
 }
 .icon-lg {
   font-size: 1.2em;
 }
-/* absolute units */
+
 .icon-16 {
   font-size: 16px;
 }
+
 .icon-20 {
   font-size: 20px;
 }
+
 .icon-24 {
   font-size: 24px;
 }
+
 .icon-28 {
   font-size: 28px;
 }
+
 .icon-32 {
   font-size: 32px;
 }
+
 .icon-36 {
   font-size: 36px;
 }
-
-/*------------------------
-  spinning icons
--------------------------*/
-.icon-is-spinning {
-  animation: icon-spin 1s infinite linear;
-}
-@keyframes icon-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/*------------------------
-  rotated/flipped icons
--------------------------*/
-.icon-rotate-90 {
-  transform: rotate(90deg);
-}
-.icon-rotate-180 {
-  transform: rotate(180deg);
-}
-.icon-rotate-270 {
-  transform: rotate(270deg);
-}
-.icon-flip-y {
-  transform: scaleY(-1);
-}
-.icon-flip-x {
-  transform: scaleX(-1);
-}
-/*------------------------
-	icons
--------------------------*/
 
 .icon-shop::before {
   content: "\ea02";

@@ -69,10 +69,10 @@ export default function Carousel(props) {
               </div>
               <div className='carousel-content'>
                 <div>
-                  <h2 className='h3'>
+                  <h2 className='h3 text-ui-100'>
                     {slide.title}
                   </h2>
-                  <p className='mb-5 mt-2'>
+                  <p className='mb-5 mt-2 text-ui-200'>
                     {slide.description}
                   </p>
                   <button className='button button-primary'>

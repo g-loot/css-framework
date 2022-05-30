@@ -36,7 +36,7 @@ export default function Home() {
 
         <section className='mb-4 grid grid-cols-1 xl:grid-cols-3 gap-4'>
           
-          <div className='card flex-1 relative overflow-hidden rounded-lg p-4'>
+          <div className='card flex flex-col  flex-1 relative rounded-lg p-4'>
             <div className='mb-2'>
               <div className='flex items-baseline gap-2 mb-1'>
                 <h2 className='h5'>
@@ -48,16 +48,35 @@ export default function Home() {
                 Claim a free reward each day
               </p>
             </div>
-            <div className='flex-1 flex flex-col items-center py-8'>
+            <div className='relative z-30 flex-1 flex flex-col items-center justify-center'>
               <button className='button button-lg button-claim'>
                 <span>Claim rewards</span>
               </button>
             </div>
           </div>
+          
+          <div className='card flex flex-col flex-1 relative overflow-hidden rounded-lg p-4'>
+            <div className='relative z-30 flex-1 flex flex-col items-center justify-center text-center'>
+              <button className="button button-secondary button-play">
+                <span className="icon icon-circle-caret-right"></span>
+                <span>How to brawl</span>
+              </button>
+              <h3 className='h4 mt-3 mb-5'>
+                Install the tracker to track your stats and compete.
+              </h3>
+              <button className='button button-primary'>
+                <span>Download tracker</span>
+              </button>
+            </div>
+            <div className='absolute pointer-events-none inset-0 z-10 bg-center bg-no-repeat bg-cover' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653907437/Marketing/2022_prototype/bg-howtobrawl.jpg)`}}></div>
 
-          <div className='card card-halo halo-r flex-1 relative overflow-hidden rounded-lg p-4'>
-            <div className='mb-2 flex items-start gap-4'>
-              <div className="rounded-md bg-game-valorant flex items-center justify-center"><span className="icon icon-32 icon-game-valorant-symbol color-white"></span></div>
+          </div>
+
+          <div className='card flex flex-col  card-halo halo-r flex-1 relative overflow-hidden rounded-lg p-4'>
+            <div className='relative z-30 mb-2 flex items-start gap-4'>
+              <div className="rounded flex items-center justify-center h-12 w-12 bg-gradient-to-b from-ui-900/75 to-ui-800">
+                <span className="icon icon-32 icon-game-valorant-symbol text-game-valorant color-white"></span>
+              </div>
               <div>
                 <div className='flex items-baseline gap-2 mb-1'>
                   <h2 className='h5'>
@@ -71,22 +90,22 @@ export default function Home() {
             </div>
 
 
-            <div className='relative z-30 flex-1 flex flex-col items-center justify-center h-60'>
+            <div className='relative z-30 flex-1 flex flex-col items-center justify-center py-8'>
               <div className='w-full rounded-xl grid grid-cols-2 lg:grid-cols-4 gap-2 leading-none mb-4'>
-                <div className='flex-1 rounded-lg bg-ui-900/75 backdrop-blur-sm text-center aspect-square flex flex-col gap-1 justify-center'>
+                <div className='flex-1 rounded-lg bg-gradient-to-b from-ui-900/75 to-ui-800/75 backdrop-blur-sm text-center aspect-square flex flex-col gap-1 justify-center'>
                   <div className='text-3xl font-headings italic text-ui-100'>11</div>
                   <div className='text-xs text-ui-300 h-5'>Assists</div>
                 </div>
-                <div className='flex-1 rounded-lg bg-ui-900/75 backdrop-blur-sm text-center aspect-square flex flex-col gap-1 justify-center'>
-                  <div className='text-3xl font-headings italic text-ui-100'>11</div>
+                <div className='flex-1 rounded-lg bg-gradient-to-b from-ui-900/75 to-ui-800/75 backdrop-blur-sm text-center aspect-square flex flex-col gap-1 justify-center'>
+                  <div className='text-3xl font-headings italic text-ui-100'>53</div>
                   <div className='text-xs text-ui-300 h-5'>Kills</div>
                 </div>
-                <div className='flex-1 rounded-lg bg-ui-900/75 backdrop-blur-sm text-center aspect-square flex flex-col gap-1 justify-center'>
-                  <div className='text-3xl font-headings italic text-ui-100'>11</div>
+                <div className='flex-1 rounded-lg bg-gradient-to-b from-ui-900/75 to-ui-800/75 backdrop-blur-sm text-center aspect-square flex flex-col gap-1 justify-center'>
+                  <div className='text-3xl font-headings italic text-ui-100'>23</div>
                   <div className='text-xs text-ui-300 h-5'>Deaths</div>
                 </div>
-                <div className='flex-1 rounded-lg bg-ui-900/75 backdrop-blur-sm text-center aspect-square flex flex-col gap-1 justify-center'>
-                  <div className='text-3xl font-headings italic text-ui-100'>11</div>
+                <div className='flex-1 rounded-lg bg-gradient-to-b from-ui-900/75 to-ui-800/75 backdrop-blur-sm text-center aspect-square flex flex-col gap-1 justify-center'>
+                  <div className='text-3xl font-headings italic text-ui-100'>38</div>
                   <div className='text-xs text-ui-300 h-5'>Headshot<br/>kills</div>
                 </div>
               </div>
@@ -94,17 +113,12 @@ export default function Home() {
                 <span>View stats</span>
               </button>
             </div>
-            
-
 
             <div className='absolute pointer-events-none inset-0 z-10 bg-right-bottom bg-no-repeat bg-contain' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289889/Marketing/202109_gloot2/laststats-valorant.png)`}}></div>
             
-            
           </div>
           
-          <div className='card flex-1 relative overflow-hidden rounded-lg p-4'>
-
-          </div>
+         
 
         </section>
 

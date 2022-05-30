@@ -7,8 +7,8 @@ export default function RewardLadder(props) {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setStep(2)
-    }, 1000);
+      setStep(3)
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
   

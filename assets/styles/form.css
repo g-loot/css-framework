@@ -511,7 +511,7 @@ textarea,
   > .icon {
     @apply
     absolute
-    bottom-[calc(50%-9px)]
+    bottom-[calc(50%-calc(27px/2))]
     left-2.5
     text-lg
     text-ui-300
