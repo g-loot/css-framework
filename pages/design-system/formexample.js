@@ -128,7 +128,7 @@ export default function FormExample() {
                       Data Privacy
                     </h2>
                     <p className='text-sm text-ui-200'>
-                      To make G-Loot better we collect information from you as visitor with help from cookies. We also conduct relevant marketing of G-Loot's services within Meta, Google, Adroll, Snapchat and Bing's network. Read more in our <a href="#" target="_blank">Privacy Policy</a>. <br/>
+                      To make G-Loot better we collect information from you as visitor with help from cookies. We also conduct relevant marketing of G-Loot&lsquo;s services within Meta, Google, Adroll, Snapchat and Bing&lsquo;s network. Read more in our <a href="#" target="_blank">Privacy Policy</a>. <br/>
                       Here you can consent to share your data with the following partners:
                     </p>
                     <div className='form-group'>

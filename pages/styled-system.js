@@ -49,7 +49,7 @@ export default function Home() {
 
 
         <Box width={[200, 400, 1024]} margin={2} >
-          What's in the box?
+          What&lsquo;s in the box?
         </Box>
 
     </div>

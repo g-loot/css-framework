@@ -22,16 +22,16 @@ export default function Colors() {
             Colors
           </h1>
 
-          {DScolors.colors.map((item, i) => (
-            <div className="mb-8">
+          {DScolors.colors.map((item, indexItem) => (
+            <div className="mb-8" key={indexItem}>
               <div className="">
                 <h2 className='text-3xl mb-2'>
                   {item.title}
                 </h2>
                 <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">
-                  {item.colors.map((item2, i) => (
+                  {item.colors.map((item2, indexItem2) => (
                       <>
-                        <div className='rounded-lg overflow-hidden card' key={item2}>
+                        <div className='rounded-lg overflow-hidden card' key={indexItem2}>
                           <div className={`h-32 relative ${item2.value}`}>
 
                           </div>

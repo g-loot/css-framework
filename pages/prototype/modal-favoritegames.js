@@ -1,7 +1,7 @@
 import { Dialog } from '@headlessui/react'
 import { useState } from 'react'
 
-function ModalFavoriteGames() {
+export default function ModalFavoriteGames(props) {
   let [isOpen, setIsOpen] = useState(true)
 
   return (

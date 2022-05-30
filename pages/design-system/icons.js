@@ -25,9 +25,9 @@ export default function Icons() {
 
           <div className="flex flex-wrap gap-2">
           
-            {DSicons.icons.map((item, i) => (
+            {DSicons.icons.map((item, index) => (
 
-              <div className="card card-alt rounded-lg text-0  w-40 h-40 inline-flex flex-col justify-center items-center relative transition hover:scale(105) hover:opacity-50 cursor-pointer" onClick={() => {navigator.clipboard.writeText(item.name)}}>
+              <div key={index} className="card card-alt rounded-lg text-0  w-40 h-40 inline-flex flex-col justify-center items-center relative transition hover:scale(105) hover:opacity-50 cursor-pointer" onClick={() => {navigator.clipboard.writeText(item.name)}}>
                 <span className={`icon block icon-32 color-dark-200 hover:color-white icon-${item.name}`}></span>
                 <span className="absolute bottom-0 p-2 text-ui-300 text-xs">
                   {item.name}

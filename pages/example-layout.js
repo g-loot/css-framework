@@ -86,7 +86,7 @@ export default function Home() {
             <div className='p-4'>
               <h2 className="font-headings italic text-3xl text-ui-200">Constructing various layouts</h2>
               <p className='text-ui-200 leading-loose'>
-                Building layouts is at the core of an integrater's role. If Tailwind enables building complex layouts with a few simple class names, the styled &amp; component systems make it much more heavy with little reusability.
+                Building layouts is at the core of an integrater&lsquo;s role. If Tailwind enables building complex layouts with a few simple class names, the styled &amp; component systems make it much more heavy with little reusability.
               </p>
             </div>
             <div className='p-4 border-t border-ui-600 mb-4'>

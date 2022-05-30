@@ -68,7 +68,7 @@ export default function Introduction() {
                   </strong>
                   <br />
                   <span>
-                    By separating the style from the content, you can design in a smarter way, combining styling across components (example: we are able to streamline the loading state of the tournament & mission cards). It makes it also easier to have a semantic structure (div > figure, header, section, ul, etc.).
+                    By separating the style from the content, you can design in a smarter way, combining styling across components (example: we are able to streamline the loading state of the tournament &amp; mission cards). It makes it also easier to have a semantic structure (div &gt; figure, header, section, ul, etc.).
                   </span>
                 </p>
                 <p className='border-b border-ui-600 pb-5'>

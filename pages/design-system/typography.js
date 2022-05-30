@@ -91,7 +91,7 @@ export default function Typography() {
                   </div>
                   <div className='w-3/5'>
                     <div className='h1'>
-                      You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
+                      You can take the girl out of Salvador, but you&lsquo;ll never take the girl out of Salvador.
                     </div>
                     <div className='text-sm text-ui-300 mt-4'>
                       Our main size for headers, usually H1 or similar.
@@ -115,7 +115,7 @@ export default function Typography() {
                   </div>
                   <div className='w-3/5'>
                     <div className='h2'>
-                      You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
+                      You can take the girl out of Salvador, but you&lsquo;ll never take the girl out of Salvador.
                     </div>
                     <div className='text-sm text-ui-300 mt-4'>
                       Our main size for headers, usually H1 or similar.
@@ -139,7 +139,7 @@ export default function Typography() {
                   </div>
                   <div className='w-3/5'>
                     <div className='h3'>
-                      You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
+                      You can take the girl out of Salvador, but you&lsquo;ll never take the girl out of Salvador.
                     </div>
                     <div className='text-sm text-ui-300 mt-4'>
                       Our main size for headers, usually H1 or similar.
@@ -163,7 +163,7 @@ export default function Typography() {
                   </div>
                   <div className='w-3/5'>
                     <div className='h4'>
-                      You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
+                      You can take the girl out of Salvador, but you&lsquo;ll never take the girl out of Salvador.
                     </div>
                     <div className='text-sm text-ui-300 mt-4'>
                       Our main size for headers, usually H1 or similar.
@@ -187,7 +187,7 @@ export default function Typography() {
                   </div>
                   <div className='w-3/5'>
                     <div className='h5'>
-                      You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
+                      You can take the girl out of Salvador, but you&lsquo;ll never take the girl out of Salvador.
                     </div>
                     <div className='text-sm text-ui-300 mt-4'>
                       Our main size for headers, usually H1 or similar.
@@ -211,7 +211,7 @@ export default function Typography() {
                   </div>
                   <div className='w-3/5'>
                     <div className='h6'>
-                      You can take the girl out of Salvador, but you'll never take the girl out of Salvador.
+                      You can take the girl out of Salvador, but you&lsquo;ll never take the girl out of Salvador.
                     </div>
                     <div className='text-sm text-ui-300 mt-4'>
                       Our main size for headers, usually H1 or similar.
