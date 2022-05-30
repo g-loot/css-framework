@@ -137,7 +137,7 @@
       ;
       transform-box: fill-box;
       transform-origin: center center;
-      strokeWidth: 24;
+      stroke-width: 24;
       stroke-dasharray: 120;
       stroke-dashoffset: calc(var(--percent) - 100);
     }
