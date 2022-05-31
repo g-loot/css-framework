@@ -34,7 +34,7 @@ export default function Loaders() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Extra large
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
@@ -42,7 +42,7 @@ export default function Loaders() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Large
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
@@ -50,7 +50,7 @@ export default function Loaders() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Medium <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
@@ -58,7 +58,7 @@ export default function Loaders() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Small
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
@@ -66,7 +66,7 @@ export default function Loaders() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Extra small
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
@@ -97,7 +97,7 @@ export default function Loaders() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Extra large
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
@@ -107,7 +107,7 @@ export default function Loaders() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Large
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
@@ -117,7 +117,7 @@ export default function Loaders() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Medium <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
@@ -127,7 +127,7 @@ export default function Loaders() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Small
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
@@ -137,7 +137,7 @@ export default function Loaders() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Extra small
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>

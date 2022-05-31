@@ -25,6 +25,22 @@
     bg-ui-700
     shadow-[0_0_0_1px_rgba(var(--color-ui-100)/0.5)]
     ;
+
+    &.icon {
+      @apply
+      text-ui-400/50
+      text-center
+      flex
+      items-center
+      justify-center
+      text-5xl
+      ;
+      &::before {
+        @apply
+        absolute
+        ;
+      }
+    }
   }
 
   /* shape */
@@ -77,6 +93,11 @@
       @apply
       inset-[0.2rem]
       ;
+      &.icon {
+        @apply
+        text-4xl
+        ;
+      }
     }
     &.avatar-square {
       @apply
@@ -103,6 +124,11 @@
       @apply
       inset-[0.15rem]
       ;
+      &.icon {
+        @apply
+        text-3xl
+        ;
+      }
     }
     &.avatar-square {
       @apply
@@ -129,6 +155,11 @@
       @apply
       inset-[0.125rem]
       ;
+      &.icon {
+        @apply
+        text-2xl
+        ;
+      }
     }
     &.avatar-square {
       @apply
@@ -155,6 +186,11 @@
       @apply
       inset-[0.1rem]
       ;
+      &.icon {
+        @apply
+        text-sm
+        ;
+      }
     }
     &.avatar-square {
       @apply

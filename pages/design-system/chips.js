@@ -38,7 +38,7 @@ export default function Chips() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Text only
                       </div>
                       <div className='flex-1'>
@@ -48,7 +48,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                       Icon + text
                       </div>
                       <div className='flex-1'>
@@ -59,7 +59,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                       Text + icon
                       </div>
                       <div className='flex-1'>
@@ -84,7 +84,7 @@ export default function Chips() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Text only
                       </div>
                       <div className='flex-1'>
@@ -94,7 +94,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                       Icon + text
                       </div>
                       <div className='flex-1'>
@@ -105,7 +105,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                       Text + icon
                       </div>
                       <div className='flex-1'>
@@ -138,7 +138,7 @@ export default function Chips() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Primary
                       </div>
                       <div className='flex-1'>
@@ -151,7 +151,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Secondary
                       </div>
                       <div className='flex-1'>
@@ -187,7 +187,7 @@ export default function Chips() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Medium <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='flex-1 flex items-center gap-2'>
@@ -213,7 +213,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Small
                       </div>
                       <div className='flex-1 flex items-center gap-2'>
@@ -239,7 +239,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Extra small
                       </div>
                       <div className='flex-1 flex items-center gap-2'>
@@ -328,7 +328,7 @@ export default function Chips() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Green <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='flex-1'>
@@ -338,7 +338,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Blue
                       </div>
                       <div className='flex-1'>
@@ -348,7 +348,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Gray
                       </div>
                       <div className='flex-1'>
@@ -383,7 +383,7 @@ export default function Chips() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Normal <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='chip chip-reward chip-xp'>
@@ -392,7 +392,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                       Inverted
                       </div>
                       <div className='chip chip-reward chip-xp chip-inverted'>
@@ -415,7 +415,7 @@ export default function Chips() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                   <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Normal <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='chip chip-reward chip-token'>
@@ -424,7 +424,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                       Inverted
                       </div>
                       <div className='chip chip-reward chip-token chip-inverted'>
@@ -447,7 +447,7 @@ export default function Chips() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                   <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Normal <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='chip chip-reward chip-ticket'>
@@ -456,7 +456,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                       Inverted
                       </div>
                       <div className='chip chip-reward chip-ticket chip-inverted'>
@@ -480,7 +480,7 @@ export default function Chips() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Small
                       </div>
                       <div className='chip chip-reward chip-ticket chip-inverted chip-sm'>
@@ -489,7 +489,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                       </div>
                       <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
                         <span className='icon icon-xp-symbol-outline'></span>
@@ -497,7 +497,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                       </div>
                       <div className='chip chip-reward chip-token chip-inverted chip-sm'>
                         <span className='icon icon-token'></span>
@@ -528,7 +528,7 @@ export default function Chips() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Default <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='flex-1'>
@@ -539,7 +539,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Attention
                       </div>
                       <div className='flex-1'>
@@ -550,7 +550,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Success
                       </div>
                       <div className='flex-1'>
@@ -561,7 +561,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Info
                       </div>
                       <div className='flex-1'>
@@ -572,7 +572,7 @@ export default function Chips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Error
                       </div>
                       <div className='flex-1'>

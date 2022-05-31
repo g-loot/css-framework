@@ -34,7 +34,7 @@ export default function Avatars() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Rounded <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='flex-1'>
@@ -44,7 +44,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Square
                       </div>
                       <div className='flex-1'>
@@ -54,7 +54,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Diamond
                       </div>
                       <div className='flex-1'>
@@ -88,7 +88,7 @@ export default function Avatars() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Large <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='flex-1'>
@@ -103,7 +103,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Medium
                       </div>
                       <div className='flex-1'>
@@ -118,7 +118,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Small
                       </div>
                       <div className='flex-1'>
@@ -133,7 +133,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Extra small
                       </div>
                       <div className='flex-1'>
@@ -148,7 +148,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Tiny
                       </div>
                       <div className='flex-1'>
@@ -187,7 +187,7 @@ export default function Avatars() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Light <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='flex-1'>
@@ -199,7 +199,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Gold
                       </div>
                       <div className='flex-1'>
@@ -211,7 +211,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Silver
                       </div>
                       <div className='flex-1'>
@@ -223,7 +223,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Bronze
                       </div>
                       <div className='flex-1'>
@@ -257,7 +257,7 @@ export default function Avatars() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Online <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
                       </div>
                       <div className='flex-1'>
@@ -286,7 +286,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Disabled
                       </div>
                       <div className='flex-1'>
@@ -315,7 +315,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Error
                       </div>
                       <div className='flex-1'>
@@ -344,7 +344,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Attention
                       </div>
                       <div className='flex-1'>
@@ -373,7 +373,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Info
                       </div>
                       <div className='flex-1'>
@@ -402,7 +402,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Radar
                       </div>
                       <div className='flex-1'>
@@ -457,7 +457,7 @@ export default function Avatars() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         No border
                       </div>
                       <div className='flex-1'>
@@ -481,7 +481,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         
                       </div>
                       <div className='flex-1'>
@@ -505,7 +505,7 @@ export default function Avatars() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         
                       </div>
                       <div className='flex-1'>
@@ -535,6 +535,105 @@ export default function Avatars() {
                   </div>
                   <div className='flex-1'>
                     <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/mv2yx3r8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          {/* With icon */}
+          <div className='mb-12'>
+
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+              With icon
+            </h2>
+
+            <div className="card rounded-lg p-4">
+              <div className=''>
+                <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+                  <div className='flex-1 space-y-4'>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        Works with any icon
+                      </div>
+                      <div className='flex-1'>
+                        <div className='flex gap-4 justify-start items-center'>
+                          <figure className='avatar'>
+                            <span className='icon icon-profile'></span>
+                          </figure>
+                          <figure className='avatar avatar-md'>
+                            <span className='icon icon-profile'></span>
+                          </figure>
+                          <figure className='avatar avatar-sm'>
+                            <span className='icon icon-profile'></span>
+                          </figure>
+                          <figure className='avatar avatar-xs'>
+                            <span className='icon icon-profile'></span>
+                          </figure>
+                          <figure className='avatar avatar-tiny'>
+                            <span className='icon icon-profile'></span>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        
+                      </div>
+                      <div className='flex-1'>
+                        <div className='flex gap-4 justify-start items-center'>
+                          <figure className='avatar avatar-square'>
+                            <span className='icon icon-multiple-11'></span>
+                          </figure>
+                          <figure className='avatar avatar-square avatar-md'>
+                            <span className='icon icon-multiple-11'></span>
+                          </figure>
+                          <figure className='avatar avatar-square avatar-sm'>
+                            <span className='icon icon-multiple-11'></span>
+                          </figure>
+                          <figure className='avatar avatar-square avatar-xs'>
+                            <span className='icon icon-multiple-11'></span>
+                          </figure>
+                          <figure className='avatar avatar-square avatar-tiny'>
+                            <span className='icon icon-multiple-11'></span>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        
+                      </div>
+                      <div className='flex-1'>
+                        <div className='flex gap-4 justify-start items-center'>
+                          <figure className='avatar avatar-diamond'>
+                            <span className='icon icon-handheld-console-2'></span>
+                          </figure>
+                          <figure className='avatar avatar-diamond avatar-md'>
+                            <span className='icon icon-handheld-console-2'></span>
+                          </figure>
+                          <figure className='avatar avatar-diamond avatar-sm'>
+                            <span className='icon icon-handheld-console-2'></span>
+                          </figure>
+                          <figure className='avatar avatar-diamond avatar-xs'>
+                            <span className='icon icon-handheld-console-2'></span>
+                          </figure>
+                          <figure className='avatar avatar-diamond avatar-tiny'>
+                            <span className='icon icon-handheld-console-2'></span>
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    
+                    
+                    
+                  </div>
+                  <div className='flex-1'>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/L86wt5ok/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>

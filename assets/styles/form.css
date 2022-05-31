@@ -742,6 +742,7 @@ textarea,
 
 .form-group.is-disabled input,
 .form-group.is-disabled select,
+.form-group.is-disabled textarea,
 input[type=text]:disabled,
 input[type=number]:disabled,
 input[type=email]:disabled,
@@ -755,10 +756,32 @@ input[type=email].is-disabled,
 input[type=password].is-disabled,
 select.is-disabled,
 textarea.is-disabled,
-.input-text.is-disabled, {
+.input-text.is-disabled {
   @apply
   opacity-50
   pointer-events-none
   ;
 }
-
+.form-group.is-disabled {
+  @apply
+  relative
+  ;
+  &::after {
+    @apply
+    font-icon
+    content-['\ea12']
+    text-ui-400
+    absolute
+    h-6
+    rounded-full
+    mx-auto
+    bottom-2
+    right-2.5
+    ;
+  }
+  select:not([multiple]) {
+    @apply
+    bg-none
+    ;
+  }
+}

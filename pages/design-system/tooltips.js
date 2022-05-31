@@ -35,7 +35,7 @@ export default function Tooltips() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Top <button className="chip chip-sm chip-secondary pointer-events-none"><span>default</span></button>
                       </div>
                       <div className='flex-1'>
@@ -45,7 +45,7 @@ export default function Tooltips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Right
                       </div>
                       <div className='flex-1'>
@@ -55,7 +55,7 @@ export default function Tooltips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Bottom
                       </div>
                       <div className='flex-1'>
@@ -65,7 +65,7 @@ export default function Tooltips() {
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         left
                       </div>
                       <div className='flex-1'>
@@ -96,7 +96,7 @@ export default function Tooltips() {
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                           Top
                         </div>
                         <div className='flex-1'>
@@ -123,7 +123,7 @@ export default function Tooltips() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                           Right
                         </div>
                         <div className='flex-1'>
@@ -133,7 +133,7 @@ export default function Tooltips() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                           Bottom
                         </div>
                         <div className='flex-1'>
@@ -143,7 +143,7 @@ export default function Tooltips() {
                         </div>
                       </div>
                       <div className='w-full flex gap-4 items-center'>
-                        <div className='w-1/4 text-ui-400 text-right'>
+                        <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                           left
                         </div>
                         <div className='flex-1'>

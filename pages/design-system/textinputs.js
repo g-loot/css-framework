@@ -200,9 +200,9 @@ export default function TextInputs() {
                           <label htmlFor="country">Country</label>
                           <input type="text" name="country" id="country" />
                         </div>
-                        <div className='form-group'>
+                        <div className='form-group is-disabled'>
                           <label htmlFor="bio">Bio</label>
-                          <textarea id="bio" name="bio" rows="4" placeholder="" disabled></textarea>
+                          <textarea id="bio" name="bio" rows="4" placeholder=""></textarea>
                         </div>
                       </div>
                     </div>
