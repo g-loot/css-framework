@@ -69,6 +69,7 @@
   relative
   overflow-hidden
   rounded-full
+  shrink-0
   ;
   > div {
     @apply

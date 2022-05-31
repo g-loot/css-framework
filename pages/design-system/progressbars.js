@@ -92,7 +92,7 @@ export default function Progressbar() {
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
-                    <div className='w-full flex gap-4 items-center justify-center'>
+                    <div className='w-full flex flex-wrap gap-4 items-center justify-center'>
                       <div className='progressbar-radial'>
                         <div>
                           <div>

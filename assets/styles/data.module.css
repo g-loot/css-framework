@@ -6,6 +6,7 @@
 .icon-holder {
   @apply
   relative
+  shrink-0
   ;
   &::before {
     @apply
