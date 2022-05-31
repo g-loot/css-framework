@@ -1,0 +1,361 @@
+/*----------------------------*/
+/* TOURNAMENT BRACKETS */
+/*----------------------------*/
+
+.brackets {
+  @apply
+  flex
+  items-stretch
+  ;
+}
+
+.bracket-teams {
+
+  > li:first-child {
+    @apply
+    rounded-t
+    overflow-hidden
+    border
+    border-ui-700
+    ;
+  }
+  > li:not(:first-child):not(:last-child) {
+    @apply
+    border-x
+    border-b
+    border-ui-700
+    ;
+  }
+  > li:last-child {
+    @apply
+    rounded-b
+    overflow-hidden
+    border-b
+    border-x
+    border-ui-700
+    ;
+  }
+
+  > li{
+    @apply
+    flex
+    items-center
+    p-1
+    gap-2
+    bg-ui-800
+    ;
+
+    &.is-active {
+      @apply
+      shadow-[0_0_4px_1px_rgba(var(--color-interaction-500),1)]
+      relative
+      outline
+      outline-1
+      outline-interaction-500/75
+      z-20
+      bg-ui-700
+      ;
+    }
+
+    figure {
+      @apply
+      from-ui-800/0
+      via-ui-800/0
+      to-ui-800/0
+      shadow-[inset_0_0_0_1px_rgba(var(--color-ui-100)/0)]
+      h-[30px]
+      w-[30px]
+      rounded-sm
+      ;
+      
+      > span {
+        @apply
+        inset-[0.1rem]
+        inset-0
+        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-100)/0)]
+        rounded-[calc(0.25rem-0.1rem)]
+        ;
+        &.icon {
+          @apply
+          text-sm
+          ;
+        }
+      }
+    }
+    b {
+      @apply
+      flex-1
+      block
+      font-headings
+      italic
+      text-lg
+      leading-none
+      ;
+    }
+    i {
+      @apply
+      not-italic
+      h-[30px]
+      w-[30px]
+      leading-[30px]
+      rounded-sm
+      bg-gradient-to-b
+      from-ui-900
+      to-ui-800
+      text-center
+      font-headings
+      text-lg
+    }
+  }
+}
+
+
+.bracket-item {
+  @apply
+  relative
+  px-7
+  min-w-xs
+  flex
+  flex-col
+  justify-center
+  items-stretch
+  flex-1
+  ;
+  > div {
+    > div {
+      @apply
+      relative
+      ;
+    }
+  }
+  .bracket-meta,
+  .bracket-info {
+    @apply
+    h-6
+    ;
+  }
+  .bracket-meta {
+    @apply
+    flex
+    justify-between
+    items-center
+    text-xs
+    leading-none
+    ;
+    > div:nth-child(1) {
+      @apply
+      flex
+      gap-1
+      text-ui-300
+      ;
+    }
+    a {
+      @apply
+      text-interaction-500
+      hover:text-interaction-300
+      underline
+      ;
+    }
+  }
+  .bracket-info {
+    @apply
+    text-xs
+    text-ui-400
+    text-center
+    ;
+  }
+}
+
+.bracket-round {
+  @apply
+  flex
+  flex-col
+  justify-items-stretch
+  items-stretch
+  flex-1
+  max-w-xs
+  opacity-0
+  -translate-x-8
+  animate-[bracket-round-slidein_1.5s_cubic-bezier(0.9,0,0.1,1)_forwards]
+  ;
+
+  &:first-child {
+    .bracket-teams {
+      &::before,
+      &::after {
+        @apply
+        hidden
+        ;
+      }
+    }
+  }
+  &:last-child {
+    .bracket-item {
+      &::before,
+      &::after {
+        @apply
+        hidden
+        ;
+      }
+    }
+  }
+  .bracket-title {
+    @apply
+    py-3
+    leading-none
+    flex-none
+    text-center
+    font-headings
+    text-lg
+    bg-ui-800/50
+    backdrop-blur-sm
+    rounded-lg
+    mb-8
+    mx-7
+    text-ui-300
+    whitespace-nowrap
+    overflow-ellipsis
+    ;
+  }
+  > ul {
+    @apply
+    flex
+    flex-col
+    items-stretch
+    justify-around
+    flex-1
+    ;
+    > li.bracket-item {
+      @apply
+        py-8
+        ;
+    }
+    > .bracket-item {
+      &::before {
+        @apply
+        content-['']
+        absolute
+        w-[calc(2rem-3px)]
+        h-[calc(50%-1rem)]
+        right-0
+        ;
+      }
+      .bracket-teams {
+        &::before,
+        &::after {
+          @apply
+          content-['']
+          absolute
+          w-[calc(2rem-3px)]
+          h-8
+          left-0
+          -translate-x-px
+          ;
+        }
+        &::before {
+          @apply
+          top-[calc(50%-2rem)]
+          border-l
+          border-b
+          border-ui-400
+          rounded-bl-xl
+          translate-y-[0.5px]
+        }
+        &::after {
+          @apply
+          bottom-[calc(50%-2rem)]
+          border-l
+          border-t
+          border-ui-400
+          rounded-tl-xl
+          -translate-y-[0.5px]
+        }
+      }
+    }
+    > .bracket-item:nth-child(odd) {
+      &::before {
+        @apply
+        rounded-tr-xl
+        border-t
+        border-r
+        border-ui-400
+        top-[50%]
+        ;
+      }
+    }
+    > .bracket-item:nth-child(even) {
+      &::before {
+        @apply
+        rounded-br-xl
+        border-b
+        border-r
+        border-ui-400
+        bottom-[50%]
+        ;
+      }
+    }
+  }
+}
+
+.bracket-item,
+.bracket-teams {
+  &::before,
+  &::after {
+    @apply
+    opacity-0
+    animate-[bracket-connectors-slidein_0.75s_ease_forwards_1.5s]
+    ;
+  }
+}
+
+.bracket-round:nth-child(2){
+  @apply
+  animation-delay-200
+  ;
+}
+.bracket-round:nth-child(3){
+  @apply
+  animation-delay-400
+  ;
+}
+.bracket-round:nth-child(4){
+  @apply
+  animation-delay-600
+  ;
+}
+.bracket-round:nth-child(5){
+  @apply
+  animation-delay-800
+  ;
+}
+.bracket-round:nth-child(6){
+  @apply
+  animation-delay-1000
+  ;
+}
+
+@keyframes bracket-round-slidein {
+  0% {
+    transform: translateX(-2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes bracket-connectors-slidein {
+  0%,
+  20%,
+  40%,
+  60%,
+  80% {
+    opacity: 0;
+  }
+  30%,
+  50%,
+  70%,
+  100% {
+    opacity: 1;
+  }
+}

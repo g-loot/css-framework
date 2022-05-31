@@ -20,12 +20,11 @@
 @import "./accordion.module.css";
 @import "./avatar.module.css";
 @import "./badge.module.css";
-
+@import "./bracket.module.css";
 @import "./card.module.css";
 @import "./carousel.module.css";
 @import "./chip.module.css";
 @import "./data.module.css";
-
 @import "./ladder.module.css";
 @import "./links.module.css";
 @import "./loader.module.css";

@@ -8,15 +8,15 @@ import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
 export default function DataNumbers() {
+  
   function RandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  
-  const [random1, setRandom1] = useState(RandomNumber(0,100));
-  const [random2, setRandom2] = useState(RandomNumber(0,100));
-  const [random3, setRandom3] = useState(RandomNumber(0,100));
-  const [random4, setRandom4] = useState(RandomNumber(0,100));
+  const [random1, setRandom1] = useState(0);
+  const [random2, setRandom2] = useState(0);
+  const [random3, setRandom3] = useState(0);
+  const [random4, setRandom4] = useState(0);
 
   function clickHandlerNum1and2(){
     clickHandlerNum1();
