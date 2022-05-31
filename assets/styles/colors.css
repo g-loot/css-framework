@@ -100,9 +100,11 @@ body {
   ;
 }
 
+/*
 a:-webkit-any-link,
 a {
   @apply
   text-ui-100
   ;
 }
+*/

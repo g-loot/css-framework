@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
@@ -12,18 +12,19 @@ function RandomNumber(min, max) {
 }
 
 export default function Progressbar() {
-  var Random1 = RandomNumber(1,100);
-  var Random2 = RandomNumber(1,100);
-  var Random3 = RandomNumber(1,100);
-  var Random4 = RandomNumber(1,100);
+
+  const [random1, setRandom1] = useState(0);
+  const [random2, setRandom2] = useState(0);
+  const [random3, setRandom3] = useState(0);
+  const [random4, setRandom4] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      Random1 = RandomNumber(1,100);
-      Random2 = RandomNumber(1,100);
-      Random3 = RandomNumber(1,100);
-      Random4 = RandomNumber(1,100);
-    }, 1000);
+      setRandom1(RandomNumber(0,100))
+      setRandom2(RandomNumber(0,100))
+      setRandom3(RandomNumber(0,100))
+      setRandom4(RandomNumber(0,100))
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
   
@@ -55,16 +56,16 @@ export default function Progressbar() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex flex-col gap-4 items-center'>
-                      <div className='progressbar w-full' style={{"--percent": Random1}}>
+                      <div className='progressbar w-full' style={{"--percent": random1}}>
                         <div></div>
                       </div>
-                      <div className='progressbar w-full' style={{"--percent": Random2}}>
+                      <div className='progressbar w-full' style={{"--percent": random2}}>
                         <div></div>
                       </div>
-                      <div className='progressbar w-full' style={{"--percent": Random3}}>
+                      <div className='progressbar w-full' style={{"--percent": random3}}>
                         <div></div>
                       </div>
-                      <div className='progressbar w-full' style={{"--percent": Random4}}>
+                      <div className='progressbar w-full' style={{"--percent": random4}}>
                         <div></div>
                       </div>
                     </div>
@@ -96,14 +97,14 @@ export default function Progressbar() {
                         <div>
                           <div>
                             <div className='text-2xl font-headings'>
-                              {Random1}%
+                              {random1}%
                             </div>
                             <div className='text-xs text-ui-300 uppercase'>
                               win rate
                             </div>
                           </div>
                         </div>
-                        <svg viewBox="0 0 40 40" style={{"--percent": Random1}}>
+                        <svg viewBox="0 0 40 40" style={{"--percent": random1}}>
                             <circle cx="20" cy="20" r="16" />
                         </svg>
                       </div>
@@ -111,14 +112,14 @@ export default function Progressbar() {
                         <div>
                           <div>
                             <div className='text-2xl font-headings'>
-                              {Random2}%
+                              {random2}%
                             </div>
                             <div className='text-xs text-ui-300 uppercase'>
                               win rate
                             </div>
                           </div>
                         </div>
-                        <svg viewBox="0 0 40 40" style={{"--percent": Random2}}>
+                        <svg viewBox="0 0 40 40" style={{"--percent": random2}}>
                             <circle cx="20" cy="20" r="16" />
                         </svg>
                       </div>
@@ -126,14 +127,14 @@ export default function Progressbar() {
                         <div>
                           <div>
                             <div className='text-2xl font-headings'>
-                              {Random3}%
+                              {random3}%
                             </div>
                             <div className='text-xs text-ui-300 uppercase'>
                               win rate
                             </div>
                           </div>
                         </div>
-                        <svg viewBox="0 0 40 40" style={{"--percent": Random3}}>
+                        <svg viewBox="0 0 40 40" style={{"--percent": random3}}>
                             <circle cx="20" cy="20" r="16" />
                         </svg>
                       </div>
@@ -141,14 +142,14 @@ export default function Progressbar() {
                         <div>
                           <div>
                             <div className='text-2xl font-headings'>
-                              {Random4}%
+                              {random4}%
                             </div>
                             <div className='text-xs text-ui-300 uppercase'>
                               win rate
                             </div>
                           </div>
                         </div>
-                        <svg viewBox="0 0 40 40" style={{"--percent": Random4}}>
+                        <svg viewBox="0 0 40 40" style={{"--percent": random4}}>
                             <circle cx="20" cy="20" r="16" />
                         </svg>
                       </div>
@@ -174,7 +175,7 @@ export default function Progressbar() {
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex flex-col gap-4 items-center'>
-                      <div className='progressbar progressbar-sm w-full' style={{"--percent": Random1}}>
+                      <div className='progressbar progressbar-sm w-full' style={{"--percent": random1}}>
                         <div></div>
                       </div>
 
@@ -182,14 +183,14 @@ export default function Progressbar() {
                         <div>
                           <div>
                             <div className='text-xl font-headings'>
-                              {Random2}%
+                              {random2}%
                             </div>
                             <div className='text-xs text-ui-300 uppercase'>
                               win rate
                             </div>
                           </div>
                         </div>
-                        <svg viewBox="0 0 40 40" style={{"--percent": Random2}}>
+                        <svg viewBox="0 0 40 40" style={{"--percent": random2}}>
                             <circle cx="20" cy="20" r="16" />
                         </svg>
                       </div>

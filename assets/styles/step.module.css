@@ -4,252 +4,29 @@
 
 /* primary */
 
-.step {
+
+
+
+/* tertiary */
+
+.step,
+.step.step-primary {
+
   @apply
   flex
   flex-nowrap
   list-none
-  p-0
+  p-1
   ;
 
   > li {
     @apply
-    mt-1
+    mt-0
     relative
     flex-1
     text-center
     ;
 
-    &::before {
-      @apply
-      content-['']
-      absolute
-      z-10
-      left-[50%]
-      w-full
-      h-0.5
-      top-[0.3rem]
-      bg-main
-      transition-all
-      duration-1000
-      ease-[cubic-bezier(0.9,0,0.1,1)]
-      ;
-    }
-
-    > a {
-      @apply
-      inline-block
-      text-main
-      pt-5
-      px-2
-      transition-all
-      duration-1000
-      ease-[cubic-bezier(0.9,0,0.1,1)]
-      ;
-
-      &::before {
-        @apply
-        content-['']
-        rounded-full
-        block
-        absolute
-        z-20
-        left-[50%]
-        top-0
-        -translate-x-[50%]
-        w-3
-        h-3
-        bg-interaction-500
-        border-2
-        border-ui-800
-        transition-all
-        duration-1000
-        ease-[cubic-bezier(0.9,0,0.1,1)]
-        ;
-      }      
-    }
-    &:last-child {
-      &::before {
-        @apply
-        hidden
-        ;
-      }
-    }
-
-    &.is-active {
-      &::before {
-        @apply
-        bg-ui-500
-        ;
-      }
-      a {
-        &::before {
-          @apply
-          border-main
-          bg-ui-800
-          ;
-        }
-
-      }
-    
-    }
-  }
-  & > li.is-active ~ li,
-  &.is-inactive > li {
-    &::before {
-      @apply
-      bg-ui-500
-      ;
-    }
-    a {
-      @apply
-      text-ui-400
-      ;
-      &::before {
-        @apply
-        bg-ui-500
-        ;
-      }
-    }
-  }
-}
-
-/* secondary */
-
-.step.step-secondary {
-
-  li::before,
-  a::before {
-    @apply
-    hidden;
-  }
-
-  @apply 
-  gap-4
-  ;
- 
-  > li {
-    @apply
-    mt-0
-    
-    ;
-    > a {
-      @apply
-      p-0
-      flex
-      items-center
-      gap-4
-      text-ui-200
-      transition-all
-      duration-1000
-      ease-[cubic-bezier(0.9,0,0.1,1)]
-      ;
-
-      > i {
-        @apply 
-        h-12
-        w-12
-        rounded-full
-        bg-gradient-radial-to-b
-        from-ui-200
-        to-ui-400
-        text-ui-800
-        text-center
-        text-xl
-        not-italic
-        font-headings
-        leading-[3rem]
-        ;
-      }
-
-      hr {
-        @apply
-        flex-1
-        block
-        h-px
-        rounded
-        border-t
-        border-ui-300
-        ;
-      }
-    }
-    &:last-child {
-      @apply
-      flex-none
-      ;
-      hr {
-        @apply
-        hidden;
-      }
-    }
-    &.is-active {
-      a {
-        @apply
-        text-main
-        ;
-        i {
-          @apply
-          from-interaction-300
-          to-interaction-700
-          text-ui-800;
-        }
-        hr {
-          @apply
-          border-dashed
-          ;
-        }
-      }
-    }
-  }
-
-  & > li.is-active ~ li,
-  &.is-inactive > li {
-    &::before {
-      @apply
-      bg-ui-600
-      ;
-    }
-    a {
-      @apply
-      text-ui-400
-      ;
-      &::before {
-        @apply
-        bg-ui-500
-        ;
-      }
-      i {
-        @apply
-        from-ui-800
-        to-ui-700
-        text-ui-400
-        ;
-      }
-    }
-  }
-}
-
-
-/* tertiary */
-
-.step.step-tertiary {
-
-  @apply
-  p-1
-  ;
-
-  li::before,
-  a::before {
-    @apply
-    hidden;
-  }
-
- 
-  > li {
-    @apply
-    mt-0
-    ;
-
     > a {
       @apply
       p-0
@@ -257,6 +34,12 @@
       items-center
       text-ui-200
       ;
+
+      > b {
+        @apply
+        font-normal
+        ;
+      }
 
       > i {
         @apply 
@@ -278,14 +61,15 @@
         outline-interaction-500
         outline
         overflow-hidden
+        transition
+        duration-300
         ;
-
 
         &::before,
         &::after {
           @apply
           absolute
-          transition-all
+          transition-transform
           duration-1000
           ease-[cubic-bezier(0.9,0,0.1,1)]
           ;
@@ -336,11 +120,6 @@
           ;
           clip-path: polygon(0% 0%, 100% 0%, calc(100% - 0.25em) 100%, 0% 100%);
         }
-      }
-      hr {
-        @apply
-        hidden
-        ;
       }
     }
     &:last-child {
@@ -414,8 +193,194 @@
           ;
         }
       }
-        
+    }
+  }
+}
+
+/* secondary */
+
+.step.step-secondary {
+
+  @apply
+  px-12
+  ;
+
+ 
+  > li {
+    @apply
+    pb-12
+
+    ;
+    > a {
+      @apply
+      p-0
+      flex
+      items-center
+      text-ui-200
+      transition-all
+      duration-1000
+      ease-[cubic-bezier(0.9,0,0.1,1)]
+      ;
+      > b {
+        @apply
+        absolute
+        w-32
+        -left-16
+        top-5
+        translate-x-1.5
+        ;
+      }
+      > i {
+        @apply 
+        h-3
+        w-3
+        outline-2
+        text-main/0
+        ;
+        &::before {
+          @apply
+          hidden
+          ;
+        }
+        &::after {
+          @apply
+          text-main/0
+          ;
+        }
+      }
+      > span {
+        @apply
+        h-px
+        ;
+      }
+    }
+    &:last-child {
+      @apply
+      flex-none
+      ;
       
+    }
+    &.is-active {
+      a {
+        @apply
+        text-main
+        ;
+        i {
+          @apply
+          from-interaction-300
+          to-interaction-700
+          text-ui-800;
+        }
+      }
+    }
+  }
+
+  & > li.is-active ~ li,
+  &.is-inactive > li {
+    &::before {
+      @apply
+      bg-ui-600
+      ;
+    }
+    a {
+      @apply
+      text-ui-400
+      ;
+      &::before {
+        @apply
+        bg-ui-500
+        ;
+      }
+      i {
+        @apply
+        from-ui-800
+        to-ui-700
+        text-ui-400
+        ;
+      }
+    }
+  }
+}
+
+.step.step-tertiary {
+
+
+  @apply 
+  gap-4
+  ;
+ 
+  > li {
+    @apply
+    mt-0
+    
+    ;
+    > a {
+      @apply
+      p-0
+      flex
+      items-center
+      gap-4
+      text-ui-200
+      transition-all
+      duration-1000
+      ease-[cubic-bezier(0.9,0,0.1,1)]
+      ;
+
+      > i {
+        @apply 
+        outline-0
+        text-ui-400/0
+        ;
+        &::after {
+          @apply
+          text-ui-800
+          ;
+        }
+      }
+      > span {
+        @apply
+        h-0.5
+        ;
+      }
+    }
+    &:last-child {
+      @apply
+      flex-none
+      ;
+      
+    }
+    &.is-active {
+      a {
+        @apply
+        text-main
+        ;
+      }
+    }
+  }
+
+  & > li.is-active ~ li,
+  &.is-inactive > li {
+    &::before {
+      @apply
+      bg-ui-600
+      ;
+    }
+    a {
+      @apply
+      text-ui-400
+      ;
+      &::before {
+        @apply
+        bg-ui-500
+        ;
+      }
+      i {
+        @apply
+        from-ui-700
+        to-ui-800
+        text-ui-400
+        ;
+      }
     }
   }
 }

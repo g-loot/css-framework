@@ -126,6 +126,14 @@ hr {
   ;
 }
 
+p {
+  a {
+    @apply
+    text-interaction-500
+    ;
+  }
+}
+
 .text-gradient {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

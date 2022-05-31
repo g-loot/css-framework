@@ -139,8 +139,7 @@
         },
         {
           "label": "Empty states",
-          "url": "emptystates",
-          "disabled": true
+          "url": "emptystates"
         },
         {
           "label": "Toasters",

@@ -103,15 +103,6 @@ export default function Introduction() {
                 </h3>
                 <p className='border-b border-ui-600 pb-5'>
                   <strong className='font-headings text-xl text-error-300'>
-                    A bit heavier
-                  </strong>
-                  <br />
-                  <span>
-                    When embedding the style of a component within itself, the page only loads the style when it is needed. When using the G-Loot CSS Framework, the page needs to load the CSS file in its entirety. To contre measure this, the file is purged from all unused files before it is compiled, making sure that the weight will not exceed 364ko.
-                  </span>
-                </p>
-                <p className='border-b border-ui-600 pb-5'>
-                  <strong className='font-headings text-xl text-error-300'>
                     A more complex setup
                   </strong>
                   <br />
@@ -128,6 +119,18 @@ export default function Introduction() {
                     If it is possible for the two-systems to cohabit for a while, eventually all components and pages will have to be redesigned in the framework and the new HTML structures applied within the product.
                   </span>
                 </p>
+
+                <div className='card px-4 py-8 text-center rounded-xl space-y-4'>
+                  <p>
+                    Want to learn more about different ways of styling components?
+                  </p>
+                  <a className='button button-tertiary' href='https://www.smashingmagazine.com/2020/05/styling-components-react/' rel='noreferrer' target='_blank'>
+                    <span>
+                      Read more
+                    </span>
+                    <span className='icon icon-box-arrow-top-right'></span>
+                  </a>
+                </div>
                 
               </div>
 

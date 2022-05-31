@@ -62,23 +62,31 @@ export default function Steps() {
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
-                    <ul className={`step ${randomNum1 === 0 ? `is-inactive` : ''}`}>
+                    <ul className={`step step-primary ${randomNum1 === 0 ? `is-inactive` : ''}`}>
                       <li className={`${randomNum1 === 1 ? `is-active` : ''}`}>
-                        <a href='#' className='tooltip' data-tooltip='Step 1'>Step 1</a>
+                        <a href='#'>
+                          <i>1</i>
+                          <b></b>
+                          <span></span>
+                        </a>
                       </li>
                       <li className={`${randomNum1 === 2 ? `is-active` : ''}`}>
-                        <a href='#' className='tooltip' data-tooltip='Step 2'>Step 2</a>
+                        <a href='#'>
+                          <i>2</i>
+                          <b></b>
+                          <span></span>
+                        </a>
                       </li>
                       <li className={`${randomNum1 === 3 ? `is-active` : ''}`}>
-                        <a href='#' className='tooltip' data-tooltip='Step 3'>Step 3</a>
-                      </li>
-                      <li className={`${randomNum1 === 4 ? `is-active` : ''}`}>
-                        <a href='#' className='tooltip' data-tooltip='Step 4'>Step 4</a>
+                        <a href='#'>
+                          <i>3</i>
+                          <b></b>
+                          <span></span>
+                        </a>
                       </li>
                     </ul>
-
                     <div className='text-center'>
-                      <button className='button button-tertiary mx-auto' onClick={clickHandlerNum1.bind(this, randomNum1, 4)}>
+                      <button className='button button-tertiary mx-auto' onClick={clickHandlerNum1.bind(this, randomNum1, 3)}>
                         <span>Next step</span>
                       </button>
                     </div>
@@ -107,22 +115,22 @@ export default function Steps() {
                       <li className={`${randomNum2 === 1 ? `is-active` : ''}`}>
                         <a href='#'>
                           <i>1</i>
-                          <span>Step 1</span>
-                          <hr />
+                          <b>Step 1</b>
+                          <span></span>
                         </a>
                       </li>
                       <li className={`${randomNum2 === 2 ? `is-active` : ''}`}>
                         <a href='#'>
                           <i>2</i>
-                          <span>Step 2</span>
-                          <hr />
+                          <b>Step 2</b>
+                          <span></span>
                         </a>
                       </li>
                       <li className={`${randomNum2 === 3 ? `is-active` : ''}`}>
                         <a href='#'>
                           <i>3</i>
-                          <span>Step 3</span>
-                          <hr />
+                          <b>Step 3</b>
+                          <span></span>
                         </a>
                       </li>
                     </ul>
@@ -157,22 +165,22 @@ export default function Steps() {
                       <li className={`${randomNum3 === 1 ? `is-active` : ''}`}>
                         <a href='#'>
                           <i>1</i>
+                          <b>Step 1</b>
                           <span></span>
-                          <hr />
                         </a>
                       </li>
                       <li className={`${randomNum3 === 2 ? `is-active` : ''}`}>
                         <a href='#'>
                           <i>2</i>
+                          <b>Step 2</b>
                           <span></span>
-                          <hr />
                         </a>
                       </li>
                       <li className={`${randomNum3 === 3 ? `is-active` : ''}`}>
                         <a href='#'>
                           <i>3</i>
+                          <b>Step 3</b>
                           <span></span>
-                          <hr />
                         </a>
                       </li>
                     </ul>
