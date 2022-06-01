@@ -28,40 +28,49 @@
 }
 
 .bracket-teams {
-
   > li:first-child {
     @apply
     rounded-t
     overflow-hidden
-    border
-    border-ui-700
+    
     ;
   }
   > li:not(:first-child):not(:last-child) {
-    @apply
-    border-x
-    border-b
-    border-ui-700
-    ;
+   
   }
   > li:last-child {
     @apply
     rounded-b
     overflow-hidden
-    border-b
-    border-x
-    border-ui-700
+    
     ;
   }
 
   > li{
     @apply
+    relative
+    z-10
     flex
     items-center
     p-1
+    pl-2
     gap-2
     bg-ui-800
+    relative
+    outline
+    outline-ui-600
     ;
+
+    &::before {
+      @apply
+      content-['']
+      absolute
+      inset-y-0
+      left-0
+      w-1
+      bg-ui-700
+      ;
+    }
 
     &.is-active {
       @apply
@@ -73,6 +82,11 @@
       z-20
       bg-ui-700
       ;
+      &::before {
+        @apply
+        bg-interaction-500
+        ;
+      }
     }
 
     figure {
@@ -265,6 +279,7 @@
           @apply
           content-['']
           absolute
+          z-0
           w-[calc(2rem-3px)]
           h-8
           left-0
@@ -278,7 +293,7 @@
           border-b
           border-ui-400
           rounded-bl-xl
-          translate-y-[0.5px]
+          translate-y-[0px]
         }
         &::after {
           @apply
@@ -287,7 +302,7 @@
           border-t
           border-ui-400
           rounded-tl-xl
-          -translate-y-[0.5px]
+          -translate-y-[1px]
         }
       }
     }

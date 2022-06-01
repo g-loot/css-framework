@@ -28,7 +28,7 @@
 
     &.icon {
       @apply
-      text-ui-400/50
+      text-ui-300/50
       text-center
       flex
       items-center

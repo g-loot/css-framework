@@ -562,19 +562,19 @@ export default function Avatars() {
                       <div className='flex-1'>
                         <div className='flex gap-4 justify-start items-center'>
                           <figure className='avatar'>
-                            <span className='icon icon-profile'></span>
+                            <span className='icon icon-profile-2'></span>
                           </figure>
                           <figure className='avatar avatar-md'>
-                            <span className='icon icon-profile'></span>
+                            <span className='icon icon-profile-2'></span>
                           </figure>
                           <figure className='avatar avatar-sm'>
-                            <span className='icon icon-profile'></span>
+                            <span className='icon icon-profile-2'></span>
                           </figure>
                           <figure className='avatar avatar-xs'>
-                            <span className='icon icon-profile'></span>
+                            <span className='icon icon-profile-2'></span>
                           </figure>
                           <figure className='avatar avatar-tiny'>
-                            <span className='icon icon-profile'></span>
+                            <span className='icon icon-profile-2'></span>
                           </figure>
                         </div>
                       </div>
