@@ -2,11 +2,29 @@
 /* TOURNAMENT BRACKETS */
 /*----------------------------*/
 
+.brackets-container {
+  @apply
+  grid
+  justify-start
+  items-start
+  overflow-x-scroll
+  pb-4
+  ;
+}
+
 .brackets {
   @apply
   flex
   items-stretch
+  snap-x
+  snap-mandatory
   ;
+
+  > * {
+    @apply
+    snap-start
+    ;
+  }
 }
 
 .bracket-teams {
@@ -177,6 +195,7 @@
   opacity-0
   -translate-x-8
   animate-[bracket-round-slidein_1.5s_cubic-bezier(0.9,0,0.1,1)_forwards]
+  snap-mandatory
   ;
 
   &:first-child {
@@ -227,8 +246,8 @@
     ;
     > li.bracket-item {
       @apply
-        py-8
-        ;
+      py-8
+      ;
     }
     > .bracket-item {
       &::before {
@@ -357,5 +376,68 @@
   70%,
   100% {
     opacity: 1;
+  }
+}
+
+/* responsive */
+.brackets-container.is-responsive {
+  @apply
+  block
+  lg:grid
+  ;
+}
+.brackets-container.is-responsive > .brackets,
+.brackets.is-responsive {
+
+  @apply
+  grid
+  lg:flex
+  ;
+  .bracket-round {
+    @apply
+    max-w-lg
+    ;
+    .bracket-title {
+      @apply
+      mx-4
+      md:mx-0
+      lg:mx-7
+      mt-8
+      lg:mt-0
+      mb-8
+      lg:mb-8
+      ;
+    }
+    > ul {
+      @apply
+      grid
+      lg:flex
+      grid-cols-1
+      md:grid-cols-2
+      gap-2
+      lg:gap-0
+      px-2
+      lg:px-0
+      ;
+      .bracket-item {
+        @apply
+        px-2
+        lg:px-7
+        py-0
+        lg:py-8
+        min-w-[40%]
+        lg:min-w-xs
+      }
+    }
+  }
+  .bracket-item,
+  .bracket-teams {
+    &::before,
+    &::after {
+      @apply
+      border-ui-300/0
+      lg:border-ui-300
+      ;
+    }
   }
 }

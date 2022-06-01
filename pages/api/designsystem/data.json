@@ -134,8 +134,7 @@
         },
         {
           "label": "Tournament brackets",
-          "url": "tournamentbrackets",
-          "disabled": true
+          "url": "tournamentbrackets"
         },
         {
           "label": "Empty states",

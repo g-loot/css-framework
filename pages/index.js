@@ -36,6 +36,7 @@ export default function Home() {
                     Latest components:
                   </div>
                   <ul className="menu menu-secondary">
+                    <li><a href='design-system/tournamentbrackets'><span>Tournament brackets</span></a></li>
                     <li><a href='design-system/emptystates'><span>Empty states</span></a></li>
                     <li><a href='design-system/carousel'><span>Carousel</span></a></li>
                     <li><a href='design-system/accordion'><span>Accordion</span></a></li>
