@@ -120,7 +120,7 @@ export default function Introduction() {
                   </span>
                 </p>
 
-                <div className='card px-4 py-8 text-center rounded-xl space-y-4'>
+                <div className='surface surface-dimmed px-4 py-8 text-center rounded-xl space-y-4'>
                   <p>
                     Want to learn more about different ways of styling components?
                   </p>

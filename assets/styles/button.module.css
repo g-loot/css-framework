@@ -4,18 +4,16 @@
 /* BUTTON */
 /*----------------------------*/
 
-
-
 .button {
   @apply
-  uppercase
+  /*uppercase*/
   outline-none
+  text-lg
   leading-none
   border-0
   inline-flex
   justify-center
   items-center
-  bg-main
   cursor-pointer
   p-2.5
   min-h-4
@@ -26,6 +24,7 @@
   scale-100
   space-x-2
   backdrop-blur
+  bg-main
   bg-[length:500%_auto]
   focus-visible:outline
   focus-visible:outline-offset-2
@@ -42,6 +41,17 @@
     ;
   }
 
+  &:not([class*='button-secondary'], 
+  [class*='button-tertiary'], 
+  [class*='button-premium'], 
+  [class*='button-claim']), {
+    @apply
+    bg-gradient-to-r
+    from-interaction-500
+    via-interaction-500
+    to-interaction-300
+    ;
+  }
   &:not([class*='rounded']) {
     @apply
     rounded
@@ -64,6 +74,11 @@
       mx-0
       ;
     }
+    &:not([class*='icon']) {
+      @apply
+      mb-0.5
+      ;
+    }
   }
 
   &:not([disabled]),
@@ -73,6 +88,7 @@
       @apply 
       scale-105
       bg-right
+      shadow-[inset_0_0_0_1px_rgba(255,255,255,1)];
       ;
     }
     &:active {
@@ -124,6 +140,7 @@
     @apply 
     bg-ui-700
     text-ui-300
+    shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/0%)]
     ;
 
     &:not([disabled]),
@@ -133,6 +150,7 @@
         @apply
         bg-ui-600
         text-ui-200
+        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/0%)]
         ;
       }
     }
@@ -148,7 +166,7 @@
 
     > * {
       @apply
-      drop-shadow-[0_-1.5px_0.5px_rgba(var(--color-premium-300)/0.5)]
+      drop-shadow-[0_-1px_0_rgba(var(--color-mono-100)/50%)]
       ;
     }
 
@@ -175,7 +193,7 @@
 
     > * {
       @apply
-      drop-shadow-[0_-1.5px_0.5px_rgba(var(--color-purple-500)/0.25)]
+      drop-shadow-[0_-1px_0_rgba(var(--color-ui-900)/50%)]
       ;
     }
 
@@ -227,7 +245,7 @@
 
     > * {
       @apply
-      text-lg
+      text-xl
       ;
     }
     &[class*='rounded-full']{
@@ -244,7 +262,7 @@
 
     > * {
       @apply
-      text-sm
+      text-base
       ;
     }
     &[class*='rounded-full']{

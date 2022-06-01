@@ -1,1437 +1,1931 @@
 {
-  "icons": [{
-      "name": "twitch"
-    },
-    {
-      "name": "ic_stars_24px"
-    },
-    {
-      "name": "leave"
-    },
-    {
-      "name": "game-pubg-symbol"
-    },
-    {
-      "name": "google"
-    },
-    {
-      "name": "b-eye"
-    },
-    {
-      "name": "hide"
-    },
-    {
-      "name": "xp-symbol-outline"
-    },
-    {
-      "name": "handheld-console-2"
-    },
-    {
-      "name": "multiple-12"
-    },
-    {
-      "name": "profile-2"
-    },
-    {
-      "name": "missions"
-    },
-    {
-      "name": "menu-5"
-    },
-    {
-      "name": "brawl"
-    },
-    {
-      "name": "showdown"
-    },
-    {
-      "name": "document-copy"
-    },
-    {
-      "name": "i-delete"
-    },
-    {
-      "name": "t-delete"
-    },
-    {
-      "name": "i-remove"
-    },
-    {
-      "name": "t-remove"
-    },
-    {
-      "name": "e-remove"
-    },
-    {
-      "name": "e-delete"
-    },
-    {
-      "name": "alpha-order"
-    },
-    {
-      "name": "sort-tool"
-    },
-    {
-      "name": "selection"
-    },
-    {
-      "name": "filter"
-    },
-    {
-      "name": "game-dota2-symbol"
-    },
-    {
-      "name": "game-leagueoflegends-symbol"
-    },
-    {
-      "name": "game-rocketleague-symbol"
-    },
-    {
-      "name": "xp-symbol"
-    },
-    {
-      "name": "game-valorant-symbol"
-    },
-    {
-      "name": "game-csgo-symbol"
-    },
-    {
-      "name": "game-apexlegends-symbol"
-    },
-    {
-      "name": "circle-ctrl-down"
-    },
-    {
-      "name": "circle-ctrl-right"
-    },
-    {
-      "name": "circle-caret-down"
-    },
-    {
-      "name": "caret-sm-up"
-    },
-    {
-      "name": "arrow-sm-right"
-    },
-    {
-      "name": "arrow-sm-down"
-    },
-    {
-      "name": "arrow-sm-left"
-    },
-    {
-      "name": "reply"
-    },
-    {
-      "name": "curved-arrow-right"
-    },
-    {
-      "name": "ctrl-backward"
-    },
-    {
-      "name": "ctrl-forward"
-    },
-    {
-      "name": "circle-caret-right"
-    },
-    {
-      "name": "circle-caret-left"
-    },
-    {
-      "name": "circle-ctrl-left"
-    },
-    {
-      "name": "circle-ctrl-up"
-    },
-    {
-      "name": "circle-caret-up"
-    },
-    {
-      "name": "mastercard"
-    },
-    {
-      "name": "amazon"
-    },
-    {
-      "name": "game-dota2"
-    },
-    {
-      "name": "mission-herolvlup"
-    },
-    {
-      "name": "mission-buyback"
-    },
-    {
-      "name": "gloot-symbol"
-    },
-    {
-      "name": "coin"
-    },
-    {
-      "name": "game-apexlegends"
-    },
-    {
-      "name": "game-csgo"
-    },
-    {
-      "name": "game-leagueoflegends"
-    },
-    {
-      "name": "game-pubg"
-    },
-    {
-      "name": "game-rocketleague"
-    },
-    {
-      "name": "game-valorant"
-    },
-    {
-      "name": "gloot-logo"
-    },
-    {
-      "name": "mission-road"
-    },
-    {
-      "name": "mission-assist"
-    },
-    {
-      "name": "mission-bosskill"
-    },
-    {
-      "name": "mission-knockouttaken"
-    },
-    {
-      "name": "mission-creepdenie"
-    },
-    {
-      "name": "mission-creepkill"
-    },
-    {
-      "name": "mission-creeplasthit"
-    },
-    {
-      "name": "mission-damagegiven"
-    },
-    {
-      "name": "mission-damataken"
-    },
-    {
-      "name": "mission-doublekill"
-    },
-    {
-      "name": "mission-friendduel"
-    },
-    {
-      "name": "mission-gamematchbattlewon"
-    },
-    {
-      "name": "mission-goal"
-    },
-    {
-      "name": "mission-headshot"
-    },
-    {
-      "name": "mission-revive"
-    },
-    {
-      "name": "mission-herospawn"
-    },
-    {
-      "name": "mission-hitsdealt"
-    },
-    {
-      "name": "mission-hitstaken"
-    },
-    {
-      "name": "mission-kill"
-    },
-    {
-      "name": "mission-killstreak"
-    },
-    {
-      "name": "mission-knockoutdealt"
-    },
-    {
-      "name": "mission-quintuplekill"
-    },
-    {
-      "name": "mission-mvp"
-    },
-    {
-      "name": "mission-oneshot"
-    },
-    {
-      "name": "mission-quadruplekill"
-    },
-    {
-      "name": "ticket"
-    },
-    {
-      "name": "token"
-    },
-    {
-      "name": "mission-ribbon"
-    },
-    {
-      "name": "origin"
-    },
-    {
-      "name": "mission-roundwon"
-    },
-    {
-      "name": "mission-sextuplekill"
-    },
-    {
-      "name": "mission-takedown"
-    },
-    {
-      "name": "mission-triplekill"
-    },
-    {
-      "name": "mission-ultimate"
-    },
-    {
-      "name": "visa"
-    },
-    {
-      "name": "overwolf-symbol"
-    },
-    {
-      "name": "paypal"
-    },
-    {
-      "name": "steam"
-    },
-    {
-      "name": "tagline"
-    },
-    {
-      "name": "ticket-shape"
-    },
-    {
-      "name": "windows-symbol"
-    },
-    {
-      "name": "trophy"
-    },
-    {
-      "name": "podium"
-    },
-    {
-      "name": "podium-trophy"
-    },
-    {
-      "name": "web-hyperlink"
-    },
-    {
-      "name": "web-link"
-    },
-    {
-      "name": "b-check"
-    },
-    {
-      "name": "b-meeting"
-    },
-    {
-      "name": "b-love"
-    },
-    {
-      "name": "url"
-    },
-    {
-      "name": "b-add"
-    },
-    {
-      "name": "fist"
-    },
-    {
-      "name": "flag-diagonal-34"
-    },
-    {
-      "name": "flag-diagonal-33"
-    },
-    {
-      "name": "flag-points-31"
-    },
-    {
-      "name": "chequered-flag"
-    },
-    {
-      "name": "flag-points-32"
-    },
-    {
-      "name": "flag-simple"
-    },
-    {
-      "name": "link"
-    },
-    {
-      "name": "chain"
-    },
-    {
-      "name": "web-url"
-    },
-    {
-      "name": "hyperlink"
-    },
-    {
-      "name": "link-broken"
-    },
-    {
-      "name": "unlink"
-    },
-    {
-      "name": "medal"
-    },
-    {
-      "name": "angry-10"
-    },
-    {
-      "name": "angry-44"
-    },
-    {
-      "name": "c-pulse"
-    },
-    {
-      "name": "s-question"
-    },
-    {
-      "name": "c-warning"
-    },
-    {
-      "name": "s-warning"
-    },
-    {
-      "name": "attach"
-    },
-    {
-      "name": "attachment"
-    },
-    {
-      "name": "add-27"
-    },
-    {
-      "name": "add-29"
-    },
-    {
-      "name": "a-time"
-    },
-    {
-      "name": "a-sync"
-    },
-    {
-      "name": "a-star"
-    },
-    {
-      "name": "a-share"
-    },
-    {
-      "name": "a-security"
-    },
-    {
-      "name": "a-search"
-    },
-    {
-      "name": "a-remove"
-    },
-    {
-      "name": "a-location"
-    },
-    {
-      "name": "a-heart"
-    },
-    {
-      "name": "a-edit"
-    },
-    {
-      "name": "a-delete"
-    },
-    {
-      "name": "a-check"
-    },
-    {
-      "name": "a-add"
-    },
-    {
-      "name": "agenda"
-    },
-    {
-      "name": "c-info"
-    },
-    {
-      "name": "s-info"
-    },
-    {
-      "name": "warning-sign"
-    },
-    {
-      "name": "s-ban"
-    },
-    {
-      "name": "bulb-63"
-    },
-    {
-      "name": "payment-method"
-    },
-    {
-      "name": "calendar-event-create"
-    },
-    {
-      "name": "calendar-2"
-    },
-    {
-      "name": "calendar-event"
-    },
-    {
-      "name": "present"
-    },
-    {
-      "name": "ghost-2"
-    },
-    {
-      "name": "globe"
-    },
-    {
-      "name": "archery-target"
-    },
-    {
-      "name": "goal-65"
-    },
-    {
-      "name": "camera-shooting"
-    },
-    {
-      "name": "heart"
-    },
-    {
-      "name": "view"
-    },
-    {
-      "name": "eye"
-    },
-    {
-      "name": "energy-shaker"
-    },
-    {
-      "name": "energy-drink"
-    },
-    {
-      "name": "energy-supplement"
-    },
-    {
-      "name": "pen-2"
-    },
-    {
-      "name": "i-edit"
-    },
-    {
-      "name": "crown"
-    },
-    {
-      "name": "crosshair"
-    },
-    {
-      "name": "cursor-pointer"
-    },
-    {
-      "name": "countdown-2"
-    },
-    {
-      "name": "check"
-    },
-    {
-      "name": "f-check"
-    },
-    {
-      "name": "f-comment"
-    },
-    {
-      "name": "comment"
-    },
-    {
-      "name": "comments"
-    },
-    {
-      "name": "a-chat"
-    },
-    {
-      "name": "chart-pie-35"
-    },
-    {
-      "name": "chart-growth"
-    },
-    {
-      "name": "b-chart"
-    },
-    {
-      "name": "file-chart-bar"
-    },
-    {
-      "name": "d-chart"
-    },
-    {
-      "name": "g-chart"
-    },
-    {
-      "name": "chart-bar-33"
-    },
-    {
-      "name": "a-chart"
-    },
-    {
-      "name": "card-edit"
-    },
-    {
-      "name": "card-favorite"
-    },
-    {
-      "name": "card-remove"
-    },
-    {
-      "name": "card-update"
-    },
-    {
-      "name": "shopping-cart"
-    },
-    {
-      "name": "cart-simple-remove"
-    },
-    {
-      "name": "cart-simple-add"
-    },
-    {
-      "name": "add-to-cart"
-    },
-    {
-      "name": "instant-camera-2"
-    },
-    {
-      "name": "calendar-date-2"
-    },
-    {
-      "name": "calendar-date"
-    },
-    {
-      "name": "calendar-event-2"
-    },
-    {
-      "name": "calendar"
-    },
-    {
-      "name": "camera"
-    },
-    {
-      "name": "humidity-26"
-    },
-    {
-      "name": "hospital-34"
-    },
-    {
-      "name": "home-2"
-    },
-    {
-      "name": "pen-01"
-    },
-    {
-      "name": "pen-23"
-    },
-    {
-      "name": "pencil"
-    },
-    {
-      "name": "paper"
-    },
-    {
-      "name": "paper-diploma"
-    },
-    {
-      "name": "notification"
-    },
-    {
-      "name": "notes"
-    },
-    {
-      "name": "multiple-11"
-    },
-    {
-      "name": "money-coins"
-    },
-    {
-      "name": "money-bag"
-    },
-    {
-      "name": "money-13"
-    },
-    {
-      "name": "money-12"
-    },
-    {
-      "name": "money-11"
-    },
-    {
-      "name": "file-money"
-    },
-    {
-      "name": "molecule-40"
-    },
-    {
-      "name": "manga-62"
-    },
-    {
-      "name": "manga-63"
-    },
-    {
-      "name": "marker-2"
-    },
-    {
-      "name": "meeting"
-    },
-    {
-      "name": "stack"
-    },
-    {
-      "name": "layers"
-    },
-    {
-      "name": "laptop"
-    },
-    {
-      "name": "laugh-17"
-    },
-    {
-      "name": "language"
-    },
-    {
-      "name": "thumb-up"
-    },
-    {
-      "name": "thumb-down"
-    },
-    {
-      "name": "like"
-    },
-    {
-      "name": "image"
-    },
-    {
-      "name": "handout"
-    },
-    {
-      "name": "favorite"
-    },
-    {
-      "name": "payment"
-    },
-    {
-      "name": "send-message"
-    },
-    {
-      "name": "selfie"
-    },
-    {
-      "name": "halloween-pumpkin"
-    },
-    {
-      "name": "sheep"
-    },
-    {
-      "name": "quote"
-    },
-    {
-      "name": "spiteful"
-    },
-    {
-      "name": "speechless"
-    },
-    {
-      "name": "spider"
-    },
-    {
-      "name": "speaker"
-    },
-    {
-      "name": "loudspeaker"
-    },
-    {
-      "name": "spaceship"
-    },
-    {
-      "name": "sound-wave"
-    },
-    {
-      "name": "socket"
-    },
-    {
-      "name": "smile"
-    },
-    {
-      "name": "smart"
-    },
-    {
-      "name": "skull"
-    },
-    {
-      "name": "skull-2"
-    },
-    {
-      "name": "sleep"
-    },
-    {
-      "name": "sleep-2"
-    },
-    {
-      "name": "account"
-    },
-    {
-      "name": "profile"
-    },
-    {
-      "name": "male"
-    },
-    {
-      "name": "single-position"
-    },
-    {
-      "name": "file-article"
-    },
-    {
-      "name": "silly"
-    },
-    {
-      "name": "sign"
-    },
-    {
-      "name": "sick"
-    },
-    {
-      "name": "shy"
-    },
-    {
-      "name": "quite-happy"
-    },
-    {
-      "name": "network-communication-1"
-    },
-    {
-      "name": "security"
-    },
-    {
-      "name": "satisfied"
-    },
-    {
-      "name": "sad"
-    },
-    {
-      "name": "safe"
-    },
-    {
-      "name": "round-euro"
-    },
-    {
-      "name": "rat-head"
-    },
-    {
-      "name": "radiation"
-    },
-    {
-      "name": "puzzled"
-    },
-    {
-      "name": "pulse"
-    },
-    {
-      "name": "box-arrow-bottom-left"
-    },
-    {
-      "name": "delete"
-    },
-    {
-      "name": "box-arrow-bottom-right"
-    },
-    {
-      "name": "box-ctrl-up"
-    },
-    {
-      "name": "box-arrow-up"
-    },
-    {
-      "name": "box-arrow-right"
-    },
-    {
-      "name": "box-arrow-left"
-    },
-    {
-      "name": "box-arrow-down"
-    },
-    {
-      "name": "box-caret-right"
-    },
-    {
-      "name": "box-ctrl-right"
-    },
-    {
-      "name": "remove"
-    },
-    {
-      "name": "s-remove"
-    },
-    {
-      "name": "square-pin"
-    },
-    {
-      "name": "square-marker"
-    },
-    {
-      "name": "box-caret-left"
-    },
-    {
-      "name": "box-ctrl-left"
-    },
-    {
-      "name": "data-download"
-    },
-    {
-      "name": "box-caret-down"
-    },
-    {
-      "name": "box-ctrl-down"
-    },
-    {
-      "name": "box-arrow-top-left"
-    },
-    {
-      "name": "s-delete"
-    },
-    {
-      "name": "box-arrow-top-right"
-    },
-    {
-      "name": "add"
-    },
-    {
-      "name": "s-add"
-    },
-    {
-      "name": "store"
-    },
-    {
-      "name": "chess-tower"
-    },
-    {
-      "name": "box-caret-up"
-    },
-    {
-      "name": "ctrl-up"
-    },
-    {
-      "name": "surprise"
-    },
-    {
-      "name": "smiling-face-sunglasses"
-    },
-    {
-      "name": "tv-stand"
-    },
-    {
-      "name": "tv"
-    },
-    {
-      "name": "time-machine"
-    },
-    {
-      "name": "stopwatch"
-    },
-    {
-      "name": "time-clock"
-    },
-    {
-      "name": "time-alarm"
-    },
-    {
-      "name": "clock"
-    },
-    {
-      "name": "file-history"
-    },
-    {
-      "name": "screen-touch"
-    },
-    {
-      "name": "trash-can"
-    },
-    {
-      "name": "bin"
-    },
-    {
-      "name": "trash"
-    },
-    {
-      "name": "arrow-up"
-    },
-    {
-      "name": "arrow-right"
-    },
-    {
-      "name": "arrow-down"
-    },
-    {
-      "name": "arrow-left"
-    },
-    {
-      "name": "tap-01"
-    },
-    {
-      "name": "tap-02"
-    },
-    {
-      "name": "tablet"
-    },
-    {
-      "name": "ctrl-right"
-    },
-    {
-      "name": "lifering"
-    },
-    {
-      "name": "sunglasses-48"
-    },
-    {
-      "name": "support"
-    },
-    {
-      "name": "ctrl-left"
-    },
-    {
-      "name": "ctrl-down"
-    },
-    {
-      "name": "video"
-    },
-    {
-      "name": "upset-14"
-    },
-    {
-      "name": "vampire"
-    },
-    {
-      "name": "wolf"
-    },
-    {
-      "name": "wink-69"
-    },
-    {
-      "name": "wink-11"
-    },
-    {
-      "name": "wink-06"
-    },
-    {
-      "name": "window-maximize"
-    },
-    {
-      "name": "window-minimize"
-    },
-    {
-      "name": "world-2"
-    },
-    {
-      "name": "world-pin"
-    },
-    {
-      "name": "world-marker"
-    },
-    {
-      "name": "world"
-    },
-    {
-      "name": "wifi"
-    },
-    {
-      "name": "wifi-router"
-    },
-    {
-      "name": "smartwatch"
-    },
-    {
-      "name": "watch-2"
-    },
-    {
-      "name": "watch-dev"
-    },
-    {
-      "name": "watch"
-    },
-    {
-      "name": "wand-11"
-    },
-    {
-      "name": "wallet"
-    },
-    {
-      "name": "wallet-44"
-    },
-    {
-      "name": "wallet-43"
-    },
-    {
-      "name": "volume"
-    },
-    {
-      "name": "volume-2"
-    },
-    {
-      "name": "film"
-    },
-    {
-      "name": "upset-13"
-    },
-    {
-      "name": "file-user"
-    },
-    {
-      "name": "witch-hat"
-    },
-    {
-      "name": "zoom"
-    },
-    {
-      "name": "magnifier-zoom-in"
-    },
-    {
-      "name": "magnifier-zoom-out"
-    },
-    {
-      "name": "theater"
-    },
-    {
-      "name": "fireworks"
-    },
-    {
-      "name": "incognito"
-    },
-    {
-      "name": "board-game"
-    },
-    {
-      "name": "playing-cards"
-    },
-    {
-      "name": "arcade"
-    },
-    {
-      "name": "handheld-console"
-    },
-    {
-      "name": "low-vision"
-    },
-    {
-      "name": "broken-heart"
-    },
-    {
-      "name": "privacy"
-    },
-    {
-      "name": "finger-snap"
-    },
-    {
-      "name": "cpu"
-    },
-    {
-      "name": "eye-recognition"
-    },
-    {
-      "name": "electronic-circuit"
-    },
-    {
-      "name": "privacy-policy"
-    },
-    {
-      "name": "tags-stack"
-    },
-    {
-      "name": "energy"
-    },
-    {
-      "name": "refresh-01"
-    },
-    {
-      "name": "refresh-02"
-    },
-    {
-      "name": "circle"
-    },
-    {
-      "name": "search"
-    },
-    {
-      "name": "search-zoom-out"
-    },
-    {
-      "name": "search-zoom-in"
-    },
-    {
-      "name": "zoom-out"
-    },
-    {
-      "name": "zoom-in"
-    },
-    {
-      "name": "magnifier"
-    },
-    {
-      "name": "maximize"
-    },
-    {
-      "name": "verified"
-    },
-    {
-      "name": "backup-1"
-    },
-    {
-      "name": "screen-sharing-2"
-    },
-    {
-      "name": "armor"
-    },
-    {
-      "name": "shield"
-    },
-    {
-      "name": "jewel"
-    },
-    {
-      "name": "reading"
-    },
-    {
-      "name": "gaming-console"
-    },
-    {
-      "name": "mario-mushroom"
-    },
-    {
-      "name": "potion"
-    },
-    {
-      "name": "final-score"
-    },
-    {
-      "name": "telescope"
-    },
-    {
-      "name": "pacman"
-    },
-    {
-      "name": "sword"
-    },
-    {
-      "name": "gold-coin"
-    },
-    {
-      "name": "air-bomb"
-    },
-    {
-      "name": "military-medal"
-    },
-    {
-      "name": "missile"
-    },
-    {
-      "name": "chess-king"
-    },
-    {
-      "name": "military-tank"
-    },
-    {
-      "name": "assault-rifle"
-    },
-    {
-      "name": "submachine-gun"
-    },
-    {
-      "name": "shotgun"
-    },
-    {
-      "name": "no-guns"
-    },
-    {
-      "name": "submarine"
-    },
-    {
-      "name": "sniper-rifle"
-    },
-    {
-      "name": "army"
-    },
-    {
-      "name": "military-knife"
-    },
-    {
-      "name": "parachute"
-    },
-    {
-      "name": "military-tag"
-    },
-    {
-      "name": "tnt-explosives"
-    },
-    {
-      "name": "grenade"
-    },
-    {
-      "name": "bullets"
-    },
-    {
-      "name": "military-vest"
-    },
-    {
-      "name": "gas-mask"
-    },
-    {
-      "name": "firearm"
-    },
-    {
-      "name": "logo-youtube"
-    },
-    {
-      "name": "logo-messenger"
-    },
-    {
-      "name": "logo-facebook"
-    },
-    {
-      "name": "logo-whatsapp"
-    },
-    {
-      "name": "logo-twitter"
-    },
-    {
-      "name": "logo-paypal"
-    },
-    {
-      "name": "logo-spotify"
-    },
-    {
-      "name": "tiktok"
-    },
-    {
-      "name": "discord"
-    },
-    {
-      "name": "logo-vk"
-    },
-    {
-      "name": "logo-linkedin"
-    },
-    {
-      "name": "logo-instagram"
-    },
-    {
-      "name": "logo-fb-simple"
-    },
-    {
-      "name": "network-communication"
-    },
-    {
-      "name": "party"
-    },
-    {
-      "name": "settings-gear"
-    },
-    {
-      "name": "settings"
-    },
-    {
-      "name": "file-settings"
-    },
-    {
-      "name": "control-panel"
-    },
-    {
-      "name": "speedometer"
-    },
-    {
-      "name": "f-dashboard"
-    },
-    {
-      "name": "wrench"
-    },
-    {
-      "name": "wrench-tool"
-    },
-    {
-      "name": "gear"
-    },
-    {
-      "name": "cogwheel"
-    },
-    {
-      "name": "preferences"
-    },
-    {
-      "name": "options"
-    },
-    {
-      "name": "layout-11"
-    },
-    {
-      "name": "camera-flash"
-    },
-    {
-      "name": "lightning"
-    },
-    {
-      "name": "padlock-unlocked"
-    },
-    {
-      "name": "padlock"
-    },
-    {
-      "name": "lock"
-    },
-    {
-      "name": "unlocked"
-    },
-    {
-      "name": "c-question"
-    },
-    {
-      "name": "interview"
-    },
-    {
-      "name": "alarm"
-    },
-    {
-      "name": "bell"
-    },
-    {
-      "name": "alarm-disable"
-    },
-    {
-      "name": "circle-08"
-    },
-    {
-      "name": "circle-10"
-    },
-    {
-      "name": "circle-09"
-    },
-    {
-      "name": "file-download-3"
-    },
-    {
-      "name": "backup"
-    },
-    {
-      "name": "cloud-data-download"
-    },
-    {
-      "name": "news"
-    },
-    {
-      "name": "star"
-    },
-    {
-      "name": "shop"
+  "categories": [
+    {
+      "name": "Brand",
+      "icons": [
+        {
+          "tags": "brand,gloot,g-loot,logo,symbol",
+          "name": "gloot-symbol"
+        },
+        {
+          "tags": "brand,gloot,logo",
+          "name": "gloot-logo"
+        },
+        {
+          "tags": "brand,gloot,tagline,esports",
+          "name": "tagline"
+        },
+        {
+          "tags": "brand,gloot,xp,reward",
+          "name": "xp-symbol"
+        },
+        {
+          "tags": "brand,gloot,xp,reward",
+          "name": "xp-symbol-outline"
+        },
+        {
+          "tags": "brand,gloot,coin,reward,voucher",
+          "name": "coin"
+        },
+        {
+          "tags": "brand,gloot,token,reward,brawl",
+          "name": "token"
+        },
+        {
+          "tags": "brand,gloot,ticket,reward,tournament,showdown",
+          "name": "ticket"
+        },
+        {
+          "tags": "brand,gloot,ticket,reward,tournament,showdown",
+          "name": "ticket-shape"
+        },
+        {
+          "tags": "brand,gloot,missions,xp",
+          "name": "missions"
+        },
+        {
+          "tags": "brand,gloot,brawl,leaderboard",
+          "name": "brawl"
+        },
+        {
+          "tags": "brand,gloot,tournament,showdown",
+          "name": "showdown"
+        },
+        {
+          "tags": "brand,gloot,premium",
+          "name": "ic_stars_24px"
+        }
+      ]
+    },
+    {
+      "name": "Games",
+      "icons": [
+        {
+          "tags": "game,apex,legends",
+          "name": "game-apexlegends-symbol"
+        },
+        {
+          "tags": "game,csgo,counter,strike,valve",
+          "name": "game-csgo-symbol"
+        },
+        {
+          "tags": "game,dota2",
+          "name": "game-dota2-symbol"
+        },
+        {
+          "tags": "game,league,legends",
+          "name": "game-leagueoflegends-symbol"
+        },
+        {
+          "tags": "game,pubg,battlegrounds,krafton",
+          "name": "game-pubg-symbol"
+        },
+        {
+          "tags": "game,rocket,league",
+          "name": "game-rocketleague-symbol"
+        },
+        {
+          "tags": "game,valorant,riot",
+          "name": "game-valorant-symbol"
+        },
+        {
+          "tags": "game,symbol,icon,logo,apex,legends",
+          "name": "game-apexlegends"
+        },
+        {
+          "tags": "game,symbol,icon,logo,csgo,counter,strike,valve",
+          "name": "game-csgo"
+        },
+        {
+          "tags": "game,symbol,icon,logo,dota2",
+          "name": "game-dota2"
+        },
+        {
+          "tags": "game,symbol,icon,logo,league,legends",
+          "name": "game-leagueoflegends"
+        },
+        {
+          "tags": "game,symbol,icon,logo,pubg,battlegrounds,krafton",
+          "name": "game-pubg"
+        },
+        {
+          "tags": "game,symbol,icon,logo,rocket,league",
+          "name": "game-rocketleague"
+        },
+        {
+          "tags": "game,symbol,icon,logo,valorant,riot",
+          "name": "game-valorant"
+        }
+      ]
+    },
+    {
+      "name": "Missions",
+      "icons": [
+        {
+          "tags": "",
+          "name": "mission-herolvlup"
+        },
+        {
+          "tags": "",
+          "name": "mission-buyback"
+        },
+        {
+          "tags": "",
+          "name": "mission-road"
+        },
+        {
+          "tags": "",
+          "name": "mission-assist"
+        },
+        {
+          "tags": "",
+          "name": "mission-bosskill"
+        },
+        {
+          "tags": "",
+          "name": "mission-knockouttaken"
+        },
+        {
+          "tags": "",
+          "name": "mission-creepdenie"
+        },
+        {
+          "tags": "",
+          "name": "mission-creepkill"
+        },
+        {
+          "tags": "",
+          "name": "mission-creeplasthit"
+        },
+        {
+          "tags": "",
+          "name": "mission-damagegiven"
+        },
+        {
+          "tags": "",
+          "name": "mission-damataken"
+        },
+        {
+          "tags": "",
+          "name": "mission-doublekill"
+        },
+        {
+          "tags": "",
+          "name": "mission-friendduel"
+        },
+        {
+          "tags": "",
+          "name": "mission-gamematchbattlewon"
+        },
+        {
+          "tags": "",
+          "name": "mission-goal"
+        },
+        {
+          "tags": "",
+          "name": "mission-headshot"
+        },
+        {
+          "tags": "",
+          "name": "mission-revive"
+        },
+        {
+          "tags": "",
+          "name": "mission-herospawn"
+        },
+        {
+          "tags": "",
+          "name": "mission-hitsdealt"
+        },
+        {
+          "tags": "",
+          "name": "mission-hitstaken"
+        },
+        {
+          "tags": "",
+          "name": "mission-kill"
+        },
+        {
+          "tags": "",
+          "name": "mission-killstreak"
+        },
+        {
+          "tags": "",
+          "name": "mission-knockoutdealt"
+        },
+        {
+          "tags": "",
+          "name": "mission-quintuplekill"
+        },
+        {
+          "tags": "",
+          "name": "mission-mvp"
+        },
+        {
+          "tags": "",
+          "name": "mission-oneshot"
+        },
+        {
+          "tags": "",
+          "name": "mission-quadruplekill"
+        },
+        {
+          "tags": "",
+          "name": "mission-ribbon"
+        },
+        {
+          "tags": "",
+          "name": "mission-roundwon"
+        },
+        {
+          "tags": "",
+          "name": "mission-sextuplekill"
+        },
+        {
+          "tags": "",
+          "name": "mission-takedown"
+        },
+        {
+          "tags": "",
+          "name": "mission-triplekill"
+        },
+        {
+          "tags": "",
+          "name": "mission-ultimate"
+        }
+      ]
+    },
+    {
+      "name": "Partners & social media",
+      "icons": [
+        {
+          "tags": "social,media,partner,communication,community,video,streaming,twitch",
+          "name": "twitch"
+        },
+        {
+          "tags": "social,media,partner,communication,community,youtube",
+          "name": "logo-youtube"
+        },
+        {
+          "tags": "social,media,partner,communication,community,facebook,messenger",
+          "name": "logo-messenger"
+        },
+        {
+          "tags": "social,media,partner,communication,community,facebook",
+          "name": "logo-facebook"
+        },
+        {
+          "tags": "social,media,partner,communication,community,whatsapp",
+          "name": "logo-whatsapp"
+        },
+        {
+          "tags": "social,media,partner,communication,community,twitter",
+          "name": "logo-twitter"
+        },
+        {
+          "tags": "social,media,partner,communication,community,paypal",
+          "name": "logo-paypal"
+        },
+        {
+          "tags": "social,media,partner,communication,community,spotify",
+          "name": "logo-spotify"
+        },
+        {
+          "tags": "social,media,partner,communication,community,tiktok",
+          "name": "tiktok"
+        },
+        {
+          "tags": "social,media,partner,communication,community,social,game,discord,gaming",
+          "name": "discord"
+        },
+        {
+          "tags": "social,media,partner,communication,community,VKontakte,vk",
+          "name": "logo-vk"
+        },
+        {
+          "tags": "social,media,partner,communication,community,linkedin",
+          "name": "logo-linkedin"
+        },
+        {
+          "tags": "social,media,partner,communication,community,instagram",
+          "name": "logo-instagram"
+        },
+        {
+          "tags": "social,media,partner,communication,community,facebook",
+          "name": "logo-fb-simple"
+        },
+        {
+          "tags": "social,media,partner,communication,community,google,logo",
+          "name": "google"
+        },
+        {
+          "tags": "social,media,partner,communication,community,steam,logo",
+          "name": "steam"
+        },
+        {
+          "tags": "social,media,partner,communication,community,origin,logo",
+          "name": "origin"
+        },
+        {
+          "tags": "social,media,partner,communication,community,overwolf,logo",
+          "name": "overwolf-symbol"
+        },
+        {
+          "tags": "social,media,partner,communication,community,paypal,logo",
+          "name": "paypal"
+        },
+        {
+          "tags": "social,media,partner,communication,community,amazon,logo",
+          "name": "amazon"
+        },
+        {
+          "tags": "social,media,partner,communication,community,windows,logo",
+          "name": "windows-symbol"
+        },
+        {
+          "tags": "social,media,partner,communication,community,visa,logo",
+          "name": "visa"
+        },
+        {
+          "tags": "social,media,partner,communication,community,mastercard,logo",
+          "name": "mastercard"
+        }
+      ]
+    },
+    {
+      "name": "Interface",
+      "icons": [
+        {
+          "tags": "arrow,out,log,sign,close,door,exit,leave,logout,outside",
+          "name": "leave"
+        },
+       
+        {
+          "tags": "watch,block,view,search,visibility,blind,eye,preview,disabled,hidden,hide,look,observe,overview,see,sight,visible,vision,invisible",
+          "name": "b-eye"
+        },
+        {
+          "tags": "watch,view,search,visibility,blind,eye,preview,disabled,hidden,hide,look,observe,overview,see,sight,visible,vision,invisible",
+          "name": "hide"
+        },
+        {
+          "tags": "navigation,circle,ui,interface,dot,list,gallery,menu,options,settings,circles,dots,more",
+          "name": "menu-5"
+        },
+        {
+          "tags": "files,file,folder,group,document,text,note,report,page,copy,paper,documents,duplicate,item,draft,single,letter,content,sheet",
+          "name": "document-copy"
+        },
+        {
+          "tags": "ui,interface,close,exit,decrease,delete,remove,minus,cancel,deletion,less,removal,subtract",
+          "name": "i-delete"
+        },
+        {
+          "tags": "ui,interface,close,exit,decrease,delete,remove,minus,cancel,deletion,less,removal,subtract",
+          "name": "t-delete"
+        },
+        {
+          "tags": "ui,interface,close,exit,cross,delete,remove,cancel,deletion,removal,denied,discard,dismiss,wrong",
+          "name": "i-remove"
+        },
+        {
+          "tags": "ui,interface,close,exit,cross,delete,remove,cancel,deletion,removal,denied,discard,dismiss,wrong",
+          "name": "t-remove"
+        },
+        {
+          "tags": "ui,interface,close,exit,cross,delete,remove,cancel,deletion,removal,denied,discard,dismiss,wrong",
+          "name": "e-remove"
+        },
+        {
+          "tags": "ui,interface,close,exit,decrease,delete,remove,minus,cancel,deletion,less,removal,subtract",
+          "name": "e-delete"
+        },
+        {
+          "tags": "order,filter,sort,abc,sorting,alphabetical",
+          "name": "alpha-order"
+        },
+        {
+          "tags": "ui,interface,tool,settings,filter,categories,category,filtering,filters,refine,search,sort,funnel,seo",
+          "name": "sort-tool"
+        },
+        {
+          "tags": "design,development,add,plus,selection,filter,grid,view,categories,category,filtering,filters,refine,search,selected,sort",
+          "name": "selection"
+        },
+        {
+          "tags": "ui,interface,tool,settings,filter,categories,category,filtering,filters,refine,search,sort,funnel,seo",
+          "name": "filter"
+        },{
+          "tags": "arrow,bottom,descend,down,downward,circle,round",
+          "name": "circle-ctrl-down"
+        },
+        {
+          "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards,circle,round",
+          "name": "circle-ctrl-right"
+        },
+        {
+          "tags": "arrow,bottom,descend,down,downward,circle,round",
+          "name": "circle-caret-down"
+        },
+        {
+          "tags": "arrow,direction,keyboard,move,navigation,out,position,top,up,upward,upwards",
+          "name": "caret-sm-up"
+        },
+        {
+          "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards",
+          "name": "arrow-sm-right"
+        },
+        {
+          "tags": "arrow,bottom,descend,down,downward",
+          "name": "arrow-sm-down"
+        },
+        {
+          "tags": "arrow,back,left,direction,backward,backwards,keyboard,move,navigation,out,position,previous",
+          "name": "arrow-sm-left"
+        },
+        {
+          "tags": "arrow,communication,answer,chat,comment,comments,conversation,dialog,email,forum,mail,message,messages,reply,speaking,talk",
+          "name": "reply"
+        },
+        {
+          "tags": "arrow,back,curve,forward,invert,line,redo,repeat,right,rotate",
+          "name": "curved-arrow-right"
+        },
+        {
+          "tags": "arrow,back,left,arrows,direction,backward,previous,double,rewind,media,player",
+          "name": "ctrl-backward"
+        },
+        {
+          "tags": "arrow,forward,right,direction,next,onward,double,advance,proceed",
+          "name": "ctrl-forward"
+        },
+        {
+          "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards,circle,round,play",
+          "name": "circle-caret-right"
+        },
+        {
+          "tags": "arrow,back,left,direction,backward,backwards,keyboard,move,navigation,out,position,previous,circle,round",
+          "name": "circle-caret-left"
+        },
+        {
+          "tags": "arrow,back,left,direction,backward,backwards,keyboard,move,navigation,out,position,previous,circle,round",
+          "name": "circle-ctrl-left"
+        },
+        {
+          "tags": "arrow,direction,keyboard,move,navigation,out,position,top,up,upward,upwards,circle,round",
+          "name": "circle-ctrl-up"
+        },
+        {
+          "tags": "arrow,direction,keyboard,move,navigation,out,position,top,up,upward,upwards,circle,round",
+          "name": "circle-caret-up"
+        },
+        {
+          "tags": "sport,achievement,award,medal,prize,winner,cup,champion,trophy,victory",
+          "name": "trophy"
+        },
+        {
+          "tags": "sport,blocks,winner,champion,podium,trophy,victory,scoring",
+          "name": "podium"
+        },
+        {
+          "tags": "sport,blocks,winner,champion,podium,trophy,victory",
+          "name": "podium-trophy"
+        },
+        {
+          "tags": "share,connection,connections,web,attachment,chain,hyperlink,link,linked,links,url",
+          "name": "web-hyperlink"
+        },
+        {
+          "tags": "share,connection,ui,interface,connections,web,chain,hyperlink,link,linked,links,url",
+          "name": "web-link"
+        },
+        {
+          "tags": "user,group,profile,account,avatar,contact,male,man,person,check,mark,approved,complete,completed,done,checked,tick,users,member,human,friend,follower,community,people",
+          "name": "b-check"
+        },
+        {
+          "tags": "user,communication,group,team,meeting,answer,chat,comment,comments,conversation,dialog,forum,message,messages,reply,speaking,talk,profile,account,avatar,contact,male,man,person,service,help,support,users,member,appointment,human,friend,customer,follower,community,people",
+          "name": "b-meeting"
+        },
+        {
+          "tags": "user,group,profile,account,avatar,contact,male,man,person,favorite,favourite,love,like,heart,users,member,human,friend,follower,community,people,parents",
+          "name": "b-love"
+        },
+        {
+          "tags": "share,connection,ui,interface,connections,text,web,editing,chain,hyperlink,link,linked,links,url",
+          "name": "url"
+        },
+        {
+          "tags": "user,group,new,profile,account,avatar,contact,male,man,person,add,create,plus,users,friend,follower,community,people",
+          "name": "b-add"
+        },
+        {
+          "tags": "emoticon,smiley,agree,fist,greeting,punch",
+          "name": "fist"
+        },
+        {
+          "tags": "location,message,map,tag,important,maps,alert,flag,banner,notify",
+          "name": "flag-diagonal-34"
+        },
+        {
+          "tags": "location,message,map,tag,important,maps,alert,flag,banner,notify",
+          "name": "flag-diagonal-33"
+        },
+        {
+          "tags": "location,message,map,tag,important,maps,alert,flag,banner,notify",
+          "name": "flag-points-31"
+        },
+        {
+          "tags": "start,sport,goal,flag,finish,race",
+          "name": "chequered-flag"
+        },
+        {
+          "tags": "location,message,map,tag,important,maps,alert,flag,banner,notify",
+          "name": "flag-points-32"
+        },
+        {
+          "tags": "location,message,map,tag,important,maps,alert,flag,banner,notify",
+          "name": "flag-simple"
+        },
+        {
+          "tags": "share,connection,ui,interface,connections,web,chain,hyperlink,link,linked,links,url",
+          "name": "link"
+        },
+        {
+          "tags": "share,connection,ui,interface,connections,web,chain,hyperlink,link,linked,links,url",
+          "name": "chain"
+        },
+        {
+          "tags": "share,connection,ui,interface,connections,web,chain,hyperlink,link,linked,links,url",
+          "name": "web-url"
+        },
+        {
+          "tags": "share,connection,ui,interface,connections,web,chain,hyperlink,link,linked,links,url",
+          "name": "hyperlink"
+        },
+        {
+          "tags": "share,connection,ui,interface,connections,remove,web,break,chain,hyperlink,link,linked,links,url,broken,unlink",
+          "name": "link-broken"
+        },
+        {
+          "tags": "share,connection,ui,interface,connections,remove,text,web,editing,break,chain,hyperlink,link,linked,links,url,broken,unlink",
+          "name": "unlink"
+        },
+        {
+          "tags": "education,school,sport,achievement,award,medal,prize,winner,trophy",
+          "name": "medal"
+        },
+        {
+          "tags": "emoticon,angry,furious,smiley,unhappy,upset",
+          "name": "angry-10"
+        },
+        {
+          "tags": "emoticon,angry,furious,smiley,unhappy,upset",
+          "name": "angry-44"
+        },
+        {
+          "tags": "data,ui,interface,diagram,stats,chart,graph,report,statistics,analytics,monitor,healthcare,health,medical,charting,charts,results,pulse,analysis,analytic",
+          "name": "c-pulse"
+        },
+        {
+          "tags": "ui,interface,sign,info,mark,alert,information,notification,about,faq,help,support,ask,query,question",
+          "name": "s-question"
+        },
+        {
+          "tags": "ui,interface,sign,info,stop,mark,error,danger,alert,attention,caution,exclamation,information,notification,warning",
+          "name": "c-warning"
+        },
+        {
+          "tags": "ui,interface,sign,info,stop,mark,error,danger,alert,attention,caution,exclamation,information,notification,warning",
+          "name": "s-warning"
+        },
+        {
+          "tags": "file,ui,interface,inbox,text,email,mail,contact,copy,editing,paper,attachment,attach,attached,attaching,clip,collate,include,paperclip",
+          "name": "attach"
+        },
+        {
+          "tags": "file,ui,interface,inbox,text,email,mail,contact,copy,editing,paper,attachment,attach,attached,attaching,clip,collate,include,paperclip",
+          "name": "attachment"
+        },
+        {
+          "tags": "user,new,profile,account,avatar,contact,male,man,person,add,create,plus,users,friend,follower",
+          "name": "add-27"
+        },
+        {
+          "tags": "user,new,profile,account,avatar,contact,male,man,person,add,create,plus,users,friend,follower",
+          "name": "add-29"
+        },
+        {
+          "tags": "user,schedule,meeting,time,profile,account,avatar,contact,male,man,person,calendar,users,member,appointment,countdown,human,friend,follower",
+          "name": "a-time"
+        },
+        {
+          "tags": "sync,user,refresh,reload,update,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower",
+          "name": "a-sync"
+        },
+        {
+          "tags": "user,profile,account,avatar,contact,male,man,person,favorite,favourite,love,like,users,member,star,human,friend,follower",
+          "name": "a-star"
+        },
+        {
+          "tags": "share,social,user,profile,account,avatar,contact,male,man,person,connect,users,member,human,friend,follower",
+          "name": "a-share"
+        },
+        {
+          "tags": "user,lock,security,profile,account,avatar,contact,male,man,person,safe,padlock,protection,secure,users,member,human,friend,follower",
+          "name": "a-security"
+        },
+        {
+          "tags": "user,profile,account,avatar,contact,male,man,person,view,search,find,lens,users,member,human,friend,follower",
+          "name": "a-search"
+        },
+        {
+          "tags": "user,delete,remove,profile,account,avatar,contact,male,man,person,cancel,users,member,human,friend,follower",
+          "name": "a-remove"
+        },
+        {
+          "tags": "position,location,user,profile,account,avatar,contact,male,man,person,pin,users,member,human,friend,locator,follower,body",
+          "name": "a-location"
+        },
+        {
+          "tags": "user,profile,account,avatar,contact,male,man,person,favorite,favourite,love,like,heart,users,member,human,friend,follower",
+          "name": "a-heart"
+        },
+        {
+          "tags": "change,user,profile,account,avatar,contact,male,man,person,edit,modify,users,member,human,friend,follower",
+          "name": "a-edit"
+        },
+        {
+          "tags": "user,delete,remove,profile,account,avatar,contact,male,man,person,cancel,users,member,human,friend,follower",
+          "name": "a-delete"
+        },
+        {
+          "tags": "user,profile,account,avatar,contact,male,man,person,check,mark,approved,complete,completed,done,checked,tick,users,member,human,friend,follower",
+          "name": "a-check"
+        },
+        {
+          "tags": "user,new,profile,account,avatar,contact,male,man,person,add,create,plus,users,friend,follower",
+          "name": "a-add"
+        },
+        {
+          "tags": "business,finance,education,school,agenda,book,contacts,diary,note,notebook,notes,pad",
+          "name": "agenda"
+        },
+        {
+          "tags": "ui,interface,sign,info,travel,alert,information,notification,about,faq,help,support,tooltip",
+          "name": "c-info"
+        },
+        {
+          "tags": "ui,interface,sign,info,alert,information,notification,about,faq,help,support,tooltip",
+          "name": "s-info"
+        },
+        {
+          "tags": "sign,error,danger,alert,attention,caution,exclamation,problem,warning,red",
+          "name": "warning-sign"
+        },
+        {
+          "tags": "ui,interface,sign,ban,stop,banned,block,blocked,forbidden,not,prevent,none,private,cancel",
+          "name": "s-ban"
+        },
+        {
+          "tags": "business,finance,bulb,idea,lamp,light",
+          "name": "bulb-63"
+        },
+        {
+          "tags": "new,finance,badge,shopping,payment,money,shop,card,charge,checkout,credit,debit,method,methods,add,create,plus,buy,credit card",
+          "name": "payment-method"
+        },
+        {
+          "tags": "ui,interface,day,schedule,new,time,add,calendar,appointment,event,plan,date,month",
+          "name": "calendar-event-create"
+        },
+        {
+          "tags": "day,schedule,time,calendar,appointment,event,plan,planning,date,month,timetable,year",
+          "name": "calendar-2"
+        },
+        {
+          "tags": "ui,interface,day,schedule,time,check,checkmark,complete,completed,done,calendar,checked,appointment,event,plan,planning,date,month,timetable,year",
+          "name": "calendar-event"
+        },
+        {
+          "tags": "exchange,box,shopping,gift,package,present,surprise,birthday,christmas,donation,wrapped",
+          "name": "present"
+        },
+        {
+          "tags": "halloween,ghost,horror,scary,enemy,pacman",
+          "name": "ghost-2"
+        },
+        {
+          "tags": "energy,environment,browser,business,finance,education,school,travel,earth,globe,internet,world,map,object,language,global",
+          "name": "globe"
+        },
+        {
+          "tags": "arrow,business,sport,goal,goals,target,targeting,game,archery",
+          "name": "archery-target"
+        },
+        {
+          "tags": "arrow,business,finance,dartboard,darts,goal,goals,target,targeting",
+          "name": "goal-65"
+        },
+        {
+          "tags": "media,goal,photo,camera,multimedia,focus,aim",
+          "name": "camera-shooting"
+        },
+        {
+          "tags": "day,award,favorite,favourite,healthcare,health,medical,love,romantic,like,heart,valentine,wishlist,dating,relationship,romance",
+          "name": "heart"
+        },
+        {
+          "tags": "watch,view,search,visibility,eye,preview,look,observe,overview,see,sight,visible,vision",
+          "name": "view"
+        },
+        {
+          "tags": "ui,interface,watch,view,search,visibility,eye,preview,look,observe,overview,see,sight,visible,vision",
+          "name": "eye"
+        },
+        {
+          "tags": "energy,power,sport,food,bottle,drink,beverage,boost,fitness,shaker,protein",
+          "name": "energy-shaker"
+        },
+        {
+          "tags": "energy,power,sport,food,bottle,drink,beverage,boost,fitness",
+          "name": "energy-drink"
+        },
+        {
+          "tags": "energy,power,sport,food,fitness,gym,powder,proteins,supplement",
+          "name": "energy-supplement"
+        },
+        {
+          "tags": "ui,interface,text,message,note,pen,edit,pencil,write,draw,create,editing,compose,editor,draft",
+          "name": "pen-2"
+        },
+        {
+          "tags": "ui,interface,text,message,note,pen,edit,pencil,write,draw,create,editing,compose,editor,draft",
+          "name": "i-edit"
+        },
+        {
+          "tags": "sport,branding,crown,diadem,king,premium,queen,royal",
+          "name": "crown"
+        },
+        {
+          "tags": "location,dartboard,goal,target,map,focus,maps,aim,crosshair,radar",
+          "name": "crosshair"
+        },
+        {
+          "tags": "arrow,cursor,design,hand,development,click,mouse,point,pointer,finger,active,tap",
+          "name": "cursor-pointer"
+        },
+        {
+          "tags": "media,photo,camera,multimedia,timer,countdown,self-timer",
+          "name": "countdown-2"
+        },
+        {
+          "tags": "success,select,check,selected,mark,accept,approve,approved,checkmark,complete,completed,done,checked,tick,checkbox,ok",
+          "name": "check"
+        },
+        {
+          "tags": "ui,interface,success,select,check,selected,mark,accept,approve,approved,checkmark,complete,completed,done,checked,tick,checkbox,ok",
+          "name": "f-check"
+        },
+        {
+          "tags": "ui,interface,communication,answer,chat,comment,comments,conversation,dialog,forum,message,messages,reply,speaking,talk,bubble,bubbles",
+          "name": "f-comment"
+        },
+        {
+          "tags": "ui,interface,communication,answer,chat,comment,comments,conversation,dialog,forum,message,messages,reply,speaking,talk,bubble,bubbles",
+          "name": "comment"
+        },
+        {
+          "tags": "communication,chat,comments,conversation,dialog,forum,messages,speaking,talk,bubbles",
+          "name": "comments"
+        },
+        {
+          "tags": "ui,interface,communication,chat,comment,comments,conversation,dialog,forum,message,messages,speaking,talk,bubble,bubbles",
+          "name": "a-chat"
+        },
+        {
+          "tags": "business,finance,piechart,graph,pie,report,statistics",
+          "name": "chart-pie-35"
+        },
+        {
+          "tags": "arrow,data,progress,diagram,business,finance,chart,graph,report,statistics,analytics,bar",
+          "name": "chart-growth"
+        },
+        {
+          "tags": "data,ui,interface,diagram,stats,growth,chart,graph,statistics,analytics,bar,stock,bars,level,signal,wifi",
+          "name": "b-chart"
+        },
+        {
+          "tags": "files,data,file,diagram,stats,growth,folder,document,format,chart,office,graph,statistics,analytics,bar,stock,bars,paper,documents,catalog,envelope,level,archive",
+          "name": "file-chart-bar"
+        },
+        {
+          "tags": "data,ui,interface,diagram,stats,growth,chart,graph,statistics,analytics,bar,stock,bars,level,signal,wifi,strong",
+          "name": "d-chart"
+        },
+        {
+          "tags": "data,ui,interface,diagram,stats,growth,chart,graph,statistics,analytics,bar,stock,bars,level,signal,wifi",
+          "name": "g-chart"
+        },
+        {
+          "tags": "arrow,data,progress,diagram,business,finance,chart,graph,report,statistics,analytics,bar",
+          "name": "chart-bar-33"
+        },
+        {
+          "tags": "circle,data,stats,business,finance,chart,piechart,graph,pie,report,statistics,analytics,percent,slice,charting,charts,results",
+          "name": "a-chart"
+        },
+        {
+          "tags": "change,finance,shopping,payment,money,shop,edit,card,charge,checkout,credit,debit,method,methods,buy,credit card",
+          "name": "card-edit"
+        },
+        {
+          "tags": "finance,shopping,payment,money,shop,card,charge,checkout,credit,debit,method,methods,favorite,favourite,love,like,heart,buy,credit card",
+          "name": "card-favorite"
+        },
+        {
+          "tags": "delete,remove,finance,shopping,payment,money,shop,card,charge,checkout,credit,debit,method,methods,cancel,buy,credit card",
+          "name": "card-remove"
+        },
+        {
+          "tags": "sync,refresh,reload,update,finance,shopping,payment,money,shop,card,charge,checkout,credit,debit,method,methods,buy,credit card",
+          "name": "card-update"
+        },
+        {
+          "tags": "ui,interface,bag,shopping,ecommerce,sale,shop,checkout,basket,buy,cart,retail,trolley",
+          "name": "shopping-cart"
+        },
+        {
+          "tags": "delete,remove,bag,shopping,ecommerce,sale,shop,checkout,clear,minus,basket,cancel,buy,cart,retail,trolley",
+          "name": "cart-simple-remove"
+        },
+        {
+          "tags": "new,bag,shopping,ecommerce,sale,shop,checkout,add,plus,basket,buy,cart,retail,trolley",
+          "name": "cart-simple-add"
+        },
+        {
+          "tags": "ui,interface,new,bag,shopping,ecommerce,sale,shop,checkout,add,plus,basket,buy,cart,retail,trolley",
+          "name": "add-to-cart"
+        },
+        {
+          "tags": "media,picture,image,photo,camera,multimedia",
+          "name": "instant-camera-2"
+        },
+        {
+          "tags": "ui,interface,day,schedule,time,grid,calendar,appointment,event,plan,planning,date,month,timetable,year",
+          "name": "calendar-date-2"
+        },
+        {
+          "tags": "day,schedule,time,holidays,grid,calendar,appointment,event,plan,planning,date,month,timetable,year",
+          "name": "calendar-date"
+        },
+        {
+          "tags": "ui,interface,day,schedule,time,check,checkmark,complete,completed,done,calendar,checked,appointment,event,plan,planning,date,month,timetable,year",
+          "name": "calendar-event-2"
+        },
+        {
+          "tags": "ui,interface,day,schedule,time,calendar,appointment,event,plan,planning,date,month,timetable,year",
+          "name": "calendar"
+        },
+        {
+          "tags": "media,photo,photography,camera,multimedia,digital",
+          "name": "camera"
+        },
+        {
+          "tags": "weather,healthcare,health,medical,humidity",
+          "name": "humidity-26"
+        },
+        {
+          "tags": "cross,healthcare,health,medical,hospital",
+          "name": "hospital-34"
+        },
+        {
+          "tags": "ui,interface,office,building,estate,home,house,real,page,address,apartment,homepage,local,shelter",
+          "name": "home-2"
+        },
+        {
+          "tags": "text,message,education,school,note,design,pen,edit,pencil,write,development,draw,create,editing,compose,editor,draft",
+          "name": "pen-01"
+        },
+        {
+          "tags": "text,message,education,school,note,design,pen,edit,pencil,write,development,draw,create,editing,compose,editor,draft",
+          "name": "pen-23"
+        },
+        {
+          "tags": "ui,interface,text,message,education,school,note,pen,edit,pencil,write,draw,create,editing,compose,editor,draft",
+          "name": "pencil"
+        },
+        {
+          "tags": "file,communication,document,education,school,note,achievement,award,degree,diploma,report,paper,magazine,draft,news,parchment,blog",
+          "name": "paper"
+        },
+        {
+          "tags": "education,school,achievement,award,ribbon,degree,diploma,paper,parchment,reward",
+          "name": "paper-diploma"
+        },
+        {
+          "tags": "ui,interface,update,communication,music,chat,message,education,school,volume,announcement,alarm,audio,sound,alert,attention,notification,speaker,voice,announce,megaphone,shout",
+          "name": "notification"
+        },
+        {
+          "tags": "business,finance,notebook,notes,notepad,reminder,to-do,paste",
+          "name": "notes"
+        },
+        {
+          "tags": "user,group,team,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower,community,people,collaboration,collective",
+          "name": "multiple-11"
+        },
+        {
+          "tags": "change,business,finance,cash,payment,coins,money,dollar,banknotes",
+          "name": "money-coins"
+        },
+        {
+          "tags": "business,finance,bag,cash,payment,coins,money,pay,price,reward,profit,wealth",
+          "name": "money-bag"
+        },
+        {
+          "tags": "business,finance,cash,payment,money,dollar,banknotes",
+          "name": "money-13"
+        },
+        {
+          "tags": "business,finance,cash,payment,money,dollar,banknotes",
+          "name": "money-12"
+        },
+        {
+          "tags": "business,finance,cash,payment,money,dollar,banknotes",
+          "name": "money-11"
+        },
+        {
+          "tags": "file,folder,document,format,order,certificate,bill,payment,money,dollar,agreement,paper,item,invoice,receipt",
+          "name": "file-money"
+        },
+        {
+          "tags": "science,healthcare,health,medical,atom,chemistry,molecule",
+          "name": "molecule-40"
+        },
+        {
+          "tags": "emoticon,smiley,cheerful,happy,smile,comic,manga",
+          "name": "manga-62"
+        },
+        {
+          "tags": "emoticon,smiley,cheerful,happy,smile,comic,manga",
+          "name": "manga-63"
+        },
+        {
+          "tags": "arrow,direction,navigation,gps,location,navigate,map,pin,pointer,marker,compass,locate",
+          "name": "marker-2"
+        },
+        {
+          "tags": "user,group,team,meeting,conversation,dialog,profile,account,avatar,contact,male,man,person,users,member,appointment,human,friend,follower,community,people",
+          "name": "meeting"
+        },
+        {
+          "tags": "layer,layers,order,stack,sheets,archive,sheet,layering,overlay,stackable,stacking",
+          "name": "stack"
+        },
+        {
+          "tags": "files,file,network,media,structure,business,hierarchy,layer,layers,order,stack,map,relations,sitemap,development,sheets,filter,management,organization,archive,sheet,layering,stackable,stacking",
+          "name": "layers"
+        },
+        {
+          "tags": "notebook,computer,laptop,tech,technology,device,mac,monitor,screen,pc,personal",
+          "name": "laptop"
+        },
+        {
+          "tags": "open,emoticon,smiley,cheerful,happy,smile,mouth,laugh,positive",
+          "name": "laugh-17"
+        },
+        {
+          "tags": "communication,chat,comment,conversation,talk,education,school,language",
+          "name": "language"
+        },
+        {
+          "tags": "up,hand,finger,gesture,favorite,favourite,approve,like,thumbs,vote,rate,thumb",
+          "name": "thumb-up"
+        },
+        {
+          "tags": "down,no,finger,gesture,favorite,emoticon,smiley,like,thumbs,vote,dislike,unlike",
+          "name": "thumb-down"
+        },
+        {
+          "tags": "up,hand,finger,gesture,favorite,favourite,approve,like,thumbs,vote,rate,thumb",
+          "name": "like"
+        },
+        {
+          "tags": "media,format,canvas,picture,gallery,image,photo,photography,graphic,landscape,album,multimedia",
+          "name": "image"
+        },
+        {
+          "tags": "business,finance,payment,money,coin,hand,handout",
+          "name": "handout"
+        },
+        {
+          "tags": "day,award,favorite,favourite,love,romantic,like,heart,valentine,wishlist,dating,relationship,romance",
+          "name": "favorite"
+        },
+        {
+          "tags": "business,finance,payment,money,hand,handout,holding,loan",
+          "name": "payment"
+        },
+        {
+          "tags": "communication,send,email,mail,message,messages,contact,write,paper,letter,news,fly,airplane,flight,plane,sending",
+          "name": "send-message"
+        },
+        {
+          "tags": "media,picture,portrait,photo,camera,option,multimedia,face,selfie,capture",
+          "name": "selfie"
+        },
+        {
+          "tags": "holidays,halloween,evil,scary,pumpkin",
+          "name": "halloween-pumpkin"
+        },
+        {
+          "tags": "animal,nature,head,face,farm,lamb,sheep,wool",
+          "name": "sheep"
+        },
+        {
+          "tags": "text,message,editing,marks,bubble,quotation,quote",
+          "name": "quote"
+        },
+        {
+          "tags": "emoticon,smiley,malicious,smirking,spiteful",
+          "name": "spiteful"
+        },
+        {
+          "tags": "no,emoticon,smiley,lips,sealed,speechless,words",
+          "name": "speechless"
+        },
+        {
+          "tags": "holidays,halloween,spider,web,animal,nature,bug,virus",
+          "name": "spider"
+        },
+        {
+          "tags": "media,multimedia,announcement,audio,alert,notification,speaker,voice,megaphone,loudspeaker",
+          "name": "speaker"
+        },
+        {
+          "tags": "media,multimedia,audio,alert,notification,speaker,voice,megaphone,loudspeaker",
+          "name": "loudspeaker"
+        },
+        {
+          "tags": "object,space,spaceship,rocket",
+          "name": "spaceship"
+        },
+        {
+          "tags": "media,music,multimedia,audio,sound,alert,notification,waves,wave",
+          "name": "sound-wave"
+        },
+        {
+          "tags": "energy,power,tech,technology,electric,jack,wall,electrical,outlet,socket",
+          "name": "socket"
+        },
+        {
+          "tags": "emoticon,smiley,cheerful,happy,smile,positive,satisfied",
+          "name": "smile"
+        },
+        {
+          "tags": "smart,emoticon,smiley,geek,nerd,nerdy,wunderkind",
+          "name": "smart"
+        },
+        {
+          "tags": "holidays,object,emoticon,smiley,danger,dead,death,head,poison,skeleton,skull",
+          "name": "skull"
+        },
+        {
+          "tags": "halloween,scary,death,head,skeleton,skull",
+          "name": "skull-2"
+        },
+        {
+          "tags": "sleep,emoticon,smiley,rest,pensive",
+          "name": "sleep"
+        },
+        {
+          "tags": "sleep,emoticon,smiley,rest",
+          "name": "sleep-2"
+        },
+        {
+          "tags": "user,profile,account,avatar,contact,woman,man,person,users,member,human,friend,follower",
+          "name": "account"
+        },
+        {
+          "tags": "user,profile,account,avatar,contact,woman,man,person,users,member,human,friend,follower",
+          "name": "profile"
+        },
+        {
+          "tags": "user,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower,body",
+          "name": "male"
+        },
+        {
+          "tags": "position,location,user,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower,body",
+          "name": "single-position"
+        },
+        {
+          "tags": "file,post,folder,document,paragraph,text,note,report,page,paper,item,draft,single,letter,content,sheet,folded,article,blog",
+          "name": "file-article"
+        },
+        {
+          "tags": "out,emoticon,smiley,happy,grimace,mouth,tongue,silly",
+          "name": "silly"
+        },
+        {
+          "tags": "sign,business,finance,drawing,pen,signature",
+          "name": "sign"
+        },
+        {
+          "tags": "emoticon,smiley,disgusted,fever,nauseated,nauseous,sick",
+          "name": "sick"
+        },
+        {
+          "tags": "no,emoticon,smiley,mouth,embarrassed,shy,without",
+          "name": "shy"
+        },
+        {
+          "tags": "open,emoticon,smiley,cheerful,happy,smile,mouth,laugh,positive,quite",
+          "name": "quite-happy"
+        },
+        {
+          "tags": "arrow,up,file,share,storage,transfer,upload,connection,social,update,communication,export,network,outbox,output,post,sharing,group,team,connect,internet,connected,networking,node,nodes,seo,dots",
+          "name": "network-communication-1"
+        },
+        {
+          "tags": "data,ui,interface,security,safety,privacy,protection,secure,access,antivirus,firewall,shield,protect,insurance,policy",
+          "name": "security"
+        },
+        {
+          "tags": "emoticon,smiley,cheerful,happy,smile,positive,satisfied",
+          "name": "satisfied"
+        },
+        {
+          "tags": "emoticon,smiley,unhappy,sad,disappointed",
+          "name": "sad"
+        },
+        {
+          "tags": "security,box,business,finance,furniture,safe,combination,safety,vault",
+          "name": "safe"
+        },
+        {
+          "tags": "business,finance,shopping,money,currency,euro,cashier",
+          "name": "round-euro"
+        },
+        {
+          "tags": "mouse,animal,nature,head,mice,rat,rodent",
+          "name": "rat-head"
+        },
+        {
+          "tags": "energy,environment,danger,virus,atomic,emergency,radiation,sickness,toxic,waste",
+          "name": "radiation"
+        },
+        {
+          "tags": "emoticon,smiley,concern,confused,puzzled,thinking",
+          "name": "puzzled"
+        },
+        {
+          "tags": "sport,monitor,healthcare,health,medical,heart,beat,pulse,cardio,lifeline,rhythm",
+          "name": "pulse"
+        },
+        {
+          "tags": "arrow,back,left,direction,bottom,backward,backwards,keyboard,move,navigation,out,position,previous,enlarge,fullscreen,zoom",
+          "name": "box-arrow-bottom-left"
+        },
+        {
+          "tags": "ui,interface,close,exit,decrease,delete,remove,minus,cancel,deletion,less,removal,subtract",
+          "name": "delete"
+        },
+        {
+          "tags": "arrow,forward,right,direction,bottom,keyboard,move,navigation,out,position,next,onward,onwards,enlarge,fullscreen,zoom",
+          "name": "box-arrow-bottom-right"
+        },
+        {
+          "tags": "arrow,direction,keyboard,move,navigation,out,position,top,up,upward,upwards",
+          "name": "box-ctrl-up"
+        },
+        {
+          "tags": "arrow,direction,keyboard,move,navigation,out,position,top,up,upward,upwards",
+          "name": "box-arrow-up"
+        },
+        {
+          "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards",
+          "name": "box-arrow-right"
+        },
+        {
+          "tags": "arrow,back,left,direction,backward,backwards,keyboard,move,navigation,out,position,previous",
+          "name": "box-arrow-left"
+        },
+        {
+          "tags": "arrow,bottom,descend,down,downward",
+          "name": "box-arrow-down"
+        },
+        {
+          "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards,play",
+          "name": "box-caret-right"
+        },
+        {
+          "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards",
+          "name": "box-ctrl-right"
+        },
+        {
+          "tags": "ui,interface,close,exit,cross,delete,remove,cancel,deletion,removal,denied,discard,dismiss,wrong",
+          "name": "remove"
+        },
+        {
+          "tags": "ui,interface,close,exit,cross,delete,remove,cancel,deletion,removal,denied,discard,dismiss,wrong",
+          "name": "s-remove"
+        },
+        {
+          "tags": "direction,navigation,position,gps,location,map,pin,place,address,marker,maps,street,near,nearby",
+          "name": "square-pin"
+        },
+        {
+          "tags": "direction,navigation,position,gps,location,map,pin,place,address,marker,maps,street,near,nearby",
+          "name": "square-marker"
+        },
+        {
+          "tags": "arrow,back,left,direction,backward,backwards,keyboard,move,navigation,out,position,previous",
+          "name": "box-caret-left"
+        },
+        {
+          "tags": "arrow,back,left,direction,backward,backwards,keyboard,move,navigation,out,position,previous",
+          "name": "box-ctrl-left"
+        },
+        {
+          "tags": "arrow,bottom,descend,down,downward,data,download,file,input,save,share,storage,transfer,ui,interface",
+          "name": "data-download"
+        },
+        {
+          "tags": "arrow,bottom,descend,down,downward",
+          "name": "box-caret-down"
+        },
+        {
+          "tags": "arrow,bottom,descend,down,downward",
+          "name": "box-ctrl-down"
+        },
+        {
+          "tags": "arrow,back,left,direction,backward,backwards,keyboard,move,navigation,out,position,previous,top,up,upward,upwards,enlarge,fullscreen,zoom",
+          "name": "box-arrow-top-left"
+        },
+        {
+          "tags": "ui,interface,close,exit,decrease,delete,remove,minus,cancel,deletion,less,removal,subtract",
+          "name": "s-delete"
+        },
+        {
+          "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards,top,up,upward,upwards,enlarge,fullscreen,zoom",
+          "name": "box-arrow-top-right"
+        },
+        {
+          "tags": "ui,interface,expand,increase,new,add,create,plus,addition,positive",
+          "name": "add"
+        },
+        {
+          "tags": "ui,interface,expand,increase,new,add,create,plus,addition,positive",
+          "name": "s-add"
+        },
+        {
+          "tags": "commerce,home,shopping,ecommerce,shop,food,restaurant,retail,market,mall,online,retailer,store,cafe",
+          "name": "store"
+        },
+        {
+          "tags": "business,finance,sport,chess,game,piece,rook,strategy,tower",
+          "name": "chess-tower"
+        },
+        {
+          "tags": "arrow,direction,keyboard,move,navigation,out,position,top,up,upward,upwards",
+          "name": "box-caret-up"
+        },
+        {
+          "tags": "arrow,direction,keyboard,move,navigation,out,position,top,up,upward,upwards,chevron",
+          "name": "ctrl-up"
+        },
+        {
+          "tags": "open,emoticon,smiley,surprise,surprised,mouth,disbelief,shocked",
+          "name": "surprise"
+        },
+        {
+          "tags": "sunglasses,emoticon,smiley,cheerful,happy,smile,cool",
+          "name": "smiling-face-sunglasses"
+        },
+        {
+          "tags": "video,display,furniture,shelf,computer,technology,film,movie,desktop,monitor,screen,television,tv,personal,entertainment,workstation",
+          "name": "tv-stand"
+        },
+        {
+          "tags": "video,display,computer,device,film,movie,desktop,monitor,screen,television,tv,personal,entertainment,workstation",
+          "name": "tv"
+        },
+        {
+          "tags": "arrow,progress,version,24h,availability,available,career,clock,daily,day,every,freelance,freelancer,monthly,schedule,weekly,yearly,time,watch,wait,alarm,timer,alert,appointment,countdown,track,event,tracking,deadline,hour,history",
+          "name": "time-machine"
+        },
+        {
+          "tags": "measure,clock,schedule,time,watch,sport,alarm,timer,speed,alert,countdown,track,event,tracking,productivity,deadline,hour,stopwatch,history,chronometer,lap",
+          "name": "stopwatch"
+        },
+        {
+          "tags": "clock,schedule,time,watch,furniture,alarm,timer,alert,track,event,tracking,deadline,hour,history",
+          "name": "time-clock"
+        },
+        {
+          "tags": "clock,schedule,time,watch,furniture,alarm,timer,alert,track,event,tracking,deadline,hour,history",
+          "name": "time-alarm"
+        },
+        {
+          "tags": "progress,availability,available,clock,daily,day,monthly,schedule,weekly,yearly,time,watch,wait,alarm,timer,alert,appointment,countdown,track,event,tracking,deadline,hour,history",
+          "name": "clock"
+        },
+        {
+          "tags": "availability,available,clock,daily,day,every,monthly,schedule,weekly,yearly,document,time,watch,wait,paper,alarm,timer,alert,appointment,countdown,track,event,tracking,deadline,hour,history",
+          "name": "file-history"
+        },
+        {
+          "tags": "media,hand,finger,tap,photo,screen,camera,touch,multimedia",
+          "name": "screen-touch"
+        },
+        {
+          "tags": "delete,remove,can,waste,garbage,recycle,recycling,bin,trash,dump,dustbin,junk,rubbish,trashcan",
+          "name": "trash-can"
+        },
+        {
+          "tags": "ui,interface,delete,remove,can,waste,garbage,recycle,recycling,bin,trash,dump,dustbin,junk,rubbish,trashcan",
+          "name": "bin"
+        },
+        {
+          "tags": "delete,remove,furniture,can,waste,garbage,recycle,recycling,bin,trash,dump,dustbin,junk,rubbish,trashcan",
+          "name": "trash"
+        },
+        {
+          "tags": "arrow,direction,keyboard,move,navigation,out,position,top,up,upward,upwards",
+          "name": "arrow-up"
+        },
+        {
+          "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards",
+          "name": "arrow-right"
+        },
+        {
+          "tags": "arrow,bottom,descend,down,downward",
+          "name": "arrow-down"
+        },
+        {
+          "tags": "arrow,back,left,direction,backward,backwards,keyboard,move,navigation,out,position,previous",
+          "name": "arrow-left"
+        },
+        {
+          "tags": "hand,mobile,fingers,gesture,tap,screen,touch,one,gestures,interactive",
+          "name": "tap-01"
+        },
+        {
+          "tags": "hand,mobile,fingers,gesture,tap,screen,touch,one,gestures,interactive",
+          "name": "tap-02"
+        },
+        {
+          "tags": "tech,technology,android,apple,device,mobile,ipad,ios,touch,tablet,touchscreen",
+          "name": "tablet"
+        },
+        {
+          "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards,chevron",
+          "name": "ctrl-right"
+        },
+        {
+          "tags": "ui,interface,shopping,safe,object,help,support,life,lifebuoy,lifering",
+          "name": "lifering"
+        },
+        {
+          "tags": "sunglasses,emoticon,smiley,cheerful,happy,smile,cool",
+          "name": "sunglasses-48"
+        },
+        {
+          "tags": "ui,interface,shopping,safe,object,help,support,life,lifebuoy,lifering",
+          "name": "support"
+        },
+        {
+          "tags": "arrow,back,left,direction,backward,backwards,keyboard,move,navigation,out,position,previous,chevron",
+          "name": "ctrl-left"
+        },
+        {
+          "tags": "arrow,direction,bottom,down,keyboard,move,navigation,chevron",
+          "name": "ctrl-down"
+        },
+        {
+          "tags": "play,media,video,film,movie,editing,camera,multimedia,show",
+          "name": "video"
+        },
+        {
+          "tags": "emoticon,angry,furious,smiley,unhappy,upset",
+          "name": "upset-14"
+        },
+        {
+          "tags": "holidays,halloween,evil,horror,scary,monster,dracula,vampire",
+          "name": "vampire"
+        },
+        {
+          "tags": "holidays,halloween,animal,nature,scary,monster,face,werewolf,wolf",
+          "name": "wolf"
+        },
+        {
+          "tags": "emoticon,smiley,cheerful,happy,smile,positive,satisfied,wink",
+          "name": "wink-69"
+        },
+        {
+          "tags": "emoticon,smiley,cheerful,happy,smile,positive,satisfied,wink",
+          "name": "wink-11"
+        },
+        {
+          "tags": "emoticon,smiley,cheerful,happy,smile,positive,satisfied,wink",
+          "name": "wink-06"
+        },
+        {
+          "tags": "arrow,right,move,out,top,interface,enlarge,expand,fullscreen,increase,maximize,reach,window,zoom,application,browser,windows",
+          "name": "window-maximize"
+        },
+        {
+          "tags": "arrow,left,bottom,move,out,interface,enlarge,expand,fullscreen,increase,maximize,reach,window,zoom,application,browser,windows",
+          "name": "window-minimize"
+        },
+        {
+          "tags": "earth,globe,world,language,global",
+          "name": "world-2"
+        },
+        {
+          "tags": "direction,navigation,position,gps,location,earth,globe,world,map,pin,place,marker,planet,maps",
+          "name": "world-pin"
+        },
+        {
+          "tags": "direction,navigation,position,gps,location,earth,globe,world,map,pin,place,marker,planet,maps",
+          "name": "world-marker"
+        },
+        {
+          "tags": "navigation,gps,location,energy,environment,travel,earth,globe,world,map,planet,maps",
+          "name": "world"
+        },
+        {
+          "tags": "connection,communication,network,internet,tech,technology,wireless,label,signal,pulse,radar,online,wifi,broadband,connectivity,hotspot,reception,router,sensor,signals,wave",
+          "name": "wifi"
+        },
+        {
+          "tags": "connection,communication,network,internet,tech,technology,device,wireless,signal,online,wifi,broadband,connectivity,hotspot,reception,router,sensor,signals,antenna,lan,modem",
+          "name": "wifi-router"
+        },
+        {
+          "tags": "clock,time,watch,accessory,tech,technology,apple,device,smart,alarm,iwatch,timer,track,digital,tracking,wristwatch",
+          "name": "smartwatch"
+        },
+        {
+          "tags": "clock,time,watch,clothes,accessory,tech,technology,device,smart,alarm,timer,track,digital,tracking,wristwatch",
+          "name": "watch-2"
+        },
+        {
+          "tags": "responsive,clock,schedule,tool,app,time,watch,design,android,apple,development,device,ios,code,coding,develop,tag,smart,alarm,iwatch,smartwatch,timer,wearable",
+          "name": "watch-dev"
+        },
+        {
+          "tags": "clock,time,watch,accessory,tech,technology,device,smart,alarm,timer,track,digital,tracking,wristwatch",
+          "name": "watch"
+        },
+        {
+          "tags": "select,tool,design,development,editing,filter,photo,magic,stick,effect,enhance,fairy,fairytail,fantasy,juggle,magician,trick,wand,wish,wizard",
+          "name": "wand-11"
+        },
+        {
+          "tags": "change,shopping,cash,payment,money,coin,pay,wallet,purse,profit,spend",
+          "name": "wallet"
+        },
+        {
+          "tags": "business,finance,shopping,cash,payment,money,pay,wallet",
+          "name": "wallet-44"
+        },
+        {
+          "tags": "business,finance,shopping,cash,payment,money,pay,wallet",
+          "name": "wallet-43"
+        },
+        {
+          "tags": "media,volume,multimedia,audio,sound,speaker",
+          "name": "volume"
+        },
+        {
+          "tags": "media,volume,multimedia,audio,sound,speaker,mute",
+          "name": "volume-2"
+        },
+        {
+          "tags": "media,video,film,movie,camera,multimedia,videocamera",
+          "name": "film"
+        },
+        {
+          "tags": "emoticon,angry,furious,smiley,unhappy,upset",
+          "name": "upset-13"
+        },
+        {
+          "tags": "file,share,user,communication,post,folder,document,profile,account,person,paper,item,users,member",
+          "name": "file-user"
+        },
+        {
+          "tags": "hat,holidays,halloween,magic,scary,witch",
+          "name": "witch-hat"
+        },
+        {
+          "tags": "zoom,glass,view,search,find,lens,magnify,explore,lookup,magnifier,magnifying",
+          "name": "zoom"
+        },
+        {
+          "tags": "ui,interface,enlarge,increase,zoom,in,glass,plus,view,search,find,lens,magnify,explore,lookup,magnifier,magnifying,approach",
+          "name": "magnifier-zoom-in"
+        },
+        {
+          "tags": "out,ui,interface,zoom,glass,view,search,minus,find,lens,magnify,explore,lookup,magnifier,magnifying,recede,reduce",
+          "name": "magnifier-zoom-out"
+        },
+        {
+          "tags": "play,school,movie,artist,mask,performance,cinema,theater,theatre,drama,acting,actor,tragedy",
+          "name": "theater"
+        },
+        {
+          "tags": "celebration,party,entertainment,stars,fireworks,spectacular,explosives",
+          "name": "fireworks"
+        },
+        {
+          "tags": "glasses,hat,privacy,private,invisible,incognito,incognito mode,undercover,detective",
+          "name": "incognito"
+        },
+        {
+          "tags": "play,board,game,strategy,party,playing,dices,casino,tabletop",
+          "name": "board-game"
+        },
+        {
+          "tags": "play,game,card,magic,trick,cards,playing,deck,poker,hearts",
+          "name": "playing-cards"
+        },
+        {
+          "tags": "play,controller,game,joystick,gaming,arcade",
+          "name": "arcade"
+        },
+        {
+          "tags": "play,controller,game,console,videogame,gaming,platform,handheld",
+          "name": "handheld-console"
+        },
+        {
+          "tags": "increase,zoom,low,visibility,lens,vision,visual,impairment",
+          "name": "low-vision"
+        },
+        {
+          "tags": "sad,love,dislike,heart,valentine,romance,broken,heartbreak",
+          "name": "broken-heart"
+        },
+        {
+          "tags": "data,lock,security,privacy,protection,secure,private,shield,terms",
+          "name": "privacy"
+        },
+        {
+          "tags": "idea,hand,click,finger,gesture,snap,smart,finders,snapping,easy,simple,aha,quick",
+          "name": "finger-snap"
+        },
+        {
+          "tags": "computer,technology,pc,chip,cpu,core,microchip,processor",
+          "name": "cpu"
+        },
+        {
+          "tags": "identity,technology,eye,scan,scanner,recognition,iris,identify,retina",
+          "name": "eye-recognition"
+        },
+        {
+          "tags": "connection,network,board,circuit,electronic,computer,technology,science,artificial,intelligence,wires,fiber,optics",
+          "name": "electronic-circuit"
+        },
+        {
+          "tags": "agreement,deal,handshake,privacy,partnership,policy",
+          "name": "privacy-policy"
+        },
+        {
+          "tags": "stack,price,discount,sale,category,label,tag,tags,e-commerce",
+          "name": "tags-stack"
+        },
+        {
+          "tags": "energy,fire,sport,fuel,flame,fitness,cardio,calorie,calories",
+          "name": "energy"
+        },
+        {
+          "tags": "loading,progress,wait,spinner,loader",
+          "name": "refresh-01"
+        },
+        {
+          "tags": "rotate,loading,progress,tool,wait,spinner,rotation,loader",
+          "name": "refresh-02"
+        },
+        {
+          "tags": "loading,progress,wait,spinner,loader",
+          "name": "circle"
+        },
+        {
+          "tags": "ui,interface,zoom,glass,view,search,find,lens,magnify,explore,lookup,magnifier,magnifying",
+          "name": "search"
+        },
+        {
+          "tags": "out,ui,interface,zoom,glass,view,search,minus,find,lens,magnify,explore,lookup,magnifier,magnifying,recede,reduce",
+          "name": "search-zoom-out"
+        },
+        {
+          "tags": "ui,interface,enlarge,increase,zoom,in,glass,plus,view,search,find,lens,magnify,explore,lookup,magnifier,magnifying,approach",
+          "name": "search-zoom-in"
+        },
+        {
+          "tags": "out,ui,interface,zoom,glass,view,search,minus,find,lens,magnify,explore,lookup,magnifier,magnifying,recede,reduce",
+          "name": "zoom-out"
+        },
+        {
+          "tags": "ui,interface,enlarge,increase,zoom,in,glass,plus,view,search,find,lens,magnify,explore,lookup,magnifier,magnifying,approach",
+          "name": "zoom-in"
+        },
+        {
+          "tags": "ui,interface,zoom,glass,view,search,find,lens,magnify,explore,lookup,magnifier,magnifying",
+          "name": "magnifier"
+        },
+        {
+          "tags": "arrow,move,out,enlarge,expand,fullscreen,increase,maximize,reach,window,zoom,center",
+          "name": "maximize"
+        },
+        {
+          "tags": "check,selected,approved,checkmark,completed,done,checked,delivered,verify,verified",
+          "name": "verified"
+        },
+        {
+          "tags": "arrow,bottom,down,data,download,file,save,storage,backup,box,archive",
+          "name": "backup-1"
+        },
+        {
+          "tags": "arrow,share,connection,network,sharing,display,computer,device,monitor,screen,pc,projector,projection",
+          "name": "screen-sharing-2"
+        },
+        {
+          "tags": "hero,helmet,gaming,knight,warrior,medieval,war,armor,spartan",
+          "name": "armor"
+        },
+        {
+          "tags": "safe,safety,protection,secure,shield,defence",
+          "name": "shield"
+        },
+        {
+          "tags": "diamond,jewelry,stone,jewel,luxury,gem,precious",
+          "name": "jewel"
+        },
+        {
+          "tags": "education,school,book,library,knowledge,learning,reading,smart,reader,newspaper,student,studying",
+          "name": "reading"
+        },
+        {
+          "tags": "play,controller,player,console,joystick,videogame,gamepad,nintendo,playstation,xbox,gaming,gamer",
+          "name": "gaming-console"
+        },
+        {
+          "tags": "play,video,game,mushroom,nintendo,gaming,arcade,mario,bros,super",
+          "name": "mario-mushroom"
+        },
+        {
+          "tags": "education,science,magic,medicine,bottle,chemistry,flask,laboratory,poison,potion,liquid,experiment,elixir,alchemy",
+          "name": "potion"
+        },
+        {
+          "tags": "competition,sport,prize,winner,event,champion,race,podium,score,ranking,tournament",
+          "name": "final-score"
+        },
+        {
+          "tags": "zoom,explore,observe,adventure,telescope,mission,spyglass,astronomy",
+          "name": "telescope"
+        },
+        {
+          "tags": "play,game,pacman,gaming,fun,arcade",
+          "name": "pacman"
+        },
+        {
+          "tags": "game,weapon,gaming,fight,sword,fighter,knight,warrior,medieval,war",
+          "name": "sword"
+        },
+        {
+          "tags": "payment,money,gold,coin,reward,treasure",
+          "name": "gold-coin"
+        },
+        {
+          "tags": "bomb,air,weapon,war,military,explosive,ammunition,missiles",
+          "name": "air-bomb"
+        },
+        {
+          "tags": "achievement,award,medal,winner,decoration,champion,military,honor,army,veteran",
+          "name": "military-medal"
+        },
+        {
+          "tags": "soldier,weapon,shooting,war,military,ammunition,missiles",
+          "name": "missile"
+        },
+        {
+          "tags": "board,chess,game,piece,crown,king,royal",
+          "name": "chess-king"
+        },
+        {
+          "tags": "vehicle,weapon,tank,war,military,army,battle",
+          "name": "military-tank"
+        },
+        {
+          "tags": "soldier,weapon,shooting,fighter,combat,war,military,gun,army,battle,assault,rifle",
+          "name": "assault-rifle"
+        },
+        {
+          "tags": "soldier,weapon,shooting,fighter,combat,war,military,gun,army,battle,assault,rifle,submachine",
+          "name": "submachine-gun"
+        },
+        {
+          "tags": "soldier,weapon,shooting,fighter,combat,war,military,gun,army,battle,rifle,shotgun",
+          "name": "shotgun"
+        },
+        {
+          "tags": "banned,weapon,firearm,gun,pistol,crime",
+          "name": "no-guns"
+        },
+        {
+          "tags": "water,transportation,military,submarines,watercraft,underwater,submersible,warship",
+          "name": "submarine"
+        },
+        {
+          "tags": "soldier,weapon,shooting,fighter,combat,war,military,gun,army,battle,rifle,shotgun,sniper",
+          "name": "sniper-rifle"
+        },
+        {
+          "tags": "badge,soldier,fighter,combat,war,military,army,veteran,battle",
+          "name": "army"
+        },
+        {
+          "tags": "knife,soldier,weapon,war,military,sharp,blade",
+          "name": "military-knife"
+        },
+        {
+          "tags": "drop,air,fly,war,military,parachute,parachuting",
+          "name": "parachute"
+        },
+        {
+          "tags": "badge,tag,soldier,war,military,army,veteran",
+          "name": "military-tag"
+        },
+        {
+          "tags": "bomb,weapon,war,military,explosive,army,ammunition,grenade,tnt,dynamite",
+          "name": "tnt-explosives"
+        },
+        {
+          "tags": "bomb,weapon,war,military,explosive,army,ammunition,grenade",
+          "name": "grenade"
+        },
+        {
+          "tags": "bullets,soldier,weapon,shooting,military,ammo,guns,ammunition",
+          "name": "bullets"
+        },
+        {
+          "tags": "vest,soldier,protection,police,war,defence,military,army,battle,bulletproof",
+          "name": "military-vest"
+        },
+        {
+          "tags": "mask,danger,poison,toxic,protection,chemical,gas,nuclear",
+          "name": "gas-mask"
+        },
+        {
+          "tags": "weapon,firearm,gun,pistol",
+          "name": "firearm"
+        },
+        
+        {
+          "tags": "arrow,up,file,share,storage,transfer,upload,connection,social,update,communication,export,network,outbox,output,post,sharing,group,team,connect,internet,connected,networking,node,nodes,seo,dots",
+          "name": "network-communication"
+        },
+        {
+          "tags": "social,surprise,birthday,celebration,party,event,popper,confetti,new year",
+          "name": "party"
+        },
+        {
+          "tags": "ui,interface,control,preferences,tool,system,edit,options,settings,filter,adjust,adjustment,option,wheel,configuration,configure,gear,parameter,parameters,setting,setup,tools,engine,cog,cogwheel",
+          "name": "settings-gear"
+        },
+        {
+          "tags": "interface,control,preferences,tool,system,building,edit,options,settings,filter,diy,adjust,adjustment,option,project,configuration,configure,gear,parameter,parameters,setting,setup,tools,build,engine,repair,screwdriver,wrench",
+          "name": "settings"
+        },
+        {
+          "tags": "file,folder,control,preferences,document,system,office,edit,options,settings,paper,item,adjust,option,configuration,configure,gear,parameter,parameters,setting,setup,tools",
+          "name": "file-settings"
+        },
+        {
+          "tags": "interface,scale,growth,settings,meter,dashboard,speed,widget,setting,fast,gauge,indicator,metrics,odometer,performance,productivity,speedometer,bandwidth",
+          "name": "control-panel"
+        },
+        {
+          "tags": "ui,interface,scale,growth,settings,meter,dashboard,speed,widget,setting,fast,gauge,indicator,metrics,odometer,performance,productivity,speedometer",
+          "name": "speedometer"
+        },
+        {
+          "tags": "ui,interface,scale,growth,settings,meter,dashboard,speed,widget,setting,fast,gauge,indicator,metrics,odometer,performance,productivity,speedometer",
+          "name": "f-dashboard"
+        },
+        {
+          "tags": "ui,interface,control,preferences,tool,system,building,edit,options,settings,filter,diy,adjust,adjustment,option,project,configuration,configure,gear,parameter,parameters,setting,setup,tools,build,engine,repair,wrench",
+          "name": "wrench"
+        },
+        {
+          "tags": "ui,interface,control,preferences,tool,system,building,edit,options,settings,filter,diy,adjust,adjustment,option,project,configuration,configure,gear,parameter,parameters,setting,setup,tools,build,engine,repair,wrench",
+          "name": "wrench-tool"
+        },
+        {
+          "tags": "ui,interface,control,preferences,tool,system,edit,options,settings,filter,adjust,adjustment,option,wheel,configuration,configure,gear,parameter,parameters,setting,setup,tools,engine,cog,cogwheel",
+          "name": "gear"
+        },
+        {
+          "tags": "control,preferences,tool,system,edit,options,settings,filter,adjust,adjustment,option,wheel,configuration,configure,gear,parameter,parameters,setting,setup,tools,engine,cogwheel",
+          "name": "cogwheel"
+        },
+        {
+          "tags": "ui,interface,control,slider,preferences,system,edit,options,settings,filter,adjust,adjustment,option,configuration,configure,parameter,parameters,setting,setup,tools,sliders",
+          "name": "preferences"
+        },
+        {
+          "tags": "ui,interface,control,slider,preferences,system,edit,options,settings,filter,filters,adjust,adjustment,option,configuration,configure,parameter,parameters,setting,setup,tools,sliders",
+          "name": "options"
+        },
+        {
+          "tags": "layout,list,design,web,development,page,website,gallery,boxes,column,grid,masonry,mockup,row,site,table,tile,view,wireframe,dashboard",
+          "name": "layout-11"
+        },
+        {
+          "tags": "weather,media,light,photo,multimedia,flash,lightning",
+          "name": "camera-flash"
+        },
+        {
+          "tags": "weather,energy,media,light,photo,multimedia,flash,lightning,activity,cardio,calories",
+          "name": "lightning"
+        },
+        {
+          "tags": "ui,interface,lock,login,password,security,safe,safety,locked,padlock,privacy,protected,protection,secure,closed,encryption,protect,theft,unlock,unlocked,unsafe,unsecure",
+          "name": "padlock-unlocked"
+        },
+        {
+          "tags": "ui,interface,lock,login,password,security,safe,safety,locked,padlock,privacy,protected,protection,secure,closed,encryption,protect",
+          "name": "padlock"
+        },
+        {
+          "tags": "lock,login,password,security,safe,safety,locked,padlock,privacy,protected,protection,secure,closed,encryption,protect,policy",
+          "name": "lock"
+        },
+        {
+          "tags": "ui,interface,lock,login,password,security,safe,safety,locked,padlock,privacy,protected,protection,secure,closed,encryption,protect,theft,unlock,unlocked,unsafe,unsecure",
+          "name": "unlocked"
+        },
+        {
+          "tags": "ui,interface,sign,info,mark,alert,information,notification,about,faq,help,support,ask,query,question",
+          "name": "c-question"
+        },
+        {
+          "tags": "conference,meeting,business,deal,collaboration,partnership,podcast,interview,teamwork,questions,discussion",
+          "name": "interview"
+        },
+        {
+          "tags": "holidays,ring,alarm,sound,alert,notification,christmas,bell,buzz,ringing,ringtone,wake",
+          "name": "alarm"
+        },
+        {
+          "tags": "ui,interface,ring,alarm,sound,alert,notification,christmas,bell,buzz,ringing,ringtone,wake",
+          "name": "bell"
+        },
+        {
+          "tags": "delete,remove,schedule,time,volume,minus,alarm,timer,sound,alert,cancel,disabled,bell,event,mute,negative,quiet,silence",
+          "name": "alarm-disable"
+        },
+        {
+          "tags": "user,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower",
+          "name": "circle-08"
+        },
+        {
+          "tags": "user,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower",
+          "name": "circle-10"
+        },
+        {
+          "tags": "user,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower",
+          "name": "circle-09"
+        },
+        {
+          "tags": "arrow,bottom,descend,down,downward,data,download,file,input,save,share,storage,transfer,inbox,folder",
+          "name": "file-download-3"
+        },
+        {
+          "tags": "arrow,bottom,down,data,download,file,save,storage,backup,box,archive",
+          "name": "backup"
+        },
+        {
+          "tags": "arrow,bottom,descend,down,downward,cloud,data,download,file,input,save,share,storage,sync,transfer",
+          "name": "cloud-data-download"
+        },
+        {
+          "tags": "file,communication,post,document,note,degree,diploma,report,paper,draft,news,parchment,article,blog",
+          "name": "news"
+        },
+        {
+          "tags": "save,ui,interface,award,holidays,bookmark,favorite,favourite,love,like,vote,star,rate,rating,scoring",
+          "name": "star"
+        },
+        {
+          "tags": "commerce,home,shopping,ecommerce,shop,food,retail,market,mall,online,retailer,store,commercial,property",
+          "name": "shop"
+        }
+      ]
     }
   ]
+  
 }

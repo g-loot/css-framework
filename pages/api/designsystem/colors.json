@@ -227,6 +227,69 @@
           "number": "700",
           "data": "decorative.teal.dark",
           "hex": "#F3F3F6"
+        },
+        {
+          "name": "Gold Light",
+          "value": "bg-gold-300",
+          "number": "300",
+          "data": "reward.gold.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Gold Main",
+          "value": "bg-gold-500",
+          "number": "500",
+          "data": "reward.gold.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Gold Dark",
+          "value": "bg-gold-700",
+          "number": "700",
+          "data": "reward.gold.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Silver Light",
+          "value": "bg-silver-300",
+          "number": "300",
+          "data": "reward.silver.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Silver Main",
+          "value": "bg-silver-500",
+          "number": "500",
+          "data": "reward.silver.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Silver Dark",
+          "value": "bg-silver-700",
+          "number": "700",
+          "data": "reward.silver.dark",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Bronze Light",
+          "value": "bg-bronze-300",
+          "number": "300",
+          "data": "reward.bronze.light",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Bronze Main",
+          "value": "bg-bronze-500",
+          "number": "500",
+          "data": "reward.bronze.main",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Bronze Dark",
+          "value": "bg-bronze-700",
+          "number": "700",
+          "data": "reward.bronze.dark",
+          "hex": "#F3F3F6"
         }
       ]
     },
@@ -242,9 +305,9 @@
         },
         {
           "name": "Purple blue",
-          "value": "bg-gradient-to-r from-purple-500 to-blue-500",
+          "value": "bg-gradient-to-r from-purple-700 to-info-500",
           "number": "500",
-          "data": "decorative.gradient.purple-blue",
+          "data": "decorative.gradient.purple-info",
           "hex": "#F3F3F6"
         }
       ]
@@ -360,70 +423,56 @@
       ]
     },
     {
-      "title": "Reward",
-      "title_short": "reward",
+      "title": "Game",
+      "title_short": "game",
       "colors": [
         {
-          "name": "Gold Light",
-          "value": "bg-gold-300",
-          "number": "300",
-          "data": "reward.gold.light",
-          "hex": "#F3F3F6"
-        },
-        {
-          "name": "Gold Main",
-          "value": "bg-gold-500",
+          "name": "Apex Legends",
+          "value": "bg-game-apexlegends",
           "number": "500",
-          "data": "reward.gold.main",
+          "data": "game.apexlegends",
           "hex": "#F3F3F6"
         },
         {
-          "name": "Gold Dark",
-          "value": "bg-gold-700",
-          "number": "700",
-          "data": "reward.gold.dark",
-          "hex": "#F3F3F6"
-        },
-        {
-          "name": "Silver Light",
-          "value": "bg-silver-300",
-          "number": "300",
-          "data": "reward.silver.light",
-          "hex": "#F3F3F6"
-        },
-        {
-          "name": "Silver Main",
-          "value": "bg-silver-500",
+          "name": "CS:GO",
+          "value": "bg-game-csgo",
           "number": "500",
-          "data": "reward.silver.main",
+          "data": "game.csgo",
           "hex": "#F3F3F6"
         },
         {
-          "name": "Silver Dark",
-          "value": "bg-silver-700",
-          "number": "700",
-          "data": "reward.silver.dark",
-          "hex": "#F3F3F6"
-        },
-        {
-          "name": "Bronze Light",
-          "value": "bg-bronze-300",
-          "number": "300",
-          "data": "reward.bronze.light",
-          "hex": "#F3F3F6"
-        },
-        {
-          "name": "Bronze Main",
-          "value": "bg-bronze-500",
+          "name": "Dota 2",
+          "value": "bg-game-dota2",
           "number": "500",
-          "data": "reward.bronze.main",
+          "data": "game.dota2",
           "hex": "#F3F3F6"
         },
         {
-          "name": "Bronze Dark",
-          "value": "bg-bronze-700",
-          "number": "700",
-          "data": "reward.bronze.dark",
+          "name": "League of Legends",
+          "value": "bg-game-leagueoflegends",
+          "number": "500",
+          "data": "game.leagueoflegends",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "Rocket League",
+          "value": "bg-game-rocketleague",
+          "number": "500",
+          "data": "game.rocketleague",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "PUBG: BATTLEGROUNDS",
+          "value": "bg-game-pubg",
+          "number": "500",
+          "data": "game.pubg",
+          "hex": "#F3F3F6"
+        },
+        {
+          "name": "VALORANT",
+          "value": "bg-game-valorant",
+          "number": "500",
+          "data": "game.valorant",
           "hex": "#F3F3F6"
         }
       ]

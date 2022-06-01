@@ -51,7 +51,7 @@ export default function Progressbar() {
               Linear
             </h2>
           
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
@@ -88,7 +88,7 @@ export default function Progressbar() {
               Radial 
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
@@ -170,7 +170,7 @@ export default function Progressbar() {
               Size
             </h2>
           
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>

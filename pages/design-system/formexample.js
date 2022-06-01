@@ -23,7 +23,7 @@ export default function FormExample() {
 
           <div className='mb-10'>
             <div className='flex flex-col lg:flex-row gap-4'>
-              <div className='flex-3 card rounded-lg p-4 lg:p-8'>
+              <div className='flex-3 surface rounded-lg p-4 lg:p-8'>
                 <form action="#" method="POST">
                   <section className='space-y-4'>
                     <h2 className='h4 mb-8'>

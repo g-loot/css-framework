@@ -30,7 +30,7 @@ export default function Chips() {
             </h2>
 
             {/* default: primary */}
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
                 <h3 className='mb-6 lg:mb-10'>
                   Primary
@@ -133,7 +133,7 @@ export default function Chips() {
               With close button
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
@@ -182,13 +182,13 @@ export default function Chips() {
               Sizes
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                        Medium <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
+                        Medium <button className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                       </div>
                       <div className='flex-1 flex items-center gap-2'>
                         <div className='chip chip-primary'>
@@ -284,7 +284,7 @@ export default function Chips() {
               Roundness
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
@@ -323,13 +323,13 @@ export default function Chips() {
               Sliced
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                        Green <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
+                        Green <button className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                       </div>
                       <div className='flex-1'>
                         <button className='chip chip-sliced'>
@@ -375,16 +375,16 @@ export default function Chips() {
             </h2>
 
             {/* Reward: XP */}
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
                 <h3 className='mb-6 lg:mb-10'>
-                  XP <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
+                  XP <button className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                 </h3>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                        Normal <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
+                        Normal <button className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                       </div>
                       <div className='chip chip-reward chip-xp'>
                         <span className='icon icon-xp-symbol-outline'></span>
@@ -416,7 +416,7 @@ export default function Chips() {
                   <div className='flex-1 space-y-4'>
                   <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                        Normal <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
+                        Normal <button className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                       </div>
                       <div className='chip chip-reward chip-token'>
                         <span className='icon icon-token'></span>
@@ -448,7 +448,7 @@ export default function Chips() {
                   <div className='flex-1 space-y-4'>
                   <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                        Normal <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
+                        Normal <button className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                       </div>
                       <div className='chip chip-reward chip-ticket'>
                         <span className='icon icon-ticket'></span>
@@ -523,13 +523,13 @@ export default function Chips() {
               Status
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                        Default <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
+                        Default <button className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                       </div>
                       <div className='flex-1'>
                         <button className='chip chip-status'>

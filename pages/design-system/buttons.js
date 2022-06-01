@@ -31,7 +31,7 @@ export default function Buttons() {
             </h2>
 
             {/* variant: primary */}
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
                 <h3 className='mb-6 lg:mb-10'>
                   Primary
@@ -43,7 +43,7 @@ export default function Buttons() {
                         Text only
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='primary'></Button>
+                        <Button label='Button Label' variant='primary'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -51,7 +51,7 @@ export default function Buttons() {
                         Icon + text
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='primary' icon='heart'></Button>
+                        <Button label='Button Label' variant='primary' icon='heart'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -59,7 +59,7 @@ export default function Buttons() {
                         Text + icon
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='primary' icon='heart' iconDirection='right'></Button>
+                        <Button label='Button Label' variant='primary' icon='heart' iconDirection='right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -89,7 +89,7 @@ export default function Buttons() {
                         Text only
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='secondary'></Button>
+                        <Button label='Button Label' variant='secondary'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -97,7 +97,7 @@ export default function Buttons() {
                         Icon + text
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='secondary' icon='heart'></Button>
+                        <Button label='Button Label' variant='secondary' icon='heart'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -105,7 +105,7 @@ export default function Buttons() {
                         Text + icon
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='secondary' icon='heart' iconDirection='right'></Button>
+                        <Button label='Button Label' variant='secondary' icon='heart' iconDirection='right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -136,7 +136,7 @@ export default function Buttons() {
                         Text only
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='tertiary'></Button>
+                        <Button label='Button Label' variant='tertiary'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -144,7 +144,7 @@ export default function Buttons() {
                         Icon + text
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='tertiary' icon='heart'></Button>
+                        <Button label='Button Label' variant='tertiary' icon='heart'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -152,7 +152,7 @@ export default function Buttons() {
                         Text + icon
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='tertiary' icon='heart' iconDirection='right'></Button>
+                        <Button label='Button Label' variant='tertiary' icon='heart' iconDirection='right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -185,7 +185,7 @@ export default function Buttons() {
                         Text only
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='premium'></Button>
+                        <Button label='Button Label' variant='premium'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -193,7 +193,7 @@ export default function Buttons() {
                         Icon + text
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='premium' icon='heart'></Button>
+                        <Button label='Button Label' variant='premium' icon='heart'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -201,7 +201,7 @@ export default function Buttons() {
                         Text + icon
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='premium' icon='heart' iconDirection='right'></Button>
+                        <Button label='Button Label' variant='premium' icon='heart' iconDirection='right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -233,7 +233,7 @@ export default function Buttons() {
                         Text only
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='claim'></Button>
+                        <Button label='Button Label' variant='claim'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -241,7 +241,7 @@ export default function Buttons() {
                         Icon + text
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='claim' icon='heart'></Button>
+                        <Button label='Button Label' variant='claim' icon='heart'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -249,7 +249,7 @@ export default function Buttons() {
                         Text + icon
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='claim' icon='heart' iconDirection='right'></Button>
+                        <Button label='Button Label' variant='claim' icon='heart' iconDirection='right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -282,7 +282,7 @@ export default function Buttons() {
                         Primary
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='primary' play='true' icon='circle-caret-right'></Button>
+                        <Button label='Button Label' variant='primary' play='true' icon='circle-caret-right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -290,7 +290,7 @@ export default function Buttons() {
                         Secondary
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='secondary' play='true' icon='circle-caret-right'></Button>
+                        <Button label='Button Label' variant='secondary' play='true' icon='circle-caret-right'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
@@ -298,7 +298,7 @@ export default function Buttons() {
                         Tertiary
                       </div>
                       <div className='flex-1'>
-                        <Button label='Label' variant='tertiary' play='true' icon='circle-caret-right'></Button>
+                        <Button label='Button Label' variant='tertiary' play='true' icon='circle-caret-right'></Button>
                       </div>
                     </div>
                   </div>
@@ -322,7 +322,7 @@ export default function Buttons() {
               Sizes
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
@@ -331,18 +331,18 @@ export default function Buttons() {
                         Large
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
-                        <Button label='Label' variant='primary' size='lg'></Button>
-                        <Button label='Label' variant='secondary' icon='heart' size='lg'></Button>
+                        <Button label='Button Label' variant='primary' size='lg'></Button>
+                        <Button label='Button Label' variant='secondary' icon='heart' size='lg'></Button>
                         <Button variant='tertiary' icon='heart' size='lg'></Button>
                       </div>
                     </div>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                        Medium <button className='chip chip-sm chip-secondary pointer-events-none'><span>default</span></button>
+                        Medium <button className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
-                        <Button label='Label' variant='primary' size='md'></Button>
-                        <Button label='Label' variant='secondary' icon='heart' size='md'></Button>
+                        <Button label='Button Label' variant='primary' size='md'></Button>
+                        <Button label='Button Label' variant='secondary' icon='heart' size='md'></Button>
                         <Button variant='tertiary' icon='heart' size='md'></Button>
                       </div>
                     </div>
@@ -351,8 +351,8 @@ export default function Buttons() {
                         Small
                       </div>
                       <div className='flex-1 flex flex-wrap gap-2'>
-                        <Button label='Label' variant='primary' size='sm'></Button>
-                        <Button label='Label' variant='secondary' icon='heart' size='sm'></Button>
+                        <Button label='Button Label' variant='primary' size='sm'></Button>
+                        <Button label='Button Label' variant='secondary' icon='heart' size='sm'></Button>
                         <Button variant='tertiary' icon='heart' size='sm'></Button>
                       </div>
                     </div>
@@ -375,7 +375,7 @@ export default function Buttons() {
               Currency
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
@@ -421,7 +421,7 @@ export default function Buttons() {
               Close
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
@@ -465,7 +465,7 @@ export default function Buttons() {
             </h2>
 
             {/* status: loading */}
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
                 <h3 className='mb-6 lg:mb-10'>
                   Loading
@@ -478,7 +478,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-primary is-loading'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -488,7 +488,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-secondary is-loading'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -498,7 +498,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-tertiary is-loading'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -508,7 +508,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-premium is-loading'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -518,7 +518,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-claim is-loading'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -559,7 +559,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-primary is-disabled'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -569,7 +569,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-secondary is-disabled'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -579,7 +579,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-tertiary is-disabled'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -589,7 +589,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-premium is-disabled'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -599,7 +599,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-claim is-disabled'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -642,7 +642,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-primary is-shining'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -652,7 +652,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-secondary is-shining'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -662,7 +662,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-tertiary is-shining'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -672,7 +672,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-premium is-shining'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>
@@ -682,7 +682,7 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-claim is-shining'>
-                          <span>Label</span>
+                          <span>Button Label</span>
                         </button>
                       </div>
                     </div>

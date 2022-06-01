@@ -5,53 +5,58 @@ import DSdata from '../api/designsystem/data.json'
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
-export default function Menu() {
+export default function ListItems() {
   const router = useRouter();
   const { data, loading } = useFetch('/api/designsystem', { delay: 20 });
 
   return (
     <div>
-        <DSHead title='Menu' />
+        <DSHead title='List items' />
         
         <DSTopBar />
 
         <DSStructure data={DSdata}>
           <h1 className='mb-2 mx-2 md:mx-0'>
-            Menu
+            List items
           </h1>
 
 
-          {/* primary */}
+          {/* Structure */}
           <div className='mb-12'>
 
             <h2 className='h3 mb-3 mx-2 md:mx-0'>
-              Primary
+              Structure
             </h2>
           
             <div className=''>
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
                   <div className='flex-1 surface rounded-lg overflow-hidden'>
-                    <ul className='menu'>
-                      <li>
-                        <a>
-                          <span>Missions</span>
-                        </a>
+                    <ul>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-tiny'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            This is the title This is the title This is the title This is the title This is the title
+                          </div>
+                        </div>
+                        <div>qsd</div>
                       </li>
-                      <li>
-                        <a className='is-active'>
-                          <span>Brawls</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a>
-                          <span>Tournaments</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a>
-                          <span>Stats</span>
-                        </a>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-tiny'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            This is the title
+                          </div>
+                        </div>
                       </li>
                     </ul>
                   </div>

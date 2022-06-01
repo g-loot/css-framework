@@ -38,6 +38,7 @@
       ease-in-out
       ;
     }
+
     a {
       @apply
       block
@@ -100,10 +101,11 @@
       > a {
         @apply
         p-0
-        h-2.5
+        h-1.5
         w-2.5
-        rounded-lg
+        rounded-none
         bg-ui-300
+        -skew-x-30
         ;
         &::after {
           @apply
@@ -126,7 +128,5 @@
         ;
       }
     }
-
-    
   }
 }

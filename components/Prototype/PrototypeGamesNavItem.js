@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-export default function Accordion(props) {
+export default function PrototypeGamesNavItem(props) {
 
   const [isActive, setActive] = useState(false);
   const elementRef = useRef(null);
@@ -15,12 +15,7 @@ export default function Accordion(props) {
   return (
   <div className={`accordion-item ${isActive ? 'is-active' : ''}`}>
     <div className='accordion-header' aria-expanded={`${isActive ? true : false}`} aria-controls onClick={handleToggle}>
-      <div className='accordion-title'>
-        {props.title}
-      </div>
-      <div>
-        <span className='icon icon-24 icon-arrow-sm-down'></span>
-      </div>
+      {props.header}
     </div>
     <div className={`accordion-collapse`} style={{height: `${isActive ? height : 0}px`}}>
       <div ref={elementRef}>

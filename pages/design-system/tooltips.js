@@ -30,13 +30,13 @@ export default function Tooltips() {
             </h2>
 
             {/* Small: structure */}
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                        Top <button className="chip chip-sm chip-secondary pointer-events-none"><span>default</span></button>
+                        Top <button className="chip chip-xs chip-secondary pointer-events-none uppercase"><span>default</span></button>
                       </div>
                       <div className='flex-1'>
                         <button className='chip chip-primary tooltip' data-tooltip="Lorem ipsum dolor sit amet">
@@ -91,7 +91,7 @@ export default function Tooltips() {
                 Big
               </h2>
 
-              <div className="card rounded-lg p-4">
+              <div className="surface rounded-lg p-4">
                 <div className=''>
                   <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                     <div className='flex-1 space-y-4'>

@@ -1,0 +1,41 @@
+/*----------------------------*/
+/* LIST ITEMS */
+/*----------------------------*/
+
+.items {
+  
+}
+
+.item {
+  @apply
+  flex
+  flex-nowrap
+  items-center
+  gap-2
+  p-2
+  ;
+  .item-content {
+    @apply
+    flex-1
+    
+    ;
+  }
+  .item-image {
+    @apply
+    flex-none
+    ;
+  }
+  .item-title {
+    @apply
+    whitespace-nowrap
+    overflow-hidden
+    overflow-ellipsis
+    ;
+  }
+  &:not(:last-child) {
+    @apply
+    border-b
+    border-ui-700
+    ;
+  }
+}

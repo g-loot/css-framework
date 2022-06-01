@@ -28,7 +28,7 @@ export default function SelectInputs() {
               Single
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
@@ -62,7 +62,7 @@ export default function SelectInputs() {
               Multiple
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
@@ -97,7 +97,7 @@ export default function SelectInputs() {
               Validation
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
@@ -172,7 +172,7 @@ export default function SelectInputs() {
               Status
             </h2>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
                 <h3 className='h4 mb-6 lg:mb-10'>
                   Loading

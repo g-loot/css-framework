@@ -5,6 +5,7 @@ import styles from '../../assets/styles/icons.module.css'
 export default function Icon(props) {
   const iconClass = classNames(
     [styles.icon],
+    "icon",
     [styles["icon-"+props.icon]]
   );
   return (

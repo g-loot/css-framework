@@ -3,6 +3,7 @@ import Footer from '../Footer/Footer';
 import Icon from '../Icon/Icon';
 import JSONstructure from '../../pages/api/prototype/structure.json'
 import MainNav from '../MainNav/MainNav';
+import PrototypeGamesNav from './PrototypeGamesNav';
 import PrototypeHead from './PrototypeHead';
 import Topbar from '../Topbar/Topbar';
 import { useRouter } from 'next/router'
@@ -15,9 +16,10 @@ export default function PrototypeStructure({children, title}) {
       <Topbar />
       <div className="container flex mx-auto md:gap-12 md:px-4 2xl:px-0">
         <div className="hidden md:block sticky w-auto md:w-3/12 xl:w-2/12 py-4 space-y-4">
-          <div className="card rounded-lg overflow-hidden">
+          <div className="surface rounded-lg overflow-hidden">
             <MainNav items={JSONstructure.pages} />
           </div>
+          <PrototypeGamesNav />
           <div className='text-center'>
             <Button label='Edit favorite games' variant='secondary' icon='pen-2' size='sm'></Button>
           </div>
@@ -34,7 +36,6 @@ export default function PrototypeStructure({children, title}) {
                 </div>
               </div>
               <div className='absolute pointer-events-none inset-0 z-10 bg-right-bottom bg-no-repeat bg-contain' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653908737/Marketing/2022_prototype/bg-tournamentschedule.jpg)`}}></div>
-
             </div>
           </div>
         </div>

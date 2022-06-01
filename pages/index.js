@@ -22,7 +22,7 @@ export default function Home() {
         </Head>
         
         <div className='absolute z-20 inset-0 flex items-center justify-center'>
-          <div className='card card-halo halo-r p-4 lg:p-8 lg:rounded-xl container max-w-lg mx-auto'>
+          <div className='surface surface-halo halo-r p-4 lg:p-8 lg:rounded-xl container max-w-lg mx-auto'>
 
            
             <div className='flex flex-col lg:flex-row items-stretch '>
@@ -47,7 +47,7 @@ export default function Home() {
                 </div>
               </div>
               <div className='flex-3 space-y-8'>
-                <a href='design-system/introduction' className='card-mission card-interactive card-ui-700'>
+                <a href='design-system/introduction' className='card-mission card-interactive surface-ui-700'>
                   <div className='card-decoration'></div>
                   <div className='card-info'>
                     <div className='card-title'>
@@ -66,11 +66,11 @@ export default function Home() {
                     <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289722/Marketing/2022_prototype/cover-designsystem.jpg)`}}></span>
                   </div>
                 </a>
-                <a href='prototype/index' className='card-mission card-locked card-ui-700'>
+                <a href='prototype/index' className='card-mission card-locked surface-ui-700'>
                   <div className='card-decoration'></div>
                   <div className='card-info'>
                     <div className='card-title'>
-                      Prototype <button className="chip chip-sm chip-secondary pointer-events-none uppercase"><span>coming soon</span></button>
+                      Prototype <button className="chip chip-xs chip-secondary pointer-events-none uppercase uppercase"><span>coming soon</span></button>
                     </div>
                     <div className='card-meta'>
                       <div>

@@ -58,7 +58,7 @@ export default function EmptyStates() {
               Structure
             </h2>
 
-            <div className="card rounded-lg px-4 py-8 text-center">
+            <div className="surface rounded-lg px-4 py-8 text-center">
               <div className='max-w-xs mx-auto'>
                 <span className='icon icon-brawl text-6xl text-ui-500'></span>
                 <div className='mt-2 mb-6'>
@@ -88,7 +88,7 @@ export default function EmptyStates() {
               With skip button
             </h2>
 
-            <div className="card rounded-lg px-4 py-8 text-center">
+            <div className="surface rounded-lg px-4 py-8 text-center">
               <div className='max-w-xs mx-auto'>
                 <span className='icon icon-smile text-6xl text-ui-500'></span>
                 <div className='mt-2 mb-6'>
@@ -123,7 +123,7 @@ export default function EmptyStates() {
               With input
             </h2>
 
-            <div className="card rounded-lg px-4 py-8 text-center">
+            <div className="surface rounded-lg px-4 py-8 text-center">
               <div className='max-w-xs mx-auto'>
                 <span className='icon icon-manga-63 text-6xl text-ui-500'></span>
                 <div className='mt-2 mb-6'>

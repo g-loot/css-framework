@@ -21,13 +21,13 @@ export default function TournamentCards() {
           </h1>
 
 
-          {/* Tournament card */}
+          {/* Tournament surface */}
           <div className='mb-12'>
 
           
            
             
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
                 {/* Showdown */}
                 <h3 className='h4 mb-6 lg:mb-10'>
@@ -91,7 +91,7 @@ export default function TournamentCards() {
                 </h3>
                 <div className='flex gap-4 flex-col lg:flex-row'>
                   <div className='flex-1 space-y-4'>
-                    <div className='card-tournament card-ui-800'>
+                    <div className='card-tournament surface-ui-800'>
                       <div className='card-decoration'>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Skirmish-sameheight.svg' width='auto' height='auto' alt='G-Loot Showdown' />
                         <div className='chip chip-secondary chip-xs'>
@@ -147,7 +147,7 @@ export default function TournamentCards() {
                 </h3>
                 <div className='flex gap-4 flex-col lg:flex-row'>
                   <div className='flex-1 space-y-4'>
-                    <div className='card-tournament card-ui-800'>
+                    <div className='card-tournament surface-ui-800'>
                       <div className='card-decoration'>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg' width='auto' height='auto' alt='G-Loot Showdown' />
                         <div className='chip chip-secondary chip-xs'>

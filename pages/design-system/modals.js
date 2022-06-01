@@ -32,7 +32,7 @@ export default function Mdodal() {
             <div className='mb-10'>
               <div className='flex flex-col lg:flex-row gap-4'>
                 <div className='flex-3'>
-                  <div className='modal card'>
+                  <div className='modal surface'>
                     <button className="button button-secondary button-close">
                       <span className='icon icon-e-remove'></span>
                     </button>
@@ -80,7 +80,7 @@ export default function Mdodal() {
             <div className='mb-10'>
               <div className='flex flex-col lg:flex-row gap-4'>
                 <div className='flex-3'>
-                  <div className='modal modal-inverted card'>
+                  <div className='modal modal-inverted surface'>
                     <button className="button button-secondary button-close">
                       <span className='icon icon-e-remove'></span>
                     </button>
@@ -129,7 +129,7 @@ export default function Mdodal() {
             <div className='mb-10'>
               <div className='flex flex-col lg:flex-row gap-4'>
                 <div className='flex-3'>
-                  <div className='modal  card'>
+                  <div className='modal  surface'>
                     <button className="button button-secondary button-close">
                       <span className='icon icon-e-remove'></span>
                     </button>

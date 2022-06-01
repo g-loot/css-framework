@@ -31,7 +31,7 @@ export default function Colors() {
                 <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-4">
                   {item.colors.map((item2, indexItem2) => (
                       <>
-                        <div className='rounded-lg overflow-hidden card' key={indexItem2}>
+                        <div className='rounded-lg overflow-hidden surface' key={indexItem2}>
                           <div className={`h-32 relative ${item2.value}`}>
 
                           </div>

@@ -31,7 +31,7 @@ export default function Scrollbars() {
             <div className=''>
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-stretch'>
-                  <div className='flex-1 card rounded-lg overflow-y-scroll h-64 scrollbar scrollbar-primary'>
+                  <div className='flex-1 surface rounded-lg overflow-y-scroll h-64 scrollbar scrollbar-primary'>
                     <div className='p-4 space-y-8 text-ui-300 leading-loose'>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus ipsum in turpis efficitur, nec euismod leo facilisis. Vestibulum risus felis, ultrices eu cursus a, dignissim sed risus. Morbi fermentum turpis non arcu faucibus, a placerat purus imperdiet. Aliquam vel libero arcu. Aenean nec massa quis ex varius tincidunt. Nam eget sem gravida, imperdiet mi vel, facilisis nisl. Aenean ac interdum lorem. Mauris sit amet libero non elit tristique luctus. Aliquam non tristique nunc. Vivamus laoreet tellus et metus mattis, eget semper nunc efficitur. Donec lobortis tempus massa, ut lobortis mi posuere nec. Sed luctus erat vel placerat volutpat. Praesent in porttitor leo, quis mollis lacus. Cras quis mi feugiat, vehicula sem sit amet, placerat nisl. Pellentesque euismod, neque in placerat tempus, arcu lectus lacinia nibh, vitae mollis ipsum orci at nulla. Integer varius diam sit amet felis porta consequat.
@@ -62,13 +62,13 @@ export default function Scrollbars() {
           <div className='mb-12'>
 
             <h2 className='h3 mb-3 mx-2 md:mx-0'>
-              Secondary <button className="chip chip-sm chip-secondary pointer-events-none"><span>default</span></button>
+              Secondary <button className="chip chip-xs chip-secondary pointer-events-none uppercase"><span>default</span></button>
             </h2>
           
             <div className=''>
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-stretch'>
-                  <div className='flex-1 card rounded-lg overflow-y-scroll h-64 scrollbar scrollbar-secondary'>
+                  <div className='flex-1 surface rounded-lg overflow-y-scroll h-64 scrollbar scrollbar-secondary'>
                     <div className='p-4 space-y-8 text-ui-300 leading-loose'>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus ipsum in turpis efficitur, nec euismod leo facilisis. Vestibulum risus felis, ultrices eu cursus a, dignissim sed risus. Morbi fermentum turpis non arcu faucibus, a placerat purus imperdiet. Aliquam vel libero arcu. Aenean nec massa quis ex varius tincidunt. Nam eget sem gravida, imperdiet mi vel, facilisis nisl. Aenean ac interdum lorem. Mauris sit amet libero non elit tristique luctus. Aliquam non tristique nunc. Vivamus laoreet tellus et metus mattis, eget semper nunc efficitur. Donec lobortis tempus massa, ut lobortis mi posuere nec. Sed luctus erat vel placerat volutpat. Praesent in porttitor leo, quis mollis lacus. Cras quis mi feugiat, vehicula sem sit amet, placerat nisl. Pellentesque euismod, neque in placerat tempus, arcu lectus lacinia nibh, vitae mollis ipsum orci at nulla. Integer varius diam sit amet felis porta consequat.
@@ -105,7 +105,7 @@ export default function Scrollbars() {
             <div className=''>
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-stretch'>
-                  <div className='flex-1 card rounded-lg overflow-y-scroll h-64 scrollbar-desktop'>
+                  <div className='flex-1 surface rounded-lg overflow-y-scroll h-64 scrollbar-desktop'>
                     <div className='p-4 space-y-8 text-ui-300 leading-loose'>
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus ipsum in turpis efficitur, nec euismod leo facilisis. Vestibulum risus felis, ultrices eu cursus a, dignissim sed risus. Morbi fermentum turpis non arcu faucibus, a placerat purus imperdiet. Aliquam vel libero arcu. Aenean nec massa quis ex varius tincidunt. Nam eget sem gravida, imperdiet mi vel, facilisis nisl. Aenean ac interdum lorem. Mauris sit amet libero non elit tristique luctus. Aliquam non tristique nunc. Vivamus laoreet tellus et metus mattis, eget semper nunc efficitur. Donec lobortis tempus massa, ut lobortis mi posuere nec. Sed luctus erat vel placerat volutpat. Praesent in porttitor leo, quis mollis lacus. Cras quis mi feugiat, vehicula sem sit amet, placerat nisl. Pellentesque euismod, neque in placerat tempus, arcu lectus lacinia nibh, vitae mollis ipsum orci at nulla. Integer varius diam sit amet felis porta consequat.

@@ -21,7 +21,7 @@ export default function Typography() {
               Typography
             </h1>
 
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className='border-b border-ui-700 pb-12 mb-12'>
                 <h2 className='h3 mb-10'>
                   Fonts

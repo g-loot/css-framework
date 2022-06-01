@@ -88,7 +88,7 @@ export default function CarouselDS() {
                 <div className='flex gap-4 flex-col'>
                   <div className='flex-1 space-y-4'>
                   
-                    <div className='card rounded-xl overflow-hidden carousel'>
+                    <div className='surface rounded-xl overflow-hidden carousel'>
 
 
                       <div className='carousel-slides'>

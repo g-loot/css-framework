@@ -33,7 +33,7 @@ export default function AccordionDS() {
             <div className='mb-10'>
             <div className='flex flex-col lg:flex-row gap-4'>
               <div className='flex-3'>
-                <div className='card rounded-lg accordion'>
+                <div className='surface rounded-lg accordion'>
 
                   <Accordion title='Before entering a Brawl' active>
                     <div className='flex flex-col md:flex-row items-center gap-8 p-8'>

@@ -21,20 +21,20 @@ export default function MissionCards() {
           </h1>
 
 
-          {/* Mission card */}
+          {/* Mission surface */}
           <div className='mb-12'>
 
           
            
             {/* Reward: XP */}
-            <div className="card rounded-lg p-4">
+            <div className="surface rounded-lg p-4">
               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
                 <h3 className='h4 mb-6 lg:mb-10'>
                   Normal
                 </h3>
                 <div className='flex gap-4 flex-col lg:flex-row'>
                   <div className='flex-1 space-y-4'>
-                    <div className='card-mission card-ui-700'>
+                    <div className='card-mission surface-ui-700'>
                       <div className='card-decoration'></div>
                       <div className='card-info'>
                         <div className='card-title'>
@@ -71,7 +71,7 @@ export default function MissionCards() {
                 </h3>
                 <div className='flex gap-4 flex-col lg:flex-row'>
                   <div className='flex-1 space-y-4'>
-                    <div className='card-mission card-ui-700 card-locked'>
+                    <div className='card-mission surface-ui-700 card-locked'>
                       <div className='card-decoration'>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1653293407/Marketing/2022_prototype/Premium_logo.png' width='auto' height='auto' alt='G-Loot Premium' />
                       </div>
@@ -110,7 +110,7 @@ export default function MissionCards() {
                 </h3>
                 <div className='flex gap-4 flex-col lg:flex-row'>
                   <div className='flex-1 space-y-4'>
-                    <div className='card-mission card-ui-700 card-unlocked'>
+                    <div className='card-mission surface-ui-700 card-unlocked'>
                       <div className='card-decoration'>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1653293407/Marketing/2022_prototype/Premium_logo.png' width='auto' height='auto' alt='G-Loot Premium' />
                       </div>
@@ -150,7 +150,7 @@ export default function MissionCards() {
                 </h3>
                 <div className='flex gap-4 flex-col lg:flex-row'>
                   <div className='flex-1 space-y-4'>
-                    <div className='card-mission card-ui-700 card-interactive'>
+                    <div className='card-mission surface-ui-700 card-interactive'>
                       <div className='card-decoration'>
                       </div>
                       <div className='card-info'>

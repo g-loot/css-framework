@@ -3,16 +3,18 @@ import PrototypeStructure from '../../components/Prototype/PrototypeStructure';
 import RewardLadder from '../../components/RewardLadder/RewardLadder';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
+//import DataGames from '../../mock-data/games.json'
 
 export default function Home() {
   const router = useRouter();
-  const { data, loading } = useFetch('/api/users/self', { delay: 1000 });
+  const { data, loading } = useFetch('/api/brawls', { delay: 1000 });
 
   return (
     <>
       <PrototypeStructure title="Home">
+        
 
-        <section className='card rounded-lg overflow-hidden mb-4'>
+        <section className='surface rounded-lg overflow-hidden mb-4'>
           <Carousel></Carousel>
         </section>
 
@@ -36,7 +38,7 @@ export default function Home() {
 
         <section className='mb-4 grid grid-cols-1 xl:grid-cols-3 gap-4'>
           
-          <div className='card flex flex-col  flex-1 relative rounded-lg p-4'>
+          <div className='surface flex flex-col  flex-1 relative rounded-lg p-4'>
             <div className='mb-2'>
               <div className='flex items-baseline gap-2 mb-1'>
                 <h2 className='h5'>
@@ -55,7 +57,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className='card flex flex-col flex-1 relative overflow-hidden rounded-lg p-4'>
+          <div className='surface flex flex-col flex-1 relative overflow-hidden rounded-lg p-4'>
             <div className='relative z-30 flex-1 flex flex-col items-center justify-center text-center'>
               <button className="button button-secondary button-play">
                 <span className="icon icon-circle-caret-right"></span>
@@ -72,7 +74,7 @@ export default function Home() {
 
           </div>
 
-          <div className='card flex flex-col  card-halo halo-r flex-1 relative overflow-hidden rounded-lg p-4'>
+          <div className='surface flex flex-col  surface-halo halo-r flex-1 relative overflow-hidden rounded-lg p-4'>
             <div className='relative z-30 mb-2 flex items-start gap-4'>
               <div className="rounded flex items-center justify-center h-12 w-12 bg-gradient-to-b from-ui-900/75 to-ui-800">
                 <span className="icon icon-32 icon-game-valorant-symbol text-game-valorant color-white"></span>

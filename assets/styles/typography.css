@@ -130,6 +130,8 @@ p {
   a {
     @apply
     text-interaction-500
+    hover:text-interaction-300
+    underline
     ;
   }
 }
