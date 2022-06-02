@@ -20,6 +20,7 @@ const slides = [
     description: 'Aenean at libero ligula. Sed gravida dapibus lectus nec finibus. Morbi egestas vitae tellus eget egestas. Donec scelerisque gravida metus, non pulvinar augue finibus eu. ',
     image: 'https://res.cloudinary.com/gloot/image/upload/v1654158114/Marketing/2022_prototype/DummyContent/carousel-item-apexlegends-fade.jpg',
     buttonLabel: 'Read the blog',
+    buttonExternal: true,
     buttonURL: '#'
   }
 ];
@@ -77,6 +78,11 @@ export default function Carousel(props) {
                   </p>
                   <button className='button button-primary'>
                     <span>{slide.buttonLabel}</span>
+                    {slide.buttonExternal && (
+                      <>
+                        <span className='icon icon-box-arrow-top-right'></span>
+                      </>
+                    )}
                   </button>
                 </div>
               </div>
