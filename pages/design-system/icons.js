@@ -51,7 +51,7 @@ export default function Icons() {
                     }
                   })
                   .map(item => (
-                    <div key={item} className='surface surface-dimmed rounded-lg text-0 w-32 h-32 inline-flex flex-col justify-center items-center relative cursor-pointer text-ui-300 hover:text-ui-100' onClick={() => {navigator.clipboard.writeText(item.name)}}>
+                    <div key={item} className='surface surface-dimmed rounded-lg text-0 w-32 h-32 inline-flex flex-col justify-center items-center relative cursor-pointer text-ui-300 hover:text-ui-100 transition duration-200' onClick={() => {navigator.clipboard.writeText(item.name)}}>
                       <span className={`icon block text-4xl icon-${item.name}`}></span>
                       <span className='absolute bottom-0 p-2 text-ui-400 text-xs text-center leading-none'>
                         {item.name}

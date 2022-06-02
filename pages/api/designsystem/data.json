@@ -146,11 +146,6 @@
           "disabled": true
         },
         {
-          "label": "Notifications",
-          "url": "notifications",
-          "disabled": true
-        },
-        {
           "label": "Reward ladder",
           "url": "rewardladder"
         },
@@ -161,6 +156,15 @@
         {
           "label": "Carousel",
           "url": "carousel"
+        },
+        {
+          "label": "List items",
+          "url": "listitems"
+        },
+        {
+          "label": "Content cards",
+          "url": "contentcards",
+          "disabled": true
         }
       ]
     }

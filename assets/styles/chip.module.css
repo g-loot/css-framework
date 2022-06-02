@@ -246,7 +246,8 @@
         }
       }
     }
-    &.chip-ticket {
+    &.chip-ticket,
+    &.chip-bronze {
       &:not(.chip-inverted){
         @apply 
         text-bronze-300
@@ -270,6 +271,95 @@
           &:focus-visible {
             @apply
             bg-bronze-300
+            ;
+          }
+        }
+      }
+    }
+    &.chip-silver {
+      &:not(.chip-inverted){
+        @apply 
+        text-silver-300
+        ;
+      }
+      &.chip-inverted {
+        @apply 
+        bg-gradient-to-b
+        from-silver-700
+        via-silver-300
+        to-silver-500
+        shadow-[inset_0_0_0_1px_rgb(var(--color-silver-300))]
+        ;
+  
+        > * {
+          text-shadow: 0 1.5px 0.5px rgb(var(--color-silver-300));
+        }
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          &:hover,
+          &:focus-visible {
+            @apply
+            bg-silver-300
+            ;
+          }
+        }
+      }
+    }
+    &.chip-gold {
+      &:not(.chip-inverted){
+        @apply 
+        text-gold-300
+        ;
+      }
+      &.chip-inverted {
+        @apply 
+        bg-gradient-to-b
+        from-gold-700
+        via-gold-300
+        to-gold-500
+        shadow-[inset_0_0_0_1px_rgb(var(--color-gold-300))]
+        ;
+  
+        > * {
+          text-shadow: 0 1.5px 0.5px rgb(var(--color-gold-300));
+        }
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          &:hover,
+          &:focus-visible {
+            @apply
+            bg-gold-300
+            ;
+          }
+        }
+      }
+    }
+    &.chip-ui {
+      &:not(.chip-inverted){
+        @apply 
+        text-ui-300
+        ;
+      }
+      &.chip-inverted {
+        @apply 
+        bg-gradient-to-b
+        from-ui-900
+        to-ui-800/0
+        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-900)/0)]
+        ;
+  
+        > * {
+          @apply
+          text-ui-300
+          ;
+          text-shadow: 0 1.5px 0.5px rgb(var(--color-ui-700));
+        }
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          &:hover,
+          &:focus-visible {
+            @apply
+            bg-ui-300
             ;
           }
         }

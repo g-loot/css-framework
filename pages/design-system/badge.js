@@ -32,7 +32,7 @@ export default function Badge() {
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
-                    <div className='w-full flex gap-8 items-center justify-center'>
+                    <div className='w-full flex flex-wrap gap-8 items-center justify-center'>
                         <div data-badge=".">
                           Notifications
                         </div>
@@ -69,7 +69,7 @@ export default function Badge() {
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
                   <div className='flex-1 space-y-4'>
-                    <div className='w-full flex gap-8 items-center justify-center'>
+                    <div className='w-full flex flex-wrap gap-8 items-center justify-center'>
                       <button className='button button-secondary' data-badge="88">
                         <span>Notifications</span>
                       </button>
@@ -80,6 +80,42 @@ export default function Badge() {
                   </div>
                   <div className='flex-1'>
                     <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/sqetj4yp/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          {/* Colors */}
+          <div className='mb-12'>
+
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+              Colors
+            </h2>
+          
+            <div className="surface rounded-lg p-4">
+              <div className=''>
+                <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+                  <div className='flex-1 space-y-4'>
+                    <div className='w-full flex flex-wrap gap-8 items-center justify-center'>
+                        <div data-badge="." className='after:bg-info-500'>
+                          Notifications
+                        </div>
+                        <div data-badge="8" className='after:bg-error-500'>
+                          Notifications
+                        </div>
+                        <div data-badge="88" className='after:bg-attention-500'>
+                          Notifications
+                        </div>
+                        <div data-badge="888" className='after:bg-sucess-500'>
+                          Notifications
+                        </div>
+                    </div>
+                  </div>
+                  <div className='flex-1'>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/kxd57qu8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>

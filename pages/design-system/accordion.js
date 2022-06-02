@@ -254,7 +254,7 @@ export default function AccordionDS() {
                 </div>
               </div>
               <div className='flex-2'>
-                <iframe className="rounded-lg" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/qejv3rwu/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                <iframe className="rounded-lg" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/pc0w3eda/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
               </div>
             </div>
           </div>

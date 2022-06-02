@@ -32,7 +32,6 @@ export default function Home() {
                 <span>Resets in 02:03:22</span>
               </div>
               <button className='tooltip tooltip-left text-ui-300 text-0' data-tooltip='Unlock rewards to earn XP'><span className='icon icon-16 icon-c-info'></span></button>
-
             </div>
           </div>
           <RewardLadder></RewardLadder>

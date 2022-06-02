@@ -68,4 +68,17 @@
     -translate-y-3
     ;
   }
+  &:empty {
+    @apply
+    text-0
+    ;
+    &::after {
+      @apply
+      relative
+      translate-y-0
+      translate-x-0
+      right-0
+      ;
+    }
+  }
 }

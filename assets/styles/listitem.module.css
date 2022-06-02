@@ -18,9 +18,13 @@
   ;
   .item-content {
     @apply
-    flex-1
     overflow-hidden
     ;
+    &:not([class*='flex-']) {
+      @apply
+      flex-1
+      ;
+    }
   }
   .item-image {
     @apply
