@@ -51,7 +51,7 @@ export default function Home() {
                   <div className='card-decoration'></div>
                   <div className='card-info'>
                     <div className='card-title'>
-                      Front-end Framework
+                      Front-end Framework <button className="chip chip-xs chip-secondary pointer-events-none uppercase uppercase"><span>work in progress</span></button>
                     </div>
                     <div className='card-meta'>
                       <div>
@@ -66,11 +66,11 @@ export default function Home() {
                     <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289722/Marketing/2022_prototype/cover-designsystem.jpg)`}}></span>
                   </div>
                 </a>
-                <a href='prototype/index' className='card-mission card-locked surface-ui-700'>
+                <a href='prototype/' className='card-mission card-interactive surface-ui-700'>
                   <div className='card-decoration'></div>
                   <div className='card-info'>
                     <div className='card-title'>
-                      Prototype <button className="chip chip-xs chip-secondary pointer-events-none uppercase uppercase"><span>coming soon</span></button>
+                      Prototype <button className="chip chip-xs chip-secondary pointer-events-none uppercase uppercase"><span>work in progress</span></button>
                     </div>
                     <div className='card-meta'>
                       <div>
