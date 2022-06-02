@@ -28,11 +28,17 @@
     @apply
     select-none
     ;
+    .icon[class*='icon-game'],
+    .item-title {
+      @apply
+      transition
+      duration-300
+      ease-in-out
+      ;
+    }
     .item-title {
       @apply
       text-ui-300
-      transition-opacity
-      duration-300
       ;
     }
     .icon[class*='down']{
@@ -79,15 +85,24 @@
             @apply 
             opacity-100
             ;
+            .item-title {
+              @apply
+              text-ui-100
+              ;
+            }
           }
-          
         }
       }
-      &:not(.is-active) {
-        .accordion-header {
+    }
+    &:not(.is-active) {
+      .accordion-header {
+        @apply
+        text-ui-200
+        bg-ui-700/25
+        ;
+        .icon[class*='icon-game'] {
           @apply
-          text-ui-200
-          bg-ui-700/25
+          text-ui-300
           ;
         }
       }
@@ -102,7 +117,6 @@
         .item-title {
           @apply
           text-ui-100
-          
           ;
         }
         .icon[class*='down']{
@@ -201,12 +215,9 @@
     > i {
       @apply
       absolute
-      
       rounded-full
-      
       transition
       transform-gpu
-      
       text-ui-400
       opacity-0
       ease-[cubic-bezier(.7,0,.3,1)]
@@ -214,7 +225,7 @@
 
       &:nth-of-type(1) {
         @apply
-        duration-500
+        duration-700
         blur-md
         w-[120%]
         h-[100%]
@@ -226,13 +237,13 @@
 
       &:nth-of-type(2) {
         @apply
-        duration-700
-        blur-[1px]
+        duration-300
+        blur-sm
         w-full
-        h-[20%]
+        h-1
         right-3
-        -bottom-[10%]
-        translate-y-2
+        -bottom-0.5
+        -translate-x-4
         ;
       }
     }
@@ -246,13 +257,13 @@
         &:nth-of-type(1) {
           @apply
           translate-y-0
-          opacity-25
+          opacity-30
           ;
         }
         &:nth-of-type(2) {
           @apply
-          translate-y-0
-          opacity-50
+          translate-x-0
+          opacity-75
           ;
         }
       }

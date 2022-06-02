@@ -35,7 +35,7 @@ export default function RewardLadder(props) {
           <div className='ladder-content'>
             <div className='ladder-decoration'></div>
             <div className='ladder-body'>
-              <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
+              <div className='chip chip-xs chip-reward chip-xp chip-inverted chip-sm'>
                 <span>500</span>
                 <span className='icon icon-xp-symbol-outline'></span>
               </div>
@@ -56,7 +56,7 @@ export default function RewardLadder(props) {
           <div className='ladder-content'>
             <div className='ladder-decoration'></div>
             <div className='ladder-body'>
-              <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
+              <div className='chip chip-xs chip-reward chip-xp chip-inverted chip-sm'>
                 <span>500</span>
                 <span className='icon icon-xp-symbol-outline'></span>
               </div>
@@ -77,7 +77,7 @@ export default function RewardLadder(props) {
           <div className='ladder-content'>
             <div className='ladder-decoration'></div>
             <div className='ladder-body'>
-              <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
+              <div className='chip chip-xs chip-reward chip-xp chip-inverted chip-sm'>
                 <span>800</span>
                 <span className='icon icon-xp-symbol-outline'></span>
               </div>
@@ -98,7 +98,7 @@ export default function RewardLadder(props) {
           <div className='ladder-content'>
             <div className='ladder-decoration'></div>
             <div className='ladder-body'>
-              <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
+              <div className='chip chip-xs chip-reward chip-xp chip-inverted chip-sm'>
                 <span>1100</span>
                 <span className='icon icon-xp-symbol-outline'></span>
               </div>
@@ -119,7 +119,7 @@ export default function RewardLadder(props) {
           <div className='ladder-content'>
             <div className='ladder-decoration'></div>
             <div className='ladder-body'>
-              <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
+              <div className='chip chip-xs chip-reward chip-xp chip-inverted chip-sm'>
                 <span>1400</span>
                 <span className='icon icon-xp-symbol-outline'></span>
               </div>
@@ -140,7 +140,7 @@ export default function RewardLadder(props) {
           <div className='ladder-content'>
             <div className='ladder-decoration'></div>
             <div className='ladder-body'>
-              <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
+              <div className='chip chip-xs chip-reward chip-xp chip-inverted chip-sm'>
                 <span>1700</span>
                 <span className='icon icon-xp-symbol-outline'></span>
               </div>
@@ -161,7 +161,7 @@ export default function RewardLadder(props) {
           <div className='ladder-content'>
             <div className='ladder-decoration'></div>
             <div className='ladder-body'>
-              <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
+              <div className='chip chip-xs chip-reward chip-xp chip-inverted chip-sm'>
                 <span>2000</span>
                 <span className='icon icon-xp-symbol-outline'></span>
               </div>
@@ -182,7 +182,7 @@ export default function RewardLadder(props) {
           <div className='ladder-content'>
             <div className='ladder-decoration'></div>
             <div className='ladder-body'>
-              <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
+              <div className='chip chip-xs chip-reward chip-xp chip-inverted chip-sm'>
                 <span>2000</span>
                 <span className='icon icon-xp-symbol-outline'></span>
               </div>
@@ -204,7 +204,7 @@ export default function RewardLadder(props) {
           <div className='ladder-content'>
             <div className='ladder-decoration'></div>
             <div className='ladder-body'>
-              <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
+              <div className='chip chip-xs chip-reward chip-xp chip-inverted chip-sm'>
                 <span>2000</span>
                 <span className='icon icon-xp-symbol-outline'></span>
               </div>
@@ -226,7 +226,7 @@ export default function RewardLadder(props) {
           <div className='ladder-content'>
             <div className='ladder-decoration'></div>
             <div className='ladder-body'>
-              <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
+              <div className='chip chip-xs chip-reward chip-xp chip-inverted chip-sm'>
                 <span>2000</span>
                 <span className='icon icon-xp-symbol-outline'></span>
               </div>

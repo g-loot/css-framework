@@ -227,7 +227,7 @@ export default function ListItems() {
                     <ul>
                       <li className='item'>
                         <div className='item-image'>
-                          <div className="chip chip-reward chip-xp chip-xs chip-inverted h-7 w-7">
+                          <div className="chip chip-reward chip-xp chip-xs chip-inverted h-6 w-6 text-xs">
                             <span>1</span>
                           </div>
                         </div>
@@ -241,18 +241,20 @@ export default function ListItems() {
                             Hunter1337-
                           </div>
                         </div>
-                        <div className='item-content text-center'>
+                        <div className='item-content text-center text-sm text-ui-300'>
                           12
                         </div>
                         <div className='item-content text-center'>
-                          <div className='flex items-center gap-2'>
-                            <div className='flex items-center'>
-                              <img src='https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-coin-small.png' width='34' height='auto' />
-                              <span className='text-gold-500'>12</span>
-                            </div>
-                            <div className='flex items-center gap-1'>
-                              <img src='https://res.cloudinary.com/gloot/image/upload/v1654152412/Marketing/2022_prototype/CurrencyRewards/Reward-ticket-unique.png' width='34' height='auto' />
-                              <span className='text-bronze-500'>2</span>
+                          <div className='flex justify-center'>
+                            <div className='flex justify-center items-center px-3 gap-2 bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full'>
+                              <div className='flex items-center'>
+                                <img src='https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-centered-coin-small.png' width='34' height='auto' />
+                                <span className='text-sm text-gold-500'>12</span>
+                              </div>
+                              <div className='flex items-center gap-1'>
+                                <img src='https://res.cloudinary.com/gloot/image/upload/v1654152412/Marketing/2022_prototype/CurrencyRewards/Reward-centered-ticket-unique.png' width='34' height='auto' />
+                                <span className='text-sm text-bronze-500'>2</span>
+                              </div>
                             </div>
                           </div>
                         </div>

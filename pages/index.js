@@ -50,8 +50,8 @@ export default function Home() {
                 <a href='design-system/introduction' className='card-mission card-interactive surface-ui-700'>
                   <div className='card-decoration'></div>
                   <div className='card-info'>
-                    <div className='card-title'>
-                      Front-end Framework <button className="chip chip-xs chip-secondary pointer-events-none uppercase uppercase"><span>work in progress</span></button>
+                    <div className='card-title flex gap-2 items-center'>
+                      <span>Front-end Framework</span> <button className="chip chip-xs chip-secondary pointer-events-none uppercase uppercase"><span>work in progress</span></button>
                     </div>
                     <div className='card-meta'>
                       <div>
@@ -69,8 +69,8 @@ export default function Home() {
                 <a href='prototype/' className='card-mission card-interactive surface-ui-700'>
                   <div className='card-decoration'></div>
                   <div className='card-info'>
-                    <div className='card-title'>
-                      Prototype <button className="chip chip-xs chip-secondary pointer-events-none uppercase uppercase"><span>work in progress</span></button>
+                    <div className='card-title flex gap-2 items-center'>
+                      <span>Prototype</span> <button className="chip chip-xs chip-secondary pointer-events-none uppercase uppercase"><span>work in progress</span></button>
                     </div>
                     <div className='card-meta'>
                       <div>

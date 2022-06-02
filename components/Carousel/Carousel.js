@@ -3,21 +3,21 @@ import React, { useEffect, useState } from 'react';
 const slides = [
   {
     title: 'Season 6 is here',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo diam quis ante mollis, ac elementum dolor elementum. In vel consectetur tortor, nec porta lectus.',
+    description: '32 teams will duke it out over 3 days across 18 matches. The top teams will move on to the Grand Final. Do not miss out!',
     image: 'https://res.cloudinary.com/gloot/image/upload/v1654158104/Marketing/2022_prototype/DummyContent/carousel-item-pubg-s6.jpg',
     buttonLabel: 'Learn more',
     buttonURL: '#'
   },
   {
     title: 'New tournaments available',
-    description: 'Aliquam erat volutpat. Aenean iaculis, nunc molestie interdum consequat, urna tortor scelerisque ante, vel commodo mauris lectus sed massa.',
+    description: 'There are some new tournaments for you to compete in. Check them out now!',
     image: 'https://res.cloudinary.com/gloot/image/upload/v1654158116/Marketing/2022_prototype/DummyContent/carousel-item-gloot-newtournaments.jpg',
     buttonLabel: 'Learn more',
     buttonURL: '#'
   },
   {
     title: 'Apex Legends: Fade, the Phasing Punisher',
-    description: 'Aenean at libero ligula. Sed gravida dapibus lectus nec finibus. Morbi egestas vitae tellus eget egestas. Donec scelerisque gravida metus, non pulvinar augue finibus eu. ',
+    description: 'Apex Legends Mobile is finally here, and it brings a new, mobile-exclusive Legend to the fold.',
     image: 'https://res.cloudinary.com/gloot/image/upload/v1654158114/Marketing/2022_prototype/DummyContent/carousel-item-apexlegends-fade.jpg',
     buttonLabel: 'Read the blog',
     buttonExternal: true,

@@ -159,7 +159,7 @@ export default function AccordionDS() {
                     
                     <div className='item'>
                       <div className='item-image'>
-                        <div className={`rounded h-12 w-12 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-valorant`}>
+                        <div className={`rounded h-10 w-10 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-valorant`}>
                           <span className={`icon icon-24 icon-game-valorant-symbol`}></span>
                         </div>
                       </div>
@@ -177,35 +177,28 @@ export default function AccordionDS() {
                   </>
                   
                 )}>
-                    <div className='flex flex-col md:flex-row items-center gap-8 p-8'>
-                      <div className='flex-none grow-0'>
-                        <img src='https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Brawl.svg' width='auto' className='h-26 mx-auto' />
-                      </div>
-                      <div className='text-ui-300 space-y-4'>
-                        <p>
-                          Make sure you have the G-Loot Tracker installed and running on your PC. See if everthing is working by running the G-Loot app on your PC, then start your game.
-                        </p>
-                        <p>
-                          The G-Loot icon should appear in your game with a green dot. This means everything is up and running to track your Mission progress.
-                        </p>
-                      </div>
-                    </div>
+                    <ul className="menu menu-primary">
+                      <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
+                      <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
+                      <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
+                      <li><a><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+                    </ul>
                   </Accordion>
                   <Accordion title='Play your first matches to join the leaderboard' header={(
                   <>
-                    <i className='bg-gradient-to-r from-game-apexlegends/0 via-game-apexlegends to-game-apexlegends/0'></i>
-                    <i className='bg-gradient-to-r from-game-apexlegends/0 via-game-apexlegends to-game-apexlegends/0'></i>
+                    <i className='bg-gradient-to-r from-game-pubg/0 via-game-pubg to-game-pubg/0'></i>
+                    <i className='bg-gradient-to-r from-game-pubg/0 via-game-pubg to-game-pubg/0'></i>
                 
                     
                     <div className='item'>
                       <div className='item-image'>
-                        <div className={`rounded h-12 w-12 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-apexlegends`}>
-                          <span className={`icon icon-24 icon-game-apexlegends-symbol`}></span>
+                        <div className={`rounded h-10 w-10 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-pubg`}>
+                          <span className={`icon icon-24 icon-game-pubg-symbol`}></span>
                         </div>
                       </div>
                       <div className='item-content'>
                         <div className='item-title font-headings text-xl italic'>
-                          Apex Legends
+                          PUBG: BATTLEGROUNDS
                         </div>
                       </div>
                       <div className='item-actions'>
@@ -217,17 +210,12 @@ export default function AccordionDS() {
                   </>
                   
                 )}>
-                    <div className='p-8 text-ui-300 space-y-4'>
-                        <p>
-                          To join the leaderboard, you need to complete a certain number of matches depending on the rules of the Brawl you want to compete in.
-                        </p>
-                        <p>
-                          When you have played the minimum amount of matches, your Brawl points will be added to the leaderboard.
-                        </p>
-                        <p>
-                          You can always play more matches as long as you have Tokens. Only your best scores will count.
-                        </p>
-                    </div>
+                    <ul className="menu menu-primary">
+                      <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
+                      <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
+                      <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
+                      <li><a><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+                    </ul>
                   </Accordion>
                   <Accordion title='Pay tokens to activate Brawl matches' header={(
                   <>
@@ -237,7 +225,7 @@ export default function AccordionDS() {
                     
                     <div className='item'>
                       <div className='item-image'>
-                        <div className={`rounded h-12 w-12 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-rocketleague`}>
+                        <div className={`rounded h-10 w-10 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-rocketleague`}>
                           <span className={`icon icon-24 icon-game-rocketleague-symbol`}></span>
                         </div>
                       </div>
@@ -255,22 +243,12 @@ export default function AccordionDS() {
                   </>
                   
                 )}>
-                    <div className='flex flex-col md:flex-row items-center gap-8 p-8'>
-                      <div className='flex-none grow-0'>
-                        <video autoPlay playsinline muted loop preload width="150" height="150">
-                          <source src="https://res.cloudinary.com/gloot/video/upload/v1644396746/Marketing/202109_gloot2/3D/HomeStepToken.webm" type="video/webm" />
-                          <img src="https://res.cloudinary.com/gloot/image/upload/v1644184592/Marketing/202109_gloot2/Square_token.png" />
-                        </video>
-                      </div>
-                      <div className='text-ui-300 space-y-4'>
-                        <p>
-                          To play in the Brawl you need Tokens.
-                        </p>
-                        <p>
-                          Each match costs a certain number of Tokens. When you have spent a Token and activated a Brawl match, your next game match in the correct game mode will count towards the Brawl.
-                        </p>
-                      </div>
-                    </div>
+                    <ul className="menu menu-primary">
+                      <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
+                      <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
+                      <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
+                      <li><a><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+                    </ul>
                   </Accordion>
                   
                 </div>

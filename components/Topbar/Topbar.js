@@ -7,7 +7,7 @@ import styled from 'styled-components';
 export default function Topbar() {
   return (
     <div className='sticky top-0 z-50 bg-ui-800/50 flex items-center backdrop-blur-md'>
-      <div className='py-2 container mx-auto flex gap-5 relative text-white items-stretch justify-between md:px-4 2xl:px-0'>
+      <div className='py-2 container mx-auto flex md:gap-12 relative text-white items-stretch justify-between md:px-4 2xl:px-0'>
         <div className='w-auto md:w-3/12 xl:w-2/12 flex items-center'>
           <a href='../' className='block transition-opacity duration-100 hover:opacity-50'>
             <img width='123' height='64' src='https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg' alt='G-Loot logo' />
@@ -15,7 +15,7 @@ export default function Topbar() {
         </div>
         <div className='w-full md:w-9/12 xl:w-10/12 hidden md:flex items-center justify-between'>
           <div className='flex items-center'>
-            <div className='hidden lg:block'>
+            <div className='hidden lg:block pl-2'>
               <Button variant='secondary' label='Download tracker' icon='tv' />
             </div>
           </div>
