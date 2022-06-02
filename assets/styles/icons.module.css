@@ -23,37 +23,62 @@
   text-transform: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
 }
 
 .icon-sm {
   font-size: 0.8em;
+   &::before {
+    line-height: 0.8em;
+  }
 }
 .icon-lg {
   font-size: 1.2em;
+   &::before {
+    line-height: 1.2em;
+  }
 }
 
 .icon-16 {
   font-size: 16px;
+  &::before {
+    line-height: 16px;
+  }
 }
 
 .icon-20 {
   font-size: 20px;
+  &::before {
+    line-height: 20px;
+  }
 }
 
 .icon-24 {
   font-size: 24px;
+  &::before {
+    line-height: 24px;
+  }
 }
 
 .icon-28 {
   font-size: 28px;
+  &::before {
+    line-height: 28px;
+  }
 }
 
 .icon-32 {
   font-size: 32px;
+  &::before {
+    line-height: 32px;
+  }
 }
 
 .icon-36 {
   font-size: 36px;
+  &::before {
+    line-height: 36px;
+  }
 }
 
 .icon-shop::before {

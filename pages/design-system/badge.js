@@ -74,7 +74,7 @@ export default function Badge() {
                         <span>Notifications</span>
                       </button>
                       <figure className='avatar avatar-simple' data-badge="88">
-                        <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                        <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                       </figure>
                     </div>
                   </div>

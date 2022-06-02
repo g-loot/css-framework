@@ -8,16 +8,18 @@
 
 .item {
   @apply
+  relative
   flex
   flex-nowrap
   items-center
   gap-2
   p-2
+  w-full
   ;
   .item-content {
     @apply
     flex-1
-    
+    overflow-hidden
     ;
   }
   .item-image {
@@ -36,6 +38,11 @@
     @apply
     border-b
     border-ui-700
+    ;
+  }
+  .item-actions {
+    @apply
+    leading-none
     ;
   }
 }

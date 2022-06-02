@@ -26,28 +26,14 @@
   }
   .accordion-header {
     @apply
-    px-4
-    py-3
-    leading-none
-    font-headings
-    uppercase
-    text-ui-300
-    flex
-    gap-2
-    items-center
     select-none
     ;
-    > .accordion-title {
+    .item-title {
       @apply
-      overflow-ellipsis
-      flex-1
+      text-ui-300
+      transition-opacity
+      duration-300
       ;
-
-      > span {
-        @apply
-        whitespace-nowrap
-        ;
-      }
     }
     .icon[class*='down']{
       @apply
@@ -110,9 +96,15 @@
     &.is-active {
       .accordion-header {
         @apply
-        text-interaction-500
+        text-ui-100
         bg-ui-700
         ;
+        .item-title {
+          @apply
+          text-ui-100
+          
+          ;
+        }
         .icon[class*='down']{
           @apply
           text-ui-200
@@ -196,5 +188,74 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+.accordion.accordion-halo {
+
+  .accordion-header {
+    @apply
+    overflow-hidden
+    relative
+    ;
+    > i {
+      @apply
+      absolute
+      
+      rounded-full
+      
+      transition
+      transform-gpu
+      
+      text-ui-400
+      opacity-0
+      ease-[cubic-bezier(.7,0,.3,1)]
+      ;
+
+      &:nth-of-type(1) {
+        @apply
+        duration-500
+        blur-md
+        w-[120%]
+        h-[100%]
+        -left-[33%]
+        -bottom-[10%]
+        translate-y-12
+        ;
+      }
+
+      &:nth-of-type(2) {
+        @apply
+        duration-700
+        blur-[1px]
+        w-full
+        h-[20%]
+        right-3
+        -bottom-[10%]
+        translate-y-2
+        ;
+      }
+    }
+  }
+  .accordion-item.is-active {
+    .accordion-header {
+      @apply
+      bg-ui-800/0
+      ;
+      > i {
+        &:nth-of-type(1) {
+          @apply
+          translate-y-0
+          opacity-25
+          ;
+        }
+        &:nth-of-type(2) {
+          @apply
+          translate-y-0
+          opacity-50
+          ;
+        }
+      }
+    }
   }
 }

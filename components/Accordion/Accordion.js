@@ -14,13 +14,10 @@ export default function Accordion(props) {
   
   return (
   <div className={`accordion-item ${isActive ? 'is-active' : ''}`}>
-    <div className='accordion-header' aria-expanded={`${isActive ? true : false}`} aria-controls onClick={handleToggle}>
-      <div className='accordion-title'>
-        {props.title}
-      </div>
-      <div>
-        <span className='icon icon-24 icon-arrow-sm-down'></span>
-      </div>
+    <div className={`accordion-header`} aria-expanded={`${isActive ? true : false}`} aria-controls onClick={handleToggle}>
+
+      {props.header}
+      
     </div>
     <div className={`accordion-collapse`} style={{height: `${isActive ? height : 0}px`}}>
       <div ref={elementRef}>

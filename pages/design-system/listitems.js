@@ -31,79 +31,309 @@ export default function ListItems() {
             <div className=''>
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
-                  <div className='flex-1 surface rounded-lg overflow-hidden'>
+                  <div className='flex-1 surface rounded-xl overflow-hidden'>
                     <ul>
                       <li className='item'>
                         <div className='item-image'>
-                          <figure className='avatar avatar-square avatar-simple avatar-tiny'>
-                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
                         <div className='item-content'>
                           <div className='item-title'>
-                            This is the title This is the title This is the title This is the title This is the title
+                            Croc Esports
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
                           </div>
                         </div>
-                        <div>qsd</div>
                       </li>
                       <li className='item'>
                         <div className='item-image'>
-                          <figure className='avatar avatar-square avatar-simple avatar-tiny'>
-                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png)`}}></span>
                           </figure>
                         </div>
                         <div className='item-content'>
                           <div className='item-title'>
-                            This is the title
+                            Kingzz
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Angry Beavers
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Bunny Hunger
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
                           </div>
                         </div>
                       </li>
                     </ul>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/dwjbm4fn/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/0mn7yqpo/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* secondary */}
+          {/* With action */}
           <div className='mb-12'>
 
             <h2 className='h3 mb-3 mx-2 md:mx-0'>
-              Secondary
+              With action
             </h2>
           
             <div className=''>
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
                   <div className='flex-1 surface rounded-lg overflow-hidden'>
-                    <ul className='menu menu-secondary'>
-                      <li>
-                        <a>
-                          <span>Missions</span>
-                        </a>
+                    <ul>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Croc Esports
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-secondary rounded-full tooltip tooltip-left' data-tooltip='Join team'>
+                              <span className='icon icon-b-add'></span>
+                            </button>
+                          </div>
+                        </div>
                       </li>
-                      <li>
-                        <a className='is-active'>
-                          <span>Brawls</span>
-                        </a>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Kingzz
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-secondary rounded-full tooltip tooltip-left' data-tooltip='Join team'>
+                              <span className='icon icon-b-add'></span>
+                            </button>
+                          </div>
+                        </div>
                       </li>
-                      <li>
-                        <a>
-                          <span>Tournaments</span>
-                        </a>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Angry Beavers
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-secondary rounded-full tooltip tooltip-left' data-tooltip='Join team'>
+                              <span className='icon icon-b-add'></span>
+                            </button>
+                          </div>
+                        </div>
                       </li>
-                      <li>
-                        <a>
-                          <span>Stats</span>
-                        </a>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Bunny Hunger
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-secondary rounded-full tooltip tooltip-left' data-tooltip='Join team'>
+                              <span className='icon icon-b-add'></span>
+                            </button>
+                          </div>
+                        </div>
                       </li>
                     </ul>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/uo6p2nve/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/xj50zs89/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* As table */}
+          <div className='mb-12'>
+
+            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+              As table
+            </h2>
+          
+            <div className=''>
+              <div className=''>
+                <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
+                  <div className='flex-1 surface rounded-lg overflow-hidden'>
+                    <ul>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <div className="chip chip-reward chip-xp chip-xs chip-inverted h-7 w-7">
+                            <span>1</span>
+                          </div>
+                        </div>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-tiny'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Hunter1337-
+                          </div>
+                        </div>
+                        <div className='item-content text-center'>
+                          12
+                        </div>
+                        <div className='item-content text-center'>
+                          <div className='flex items-center gap-2'>
+                            <div className='flex items-center'>
+                              <img src='https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-coin-small.png' width='34' height='auto' />
+                              <span className='text-gold-500'>12</span>
+                            </div>
+                            <div className='flex items-center gap-1'>
+                              <img src='https://res.cloudinary.com/gloot/image/upload/v1654152412/Marketing/2022_prototype/CurrencyRewards/Reward-ticket-unique.png' width='34' height='auto' />
+                              <span className='text-bronze-500'>2</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
+                              <span className='icon icon-a-chart'></span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Kingzz
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-secondary rounded-full tooltip tooltip-left' data-tooltip='Join team'>
+                              <span className='icon icon-b-add'></span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Angry Beavers
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-secondary rounded-full tooltip tooltip-left' data-tooltip='Join team'>
+                              <span className='icon icon-b-add'></span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Bunny Hunger
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-secondary rounded-full tooltip tooltip-left' data-tooltip='Join team'>
+                              <span className='icon icon-b-add'></span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className='flex-1'>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/xj50zs89/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>

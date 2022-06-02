@@ -46,7 +46,7 @@ export default function Topbar() {
                 <Icon icon='c-question'></Icon>
               </button>
               <figure className='avatar avatar-tiny'>
-                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644921493/Marketing/202109_gloot2/teamlogo_CrocEsports.png)`}}></span>
+                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
               </figure>
             </div>
           </div>

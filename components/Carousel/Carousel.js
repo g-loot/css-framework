@@ -2,24 +2,24 @@ import React, { useEffect, useState } from 'react';
 
 const slides = [
   {
-    title: 'Lorem ipsum dolor',
+    title: 'Season 6 is here',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo diam quis ante mollis, ac elementum dolor elementum. In vel consectetur tortor, nec porta lectus.',
-    image: 'https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg',
-    buttonLabel: 'Label',
+    image: 'https://res.cloudinary.com/gloot/image/upload/v1654158104/Marketing/2022_prototype/DummyContent/carousel-item-pubg-s6.jpg',
+    buttonLabel: 'Learn more',
     buttonURL: '#'
   },
   {
-    title: 'Fusce a diam accumsan',
+    title: 'New tournaments available',
     description: 'Aliquam erat volutpat. Aenean iaculis, nunc molestie interdum consequat, urna tortor scelerisque ante, vel commodo mauris lectus sed massa.',
-    image: 'https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-apexlegends_1.jpg',
-    buttonLabel: 'Label',
+    image: 'https://res.cloudinary.com/gloot/image/upload/v1654158116/Marketing/2022_prototype/DummyContent/carousel-item-gloot-newtournaments.jpg',
+    buttonLabel: 'Learn more',
     buttonURL: '#'
   },
   {
-    title: 'Aenean at libero ligula',
+    title: 'Apex Legends: Fade, the Phasing Punisher',
     description: 'Aenean at libero ligula. Sed gravida dapibus lectus nec finibus. Morbi egestas vitae tellus eget egestas. Donec scelerisque gravida metus, non pulvinar augue finibus eu. ',
-    image: 'https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-valorant_1.jpg',
-    buttonLabel: 'Label',
+    image: 'https://res.cloudinary.com/gloot/image/upload/v1654158114/Marketing/2022_prototype/DummyContent/carousel-item-apexlegends-fade.jpg',
+    buttonLabel: 'Read the blog',
     buttonURL: '#'
   }
 ];
