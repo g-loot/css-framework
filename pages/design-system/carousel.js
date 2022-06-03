@@ -74,7 +74,7 @@ export default function CarouselDS() {
         <DSTopBar />
 
         <DSStructure data={DSdata}>
-          <h1 className='mb-2 mx-2 md:mx-0'>
+          <h1 className='mb-2'>
             Carousel
           </h1>
 

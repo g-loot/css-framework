@@ -52,7 +52,7 @@ export default function DataNumbers() {
 
         <DSStructure data={DSdata}>
 
-          <h1 className='mb-2 mx-2 md:mx-0'>
+          <h1 className='mb-2'>
             Data &amp; numbers
           </h1>
 

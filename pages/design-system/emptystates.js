@@ -46,7 +46,7 @@ export default function EmptyStates() {
 
         <DSStructure data={DSdata}>
 
-          <h1 className='mb-2 mx-2 md:mx-0'>
+          <h1 className='mb-2'>
             Empty states
           </h1>
 

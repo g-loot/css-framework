@@ -16,7 +16,7 @@ export default function TournamentCards() {
         <DSTopBar />
 
         <DSStructure data={DSdata}>
-          <h1 className='mb-2 mx-2 md:mx-0'>
+          <h1 className='mb-2'>
             Tournament cards
           </h1>
 

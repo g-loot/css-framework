@@ -17,7 +17,7 @@ export default function Tabs() {
 
         <DSStructure data={DSdata}>
 
-          <h1 className='mb-2 mx-2 md:mx-0'>
+          <h1 className='mb-2'>
             Tabs
           </h1>
 

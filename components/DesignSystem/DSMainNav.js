@@ -10,7 +10,9 @@ export default function DSMainNav(props) {
     {props.data.sections.map((item, itemIndex) => (
       <div className="surface md:rounded-lg overflow-hidden mb-4" key={itemIndex}>
         <button className='flex items-center py-2 px-4'>
-          <span className={`icon icon-16 icon-${item.icon}`}></span>
+          {/*
+            <span className={`icon icon-16 icon-${item.icon}`}></span>
+          */}
           <span className='font-headings uppercase text-ui-100'>{item.label}</span>
         </button>
         <div className={`${router.pathname.includes(item.url) ? 'is-active' : ''}`}>
