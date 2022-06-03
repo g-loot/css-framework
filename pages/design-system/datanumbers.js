@@ -60,7 +60,7 @@ export default function DataNumbers() {
           {/* Gauge */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Gauge
             </h2>
           
@@ -123,7 +123,7 @@ export default function DataNumbers() {
           {/* Icon holder */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Icon holder
             </h2>
 
@@ -168,7 +168,7 @@ export default function DataNumbers() {
           {/* Icon holder + loader */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Icon holder + loader
             </h2>
 

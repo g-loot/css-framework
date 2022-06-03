@@ -25,7 +25,7 @@ export default function Avatars() {
           {/* shape */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Shape
             </h2>
 
@@ -79,7 +79,7 @@ export default function Avatars() {
           {/* size */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Size
             </h2>
 
@@ -178,7 +178,7 @@ export default function Avatars() {
           {/* rank */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Rank
             </h2>
 
@@ -248,7 +248,7 @@ export default function Avatars() {
           {/* status */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Status
             </h2>
 
@@ -448,7 +448,7 @@ export default function Avatars() {
           {/* simple */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Simple
             </h2>
 
@@ -547,7 +547,7 @@ export default function Avatars() {
           {/* With icon */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               With icon
             </h2>
 

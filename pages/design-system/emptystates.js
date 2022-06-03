@@ -54,7 +54,7 @@ export default function EmptyStates() {
           {/* Structure */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Structure
             </h2>
 
@@ -84,7 +84,7 @@ export default function EmptyStates() {
           {/* With skip button */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               With skip button
             </h2>
 
@@ -119,7 +119,7 @@ export default function EmptyStates() {
           {/* With input */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               With input
             </h2>
 

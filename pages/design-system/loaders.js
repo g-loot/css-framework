@@ -25,7 +25,7 @@ export default function Loaders() {
           {/* Spinner */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Spinner
             </h2>
           
@@ -88,7 +88,7 @@ export default function Loaders() {
           {/* G-Loot loader */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               G-Loot loader
             </h2>
             

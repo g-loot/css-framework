@@ -54,7 +54,7 @@ export default function Steps() {
           {/* Default */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Default
             </h2>
 
@@ -103,7 +103,7 @@ export default function Steps() {
           {/* Secondary */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Secondary
             </h2>
 
@@ -153,7 +153,7 @@ export default function Steps() {
           {/* Tertiary */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Tertiary
             </h2>
 

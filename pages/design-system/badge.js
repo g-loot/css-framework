@@ -24,7 +24,7 @@ export default function Badge() {
           {/* Structure */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Structure
             </h2>
           
@@ -61,7 +61,7 @@ export default function Badge() {
           {/* with badges */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Badges everywhere
             </h2>
           
@@ -91,7 +91,7 @@ export default function Badge() {
           {/* Colors */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Colors
             </h2>
           

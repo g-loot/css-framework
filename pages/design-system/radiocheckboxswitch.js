@@ -24,7 +24,7 @@ export default function RadioCheckSwitch() {
           {/* Radio */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Radio
             </h2>
 
@@ -59,7 +59,7 @@ export default function RadioCheckSwitch() {
           {/* Switch */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Switch
             </h2>
 
@@ -94,7 +94,7 @@ export default function RadioCheckSwitch() {
           {/* Checkbox */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Checkbox
             </h2>
 
@@ -135,7 +135,7 @@ export default function RadioCheckSwitch() {
           {/* Validation */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Validation
             </h2>
 

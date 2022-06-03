@@ -47,7 +47,7 @@ export default function Progressbar() {
           {/* linear */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Linear
             </h2>
           
@@ -84,7 +84,7 @@ export default function Progressbar() {
           {/* radial */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Radial 
             </h2>
 
@@ -166,7 +166,7 @@ export default function Progressbar() {
           {/* Size */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Size
             </h2>
           

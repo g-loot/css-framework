@@ -15,7 +15,7 @@ export default function DSStructure({children, data}) {
           </div>
           <div className="pt-4 pb-8 w-full md:w-9/12 xl:w-10/12">
             
-            <div className='px-4 md:px-0'>
+            <div className='px-2 md:px-0'>
               {children}
             </div>
           </div>

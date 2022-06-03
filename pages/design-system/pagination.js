@@ -24,7 +24,7 @@ export default function Pagination() {
           {/* variant */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Default
             </h2>
           
@@ -76,7 +76,7 @@ export default function Pagination() {
           {/* bullet */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Bullet
             </h2>
 

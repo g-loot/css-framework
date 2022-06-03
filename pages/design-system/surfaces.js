@@ -22,7 +22,7 @@ export default function Surfaces() {
 
 
           <div className='mb-10'>
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Normal
             </h2>
             <div className='flex flex-col lg:flex-row gap-4'>
@@ -35,7 +35,7 @@ export default function Surfaces() {
           </div>
 
           <div className='mb-10'>
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Dimmed
             </h2>
             <div className='flex flex-col lg:flex-row gap-4'>
@@ -49,7 +49,7 @@ export default function Surfaces() {
 
 
           <div className='mb-10'>
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Halo surface
             </h2>
             <div className='flex flex-col lg:flex-row gap-4'>

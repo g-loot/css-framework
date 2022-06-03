@@ -10,7 +10,7 @@ export default function DSMainNavMobile(props) {
   };
   return (
     <>
-      <div className='sticky z-40 top-[50px] block md:hidden px-4 pb-4'>
+      <div className='sticky z-40 top-[50px] block md:hidden px-2 pb-2'>
         <div className="form-group form-select">
           <select onChange={e => handleClick(e)}>
             {props.data.sections.map((item, itemIndex) => (

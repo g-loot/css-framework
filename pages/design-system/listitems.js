@@ -24,7 +24,7 @@ export default function ListItems() {
           {/* Structure */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Structure
             </h2>
           
@@ -106,7 +106,7 @@ export default function ListItems() {
           {/* With action */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               With action
             </h2>
           
@@ -216,7 +216,7 @@ export default function ListItems() {
           {/* As table */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               As table
             </h2>
           
@@ -403,7 +403,7 @@ export default function ListItems() {
           {/* As notification */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               As notification
             </h2>
           
@@ -446,7 +446,7 @@ export default function ListItems() {
           {/* As header */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               As header
             </h2>
           

@@ -24,7 +24,7 @@ export default function TextInputs() {
           {/* structure */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Structure
             </h2>
 
@@ -73,7 +73,7 @@ export default function TextInputs() {
           {/* Validation */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Validation
             </h2>
 
@@ -111,7 +111,7 @@ export default function TextInputs() {
           {/* With icon */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               With icon
             </h2>
 
@@ -156,7 +156,7 @@ export default function TextInputs() {
           {/* With loader */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               Status
             </h2>
 
@@ -219,7 +219,7 @@ export default function TextInputs() {
           {/* With button */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3 mx-2 md:mx-0'>
+            <h2 className='h3 mb-3'>
               With button
             </h2>
 
