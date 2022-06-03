@@ -13,7 +13,7 @@ export default function TextInputs() {
     <div>
         <DSHead title='Text inputs' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
           <h1 className='mb-2'>

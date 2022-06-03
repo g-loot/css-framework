@@ -13,7 +13,7 @@ export default function Mdodal() {
     <div>
         <DSHead title='Modal' />
 
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

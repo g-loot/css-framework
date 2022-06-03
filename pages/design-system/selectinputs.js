@@ -13,7 +13,7 @@ export default function SelectInputs() {
     <div>
         <DSHead title='Select inputs' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
           <h1 className='mb-2'>

@@ -13,7 +13,7 @@ export default function RadioCheckSwitch() {
     <div>
         <DSHead title='Radio, switch and checkbox' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
           <h1 className='mb-2'>

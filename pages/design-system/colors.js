@@ -14,7 +14,7 @@ export default function Colors() {
     <div>
         <DSHead title='Colors' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

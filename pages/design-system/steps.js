@@ -42,7 +42,7 @@ export default function Steps() {
     <div>
         <DSHead title='Steps' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

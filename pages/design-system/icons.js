@@ -17,7 +17,7 @@ export default function Icons() {
     <div>
         <DSHead title='Icons' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
           <div className='mx-2 md:ml-0 md:pr-4 flex items-end justify-between mb-4'>

@@ -48,7 +48,7 @@ export default function DataNumbers() {
     <div>
         <DSHead title='Data &amp; Numbers' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

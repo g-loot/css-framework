@@ -13,7 +13,7 @@ export default function Typography() {
     <div>
         <DSHead title='Typography' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

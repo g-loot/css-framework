@@ -13,7 +13,7 @@ export default function Chips() {
     <div>
         <DSHead title='Chips' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

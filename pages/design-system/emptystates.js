@@ -42,7 +42,7 @@ export default function EmptyStates() {
     <div>
         <DSHead title='Empty states' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

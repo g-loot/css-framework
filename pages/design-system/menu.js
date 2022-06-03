@@ -13,7 +13,7 @@ export default function Menu() {
     <div>
         <DSHead title='Menu' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
           <h1 className='mb-2'>

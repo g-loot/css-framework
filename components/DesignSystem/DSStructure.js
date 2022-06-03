@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 
 import DSMainNav from '../../components/DesignSystem/DSMainNav';
-import DSMainNavMobile from './DSMainNavMobile';
 import { useRouter } from 'next/router';
 
 export default function DSStructure({children, data}) {
@@ -15,7 +14,7 @@ export default function DSStructure({children, data}) {
             <DSMainNav data={data} />
           </div>
           <div className="pt-4 pb-8 w-full md:w-9/12 xl:w-10/12">
-            <DSMainNavMobile data={data} />
+            
             <div className='px-4 md:px-0'>
               {children}
             </div>

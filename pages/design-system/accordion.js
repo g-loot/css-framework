@@ -14,7 +14,7 @@ export default function AccordionDS() {
     <div>
         <DSHead title='Accordion' />
 
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

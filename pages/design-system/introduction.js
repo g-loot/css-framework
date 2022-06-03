@@ -13,7 +13,7 @@ export default function Introduction() {
     <div>
         <DSHead title='Introduction' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

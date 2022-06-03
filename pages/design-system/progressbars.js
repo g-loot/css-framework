@@ -35,7 +35,7 @@ export default function Progressbar() {
     <div>
         <DSHead title='Progress bars' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

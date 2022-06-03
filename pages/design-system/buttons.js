@@ -14,7 +14,7 @@ export default function Buttons() {
     <div>
         <DSHead title='Buttons' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

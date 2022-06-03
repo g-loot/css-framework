@@ -13,7 +13,7 @@ export default function Avatars() {
     <div>
         <DSHead title='Avatars' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 
@@ -261,7 +261,7 @@ export default function Avatars() {
                         Online <button className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                       </div>
                       <div className='flex-1'>
-                        <div className='flex gap-4 justify-start items-center'>
+                        <div className='flex flex-wrap gap-4 justify-start items-center'>
                           <figure className='avatar'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                             <i></i>
@@ -290,7 +290,7 @@ export default function Avatars() {
                         Disabled
                       </div>
                       <div className='flex-1'>
-                        <div className='flex gap-4 justify-start items-center'>
+                        <div className='flex flex-wrap gap-4 justify-start items-center'>
                           <figure className='avatar'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                             <i className="disabled"></i>
@@ -319,7 +319,7 @@ export default function Avatars() {
                         Error
                       </div>
                       <div className='flex-1'>
-                        <div className='flex gap-4 justify-start items-center'>
+                        <div className='flex flex-wrap gap-4 justify-start items-center'>
                           <figure className='avatar'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                             <i className="error"></i>
@@ -348,7 +348,7 @@ export default function Avatars() {
                         Attention
                       </div>
                       <div className='flex-1'>
-                        <div className='flex gap-4 justify-start items-center'>
+                        <div className='flex flex-wrap gap-4 justify-start items-center'>
                           <figure className='avatar'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                             <i className="attention"></i>
@@ -377,7 +377,7 @@ export default function Avatars() {
                         Info
                       </div>
                       <div className='flex-1'>
-                        <div className='flex gap-4 justify-start items-center'>
+                        <div className='flex flex-wrap gap-4 justify-start items-center'>
                           <figure className='avatar'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                             <i className="info"></i>
@@ -406,7 +406,7 @@ export default function Avatars() {
                         Radar
                       </div>
                       <div className='flex-1'>
-                        <div className='flex gap-4 justify-start items-center'>
+                        <div className='flex flex-wrap gap-4 justify-start items-center'>
                           <figure className='avatar'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                             <i className="radar"></i>
@@ -461,7 +461,7 @@ export default function Avatars() {
                         No border
                       </div>
                       <div className='flex-1'>
-                        <div className='flex gap-4 justify-start items-center'>
+                        <div className='flex flex-wrap gap-4 justify-start items-center'>
                           <figure className='avatar avatar-simple'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
@@ -485,7 +485,7 @@ export default function Avatars() {
                         
                       </div>
                       <div className='flex-1'>
-                        <div className='flex gap-4 justify-start items-center'>
+                        <div className='flex flex-wrap gap-4 justify-start items-center'>
                           <figure className='avatar avatar-square avatar-simple'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
@@ -509,7 +509,7 @@ export default function Avatars() {
                         
                       </div>
                       <div className='flex-1'>
-                        <div className='flex gap-4 justify-start items-center'>
+                        <div className='flex flex-wrap gap-4 justify-start items-center'>
                           <figure className='avatar avatar-diamond avatar-simple'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
@@ -560,7 +560,7 @@ export default function Avatars() {
                         Works with any icon
                       </div>
                       <div className='flex-1'>
-                        <div className='flex gap-4 justify-start items-center'>
+                        <div className='flex flex-wrap gap-4 justify-start items-center'>
                           <figure className='avatar'>
                             <span className='icon icon-profile-2'></span>
                           </figure>
@@ -584,7 +584,7 @@ export default function Avatars() {
                         
                       </div>
                       <div className='flex-1'>
-                        <div className='flex gap-4 justify-start items-center'>
+                        <div className='flex flex-wrap gap-4 justify-start items-center'>
                           <figure className='avatar avatar-square'>
                             <span className='icon icon-multiple-11'></span>
                           </figure>
@@ -608,7 +608,7 @@ export default function Avatars() {
                         
                       </div>
                       <div className='flex-1'>
-                        <div className='flex gap-4 justify-start items-center'>
+                        <div className='flex flex-wrap gap-4 justify-start items-center'>
                           <figure className='avatar avatar-diamond'>
                             <span className='icon icon-handheld-console-2'></span>
                           </figure>

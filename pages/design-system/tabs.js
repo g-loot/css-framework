@@ -13,7 +13,7 @@ export default function Tabs() {
     <div>
         <DSHead title='Tabs' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

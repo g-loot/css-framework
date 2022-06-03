@@ -13,7 +13,7 @@ export default function Tooltips() {
     <div>
         <DSHead title='Tooltips' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 

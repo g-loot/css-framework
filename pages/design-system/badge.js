@@ -13,7 +13,7 @@ export default function Badge() {
     <div>
         <DSHead title='Badge' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
           <h1 className='mb-2'>

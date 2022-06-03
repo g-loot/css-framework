@@ -13,7 +13,7 @@ export default function MissionCards() {
     <div>
         <DSHead title='Mission Cards' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
           <h1 className='mb-2'>

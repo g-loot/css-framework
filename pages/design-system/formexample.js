@@ -13,7 +13,7 @@ export default function FormExample() {
     <div>
         <DSHead title='Form example' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
 
         <DSStructure data={DSdata}>

@@ -13,7 +13,7 @@ export default function Scrollbars() {
     <div>
         <DSHead title='Scrollbars' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
           <h1 className='mb-2'>

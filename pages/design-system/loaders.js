@@ -13,7 +13,7 @@ export default function Loaders() {
     <div>
         <DSHead title='Loaders' />
         
-        <DSTopBar />
+        <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 
