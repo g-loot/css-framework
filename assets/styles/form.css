@@ -758,7 +758,7 @@ select.is-disabled,
 textarea.is-disabled,
 .input-text.is-disabled {
   @apply
-  opacity-50
+  opacity-40
   pointer-events-none
   ;
 }

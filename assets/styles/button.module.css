@@ -88,7 +88,7 @@
       @apply 
       scale-105
       bg-right
-      shadow-[inset_0_0_0_1px_rgba(255,255,255,1)];
+      shadow-[inset_0_0_0_1px_rgba(255,255,255,1)]
       ;
     }
     &:active {
@@ -220,6 +220,12 @@
       scale-150
       ml-0
       ;
+
+      ~ *:last-child {
+        @apply
+        mr-1
+        ;
+      }
     }
 
     &:not([disabled]),
@@ -346,7 +352,7 @@
       > div:last-child {
         span {
           @apply
-          text-purple-300
+          text-purple-500
           ;
         }
       }
@@ -461,8 +467,20 @@
   &:disabled {
     @apply
     pointer-events-none
+    select-none
     opacity-50
+    bg-ui-700
+    from-ui-700
+    to-ui-700
+    to-ui-700
+    text-ui-400
+    shadow-[inset_0_0_0_1px_rgba(var(--color-ui-700),0)]
     ;
+    > * {
+      @apply
+      drop-shadow-[0_-1px_0_rgba(var(--color-ui-700)/0%)]
+      ;
+    }
   }
 
   /* Shining */
@@ -505,16 +523,19 @@
     h-10
     w-10
     rounded-full
-    hover:rotate-45
+    hover:rotate-90
     bg-ui-800/75
+    transition-all
+    duration-300
+    ease-[cubic-bezier(.8,0,.3,1)]
     ;
 
     > .icon {
       @apply
       block
       transition-all
-      duration-200
-      ease-in-out
+      duration-300
+      ease-[cubic-bezier(.8,0,.3,1)]
       ;
     }
 

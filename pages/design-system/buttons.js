@@ -403,6 +403,81 @@ export default function Buttons() {
                         <Button label='Purchase' variant='primary' currency='ticket' amount='2'></Button>
                       </div>
                     </div>
+
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        
+                      </div>
+                      <div className='flex-1 flex flex-wrap gap-2'>
+                        <Button label='Purchase' variant='secondary' currency='coin' amount='15,000'></Button>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        
+                      </div>
+                      <div className='flex-1 flex flex-wrap gap-2'>
+                        <Button label='Purchase' variant='secondary' currency='token' amount='10'></Button>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        
+                      </div>
+                      <div className='flex-1 flex flex-wrap gap-2'>
+                        <Button label='Purchase' variant='secondary' currency='ticket' amount='2'></Button>
+                      </div>
+                    </div>
+
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        
+                      </div>
+                      <div className='flex-1 flex flex-wrap gap-2'>
+                        <Button label='Purchase' variant='tertiary' currency='coin' amount='15,000'></Button>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        
+                      </div>
+                      <div className='flex-1 flex flex-wrap gap-2'>
+                        <Button label='Purchase' variant='tertiary' currency='token' amount='10'></Button>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        
+                      </div>
+                      <div className='flex-1 flex flex-wrap gap-2'>
+                        <Button label='Purchase' variant='tertiary' currency='ticket' amount='2'></Button>
+                      </div>
+                    </div>
+
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        
+                      </div>
+                      <div className='flex-1 flex flex-wrap gap-2'>
+                        <Button label='Purchase' variant='premium' currency='coin' amount='15,000'></Button>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        
+                      </div>
+                      <div className='flex-1 flex flex-wrap gap-2'>
+                        <Button label='Purchase' variant='premium' currency='token' amount='10'></Button>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        
+                      </div>
+                      <div className='flex-1 flex flex-wrap gap-2'>
+                        <Button label='Purchase' variant='premium' currency='ticket' amount='2'></Button>
+                      </div>
+                    </div>
                     
                   </div>
                   <div className='flex-1'>
