@@ -6,8 +6,12 @@
 .tabs {
   @apply
   flex
+  flex-nowrap
   items-stretch
+  whitespace-nowrap
   relative
+  overflow-x-scroll
+  pt-0.5
   ;
 
   li {
@@ -119,5 +123,18 @@
     absolute
     bottom-0
     inset-x-0;
+  }
+}
+
+/* scrollbar hidden if overflow */
+.tabs {
+  -webkit-overflow-scrolling: touch;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 }

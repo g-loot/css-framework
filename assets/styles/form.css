@@ -511,7 +511,7 @@ textarea,
   > .icon {
     @apply
     absolute
-    bottom-[calc(50%-calc(27px/2))]
+    bottom-[calc(50%-calc(18px/2))]
     left-2.5
     text-lg
     text-ui-300
@@ -552,8 +552,8 @@ textarea,
 
     &.button-sm {
       @apply
-      right-[5px]
-      bottom-[5px]
+      right-1
+      bottom-[calc(50%-calc(32px/2))]
       ;
     }
 

@@ -3,12 +3,11 @@ import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
 import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
-import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
 export default function Buttons() {
   const router = useRouter();
-  const { data, loading } = useFetch('/api/designsystem', { delay: 20 });
+  
 
   return (
     <div>
@@ -717,26 +716,6 @@ export default function Buttons() {
                       </div>
                       <div className='flex-1'>
                         <button className='button button-primary is-shining'>
-                          <span>Button Label</span>
-                        </button>
-                      </div>
-                    </div>
-                    <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                        Secondary
-                      </div>
-                      <div className='flex-1'>
-                        <button className='button button-secondary is-shining'>
-                          <span>Button Label</span>
-                        </button>
-                      </div>
-                    </div>
-                    <div className='w-full flex gap-4 items-center'>
-                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                        Tertiary
-                      </div>
-                      <div className='flex-1'>
-                        <button className='button button-tertiary is-shining'>
                           <span>Button Label</span>
                         </button>
                       </div>

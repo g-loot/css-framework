@@ -9,13 +9,13 @@
   /*uppercase*/
   outline-none
   text-lg
-  leading-none
+  leading-[1]
   border-0
   inline-flex
   justify-center
   items-center
   cursor-pointer
-  p-2.5
+  p-3
   min-h-4
   transition-all
   duration-200
@@ -76,7 +76,7 @@
     }
     &:not([class*='icon']) {
       @apply
-      mb-0.5
+      mb-0
       ;
     }
   }
@@ -474,7 +474,8 @@
     to-ui-700
     to-ui-700
     text-ui-400
-    shadow-[inset_0_0_0_1px_rgba(var(--color-ui-700),0)]
+    grayscale-0
+    shadow-[inset_0_0_0_1px_rgba(var(--color-ui-700),50%)]
     ;
     > * {
       @apply
@@ -482,6 +483,27 @@
       ;
     }
   }
+
+  /*
+&.is-disabled,
+  &:disabled {
+    @apply
+    pointer-events-none
+    select-none
+    bg-disabled-500
+    from-disabled-500
+    via-disabled-500
+    to-disabled-500
+    text-disabled-300
+    shadow-[inset_0_0_0_1px_rgba(var(--color-ui-600),50%)]
+    ;
+    > * {
+      @apply
+      drop-shadow-[0_-1px_0_rgba(var(--color-ui-700)/0%)]
+      ;
+    }
+  }
+  */
 
   /* Shining */
 
@@ -496,23 +518,16 @@
       @apply
       content-['']
       absolute
-      w-6
-      h-80
-      bg-gradient-to-r
-      from-mono-100/0
-      to-mono-100/50
-      -left-44
-      border-r
-      border-r-mono-100/75
-      blur-sm
-      animate-[button-shining-rays_4s_cubic-bezier(0.5,0,0.5,1)_infinite]
+      inset-0
+      bg-[length:200%_auto]
+      animate-[button-shining-rays_2s_linear_infinite]
+      bg-[linear-gradient(45deg,#fff0_45%,#fffc_50%,#fff0_55%,#fff0)]
       ;
     }
 
     &::before {
       @apply
-      -left-10
-      ease-[cubic-bezier(.9,0,.9,1)]
+      animation-delay-300
       ;
     }
   }
@@ -561,11 +576,10 @@
 
 @keyframes button-shining-rays {
   0% {
-    transform: rotate(-30deg) translateX(calc(-20em));
-  }
-  75%,
-  100% {
-    transform: rotate(-30deg) translateX(calc(20em));
-    opacity: 0;
+    background-position:-50%
+  } 25% {
+    background-position:-50%
+  } 50%, 100% {
+    background-position:150%
   }
 }

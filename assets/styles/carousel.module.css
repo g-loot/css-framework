@@ -22,7 +22,7 @@
     lg:flex-7
     flex
     items-stretch
-    h-96
+    h-[420px]
     lg:h-72
     lg:h-auto
     ;
@@ -32,6 +32,8 @@
       inset-0
       absolute
       flex
+      flex-col
+      lg:flex-row
       items-stretch
       transition-all
       duration-1000
@@ -102,7 +104,8 @@
         relative
         z-20
         flex-5
-        p-5
+        p-4
+        lg:p-5
         flex
         flex-col
         items-start
@@ -124,8 +127,8 @@
 
         > * {
           @apply
-          max-w-xs
-          mx-4
+          lg:max-w-xs
+          lg:mx-4
           ;
         }
       }

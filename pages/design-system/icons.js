@@ -5,13 +5,12 @@ import DSStructure from '../../components/DesignSystem/DSStructure';
 import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
 import DSicons from '../api/designsystem/icons.json'
-import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
 export default function Icons() {
   const [filter, setFilter] = useState('');
   const router = useRouter();
-  const { data, loading } = useFetch('/api/designsystem', { delay: 20 });
+  
 
   return (
     <div>
@@ -42,7 +41,7 @@ export default function Icons() {
             <div key={categoryIndex}>
               
               <h2 className={`h4 mb-3 mx-2 md:mx-0 ${filter ? 'hidden' : ''}`}>{category.name}</h2>
-              <div className='flex flex-wrap gap-2'>
+              <div className='flex flex-wrap justify-stretch gap-2'>
                 {category.icons
                   .filter(item => {
                     if (!filter) return true
@@ -52,7 +51,7 @@ export default function Icons() {
                   })
                   .map(item => (
                     <div key={item} description={item.keywords} className='surface surface-dimmed rounded-lg text-0 w-32 h-32 inline-flex flex-col justify-center items-center relative cursor-pointer text-ui-300 hover:text-ui-100 transition duration-200' onClick={() => {navigator.clipboard.writeText(item.name)}}>
-                      <span className={`icon block text-4xl icon-${item.name}`}></span>
+                      <span className={`icon block text-4xl mb-4 icon-${item.name}`}></span>
                       <span className='absolute bottom-0 p-2 text-ui-400 text-xs text-center leading-none'>
                         {item.name}
                       </span>

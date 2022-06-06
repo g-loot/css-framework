@@ -2,12 +2,11 @@ import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
 import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
-import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
 export default function Introduction() {
   const router = useRouter();
-  const { data, loading } = useFetch('/api/designsystem', { delay: 20 });
+  
 
   return (
     <div>
@@ -90,11 +89,20 @@ export default function Introduction() {
               </p>
               <p className='pb-5'>
                 <strong className='font-headings text-xl text-main'>
-                  Flexible and fast
+                  Flexible and quick
                 </strong>
                 <br />
                 <span>
                   Because it is based on the CSS Framework <a href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind</a>, the whole product can use its numerous utility-first class names to build layouts and one-offs with ease and speed.
+                </span>
+              </p>
+              <p className='pb-5'>
+                <strong className='font-headings text-xl text-main'>
+                  Faster render
+                </strong>
+                <br />
+                <span>
+                  While loading large external style sheets can negatively impact performance metrics, simple CSS is faster for browsers to render than styling that is generated using code like styled-components.
                 </span>
               </p>
               <h3 className='h3 my-4'>

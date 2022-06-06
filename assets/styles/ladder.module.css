@@ -70,6 +70,9 @@
         ;
 
         > span {
+          @apply
+          transform-gpu
+          ;
           &:nth-child(1) {
             @apply
             text-center

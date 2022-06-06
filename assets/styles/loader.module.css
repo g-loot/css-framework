@@ -289,3 +289,87 @@
     background-position: 800px 0;
   }
 }
+
+/* list */
+
+.is-loading > .item,
+.item.is-loading {
+  @apply
+  relative
+  pointer-events-none
+  
+  ;
+  
+
+  .avatar > *,
+  .item-actions > * {
+    @apply
+    opacity-0
+    ;
+  }
+  .item-content {
+    > * {
+      @apply
+      text-ui-200/0
+      bg-ui-200/0
+      ;
+    }
+  }
+  .item-title,
+  .avatar {
+    @apply
+    relative
+    ;
+    &::after {
+      @apply
+      absolute
+      inset-y-0
+      left-0
+      content-['']
+      block
+      rounded
+      bg-ui-700
+      bg-[length:800px_100%]
+      bg-[-200%_center]
+      bg-no-repeat
+      animate-[loader-list_1s_linear_infinite]
+      ;
+      background-image: linear-gradient(to right, rgba(var(--color-ui-700) / 100%) 8%, rgba(var(--color-ui-600) / 100%) 18%, rgba(var(--color-ui-700) / 100%) 33%);
+    }
+  }
+  .avatar {
+    &::after {
+      @apply
+      inset-0
+      ;
+    }
+  }
+
+  &:nth-child(odd) {
+    .item-title {
+      &::after {
+        @apply
+        w-2/3
+        ;
+      }
+    }
+  }
+  &:nth-child(even) {
+    .item-title {
+      &::after {
+        @apply
+        w-2/4
+        ;
+      }
+    }
+  }
+}
+
+@keyframes loader-list {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
+}

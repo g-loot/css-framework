@@ -16,13 +16,12 @@
   flex
   flex-nowrap
   list-none
-  p-1
   ;
 
   > li {
     @apply
-    mt-0
     relative
+    mt-0
     flex-1
     text-center
     ;
@@ -33,11 +32,15 @@
       flex
       items-center
       text-ui-200
+      cursor-default
+      pointer-events-none
       ;
 
-      > b {
+      > div {
         @apply
+        hidden
         font-normal
+        leading-none
         ;
       }
 
@@ -57,12 +60,11 @@
         not-italic
         font-headings
         leading-[3rem]
-        outline-4
-        outline-interaction-500
-        outline
+        shadow-[0_0_0_4px_rgb(var(--color-interaction-500))]
         overflow-hidden
         transition
         duration-300
+        shrink-0
         ;
 
         &::before,
@@ -99,8 +101,8 @@
         @apply
         relative
         z-0
-        h-1
         flex-1
+        h-1
         w-full
         bg-ui-600
         overflow-hidden
@@ -167,7 +169,7 @@
       }
       i {
         @apply
-        outline-ui-600
+        shadow-[0_0_0_4px_rgb(var(--color-ui-600))]
         from-ui-800
         to-ui-700
         text-ui-400
@@ -184,7 +186,7 @@
           ;
         }
       }
-
+      
       > span {
         &::before {
           @apply
@@ -200,17 +202,7 @@
 /* secondary */
 
 .step.step-secondary {
-
-  @apply
-  px-12
-  ;
-
- 
   > li {
-    @apply
-    pb-12
-
-    ;
     > a {
       @apply
       p-0
@@ -221,20 +213,11 @@
       duration-1000
       ease-[cubic-bezier(0.9,0,0.1,1)]
       ;
-      > b {
-        @apply
-        absolute
-        w-32
-        -left-16
-        top-5
-        translate-x-1.5
-        ;
-      }
       > i {
         @apply 
         h-3
         w-3
-        outline-2
+        shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
         text-main/0
         ;
         &::before {
@@ -247,6 +230,11 @@
           text-main/0
           ;
         }
+      }
+      > div {
+        @apply
+        block
+        ;
       }
       > span {
         @apply
@@ -293,6 +281,7 @@
       }
       i {
         @apply
+        shadow-[0_0_0_2px_rgb(var(--color-ui-600))]
         from-ui-800
         to-ui-700
         text-ui-400
@@ -303,23 +292,12 @@
 }
 
 .step.step-tertiary {
-
-
-  @apply 
-  gap-4
-  ;
- 
   > li {
-    @apply
-    mt-0
-    
-    ;
     > a {
       @apply
       p-0
       flex
       items-center
-      gap-4
       text-ui-200
       transition-all
       duration-1000
@@ -328,7 +306,7 @@
 
       > i {
         @apply 
-        outline-0
+        shadow-[0_0_0_2px_rgb(var(--color-ui-700))]
         text-ui-400/0
         ;
         &::after {
@@ -336,6 +314,11 @@
           text-ui-800
           ;
         }
+      }
+      > div {
+        @apply
+        block
+        ;
       }
       > span {
         @apply
@@ -376,10 +359,192 @@
       }
       i {
         @apply
+        shadow-[0_0_0_2px_rgb(var(--color-ui-700))]
         from-ui-700
         to-ui-800
         text-ui-400
         ;
+      }
+    }
+  }
+}
+
+.step.step-quaternary {
+  li {
+    a {
+      > i {
+        @apply
+        h-3
+        w-3
+        from-interaction-500
+        to-interaction-500
+        shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
+        text-main/0
+        ;
+        &::before {
+          @apply
+          inset-0
+          from-ui-800
+          to-ui-800
+          ;
+        }
+      }
+      > div {
+        @apply
+        hidden
+        ;
+      }
+      > span {
+        @apply
+        h-3
+        w-full
+        rounded-full
+        mx-2
+        ;
+        &::before {
+          @apply
+          scale-x-105
+          ;
+        }
+      }
+    }
+  }
+  & > li.is-active ~ li,
+  &.is-inactive > li {
+    a {
+      i {
+        @apply
+        shadow-[0_0_0_2px_rgb(var(--color-ui-600))]
+        from-ui-600
+        to-ui-600
+        ;
+      }
+    }
+  }
+}
+
+/* label position */
+
+.step:not(.step-label-bottom):not(.step-label-alternate) {
+  
+  &.step-secondary,
+  &.step-tertiary {
+    @apply
+    gap-4
+    ;
+    > li {
+      > a {
+        @apply
+        gap-4
+        ;
+      }
+    }
+  }
+}
+.step.step-label-bottom:not(.step-vertical) {
+  @apply
+  pb-28
+  px-[12%]
+  ;
+  > li {
+    @apply
+    min-w-[192px]
+    ;
+    > a {
+      > div {
+        @apply
+        absolute
+        leading-tight
+        w-40
+        -left-20
+        ;
+      }
+    }
+  }
+  &,
+  &.step-primary {
+    > li {
+      > a {
+        > div {
+          @apply
+          block
+          top-16
+          translate-x-6
+          ;
+        }
+      }
+    }
+  }
+  &.step-tertiary {
+    > li {
+      > a {
+        > div {
+          @apply
+          top-14
+          translate-x-6
+          ;
+        }
+      }
+    }
+  }
+  &.step-secondary {
+    > li {
+      > a {
+        > div {
+          @apply
+          top-7
+          translate-x-1.5
+          ;
+        }
+      }
+    }
+  }
+}
+
+
+/* vertical */
+
+.step.step-vertical {
+  @apply
+  flex-col
+  relative
+  ;
+  > li {
+    > a {
+      @apply
+      flex
+      gap-4
+      items-center
+      justify-between
+      ;
+      > div {
+        @apply
+        py-6
+        flex-1
+        order-2
+        text-left
+        translate-x-0
+        block
+        ;
+
+      }
+      > span {
+        @apply
+        absolute
+        hidden
+        left-[calc(50%-2px)]
+        w-1
+        h-full
+        
+        ;
+        clip-path: polygon(0% 0%, 100% 0%, calc(100% - 0.25em) 100%, 0% 100%);
+
+        &::before {
+          @apply
+
+          translate-x-0
+          ;
+        }
       }
     }
   }

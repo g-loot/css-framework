@@ -14,7 +14,7 @@ export default function MainNav(props) {
         <li className={`${item.disabled == true ? 'is-disabled' : ''}`} key={itemIndex}>
           <a href={item.url} className={`${router.pathname.includes(item.url) || router.pathname == '' ? 'is-active' : ''}`}>
             <span className={`icon icon-16 icon-${item.icon}`}></span>
-            <span>{item.label}</span>
+            <span className='uppercase'>{item.label}</span>
           </a>
         </li>
       ))}

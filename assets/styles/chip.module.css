@@ -220,7 +220,7 @@
     &.chip-token {
       &:not(.chip-inverted){
         @apply 
-        text-purple-300
+        text-purple-500
         ;
       }
       &.chip-inverted {
@@ -250,7 +250,7 @@
     &.chip-bronze {
       &:not(.chip-inverted){
         @apply 
-        text-bronze-300
+        text-bronze-500
         ;
       }
       &.chip-inverted {
@@ -414,6 +414,8 @@
     h-6
     -mr-1
     bg-interaction-700
+    from-interaction-700
+    to-interaction-700
     ;
   }
 
@@ -421,6 +423,8 @@
     > .button-close {
       @apply
       bg-ui-500
+      from-ui-500
+      to-ui-500
       text-ui-300
       ;
     }
@@ -486,6 +490,7 @@
       w-[20px]
       h-[20px]
       -mr-[4.5px]
+      text-sm
       ;
     }
   }
@@ -506,6 +511,7 @@
       w-[18px]
       h-[18px]
       -mr-[4px]
+      text-[0.6rem]
       ;
     }
   }

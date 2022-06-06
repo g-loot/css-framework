@@ -54,7 +54,7 @@ export default function Home() {
               </div>
             </div>
             <div className='relative z-30 flex flex-col items-center justify-center'>
-              <button className='button button-claim'>
+              <button className='button button-claim is-shining'>
                 <span>Claim rewards</span>
               </button>
             </div>

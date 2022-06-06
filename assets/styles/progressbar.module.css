@@ -10,6 +10,7 @@
   bg-ui-600
   overflow-hidden
   w-full
+  transform-gpu
   ;
 
   &,
@@ -29,6 +30,7 @@
     ease-[cubic-bezier(0.9,0,0.1,1)]
     scale-x-110
     animate-[progressbar-gradient_2s_linear_infinite]
+    transform-gpu
     ;
     background-image: linear-gradient(to right, rgb(var(--color-interaction-300)) 0px, rgb(var(--color-blue-700)) 200px, rgb(var(--color-interaction-300)) 400px);
     clip-path: polygon(0% 0%, 100% 0%, calc(100% - 0.5em) 100%, 0% 100%);
@@ -70,6 +72,7 @@
   overflow-hidden
   rounded-full
   shrink-0
+  transform-gpu
   ;
   > div {
     @apply
@@ -124,6 +127,7 @@
     rounded-full
     -scale-x-100
     shadow-[inset_0_0_0_1000px_rgb(var(--color-ui-600))]
+    transform-gpu
     ;
 
     circle {
@@ -135,12 +139,13 @@
       transition-all
       duration-1000
       ease-[cubic-bezier(0.9,0,0.1,1)]
+      transform-gpu
       ;
       transform-box: fill-box;
       transform-origin: center center;
       stroke-width: 24;
       stroke-dasharray: 120;
-      stroke-dashoffset: calc(var(--percent) - 100);
+      stroke-dashoffset: calc((1 * var(--percent)) - 100);
     }
   }
 

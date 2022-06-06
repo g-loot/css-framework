@@ -4,7 +4,6 @@ import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
 import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
-import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
 export default function EmptyStates() {
@@ -36,7 +35,7 @@ export default function EmptyStates() {
   }
 
   const router = useRouter();
-  const { data, loading } = useFetch('/api/designsystem', { delay: 20 });
+  
 
   return (
     <div>

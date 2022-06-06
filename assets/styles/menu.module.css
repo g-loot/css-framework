@@ -43,17 +43,23 @@
       relative
       z-20
       select-none
-      uppercase
+      
       transition
       ease-linear
       duration-75
       ;
 
-      &:not(.icon) {
+      &:not([class*='icon']) {
         @apply 
         font-headings
         tracking-wide
         block
+        text-lg
+        ;
+      }
+      &.icon {
+        @apply
+        text-base
         ;
       }
     }

@@ -227,8 +227,13 @@
           "number": "700",
           "data": "decorative.teal.dark",
           "hex": "#F3F3F6"
-        },
-        {
+        }
+      ]
+    },
+    {
+      "title": "Decorative / reward",
+      "title_short": "decorative",
+      "colors": [{
           "name": "Gold Light",
           "value": "bg-gold-300",
           "number": "300",
@@ -425,8 +430,7 @@
     {
       "title": "Game",
       "title_short": "game",
-      "colors": [
-        {
+      "colors": [{
           "name": "Apex Legends",
           "value": "bg-game-apexlegends",
           "number": "500",

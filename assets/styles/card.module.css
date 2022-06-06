@@ -16,6 +16,7 @@
   flex-col
   items-stretch
   justify-between
+  transform-gpu
   ;
   &:not([class*='rounded']) {
     @apply

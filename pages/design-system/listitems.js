@@ -2,12 +2,11 @@ import DSHead from '../../components/DesignSystem/DSHead';
 import DSStructure from '../../components/DesignSystem/DSStructure';
 import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
-import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
 export default function ListItems() {
   const router = useRouter();
-  const { data, loading } = useFetch('/api/designsystem', { delay: 20 });
+  
 
   return (
     <div>
@@ -426,10 +425,10 @@ export default function ListItems() {
                           Notification title
                         </div>
                         <p className='text-sm text-ui-200'>
-                          Lorem ipsum dolor sit amet, consectetur adipisc ing elit, sed do eiusmod tempor incididunt.
+                          Lorem ipsum dolor sit amet, consectetur adipisc ing elit
                         </p>
                       </div>
-                      <div className='list-actions absolute top-2 right-2'>
+                      <div className='item-actions absolute top-2 right-2'>
                         <div data-badge="." className='after:bg-error-300'></div>
                       </div>
                     </div>
@@ -466,7 +465,7 @@ export default function ListItems() {
                           Your stats
                         </div>
                       </div>
-                      <div className='list-actions'>
+                      <div className='item-actions'>
                         <div>
                           <span className="icon icon-24 icon-arrow-sm-down text-ui-300"></span>
                         </div>
@@ -481,6 +480,88 @@ export default function ListItems() {
             </div>
           </div>
 
+
+          {/* Loading */}
+          <div className='mb-12'>
+
+            <h2 className='h3 mb-3'>
+              Loading
+            </h2>
+          
+            <div className=''>
+              <div className=''>
+                <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
+                  <div className='flex-1 surface rounded-xl overflow-hidden'>
+                    <ul className='is-loading'>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Croc Esports
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Kingzz
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Angry Beavers
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Bunny Hunger
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className='flex-1'>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/08sanf9d/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           
         </DSStructure>
