@@ -443,12 +443,13 @@
 }
 .step.step-label-bottom:not(.step-vertical) {
   @apply
-  pb-28
+  pb-4
+  lg:pb-28
   px-[12%]
   ;
   > li {
     @apply
-    min-w-[192px]
+    lg:min-w-[192px]
     ;
     > a {
       > div {
@@ -457,6 +458,8 @@
         leading-tight
         w-40
         -left-20
+        hidden
+        lg:block
         ;
       }
     }
@@ -467,7 +470,8 @@
       > a {
         > div {
           @apply
-          block
+          hidden
+          lg:block
           top-16
           translate-x-6
           ;

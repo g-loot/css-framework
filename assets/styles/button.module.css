@@ -33,6 +33,7 @@
   font-bold
   font-headings
   tracking-wide
+  transform-gpu
   ;
 
   .icon {
@@ -548,6 +549,7 @@
     > .icon {
       @apply
       block
+      transform-gpu
       transition-all
       duration-300
       ease-[cubic-bezier(.8,0,.3,1)]
