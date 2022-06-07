@@ -36,6 +36,7 @@ export default function Home() {
                     Latest components:
                   </div>
                   <ul className="menu menu-secondary">
+                    <li><a href='design-system/checkmarks'><span>Checkmarks</span></a></li>
                     <li><a href='design-system/listitems'><span>List items</span></a></li>
                     <li><a href='design-system/tournamentbrackets'><span>Tournament brackets</span></a></li>
                     <li><a href='design-system/emptystates'><span>Empty states</span></a></li>
@@ -43,7 +44,6 @@ export default function Home() {
                     <li><a href='design-system/accordion'><span>Accordion</span></a></li>
                     <li><a href='design-system/missioncards'><span>Mission cards</span></a></li>
                     <li><a href='design-system/tournamentcards'><span>Tournament cards</span></a></li>
-                    <li><a href='design-system/steps'><span>Steps</span></a></li>
                   </ul>
                 </div>
               </div>
