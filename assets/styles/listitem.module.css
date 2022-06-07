@@ -52,19 +52,17 @@
 }
 
 ul.item-actions-dimmed > .item,
-.item.item-actions-dimmed {
+ul.item-actions-hidden > .item,
+.item.item-actions-dimmed,
+.item.item-actions-hidden {
   @apply
   transition
-  duration-100
-  ease-in-out
+  duration-75
   ;
   > .item-actions {
     @apply
-    opacity-20
-    transition-opacity
+    transition
     transform-gpu
-    duration-200
-    ease-in-out
     ;
   }
   &:hover {
@@ -74,6 +72,40 @@ ul.item-actions-dimmed > .item,
     > .item-actions {
       @apply
       opacity-100
+      ;
+    }
+  }
+}
+ul.item-actions-dimmed > .item,
+.item.item-actions-dimmed {
+  > .item-actions {
+    @apply
+    opacity-20
+    duration-75
+    ;
+  }
+  &:hover {
+    > .item-actions {
+      @apply
+      opacity-100
+      ;
+    }
+  }
+}
+ul.item-actions-hidden > .item,
+.item.item-actions-hidden {
+  > .item-actions {
+    @apply
+    opacity-0
+    duration-200
+    translate-x-1
+    ;
+  }
+  &:hover {
+    > .item-actions {
+      @apply
+      opacity-100
+      translate-x-0
       ;
     }
   }

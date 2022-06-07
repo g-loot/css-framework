@@ -411,8 +411,8 @@ export default function ListItems() {
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
                   <div className='flex-1 surface rounded-lg overflow-hidden'>
-                    <ul>
-                      <li className='item item-actions-dimmed'>
+                    <ul className='item-actions-dimmed'>
+                      <li className='item'>
                         <div className='item-content'>
                           <div className='item-title'>
                             Brawl #1
@@ -440,7 +440,7 @@ export default function ListItems() {
                           </div>
                         </div>
                       </li>
-                      <li className='item item-actions-dimmed'>
+                      <li className='item'>
                         <div className='item-content'>
                           <div className='item-title'>
                             Brawl #2
@@ -468,7 +468,7 @@ export default function ListItems() {
                           </div>
                         </div>
                       </li>
-                      <li className='item item-actions-dimmed'>
+                      <li className='item'>
                         <div className='item-content'>
                           <div className='item-title'>
                             Brawl #3
@@ -496,7 +496,7 @@ export default function ListItems() {
                           </div>
                         </div>
                       </li>
-                      <li className='item item-actions-dimmed'>
+                      <li className='item'>
                         <div className='item-content'>
                           <div className='item-title'>
                             Brawl #4
@@ -524,7 +524,7 @@ export default function ListItems() {
                           </div>
                         </div>
                       </li>
-                      <li className='item item-actions-dimmed'>
+                      <li className='item'>
                         <div className='item-content'>
                           <div className='item-title'>
                             Brawl #5
@@ -552,7 +552,7 @@ export default function ListItems() {
                           </div>
                         </div>
                       </li>
-                      <li className='item item-actions-dimmed'>
+                      <li className='item'>
                         <div className='item-content'>
                           <div className='item-title'>
                             Brawl #6
@@ -580,7 +580,7 @@ export default function ListItems() {
                           </div>
                         </div>
                       </li>
-                      <li className='item item-actions-dimmed'>
+                      <li className='item'>
                         <div className='item-content'>
                           <div className='item-title'>
                             Brawl #7
@@ -612,6 +612,225 @@ export default function ListItems() {
                   </div>
                   <div className='flex-1'>
                     <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/gnfe8zrm/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          {/* With hidden actions */}
+          <div className='mb-12'>
+
+            <h2 className='h3 mb-3'>
+              With hidden actions
+            </h2>
+          
+            <div className=''>
+              <div className=''>
+                <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
+                  <div className='flex-1 surface rounded-lg overflow-hidden'>
+                    <ul className='item-actions-hidden'>
+                      <li className='item'>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Brawl #1
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
+                              <span className='icon icon-view'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
+                              <span className='icon icon-network-communication'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
+                              <span className='icon icon-e-remove'></span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Brawl #2
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
+                              <span className='icon icon-view'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
+                              <span className='icon icon-network-communication'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
+                              <span className='icon icon-e-remove'></span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Brawl #3
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
+                              <span className='icon icon-view'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
+                              <span className='icon icon-network-communication'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
+                              <span className='icon icon-e-remove'></span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Brawl #4
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
+                              <span className='icon icon-view'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
+                              <span className='icon icon-network-communication'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
+                              <span className='icon icon-e-remove'></span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Brawl #5
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
+                              <span className='icon icon-view'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
+                              <span className='icon icon-network-communication'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
+                              <span className='icon icon-e-remove'></span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Brawl #6
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
+                              <span className='icon icon-view'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
+                              <span className='icon icon-network-communication'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
+                              <span className='icon icon-e-remove'></span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Brawl #7
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
+                              <span className='icon icon-view'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
+                              <span className='icon icon-network-communication'></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
+                              <span className='icon icon-e-remove'></span>
+                            </button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className='flex-1'>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/57s9pt4v/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>

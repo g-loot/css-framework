@@ -106,6 +106,7 @@ textarea {
   input[type=number],
   input[type=email],
   input[type=password],
+  input[type=date],
   textarea,
   .input-text {
     @apply
@@ -118,6 +119,7 @@ input[type=text],
 input[type=number],
 input[type=email],
 input[type=password],
+input[type=date],
 textarea,
 .input-text,
 .form-select > select {
@@ -188,6 +190,7 @@ textarea,
     left-0
     bottom-[calc(50%-0.75rem)]
     transition-all
+    transform-gpu
     duration-300
     ease-[cubic-bezier(.7,0,.3,1)]
     shadow-[0_0_0_1px_rgb(var(--color-ui-600))]
@@ -498,6 +501,7 @@ textarea,
     left-2.5
     text-lg
     text-ui-300
+    pointer-events-none
     ;
 
     ~ input {
@@ -515,6 +519,10 @@ textarea,
       ~ input {
         @apply
         pl-2.5
+        ;
+      }
+      ~ input:not([type=date]) {
+        @apply
         pr-9
         ;
       }
@@ -585,6 +593,7 @@ textarea,
     input[type=number],
     input[type=email],
     input[type=password],
+    input[type=date],
     textarea,
     .input-text,
     select {
@@ -619,19 +628,20 @@ textarea,
     &::after {
       @apply
       content-[attr(data-success)]
-      text-success-500
+      text-interaction-500
       ;
     }
     input[type=text],
     input[type=number],
     input[type=email],
     input[type=password],
+    input[type=date],
     textarea,
     .input-text,
     select {
       @apply
-      border-success-700
-      focus-visible:outline-success-500
+      border-interaction-700
+      focus-visible:outline-interaction-500
       ;
     }
     .icon,
@@ -639,19 +649,19 @@ textarea,
     .form-switch,
     .form-checkbox {
       @apply
-      text-success-500
+      text-interaction-500
       ;
       input {
         &:checked + .form-icon {
           @apply
-          bg-success-500
-          from-success-700
-          to-success-300
+          bg-interaction-500
+          from-interaction-700
+          to-interaction-300
           ;
         }
         & + .form-icon {
           @apply
-          shadow-[0_0_0_2px_rgb(var(--color-success-300))]
+          shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
         }
       }
     }
@@ -667,6 +677,7 @@ textarea,
     input[type=number],
     input[type=email],
     input[type=password],
+    input[type=date],
     textarea,
     .input-text,
     select {
@@ -702,12 +713,10 @@ textarea,
   /* loading */
 
   &.is-loading {
+
     @apply
     relative
     ;
-  }
-
-  &.is-loading {
 
     &::after {
       @apply
@@ -722,7 +731,7 @@ textarea,
       opacity-100
       rounded-full
       mx-auto
-      bottom-2
+      bottom-2.5
       right-2.5
       animate-[input-loader-rotate_1s_linear_infinite]
       ;
@@ -738,6 +747,7 @@ textarea,
     input[type=number],
     input[type=email],
     input[type=password],
+    input[type=date],
     textarea,
     .input-text {
       @apply
@@ -770,6 +780,7 @@ input[type=text]:disabled,
 input[type=number]:disabled,
 input[type=email]:disabled,
 input[type=password]:disabled,
+input[type=date]:disabled,
 select:disabled,
 textarea:disabled,
 .input-text:disabled,
@@ -777,6 +788,7 @@ input[type=text].is-disabled,
 input[type=number].is-disabled,
 input[type=email].is-disabled,
 input[type=password].is-disabled,
+input[type=date].is-disabled,
 select.is-disabled,
 textarea.is-disabled,
 .input-text.is-disabled {
@@ -789,5 +801,14 @@ textarea.is-disabled,
 .form-group.is-disabled {
   @apply
   relative
+  ;
+}
+
+
+/* input date */
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  @apply
+  opacity-0
   ;
 }

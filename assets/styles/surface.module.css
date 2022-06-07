@@ -6,6 +6,7 @@
 .surface {
   @apply
   relative
+  transform-gpu
   ;
 
   &:not([class*='surface-ui'], [class*='surface-dimmed']) {

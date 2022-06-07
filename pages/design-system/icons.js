@@ -45,7 +45,7 @@ export default function Icons() {
                 {category.icons
                   .filter(item => {
                     if (!filter) return true
-                    if (item.name.includes(filter) || item.tags.includes(filter)) {
+                    if (item.name.includes(filter.toLowerCase()) || item.tags.includes(filter.toLowerCase())) {
                       return true
                     }
                   })

@@ -24,8 +24,8 @@
     bg-center
     bg-ui-700
     bg-gradient-to-b
-      from-ui-900
-      to-ui-700
+    from-ui-900
+    to-ui-800
     shadow-[0_0_0_1px_rgba(var(--color-ui-100)/0.5)]
     ;
 
@@ -191,7 +191,7 @@
       ;
       &.icon {
         @apply
-        text-sm
+        text-base
         ;
       }
     }
