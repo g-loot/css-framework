@@ -5,7 +5,6 @@
 /*----------------------------*/
 
 
-
 .carousel {
   @apply
   block
@@ -13,6 +12,14 @@
   lg:flex-row
   lg:items-stretch
   ;
+
+  .carousel-slides,
+  .carousel-nav {
+    @apply
+    h-[420px]
+    lg:h-80
+    ;
+  }
 
   .carousel-slides {
     @apply
@@ -22,9 +29,6 @@
     lg:flex-7
     flex
     items-stretch
-    h-[420px]
-    lg:h-72
-    lg:h-auto
     ;
 
     .carousel-slide {
@@ -146,7 +150,6 @@
     lg:from-ui-900/0
     lg:to-ui-900
     lg:pr-3
-    lg:h-72
     flex-2
     flex-shrink-0
     shrink-0
@@ -223,6 +226,11 @@
         animation-delay-300
         ;
       }
+      &:nth-child(5) {
+        @apply
+        animation-delay-400
+        ;
+      }
       
       
       > a {
@@ -232,8 +240,8 @@
         flex-col
         justify-center
         ml-2
-        my-2
         lg:ml-0
+        my-2
         lg:mb-0
         lg:mt-3
         p-3
@@ -276,13 +284,17 @@
           ;
         }
 
+        > div {
+          @apply
+          text-sm
+          ;
+        }
         > span {
           @apply
           text-xs
           text-ui-300
           ;
         }
-
 
         > i {
           @apply
@@ -381,5 +393,32 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+/* onboarding */
+
+.carousel.carousel-step {
+  .carousel-control {
+    @apply
+    hidden
+    ;
+  } 
+  .carousel-list {
+    @apply
+    py-2
+    ;
+    > li {
+      @apply
+      h-1/4
+      ;
+      > a {
+        @apply
+        my-2
+        lg:mb-2
+        lg:my-2
+        ;
+      }
+    }
   }
 }

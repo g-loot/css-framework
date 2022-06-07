@@ -82,6 +82,10 @@
         {
           "label": "Tooltips",
           "url": "tooltips"
+        },
+        {
+          "label": "Checkmarks",
+          "url": "checkmarks"
         }
       ]
     },

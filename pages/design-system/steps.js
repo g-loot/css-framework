@@ -349,28 +349,100 @@ export default function Steps() {
 
             <div className="surface rounded-lg p-4">
               <div className='mb-0'>
-                <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+                <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
                   <div className='flex-1 space-y-4'>
                     
                     <ul className='step step-label-bottom step-primary step-vertical'>
                       <li className='is-active'>
                         <a href='#'>
                           <i>1</i>
-                          <div className='text-sm'>First you need to subscribe to G-Loot.</div>
+                          <div>First you need to subscribe to G-Loot.</div>
                           <span></span>
                         </a>
                       </li>
                       <li>
                         <a href='#'>
                           <i>2</i>
-                          <div className='text-sm'>Then you have to win a ticket by playing missions and competing in Brawls.</div>
+                          <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
                           <span></span>
                         </a>
                       </li>
                       <li>
                         <a href='#'>
                           <i>3</i>
-                          <div className='text-sm'>Now you can join the tournament Make sure to check out how to play.</div>
+                          <div>Now you can join the tournament Make sure to check out how to play.</div>
+                          <span></span>
+                        </a>
+                      </li>
+                    </ul>
+
+                    <ul className='step step-label-bottom step-secondary step-vertical'>
+                      <li className='is-active'>
+                        <a href='#'>
+                          <i>1</i>
+                          <div>First you need to subscribe to G-Loot.</div>
+                          <span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='#'>
+                          <i>2</i>
+                          <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
+                          <span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='#'>
+                          <i>3</i>
+                          <div>Now you can join the tournament Make sure to check out how to play.</div>
+                          <span></span>
+                        </a>
+                      </li>
+                    </ul>
+
+                    <ul className='step step-label-bottom step-tertiary step-vertical'>
+                      <li className='is-active'>
+                        <a href='#'>
+                          <i>1</i>
+                          <div>First you need to subscribe to G-Loot.</div>
+                          <span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='#'>
+                          <i>2</i>
+                          <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
+                          <span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='#'>
+                          <i>3</i>
+                          <div>Now you can join the tournament Make sure to check out how to play.</div>
+                          <span></span>
+                        </a>
+                      </li>
+                    </ul>
+
+                    <ul className='step step-label-bottom step-quaternary step-vertical'>
+                      <li className='is-active'>
+                        <a href='#'>
+                          <i>1</i>
+                          <div>First you need to subscribe to G-Loot.</div>
+                          <span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='#'>
+                          <i>2</i>
+                          <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
+                          <span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href='#'>
+                          <i>3</i>
+                          <div>Now you can join the tournament Make sure to check out how to play.</div>
                           <span></span>
                         </a>
                       </li>

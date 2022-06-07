@@ -31,8 +31,6 @@ textarea {
   }
 }
 
-
-
 /*----------------------------*/
 /* SELECT INPUTS */
 /*----------------------------*/
@@ -131,12 +129,10 @@ textarea,
   border
   border-ui-500
   rounded
-  min-h-[2.5rem]
   focus-visible:outline
   focus-visible:outline-1
   focus-visible:outline-ui-300
-  py-1.5
-  px-2
+  p-[0.594rem]
   ;
 }
 
@@ -178,7 +174,7 @@ textarea,
       + .form-icon {
         @apply
         bg-interaction-500
-        shadow-[0_0_0_1px_rgb(var(--color-interaction-700))]
+        shadow-[0_0_0_1px_rgb(var(--color-interaction-300))]
         ;
       }
     }
@@ -194,7 +190,7 @@ textarea,
     transition-all
     duration-300
     ease-[cubic-bezier(.7,0,.3,1)]
-    outline
+    shadow-[0_0_0_1px_rgb(var(--color-ui-600))]
     ;
     &::after {
       @apply
@@ -207,14 +203,13 @@ textarea,
     }
   }
 
-
   input:checked {
     + .form-icon {
       @apply
       bg-gradient-to-b
       from-interaction-700
       to-interaction-300
-      outline-interaction-300
+      shadow-[0_0_0_2px_rgb(var(--color-interaction-300))]
       ;
     }
   }
@@ -222,36 +217,28 @@ textarea,
     + .form-icon {
       @apply
       bg-ui-700
-      outline-ui-500/75
+      shadow-[0_0_0_1px_rgb(var(--color-ui-500))]
       ;
     }
   }
 
-
   &:not([disabled]),
   &:not(.is-disabled) {
-    &:hover,
     &:focus-visible {
       input {
         + .form-icon {
-          &::after {
-            @apply
-            scale-75
-            ;
-          }
+          @apply
+          outline
+          outline-offset-2
+          outline-ui-500
+          ;
         }
       }
       input:checked {
         + .form-icon {
           @apply
+          outline
           outline-interaction-300
-          ;
-        }
-      }
-      input:not(:checked) {
-        + .form-icon {
-          @apply
-          bg-ui-800
           ;
         }
       }
@@ -443,10 +430,6 @@ textarea,
       }
     }
   }
-
-
- 
-  
 }
 
 
@@ -547,6 +530,7 @@ textarea,
       absolute
       right-0.5
       bottom-0.5
+      p-2.5
       ;      
     }
 
@@ -616,6 +600,19 @@ textarea,
       @apply
       text-error-500
       ;
+      input {
+        &:checked + .form-icon {
+          @apply
+          bg-error-500
+          from-error-700
+          to-error-300
+          ;
+        }
+        & + .form-icon {
+          @apply
+          shadow-[0_0_0_2px_rgb(var(--color-error-300))]
+        }
+      }
     }
   }
   &[data-success] {
@@ -637,13 +634,26 @@ textarea,
       focus-visible:outline-success-500
       ;
     }
-     .icon,
+    .icon,
     .form-radio,
     .form-switch,
     .form-checkbox {
       @apply
       text-success-500
       ;
+      input {
+        &:checked + .form-icon {
+          @apply
+          bg-success-500
+          from-success-700
+          to-success-300
+          ;
+        }
+        & + .form-icon {
+          @apply
+          shadow-[0_0_0_2px_rgb(var(--color-success-300))]
+        }
+      }
     }
   }
   &[data-attention] {
@@ -672,6 +682,19 @@ textarea,
       @apply
       text-attention-500
       ;
+      input {
+        &:checked + .form-icon {
+          @apply
+          bg-attention-500
+          from-attention-700
+          to-attention-300
+          ;
+        }
+        & + .form-icon {
+          @apply
+          shadow-[0_0_0_2px_rgb(var(--color-attention-300))]
+        }
+      }
     }
   }
 
@@ -761,27 +784,10 @@ textarea.is-disabled,
   opacity-40
   pointer-events-none
   ;
+  /* todo apply disabled color treatment */
 }
 .form-group.is-disabled {
   @apply
   relative
   ;
-  &::after {
-    @apply
-    font-icon
-    content-['\ea12']
-    text-ui-400
-    absolute
-    h-6
-    rounded-full
-    mx-auto
-    bottom-2
-    right-2.5
-    ;
-  }
-  select:not([multiple]) {
-    @apply
-    bg-none
-    ;
-  }
 }

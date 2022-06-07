@@ -4,11 +4,6 @@
 
 /* primary */
 
-
-
-
-/* tertiary */
-
 .step,
 .step.step-primary {
 
@@ -40,7 +35,7 @@
         @apply
         hidden
         font-normal
-        leading-none
+        leading-tight
         ;
       }
 
@@ -72,7 +67,7 @@
           @apply
           absolute
           transition-transform
-          duration-1000
+          transform-gpu
           ease-[cubic-bezier(0.9,0,0.1,1)]
           ;
         }
@@ -80,6 +75,7 @@
         &::before {
           @apply
           content-['']
+          duration-700
           inset-1
           rounded-full
           bg-gradient-radial-to-b
@@ -89,6 +85,7 @@
         }
         &::after {
           @apply
+          duration-1000
           font-icon
           content-['\eb24']
           z-10
@@ -209,9 +206,6 @@
       flex
       items-center
       text-ui-200
-      transition-all
-      duration-1000
-      ease-[cubic-bezier(0.9,0,0.1,1)]
       ;
       > i {
         @apply 
@@ -222,7 +216,7 @@
         ;
         &::before {
           @apply
-          hidden
+          inset-0.5
           ;
         }
         &::after {
@@ -254,10 +248,7 @@
         text-main
         ;
         i {
-          @apply
-          from-interaction-300
-          to-interaction-700
-          text-ui-800;
+          
         }
       }
     }
@@ -306,7 +297,7 @@
 
       > i {
         @apply 
-        shadow-[0_0_0_2px_rgb(var(--color-ui-700))]
+        shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
         text-ui-400/0
         ;
         &::after {
@@ -330,7 +321,6 @@
       @apply
       flex-none
       ;
-      
     }
     &.is-active {
       a {
@@ -359,7 +349,7 @@
       }
       i {
         @apply
-        shadow-[0_0_0_2px_rgb(var(--color-ui-700))]
+        shadow-[0_0_0_2px_rgb(var(--color-ui-600))]
         from-ui-700
         to-ui-800
         text-ui-400
@@ -376,16 +366,14 @@
         @apply
         h-3
         w-3
-        from-interaction-500
-        to-interaction-500
+        
         shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
         text-main/0
         ;
         &::before {
           @apply
-          inset-0
-          from-ui-800
-          to-ui-800
+          inset-0.5
+          
           ;
         }
       }
@@ -396,7 +384,7 @@
       }
       > span {
         @apply
-        h-3
+        h-2
         w-full
         rounded-full
         mx-2
@@ -455,7 +443,6 @@
       > div {
         @apply
         absolute
-        leading-tight
         w-40
         -left-20
         hidden
@@ -479,18 +466,6 @@
       }
     }
   }
-  &.step-tertiary {
-    > li {
-      > a {
-        > div {
-          @apply
-          top-14
-          translate-x-6
-          ;
-        }
-      }
-    }
-  }
   &.step-secondary {
     > li {
       > a {
@@ -503,6 +478,18 @@
       }
     }
   }
+  &.step-tertiary {
+    > li {
+      > a {
+        > div {
+          @apply
+          top-14
+          translate-x-6
+          ;
+        }
+      }
+    }
+  }
 }
 
 
@@ -510,17 +497,32 @@
 
 .step.step-vertical {
   @apply
-  flex-col
+  grid
+  grid-rows-1
+  grid-flow-row
+  auto-rows-fr
   relative
   ;
   > li {
+    @apply
+    flex-1
+    flex
+    items-stretch
+    ;
     > a {
       @apply
       flex
       gap-4
       items-center
       justify-between
+      py-4
       ;
+      > i {
+        @apply
+        relative
+        z-10
+        ;
+      }
       > div {
         @apply
         py-6
@@ -535,18 +537,62 @@
       > span {
         @apply
         absolute
-        hidden
-        left-[calc(50%-2px)]
-        w-1
-        h-full
-        
+        z-0
         ;
-        clip-path: polygon(0% 0%, 100% 0%, calc(100% - 0.25em) 100%, 0% 100%);
+      }
+    }
+  }
 
-        &::before {
+
+  &,
+  &.step-primary {
+    > li {
+      > a {
+        > span {
           @apply
-
-          translate-x-0
+          left-[calc(1.5rem-0.125rem)]
+          top-[calc(50%+0.75rem)]
+          w-1
+          h-[calc(100%-1.5rem)]
+          m-0
+          ;
+          &::before {
+            @apply
+            translate-x-0
+            w-full
+            h-1/2
+            ;
+            clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 0.25em), 0% 100%);
+          }
+        }
+      }
+    }
+  }
+  &.step-secondary {
+    > li {
+      > a {
+        > span {
+          @apply
+          left-[calc(0.5rem-2.5px)]
+          top-[calc(50%+0.75rem)]
+          w-px
+          h-[calc(100%-1.5rem)]
+          m-0
+          ;
+        }
+      }
+    }
+  }
+  &.step-quaternary {
+    > li {
+      > a {
+        > span {
+          @apply
+          left-0.5
+          top-[calc(50%+1rem)]
+          w-2
+          h-[calc(100%-2rem)]
+          m-0
           ;
         }
       }

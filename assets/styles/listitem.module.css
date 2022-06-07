@@ -50,3 +50,31 @@
     ;
   }
 }
+
+ul.item-actions-dimmed > .item,
+.item.item-actions-dimmed {
+  @apply
+  transition
+  duration-100
+  ease-in-out
+  ;
+  > .item-actions {
+    @apply
+    opacity-20
+    transition-opacity
+    transform-gpu
+    duration-200
+    ease-in-out
+    ;
+  }
+  &:hover {
+    @apply
+    bg-ui-700/50
+    ;
+    > .item-actions {
+      @apply
+      opacity-100
+      ;
+    }
+  }
+}

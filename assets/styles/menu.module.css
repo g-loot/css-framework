@@ -43,7 +43,6 @@
       relative
       z-20
       select-none
-      
       transition
       ease-linear
       duration-75
@@ -54,7 +53,6 @@
         font-headings
         tracking-wide
         block
-        text-lg
         ;
       }
       &.icon {

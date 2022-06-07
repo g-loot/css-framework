@@ -1,0 +1,78 @@
+/*----------------------------*/
+/* STEP */
+/*----------------------------*/
+
+/* primary */
+
+.checkmark {
+  @apply
+  block
+  h-12
+  w-12
+  rounded-full
+  bg-gradient-radial-to-b
+  from-ui-900
+  to-ui-800
+  text-ui-800
+  relative
+  z-10
+  overflow-hidden
+  transition
+  ease-[cubic-bezier(0.9,0,0.1,1)]
+  duration-1000
+  shadow-[0_0_0_2px_rgb(var(--color-ui-600))]
+  ;
+
+  > i {
+   @apply
+   text-center
+   text-xl
+   not-italic
+   ;
+    &::before,
+    &::after {
+      @apply
+      absolute
+      inset-1
+      transition-transform
+      transform-gpu
+      ease-[cubic-bezier(0.9,0,0.1,1)]
+      translate-y-12
+      ;
+    }
+    &::before {
+      @apply
+      content-['']
+      z-0
+      duration-700
+      rounded-full
+      bg-gradient-radial-to-b
+      from-interaction-300
+      to-interaction-700
+      ;
+    }
+    &::after {
+      @apply
+      duration-1000
+      font-icon
+      content-['\eb24']
+      leading-9
+      z-10
+      ;
+    }
+  }
+
+  &.is-active {
+    @apply
+    shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
+    ;
+    > i {
+      &::before,
+      &::after {
+        @apply
+        translate-y-0
+        ;
+      }
+    }
+  }
+}

@@ -1,7 +1,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
-
 @import "./animation";
 @import "./colors";
 @import "./fonts";
@@ -10,7 +9,6 @@
 @import "./scrollbar";
 @import "./typography";
 @import "./variables";
-
 
 
 @import "./button.module.css";
@@ -23,6 +21,7 @@
 @import "./bracket.module.css";
 @import "./card.module.css";
 @import "./carousel.module.css";
+@import "./checkmark.module.css";
 @import "./chip.module.css";
 @import "./data.module.css";
 @import "./ladder.module.css";

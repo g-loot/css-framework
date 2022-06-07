@@ -359,7 +359,6 @@
           "tags": "arrow,out,log,sign,close,door,exit,leave,logout,outside",
           "name": "leave"
         },
-       
         {
           "tags": "watch,block,view,search,visibility,blind,eye,preview,disabled,hidden,hide,look,observe,overview,see,sight,visible,vision,invisible",
           "name": "b-eye"
@@ -370,7 +369,7 @@
         },
         {
           "tags": "navigation,circle,ui,interface,dot,list,gallery,menu,options,settings,circles,dots,more",
-          "name": "menu-5"
+          "name": "dots"
         },
         {
           "tags": "files,file,folder,group,document,text,note,report,page,copy,paper,documents,duplicate,item,draft,single,letter,content,sheet",
@@ -1923,6 +1922,18 @@
         {
           "tags": "commerce,home,shopping,ecommerce,shop,food,retail,market,mall,online,retailer,store,commercial,property",
           "name": "shop"
+        },
+        {
+          "tags": "navigation,circle,dots,ui,interface,list,gallery,menu,option,settings,dot,more",
+          "name": "dots-vertical"
+        },
+        {
+          "tags": "inbox,email,contact,address,at sign",
+          "name": "at-sign-2"
+        },
+        {
+          "tags": "sign,key,email,website,address,at",
+          "name": "at-sign"
         }
       ]
     }

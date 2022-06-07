@@ -229,12 +229,12 @@ export default function TextInputs() {
                     <div className='w-full flex gap-4 items-center'>
                       <div className='flex-1 space-y-4'>
                         <div className='form-group'>
-                          <label htmlFor="new-password">New password</label>
+                          <label htmlFor="search-field">Search</label>
                           <div className='input-group'>
-                            <button className='button button-sm button-tertiary'>
-                              <span>Show</span>
+                            <button role="button" className="button button-tertiary">
+                              <span className="icon icon-zoom"></span>
                             </button>
-                            <input type="password" name="new-password" id="new-password" />
+                            <input type="password" name="search-field" id="search-field" />
                           </div>
                         </div>
                         <div className='form-group'>

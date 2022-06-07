@@ -1941,8 +1941,12 @@
   content: "\ebdc";
 }
 
-.icon-menu-5::before {
+.icon-dots::before {
   content: "\ebde";
+}
+
+.icon-dots-vertical::before {
+  content: "\ebf1";
 }
 
 .icon-missions::before {
@@ -1991,4 +1995,12 @@
 
 .icon-twitch::before {
   content: "\ebea";
+}
+
+.icon-at-sign::before {
+  content: "\ebef";
+}
+
+.icon-at-sign-2::before {
+  content: "\ebee";
 }

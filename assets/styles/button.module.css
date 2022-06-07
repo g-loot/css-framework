@@ -469,18 +469,15 @@
     @apply
     pointer-events-none
     select-none
-    opacity-50
-    bg-ui-700
-    from-ui-700
-    to-ui-700
-    to-ui-700
-    text-ui-400
-    grayscale-0
-    shadow-[inset_0_0_0_1px_rgba(var(--color-ui-700),50%)]
+    bg-disabled-500/25
+    from-disabled-500/25
+    to-disabled-500/25
+    text-disabled-300
+    shadow-[inset_0_0_0_1px_rgba(var(--color-disabled-700),50%)]
     ;
     > * {
       @apply
-      drop-shadow-[0_-1px_0_rgba(var(--color-ui-700)/0%)]
+      drop-shadow-[0_-1px_0_rgba(var(--color-disabled-700)/0%)]
       ;
     }
   }
