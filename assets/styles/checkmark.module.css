@@ -53,10 +53,14 @@
     }
     &::after {
       @apply
+      absolute
       duration-1000
       font-icon
       content-['\eb24']
-      leading-9
+      leading-none
+      top-[calc(50%-0.5em)]
+      inset-x-0
+      text-center
       z-10
       ;
     }
@@ -74,5 +78,40 @@
         ;
       }
     }
+  }
+}
+
+/* size */
+
+.checkmark.checkmark-sm {
+  @apply
+  h-9
+  w-9
+  ;
+}
+.checkmark.checkmark-xs {
+  @apply
+  h-6
+  w-6
+  shadow-[0_0_0_1px_rgb(var(--color-ui-600))]
+  ;
+  > i {
+    &::before,
+    &::after {
+      @apply
+      inset-0.5
+      ;
+    }
+    &::after {
+      @apply
+      text-sm
+      top-[calc(50%-0.5em)]
+      ;
+    }
+  }
+  &.is-active {
+    @apply
+    shadow-[0_0_0_1px_rgb(var(--color-interaction-500))]
+    ;
   }
 }
