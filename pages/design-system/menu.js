@@ -31,7 +31,7 @@ export default function Menu() {
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
                   <div className='flex-1 surface rounded-lg overflow-hidden'>
-                    <ul className='menu'>
+                    <ul className='menu' role='menu'>
                       <li>
                         <a>
                           <span>Missions</span>
@@ -115,7 +115,7 @@ export default function Menu() {
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
                   <div className='flex-1 surface rounded-lg overflow-hidden'>
-                    <ul className='menu'>
+                    <ul className='menu' role='menu'>
                       <li>
                         <a>
                           <span className='icon icon-missions'></span>
@@ -161,7 +161,7 @@ export default function Menu() {
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
                   <div className='flex-1 surface rounded-lg overflow-hidden'>
-                    <ul className='menu'>
+                    <ul className='menu' role='menu'>
                       <li>
                         <a>
                           <span>Home</span>
@@ -202,7 +202,7 @@ export default function Menu() {
               </div>
             </div>
           </div>
-        
+
 
           
         </DSStructure>

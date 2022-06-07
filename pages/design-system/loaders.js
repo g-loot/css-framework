@@ -260,6 +260,93 @@ export default function Loaders() {
             </div>
           </div>
 
+          {/* Lists */}
+          <div className='mb-12'>
+
+            <h2 className='mb-3'>
+              Lists
+            </h2>
+
+            {/* Lists */}
+            <div className="surface rounded-lg p-4">
+           
+           
+              <div className=''>
+                
+                <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+                  <div className='flex-1 space-y-4'>
+                    <ul className='is-loading border rounded-lg border-ui-600'>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Croc Esports
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Croc Esports
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Croc Esports
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                      </li>
+                      <li className='item'>
+                        <div className='item-image'>
+                          <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                            <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                          </figure>
+                        </div>
+                        <div className='item-content'>
+                          <div className='item-title'>
+                            Croc Esports
+                          </div>
+                          <div className='text-ui-300 text-xs'>
+                            3 members
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className='flex-1'>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/08sanf9d/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
           
           
         </DSStructure>

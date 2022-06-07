@@ -297,34 +297,39 @@
   @apply
   relative
   pointer-events-none
-  
   ;
   
+  &,
+  *[class*='text-'] {
+    @apply
+    text-ui-200/0
+    ;
+  }
 
-  .avatar > *,
+  .item-image > *,
   .item-actions > * {
     @apply
     opacity-0
     ;
   }
   .item-content {
-    > * {
+    *:not(.item-title) {
       @apply
-      text-ui-200/0
       bg-ui-200/0
+      opacity-0
       ;
     }
   }
+  .item-image,
   .item-title,
-  .avatar {
+  .item-image {
     @apply
     relative
     ;
     &::after {
       @apply
       absolute
-      inset-y-0
-      left-0
+      inset-0
       content-['']
       block
       rounded

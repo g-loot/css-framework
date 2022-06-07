@@ -34,7 +34,7 @@ const slides = [
 const slidesOnboarding = [
   {
     title: 'Create a G-Loot account',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo diam quis ante mollis, ac elementum dolor elementum. In vel consectetur tortor, nec porta lectus.',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo diam quis ante mollis, ac elementum dolor elementum. ',
     image: 'https://res.cloudinary.com/gloot/image/upload/v1654611769/Marketing/2022_prototype/DummyContent/carouselonboarding-item-step1.jpg',
     buttonLabel: 'Create an account',
     buttonURL: '#'
@@ -48,14 +48,14 @@ const slidesOnboarding = [
   },
   {
     title: 'Complete your first mission',
-    description: 'Aenean at libero ligula. Sed gravida dapibus lectus nec finibus. Morbi egestas vitae tellus eget egestas. Donec scelerisque gravida metus, non pulvinar augue finibus eu. ',
+    description: 'Morbi egestas vitae tellus eget egestas. Donec scelerisque gravida metus, non pulvinar augue finibus eu. ',
     image: 'https://res.cloudinary.com/gloot/image/upload/v1654611769/Marketing/2022_prototype/DummyContent/carouselonboarding-item-step3.jpg',
     buttonLabel: 'Browse Missions',
     buttonURL: '#'
   },
   {
     title: 'Play in a Brawl',
-    description: 'Aenean at libero ligula. Sed gravida dapibus lectus nec finibus. Morbi egestas vitae tellus eget egestas. Donec scelerisque gravida metus, non pulvinar augue finibus eu. ',
+    description: 'Aenean at libero ligula. Sed gravida dapibus lectus nec finibus. Morbi egestas vitae tellus eget egestas.',
     image: 'https://res.cloudinary.com/gloot/image/upload/v1654611769/Marketing/2022_prototype/DummyContent/carouselonboarding-item-step4.jpg',
     buttonLabel: 'Browse Brawls',
     buttonURL: '#'
@@ -220,6 +220,9 @@ export default function CarouselDS() {
                                   <h2 className='h3'>
                                     {slideOnboarding.title}
                                   </h2>
+                                  <div className='mt-3 text-sm uppercase text-ui-300'>
+                                    {slideOnboardingNumber > slideOnboardingIndex ? 'Completed' : 'Not completed'}
+                                  </div>
                                   <p className='mb-5 mt-2'>
                                     {slideOnboarding.description}
                                   </p>
@@ -250,7 +253,7 @@ export default function CarouselDS() {
                                     </div>
                                   </div>
                                   <div className='item-actions'>
-                                    <div className={`checkmark checkmark-sm ${slideOnboardingNumber >= slideOnboardingIndex ? 'is-active' : ''}`}>
+                                    <div className={`checkmark checkmark-sm ${slideOnboardingNumber > slideOnboardingIndex ? 'is-active' : ''}`}>
                                       <i></i>
                                     </div>
                                   </div>
