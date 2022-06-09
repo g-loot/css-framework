@@ -4,6 +4,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:framework": "sh ./framework/build-framework.sh",
+    "publish:framework": "npm run build:framework && cd dist && npm publish --access public",
     "start": "next start",
     "lint": "next lint"
   },

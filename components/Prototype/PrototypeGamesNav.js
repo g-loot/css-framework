@@ -28,7 +28,6 @@ export default function PrototypeGamesNav({children}) {
                   <i className={`bg-gradient-to-r ${item.slug === 'apex_legends' ? 'from-game-apexlegends/0 via-game-apexlegends to-game-apexlegends/0' : ''} ${item.slug === 'csgo' ? 'from-game-csgo/0 via-game-csgo to-game-csgo/0' : ''}  ${item.slug === 'dota_2' ? 'from-game-dota2/0 via-game-dota2 to-game-dota2/0' : ''}  ${item.slug === 'league_of_legends' ? 'from-game-leagueoflegends/0 via-game-leagueoflegends to-game-leagueoflegends/0' : ''}  ${item.slug === 'rocket_league' ? 'from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0' : ''} ${item.slug === 'pubg' ? 'from-game-pubg/0 via-game-pubg to-game-pubg/0' : ''}  ${item.slug === 'valorant' ? 'from-game-valorant/0 via-game-valorant to-game-valorant/0' : ''}`}></i>
                   <i className={`bg-gradient-to-r ${item.slug === 'apex_legends' ? 'from-game-apexlegends/0 via-game-apexlegends to-game-apexlegends/0' : ''} ${item.slug === 'csgo' ? 'from-game-csgo/0 via-game-csgo to-game-csgo/0' : ''}  ${item.slug === 'dota_2' ? 'from-game-dota2/0 via-game-dota2 to-game-dota2/0' : ''}  ${item.slug === 'league_of_legends' ? 'from-game-leagueoflegends/0 via-game-leagueoflegends to-game-leagueoflegends/0' : ''}  ${item.slug === 'rocket_league' ? 'from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0' : ''} ${item.slug === 'pubg' ? 'from-game-pubg/0 via-game-pubg to-game-pubg/0' : ''}  ${item.slug === 'valorant' ? 'from-game-valorant/0 via-game-valorant to-game-valorant/0' : ''}`}></i>
                
-                  
                   <div className='item p-0'>
                     <div className='item-image'>
                       <div className={`rounded h-8 w-8 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-${item.slug.replace(/#|_/g,'')}`}>
@@ -46,8 +45,6 @@ export default function PrototypeGamesNav({children}) {
                       </div>
                     </div>
                   </div>
-
-                  
                 </>
                 
               )}

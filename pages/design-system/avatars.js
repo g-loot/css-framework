@@ -54,10 +54,30 @@ export default function Avatars() {
                     </div>
                     <div className='w-full flex gap-4 items-center'>
                       <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        Squircle
+                      </div>
+                      <div className='flex-1'>
+                        <figure className='avatar avatar-squircle'>
+                          <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                        </figure>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                         Diamond
                       </div>
                       <div className='flex-1'>
                         <figure className='avatar avatar-diamond'>
+                          <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                        </figure>
+                      </div>
+                    </div>
+                    <div className='w-full flex gap-4 items-center'>
+                      <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                        Hexagon
+                      </div>
+                      <div className='flex-1'>
+                        <figure className='avatar avatar-hexagon'>
                           <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                         </figure>
                       </div>
@@ -95,7 +115,7 @@ export default function Avatars() {
                           <figure className='avatar'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
-                          <figure className='avatar avatar-square'>
+                          <figure className='avatar avatar-squircle'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
@@ -110,7 +130,7 @@ export default function Avatars() {
                           <figure className='avatar avatar-md'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
-                          <figure className='avatar avatar-md avatar-square'>
+                          <figure className='avatar avatar-md avatar-squircle'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
@@ -125,7 +145,7 @@ export default function Avatars() {
                           <figure className='avatar avatar-sm'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
-                          <figure className='avatar avatar-sm avatar-square'>
+                          <figure className='avatar avatar-sm avatar-squircle'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
@@ -140,7 +160,7 @@ export default function Avatars() {
                           <figure className='avatar avatar-xs'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
-                          <figure className='avatar avatar-xs avatar-square'>
+                          <figure className='avatar avatar-xs avatar-squircle'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
@@ -155,7 +175,7 @@ export default function Avatars() {
                           <figure className='avatar avatar-tiny'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
-                          <figure className='avatar avatar-tiny avatar-square'>
+                          <figure className='avatar avatar-tiny avatar-squircle'>
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
@@ -584,19 +604,19 @@ export default function Avatars() {
                       </div>
                       <div className='flex-1'>
                         <div className='flex flex-wrap gap-4 justify-start items-center'>
-                          <figure className='avatar avatar-square'>
+                          <figure className='avatar avatar-squircle'>
                             <span className='icon icon-multiple-11'></span>
                           </figure>
-                          <figure className='avatar avatar-square avatar-md'>
+                          <figure className='avatar avatar-squircle avatar-md'>
                             <span className='icon icon-multiple-11'></span>
                           </figure>
-                          <figure className='avatar avatar-square avatar-sm'>
+                          <figure className='avatar avatar-squircle avatar-sm'>
                             <span className='icon icon-multiple-11'></span>
                           </figure>
-                          <figure className='avatar avatar-square avatar-xs'>
+                          <figure className='avatar avatar-squircle avatar-xs'>
                             <span className='icon icon-multiple-11'></span>
                           </figure>
-                          <figure className='avatar avatar-square avatar-tiny'>
+                          <figure className='avatar avatar-squircle avatar-tiny'>
                             <span className='icon icon-multiple-11'></span>
                           </figure>
                         </div>

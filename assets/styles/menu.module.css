@@ -19,7 +19,8 @@
     ;
   }
 
-  a {
+  a,
+  button {
     @apply
     relative
     inline-flex
@@ -113,7 +114,8 @@
   }
 
   li.is-disabled {
-    a {
+    a,
+    button {
       @apply
       pointer-events-none
       text-ui-500
@@ -122,16 +124,14 @@
   }
 
   &.menu-secondary {
-
-    a {
+    a,
+    button {
       > * {
         @apply
-        normal-case
         font-body
         text-sm
         ;
       }
     }
-      
   }
 }

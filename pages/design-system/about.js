@@ -4,13 +4,13 @@ import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
 import { useRouter } from 'next/router';
 
-export default function Introduction() {
+export default function About() {
   const router = useRouter();
   
 
   return (
     <div>
-        <DSHead title='Introduction' />
+        <DSHead title='About' />
         
         <DSTopBar data={DSdata} />
 
@@ -30,7 +30,7 @@ export default function Introduction() {
                 The G-Loot CSS Framework is a centralized front-end design system that allows any developer to quickly build pages that are in line with the G-Loot brand and its user interface system.
               </p>
               <p>
-                Based on the utility-first framework <a href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind</a>, the G-Loot CSS Framework provides pre-defined components listed on this website as well as highly composable, low-level utility classes to build complex user interfaces with speed in mind.
+                Based on the utility-first framework <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, the G-Loot CSS Framework provides pre-defined components listed on this website as well as highly composable, low-level utility classes to build complex user interfaces with speed in mind.
               </p>
             </div>
 
@@ -49,13 +49,13 @@ export default function Introduction() {
             <div className='max-w-md mx-auto aspect-video bg-cover bg-center rounded-lg my-12 border border-ui-600' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653377432/Marketing/2022_prototype/methodology-class.jpg)`}}></div>
             <div className='max-w-sm mx-auto space-y-4 text-ui-200'>
               <h2 className='leading-none uppercase text-2xl text-ui-300'>
-                The class way
+                The class(y) way
               </h2>
               <p>
-                By creating a G-Loot CSS Framework we are able to centralise all the styling in one place, making sure everything is designed in a consistent and smart way.
+                By creating a G-Loot CSS Framework we are able to centralise all the design system in one place, making sure everything is built in a visually consistent and smart way.
               </p>
               <p>
-                And since the G-Loot CSS Framework is based on <a href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind</a>, it allows the use of its utility-first class names anywhere. That way new pages and components can be built effortlessly.
+                And since the G-Loot CSS Framework is based on <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, it allows the use of its utility-first class names anywhere. That way new pages and components can be built effortlessly.
               </p>
               <h3 className='h3 my-4'>
                 Benefits
@@ -87,13 +87,13 @@ export default function Introduction() {
                   As it is independent from the front-end technology (ReactJS), the G-Loot CSS Framework is instantly compatible with any other front-end language (VueJS, PHP, plain HTML, emails, etc.) making the building of ad-hoc tools and interfaces a piece of cake.
                 </span>
               </p>
-              <p className='pb-5'>
+              <p className='border-b border-ui-600 pb-5'>
                 <strong className='font-headings text-xl text-main'>
                   Flexible and quick
                 </strong>
                 <br />
                 <span>
-                  Because it is based on the CSS Framework <a href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind</a>, the whole product can use its numerous utility-first class names to build layouts and one-offs with ease and speed.
+                  Because it is based on the CSS Framework <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, the whole product can use its numerous utility-first class names to build layouts and one-offs with ease and speed.
                 </span>
               </p>
               <p className='pb-5'>

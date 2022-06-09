@@ -4,19 +4,19 @@ import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
 import { useRouter } from 'next/router';
 
-export default function RadioCheckSwitch() {
+export default function RadioCheckToggle() {
   const router = useRouter();
   
 
   return (
     <div>
-        <DSHead title='Radio, switch and checkbox' />
+        <DSHead title='Radio, toggle and checkbox' />
         
         <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
           <h1 className='mb-2'>
-            Radio, checkbox, switch
+            Radio, checkbox, toggle
           </h1>
 
 
@@ -55,11 +55,11 @@ export default function RadioCheckSwitch() {
           </div>
 
 
-          {/* Switch */}
+          {/* Toggle */}
           <div className='mb-12'>
 
             <h2 className='h3 mb-3'>
-              Switch
+              Toggle
             </h2>
 
             <div className="surface rounded-lg p-4">
@@ -69,11 +69,11 @@ export default function RadioCheckSwitch() {
                     <div className='w-full flex gap-4 items-center'>
                       <div className='flex-1 space-y-4'>
                         <div className="form-group">
-                          <label className="form-switch">
+                          <label className="form-toggle">
                             <input type="checkbox" name="notification" />
                             <i className="form-icon"></i> Send me notifications with news and tips
                           </label>
-                          <label className="form-switch">
+                          <label className="form-toggle">
                             <input type="checkbox" name="notification" />
                             <i className="form-icon"></i> Send me emails with news and tips
                           </label>
@@ -151,7 +151,7 @@ export default function RadioCheckSwitch() {
                           </label>
                         </div>
                         <div className="form-group" data-success="Please choose an option.">
-                          <label className="form-switch">
+                          <label className="form-toggle">
                             <input type="checkbox" name="input-success" />
                             <i className="form-icon"></i> I agree with your policy
                           </label>

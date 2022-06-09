@@ -263,8 +263,7 @@
   }
   &.button-sm {
     @apply
-    py-2
-    px-2.5
+    p-2
     ;
 
     > * {

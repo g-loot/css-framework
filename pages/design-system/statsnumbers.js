@@ -6,7 +6,7 @@ import DSTopBar from '../../components/DesignSystem/DSTopBar';
 import DSdata from '../api/designsystem/data.json'
 import { useRouter } from 'next/router';
 
-export default function DataNumbers() {
+export default function StatsNumbers() {
   
   function RandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -45,14 +45,14 @@ export default function DataNumbers() {
 
   return (
     <div>
-        <DSHead title='Data &amp; Numbers' />
+        <DSHead title='Stats &amp; Numbers' />
         
         <DSTopBar data={DSdata} />
 
         <DSStructure data={DSdata}>
 
           <h1 className='mb-2'>
-            Data &amp; numbers
+            Stats &amp; numbers
           </h1>
 
 

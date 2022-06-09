@@ -1,0 +1,83 @@
+/*----------------------------*/
+/* ALERT */
+/*----------------------------*/
+
+.alert {
+  @apply
+  rounded-xl
+  w-full
+  flex
+  justify-between
+  items-center
+  gap-4
+  p-4
+  text-ui-200
+  bg-ui-600/75
+  border
+  border-ui-500/75
+  backdrop-blur-sm
+ 
+  ;
+  > * {
+    @apply
+    flex
+    gap-2
+    items-center
+    ;
+
+    .icon {
+      @apply
+      text-blue-700
+      ;
+    }
+  }
+
+  &.alert-green {
+    @apply
+    border-0
+    bg-interaction-500
+    ;
+    &,
+    > * .icon {
+      @apply
+      text-ui-800
+      ;
+    }
+  }
+  &.alert-blue {
+    @apply
+    border-0
+    bg-blue-500
+    ;
+    &,
+    > * .icon {
+      @apply
+      text-ui-800
+      ;
+    }
+  }
+  &.alert-orange {
+    @apply
+    border-0
+    bg-attention-300
+    ;
+    &,
+    > * .icon {
+      @apply
+      text-ui-800
+      ;
+    }
+  }
+  &.alert-red {
+    @apply
+    border-0
+    bg-error-300
+    ;
+    &,
+    > * .icon {
+      @apply
+      text-ui-800
+      ;
+    }
+  }
+}

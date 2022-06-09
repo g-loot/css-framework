@@ -1,11 +1,5 @@
-import { compose, flexbox, layout, space } from 'styled-system';
-
-import Button from '../components/Button/Button';
-import CustomComponent from '../components/CustomComponent/CustomComponent';
 import Head from 'next/head';
-import MainNav from '../components/MainNav/MainNav';
-import Topbar from '../components/Topbar/Topbar';
-import styled from 'styled-components';
+import packageFramework from '../framework/package-framework.json';
 import useFetch from '../hooks/use-fetch';
 import { useRouter } from 'next/router';
 
@@ -26,29 +20,47 @@ export default function Home() {
 
            
             <div className='flex flex-col lg:flex-row items-stretch '>
-              <div className='flex-1 lg:pr-8 lg:mr-8 lg:border-r lg:border-ui-700'>
-                <img className='mb-1' width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
-                <h1 className='text-xl uppercase not-italic leading-none pl-10 pb-8 mb-8 border-b border-ui-700'>
-                  Front-end
-                </h1>
-                <div className='hidden lg:block'>
-                  <div className='px-2 mb-2 uppercase font-headings text-ui-200'>
-                    Latest components:
+              <div className='flex-1 lg:pr-8 lg:mr-8 lg:border-r lg:border-ui-700 flex flex-col justify-between'>
+                <div>
+                  <div className='flex items-start justify-between pb-8 mb-8 border-b border-ui-700'>
+                    <div>
+                      <img className='mb-1' width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
+                      <h1 className='text-xl uppercase not-italic leading-none pl-10'>
+                        Front-end
+                      </h1>
+                    </div>
+                    <div className='text-xs text-ui-400 block lg:hidden'>
+                      <div className='chip chip-secondary chip-xs'>
+                        <span>v{packageFramework.version}</span>
+                      </div>
+                    </div>
                   </div>
-                  <ul className="menu menu-secondary">
-                    <li><a href='design-system/checkmarks'><span>Checkmarks</span></a></li>
-                    <li><a href='design-system/listitems'><span>List items</span></a></li>
-                    <li><a href='design-system/tournamentbrackets'><span>Tournament brackets</span></a></li>
-                    <li><a href='design-system/emptystates'><span>Empty states</span></a></li>
-                    <li><a href='design-system/carousel'><span>Carousel</span></a></li>
-                    <li><a href='design-system/accordion'><span>Accordion</span></a></li>
-                    <li><a href='design-system/missioncards'><span>Mission cards</span></a></li>
-                    <li><a href='design-system/tournamentcards'><span>Tournament cards</span></a></li>
-                  </ul>
+                  
+                  <div className='hidden lg:block'>
+                    <div className='px-2 mb-2 uppercase font-headings text-ui-200'>
+                      Latest components:
+                    </div>
+                    <ul className="menu menu-secondary">
+                      <li><a href='design-system/countdown'><span>Countdown</span></a></li>
+                      <li><a href='design-system/checkmarks'><span>Checkmarks</span></a></li>
+                      <li><a href='design-system/listitems'><span>List items</span></a></li>
+                      <li><a href='design-system/tournamentbrackets'><span>Tournament brackets</span></a></li>
+                      <li><a href='design-system/emptystates'><span>Empty states</span></a></li>
+                      <li><a href='design-system/carousel'><span>Carousel</span></a></li>
+                      <li><a href='design-system/accordion'><span>Accordion</span></a></li>
+                      <li><a href='design-system/missioncards'><span>Mission cards</span></a></li>
+                      <li><a href='design-system/tournamentcards'><span>Tournament cards</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div className='text-xs text-ui-400 hidden lg:block'>
+                  <div className='chip chip-secondary chip-xs'>
+                    <span>v{packageFramework.version}</span>
+                  </div>
                 </div>
               </div>
               <div className='flex-3 space-y-8'>
-                <a href='design-system/introduction' className='card-mission card-interactive surface-ui-700'>
+                <a href='design-system/about' className='card-mission card-interactive surface-ui-700'>
                   <div className='card-decoration'></div>
                   <div className='card-info'>
                     <div className='card-title flex gap-2 items-center'>

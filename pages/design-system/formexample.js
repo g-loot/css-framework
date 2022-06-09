@@ -131,23 +131,23 @@ export default function FormExample() {
                       Here you can consent to share your data with the following partners:
                     </p>
                     <div className='form-group'>
-                      <label className="form-switch">
+                      <label className="form-toggle">
                         <input type="checkbox" name="data-meta" checked />
                         <i className="form-icon"></i> Meta
                       </label>
-                      <label className="form-switch">
+                      <label className="form-toggle">
                         <input type="checkbox" name="data-google" checked />
                         <i className="form-icon"></i> Google
                       </label>
-                      <label className="form-switch">
+                      <label className="form-toggle">
                         <input type="checkbox" name="data-adroll" checked />
                         <i className="form-icon"></i> Adroll
                       </label>
-                      <label className="form-switch">
+                      <label className="form-toggle">
                         <input type="checkbox" name="data-bing" />
                         <i className="form-icon"></i> Bing
                       </label>
-                      <label className="form-switch">
+                      <label className="form-toggle">
                         <input type="checkbox" name="data-quantcast" />
                         <i className="form-icon"></i> Quantcast
                       </label>

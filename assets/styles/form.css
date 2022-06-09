@@ -18,7 +18,7 @@ textarea {
 
 .form-group {
  
-  > label:not(.form-radio):not(.form-checkbox):not(.form-switch) {
+  > label:not(.form-radio):not(.form-checkbox):not(.form-toggle) {
     @apply
     block
     text-sm
@@ -144,7 +144,7 @@ textarea,
 
 .form-radio,
 .form-checkbox,
-.form-switch {
+.form-toggle {
   @apply
   block
   pl-12
@@ -192,7 +192,7 @@ textarea,
     transition-all
     transform-gpu
     duration-300
-    ease-[cubic-bezier(.7,0,.3,1)]
+    ease-[cubic-bezier(.9,0,.2,1)]
     shadow-[0_0_0_1px_rgb(var(--color-ui-600))]
     ;
     &::after {
@@ -201,7 +201,7 @@ textarea,
       absolute
       transition
       duration-300
-      ease-[cubic-bezier(.7,0,.3,1)]
+      ease-[cubic-bezier(.9,0,.2,1)]
       ;
     }
   }
@@ -301,9 +301,9 @@ textarea,
     }
   }
 
-  /* switch */
+  /* toggle */
 
-  &.form-switch {
+  &.form-toggle {
     .form-icon {
       @apply
       h-6
@@ -383,6 +383,7 @@ textarea,
         &::after {
           @apply
           scale-110
+          translate-y-2
           opacity-0
           ;
         }
@@ -405,6 +406,7 @@ textarea,
       + .form-icon {
         &::after {
           @apply
+          translate-y-0
           -rotate-45
           scale-100
           opacity-100
@@ -604,7 +606,7 @@ textarea,
     }
     .icon,
     .form-radio,
-    .form-switch,
+    .form-toggle,
     .form-checkbox {
       @apply
       text-error-500
@@ -646,7 +648,7 @@ textarea,
     }
     .icon,
     .form-radio,
-    .form-switch,
+    .form-toggle,
     .form-checkbox {
       @apply
       text-interaction-500
@@ -688,7 +690,7 @@ textarea,
     }
      .icon,
     .form-radio,
-    .form-switch,
+    .form-toggle,
     .form-checkbox {
       @apply
       text-attention-500

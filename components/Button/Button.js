@@ -57,7 +57,7 @@ export default function Button(props) {
   if (props.currency) {
     return (
       <>
-        <button role='button' className={buttonClass}>
+        <button type='button' className={buttonClass}>
           <div>
             <span>{label}</span>
           </div>
@@ -71,7 +71,7 @@ export default function Button(props) {
   } else {
     return (
       <>
-        <button role='button' className={buttonClass}>
+        <button type='button' className={buttonClass}>
           {
             props.iconDirection != 'right' ? icon : ''
           }

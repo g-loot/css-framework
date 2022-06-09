@@ -1,4 +1,5 @@
 import DSMainNavMobile from './DSMainNavMobile';
+import packageFramework from '../../framework/package-framework.json';
 
 export default function DSTopBar({children, data}) {
   return (
@@ -12,9 +13,12 @@ export default function DSTopBar({children, data}) {
             
           </div>
           <div className='w-1/2 md:w-9/12 xl:w-10/12 flex items-center justify-between'>
-            <div className='flex items-center'>
+            <div className='flex items-baseline gap-2'>
               <div className='hidden md:block font-headings italic text-xl leading-none text-ui-300'>
-                Front-end Framework
+                Front-end framework
+              </div>
+              <div className='chip chip-secondary chip-xs'>
+                <span>v{packageFramework.version}</span>
               </div>
             </div>
             <div className='flex items-center justify-end'>

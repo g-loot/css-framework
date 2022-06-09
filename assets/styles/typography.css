@@ -93,47 +93,10 @@ h6,
   ;
 }
 
-.link {
-  @apply
-  cursor-pointer
-  text-interaction-500
-  hover:text-interaction-700
-  underline
-  transition
-  duration-75
-  active:text-interaction-300
-  ;
-}
-
-code {
-  @apply
-  px-2
-  py-1
-  bg-ui-600
-  rounded
-  border
-  border-ui-500
-  text-sm
-  inline-block
-  mx-1
-  leading-none
-  ;
-}
-
 hr {
   @apply
   border-ui-600
   ;
-}
-
-p {
-  a {
-    @apply
-    text-interaction-500
-    hover:text-interaction-300
-    underline
-    ;
-  }
 }
 
 .text-gradient {

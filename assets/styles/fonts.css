@@ -2,10 +2,14 @@
 /* FONTS */
 /*----------------------------*/
 
+* {
+  --fonts-root: '../fonts/';
+}
+
 @font-face {
   font-family: 'Podium Sharp';
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1652173357/GNOG%20assets/Fonts/PODIUM_Sharp/podiumsharp-3.9italic-webfont.woff2')
-      format('woff2'), url('https://res.cloudinary.com/gloot/raw/upload/v1652173357/GNOG%20assets/Fonts/PODIUM_Sharp/podiumsharp-3.9italic-webfont.woff')
+  src: url('../fonts/ps/ps-3.9italic-webfont.woff2')
+      format('woff2'), url('../fonts/ps/ps-3.9italic-webfont.woff')
       format('woff');
   font-display: swap;
   font-weight: 700;
@@ -14,8 +18,8 @@
 
 @font-face {
   font-family: 'Podium Sharp';
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1637672348/GNOG%20assets/Fonts/PODIUM_Sharp/podiumsharp-3.9-webfont.woff2')
-      format('woff2'), url('https://res.cloudinary.com/gloot/raw/upload/v1636017636/GNOG%20assets/Fonts/PODIUM_Sharp/podiumsharp-3.9-webfont.woff')
+  src: url('../fonts/ps/ps-3.9-webfont.woff2')
+      format('woff2'), url('../fonts/ps/ps-3.9-webfont.woff')
       format('woff');
   font-display: swap;
   font-weight: 700;
@@ -55,8 +59,8 @@
 
 @font-face {
   font-family: "glooticons";
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1652250740/GNOG%20assets/Fonts/Icons/glooticons.woff2') format('woff2'),
-    url('https://res.cloudinary.com/gloot/raw/upload/v1652250740/GNOG%20assets/Fonts/Icons/glooticons.woff') format('woff');
+  src: url('../fonts/icons/glooticons.woff2') format('woff2'),
+    url('../fonts/icons/glooticons.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

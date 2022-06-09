@@ -88,6 +88,13 @@
   h-9
   w-9
   ;
+  > i {
+    &::after {
+      @apply
+      text-sm
+      ;
+    }
+  }
 }
 .checkmark.checkmark-xs {
   @apply
@@ -104,7 +111,7 @@
     }
     &::after {
       @apply
-      text-sm
+      text-xs
       top-[calc(50%-0.5em)]
       ;
     }

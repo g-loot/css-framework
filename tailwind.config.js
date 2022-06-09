@@ -17,6 +17,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,json}",
   ],
   theme: {
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1576px',
+    },
     minWidth: {
       'xs': '320px',
       'sm': '480px',
@@ -197,6 +204,22 @@ module.exports = {
       aspectRatio: {
         'story': '9 / 16',
         'landscape': '10 / 3',
+      },
+      height: {
+        '0': '0rem',
+        'xs': '.75rem',
+        'sm': '.875rem',
+        'tiny': '.875rem',
+        'base': '1rem',
+        'lg': '1.125rem',
+        'xl': '1.25rem',
+        '2xl': '1.75rem',
+        '3xl': '2.25rem',
+        '4xl': '3rem',
+        '5xl': '3.5rem',
+        '6xl': '4rem',
+        '7xl': '5rem',
+        '8xl': '7.4rem',
       },
     }
   },

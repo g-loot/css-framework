@@ -4,8 +4,12 @@
       "label": "About",
       "icon": "",
       "pages": [{
-          "label": "Introduction",
-          "url": "introduction"
+          "label": "About",
+          "url": "about"
+        },
+        {
+          "label": "Getting started",
+          "url": "gettingstarted"
         }
       ]
     },
@@ -32,7 +36,37 @@
       ]
     },
     {
-      "label": "Atoms",
+      "label": "Actions",
+      "icon": "",
+      "pages": [
+        {
+          "label": "Buttons",
+          "url": "buttons"
+        },
+        {
+          "label": "Dropdown",
+          "url": "dropdown",
+          "disabled": true
+        },
+        {
+          "label": "Modal",
+          "url": "modal",
+          "disabled": true
+        },
+        {
+          "label": "Swap",
+          "url": "swap",
+          "disabled": true
+        },
+        {
+          "label": "Toasters",
+          "url": "toasters",
+          "disabled": true
+        }
+      ]
+    },
+    {
+      "label": "Content",
       "icon": "",
       "pages": [
         {
@@ -40,32 +74,12 @@
           "url": "avatars"
         },
         {
-          "label": "Buttons",
-          "url": "buttons"
-        },
-        {
           "label": "Chips",
           "url": "chips"
         },
         {
-          "label": "Pagination",
-          "url": "pagination"
-        },
-        {
-          "label": "Tabs",
-          "url": "tabs"
-        },
-        {
-          "label": "Scrollbars",
-          "url": "scrollbars"
-        },
-        {
           "label": "Progress bars",
           "url": "progressbars"
-        },
-        {
-          "label": "Menu",
-          "url": "menu"
         },
         {
           "label": "Badge",
@@ -76,21 +90,89 @@
           "url": "loaders"
         },
         {
-          "label": "Steps",
-          "url": "steps"
-        },
-        {
           "label": "Tooltips",
           "url": "tooltips"
         },
         {
           "label": "Checkmarks",
           "url": "checkmarks"
+        },
+        {
+          "label": "Scrollbars",
+          "url": "scrollbars"
+        },
+        {
+          "label": "Tables",
+          "url": "tables",
+          "disabled": true
+        },
+        {
+          "label": "Tournament brackets",
+          "url": "tournamentbrackets"
+        },
+        {
+          "label": "Empty states",
+          "url": "emptystates"
+        },
+        {
+          "label": "Reward ladder",
+          "url": "rewardladder"
+        },
+        {
+          "label": "Stats & numbers",
+          "url": "statsnumbers"
+        },
+        {
+          "label": "Carousel",
+          "url": "carousel"
+        },
+        {
+          "label": "List items",
+          "url": "listitems"
+        },
+        {
+          "label": "Countdown",
+          "url": "countdown"
+        },
+        {
+          "label": "Alert",
+          "url": "alert"
         }
       ]
     },
     {
-      "label": "Form",
+      "label": "Navigation",
+      "icon": "",
+      "pages": [
+        
+        {
+          "label": "Pagination",
+          "url": "pagination"
+        },
+        {
+          "label": "Tabs",
+          "url": "tabs"
+        },
+        {
+          "label": "Menu",
+          "url": "menu"
+        },
+        {
+          "label": "Steps",
+          "url": "steps"
+        },
+        {
+          "label": "Accordion",
+          "url": "accordion"
+        },
+        {
+          "label": "Links",
+          "url": "links"
+        }
+      ]
+    },
+    {
+      "label": "Data input",
       "icon": "",
       "pages": [
         {
@@ -102,8 +184,8 @@
           "url": "textinputs"
         },
         {
-          "label": "Radio, checkbox, switch",
-          "url": "radiocheckboxswitch"
+          "label": "Radio, checkbox, toggle",
+          "url": "radiocheckboxtoggle"
         },
         {
           "label": "Select inputs",
@@ -112,22 +194,9 @@
       ]
     },
     {
-      "label": "Molecules",
+      "label": "Cards",
       "icon": "",
       "pages": [
-        {
-          "label": "Modals",
-          "url": "modals"
-        },
-        {
-          "label": "Tables",
-          "url": "tables",
-          "disabled": true
-        },
-        {
-          "label": "Accordion",
-          "url": "accordion"
-        },
         {
           "label": "Mission cards",
           "url": "missioncards"
@@ -135,35 +204,6 @@
         {
           "label": "Tournament cards",
           "url": "tournamentcards"
-        },
-        {
-          "label": "Tournament brackets",
-          "url": "tournamentbrackets"
-        },
-        {
-          "label": "Empty states",
-          "url": "emptystates"
-        },
-        {
-          "label": "Toasters",
-          "url": "toasters",
-          "disabled": true
-        },
-        {
-          "label": "Reward ladder",
-          "url": "rewardladder"
-        },
-        {
-          "label": "Data & numbers",
-          "url": "datanumbers"
-        },
-        {
-          "label": "Carousel",
-          "url": "carousel"
-        },
-        {
-          "label": "List items",
-          "url": "listitems"
         },
         {
           "label": "Content cards",
