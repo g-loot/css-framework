@@ -48,13 +48,13 @@ export default function GettingStarted() {
                   Import the framework config into your project <code className='text-xs'>tailwind.config.js</code> and indicate which files Tailwind should scan.
                 </p>
                 <div className='code surface'>
-                  <pre data-prefix=""><code>const tailwindConfig = require('@augustin_hiebel/gloot-framework/tailwind.config');</code></pre>
+                  <pre data-prefix=""><code>const tailwindConfig = require(&apos;@augustin_hiebel/gloot-framework/tailwind.config&apos;);</code></pre>
                   <pre data-prefix=""><code>module.exports = &#123;</code></pre>
                   <pre data-prefix=""><code>  ...tailwindConfig,</code></pre>
-                  <pre data-prefix=""><code>  content: [</code></pre>
-                  <pre data-prefix=""><code>    "./pages/*.&#123;js,ts,jsx,tsx,json&#x7D;",</code></pre>
-                  <pre data-prefix=""><code>  ],</code></pre>
-                  <pre data-prefix=""><code>]&#x7D;;</code></pre>
+                  <pre data-prefix=""><code>  content: &#x5B;</code></pre>
+                  <pre data-prefix=""><code>    &quot;./pages/*.&#123;js,ts,jsx,tsx,json&#x7D;&quot;,</code></pre>
+                  <pre data-prefix=""><code>  &#x5D;,</code></pre>
+                  <pre data-prefix=""><code>&#x5D;&#x7D;;</code></pre>
                 </div>
               </div>
             </div>
