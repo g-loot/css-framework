@@ -145,7 +145,7 @@
       transform-origin: center center;
       stroke-width: 24;
       stroke-dasharray: 120;
-      stroke-dashoffset: calc((1 * var(--percent)) - 100);
+      stroke-dashoffset: calc((1px * var(--percent)) - 100px);
     }
   }
 

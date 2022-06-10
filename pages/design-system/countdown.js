@@ -9,7 +9,6 @@ import { useRouter } from 'next/router';
 function calculateTimeLeft() {
   const year = new Date().getFullYear();
   const date = new Date().getUTCDate();
-  console.log(date);
   const difference = +new Date(`${year}-10-1`) - +new Date();
   let timeLeft = {};
 
@@ -30,14 +29,14 @@ export default function Countdown() {
   const [timeLeft, setTimeLeft] = React.useState(calculateTimeLeft());
 
   React.useEffect(() => {
-    const id = setTimeout(() => {
+    const id = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => {
-      clearTimeout(id);
+      clearInterval(id);
     };
-  });
+  }, []);
 
 
   const router = useRouter();

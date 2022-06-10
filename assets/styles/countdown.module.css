@@ -24,9 +24,10 @@
       text-center
       transition-all
       duration-1000
-      top-[calc(var(--value)*-1em)]
+      top-[calc(var(--value)_*_-1em)]
       ease-[cubic-bezier(0.9,0,0.1,1)]
       ;
+      /*top-[calc(var(--value)*-1em)]*/
     }
   }
   &.text-8xl {
