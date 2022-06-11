@@ -57,7 +57,7 @@ export default function StatsNumbers() {
 
 
           {/* Gauge */}
-          <div className='mb-12'>
+          <div className='mb-12' id='gauge'>
 
             <h2 className='h3 mb-3'>
               Gauge
@@ -120,7 +120,7 @@ export default function StatsNumbers() {
 
 
           {/* Icon holder */}
-          <div className='mb-12'>
+          <div className='mb-12' id='icon-holder'>
 
             <h2 className='h3 mb-3'>
               Icon holder
@@ -167,7 +167,7 @@ export default function StatsNumbers() {
           {/* Icon holder + loader */}
           <div className='mb-12'>
 
-            <h2 className='h3 mb-3'>
+            <h2 className='h3 mb-3' id='icon-holder-loader'>
               Icon holder + loader
             </h2>
 
@@ -205,6 +205,62 @@ export default function StatsNumbers() {
                         <span>Get random values</span>
                       </button>
                     </div>                 
+                  </div>
+                  <div className='flex-1'>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/ryc2mboz/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          {/* Stats */}
+          <div className='mb-12'>
+
+            <h2 className='h3 mb-3' id='stats'>
+              Stats
+            </h2>
+
+            <div className="surface rounded-lg p-4">
+              <div className=''>
+                <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+                  <div className='flex-1 space-y-4 flex justify-center'>
+                    <div className='stats surface surface-ui-700'>
+                      <div className='stat'>
+                        <div className='stat-label'>
+                          Downloads
+                        </div>
+                        <div className='stat-value'>
+                          31k
+                        </div>
+                        <div className='stat-description'>
+                          From January 1st to February 1st
+                        </div>
+                      </div>
+                      <div className='stat'>
+                        <div className='stat-label'>
+                          Total Users
+                        </div>
+                        <div className='stat-value'>
+                          89,400
+                        </div>
+                        <div className='stat-description text-interaction-500'>
+                          ↗︎ 21% more than last month
+                        </div>
+                      </div>
+                      <div className='stat'>
+                        <div className='stat-label'>
+                          New Registers
+                        </div>
+                        <div className='stat-value'>
+                          1,200
+                        </div>
+                        <div className='stat-description text-error-500'>
+                          ↘︎ 15% less than last month
+                        </div>
+                      </div>
+                    </div>   
                   </div>
                   <div className='flex-1'>
                     <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/ryc2mboz/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>

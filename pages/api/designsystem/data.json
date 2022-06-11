@@ -49,9 +49,8 @@
           "disabled": true
         },
         {
-          "label": "Modal",
-          "url": "modal",
-          "disabled": true
+          "label": "Modals",
+          "url": "modals"
         },
         {
           "label": "Swap",

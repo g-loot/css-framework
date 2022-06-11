@@ -13,9 +13,9 @@ export default function DSTopBar({children, data}) {
             
           </div>
           <div className='w-1/2 md:w-9/12 xl:w-10/12 flex items-center justify-between'>
-            <div className='flex items-baseline gap-2'>
+            <div className='flex items-center gap-2'>
               <div className='hidden md:block font-headings italic text-xl leading-none text-ui-300'>
-                Front-end framework
+                Framework
               </div>
               <div className='chip chip-secondary chip-xs'>
                 <span>v{packageFramework.version}</span>
@@ -23,7 +23,7 @@ export default function DSTopBar({children, data}) {
             </div>
             <div className='flex items-center justify-end'>
               <div className='block md:hidden font-headings italic text-lg leading-none text-ui-300'>
-                Front-end Framework
+                Framework
               </div>
             </div>
           </div>

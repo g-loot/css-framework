@@ -23,7 +23,7 @@ export default function AccordionDS() {
 
 
           {/* Structure */}
-          <div className='mb-12'>
+          <div className='mb-12' id='structure'>
 
             <h2 className='h3 mb-3'>
               Structure
@@ -139,7 +139,7 @@ export default function AccordionDS() {
 
 
           {/* With halo */}
-          <div className='mb-12'>
+          <div className='mb-12' id='with-halo'>
 
             <h2 className='h3 mb-3'>
               With halo

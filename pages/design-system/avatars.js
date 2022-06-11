@@ -21,11 +21,11 @@ export default function Avatars() {
           </h1>
 
 
-          {/* shape */}
-          <div className='mb-12'>
+          {/* Shapes */}
+          <div className='mb-12' id='shapes'>
 
             <h2 className='h3 mb-3'>
-              Shape
+              Shapes
             </h2>
 
             <div className="surface rounded-lg p-4">
@@ -95,11 +95,11 @@ export default function Avatars() {
 
 
 
-          {/* size */}
-          <div className='mb-12'>
+          {/* Sizes */}
+          <div className='mb-12' id='sizes'>
 
             <h2 className='h3 mb-3'>
-              Size
+              Sizes
             </h2>
 
             <div className="surface rounded-lg p-4">
@@ -194,8 +194,8 @@ export default function Avatars() {
 
 
 
-          {/* rank */}
-          <div className='mb-12'>
+          {/* Rank */}
+          <div className='mb-12' id='rank'>
 
             <h2 className='h3 mb-3'>
               Rank
@@ -264,8 +264,8 @@ export default function Avatars() {
 
 
 
-          {/* status */}
-          <div className='mb-12'>
+          {/* Status */}
+          <div className='mb-12' id='status'>
 
             <h2 className='h3 mb-3'>
               Status

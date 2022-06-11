@@ -121,7 +121,7 @@
   &.modal-inverted {
     .modal-image {
       @apply
-      order-2
+      lg:order-2
       ;
     }
     .modal-content {

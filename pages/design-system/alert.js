@@ -21,7 +21,7 @@ export default function Alert() {
 
 
           {/* Structure */}
-          <div className='mb-12'>
+          <div className='mb-12' id='structure'>
 
             <h2 className='h3 mb-3'>
               Structure
@@ -47,7 +47,7 @@ export default function Alert() {
           </div>
 
           {/* With buttons */}
-          <div className='mb-12'>
+          <div className='mb-12' id='with-buttons'>
 
             <h2 className='h3 mb-3'>
               With buttons
@@ -78,7 +78,7 @@ export default function Alert() {
           </div>
 
           {/* Colors */}
-          <div className='mb-12'>
+          <div className='mb-12' id='colors'>
 
             <h2 className='h3 mb-3'>
               Colors

@@ -18,6 +18,7 @@
   justify-between
   transform-gpu
   ;
+  
   &:not([class*='rounded']) {
     @apply
     rounded-xl

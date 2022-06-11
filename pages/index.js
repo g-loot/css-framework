@@ -25,8 +25,8 @@ export default function Home() {
                   <div className='flex items-start justify-between pb-8 mb-8 border-b border-ui-700'>
                     <div>
                       <img className='mb-1' width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
-                      <h1 className='text-xl uppercase not-italic leading-none pl-10'>
-                        Front-end
+                      <h1 className='text-lg uppercase not-italic leading-none pl-10'>
+                        Framework
                       </h1>
                     </div>
                     <div className='text-xs text-ui-400 block lg:hidden'>
@@ -63,7 +63,7 @@ export default function Home() {
                   <div className='card-decoration'></div>
                   <div className='card-info'>
                     <div className='card-title flex gap-2 items-center'>
-                      <span>Front-end Framework</span> <button className="chip chip-xs chip-secondary pointer-events-none uppercase uppercase"><span>work in progress</span></button>
+                      <span>Framework</span> <button className="chip chip-xs chip-secondary pointer-events-none uppercase uppercase"><span>work in progress</span></button>
                     </div>
                     <div className='card-meta'>
                       <div>
