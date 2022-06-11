@@ -103,7 +103,7 @@ export default function GettingStarted() {
               </ul>
               <div className='' id='example-repository'>
 
-                <h2 className='h3'>Example repository <a class="text-2xl opacity-20 hover:opacity-60" href="#example-repository">#</a></h2>
+                <h2 className='h3'>Example repository <a className="text-2xl opacity-20 hover:opacity-60" href="#example-repository">#</a></h2>
                 <p className='text-ui-200 leading-tight my-4'>
                   Check this example setup of the G-Loot Framework and Tailwind CSS on webpack.
                 </p>
