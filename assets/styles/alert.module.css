@@ -16,7 +16,7 @@
   border
   border-ui-600
   backdrop-blur-sm
- 
+  leading-tight
   ;
   > * {
     @apply

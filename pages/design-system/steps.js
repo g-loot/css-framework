@@ -67,7 +67,7 @@ export default function Steps() {
 
 
           {/* Structure */}
-          <div className='mb-12'>
+          <div className='mb-12' id='structure'>
 
             <h2 className='h3 mb-3'>
               Structure
@@ -116,7 +116,7 @@ export default function Steps() {
 
 
           {/* Variants */}
-          <div className='mb-12'>
+          <div className='mb-12' id='variants'>
 
             <h2 className='h3 mb-3'>
               Variants
@@ -292,7 +292,7 @@ export default function Steps() {
 
 
           {/* Label position */}
-          <div className='mb-12'>
+          <div className='mb-12' id='label-position'>
 
             <h2 className='h3 mb-3'>
               Label position
@@ -341,7 +341,7 @@ export default function Steps() {
 
 
           {/* Vertical */}
-          <div className='mb-12'>
+          <div className='mb-12' id='vertical'>
 
             <h2 className='h3 mb-3'>
               Vertical

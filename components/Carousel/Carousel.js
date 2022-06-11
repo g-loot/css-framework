@@ -68,7 +68,7 @@ export default function Carousel(props) {
               <div className='carousel-image'>
                 <span style={{ backgroundImage: `url(${slide.image})`}}></span>
               </div>
-              <div className='carousel-content'>
+              <div className='carousel-body'>
                 <div>
                   <h2 className='h3 text-ui-100'>
                     {slide.title}

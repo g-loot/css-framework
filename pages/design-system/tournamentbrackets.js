@@ -168,7 +168,7 @@ export default function TournamentBracketsDS() {
 
 
           {/* Structure */}
-          <div className='mb-12'>
+          <div className='mb-12' id='structure'>
 
             <h2 className='h3 mb-3'>
               Structure
@@ -247,7 +247,7 @@ export default function TournamentBracketsDS() {
           </div>
 
           {/* Responsive */}
-          <div className='mb-12'>
+          <div className='mb-12' id='responsive'>
 
             <h2 className='h3 mb-3'>
               Responsive brackets

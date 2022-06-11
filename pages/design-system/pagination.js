@@ -20,14 +20,13 @@ export default function Pagination() {
           </h1>
 
 
-          {/* variant */}
-          <div className='mb-12'>
+          {/* Structure */}
+          <div className='mb-12' id='structure'>
 
             <h2 className='h3 mb-3'>
-              Default
+              Structure
             </h2>
           
-            {/* variant: primary */}
             <div className="surface rounded-lg p-4">
               <div className=''>
                 <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
@@ -72,8 +71,8 @@ export default function Pagination() {
 
 
 
-          {/* bullet */}
-          <div className='mb-12'>
+          {/* Bullet */}
+          <div className='mb-12' id='bullet'>
 
             <h2 className='h3 mb-3'>
               Bullet

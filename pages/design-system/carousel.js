@@ -112,7 +112,7 @@ export default function CarouselDS() {
 
 
           {/* Structure */}
-          <div className='mb-12'>
+          <div className='mb-12' id='structure'>
 
             <div className='pt-4'>
               <div className=''>
@@ -131,7 +131,7 @@ export default function CarouselDS() {
                               <div className='carousel-image'>
                                 <span style={{ backgroundImage: `url(${slide.image})`}}></span>
                               </div>
-                              <div className='carousel-content'>
+                              <div className='carousel-body'>
                                 <div>
                                   <h2 className='h3'>
                                     {slide.title}
@@ -157,7 +157,7 @@ export default function CarouselDS() {
                             <>
                               <li key={itemIndex} className={`${slideNumber === itemIndex ? 'is-active' : ''}`}>
                                 <a onClick={slideHandler.bind(this, itemIndex)} className='item'>
-                                  <div className='item-content'>
+                                  <div className='item-body'>
                                   <span className='text-xs text-ui-300'>
                                       Step {itemIndex + 1}
                                     </span>
@@ -196,7 +196,7 @@ export default function CarouselDS() {
 
 
           {/* Carousel step (onboarding) */}
-          <div className='mb-12'>
+          <div className='mb-12' id='step'>
 
             <div className='pt-4'>
               <div className=''>
@@ -215,7 +215,7 @@ export default function CarouselDS() {
                               <div className='carousel-image'>
                                 <span style={{ backgroundImage: `url(${slideOnboarding.image})`}}></span>
                               </div>
-                              <div className='carousel-content'>
+                              <div className='carousel-body'>
                                 <div>
                                   <h2 className='h3'>
                                     {slideOnboarding.title}
@@ -244,7 +244,7 @@ export default function CarouselDS() {
                             <>
                               <li key={slideOnboardingIndex} className={`${slideOnboardingNumber === slideOnboardingIndex ? 'is-active' : ''}`}>
                                 <a onClick={slideOnboardingHandler.bind(this, slideOnboardingIndex)} className='item'>
-                                  <div className='item-content'>
+                                  <div className='item-body'>
                                     <span className='text-xs text-ui-300'>
                                       Step {slideOnboardingIndex + 1}
                                     </span>
@@ -267,7 +267,7 @@ export default function CarouselDS() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="400" src="//jsfiddle.net/augustin_hiebel/kjq7t1rd/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="400" src="//jsfiddle.net/augustin_hiebel/jkyfqgm1/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>

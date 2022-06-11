@@ -22,7 +22,7 @@ export default function Loaders() {
 
 
           {/* Spinner */}
-          <div className='mb-12'>
+          <div className='mb-12' id='spinner'>
 
             <h2 className='h3 mb-3'>
               Spinner
@@ -85,7 +85,7 @@ export default function Loaders() {
 
 
           {/* G-Loot loader */}
-          <div className='mb-12'>
+          <div className='mb-12' id='gloot-loader'>
 
             <h2 className='h3 mb-3'>
               G-Loot loader
@@ -156,13 +156,13 @@ export default function Loaders() {
           </div>
 
           {/* Cards */}
-          <div className='mb-12'>
+          <div className='mb-12' id='cards'>
 
             <h2 className='mb-3'>
               Cards
             </h2>
 
-            {/* Cards */}
+            {/* Mission card */}
             <div className="surface rounded-lg p-4">
               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
                 <h3 className='h4 mb-6 lg:mb-10'>
@@ -173,7 +173,7 @@ export default function Loaders() {
                     <div className='card-mission is-loading'>
                       <div className='card-decoration'>
                       </div>
-                      <div className='card-info'>
+                      <div className='card-body'>
                         <div className='card-title'>
                           Get 10 shots on goal
                         </div>
@@ -215,7 +215,7 @@ export default function Loaders() {
                           <span>Global</span>
                         </div>
                       </div>
-                      <div className='card-info'>
+                      <div className='card-body'>
                         <div className='chip chip-sliced chip-gray'>
                           <span>Finished</span>
                         </div>
@@ -261,7 +261,7 @@ export default function Loaders() {
           </div>
 
           {/* Lists */}
-          <div className='mb-12'>
+          <div className='mb-12' id='list'>
 
             <h2 className='mb-3'>
               Lists
@@ -282,7 +282,7 @@ export default function Loaders() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Croc Esports
                           </div>
@@ -297,7 +297,7 @@ export default function Loaders() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Croc Esports
                           </div>
@@ -312,7 +312,7 @@ export default function Loaders() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Croc Esports
                           </div>
@@ -327,7 +327,7 @@ export default function Loaders() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Croc Esports
                           </div>

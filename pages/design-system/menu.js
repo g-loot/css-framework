@@ -21,7 +21,7 @@ export default function Menu() {
 
 
           {/* primary */}
-          <div className='mb-12'>
+          <div className='mb-12' id='primary'>
 
             <h2 className='h3 mb-3'>
               Primary
@@ -63,7 +63,7 @@ export default function Menu() {
           </div>
 
           {/* secondary */}
-          <div className='mb-12'>
+          <div className='mb-12' id='secondary'>
 
             <h2 className='h3 mb-3'>
               Secondary
@@ -105,7 +105,7 @@ export default function Menu() {
           </div>
 
           {/* with icons */}
-          <div className='mb-12'>
+          <div className='mb-12' id='with-icons'>
 
             <h2 className='h3 mb-3'>
               With icons
@@ -151,7 +151,7 @@ export default function Menu() {
           </div>
 
           {/* with separators */}
-          <div className='mb-12'>
+          <div className='mb-12' id='with-separator'>
 
             <h2 className='h3 mb-3'>
               With separators

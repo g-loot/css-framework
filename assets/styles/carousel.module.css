@@ -110,7 +110,7 @@
         }
       }
 
-      .carousel-content {
+      .carousel-body {
         @apply
         relative
         z-20

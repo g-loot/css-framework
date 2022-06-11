@@ -22,7 +22,7 @@ export default function Mdodal() {
 
 
           {/* Structure */}
-          <div className='mb-12'>
+          <div className='mb-12' id='structure'>
 
             <h2 className='h3 mb-3'>
               Structure
@@ -70,7 +70,7 @@ export default function Mdodal() {
 
 
           {/* Inverted */}
-          <div className='mb-12'>
+          <div className='mb-12' id='inverted'>
 
             <h2 className='h3 mb-3'>
               Inverted
@@ -118,11 +118,11 @@ export default function Mdodal() {
 
 
 
-          {/* Inverted */}
-          <div className='mb-12'>
+          {/* With inner image */}
+          <div className='mb-12' id='with-inner-image'>
 
             <h2 className='h3 mb-3'>
-              Inverted
+              With inner image
             </h2>
 
             <div className='mb-10'>

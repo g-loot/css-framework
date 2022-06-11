@@ -37,7 +37,7 @@ export default function AccordionDS() {
                   <Accordion header={(
                   <>
                     <div className='item'>
-                      <div className='item-content'>
+                      <div className='item-body'>
                         <div className='p-2 item-title font-headings text-lg italic'>
                           Before entering a Brawl
                         </div>
@@ -67,7 +67,7 @@ export default function AccordionDS() {
                   <Accordion header={(
                   <>
                     <div className='item'>
-                      <div className='item-content'>
+                      <div className='item-body'>
                         <div className='p-2 item-title font-headings text-lg italic'>
                           Play your first matches to join the leaderboard
                         </div>
@@ -95,7 +95,7 @@ export default function AccordionDS() {
                   <Accordion header={(
                   <>
                     <div className='item'>
-                      <div className='item-content'>
+                      <div className='item-body'>
                         <div className='p-2 item-title font-headings text-lg italic'>
                           Pay tokens to activate Brawl matches
                         </div>
@@ -162,7 +162,7 @@ export default function AccordionDS() {
                           <span className={`icon icon-24 icon-game-valorant-symbol`}></span>
                         </div>
                       </div>
-                      <div className='item-content'>
+                      <div className='item-body'>
                         <div className='item-title font-headings text-xl italic'>
                           Valorant
                         </div>
@@ -195,7 +195,7 @@ export default function AccordionDS() {
                           <span className={`icon icon-24 icon-game-pubg-symbol`}></span>
                         </div>
                       </div>
-                      <div className='item-content'>
+                      <div className='item-body'>
                         <div className='item-title font-headings text-xl italic'>
                           PUBG: BATTLEGROUNDS
                         </div>
@@ -228,7 +228,7 @@ export default function AccordionDS() {
                           <span className={`icon icon-24 icon-game-rocketleague-symbol`}></span>
                         </div>
                       </div>
-                      <div className='item-content'>
+                      <div className='item-body'>
                         <div className='item-title font-headings text-xl italic'>
                           Rocket League
                         </div>

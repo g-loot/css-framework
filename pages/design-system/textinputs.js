@@ -21,7 +21,7 @@ export default function TextInputs() {
 
 
           {/* structure */}
-          <div className='mb-12'>
+          <div className='mb-12' id='structure'>
 
             <h2 className='h3 mb-3'>
               Structure
@@ -70,7 +70,7 @@ export default function TextInputs() {
 
 
           {/* Validation */}
-          <div className='mb-12'>
+          <div className='mb-12' id='validation'>
 
             <h2 className='h3 mb-3'>
               Validation
@@ -108,7 +108,7 @@ export default function TextInputs() {
 
 
           {/* With icon */}
-          <div className='mb-12'>
+          <div className='mb-12' id='with-icon'>
 
             <h2 className='h3 mb-3'>
               With icon
@@ -153,7 +153,7 @@ export default function TextInputs() {
 
 
           {/* With loader */}
-          <div className='mb-12'>
+          <div className='mb-12' id='with-loader'>
 
             <h2 className='h3 mb-3'>
               Status
@@ -216,7 +216,7 @@ export default function TextInputs() {
 
 
           {/* With button */}
-          <div className='mb-12'>
+          <div className='mb-12' id='with-button'>
 
             <h2 className='h3 mb-3'>
               With button
@@ -259,7 +259,7 @@ export default function TextInputs() {
 
 
           {/* Input date */}
-          <div className='mb-12'>
+          <div className='mb-12' id='input-date'>
 
             <h2 className='h3 mb-3'>
               Input date

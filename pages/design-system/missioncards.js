@@ -20,14 +20,11 @@ export default function MissionCards() {
           </h1>
 
 
-          {/* Mission surface */}
+          {/* Normal */}
           <div className='mb-12'>
-
-          
            
-            {/* Reward: XP */}
             <div className="surface rounded-lg p-4">
-              <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
+              <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12' id='normal'>
                 <h3 className='h4 mb-6 lg:mb-10'>
                   Normal
                 </h3>
@@ -35,7 +32,7 @@ export default function MissionCards() {
                   <div className='flex-1 space-y-4'>
                     <div className='card-mission surface-ui-700'>
                       <div className='card-decoration'></div>
-                      <div className='card-info'>
+                      <div className='card-body'>
                         <div className='card-title'>
                           Get 22 kills
                         </div>
@@ -64,7 +61,7 @@ export default function MissionCards() {
               </div>
 
               {/* Premium locked */}
-              <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
+              <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12' id='premium-locked'>
                 <h3 className='h4 mb-6 lg:mb-10'>
                   Premium locked
                 </h3>
@@ -74,7 +71,7 @@ export default function MissionCards() {
                       <div className='card-decoration'>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1653293407/Marketing/2022_prototype/Premium_logo.png' width='auto' height='auto' alt='G-Loot Premium' />
                       </div>
-                      <div className='card-info'>
+                      <div className='card-body'>
                         <div className='card-title'>
                           Get 3 double kills
                         </div>
@@ -103,7 +100,7 @@ export default function MissionCards() {
               </div>
 
                {/* Premium unlocked */}
-               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
+               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12' id='premium-unlocked'>
                 <h3 className='h4 mb-6 lg:mb-10'>
                   Premium unlocked
                 </h3>
@@ -113,7 +110,7 @@ export default function MissionCards() {
                       <div className='card-decoration'>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1653293407/Marketing/2022_prototype/Premium_logo.png' width='auto' height='auto' alt='G-Loot Premium' />
                       </div>
-                      <div className='card-info'>
+                      <div className='card-body'>
                         <div className='card-title'>
                           Get 6 assists
                         </div>
@@ -141,9 +138,8 @@ export default function MissionCards() {
                 </div>
               </div>
 
-
                {/* Interactive */}
-               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
+               <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12' id='interactive'>
                 <h3 className='h4 mb-6 lg:mb-10'>
                   Interactive
                 </h3>
@@ -152,7 +148,7 @@ export default function MissionCards() {
                     <div className='card-mission surface-ui-700 card-interactive'>
                       <div className='card-decoration'>
                       </div>
-                      <div className='card-info'>
+                      <div className='card-body'>
                         <div className='card-title'>
                           Get 10 shots on goal
                         </div>
@@ -181,7 +177,7 @@ export default function MissionCards() {
               </div>
 
                {/* Loading */}
-               <div className=''>
+               <div className='' id='loading'>
                 <h3 className='h4 mb-6 lg:mb-10'>
                   Loading
                 </h3>
@@ -190,7 +186,7 @@ export default function MissionCards() {
                     <div className='card-mission is-loading'>
                       <div className='card-decoration'>
                       </div>
-                      <div className='card-info'>
+                      <div className='card-body'>
                         <div className='card-title'>
                           Get 10 shots on goal
                         </div>

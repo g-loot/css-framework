@@ -16,7 +16,7 @@
   p-2
   w-full
   ;
-  .item-content {
+  .item-body {
     @apply
     overflow-hidden
     ;

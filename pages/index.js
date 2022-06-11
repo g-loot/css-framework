@@ -61,7 +61,7 @@ export default function Home() {
               <div className='flex-3 space-y-8'>
                 <a href='design-system/about' className='card-mission card-interactive surface-ui-700'>
                   <div className='card-decoration'></div>
-                  <div className='card-info'>
+                  <div className='card-body'>
                     <div className='card-title flex gap-2 items-center'>
                       <span>Framework</span> <button className="chip chip-xs chip-secondary pointer-events-none uppercase uppercase"><span>work in progress</span></button>
                     </div>
@@ -80,7 +80,7 @@ export default function Home() {
                 </a>
                 <a href='prototype/' className='card-mission card-interactive surface-ui-700'>
                   <div className='card-decoration'></div>
-                  <div className='card-info'>
+                  <div className='card-body'>
                     <div className='card-title flex gap-2 items-center'>
                       <span>Prototype</span> <button className="chip chip-xs chip-secondary pointer-events-none uppercase uppercase"><span>work in progress</span></button>
                     </div>

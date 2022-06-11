@@ -21,7 +21,7 @@ export default function RadioCheckToggle() {
 
 
           {/* Radio */}
-          <div className='mb-12'>
+          <div className='mb-12' id='radio'>
 
             <h2 className='h3 mb-3'>
               Radio
@@ -56,7 +56,7 @@ export default function RadioCheckToggle() {
 
 
           {/* Toggle */}
-          <div className='mb-12'>
+          <div className='mb-12' id='toggle'>
 
             <h2 className='h3 mb-3'>
               Toggle
@@ -91,7 +91,7 @@ export default function RadioCheckToggle() {
 
 
           {/* Checkbox */}
-          <div className='mb-12'>
+          <div className='mb-12' id='checkbox'>
 
             <h2 className='h3 mb-3'>
               Checkbox
@@ -132,7 +132,7 @@ export default function RadioCheckToggle() {
 
 
           {/* Validation */}
-          <div className='mb-12'>
+          <div className='mb-12' id='validation'>
 
             <h2 className='h3 mb-3'>
               Validation

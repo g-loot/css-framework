@@ -23,7 +23,7 @@ export default function Buttons() {
 
 
           {/* variant */}
-          <div className='mb-12'>
+          <div className='mb-12'  id='variants'>
 
             <h2 className='mb-3'>
               Variants
@@ -314,8 +314,8 @@ export default function Buttons() {
 
 
 
-          {/* size */}
-          <div className='mb-12'>
+          {/* Sizes */}
+          <div className='mb-12' id='sizes'>
 
             <h2 className='mb-3'>
               Sizes
@@ -368,7 +368,7 @@ export default function Buttons() {
 
 
           {/* currency */}
-          <div className='mb-12'>
+          <div className='mb-12' id='currency'>
 
             <h2 className='mb-3'>
               Currency
@@ -489,7 +489,7 @@ export default function Buttons() {
 
 
           {/* close */}
-          <div className='mb-12'>
+          <div className='mb-12' id='close'>
 
             <h2 className='mb-3'>
               Close
@@ -532,7 +532,7 @@ export default function Buttons() {
 
 
           {/* status */}
-          <div className='mb-12'>
+          <div className='mb-12' id='status'>
 
             <h2 className='mb-3'>
               Status

@@ -216,9 +216,9 @@ export default function StatsNumbers() {
 
 
           {/* Stats */}
-          <div className='mb-12'>
+          <div className='mb-12' id='stats'>
 
-            <h2 className='h3 mb-3' id='stats'>
+            <h2 className='h3 mb-3'>
               Stats
             </h2>
 

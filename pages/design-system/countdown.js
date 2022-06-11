@@ -56,7 +56,7 @@ export default function Countdown() {
 
 
           {/* Structure */}
-          <div className='mb-12'>
+          <div className='mb-12' id='structure'>
 
             <h2 className='h3 mb-3'>
               Structure
@@ -79,7 +79,7 @@ export default function Countdown() {
           </div>
 
           {/* Typography */}
-          <div className='mb-12'>
+          <div className='mb-12' id='typography'>
 
             <h2 className='h3 mb-3'>
               Typography
@@ -102,7 +102,7 @@ export default function Countdown() {
           </div>
 
           {/* Clock countdown */}
-          <div className='mb-12'>
+          <div className='mb-12' id='clock-countdown'>
 
             <h2 className='h3 mb-3'>
               Clock countdown

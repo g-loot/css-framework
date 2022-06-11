@@ -39,7 +39,7 @@ export default function Alert() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/chnr8gbk/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/gm3p84ho/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
@@ -63,14 +63,14 @@ export default function Alert() {
                         <span>3 new tournaments available.</span>
                       </div>
                       <div className="flex-none">
-                        <button className="button button-sm button-secondary">Deny</button>
-                        <button className="button button-sm button-primary">Accept</button>
+                        <button type='button' className="button button-sm button-secondary"><span>Deny</span></button>
+                        <button type='button' className="button button-sm button-primary"><span>Accept</span></button>
                       </div>
                     </div>
                   
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/3c0gf9mx/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/2n3dxuz1/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function Alert() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/592j71gs/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/0y9fbe3d/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
@@ -117,7 +117,7 @@ export default function Alert() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/592j71gs/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/cfgd0u7j/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
@@ -135,7 +135,7 @@ export default function Alert() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/592j71gs/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/6fcoxy8w/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>
@@ -153,7 +153,7 @@ export default function Alert() {
                     </div>
                   </div>
                   <div className='flex-1'>
-                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/592j71gs/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+                    <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/bocn37zt/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
                   </div>
                 </div>
               </div>

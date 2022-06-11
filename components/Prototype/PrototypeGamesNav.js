@@ -34,7 +34,7 @@ export default function PrototypeGamesNav({children}) {
                         <span className={`icon icon-20 icon-game-${item.slug.replace(/#|_/g,'')}-symbol`}></span>
                       </div>
                     </div>
-                    <div className='item-content'>
+                    <div className='item-body'>
                       <div className='item-title font-headings uppercase'>
                         {item.name}
                       </div>

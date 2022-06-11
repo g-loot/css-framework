@@ -21,7 +21,7 @@ export default function ListItems() {
 
 
           {/* Structure */}
-          <div className='mb-12'>
+          <div className='mb-12' id='structure'>
 
             <h2 className='h3 mb-3'>
               Structure
@@ -38,7 +38,7 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Croc Esports
                           </div>
@@ -53,7 +53,7 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Kingzz
                           </div>
@@ -68,7 +68,7 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Angry Beavers
                           </div>
@@ -83,7 +83,7 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Bunny Hunger
                           </div>
@@ -103,7 +103,7 @@ export default function ListItems() {
           </div>
 
           {/* With action */}
-          <div className='mb-12'>
+          <div className='mb-12' id='with-action'>
 
             <h2 className='h3 mb-3'>
               With action
@@ -120,7 +120,7 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Croc Esports
                           </div>
@@ -142,7 +142,7 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Kingzz
                           </div>
@@ -164,7 +164,7 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Angry Beavers
                           </div>
@@ -186,7 +186,7 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Bunny Hunger
                           </div>
@@ -213,7 +213,7 @@ export default function ListItems() {
           </div>
 
           {/* As table */}
-          <div className='mb-12'>
+          <div className='mb-12' id='as-table'>
 
             <h2 className='h3 mb-3'>
               As table
@@ -235,15 +235,15 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Croc Esports
                           </div>
                         </div>
-                        <div className='item-content text-center text-sm text-ui-300'>
+                        <div className='item-body text-center text-sm text-ui-300'>
                           54
                         </div>
-                        <div className='item-content text-center flex-2 hidden xl:block'>
+                        <div className='item-body text-center flex-2 hidden xl:block'>
                           <div className='flex justify-center'>
                             <div className='flex justify-center items-center px-3 gap-2 bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full'>
                               <div className='flex items-center'>
@@ -276,15 +276,15 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Kingzz
                           </div>
                         </div>
-                        <div className='item-content text-center text-sm text-ui-300'>
+                        <div className='item-body text-center text-sm text-ui-300'>
                           27
                         </div>
-                        <div className='item-content text-center flex-2 hidden xl:block'>
+                        <div className='item-body text-center flex-2 hidden xl:block'>
                           <div className='flex justify-center'>
                             <div className='flex justify-center items-center px-3 gap-2 bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full'>
                               <div className='flex items-center'>
@@ -317,15 +317,15 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Angry Beavers
                           </div>
                         </div>
-                        <div className='item-content text-center text-sm text-ui-300'>
+                        <div className='item-body text-center text-sm text-ui-300'>
                           12
                         </div>
-                        <div className='item-content text-center flex-2 hidden xl:block'>
+                        <div className='item-body text-center flex-2 hidden xl:block'>
                           <div className='flex justify-center'>
                             <div className='flex justify-center items-center px-3 gap-2 bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full'>
                               <div className='flex items-center'>
@@ -358,15 +358,15 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Bunny Hunger
                           </div>
                         </div>
-                        <div className='item-content text-center text-sm text-ui-300'>
+                        <div className='item-body text-center text-sm text-ui-300'>
                           10
                         </div>
-                        <div className='item-content text-center flex-2 hidden xl:block'>
+                        <div className='item-body text-center flex-2 hidden xl:block'>
                           <div className='flex justify-center'>
                             <div className='flex justify-center items-center px-3 gap-2 bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full'>
                               <div className='flex items-center'>
@@ -401,7 +401,7 @@ export default function ListItems() {
 
 
           {/* With dimmed actions */}
-          <div className='mb-12'>
+          <div className='mb-12' id='with-dimmed-actions'>
 
             <h2 className='h3 mb-3'>
               With dimmed actions
@@ -413,7 +413,7 @@ export default function ListItems() {
                   <div className='flex-1 surface rounded-lg overflow-hidden'>
                     <ul className='item-actions-dimmed'>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #1
                           </div>
@@ -441,7 +441,7 @@ export default function ListItems() {
                         </div>
                       </li>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #2
                           </div>
@@ -469,7 +469,7 @@ export default function ListItems() {
                         </div>
                       </li>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #3
                           </div>
@@ -497,7 +497,7 @@ export default function ListItems() {
                         </div>
                       </li>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #4
                           </div>
@@ -525,7 +525,7 @@ export default function ListItems() {
                         </div>
                       </li>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #5
                           </div>
@@ -553,7 +553,7 @@ export default function ListItems() {
                         </div>
                       </li>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #6
                           </div>
@@ -581,7 +581,7 @@ export default function ListItems() {
                         </div>
                       </li>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #7
                           </div>
@@ -620,7 +620,7 @@ export default function ListItems() {
 
 
           {/* With hidden actions */}
-          <div className='mb-12'>
+          <div className='mb-12' id='with-hidden-actions'>
 
             <h2 className='h3 mb-3'>
               With hidden actions
@@ -632,7 +632,7 @@ export default function ListItems() {
                   <div className='flex-1 surface rounded-lg overflow-hidden'>
                     <ul className='item-actions-hidden'>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #1
                           </div>
@@ -660,7 +660,7 @@ export default function ListItems() {
                         </div>
                       </li>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #2
                           </div>
@@ -688,7 +688,7 @@ export default function ListItems() {
                         </div>
                       </li>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #3
                           </div>
@@ -716,7 +716,7 @@ export default function ListItems() {
                         </div>
                       </li>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #4
                           </div>
@@ -744,7 +744,7 @@ export default function ListItems() {
                         </div>
                       </li>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #5
                           </div>
@@ -772,7 +772,7 @@ export default function ListItems() {
                         </div>
                       </li>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #6
                           </div>
@@ -800,7 +800,7 @@ export default function ListItems() {
                         </div>
                       </li>
                       <li className='item'>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Brawl #7
                           </div>
@@ -838,7 +838,7 @@ export default function ListItems() {
           </div>
 
           {/* As notification */}
-          <div className='mb-12'>
+          <div className='mb-12' id='as-notification'>
 
             <h2 className='h3 mb-3'>
               As notification
@@ -855,7 +855,7 @@ export default function ListItems() {
                           <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654158104/Marketing/2022_prototype/DummyContent/carousel-item-pubg-s6.jpg)`}}></span>
                         </figure>
                       </div>
-                      <div className='item-content'>
+                      <div className='item-body'>
                         <div className='text-xs text-ui-300'>
                           Game or Area
                         </div>
@@ -881,7 +881,7 @@ export default function ListItems() {
           </div>
 
           {/* As header */}
-          <div className='mb-12'>
+          <div className='mb-12' id='as-header'>
 
             <h2 className='h3 mb-3'>
               As header
@@ -898,7 +898,7 @@ export default function ListItems() {
                           <span className='icon icon-chart-bar-33'></span>
                         </figure>
                       </div>
-                      <div className='item-content'>
+                      <div className='item-body'>
                         <div className='item-title'>
                           Your stats
                         </div>
@@ -920,7 +920,7 @@ export default function ListItems() {
 
 
           {/* Loading */}
-          <div className='mb-12'>
+          <div className='mb-12' id='loading'>
 
             <h2 className='h3 mb-3'>
               Loading
@@ -937,7 +937,7 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Croc Esports
                           </div>
@@ -952,7 +952,7 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Kingzz
                           </div>
@@ -967,7 +967,7 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Angry Beavers
                           </div>
@@ -982,7 +982,7 @@ export default function ListItems() {
                             <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png)`}}></span>
                           </figure>
                         </div>
-                        <div className='item-content'>
+                        <div className='item-body'>
                           <div className='item-title'>
                             Bunny Hunger
                           </div>

@@ -20,14 +20,14 @@ export default function TournamentCards() {
           </h1>
 
 
-          {/* Tournament surface */}
+          {/* Tournament card */}
           <div className='mb-12'>
 
           
            
             
             <div className="surface rounded-lg p-4">
-              <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
+              <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12' id='showdown'>
                 {/* Showdown */}
                 <h3 className='h4 mb-6 lg:mb-10'>
                   Showdown
@@ -41,7 +41,7 @@ export default function TournamentCards() {
                           <span>Valorant europe</span>
                         </div>
                       </div>
-                      <div className='card-info'>
+                      <div className='card-body'>
                         <div className='chip chip-sliced'>
                           <span>Open</span>
                         </div>
@@ -84,7 +84,7 @@ export default function TournamentCards() {
               </div>
 
               {/* Skirmish */}
-              <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
+              <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12' id='skirmish'>
                 <h3 className='h4 mb-6 lg:mb-10'>
                   Skirmish
                 </h3>
@@ -97,7 +97,7 @@ export default function TournamentCards() {
                           <span>Global</span>
                         </div>
                       </div>
-                      <div className='card-info'>
+                      <div className='card-body'>
                         <div className='chip chip-sliced chip-blue'>
                           <span>Ongoing</span>
                         </div>
@@ -140,7 +140,7 @@ export default function TournamentCards() {
               </div>
 
               {/* Open */}
-              <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
+              <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12' id='open'>
                 <h3 className='h4 mb-6 lg:mb-10'>
                   Open
                 </h3>
@@ -153,7 +153,7 @@ export default function TournamentCards() {
                           <span>Global</span>
                         </div>
                       </div>
-                      <div className='card-info'>
+                      <div className='card-body'>
                         <div className='chip chip-sliced chip-gray'>
                           <span>Finished</span>
                         </div>
@@ -195,9 +195,8 @@ export default function TournamentCards() {
                 </div>
               </div>
 
-
               {/* Loading */}
-              <div className=''>
+              <div className='' id='loading'>
                 <h3 className='h4 mb-6 lg:mb-10'>
                   Loading
                 </h3>
@@ -210,7 +209,7 @@ export default function TournamentCards() {
                           <span>Global</span>
                         </div>
                       </div>
-                      <div className='card-info'>
+                      <div className='card-body'>
                         <div className='chip chip-sliced chip-gray'>
                           <span>Finished</span>
                         </div>

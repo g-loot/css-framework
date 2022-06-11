@@ -22,7 +22,7 @@ export default function Chips() {
 
 
           {/* default */}
-          <div className='mb-12'>
+          <div className='mb-12' id='default'>
 
             <h2 className='mb-3'>
               Default
@@ -175,7 +175,7 @@ export default function Chips() {
           
           
           {/* Sizes */}
-          <div className='mb-12'>
+          <div className='mb-12' id='sizes'>
 
             <h2 className='mb-3'>
               Sizes
@@ -277,7 +277,7 @@ export default function Chips() {
           
           
           {/* Roundness */}
-          <div className='mb-12'>
+          <div className='mb-12' id='roundness'>
 
             <h2 className='mb-3'>
               Roundness
@@ -316,7 +316,7 @@ export default function Chips() {
 
 
           {/* Sliced */}
-          <div className='mb-12'>
+          <div className='mb-12' id='sliced'>
 
             <h2 className='mb-3'>
               Sliced
@@ -367,7 +367,7 @@ export default function Chips() {
 
 
           {/* Reward */}
-          <div className='mb-12'>
+          <div className='mb-12' id='reward'>
 
             <h2 className='mb-3'>
               Reward
@@ -516,7 +516,7 @@ export default function Chips() {
 
 
           {/* status */}
-          <div className='mb-12'>
+          <div className='mb-12' id='status'>
 
             <h2 className='mb-3'>
               Status

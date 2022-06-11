@@ -36,7 +36,7 @@ export default function RewardLadderDS() {
 
 
           {/* Reward ladder */}
-          <div className='mb-12'>
+          <div className='mb-12' id='reward-ladder'>
 
             <div className='pt-4'>
               <div className=''>

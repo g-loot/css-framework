@@ -29,7 +29,7 @@
     z-20
     ;
   }
-  .card-info {
+  .card-body {
     @apply
     relative
     z-20
@@ -85,7 +85,7 @@
       ;
     }
   }
-  .card-info {
+  .card-body {
     @apply
     p-4
     ;
@@ -174,7 +174,7 @@
   aspect-video
   max-w-sm
   ;
-  .card-info {
+  .card-body {
     @apply
     bg-ui-900/75
     backdrop-blur-sm

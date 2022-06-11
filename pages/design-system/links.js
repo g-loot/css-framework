@@ -57,7 +57,7 @@ export default function Links() {
 
 
           {/* Structure */}
-          <div className='mb-12'>
+          <div className='mb-12' id='structure'>
 
             <h2 className='h3 mb-3'>
               Structure
@@ -81,7 +81,7 @@ export default function Links() {
 
 
           {/* Main color */}
-          <div className='mb-12'>
+          <div className='mb-12' id='main-color'>
 
             <h2 className='h3 mb-3'>
               Main color
@@ -103,7 +103,7 @@ export default function Links() {
 
 
           {/* Underline on hover */}
-          <div className='mb-12'>
+          <div className='mb-12' id='hover-underline'>
 
             <h2 className='h3 mb-3'>
               Underline on hover

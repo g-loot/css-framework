@@ -22,7 +22,7 @@ export default function Tooltips() {
 
 
           {/* Small */}
-          <div className='mb-12'>
+          <div className='mb-12' id='small'>
 
             <h2 className='h3 mb-3'>
               Small

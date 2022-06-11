@@ -21,7 +21,7 @@ export default function Scrollbars() {
 
 
           {/* Primary */}
-          <div className='mb-12'>
+          <div className='mb-12' id='primary'>
 
             <h2 className='h3 mb-3'>
               Primary
@@ -58,7 +58,7 @@ export default function Scrollbars() {
           </div>
 
           {/* Secondary */}
-          <div className='mb-12'>
+          <div className='mb-12' id='secondary'>
 
             <h2 className='h3 mb-3'>
               Secondary <button className="chip chip-xs chip-secondary pointer-events-none uppercase"><span>default</span></button>
@@ -95,7 +95,7 @@ export default function Scrollbars() {
           </div>
 
           {/* Desktop only */}
-          <div className='mb-12'>
+          <div className='mb-12' id='desktop-only'>
 
             <h2 className='h3 mb-3'>
               Desktop only

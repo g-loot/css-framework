@@ -20,8 +20,8 @@ export default function SelectInputs() {
           </h1>
 
 
-          {/* single */}
-          <div className='mb-12'>
+          {/* Single */}
+          <div className='mb-12' id='single'>
 
             <h2 className='h3 mb-3'>
               Single
@@ -54,8 +54,8 @@ export default function SelectInputs() {
           </div>
 
 
-          {/* multiple */}
-          <div className='mb-12'>
+          {/* Multiple */}
+          <div className='mb-12' id='multiple'>
 
             <h2 className='h3 mb-3'>
               Multiple
@@ -90,7 +90,7 @@ export default function SelectInputs() {
 
 
           {/* Validation */}
-          <div className='mb-12'>
+          <div className='mb-12' id='validation'>
 
             <h2 className='h3 mb-3'>
               Validation
@@ -164,8 +164,8 @@ export default function SelectInputs() {
 
 
 
-          {/* With loader */}
-          <div className='mb-12'>
+          {/* Loading */}
+          <div className='mb-12' id='loading'>
 
             <h2 className='h3 mb-3'>
               Status

@@ -312,7 +312,7 @@
     opacity-0
     ;
   }
-  .item-content {
+  .item-body {
     *:not(.item-title) {
       @apply
       bg-ui-200/0

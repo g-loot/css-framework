@@ -465,7 +465,7 @@ export default function Avatars() {
 
 
           {/* simple */}
-          <div className='mb-12'>
+          <div className='mb-12' id='simple'>
 
             <h2 className='h3 mb-3'>
               Simple
@@ -564,7 +564,7 @@ export default function Avatars() {
 
 
           {/* With icon */}
-          <div className='mb-12'>
+          <div className='mb-12' id='with-icon'>
 
             <h2 className='h3 mb-3'>
               With icon

@@ -22,7 +22,7 @@ export default function Tabs() {
 
 
           {/* Structure */}
-          <div className='mb-12'>
+          <div className='mb-12' id='structure'>
 
             <h2 className='h3 mb-3'>
               Structure
@@ -69,7 +69,7 @@ export default function Tabs() {
 
 
           {/* with badges */}
-          <div className='mb-12'>
+          <div className='mb-12' id='with-badges'>
 
             <h2 className='h3 mb-3'>
               With badges
