@@ -73,6 +73,16 @@
         ease-[cubic-bezier(0.68,0,0.07,1)]
         ;
       }
+
+      &:active {
+        &:hover,
+        &:focus {
+          @apply 
+          translate-y-0.5
+          ;
+         
+        }
+      }
     }
 
     &.is-active > a,

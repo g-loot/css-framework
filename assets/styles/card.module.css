@@ -375,8 +375,11 @@
     }
   }
   &:active {
-    @apply
-    opacity-25
-    ;
+    &:hover,
+    &:focus {
+      @apply
+      opacity-75
+      ;
+    }
   }
 }

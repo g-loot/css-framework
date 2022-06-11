@@ -53,9 +53,8 @@
           "url": "modals"
         },
         {
-          "label": "Swap",
-          "url": "swap",
-          "disabled": true
+          "label": "Switch",
+          "url": "switch"
         },
         {
           "label": "Toasters",

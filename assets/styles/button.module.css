@@ -18,11 +18,11 @@
   p-3
   min-h-4
   transition-all
-  duration-200
+  duration-300
   ease-in-out
   text-ui-800
   scale-100
-  space-x-2
+  
   backdrop-blur
   bg-main
   bg-[length:500%_auto]
@@ -35,6 +35,8 @@
   tracking-wide
   transform-gpu
   ;
+
+  
 
   .icon {
     @apply
@@ -59,43 +61,53 @@
     ;
   }
 
-  > * {
-    &:first-child {
-      @apply
-      ml-0.5
-      ;
-    }
-    &:last-child {
-      @apply
-      mr-0.5
-      ;
-    }
-    &:first-child:last-child {
-      @apply
-      mx-0
-      ;
-    }
-    &:not([class*='icon']) {
-      @apply
-      mb-0
-      ;
+  &:not(.switch) {
+    @apply
+    space-x-2
+    ;
+    > * {
+      &:first-child {
+        @apply
+        ml-0.5
+        ;
+      }
+      &:last-child {
+        @apply
+        mr-0.5
+        ;
+      }
+      &:first-child:last-child {
+        @apply
+        mx-0
+        ;
+      }
+      &:not([class*='icon']) {
+        @apply
+        mb-0
+        ;
+      }
     }
   }
+
+  
 
   &:not([disabled]),
   &:not(.is-disabled) {
     &:hover,
     &:focus-visible {
       @apply 
-      scale-105
       bg-right
       shadow-[inset_0_0_0_1px_rgba(255,255,255,1)]
       ;
     }
     &:active {
-      @apply
-      opacity-25
-      ;
+      &:hover,
+      &:focus {
+        @apply
+        opacity-75
+        scale-95
+        ;
+      }
     }
   }
   

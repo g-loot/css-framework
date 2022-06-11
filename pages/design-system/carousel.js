@@ -253,7 +253,7 @@ export default function CarouselDS() {
                                     </div>
                                   </div>
                                   <div className='item-actions'>
-                                    <div className={`checkmark checkmark-sm ${slideOnboardingNumber > slideOnboardingIndex ? 'is-active' : ''}`}>
+                                    <div className={`checkmark checkmark-invisible checkmark-sm ${slideOnboardingNumber > slideOnboardingIndex ? 'is-active' : ''}`}>
                                       <i></i>
                                     </div>
                                   </div>

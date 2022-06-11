@@ -60,7 +60,7 @@ export default function About() {
               <h3 className='h3 my-4'>
                 Benefits
               </h3>
-              <p className='border-b border-ui-600 pb-5'>
+              <p className='border-b border-ui-700 pb-5'>
                 <strong className='font-headings text-xl text-main'>
                   Smart design
                 </strong>
@@ -69,7 +69,7 @@ export default function About() {
                   By separating the style from the content, you can design in a smarter way, combining styling across components (example: we are able to streamline the loading state of the tournament &amp; mission cards). It makes it also easier to have a semantic structure (div &gt; figure, header, section, ul, etc.).
                 </span>
               </p>
-              <p className='border-b border-ui-600 pb-5'>
+              <p className='border-b border-ui-700 pb-5'>
                 <strong className='font-headings text-xl text-main'>
                   One place of truth
                 </strong>
@@ -78,7 +78,7 @@ export default function About() {
                 Since the styling is defined outside of the React components, the appearance and feeling of any element can be explored and tested well before the React component is actually created. It also makes the G-Loot CSS Framework the one place of truth between UX/UI and devs.
                 </span>
               </p>
-              <p className='border-b border-ui-600 pb-5'>
+              <p className='border-b border-ui-700 pb-5'>
                 <strong className='font-headings text-xl text-main'>
                   Technology agnostic
                 </strong>
@@ -87,7 +87,7 @@ export default function About() {
                   As it is independent from the front-end technology (ReactJS), the G-Loot CSS Framework is instantly compatible with any other front-end language (VueJS, PHP, plain HTML, emails, etc.) making the building of ad-hoc tools and interfaces a piece of cake.
                 </span>
               </p>
-              <p className='border-b border-ui-600 pb-5'>
+              <p className='border-b border-ui-700 pb-5'>
                 <strong className='font-headings text-xl text-main'>
                   Flexible and quick
                 </strong>
@@ -108,15 +108,7 @@ export default function About() {
               <h3 className='h3 my-4'>
                 Downsides
               </h3>
-              <p className='border-b border-ui-600 pb-5'>
-                <strong className='font-headings text-xl text-error-300'>
-                  A more complex setup
-                </strong>
-                <br />
-                <span>
-                  The various parts of the products relying on the framework need to have a smart way to consume it while still being able to purge the unused class before the compilation. 
-                </span>
-              </p>
+             
               <p className='pb-5'>
                 <strong className='font-headings text-xl text-error-300'>
                   Work

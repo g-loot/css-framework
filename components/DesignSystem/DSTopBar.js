@@ -12,18 +12,21 @@ export default function DSTopBar({children, data}) {
             </a>
             
           </div>
-          <div className='w-1/2 md:w-9/12 xl:w-10/12 flex items-center justify-between'>
-            <div className='flex items-center gap-2'>
-              <div className='hidden md:block font-headings italic text-xl leading-none text-ui-300'>
+          <div className='w-1/2 md:w-9/12 xl:w-10/12 flex items-center justify-end md:justify-between'>
+            <div className='hidden md:flex items-center gap-2'>
+              <div className='font-headings italic text-xl leading-none text-ui-300'>
                 Framework
               </div>
               <div className='chip chip-secondary chip-xs'>
                 <span>v{packageFramework.version}</span>
               </div>
             </div>
-            <div className='flex items-center justify-end'>
-              <div className='block md:hidden font-headings italic text-lg leading-none text-ui-300'>
+            <div className='flex md:hidden gap-2 items-center justify-end'>
+              <div className='font-headings italic text-lg leading-none text-ui-300'>
                 Framework
+              </div>
+              <div className='chip chip-secondary chip-xs'>
+                <span>v{packageFramework.version}</span>
               </div>
             </div>
           </div>

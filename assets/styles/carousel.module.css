@@ -285,11 +285,13 @@
         &:not([disabled]),
         &:not(.is-disabled) {
           &:active {
-            @apply
-            duration-200
-            ease-in-out
-            opacity-25
-            ;
+            &:hover,
+            &:focus {
+              @apply
+              opacity-75
+              scale-95
+              ;
+            }
           }
         }
 

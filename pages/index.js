@@ -36,20 +36,27 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  <div className='hidden lg:block'>
-                    <div className='px-2 mb-2 uppercase font-headings text-ui-200'>
-                      Latest components:
+                  <div className='hidden lg:block space-y-8'>
+                    <div>
+                      <div className='px-2 mb-2 uppercase font-headings text-ui-200'>
+                        Latest components:
+                      </div>
+                      <ul className="menu menu-secondary">
+                        <li><a href='design-system/switch'><span>Switch</span></a></li>
+                        <li><a href='design-system/countdown'><span>Countdown</span></a></li>
+                        <li><a href='design-system/alert'><span>Alert</span></a></li>
+                        <li><a href='design-system/checkmarks'><span>Checkmarks</span></a></li>
+                        <li><a href='design-system/listitems'><span>List items</span></a></li>
+                      </ul>
                     </div>
-                    <ul className="menu menu-secondary">
-                      <li><a href='design-system/countdown'><span>Countdown</span></a></li>
-                      <li><a href='design-system/alert'><span>Alert</span></a></li>
-                      <li><a href='design-system/checkmarks'><span>Checkmarks</span></a></li>
-                      <li><a href='design-system/listitems'><span>List items</span></a></li>
-                      <li><a href='design-system/tournamentbrackets'><span>Tournament brackets</span></a></li>
-                      <li><a href='design-system/emptystates'><span>Empty states</span></a></li>
-                      <li><a href='design-system/carousel'><span>Carousel</span></a></li>
-                      <li><a href='design-system/accordion'><span>Accordion</span></a></li>
-                    </ul>
+                    <div>
+                      <div className='px-2 mb-2 uppercase font-headings text-ui-200'>
+                        Latest pages:
+                      </div>
+                      <ul className="menu menu-secondary">
+                        <li><a href='prototype'><span>Home</span></a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
                 <div className='text-xs text-ui-400 hidden lg:block'>

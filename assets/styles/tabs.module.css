@@ -73,12 +73,16 @@
     }
 
     &:active {
-      > span {
-        @apply 
-        translate-y-0.5
-        ;
+      &:hover,
+      &:focus {
+        > span {
+          @apply 
+          translate-y-0.5
+          ;
+        }
       }
     }
+
 
     &.active,
     &:active,

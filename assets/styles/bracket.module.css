@@ -399,14 +399,14 @@
 }
 
 /* responsive */
-.brackets-container.is-responsive {
+.brackets-container.brackets-responsive {
   @apply
   block
   lg:grid
   ;
 }
-.brackets-container.is-responsive > .brackets,
-.brackets.is-responsive {
+.brackets-container.brackets-responsive > .brackets,
+.brackets.brackets-responsive {
 
   @apply
   grid

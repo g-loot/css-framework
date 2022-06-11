@@ -105,12 +105,15 @@
     }
 
     &:active {
-      &::after {
-       @apply
-       bg-ui-700/25
-       ; 
+      &:hover,
+      &:focus {
+        @apply
+        bg-ui-700/25
+        ;
       }
     }
+
+   
   }
 
   li.is-disabled {

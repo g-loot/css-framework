@@ -1,0 +1,107 @@
+/*----------------------------*/
+/* SWITCH */
+/*----------------------------*/
+
+.switch {
+  @apply
+  relative
+  inline-grid
+  select-none
+  place-content-center
+  cursor-pointer
+  ;
+
+  &,
+  > * {
+    @apply
+    transition-all
+    duration-300
+    ease-in-out
+    ;
+  }
+
+  input {
+    @apply
+    appearance-none
+    ;
+  }
+
+  > * {
+    @apply
+    col-start-1
+    row-start-1
+    origin-center
+    ;
+  }
+
+  &:active {
+    &:hover,
+    &:focus {
+      @apply
+      opacity-75
+      scale-95
+      ;
+    }
+  }
+
+  .switch-on,
+  .switch-indeterminate, 
+  input:indeterminate~.switch-on {
+    @apply
+    opacity-0
+    ;
+  }
+
+  input:checked~.switch-off,
+  .switch-active .switch-off,
+  input:indeterminate~.switch-off {
+    @apply
+    opacity-0
+    ;
+  }
+  
+  input:checked~.switch-on, 
+  .switch-active .switch-on, 
+  input:indeterminate~.switch-indeterminate {
+    @apply
+    opacity-100
+    ;
+  }
+
+  &.switch-rotate {
+    .switch-on,
+    .switch-indeterminate, 
+    input:indeterminate~.switch-on {
+      @apply
+      -rotate-45
+      ;
+    }
+    
+    input:checked~.switch-off,
+    .switch-active .switch-off,
+    input:indeterminate~.switch-off {
+      @apply
+      rotate-45
+      ;
+    }
+    
+    input:checked~.switch-on, 
+    .switch-active .switch-on, 
+    input:indeterminate~.switch-indeterminate {
+      @apply
+      rotate-0
+      ;
+    }
+  }
+
+
+}
+
+/*
+    position: relative;
+    display: inline-grid;
+    -webkit-user-select: none;
+    user-select: none;
+    place-content: center;
+    cursor: pointer;
+*/
