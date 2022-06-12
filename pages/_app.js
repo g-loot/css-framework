@@ -1,10 +1,18 @@
 import "../assets/styles/globals.css";
 
-const App = ({ Component, pageProps }) => {
-  return (
-    <>
-      <Component {...pageProps} />
-    </>
-  )
+import App from 'next/app';
+import React from 'react';
+import SiteLayout from '../components/SiteLayout';
+
+class MyApp extends App {
+  render() {
+    const { Component, pageProps, router } = this.props
+
+    const getLayout =
+      Component.getLayout || (page => <SiteLayout children={page} />)
+
+    return getLayout(<Component {...pageProps} />)
+  }
 }
-export default App;
+
+export default MyApp

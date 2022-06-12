@@ -1,5 +1,5 @@
 import MainNav from '../MainNav/MainNav';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 export default function DSMainNav(props) {
 

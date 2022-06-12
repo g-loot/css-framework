@@ -1,0 +1,79 @@
+/*----------------------------*/
+/* GAUGE */
+/*----------------------------*/
+
+.gauge {
+  @apply
+  relative
+  shrink-0
+  ;
+  &::before {
+    @apply
+    content-['']
+    w-8
+    h-8
+    block
+    rounded-full
+    blur
+    absolute
+    top-0
+    left-[calc(50%-1rem)]
+    bg-gradient-radial-spotlight
+    from-blue-500/25
+    to-blue-700/0
+    ;
+  }
+}
+
+.gauge {
+
+  --min: 0;
+  --max: 285;
+
+  @apply
+  rounded-full
+  relative
+  p-1.5
+  bg-gradient-to-b
+  from-ui-800
+  to-ui-700
+  ;
+
+  .gauge-chart {
+
+    @apply
+    origin-[50%_57%]
+    ;
+
+    path {
+      &:nth-child(1) {
+        @apply
+        fill-ui-600
+        ;
+      }
+      &:nth-child(2) {
+        @apply
+        stroke-interaction-500
+        transition-all
+        duration-1000
+        ease-[cubic-bezier(0.9,0,0.1,1)]
+        ;
+        transform-box: fill-box;
+        stroke-dasharray: calc(var(--max) * var(--percent) / 100) var(--max);
+      }
+    }
+  }
+  .gauge-content {
+    @apply
+    absolute
+    z-20
+    inset-0
+    flex
+    flex-col
+    text-center
+    items-center
+    justify-center
+    leading-none
+    ;
+  }
+}

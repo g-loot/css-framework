@@ -76,10 +76,6 @@
           "url": "chips"
         },
         {
-          "label": "Progress bars",
-          "url": "progressbars"
-        },
-        {
           "label": "Badge",
           "url": "badge"
         },
@@ -117,20 +113,12 @@
           "url": "rewardladder"
         },
         {
-          "label": "Stats & numbers",
-          "url": "statsnumbers"
-        },
-        {
           "label": "Carousel",
           "url": "carousel"
         },
         {
           "label": "List items",
           "url": "listitems"
-        },
-        {
-          "label": "Countdown",
-          "url": "countdown"
         },
         {
           "label": "Alert",
@@ -156,21 +144,51 @@
           "url": "menu"
         },
         {
-          "label": "Steps",
-          "url": "steps"
-        },
-        {
           "label": "Accordion",
           "url": "accordion"
         },
         {
           "label": "Links",
           "url": "links"
+        },
+        {
+          "label": "Drawer",
+          "url": "drawer"
         }
       ]
     },
     {
-      "label": "Data input",
+      "label": "Stats & numbers",
+      "icon": "",
+      "pages": [
+        {
+          "label": "Progress bars",
+          "url": "progressbars"
+        },
+        {
+          "label": "Gauge",
+          "url": "gauge"
+        },
+        {
+          "label": "Icon holder",
+          "url": "iconholder"
+        },
+        {
+          "label": "Countdown",
+          "url": "countdown"
+        },
+        {
+          "label": "Steps",
+          "url": "steps"
+        },
+        {
+          "label": "Stats",
+          "url": "stats"
+        }
+      ]
+    },
+    {
+      "label": "Form",
       "icon": "",
       "pages": [
         {
@@ -188,6 +206,10 @@
         {
           "label": "Select inputs",
           "url": "selectinputs"
+        },
+        {
+          "label": "Range inputs",
+          "url": "rangeinputs"
         }
       ]
     },

@@ -26,6 +26,9 @@
 @import "./chip.module.css";
 @import "./code.module.css";
 @import "./countdown.module.css";
+@import "./drawer.module.css";
+@import "./gauge.module.css";
+@import "./iconholder.module.css";
 @import "./ladder.module.css";
 @import "./link.module.css";
 @import "./listitem.module.css";

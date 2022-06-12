@@ -73,6 +73,7 @@
   rounded-full
   shrink-0
   transform-gpu
+  mx-auto
   ;
   > div {
     @apply
@@ -101,6 +102,7 @@
     via-blue-300/50
     to-blue-500/0
     blur-lg
+    transform-gpu
     left-[calc(50%-3rem)];
   }
 
@@ -178,5 +180,18 @@
     top-2.5
     left-2.5
     ;
+  }
+}
+
+@media (pointer:none), (pointer:coarse) {
+  .progressbar-radial {
+    > svg {
+      circle {
+        @apply
+        fill-main
+        stroke-ui-600
+        ;
+      }
+    }
   }
 }

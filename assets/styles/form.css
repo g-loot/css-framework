@@ -814,3 +814,87 @@ input[type=date]::-webkit-calendar-picker-indicator {
   opacity-0
   ;
 }
+
+
+/* range */
+input[type=range].form-range {
+
+  @apply
+  h-4
+  w-full
+  cursor-pointer
+  appearance-none
+  overflow-hidden
+  rounded-lg
+  bg-ui-700/0
+  ;
+
+  &:focus {
+    @apply
+    outline-none
+    ;
+  }
+
+  &:focus-visible {
+    &::-webkit-slider-runnable-track {
+      --focus-shadow: 0 0 0 6px var(--color-ui-800) inset, 0 0 0 2rem rgb(var(--color-main)) inset
+    }
+    &::-moz-range-thumb {
+      --focus-shadow: 0 0 0 6px var(--color-ui-800) inset, 0 0 0 2rem rgb(var(--color-main)) inset
+    }
+  }
+
+  &::-webkit-slider-runnable-track {
+    @apply
+    h-2
+    w-full
+    rounded-full
+    bg-ui-600
+    ;
+  }
+
+  &::-moz-range-track {
+    @apply
+    h-2
+    w-full
+    rounded-full
+    bg-ui-600
+    ;
+  }
+
+  &::-webkit-slider-thumb {
+    @apply
+    h-4
+    w-4
+    relative
+    top-[50%]
+    -translate-y-[50%]
+    appearance-none
+    border-none
+    rounded-full
+    text-main
+    bg-ui-800
+    ;
+    --filler-size: 100rem;
+    --filler-offset: .5rem;
+    box-shadow: 0 0 0 3px rgb(var(--color-main)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size)
+  }
+
+  &::-moz-range-thumb {
+    @apply
+    h-4
+    w-4
+    relative
+    top-[50%]
+    -translate-y-[50%]
+    appearance-none
+    border-none
+    rounded-full
+    text-main
+    bg-ui-800
+    ;
+    --filler-size: 100rem;
+    --filler-offset: .5rem;
+    box-shadow: 0 0 0 3px rgb(var(--color-main)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size)
+  }
+}

@@ -107,13 +107,14 @@
     &:active {
       &:hover,
       &:focus {
-        @apply
-        bg-ui-700/25
-        ;
+        &,
+        &::after {
+          @apply
+          bg-ui-700/25
+          ;
+        }
       }
     }
-
-   
   }
 
   li.is-disabled {

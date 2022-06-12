@@ -22,6 +22,7 @@
   ease-in-out
   text-ui-800
   scale-100
+  select-none
   
   backdrop-blur
   bg-main
@@ -35,8 +36,6 @@
   tracking-wide
   transform-gpu
   ;
-
-  
 
   .icon {
     @apply
