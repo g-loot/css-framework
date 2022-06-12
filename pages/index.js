@@ -114,7 +114,7 @@ const Index = () => {
                       A centralized CSS framework for speed and consistency
                     </div>
                   </div>
-                  <div className='progressbar progressbar-sm' style={{"--percent": "75"}}>
+                  <div className='progressbar progressbar-sm' style={{"--percent": "80"}}>
                     <div></div>
                   </div>
                 </div>
