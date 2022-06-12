@@ -9,7 +9,7 @@ class MyApp extends App {
     const { Component, pageProps, router } = this.props
 
     const getLayout =
-      Component.getLayout || (page => <SiteLayout children={page} />)
+      Component.getLayout || (page => <SiteLayout>{page}</SiteLayout>)
 
     return getLayout(<Component {...pageProps} />)
   }
