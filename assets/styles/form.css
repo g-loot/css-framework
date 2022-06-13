@@ -136,6 +136,12 @@ textarea,
   focus-visible:outline-ui-300
   p-[0.594rem]
   ;
+
+  &.input-sm {
+    @apply
+    p-[0.4375rem]
+    ;
+  }
 }
 
 /*----------------------------*/

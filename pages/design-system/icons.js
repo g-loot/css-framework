@@ -21,6 +21,7 @@ const DSpage = () => {
             type='text'
             value={filter}
             placeholder='Filter icons'
+            className='input-sm'
             onChange={event => setFilter(event.target.value)}
           />
         </div>

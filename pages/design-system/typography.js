@@ -85,12 +85,12 @@ const DSpage = () => {
               Our main size for headers, usually H1 or similar.
             </div>
           </div>
-          <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
+          <div className='hidden lg:block py-2 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
             font-family: Podium Sharp;<br />
-            font-size: 56px;<br />
+            font-size: 3.5rem;<br />
             font-style: italic;<br />
             font-weight: 700;<br />
-            line-height: 125%;<br />
+            line-height: 1.25;<br />
           </div>
         </div>
 
@@ -106,15 +106,15 @@ const DSpage = () => {
               You can take the girl out of Salvador, but you&lsquo;ll never take the girl out of Salvador.
             </div>
             <div className='text-sm text-ui-300 mt-4'>
-              Our main size for headers, usually H1 or similar.
+              Our second size for headers, usually H2.
             </div>
           </div>
-          <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
+          <div className='hidden lg:block py-2 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
             font-family: Podium Sharp;<br />
-            font-size: 56px;<br />
+            font-size: 3rem;<br />
             font-style: italic;<br />
             font-weight: 700;<br />
-            line-height: 125%;<br />
+            line-height: 1.25;<br />
           </div>
         </div>
 
@@ -130,15 +130,15 @@ const DSpage = () => {
               You can take the girl out of Salvador, but you&lsquo;ll never take the girl out of Salvador.
             </div>
             <div className='text-sm text-ui-300 mt-4'>
-              Our main size for headers, usually H1 or similar.
+              Our third size for headers, usually H3.
             </div>
           </div>
-          <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
+          <div className='hidden lg:block py-2 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
             font-family: Podium Sharp;<br />
-            font-size: 56px;<br />
+            font-size: 2.25rem;<br />
             font-style: italic;<br />
             font-weight: 700;<br />
-            line-height: 125%;<br />
+            line-height: 1.25;<br />
           </div>
         </div>
 
@@ -154,15 +154,15 @@ const DSpage = () => {
               You can take the girl out of Salvador, but you&lsquo;ll never take the girl out of Salvador.
             </div>
             <div className='text-sm text-ui-300 mt-4'>
-              Our main size for headers, usually H1 or similar.
+              Our fourth size for headers, usually H4.
             </div>
           </div>
-          <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
+          <div className='hidden lg:block py-2 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
             font-family: Podium Sharp;<br />
-            font-size: 56px;<br />
+            font-size: 1.75rem;<br />
             font-style: italic;<br />
             font-weight: 700;<br />
-            line-height: 125%;<br />
+            line-height: 1.25;<br />
           </div>
         </div>
 
@@ -178,15 +178,16 @@ const DSpage = () => {
               You can take the girl out of Salvador, but you&lsquo;ll never take the girl out of Salvador.
             </div>
             <div className='text-sm text-ui-300 mt-4'>
-              Our main size for headers, usually H1 or similar.
+              Our fifth size for headers, usually H5.
             </div>
           </div>
-          <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
-            font-family: Podium Sharp;<br />
-            font-size: 56px;<br />
+          <div className='hidden lg:block py-2 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
+            font-family: Roboto Condensed;<br />
+            font-size: 1.25rem;<br />
             font-style: italic;<br />
             font-weight: 700;<br />
-            line-height: 125%;<br />
+            line-height: 1.25;<br />
+            text-transform: uppercase;<br />
           </div>
         </div>
 
@@ -202,15 +203,16 @@ const DSpage = () => {
               You can take the girl out of Salvador, but you&lsquo;ll never take the girl out of Salvador.
             </div>
             <div className='text-sm text-ui-300 mt-4'>
-              Our main size for headers, usually H1 or similar.
+              Our sixth size for headers, usually H6.
             </div>
           </div>
-          <div className='hidden lg:block pt-4 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
-            font-family: Podium Sharp;<br />
-            font-size: 56px;<br />
-            font-style: italic;<br />
+          <div className='hidden lg:block py-2 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4'>
+            font-family: Roboto Condensed;<br />
+            font-size: 1rem;<br />
+            font-style: normal;<br />
             font-weight: 700;<br />
-            line-height: 125%;<br />
+            line-height: 1.25;<br />
+            text-transform: uppercase;<br />
           </div>
         </div>
 

@@ -70,6 +70,7 @@ const DSLayout = ({ children }) => {
                   value={filter}
                   placeholder=''
                   autoComplete='off'
+                  className='input-sm'
                   onChange={event => setFilter(event.target.value)}
                 />
               </div>

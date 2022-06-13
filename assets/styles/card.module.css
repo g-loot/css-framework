@@ -26,6 +26,8 @@
   }
   .card-body {
     @apply
+    relative
+    z-10
     flex
     flex-1
     flex-col
@@ -48,6 +50,37 @@
     items-start
     gap-2
     ;
+  }
+
+  &.card-cover {
+    .card-image {
+      
+      &,
+      figure {
+        @apply
+        absolute
+        inset-0
+        z-0
+        ;
+
+        img {
+          @apply
+          h-full
+          object-cover
+          ;
+        }
+      }
+    }
+    &::before {
+      @apply
+      content-['']
+      absolute
+      z-10
+      inset-0
+      bg-ui-900
+      opacity-80
+      ;
+    }
   }
 }
 
