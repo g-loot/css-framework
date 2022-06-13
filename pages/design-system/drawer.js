@@ -27,7 +27,7 @@ const DSpage = () => {
               </div> 
               <div className="drawer-side">
                 <label htmlFor="drawer-1" className="drawer-overlay"></label>
-                <div className='p-4 overflow-y-auto w-80 bg-ui-700/75 text-base-content'>
+                <div className='p-4 overflow-y-auto w-1/2 lg:w-80 bg-ui-700 text-base-content'>
                   <ul className="menu">
                     <li><a><span>Item 1</span></a></li>
                     <li><a><span>Item 2</span></a></li>
@@ -61,7 +61,7 @@ const DSpage = () => {
               </div> 
               <div className="drawer-side">
                 <label htmlFor="drawer-2" className="drawer-overlay"></label>
-                <div className='p-4 overflow-y-auto w-80 bg-ui-700/75 text-base-content'>
+                <div className='p-4 overflow-y-auto w-1/2 lg:w-80 bg-ui-700 text-base-content'>
                   <ul className="menu">
                     <li><a><span>Item 1</span></a></li>
                     <li><a><span>Item 2</span></a></li>
@@ -95,7 +95,7 @@ const DSpage = () => {
               </div> 
               <div className="drawer-side">
                 <label htmlFor="drawer-3" className="drawer-overlay"></label>
-                <div className='p-4 overflow-y-auto w-80 bg-ui-700/75 text-base-content'>
+                <div className='p-4 overflow-y-auto w-1/2 lg:w-80 bg-ui-700 text-base-content'>
                   <ul className="menu">
                     <li><a><span>Item 1</span></a></li>
                     <li><a><span>Item 2</span></a></li>

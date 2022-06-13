@@ -43,32 +43,32 @@ const Index = () => {
                     Latest components:
                   </div>
                   <ul className="menu menu-secondary">
-                    <li className='rounded overflow-hidden'>
+                    <li>
                       <Link href='design-system/stats'>
                         <a><span>Stats</span></a>
                       </Link>
                     </li>
-                    <li className='rounded overflow-hidden'>
+                    <li>
                       <Link href='design-system/rangeinputs'>
                         <a><span>Range inputs</span></a>
                       </Link>
                     </li>
-                    <li className='rounded overflow-hidden'>
+                    <li>
                       <Link href='design-system/switch'>
                         <a><span>Switch</span></a>
                       </Link>
                     </li>
-                    <li className='rounded overflow-hidden'>
+                    <li>
                       <Link href='design-system/countdown'>
                         <a><span>Countdown</span></a>
                       </Link>
                     </li>
-                    <li className='rounded overflow-hidden'>
+                    <li>
                       <Link href='design-system/alert'>
                         <a><span>Alert</span></a>
                       </Link>
                     </li>
-                    <li className='rounded overflow-hidden'>
+                    <li>
                       <Link href='design-system/checkmarks'>
                         <a><span>Checkmarks</span></a>
                       </Link>
@@ -80,7 +80,7 @@ const Index = () => {
                     Latest pages:
                   </div>
                   <ul className="menu menu-secondary">
-                    <li className='rounded overflow-hidden'>
+                    <li>
                       <Link href='prototype/'>
                         <a><span>Home</span></a>
                       </Link>

@@ -9,6 +9,15 @@
   list-none
   ;
 
+  li {
+    @apply
+    transition-all
+    transform-gpu
+    duration-200
+    ease-in-out
+    ;
+  }
+
   li.separator {
     @apply
     bg-ui-700
@@ -38,6 +47,8 @@
     focus-visible:outline
     focus-visible:outline-1
     focus-visible:outline-main
+    rounded
+    overflow-hidden
     ;
 
     > * {

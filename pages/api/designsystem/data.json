@@ -44,11 +44,6 @@
           "url": "buttons"
         },
         {
-          "label": "Dropdown",
-          "url": "dropdown",
-          "disabled": true
-        },
-        {
           "label": "Modals",
           "url": "modals"
         },
@@ -57,9 +52,8 @@
           "url": "switch"
         },
         {
-          "label": "Toasters",
-          "url": "toasters",
-          "disabled": true
+          "label": "Dropdown",
+          "url": "dropdown"
         }
       ]
     },
