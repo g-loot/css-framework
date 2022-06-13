@@ -142,7 +142,7 @@ const DSpage = () => {
                 </label>
               </div>
             </section>
-            <section className='mt-8 pt-8 border-t border-ui-600 flex gap-4'>
+            <section className='mt-4 lg:mt-8 pt-4 lg:pt-8 border-t border-ui-600 flex gap-4'>
               <button type='cancel' className='flex-1 button button-primary'>
                 <span>Save</span>
               </button>

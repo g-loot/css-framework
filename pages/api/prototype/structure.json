@@ -1,27 +1,27 @@
 {
   "pages": [
     {
-      "label": "home",
+      "label": "Home",
       "icon": "home-2",
       "url": "url"
     },
     {
-      "label": "profile",
+      "label": "Profile",
       "icon": "circle-09",
       "url": "url"
     },
     {
-      "label": "teams",
+      "label": "Teams",
       "icon": "multiple-12",
       "url": "url"
     },
     {
-      "label": "shop",
+      "label": "Shop",
       "icon": "shop",
       "url": "url"
     },
     {
-      "label": "premium",
+      "label": "Premium",
       "icon": "ic_stars_24px",
       "url": "url"
     }

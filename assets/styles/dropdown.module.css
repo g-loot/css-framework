@@ -8,6 +8,12 @@
   inline-block
   ;
 
+  > .button {
+    @apply
+    m-1
+    ;
+  }
+
   .dropdown-content {
     @apply
     absolute
@@ -73,7 +79,7 @@
     .dropdown-content {
       @apply
       scale-100
-      translate-y-2
+      translate-y-0
       ;
     }
   }

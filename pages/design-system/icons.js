@@ -15,7 +15,7 @@ const DSpage = () => {
       </h1>
       <div className='form-group mb-1'>
         <div className='input-group'>
-          <span className='icon icon-right icon-zoom'></span>
+          <span className='icon icon-zoom'></span>
           <input id='filter'
             name='filter'
             type='text'

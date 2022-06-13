@@ -546,8 +546,8 @@ textarea,
 
     &.button-sm {
       @apply
-      right-1
-      bottom-[calc(50%-calc(32px/2))]
+      right-0.5
+      bottom-[calc(50%-calc(36px/2))]
       ;
     }
 
@@ -825,7 +825,7 @@ input[type=range].form-range {
   cursor-pointer
   appearance-none
   overflow-hidden
-  rounded-lg
+  rounded-full
   bg-ui-700/0
   ;
 

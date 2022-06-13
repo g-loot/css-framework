@@ -42,7 +42,7 @@ const Index = () => {
                   <div className='px-2 mb-2 uppercase font-headings text-ui-200'>
                     Latest components:
                   </div>
-                  <ul className="menu menu-secondary">
+                  <ul className="menu menu-secondary menu-rounded">
                     <li>
                       <Link href='design-system/stats'>
                         <a><span>Stats</span></a>
@@ -79,7 +79,7 @@ const Index = () => {
                   <div className='px-2 mb-2 uppercase font-headings text-ui-200'>
                     Latest pages:
                   </div>
-                  <ul className="menu menu-secondary">
+                  <ul className="menu menu-secondary menu-rounded">
                     <li>
                       <Link href='prototype/'>
                         <a><span>Home</span></a>

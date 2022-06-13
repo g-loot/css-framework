@@ -13,7 +13,6 @@ export default function Home() {
     <>
       <PrototypeStructure title="Home">
         
-
         <section className='surface sm:rounded-lg overflow-hidden mb-4'>
           <Carousel></Carousel>
         </section>

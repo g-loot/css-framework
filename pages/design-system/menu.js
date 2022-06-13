@@ -193,6 +193,58 @@ const DSpage = () => {
       </div>
     </div>
 
+    {/* Rounded */}
+    <div className='mb-12' id='rounded'>
+
+      <h2 className='h3 mb-3'>
+        Rounded
+      </h2>
+
+      <div className=''>
+        <div className=''>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
+            <div className='flex-1 surface rounded-lg p-1'>
+              <ul className='menu menu-rounded' role='menu'>
+                <li>
+                  <a>
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <span>Profile</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <span>Missions</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <span>Brawls</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <span>Tournaments</span>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <span>Stats</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className='flex-1'>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/75qy032g/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </>
   )
 }

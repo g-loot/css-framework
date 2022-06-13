@@ -26,7 +26,7 @@ const DSpage = () => {
                   <div className="form-group form-select">
                     <label htmlFor="favorite-game">Favorite game:</label>
                     <select id="favorite-game">
-                      <option>Choose an option</option>
+                      <option disabled selected>Choose an option</option>
                       <option>PUBG: BATTLEGROUNDS</option>
                       <option>DOTA 2</option>
                       <option>VALORANT</option>
@@ -95,7 +95,7 @@ const DSpage = () => {
                   <div className="form-group form-select" data-error="Please choose an option.">
                     <label htmlFor="favorite-agent">Favorite agent:</label>
                     <select id="favorite-agent">
-                      <option>Choose an option</option>
+                      <option disabled selected>Choose an option</option>
                       <option>Astra</option>
                       <option>Breach</option>
                       <option>Brimstone</option>
@@ -120,7 +120,7 @@ const DSpage = () => {
                   <div className="form-group form-select" data-success="Good choice.">
                     <label htmlFor="favorite-role">Favorite role:</label>
                     <select id="favorite-role">
-                      <option>Choose an option</option>
+                      <option disabled selected>Choose an option</option>
                       <option>Controller</option>
                       <option selected>Duelist</option>
                       <option>Initiator</option>
@@ -130,7 +130,7 @@ const DSpage = () => {
                   <div className="form-group form-select" data-attention="Are you sure?">
                     <label htmlFor="favorite-map">Favorite map:</label>
                     <select id="favorite-map">
-                      <option>Choose an option</option>
+                      <option disabled selected>Choose an option</option>
                       <option>Ascent</option>
                       <option>Bind</option>
                       <option>Breeze</option>

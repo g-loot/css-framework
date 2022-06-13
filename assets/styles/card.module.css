@@ -6,12 +6,48 @@
 /* content */
 
 .card {
+
+  @apply
+  transform-gpu
+  overflow-hidden
+  ;
+  &:not([class*='rounded']) {
+    @apply
+    rounded-xl
+    ;
+  }
+
+  .card-image {
+    @apply
+    flex
+    items-center
+    justify-center
+    ;
+  }
   .card-body {
+    @apply
+    flex
+    flex-1
+    flex-col
+    p-6
+    gap-5
+    ;
 
   }
 
+  .card-title {
+    @apply
+    leading-none
+  }
+
   .card-actions {
-    
+    @apply
+    leading-none
+    flex
+    flex-wrap
+    items-start
+    gap-2
+    ;
   }
 }
 
@@ -22,7 +58,6 @@
   @apply
   w-full
   relative
-  mx-auto
   min-w-xs
   overflow-hidden
   flex

@@ -66,6 +66,16 @@
       border-ui-700
       ;
     }
+    ul.menu {
+      > li {
+        @apply
+        translate-y-2
+        opacity-0
+        duration-500
+        delay-100
+        ;
+      }
+    }
   }
 
   .accordion-item {
@@ -130,53 +140,57 @@
         ul.menu {
           > li {
             @apply
-            animate-[carousel-list-slidein_0.6s_cubic-bezier(0.7,0,0.4,1)_forwards]
-            translate-y-2
-            opacity-0
+            translate-y-0
+            opacity-100
             ;
             &:nth-child(1) {
               @apply
-              animation-delay-100
+              delay-[.1s]
               ;
             }
             &:nth-child(2) {
               @apply
-              animation-delay-200
+              delay-[.2s]
               ;
             }
             &:nth-child(3) {
               @apply
-              animation-delay-300
+              delay-[.3s]
               ;
             }
             &:nth-child(4) {
               @apply
-              animation-delay-400
+              delay-[.4s]
               ;
             }
             &:nth-child(5) {
               @apply
-              animation-delay-500
+              delay-[.5s]
               ;
             }
             &:nth-child(6) {
               @apply
-              animation-delay-600
+              delay-[.6s]
               ;
             }
             &:nth-child(7) {
               @apply
-              animation-delay-700
+              delay-[.7s]
               ;
             }
             &:nth-child(8) {
               @apply
-              animation-delay-800
+              delay-[.8s]
               ;
             }
             &:nth-child(9) {
               @apply
-              animation-delay-900
+              delay-[.9s]
+              ;
+            }
+            &:nth-child(10) {
+              @apply
+              delay-[1s]
               ;
             }
           }
@@ -191,17 +205,6 @@
     @apply
     p-1
     ;
-  }
-}
-
-@keyframes accordion-list-slidein {
-  from {
-    transform: translateY(0.5rem);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 

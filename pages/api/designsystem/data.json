@@ -5,10 +5,12 @@
       "icon": "",
       "pages": [{
           "label": "About",
+          "tags": "framework,about,css,gettingstarted,components,styled,system,design,tailwind",
           "url": "about"
         },
         {
           "label": "Getting started",
+          "tags": "framework,about,css,gettingstarted,install,npm,package,react,package,tailwind",
           "url": "gettingstarted"
         }
       ]
@@ -19,18 +21,22 @@
       "pages": [
         {
           "label": "Colors",
+          "tags": "basics,colors,background,text,main,ui,main,accent,gradient,colour",
           "url": "colors"
         },
         {
           "label": "Icons",
+          "tags": "basics,icons,picto,size,nucleo",
           "url": "icons"
         },
         {
           "label": "Typography",
+          "tags": "basics,typography,headings,font,size,bold,italic,font,family,roboto,podium,sharp,title",
           "url": "typography"
         },
         {
           "label": "Surfaces",
+          "tags": "basics,surfaces,cards,container,box,halo",
           "url": "surfaces"
         }
       ]
@@ -41,18 +47,22 @@
       "pages": [
         {
           "label": "Buttons",
+          "tags": "actions,buttons,interaction,click,onclick,variant,link",
           "url": "buttons"
         },
         {
           "label": "Modals",
+          "tags": "actions,modals,dialog,prompt,click,onclick",
           "url": "modals"
         },
         {
           "label": "Switch",
+          "tags": "actions,switch,swap,click,onclick",
           "url": "switch"
         },
         {
           "label": "Dropdown",
+          "tags": "actions,dropdown,click,hidden,hover,open",
           "url": "dropdown"
         }
       ]
@@ -63,59 +73,73 @@
       "pages": [
         {
           "label": "Avatars",
+          "tags": "content,avatar,user,profile",
           "url": "avatars"
         },
         {
           "label": "Chips",
+          "tags": "content,tags,chips,information",
           "url": "chips"
         },
         {
           "label": "Badge",
+          "tags": "content,badge",
           "url": "badge"
         },
         {
           "label": "Loaders",
+          "tags": "content,loader,progressbar,wait,loading",
           "url": "loaders"
         },
         {
           "label": "Tooltips",
+          "tags": "content,tooltip,hover,information",
           "url": "tooltips"
         },
         {
           "label": "Checkmarks",
+          "tags": "content,checkmark,checked,valid,tasklist,done",
           "url": "checkmarks"
         },
         {
           "label": "Scrollbars",
+          "tags": "content,scrollbar,overflow,scroll,mouse",
           "url": "scrollbars"
         },
         {
           "label": "Tables",
+          "tags": "content,tables,list,spreadsheet",
           "url": "tables",
           "disabled": true
         },
         {
           "label": "Tournament brackets",
+          "tags": "content,tournament,brackets,showdown",
           "url": "tournamentbrackets"
         },
         {
           "label": "Empty states",
+          "tags": "content,empty,states",
           "url": "emptystates"
         },
         {
           "label": "Reward ladder",
+          "tags": "content,reward,ladder,progression,leaderboard",
           "url": "rewardladder"
         },
         {
           "label": "Carousel",
+          "tags": "content,carousel,information,slide",
           "url": "carousel"
         },
         {
           "label": "List items",
+          "tags": "content,list,items,ordered,unordered",
           "url": "listitems"
         },
         {
           "label": "Alert",
+          "tags": "content,",
           "url": "alert"
         }
       ]
@@ -127,26 +151,32 @@
         
         {
           "label": "Pagination",
+          "tags": "nav,navigation,pages,next,previous",
           "url": "pagination"
         },
         {
           "label": "Tabs",
+          "tags": "nav,navigation,tabs,submenu",
           "url": "tabs"
         },
         {
           "label": "Menu",
+          "tags": "nav,navigation,menu,links",
           "url": "menu"
         },
         {
           "label": "Accordion",
+          "tags": "nav,navigation,accordion,open,drawer,close",
           "url": "accordion"
         },
         {
           "label": "Links",
+          "tags": "nav,navigation,links,href",
           "url": "links"
         },
         {
           "label": "Drawer",
+          "tags": "nav,navigation,",
           "url": "drawer"
         }
       ]
@@ -157,26 +187,32 @@
       "pages": [
         {
           "label": "Progress bars",
+          "tags": "stats,numbers,progress,bar,loading",
           "url": "progressbars"
         },
         {
           "label": "Gauge",
+          "tags": "stats,numbers,gauge",
           "url": "gauge"
         },
         {
           "label": "Icon holder",
+          "tags": "stats,numbers,icon,holder,stats",
           "url": "iconholder"
         },
         {
           "label": "Countdown",
+          "tags": "stats,numbers,time,countdown,date",
           "url": "countdown"
         },
         {
           "label": "Steps",
+          "tags": "stats,numbers,steps,progress",
           "url": "steps"
         },
         {
           "label": "Stats",
+          "tags": "stats,numbers,data,display,information",
           "url": "stats"
         }
       ]
@@ -187,22 +223,27 @@
       "pages": [
         {
           "label": "Form example",
+          "tags": "form,example,layout",
           "url": "formexample"
         },
         {
           "label": "Text inputs",
+          "tags": "form,data,input,range,value,ui,text",
           "url": "textinputs"
         },
         {
           "label": "Radio, checkbox, toggle",
+          "tags": "form,data,radio,checkbox,toggle,input,ui",
           "url": "radiocheckboxtoggle"
         },
         {
           "label": "Select inputs",
+          "tags": "form,data,select,input,choice,ui",
           "url": "selectinputs"
         },
         {
           "label": "Range inputs",
+          "tags": "form,data,input,range,value,ui",
           "url": "rangeinputs"
         }
       ]
@@ -213,16 +254,18 @@
       "pages": [
         {
           "label": "Mission cards",
+          "tags": "card,mission,objective,content,games",
           "url": "missioncards"
         },
         {
           "label": "Tournament cards",
+          "tags": "card,tournament,competition,showdown,open,skirmish,objective,content,games",
           "url": "tournamentcards"
         },
         {
           "label": "Content cards",
-          "url": "contentcards",
-          "disabled": true
+          "tags": "content,card,display",
+          "url": "contentcards"
         }
       ]
     }

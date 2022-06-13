@@ -1,15 +1,17 @@
 import React, { useRef, useState } from 'react';
 
 import DSHead from './DSHead';
+import DSMainNav from './DSMainNav';
 import DSTopBar from './DSTopBar';
 import DSdata from '../../pages/api/designsystem/data.json'
-import Link from "next/link";
-import MainNav from '../MainNav/MainNav';
-import { getLayout as getSiteLayout } from "../SiteLayout";
+import Link from 'next/link';
+import { getLayout as getSiteLayout } from '../SiteLayout';
 import packageFramework from '../../framework/package-framework.json';
 import { useRouter } from 'next/router';
 
 const DSLayout = ({ children }) => {
+
+  const [filter, setFilter] = useState('');
 
   const router = useRouter();
   const myRef = useRef(null);
@@ -29,7 +31,7 @@ const DSLayout = ({ children }) => {
     <>
     <DSHead title='Docs' />
     <div className='drawer drawer-mobile'>
-      <input id="drawer-ds" type="checkbox" className="drawer-toggle" />
+      <input id='drawer-ds' type='checkbox' className='drawer-toggle' />
       <div className='drawer-content' ref={myRef}>
         <div className='block lg:hidden'>
           <DSTopBar data={DSdata} />
@@ -41,37 +43,51 @@ const DSLayout = ({ children }) => {
         </div>
       </div>
       <div className='drawer-side scrollbar-hidden'>
-        <label htmlFor="drawer-ds" className="drawer-overlay"></label>
+        <label htmlFor='drawer-ds' className='drawer-overlay'></label>
         <aside className='w-80 bg-ui-800 border-r border-ui-700'>
-          <div className='sticky z-20 top-0 bg-ui-800/75 p-4 backdrop-blur-sm flex justify-between'>
-            <Link href='../'>
-              <a className='hover:opacity-50 transition-opacity duration-150'>
-                <img className='mb-1' width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
-                <div className='font-headings text-lg uppercase not-italic leading-none pl-10'>
-                  Framework
+          <div className='sticky z-20 top-0 bg-ui-800/75 p-4 backdrop-blur-sm'>
+            <div className='flex justify-between'>
+              <Link href='../'>
+                <a className='hover:opacity-50 transition-opacity duration-150'>
+                  <img className='' width='123' height='64' src='https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg' alt='G-Loot logo' />
+                  <div className='font-headings text-lg uppercase not-italic leading-none pl-10'>
+                    Framework
+                  </div>
+                </a>
+              </Link>
+              <div className='text-xs text-ui-400'>
+                <div className='chip chip-secondary chip-xs'>
+                  <span>v{packageFramework.version}</span>
                 </div>
-              </a>
-            </Link>
-
-            <div className='text-xs text-ui-400'>
-              <div className='chip chip-secondary chip-xs'>
-                <span>v{packageFramework.version}</span>
+              </div>
+            </div>
+            <div className='form-group mt-2'>
+              <div className='input-group'>
+                <span className='icon icon-zoom'></span>
+                <input id='filter'
+                  name='filter'
+                  type='text'
+                  value={filter}
+                  placeholder=''
+                  autoComplete='off'
+                  onChange={event => setFilter(event.target.value)}
+                />
               </div>
             </div>
           </div>
           
           <div className='relative z-0 px-4 pb-4'>
             {DSdata.sections.map((item, itemIndex) => (
-              <div className="mb-4" key={itemIndex}>
-                <button className='flex items-center py-2 px-4'>
+              <div className={`${filter ? '' : 'mb-4'}`} key={itemIndex}>
+                <button className={`flex items-center px-4 ${filter ? 'hidden' : 'py-2'}`}>
                   {/*
                     <span className={`icon icon-16 icon-${item.icon}`}></span>
                   */}
                   <span className='font-headings uppercase text-ui-100'>{item.label}</span>
                 </button>
                 <div className={`${router.pathname.includes(item.url) ? 'is-active' : ''}`}>
-                  <div className='border-t border-ui-700/50'>
-                    <MainNav items={item.pages.sort((a, b) => a.label.localeCompare(b.label))} style="secondary" onClick={executeScroll.bind(this)} />
+                  <div className={`${filter ? '' : 'border-t border-ui-700/50'}`}>
+                    <DSMainNav filter={filter} items={item.pages.sort((a, b) => a.label.localeCompare(b.label))} style='secondary' rounded='true' onClick={executeScroll.bind(this)} />
                   </div>
                 </div>
               </div>
