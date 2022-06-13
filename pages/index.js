@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 
+import DSHead from '../components/DesignSystem/DSHead';
 import Link from 'next/link';
 import ReactDOM from 'react-dom';
 import { getLayout } from '../components/SiteLayout';
@@ -18,6 +19,8 @@ const Index = () => {
   }
  
   return(
+    <>
+    <DSHead title='Welcome' />
     <div className='absolute z-20 inset-0 flex items-center justify-center' data-theme='light'>
       <div className='surface surface-halo halo-r p-4 lg:p-8 lg:rounded-xl container max-w-lg mx-auto'>
         <div className='flex flex-col lg:flex-row items-stretch '>
@@ -153,6 +156,7 @@ const Index = () => {
         </div>
       </div>
     </div>
+  </>
   )
 };
 

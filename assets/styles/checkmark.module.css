@@ -87,6 +87,12 @@
   w-9
   ;
   > i {
+    &::before,
+    &::after {
+      @apply
+      inset-1
+      ;
+    }
     &::after {
       @apply
       text-sm
