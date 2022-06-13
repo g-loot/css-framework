@@ -25,7 +25,7 @@ const Index = () => {
             <div>
               <div className='flex items-start justify-between pb-8 mb-8 border-b border-ui-700'>
                 <div>
-                  <img className='mb-1' width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
+                  <img className='mb-0.5' width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
                   <h1 className='text-lg uppercase not-italic leading-none pl-10'>
                     Framework
                   </h1>
@@ -43,6 +43,11 @@ const Index = () => {
                     Latest components:
                   </div>
                   <ul className="menu menu-secondary menu-rounded">
+                    <li>
+                      <Link href='design-system/dropdown'>
+                        <a><span>Dropdown</span></a>
+                      </Link>
+                    </li>
                     <li>
                       <Link href='design-system/stats'>
                         <a><span>Stats</span></a>
@@ -101,7 +106,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className='flex-3 space-y-8'>
+          <div className='flex-3 space-y-8 flex flex-col items-center'>
             <Link href='design-system/about'>
               <a className='card-mission card-interactive surface-ui-700'>
                 <div className='card-decoration'></div>

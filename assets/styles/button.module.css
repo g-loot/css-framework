@@ -178,7 +178,7 @@
 
     > * {
       @apply
-      drop-shadow-[0_-1px_0_rgba(var(--color-mono-100)/50%)]
+      drop-shadow-[0_-1px_0_rgba(var(--color-premium-300)/50%)]
       ;
     }
 
@@ -187,7 +187,7 @@
       &:hover,
       &:focus-visible {
         @apply
-        shadow-[inset_0_0_0_1px_rgba(var(--color-premium-300),1)]
+        shadow-[inset_0_0_0_1px_rgba(var(--color-premium-300),50%)]
         ;
       }
     }
@@ -200,12 +200,12 @@
     to-info-500
     text-mono-100
     bg-[length:200%_auto]
-    shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)]
+    shadow-[inset_0_0_0_1px_rgba(var(--color-info-300),0)]
     ;
 
     > * {
       @apply
-      drop-shadow-[0_-1px_0_rgba(var(--color-ui-900)/50%)]
+      shadow-[inset_0_0_0_1px_rgba(var(--color-info-300),50%)]
       ;
     }
 
@@ -214,7 +214,7 @@
       &:hover,
       &:focus-visible {
         @apply
-        shadow-[inset_0_0_0_1px_rgba(255,255,255,0.15)];
+        shadow-[inset_0_0_0_1px_rgba(var(--color-info-300),50%)]
       }
     }
   }

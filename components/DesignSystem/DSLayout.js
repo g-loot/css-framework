@@ -61,7 +61,7 @@ const DSLayout = ({ children }) => {
                 </div>
               </div>
             </div>
-            <div className='form-group mt-2'>
+            <div className='form-group mt-4'>
               <div className='input-group'>
                 <span className='icon icon-zoom'></span>
                 <input id='filter'
