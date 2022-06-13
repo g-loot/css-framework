@@ -21,8 +21,8 @@ const DSpage = () => {
         <div className='flex flex-col lg:flex-row gap-4'>
           <div className='flex-1 flex justify-center items-center'>
             <div className="dropdown">
-              <label tabindex="0" className="button button-primary">Click me</label>
-              <div tabindex="0" className="dropdown-content bg-ui-600 w-52 p-1">
+              <label tabIndex="0" className="button button-primary">Click me</label>
+              <div tabIndex="0" className="dropdown-content bg-ui-600 w-52 p-1">
                 <ul className='menu'>
                   <li><a><span>Item 1</span></a></li>
                     <li><a><span>Item 2</span></a></li>
@@ -49,8 +49,8 @@ const DSpage = () => {
         <div className='flex flex-col lg:flex-row gap-4'>
           <div className='flex-1 flex justify-center items-center'>
             <div className="dropdown dropdown-open">
-              <label tabindex="0" className="button button-primary">Click me</label>
-              <div tabindex="0" className="dropdown-content bg-ui-600 w-52 p-1">
+              <label tabIndex="0" className="button button-primary">Click me</label>
+              <div tabIndex="0" className="dropdown-content bg-ui-600 w-52 p-1">
                 <ul className='menu'>
                   <li><a><span>Item 1</span></a></li>
                     <li><a><span>Item 2</span></a></li>

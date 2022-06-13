@@ -2,7 +2,20 @@
 /* CARD */
 /*----------------------------*/
 
-/* commons */
+
+/* content */
+
+.card {
+  .card-body {
+
+  }
+
+  .card-actions {
+    
+  }
+}
+
+/* missions & tournaments */
 
 .card-mission,
 .card-tournament {
