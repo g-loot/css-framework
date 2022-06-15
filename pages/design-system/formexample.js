@@ -44,8 +44,10 @@ const DSpage = () => {
               <div className='form-group'>
                 <label htmlFor="avatar">Avatar</label>
                 <div className='flex items-center gap-4'>
-                  <figure className='avatar avatar-simple'>
-                    <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                  <figure className='avatar avatar-circle avatar-simple'>
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                    </div>
                   </figure>
                   <button className='button button-sm button-secondary'>
                     <span>Change</span>

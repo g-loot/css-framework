@@ -1,0 +1,75 @@
+/*----------------------------*/
+/* TABLE */
+/*----------------------------*/
+
+
+.table.table-rounded {
+  @apply
+  space-y-2
+  border-separate
+  border-spacing-y-2
+  ;
+
+  tr {
+    > td {
+      @apply
+      py-2
+      px-1
+      ;
+      &:first-child {
+        @apply
+        pl-2
+        ;
+      }
+      &:last-child {
+        @apply
+        pr-2
+        ;
+      }
+    }
+  }
+  
+
+  > tbody {
+    > tr {
+      > td {
+        @apply
+        bg-ui-800
+        border-y
+        border-ui-700
+        ;
+  
+        &:first-child {
+          @apply
+          rounded-l
+          border-l
+          ;
+        }
+        &:last-child {
+          @apply
+          rounded-r
+          border-r
+          ;
+        }
+      }      
+    }
+  }
+  &.rounded-lg {
+    > tbody {
+      > tr {
+        > td {
+          &:first-child {
+            @apply
+            rounded-l-lg
+            ;
+          }
+          &:last-child {
+            @apply
+            rounded-r-lg
+            ;
+          }
+        }      
+      }
+    }
+  }
+}

@@ -693,7 +693,7 @@ const DSpage = () => {
 
 
 
-        <div className='border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12'>
+        <div className=''>
           <h3 className='h4 mb-6 lg:mb-10'>
             Shining
           </h3>

@@ -63,7 +63,9 @@ const DSpage = () => {
                   <span>Notifications</span>
                 </button>
                 <figure className='avatar avatar-simple' data-badge="88">
-                  <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <div>
+                      <img src='https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png' />
+                    </div>
                 </figure>
               </div>
             </div>

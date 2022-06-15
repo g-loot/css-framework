@@ -63,6 +63,7 @@ select[multiple] {
     ;
   }
 }
+
 .scrollbar-secondary {
   &::-webkit-scrollbar-thumb {
     @apply
@@ -87,6 +88,7 @@ select[multiple] {
     height: 0 !important;
   }
 }
+
 
 @media not all and (hover: none) and (pointer: coarse) {
     

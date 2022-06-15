@@ -17,8 +17,10 @@ export default function RewardLadder(props) {
       <div className='ladder-avatar py-2'>
         <div>
           <div>
-            <figure className='avatar avatar-xs'>
-              <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+            <figure className='avatar avatar-circle avatar-xs'>
+              <div>
+                <img src='https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png' alt='' />
+              </div>
               <i className='radar'></i>
             </figure>
           </div>

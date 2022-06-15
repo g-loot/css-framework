@@ -20,7 +20,7 @@ const DSpage = () => {
       <div className=''>
         <div className='flex flex-col lg:flex-row gap-4'>
           <div className='flex-1 flex justify-start items-start'>
-            <div className='card w-96 surface-ui-800'>
+            <div className='card w-96 surface surface-ui-800'>
               <div className='card-image'>
                 <figure><img src='https://res.cloudinary.com/gloot/image/upload/v1644831543/Marketing/202109_gloot2/mission-dota2_1.jpg' alt='Dota 2' /></figure>
               </div>
@@ -51,7 +51,7 @@ const DSpage = () => {
       <div className=''>
         <div className='flex flex-col lg:flex-row gap-4'>
           <div className='flex-1 flex justify-start items-start'>
-            <div className='card w-96 surface-ui-800'>
+            <div className='card w-96 surface surface-ui-800'>
               <div className='card-image'>
                 <figure><img src='https://res.cloudinary.com/gloot/image/upload/v1644831543/Marketing/202109_gloot2/mission-csgo_5.jpg' alt='CS:GO' /></figure>
               </div>
@@ -124,7 +124,7 @@ const DSpage = () => {
       <div className=''>
         <div className='flex flex-col lg:flex-row gap-4'>
           <div className='flex-1 flex justify-start items-start'>
-            <div className='card w-96 surface-ui-800'>
+            <div className='card w-96 surface surface-ui-800'>
               <div className='card-body'>
                 <h3 className='card-title text-2xl'>Showdown open</h3>
                 <p className='text-ui-200'>Our VALORANT Showdown registration just opened. Time to suscribe!</p>

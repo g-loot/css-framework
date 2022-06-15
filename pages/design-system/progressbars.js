@@ -156,10 +156,14 @@ const DSpage = () => {
 
       <div className="surface rounded-lg p-4">
         <div className=''>
-          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
-            <div className='flex-1 space-y-4'>
-              <div className='w-full flex flex-col gap-4 items-center'>
-                <div className='progressbar progressbar-sm w-full' style={{"--percent": random1}}>
+          <div className='flex gap-4 flex-col lg:flex-row items-start'>
+            <div className='flex-1 flex gap-4 items-start'>
+              <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                Small
+              </div>
+              <div className='flex-1 w-full flex flex-col gap-4 items-center pt-1'>
+
+                <div className='progressbar progressbar-sm w-full mt-0.5' style={{"--percent": random1}}>
                   <div></div>
                 </div>
 
@@ -180,6 +184,7 @@ const DSpage = () => {
                 </div>
                 
               </div>
+              
             </div>
             <div className='flex-1'>
               <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/Lqwb35of/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>

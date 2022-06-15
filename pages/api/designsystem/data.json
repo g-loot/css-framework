@@ -5,12 +5,12 @@
       "icon": "",
       "pages": [{
           "label": "About",
-          "tags": "framework,about,css,gettingstarted,components,styled,system,design,tailwind",
+          "tags": "framework,about,css,gettingstarted,components,styled,system,design,tailwindcss,reactjs",
           "url": "about"
         },
         {
           "label": "Getting started",
-          "tags": "framework,about,css,gettingstarted,install,npm,package,react,package,tailwind",
+          "tags": "framework,about,css,gettingstarted,install,npm,package,reactjs,webpack,tailwindcss,nodejs,config",
           "url": "gettingstarted"
         }
       ]
@@ -31,7 +31,7 @@
         },
         {
           "label": "Typography",
-          "tags": "basics,typography,headings,font,size,bold,italic,font,family,roboto,podium,sharp,title",
+          "tags": "basics,typography,headings,font,size,bold,italic,font,family,roboto,condensed,podium,sharp,title",
           "url": "typography"
         },
         {
@@ -47,7 +47,7 @@
       "pages": [
         {
           "label": "Buttons",
-          "tags": "actions,buttons,interaction,click,onclick,variant,link",
+          "tags": "actions,buttons,interaction,click,onclick,variant,link,navigation",
           "url": "buttons"
         },
         {
@@ -171,12 +171,12 @@
         },
         {
           "label": "Links",
-          "tags": "nav,navigation,links,href",
+          "tags": "nav,navigation,links,href,target",
           "url": "links"
         },
         {
           "label": "Drawer",
-          "tags": "nav,navigation,",
+          "tags": "nav,navigation,drawer,side,left,closed,opened",
           "url": "drawer"
         }
       ]
@@ -192,27 +192,27 @@
         },
         {
           "label": "Gauge",
-          "tags": "stats,numbers,gauge",
+          "tags": "stats,numbers,gauge,graphs,charts",
           "url": "gauge"
         },
         {
           "label": "Icon holder",
-          "tags": "stats,numbers,icon,holder,stats",
+          "tags": "stats,numbers,icon,holder,stats,,graphs,charts",
           "url": "iconholder"
         },
         {
           "label": "Countdown",
-          "tags": "stats,numbers,time,countdown,date",
+          "tags": "stats,numbers,time,countdown,date,graphs,charts",
           "url": "countdown"
         },
         {
           "label": "Steps",
-          "tags": "stats,numbers,steps,progress",
+          "tags": "stats,numbers,steps,progression,explanation,onboarding",
           "url": "steps"
         },
         {
           "label": "Stats",
-          "tags": "stats,numbers,data,display,information",
+          "tags": "stats,numbers,data,display,information,graphs,charts",
           "url": "stats"
         }
       ]
@@ -223,7 +223,7 @@
       "pages": [
         {
           "label": "Form example",
-          "tags": "form,example,layout",
+          "tags": "form,example,layout,sheet,type",
           "url": "formexample"
         },
         {

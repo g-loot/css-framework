@@ -24,8 +24,10 @@ const DSpage = () => {
               <ul>
                 <li className='item'>
                   <div className='item-image'>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -39,8 +41,10 @@ const DSpage = () => {
                 </li>
                 <li className='item'>
                   <div className='item-image'>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png)`}}></span>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -54,8 +58,10 @@ const DSpage = () => {
                 </li>
                 <li className='item'>
                   <div className='item-image'>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png)`}}></span>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -69,8 +75,10 @@ const DSpage = () => {
                 </li>
                 <li className='item'>
                   <div className='item-image'>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png)`}}></span>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -106,8 +114,10 @@ const DSpage = () => {
               <ul>
                 <li className='item'>
                   <div className='item-image'>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -128,8 +138,10 @@ const DSpage = () => {
                 </li>
                 <li className='item'>
                   <div className='item-image'>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png)`}}></span>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -150,8 +162,10 @@ const DSpage = () => {
                 </li>
                 <li className='item'>
                   <div className='item-image'>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png)`}}></span>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -172,8 +186,10 @@ const DSpage = () => {
                 </li>
                 <li className='item'>
                   <div className='item-image'>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png)`}}></span>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -222,7 +238,9 @@ const DSpage = () => {
                   </div>
                   <div className='item-image'>
                     <figure className='avatar avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -263,7 +281,9 @@ const DSpage = () => {
                   </div>
                   <div className='item-image'>
                     <figure className='avatar avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png)`}}></span>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -299,12 +319,14 @@ const DSpage = () => {
                 <li className='item'>
                   <div className='item-image'>
                     <div className="chip chip-reward chip-bronze chip-xs chip-inverted h-6 w-6 text-xs">
-                      <span>4</span>
+                      <span>3</span>
                     </div>
                   </div>
                   <div className='item-image'>
                     <figure className='avatar avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png)`}}></span>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -339,13 +361,15 @@ const DSpage = () => {
                 </li>
                 <li className='item'>
                   <div className='item-image'>
-                    <div className="chip chip-reward chip-ui chip-xs chip-inverted h-6 w-6 text-xs">
-                      <span>3</span>
+                    <div className="chip chip-reward chip-neutral chip-xs chip-inverted h-6 w-6 text-xs">
+                      <span>4</span>
                     </div>
                   </div>
                   <div className='item-image'>
                     <figure className='avatar avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png)`}}></span>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_12.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -841,8 +865,10 @@ const DSpage = () => {
               
               <div className='item'>
                 <div className='item-image'>
-                  <figure className='avatar avatar-square avatar-simple'>
-                    <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654158104/Marketing/2022_prototype/DummyContent/carousel-item-pubg-s6.jpg)`}}></span>
+                  <figure className='avatar avatar-simple rounded-sm overflow-hidden'>
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                    </div>                    
                   </figure>
                 </div>
                 <div className='item-body'>
@@ -884,8 +910,10 @@ const DSpage = () => {
               
               <div className='item'>
                 <div className='item-image'>
-                  <figure className='avatar avatar-square avatar-tiny avatar-simple'>
+                  <figure className='avatar avatar-tiny avatar-simple'>
+                    <div>
                     <span className='icon icon-chart-bar-33'></span>
+                    </div>                    
                   </figure>
                 </div>
                 <div className='item-body'>
@@ -923,8 +951,10 @@ const DSpage = () => {
               <ul className='is-loading'>
                 <li className='item'>
                   <div className='item-image'>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -938,8 +968,10 @@ const DSpage = () => {
                 </li>
                 <li className='item'>
                   <div className='item-image'>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png)`}}></span>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -953,8 +985,10 @@ const DSpage = () => {
                 </li>
                 <li className='item'>
                   <div className='item-image'>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png)`}}></span>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -968,8 +1002,10 @@ const DSpage = () => {
                 </li>
                 <li className='item'>
                   <div className='item-image'>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png)`}}></span>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      </div>                    
                     </figure>
                   </div>
                   <div className='item-body'>

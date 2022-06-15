@@ -24,12 +24,12 @@ const DSpage = () => {
             <div className='flex-1 space-y-4'>
               <div className='w-full flex gap-4 items-center'>
                 <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                  Top <button className="chip chip-xs chip-secondary pointer-events-none uppercase"><span>default</span></button>
+                  Top <div className="chip chip-xs chip-secondary pointer-events-none uppercase"><span>default</span></div>
                 </div>
                 <div className='flex-1'>
-                  <button className='chip chip-primary tooltip' data-tooltip="Lorem ipsum dolor sit amet">
+                  <div className='chip chip-primary tooltip' data-tooltip="Lorem ipsum dolor sit amet">
                     <span>Tooltip</span>
-                  </button>
+                  </div>
                 </div>
               </div>
               <div className='w-full flex gap-4 items-center'>
@@ -37,9 +37,9 @@ const DSpage = () => {
                   Right
                 </div>
                 <div className='flex-1'>
-                  <button className='chip chip-primary tooltip tooltip-right' data-tooltip="Lorem ipsum dolor sit amet">
+                  <div className='chip chip-primary tooltip tooltip-right' data-tooltip="Lorem ipsum dolor sit amet">
                     <span>Tooltip</span>
-                  </button>
+                  </div>
                 </div>
               </div>
               <div className='w-full flex gap-4 items-center'>
@@ -47,9 +47,9 @@ const DSpage = () => {
                   Bottom
                 </div>
                 <div className='flex-1'>
-                  <button className='chip chip-primary tooltip tooltip-bottom' data-tooltip="Lorem ipsum dolor sit amet">
+                  <div className='chip chip-primary tooltip tooltip-bottom' data-tooltip="Lorem ipsum dolor sit amet">
                     <span>Tooltip</span>
-                  </button>
+                  </div>
                 </div>
               </div>
               <div className='w-full flex gap-4 items-center'>
@@ -57,9 +57,9 @@ const DSpage = () => {
                   left
                 </div>
                 <div className='flex-1'>
-                  <button className='chip chip-primary tooltip tooltip-left' data-tooltip="Lorem ipsum dolor sit amet">
+                  <div className='chip chip-primary tooltip tooltip-left' data-tooltip="Lorem ipsum dolor sit amet">
                     <span>Tooltip</span>
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>

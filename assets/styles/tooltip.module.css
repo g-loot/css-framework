@@ -6,6 +6,7 @@
 .tooltip {
   @apply
   relative
+  cursor-pointer
   ;
 
   &:hover {

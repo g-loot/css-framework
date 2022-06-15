@@ -10,10 +10,8 @@
 @import "./typography";
 @import "./variables";
 
-
 @import "./button.module.css";
 @import "./icons.module.css";
-
 
 @import "./alert.module.css";
 @import "./accordion.module.css";
@@ -34,6 +32,7 @@
 @import "./link.module.css";
 @import "./listitem.module.css";
 @import "./loader.module.css";
+@import "./mask.module.css";
 @import "./modal.module.css";
 @import "./menu.module.css";
 @import "./pagination.module.css";
@@ -42,6 +41,7 @@
 @import "./stat.module.css";
 @import "./step.module.css";
 @import "./switch.module.css";
+@import "./table.module.css";
 @import "./tabs.module.css";
 @import "./tooltip.module.css";
 

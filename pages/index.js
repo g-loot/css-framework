@@ -33,7 +33,7 @@ const Index = () => {
                     Framework
                   </h1>
                 </div>
-                <div className='text-xs text-ui-400 block lg:hidden'>
+                <div className='text-xs text-ui-400 mt-1'>
                   <div className='chip chip-secondary chip-xs'>
                     <span>v{packageFramework.version}</span>
                   </div>
@@ -89,6 +89,11 @@ const Index = () => {
                   </div>
                   <ul className="menu menu-secondary menu-rounded">
                     <li>
+                      <Link href='prototype/landing/pubg-season-6'>
+                        <a><span>PUBG Season 6</span></a>
+                      </Link>
+                    </li>
+                    <li>
                       <Link href='prototype/'>
                         <a><span>Home</span></a>
                       </Link>
@@ -103,11 +108,6 @@ const Index = () => {
               <i className="form-icon"></i> Light theme
             </label>
            
-            <div className='text-xs text-ui-400 hidden lg:block'>
-              <div className='chip chip-secondary chip-xs'>
-                <span>v{packageFramework.version}</span>
-              </div>
-            </div>
           </div>
           <div className='flex-3 space-y-8 flex flex-col items-center'>
             <Link href='design-system/about'>

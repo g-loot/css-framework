@@ -16,7 +16,7 @@ const DSpage = () => {
   return(
   <>
     <h1 className='mb-2'>
-      Reward Ladder
+      Reward ladder
     </h1>
 
 
@@ -32,8 +32,10 @@ const DSpage = () => {
                 <div className='ladder-avatar'>
                   <div>
                     <div>
-                      <figure className='avatar avatar-md'>
-                        <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                      <figure className='avatar avatar-circle avatar-sm'>
+                        <div>
+                          <img src='https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png' alt='' />
+                        </div>
                         <i className='radar'></i>
                       </figure>
                     </div>

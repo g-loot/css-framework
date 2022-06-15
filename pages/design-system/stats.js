@@ -86,7 +86,10 @@ const DSpage = () => {
                   </div>
                   <div className="stat-image">
                     <figure className='avatar avatar-simple avatar-squircle avatar-sm'>
-                      <span style={{ backgroundImage: `url("https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-rocketleague_1.jpg")`}}></span>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                      </div>
+                      <i></i>
                     </figure>
                   </div>
                 </div>

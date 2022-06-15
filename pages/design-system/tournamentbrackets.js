@@ -193,8 +193,10 @@ const DSpage = () => {
                                 <ul className='bracket-teams'>
                                   {match.teams.map((team, teamIndex) => (
                                     <li className={`${team.iswinning ? 'is-active' : ''}`} key={teamIndex}>
-                                      <figure className='avatar'>
-                                        <span style={{ backgroundImage: `url(${team.image})`}}></span>
+                                      <figure className='avatar avatar-tiny'>
+                                        <div>
+                                          <img src={team.image} alt={team.name} />
+                                        </div>
                                       </figure>
                                       <b>
                                         {team.name}
@@ -272,8 +274,10 @@ const DSpage = () => {
                                 <ul className='bracket-teams'>
                                   {match.teams.map((team, teamIndex) => (
                                     <li className={`${team.iswinning ? 'is-active' : ''}`} key={teamIndex}>
-                                      <figure className='avatar'>
-                                        <span style={{ backgroundImage: `url(${team.image})`}}></span>
+                                      <figure className='avatar avatar-tiny'>
+                                        <div>
+                                          <img src={team.image} alt={team.name} />
+                                        </div>
                                       </figure>
                                       <b>
                                         {team.name}

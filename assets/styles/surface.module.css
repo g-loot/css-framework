@@ -7,15 +7,10 @@
   @apply
   relative
   transform-gpu
+  bg-ui-800
+  border
+  border-ui-700
   ;
-
-  &:not([class*='surface-ui'], [class*='surface-dimmed']) {
-    @apply
-    border
-    bg-ui-800
-    border-ui-700
-    ;
-  }
 }
 .surface {
 
@@ -210,70 +205,79 @@
 }
 
 /* colors */
-
-.surface-dimmed {
-  @apply
-  bg-ui-800/50
-  border-ui-700
-}
-
-.surface-ui-900 {
-  @apply
-  border
-  bg-ui-900
-  border-ui-800
-  ;
-  .progressbar {
+.surface {
+  &.surface-dimmed {
     @apply
+    bg-ui-800/50
+    border-ui-700
+  }
+  
+  &.surface-ui-900 {
+    @apply
+    border
+    bg-ui-900
+    border-ui-800
+    ;
+    .progressbar {
+      @apply
+      bg-ui-700
+      ;
+    }
+  }
+  &.surface-ui-800 {
+    @apply
+    border
+    bg-ui-800
+    border-ui-700
+    ;
+    .progressbar {
+      @apply
+      bg-ui-600
+      ;
+    }
+  }
+  &.surface-ui-700 {
+    @apply
+    border
     bg-ui-700
+    border-ui-600
     ;
+    .progressbar {
+      @apply
+      bg-ui-500
+      ;
+    }
   }
-}
-.surface-ui-800 {
-  @apply
-  border
-  bg-ui-800
-  border-ui-700
-  ;
-  .progressbar {
+  &.surface-ui-600 {
     @apply
+    border
     bg-ui-600
+    border-ui-500
     ;
+    .progressbar {
+      @apply
+      bg-ui-400
+      ;
+    }
   }
-}
-.surface-ui-700 {
-  @apply
-  border
-  bg-ui-700
-  border-ui-600
-  ;
-  .progressbar {
+  &.surface-premium,
+  &.surface-unlocked {
     @apply
-    bg-ui-500
+    border
+    border-premium-700/25
+    bg-ui-800
     ;
+    .progressbar {
+      @apply
+      bg-premium-700
+      ;
+    }
   }
-}
-.surface-ui-600 {
-  @apply
-  border
-  bg-ui-600
-  border-ui-500
-  ;
-  .progressbar {
+  &.surface-main {
     @apply
-    bg-ui-400
-    ;
-  }
-}
-.surface-premium,
-.surface-unlocked {
-  @apply
-  border
-  border-premium-700/25
-  ;
-  .progressbar {
-    @apply
-    bg-premium-700
+    border
+    border-main
+    bg-ui-800
     ;
   }
 }

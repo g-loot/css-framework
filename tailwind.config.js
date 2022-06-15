@@ -14,6 +14,7 @@ module.exports = {
   content: [
     "./pages/*.{js,ts,jsx,tsx,json}",
     "./pages/*/*.{js,ts,jsx,tsx,json}",
+    "./pages/*/*/*.{js,ts,jsx,tsx,json}",
     "./components/**/*.{js,ts,jsx,tsx,json}",
   ],
   theme: {
@@ -35,6 +36,7 @@ module.exports = {
       '8': '2rem',
       '10': '2.5rem',
       '12': '3rem',
+      'screen': '100vh',
     },
     maxWidth: {
       'xs': '320px',

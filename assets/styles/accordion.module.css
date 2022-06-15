@@ -119,7 +119,7 @@
     }
 
     &.is-active {
-      .accordion-header {
+      > .accordion-header {
         @apply
         text-ui-100
         bg-ui-700

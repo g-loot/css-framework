@@ -338,7 +338,7 @@
         }
       }
     }
-    &.chip-ui {
+    &.chip-neutral {
       &:not(.chip-inverted){
         @apply 
         text-ui-300
@@ -348,8 +348,8 @@
         @apply 
         bg-gradient-to-b
         from-ui-900
-        to-ui-800/0
-        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-900)/0)]
+        to-ui-700
+        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-600)/100%)]
         ;
   
         > * {
@@ -363,7 +363,8 @@
           &:hover,
           &:focus-visible {
             @apply
-            bg-ui-300
+            from-ui-700
+            to-ui-800
             ;
           }
         }

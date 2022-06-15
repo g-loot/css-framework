@@ -23,21 +23,46 @@ const DSpage = () => {
             <div className='flex-1 space-y-4'>
               <div className='w-full flex gap-4 items-center'>
                 <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                  Rounded <button className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                 </div>
                 <div className='flex-1'>
-                  <figure className='avatar'>
-                    <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                  <figure className="avatar">
+                    <div>
+                      <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg' />
+                    </div>
                   </figure>
                 </div>
               </div>
+            </div>
+            <div className='flex-1'>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/djL5vgrp/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+
+    {/* Shapes */}
+    <div className='mb-12' id='shapes'>
+
+      <h2 className='h3 mb-3'>
+        Shapes
+      </h2>
+
+      <div className="surface rounded-lg p-4">
+        <div className=''>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+            <div className='flex-1 space-y-4'>
               <div className='w-full flex gap-4 items-center'>
                 <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                  Square
+                  Circle
                 </div>
                 <div className='flex-1'>
-                  <figure className='avatar avatar-square'>
-                    <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                  <figure className="avatar avatar-circle">
+                    <div>
+                      <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg' />
+                    </div>
                   </figure>
                 </div>
               </div>
@@ -46,8 +71,10 @@ const DSpage = () => {
                   Squircle
                 </div>
                 <div className='flex-1'>
-                  <figure className='avatar avatar-squircle'>
-                    <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                  <figure className="avatar avatar-squircle">
+                    <div>
+                      <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg' />
+                    </div>
                   </figure>
                 </div>
               </div>
@@ -56,8 +83,10 @@ const DSpage = () => {
                   Diamond
                 </div>
                 <div className='flex-1'>
-                  <figure className='avatar avatar-diamond'>
-                    <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                  <figure className="avatar avatar-diamond">
+                    <div>
+                      <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg' />
+                    </div>
                   </figure>
                 </div>
               </div>
@@ -66,8 +95,10 @@ const DSpage = () => {
                   Hexagon
                 </div>
                 <div className='flex-1'>
-                  <figure className='avatar avatar-hexagon'>
-                    <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                  <figure className="avatar avatar-hexagon">
+                    <div>
+                      <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg' />
+                    </div>
                   </figure>
                 </div>
               </div>
@@ -101,11 +132,15 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex gap-4 justify-start'>
-                    <figure className='avatar'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg' />
+                      </div>
                     </figure>
-                    <figure className='avatar avatar-squircle'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-squircle">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg' />
+                      </div>
                     </figure>
                   </div>
                 </div>
@@ -116,11 +151,15 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex gap-4 justify-start'>
-                    <figure className='avatar avatar-md'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-md">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg' />
+                      </div>
                     </figure>
-                    <figure className='avatar avatar-md avatar-squircle'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-md avatar-squircle">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg' />
+                      </div>
                     </figure>
                   </div>
                 </div>
@@ -131,11 +170,15 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex gap-4 justify-start'>
-                    <figure className='avatar avatar-sm'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-sm">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg' />
+                      </div>
                     </figure>
-                    <figure className='avatar avatar-sm avatar-squircle'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-sm avatar-squircle">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg' />
+                      </div>
                     </figure>
                   </div>
                 </div>
@@ -146,11 +189,15 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex gap-4 justify-start'>
-                    <figure className='avatar avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-xs">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg' />
+                      </div>
                     </figure>
-                    <figure className='avatar avatar-xs avatar-squircle'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-xs avatar-squircle">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg' />
+                      </div>
                     </figure>
                   </div>
                 </div>
@@ -161,11 +208,15 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex gap-4 justify-start'>
-                    <figure className='avatar avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-tiny">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg' />
+                      </div>
                     </figure>
-                    <figure className='avatar avatar-tiny avatar-squircle'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-tiny avatar-squircle">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg' />
+                      </div>
                     </figure>
                   </div>
                 </div>
@@ -200,8 +251,15 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex gap-4 justify-start'>
-                    <figure className='avatar'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg' />
+                      </div>
+                    </figure>
+                    <figure className="avatar avatar-squircle">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg' />
+                      </div>
                     </figure>
                   </div>
                 </div>
@@ -212,8 +270,15 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex gap-4 justify-start'>
-                    <figure className='avatar avatar-gold'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-gold">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg' />
+                      </div>
+                    </figure>
+                    <figure className="avatar avatar-gold avatar-squircle">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg' />
+                      </div>
                     </figure>
                   </div>
                 </div>
@@ -224,8 +289,15 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex gap-4 justify-start'>
-                    <figure className='avatar avatar-silver'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-silver">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg' />
+                      </div>
+                    </figure>
+                    <figure className="avatar avatar-silver avatar-squircle">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg' />
+                      </div>
                     </figure>
                   </div>
                 </div>
@@ -236,8 +308,15 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex gap-4 justify-bronze'>
-                    <figure className='avatar avatar-bronze'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-bronze">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg' />
+                      </div>
+                    </figure>
+                    <figure className="avatar avatar-bronze avatar-squircle">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg' />
+                      </div>
                     </figure>
                   </div>
                 </div>
@@ -270,24 +349,16 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className='avatar'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-circle avatar-online">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
+                      </div>
                       <i></i>
-                    </figure>
-                    <figure className='avatar avatar-md'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i></i>
-                    </figure>
-                    <figure className='avatar avatar-sm'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i></i>
-                    </figure>
-                    <figure className='avatar avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i></i>
-                    </figure>
-                    <figure className='avatar avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    </figure>                    
+                    <figure className="avatar avatar-circle avatar-sm avatar-online">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
+                      </div>
                       <i></i>
                     </figure>
                   </div>
@@ -299,24 +370,16 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className='avatar'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-circle avatar-online">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
+                      </div>
                       <i className="disabled"></i>
-                    </figure>
-                    <figure className='avatar avatar-md'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="disabled"></i>
-                    </figure>
-                    <figure className='avatar avatar-sm'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="disabled"></i>
-                    </figure>
-                    <figure className='avatar avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="disabled"></i>
-                    </figure>
-                    <figure className='avatar avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    </figure>                    
+                    <figure className="avatar avatar-circle avatar-sm avatar-online">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
+                      </div>
                       <i className="disabled"></i>
                     </figure>
                   </div>
@@ -328,24 +391,16 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className='avatar'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-circle avatar-online">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
+                      </div>
                       <i className="error"></i>
-                    </figure>
-                    <figure className='avatar avatar-md'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="error"></i>
-                    </figure>
-                    <figure className='avatar avatar-sm'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="error"></i>
-                    </figure>
-                    <figure className='avatar avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="error"></i>
-                    </figure>
-                    <figure className='avatar avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    </figure>                    
+                    <figure className="avatar avatar-circle avatar-sm avatar-online">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
+                      </div>
                       <i className="error"></i>
                     </figure>
                   </div>
@@ -357,24 +412,16 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className='avatar'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-circle avatar-online">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
+                      </div>
                       <i className="attention"></i>
-                    </figure>
-                    <figure className='avatar avatar-md'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="attention"></i>
-                    </figure>
-                    <figure className='avatar avatar-sm'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="attention"></i>
-                    </figure>
-                    <figure className='avatar avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="attention"></i>
-                    </figure>
-                    <figure className='avatar avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    </figure>                    
+                    <figure className="avatar avatar-circle avatar-sm avatar-online">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
+                      </div>
                       <i className="attention"></i>
                     </figure>
                   </div>
@@ -386,24 +433,16 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className='avatar'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-circle avatar-online">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
+                      </div>
                       <i className="info"></i>
-                    </figure>
-                    <figure className='avatar avatar-md'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="info"></i>
-                    </figure>
-                    <figure className='avatar avatar-sm'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="info"></i>
-                    </figure>
-                    <figure className='avatar avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="info"></i>
-                    </figure>
-                    <figure className='avatar avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    </figure>                    
+                    <figure className="avatar avatar-circle avatar-sm avatar-online">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
+                      </div>
                       <i className="info"></i>
                     </figure>
                   </div>
@@ -415,25 +454,17 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className='avatar'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-circle avatar-online">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
+                      </div>
                       <i className="radar"></i>
-                    </figure>
-                    <figure className='avatar avatar-md'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="disabled radar"></i>
-                    </figure>
-                    <figure className='avatar avatar-sm'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="error radar"></i>
-                    </figure>
-                    <figure className='avatar avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="attention radar"></i>
-                    </figure>
-                    <figure className='avatar avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                      <i className="info radar"></i>
+                    </figure>                    
+                    <figure className="avatar avatar-circle avatar-sm avatar-online">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
+                      </div>
+                      <i className="radar info"></i>
                     </figure>
                   </div>
                 </div>
@@ -470,76 +501,19 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className='avatar avatar-simple'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-simple">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg' />
+                      </div>
                     </figure>
-                    <figure className='avatar avatar-simple avatar-md'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                    <figure className='avatar avatar-simple avatar-sm'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                    <figure className='avatar avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                    <figure className='avatar avatar-simple avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+                    <figure className="avatar avatar-diamond avatar-simple">
+                      <div>
+                        <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg' />
+                      </div>
                     </figure>
                   </div>
                 </div>
               </div>
-              <div className='w-full flex gap-4 items-center'>
-                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                  
-                </div>
-                <div className='flex-1'>
-                  <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className='avatar avatar-square avatar-simple'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                    <figure className='avatar avatar-square avatar-simple avatar-md'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                    <figure className='avatar avatar-square avatar-simple avatar-sm'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                    <figure className='avatar avatar-square avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                    <figure className='avatar avatar-square avatar-simple avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              <div className='w-full flex gap-4 items-center'>
-                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                  
-                </div>
-                <div className='flex-1'>
-                  <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className='avatar avatar-diamond avatar-simple'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                    <figure className='avatar avatar-diamond avatar-simple avatar-md'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                    <figure className='avatar avatar-diamond avatar-simple avatar-sm'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                    <figure className='avatar avatar-diamond avatar-simple avatar-xs'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                    <figure className='avatar avatar-diamond avatar-simple avatar-tiny'>
-                      <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              
-              
-              
-              
             </div>
             <div className='flex-1'>
               <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/mv2yx3r8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
@@ -569,79 +543,91 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className='avatar'>
-                      <span className='icon icon-profile-2'></span>
+                    <figure className="avatar avatar-squircle">
+                      <div>
+                        <span className='icon icon-multiple-11'></span>
+                      </div>
                     </figure>
-                    <figure className='avatar avatar-md'>
-                      <span className='icon icon-profile-2'></span>
+                    <figure className="avatar avatar-squircle avatar-md">
+                      <div>
+                        <span className='icon icon-multiple-11'></span>
+                      </div>
                     </figure>
-                    <figure className='avatar avatar-sm'>
-                      <span className='icon icon-profile-2'></span>
+                    <figure className="avatar avatar-squircle avatar-sm">
+                      <div>
+                        <span className='icon icon-multiple-11'></span>
+                      </div>
                     </figure>
-                    <figure className='avatar avatar-xs'>
-                      <span className='icon icon-profile-2'></span>
+                    <figure className="avatar avatar-squircle avatar-xs">
+                      <div>
+                        <span className='icon icon-multiple-11'></span>
+                      </div>
                     </figure>
-                    <figure className='avatar avatar-tiny'>
-                      <span className='icon icon-profile-2'></span>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              <div className='w-full flex gap-4 items-center'>
-                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                  
-                </div>
-                <div className='flex-1'>
-                  <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className='avatar avatar-squircle'>
-                      <span className='icon icon-multiple-11'></span>
-                    </figure>
-                    <figure className='avatar avatar-squircle avatar-md'>
-                      <span className='icon icon-multiple-11'></span>
-                    </figure>
-                    <figure className='avatar avatar-squircle avatar-sm'>
-                      <span className='icon icon-multiple-11'></span>
-                    </figure>
-                    <figure className='avatar avatar-squircle avatar-xs'>
-                      <span className='icon icon-multiple-11'></span>
-                    </figure>
-                    <figure className='avatar avatar-squircle avatar-tiny'>
-                      <span className='icon icon-multiple-11'></span>
+                    <figure className="avatar avatar-squircle avatar-tiny">
+                      <div>
+                        <span className='icon icon-multiple-11'></span>
+                      </div>
                     </figure>
                   </div>
                 </div>
               </div>
-              <div className='w-full flex gap-4 items-center'>
-                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                  
-                </div>
-                <div className='flex-1'>
-                  <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className='avatar avatar-diamond'>
-                      <span className='icon icon-handheld-console-2'></span>
-                    </figure>
-                    <figure className='avatar avatar-diamond avatar-md'>
-                      <span className='icon icon-handheld-console-2'></span>
-                    </figure>
-                    <figure className='avatar avatar-diamond avatar-sm'>
-                      <span className='icon icon-handheld-console-2'></span>
-                    </figure>
-                    <figure className='avatar avatar-diamond avatar-xs'>
-                      <span className='icon icon-handheld-console-2'></span>
-                    </figure>
-                    <figure className='avatar avatar-diamond avatar-tiny'>
-                      <span className='icon icon-handheld-console-2'></span>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-              
-              
-              
-              
             </div>
             <div className='flex-1'>
               <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/L86wt5ok/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* With placeholder */}
+    <div className='mb-12' id='with-placeholder'>
+
+      <h2 className='h3 mb-3'>
+        With placeholder
+      </h2>
+
+      <div className="surface rounded-lg p-4">
+        <div className=''>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+            <div className='flex-1 space-y-4'>
+              <div className='w-full flex gap-4 items-center'>
+                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                  Works with any text
+                </div>
+                <div className='flex-1'>
+                  <div className='flex flex-wrap gap-4 justify-start items-center'>
+                    <figure className="avatar avatar-squircle">
+                      <div>
+                        <span>CG</span>
+                      </div>
+                    </figure>
+                    <figure className="avatar avatar-squircle avatar-md">
+                      <div>
+                        <span>CG</span>
+                      </div>
+                    </figure>
+                    <figure className="avatar avatar-squircle avatar-sm">
+                      <div>
+                        <span>CG</span>
+                      </div>
+                    </figure>
+                    <figure className="avatar avatar-squircle avatar-xs">
+                      <div>
+                        <span>CG</span>
+                      </div>
+                    </figure>
+                    <figure className="avatar avatar-squircle avatar-tiny">
+                      <div>
+                        <span>CG</span>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='flex-1'>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/y1wjg3p6/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
             </div>
           </div>
         </div>
