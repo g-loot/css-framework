@@ -3,7 +3,7 @@ const TournamentLeaderboard = [
     name: 'Open Qualifer EU West',
     icon: 'https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_white.svg',
     iconcolor: 'https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_colored.png',
-    date: 'May 5',
+    date: 'June 27 - July 3',
     region: 'EU West',
     rounds: [
       {
@@ -11,7 +11,7 @@ const TournamentLeaderboard = [
         groups: [
           {
             name: 'Group 1',
-            date: 'May 5',
+            date: 'June 27',
             time: '15:30 PM',
             games: [
               {
@@ -111,6 +111,14 @@ const TournamentLeaderboard = [
                 name: 'Game 2',
                 results: [
                   {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
                     name: 'JWeiss',
                     avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
                     total_kills: 22,
@@ -121,6 +129,103 @@ const TournamentLeaderboard = [
                   {
                     name: 'SkinnyFabulous',
                     avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: 'Round 2',
+        groups: [
+          {
+            name: 'Group 1',
+            date: 'June 27',
+            time: '15:30 PM',
+            games: [
+              {
+                name: 'Game 1',
+                results: [
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
                     total_kills: 22,
                     kill_points: 12,
                     placement_points: 54,
@@ -199,21 +304,9 @@ const TournamentLeaderboard = [
                     total_score: 124
                   }
                 ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        name: 'Round 2',
-        groups: [
-          {
-            name: 'Group 1',
-            date: 'May 5',
-            time: '15:30 PM',
-            games: [
+              },
               {
-                name: 'Game 1',
+                name: 'Game 2',
                 results: [
                   {
                     name: 'SkinnyFabulous',
@@ -315,7 +408,7 @@ const TournamentLeaderboard = [
     name: 'Open Qualifer EU East',
     icon: 'https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_white.svg',
     iconcolor: 'https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_colored.png',
-    date: 'May 5',
+    date: 'June 27 - July 3',
     region: 'EU East',
     rounds: [
       {
@@ -323,15 +416,386 @@ const TournamentLeaderboard = [
         groups: [
           {
             name: 'Group 1',
-            date: 'May 5',
+            date: 'June 27',
             time: '15:30 PM',
             games: [
               {
                 name: 'Game 1',
                 results: [
                   {
-                    name: 'Name12345',
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
                     avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              },
+              {
+                name: 'Game 2',
+                results: [
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: 'Round 2',
+        groups: [
+          {
+            name: 'Group 1',
+            date: 'June 27',
+            time: '15:30 PM',
+            games: [
+              {
+                name: 'Game 1',
+                results: [
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              },
+              {
+                name: 'Game 2',
+                results: [
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
                     total_kills: 22,
                     kill_points: 12,
                     placement_points: 54,
@@ -349,23 +813,394 @@ const TournamentLeaderboard = [
     name: 'Open Qualifer EMEA',
     icon: 'https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_white.svg',
     iconcolor: 'https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_colored.png',
-    date: 'May 5',
+    date: 'June 27 - July 3',
     region: 'EMEA',
-    rounds: [
+     rounds: [
       {
         name: 'Round 1',
         groups: [
           {
             name: 'Group 1',
-            date: 'May 5',
+            date: 'June 27',
             time: '15:30 PM',
             games: [
               {
                 name: 'Game 1',
                 results: [
                   {
-                    name: 'Name12345',
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
                     avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              },
+              {
+                name: 'Game 2',
+                results: [
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: 'Round 2',
+        groups: [
+          {
+            name: 'Group 1',
+            date: 'June 27',
+            time: '15:30 PM',
+            games: [
+              {
+                name: 'Game 1',
+                results: [
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              },
+              {
+                name: 'Game 2',
+                results: [
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
                     total_kills: 22,
                     kill_points: 12,
                     placement_points: 54,
@@ -383,7 +1218,7 @@ const TournamentLeaderboard = [
     name: 'Super Weekend',
     icon: 'https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_superwkd_white.svg',
     iconcolor: 'https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_superwkd_colored.png',
-    date: 'May 5',
+    date: 'July 7 - 10',
     region: 'World',
     rounds: [
       {
@@ -391,15 +1226,386 @@ const TournamentLeaderboard = [
         groups: [
           {
             name: 'Group 1',
-            date: 'May 5',
+            date: 'July 7',
             time: '15:30 PM',
             games: [
               {
                 name: 'Game 1',
                 results: [
                   {
-                    name: 'Name12345',
-                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png',
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              },
+              {
+                name: 'Game 2',
+                results: [
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: 'Round 2',
+        groups: [
+          {
+            name: 'Group 1',
+            date: 'July 7',
+            time: '15:30 PM',
+            games: [
+              {
+                name: 'Game 1',
+                results: [
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              },
+              {
+                name: 'Game 2',
+                results: [
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
                     total_kills: 22,
                     kill_points: 12,
                     placement_points: 54,
@@ -417,7 +1623,7 @@ const TournamentLeaderboard = [
     name: 'Grand Final',
     icon: 'https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_final_white.svg',
     iconcolor: 'https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_final_colored.png',
-    date: 'May 5',
+    date: 'July 22-24',
     region: 'World',
     rounds: [
       {
@@ -425,15 +1631,386 @@ const TournamentLeaderboard = [
         groups: [
           {
             name: 'Group 1',
-            date: 'May 5',
+            date: 'July 22',
             time: '15:30 PM',
             games: [
               {
                 name: 'Game 1',
                 results: [
                   {
-                    name: 'Name12345',
-                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png',
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              },
+              {
+                name: 'Game 2',
+                results: [
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        name: 'Round 2',
+        groups: [
+          {
+            name: 'Group 1',
+            date: 'July 22',
+            time: '15:30 PM',
+            games: [
+              {
+                name: 'Game 1',
+                results: [
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  }
+                ]
+              },
+              {
+                name: 'Game 2',
+                results: [
+                  {
+                    name: 'SkinnyFabulous',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'JWeiss',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: '952-u-',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Kes',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'DoubleM',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'NastlyFlow',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Out_and_Bad',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'TeddysonJohn',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'KingBubba',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Private-Ryan',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg',
+                    total_kills: 22,
+                    kill_points: 12,
+                    placement_points: 54,
+                    total_score: 124
+                  },
+                  {
+                    name: 'Travis',
+                    avatar: 'https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg',
                     total_kills: 22,
                     kill_points: 12,
                     placement_points: 54,
