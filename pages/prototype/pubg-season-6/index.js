@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Accordion from '../../../components/Accordion/Accordion';
 import Footer from '../../../components/Footer/Footer';
-import TournamentLeaderboard from './pubg-season-6-data';
+import TournamentLeaderboard from '../../api/pubg-season-6/data';
 import { getLayout } from '../../../components/Prototype/PrototypeLayout';
 
 const PrototypePage = () => {
@@ -54,6 +54,7 @@ const PrototypePage = () => {
 
 
       <div className='container mx-auto max-w-xl flex flex-col relative pb-8'>
+        <img src='https://res.cloudinary.com/gloot/image/upload/v1655362920/Marketing/2022_PUBG_season_6/G-Loot_S6_logo.png' className='block 2xl:hidden mx-auto' width={200} height={200} alt="PUBG G-Loot Season 6" />
 
         <h1 className='text-center block mx-auto my-8 text-6xl uppercase'>
           <span className='text-main'>G-Loot</span> PUBG Season 6
@@ -63,6 +64,7 @@ const PrototypePage = () => {
           <iframe className='mx-auto max-w-[100%] block aspect-video h-auto rounded-2xl' src={`https://player.twitch.tv/?video=1465753668&parent=${Window}`} allowFullScreen={true} height={676} width={1082}></iframe>
         </div>
         <img src='https://res.cloudinary.com/gloot/image/upload/v1655120411/Marketing/2022_PUBG_season_6/season_6-hero-julie.png' className='absolute pointer-events-none hidden lg:block bottom-0 -left-[calc(1100px/2)] xl:-left-[calc(900px/2)] scale-75 origin-bottom lg:scale-100' width={770} height={686} alt="Julie" />
+        <img src='https://res.cloudinary.com/gloot/image/upload/v1655362920/Marketing/2022_PUBG_season_6/G-Loot_S6_logo.png' className='absolute pointer-events-none hidden 2xl:block bottom-12 left-[calc(100%-212px)]' width={212} height={212} alt="PUBG G-Loot Season 6" />
 
       </div>
 

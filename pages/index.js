@@ -89,7 +89,7 @@ const Index = () => {
                   </div>
                   <ul className="menu menu-secondary menu-rounded">
                     <li>
-                      <Link href='prototype/landing/pubg-season-6'>
+                      <Link href='prototype/pubg-season-6'>
                         <a><span>PUBG Season 6</span></a>
                       </Link>
                     </li>
