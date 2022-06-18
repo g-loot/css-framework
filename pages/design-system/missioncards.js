@@ -20,7 +20,7 @@ const DSpage = () => {
       <div className=''>
         <div className='flex flex-col lg:flex-row gap-4'>
           <div className='flex-1 flex justify-start items-start'>
-            <div className='card-mission surface-ui-800'>
+            <div className='card-mission surface'>
               <div className='card-decoration'></div>
               <div className='card-body'>
                 <div className='card-title'>
@@ -61,7 +61,7 @@ const DSpage = () => {
       <div className=''>
         <div className='flex flex-col lg:flex-row gap-4'>
           <div className='flex-1 flex justify-start items-start'>
-            <div className='card-mission surface-ui-800 card-locked'>
+            <div className='card-mission surface card-locked'>
               <div className='card-decoration'>
                 <img src='https://res.cloudinary.com/gloot/image/upload/v1653293407/Marketing/2022_prototype/Premium_logo.png' width='auto' height='auto' alt='G-Loot Premium' />
               </div>
@@ -104,7 +104,7 @@ const DSpage = () => {
       <div className=''>
         <div className='flex flex-col lg:flex-row gap-4'>
           <div className='flex-1 flex justify-start items-start'>
-            <div className='card-mission surface-ui-800 card-unlocked'>
+            <div className='card-mission surface card-unlocked'>
               <div className='card-decoration'>
                 <img src='https://res.cloudinary.com/gloot/image/upload/v1653293407/Marketing/2022_prototype/Premium_logo.png' width='auto' height='auto' alt='G-Loot Premium' />
               </div>
@@ -147,7 +147,7 @@ const DSpage = () => {
       <div className=''>
         <div className='flex flex-col lg:flex-row gap-4'>
           <div className='flex-1 flex justify-start items-start'>
-            <div className='card-mission surface-ui-800 card-interactive'>
+            <div className='card-mission surface card-interactive'>
               <div className='card-decoration'>
               </div>
               <div className='card-body'>

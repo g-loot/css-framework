@@ -74,7 +74,7 @@ const DSpage = () => {
                 </div>
                 
                 
-              </div>                      
+              </div>  
             </div>
             <div className='flex-1'>
               <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/ryc2mboz/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>

@@ -349,13 +349,13 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className="avatar avatar-circle avatar-online">
+                    <figure className="avatar avatar-circle">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
                       <i></i>
-                    </figure>                    
-                    <figure className="avatar avatar-circle avatar-sm avatar-online">
+                    </figure>
+                    <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
@@ -370,13 +370,13 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className="avatar avatar-circle avatar-online">
+                    <figure className="avatar avatar-circle">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
                       <i className="disabled"></i>
-                    </figure>                    
-                    <figure className="avatar avatar-circle avatar-sm avatar-online">
+                    </figure>
+                    <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
@@ -391,13 +391,13 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className="avatar avatar-circle avatar-online">
+                    <figure className="avatar avatar-circle">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
                       <i className="error"></i>
-                    </figure>                    
-                    <figure className="avatar avatar-circle avatar-sm avatar-online">
+                    </figure>
+                    <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
@@ -412,13 +412,13 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className="avatar avatar-circle avatar-online">
+                    <figure className="avatar avatar-circle">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
                       <i className="attention"></i>
-                    </figure>                    
-                    <figure className="avatar avatar-circle avatar-sm avatar-online">
+                    </figure>
+                    <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
@@ -433,13 +433,13 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className="avatar avatar-circle avatar-online">
+                    <figure className="avatar avatar-circle">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
                       <i className="info"></i>
-                    </figure>                    
-                    <figure className="avatar avatar-circle avatar-sm avatar-online">
+                    </figure>
+                    <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
@@ -454,13 +454,13 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
-                    <figure className="avatar avatar-circle avatar-online">
+                    <figure className="avatar avatar-circle">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
                       <i className="radar"></i>
-                    </figure>                    
-                    <figure className="avatar avatar-circle avatar-sm avatar-online">
+                    </figure>
+                    <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>

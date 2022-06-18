@@ -32,7 +32,7 @@ export default function Footer(props) {
               <span className='text-ui-300'>All rights reserved. Made in Stockholm, Sweden</span>
               <img
                 loading='lazy'
-                className='ml-2'
+                className='ml-2 rounded-sm'
                 alt='Swedish flag'
                 src='https://gloot.com/icons/sweden.svg'
                 width='16'
@@ -98,27 +98,27 @@ export default function Footer(props) {
             <ul className=''>
               <li>
                 <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/terms-conditions'>
-                  <Icon icon='discord' />
+                  <span className='icon icon-discord icon-24'></span> 
                 </a>
               </li>
               <li>
                 <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/terms-conditions'>
-                  <Icon icon='logo-facebook' />
+                  <span className='icon icon-logo-facebook icon-24'></span> 
                 </a>
               </li>
               <li>
                 <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/terms-conditions'>
-                  <Icon icon='logo-instagram' />
+                  <span className='icon icon-logo-instagram icon-24'></span> 
                 </a>
               </li>
               <li>
                 <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/terms-conditions'>
-                  <Icon icon='logo-twitter' />
+                  <span className='icon icon-logo-twitter icon-24'></span> 
                 </a>
               </li>
               <li>
                 <a className='text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block' target='_blank' rel='noreferrer' href='https://gloot.com/terms-conditions'>
-                  <Icon icon='logo-youtube' />
+                  <span className='icon icon-logo-youtube icon-24'></span> 
                 </a>
               </li> 
             </ul>

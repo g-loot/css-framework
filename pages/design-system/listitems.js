@@ -1,7 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
+
 import { getLayout } from '../../components/DesignSystem/DSLayout';
 
 const DSpage = () => {
+
+  const [StartAnim, setStartAnim] = useState(false);
+
+  function handleStartAnim() {
+    
+    setStartAnim(true);
+
+    const timer = setTimeout(() => {
+      setStartAnim(false)
+      
+    }, 1000);
+    return () => clearTimeout(timer);
+  }
 
   return(
   <>
@@ -27,7 +41,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-xs'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -44,7 +58,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-xs'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -61,7 +75,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-xs'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -78,7 +92,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-xs'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -117,7 +131,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-xs'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -141,7 +155,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-xs'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -165,7 +179,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-xs'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -189,7 +203,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-xs'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -240,7 +254,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-tiny'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -283,7 +297,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-tiny'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -326,7 +340,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-tiny'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -369,7 +383,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-tiny'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_12.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -868,7 +882,7 @@ const DSpage = () => {
                   <figure className='avatar avatar-simple rounded-sm overflow-hidden'>
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
-                    </div>                    
+                    </div>
                   </figure>
                 </div>
                 <div className='item-body'>
@@ -913,7 +927,7 @@ const DSpage = () => {
                   <figure className='avatar avatar-tiny avatar-simple'>
                     <div>
                     <span className='icon icon-chart-bar-33'></span>
-                    </div>                    
+                    </div>
                   </figure>
                 </div>
                 <div className='item-body'>
@@ -954,7 +968,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-xs'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -971,7 +985,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-xs'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -988,7 +1002,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-xs'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -1005,7 +1019,7 @@ const DSpage = () => {
                     <figure className='avatar avatar-xs'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
-                      </div>                    
+                      </div>
                     </figure>
                   </div>
                   <div className='item-body'>
@@ -1021,6 +1035,208 @@ const DSpage = () => {
             </div>
             <div className='flex-1'>
               <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/08sanf9d/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      {/* Spaced */}
+      <div className='mb-12' id='spaced'>
+
+        <h2 className='h3 mb-3'>
+          Spaced
+        </h2>
+
+        <div className=''>
+          <div className=''>
+            <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
+              <div className='flex-1'>
+                <ul className='items-spaced space-y-2'>
+                  <li className='item rounded-xl'>
+                    <div className='item-image'>
+                      <figure className='avatar avatar-xs'>
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                        </div>
+                      </figure>
+                    </div>
+                    <div className='item-body'>
+                      <div className='item-title'>
+                        Croc Esports
+                      </div>
+                      <div className='text-ui-300 text-xs'>
+                        3 members
+                      </div>
+                    </div>
+                  </li>
+                  <li className='item rounded-xl'>
+                    <div className='item-image'>
+                      <figure className='avatar avatar-xs'>
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                        </div>
+                      </figure>
+                    </div>
+                    <div className='item-body'>
+                      <div className='item-title'>
+                        Kingzz
+                      </div>
+                      <div className='text-ui-300 text-xs'>
+                        3 members
+                      </div>
+                    </div>
+                  </li>
+                  <li className='item rounded-xl'>
+                    <div className='item-image'>
+                      <figure className='avatar avatar-xs'>
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                        </div>
+                      </figure>
+                    </div>
+                    <div className='item-body'>
+                      <div className='item-title'>
+                        Angry Beavers
+                      </div>
+                      <div className='text-ui-300 text-xs'>
+                        3 members
+                      </div>
+                    </div>
+                  </li>
+                  <li className='item rounded-xl'>
+                    <div className='item-image'>
+                      <figure className='avatar avatar-xs'>
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
+                        </div>
+                      </figure>
+                    </div>
+                    <div className='item-body'>
+                      <div className='item-title'>
+                        Bunny Hunger
+                      </div>
+                      <div className='text-ui-300 text-xs'>
+                        3 members
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div className='flex-1'>
+                <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/gctr4vwz/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+    {/* Animation */}
+    <div className='mb-12' id='animation'>
+
+      <h2 className='h3 mb-3'>
+        Animation
+      </h2>
+
+      <div className=''>
+        <div className=''>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
+            <div className='flex-1'>
+              <ul className='items-spaced space-y-2'>
+                <li className={`item rounded-lg ${StartAnim === true ? 'animate-slide-in-bottom animate-delay' : ''}`} style={{ '--delay': 'calc( 1 * 0.05s)'}}>
+                  <div className='item-image'>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      </div>
+                    </figure>
+                  </div>
+                  <div className='item-body'>
+                    <div className='item-title'>
+                      Croc Esports
+                    </div>
+                    <div className='text-ui-300 text-xs'>
+                      3 members
+                    </div>
+                  </div>
+                </li>
+                <li className={`item rounded-lg ${StartAnim === true ? 'animate-slide-in-bottom animate-delay' : ''}`} style={{ '--delay': 'calc( 2 * 0.05s)'}}>
+                  <div className='item-image'>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                      </div>
+                    </figure>
+                  </div>
+                  <div className='item-body'>
+                    <div className='item-title'>
+                      Kingzz
+                    </div>
+                    <div className='text-ui-300 text-xs'>
+                      3 members
+                    </div>
+                  </div>
+                </li>
+                <li className={`item rounded-lg ${StartAnim === true ? 'animate-slide-in-bottom animate-delay' : ''}`} style={{ '--delay': 'calc( 3 * 0.05s)'}}>
+                  <div className='item-image'>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                      </div>
+                    </figure>
+                  </div>
+                  <div className='item-body'>
+                    <div className='item-title'>
+                      Angry Beavers
+                    </div>
+                    <div className='text-ui-300 text-xs'>
+                      3 members
+                    </div>
+                  </div>
+                </li>
+                <li className={`item rounded-lg ${StartAnim === true ? 'animate-slide-in-bottom animate-delay' : ''}`} style={{ '--delay': 'calc( 4 * 0.05s)'}}>
+                  <div className='item-image'>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
+                      </div>
+                    </figure>
+                  </div>
+                  <div className='item-body'>
+                    <div className='item-title'>
+                      Bunny Hunger
+                    </div>
+                    <div className='text-ui-300 text-xs'>
+                      3 members
+                    </div>
+                  </div>
+                </li>
+                <li className={`item rounded-lg ${StartAnim === true ? 'animate-slide-in-bottom animate-delay' : ''}`} style={{ '--delay': 'calc( 5 * 0.05s)'}}>
+                  <div className='item-image'>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                      </div>
+                    </figure>
+                  </div>
+                  <div className='item-body'>
+                    <div className='item-title'>
+                      DoubleM
+                    </div>
+                    <div className='text-ui-300 text-xs'>
+                      3 members
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div className='text-center mt-5'>
+                <button className='button button-tertiary mx-auto' onClick={handleStartAnim.bind(this)}>
+                  <span>Play animation</span>
+                </button>
+              </div>
+            </div>
+            <div className='flex-1'>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/pyd0z76f/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
             </div>
           </div>
         </div>

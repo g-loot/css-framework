@@ -2,10 +2,6 @@
 /* LIST ITEMS */
 /*----------------------------*/
 
-.items {
-  
-}
-
 .item {
   @apply
   relative
@@ -110,3 +106,21 @@ ul.item-actions-hidden > .item,
     }
   }
 }
+
+.items-spaced {
+  > .item {
+    &:not([class*=surface]){
+      @apply
+      bg-ui-800
+      border
+      border-ui-700
+      ;
+    }
+
+    &:not([class*=rounded]){
+      @apply
+      rounded
+      ;
+    }
+  }
+} 

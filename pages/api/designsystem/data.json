@@ -38,6 +38,11 @@
           "label": "Surfaces",
           "tags": "basics,surfaces,cards,container,box,halo",
           "url": "surfaces"
+        },
+        {
+          "label": "Animation",
+          "tags": "basics,animation,slide,in,out,fade,loading,bounce,spin,heartbeat,infinite,delay,keyframes,animate",
+          "url": "animation"
         }
       ]
     },
@@ -266,6 +271,17 @@
           "label": "Content cards",
           "tags": "content,card,display",
           "url": "contentcards"
+        }
+      ]
+    },
+    {
+      "label": "Templates",
+      "icon": "",
+      "pages": [
+        {
+          "label": "Footer",
+          "tags": "footer,website",
+          "url": "footer"
         }
       ]
     }

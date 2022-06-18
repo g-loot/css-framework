@@ -476,7 +476,7 @@ const DSpage = () => {
               </div>
             </div>
             <div className='flex-1'>
-              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/my610f4g/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/qhv65onx/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
             </div>
           </div>
         </div>

@@ -47,6 +47,11 @@ const Index = () => {
                   </div>
                   <ul className="menu menu-secondary menu-rounded">
                     <li>
+                      <Link href='design-system/animation'>
+                        <a><span>Animation</span></a>
+                      </Link>
+                    </li>
+                    <li>
                       <Link href='design-system/dropdown'>
                         <a><span>Dropdown</span></a>
                       </Link>
@@ -69,11 +74,6 @@ const Index = () => {
                     <li>
                       <Link href='design-system/countdown'>
                         <a><span>Countdown</span></a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href='design-system/alert'>
-                        <a><span>Alert</span></a>
                       </Link>
                     </li>
                     <li>
@@ -111,7 +111,7 @@ const Index = () => {
           </div>
           <div className='flex-3 space-y-8 flex flex-col items-center'>
             <Link href='design-system/about'>
-              <a className='card-mission card-interactive surface-ui-700'>
+              <a className='card-mission card-interactive surface surface-ui-700'>
                 <div className='card-decoration'></div>
                 <div className='card-body'>
                   <div className='card-title flex gap-2 items-center'>
@@ -132,7 +132,7 @@ const Index = () => {
               </a>
             </Link>
             <Link href='prototype/'>
-              <a className='card-mission card-interactive surface-ui-700'>
+              <a className='card-mission card-interactive surface surface-ui-700'>
                 <div className='card-decoration'></div>
                 <div className='card-body'>
                   <div className='card-title flex gap-2 items-center'>

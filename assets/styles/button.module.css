@@ -6,7 +6,6 @@
 
 .button {
   @apply
-  /*uppercase*/
   outline-none
   text-lg
   leading-[1]
@@ -480,7 +479,9 @@
     pointer-events-none
     select-none
     bg-disabled-500/25
+    bg-gradient-to-r
     from-disabled-500/25
+    via-disabled-500/25
     to-disabled-500/25
     text-disabled-300
     shadow-[inset_0_0_0_1px_rgba(var(--color-disabled-700),50%)]
@@ -488,6 +489,13 @@
     > * {
       @apply
       drop-shadow-[0_-1px_0_rgba(var(--color-disabled-700)/0%)]
+      ;
+    }
+    &.button-currency > div:last-child {
+      @apply
+      from-disabled-500/50
+      via-disabled-500/50
+      to-disabled-500/50
       ;
     }
   }

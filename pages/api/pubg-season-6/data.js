@@ -405,7 +405,7 @@ const TournamentLeaderboard = [
     ]
   },
   {
-    name: 'Open Qualifer EMEA',
+    name: 'Open Qualifer MEA',
     icon: 'https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_white.svg',
     iconcolor: 'https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_colored.png',
     date: 'June 27 - July 3',

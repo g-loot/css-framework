@@ -157,7 +157,7 @@ const PrototypePage = () => {
               <div className='space-y-2 hidden lg:block'>
                 {TournamentLeaderboard[SelectedTournament].rounds.map((round, roundIndex) => (
                   <>
-                    <div className={`surface rounded-lg accordion ${Loading === true ? '' : 'anim-slide-in-bottomNO anim-delay'}`} style={{ '--delay': 'calc('+roundIndex+' * 0.05s)'}}>
+                    <div className={`surface rounded-lg accordion ${Loading === true ? '' : 'animate-slide-in-bottomNO animate-delay'}`} style={{ '--delay': 'calc('+roundIndex+' * 0.05s)'}}>
                       <Accordion key={roundIndex} header={(
                         <>
                           <div className='item py-1'>
@@ -285,7 +285,7 @@ const PrototypePage = () => {
                     </div>
                   </li>
                   {randomArrayShuffle(TournamentLeaderboard[SelectedTournament].rounds[SelectedRound].groups[SelectedGroup].games[SelectedGame].results).map((item, itemIndex) => (
-                  <li key={itemIndex} className={`item surface lg:rounded-lg text-center ${Loading === true ? '' : 'anim-slide-in-bottom anim-delay'}`} style={{ '--delay': 'calc('+itemIndex+' * 0.05s)'}}>
+                  <li key={itemIndex} className={`item surface lg:rounded-lg text-center ${Loading === true ? '' : 'animate-slide-in-bottom animate-delay'}`} style={{ '--delay': 'calc('+itemIndex+' * 0.05s)'}}>
                     <div className='item-image w-16 hidden md:block'>
                       <div className={`chip chip-reward chip-xs chip-inverted h-6 min-w-[1.5rem] text-xs ${itemIndex === 0 ? 'chip-gold' : ''} ${itemIndex === 1 ? 'chip-silver' : ''} ${itemIndex === 2 ? 'chip-bronze' : ''} ${itemIndex > 2 ? 'chip-neutral' : ''}`}><span>{itemIndex+1}</span></div>
                     </div>
@@ -332,7 +332,7 @@ const PrototypePage = () => {
 
         <div className={`container max-w-[1320px] mx-auto max-w-xl mt-8 ${!TournamentLeaderboard[SelectedTournament].disabled ? 'hidden' : 'block'}`}>
           
-          <div className={`h-44 flex items-center justify-center relative ${Loading === true ? '' : 'anim-slide-in-bottom anim-delay'}`} style={{ '--delay': '0.05s'}}>
+          <div className={`h-44 flex items-center justify-center relative ${Loading === true ? '' : 'animate-slide-in-bottom animate-delay'}`} style={{ '--delay': '0.05s'}}>
             <div className={`relative z-0 surface surface-dimmed rounded-lg px-4 py-8 text-center mt-28`}>
               <div className={`absolute z-10 inset-0 flex items-center ${Loading === true ? 'flex' : 'hidden'}`}>
                 <div className='loader-gloot loader-xl'>
@@ -390,7 +390,7 @@ const PrototypePage = () => {
                   </div>
                 </li>
                 {randomArrayShuffle(TournamentLeaderboard[SelectedTournament].rounds[SelectedRound].groups[SelectedGroup].games[SelectedGame].results).map((item, itemIndex) => (
-                <li className={`item surface lg:rounded-lg text-center ${Loading === true ? '' : 'anim-slide-in-bottom anim-delay'}`} style={{ '--delay': 'calc('+itemIndex+' * 0.05s)'}}>
+                <li className={`item surface lg:rounded-lg text-center ${Loading === true ? '' : 'animate-slide-in-bottom animate-delay'}`} style={{ '--delay': 'calc('+itemIndex+' * 0.05s)'}}>
                   <div className='item-image w-16 hidden md:block'>
                     <div className={`chip chip-reward chip-xs chip-inverted h-6 min-w-[1.5rem] text-xs ${itemIndex === 0 ? 'chip-gold' : ''} ${itemIndex === 1 ? 'chip-silver' : ''} ${itemIndex === 2 ? 'chip-bronze' : ''} ${itemIndex > 2 ? 'chip-neutral' : ''}`}><span>{itemIndex+1}</span></div>
                   </div>

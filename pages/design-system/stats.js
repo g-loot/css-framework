@@ -33,7 +33,7 @@ const DSpage = () => {
                       12% more than last month
                     </div>
                   </div>
-                </div>                      
+                </div>  
               </div>   
             </div>
             <div className='flex-1'>
