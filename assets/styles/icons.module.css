@@ -1945,10 +1945,6 @@
   content: "\ebde";
 }
 
-.icon-dots-vertical::before {
-  content: "\ebf1";
-}
-
 .icon-missions::before {
   content: "\ebdf";
 }
@@ -1981,10 +1977,6 @@
   content: "\ebe6";
 }
 
-.icon-game-pubg-symbol::before {
-  content: "\ebe7";
-}
-
 .icon-leave::before {
   content: "\ebe8";
 }
@@ -1997,10 +1989,54 @@
   content: "\ebea";
 }
 
-.icon-at-sign::before {
-  content: "\ebef";
+.icon-t-add::before {
+  content: "\ebeb";
+}
+
+.icon-i-add::before {
+  content: "\ebec";
+}
+
+.icon-e-add::before {
+  content: "\ebed";
 }
 
 .icon-at-sign-2::before {
   content: "\ebee";
+}
+
+.icon-at-sign::before {
+  content: "\ebef";
+}
+
+.icon-dots-vertical::before {
+  content: "\ebf1";
+}
+
+.icon-f-add::before {
+  content: "\ebf2";
+}
+
+.icon-c-add::before {
+  content: "\ebf3";
+}
+
+.icon-c-remove::before {
+  content: "\ebf4";
+}
+
+.icon-c-delete::before {
+  content: "\ebf5";
+}
+
+.icon-f-remove::before {
+  content: "\ebf6";
+}
+
+.icon-f-delete::before {
+  content: "\ebf7";
+}
+
+.icon-game-pubg-symbol::before {
+  content: "\ea01";
 }

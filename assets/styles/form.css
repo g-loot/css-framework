@@ -107,6 +107,7 @@ textarea {
   input[type=email],
   input[type=password],
   input[type=date],
+  input[type=file],
   textarea,
   .input-text {
     @apply
@@ -120,6 +121,7 @@ input[type=number],
 input[type=email],
 input[type=password],
 input[type=date],
+input[type=file],
 textarea,
 .input-text,
 .form-select > select {
@@ -142,6 +144,33 @@ textarea,
     p-[0.4375rem]
     ;
   }
+}
+
+/*----------------------------*/
+/* FILE */
+/*----------------------------*/
+
+input[type=file] {
+  @apply
+  p-0
+  min-h-[42px]
+  file:min-h-[42px]
+  file:bg-ui-600
+  file:hover:bg-ui-500
+  file:cursor-pointer
+  file:px-4
+  file:rounded-l-sm 
+  file:border-0
+  file:font-bold  
+  file:text-ui-100
+  file:mr-2
+  block
+  w-full
+  text-sm
+  text-ui-300
+  cursor-pointer
+  focus:outline-none
+  ;
 }
 
 /*----------------------------*/
@@ -602,6 +631,7 @@ textarea,
     input[type=email],
     input[type=password],
     input[type=date],
+    input[type=file],
     textarea,
     .input-text,
     select {
@@ -644,6 +674,7 @@ textarea,
     input[type=email],
     input[type=password],
     input[type=date],
+    input[type=file],
     textarea,
     .input-text,
     select {
@@ -686,6 +717,7 @@ textarea,
     input[type=email],
     input[type=password],
     input[type=date],
+    input[type=file],
     textarea,
     .input-text,
     select {
@@ -789,6 +821,7 @@ input[type=number]:disabled,
 input[type=email]:disabled,
 input[type=password]:disabled,
 input[type=date]:disabled,
+input[type=file]:disabled,
 select:disabled,
 textarea:disabled,
 .input-text:disabled,
@@ -797,6 +830,7 @@ input[type=number].is-disabled,
 input[type=email].is-disabled,
 input[type=password].is-disabled,
 input[type=date].is-disabled,
+input[type=file].is-disabled,
 select.is-disabled,
 textarea.is-disabled,
 .input-text.is-disabled {
@@ -902,5 +936,52 @@ input[type=range].form-range {
     --filler-size: 100rem;
     --filler-offset: .5rem;
     box-shadow: 0 0 0 3px rgb(var(--color-main)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size)
+  }
+}
+
+
+/* input file dropzone */
+
+.form-dropzone {
+  @apply
+  flex
+  justify-center
+  items-center
+  w-full
+  ;
+  > label {
+    @apply
+    flex
+    flex-col
+    justify-center
+    items-center
+    w-full
+    bg-ui-700
+    rounded
+    border
+    border-ui-500
+    border-dashed
+    cursor-pointer
+    hover:bg-ui-600
+    hover:border-ui-400
+    ;
+
+    > div {
+      @apply
+      flex
+      flex-col
+      justify-center
+      items-center
+      text-center
+      px-4
+      py-8
+      text-ui-300
+      ;
+    }
+    > input[type=file] {
+      @apply
+      hidden
+      ;
+    }
   }
 }

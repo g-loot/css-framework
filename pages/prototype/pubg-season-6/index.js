@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import Accordion from '../../../components/Accordion/Accordion';
 import Footer from '../../../components/Footer/Footer';
+import TopbarMarketing from '../../../components/TopBarMarketing/TopbarMarketing';
 import TournamentLeaderboard from '../../api/pubg-season-6/data';
 import { getLayout } from '../../../components/Prototype/PrototypeLayout';
 
@@ -52,6 +53,7 @@ const PrototypePage = () => {
 
   return(
   <>
+    <TopbarMarketing />
     <section 
       className='relative full-width bg-cover bg-no-repeat overflow-hidden bg-center pt-24' 
       style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1655119438/Marketing/2022_PUBG_season_6/season-6-hero-bg.jpg)`}}>
@@ -78,11 +80,11 @@ const PrototypePage = () => {
     </section>
 
     <section
-      className='pb-24 bg-ui-900  min-h-screen'>
+      className='pb-24 bg-ui-900 min-h-screen'>
 
-        <div className='mx-auto max-w-xl flex overflow-scroll scrollbar-hidden justify-start gap-4 bg-gradient-to-b from-mono-900/50 to-ui-900 px-4 pt-8 sm:rounded-2xl'>
+        <div className='mx-auto max-w-xl flex overflow-x-auto scrollbar-desktop justify-start gap-4 bg-gradient-to-b from-mono-900/50 to-ui-900 px-4 py-8 sm:rounded-2xl'>
 
-          <div className='flex-1 flex justify-center gap-4 '>
+          <div className='flex-1 flex justify-center gap-4 lg:gap-8 '>
 
             {TournamentLeaderboard.map((item, itemIndex) => (
               <>
@@ -118,7 +120,7 @@ const PrototypePage = () => {
 
         
 
-        <div className={`container max-w-[1320px] mx-auto max-w-xl mt-8 ${!TournamentLeaderboard[SelectedTournament].disabled ? '' : 'hidden'}`}>
+        <div className={`container max-w-[1280px] mx-auto max-w-xl mt-8 ${!TournamentLeaderboard[SelectedTournament].disabled ? '' : 'hidden'}`}>
           <div className='hidden justify-end gap-4 mb-8'>
             <button type='button' className='button button-secondary'>
               <span className='icon icon-data-download'></span>
@@ -126,9 +128,9 @@ const PrototypePage = () => {
             </button>
           </div>
           <div className='flex flex-col lg:flex-row gap-4 '>
-            <div className={`w-full lg:w-56 ${Loading === true ? 'opacity-0NO' : ''}`}>
+            <div className={`w-full lg:w-64 ${Loading === true ? 'opacity-0NO' : ''}`}>
 
-              <div className='text-sm text-ui-300 text-center mb-2 py-2 font-bold leading-none border-b border-ui-700'>
+              <div className='text-sm text-ui-300 text-center mb-2 lg:mb-3 py-2 font-bold leading-none border-b border-ui-700'>
                 Leaderboard
               </div>
 
@@ -154,7 +156,7 @@ const PrototypePage = () => {
                 </div>
               </div>
 
-              <div className='space-y-2 hidden lg:block'>
+              <div className='space-y-2 lg:space-y-3 hidden lg:block'>
                 {TournamentLeaderboard[SelectedTournament].rounds.map((round, roundIndex) => (
                   <>
                     <div className={`surface rounded-lg accordion ${Loading === true ? '' : 'animate-slide-in-bottomNO animate-delay'}`} style={{ '--delay': 'calc('+roundIndex+' * 0.05s)'}}>
@@ -260,12 +262,12 @@ const PrototypePage = () => {
               
               <div className={`${Loading === true ? 'opacity-0' : ''}`}>
 
-                <ul ref={screenshotRef} className='space-y-2'>
+                <ul ref={screenshotRef} className='space-y-2 lg:space-y-3'>
                   <li className='item text-sm text-ui-300 text-center font-bold leading-none'>
                     <div className='item-image w-16 hidden md:block'>
                       #
                     </div>
-                    <div className='item-image w-12 text-left'>
+                    <div className='item-image w-20 text-left'>
                       Party
                     </div>
                     <div className='item-body flex-2 lg:flex-3'>
@@ -289,13 +291,13 @@ const PrototypePage = () => {
                     <div className='item-image w-16 hidden md:block'>
                       <div className={`chip chip-reward chip-xs chip-inverted h-6 min-w-[1.5rem] text-xs ${itemIndex === 0 ? 'chip-gold' : ''} ${itemIndex === 1 ? 'chip-silver' : ''} ${itemIndex === 2 ? 'chip-bronze' : ''} ${itemIndex > 2 ? 'chip-neutral' : ''}`}><span>{itemIndex+1}</span></div>
                     </div>
-                    <div className='item-image w-12'>
-                      <figure className='avatar avatar-xs'>
+                    <div className='item-image w-20'>
+                      <figure className='avatar avatar-md'>
                         <div><img src={item.avatar} alt={item.name} /></div>
                       </figure>
                     </div>
                     <div className='item-body flex-2 lg:flex-3 text-left'>
-                      <div className='item-title font-headings italic text-lg text-ui-100'>
+                      <div className='item-title font-headings italic text-xl text-ui-100'>
                         {item.name}
                       </div>
                     </div>
@@ -353,97 +355,6 @@ const PrototypePage = () => {
 
 
     </section>
-
-    {/*
-
-    <section className={`fixed inset-0 z-50 bg-ui-900/95 backdrop-blur-sm flex items-center justify-center ${ShowModal ? 'block' : 'hidden'}`}>
-      <div className='modal surface max-w-sm mx-auto'>
-        <button type='button' className='button button-secondary button-close' onClick={() => setShowModal(false)}>
-          <span className='icon icon-e-remove'></span>
-        </button>
-        <div className='modal-content'>
-          <div className='modal-body'>
-            <div className='h-[568px] w-[320px] rounded-3xl bg-ui-700 mx-auto overflow-x-hidden overflow-y-scroll scrollbar-desktop px-2'>
-
-              <ul className={`space-y-2 ${!TournamentLeaderboard[SelectedTournament].disabled ? '' : 'hidden'}`}>
-                <li className='item text-sm text-ui-300 text-center font-bold leading-none'>
-                  <div className='item-image w-16 hidden md:block'>
-                    #
-                  </div>
-                  <div className='item-image w-12 text-left'>
-                    Party
-                  </div>
-                  <div className='item-body flex-3'>
-                    
-                  </div>
-                  <div className='item-body'>
-                    Total kills
-                  </div>
-                  <div className='item-body'>
-                    Kill points
-                  </div>
-                  <div className='item-body'>
-                    Placement points
-                  </div>
-                  <div className='item-body'>
-                    Total Score
-                  </div>
-                </li>
-                {randomArrayShuffle(TournamentLeaderboard[SelectedTournament].rounds[SelectedRound].groups[SelectedGroup].games[SelectedGame].results).map((item, itemIndex) => (
-                <li className={`item surface lg:rounded-lg text-center ${Loading === true ? '' : 'animate-slide-in-bottom animate-delay'}`} style={{ '--delay': 'calc('+itemIndex+' * 0.05s)'}}>
-                  <div className='item-image w-16 hidden md:block'>
-                    <div className={`chip chip-reward chip-xs chip-inverted h-6 min-w-[1.5rem] text-xs ${itemIndex === 0 ? 'chip-gold' : ''} ${itemIndex === 1 ? 'chip-silver' : ''} ${itemIndex === 2 ? 'chip-bronze' : ''} ${itemIndex > 2 ? 'chip-neutral' : ''}`}><span>{itemIndex+1}</span></div>
-                  </div>
-                  <div className='item-image w-12'>
-                    <figure className='avatar avatar-xs'>
-                      <div><img src={item.avatar} alt={item.name} /></div>
-                    </figure>
-                  </div>
-                  <div className='item-body flex-3 text-left'>
-                    <div className='item-title font-headings italic text-lg text-ui-100'>
-                      {item.name}
-                    </div>
-                  </div>
-                  <div className='item-body'>
-                    <span className='bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings'>
-                      {item.total_kills}
-                    </span>
-                  </div>
-                  <div className='item-body'>
-                    <span className='bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings'>
-                      {item.kill_points}
-                    </span>
-                  </div>
-                  <div className='item-body'>
-                    <span className='bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings'>
-                      {item.placement_points}
-                    </span>
-                  </div>
-                  <div className='item-body'>
-                    <span className='bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings'>
-                      {item.total_score}
-                    </span>
-                  </div>
-                </li>
-                ))}
-              </ul>
-
-            </div>
-          </div>
-          <div className='modal-action'>
-            <button type='button' className='flex-1 button button-primary' onClick={() => exportComponentAsPNG(screenshotRef)}>
-              <span>Download</span>
-            </button>
-            <button type='button' className='flex-1 button button-secondary' onClick={() => setShowModal(false)}>
-              <span>Close</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-                */}
-
     
     <Footer/>
   </>

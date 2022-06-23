@@ -83,7 +83,7 @@ const DSpage = () => (
         <pre data-prefix=""><code>  content: &#x5B;</code></pre>
         <pre data-prefix=""><code>    &quot;./pages/*.&#123;js,ts,jsx,tsx,json&#x7D;&quot;,</code></pre>
         <pre data-prefix=""><code>  &#x5D;,</code></pre>
-        <pre data-prefix=""><code>&#x5D;&#x7D;;</code></pre>
+        <pre data-prefix=""><code>&#x7D;;</code></pre>
       </div>
     </li>
   </ul>

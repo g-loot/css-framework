@@ -45,7 +45,8 @@
   &:not([class*='button-secondary'], 
   [class*='button-tertiary'], 
   [class*='button-premium'], 
-  [class*='button-claim']), {
+  [class*='button-claim'], 
+  [class*='button-ghost']), {
     @apply
     bg-gradient-to-r
     from-interaction-500
@@ -252,12 +253,34 @@
     }
   }
 
+  &.button-ghost {
+    @apply 
+    bg-ui-800/0
+    bg-gradient-to-r
+    from-ui-800/0
+    via-ui-800/0
+    to-ui-800/0
+    shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
+    text-ui-300
+    ;
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        bg-ui-700
+        text-ui-200
+        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/0%)]
+      }
+    }
+  }
+
   /* Sizes */
 
   &.button-lg {
     @apply
-    py-3
-    px-4
+    py-4
+    px-5
     ;
 
     > * {
@@ -267,13 +290,13 @@
     }
     &[class*='rounded-full']{
       @apply
-      px-3
+      px-4
       ;
     }
   }
   &.button-sm {
     @apply
-    p-2
+    py-2.5
     ;
 
     > * {
@@ -283,7 +306,7 @@
     }
     &[class*='rounded-full']{
       @apply
-      px-2
+      px-2.5
       ;
     }
   }
@@ -302,7 +325,8 @@
       items-center
       justify-center
       self-stretch
-      relative;
+      relative
+      ;
 
       &:first-child {
         @apply
@@ -319,7 +343,7 @@
         pl-2
         pr-3
         m-0
-        transition
+        transition-all
         duration-200
         rounded-[calc(0.25rem-1px)]
         ;

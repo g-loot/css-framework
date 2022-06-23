@@ -1934,38 +1934,6 @@
         {
           "tags": "sign,key,email,website,address,at",
           "name": "at-sign"
-        },
-        {
-          "tags": "ui,interface,expand,increase,new,add,create,plus,addition,positive",
-          "name": "t-add"
-        },
-        {
-          "tags": "ui,interface,expand,increase,new,add,create,plus,addition,positive",
-          "name": "i-add"
-        },
-        {
-          "tags": "ui,interface,expand,increase,new,add,create,plus,addition,positive",
-          "name": "e-add"
-        },
-        {
-          "tags": "ui,interface,expand,increase,new,add,create,plus,addition,positive",
-          "name": "f-add"
-        },
-        {
-          "tags": "ui,interface,expand,increase,new,add,create,plus,addition,positive",
-          "name": "c-add"
-        },
-        {
-          "tags": "ui,interface,close,exit,cross,delete,remove,cancel,deletion,removal,denied,discard,dismiss,wrong",
-          "name": "c-remove"
-        },
-        {
-          "tags": "ui,interface,close,exit,cross,delete,remove,cancel,deletion,removal,denied,discard,dismiss,wrong",
-          "name": "f-remove"
-        },
-        {
-          "tags": "ui,interface,close,exit,decrease,delete,remove,minus,cancel,deletion,less,removal,subtract",
-          "name": "f-delete"
         }
       ]
     }

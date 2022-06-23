@@ -56,8 +56,8 @@ module.exports = {
       '3xl': '2.25rem',
       '4xl': '3rem',
       '5xl': '3.5rem',
-      '6xl': '4rem',
-      '7xl': '5rem',
+      '6xl': '3.75rem',
+      '7xl': '4.5rem',
       '8xl': '7.4rem',
     },
     colors: {
@@ -230,7 +230,8 @@ module.exports = {
         'slide-in-bottom': 'slideInBottom 0.88s cubic-bezier(0.7, 0, 0.1, 1) both',
         'fade-in': 'fadeIn 0.88s cubic-bezier(0.7, 0, 0.1, 1) both',
         'heartbeat': 'heartbeat 1.5s ease-in-out infinite both',
-        'bounce-in': 'bounceIn 1.1s both',
+        'drop-in': 'dropIn 1.1s both',
+        'bounce-left': 'bounceLeft 1.1s both',
       },
       keyframes: {
         slideInLeft: {
@@ -281,6 +282,16 @@ module.exports = {
             opacity: '1',
           },
         },
+        bounceLeft: {
+          '0%, 100%': { 
+            transfrom: 'translateX(25%)',
+            animationTimingFunction: 'cubic-bezier(0.8,0,1,1)',
+          },
+          '50%': { 
+            transfrom: 'none',
+            animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+          },
+        },
         heartbeat: {
           'from': {
             transform: 'scale(1)',
@@ -304,7 +315,7 @@ module.exports = {
             animationTimingFunction: 'ease-out',
           }
         },
-        bounceIn: {
+        dropIn: {
           '0%': {
             transform: 'translateY(-500px)',
             animationTimingFunction: 'ease-in',

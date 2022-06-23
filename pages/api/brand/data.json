@@ -1,0 +1,102 @@
+{
+  "sections": [
+    {
+      "label": "Guidelines",
+      "icon": "",
+      "pages": [{
+          "label": "Introduction",
+          "tags": "brand,introduction,about,g-loot,gloot",
+          "url": "introduction"
+        },
+        {
+          "label": "Our visual identity",
+          "tags": "visual,identity,brand,g-loot,gloot,personality",
+          "url": "visualidentity"
+        },
+        {
+          "label": "Logotype",
+          "tags": "wordmark",
+          "url": "logotype"
+        },
+        {
+          "label": "Colors",
+          "tags": "",
+          "url": "colors",
+          "disabled": true
+        },
+        {
+          "label": "Typography",
+          "tags": "",
+          "url": "typography",
+          "disabled": true
+        },
+        {
+          "label": "Graphical elements",
+          "tags": "",
+          "url": "graphicalelements",
+          "disabled": true
+        },
+        {
+          "label": "Applications",
+          "tags": "",
+          "url": "applications",
+          "disabled": true
+        }
+      ]
+    },
+    {
+      "label": "Resources",
+      "icon": "",
+      "pages": [
+        {
+          "label": "Logotypes",
+          "tags": "",
+          "url": "logotypes",
+          "disabled": true
+        },
+        {
+          "label": "Colors",
+          "tags": "",
+          "url": "colors",
+          "disabled": true
+        },
+        {
+          "label": "Wordmarks",
+          "tags": "",
+          "url": "wordmarks",
+          "disabled": true
+        },
+        {
+          "label": "Icons",
+          "tags": "",
+          "url": "icons",
+          "disabled": true
+        },
+        {
+          "label": "Images",
+          "tags": "",
+          "url": "images",
+          "disabled": true
+        },
+        {
+          "label": "Videos",
+          "tags": "",
+          "url": "videos",
+          "disabled": true
+        },
+        {
+          "label": "Presentation",
+          "tags": "",
+          "url": "presentation",
+          "disabled": true
+        },
+        {
+          "label": "Email signature",
+          "tags": "",
+          "url": "emailsignature",
+          "disabled": true
+        }
+      ]
+    }
+  ]
+}

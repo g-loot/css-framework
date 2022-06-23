@@ -44,7 +44,7 @@ const DSpage = () => {
               <div className='form-group'>
                 <label htmlFor="avatar">Avatar</label>
                 <div className='flex items-center gap-4'>
-                  <figure className='avatar avatar-circle avatar-simple'>
+                  <figure className='avatar avatar-circle'>
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                     </div>
@@ -55,20 +55,17 @@ const DSpage = () => {
                 </div>
               </div>
               <div className='form-group'>
-                <label htmlFor="cover">Cover photo</label>
-                <div className='px-6 pt-5 pb-6 border border-ui-500 border-dashed rounded space-y-1 text-center'>
-                  <div className='text-ui-500'>
-                    <span className='icon icon-image icon-36'></span>
-                  </div>
-                  <div className="flex justify-center text-ui-200">
-                    <label htmlFor="file-upload" className="relative cursor-pointer rounded-md font-medium text-interaction-500 hover:text-interaction-300 focus-within:outline-none">
-                      <span>Upload a file</span>
-                      <input id="file-upload" name="file-upload" type="file" className="sr-only" />
-                    </label>
-                    <p className="pl-1">or drag and drop</p>
-                  </div>
-                  <p className="text-sm text-ui-400">PNG, JPG, GIF up to 10MB</p>
-                </div>
+                <label>Cover photo</label>
+                <div className='form-dropzone'>
+                  <label htmlFor='dropzone-file'>
+                    <div>
+                        <span className='icon text-4xl icon-image mb-4'></span>
+                        <p className='text-sm text-ui-200'><span className='font-semibold'>Click to upload</span> or drag and drop</p>
+                        <p className='text-sm'>SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                    </div>
+                    <input id='dropzone-file' type='file' />
+                  </label>
+                </div> 
               </div>
             </section>
             <section className='space-y-4'>

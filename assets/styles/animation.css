@@ -10,14 +10,62 @@
   ;
 }
 
-/* delay */
+.perspective {
+  perspective: 500px;
+}
 
+/* delay */
 .animate-delay {
   animation-delay: var(--delay, 0.3s) !important;
 }
 
 /* iteration count */
-
 .animate-infinite {
   animation-iteration-count: infinite;
+}
+
+
+/* flip */ 
+.flip {
+  @apply
+  relative
+  transition-transform
+  duration-[1.25s]
+  ease-[cubic-bezier(0.8,0,0.2,1)]
+  ;
+  transform-style: preserve-3d;
+  
+  > * {
+    @apply
+    absolute
+    w-full
+    h-full
+    ;
+    backface-visibility: hidden;
+  }
+
+  > .flip-front {
+    @apply
+    z-20
+    ;
+    
+  }
+  > .flip-back {
+    @apply
+    z-10
+    ;
+    transform: translate3d(0,0,0) rotateY(180deg);
+  }
+
+  &:not(.animate-flip) {
+    transform: translate3d(0,0,0) rotateY(0deg);
+  }
+
+  &.animate-flip {
+    transform: translate3d(0,0,0) rotateY(180deg);
+  }
+
+  &.animate-delay {
+    transition-delay: var(--delay, 0.3s) !important;
+  }
 }

@@ -250,6 +250,11 @@
           "label": "Range inputs",
           "tags": "form,data,input,range,value,ui",
           "url": "rangeinputs"
+        },
+        {
+          "label": "File inputs",
+          "tags": "form,data,input,file,upload,drop,drag",
+          "url": "fileinputs"
         }
       ]
     },
@@ -280,8 +285,18 @@
       "pages": [
         {
           "label": "Footer",
-          "tags": "footer,website",
+          "tags": "footer,website,section,end,page",
           "url": "footer"
+        },
+        {
+          "label": "Breadcrumbs",
+          "tags": "breadcrumbs,website,navigation,page,structure",
+          "url": "breadcrumbs"
+        },
+        {
+          "label": "Brawl info",
+          "tags": "brawl,information,info,leaderboard",
+          "url": "brawlinfo"
         }
       ]
     }
