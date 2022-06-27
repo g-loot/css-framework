@@ -1041,95 +1041,95 @@ const DSpage = () => {
       </div>
     </div>
 
-      {/* Spaced */}
-      <div className='mb-12' id='spaced'>
+    {/* Spaced */}
+    <div className='mb-12' id='spaced'>
 
-        <h2 className='h3 mb-3'>
-          Spaced
-        </h2>
+      <h2 className='h3 mb-3'>
+        Spaced
+      </h2>
 
+      <div className=''>
         <div className=''>
-          <div className=''>
-            <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
-              <div className='flex-1'>
-                <ul className='items-spaced space-y-2'>
-                  <li className='item rounded-xl'>
-                    <div className='item-image'>
-                      <figure className='avatar avatar-xs'>
-                        <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
-                        </div>
-                      </figure>
-                    </div>
-                    <div className='item-body'>
-                      <div className='item-title'>
-                        Croc Esports
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
+            <div className='flex-1'>
+              <ul className='items-spaced space-y-2'>
+                <li className='item rounded-xl'>
+                  <div className='item-image'>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                       </div>
-                      <div className='text-ui-300 text-xs'>
-                        3 members
-                      </div>
+                    </figure>
+                  </div>
+                  <div className='item-body'>
+                    <div className='item-title'>
+                      Croc Esports
                     </div>
-                  </li>
-                  <li className='item rounded-xl'>
-                    <div className='item-image'>
-                      <figure className='avatar avatar-xs'>
-                        <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
-                        </div>
-                      </figure>
+                    <div className='text-ui-300 text-xs'>
+                      3 members
                     </div>
-                    <div className='item-body'>
-                      <div className='item-title'>
-                        Kingzz
+                  </div>
+                </li>
+                <li className='item rounded-xl'>
+                  <div className='item-image'>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                       </div>
-                      <div className='text-ui-300 text-xs'>
-                        3 members
-                      </div>
+                    </figure>
+                  </div>
+                  <div className='item-body'>
+                    <div className='item-title'>
+                      Kingzz
                     </div>
-                  </li>
-                  <li className='item rounded-xl'>
-                    <div className='item-image'>
-                      <figure className='avatar avatar-xs'>
-                        <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
-                        </div>
-                      </figure>
+                    <div className='text-ui-300 text-xs'>
+                      3 members
                     </div>
-                    <div className='item-body'>
-                      <div className='item-title'>
-                        Angry Beavers
+                  </div>
+                </li>
+                <li className='item rounded-xl'>
+                  <div className='item-image'>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                       </div>
-                      <div className='text-ui-300 text-xs'>
-                        3 members
-                      </div>
+                    </figure>
+                  </div>
+                  <div className='item-body'>
+                    <div className='item-title'>
+                      Angry Beavers
                     </div>
-                  </li>
-                  <li className='item rounded-xl'>
-                    <div className='item-image'>
-                      <figure className='avatar avatar-xs'>
-                        <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
-                        </div>
-                      </figure>
+                    <div className='text-ui-300 text-xs'>
+                      3 members
                     </div>
-                    <div className='item-body'>
-                      <div className='item-title'>
-                        Bunny Hunger
+                  </div>
+                </li>
+                <li className='item rounded-xl'>
+                  <div className='item-image'>
+                    <figure className='avatar avatar-xs'>
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
                       </div>
-                      <div className='text-ui-300 text-xs'>
-                        3 members
-                      </div>
+                    </figure>
+                  </div>
+                  <div className='item-body'>
+                    <div className='item-title'>
+                      Bunny Hunger
                     </div>
-                  </li>
-                </ul>
-              </div>
-              <div className='flex-1'>
-                <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/gctr4vwz/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
-              </div>
+                    <div className='text-ui-300 text-xs'>
+                      3 members
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className='flex-1'>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/gctr4vwz/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
             </div>
           </div>
         </div>
-        </div>
+      </div>
+    </div>
 
     {/* Animation */}
     <div className='mb-12' id='animation'>

@@ -111,7 +111,7 @@ body[data-theme='light'] {
 
 body {
   @apply 
-  text-ui-100
+  text-ui-200
   bg-ui-900;
   background: rgb(var(--color-ui-900)) !important;
 }

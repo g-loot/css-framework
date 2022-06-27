@@ -47,6 +47,11 @@ const Index = () => {
                   </div>
                   <ul className="menu menu-secondary menu-rounded">
                     <li>
+                      <Link href='design-system/tables'>
+                        <a><span>Tables</span></a>
+                      </Link>
+                    </li>
+                    <li>
                       <Link href='design-system/fileinputs'>
                         <a><span>File inputs</span></a>
                       </Link>
@@ -76,12 +81,6 @@ const Index = () => {
                         <a><span>Switch</span></a>
                       </Link>
                     </li>
-                    <li>
-                      <Link href='design-system/countdown'>
-                        <a><span>Countdown</span></a>
-                      </Link>
-                    </li>
-                   
                   </ul>
                 </div>
                 <div>

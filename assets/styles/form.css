@@ -177,9 +177,7 @@ input[type=file] {
 /* RADIO */
 /*----------------------------*/
 
-.form-radio,
-.form-checkbox,
-.form-toggle {
+:where(.form-radio,.form-checkbox, .form-toggle) {
   @apply
   block
   pl-12
@@ -187,6 +185,8 @@ input[type=file] {
   pr-2
   relative
   select-none
+  min-h-[24px]
+  min-w-[24px]
   ;
 
   &:not(.is-disabled) {
@@ -292,9 +292,13 @@ input[type=file] {
       h-6
       w-6
       rounded-full
-      left-2
       shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
       ;
+      &:not([class*=left-]){
+        @apply
+        left-2
+        ;
+      }
 
       &::after {
         @apply
@@ -344,9 +348,13 @@ input[type=file] {
       h-6
       w-10
       rounded-full
-      left-0
       shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
       ;
+      &:not([class*=left-]){
+        @apply
+        left-0
+        ;
+      }
 
       &::after {
         @apply
@@ -395,9 +403,13 @@ input[type=file] {
       h-6
       w-6
       rounded
-      left-2
       shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
       ;
+      &:not([class*=left-]){
+        @apply
+        left-2
+        ;
+      }
 
       &::after {
         @apply

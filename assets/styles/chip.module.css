@@ -12,7 +12,6 @@
   gap-2
   justify-center
   items-center
-  bg-main
   font-body
   transition-all
   duration-200
@@ -31,6 +30,11 @@
   select-none
   ;
 
+  &:not([class*=bg-]){
+    @apply
+    bg-main
+    ;
+  }
 
   > * {
     @apply
@@ -381,7 +385,6 @@
     pr-3
     pl-2
     py-1
-    bg-interaction-300
     ;
     clip-path: polygon(0 0, 100%0, calc(100% - 0.5em) 100%, 0 100%);
     > *:not(.icon) {
@@ -390,6 +393,12 @@
       font-headings
       italic
       uppercase
+      ;
+    }
+
+    &:not([class*=bg-]){
+      @apply
+      bg-interaction-300
       ;
     }
 
