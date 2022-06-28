@@ -219,8 +219,8 @@ module.exports = {
         '3xl': '2.25rem',
         '4xl': '3rem',
         '5xl': '3.5rem',
-        '6xl': '4rem',
-        '7xl': '5rem',
+        '6xl': '3.75rem',
+        '7xl': '4.5rem',
         '8xl': '7.4rem',
       },
       animation: {

@@ -1,4 +1,5 @@
 import Carousel from '../../components/Carousel/Carousel';
+import Countdown from '../../components/Countdown/Countdown';
 import PrototypeStructure from '../../components/Prototype/PrototypeStructure';
 import RewardLadder from '../../components/RewardLadder/RewardLadder';
 import useFetch from '../../hooks/use-fetch';
@@ -28,7 +29,7 @@ export default function Home() {
             <div className='flex items-center gap-2'>
               <div className='chip chip-sm chip-secondary'>
                 <span className='icon icon-time-machine'></span>
-                <span>Resets in 02:03:22</span>
+                <span>Resets in <Countdown additionalClassName='ml-1' separator=':'/></span>
               </div>
               <button className='tooltip tooltip-left text-ui-300 text-0' data-tooltip='Unlock rewards to earn XP'><span className='icon icon-16 icon-c-info'></span></button>
             </div>

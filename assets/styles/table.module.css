@@ -23,9 +23,6 @@
     p-3
     ;
   }
-  :where(tbody th,tbody td) {
-
-  }
 
   &:where(:not(.table-zebra)) :where(thead,tbody,tfoot) :where(tr:not(:last-child) :where(th,td)) {
     @apply
@@ -35,22 +32,49 @@
   }
 }
 
+.table.table-interactive {
+  :where(tbody) {
+    :where(tr) {
+      :where(th,td) {
+        @apply
+        transition-colors
+        duration-300
+        ease-in-out
+        cursor-pointer
+        ;
+      }
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          :where(th,td) {
+            @apply
+            bg-ui-700
+            text-ui-100
+            ;
+          }
+        }
+      }
+    }
+  }
+}
+
 .table.table-comptact {
   :where(th,td) {
     @apply
-      py-2
-      px-1
+    py-2
+    px-1
+    ;
+    &:first-child {
+      @apply
+      pl-2
       ;
-      &:first-child {
-        @apply
-        pl-2
-        ;
-      }
-      &:last-child {
-        @apply
-        pr-2
-        ;
-      }
+    }
+    &:last-child {
+      @apply
+      pr-2
+      ;
+    }
   }
 }
 
@@ -105,5 +129,72 @@
         ;
       }
     }
+  }
+}
+
+/* loading */
+
+.table.is-loading {
+  @apply
+  relative
+  pointer-events-none
+  ;
+  
+  :where(tbody th,tbody td) {
+    @apply
+    relative
+    ;
+    &,
+    *[class*='text-'] {
+      @apply
+      text-ui-200/0
+      ;
+    }
+    &::after {
+      @apply
+      absolute
+      inset-x-1
+      h-6
+      content-['']
+      block
+      rounded
+      bg-ui-700
+      bg-[length:800px_100%]
+      bg-[-200%_center]
+      bg-no-repeat
+      top-[calc(50%-0.75rem)]
+      animate-[loader-table_1s_linear_infinite]
+      ;
+      background-image: linear-gradient(to right, rgba(var(--color-ui-700) / 100%) 8%, rgba(var(--color-ui-600) / 100%) 18%, rgba(var(--color-ui-700) / 100%) 33%);
+    }
+  }
+  tbody > tr {
+    &:nth-child(odd) {
+      :where(th,td) {
+        &::after {
+          @apply
+          w-2/3
+          ;
+        }
+      }
+    }
+    &:nth-child(even) {
+      :where(th,td) {
+        &::after {
+          @apply
+          w-4/5
+          ;
+        }
+      }
+    }
+  }
+}
+
+@keyframes loader-table {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
   }
 }
