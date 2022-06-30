@@ -316,6 +316,7 @@
     @apply
     p-px
     justify-items-stretch
+    h-[42px]
     ;
     
     > div {
@@ -398,6 +399,16 @@
           ;
         }
       }
+    }
+    &.button-lg {
+      @apply
+      h-[52px]
+      ;
+    }
+    &.button-sm {
+      @apply
+      h-[36px]
+      ;
     }
   }
 

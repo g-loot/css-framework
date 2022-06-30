@@ -303,59 +303,6 @@ const DSpage = () => {
 
 
 
-    {/* Sizes */}
-    <div className='mb-12' id='sizes'>
-
-      <h2 className='h3 mb-3'>
-        Sizes
-      </h2>
-
-      <div className="surface rounded-lg p-4">
-        <div className=''>
-          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
-            <div className='flex-1 space-y-4'>
-              <div className='w-full flex gap-4 items-center'>
-                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                  Large
-                </div>
-                <div className='flex-1 flex flex-wrap gap-2'>
-                  <Button label='Button Label' variant='primary' size='lg'></Button>
-                  <Button label='Button Label' variant='secondary' icon='heart' size='lg'></Button>
-                  <Button variant='tertiary' icon='heart' size='lg'></Button>
-                </div>
-              </div>
-              <div className='w-full flex gap-4 items-center'>
-                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                  Medium <button className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
-                </div>
-                <div className='flex-1 flex flex-wrap gap-2'>
-                  <Button label='Button Label' variant='primary' size='md'></Button>
-                  <Button label='Button Label' variant='secondary' icon='heart' size='md'></Button>
-                  <Button variant='tertiary' icon='heart' size='md'></Button>
-                </div>
-              </div>
-              <div className='w-full flex gap-4 items-center'>
-                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                  Small
-                </div>
-                <div className='flex-1 flex flex-wrap gap-2'>
-                  <Button label='Button Label' variant='primary' size='sm'></Button>
-                  <Button label='Button Label' variant='secondary' icon='heart' size='sm'></Button>
-                  <Button variant='tertiary' icon='heart' size='sm'></Button>
-                </div>
-              </div>
-              
-            </div>
-            <div className='flex-1'>
-              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/n7b2judx/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
     {/* currency */}
     <div className='mb-12' id='currency'>
 
@@ -470,6 +417,62 @@ const DSpage = () => {
             </div>
             <div className='flex-1'>
               <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/z1fpx59h/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    {/* Sizes */}
+    <div className='mb-12' id='sizes'>
+
+      <h2 className='h3 mb-3'>
+        Sizes
+      </h2>
+
+      <div className="surface rounded-lg p-4">
+        <div className=''>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+            <div className='flex-1 space-y-4'>
+              <div className='w-full flex gap-4 items-center'>
+                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                  Large
+                </div>
+                <div className='flex-1 flex flex-col items-start flex-wrap gap-2'>
+                  <Button label='Button Label' variant='primary' size='lg'></Button>
+                  <Button label='Button Label' variant='secondary' icon='heart' size='lg'></Button>
+                  <Button label='Purchase' variant='primary' currency='coin' amount='15,000' size='lg'></Button>
+                  <Button variant='tertiary' icon='heart' size='lg'></Button>
+                </div>
+              </div>
+              <div className='w-full flex gap-4 items-center'>
+                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                  Medium <button className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
+                </div>
+                <div className='flex-1 flex flex-col items-start flex-wrap gap-2'>
+                  <Button label='Button Label' variant='primary' size='md'></Button>
+                  <Button label='Button Label' variant='secondary' icon='heart' size='md'></Button>
+                  <Button label='Purchase' variant='primary' currency='coin' amount='15,000' size='md'></Button>
+                  <Button variant='tertiary' icon='heart' size='md'></Button>
+                </div>
+              </div>
+              <div className='w-full flex gap-4 items-center'>
+                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                  Small
+                </div>
+                <div className='flex-1 flex flex-col items-start flex-wrap gap-2'>
+                  <Button label='Button Label' variant='primary' size='sm'></Button>
+                  <Button label='Button Label' variant='secondary' icon='heart' size='sm'></Button>
+                  <Button label='Purchase' variant='primary' currency='coin' amount='15,000' size='sm'></Button>
+                  <Button variant='tertiary' icon='heart' size='sm'></Button>
+                </div>
+              </div>
+              
+            </div>
+            <div className='flex-1'>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/n7b2judx/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
             </div>
           </div>
         </div>
