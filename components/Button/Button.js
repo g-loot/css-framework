@@ -25,6 +25,7 @@ export default function Button(props) {
     "button-main": props.variant === 'main',
     "button-secondary": props.variant === 'secondary',
     "button-tertiary": props.variant === 'tertiary',
+    "button-ghost": props.variant === 'ghost',
     "button-premium": props.variant === 'premium',
     "button-claim": props.variant === 'claim',
     "button-play": props.variant === 'play',

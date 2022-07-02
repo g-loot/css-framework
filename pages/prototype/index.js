@@ -1,3 +1,4 @@
+import Ad from '../../components/Ad/Ad';
 import Carousel from '../../components/Carousel/Carousel';
 import Countdown from '../../components/Countdown/Countdown';
 import PrototypeStructure from '../../components/Prototype/PrototypeStructure';
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Home">
+        <Ad width='1005'height='300'/>
         
         <section className='surface sm:rounded-lg overflow-hidden mb-4'>
           <Carousel></Carousel>

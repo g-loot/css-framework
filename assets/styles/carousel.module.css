@@ -280,6 +280,10 @@
         opacity-70
         lg:scale-90
         select-none
+        flex
+        flex-col
+        items-start
+        justify-center
         ;
 
         &:not([disabled]),

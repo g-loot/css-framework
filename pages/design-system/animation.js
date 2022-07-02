@@ -126,6 +126,28 @@ const DSpage = () => {
       </div>
     </div>
 
+    {/* Bounce right */}
+    <div className='mb-12' id='bounce-right'>
+
+      <h2 className='h3 mb-3'>
+        Bounce right
+      </h2>
+
+      <div className="surface rounded-lg p-4">
+        <div className=''>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+            <div className='flex-1 space-y-4 text-center'>
+              <div className={`w-24 h-24 rounded-full bg-ui-400 mx-auto animate-bounce-right animate-infinite`}>
+              </div>
+            </div>
+            <div className='flex-1'>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/a19yhk7j/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     {/* Bounce left */}
     <div className='mb-12' id='bounce-left'>
 
@@ -141,7 +163,7 @@ const DSpage = () => {
               </div>
             </div>
             <div className='flex-1'>
-              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/jqpguk8w/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/9Lroq6k8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
             </div>
           </div>
         </div>
