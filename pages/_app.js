@@ -1,16 +1,18 @@
-import { theme, ThemeProvider, GlobalStyle } from '@g-loot/component-library';
-import InternalGlobalStyle from '../globalStyle';
+import "../assets/styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <InternalGlobalStyle />
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
-  );
+import App from 'next/app';
+import React from 'react';
+import SiteLayout from '../components/SiteLayout';
+
+class MyApp extends App {
+  render() {
+    const { Component, pageProps, router } = this.props
+
+    const getLayout =
+      Component.getLayout || (page => <SiteLayout>{page}</SiteLayout>)
+
+    return getLayout(<Component {...pageProps} />)
+  }
 }
 
-export default MyApp;
+export default MyApp

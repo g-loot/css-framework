@@ -1,0 +1,30 @@
+/*----------------------------*/
+/* LINK */
+/*----------------------------*/
+
+.link {
+  @apply
+  cursor-pointer
+  underline
+  hover:opacity-50
+  focus-visible:outline
+  focus-visible:outline-interaction-500
+  focus-visible:outline-offset-2
+  visited:text-interaction-700
+  ;
+
+  &.link-main {
+    @apply
+    text-interaction-500
+    hover:text-interaction-300
+    ;
+  }
+  
+  &.link-hover {
+    @apply
+    no-underline
+    hover:underline
+    ;
+  }
+}
+

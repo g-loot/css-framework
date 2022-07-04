@@ -1,0 +1,144 @@
+/*----------------------------*/
+/* TABS */
+/*----------------------------*/
+
+
+.tabs {
+  @apply
+  flex
+  flex-nowrap
+  items-stretch
+  whitespace-nowrap
+  relative
+  overflow-x-auto
+  pt-0.5
+  ;
+
+  li {
+    @apply
+    flex
+    justify-center
+    items-end
+    relative
+    transition
+    duration-300
+    ease-in-out
+    leading-none
+    text-center
+    ;
+  }
+
+  &:hover {
+    li {
+      @apply
+      opacity-30
+      ;
+      &:hover {
+        @apply
+        opacity-100
+        ;
+      }
+    }
+  }
+
+  a,
+  button,
+  .button {
+    @apply
+    relative
+    block
+    px-5
+    pt-3
+    pb-4
+    font-bold
+    font-headings
+    tracking-wide
+    text-lg
+    text-ui-300
+    cursor-pointer
+    select-none
+    transition
+    duration-300
+    ease-in-out
+    leading-[1]
+    ;
+
+    > span {
+      @apply
+      block
+      transition
+      ease-linear
+      duration-[50ms]
+      ;
+    }
+
+    &:active {
+      &:hover,
+      &:focus {
+        > span {
+          @apply 
+          translate-y-0.5
+          ;
+        }
+      }
+    }
+
+
+    &.active,
+    &:active,
+    &:hover {
+      @apply
+      text-white
+      ;
+      &::after {
+        @apply
+        opacity-100
+        scale-x-100
+        -skew-x-30
+        ;
+      }
+    }
+
+    &::after {
+      @apply
+      content-['']
+      absolute
+      block
+      h-1
+      w-full
+      bottom-0
+      inset-x-0
+      bg-main
+      opacity-0
+      scale-x-0
+      -skew-x-30
+      transition
+      duration-300
+      ease-[cubic-bezier(0.7,0,0.3,1)]
+      ;
+    }
+  }
+  &::after {
+    @apply
+    content-['']
+    h-px
+    w-full
+    bg-ui-800
+    absolute
+    bottom-0
+    inset-x-0;
+  }
+}
+
+/* scrollbar hidden if overflow */
+.tabs {
+  -webkit-overflow-scrolling: touch;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}

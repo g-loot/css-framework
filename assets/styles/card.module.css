@@ -1,0 +1,466 @@
+/*----------------------------*/
+/* CARD */
+/*----------------------------*/
+
+
+/* content */
+
+.card {
+
+  @apply
+  transform-gpu
+  overflow-hidden
+  ;
+  &:not([class*='rounded']) {
+    @apply
+    rounded-xl
+    ;
+  }
+
+  .card-image {
+    @apply
+    flex
+    items-center
+    justify-center
+    ;
+  }
+  .card-body {
+    @apply
+    relative
+    z-10
+    flex
+    flex-1
+    flex-col
+    p-6
+    gap-5
+    ;
+
+  }
+
+  .card-title {
+    @apply
+    leading-none
+  }
+
+  .card-actions {
+    @apply
+    leading-none
+    flex
+    flex-wrap
+    items-start
+    gap-2
+    ;
+  }
+
+  &.card-cover {
+    .card-image {
+      
+      &,
+      figure {
+        @apply
+        absolute
+        inset-0
+        z-0
+        ;
+
+        img {
+          @apply
+          h-full
+          object-cover
+          ;
+        }
+      }
+    }
+    &::before {
+      @apply
+      content-['']
+      absolute
+      z-10
+      inset-0
+      bg-ui-900
+      opacity-80
+      ;
+    }
+  }
+}
+
+/* missions & tournaments */
+
+.card-mission,
+.card-tournament {
+  @apply
+  w-full
+  relative
+  min-w-xs
+  overflow-hidden
+  flex
+  flex-col
+  items-stretch
+  justify-between
+  transform-gpu
+  ;
+  
+  &:not([class*='rounded']) {
+    @apply
+    rounded-xl
+    ;
+  }
+  .card-decoration {
+    @apply
+    z-20
+    ;
+  }
+  .card-body {
+    @apply
+    relative
+    z-20
+    ;
+  }
+  .card-title {
+    @apply
+    font-headings
+    italic
+    leading-none
+    ;
+  }
+  .card-meta {
+    @apply
+    flex
+    
+    ;
+  }
+  .card-bg {
+    &::before {
+      @apply
+      content-['']
+      absolute
+      z-10
+      -inset-px
+      ;
+    }
+  }
+}
+
+/* card-tournament */
+
+.card-tournament {
+  @apply
+  aspect-square
+  relative
+  max-w-xs
+  ;
+  .card-decoration {
+    @apply
+    flex
+    justify-between
+    items-start
+    p-2
+    ;
+    > img {
+      @apply
+      justify-self-stretch
+      h-20
+      mt-1
+      ml-1
+      drop-shadow-lg
+      ;
+    }
+  }
+  .card-body {
+    @apply
+    p-4
+    ;
+  }
+  .card-title {
+    @apply
+    mt-4
+    text-2xl
+    ;
+  }
+  .card-meta {
+    @apply
+    flex
+    justify-start
+    items-stretch
+    mt-4
+    ;
+
+    > div {
+      @apply
+      flex
+      flex-col
+      items-start
+      justify-center
+      ;
+      &:not(:last-child) {
+        @apply
+        mr-4
+        pr-4
+        border-r
+        border-ui-300/25
+        ;
+      }
+    }
+
+    label {
+      @apply
+      text-sm
+      text-ui-300
+      leading-none
+      mb-2
+      ;
+    }
+    ul {
+      @apply
+      p-0
+      m-0
+      font-bold
+      text-sm
+      text-ui-200
+      ;
+      > li {
+        @apply
+        pl-4
+        relative
+        ;
+        &::before {
+          @apply
+          content-['']
+          absolute
+          left-0
+          top-[calc(50%-(0.5rem/2))]
+          w-2
+          h-2
+          bg-gradient-radial
+          from-ui-300
+          to-ui-400/75
+          rounded-full
+          shadow-[0_0_0_2px_rgba(255,255,255,0.15)]
+          ;
+        }
+      }
+    }
+  }
+  .card-bg {
+    &::before {
+      background-image: linear-gradient(to bottom, rgba(var(--color-ui-900) / 75%) 25%, rgba(var(--color-ui-900) / 25%) 50%, rgba(var(--color-ui-900) / 95%) 75%, rgba(var(--color-ui-900) / 100%) 100%)
+    }
+  }
+}
+
+/* card-mission */
+
+.card-mission {
+  @apply
+  aspect-video
+  max-w-sm
+  ;
+  .card-body {
+    @apply
+    bg-ui-900/75
+    backdrop-blur-sm
+    p-2
+    ;
+
+    .card-title {
+      @apply
+      text-xl
+      mt-1
+      mb-2
+      ;
+    }
+    .card-meta {
+      @apply
+      items-center
+      justify-between
+      text-sm
+      text-ui-200
+      mb-2.5
+      ;
+
+      > * {
+        &::last-child {
+          @apply
+          text-right
+          ;
+        }
+      }
+    }
+  }
+
+  .card-bg {
+    &::before {
+      @apply
+      bg-gradient-to-b
+      from-ui-900/0
+      via-ui-900/25
+      to-ui-900/50
+      ;
+    }
+  }
+
+  &.card-locked,
+  &.card-unlocked {
+    .progressbar {
+      > * {
+        background-image: linear-gradient(to right, rgb(var(--color-premium-300)) 0px, rgb(var(--color-premium-700)) 200px, rgb(var(--color-premium-300)) 400px);
+      }
+    }
+    .card-decoration {
+      @apply 
+      flex
+      flex-1
+      items-center
+      -inset-px
+      ;
+      > img {
+        @apply
+        relative
+        z-30
+        h-auto
+        max-h-[50%]
+        ;
+      }
+    }
+  }
+
+  &.card-unlocked {
+    .card-decoration {
+      @apply
+      items-start
+      ;
+      &::after {
+        @apply
+        font-icon
+        text-3xl
+        content-['\ebe9']
+        absolute
+        right-1
+        top-1
+        leading-none
+        z-10
+        rounded-full
+        bg-gradient-to-b
+        from-ui-500
+        to-ui-800
+        text-premium-300
+        drop-shadow-[0_3px_1.5px_rgba(0,0,0,0.5)]
+        ;
+      }
+    }
+  }
+
+  &.card-locked {
+    @apply
+    pointer-events-none
+    ;
+
+    .card-decoration {
+      @apply 
+      drop-shadow-[0_3px_1.5px_rgba(0,0,0,0.5)]
+      ;
+      > img {
+        @apply
+        w-auto
+        mx-auto
+        translate-y-4
+        ;
+      }
+      &::before {
+        @apply
+        content-['']
+        absolute
+        z-0
+        top-0
+        left-0
+        right-0
+        h-10
+        bg-gradient-to-b
+        from-premium-300
+        to-premium-500
+        text-ui-800
+        ;
+        clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
+      }
+      &::after {
+        @apply
+        font-icon
+        content-['\ea12']
+        absolute
+        z-10
+        w-8
+        h-8
+        rounded-full
+        top-1
+        left-[calc(50%-1rem)]
+        bg-gradient-to-b
+        from-ui-900
+        via-ui-800
+        to-ui-700
+        text-premium-300
+        shadow-[0_0_0_1px_rgb(var(--color-premium-300))]
+        text-center
+        leading-[2]
+        ;
+      }
+    }
+    .card-bg {
+      * {
+        @apply
+        grayscale
+        ;
+      }
+
+      &::before {
+        @apply
+        bg-ui-800/75
+      }
+    }
+  }
+}
+
+.card-bg {
+  &,
+  > * {
+    @apply
+    absolute
+    z-0
+    bg-cover
+    bg-center
+    -inset-px
+    bg-no-repeat
+    ;
+  }
+}
+
+.card-interactive {
+  @apply
+  cursor-pointer
+  ;
+  .card-bg {
+    * {
+      @apply
+      transition-all
+      duration-500
+      ease-[cubic-bezier(0.7,0,0.3,1)]
+      ;
+    }
+  }
+  &:hover {
+    .card-bg {
+      * {
+        @apply
+        scale-110
+        ;
+      }
+    }
+  }
+  &:active {
+    &:hover,
+    &:focus {
+      @apply
+      opacity-75
+      ;
+    }
+  }
+}

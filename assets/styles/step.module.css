@@ -1,0 +1,602 @@
+/*----------------------------*/
+/* STEP */
+/*----------------------------*/
+
+/* primary */
+
+.step,
+.step.step-primary {
+
+  @apply
+  flex
+  flex-nowrap
+  list-none
+  ;
+
+  > li {
+    @apply
+    relative
+    mt-0
+    flex-1
+    text-center
+    ;
+
+    > a {
+      @apply
+      p-0
+      flex
+      items-center
+      text-ui-200
+      cursor-default
+      pointer-events-none
+      ;
+
+      > div {
+        @apply
+        hidden
+        font-normal
+        leading-tight
+        ;
+      }
+
+      > i {
+        @apply 
+        h-12
+        w-12
+        rounded-full
+        bg-gradient-radial-to-b
+        from-ui-900
+        to-ui-800
+        text-ui-800
+        relative
+        z-10
+        text-center
+        text-xl
+        not-italic
+        font-headings
+        leading-[3rem]
+        shadow-[0_0_0_4px_rgb(var(--color-interaction-500))]
+        overflow-hidden
+        transition
+        duration-300
+        delay-500
+        shrink-0
+        ;
+
+        &::before,
+        &::after {
+          @apply
+          absolute
+          transition-transform
+          transform-gpu
+          ease-[cubic-bezier(0.9,0,0.1,1)]
+          ;
+        }
+
+        &::before {
+          @apply
+          content-['']
+          duration-700
+          inset-1
+          rounded-full
+          bg-gradient-radial-to-b
+          from-interaction-300
+          to-interaction-700
+          ;
+        }
+        &::after {
+          @apply
+          duration-1000
+          font-icon
+          content-['\eb24']
+          z-10
+          inset-0
+          ;
+        }
+      }
+
+      > span {
+        @apply
+        relative
+        z-0
+        flex-1
+        h-1
+        w-full
+        bg-ui-600
+        overflow-hidden
+        ;
+        &::before {
+          @apply
+          content-['']
+          absolute
+          z-0
+          inset-0
+          bg-interaction-500
+          origin-left
+          scale-x-100
+          transition-all
+          duration-1000
+          ease-[cubic-bezier(0.9,0,0.1,1)]
+          ;
+          clip-path: polygon(0% 0%, 100% 0%, calc(100% - 0.25em) 100%, 0% 100%);
+        }
+      }
+    }
+    &:last-child {
+      @apply
+      flex-none
+      ;
+      span {
+        @apply
+        hidden
+        ;
+      }
+    }
+
+    &.is-active {
+      a {
+        @apply
+        text-main
+        ;
+        span {
+          &::before {
+            @apply
+            -translate-x-[50%]
+            ;
+          }
+        }
+      }
+    }
+  }
+
+  & > li.is-active ~ li,
+  &.is-inactive > li {
+    &::before {
+      @apply
+      bg-ui-600
+      ;
+    }
+    a {
+      @apply
+      text-ui-400
+      ;
+      &::before {
+        @apply
+        bg-ui-500
+        ;
+      }
+      i {
+        @apply
+        shadow-[0_0_0_4px_rgb(var(--color-ui-600))]
+        from-ui-800
+        to-ui-700
+        text-ui-400
+        ;
+
+        &::before {
+          @apply
+          translate-y-12
+          ;
+        }
+        &::after {
+          @apply
+          translate-y-12
+          ;
+        }
+      }
+      
+      > span {
+        &::before {
+          @apply
+          bg-interaction-500/0
+          scale-x-0
+          ;
+        }
+      }
+    }
+  }
+}
+
+/* secondary */
+
+.step.step-secondary {
+  > li {
+    > a {
+      @apply
+      p-0
+      flex
+      items-center
+      text-ui-200
+      ;
+      > i {
+        @apply 
+        h-3
+        w-3
+        shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
+        text-main/0
+        ;
+        &::before {
+          @apply
+          inset-0.5
+          ;
+        }
+        &::after {
+          @apply
+          text-main/0
+          ;
+        }
+      }
+      > div {
+        @apply
+        block
+        ;
+      }
+      > span {
+        @apply
+        h-px
+        ;
+      }
+    }
+    &:last-child {
+      @apply
+      flex-none
+      ;
+      
+    }
+    &.is-active {
+      a {
+        @apply
+        text-main
+        ;
+        i {
+          
+        }
+      }
+    }
+  }
+
+  & > li.is-active ~ li,
+  &.is-inactive > li {
+    &::before {
+      @apply
+      bg-ui-600
+      ;
+    }
+    a {
+      @apply
+      text-ui-400
+      ;
+      &::before {
+        @apply
+        bg-ui-500
+        ;
+      }
+      i {
+        @apply
+        shadow-[0_0_0_2px_rgb(var(--color-ui-600))]
+        from-ui-800
+        to-ui-700
+        text-ui-400
+        ;
+      }
+    }
+  }
+}
+
+.step.step-tertiary {
+  > li {
+    > a {
+      @apply
+      p-0
+      flex
+      items-center
+      text-ui-200
+      transition-all
+      duration-1000
+      ease-[cubic-bezier(0.9,0,0.1,1)]
+      ;
+
+      > i {
+        @apply 
+        shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
+        text-ui-400/0
+        ;
+        &::after {
+          @apply
+          text-ui-800
+          ;
+        }
+      }
+      > div {
+        @apply
+        block
+        ;
+      }
+      > span {
+        @apply
+        h-0.5
+        ;
+      }
+    }
+    &:last-child {
+      @apply
+      flex-none
+      ;
+    }
+    &.is-active {
+      a {
+        @apply
+        text-main
+        ;
+      }
+    }
+  }
+
+  & > li.is-active ~ li,
+  &.is-inactive > li {
+    &::before {
+      @apply
+      bg-ui-600
+      ;
+    }
+    a {
+      @apply
+      text-ui-400
+      ;
+      &::before {
+        @apply
+        bg-ui-500
+        ;
+      }
+      i {
+        @apply
+        shadow-[0_0_0_2px_rgb(var(--color-ui-600))]
+        from-ui-700
+        to-ui-800
+        text-ui-400
+        ;
+      }
+    }
+  }
+}
+
+.step.step-quaternary {
+  li {
+    a {
+      > i {
+        @apply
+        h-3
+        w-3
+        
+        shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
+        text-main/0
+        ;
+        &::before {
+          @apply
+          inset-0.5
+          
+          ;
+        }
+      }
+      > div {
+        @apply
+        hidden
+        ;
+      }
+      > span {
+        @apply
+        h-2
+        w-full
+        rounded-full
+        mx-2
+        ;
+        &::before {
+          @apply
+          scale-x-105
+          ;
+        }
+      }
+    }
+  }
+  & > li.is-active ~ li,
+  &.is-inactive > li {
+    a {
+      i {
+        @apply
+        shadow-[0_0_0_2px_rgb(var(--color-ui-600))]
+        from-ui-600
+        to-ui-600
+        ;
+      }
+    }
+  }
+}
+
+/* label position */
+
+.step:not(.step-label-bottom):not(.step-label-alternate) {
+  
+  &.step-secondary,
+  &.step-tertiary {
+    @apply
+    gap-4
+    ;
+    > li {
+      > a {
+        @apply
+        gap-4
+        ;
+      }
+    }
+  }
+}
+.step.step-label-bottom:not(.step-vertical) {
+  @apply
+  pb-4
+  lg:pb-28
+  px-[12%]
+  ;
+  > li {
+    @apply
+    lg:min-w-[192px]
+    ;
+    > a {
+      > div {
+        @apply
+        absolute
+        w-40
+        -left-20
+        hidden
+        lg:block
+        ;
+      }
+    }
+  }
+  &,
+  &.step-primary {
+    > li {
+      > a {
+        > div {
+          @apply
+          hidden
+          lg:block
+          top-16
+          translate-x-6
+          ;
+        }
+      }
+    }
+  }
+  &.step-secondary {
+    > li {
+      > a {
+        > div {
+          @apply
+          top-7
+          translate-x-1.5
+          ;
+        }
+      }
+    }
+  }
+  &.step-tertiary {
+    > li {
+      > a {
+        > div {
+          @apply
+          top-14
+          translate-x-6
+          ;
+        }
+      }
+    }
+  }
+}
+
+
+/* vertical */
+
+.step.step-vertical {
+  @apply
+  grid
+  grid-rows-1
+  grid-flow-row
+  auto-rows-fr
+  relative
+  ;
+  > li {
+    @apply
+    flex-1
+    flex
+    items-stretch
+    ;
+    > a {
+      @apply
+      flex
+      gap-4
+      items-center
+      justify-between
+      py-4
+      ;
+      > i {
+        @apply
+        relative
+        z-10
+        ;
+      }
+      > div {
+        @apply
+        py-6
+        flex-1
+        order-2
+        text-left
+        translate-x-0
+        block
+        ;
+
+      }
+      > span {
+        @apply
+        absolute
+        z-0
+        ;
+      }
+    }
+  }
+
+
+  &,
+  &.step-primary {
+    > li {
+      > a {
+        > span {
+          @apply
+          left-[calc(1.5rem-0.125rem)]
+          top-[calc(50%+0.75rem)]
+          w-1
+          h-[calc(100%-1.5rem)]
+          m-0
+          ;
+          &::before {
+            @apply
+            translate-x-0
+            w-full
+            h-1/2
+            ;
+            clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 0.25em), 0% 100%);
+          }
+        }
+      }
+    }
+  }
+  &.step-secondary {
+    > li {
+      > a {
+        > span {
+          @apply
+          left-[calc(0.5rem-2.5px)]
+          top-[calc(50%+0.75rem)]
+          w-px
+          h-[calc(100%-1.5rem)]
+          m-0
+          ;
+        }
+      }
+    }
+  }
+  &.step-quaternary {
+    > li {
+      > a {
+        > span {
+          @apply
+          left-0.5
+          top-[calc(50%+1rem)]
+          w-2
+          h-[calc(100%-2rem)]
+          m-0
+          ;
+        }
+      }
+    }
+  }
+}

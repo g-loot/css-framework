@@ -1,0 +1,149 @@
+/*----------------------------*/
+/* MODAL */
+/*----------------------------*/
+
+.modal {
+  @apply
+  flex
+  flex-col
+  lg:flex-row
+  items-stretch
+  overflow-hidden
+  relative
+  ;
+
+  &:not([class*='rounded']) {
+    @apply
+    rounded-xl
+    ;
+  }
+
+  > .button-close {
+    @apply
+    absolute
+    z-20
+    top-2
+    right-2
+    ;
+  }
+
+  .modal-image {
+    @apply
+    flex-1
+    aspect-landscape
+    lg:aspect-square
+    relative
+    bg-ui-900
+    flex
+    items-center
+    justify-center
+    overflow-hidden
+    ;
+
+    > img {
+      @apply
+      relative
+      z-30
+      ;
+    }
+
+    &::before {
+      @apply
+      absolute
+      z-10
+      content-['']
+      bg-gradient-radial
+      from-blue-300/75
+      via-blue-700/50
+      to-purple-500/0
+      rounded-full
+      h-32
+      w-56
+      -bottom-24
+      -right-32
+      -rotate-45
+      blur-xl
+      ;
+    }
+
+    > span {
+      @apply
+      absolute
+      z-20
+      inset-0
+      bg-cover
+      bg-center
+      ;
+    }
+  }
+  .modal-content {
+    @apply
+    flex-1
+    flex
+    flex-col
+    items-stretch
+    p-4
+    lg:p-6
+    text-center
+    lg:text-left
+    ;
+
+    .modal-body {
+      @apply
+      flex-1
+      flex
+      flex-col
+      items-stretch
+      justify-center
+      ;
+
+      .modal-title {
+        @apply
+        font-headings
+        italic
+        text-2xl
+        my-2
+        lg:my-4
+        ;
+      }
+
+      p {
+        @apply
+        leading-loose
+        text-ui-200
+        my-4
+        lg:my-6
+        ;
+      }
+    }
+  }
+
+  &.modal-inverted {
+    .modal-image {
+      @apply
+      lg:order-2
+      ;
+    }
+    .modal-content {
+      @apply
+      order-1
+      ;
+    }
+  }
+}
+
+.modal-action {
+  @apply
+  flex
+  items-center
+  justify-center
+  lg:justify-start
+  gap-4
+  border-t
+  border-ui-700
+  pt-4
+  lg:pt-6
+  mt-4
+  lg:mt-6
+  ;
+}

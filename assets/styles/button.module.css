@@ -1,0 +1,636 @@
+@import "tailwindcss/components";
+
+/*----------------------------*/
+/* BUTTON */
+/*----------------------------*/
+
+.button {
+  @apply
+  outline-none
+  text-lg
+  leading-[1]
+  border-0
+  inline-flex
+  justify-center
+  items-center
+  cursor-pointer
+  p-3
+  min-h-4
+  transition-all
+  duration-300
+  ease-in-out
+  text-ui-800
+  scale-100
+  select-none
+  backdrop-blur
+  bg-main
+  bg-[length:500%_auto]
+  focus-visible:outline
+  focus-visible:outline-offset-2
+  focus-visible:outline-1
+  focus-visible:outline-main
+  font-bold
+  font-headings
+  tracking-wide
+  transform-gpu
+  ;
+
+  .icon {
+    @apply
+    font-icon
+    ;
+  }
+
+  &:not([class*='button-secondary'], 
+  [class*='button-tertiary'], 
+  [class*='button-premium'], 
+  [class*='button-claim'], 
+  [class*='button-ghost']), {
+    @apply
+    bg-gradient-to-r
+    from-interaction-500
+    via-interaction-500
+    to-interaction-300
+    ;
+  }
+  &:not([class*='rounded']) {
+    @apply
+    rounded
+    ;
+  }
+
+  &:not(.switch) {
+    @apply
+    space-x-2
+    ;
+    > * {
+      &:first-child {
+        @apply
+        ml-0.5
+        ;
+      }
+      &:last-child {
+        @apply
+        mr-0.5
+        ;
+      }
+      &:first-child:last-child {
+        @apply
+        mx-0
+        ;
+      }
+      &:not([class*='icon']) {
+        @apply
+        mb-0
+        ;
+      }
+    }
+  }
+
+  
+
+  &:not([disabled]),
+  &:not(.is-disabled) {
+    &:hover,
+    &:focus-visible {
+      @apply 
+      bg-right
+      shadow-[inset_0_0_0_1px_rgba(255,255,255,1)]
+      ;
+    }
+    &:active {
+      &:hover,
+      &:focus {
+        @apply
+        opacity-75
+        scale-95
+        ;
+      }
+    }
+  }
+  
+
+  /* Variants */
+
+  &.button-primary {
+    @apply 
+    bg-gradient-to-r
+    from-interaction-500
+    via-interaction-500
+    to-interaction-300
+    shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
+    ;
+
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        shadow-[inset_0_0_0_1px_rgba(255,255,255,1)];
+      }
+    }
+  }
+  &.button-secondary {
+    @apply 
+    bg-ui-700/0
+    text-ui-300
+    shadow-[inset_0_0_0_1px_rgb(var(--color-ui-400))]
+    ;
+
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        text-ui-200
+        shadow-[inset_0_0_0_1px_rgb(var(--color-ui-600))];
+      }
+    }
+  }
+  &.button-tertiary {
+    @apply 
+    bg-ui-700
+    text-ui-300
+    shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/0%)]
+    ;
+
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        bg-ui-600
+        text-ui-200
+        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/0%)]
+        ;
+      }
+    }
+  }
+  &.button-premium {
+    @apply 
+    bg-gradient-to-r
+    from-premium-500
+    via-premium-500
+    to-premium-300
+    shadow-[inset_0_0_0_1px_rgba(var(--color-premium-300),0)]
+    ;
+
+    > * {
+      @apply
+      drop-shadow-[0_-1px_0_rgba(var(--color-premium-300)/50%)]
+      ;
+    }
+
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        shadow-[inset_0_0_0_1px_rgba(var(--color-premium-300),50%)]
+        ;
+      }
+    }
+  }
+  &.button-claim {
+    @apply 
+    bg-gradient-to-r
+    from-purple-700
+    via-info-500
+    to-info-500
+    text-mono-100
+    bg-[length:200%_auto]
+    shadow-[inset_0_0_0_1px_rgba(var(--color-info-300),0)]
+    ;
+
+    > * {
+      @apply
+      shadow-[inset_0_0_0_1px_rgba(var(--color-info-300),50%)]
+      ;
+    }
+
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        shadow-[inset_0_0_0_1px_rgba(var(--color-info-300),50%)]
+      }
+    }
+  }
+  &.button-play {
+    @apply
+    rounded-full
+    space-x-3
+    ;
+    
+    .icon {
+      @apply
+      transition-transform
+      duration-200
+      ease-in-out
+      scale-150
+      ml-0
+      ;
+
+      ~ *:last-child {
+        @apply
+        mr-1
+        ;
+      }
+    }
+
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        .icon {
+          @apply
+          scale-100
+          ;
+        }
+      }
+    }
+  }
+
+  &.button-ghost {
+    @apply 
+    bg-ui-800/0
+    bg-gradient-to-r
+    from-ui-800/0
+    via-ui-800/0
+    to-ui-800/0
+    shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
+    text-ui-300
+    ;
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        bg-ui-700
+        text-ui-200
+        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/0%)]
+      }
+    }
+  }
+
+  /* Sizes */
+
+  &.button-lg {
+    @apply
+    py-4
+    px-5
+    ;
+
+    > * {
+      @apply
+      text-xl
+      ;
+    }
+    &[class*='rounded-full']{
+      @apply
+      px-4
+      ;
+    }
+  }
+  &.button-sm {
+    @apply
+    py-2.5
+    ;
+
+    > * {
+      @apply
+      text-base
+      ;
+    }
+    &[class*='rounded-full']{
+      @apply
+      px-2.5
+      ;
+    }
+  }
+
+  /* Currency */
+
+  &.button-currency {
+    @apply
+    p-px
+    justify-items-stretch
+    h-[42px]
+    ;
+    
+    > div {
+      @apply
+      flex
+      items-center
+      justify-center
+      self-stretch
+      relative
+      ;
+
+      &:first-child {
+        @apply
+        flex-1
+        px-2
+        ;
+      }
+
+      &:last-child {
+        @apply
+        bg-gradient-to-b
+        from-ui-800
+        to-ui-700
+        pl-2
+        pr-3
+        m-0
+        transition-all
+        duration-200
+        rounded-[calc(0.25rem-1px)]
+        ;
+      }
+    }
+    img {
+      @apply
+      transition
+      duration-200
+      ;
+    }
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        img {
+          @apply
+          scale-110
+          ;
+        }
+        > div:last-child {
+          @apply
+          bg-gradient-to-b
+          from-ui-800
+          to-ui-800
+          ;
+        }
+      }
+    }
+    &.button-coin {
+      > div:last-child {
+        span {
+          @apply
+          text-premium-500
+          ;
+        }
+      }
+    }
+    &.button-token {
+      > div:last-child {
+        span {
+          @apply
+          text-purple-500
+          ;
+        }
+      }
+    }
+    &.button-ticket {
+      > div:last-child {
+        span {
+          @apply
+          text-premium-700
+          ;
+        }
+      }
+    }
+    &.button-lg {
+      @apply
+      h-[52px]
+      ;
+    }
+    &.button-sm {
+      @apply
+      h-[36px]
+      ;
+    }
+  }
+
+  /* loading */
+
+  &.is-loading {
+    @apply
+    pointer-events-none
+    ;
+  }
+
+  &.is-loading {
+
+    &:not([class*='currency']),
+    &.button-currency > *:first-child {
+      > span {
+        @apply
+        opacity-0
+        ;
+      }
+      &::after {
+        @apply
+        content-['']
+        absolute
+        h-6
+        w-6
+        block
+        border-2
+        border-ui-800
+        border-l-ui-100
+        opacity-100
+        rounded-full
+        mx-auto
+        left-[calc(50%-0.75rem)]
+        animate-[button-loader-rotate_1s_linear_infinite]
+        ;
+      }
+    }
+
+    &.button-primary {
+      &:not([class*='currency']),
+      &.button-currency > *:first-child {
+        &::after {
+          @apply
+          border-ui-800/25
+          border-l-ui-800
+          ;
+        }
+      }
+    }
+    &.button-secondary {
+      &:not([class*='currency']),
+      &.button-currency > *:first-child {
+        &::after {
+          @apply
+          border-ui-700
+          border-l-ui-300
+          ;
+        }
+      }
+    }
+    &.button-tertiary {
+      &:not([class*='currency']),
+      &.button-currency > *:first-child {
+        &::after {
+          @apply
+          border-ui-600
+          border-l-ui-300
+          ;
+        }
+      }
+    }
+    &.button-premium {
+      &:not([class*='currency']),
+      &.button-currency > *:first-child {
+        &::after {
+          @apply
+          border-ui-800/25
+          border-l-ui-800
+          ;
+        }
+      }
+    }
+    &.button-claim {
+      &:not([class*='currency']),
+      &.button-currency > *:first-child {
+        &::after {
+          @apply
+          border-ui-100/25
+          border-l-ui-100
+          ;
+        }
+      }
+    }
+  }
+
+  /* Disabled */
+
+  &.is-disabled,
+  &:disabled {
+    @apply
+    pointer-events-none
+    select-none
+    bg-disabled-500/25
+    bg-gradient-to-r
+    from-disabled-500/25
+    via-disabled-500/25
+    to-disabled-500/25
+    text-disabled-300
+    shadow-[inset_0_0_0_1px_rgba(var(--color-disabled-700),50%)]
+    ;
+    > * {
+      @apply
+      drop-shadow-[0_-1px_0_rgba(var(--color-disabled-700)/0%)]
+      ;
+    }
+    &.button-currency > div:last-child {
+      @apply
+      from-disabled-500/50
+      via-disabled-500/50
+      to-disabled-500/50
+      ;
+    }
+  }
+
+  /*
+&.is-disabled,
+  &:disabled {
+    @apply
+    pointer-events-none
+    select-none
+    bg-disabled-500
+    from-disabled-500
+    via-disabled-500
+    to-disabled-500
+    text-disabled-300
+    shadow-[inset_0_0_0_1px_rgba(var(--color-ui-600),50%)]
+    ;
+    > * {
+      @apply
+      drop-shadow-[0_-1px_0_rgba(var(--color-ui-700)/0%)]
+      ;
+    }
+  }
+  */
+
+  /* Shining */
+
+  &.is-shining {
+    @apply
+    relative
+    overflow-hidden
+    ;
+
+    &::before,
+    &::after {
+      @apply
+      content-['']
+      absolute
+      inset-0
+      bg-[length:200%_auto]
+      animate-[button-shining-rays_2s_linear_infinite]
+      bg-[linear-gradient(45deg,#fff0_45%,#fffc_50%,#fff0_55%,#fff0)]
+      ;
+    }
+
+    &::before {
+      @apply
+      animation-delay-300
+      ;
+    }
+  }
+
+  /* Close */ 
+  &.button-close {
+    @apply
+    h-10
+    w-10
+    rounded-full
+    hover:rotate-90
+    bg-ui-800/75
+    transition-all
+    duration-300
+    ease-[cubic-bezier(.8,0,.3,1)]
+    ;
+
+    > .icon {
+      @apply
+      block
+      transform-gpu
+      transition-all
+      duration-300
+      ease-[cubic-bezier(.8,0,.3,1)]
+      ;
+    }
+
+    &:hover {
+      > .icon {
+        @apply
+        scale-100
+        ;
+      }
+    }
+  }
+}
+
+
+@keyframes button-loader-rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes button-shining-rays {
+  0% {
+    background-position:-50%
+  } 25% {
+    background-position:-50%
+  } 50%, 100% {
+    background-position:150%
+  }
+}

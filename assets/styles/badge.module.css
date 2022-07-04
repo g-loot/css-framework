@@ -1,0 +1,85 @@
+/*----------------------------*/
+/* BADGE */
+/*----------------------------*/
+
+[data-badge] {
+  @apply
+  relative
+  whitespace-nowrap
+  ;
+  &::after {
+    @apply
+    z-50
+    inline-block
+    content-[attr(data-badge)]
+    top-0
+    -right-1
+    px-1
+    py-0.5
+    rounded-full
+    bg-main
+    text-xs
+    text-ui-800
+    leading-none
+    font-body
+    font-bold
+    translate-x-[0.35rem]
+    -translate-y-4
+    min-w-[1rem]
+    text-center
+    ;
+  }
+
+  &.button,
+  &.avatar {
+    &::after {
+      @apply
+      absolute
+      ;
+    }
+  }
+  &.button {
+    &::after {
+      @apply
+      top-0
+      right-0
+      translate-x-[50%]
+      -translate-y-2
+      ;
+    }
+  }
+  &.avatar {
+    &::after {
+      @apply
+      top-2
+      right-2
+      translate-x-[50%]
+      -translate-y-[50%]
+      ;
+    }
+  }
+}
+[data-badge="."] {
+  &::after {
+    @apply
+    text-ui-100/0
+    w-2
+    h-2
+    min-w-[0.5rem]
+    -translate-y-3
+    ;
+  }
+  &:empty {
+    @apply
+    text-0
+    ;
+    &::after {
+      @apply
+      relative
+      translate-y-0
+      translate-x-0
+      right-0
+      ;
+    }
+  }
+}

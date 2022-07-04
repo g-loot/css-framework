@@ -1,0 +1,111 @@
+/*----------------------------*/
+/* STAT */
+/*----------------------------*/
+
+.stats {
+  @apply
+  inline-grid
+  ;
+
+  &:not([class*='rounded']){
+    @apply
+    rounded-2xl
+    ;
+  }
+
+  > .stat {
+    @apply
+    inline-flex
+    gap-x-4
+    w-64
+    p-4
+    leading-tight
+    ;
+
+    > .stat-body {
+      @apply
+      flex-1
+      ;
+    }
+
+    > *:not(.stat-image) {
+      @apply
+      whitespace-nowrap
+      ;
+    }
+  }
+}
+
+:where(.stats) {
+  @apply
+  grid-flow-col
+  overflow-x-auto
+  ;
+}
+
+.stat {
+  &:not(:last-child) {
+    @apply
+    border-r
+    border-ui-700
+    ;
+  }
+}
+
+.surface-ui-900 {
+  > .stat {
+    &:not(:last-child) {
+      @apply
+      border-ui-800
+      ;
+    }
+  }
+}
+.surface-ui-700 {
+  > .stat {
+    &:not(:last-child) {
+      @apply
+      border-ui-600
+      ;
+    }
+  }
+}
+.surface-ui-600 {
+  > .stat {
+    &:not(:last-child) {
+      @apply
+      border-ui-500
+      ;
+    }
+  }
+}
+.stat-image {
+  @apply
+  shrink-0
+  ;
+}
+.stat-body {
+  @apply
+  space-y-1
+  ;
+}
+.stat-label {
+  @apply
+  text-ui-300
+  text-sm
+  ;
+}
+.stat-value {
+  @apply
+  font-headings
+  text-5xl
+  text-ui-100
+  leading-none
+  ;
+}
+.stat-description {
+  @apply
+  text-ui-300
+  text-xs
+  ;
+}

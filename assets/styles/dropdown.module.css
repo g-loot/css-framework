@@ -1,0 +1,87 @@
+/*----------------------------*/
+/* DROPDOWN */
+/*----------------------------*/
+
+.dropdown {
+  @apply
+  relative
+  inline-block
+  ;
+
+  > .button {
+    @apply
+    m-1
+    ;
+  }
+
+  .dropdown-content {
+    @apply
+    absolute
+    z-50
+    origin-top
+    scale-90
+    invisible
+    pointer-events-none
+    opacity-0
+    transition-all
+    transform-gpu
+    duration-200
+    ease-[cubic-bezier(.7,0,.3,1)]
+    outline-none
+    ;
+
+    &:not([class*='rounded']) {
+      @apply
+      rounded-lg
+      overflow-hidden
+      ;
+    }
+    .menu {
+      > li {
+        @apply
+        -translate-y-4
+        opacity-0
+        delay-200
+        ;
+      }
+    }
+  }
+}
+
+.dropdown {
+
+  &.dropdown-open,
+  &.dropdown-hover:hover,
+  &:not(.dropdown-hover):focus,
+  &:not(.dropdown-hover):focus-within {
+    .dropdown-content {
+      @apply
+      visible
+      pointer-events-auto
+      opacity-100
+      outline-none
+      ;
+      .menu {
+        > li {
+          @apply
+          translate-y-0
+          opacity-100
+          ;
+        }
+      }
+    }
+  }
+
+  &.dropdown-open,
+  &.dropdown-hover:hover,
+  &:focus,
+  &:focus-within {
+    .dropdown-content {
+      @apply
+      scale-100
+      translate-y-0
+      ;
+    }
+  }
+}
+

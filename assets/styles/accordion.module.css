@@ -1,0 +1,275 @@
+/*----------------------------*/
+/* ACCORDION */
+/*----------------------------*/
+
+.accordion {
+  @apply
+  overflow-hidden
+  ;
+  &:not([class*='rounded']) {
+    @apply
+    rounded
+    ;
+  }
+
+  > .accordion-item {
+    @apply
+    overflow-ellipsis
+    ;
+
+    &:not(:first-child) {
+      @apply
+      border-t
+      border-ui-700
+      ;
+    }
+  }
+  .accordion-header {
+    @apply
+    select-none
+    ;
+    .icon[class*='icon-game'],
+    .item-title {
+      @apply
+      transition
+      duration-300
+      ease-in-out
+      ;
+    }
+    .item-title {
+      @apply
+      text-ui-300
+      ;
+    }
+    .icon[class*='down']{
+      @apply
+      transition
+      transform-gpu
+      duration-500
+      text-ui-400
+      ease-[cubic-bezier(.7,0,.3,1)]
+      ;
+    }
+  }
+  .accordion-collapse {
+    @apply
+    overflow-hidden
+    transition-all
+    transform-gpu
+    duration-500
+    ease-[cubic-bezier(.7,0,.3,1)]
+    ;
+
+    > div {
+      @apply
+      border-t
+      border-ui-700
+      ;
+    }
+    ul.menu {
+      > li {
+        @apply
+        translate-y-2
+        opacity-0
+        duration-500
+        delay-100
+        ;
+      }
+    }
+  }
+
+  .accordion-item {
+    &:hover {
+      [aria-controls] {
+        @apply
+        cursor-pointer
+        transition-all
+        duration-200
+        ease-[cubic-bezier(.7,0,.3,1)]
+        ;
+    
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          &:hover,
+          &:focus-visible {
+            @apply 
+            opacity-100
+            ;
+            .item-title {
+              @apply
+              text-ui-100
+              ;
+            }
+          }
+        }
+      }
+    }
+    &:not(.is-active) {
+      .accordion-header {
+        @apply
+        text-ui-200
+        bg-ui-700/25
+        ;
+        .icon[class*='icon-game'] {
+          @apply
+          text-ui-300
+          ;
+        }
+      }
+    }
+
+    &.is-active {
+      > .accordion-header {
+        @apply
+        text-ui-100
+        bg-ui-700
+        ;
+        .item-title {
+          @apply
+          text-ui-100
+          ;
+        }
+        .icon[class*='down']{
+          @apply
+          text-ui-200
+          -rotate-180
+          ;
+        }
+      }
+      .accordion-collapse {
+        ul.menu {
+          > li {
+            @apply
+            translate-y-0
+            opacity-100
+            ;
+            &:nth-child(1) {
+              @apply
+              delay-[.1s]
+              ;
+            }
+            &:nth-child(2) {
+              @apply
+              delay-[.2s]
+              ;
+            }
+            &:nth-child(3) {
+              @apply
+              delay-[.3s]
+              ;
+            }
+            &:nth-child(4) {
+              @apply
+              delay-[.4s]
+              ;
+            }
+            &:nth-child(5) {
+              @apply
+              delay-[.5s]
+              ;
+            }
+            &:nth-child(6) {
+              @apply
+              delay-[.6s]
+              ;
+            }
+            &:nth-child(7) {
+              @apply
+              delay-[.7s]
+              ;
+            }
+            &:nth-child(8) {
+              @apply
+              delay-[.8s]
+              ;
+            }
+            &:nth-child(9) {
+              @apply
+              delay-[.9s]
+              ;
+            }
+            &:nth-child(10) {
+              @apply
+              delay-[1s]
+              ;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.accordion-sm {
+  .accordion-header {
+    @apply
+    p-1
+    ;
+  }
+}
+
+.accordion.accordion-halo {
+
+  .accordion-header {
+    @apply
+    overflow-hidden
+    relative
+    ;
+    > i {
+      @apply
+      absolute
+      rounded-full
+      transition
+      transform-gpu
+      text-ui-400
+      opacity-0
+      ease-[cubic-bezier(.7,0,.3,1)]
+      ;
+
+      &:nth-of-type(1) {
+        @apply
+        duration-700
+        blur-md
+        w-[120%]
+        h-[100%]
+        -left-[33%]
+        -bottom-[10%]
+        translate-y-12
+        ;
+      }
+
+      &:nth-of-type(2) {
+        @apply
+        duration-300
+        blur-sm
+        w-full
+        h-1
+        right-3
+        -bottom-0.5
+        -translate-x-4
+        ;
+      }
+    }
+  }
+  .accordion-item.is-active {
+    .accordion-header {
+      @apply
+      bg-ui-800/0
+      ;
+      > i {
+        &:nth-of-type(1) {
+          @apply
+          translate-y-0
+          opacity-30
+          ;
+        }
+        &:nth-of-type(2) {
+          @apply
+          translate-x-0
+          opacity-75
+          ;
+        }
+      }
+    }
+  }
+}

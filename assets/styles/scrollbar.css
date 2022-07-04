@@ -1,0 +1,135 @@
+/*----------------------------*/
+/* SCROLLBAR */
+/*----------------------------*/
+
+
+body {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.scrollbar,
+select[multiple] {
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    @apply
+    w-1.5
+    h-1.5
+    right-px
+    ;
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply
+    bg-ui-400
+    transition-all
+    duration-200
+    rounded
+    cursor-pointer
+    ;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    @apply
+    bg-ui-300
+    cursor-pointer
+    ;
+  }
+  &::-webkit-scrollbar-track {
+    @apply
+    rounded
+    bg-ui-700/50
+    ;
+  }
+  &::-webkit-scrollbar-track:hover {
+    @apply
+    bg-ui-700/50
+    ;
+  }
+  &::-webkit-scrollbar-button {
+    @apply
+    hidden
+    ;
+  }
+}
+
+.scrollbar-primary {
+  &::-webkit-scrollbar-thumb {
+    @apply
+    bg-interaction-500
+    ;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    @apply
+    bg-interaction-300
+    ;
+  }
+}
+
+.scrollbar-secondary {
+  &::-webkit-scrollbar-thumb {
+    @apply
+    bg-ui-400
+    ;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    @apply
+    bg-ui-300
+    ;
+  }
+}
+
+.scrollbar-hidden {
+  -webkit-overflow-scrolling: touch;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+
+@media not all and (hover: none) and (pointer: coarse) {
+    
+  .scrollbar-desktop {
+    &::-webkit-scrollbar {
+      @apply
+      w-1.5
+      h-1.5
+      right-px
+      ;
+    }
+    &::-webkit-scrollbar-thumb {
+      @apply
+      bg-ui-400
+      transition-all
+      duration-200
+      rounded
+      cursor-pointer
+      ;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      @apply
+      bg-ui-300
+      cursor-pointer
+      ;
+    }
+    &::-webkit-scrollbar-track {
+      @apply
+      rounded
+      bg-ui-700/50
+      ;
+    }
+    &::-webkit-scrollbar-track:hover {
+      @apply
+      bg-ui-700/50
+      ;
+    }
+    &::-webkit-scrollbar-button {
+      @apply
+      hidden
+      ;
+    }
+  }
+}

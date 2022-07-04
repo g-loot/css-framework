@@ -1,0 +1,232 @@
+/*----------------------------*/
+/* PROGRESS BAR */
+/*----------------------------*/
+
+
+.progressbar {
+
+  @apply
+  rounded-sm
+  bg-ui-600
+  overflow-hidden
+  w-full
+  transform-gpu
+  ;
+
+  &,
+  > div {
+    @apply
+    h-2.5
+    ;
+  }
+
+  > div {
+    @apply
+    bg-[length:400px_auto]
+    bg-main
+    bg-repeat
+    transition-all
+    duration-1000
+    ease-[cubic-bezier(0.9,0,0.1,1)]
+    scale-x-110
+    animate-[progressbar-gradient_2s_linear_infinite]
+    transform-gpu
+    ;
+    background-image: linear-gradient(to right, rgb(var(--color-interaction-300)) 0px, rgb(var(--color-blue-700)) 200px, rgb(var(--color-interaction-300)) 400px);
+    clip-path: polygon(0% 0%, 100% 0%, calc(100% - 0.5em) 100%, 0% 100%);
+    transform: translate3d(calc(-100% + (1% * var(--percent))), 0, 0);
+  }
+}
+
+@keyframes progressbar-gradient {
+  0% {
+    background-position: 400px 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* size */
+
+.progressbar.progressbar-sm {
+  @apply
+  rounded-full
+  ;
+  
+  &,
+  > div {
+    @apply
+    h-1.5
+    ;
+  }
+}
+.progressbar.progressbar-xs {
+  @apply
+  rounded-full
+  ;
+  
+  &,
+  > div {
+    @apply
+    h-px
+    ;
+    clip-path: none;
+  }
+}
+
+
+/* radial */
+
+.progressbar-radial {
+  @apply
+  relative
+  overflow-hidden
+  rounded-full
+  shrink-0
+  transform-gpu
+  mx-auto
+  ;
+  > div {
+    @apply
+    absolute
+    z-30
+    inset-0
+    flex
+    items-center
+    justify-center
+    text-center
+    leading-none
+    ;
+  }
+
+  &::before {
+    @apply
+    content-['']
+    absolute
+    z-10
+    w-24
+    h-24
+    -bottom-12
+    rounded-full
+    bg-gradient-radial
+    from-blue-500/75
+    via-blue-300/50
+    to-blue-500/0
+    blur-lg
+    transform-gpu
+    left-[calc(50%-3rem)];
+  }
+
+  &::after {
+    @apply
+    content-['']
+    absolute
+    z-20
+    inset-2.5
+    bg-gradient-to-b
+    from-ui-800
+    to-ui-700
+    rounded-full
+    ;
+  }
+  > svg {
+    @apply
+    relative
+    z-0
+    w-32
+    h-32
+    block
+    overflow-hidden
+    rounded-full
+    -scale-x-100
+    shadow-[inset_0_0_0_1000px_rgb(var(--color-ui-600))]
+    transform-gpu
+    ;
+
+    circle {
+      @apply
+      fill-ui-100/0
+      stroke-main
+      -rotate-90
+      scale-125
+      transition-all
+      duration-1000
+      ease-[cubic-bezier(0.9,0,0.1,1)]
+      transform-gpu
+      ;
+      transform-box: fill-box;
+      transform-origin: center center;
+      stroke-width: 24;
+      stroke-dasharray: 120;
+      stroke-dashoffset: calc((1px * var(--percent)) - 100px);
+    }
+  }
+
+  &.progressbar-sm {
+    &::before {
+      @apply
+      w-12
+      h-12
+      -bottom-6
+      blur-sm
+      left-[calc(50%-1.5rem)];
+    }
+    > svg {
+      @apply
+      w-20
+      h-20
+      ;
+    }
+    &::after {
+      @apply
+      inset-1.5
+      ;
+    }
+  }
+
+  + .icon-holder {
+    @apply
+    absolute
+    z-30
+    top-2.5
+    left-2.5
+    ;
+  }
+
+  &.progressbar-xs {
+    &::before {
+      @apply
+      w-5
+      h-5
+      -bottom-6
+      blur-sm
+      left-[calc(50%-1.5rem)];
+    }
+    > svg {
+      @apply
+      w-7
+      h-7
+      ;
+    }
+    &::after {
+      @apply
+      inset-px
+      ;
+    }
+  }
+}
+
+@media (pointer:none), (pointer:coarse) {
+  .progressbar-radial {
+    > svg {
+      circle {
+        @apply
+        fill-main
+        stroke-ui-600
+        ;
+      }
+    }
+  }
+}

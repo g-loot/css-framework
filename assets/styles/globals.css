@@ -1,0 +1,49 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+@import "./animation";
+@import "./colors";
+@import "./fonts";
+@import "./form";
+@import "./general";
+@import "./scrollbar";
+@import "./typography";
+@import "./variables";
+
+@import "./button.module.css";
+@import "./icons.module.css";
+
+@import "./alert.module.css";
+@import "./accordion.module.css";
+@import "./avatar.module.css";
+@import "./badge.module.css";
+@import "./bracket.module.css";
+@import "./card.module.css";
+@import "./carousel.module.css";
+@import "./checkmark.module.css";
+@import "./chip.module.css";
+@import "./code.module.css";
+@import "./countdown.module.css";
+@import "./drawer.module.css";
+@import "./dropdown.module.css";
+@import "./gauge.module.css";
+@import "./iconholder.module.css";
+@import "./ladder.module.css";
+@import "./link.module.css";
+@import "./listitem.module.css";
+@import "./loader.module.css";
+@import "./mask.module.css";
+@import "./modal.module.css";
+@import "./menu.module.css";
+@import "./pagination.module.css";
+@import "./progressbar.module.css";
+@import "./surface.module.css";
+@import "./stat.module.css";
+@import "./step.module.css";
+@import "./switch.module.css";
+@import "./table.module.css";
+@import "./tabs.module.css";
+@import "./tooltip.module.css";
+
+
+@import "tailwindcss/utilities";

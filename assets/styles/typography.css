@@ -1,0 +1,106 @@
+/*----------------------------*/
+/* TYPOGRAPHY */
+/*----------------------------*/
+
+body {
+  @apply 
+  font-body
+  ;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+  @apply
+  font-headings
+  tracking-wide
+  leading-tight
+  text-ui-100
+  ;
+}
+
+h1,
+.h1 {
+  @apply
+  text-4xl
+  md:text-5xl
+  italic
+  ;
+}
+
+h2,
+.h2 {
+  @apply
+  text-3xl
+  md:text-4xl
+  italic
+  ;
+}
+
+h3,
+.h3 {
+  @apply
+  text-2xl
+  md:text-3xl
+  italic
+  ;
+}
+
+h4,
+.h4 {
+  @apply
+  text-xl
+  md:text-2xl
+  italic
+  ;
+}
+
+h5,
+.h5,
+h6,
+.h6 {
+  &:not(.normal-case) {
+    @apply
+    uppercase
+    ;
+  }
+}
+
+h5,
+.h5 {
+  @apply
+  font-bold
+  text-xl
+  ;
+}
+
+h6,
+.h6 {
+  @apply
+  font-bold
+  ;
+}
+
+.font-headings {
+  @apply
+  tracking-wide
+  ;
+}
+
+hr {
+  @apply
+  border-ui-600
+  ;
+}
+
+.text-gradient {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
