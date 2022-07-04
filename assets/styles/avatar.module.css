@@ -119,6 +119,38 @@
       }
     }
   }
+  &.avatar-xl {
+    @apply
+    h-32
+    w-32
+    ;
+    &:not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
+      > div {
+        @apply
+        rounded-[calc(0.6rem*2)]
+        ;
+        > * {
+          @apply
+          rounded-[calc((0.6rem*2)-(0.6rem/2))]
+          ;
+        }
+      }
+    }
+    > div {
+      > * {
+        @apply
+        inset-[calc(0.6rem/2)]
+        w-[calc(100%-0.6rem)]
+        h-[calc(100%-0.6rem)]
+        ;
+        & {
+          @apply
+          text-5xl
+          ;
+        }
+      }
+    }
+  }
   &.avatar-sm {
     @apply
     h-16

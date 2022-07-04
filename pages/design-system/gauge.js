@@ -84,7 +84,6 @@ const DSpage = () => {
                     </div>
                   </div>
                 </div>
-                
               </div>
               <div className='text-center'>
                 <button className='button button-tertiary mx-auto' onClick={clickHandlerNum1and2.bind(this)}>

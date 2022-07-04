@@ -3,27 +3,28 @@
     {
       "label": "Home",
       "icon": "home-2",
-      "url": "url"
+      "url": "home",
+      "isHome": true
     },
     {
       "label": "Profile",
       "icon": "circle-09",
-      "url": "url"
+      "url": "profile"
     },
     {
       "label": "Teams",
       "icon": "multiple-12",
-      "url": "url"
+      "url": "teams"
     },
     {
       "label": "Shop",
       "icon": "shop",
-      "url": "url"
+      "url": "shop"
     },
     {
       "label": "Premium",
       "icon": "ic_stars_24px",
-      "url": "url"
+      "url": "premium"
     }
   ]
 }

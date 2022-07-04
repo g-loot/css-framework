@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 
+import Link from 'next/link';
 import PrototypeDataGames from '../../mock-data/games.json';
 import PrototypeGamesNavItem from './PrototypeGamesNavItem';
 import useFetch from '../../hooks/use-fetch';
@@ -9,6 +10,8 @@ export default function PrototypeGamesNav({children}) {
   const router = useRouter();
   const [isActive, setActive] = useState(false);
   const elementRef = useRef(null);
+  const { query } = useRouter();
+  const hasAds = query.ads === 'true' ? true : false;
 
   var height = elementRef.current?.clientHeight;
 
@@ -51,10 +54,34 @@ export default function PrototypeGamesNav({children}) {
             >
 
               <ul className="menu menu-secondary">
-                <li><a href="cards"><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
-                <li><a href="colors"><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
-                <li><a href="icons"><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
-                <li><a href="typography"><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+                <li>
+                  <Link href={`mission${hasAds ? '?ads=true&' : '?'}game=${item.slug}`} >
+                    <a>
+                      <span className='pl-9'>Missions</span>
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`brawls${hasAds ? '?ads=true&' : '?'}game=${item.slug}`} >
+                    <a>
+                      <span className='pl-9'>Brawls</span>
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`tournaments${hasAds ? '?ads=true&' : '?'}game=${item.slug}`} >
+                    <a>
+                      <span className='pl-9'>Tournaments</span>
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`stats${hasAds ? '?ads=true&' : '?'}game=${item.slug}`} >
+                    <a>
+                      <span className='pl-9'>Stats</span>
+                    </a>
+                  </Link>
+                </li>
               </ul>
 
             </PrototypeGamesNavItem>

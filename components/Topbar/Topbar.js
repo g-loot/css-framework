@@ -16,7 +16,7 @@ export default function Topbar() {
         <div className='w-full md:w-9/12 xl:w-10/12 hidden md:flex items-center justify-between'>
           <div className='flex items-center'>
             <div className='hidden lg:block pl-2'>
-              <Button variant='secondary' label='Download tracker' icon='tv' />
+              <Button variant='secondary' size='sm' label='Download tracker' icon='tv' />
             </div>
           </div>
           <div className='flex items-center justify-end'>

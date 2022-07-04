@@ -150,12 +150,12 @@ const Index = () => {
                       Functional prototype for testing purposes.
                     </div>
                     <div className='flex gap-2'>
-                      <Link href='prototype'>
+                      <Link href='prototype/home'>
                         <a className='button button-sm button-primary'>
                           <span>View prototype</span>
                         </a>
                       </Link>
-                      <Link href='prototype?ads=true'>
+                      <Link href='prototype/home?ads=true'>
                         <a className='button button-sm button-secondary'>
                           <span>View with ads</span>
                         </a>

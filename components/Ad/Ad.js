@@ -13,9 +13,9 @@ export default function Ad(props) {
     <>
       {hasAds === true && (
         <div className="rounded-lg flex flex-col items-center justify-center overflow-hidden mb-4">
-          <div className='cursor-pointer'>
-            <iframe className='rounded-xl overflow-hidden pointer-events-none select-none' src={URL} width={Width} height={Height} frameBorder="0" allowFullScreen="0" allowtransparency="true" allow="encrypted-media"></iframe>
-          </div>
+          <a href='http://gloot.com/' target='_blank' rel="noreferrer" className='cursor-pointer active:opacity-25'>
+            <iframe className='rounded-lg overflow-hidden pointer-events-none select-none' src={URL} width={Width} height={Height} frameBorder="0" allowFullScreen="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </a>
           <Link href='prototype/premium'>
             <a className='link link-main text-sm'>
               Remove ads
