@@ -5,7 +5,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy:framework": "cd framework && npm publish"
+    "build:framework": "./build-framework.sh",
+    "deploy:framework": "npm run build:framework && cd framework && npm publish"
   },
   "devDependencies": {
     "@headlessui/react": "^1.6.2",
