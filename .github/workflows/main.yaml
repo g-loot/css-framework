@@ -39,8 +39,7 @@ jobs:
       - run: npm ci
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
-      - run: npm run build
-      - run: npm publish
+      - run: npm run deploy:framework
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #      - run: npm run build-storybook
