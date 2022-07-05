@@ -1,5 +1,5 @@
 {
-  "name": "gnog-prototype",
+  "name": "@g-loot/css-framework-library",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
