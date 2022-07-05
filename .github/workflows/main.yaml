@@ -36,7 +36,6 @@ jobs:
       - run: git describe --tag --abbrev=0
       - run: npm --no-git-tag-version version ${{ steps.version_bump.outputs.tag }}
 
-      - run: npm ci
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGE_TOKEN }}
       - run: npm run deploy:framework
