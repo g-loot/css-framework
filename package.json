@@ -28,7 +28,7 @@
     "tailwindcss-animation-delay": "^1.0.7"
   },
   "files": [
-    "dist/assets/styles/*",
-    "dist/tailwind.config.js"
+    "assets/styles/*",
+    "tailwind.config.js"
   ]
 }
