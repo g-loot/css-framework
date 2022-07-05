@@ -16,58 +16,58 @@ export default function Home() {
       <PrototypeStructure title="Home">
         <div className='animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 2 * 0.05s)'}}>
           <section>
-            <div class="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center">
               <img src="https://res.cloudinary.com/gloot/image/upload/v1636112328/GNOG%20assets/Premium/gloot-premium-horizontal.png" width="500" height="auto" alt="G-Loot Premium" />
             </div>
 
-            <div class="flex flex-col items-center justify-center text-center mb-12">
-              <h2 class="font-headings italic text-3xl md:text-4xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[30ch]">
+            <div className="flex flex-col items-center justify-center text-center mb-12">
+              <h2 className="font-headings italic text-3xl md:text-4xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[30ch]">
                 Join G-Loot Premium to unlock the full G-Loot gaming experience
               </h2>
             </div>
-            <div class="flex flex-col items-center justify-center text-center mb-12">
+            <div className="flex flex-col items-center justify-center text-center mb-12">
               <button
               type='button'
-              class="button button-lg button-premium is-shining"
+              className="button button-lg button-premium is-shining"
               >
                 <span>View premium plans</span>
               </button>
-              <div class="flex flex-col items-center justify-center text-center mt-2">
-                <p class="text-sm text-ui-300">
-                  Cancel anytime. <a class="underline cursor-pointer">Terms and conditions</a> apply.
+              <div className="flex flex-col items-center justify-center text-center mt-2">
+                <p className="text-sm text-ui-300">
+                  Cancel anytime. <a className="underline cursor-pointer">Terms and conditions</a> apply.
                 </p>
               </div>
             </div>
           </section>
           
-          <section class="flex flex-col md:flex-row items-start justify-between text-center space-y-4 md:space-y-0 mb-24">
+          <section className="flex flex-col md:flex-row items-start justify-between text-center space-y-4 md:space-y-0 mb-24">
             <div>
               <img src="https://res.cloudinary.com/gloot/image/upload/v1645610357/Marketing/202109_gloot2/premium-missions.png" width="400" height="auto" alt=""/>
-              <h3 class="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
+              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
                 Get access to Premium<br />Mission each day
               </h3>
             </div>
             <div>
               <img src="https://res.cloudinary.com/gloot/image/upload/v1645610357/Marketing/202109_gloot2/premium-rewards.png" width="400" height="auto" alt=""/>
-              <h3 class="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
+              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
                 Earn mission<br />rewards faster
               </h3>
             </div>
             <div>
               <img src="https://res.cloudinary.com/gloot/image/upload/v1645610357/Marketing/202109_gloot2/premium-ads.png" width="400" height="auto" alt=""/>
-              <h3 class="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
+              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
                 Remove ads<br />on the platform
               </h3>
             </div>
           </section>
 
           <section className="relative z-10 pt-12 md:pt-20 mb-40 container max-w-lg mx-auto ">
-            <img class="absolute z-20 -top-6 -right-14" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_3.png" width="180" height="auto" alt="" />
-            <img class="absolute z-20 top-44 -right-32" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_4.png" width="36" height="auto" alt="" />
-            <img class="absolute z-20 -bottom-12 -right-32 blur-md" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_5.png" width="168" height="auto" alt="" />
-            <img class="absolute z-0 top-60 -left-32 blur-sm" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_5.png" width="168" height="auto" alt="" />
-            <img class="absolute z-20 -bottom-6 -left-6" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_2.png" width="112" height="auto" alt="" />
-            <img class="absolute z-20 top-16 -left-6" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_1.png" width="49" height="auto" alt="" />
+            <img className="absolute z-20 -top-6 -right-14" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_3.png" width="180" height="auto" alt="" />
+            <img className="absolute z-20 top-44 -right-32" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_4.png" width="36" height="auto" alt="" />
+            <img className="absolute z-20 -bottom-12 -right-32 blur-md" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_5.png" width="168" height="auto" alt="" />
+            <img className="absolute z-0 top-60 -left-32 blur-sm" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_5.png" width="168" height="auto" alt="" />
+            <img className="absolute z-20 -bottom-6 -left-6" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_2.png" width="112" height="auto" alt="" />
+            <img className="absolute z-20 top-16 -left-6" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_1.png" width="49" height="auto" alt="" />
 
             <div className="relative z-10 flex flex-col lg:flex-row items-stretch gap-16">
               <div className="hidden lg:flex flex-col flex-1 surface rounded-xl p-4 lg:p-8">
