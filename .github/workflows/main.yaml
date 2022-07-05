@@ -39,11 +39,11 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@g-loot' # Defaults to the user or organization that owns the workflow file
 
-      - name: Get the version
-        id: get_version
-        run: echo ::set-output name=VERSION::$( git describe --tag --abbrev=0 )
-      - run: git describe --tag --abbrev=0
-      - run: npm --no-git-tag-version version $( git describe --tag --abbrev=0 )
+#      - name: Get the version
+#        id: get_version
+#        run: echo ::set-output name=VERSION::$( git describe --tag --abbrev=0 )
+#      - run: git describe --tag --abbrev=0
+#      - run: npm --no-git-tag-version version $( git describe --tag --abbrev=0 )
 
       - run: npm ci
         env:
