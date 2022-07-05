@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![G-Loot CSS Framework](https://res.cloudinary.com/gloot/image/upload/v1657002851/Marketing/2022_prototype/G-Loot_Framework_logo.svg)
 
-## Getting Started
+A CSS Framework built on Tailwind CSS to bring consistency and speed to G-Loot products.
 
-First, run the development server:
+------
+
+## Documentation
+
+For full documentation, visit [gloot-framework.netlify.app](https://gloot-framework.netlify.app/).
+
+## Using the framework
+
+### 1. Install tailwindcss
+
+Install tailwindcss and its peer dependencies via npm.
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm install -D tailwindcss postcss autoprefixer tailwindcss-animation-delay
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install the framework
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Install @augustin_hiebel/gloot-framework (temporary name) via npm.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+npm install @augustin_hiebel/gloot-framework
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 3. Import the css
 
-## Learn More
+Import the Framework CSS into your project stylesheet.
 
-To learn more about Next.js, take a look at the following resources:
+```css
+@import '@augustin_hiebel/gloot-framework/styles/globals.css';
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Adapt webpack config.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Add postcss-loader to webpack.config.js.
 
-## Deploy on Vercel
+```js
+module: {
+  rules: [
+    {
+      test: /\.(css)$/,
+      use: ['style-loader', 'css-loader', 'postcss-loader'],
+    }
+  ]
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 5. Import and adapt tailwind config.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Import the framework config into your project tailwind.config.js and indicate which files Tailwind should scan.
+
+```js
+const tailwindConfig = require('@augustin_hiebel/gloot-framework/tailwind.config');
+module.exports = {
+  ...tailwindConfig,
+  content: [
+    "./pages/*.{js,ts,jsx,tsx,json}",
+  ],
+};
+```
+
+## That's it, your projects can now use the G-Loot theme and components.
