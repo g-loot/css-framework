@@ -1,5 +1,5 @@
 {
-  "name": "@g-loot/css-framework-library",
+  "name": "@g-loot/css-framework",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
