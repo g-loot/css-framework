@@ -6,7 +6,7 @@ import BrandMainNav from './BrandMainNav';
 import BrandTopBar from './BrandTopBar';
 import Link from 'next/link';
 import { getLayout as getSiteLayout } from '../SiteLayout';
-import packageFramework from '../../framework/package-framework.json';
+import packageFramework from '../../framework/package.json';
 import { useRouter } from 'next/router';
 
 const BrandLayout = ({ children }) => {

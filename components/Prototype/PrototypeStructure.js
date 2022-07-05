@@ -17,7 +17,7 @@ export default function PrototypeStructure({children, title}) {
       <Topbar />
       <div className="container flex mx-auto md:gap-12 md:px-4 2xl:px-0">
         <div className="hidden md:block top-16 w-auto md:w-3/12 xl:w-2/12 py-4">
-          <div className='sticky top-[68px] space-y-2'>
+          <div className='sticky top-[68px] space-y-4'>
             <div className="surface rounded-lg overflow-hidden">
               <MainNav items={JSONstructure.pages} />
             </div>
@@ -43,7 +43,7 @@ export default function PrototypeStructure({children, title}) {
             <Ad width='260'height='260'/>
           </div>
         </div>
-        <div className="pt-4 pb-8 w-full md:w-9/12 xl:w-10/12 ">
+        <div className="pt-4 pb-8 w-full md:w-9/12 xl:w-10/12 min-h-screen">
           {children}
         </div>
       </div>

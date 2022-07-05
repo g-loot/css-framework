@@ -1,8 +1,5 @@
-import { compose, layout, space } from 'styled-system';
-
 import Button from '../Button/Button';
 import Icon from '../Icon/Icon';
-import styled from 'styled-components';
 
 export default function Topbar() {
   return (

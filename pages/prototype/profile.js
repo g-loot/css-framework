@@ -1,3 +1,4 @@
+import Accordion from '../../components/Accordion/Accordion';
 import Ad from '../../components/Ad/Ad';
 import Carousel from '../../components/Carousel/Carousel';
 import Countdown from '../../components/Countdown/Countdown';
@@ -5,6 +6,7 @@ import PrototypeStructure from '../../components/Prototype/PrototypeStructure';
 import RewardLadder from '../../components/RewardLadder/RewardLadder';
 import useFetch from '../../hooks/use-fetch';
 import { useRouter } from 'next/router';
+
 //import DataGames from '../../mock-data/games.json'
 
 export default function Home() {
@@ -15,69 +17,505 @@ export default function Home() {
     <>
       <PrototypeStructure title="Profile">
         <Ad width='1005'height='124'/>
-
-        <section className='flex items-end justify-between mb-4'>
-          <h1 className='h4'>
-            Profile
-          </h1>
-          <button type='button' className='button button-secondary'>
-            <span className='icon icon-cogwheel'></span>
-            <span>Profile settings</span>
-          </button>
-        </section>
-
-        <section className='flex items-center justify-between mb-4'>
+        
+        <section className='flex items-center justify-between mb-4 py-8'>
           <div className='flex gap-4 items-center'>
             <figure className="avatar avatar-xl avatar-circle">
               <div>
                 <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
               </div>
             </figure>
-            <div className='space-y-2'>
-              <h2 className='h3 leading-none'>
-                JackAttack123
-              </h2>
+            <div className=''>
+              <div className='flex gap-3 mb-3'>
+                <h2 className='h3 leading-none'>
+                  JackAttack123
+                </h2>
+                <button type='button' className='button button-sm button-secondary'>
+                  <span className='icon icon-cogwheel'></span>
+                  <span>Profile settings</span>
+                </button>
+              </div>
               <div className='flex items-center gap-2'>
-                <img src='https://flagcdn.com/tt.svg' className='aspect-video rounded-sm max-w-[1.5rem]' />
+                <div className='w-6 flex justify-center'>
+                  <img src='https://flagcdn.com/tt.svg' className='aspect-video rounded-sm max-w-[1.5rem]' />
+                </div>
                 <span className='text-ui-300'>Trinidad and Tobago</span>
               </div>
               <a href='#' target='_blank' rel="noreferrer" className='transition-colors duration-75 text-ui-300 hover:text-main flex items-center gap-2'>
-                <span className='icon icon-24 icon-twitch'></span>
+                <div className='w-6 flex justify-center'>
+                  <span className='icon icon-20 icon-twitch'></span>
+                </div>
                 <span>@jackattack123</span>
               </a>
             </div>
           </div>
-          <div className='flex-1 flex justify-center gap-4'>
-            <div className="gauge" style={{"--percent": 55}}>
-              <div className="gauge-chart">
-                <svg className="h-28 w-28" viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M102.402 110.916C101.593 110.916 100.802 110.671 100.135 110.212C99.4678 109.753 98.9556 109.103 98.6659 108.347C98.3763 107.591 98.3229 106.765 98.5128 105.978C98.7027 105.191 99.1269 104.48 99.7295 103.939C108.015 96.5056 113.85 86.7325 116.464 75.9118C119.077 65.0912 118.345 53.7322 114.365 43.3362C110.385 32.9403 103.344 23.9967 94.1732 17.6874C85.0021 11.3782 74.1324 8.0003 63.0006 8.00023C51.8688 8.00015 40.9991 11.3779 31.8279 17.687C22.6567 23.9961 15.6157 32.9396 11.6357 43.3356C7.65559 53.7315 6.92371 65.0904 9.53675 75.9111C12.1498 86.7319 17.9848 96.505 26.2705 103.939C26.6621 104.29 26.9808 104.714 27.2083 105.188C27.4357 105.662 27.5676 106.176 27.5962 106.701C27.6249 107.226 27.5498 107.751 27.3752 108.247C27.2006 108.743 26.93 109.199 26.5789 109.591C26.2277 109.982 25.8029 110.3 25.3287 110.527C24.8545 110.754 24.3402 110.885 23.8153 110.913C23.2903 110.941 22.765 110.865 22.2694 110.69C21.7737 110.515 21.3175 110.244 20.9267 109.892C11.4363 101.377 4.75315 90.1821 1.76042 77.7877C-1.23232 65.3932 -0.393727 52.3824 4.16536 40.4748C8.72445 28.5671 16.7894 18.323 27.2944 11.0965C37.7994 3.86992 50.25 0.00102438 63.0006 0.00109863C75.7512 0.00117288 88.2017 3.87021 98.7066 11.0969C109.212 18.3236 117.276 28.5677 121.835 40.4754C126.394 52.3832 127.233 65.394 124.24 77.7884C121.247 90.1828 114.564 101.377 105.073 109.893C104.34 110.552 103.389 110.917 102.402 110.916Z" />
-                    <path d="M23.5986 106.916C14.7106 98.9412 8.4515 88.4573 5.64858 76.8498C2.84566 65.2422 3.63086 53.0574 7.9004 41.9055C12.1699 30.7537 19.7228 21.1599 29.5609 14.3921C39.399 7.6242 51.0591 4.00084 63.0003 4.00085C74.9414 4.00087 86.6016 7.62426 96.4396 14.3922C106.278 21.16 113.831 30.7539 118.1 41.9057C122.37 53.0575 123.155 65.2423 120.352 76.8499C117.549 88.4574 111.29 98.9413 102.402 106.916" strokeWidth="8" strokeMiterlimit="10" strokeLinecap="round" />
+          
+          <div className='w-1/3 flex justify-center gap-4'>
+            <div className='rounded-full surface p-1'>
+              <div className='progressbar-radial'>
+                <div>
+                  <div>
+                    <div className='text-3xl font-headings mb-1'>
+                      123
+                    </div>
+                    <div className='text-xs text-ui-300 uppercase'>
+                      Played<br />brawls
+                    </div>
+                  </div>
+                </div>
+                <svg viewBox="0 0 40 40"  style={{"--percent": '33'}}>
+                  <circle cx="20" cy="20" r="16" />
                 </svg>
               </div>
-              <div className="gauge-content">
-                <div className='text-2xl font-headings'>
-                  {55}%
+            </div>
+            <div className='rounded-full surface p-1'>
+              <div className='progressbar-radial'>
+                <div>
+                  <div>
+                    <div className='text-3xl font-headings mb-1'>
+                      4
+                    </div>
+                    <div className='text-xs text-ui-300 uppercase'>
+                      Played<br />tournaments
+                    </div>
+                  </div>
                 </div>
-                <div className='text-xs text-ui-300 uppercase'>
-                  win rate
+                <svg viewBox="0 0 40 40"  style={{"--percent": '15'}}>
+                  <circle cx="20" cy="20" r="16" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className='flex flex-col lg:flex-row gap-4 items-start animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 1 * 0.05s)'}}>
+          <div className='flex-1 space-y-4'>
+            <div className='surface rounded-lg w-full'>
+              <div className='item'>
+                <div className='item-image'>
+                  <div className={`rounded h-12 w-12 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-valorant`}>
+                    <span className={`icon text-2xl icon-game-valorant-symbol`}></span>
+                  </div>
+                </div>
+                <div className='item-body'>
+                  <div className='item-title font-headings not-italic text-xl text-ui-100 uppercase'>
+                    Valorant
+                  </div>
+                </div>
+              </div>
+              <div className='p-4'>
+                <div className='grid grid-cols-2 lg:grid-cols-4'>
+                  <div className='text-center border-r border-ui-700/50'>
+                    <div className='animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 2 * 0.05s)'}}>
+                      <div className='icon-holder icon-holder-sm mx-auto'>
+                        <span className='icon icon-mission-gamematchbattlewon'></span>
+                      </div>
+                      <div>
+                        <div className="leading-none text-xs text-ui-300 uppercase">WIN RATE</div>
+                        <div className="text-2xl font-headings">25%</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='text-center border-r border-ui-700/50'>
+                    <div className='animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 3 * 0.05s)'}}>
+                      <div className='icon-holder icon-holder-sm mx-auto'>
+                        <span className='icon icon-mission-kill'></span>
+                      </div>
+                      <div>
+                        <div className="leading-none text-xs text-ui-300 uppercase">K/D ratio</div>
+                        <div className="text-2xl font-headings">0.71</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='text-center border-r border-ui-700/50'>
+                    <div className='animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 4 * 0.05s)'}}>
+                      <div className='icon-holder icon-holder-sm mx-auto'>
+                        <span className='icon icon-mission-headshot'></span>
+                      </div>
+                      <div>
+                        <div className="leading-none text-xs text-ui-300 uppercase">Headshots kill avg</div>
+                        <div className="text-2xl font-headings">2.5</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='text-center'>
+                    <div className='animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 5 * 0.05s)'}}>
+                      <div className='icon-holder icon-holder-sm mx-auto'>
+                        <span className='icon icon-mission-assist'></span>
+                      </div>
+                      <div>
+                        <div className="leading-none text-xs text-ui-300 uppercase">Assist avg</div>
+                        <div className="text-2xl font-headings">3.1</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='border-t border-ui-700'>
+                <div className='accordion rounded-none'>
+                  <Accordion header={(
+                    <>
+                      <div className='item'>
+                        <div className='item-body'>
+                          <div className='p-2 item-title font-headings text-lg italic'>
+                            All stats (total)
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <span className='icon icon-24 icon-arrow-sm-down'></span>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}>
+                      <div className='grid grid-cols-3 lg:grid-cols-4 items-center gap-2 text-center p-2'>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Assists</div>
+                          <div className="text-2xl font-headings">151</div>
+                        </div>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Kills</div>
+                          <div className="text-2xl font-headings">405</div>
+                        </div>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Deaths</div>
+                          <div className="text-2xl font-headings">570</div>
+                        </div>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Headshot kills</div>
+                          <div className="text-2xl font-headings">144</div>
+                        </div>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Wins</div>
+                          <div className="text-2xl font-headings">35</div>
+                        </div>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Losses</div>
+                          <div className="text-2xl font-headings">24</div>
+                        </div>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Draws</div>
+                          <div className="text-2xl font-headings">1</div>
+                        </div>
+                      </div>
+                    </Accordion>
                 </div>
               </div>
             </div>
-            <div className="gauge" style={{"--percent": 86}}>
-              <div className="gauge-chart">
-                <svg className="h-28 w-28" viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M102.402 110.916C101.593 110.916 100.802 110.671 100.135 110.212C99.4678 109.753 98.9556 109.103 98.6659 108.347C98.3763 107.591 98.3229 106.765 98.5128 105.978C98.7027 105.191 99.1269 104.48 99.7295 103.939C108.015 96.5056 113.85 86.7325 116.464 75.9118C119.077 65.0912 118.345 53.7322 114.365 43.3362C110.385 32.9403 103.344 23.9967 94.1732 17.6874C85.0021 11.3782 74.1324 8.0003 63.0006 8.00023C51.8688 8.00015 40.9991 11.3779 31.8279 17.687C22.6567 23.9961 15.6157 32.9396 11.6357 43.3356C7.65559 53.7315 6.92371 65.0904 9.53675 75.9111C12.1498 86.7319 17.9848 96.505 26.2705 103.939C26.6621 104.29 26.9808 104.714 27.2083 105.188C27.4357 105.662 27.5676 106.176 27.5962 106.701C27.6249 107.226 27.5498 107.751 27.3752 108.247C27.2006 108.743 26.93 109.199 26.5789 109.591C26.2277 109.982 25.8029 110.3 25.3287 110.527C24.8545 110.754 24.3402 110.885 23.8153 110.913C23.2903 110.941 22.765 110.865 22.2694 110.69C21.7737 110.515 21.3175 110.244 20.9267 109.892C11.4363 101.377 4.75315 90.1821 1.76042 77.7877C-1.23232 65.3932 -0.393727 52.3824 4.16536 40.4748C8.72445 28.5671 16.7894 18.323 27.2944 11.0965C37.7994 3.86992 50.25 0.00102438 63.0006 0.00109863C75.7512 0.00117288 88.2017 3.87021 98.7066 11.0969C109.212 18.3236 117.276 28.5677 121.835 40.4754C126.394 52.3832 127.233 65.394 124.24 77.7884C121.247 90.1828 114.564 101.377 105.073 109.893C104.34 110.552 103.389 110.917 102.402 110.916Z" />
-                    <path d="M23.5986 106.916C14.7106 98.9412 8.4515 88.4573 5.64858 76.8498C2.84566 65.2422 3.63086 53.0574 7.9004 41.9055C12.1699 30.7537 19.7228 21.1599 29.5609 14.3921C39.399 7.6242 51.0591 4.00084 63.0003 4.00085C74.9414 4.00087 86.6016 7.62426 96.4396 14.3922C106.278 21.16 113.831 30.7539 118.1 41.9057C122.37 53.0575 123.155 65.2423 120.352 76.8499C117.549 88.4574 111.29 98.9413 102.402 106.916" strokeWidth="8" strokeMiterlimit="10" strokeLinecap="round" />
-                </svg>
+            <div className='surface rounded-lg w-full'>
+              <div className='item'>
+                <div className='item-image'>
+                  <div className={`rounded h-12 w-12 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-pubg`}>
+                    <span className={`icon text-2xl icon-game-pubg-symbol`}></span>
+                  </div>
+                </div>
+                <div className='item-body'>
+                  <div className='item-title font-headings not-italic text-xl text-ui-100 uppercase'>
+                    PUBG: BATTLEGROUNDS
+                  </div>
+                </div>
               </div>
-              <div className="gauge-content">
-                <div className='text-2xl font-headings'>
-                  {86}%
+              <div className='p-4'>
+                <div className='grid grid-cols-2 lg:grid-cols-4'>
+                  <div className='text-center border-r border-ui-700/50'>
+                    <div className='animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 2 * 0.05s)'}}>
+                      <div className='icon-holder icon-holder-sm mx-auto'>
+                        <span className='icon icon-mission-gamematchbattlewon'></span>
+                      </div>
+                      <div>
+                        <div className="leading-none text-xs text-ui-300 uppercase">WIN RATE</div>
+                        <div className="text-2xl font-headings">25%</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='text-center border-r border-ui-700/50'>
+                    <div className='animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 3 * 0.05s)'}}>
+                      <div className='icon-holder icon-holder-sm mx-auto'>
+                        <span className='icon icon-mission-kill'></span>
+                      </div>
+                      <div>
+                        <div className="leading-none text-xs text-ui-300 uppercase">K/D ratio</div>
+                        <div className="text-2xl font-headings">0.71</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='text-center border-r border-ui-700/50'>
+                    <div className='animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 4 * 0.05s)'}}>
+                      <div className='icon-holder icon-holder-sm mx-auto'>
+                        <span className='icon icon-mission-headshot'></span>
+                      </div>
+                      <div>
+                        <div className="leading-none text-xs text-ui-300 uppercase">Headshots kill avg</div>
+                        <div className="text-2xl font-headings">2.5</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='text-center'>
+                    <div className='animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 5 * 0.05s)'}}>
+                      <div className='icon-holder icon-holder-sm mx-auto'>
+                        <span className='icon icon-mission-assist'></span>
+                      </div>
+                      <div>
+                        <div className="leading-none text-xs text-ui-300 uppercase">Assist avg</div>
+                        <div className="text-2xl font-headings">3.1</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className='text-xs text-ui-300 uppercase'>
-                  win rate
+              </div>
+              <div className='border-t border-ui-700'>
+                <div className='accordion rounded-none'>
+                  <Accordion header={(
+                    <>
+                      <div className='item'>
+                        <div className='item-body'>
+                          <div className='p-2 item-title font-headings text-lg italic'>
+                            All stats (total)
+                          </div>
+                        </div>
+                        <div className='item-actions'>
+                          <div>
+                            <span className='icon icon-24 icon-arrow-sm-down'></span>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}>
+                      <div className='grid grid-cols-3 lg:grid-cols-4 items-center gap-2 text-center p-2'>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Assists</div>
+                          <div className="text-2xl font-headings">151</div>
+                        </div>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Kills</div>
+                          <div className="text-2xl font-headings">405</div>
+                        </div>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Deaths</div>
+                          <div className="text-2xl font-headings">570</div>
+                        </div>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Headshot kills</div>
+                          <div className="text-2xl font-headings">144</div>
+                        </div>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Wins</div>
+                          <div className="text-2xl font-headings">35</div>
+                        </div>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Losses</div>
+                          <div className="text-2xl font-headings">24</div>
+                        </div>
+                        <div className='rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4'>
+                          <div className="leading-none text-xs text-ui-300 uppercase">Draws</div>
+                          <div className="text-2xl font-headings">1</div>
+                        </div>
+                      </div>
+                    </Accordion>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className='w-1/3 space-y-4'>
+            <div className='surface rounded-lg'>
+              <div className='p-1 border-b border-ui-700 flex justify-between'>
+                <h2 className='p-2 text-xl not-italic'>
+                    Weekly Brawls
+                </h2>
+              </div>
+              <div className='max-h-60 overflow-y-auto scrollbar-desktop'>
+                <ul>
+                  <li className='item item-interactive'>
+                    <div className='item-image'>
+                      <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                        <div><img src="https://res.cloudinary.com/gloot/image/upload/v1644831629/Marketing/202109_gloot2/mission-valorant_1.jpg" /></div>
+                      </figure>
+                    </div>
+                    <div className='item-body'>
+                      <div className='item-title'>
+                        Valorant
+                      </div>
+                      <div className='text-ui-300 text-xs'>
+                        Weekly Brawl #220
+                      </div>
+                    </div>
+                    <div className='item-action'>
+                      <div className='bg-gradient-to-b from-ui-900/50 to-ui-900/5 rounded-lg text-center p-2 leading-none'>
+                        <div className='text-ui-300 text-xs uppercase'>
+                          placement
+                        </div>
+                        <div className='font-headings text-xl'>
+                          59
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li className='item item-interactive'>
+                    <div className='item-image'>
+                      <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                        <div><img src="https://res.cloudinary.com/gloot/image/upload/v1644831647/Marketing/202109_gloot2/mission-valorant_5.jpg" /></div>
+                      </figure>
+                    </div>
+                    <div className='item-body'>
+                      <div className='item-title'>
+                        Valorant
+                      </div>
+                      <div className='text-ui-300 text-xs'>
+                        Weekly Brawl #119
+                      </div>
+                    </div>
+                    <div className='item-action'>
+                      <div className='bg-gradient-to-b from-ui-900/50 to-ui-900/5 rounded-lg text-center p-2 leading-none'>
+                        <div className='text-ui-300 text-xs uppercase'>
+                          placement
+                        </div>
+                        <div className='font-headings text-xl'>
+                          59
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li className='item item-interactive'>
+                    <div className='item-image'>
+                      <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                        <div><img src="https://res.cloudinary.com/gloot/image/upload/v1644831573/Marketing/202109_gloot2/mission-pubg_5.jpg" /></div>
+                      </figure>
+                    </div>
+                    <div className='item-body'>
+                      <div className='item-title'>
+                        PUBG: BATTLEGROUNDS
+                      </div>
+                      <div className='text-ui-300 text-xs'>
+                        Weekly Brawl #425
+                      </div>
+                    </div>
+                    <div className='item-action'>
+                      <div className='bg-gradient-to-b from-ui-900/50 to-ui-900/5 rounded-lg text-center p-2 leading-none'>
+                        <div className='text-ui-300 text-xs uppercase'>
+                          placement
+                        </div>
+                        <div className='font-headings text-xl'>
+                          12
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li className='item item-interactive'>
+                    <div className='item-image'>
+                      <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                        <div><img src="https://res.cloudinary.com/gloot/image/upload/v1644831573/Marketing/202109_gloot2/mission-pubg_2.jpg" /></div>
+                      </figure>
+                    </div>
+                    <div className='item-body'>
+                      <div className='item-title'>
+                        PUBG: BATTLEGROUNDS
+                      </div>
+                      <div className='text-ui-300 text-xs'>
+                        Weekly Brawl #424
+                      </div>
+                    </div>
+                    <div className='item-action'>
+                      <div className='bg-gradient-to-b from-ui-900/50 to-ui-900/5 rounded-lg text-center p-2 leading-none'>
+                        <div className='text-ui-300 text-xs uppercase'>
+                          placement
+                        </div>
+                        <div className='font-headings text-xl'>
+                          42
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className='surface rounded-lg'>
+              <div className='p-1 border-b border-ui-700 flex justify-between'>
+                <h2 className='p-2 text-xl not-italic'>
+                    Tournaments
+                </h2>
+              </div>
+              <div className='max-h-60 overflow-y-auto scrollbar-desktop'>
+                <ul>
+                  <li className='item item-interactive'>
+                    <div className='item-image'>
+                      <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                        <div><img src="https://res.cloudinary.com/gloot/image/upload/v1654158104/Marketing/2022_prototype/DummyContent/carousel-item-pubg-s6.jpg" /></div>
+                      </figure>
+                    </div>
+                    <div className='item-body'>
+                      <div className='item-title'>
+                        PUBG Season 6
+                      </div>
+                    </div>
+                    <div className='item-action'>
+                    <div className="chip chip-status">
+                      <span className="icon icon-calendar-date-2"></span>
+                      <span>Scheduled</span>
+                    </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className='surface rounded-lg'>
+              <div className='p-1 border-b border-ui-700 flex justify-between'>
+                <h2 className='p-2 text-xl not-italic' data-badge="3">
+                    Teams
+                </h2>
+                <button type='button' className='button button-sm button-tertiary'>
+                  <span className='icon icon-b-add'></span>
+                  <span>Create team</span>
+                </button>
+              </div>
+              <div className='max-h-60 overflow-y-auto scrollbar-desktop'>
+                <ul>
+                  <li className='item item-interactive'>
+                    <div className='item-image'>
+                      <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                        <div><img src="https://res.cloudinary.com/gloot/image/upload/c_pad,h_62,w_62/teamlogos/Raccon5_1x1_dog5jh" /></div>
+                      </figure>
+                    </div>
+                    <div className='item-body'>
+                      <div className='item-title'>
+                        Racoon5
+                      </div>
+                      <div className='text-ui-300 text-xs'>
+                        5 members
+                      </div>
+                    </div>
+                  </li>
+                  <li className='item item-interactive'>
+                    <div className='item-image'>
+                      <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                        <div><img src="https://res.cloudinary.com/gloot/image/upload/c_pad,h_62,w_62/teamlogos/sheep-santa-hat-e1510385903558_copy_dqbscr" /></div>
+                      </figure>
+                    </div>
+                    <div className='item-body'>
+                      <div className='item-title'>
+                        SnartJul
+                      </div>
+                      <div className='text-ui-300 text-xs'>
+                       5 members
+                      </div>
+                    </div>
+                  </li>
+                  <li className='item item-interactive'>
+                    <div className='item-image'>
+                      <figure className='avatar avatar-square avatar-simple avatar-xs'>
+                        <div><img src="https://lh3.googleusercontent.com/idrmC7GCQQQil7sQPpOBUb8a8bDZ5xqg6RESaLo8y4i6xqmUuu1L_YfwvReQcUWrnXEB-RCX7wu1-eFUHIrEoOhwPWab-tbccyC-8a6iog=s512" /></div>
+                      </figure>
+                    </div>
+                    <div className='item-body'>
+                      <div className='item-title'>
+                        ShikaTeam
+                      </div>
+                      <div className='text-ui-300 text-xs'>
+                       5 members
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

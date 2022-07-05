@@ -1,29 +1,35 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react'
 
 export default function Accordion(props) {
+  const isOpen = props.isopen !== undefined ? props.isopen : false
+  const isClosed = props.isclosed !== undefined ? props.isclosed : false
+  const isDisabled = props.isdisabled !== undefined ? props.isdisabled : false
+  const [isActive, setActive] = useState(isOpen)
+  const elementRef = useRef(null)
 
-  const [isActive, setActive] = useState(false);
-  const elementRef = useRef(null);
+  var height = elementRef.current?.clientHeight
 
-  var height = elementRef.current?.clientHeight;
-
-  const handleToggle = e => {
-    e.preventDefault()
-    setActive(!isActive);
-  };
   
-  return (
-  <div className={`accordion-item ${isActive ? 'is-active' : ''}`}>
-    <div className={`accordion-header`} aria-expanded={`${isActive ? true : false}`} aria-controls onClick={handleToggle}>
+  useEffect(()=> {
+    if(isClosed) {
+      height = 0;
+      setActive(false);
+    }
+  }, [isClosed])
 
-      {props.header}
-      
-    </div>
-    <div className={`accordion-collapse`} style={{height: `${isActive ? height : 0}px`}}>
-      <div ref={elementRef}>
-        {props.children}
+  const handleToggle = (e) => {
+    e.preventDefault()
+    setActive(!isActive)
+  }
+
+  return (
+    <div className={`accordion-item ${isActive ? 'is-active' : ''} ${isDisabled ? 'is-disabled pointer-events-none opacity-50' : ''}`}>
+      <div className={`accordion-header`} onClick={handleToggle}>
+        {props.header} 
+      </div>
+      <div className={`accordion-collapse ${isClosed ? 'h-0' : ''}`} style={{ height: `${isActive ? height : 0}px` }}>
+        <div ref={elementRef}>{props.children}</div>
       </div>
     </div>
-  </div>
-  );
+  )
 }

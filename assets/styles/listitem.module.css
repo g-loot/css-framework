@@ -47,13 +47,31 @@
   }
 }
 
+.item.item-interactive {
+  @apply
+  transition
+  duration-100
+  cursor-pointer
+  ;
+  &:hover {
+    @apply
+    bg-ui-700/50
+    ;
+  }
+  &:active {
+    @apply
+    bg-ui-800
+    ;
+  }
+}
+
 ul.item-actions-dimmed > .item,
 ul.item-actions-hidden > .item,
 .item.item-actions-dimmed,
 .item.item-actions-hidden {
   @apply
   transition
-  duration-75
+  duration-100
   ;
   > .item-actions {
     @apply

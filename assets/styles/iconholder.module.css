@@ -6,6 +6,16 @@
   @apply
   relative
   shrink-0
+  py-4
+  rounded-full
+  h-[6.75rem]
+  w-[6.75rem]
+  flex
+  items-center
+  justify-center
+  bg-gradient-to-b
+  from-ui-900/50
+  to-ui-800
   ;
   &::before {
     @apply
@@ -23,22 +33,6 @@
     to-blue-700/0
     ;
   }
-}
-
-.icon-holder {
-  @apply
-  py-4
-  rounded-full
-  h-[6.75rem]
-  w-[6.75rem]
-  flex
-  items-center
-  justify-center
-  bg-gradient-to-b
-  from-ui-900/50
-  to-ui-800
-  ;
-
   > .icon {
     @apply
     text-7xl
@@ -48,5 +42,25 @@
     ;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+}
+
+.icon-holder.icon-holder-sm {
+  @apply
+  h-20
+  w-20
+  ;
+  &::before {
+    @apply
+    content-['']
+    w-6
+    h-6
+    left-[calc(50%-0.75rem)]
+    ;
+  }
+  > .icon {
+    @apply
+    text-5xl
+    ;
   }
 }

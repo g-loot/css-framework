@@ -24,21 +24,21 @@ const DSpage = () => {
           <div className='surface rounded-lg accordion'>
 
             <Accordion header={(
-            <>
-              <div className='item'>
-                <div className='item-body'>
-                  <div className='p-2 item-title font-headings text-lg italic'>
-                    Before entering a Brawl
+              <>
+                <div className='item'>
+                  <div className='item-body'>
+                    <div className='p-2 item-title font-headings text-lg italic'>
+                      Before entering a Brawl
+                    </div>
+                  </div>
+                  <div className='item-actions'>
+                    <div>
+                      <span className='icon icon-24 icon-arrow-sm-down'></span>
+                    </div>
                   </div>
                 </div>
-                <div className='item-actions'>
-                  <div>
-                    <span className='icon icon-24 icon-arrow-sm-down'></span>
-                  </div>
-                </div>
-              </div>
-            </>
-          )}>
+              </>
+            )}>
               <div className='flex flex-col md:flex-row items-center gap-8 p-8'>
                 <div className='flex-none grow-0'>
                   <img src='https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Brawl.svg' width='auto' className='h-26 mx-auto' />

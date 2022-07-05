@@ -11,6 +11,7 @@ body {
 .scrollbar,
 select[multiple] {
   -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
   &::-webkit-scrollbar {
     @apply
     w-1.5
@@ -20,7 +21,7 @@ select[multiple] {
   }
   &::-webkit-scrollbar-thumb {
     @apply
-    bg-ui-400
+    bg-ui-500
     transition-all
     duration-200
     rounded
@@ -29,7 +30,7 @@ select[multiple] {
   }
   &::-webkit-scrollbar-thumb:hover {
     @apply
-    bg-ui-300
+    bg-ui-400
     cursor-pointer
     ;
   }
@@ -67,12 +68,12 @@ select[multiple] {
 .scrollbar-secondary {
   &::-webkit-scrollbar-thumb {
     @apply
-    bg-ui-400
+    bg-ui-500
     ;
   }
   &::-webkit-scrollbar-thumb:hover {
     @apply
-    bg-ui-300
+    bg-ui-400
     ;
   }
 }
@@ -90,9 +91,10 @@ select[multiple] {
 }
 
 
-@media not all and (hover: none) and (pointer: coarse) {
-    
+@media not all and (hover: none) and (pointer: coarse) { 
   .scrollbar-desktop {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
     &::-webkit-scrollbar {
       @apply
       w-1.5
@@ -102,7 +104,7 @@ select[multiple] {
     }
     &::-webkit-scrollbar-thumb {
       @apply
-      bg-ui-400
+      bg-ui-500
       transition-all
       duration-200
       rounded
@@ -111,7 +113,7 @@ select[multiple] {
     }
     &::-webkit-scrollbar-thumb:hover {
       @apply
-      bg-ui-300
+      bg-ui-400
       cursor-pointer
       ;
     }

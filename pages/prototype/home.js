@@ -20,7 +20,7 @@ export default function Home() {
           <Carousel></Carousel>
         </section>
 
-        <section className='mb-4'>
+        <section className='mb-4 animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 2 * 0.05s)'}}>
           <div className='flex items-center justify-between mb-2'>
             <div>
               <h2 className='h5 mb-1'>Weekly Mission Rewards</h2>
@@ -39,7 +39,7 @@ export default function Home() {
           <RewardLadder></RewardLadder>
         </section>
 
-        <section className='mb-4 grid grid-cols-1 xl:grid-cols-3 gap-4'>
+        <section className='mb-4 grid grid-cols-1 xl:grid-cols-3 gap-4 animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 3 * 0.05s)'}}>
           
           <div className='surface flex flex-col flex-1 min-h-[16rem] lg:min-h-fit relative overflow-hidden sm:rounded-lg p-4'>
             <div className='relative z-30 flex-1'>

@@ -1,6 +1,6 @@
 import DSMainNavMobile from './DSMainNavMobile';
 import Link from 'next/link';
-import packageFramework from '../../framework/package-framework.json';
+import packageFramework from '../../framework/package.json';
 
 export default function DSTopBar({children, data}) {
   return (

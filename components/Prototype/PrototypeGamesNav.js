@@ -24,7 +24,7 @@ export default function PrototypeGamesNav({children}) {
     <>
      {PrototypeDataGames.map((item, itemIndex) => (
         <>
-          <div className='surface rounded-lg accordion accordion-sm accordion-halo' key={itemIndex}>
+          <div className={`surface rounded-lg accordion accordion-sm accordion-halo ${itemIndex > 2 ? 'hidden' : ''}`} key={itemIndex}>
             <PrototypeGamesNavItem
               header={(
                 <>

@@ -448,9 +448,9 @@
 
   &.chip-status {
     @apply
-    rounded-lg
-    text-ui-200
-    bg-ui-400/50
+    rounded
+    text-ui-300
+    bg-ui-500/50
     ;
     &.chip-green {
       @apply

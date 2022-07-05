@@ -27,6 +27,9 @@
   .accordion-header {
     @apply
     select-none
+    transition-colors
+    duration-100
+    cursor-pointer
     ;
     .icon[class*='icon-game'],
     .item-title {
@@ -108,11 +111,18 @@
       .accordion-header {
         @apply
         text-ui-200
-        bg-ui-700/25
+        bg-ui-700/0
         ;
         .icon[class*='icon-game'] {
           @apply
           text-ui-300
+          ;
+        }
+      }
+      &:hover {
+        .accordion-header {
+          @apply
+          bg-ui-700/25
           ;
         }
       }

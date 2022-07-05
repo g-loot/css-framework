@@ -2,9 +2,8 @@ import React, {useState} from 'react';
 
 import DSHead from '../components/DesignSystem/DSHead';
 import Link from 'next/link';
-import ReactDOM from 'react-dom';
 import { getLayout } from '../components/SiteLayout';
-import packageFramework from '../framework/package-framework.json';
+import packageFramework from '../framework/package.json';
 
 const Index = () => {
   const [checked, setChecked] = useState(false); 
@@ -96,7 +95,7 @@ const Index = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link href='prototype/'>
+                          <Link href='prototype/home'>
                             <a><span>Home</span></a>
                           </Link>
                         </li>

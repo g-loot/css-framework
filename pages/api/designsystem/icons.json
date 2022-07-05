@@ -122,135 +122,135 @@
       "name": "Missions",
       "icons": [
         {
-          "tags": "",
+          "tags": "mission,hero,level,up,lvl",
           "name": "mission-herolvlup"
         },
         {
-          "tags": "",
+          "tags": "mission,buy,back",
           "name": "mission-buyback"
         },
         {
-          "tags": "",
+          "tags": "mission,road,wheel",
           "name": "mission-road"
         },
         {
-          "tags": "",
+          "tags": "mission,assist",
           "name": "mission-assist"
         },
         {
-          "tags": "",
+          "tags": "mission,boss,kill",
           "name": "mission-bosskill"
         },
         {
-          "tags": "",
+          "tags": "mission,knock,out,taken",
           "name": "mission-knockouttaken"
         },
         {
-          "tags": "",
+          "tags": "mission,creep,denie",
           "name": "mission-creepdenie"
         },
         {
-          "tags": "",
+          "tags": "mission,creep,kill",
           "name": "mission-creepkill"
         },
         {
-          "tags": "",
+          "tags": "mission,creep,last,hit",
           "name": "mission-creeplasthit"
         },
         {
-          "tags": "",
+          "tags": "mission,damage,given",
           "name": "mission-damagegiven"
         },
         {
-          "tags": "",
+          "tags": "mission,damage,taken",
           "name": "mission-damataken"
         },
         {
-          "tags": "",
+          "tags": "mission,kill,double,two",
           "name": "mission-doublekill"
         },
         {
-          "tags": "",
+          "tags": "mission,duel,friend",
           "name": "mission-friendduel"
         },
         {
-          "tags": "",
+          "tags": "mission,game,win,won,battle",
           "name": "mission-gamematchbattlewon"
         },
         {
-          "tags": "",
+          "tags": "mission,goal,ball",
           "name": "mission-goal"
         },
         {
-          "tags": "",
+          "tags": "mission,headshot",
           "name": "mission-headshot"
         },
         {
-          "tags": "",
+          "tags": "mission,revive",
           "name": "mission-revive"
         },
         {
-          "tags": "",
+          "tags": "mission,hero,spawn",
           "name": "mission-herospawn"
         },
         {
-          "tags": "",
+          "tags": "mission,hits,dealt",
           "name": "mission-hitsdealt"
         },
         {
-          "tags": "",
+          "tags": "mission,hit,taken",
           "name": "mission-hitstaken"
         },
         {
-          "tags": "",
+          "tags": "mission,kill,kills",
           "name": "mission-kill"
         },
         {
-          "tags": "",
+          "tags": "mission,kills,streak",
           "name": "mission-killstreak"
         },
         {
-          "tags": "",
+          "tags": "mission,knockout,dealt",
           "name": "mission-knockoutdealt"
         },
         {
-          "tags": "",
+          "tags": "mission,kill,five,quintuple",
           "name": "mission-quintuplekill"
         },
         {
-          "tags": "",
+          "tags": "mission,mvp,most,valuable,player",
           "name": "mission-mvp"
         },
         {
-          "tags": "",
+          "tags": "mission,one,shot",
           "name": "mission-oneshot"
         },
         {
-          "tags": "",
+          "tags": "mission,kills,four,quadruple",
           "name": "mission-quadruplekill"
         },
         {
-          "tags": "",
+          "tags": "mission,ribbon",
           "name": "mission-ribbon"
         },
         {
-          "tags": "",
+          "tags": "mission,round,win,won",
           "name": "mission-roundwon"
         },
         {
-          "tags": "",
+          "tags": "mission,kill,six,sextuple",
           "name": "mission-sextuplekill"
         },
         {
-          "tags": "",
+          "tags": "mission,take,down",
           "name": "mission-takedown"
         },
         {
-          "tags": "",
+          "tags": "mission,kill,triple",
           "name": "mission-triplekill"
         },
         {
-          "tags": "",
+          "tags": "mission,ultimate",
           "name": "mission-ultimate"
         }
       ]
