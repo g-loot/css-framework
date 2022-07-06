@@ -22,7 +22,7 @@ export default function Home() {
           <div className='flex gap-4 items-center'>
             <figure className="avatar avatar-xl avatar-circle">
               <div>
-                <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
               </div>
             </figure>
             <div className=''>
@@ -50,7 +50,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div className='w-1/3 flex justify-center gap-4'>
+          <div className='w-1/3 hidden xl:flex justify-center gap-4'>
             <div className='rounded-full surface p-1'>
               <div className='progressbar-radial'>
                 <div>
@@ -88,7 +88,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='flex flex-col lg:flex-row gap-4 items-start animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 1 * 0.05s)'}}>
+        <section className='flex flex-col lg:flex-row gap-4 lg:items-start animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 1 * 0.05s)'}}>
           <div className='flex-1 space-y-4'>
             <div className='surface rounded-lg w-full'>
               <div className='item'>
@@ -317,7 +317,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='w-1/3 space-y-4'>
+          <div className='lg:w-1/3 space-y-4'>
             <div className='surface rounded-lg'>
               <div className='p-1 border-b border-ui-700 flex justify-between'>
                 <h2 className='p-2 text-xl not-italic'>

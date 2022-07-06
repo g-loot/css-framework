@@ -153,8 +153,8 @@
   }
   &.avatar-sm {
     @apply
-    h-16
-    w-16
+    h-14
+    w-14
     ;
     &:not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
       > div {
@@ -185,8 +185,8 @@
   }
   &.avatar-xs {
     @apply
-    h-12
-    w-12
+    h-9
+    w-9
     ;
     &:not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
       > div {
@@ -217,8 +217,8 @@
   }
   &.avatar-tiny {
     @apply
-    h-[30px]
-    w-[30px]
+    h-7
+    w-7
     ;
     &:not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
       > div {
@@ -440,4 +440,27 @@
 .avatar-hexagon > div,
 .avatar-hexagon > div > * {
   mask-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjAwcHgiIGhlaWdodD0iMTgycHgiIHZpZXdCb3g9IjAgMCAyMDAgMTgyIiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA2MC4xICg4ODEzMykgLSBodHRwczovL3NrZXRjaC5jb20gLS0+CiAgICA8dGl0bGU+aGV4YWdvbi0yPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTY0Ljc4NTc4ODksMTgxLjQwMDIwOSBDNTUuNTkwMzg2NiwxODEuNDAwMjA5IDQ0LjcyMzA5MywxNzQuNzEyNjQ0IDM5LjcwNzQxOSwxNjcuMTg5MTMzIEwzLjc2MTc1NTQ5LDEwNS4zMjkxNTQgQy0xLjI1MzkxODUsOTYuOTY5Njk3IC0xLjI1MzkxODUsODQuNDMwNTEyIDMuNzYxNzU1NDksNzYuMDcxMDU1NCBMMzkuNzA3NDE5LDE0LjIxMTA3NjMgQzQ0LjcyMzA5Myw1Ljg1MTYxOTY0IDU1LjU5MDM4NjYsMCA2NC43ODU3ODg5LDAgTDEzNS44NDExNywwIEMxNDUuMDM2NTczLDAgMTU1LjkwMzg2Niw2LjY4NzU2NTMxIDE2MC45MTk1NCwxNC4yMTEwNzYzIEwxOTYuODY1MjA0LDc2LjA3MTA1NTQgQzIwMS4wNDQ5MzIsODQuNDMwNTEyIDIwMS4wNDQ5MzIsOTYuOTY5Njk3IDE5Ni44NjUyMDQsMTA1LjMyOTE1NCBMMTYwLjkxOTU0LDE2Ny4xODkxMzMgQzE1Ni43Mzk4MTIsMTc1LjU0ODU4OSAxNDUuMDM2NTczLDE4MS40MDAyMDkgMTM1Ljg0MTE3LDE4MS40MDAyMDkgTDY0Ljc4NTc4ODksMTgxLjQwMDIwOSBaIiBpZD0iaGV4YWdvbi0yIiBmaWxsPSIjMDAwMDAwIiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgIDwvZz4KPC9zdmc+);
+}
+
+.avatar-group {
+  @apply
+  flex
+  overflow-hidden
+  ;
+  > .avatar {
+    @apply
+    border
+    border-4
+    border-ui-800
+    relative
+    z-20
+    ;
+  }
+  > div,
+  > div > * {
+    mask-image: none;
+    @apply
+    rounded-full
+    ;
+  }
 }

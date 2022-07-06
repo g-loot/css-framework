@@ -44,9 +44,12 @@ export default function Topbar() {
               <button className='button button-sm button-tertiary rounded-full'>
                 <Icon icon='c-question'></Icon>
               </button>
-              <figure className='avatar avatar-tiny'>
-                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png)`}}></span>
+              <figure className="avatar avatar-circle avatar-xs">
+                <div>
+                  <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                </div>
               </figure>
+              
             </div>
           </div>
         </div>

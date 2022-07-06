@@ -17,7 +17,7 @@ export default function Footer(props) {
   return (
   <footer className='bg-ui-800 border-t border-ui-700 py-12'>
     <div>
-      <div className='container mx-auto md:gap-12 md:px-4 2xl:px-0 md:flex justify-between'>
+      <div className='container mx-auto md:gap-12 px-4 2xl:px-0 md:flex justify-between'>
         <div className='mb-12 lg:mb-0'>
           <img
             width={148}

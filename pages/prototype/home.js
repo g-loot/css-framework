@@ -21,14 +21,14 @@ export default function Home() {
         </section>
 
         <section className='mb-4 animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 2 * 0.05s)'}}>
-          <div className='flex items-center justify-between mb-2'>
+          <div className='flex items-center justify-between mb-2 px-4 sm:px-0'>
             <div>
               <h2 className='h5 mb-1'>Weekly Mission Rewards</h2>
               <p className='text-sm text-ui-300 leading-none'>
                 XP is accumulated from all missions in all games on G-Loot
               </p>
             </div>
-            <div className='flex items-center gap-2'>
+            <div className='hidden sm:flex items-center gap-2'>
               <div className='chip chip-sm chip-secondary'>
                 <span className='icon icon-time-machine'></span>
                 <span>Resets in <Countdown additionalClassName='ml-1' separator=':'/></span>

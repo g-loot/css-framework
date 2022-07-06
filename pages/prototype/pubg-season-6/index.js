@@ -112,7 +112,6 @@ const PrototypePage = () => {
                 </div>
               </>
             ))}
-            
           </div>
 
         </div>

@@ -18,12 +18,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,json}",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     screens: {
       sm: '640px',
       md: '768px',
       lg: '1024px',
       xl: '1280px',
       '2xl': '1576px',
+      '3xl': '1920px',
     },
     minWidth: {
       'xs': '320px',
@@ -43,6 +47,8 @@ module.exports = {
       'sm': '480px',
       'md': '768px',
       'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1576px',
     },
     fontSize: {
       '0': '0rem',
