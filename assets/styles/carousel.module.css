@@ -16,13 +16,13 @@
   .carousel-slides {
     @apply
     h-[420px]
-    lg:h-80
+    lg:h-72
     ;
   }
   .carousel-list {
     @apply
     h-auto
-    lg:h-80
+    lg:h-72
     ;
   }
 
@@ -267,7 +267,9 @@
         leading-tight
         relative
         cursor-pointer
-        rounded
+        rounded-r
+        rounded-l
+        lg:rounded-l-lg
         overflow-hidden
         bg-ui-700
         text-ui-200

@@ -11,7 +11,7 @@ export default function DSTopBar({children, data}) {
            
             <div className='hidden md:block'>
               <label htmlFor="drawer-ds" className="drawer-button button button-sm button-tertiary rounded-full">
-                <div className="icon icon-dots-vertical"></div>
+                <div className="icon icon-menu-8"></div>
               </label>
             </div>
             <Link href='../'>
@@ -25,9 +25,9 @@ export default function DSTopBar({children, data}) {
               <div className='font-headings italic text-lg leading-none text-ui-300'>
                 Framework
               </div>
-              <div className='chip chip-secondary chip-xs'>
+              <a href='https://www.npmjs.com/package/@g-loot/css-framework' target='_blank' rel='noreferrer' className='chip chip-secondary chip-xs'>
                 <span>v{packageFramework.version}</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>

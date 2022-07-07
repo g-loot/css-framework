@@ -1,5 +1,5 @@
 import DScolors from '../api/designsystem/colors.json'
-import DSdata from '../api/designsystem/data.json'
+import DSpages from '../api/designsystem/pages.json'
 import Link from 'next/link';
 import SiteLayout from '../../components/SiteLayout';
 import { getLayout } from '../../components/DesignSystem/DSLayout';

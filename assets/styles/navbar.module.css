@@ -1,0 +1,25 @@
+/*----------------------------*/
+/* NAVBAR */
+/*----------------------------*/
+
+.navbar {
+  @apply
+  flex
+  items-center
+  justify-center
+  min-h-8
+  w-full
+  p-1
+  backdrop-blur-md
+  ;
+
+  > .navbar-content {
+    @apply
+    flex
+    items-center
+    justify-between
+    mx-auto
+    w-full
+    ;
+  }
+}

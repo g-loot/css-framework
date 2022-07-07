@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import DSHead from './DSHead';
 import DSMainNav from './DSMainNav';
 import DSTopBar from './DSTopBar';
-import DSdata from '../../pages/api/designsystem/data.json'
+import DSpages from '../../pages/api/designsystem/pages.json'
 import Link from 'next/link';
 import { getLayout as getSiteLayout } from '../SiteLayout';
 import packageFramework from '../../framework/package.json';
@@ -34,9 +34,9 @@ const DSLayout = ({ children }) => {
       <input id='drawer-ds' type='checkbox' className='drawer-toggle' />
       <div className='drawer-content' ref={myRef}>
         <div className='block lg:hidden'>
-          <DSTopBar data={DSdata} />
+          <DSTopBar data={DSpages} />
         </div>
-        <div className='py-12 px-4'>
+        <div className='pt-12 pb-24 px-4'>
           <div className='container max-w-lg mx-auto'>
             {children}
           </div>
@@ -56,9 +56,9 @@ const DSLayout = ({ children }) => {
                 </a>
               </Link>
               <div className='text-xs text-ui-400'>
-                <div className='chip chip-secondary chip-xs'>
+                <a href='https://www.npmjs.com/package/@g-loot/css-framework' target='_blank' rel='noreferrer' className='chip chip-secondary chip-xs'>
                   <span>v{packageFramework.version}</span>
-                </div>
+                </a>
               </div>
             </div>
             <div className='form-group mt-4'>
@@ -78,7 +78,7 @@ const DSLayout = ({ children }) => {
           </div>
           
           <div className='relative z-0 px-4 pb-4'>
-            {DSdata.sections.map((item, itemIndex) => (
+            {DSpages.sections.map((item, itemIndex) => (
               <div className={`${filter ? '' : 'mb-4'}`} key={itemIndex}>
                 <button className={`flex items-center px-4 ${filter ? 'hidden' : 'py-2'}`}>
                   {/*

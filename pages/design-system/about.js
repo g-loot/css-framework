@@ -21,6 +21,7 @@ const DSpage = () => (
       </p>
     </div>
 
+    {/*
     <div className='max-w-md mx-auto aspect-video bg-cover bg-center rounded-lg my-12 border border-ui-600' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653377432/Marketing/2022_prototype/methodology-styledcomponents.jpg)`}}></div>
     <div className='max-w-sm mx-auto space-y-4 text-ui-200'>
       <h2 className='leading-none uppercase text-2xl text-ui-300'>
@@ -44,7 +45,11 @@ const DSpage = () => (
       <p className='pb-5'>
         And since the G-Loot CSS Framework is based on <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, it allows the use of its utility-first class names anywhere. That way new pages and components can be built effortlessly.
       </p>
-      <h3 className='h3 my-4'>
+    </div>
+    */}
+    <div className='max-w-sm mx-auto space-y-4 text-ui-200'>
+      
+      <h3 className='h3 my-6'>
         Benefits
       </h3>
       <p className='border-b border-ui-700 pb-5'>
@@ -53,7 +58,7 @@ const DSpage = () => (
         </strong>
         <br />
         <span>
-          By separating the style from the content, you can design in a smarter way, combining styling across components (example: we are able to streamline the loading state of the tournament &amp; mission cards). It makes it also easier to have a semantic structure (div &gt; figure, header, section, ul, etc.).
+          By separating the style from the content, we are able to design in a smarter way, combining styling across components (example: we are able to streamline the loading state of the tournament &amp; mission cards). It makes it also easier to have a semantic structure (div &gt; figure, header, section, ul, etc.).
         </span>
       </p>
       <p className='border-b border-ui-700 pb-5'>
@@ -62,7 +67,7 @@ const DSpage = () => (
         </strong>
         <br />
         <span>
-        Since the styling is defined outside of the React components, the appearance and feeling of any element can be explored and tested well before the React component is actually created. It also makes the G-Loot CSS Framework the one place of truth between UX/UI and devs.
+          Since the styling is defined outside of the React components, the appearance and feeling of any element can be explored and tested freely. It also makes the G-Loot CSS Framework the one place of truth between UX/UI and devs.
         </span>
       </p>
       <p className='border-b border-ui-700 pb-5'>
@@ -71,7 +76,7 @@ const DSpage = () => (
         </strong>
         <br />
         <span>
-          As it is independent from the front-end technology (ReactJS), the G-Loot CSS Framework is instantly compatible with any other front-end language (VueJS, PHP, plain HTML, emails, etc.) making the building of ad-hoc tools and interfaces a piece of cake.
+          As it is independent from the front-end technology (ReactJS), the G-Loot CSS Framework is instantly compatible with any other front-end language (VueJS, SvelteJS PHP, plain HTML, emails, etc.) making the building of ad-hoc tools and interfaces a piece of cake.
         </span>
       </p>
       <p className='border-b border-ui-700 pb-5'>
@@ -80,7 +85,7 @@ const DSpage = () => (
         </strong>
         <br />
         <span>
-          Because it is based on the CSS Framework <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, the whole product can use its numerous utility-first class names to build layouts and one-offs with ease and speed.
+          Because it is based on the CSS Framework <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, the whole product can use its numerous utility-first class names to build layouts and one-offs with ease and speed while still remaining consistent with the G-Loot brand.
         </span>
       </p>
       <p className='pb-5'>
@@ -92,6 +97,7 @@ const DSpage = () => (
           While loading large external style sheets can negatively impact performance metrics, simple CSS is faster for browsers to render than styling that is generated using code like styled-components.
         </span>
       </p>
+      {/*
       <h3 className='h3 my-4'>
         Downsides
       </h3>
@@ -105,6 +111,7 @@ const DSpage = () => (
           If it is possible for the two-systems to cohabit for a while, eventually all components and pages will have to be redesigned in the framework and the new HTML structures applied within the product.
         </span>
       </p>
+      */}
 
       <div className='surface surface-dimmed px-4 py-8 text-center rounded-xl space-y-4'>
         <p>

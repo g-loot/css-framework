@@ -62,12 +62,12 @@ export default function Home() {
           </section>
 
           <section className="relative z-10 pt-12 md:pt-20 mb-40 container max-w-lg mx-auto ">
-            <img className="hidden lg:block absolute z-20 -top-6 -right-14" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_3.png" width="180" height="auto" alt="" />
-            <img className="hidden lg:block absolute z-20 top-44 -right-32" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_4.png" width="36" height="auto" alt="" />
-            <img className="hidden lg:block absolute z-20 -bottom-12 -right-32 blur-md" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_5.png" width="168" height="auto" alt="" />
-            <img className="hidden lg:block absolute z-0 top-60 -left-32 blur-sm" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_5.png" width="168" height="auto" alt="" />
-            <img className="hidden lg:block absolute z-20 -bottom-6 -left-6" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_2.png" width="112" height="auto" alt="" />
-            <img className="hidden lg:block absolute z-20 top-16 -left-6" src="https://res.cloudinary.com/gloot/image/upload/v1638393248/Marketing/202109_gloot2/separator_coin_1.png" width="49" height="auto" alt="" />
+            <img className="hidden lg:block absolute z-20 -top-20 -right-4 rotate-[33deg]" src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_1.webp" width="160" height="auto" alt="" />
+            <img className="hidden lg:block absolute z-20 top-32 -right-14 rotate-[67deg]" src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_2.webp" width="75" height="auto" alt="" />
+            <img className="hidden lg:block absolute z-20 -bottom-20 -right-32 blur-sm rotate-[120deg]" src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_1.webp" width="210" height="auto" alt="" />
+            <img className="hidden lg:block absolute z-20 -top-14 left-8 blur-sm -rotate-[33deg]" src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_2.webp" width="168" height="auto" alt="" />
+            <img className="hidden lg:block absolute z-20 -bottom-14 -left-12 -rotate-[143deg]" src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_2.webp" width="144" height="auto" alt="" />
+            <img className="hidden lg:block absolute z-20 top-32 left-2 -rotate-[74deg]" src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_1.webp" width="49" height="auto" alt="" />
 
             <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-stretch gap-16 px-4 md:px-0">
               <div className="max-w-sm hidden flex-1 lg:flex flex-col bg-ui-800 rounded-xl p-2">
@@ -161,7 +161,7 @@ export default function Home() {
                     </li>
                   </ul>
 
-                  <a href="#plans" className="button button-premium is-shining w-full">
+                  <a href="https://gloot.com/features/premium" target="_blank" rel="noreferrer" className="button button-premium is-shining w-full">
                     <span className="text-xl italic">View Premium Plans</span>
                   </a>
                 </div>

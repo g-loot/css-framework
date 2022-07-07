@@ -15,7 +15,7 @@ const DSpage = () => (
         <span>Install Tailwind CSS</span>
       </h3>
       <p>
-        Install <samp className='text-sm'>tailwindcss</samp> and its peer dependencies via npm.
+        Install <a href='https://www.npmjs.com/package/tailwindcss' target='_blank' rel='noreferrer' className='link'><samp className='text-sm'>tailwindcss</samp></a> and its peer dependencies via npm.
       </p>
       <div className='code surface'>
         <pre data-prefix=">"><code>npm install -D tailwindcss postcss autoprefixer tailwindcss-animation-delay</code></pre>
@@ -28,10 +28,10 @@ const DSpage = () => (
         <span>Install the Framework</span>
       </h3>
       <p>
-        Install <samp className='text-sm'>@augustin_hiebel/gloot-framework</samp> (temporary name) via npm.
+        Install <a href='https://www.npmjs.com/package/@g-loot/css-framework' target='_blank' rel='noreferrer' className='link'><samp className='text-sm'>@g-loot/css-framework</samp></a> via npm.
       </p>
       <div className='code surface'>
-        <pre data-prefix=">"><code>npm install @augustin_hiebel/gloot-framework</code></pre>
+        <pre data-prefix=">"><code>npm install @g-loot/css-framework</code></pre>
       </div>
     </li>
 
@@ -44,7 +44,7 @@ const DSpage = () => (
         Import the Framework CSS into your project stylesheet.
       </p>
       <div className='code surface'>
-        <pre data-prefix=""><code>@import &quot;@augustin_hiebel/gloot-framework/styles/globals.css&quot;;</code></pre>
+        <pre data-prefix=""><code>@import &quot;@g-loot/css-framework/styles/globals.css&quot;;</code></pre>
       </div>
     </li>
 
@@ -77,7 +77,7 @@ const DSpage = () => (
         Import the framework config into your project <samp className='text-sm'>tailwind.config.js</samp> and indicate which files Tailwind should scan.
       </p>
       <div className='code surface'>
-        <pre data-prefix=""><code>const tailwindConfig = require(&apos;@augustin_hiebel/gloot-framework/tailwind.config&apos;);</code></pre>
+        <pre data-prefix=""><code>const tailwindConfig = require(&apos;@g-loot/css-framework/tailwind.config&apos;);</code></pre>
         <pre data-prefix=""><code>module.exports = &#123;</code></pre>
         <pre data-prefix=""><code>  ...tailwindConfig,</code></pre>
         <pre data-prefix=""><code>  content: &#x5B;</code></pre>
@@ -91,7 +91,7 @@ const DSpage = () => (
 
     <h2 className='h3'>Example repository <a className="text-2xl opacity-20 hover:opacity-60" href="#example-repository">#</a></h2>
     <p className='text-ui-200 leading-tight my-4'>
-      Check this example setup of the G-Loot Framework and Tailwind CSS on webpack.
+      Check this example setup of the G-Loot Framework and Tailwind CSS on React (webpack).
     </p>
     <div className='max-w-[150px]'>
       <a href='https://stackblitz.com/edit/gloot-framework?file=tailwind.config.js' target='_blank' rel='noreferrer' className='inline-block rounded-2xl surface transition-all duration-200 hover:opacity-50'>

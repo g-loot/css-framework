@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import DSdata from '../api/designsystem/data.json';
 import DSicons from '../api/designsystem/icons.json';
+import DSpages from '../api/designsystem/pages.json';
 import { getLayout } from '../../components/DesignSystem/DSLayout';
 
 const DSpage = () => {

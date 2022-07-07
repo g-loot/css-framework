@@ -182,6 +182,11 @@
           "label": "Drawer",
           "tags": "nav,navigation,drawer,side,left,closed,opened",
           "url": "drawer"
+        },
+        {
+          "label": "Navbar",
+          "tags": "nav,navigation,top,menu,fixed,topbar,navbar",
+          "url": "navbar"
         }
       ]
     },

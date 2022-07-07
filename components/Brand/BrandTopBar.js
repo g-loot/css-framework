@@ -10,7 +10,7 @@ export default function BrandTopBar({children, data}) {
            
             <div className='hidden md:block'>
               <label htmlFor="drawer-ds" className="drawer-button button button-sm button-tertiary rounded-full">
-                <div className="icon icon-dots-vertical"></div>
+                <div className="icon icon-menu-8"></div>
               </label>
             </div>
             <Link href='../'>

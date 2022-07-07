@@ -1,5 +1,3 @@
-import React, { useRef, useState } from 'react';
-
 import PrototypeHead from './PrototypeHead';
 import { getLayout as getSiteLayout } from '../SiteLayout';
 

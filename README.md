@@ -1,66 +1,43 @@
+
 ![G-Loot CSS Framework](https://res.cloudinary.com/gloot/image/upload/v1657002851/Marketing/2022_prototype/G-Loot_Framework_logo.svg)
 
-A CSS Framework built on Tailwind CSS to bring consistency and speed to G-Loot products.
+✨ A repo for building the [css-framework library](https://www.npmjs.com/package/@g-loot/css-framework), creating functional prototypes and hosting our brand guidelines.
 
 ------
 
-## Documentation
+## About the library
 
-For full documentation, visit [gloot-framework.netlify.app](https://gloot-framework.netlify.app/).
+The G-Loot CSS Framework is a centralised front-end design system that allows any developer to quickly build pages that are **consistent** with the G-Loot brand and its user interface system.
 
-## Using the framework
+Based on the utility-first framework  [Tailwind CSS](https://tailwindcss.com/), the G-Loot CSS Framework provides **pre-defined components** listed as well as highly composable, low-level **utility classes** to build complex user interfaces with speed in mind.
 
-### 1. Install tailwindcss
+The main purpose of this repository is to create and maintain the various **css files** and the **tailwind theme** that are consumed by the various G-Loot products. 
 
-Install tailwindcss and its peer dependencies via npm.
+## Pushing a new version
 
-```bash
-npm install -D tailwindcss postcss autoprefixer tailwindcss-animation-delay
-```
+When a push is made on the main branch, **the library is automatically updated** on both:
 
-### 2. Install the framework
+- [Github packages](https://github.com/g-loot/css-framework/packages/1521083) (for internal use)
+- [npmjs](https://www.npmjs.com/package/@g-loot/css-framework) (for easy access by the UXs and UIs on tools such as [Stackblitz](https://stackblitz.com/edit/gloot-framework))
 
-Install @g-loot/css-framework via npm.
+⚠️ Before you push on main, make sure you **update the library version** on /framework/package.json
 
-```bash
-npm install @g-loot/css-framework
-```
-
-### 3. Import the css
-
-Import the Framework CSS into your project stylesheet.
-
-```css
-@import '@g-loot/css-framework/styles/globals.css';
-```
-
-### 4. Adapt webpack config.
-
-Add postcss-loader to webpack.config.js.
-
-```js
-module: {
-  rules: [
-    {
-      test: /\.(css)$/,
-      use: ['style-loader', 'css-loader', 'postcss-loader'],
-    }
-  ]
+```json
+{ 	
+  "name": "@g-loot/css-framework", 
+  "version": "👉{version to update}👈", 
+  "dependencies": {} 
 }
 ```
 
-### 5. Import and adapt tailwind config.
+## Other purposes
 
-Import the framework config into your project tailwind.config.js and indicate which files Tailwind should scan.
+This repository serves other purposes:
 
-```js
-const tailwindConfig = require('@g-loot/css-framework/tailwind.config');
-module.exports = {
-  ...tailwindConfig,
-  content: [
-    "./pages/*.{js,ts,jsx,tsx,json}",
-  ],
-};
-```
+ - This is where the CSS Framework is put to the test and **improved**.
+ - This is where **prototypes** are created to test out new features and updates.
+ - This is home to our **branding guidelines** and **assets**. 
 
-## That's it, your projects can now use the G-Loot theme and components.
+------
+
+### For more info on how to use the framework, please read the [package readme](https://www.npmjs.com/package/@g-loot/css-framework) 

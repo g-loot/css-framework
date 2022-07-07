@@ -1966,9 +1966,120 @@
         {
           "tags": "ui,interface,close,exit,decrease,delete,remove,minus,cancel,deletion,less,removal,subtract",
           "name": "f-delete"
+        },
+        {
+          "tags": "ui,interface,list,order,unorder,list,items,organize,schedule,text,agenda,design,check,checklist,item,todo",
+          "name": "bullet-list-67"
+        },
+        {
+          "tags": "ui,interface,list,order,unorder,list,items,organize,schedule,text,agenda,design,check,checklist,item,todo",
+          "name": "bullet-list-68"
+        },
+        {
+          "tags": "ui,interface,list,order,unorder,list,items,organize,schedule,text,agenda,design,check,checklist,item,todo",
+          "name": "bullet-list-69"
+        },
+        {
+          "tags": "ui,interface,list,order,unorder,list,items,organize,schedule,text,agenda,design,check,checklist,item,todo",
+          "name": "bullet-list-70"
+        },
+        {
+          "tags": "ui,interface,list,order,unorder,list,items,organize,schedule,text,agenda,design,check,checklist,item,todo",
+          "name": "bullet-list"
+        },
+        {
+          "tags": "ui,interface,arrow,navigation,lines,cursor,list,design,development,click,mouse,point,pointer,bars,gallery,hamburger,menu,options,settings",
+          "name": "cursor-menu"
+        },
+        {
+          "tags": "navigation,ui,interface,lines,list,bars,gallery,hamburger,menu,options,settings,burger",
+          "name": "menu-8"
+        },
+        {
+          "tags": "navigation,ui,interface,lines,list,bars,gallery,hamburger,menu,options,settings,burger",
+          "name": "menu-6"
+        },
+        {
+          "tags": "left,navigation,ui,interface,lines,list,bars,gallery,hamburger,menu,options,settings,burger",
+          "name": "menu-4"
+        },
+        {
+          "tags": "arrow,up,file,share,storage,transfer,upload,connection,social,export,launch,network,outbox,output,sharing,start",
+          "name": "launch"
+        },
+        {
+          "tags": "comment,mark,source,speech,quotation,quote,author,blockquote,testimonial",
+          "name": "blockquote"
+        },
+        {
+          "tags": "enter,lock,login,door,open,furniture,home,entrance",
+          "name": "door-3"
+        },
+        {
+          "tags": "cloud,network,money,bitcoin,digital,cryptocurrency,mining",
+          "name": "cloud-mining"
+        },
+        {
+          "tags": "cloud,network,money,bitcoin,digital,cryptocurrency,mining",
+          "name": "transactions"
+        },
+        {
+          "tags": "circuit,preferences,system,settings,nodes,configuration,cogwheel,plugin,components,modules,artificial,intelligence,api,add-on,extensions,cryptocurrency,sequence,algorithm",
+          "name": "algorithm"
+        },
+        {
+          "tags": "data,stats,chart,report,statistics,analytics,bars,science,analysis,presentation,trending",
+          "name": "statistics"
+        },
+        {
+          "tags": "file,document,glass,paper,search,science,research,lens,magnifying,discovery",
+          "name": "research"
+        },
+        {
+          "tags": "connection,network,internet,wireless,signal,pulse,radar,online,wifi,connectivity,router,wave,contactless",
+          "name": "contactless"
+        },
+        {
+          "tags": "exchange,transfer,commerce,conversion,convert,interchange,trade,finance,shopping,money,currency,investment,ecommerce,rate,wire,e-commerce,refund",
+          "name": "currency-exchange-2"
+        },
+        {
+          "tags": "work,building,construction,vehicle,lift,build,crane,under construction,construction site,work in progress",
+          "name": "crane"
+        },
+        {
+          "tags": "chat,comment,message,talk,customer,bubble,rating,review,feedback,opinion",
+          "name": "feedback"
+        },
+        {
+          "tags": "success,check,read,selected,mark,approved,checkmark,completed,done,checked,tick,delivered",
+          "name": "check-single"
+        },
+        {
+          "tags": "double,success,check,read,selected,mark,approved,checkmark,completed,done,checked,tick,delivered",
+          "name": "check-double"
+        },
+        {
+          "tags": "sign,film,movie,content,adult,18,restricted,age",
+          "name": "adult-content"
+        },
+        {
+          "tags": "text,chat,message,messages,love,romantic,like,heart,bubble",
+          "name": "love-message"
+        },
+        {
+          "tags": "text,chat,message,messages,love,romantic,like,heart,bubble",
+          "name": "stairs"
+        },
+        {
+          "tags": "power,healthy,fitness,exercise,gym,workout,protein,strength,arm,muscle,bodybuilding,bicep,force",
+          "name": "bicep"
+        },
+        {
+          "tags": "data,security,preferences,edit,options,settings,privacy,private,configuration,cog,cogwheel,policy,terms",
+          "name": "privacy-settings"
         }
       ]
     }
   ]
-  
 }

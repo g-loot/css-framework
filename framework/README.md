@@ -1,6 +1,6 @@
 ![G-Loot CSS Framework](https://res.cloudinary.com/gloot/image/upload/v1657002851/Marketing/2022_prototype/G-Loot_Framework_logo.svg)
 
-A CSS Framework built on Tailwind CSS to bring consistency and speed to G-Loot products.
+A **CSS Framework** built on [Tailwind CSS](https://www.npmjs.com/package/tailwindcss) to bring consistency and speed to **G-Loot products**.
 
 ------
 
@@ -63,4 +63,11 @@ module.exports = {
 };
 ```
 
-## That's it, your projects can now use the G-Loot theme and components.
+### Example repository
+
+Check [this example setup](https://stackblitz.com/edit/gloot-framework) of the G-Loot Framework and Tailwind CSS on React (webpack).
+
+## That's it!
+
+Your projects can now consume the G-Loot theme and components. ✨
+

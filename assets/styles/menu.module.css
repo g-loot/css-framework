@@ -19,7 +19,7 @@
     }
   }
 
-  li {
+  :where(li) {
     @apply
     transition-all
     transform-gpu
@@ -28,7 +28,7 @@
     ;
   }
 
-  li.separator {
+  :where(li).separator {
     @apply
     bg-ui-700
     h-px
@@ -38,8 +38,7 @@
     ;
   }
 
-  a,
-  button {
+  :where(a, button) {
     @apply
     relative
     inline-flex
@@ -104,14 +103,11 @@
     &:hover,
     &:focus-visible,
     &.is-active {
-      @apply
-      text-white
-      z-20
-      ;
-
-      > *:not(.icon) {
-        @apply 
-        translate-x-1
+      &,
+      > * {
+        @apply
+        text-mono-100
+        z-20
         ;
       }
       
@@ -138,7 +134,7 @@
     }
   }
 
-  li.is-disabled {
+  :where(li).is-disabled {
     a,
     button {
       @apply
@@ -156,6 +152,162 @@
         font-body
         text-sm
         ;
+      }
+    }
+  }
+
+  >:where(li) {
+    :where(ul) {
+      @apply
+      flex
+      flex-col
+      items-stretch
+      ;
+    }
+    >:where(ul) {
+      @apply
+      absolute
+      hidden
+      left-full
+      rounded-lg
+      bg-ui-800
+      border
+      border-ui-700
+      overflow-hidden
+      top-0
+      ;
+      :where(li) {
+        @apply
+        w-full
+        whitespace-nowrap
+        ;
+      }
+    }
+    &:hover {
+      >:where(ul) {
+        @apply
+        flex
+        ;
+      }
+    }
+  }
+}
+
+.menu:not([class*=horizontal]) {
+  :where(a, button) {
+    &:hover,
+    &:focus-visible,
+    &.is-active {
+      > *:not(.icon) {
+        @apply 
+        translate-x-1
+        ;
+      }
+    }
+  }
+}
+
+/* horizontal */
+.menu.menu-horizontal {
+  @apply
+  inline-flex
+  flex-row
+  ;
+  :where(a, button) {
+    @apply 
+    px-4
+    ;
+    &::after {
+      @apply 
+      rounded
+      ;
+    }
+  }
+  >:where(li) {
+    >:where(ul) {
+      @apply
+      top-full
+      left-[initial]
+      ;
+    }
+  }
+}
+@screen sm {
+  .menu {
+    &.sm\:menu-horizontal {
+      @apply
+      inline-flex
+      flex-row
+      ;
+      :where(a, button) {
+        @apply 
+        px-4
+        ;
+        &::after {
+          @apply 
+          rounded
+          ;
+        }
+      }
+    }
+  }
+}
+@screen md {
+  .menu {
+    &.md\:menu-horizontal {
+      @apply
+      inline-flex
+      flex-row
+      ;
+      :where(a, button) {
+        @apply 
+        px-4
+        ;
+        &::after {
+          @apply 
+          rounded
+          ;
+        }
+      }
+    }
+  }
+}
+@screen lg {
+  .menu {
+    &.lg\:menu-horizontal {
+      @apply
+      inline-flex
+      flex-row
+      ;
+      :where(a, button) {
+        @apply 
+        px-4
+        ;
+        &::after {
+          @apply 
+          rounded
+          ;
+        }
+      }
+    }
+  }
+}
+@screen xl {
+  .menu {
+    &.xl\:menu-horizontal {
+      @apply
+      inline-flex
+      flex-row
+      ;
+      :where(a, button) {
+        @apply 
+        px-4
+        ;
+        &::after {
+          @apply 
+          rounded
+          ;
+        }
       }
     }
   }
