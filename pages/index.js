@@ -30,6 +30,14 @@ const lastestComponents = [
 
 const lastestPages = [
   {
+    label: "Missions",
+    url: "prototype/missions?game=0"
+  },
+  {
+    label: "Wallet",
+    url: "prototype/wallet"
+  },
+  {
     label: "Profile",
     url: "prototype/profile"
   },
@@ -72,7 +80,7 @@ const Index = () => {
     <DSHead title='Welcome' />
     <div className='fixed w-screen h-screen z-20 inset-0 flex justify-center items-center overflow-hidden bg-cover' data-theme='light' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1656493818/Marketing/202207_community/Community_bg.webp)`}}>
       <div className='w-full h-full overflow-y-auto scrollbar-desktop flex items-center justify-center m-auto'>
-        <div className='relative py-6 max-w-lg flex-[1_100%] m-auto'>
+        <div className='relative py-16 max-w-lg flex-[1_100%] m-auto'>
           <div className='bg-ui-800/90 border border-ui-700/90 backdrop-blur halo-r p-4 lg:p-6 lg:rounded-4xl container max-w-lg mx-auto'>
             <div className='flex flex-col lg:flex-row items-stretch '>
               <div className='flex-1 lg:pr-6 lg:mr-6 lg:border-r lg:border-ui-700 flex flex-col justify-between relative'>
@@ -126,22 +134,26 @@ const Index = () => {
                           </li>
                           </>
                         ))}
-                        <li>
-                          <Link href='prototype/pubg-season-6'>
-                            <a><span>PUBG Season 6</span></a>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href='prototype/home'>
-                            <a><span>Home</span></a>
-                          </Link>
-                        </li>
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
               <div className='flex-3 space-y-4 flex flex-col items-center'>
+
+                <div className='w-full flex justify-between md:hidden'>
+                  <div>
+                    <img className='mb-0.5' width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
+                    <h1 className='text-lg uppercase not-italic leading-none pl-10'>
+                      Framework
+                    </h1>
+                  </div>
+                  <div className='text-xs text-ui-400 mt-1'>
+                    <a href='https://www.npmjs.com/package/@g-loot/css-framework' target='_blank' rel='noreferrer' className='chip chip-secondary chip-xs'>
+                      <span>v{packageFramework.version}</span>
+                    </a>
+                  </div>
+                </div>
 
                 <div className='rounded-2xl surface surface-ui-700 overflow-hidden transform-gpu flex flex-col lg:flex-row gap-4 lg:gap-8 items-stretch w-full p-2 animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc( 1 * 0.05s)'}}>
                   <div className='flex-2 aspect-video bg-cover bg-center rounded-lg' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289722/Marketing/2022_prototype/cover-designsystem.webp)`}}>

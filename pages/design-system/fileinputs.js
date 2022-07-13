@@ -125,6 +125,30 @@ const DSpage = () => {
       </div>
     </div>
 
+    {/* Button */}
+    <div className='mb-12' id='Button'>
+
+      <h2 className='h3 mb-3'>
+        Button
+      </h2>
+
+      <div className='surface rounded-lg p-4'>
+        <div className=''>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+            <div className='flex-1 space-y-4'>
+              <div className='form-group'>
+                <label htmlFor='file-button' className='button button-tertiary rounded-full'><span className='icon icon-camera'></span></label>
+                <input type='file' name='file-button' id='file-button' aria-describedby='file_input_help' />
+              </div>
+            </div>
+            <div className='flex-1'>
+              <iframe className='rounded' width='100%' height='300' src='//jsfiddle.net/augustin_hiebel/8zw2e9vp/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094' ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
   </>
   )

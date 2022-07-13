@@ -16,19 +16,20 @@ textarea {
   ;
 }
 
-.form-group {
- 
-  > label:not(.form-radio):not(.form-checkbox):not(.form-toggle) {
-    @apply
-    block
-    text-sm
-    font-body
-    uppercase
-    text-ui-200
-    font-bold
-    mb-1
-    ;
-  }
+.form-group > label:not(.form-radio):not(.form-checkbox):not(.form-toggle):not(.button),
+.label {
+  @apply
+  text-sm
+  uppercase
+  text-ui-200
+  font-bold
+  ;
+}
+.form-group > label:not(.form-radio):not(.form-checkbox):not(.form-toggle):not(.button) {
+  @apply
+  block
+  mb-1
+  ;
 }
 
 /*----------------------------*/
@@ -128,7 +129,6 @@ textarea,
   @apply
   w-full
   shadow-sm
-  sm:text-sm
   bg-ui-700
   border
   border-ui-500
@@ -136,12 +136,13 @@ textarea,
   focus-visible:outline
   focus-visible:outline-1
   focus-visible:outline-ui-300
-  p-[0.594rem]
+  p-2
   ;
 
   &.input-sm {
     @apply
     p-[0.4375rem]
+    text-sm
     ;
   }
 }
@@ -173,6 +174,20 @@ input[type=file] {
   ;
 }
 
+label.button {
+  + input[type=file] {
+    @apply
+    h-px
+    w-px
+    -m-px
+    opacity-0
+    overflow-hidden
+    min-h-[0px]
+    ;
+    clip: rect(0px, 0px, 0px, 0px);
+  }
+}
+
 /*----------------------------*/
 /* RADIO */
 /*----------------------------*/
@@ -194,6 +209,20 @@ input[type=file] {
     cursor-pointer
     ;
   }
+
+  &.is-disabled {
+    @apply
+    cursor-not-allowed
+    opacity-50
+    ;
+    &,
+    * {
+      @apply
+      pointer-events-none
+      ;
+    }
+  }
+
 
   /* generic */
 
@@ -524,7 +553,7 @@ input[type=file] {
     }
   }
 
-  > input:first-child {
+  > input:first-child:not(:last-child) {
     @apply
     rounded-none
     rounded-l
@@ -855,6 +884,7 @@ textarea.is-disabled,
 .form-group.is-disabled {
   @apply
   relative
+  cursor-not-allowed
   ;
 }
 

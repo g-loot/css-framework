@@ -1,11 +1,16 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export default function PrototypeGamesNavItem(props) {
-
-  const [isActive, setActive] = useState(false);
+  const [isActive, setActive] = useState(props.isopen);
+  const [isDisabled, setIsDisabled] = useState(props.isdisabled);
   const elementRef = useRef(null);
 
   var height = elementRef.current?.clientHeight;
+
+  useEffect(() => {
+    setActive(props.isopen)
+    setIsDisabled(props.isdisabled)
+  }, [props.isopen, props.isdisabled])
 
   const handleToggle = e => {
     e.preventDefault()
@@ -15,7 +20,7 @@ export default function PrototypeGamesNavItem(props) {
   return (
   <div className={`accordion-item ${isActive ? 'is-active' : ''}`}>
     <div className='accordion-header' aria-expanded={`${isActive ? true : false}`} aria-controls onClick={handleToggle}>
-      {props.header}
+      {props.isopen} {props.header}
     </div>
     <div className={`accordion-collapse`} style={{height: `${isActive ? height : 0}px`}}>
       <div ref={elementRef}>

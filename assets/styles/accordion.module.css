@@ -31,8 +31,7 @@
     duration-100
     cursor-pointer
     ;
-    .icon[class*='icon-game'],
-    .item-title {
+    :where(.icon[class*='icon-game'], .item-title) {
       @apply
       transition
       duration-300
@@ -152,56 +151,100 @@
             @apply
             translate-y-0
             opacity-100
+            delay-[calc(var(--delay,1)*0.05s)]
             ;
             &:nth-child(1) {
-              @apply
-              delay-[.1s]
-              ;
+              --delay: 1;
             }
             &:nth-child(2) {
-              @apply
-              delay-[.2s]
-              ;
+              --delay: 2;
             }
             &:nth-child(3) {
-              @apply
-              delay-[.3s]
-              ;
+              --delay: 3;
             }
             &:nth-child(4) {
-              @apply
-              delay-[.4s]
-              ;
+              --delay: 4;
             }
             &:nth-child(5) {
-              @apply
-              delay-[.5s]
-              ;
+              --delay: 5;
             }
             &:nth-child(6) {
-              @apply
-              delay-[.6s]
-              ;
+              --delay: 6;
             }
             &:nth-child(7) {
-              @apply
-              delay-[.7s]
-              ;
+              --delay: 7;
             }
             &:nth-child(8) {
-              @apply
-              delay-[.8s]
-              ;
+              --delay: 8;
             }
             &:nth-child(9) {
-              @apply
-              delay-[.9s]
-              ;
+              --delay: 9;
             }
             &:nth-child(10) {
-              @apply
-              delay-[1s]
-              ;
+              --delay: 10;
+            }
+            &:nth-child(11) {
+              --delay: 11;
+            }
+            &:nth-child(12) {
+              --delay: 12;
+            }
+            &:nth-child(13) {
+              --delay: 13;
+            }
+            &:nth-child(14) {
+              --delay: 14;
+            }
+            &:nth-child(15) {
+              --delay: 15;
+            }
+            &:nth-child(16) {
+              --delay: 16;
+            }
+            &:nth-child(17) {
+              --delay: 17;
+            }
+            &:nth-child(18) {
+              --delay: 18;
+            }
+            &:nth-child(19) {
+              --delay: 19;
+            }
+            &:nth-child(20) {
+              --delay: 20;
+            }
+            &:nth-child(20) {
+              --delay: 20;
+            }
+            &:nth-child(21) {
+              --delay: 21;
+            }
+            &:nth-child(22) {
+              --delay: 22;
+            }
+            &:nth-child(23) {
+              --delay: 23;
+            }
+            &:nth-child(24) {
+              --delay: 24;
+            }
+            &:nth-child(25) {
+              --delay: 25;
+            }
+            &:nth-child(26) {
+              --delay: 26;
+            }
+            &:nth-child(27) {
+              --delay: 27;
+            }
+            &:nth-child(28) {
+              --delay: 28;
+            }
+            &:nth-child(29) {
+              --delay: 29;
+            }
+            &:nth-child(30) {
+              --delay: 30;
             }
           }
         }

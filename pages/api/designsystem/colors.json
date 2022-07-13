@@ -15,63 +15,63 @@
           "value": "bg-ui-200",
           "number": "200",
           "data": "",
-          "hex": "#F3F3F6"
+          "hex": "#B9BBD1"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-300",
           "number": "300",
           "data": "",
-          "hex": "#F3F3F6"
+          "hex": "#9090B8"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-400",
           "number": "400",
           "data": "",
-          "hex": "#F3F3F6"
+          "hex": "#5D5D89"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-500",
           "number": "500",
           "data": "",
-          "hex": "#F3F3F6"
+          "hex": "#333366"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-600",
           "number": "600",
           "data": "",
-          "hex": "#F3F3F6"
+          "hex": "#26264F"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-700",
           "number": "700",
           "data": "",
-          "hex": "#F3F3F6"
+          "hex": "#1F1F42"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-800",
           "number": "800",
           "data": "",
-          "hex": "#F3F3F6"
+          "hex": "#151532"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-850",
           "number": "850",
           "data": "",
-          "hex": "#F3F3F6"
+          "hex": "#0F0F23"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-900",
           "number": "900",
           "data": "",
-          "hex": "#F3F3F6"
+          "hex": "#0B0B1E"
         }
       ]
     },
@@ -84,14 +84,14 @@
           "value": "bg-mono-100",
           "number": "100",
           "data": "",
-          "hex": "#F3F3F6"
+          "hex": "#FFFFFF"
         },
         {
           "name": "Base Mono",
           "value": "bg-mono-900",
           "number": "900",
           "data": "",
-          "hex": "#F3F3F6"
+          "hex": "#000000"
         }
       ]
     },
@@ -104,7 +104,7 @@
         "value": "bg-main",
         "number": "500",
         "data": "brand.main",
-        "hex": "#F3F3F6"
+        "hex": "#13F094"
       }]
     },
     {
@@ -116,21 +116,21 @@
           "value": "bg-premium-300",
           "number": "300",
           "data": "brand.premium.light",
-          "hex": "#F3F3F6"
+          "hex": "#FDE268"
         },
         {
           "name": "Premium Medium",
           "value": "bg-premium-500",
           "number": "500",
           "data": "brand.premium.medium",
-          "hex": "#F3F3F6"
+          "hex": "#FBC02D"
         },
         {
           "name": "Premium Dark",
           "value": "bg-premium-700",
           "number": "700",
           "data": "brand.premium.dark",
-          "hex": "#F3F3F6"
+          "hex": "#F9A825"
         }
       ]
     },
@@ -143,21 +143,21 @@
           "value": "bg-interaction-300",
           "number": "300",
           "data": "brand.interaction.light",
-          "hex": "#F3F3F6"
+          "hex": "#56FFB9"
         },
         {
           "name": "Interaction Medium",
           "value": "bg-interaction-500",
           "number": "500",
           "data": "brand.interaction.medium",
-          "hex": "#F3F3F6"
+          "hex": "#14EF94"
         },
         {
           "name": "Interaction Dark",
           "value": "bg-interaction-700",
           "number": "700",
           "data": "brand.interaction.dark",
-          "hex": "#F3F3F6"
+          "hex": "#06C977"
         }
       ]
     },
@@ -170,63 +170,63 @@
           "value": "bg-blue-300",
           "number": "300",
           "data": "decorative.blue.light",
-          "hex": "#F3F3F6"
+          "hex": "#A6F4FF"
         },
         {
           "name": "Blue Medium",
           "value": "bg-blue-500",
           "number": "500",
           "data": "decorative.blue.medium",
-          "hex": "#F3F3F6"
+          "hex": "#00E1FF"
         },
         {
           "name": "Blue Dark",
           "value": "bg-blue-700",
           "number": "700",
           "data": "decorative.blue.dark",
-          "hex": "#F3F3F6"
+          "hex": "#04AFCB"
         },
         {
           "name": "Purple Light",
           "value": "bg-purple-300",
           "number": "300",
           "data": "decorative.purple.light",
-          "hex": "#F3F3F6"
+          "hex": "#ECA9FA"
         },
         {
           "name": "Purple Medium",
           "value": "bg-purple-500",
           "number": "500",
           "data": "decorative.purple.medium",
-          "hex": "#F3F3F6"
+          "hex": "#EA77FD"
         },
         {
           "name": "Purple Dark",
           "value": "bg-purple-700",
           "number": "700",
           "data": "decorative.purple.dark",
-          "hex": "#F3F3F6"
+          "hex": "#8A24C8"
         },
         {
           "name": "Teal Light",
           "value": "bg-teal-300",
           "number": "300",
           "data": "decorative.teal.light",
-          "hex": "#F3F3F6"
+          "hex": "#2EFFCA"
         },
         {
           "name": "Teal Medium",
           "value": "bg-teal-500",
           "number": "500",
           "data": "decorative.teal.medium",
-          "hex": "#F3F3F6"
+          "hex": "#11F7BD"
         },
         {
           "name": "Teal Dark",
           "value": "bg-teal-700",
           "number": "700",
           "data": "decorative.teal.dark",
-          "hex": "#F3F3F6"
+          "hex": "#05C996"
         }
       ]
     },
@@ -238,63 +238,63 @@
           "value": "bg-gold-300",
           "number": "300",
           "data": "reward.gold.light",
-          "hex": "#F3F3F6"
+          "hex": "#8A24C8"
         },
         {
           "name": "Gold Main",
           "value": "bg-gold-500",
           "number": "500",
           "data": "reward.gold.main",
-          "hex": "#F3F3F6"
+          "hex": "#FFE200"
         },
         {
           "name": "Gold Dark",
           "value": "bg-gold-700",
           "number": "700",
           "data": "reward.gold.dark",
-          "hex": "#F3F3F6"
+          "hex": "#FF9C03"
         },
         {
           "name": "Silver Light",
           "value": "bg-silver-300",
           "number": "300",
           "data": "reward.silver.light",
-          "hex": "#F3F3F6"
+          "hex": "#D4D5D7"
         },
         {
           "name": "Silver Main",
           "value": "bg-silver-500",
           "number": "500",
           "data": "reward.silver.main",
-          "hex": "#F3F3F6"
+          "hex": "#AEB1B6"
         },
         {
           "name": "Silver Dark",
           "value": "bg-silver-700",
           "number": "700",
           "data": "reward.silver.dark",
-          "hex": "#F3F3F6"
+          "hex": "#686982"
         },
         {
           "name": "Bronze Light",
           "value": "bg-bronze-300",
           "number": "300",
           "data": "reward.bronze.light",
-          "hex": "#F3F3F6"
+          "hex": "#151532"
         },
         {
           "name": "Bronze Main",
           "value": "bg-bronze-500",
           "number": "500",
           "data": "reward.bronze.main",
-          "hex": "#F3F3F6"
+          "hex": "#F2BE51"
         },
         {
           "name": "Bronze Dark",
           "value": "bg-bronze-700",
           "number": "700",
           "data": "reward.bronze.dark",
-          "hex": "#F3F3F6"
+          "hex": "#BC8131"
         }
       ]
     },
@@ -306,14 +306,14 @@
           "value": "bg-gradient-to-r from-teal-500 to-blue-500",
           "number": "300",
           "data": "decorative.gradient.teal-blue",
-          "hex": "#F3F3F6"
+          "hex": ""
         },
         {
           "name": "Purple blue",
           "value": "bg-gradient-to-r from-purple-700 to-info-500",
           "number": "500",
           "data": "decorative.gradient.purple-info",
-          "hex": "#F3F3F6"
+          "hex": ""
         }
       ]
     },
@@ -325,105 +325,105 @@
           "value": "bg-attention-300",
           "number": "300",
           "data": "system.attention.light",
-          "hex": "#F3F3F6"
+          "hex": "#FB8C00"
         },
         {
           "name": "Attention Main",
           "value": "bg-attention-500",
           "number": "500",
           "data": "system.attention.main",
-          "hex": "#F3F3F6"
+          "hex": "#F57C01"
         },
         {
           "name": "Attention Dark",
           "value": "bg-attention-700",
           "number": "700",
           "data": "system.attention.dark",
-          "hex": "#F3F3F6"
+          "hex": "#EF6C00"
         },
         {
           "name": "Success Light",
           "value": "bg-success-300",
           "number": "300",
           "data": "system.success.light",
-          "hex": "#F3F3F6"
+          "hex": "#98EBA8"
         },
         {
           "name": "Success Main",
           "value": "bg-success-500",
           "number": "500",
           "data": "system.success.main",
-          "hex": "#F3F3F6"
+          "hex": "#52DD6C"
         },
         {
           "name": "Success Dark",
           "value": "bg-success-700",
           "number": "700",
           "data": "system.success.dark",
-          "hex": "#F3F3F6"
+          "hex": "#1C9935"
         },
         {
           "name": "Info Light",
           "value": "bg-info-300",
           "number": "300",
           "data": "system.info.light",
-          "hex": "#F3F3F6"
+          "hex": "#4CB5FF"
         },
         {
           "name": "Info Main",
           "value": "bg-info-500",
           "number": "500",
           "data": "system.info.main",
-          "hex": "#F3F3F6"
+          "hex": "#0297FE"
         },
         {
           "name": "Info Dark",
           "value": "bg-info-700",
           "number": "700",
           "data": "system.info.dark",
-          "hex": "#F3F3F6"
+          "hex": "#0769B2"
         },
         {
           "name": "Error Light",
           "value": "bg-error-300",
           "number": "300",
           "data": "system.error.light",
-          "hex": "#F3F3F6"
+          "hex": "#FF5958"
         },
         {
           "name": "Error Main",
           "value": "bg-error-500",
           "number": "500",
           "data": "system.error.main",
-          "hex": "#F3F3F6"
+          "hex": "#151532"
         },
         {
           "name": "Error Dark",
           "value": "bg-error-700",
           "number": "700",
           "data": "system.error.dark",
-          "hex": "#F3F3F6"
+          "hex": "#B32424"
         },
         {
           "name": "Disabled Light",
           "value": "bg-disabled-300",
           "number": "300",
           "data": "system.disabled.light",
-          "hex": "#F3F3F6"
+          "hex": "#565B6B"
         },
         {
           "name": "Disabled Main",
           "value": "bg-disabled-500",
           "number": "500",
           "data": "system.disabled.main",
-          "hex": "#F3F3F6"
+          "hex": "#343847"
         },
         {
           "name": "Disabled Dark",
           "value": "bg-disabled-700",
           "number": "700",
           "data": "system.disabled.dark",
-          "hex": "#F3F3F6"
+          "hex": "#191A2F"
         }
       ]
     },
@@ -435,49 +435,49 @@
           "value": "bg-game-apexlegends",
           "number": "500",
           "data": "game.apexlegends",
-          "hex": "#F3F3F6"
+          "hex": "#FF3333"
         },
         {
           "name": "CS:GO",
           "value": "bg-game-csgo",
           "number": "500",
           "data": "game.csgo",
-          "hex": "#F3F3F6"
+          "hex": "#F98000"
         },
         {
           "name": "Dota 2",
           "value": "bg-game-dota2",
           "number": "500",
           "data": "game.dota2",
-          "hex": "#F3F3F6"
+          "hex": "#EF3E35"
         },
         {
           "name": "League of Legends",
           "value": "bg-game-leagueoflegends",
           "number": "500",
           "data": "game.leagueoflegends",
-          "hex": "#F3F3F6"
+          "hex": "#C69549"
         },
         {
           "name": "Rocket League",
           "value": "bg-game-rocketleague",
           "number": "500",
           "data": "game.rocketleague",
-          "hex": "#F3F3F6"
+          "hex": "#2D71C6"
         },
         {
           "name": "PUBG: BATTLEGROUNDS",
           "value": "bg-game-pubg",
           "number": "500",
           "data": "game.pubg",
-          "hex": "#F3F3F6"
+          "hex": "#F2A900"
         },
         {
           "name": "VALORANT",
           "value": "bg-game-valorant",
           "number": "500",
           "data": "game.valorant",
-          "hex": "#F3F3F6"
+          "hex": "#FF4655"
         }
       ]
     }

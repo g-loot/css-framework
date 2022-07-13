@@ -109,6 +109,52 @@ const DSpage = () => {
             </div>
           </div>
         </div>
+
+        {/* default: Premium */}
+        <div className=''>
+          <h3 className='h4 mb-6 lg:mb-10'>
+            Premium
+          </h3>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+            <div className='flex-1 space-y-4'>
+              <div className='w-full flex gap-4 items-center'>
+                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                  Text only
+                </div>
+                <div className='flex-1'>
+                  <button type='button' className='chip chip-premium'>
+                    <span>Label</span>
+                  </button>
+                </div>
+              </div>
+              <div className='w-full flex gap-4 items-center'>
+                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                Icon + text
+                </div>
+                <div className='flex-1'>
+                  <button type='button' className='chip chip-premium'>
+                    <span className='icon icon-circle-caret-right'></span>
+                    <span>Label</span>
+                  </button>
+                </div>
+              </div>
+              <div className='w-full flex gap-4 items-center'>
+                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                Text + icon
+                </div>
+                <div className='flex-1'>
+                  <button type='button' className='chip chip-premium'>
+                    <span>Label</span>
+                    <span className='icon icon-circle-caret-right'></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className='flex-1'>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/b5c3fad8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -341,6 +387,16 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <div className='chip chip-sliced chip-gray'>
+                    <span>Label</span>
+                  </div>
+                </div>
+              </div>
+              <div className='w-full flex gap-4 items-center'>
+                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                  Premium
+                </div>
+                <div className='flex-1'>
+                  <div className='chip chip-sliced chip-premium'>
                     <span>Label</span>
                   </div>
                 </div>

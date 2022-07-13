@@ -18,7 +18,7 @@
   &::after,
   > blockquote {
     @apply
-    bg-ui-900/90
+    bg-ui-600/90
     rounded
     transition
     duration-200
@@ -59,19 +59,20 @@
       @apply
       content-[attr(data-tooltip)]
       text-ui-200
+      font-body
+      font-normal
       text-sm
       block
       left-[50%]
       bottom-[100%]
-      max-w-xs
       py-2
       px-3
       pointer-events-none
-      text-ellipsis
-      whitespace-pre
-      leading-none
+      leading-tight
       -translate-x-[50%]
       translate-y-0.5
+      max-w-[20rem]
+      w-[max-content]
       ;
     }
 

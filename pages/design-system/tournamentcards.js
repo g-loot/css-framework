@@ -65,7 +65,7 @@ const DSpage = () => {
             </div>
           </div>
           <div className='flex-1'>
-            <iframe className='rounded' width='100%' height='300' src='//jsfiddle.net/augustin_hiebel/16r43ftn/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094' ></iframe>
+            <iframe className='rounded' width='100%' height='300' src='//jsfiddle.net/augustin_hiebel/w32p0hLf/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094' ></iframe>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@ const DSpage = () => {
           <div className='flex-1 flex justify-start items-start'>
             <div className='card-tournament surface'>
                 <div className='card-decoration'>
-                  <img src='https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Skirmish-sameheight.svg' width='auto' height='auto' alt='G-Loot Showdown' />
+                  <img src='https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Skirmish-sameheight.svg' width='auto' height='auto' alt='G-Loot Skirmish' />
                   <div className='chip chip-secondary chip-xs'>
                     <span>Global</span>
                   </div>
@@ -126,7 +126,7 @@ const DSpage = () => {
             </div>
           </div>
           <div className='flex-1'>
-            <iframe className='rounded' width='100%' height='300' src='//jsfiddle.net/augustin_hiebel/8w2cg5s4/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094' ></iframe>
+            <iframe className='rounded' width='100%' height='300' src='//jsfiddle.net/augustin_hiebel/4w1gyz7h/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094' ></iframe>
           </div>
         </div>
       </div>
@@ -144,7 +144,7 @@ const DSpage = () => {
           <div className='flex-1 flex justify-start items-start'>
             <div className='card-tournament surface'>
               <div className='card-decoration'>
-                <img src='https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg' width='auto' height='auto' alt='G-Loot Showdown' />
+                <img src='https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg' width='auto' height='auto' alt='G-Loot Open' />
                 <div className='chip chip-secondary chip-xs'>
                   <span>Global</span>
                 </div>
@@ -186,7 +186,7 @@ const DSpage = () => {
             </div>
           </div>
           <div className='flex-1'>
-            <iframe className='rounded' width='100%' height='300' src='//jsfiddle.net/augustin_hiebel/4pq9ros7/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094' ></iframe>
+            <iframe className='rounded' width='100%' height='300' src='//jsfiddle.net/augustin_hiebel/qmzxehk5/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094' ></iframe>
           </div>
         </div>
       </div>

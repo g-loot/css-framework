@@ -11,3 +11,9 @@
   --scroll-behavior: smooth;
   scroll-behavior: var(--scroll-behavior);
 }
+body {
+  @apply
+  max-w-[100vw]
+  overflow-x-hidden
+  ;
+}

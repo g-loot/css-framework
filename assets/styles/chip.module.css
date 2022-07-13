@@ -13,7 +13,7 @@
   justify-center
   items-center
   font-body
-  transition-all
+  transition
   duration-200
   ease-in-out
   text-center
@@ -28,6 +28,7 @@
   focus-visible:outline-1
   focus-visible:outline-main
   select-none
+  transform-gpu
   ;
 
   &:not([class*=bg-]){
@@ -121,6 +122,36 @@
           bg-ui-600
           text-ui-200
           shadow-[inset_0_0_0_1px_rgb(var(--color-ui-400))];
+        }
+      }
+    }
+  }
+
+  /* Premium */
+
+  &.chip-premium {
+    @apply 
+    bg-gradient-to-b
+    from-premium-700
+    via-premium-300
+    to-premium-500
+    text-ui-800
+    shadow-[inset_0_0_0_1px_rgb(var(--color-premium-300))]
+    ;
+    > * {
+      text-shadow: 0 1px 0.25px rgb(var(--color-premium-300));
+    }
+    &:is(button, a) {
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          from-premium-300
+          via-premium-300
+          to-premium-300
+          text-ui-900
+          ;
         }
       }
     }

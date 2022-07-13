@@ -1,205 +1,298 @@
 [
   {
+    "id": 0,
     "maintenance": false,
-    "name": "Apex Legends",
-    "shortName": "Apex Legends",
-    "id": "787864400",
-    "overwolfGameId": "21566",
-    "slug": "apex_legends",
-    "assets": {
-      "hero": "https://res.cloudinary.com/gloot/image/upload/v1619016839/GNOG%20assets/Games/apex_legends/hero.jpg",
-      "logo": {
-        "primary_color": "https://res.cloudinary.com/gloot/image/upload/v1619015845/GNOG%20assets/Games/apex_legends/logo_primary_color.png",
-        "primary_white": "https://res.cloudinary.com/gloot/image/upload/v1619015830/GNOG%20assets/Games/apex_legends/logo_primary_white.png",
-        "secondary_color": "https://res.cloudinary.com/gloot/image/upload/v1619078980/GNOG%20assets/Games/apex_legends/logo_secondary_color.png",
-        "secondary_white": "https://res.cloudinary.com/gloot/image/upload/v1619078670/GNOG%20assets/Games/apex_legends/logo_secondary_white.png"
-      },
-      "color": "#D03B34",
-      "cover": "https://res.cloudinary.com/gloot/image/upload/v1622115586/GNOG%20assets/Games/apex_legends/cover.png",
-      "cover_dark": "https://res.cloudinary.com/gloot/image/upload/v1633936363/GNOG%20assets/Games/apex_legends/cover_dark.png",
-      "game_picker": "https://res.cloudinary.com/gloot/image/upload/v1632130039/GNOG%20assets/Games/apex_legends/game_picker.png"
-    },
-    "weight": 3000,
-    "isComingSoon": null,
-    "hidden": null,
-    "metaDescription": "G-Loot is an esports platform. Play APEX Legend for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.",
-    "userGameNameProperty": "apexNick",
-    "twitchGameName": "Apex Legends",
-    "userGamePlaceholder": "Write your Apex in-game nickname",
-    "supportsTournaments": true
-  },
-  {
-    "maintenance": false,
-    "name": "PUBG BATTLEGROUNDS",
-    "shortName": "PUBG",
-    "id": "3966731725",
-    "overwolfGameId": "10906",
-    "slug": "pubg",
-    "assets": {
-      "hero": "",
-      "logo": {
-        "primary_color": "https://res.cloudinary.com/gloot/image/upload/v1619016454/GNOG%20assets/Games/pubg/logo_primary_color.png",
-        "primary_white": "https://res.cloudinary.com/gloot/image/upload/v1619016443/GNOG%20assets/Games/pubg/logo_primary_white.png",
-        "secondary_color": "https://res.cloudinary.com/gloot/image/upload/v1619080759/GNOG%20assets/Games/pubg/logo_secondary_color.png",
-        "secondary_white": "https://res.cloudinary.com/gloot/image/upload/v1642068586/GNOG%20assets/Games/pubg/logo_secondary_whitev2.png"
-      },
-      "color": "#F2A900",
-      "cover": "https://res.cloudinary.com/gloot/image/upload/v1643719500/GNOG%20assets/Games/pubg/cover1.jpg",
-      "cover_dark": "https://res.cloudinary.com/gloot/image/upload/v1633936853/GNOG%20assets/Games/pubg/cover_dark.png",
-      "game_picker": "https://res.cloudinary.com/gloot/image/upload/v1632130437/GNOG%20assets/Games/pubg/game_picker.png"
-    },
-    "weight": 2950,
-    "isComingSoon": null,
-    "hidden": null,
-    "metaDescription": null,
-    "userGameNameProperty": "pubgNick",
-    "twitchGameName": "PUBG BATTLEGROUNDS",
-    "userGamePlaceholder": "Write your PUBG in-game nickname",
-    "supportsTournaments": true
-  },
-  {
-    "maintenance": false,
+    "needsSteam": false,
     "name": "Valorant",
     "shortName": "Valorant",
-    "id": "1892449706",
-    "overwolfGameId": "21640",
     "slug": "valorant",
     "assets": {
-      "hero": "https://res.cloudinary.com/gloot/image/upload/v1622190427/GNOG%20assets/Games/valorant/hero.jpg",
-      "logo": {
-        "primary_color": "https://res.cloudinary.com/gloot/image/upload/v1619014308/GNOG%20assets/Games/valorant/logo_primary_color.png",
-        "primary_white": "https://res.cloudinary.com/gloot/image/upload/v1619014356/GNOG%20assets/Games/valorant/logo_primary_white.png",
-        "secondary_color": "https://res.cloudinary.com/gloot/image/upload/v1619081223/GNOG%20assets/Games/valorant/logo_secondary_color.png",
-        "secondary_white": "https://res.cloudinary.com/gloot/image/upload/v1619081202/GNOG%20assets/Games/valorant/logo_secondary_white.png"
-      },
-      "color": "#E45357",
-      "cover": "https://res.cloudinary.com/gloot/image/upload/v1622115451/GNOG%20assets/Games/valorant/cover.png",
-      "cover_dark": "https://res.cloudinary.com/gloot/image/upload/v1633936936/GNOG%20assets/Games/valorant/cover_dark.png",
-      "game_picker": "https://res.cloudinary.com/gloot/image/upload/v1632130606/GNOG%20assets/Games/valorant/game_picker.png"
+      "heroMission": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-1.webp",
+      "heroBrawl": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-1.webp"
     },
-    "weight": 2800,
-    "isComingSoon": null,
-    "hidden": null,
-    "metaDescription": "G-Loot is an esports platform. Play Valorant for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.",
-    "userGameNameProperty": "riotId",
-    "twitchGameName": "VALORANT",
-    "userGamePlaceholder": "Write your Riot ID#Tagline e.g. PlayeR#1611",
-    "supportsTournaments": true
+    "missions": [
+      {
+        "name": "Get 22 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 22,
+        "ispremium": false,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_1.webp"
+      },
+      {
+        "name": "Get 3 double kills",
+        "label": "double kills",
+        "current": 0,
+        "target": 3,
+        "ispremium": false,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_2.webp"
+      },
+      {
+        "name": "Get 6 assists",
+        "label": "assists",
+        "current": 6,
+        "target": 6,
+        "ispremium": false,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_3.webp"
+      },
+      {
+        "name": "Get 5 headshots",
+        "label": "headshots",
+        "current": 5,
+        "target": 5,
+        "ispremium": true,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_4.webp"
+      },
+      {
+        "name": "Win 6 rounds",
+        "label": "rounds",
+        "current": 2,
+        "target": 6,
+        "ispremium": true,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp"
+      },
+      {
+        "name": "Get 15 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 15,
+        "ispremium": true,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_6.webp"
+      }
+    ]
   },
   {
+    "id": 1,
     "maintenance": false,
-    "name": "Counter-Strike: Global Offensive",
+    "needsSteam": true,
+    "name": "PUBG: BATTLEGROUNDS",
+    "shortName": "PUBG: BATTLEGROUNDS",
+    "slug": "pubg",
+    "assets": {
+      "heroMission": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
+      "heroBrawl": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp"
+    },
+    "missions": [
+      {
+        "name": "Get 22 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 22,
+        "ispremium": false,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-pubg_1.webp"
+      },
+      {
+        "name": "Get 3 double kills",
+        "label": "double kills",
+        "current": 0,
+        "target": 3,
+        "ispremium": false,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-pubg_2.webp"
+      },
+      {
+        "name": "Get 6 assists",
+        "label": "assists",
+        "current": 6,
+        "target": 6,
+        "ispremium": false,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-pubg_3.webp"
+      },
+      {
+        "name": "Get 5 headshots",
+        "label": "headshots",
+        "current": 5,
+        "target": 5,
+        "ispremium": true,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-pubg_4.webp"
+      },
+      {
+        "name": "Win 6 rounds",
+        "label": "rounds",
+        "current": 2,
+        "target": 6,
+        "ispremium": true,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-pubg_5.webp"
+      },
+      {
+        "name": "Get 15 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 15,
+        "ispremium": true,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-pubg_6.webp"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "maintenance": false,
+    "needsSteam": true,
+    "name": "Apex Legends",
+    "shortName": "Apex Legends",
+    "slug": "apexlegends",
+    "assets": {
+      "heroMission": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-1.webp",
+      "heroBrawl": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-1.webp"
+    },
+    "missions": [
+      {
+        "name": "Get 22 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 22,
+        "ispremium": false,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-apexlegends_1.webp"
+      },
+      {
+        "name": "Get 22 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 22,
+        "ispremium": true,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-apexlegends_2.webp"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "maintenance": false,
+    "needsSteam": false,
+    "name": "CS:GO",
     "shortName": "CS:GO",
-    "id": "2619660763",
-    "overwolfGameId": "7764",
     "slug": "csgo",
     "assets": {
-      "hero": "https://res.cloudinary.com/gloot/image/upload/v1619009935/GNOG%20assets/Games/csgo/hero.jpg",
-      "logo": {
-        "primary_color": "https://res.cloudinary.com/gloot/image/upload/v1619013513/GNOG%20assets/Games/csgo/logo_primary_color.png",
-        "primary_white": "https://res.cloudinary.com/gloot/image/upload/v1619013517/GNOG%20assets/Games/csgo/logo_primary_white.png",
-        "secondary_color": "https://res.cloudinary.com/gloot/image/upload/v1619075288/GNOG%20assets/Games/csgo/logo_secondary_color.png",
-        "secondary_white": "https://res.cloudinary.com/gloot/image/upload/v1619075262/GNOG%20assets/Games/csgo/logo_secondary_white.png"
-      },
-      "color": "#F98100",
-      "cover": "https://res.cloudinary.com/gloot/image/upload/v1619009178/GNOG%20assets/Games/csgo/cover.png",
-      "cover_dark": "https://res.cloudinary.com/gloot/image/upload/v1633936412/GNOG%20assets/Games/csgo/cover_dark.png",
-      "game_picker": "https://res.cloudinary.com/gloot/image/upload/v1632130064/GNOG%20assets/Games/csgo/game_picker.png"
+      "heroMission": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-csgo-1.webp",
+      "heroBrawl": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-csgo-1.webp"
     },
-    "weight": 2700,
-    "isComingSoon": null,
-    "hidden": null,
-    "metaDescription": "G-Loot is an esports platform. Play Counter-Strike: Global Offensive for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.",
-    "userGameNameProperty": "csgoNick",
-    "twitchGameName": "Counter-Strike: Global Offensive",
-    "userGamePlaceholder": "Write your CS:GO in-game nickname",
-    "supportsTournaments": false
+    "missions": [
+      {
+        "name": "Get 22 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 22,
+        "ispremium": false,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_1.webp"
+      },
+      {
+        "name": "Get 22 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 22,
+        "ispremium": true,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_2.webp"
+      }
+    ]
   },
   {
+    "id": 4,
     "maintenance": false,
-    "name": "DOTA2",
-    "shortName": "DOTA2",
-    "id": "1440666116",
-    "overwolfGameId": "7314",
-    "slug": "dota_2",
+    "needsSteam": false,
+    "name": "Dota 2",
+    "shortName": "Dota 2",
+    "slug": "dota2",
     "assets": {
-      "hero": "https://res.cloudinary.com/gloot/image/upload/v1619011943/GNOG%20assets/Games/dota_2/hero.jpg",
-      "logo": {
-        "primary_color": "https://res.cloudinary.com/gloot/image/upload/v1619013651/GNOG%20assets/Games/dota_2/logo_primary_color.png",
-        "primary_white": "https://res.cloudinary.com/gloot/image/upload/v1619013663/GNOG%20assets/Games/dota_2/logo_primary_white.png",
-        "secondary_color": "https://res.cloudinary.com/gloot/image/upload/v1619079099/GNOG%20assets/Games/dota_2/logo_secondary_color.png",
-        "secondary_white": "https://res.cloudinary.com/gloot/image/upload/v1619079078/GNOG%20assets/Games/dota_2/logo_secondary_white.png"
-      },
-      "color": "#EF3D36",
-      "cover": "https://res.cloudinary.com/gloot/image/upload/v1619009254/GNOG%20assets/Games/dota_2/cover.png",
-      "cover_dark": "https://res.cloudinary.com/gloot/image/upload/v1633936644/GNOG%20assets/Games/dota_2/cover_dark.png",
-      "game_picker": "https://res.cloudinary.com/gloot/image/upload/v1632130084/GNOG%20assets/Games/dota_2/game_picker.png"
+      "heroMission": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-dota2-1.webp",
+      "heroBrawl": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-dota2-1.webp"
     },
-    "weight": 2500,
-    "isComingSoon": null,
-    "hidden": null,
-    "metaDescription": "G-Loot is an esports platform. Play DOTA 2 for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.",
-    "userGameNameProperty": "dotaTwoNick",
-    "twitchGameName": "Dota 2",
-    "userGamePlaceholder": "Write your Dota 2 in-game nickname",
-    "supportsTournaments": false
+    "missions": [
+      {
+        "name": "Get 22 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 22,
+        "ispremium": false,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-dota2_1.webp"
+      },
+      {
+        "name": "Get 22 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 22,
+        "ispremium": true,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-dota2_2.webp"
+      }
+    ]
   },
   {
+    "id": 5,
     "maintenance": false,
+    "needsSteam": false,
     "name": "League of Legends",
-    "shortName": "LoL",
-    "id": "3434118582",
-    "overwolfGameId": "5426",
-    "slug": "league_of_legends",
+    "shortName": "League of Legends",
+    "slug": "leagueoflegends",
     "assets": {
-      "hero": "",
-      "logo": {
-        "primary_color": "https://res.cloudinary.com/gloot/image/upload/v1619014180/GNOG%20assets/Games/league_of_legends/logo_primary_color.png",
-        "primary_white": "https://res.cloudinary.com/gloot/image/upload/v1619014193/GNOG%20assets/Games/league_of_legends/logo_primary_white.png",
-        "secondary_color": "https://res.cloudinary.com/gloot/image/upload/v1619080527/GNOG%20assets/Games/league_of_legends/logo_secondary_color.png",
-        "secondary_white": "https://res.cloudinary.com/gloot/image/upload/v1619080523/GNOG%20assets/Games/league_of_legends/logo_secondary_white.png"
-      },
-      "color": "#C5954A",
-      "cover": "https://res.cloudinary.com/gloot/image/upload/v1622103228/GNOG%20assets/Games/league_of_legends/cover.png",
-      "cover_dark": "https://res.cloudinary.com/gloot/image/upload/v1633936699/GNOG%20assets/Games/league_of_legends/cover_dark.png",
-      "game_picker": "https://res.cloudinary.com/gloot/image/upload/v1632130397/GNOG%20assets/Games/league_of_legends/game_picker.png"
+      "heroMission": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-1.webp",
+      "heroBrawl": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-1.webp"
     },
-    "weight": 2400,
-    "isComingSoon": null,
-    "hidden": null,
-    "metaDescription": "G-Loot is an esports platform. Play League of Legends for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.",
-    "userGameNameProperty": "leagueOfLegendsNick",
-    "twitchGameName": "League Of Legends",
-    "userGamePlaceholder": "Write your League of Legends in-game nickname",
-    "supportsTournaments": false
+    "missions": [
+      {
+        "name": "Get 22 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 22,
+        "ispremium": false,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-leagueoflegends_1.webp"
+      },
+      {
+        "name": "Get 22 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 22,
+        "ispremium": true,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-leagueoflegends_2.webp"
+      }
+    ]
   },
   {
+    "id": 6,
     "maintenance": false,
+    "needsSteam": false,
     "name": "Rocket League",
     "shortName": "Rocket League",
-    "id": "1719436358",
-    "overwolfGameId": "10798",
-    "slug": "rocket_league",
+    "slug": "rocketleague",
     "assets": {
-      "hero": "https://res.cloudinary.com/gloot/image/upload/v1619016970/GNOG%20assets/Games/rocket_league/hero.jpg",
-      "logo": {
-        "primary_color": "https://res.cloudinary.com/gloot/image/upload/v1619015715/GNOG%20assets/Games/rocket_league/logo_primary_color.png",
-        "primary_white": "https://res.cloudinary.com/gloot/image/upload/v1619015734/GNOG%20assets/Games/rocket_league/logo_primary_white.png",
-        "secondary_color": "https://res.cloudinary.com/gloot/image/upload/v1619081060/GNOG%20assets/Games/rocket_league/logo_secondary_color.png",
-        "secondary_white": "https://res.cloudinary.com/gloot/image/upload/v1619081048/GNOG%20assets/Games/rocket_league/logo_secondary_white.png"
-      },
-      "color": "#2E71C6",
-      "cover": "https://res.cloudinary.com/gloot/image/upload/v1619015677/GNOG%20assets/Games/rocket_league/cover.png",
-      "cover_dark": "https://res.cloudinary.com/gloot/image/upload/v1633936893/GNOG%20assets/Games/rocket_league/cover_dark.png",
-      "game_picker": "https://res.cloudinary.com/gloot/image/upload/v1632130472/GNOG%20assets/Games/rocket_league/game_picker.png"
+      "heroMission": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-1.webp",
+      "heroBrawl": "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-1.webp"
     },
-    "weight": 1900,
-    "isComingSoon": null,
-    "hidden": null,
-    "metaDescription": "G-Loot is an esports platform. Play Rocket League for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.",
-    "userGameNameProperty": "rocketLeagueNick",
-    "twitchGameName": "Rocket League",
-    "userGamePlaceholder": "Write your Rocket League in-game nickname",
-    "supportsTournaments": false
+    "missions": [
+      {
+        "name": "Get 22 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 22,
+        "ispremium": false,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_1.webp"
+      },
+      {
+        "name": "Get 22 kills",
+        "label": "kills",
+        "current": 11,
+        "target": 22,
+        "ispremium": true,
+        "xp": 55,
+        "image": "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_2.webp"
+      }
+    ]
   }
 ]

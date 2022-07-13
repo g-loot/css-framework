@@ -8,6 +8,7 @@ const DSpage = () => {
   const [randomNum2, setRandomNum2] = useState(1);
   const [randomNum3, setRandomNum3] = useState(1);
   const [randomNum4, setRandomNum4] = useState(1);
+  const [randomNum5, setRandomNum5] = useState(1);
 
   function clickHandlerNum0(varTarget, max) {
     if(varTarget === max) {
@@ -42,6 +43,13 @@ const DSpage = () => {
       setRandomNum4(varTarget = 0)
     } else {
       setRandomNum4(varTarget + 1)
+    }
+  }
+  function clickHandlerNum5(varTarget, max) {
+    if(varTarget === max) {
+      setRandomNum5(varTarget = 0)
+    } else {
+      setRandomNum5(varTarget + 1)
     }
   }
   return(
@@ -93,6 +101,54 @@ const DSpage = () => {
             </div>
             <div className='flex-1'>
               <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/mxsohytv/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Size */}
+    <div className='mb-12' id='size'>
+
+      <h2 className='h3 mb-3'>
+        Size
+      </h2>
+
+      <div className="surface rounded-lg p-4">
+        <div className=''>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+            <div className='flex-1 space-y-4'>
+              <ul className={`step step-primary step-sm ${randomNum5 === 0 ? `is-inactive` : ''}`}>
+                <li className={`${randomNum5 === 1 ? `is-active` : ''}`}>
+                  <a href='#'>
+                    <i>1</i>
+                    <div></div>
+                    <span></span>
+                  </a>
+                </li>
+                <li className={`${randomNum5 === 2 ? `is-active` : ''}`}>
+                  <a href='#'>
+                    <i>2</i>
+                    <div></div>
+                    <span></span>
+                  </a>
+                </li>
+                <li className={`${randomNum5 === 3 ? `is-active` : ''}`}>
+                  <a href='#'>
+                    <i>3</i>
+                    <div></div>
+                    <span></span>
+                  </a>
+                </li>
+              </ul>
+              <div className='text-center'>
+                <button className='button button-tertiary mx-auto' onClick={clickHandlerNum5.bind(this, randomNum5, 3)}>
+                  <span>Next step</span>
+                </button>
+              </div>
+            </div>
+            <div className='flex-1'>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/zdsrkw9g/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
             </div>
           </div>
         </div>

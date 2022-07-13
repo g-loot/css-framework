@@ -111,7 +111,7 @@ const DSpage = () => (
           If it is possible for the two-systems to cohabit for a while, eventually all components and pages will have to be redesigned in the framework and the new HTML structures applied within the product.
         </span>
       </p>
-      */}
+      
 
       <div className='surface surface-dimmed px-4 py-8 text-center rounded-xl space-y-4'>
         <p>
@@ -124,6 +124,7 @@ const DSpage = () => (
           <span className='icon icon-box-arrow-top-right'></span>
         </a>
       </div>
+      */}
       
     </div>
 

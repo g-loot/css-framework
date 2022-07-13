@@ -16,7 +16,7 @@ export default function Ad(props) {
           <a href='http://gloot.com/' target='_blank' rel="noreferrer" className='cursor-pointer active:opacity-25'>
             <iframe className='rounded-lg overflow-hidden pointer-events-none select-none' src={URL} width={Width} height={Height} frameBorder="0" allowFullScreen="0" allowtransparency="true" allow="encrypted-media"></iframe>
           </a>
-          <Link href='premium'>
+          <Link href={`premium${hasAds ? '?ads=true' : ''}`}>
             <a className='link link-main text-sm'>
               Remove ads
             </a>

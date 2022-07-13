@@ -21,13 +21,13 @@
   > * {
     @apply
     flex
-    gap-2
+    gap-4
     items-center
     ;
 
     .icon {
       @apply
-      text-blue-700
+      text-ui-300
       ;
     }
   }

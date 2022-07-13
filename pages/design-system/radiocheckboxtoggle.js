@@ -165,6 +165,49 @@ const DSpage = () => {
       </div>
     </div>
 
+
+    {/* Disabled */}
+    <div className='mb-12' id='disabled'>
+
+      <h2 className='h3 mb-3'>
+        Disabled
+      </h2>
+
+      <div className="surface rounded-lg p-4">
+        <div className=''>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+            <div className='flex-1 space-y-4'>
+              <div className='w-full flex gap-4 items-center'>
+                <div className='flex-1 space-y-4'>
+                  <div className="form-group">
+                    <label className="form-radio is-disabled">
+                      <input type="radio" name="input-error" />
+                      <i className="form-icon"></i> Male
+                    </label>
+                  </div>
+                  <div className="form-group">
+                    <label className="form-toggle is-disabled">
+                      <input type="checkbox" name="input-success" />
+                      <i className="form-icon"></i> I agree with your policy
+                    </label>
+                  </div>
+                  <div className="form-group">
+                    <label className="form-checkbox is-disabled">
+                      <input type="checkbox" name="input-attention" />
+                      <i className="form-icon"></i> I confirm that I have read the policity
+                    </label>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+            <div className='flex-1'>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/tmvchn3f/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </>
   )
 }

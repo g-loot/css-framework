@@ -55,7 +55,7 @@
         not-italic
         font-headings
         leading-[3rem]
-        shadow-[0_0_0_4px_rgb(var(--color-interaction-500))]
+        shadow-[0_0_0_0.25rem_rgb(var(--color-interaction-500))]
         overflow-hidden
         transition
         duration-300
@@ -167,7 +167,7 @@
       }
       i {
         @apply
-        shadow-[0_0_0_4px_rgb(var(--color-ui-600))]
+        shadow-[0_0_0_0.25rem_rgb(var(--color-ui-600))]
         from-ui-800
         to-ui-700
         text-ui-400
@@ -195,8 +195,38 @@
       }
     }
   }
+  
 }
-
+.step.step-primary.step-sm {
+  > li {
+    > a {
+      > i {
+        @apply
+        h-8
+        w-8
+        text-base
+        leading-8
+        shadow-[0_0_0_3px_rgb(var(--color-interaction-500))]
+        ;
+      }
+      > span {
+        @apply
+        h-[3px]
+        ;
+      }
+    }
+  }
+  & > li.is-active ~ li,
+  &.is-inactive > li {
+    > a {
+      > i {
+        @apply
+        shadow-[0_0_0_3px_rgb(var(--color-ui-600))]
+        ;
+      }
+    }
+  }
+}
 /* secondary */
 
 .step.step-secondary {
@@ -432,22 +462,22 @@
 }
 .step.step-label-bottom:not(.step-vertical) {
   @apply
-  pb-4
-  lg:pb-28
-  px-[12%]
+  pb-28
+  px-16
   ;
   > li {
-    @apply
-    lg:min-w-[192px]
-    ;
+    &:not(::last-child) {
+      @apply
+      lg:min-w-[10rem]
+      ;
+    }
     > a {
       > div {
         @apply
+        block
         absolute
-        w-40
-        -left-20
-        hidden
-        lg:block
+        w-32
+        -left-16
         ;
       }
     }
@@ -458,8 +488,7 @@
       > a {
         > div {
           @apply
-          hidden
-          lg:block
+          block
           top-16
           translate-x-6
           ;

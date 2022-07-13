@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 export default function MainNav(props) {
   const extraClassNames = props.extraClassNames !== undefined ? props.extraClassNames : null
@@ -18,7 +18,7 @@ export default function MainNav(props) {
       {props.items.map((item, itemIndex) => (
         <>
           <li className={`${item.disabled === true ? 'is-disabled' : ''}`} key={itemIndex} onClick={props.onClick}>
-            <Link href={`${item.url}${hasAds ? '?ads=true' : ''}`} >
+            <Link href={`${item.url}${hasAds ? '?ads=true' : ''}`}>
               <a className={`${router.pathname.endsWith('prototype') && item.isHome ? 'is-active' : ''} ${router.pathname.includes(item.url) || router.pathname === '' ? 'is-active' : ''}`}>
                 <span className="icon rounded w-8 flex items-center justify-center">
                   <span className={`icon icon-16 icon-${item.icon}`}></span>

@@ -39,7 +39,7 @@ export default function PrototypeStructure({children, title}) {
           <label htmlFor='drawer-prototype' className='drawer-overlay'></label>
           <aside className='w-80 bg-ui-850 border-r border-ui-700'>
             <div className='sticky z-20 top-0 bg-ui-850/75 p-2 backdrop-blur-sm'>
-              <label htmlFor="drawer-prototype" className="drawer-button button button-sm button-tertiary rounded-full">
+              <label htmlFor="drawer-prototype" className="drawer-button button button-tertiary button-close">
                 <div className="icon icon-e-remove"></div>
               </label>
             </div>
@@ -51,9 +51,6 @@ export default function PrototypeStructure({children, title}) {
           </aside>
         </div>
       </div>
-      
-      
-      
     </>
   )
 };

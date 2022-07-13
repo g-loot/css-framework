@@ -145,8 +145,7 @@
   }
 
   &.menu-secondary {
-    a,
-    button {
+    :where(a, button) {
       > * {
         @apply
         font-body
@@ -156,7 +155,7 @@
     }
   }
 
-  >:where(li) {
+  > :where(li) {
     :where(ul) {
       @apply
       flex
@@ -224,7 +223,7 @@
     }
   }
   >:where(li) {
-    >:where(ul) {
+    > :where(ul) {
       @apply
       top-full
       left-[initial]

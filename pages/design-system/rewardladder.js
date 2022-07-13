@@ -189,7 +189,7 @@ const DSpage = () => {
                       </div>
                     </div>
                   </li>
-                  <li className='is-locked'>
+                  <li className={`is-locked ${randomNum1 === 8 ? `is-active` : ''}`}>
                     <div className='ladder-info'>
                       <div>
                         <span>8</span>
@@ -211,7 +211,7 @@ const DSpage = () => {
                       </div>
                     </div>
                   </li>
-                  <li className='is-locked'>
+                  <li className={`is-locked ${randomNum1 === 9 ? `is-active` : ''}`}>
                     <div className='ladder-info'>
                       <div>
                         <span>9</span>
@@ -233,7 +233,7 @@ const DSpage = () => {
                       </div>
                     </div>
                   </li>
-                  <li className='is-locked'>
+                  <li className={`is-locked ${randomNum1 === 10 ? `is-active` : ''}`}>
                     <div className='ladder-info'>
                       <div>
                         <span>10</span>

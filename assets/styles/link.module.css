@@ -10,13 +10,13 @@
   focus-visible:outline
   focus-visible:outline-interaction-500
   focus-visible:outline-offset-2
-  visited:text-interaction-700
   ;
 
   &.link-main {
     @apply
     text-interaction-500
     hover:text-interaction-300
+    visited:text-interaction-700
     ;
   }
   

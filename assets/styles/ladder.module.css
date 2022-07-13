@@ -79,15 +79,35 @@
             text-center
             min-h-[1.3rem]
             min-w-[1.3rem]
-            bg-gradient-to-b
-            from-ui-700
-            to-ui-500
             rounded-full
             text-sm
             font-bold
-            text-ui-100
+            text-ui-100/0
+            bg-gradient-to-b
+            from-interaction-300
+            to-interaction-700
+            shadow-[0_0_0_3px_rgb(var(--color-ui-800)),_0_0_0_5px_rgb(var(--color-interaction-500))]
+            transition-all
+            ease-in-out
+            duration-1000
             ;
-            text-shadow: 0 -1.5px 0.5px rgb(var(--color-ui-800));
+            &::after {
+              @apply
+              absolute
+              transition-transform
+              transform-gpu
+              ease-[cubic-bezier(0.9,0,0.1,1)]
+              duration-1000
+              font-icon
+              text-xs
+              leading-5
+              content-['\eb24']
+              z-10
+              inset-0
+              translate-y-0
+              text-ui-800
+              ;
+            }
           }
           &:nth-child(2) {
             @apply
@@ -112,12 +132,15 @@
         content-['']
         absolute
         z-0
-        h-1.5
+        h-[3px]
         left-[50%]
         w-[calc(100%+1rem)]
-        top-[calc(50%-0.2rem)]
-        bg-ui-700
+        top-[calc(50%-1.5px)]
+        bg-interaction-500
         -translate-x-1
+        transition-colors
+        duration-200
+        ease-[cubic-bezier(.8,0,.3,1)]
         ;
       }
     }
@@ -130,8 +153,7 @@
       bg-gradient-to-b
       from-ui-900
       to-ui-800
-      border
-      border-ui-700
+      shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))]
       rounded-lg
       overflow-hidden
       flex
@@ -140,6 +162,10 @@
       transition-all
       duration-1000
       ease-[cubic-bezier(0.9,0,0.1,1)]
+      opacity-50
+      transform-gpu
+      scale-90
+      origin-bottom
       ;
 
       > .ladder-decoration {
@@ -158,6 +184,12 @@
         flex
         flex-col
         items-center
+        opacity-20
+        transform-gpu
+        transition-all
+        duration-500
+        ease-[cubic-bezier(0.9,0,0.1,1)]
+        delay-200
         ;
 
         > img {
@@ -169,7 +201,6 @@
           ;
         }
       }
-
     }
 
     &:not(.is-active) {
@@ -182,29 +213,122 @@
     }
 
     &.is-active {
-      > .ladder-info > div > span:nth-child(1) {
-        @apply
-        from-premium-700
-        to-premium-300
-        text-ui-800
-        shadow-[inset_0_0_0_1px_rgba(var(--color-premium-300),1)]
-        ;
-        text-shadow: 0 -1.5px 0.5px rgb(var(--color-premium-500));
+      > .ladder-info {
+        > div {
+          @apply
+          shadow-[0_0_0_0_rgb(var(--color-ui-800)),_0_0_0_2px_rgb(var(--color-interaction-500))]
+          ;
+          > span:nth-child(1) {
+            @apply
+            text-ui-800
+            shadow-[0_0_0_2px_rgb(var(--color-ui-600)),_0_0_0_3px_rgb(var(--color-ui-600))]
+            ;
+          }
+        }
       }
       > .ladder-content {
         @apply
-        border-purple-500/50
+        shadow-[inset_0_0_0_1px_rgb(var(--color-interaction-500))]
         via-ui-800
         to-ui-700
-        shadow-[0_0_8px_0_rgba(var(--color-purple-300)/15%)]
+        scale-100
+        translate-y-0
         ;
+      }
+      &,
+      & ~ li {
+        > .ladder-info {
+          &::after {
+            @apply
+            bg-ui-700
+            ;
+          }
+          > div {
+            > span:nth-child(1) {
+              &::after {
+                @apply
+                opacity-0
+                translate-y-12
+                ;
+              }
+            }
+          }
+        }
+        .ladder-content {
+          @apply
+          opacity-100
+          ;
+          .ladder-body {
+            @apply
+            opacity-100
+            ;
+          }
+        }
+      }
+      & ~ li {
+        > .ladder-info > div > span:nth-child(1) {
+          @apply
+          text-ui-100
+          bg-gradient-to-b
+          from-ui-700
+          to-ui-500
+          shadow-[0_0_0_3px_rgb(var(--color-ui-800)),_0_0_0_5px_rgb(var(--color-ui-600))]
+          ;
+        }
+        
       }
     }
     &.is-locked {
+      &::before,
+      &::after {
+        @apply
+        content-['']
+        absolute
+        ;
+      }
+      &::before {
+        @apply
+        font-icon
+        content-['\ea12']
+        absolute
+        z-10
+        w-7
+        h-7
+        leading-7
+        -left-5
+        bg-gradient-to-b
+        from-premium-300
+        to-premium-500
+        rounded-full
+        text-ui-800
+        text-lg
+        shadow-[0_0_0_3px_rgb(var(--color-ui-900))]
+        ;
+      }
+      &::after {
+        @apply
+        z-0
+        w-0
+        border-l
+        border-dashed
+        border-premium-700/50
+        -left-2
+        top-10
+        bottom-0
+        ;
+      }
+
+      ~ .is-locked {
+        &::before,
+        &::after {
+          @apply
+          hidden
+          ;
+        }
+      }
       > .ladder-content {
         @apply
-        border-premium-700/50
-        shadow-[0_0_8px_0_rgba(var(--color-premium-300)/15%)]
+        shadow-[inset_0_0_0_1px_rgb(var(--color-premium-300))]
         ;
         > .ladder-decoration {
           @apply 

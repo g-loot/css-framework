@@ -84,7 +84,7 @@
     }
 
 
-    &.active,
+    &.is-active,
     &:active,
     &:hover {
       @apply

@@ -130,6 +130,21 @@
       }
     }
   }
+
+  &.rounded-xl {
+    :where(tbody) :where(th,td) {
+      &:first-child {
+        @apply
+        rounded-l-xl
+        ;
+      }
+      &:last-child {
+        @apply
+        rounded-r-xl
+        ;
+      }
+    }
+  }
 }
 
 /* loading */
