@@ -19,17 +19,18 @@ export default function Topbar() {
                 <div className="icon icon-menu-8"></div>
               </label>
             </div>
-            <a
-              href="../"
-              className="block transition-opacity duration-100 hover:opacity-50"
-            >
-              <img
-                width="123"
-                height="64"
-                src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
-                alt="G-Loot logo"
-              />
-            </a>
+            <Link href="/">
+              <a
+                className="block transition-opacity duration-100 hover:opacity-50"
+              >
+                <img
+                  width="123"
+                  height="64"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
+                  alt="G-Loot logo"
+                />
+              </a>
+            </Link>
           </div>
           <div className="col-span-3 lg:col-span-4 flex items-center justify-end lg:justify-between">
             <div className="hidden lg:flex items-center">

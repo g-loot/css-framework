@@ -13,8 +13,8 @@ module.exports = {
   mode: 'jit',
   content: [
     "./pages/*.{js,ts,jsx,tsx,json}",
-    "./pages/*/*.{js,ts,jsx,tsx,json}",
-    "./pages/*/*/*.{js,ts,jsx,tsx,json}",
+    "./pages/**/*.{js,ts,jsx,tsx,json}",
+    "./pages/**/**/*.{js,ts,jsx,tsx,json}",
     "./components/**/*.{js,ts,jsx,tsx,json}",
   ],
   theme: {

@@ -689,7 +689,7 @@ label.button {
       bg-ui-800/95
       ;
     }
-    &:where(:empty, [data-error=true], [data-success=true], [data-attention=true]) {
+    &:where(:empty, [data-error=true], [data-success=true], [data-attention=true], [data-error=false], [data-success=false], [data-attention=false]) {
       &::after {
         @apply
         hidden
@@ -710,27 +710,29 @@ label.button {
       content-[attr(data-error)]
       ;
     }
-    :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
-      @apply
-      border-error-700
-      focus-visible:outline-error-500
-      ;
-    }
-    :where(.icon, .form-radio, .form-toggle, .form-checkbox) {
-      @apply
-      text-error-500
-      ;
-      input {
-        &:checked + .form-icon {
-          @apply
-          bg-error-500
-          from-error-700
-          to-error-300
-          ;
-        }
-        & + .form-icon {
-          @apply
-          shadow-[0_0_0_2px_rgb(var(--color-error-300))]
+    &:not([data-error=false]) {
+      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
+        @apply
+        border-error-700
+        focus-visible:outline-error-500
+        ;
+      }
+      :where(.icon, .form-radio, .form-toggle, .form-checkbox) {
+        @apply
+        text-error-500
+        ;
+        input {
+          &:checked + .form-icon {
+            @apply
+            bg-error-500
+            from-error-700
+            to-error-300
+            ;
+          }
+          & + .form-icon {
+            @apply
+            shadow-[0_0_0_2px_rgb(var(--color-error-300))]
+          }
         }
       }
     }
@@ -747,27 +749,29 @@ label.button {
       content-[attr(data-success)]
       ;
     }
-    :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
-      @apply
-      border-interaction-700
-      focus-visible:outline-interaction-500
-      ;
-    }
-    :where(.icon, .form-radio, .form-toggle, .form-checkbox) {
-      @apply
-      text-interaction-500
-      ;
-      input {
-        &:checked + .form-icon {
-          @apply
-          bg-interaction-500
-          from-interaction-700
-          to-interaction-300
-          ;
-        }
-        & + .form-icon {
-          @apply
-          shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
+    &:not([data-success=false]) {
+      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
+        @apply
+        border-interaction-700
+        focus-visible:outline-interaction-500
+        ;
+      }
+      :where(.icon, .form-radio, .form-toggle, .form-checkbox) {
+        @apply
+        text-interaction-500
+        ;
+        input {
+          &:checked + .form-icon {
+            @apply
+            bg-interaction-500
+            from-interaction-700
+            to-interaction-300
+            ;
+          }
+          & + .form-icon {
+            @apply
+            shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
+          }
         }
       }
     }
@@ -784,27 +788,29 @@ label.button {
       content-[attr(data-attention)]
       ;
     }
-    :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
-      @apply
-      border-attention-700
-      focus-visible:outline-attention-500
-      ;
-    }
-     :where(.icon, .form-radio, .form-toggle, .form-checkbox) {
-      @apply
-      text-attention-500
-      ;
-      input {
-        &:checked + .form-icon {
-          @apply
-          bg-attention-500
-          from-attention-700
-          to-attention-300
-          ;
-        }
-        & + .form-icon {
-          @apply
-          shadow-[0_0_0_2px_rgb(var(--color-attention-300))]
+    &:not([data-attention=false]) {
+      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
+        @apply
+        border-attention-700
+        focus-visible:outline-attention-500
+        ;
+      }
+      :where(.icon, .form-radio, .form-toggle, .form-checkbox) {
+        @apply
+        text-attention-500
+        ;
+        input {
+          &:checked + .form-icon {
+            @apply
+            bg-attention-500
+            from-attention-700
+            to-attention-300
+            ;
+          }
+          & + .form-icon {
+            @apply
+            shadow-[0_0_0_2px_rgb(var(--color-attention-300))]
+          }
         }
       }
     }

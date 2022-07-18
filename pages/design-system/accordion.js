@@ -126,7 +126,6 @@ const DSpage = () => {
       
     </div>
 
-
     {/* With halo */}
     <div className='mb-12' id='with-halo'>
 
@@ -139,7 +138,7 @@ const DSpage = () => {
         <div className='flex-3'>
           <div className='surface rounded-lg accordion accordion-halo'>
 
-            <Accordion title='Before entering a Brawl' active header={(
+            <Accordion title='Before entering a Brawl' isopen header={(
             <>
               <i className='bg-gradient-to-r from-game-valorant/0 via-game-valorant to-game-valorant/0'></i>
               <i className='bg-gradient-to-r from-game-valorant/0 via-game-valorant to-game-valorant/0'></i>
@@ -165,7 +164,7 @@ const DSpage = () => {
             </>
             
           )}>
-              <ul className="menu menu-primary">
+              <ul className="menu menu-secondary">
                 <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
                 <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
                 <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
@@ -198,7 +197,7 @@ const DSpage = () => {
             </>
             
           )}>
-              <ul className="menu menu-primary">
+              <ul className="menu menu-secondary">
                 <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
                 <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
                 <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
@@ -231,7 +230,130 @@ const DSpage = () => {
             </>
             
           )}>
-              <ul className="menu menu-primary">
+              <ul className="menu menu-secondary">
+                <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+              </ul>
+            </Accordion>
+            
+          </div>
+        </div>
+        <div className='flex-2'>
+          <iframe className="rounded-lg" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/pc0w3eda/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+        </div>
+      </div>
+    </div>
+
+      
+    </div>
+
+    {/* With halo <small className="text-ui-200">dimmed</small>*/}
+    <div className='mb-12' id='with-halo-dimmed'>
+
+      <h2 className='h3 mb-3'>
+        With halo <small className="text-ui-200">dimmed</small>
+      </h2>
+
+      <div className='mb-10'>
+      <div className='flex flex-col lg:flex-row gap-4'>
+        <div className='flex-3'>
+          <div className='surface rounded-lg accordion accordion-halo accordion-halo-dimmed'>
+
+            <Accordion title='Before entering a Brawl' isopen isselected header={(
+            <>
+              <i className='bg-gradient-to-r from-game-valorant/0 via-game-valorant to-game-valorant/0'></i>
+              <i className='bg-gradient-to-r from-game-valorant/0 via-game-valorant to-game-valorant/0'></i>
+          
+              
+              <div className='item'>
+                <div className='item-image'>
+                  <div className={`rounded h-10 w-10 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-valorant`}>
+                    <span className={`icon icon-24 icon-game-valorant-symbol`}></span>
+                  </div>
+                </div>
+                <div className='item-body'>
+                  <div className='item-title font-headings text-xl italic'>
+                    Valorant
+                  </div>
+                </div>
+                <div className='item-actions'>
+                  <div>
+                    <span className='icon icon-24 icon-arrow-sm-down'></span>
+                  </div>
+                </div>
+              </div>
+            </>
+            
+          )}>
+              <ul className="menu menu-secondary">
+                <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
+                <li><a className='is-active'><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+              </ul>
+            </Accordion>
+            <Accordion title='Play your first matches to join the leaderboard' isopen header={(
+            <>
+              <i className='bg-gradient-to-r from-game-pubg/0 via-game-pubg to-game-pubg/0'></i>
+              <i className='bg-gradient-to-r from-game-pubg/0 via-game-pubg to-game-pubg/0'></i>
+          
+              
+              <div className='item'>
+                <div className='item-image'>
+                  <div className={`rounded h-10 w-10 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-pubg`}>
+                    <span className={`icon icon-24 icon-game-pubg-symbol`}></span>
+                  </div>
+                </div>
+                <div className='item-body'>
+                  <div className='item-title font-headings text-xl italic'>
+                    PUBG: BATTLEGROUNDS
+                  </div>
+                </div>
+                <div className='item-actions'>
+                  <div>
+                    <span className='icon icon-24 icon-arrow-sm-down'></span>
+                  </div>
+                </div>
+              </div>
+            </>
+            
+          )}>
+              <ul className="menu menu-secondary">
+                <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+              </ul>
+            </Accordion>
+            <Accordion title='Pay tokens to activate Brawl matches' header={(
+            <>
+              <i className='bg-gradient-to-r from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0'></i>
+              <i className='bg-gradient-to-r from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0'></i>
+          
+              
+              <div className='item'>
+                <div className='item-image'>
+                  <div className={`rounded h-10 w-10 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-rocketleague`}>
+                    <span className={`icon icon-24 icon-game-rocketleague-symbol`}></span>
+                  </div>
+                </div>
+                <div className='item-body'>
+                  <div className='item-title font-headings text-xl italic'>
+                    Rocket League
+                  </div>
+                </div>
+                <div className='item-actions'>
+                  <div>
+                    <span className='icon icon-24 icon-arrow-sm-down'></span>
+                  </div>
+                </div>
+              </div>
+            </>
+            
+          )}>
+              <ul className="menu menu-secondary">
                 <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
                 <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
                 <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>

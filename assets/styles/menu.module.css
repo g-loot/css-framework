@@ -152,6 +152,11 @@
         text-sm
         ;
       }
+      &.is-active {
+        @apply
+        font-bold
+        ;
+      }
     }
   }
 

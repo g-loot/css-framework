@@ -142,3 +142,166 @@
     height: 0 !important;
   }
 }
+
+/* Tabs rank */
+
+.tabs.tabs-rank {
+  @apply
+  gap-4
+  px-6
+  ;
+  > li {
+    @apply
+    flex-none
+    relative
+    ;
+    &::before,
+    &::after {
+      @apply
+      content-['']
+      w-1.5
+      h-full
+      absolute
+      z-30
+      transition
+      duration-300
+      ease-[cubic-bezier(0.7,0,0.3,1)]
+      opacity-50
+      ;
+    }
+    &::before {
+      @apply
+      left-0
+      -skew-x-30
+      scale-y-0
+    }
+    &::after {
+      @apply
+      right-0
+      -skew-x-30
+      scale-y-0
+    }
+    > a {
+      @apply
+      flex
+      w-full
+      gap-8
+      items-center
+      justify-between
+      px-8
+      ;
+      > * {
+        @apply
+        flex
+        gap-2
+        items-center
+        relative 
+        z-20
+        ;
+      }
+      &::before,
+      &::after {
+        @apply
+        content-['']
+        bg-ui-800
+        absolute
+        z-10
+        inset-0
+        h-full
+        w-full
+        -skew-x-30
+        ;
+      }
+      &::after {
+        @apply
+        z-0
+        ;
+      }
+    }
+  }
+  &:hover {
+    li {
+      @apply
+      scale-95
+      ;
+      &:hover {
+        @apply
+        scale-100
+        ;
+        &::before,
+        &::after {
+          @apply
+          -skew-x-30
+          scale-y-100
+          opacity-100
+          ;
+        }
+      }
+    }
+  }
+  :where([class*=icon-rank]) {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply
+    bg-gradient-radial-spotlight
+    relative
+    ;
+    &::after {
+      @apply
+      content-['']
+      absolute
+      inset-2
+      rounded-full
+      blur-sm
+      bg-gradient-radial
+      opacity-10
+      ;
+    }
+  }
+  .icon-rank-bronze {
+    @apply
+    from-bronze-300
+    to-bronze-700
+    ;
+    &::after {
+      @apply
+      from-bronze-300
+      to-bronze-700
+      ;
+    }  
+  }
+  .icon-rank-silver {
+    @apply
+    from-silver-300
+    to-silver-700
+    ;
+    &::after {
+      @apply
+      from-silver-300
+      to-silver-700
+      ;
+    }  
+  }
+  .icon-rank-gold {
+    @apply
+    from-gold-300
+    to-gold-700
+    ;
+    &::after {
+      @apply
+      from-gold-300
+      to-gold-700
+      ;
+    }  
+  }
+  li.tab-bronze {
+    &::before,
+    &::after {
+      @apply
+      bg-gradient-radial
+      from-bronze-300
+      to-bronze-700
+      ;
+    }
+  }
+} 

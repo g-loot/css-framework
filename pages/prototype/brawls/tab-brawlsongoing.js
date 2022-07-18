@@ -20,7 +20,9 @@ export default function TabBrawlsOngoing() {
               className="animate-slide-in-bottom animate-delay"
               style={{ "--delay": "calc( " + brawlIndex + " * 0.05s)" }}
             >
-              <Link href="#">
+              <Link href={`/prototype/brawls/brawl${hasAds ? "?ads=true" : ""}${
+                          hasAds ? "&" : "?"
+                        }game=${selectedGame}&id=${brawl.id}`}>
                 <a className="relative surface rounded-lg overflow-hidden mb-4 block transform-gpu hover:opacity-50 transition-all duration-200 cursor-pointer">
                   <div className="relative z-10 grid grid-cols-3 gap-4 items-stretch min-h-[200px]">
                     <div className="relative col-span-3 md:col-span-1 flex flex-col justify-stretch aspect-video md:aspect-auto">
@@ -79,7 +81,7 @@ export default function TabBrawlsOngoing() {
                       {brawl.progress === 0 && (
                         <>
                           <div>
-                            <label className="text-ui-300 uppercase font-bold text-sm">Game mode</label>
+                            <label className="text-ui-300 uppercase text-sm">Game mode</label>
                             <div className="md:h-8">
                               <p className="text-ui-200 font-bold">{brawl.gameMode}</p>
                             </div>
@@ -98,7 +100,7 @@ export default function TabBrawlsOngoing() {
                     <div className="col-span-3 md:col-span-1 px-4 pb-4 flex flex-col justify-end items-start md:items-end">
                       {brawl.progress === 0 && (
                         <>
-                          <label className="text-ui-300 uppercase font-bold text-sm text-right">Reward</label>
+                          <label className="text-ui-300 uppercase text-sm text-right">Reward</label>
                           <div className="md:h-8">
                             <div className="flex gap-3 items-center">
                               {brawl.rewards.map((reward, rewardIndex) => (

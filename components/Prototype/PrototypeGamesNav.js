@@ -8,19 +8,19 @@ import { useRouter } from "next/router";
 
 const SubMenuItem = [
   {
-    url: "missions",
+    url: "/prototype/missions",
     label: "Missions",
   },
   {
-    url: "brawls",
+    url: "/prototype/brawls",
     label: "Brawls",
   },
   {
-    url: "tournaments",
+    url: "/prototype/tournaments",
     label: "Tournaments",
   },
   {
-    url: "stats",
+    url: "/prototype/stats",
     label: "Stats",
   },
 ];

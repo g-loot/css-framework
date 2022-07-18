@@ -16,6 +16,7 @@
   @apply 
   inline-block
   font-icon
+  font-normal
   ;
   color: inherit;
   flex-shrink: 0;
@@ -2161,3 +2162,22 @@
   content: "\ea01";
 }
 
+.icon-rank-silver::before {
+  content: "\ec16";
+}
+
+.icon-rank-platinum::before {
+  content: "\ec17";
+}
+
+.icon-rank-gold::before {
+  content: "\ec18";
+}
+
+.icon-rank-diamond::before {
+  content: "\ec19";
+}
+
+.icon-rank-bronze::before {
+  content: "\ec1a";
+}

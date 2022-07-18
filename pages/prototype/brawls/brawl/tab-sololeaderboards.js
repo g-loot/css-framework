@@ -13,7 +13,7 @@ export default function TabBrawlsSoloLeaderboards() {
   return (
     <>
       <section
-        className="pb-8 animate-slide-in-bottom animate-delay"
+        className="pb-4 animate-slide-in-bottom animate-delay"
         style={{ "--delay": "calc( 1 * 0.05s)" }}
       >
         <div className='flex-1 surface accordion rounded-lg'>
@@ -88,6 +88,46 @@ export default function TabBrawlsSoloLeaderboards() {
               </div>
             </div>
           </Accordion>
+        </div>
+      </section>
+      <section
+        className="pb-8 animate-slide-in-bottom animate-delay"
+        style={{ "--delay": "calc( 2 * 0.05s)" }}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1">
+            <button type='button' className="button button-primary button-currency button-token w-full">
+              <div>
+                <span>Activate 1 match</span>
+              </div>
+              <div>
+                <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png" width="34" height="34" alt="coin" />
+                <span>1</span>
+              </div>
+            </button>
+            <div className="surface surface-dimmed rounded-lg p-4 text-center relative my-4 space-y-3">
+              <h3 className="text-2xl">
+                Compete in<br />this Brawl
+              </h3>
+              <p>Play at least <span className="text-main">X matches</span></p>
+              <p className="text-sm text-ui-300">
+                  The total of your Brawl points from your X best matches will decide your place on a leaderboard. 
+              </p>
+              <button type='button' className="button button-sm button-primary button-currency button-token">
+                <div>
+                  <span>Activate 1 match</span>
+                </div>
+                <div>
+                  <img className="dropshadow-xs" src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png" width="34" height="34" alt="coin" />
+                  <span>1</span>
+                </div>
+              </button>
+              <p className="text-xs text-ui-300">You can play as many matches as you like to improve your Brawl points.</p>
+            </div>
+          </div>
+          <div className="col-span-3">
+            qsdqsd
+          </div>
         </div>
         
       </section>

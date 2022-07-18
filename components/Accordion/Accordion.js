@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 
 export default function Accordion(props) {
   const isOpen = props.isopen !== undefined ? props.isopen : false
+  const isSelected = props.isselected !== undefined ? props.isselected : false
   const isClosed = props.isclosed !== undefined ? props.isclosed : false
   const isDisabled = props.isdisabled !== undefined ? props.isdisabled : false
   const [isActive, setActive] = useState(isOpen)
@@ -23,7 +24,7 @@ export default function Accordion(props) {
   }
 
   return (
-    <div className={`accordion-item ${isActive ? 'is-active' : ''} ${isDisabled ? 'is-disabled pointer-events-none opacity-50' : ''}`}>
+    <div className={`accordion-item ${isActive ? 'is-active' : ''} ${isSelected ? 'is-selected' : ''} ${isDisabled ? 'is-disabled pointer-events-none opacity-50' : ''}`}>
       <div className={`accordion-header`} onClick={handleToggle}>
         {props.header} 
       </div>

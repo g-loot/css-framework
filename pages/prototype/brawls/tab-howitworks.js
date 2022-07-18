@@ -96,43 +96,27 @@ export default function TabBrawlsHowItWorks() {
         className="py-12 animate-slide-in-bottom animate-delay"
         style={{ "--delay": "calc( 1 * 0.05s)" }}
       >
-        <div className="grid gap-8 grid-cols-1 xl:grid-cols-2">
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
-            <img
-              className="rounded-lg"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657707945/Marketing/2022_prototype/missions-howitworks-missions.webp"
-              width="100%"
-              height="auto"
-              alt=""
-            />
-            <div className="px-4 sm:px-0">
-              <h2 className="text-2xl leading-none mb-4">What are Missions?</h2>
-              <p className="text-ui-300 leading-relaxed">
-                Daily missions are daily objectives that resets every 24 hours.
-                By completing Missions you will earn XP. The XP from all your
-                Missions goes into the Weekly Mission Rewards. You can complete
-                Daily Missions across the different games on G-Loot.
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
+          <img
+            className="rounded-lg"
+            src="https://res.cloudinary.com/gloot/image/upload/v1657707945/Marketing/2022_prototype/missions-howitworks-missions.webp"
+            width="100%"
+            height="auto"
+            alt=""
+          />
+          <div className="px-4 sm:px-0">
+            <h2 className="text-2xl leading-none mb-4">What is a Brawl?</h2>
+            <div  className="text-ui-300 leading-relaxed space-y-4">
+              <p>
+                In Brawls you compete against other G-Loot players to climb a leaderboard.
               </p>
-            </div>
-          </div>
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
-            <img
-              className="rounded-lg"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657707945/Marketing/2022_prototype/missions-howitworks-rewards.webp"
-              width="100%"
-              height="auto"
-              alt=""
-            />
-            <div className="px-4 sm:px-0">
-              <h2 className="text-2xl leading-none mb-4">
-                What are Mission Rewards?
-              </h2>
-              <p className="text-ui-300 leading-relaxed">
-                Mission Rewards are how you turn your XP into useful stuff like
-                Coins or tokens. Each time you reach a milestone in the Mission
-                rewards, you unlock another reward. Mission rewards reset each
-                week so you will always have something new to work towards.
-              </p>
+              <ul className=" list-disc list-inside list">
+                <li>Brawls are based on your stats, just like Missions. You don&#39;t need to be in the same server as the other Brawl players.</li>
+                <li>You earn Brawl points based on the objective, e.g. kills, goals or score from the game.</li>
+                <li>You need the G-Loot Tracker running while you play.</li>
+                <li>Brawls use a “best-of” format. You can enter as many times as you want, and only your best scores count.</li>
+                <li>You need to complete a set numbers of matches before you can join and see the Brawl leaderboard.</li>
+              </ul>
             </div>
           </div>
         </div>

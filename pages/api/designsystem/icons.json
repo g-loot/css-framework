@@ -119,6 +119,31 @@
       ]
     },
     {
+      "name": "Ranks",
+      "icons": [
+        {
+          "tags": "rank,tiers,brawls,clans,leaderboard,competition,token,bronze",
+          "name": "rank-bronze"
+        },
+        {
+          "tags": "rank,tiers,brawls,clans,leaderboard,competition,token,silver",
+          "name": "rank-silver"
+        },
+        {
+          "tags": "rank,tiers,brawls,clans,leaderboard,competition,token,gold",
+          "name": "rank-gold"
+        },
+        {
+          "tags": "rank,tiers,brawls,clans,leaderboard,competition,token,platinum",
+          "name": "rank-platinum"
+        },
+        {
+          "tags": "rank,tiers,brawls,clans,leaderboard,competition,token,diamond",
+          "name": "rank-diamond"
+        }
+      ]
+    },
+    {
       "name": "Missions",
       "icons": [
         {
