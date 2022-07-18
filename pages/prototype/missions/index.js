@@ -1,6 +1,6 @@
 import Ad from "../../../components/Ad/Ad";
 import Link from "next/link";
-import PrototypeDataGames from '../../../mock-data/games.json';
+import PrototypeDataGames from "../../../mock-data/games.json";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import React from "react";
 import TabMissionsHowItWorks from "./tab-howitworks";
@@ -17,7 +17,7 @@ const TabsItems = [
     label: "How it works",
     url: "how-it-works",
     component: TabMissionsHowItWorks,
-  }
+  },
 ];
 
 export default function Home() {
@@ -33,21 +33,22 @@ export default function Home() {
         <Ad width="1005" height="124" />
 
         <section className="relative surface sm:rounded-lg overflow-hidden mb-4">
-          <div className="relative z-10 grid grid-cols-4 gap-4 items-center min-h-[250px]">
-            <div className="col-span-4 md:col-span-2 xl:col-span-1 flex flex-col justify-between items-center p-8">
+          <div className="relative z-10 grid grid-cols-8 gap-4 items-center min-h-[250px]">
+            <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-between items-center py-8">
               <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Missions.svg"
-                width="175"
+                src="https://res.cloudinary.com/gloot/image/upload/v1657888944/Marketing/2022_prototype/Logo/samesize-missions.svg"
+                width="400"
                 height="auto"
                 alt=""
               />
             </div>
-            <div className="col-span-4 md:col-span-2 xl:col-span-2 flex flex-col justify-center items-center md:items-start text-center md:text-left flex-1 pl-8 md:pl-0 pr-8 py-0 md:py-4 xl:py-4">
+            <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center md:items-start text-center md:text-left flex-1 pl-8 md:pl-0 pr-8 py-0 md:py-4 xl:py-4">
+              <h1 className="text-3xl mb-2 leading-none">
+                {PrototypeDataGames[selectedGame].name} Missions
+              </h1>
               <p className="text-ui-300 max-w-[70ch] mb-4">
                 Play G-Loot Missions in-game, gather XP, and earn Mission
-                Rewards.
-                <br />
-                You can complete the Daily Missions in any game.
+                Rewards. You can complete the Daily Missions in any game.
               </p>
               <button
                 type="button"
@@ -56,7 +57,7 @@ export default function Home() {
                 <span>Tracker required</span>
               </button>
             </div>
-            <div className="col-span-4 xl:col-span-1 flex flex-col items-center justify-center gap-4">
+            <div className="col-span-8 xl:col-span-2 flex flex-col items-center justify-center gap-4">
               <div className="w-full flex flex-col justify-center items-center gap-2 pl-4 xl:pl-0 py-4 pr-4">
                 <div className="flex items-end gap-4 leading-tight">
                   <div className="text-xl xl:text-4xl font-headings italic text-main">
@@ -97,7 +98,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="absolute z-0 right-0 inset-y-0 w-full xl:w-2/3">
+          <div
+            className="absolute z-0 right-0 inset-y-0 w-full xl:w-2/3 animate-slide-in-right animate-delay"
+            style={{ "--delay": "calc( 1 * 0.05s)" }}
+          >
             <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/75"></div>
             <img
               className="absolute z-0 object-right-top object-cover xl:object-cover inset-0 w-full h-full"
@@ -109,7 +113,11 @@ export default function Home() {
           <ul className="tabs">
             {TabsItems.map((item, itemIndex) => (
               <li key={item}>
-                <Link href={`${hasAds ? "?ads=true&" : ""}${hasAds ? "&" : "?"}${selectedGame ? "game="+selectedGame+"&" : "?"}tab=${item.url}`}>
+                <Link
+                  href={`${hasAds ? "?ads=true&" : ""}${hasAds ? "&" : "?"}${
+                    selectedGame ? "game=" + selectedGame + "&" : "?"
+                  }tab=${item.url}`}
+                >
                   <a
                     className={`${selectedTab === item.url ? "is-active" : ""}`}
                   >

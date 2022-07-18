@@ -108,6 +108,7 @@
       }]
     },
     {
+      "cols": 3,
       "title": "Brand / premium",
       "title_short": "Brand",
       "title_data": "brand.premium",
@@ -162,6 +163,7 @@
       ]
     },
     {
+      "cols": 3,
       "title": "Decorative",
       "title_short": "Decorative",
       "title_data": "decorative",
@@ -170,35 +172,35 @@
           "value": "bg-blue-300",
           "number": "300",
           "data": "decorative.blue.light",
-          "hex": "#A6F4FF"
+          "hex": "#4CB5FF"
         },
         {
           "name": "Blue Medium",
           "value": "bg-blue-500",
           "number": "500",
           "data": "decorative.blue.medium",
-          "hex": "#00E1FF"
+          "hex": "#0297FE"
         },
         {
           "name": "Blue Dark",
           "value": "bg-blue-700",
           "number": "700",
           "data": "decorative.blue.dark",
-          "hex": "#04AFCB"
+          "hex": "#0243A8"
         },
         {
           "name": "Purple Light",
           "value": "bg-purple-300",
           "number": "300",
           "data": "decorative.purple.light",
-          "hex": "#ECA9FA"
+          "hex": "#F1ADFF"
         },
         {
           "name": "Purple Medium",
           "value": "bg-purple-500",
           "number": "500",
           "data": "decorative.purple.medium",
-          "hex": "#EA77FD"
+          "hex": "#D254FE"
         },
         {
           "name": "Purple Dark",
@@ -231,6 +233,7 @@
       ]
     },
     {
+      "cols": 3,
       "title": "Decorative / reward",
       "title_short": "decorative",
       "colors": [{
@@ -238,7 +241,7 @@
           "value": "bg-gold-300",
           "number": "300",
           "data": "reward.gold.light",
-          "hex": "#8A24C8"
+          "hex": "#FEFA43"
         },
         {
           "name": "Gold Main",
@@ -280,7 +283,7 @@
           "value": "bg-bronze-300",
           "number": "300",
           "data": "reward.bronze.light",
-          "hex": "#151532"
+          "hex": "#FAEA94"
         },
         {
           "name": "Bronze Main",
@@ -310,14 +313,15 @@
         },
         {
           "name": "Purple blue",
-          "value": "bg-gradient-to-r from-purple-700 to-info-500",
+          "value": "bg-gradient-to-r from-purple-700 to-blue-500",
           "number": "500",
-          "data": "decorative.gradient.purple-info",
+          "data": "decorative.gradient.purple-blue",
           "hex": ""
         }
       ]
     },
     {
+      "cols": 3,
       "title": "System",
       "title_short": "system",
       "colors": [{
@@ -381,7 +385,7 @@
           "value": "bg-info-700",
           "number": "700",
           "data": "system.info.dark",
-          "hex": "#0769B2"
+          "hex": "#0243A8"
         },
         {
           "name": "Error Light",

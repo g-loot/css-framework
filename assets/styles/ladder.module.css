@@ -268,7 +268,7 @@
       & ~ li {
         > .ladder-info > div > span:nth-child(1) {
           @apply
-          text-ui-100
+          text-ui-300
           bg-gradient-to-b
           from-ui-700
           to-ui-500

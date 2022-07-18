@@ -428,7 +428,7 @@
         },
         {
           "tags": "arrow,direction,keyboard,move,navigation,out,position,top,up,upward,upwards",
-          "name": "caret-sm-up"
+          "name": "arrow-sm-up"
         },
         {
           "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards",
@@ -935,6 +935,10 @@
           "name": "multiple-11"
         },
         {
+          "tags": "user,group,team,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower,community,people,collaboration,collective",
+          "name": "multiple-12"
+        },
+        {
           "tags": "change,business,finance,cash,payment,coins,money,dollar,banknotes",
           "name": "money-coins"
         },
@@ -1109,6 +1113,10 @@
         {
           "tags": "user,profile,account,avatar,contact,woman,man,person,users,member,human,friend,follower",
           "name": "profile"
+        },
+        {
+          "tags": "user,profile,account,avatar,contact,woman,man,person,users,member,human,friend,follower",
+          "name": "profile-2"
         },
         {
           "tags": "user,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower,body",

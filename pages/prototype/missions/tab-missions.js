@@ -5,25 +5,6 @@ import PrototypeDataGames from "../../../mock-data/games.json";
 import RewardLadder from "../../../components/RewardLadder/RewardLadder";
 import { useRouter } from "next/router";
 
-const MissionsCatalog = [
-  {
-    name: "Get 22 kills",
-    label: "kills",
-    current: 11,
-    target: 22,
-    ispremium: false,
-    xp: 55,
-  },
-  {
-    name: "Get 22 kills",
-    label: "kills",
-    current: 11,
-    target: 22,
-    ispremium: true,
-    xp: 55,
-  },
-];
-
 export default function TabMissionsMissions() {
   const { query } = useRouter();
   const hasAds = query.ads === "true" ? true : false;
@@ -56,7 +37,7 @@ export default function TabMissionsMissions() {
             </button>
           </div>
         </div>
-        { PrototypeDataGames[selectedGame].needsSteam && (
+        {PrototypeDataGames[selectedGame].needsSteam && (
           <>
             <div className="px-4 sm:px-0">
               <div className="alert mb-4">
@@ -65,28 +46,42 @@ export default function TabMissionsMissions() {
                   <div>
                     <div className="font-bold uppercase">Important:</div>
                     <p className="max-w-[80ch] text-ui-300">
-                      To complete Missions and earn rewards, you need to <Link href={`profile-settings${hasAds ? "?ads=true" : ""}`}><a className="link">connect your
-                      Steam account to G-Loot</a></Link>.
+                      To complete Missions and earn rewards, you need to{" "}
+                      <Link
+                        href={`profile-settings${hasAds ? "?ads=true" : ""}`}
+                      >
+                        <a className="link">
+                          connect your Steam account to G-Loot
+                        </a>
+                      </Link>
+                      .
                     </p>
                   </div>
                 </div>
                 <div className="flex-none">
                   <Link href={`profile-settings${hasAds ? "?ads=true" : ""}`}>
-                    <a className="button button-sm button-secondary"><span>Connect <span className="hidden sm:inline">my account</span></span></a>
+                    <a className="button button-sm button-secondary">
+                      <span>
+                        Connect{" "}
+                        <span className="hidden sm:inline">my account</span>
+                      </span>
+                    </a>
                   </Link>
                 </div>
               </div>
             </div>
           </>
         )}
-        
+
         <RewardLadder></RewardLadder>
         <div className="text-center text-sm text-ui-300 mt-4">
           XP is accumulated from all missions in all games on G-Loot.
         </div>
       </section>
-      <section className="py-8 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 2 * 0.05s)" }}>
+      <section
+        className="py-8 animate-slide-in-bottom animate-delay"
+        style={{ "--delay": "calc( 2 * 0.05s)" }}
+      >
         <div className="flex items-center justify-between mb-2 px-4 sm:px-0">
           <div>
             <h2 className="text-2xl">
@@ -108,21 +103,29 @@ export default function TabMissionsMissions() {
             </button>
           </div>
         </div>
-        { PrototypeDataGames[selectedGame].needsSteam && (
+        {PrototypeDataGames[selectedGame].needsSteam && (
           <>
             <div className="px-4 sm:px-0">
               <div className="alert mb-4">
                 <div>
                   <span className="icon icon-24 icon-steam"></span>
                   <div>
-                    <div className="font-bold uppercase">New &amp; improved stats tracking:</div>
+                    <div className="font-bold uppercase">
+                      New &amp; improved stats tracking:
+                    </div>
                     <p className="max-w-[80ch] text-ui-300">
-                      This will affect the way you get progress in your Daily Missions. You will now progress in the Missions once the full match in PUBG BATTLEGROUNDS is completed, you will get your points.
+                      This will affect the way you get progress in your Daily
+                      Missions. You will now progress in the Missions once the
+                      full match in PUBG BATTLEGROUNDS is completed, you will
+                      get your points.
                     </p>
                   </div>
                 </div>
                 <div className="flex-none">
-                  <button type="button" className="button button-tertiary button-close">
+                  <button
+                    type="button"
+                    className="button button-tertiary button-close"
+                  >
                     <span className="icon icon-e-remove"></span>
                   </button>
                 </div>
@@ -130,26 +133,25 @@ export default function TabMissionsMissions() {
             </div>
           </>
         )}
-        
+
         <div className="flex items-center justify-between mb-4 px-4 sm:px-0">
           <div>
             <div className="text-sm text-ui-300">
               Your latest match ended <b>May 19 / 11:05 PM</b>
             </div>
-            <div className="text-xs text-ui-300">
-              Last check was TBA
-            </div>
+            <div className="text-xs text-ui-300">Last check was TBA</div>
           </div>
           <div className="flex items-center gap-2">
-            
-            <button
-              className="tooltip tooltip-left button button-sm button-primary"
+            <div
+              className="tooltip tooltip-left"
               data-tooltip="This might take up to 15 minutes. Make sure the match you’re trying to fetch is 100% completed."
             >
-              <span className="icon icon-16 icon-refresh-02"></span>
-              <span className="hidden sm:block">Request a stats update</span>
-              <span className="block sm:hidden">Update</span>
-            </button>
+              <button className="button button-sm button-primary">
+                <span className="icon icon-16 icon-refresh-02"></span>
+                <span className="hidden sm:block">Request a stats update</span>
+                <span className="block sm:hidden">Update</span>
+              </button>
+            </div>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-4 sm:px-0">
@@ -234,9 +236,7 @@ export default function TabMissionsMissions() {
           </p>
           <div className="mx-auto">
             <Link href={`premium${hasAds ? "?ads=true" : ""}`}>
-              <a
-                className="button button-premium is-shining"
-              >
+              <a className="button button-premium is-shining">
                 <span>Join Premium</span>
               </a>
             </Link>

@@ -8,12 +8,14 @@
 /* GENERAL */
 /*----------------------------*/
 
-input,
-textarea {
-  @apply
-  text-ui-100
-  placeholder:text-ui-300
-  ;
+.form-group {
+  input,
+  textarea {
+    @apply
+    text-ui-100
+    placeholder:text-ui-300
+    ;
+  }
 }
 
 .form-group > label:not(.form-radio):not(.form-checkbox):not(.form-toggle):not(.button),
@@ -31,6 +33,44 @@ textarea {
   mb-1
   ;
 }
+
+
+
+/*----------------------------*/
+/* TEXT INPUTS */
+/*----------------------------*/
+
+.form-group {
+  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
+    @apply
+    block
+    ;
+  }
+
+  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, .form-select > select) {
+    @apply
+    w-full
+    shadow-sm
+    bg-ui-700
+    border
+    border-ui-500
+    rounded
+    focus-visible:outline
+    focus-visible:outline-1
+    focus-visible:outline-ui-300
+    focus-visible:z-20
+    p-2
+    ;
+
+    &.input-sm {
+      @apply
+      p-[0.4375rem]
+      text-sm
+      ;
+    }
+  }
+}
+
 
 /*----------------------------*/
 /* SELECT INPUTS */
@@ -94,85 +134,37 @@ textarea {
       }
     }
   }
-  
-}
-
-
-/*----------------------------*/
-/* TEXT INPUTS */
-/*----------------------------*/
-
-.form-group {
-  input[type=text],
-  input[type=number],
-  input[type=email],
-  input[type=password],
-  input[type=date],
-  input[type=file],
-  textarea,
-  .input-text {
-    @apply
-    block
-    ;
-  }
-}
-
-input[type=text],
-input[type=number],
-input[type=email],
-input[type=password],
-input[type=date],
-input[type=file],
-textarea,
-.input-text,
-.form-select > select {
-  @apply
-  w-full
-  shadow-sm
-  bg-ui-700
-  border
-  border-ui-500
-  rounded
-  focus-visible:outline
-  focus-visible:outline-1
-  focus-visible:outline-ui-300
-  p-2
-  ;
-
-  &.input-sm {
-    @apply
-    p-[0.4375rem]
-    text-sm
-    ;
-  }
 }
 
 /*----------------------------*/
 /* FILE */
 /*----------------------------*/
 
-input[type=file] {
-  @apply
-  p-0
-  min-h-[42px]
-  file:min-h-[42px]
-  file:bg-ui-600
-  file:hover:bg-ui-500
-  file:cursor-pointer
-  file:px-4
-  file:rounded-l-sm 
-  file:border-0
-  file:font-bold  
-  file:text-ui-100
-  file:mr-2
-  block
-  w-full
-  text-sm
-  text-ui-300
-  cursor-pointer
-  focus:outline-none
-  ;
+:where(.form-group, .form-dropzone) {
+  input[type=file] {
+    @apply
+    p-0
+    min-h-[42px]
+    file:min-h-[42px]
+    file:bg-ui-600
+    file:hover:bg-ui-500
+    file:cursor-pointer
+    file:px-4
+    file:rounded-l-sm 
+    file:border-0
+    file:font-bold  
+    file:text-ui-100
+    file:mr-2
+    block
+    w-full
+    text-sm
+    text-ui-300
+    cursor-pointer
+    focus:outline-none
+    ;
+  }
 }
+
 
 label.button {
   + input[type=file] {
@@ -524,49 +516,90 @@ label.button {
   flex
   relative
   ;
-  > div:not(.icon),
-  > span:not(.icon) {
-    @apply
-    inline-flex
-    items-center
-    px-3
-    rounded-l-md
-    border
-    border-ui-500
-    bg-ui-500/75
-    text-ui-200
-    text-sm
-    ;
-  }
 
-  > div:not(.icon):first-child,
-  > span:not(.icon):first-child {
-    @apply
-    border-r-0
-    ;
-
-    ~ input:last-child {
-      @apply
-      rounded-none
-      rounded-r
-      ;
-    }
-  }
-
-  > input:first-child:not(:last-child) {
+  > :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, button, .button, .button.button-primary) {
     @apply
     rounded-none
-    rounded-l
     ;
-    ~ div:not(.icon):last-child,
-    ~ span:not(.icon):last-child {
+    &:first-child {
       @apply
-      border-l-0
-      rounded-none
+      rounded-l
+      ;
+    }
+    &:last-child {
+      @apply
       rounded-r
       ;
     }
   }
+
+  > :where(.icon, .button) {
+    @apply
+    relative
+    z-30
+    ;
+    &:first-child {
+      + :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea) {
+        @apply
+        rounded-l
+        ;
+      }
+    }
+  }
+
+  > .button.button-primary {
+    @apply
+    rounded-l-none
+    ;
+    + :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea) {
+      @apply
+      rounded-r-none
+      ;
+    }
+  }
+
+  > :where(span, div) {
+    &:not(.icon) {
+      @apply
+      inline-flex
+      items-center
+      px-3
+      border
+      border-ui-500
+      border-l-0
+      bg-ui-500/75
+      text-ui-200
+      text-sm
+      ;
+      &:first-child {
+        @apply
+        rounded-l
+        border-l
+        ;
+      }
+      &:last-child {
+        @apply
+        rounded-r
+        ;
+      }
+
+      &:not(:last-child) {
+        @apply
+        border-r-0
+        rounded-r-none
+        ;
+      }
+
+      ~ :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea) {
+        &:last-child {
+          @apply
+          rounded-r
+          ;
+        }
+      }
+    }
+  }
+  
 
 /*----------------------------*/
 /* ICON */
@@ -582,7 +615,7 @@ label.button {
     pointer-events-none
     ;
 
-    ~ input {
+    ~ :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file]) {
       @apply
       pl-9
       ;
@@ -609,8 +642,7 @@ label.button {
 
   /* button */
 
-  > button,
-  > .button {
+  > :where(button, .button) {
     &:not(.button-primary) {
       @apply
       absolute
@@ -630,16 +662,10 @@ label.button {
     &.button-primary {
       @apply
       whitespace-nowrap
-      rounded-none
+      rounded-l-none
       rounded-r
-      order-2;
-
-      ~ input {
-        @apply
-        rounded-none
-        rounded-l
-        ;
-      }
+      order-2
+      ;
     }
   }
 }
@@ -649,42 +675,48 @@ label.button {
 /*----------------------------*/
 
 .form-group {
-  &[data-error],
-  &[data-success],
-  &[data-attention] {
-    &::after {
+  &:where([data-error], [data-success], [data-attention]) {
+    &::after,
+    .form-info {
       @apply
       block
-      text-sm
+      text-xs
       mt-1
+      leading-none
+      max-w-[max-content]
+      rounded-sm
+      absolute
+      bg-ui-800/95
       ;
     }
+    &:where(:empty, [data-error=true], [data-success=true], [data-attention=true]) {
+      &::after {
+        @apply
+        hidden
+        ;
+      }
+    }
   }
+  
   &[data-error] {
-    &::after {
+    &::after,
+    .form-info {
       @apply
-      content-[attr(data-error)]
       text-error-500
       ;
     }
-    input[type=text],
-    input[type=number],
-    input[type=email],
-    input[type=password],
-    input[type=date],
-    input[type=file],
-    textarea,
-    .input-text,
-    select {
+    &::after {
+      @apply
+      content-[attr(data-error)]
+      ;
+    }
+    :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
       @apply
       border-error-700
       focus-visible:outline-error-500
       ;
     }
-    .icon,
-    .form-radio,
-    .form-toggle,
-    .form-checkbox {
+    :where(.icon, .form-radio, .form-toggle, .form-checkbox) {
       @apply
       text-error-500
       ;
@@ -704,30 +736,24 @@ label.button {
     }
   }
   &[data-success] {
-    &::after {
+    &::after,
+    .form-info {
       @apply
-      content-[attr(data-success)]
       text-interaction-500
       ;
     }
-    input[type=text],
-    input[type=number],
-    input[type=email],
-    input[type=password],
-    input[type=date],
-    input[type=file],
-    textarea,
-    .input-text,
-    select {
+    &::after {
+      @apply
+      content-[attr(data-success)]
+      ;
+    }
+    :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
       @apply
       border-interaction-700
       focus-visible:outline-interaction-500
       ;
     }
-    .icon,
-    .form-radio,
-    .form-toggle,
-    .form-checkbox {
+    :where(.icon, .form-radio, .form-toggle, .form-checkbox) {
       @apply
       text-interaction-500
       ;
@@ -747,30 +773,24 @@ label.button {
     }
   }
   &[data-attention] {
-    &::after {
+    &::after,
+    .form-info {
       @apply
-      content-[attr(data-attention)]
       text-attention-500
       ;
     }
-    input[type=text],
-    input[type=number],
-    input[type=email],
-    input[type=password],
-    input[type=date],
-    input[type=file],
-    textarea,
-    .input-text,
-    select {
+    &::after {
+      @apply
+      content-[attr(data-attention)]
+      ;
+    }
+    :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
       @apply
       border-attention-700
       focus-visible:outline-attention-500
       ;
     }
-     .icon,
-    .form-radio,
-    .form-toggle,
-    .form-checkbox {
+     :where(.icon, .form-radio, .form-toggle, .form-checkbox) {
       @apply
       text-attention-500
       ;
@@ -857,6 +877,7 @@ label.button {
 .form-group.is-disabled input,
 .form-group.is-disabled select,
 .form-group.is-disabled textarea,
+.form-group.is-disabled label,
 input[type=text]:disabled,
 input[type=number]:disabled,
 input[type=email]:disabled,
@@ -1025,5 +1046,15 @@ input[type=range].form-range {
       hidden
       ;
     }
+  }
+}
+
+/* number */
+
+@layer utilities {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
