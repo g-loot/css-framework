@@ -124,7 +124,8 @@
     &:not([disabled]),
     &:not(.is-disabled) {
       &:hover,
-      &:focus-visible {
+      &:focus-visible,
+      &.is-active {
         @apply
         shadow-[inset_0_0_0_1px_rgba(255,255,255,1)];
       }
@@ -132,7 +133,7 @@
   }
   &.button-secondary {
     @apply 
-    bg-ui-700/0
+    bg-ui-800/75
     text-ui-300
     shadow-[inset_0_0_0_1px_rgb(var(--color-ui-400))]
     ;
@@ -140,7 +141,8 @@
     &:not([disabled]),
     &:not(.is-disabled) {
       &:hover,
-      &:focus-visible {
+      &:focus-visible,
+      &.is-active {
         @apply
         text-ui-200
         shadow-[inset_0_0_0_1px_rgb(var(--color-ui-600))];
@@ -157,7 +159,8 @@
     &:not([disabled]),
     &:not(.is-disabled) {
       &:hover,
-      &:focus-visible {
+      &:focus-visible,
+      &.is-active {
         @apply
         bg-ui-600
         text-ui-200
@@ -184,7 +187,8 @@
     &:not([disabled]),
     &:not(.is-disabled) {
       &:hover,
-      &:focus-visible {
+      &:focus-visible,
+      &.is-active {
         @apply
         shadow-[inset_0_0_0_1px_rgba(var(--color-premium-300),50%)]
         ;
@@ -211,7 +215,8 @@
     &:not([disabled]),
     &:not(.is-disabled) {
       &:hover,
-      &:focus-visible {
+      &:focus-visible,
+      &.is-active {
         @apply
         shadow-[inset_0_0_0_1px_rgba(var(--color-info-300),50%)]
       }
@@ -242,7 +247,8 @@
     &:not([disabled]),
     &:not(.is-disabled) {
       &:hover,
-      &:focus-visible {
+      &:focus-visible,
+      &.is-active {
         .icon {
           @apply
           scale-100
@@ -250,11 +256,22 @@
         }
       }
     }
+    &.button-lg {
+      @apply
+      px-4
+      ;
+    } 
+    &.button-sm {
+      @apply
+      px-2.5
+      ;
+    } 
   }
 
   &.button-ghost {
     @apply 
     bg-ui-800/0
+    backdrop-blur-none
     bg-gradient-to-r
     from-ui-800/0
     via-ui-800/0
@@ -265,7 +282,8 @@
     &:not([disabled]),
     &:not(.is-disabled) {
       &:hover,
-      &:focus-visible {
+      &:focus-visible,
+      &.is-active {
         @apply
         bg-ui-700
         text-ui-200
@@ -358,7 +376,8 @@
     &:not([disabled]),
     &:not(.is-disabled) {
       &:hover,
-      &:focus-visible {
+      &:focus-visible,
+      &.is-active {
         img {
           @apply
           scale-110

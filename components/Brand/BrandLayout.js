@@ -1,12 +1,11 @@
 import React, { useRef, useState } from 'react';
 
-import BrandData from '../../pages/api/brand/data.json'
+import BrandData from '../../pages/api/brand/data.json';
 import BrandHead from './BrandHead';
 import BrandMainNav from './BrandMainNav';
 import BrandTopBar from './BrandTopBar';
 import Link from 'next/link';
 import { getLayout as getSiteLayout } from '../SiteLayout';
-import packageFramework from '../../framework/package.json';
 import { useRouter } from 'next/router';
 
 const BrandLayout = ({ children }) => {
@@ -74,7 +73,7 @@ const BrandLayout = ({ children }) => {
           
           <div className='relative z-0 px-4 pb-4'>
             {BrandData.sections.map((item, itemIndex) => (
-              <div className={`${filter ? '' : 'mb-4'}`} key={itemIndex}>
+              <div className={`${filter ? '' : 'mb-4'}`} key={item}>
                 <button className={`flex items-center px-4 ${filter ? 'hidden' : 'py-2'}`}>
                   {/*
                     <span className={`icon icon-16 icon-${item.icon}`}></span>

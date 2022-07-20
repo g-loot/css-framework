@@ -1,35 +1,38 @@
 import React, { useRef, useState } from "react";
 
 import Link from "next/link";
-import { useRouter } from "next/router";
 import PrototypeDataGames from "../../mock-data/games.json";
 import PrototypeGamesNavItem from "./PrototypeGamesNavItem";
+import useFetch from "../../hooks/use-fetch";
+import { useRouter } from "next/router";
 
 const SubMenuItem = [
   {
-    url: "missions",
+    url: "/prototype/missions",
     label: "Missions",
   },
   {
-    url: "brawls",
+    url: "/prototype/brawls",
     label: "Brawls",
   },
   {
-    url: "tournaments",
+    url: "/prototype/tournaments",
     label: "Tournaments",
   },
   {
-    url: "stats",
+    url: "/prototype/stats",
     label: "Stats",
   },
 ];
 
 export default function PrototypeGamesNav({ children }) {
   const router = useRouter();
-  const { game } = router.query;
   const [isActive, setActive] = useState(false);
   const elementRef = useRef(null);
-  const hasAds = router.ads === "true" ? true : false;
+  const { query } = useRouter();
+  const hasAds = query.ads === "true" ? true : false;
+  const hasGame = query.game;
+  const selectedGame = query.game;
 
   var height = elementRef.current?.clientHeight;
 
@@ -43,17 +46,14 @@ export default function PrototypeGamesNav({ children }) {
       {PrototypeDataGames.map((item, itemIndex) => (
         <>
           <div
-            className={`surface rounded-lg accordion accordion-sm accordion-halo accordion-halo-dimmed ${
+            className={`surface rounded-lg accordion accordion-sm accordion-halo ${
               itemIndex > 1 ? "hidden" : ""
             }`}
             key={itemIndex}
           >
             <PrototypeGamesNavItem
               isopen={
-                item.slug === game ? true : false
-              }
-              isselected={
-                item.slug === game ? true : false
+                parseInt(item.id) === parseInt(selectedGame) ? true : false
               }
               header={
                 <>
@@ -155,12 +155,14 @@ export default function PrototypeGamesNav({ children }) {
                   <>
                     <li key={subItem}>
                       <Link
-                        href={`/prototype/${item.slug}/${subItem.url}${hasAds ? "?ads=true" : ""}`}
+                        href={`${subItem.url}${hasAds ? "?ads=true" : ""}${
+                          hasAds ? "&" : "?"
+                        }game=${item.id}`}
                       >
                         <a
                           className={`${
                             router.pathname.includes(subItem.url) &&
-                            item.slug === game
+                            parseInt(item.id) === parseInt(selectedGame)
                               ? "is-active"
                               : ""
                           }`}

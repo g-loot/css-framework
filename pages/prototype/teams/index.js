@@ -1,10 +1,8 @@
-import Ad from "../../../components/Ad/Ad";
-import Carousel from "../../../components/Carousel/Carousel";
-import Countdown from "../../../components/Countdown/Countdown";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import RewardLadder from "../../../components/RewardLadder/RewardLadder";
-import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
+import Ad from "../../../components/Ad/Ad";
+import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
+import { usePrototypeData } from "../../../contexts/prototype";
+import useFetch from "../../../hooks/use-fetch";
 //import DataGames from '../../mock-data/games.json'
 
 const Teams = [
@@ -96,8 +94,10 @@ const Teams = [
 
 export default function Home() {
   const router = useRouter();
+  const prototype = usePrototypeData();
   const { data, loading } = useFetch("/api/brawls", { delay: 1000 });
 
+  console.log(prototype);
   return (
     <>
       <PrototypeStructure title="Teams">

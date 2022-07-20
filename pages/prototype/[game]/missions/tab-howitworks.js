@@ -1,4 +1,4 @@
-import Accordion from "../../../components/Accordion/Accordion";
+import Accordion from "../../../../components/Accordion/Accordion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -87,7 +87,7 @@ const MissionsHowitworksTabs = [
   }
 ]
 
-export default function TabTournamentsHowItWorks() {
+export default function TabMissionsHowItWorks() {
   const { query } = useRouter();
   const hasAds = query.ads === "true" ? true : false;
   return (

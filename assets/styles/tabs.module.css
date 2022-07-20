@@ -26,6 +26,13 @@
     leading-none
     text-center
     ;
+
+    &.is-disabled {
+      @apply
+      opacity-50
+      pointer-events-none
+      ;
+    }
   }
 
   &:hover {
@@ -99,6 +106,15 @@
       }
     }
 
+    &::before,
+    &::after {
+      @apply
+      transition
+      duration-300
+      ease-[cubic-bezier(0.7,0,0.3,1)]
+      ;
+    }
+
     &::after {
       @apply
       content-['']
@@ -112,9 +128,6 @@
       opacity-0
       scale-x-0
       -skew-x-30
-      transition
-      duration-300
-      ease-[cubic-bezier(0.7,0,0.3,1)]
       ;
     }
   }
@@ -126,12 +139,14 @@
     bg-ui-800
     absolute
     bottom-0
-    inset-x-0;
+    inset-x-0
+    hidden
+    ;
   }
 }
 
 /* scrollbar hidden if overflow */
-.tabs {
+.tabs:not([class*=scrollbar]) {
   -webkit-overflow-scrolling: touch;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
@@ -148,74 +163,152 @@
 .tabs.tabs-rank {
   @apply
   gap-4
-  px-6
+  pt-0
   ;
+  &:not([class*=px-]) {
+    @apply
+    px-6
+    ;
+  }
+  &::after {
+    @apply
+    hidden
+    ;
+  }
   > li {
     @apply
     flex-none
-    relative
+    transform-gpu
     ;
-    &::before,
-    &::after {
-      @apply
-      content-['']
-      w-1.5
-      h-full
-      absolute
-      z-30
-      transition
-      duration-300
-      ease-[cubic-bezier(0.7,0,0.3,1)]
-      opacity-50
-      ;
-    }
-    &::before {
-      @apply
-      left-0
-      -skew-x-30
-      scale-y-0
-    }
-    &::after {
-      @apply
-      right-0
-      -skew-x-30
-      scale-y-0
-    }
+    
     > a {
       @apply
-      flex
-      w-full
-      gap-8
-      items-center
-      justify-between
-      px-8
+      relative
+      block
       ;
-      > * {
+      &:not(.is-active) {
         @apply
-        flex
-        gap-2
-        items-center
-        relative 
-        z-20
+        opacity-60
+        scale-95
         ;
       }
+      :where([class*=icon-rank]) {
+        @apply
+        duration-300
+        transform-gpu
+        ease-in-out
+        scale-75
+        ;
+      }
+      
       &::before,
       &::after {
         @apply
         content-['']
-        bg-ui-800
-        absolute
-        z-10
-        inset-0
+        w-1
         h-full
-        w-full
+        absolute
+        z-50
+        transition
+        duration-300
+        ease-[cubic-bezier(0.7,0,0.3,1)]
+        opacity-100
+        inset-y-0
         -skew-x-30
+        scale-x-0
+        shadow-[inset_0_0_0_1px_rgba(255,255,255,0.25)]
         ;
+      }
+      &::before {
+        @apply
+        left-0
+        right-auto
+        origin-left
       }
       &::after {
         @apply
-        z-0
+        right-0
+        left-auto
+        origin-right
+      }
+      > div {
+        @apply
+        flex
+        w-full
+        gap-8
+        items-center
+        justify-between
+        px-5
         ;
+        > * {
+          @apply
+          flex
+          gap-4
+          items-center
+          relative 
+          z-20
+          ;
+        }
+        &::before,
+        &::after {
+          @apply
+          content-['']
+          absolute
+          z-10
+          inset-0
+          h-full
+          w-full
+          -skew-x-30
+          transition-all
+          transform-gpu
+          duration-200
+          ease-[cubic-bezier(.7,0,.3,1)]
+          ;
+        }
+        &::before {
+          @apply
+          z-10
+          bg-ui-700
+          scale-y-0
+          -skew-x-30
+          translate-y-2
+          opacity-0
+          
+          ;
+        }
+        &::after {
+          @apply
+          z-0
+          bg-ui-800
+          border
+          border-ui-700
+          ;
+        }
+      }
+      &.is-active {
+        :where([class*=icon-rank]) {
+          @apply
+          scale-100
+          ;
+        }
+        &::before,
+        &::after {
+          @apply
+          -skew-x-30
+          scale-x-100
+          opacity-100
+          ;
+        }
+        > div {
+          &::before {
+            @apply
+            scale-y-100
+            -skew-x-30
+            translate-y-0
+            opacity-100
+            ;
+          }
+        }
       }
     }
   }
@@ -228,12 +321,38 @@
         @apply
         scale-100
         ;
-        &::before,
-        &::after {
+        > a {
           @apply
-          -skew-x-30
-          scale-y-100
           opacity-100
+          scale-100
+          ;
+          :where([class*=icon-rank]) {
+            @apply
+            scale-100
+            ;
+          }
+          &::before,
+          &::after {
+            @apply
+            -skew-x-30
+            scale-x-100
+            opacity-100
+            ;
+          }
+          > div {
+            &::before {
+              @apply
+              scale-y-100
+              -skew-x-30
+              translate-y-0
+              opacity-50
+              ;
+            }
+          }
+        }
+        &:active {
+          @apply
+          scale-95
           ;
         }
       }
@@ -261,6 +380,7 @@
   .icon-rank-bronze {
     @apply
     from-bronze-300
+    via-bronze-500
     to-bronze-700
     ;
     &::after {
@@ -273,6 +393,7 @@
   .icon-rank-silver {
     @apply
     from-silver-300
+    via-silver-500
     to-silver-700
     ;
     &::after {
@@ -285,6 +406,7 @@
   .icon-rank-gold {
     @apply
     from-gold-300
+    via-gold-500
     to-gold-700
     ;
     &::after {
@@ -294,14 +416,88 @@
       ;
     }  
   }
-  li.tab-bronze {
-    &::before,
+  .icon-rank-platinum {
+    @apply
+    from-purple-300
+    to-purple-500
+    ;
     &::after {
       @apply
-      bg-gradient-radial
-      from-bronze-300
-      to-bronze-700
+      from-purple-300
+      to-purple-700
       ;
-    }
+    }  
+  }
+  .icon-rank-diamond {
+    @apply
+    from-interaction-300
+    to-blue-500
+    ;
+    &::after {
+      @apply
+      from-interaction-300
+      to-blue-500
+      ;
+    }  
+  }
+  li.tab-bronze {
+    > a {
+      &::before,
+      &::after {
+        @apply
+        bg-gradient-radial
+        from-bronze-300
+        to-bronze-700
+        ;
+      }
+    } 
+  }
+  li.tab-silver {
+    > a {
+      &::before,
+      &::after {
+        @apply
+        bg-gradient-radial
+        from-silver-300
+        to-silver-700
+        ;
+      }
+    } 
+  }
+  li.tab-gold {
+    > a {
+      &::before,
+      &::after {
+        @apply
+        bg-gradient-radial
+        from-gold-300
+        to-gold-700
+        ;
+      }
+    } 
+  }
+  li.tab-platinum {
+    > a {
+      &::before,
+      &::after {
+        @apply
+        bg-gradient-radial
+        from-purple-300
+        to-purple-700
+        ;
+      }
+    } 
+  }
+  li.tab-diamond {
+    > a {
+      &::before,
+      &::after {
+        @apply
+        bg-gradient-radial
+        from-interaction-300
+        to-blue-500
+        ;
+      }
+    } 
   }
 } 

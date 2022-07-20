@@ -208,8 +208,8 @@
 .surface {
   &.surface-dimmed {
     @apply
-    bg-ui-800/50
-    border-ui-700
+    bg-ui-850
+    border-ui-700/50
   }
   
   &.surface-ui-900 {

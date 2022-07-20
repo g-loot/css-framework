@@ -1,7 +1,7 @@
-import Ad from "../../../components/Ad/Ad";
-import Countdown from "../../../components/Countdown/Countdown";
+import Ad from "../../../../components/Ad/Ad";
+import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
-import PrototypeDataGames from "../../../mock-data/games.json";
+import PrototypeDataGames from "../../../../mock-data/games.json";
 import { useRouter } from "next/router";
 
 export default function TabTournamentsFinished() {

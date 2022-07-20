@@ -119,7 +119,7 @@ export default function Topbar() {
                   >
                     <ul className="menu menu-rounded">
                       <li>
-                        <Link href={`wallet${hasAds ? '?ads=true' : ''}`}>
+                        <Link href={`/prototype/wallet${hasAds ? '?ads=true' : ''}`}>
                           <a>
                             <span className="icon icon-wallet-43"></span>
                             <span>Wallet</span>
@@ -127,7 +127,7 @@ export default function Topbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href={`profile${hasAds ? '?ads=true' : ''}`}>
+                        <Link href={`/prototype/profile${hasAds ? '?ads=true' : ''}`}>
                           <a>
                             <span className="icon icon-circle-09"></span>
                             <span>Public profile</span>
@@ -135,7 +135,7 @@ export default function Topbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href={`profile-settings${hasAds ? '?ads=true' : ''}`}>
+                        <Link href={`/prototype/profile-settings${hasAds ? '?ads=true' : ''}`}>
                           <a>
                             <span className="icon icon-cogwheel"></span>
                             <span>Settings</span>
@@ -143,7 +143,7 @@ export default function Topbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href={`logout${hasAds ? '?ads=true' : ''}`}>
+                        <Link href={`/prototype/logout${hasAds ? '?ads=true' : ''}`}>
                           <a>
                             <span className="icon icon-leave"></span>
                             <span>Log out</span>

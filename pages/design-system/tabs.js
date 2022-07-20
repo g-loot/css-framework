@@ -15,7 +15,7 @@ const DSpage = () => {
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
                 <div className="w-full flex gap-4 items-center justify-center">
-                  <ul className="tabs">
+                  <ul className="tabs border-b border-ui-700">
                     <li>
                       <a className="is-active">
                         <span>Brawls</span>
@@ -107,29 +107,56 @@ const DSpage = () => {
             <li className="tab-bronze">
               <a className="is-active">
                 <div>
-                  <span className="icon text-4xl icon-rank-bronze"></span>
-                  <span className="font-headings text-2xl uppercase italic">Bronze</span>
+                  <div>
+                    <span className="icon text-4xl icon-rank-bronze"></span>
+                    <span className="font-headings text-2xl uppercase italic">Bronze</span>
+                  </div>
                 </div>
               </a>
             </li>
             <li className="tab-silver">
               <a>
                 <div>
-                  <span className="icon text-4xl icon-rank-silver"></span>
-                  <span className="font-headings text-2xl uppercase italic">Silver</span>
-                </div>
-                <figure className="avatar avatar-circle avatar-xs">
                   <div>
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                    <span className="icon text-4xl icon-rank-silver"></span>
+                    <span className="font-headings text-2xl uppercase italic">Silver</span>
                   </div>
-                </figure>
+                  <figure className="avatar avatar-circle avatar-xs">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                    </div>
+                    <i className="radar"></i>
+                  </figure>
+                </div>
               </a>
             </li>
             <li className="tab-gold">
               <a>
                 <div>
-                  <span className="icon text-4xl icon-rank-gold"></span>
-                  <span className="font-headings text-2xl uppercase italic">Gold</span>
+                  <div>
+                    <span className="icon text-4xl icon-rank-gold"></span>
+                    <span className="font-headings text-2xl uppercase italic">Gold</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li className="tab-platinum">
+              <a>
+                <div>
+                  <div>
+                    <span className="icon text-4xl icon-rank-platinum"></span>
+                    <span className="font-headings text-2xl uppercase italic">Platinum</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li className="tab-diamond">
+              <a>
+                <div>
+                  <div>
+                    <span className="icon text-4xl icon-rank-diamond"></span>
+                    <span className="font-headings text-2xl uppercase italic">Diamond</span>
+                  </div>
                 </div>
               </a>
             </li>
@@ -137,7 +164,7 @@ const DSpage = () => {
         </div>
 
         <div className='mt-4'>
-          <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/a614r7Ly/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+          <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/5m6t23cw/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
         </div>
 
       </div>

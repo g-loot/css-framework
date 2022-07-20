@@ -97,7 +97,19 @@ h6,
 hr {
   @apply
   border-ui-600
+  mx-auto
   ;
+
+  &.separator-gradient {
+    @apply
+    h-px
+    border-none
+    bg-gradient-to-r
+    from-ui-600/0
+    via-ui-600
+    to-ui-600/0
+    ;
+  }
 }
 
 .text-gradient {

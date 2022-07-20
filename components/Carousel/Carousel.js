@@ -28,13 +28,14 @@ const slides = [
 export default function Carousel(props) {
 
   const [slideNumber, setSlideNumber] = useState(0);
+  const interval = setTimeout(() => {
+    nextHandler(slideNumber, slides.length)
+  }, 5000);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      //nextHandler(slideNumber, slides.length)
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    interval;
+    return () => clearTimeout(interval);
+  }, [interval]);
 
   function slideHandler(varTarget) {
     console.log(varTarget);
@@ -64,7 +65,7 @@ export default function Carousel(props) {
       <div className='carousel-slides'>
         {slides.map((slide, slideIndex) => (
           <>
-            <div className={`carousel-slide ${slideNumber === slideIndex ? 'is-active' : ''}`} key={slideIndex}>
+            <div className={`carousel-slide ${slideNumber === slideIndex ? 'is-active' : ''}`} key={slide}>
               <div className='carousel-image'>
                 <span style={{ backgroundImage: `url(${slide.image})`}}></span>
               </div>
@@ -97,7 +98,7 @@ export default function Carousel(props) {
         <ul className='carousel-list'>
           {slides.map((item, itemIndex) => (
             <>
-              <li key={itemIndex} className={`${slideNumber === itemIndex ? 'is-active' : ''}`}>
+              <li key={item} className={`${slideNumber === itemIndex ? 'is-active' : ''}`}>
                 <a onClick={slideHandler.bind(this, itemIndex)}>
                   <span>
                     Step {itemIndex + 1}

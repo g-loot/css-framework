@@ -1,33 +1,41 @@
-import Accordion from "../../../components/Accordion/Accordion";
-import Ad from "../../../components/Ad/Ad";
-import Countdown from "../../../components/Countdown/Countdown";
+import React, { useEffect, useState } from "react";
+
+import Accordion from "../../../../components/Accordion/Accordion";
+import Ad from "../../../../components/Ad/Ad";
+import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
-import PrototypeDataGames from "../../../mock-data/games.json";
+import PrototypeDataGames from "../../../../mock-data/games.json";
+import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function TabBrawlsOngoing() {
-  const { query } = useRouter();
-  const hasAds = query.ads === "true" ? true : false;
-  const selectedGame = !query.game ? 0 : query.game;
+  const router = useRouter();
+  const prototypeData = usePrototypeData();
+  const [selectedGame, setSelectedGame] = useState(null);
+  const hasAds = router.ads === "true" ? true : false;
+  const { game } = router.query;
+
+  useEffect(() => {
+    setSelectedGame(prototypeData.getGameBySlug(game));
+  }, [game]);
 
   return (
     <div className="px-4 sm:px-0">
       <>
-        {PrototypeDataGames[selectedGame]?.brawls.map((brawl, brawlIndex) => (
+        {selectedGame && selectedGame.brawls.map((brawl, brawlIndex) => (
           <>
             <section
               key={brawl}
               className="animate-slide-in-bottom animate-delay"
               style={{ "--delay": "calc( " + brawlIndex + " * 0.05s)" }}
             >
-              <Link href={`/prototype/brawls/brawl${hasAds ? "?ads=true" : ""}${
-                          hasAds ? "&" : "?"
-                        }game=${selectedGame}&id=${brawl.id}`}>
+              
+              <Link href={`/prototype/${game}/brawls/${brawl.id}${hasAds ? "?ads=true" : ""}`}>
                 <a className="relative surface rounded-lg overflow-hidden mb-4 block transform-gpu hover:opacity-50 transition-all duration-200 cursor-pointer">
                   <div className="relative z-10 grid grid-cols-3 gap-4 items-stretch min-h-[200px]">
-                    <div className="relative col-span-3 md:col-span-1 flex flex-col justify-stretch aspect-video md:aspect-auto">
+                    <div className="relative col-span-3 md:col-span-1 flex flex-col justify-between h-full aspect-video md:aspect-auto">
                       <div className="relative z-10 flex flex-col justify-between p-4">
-                        <div>
+                        <div className="flex-1">
                           <div className="chip chip-sliced">
                             <span>Ongoing</span>
                           </div>
@@ -50,6 +58,18 @@ export default function TabBrawlsOngoing() {
                           </div>
                         </div>
                       </div>
+                      {brawl.progress > 0 && (
+                        <>
+                          <div className="relative z-10 flex p-4">
+                            <figure className="avatar avatar-circle avatar-sm">
+                              <div>
+                                <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                              </div>
+                              <i className="radar"></i>
+                            </figure>
+                          </div>
+                        </>
+                      )}
                       <div
                         className="absolute z-0 right-0 inset-y-0 w-full animate-slide-in-left animate-delay"
                         style={{

@@ -4,7 +4,9 @@ import DSHead from './DSHead';
 import DSMainNav from './DSMainNav';
 import DSTopBar from './DSTopBar';
 import DSpages from '../../pages/api/designsystem/pages.json'
+import Footer from '../Footer/Footer';
 import Link from 'next/link';
+import TopbarFramework from '../Topbar/Topbar-framework';
 import { getLayout as getSiteLayout } from '../SiteLayout';
 import packageFramework from '../../framework/package.json';
 import { useRouter } from 'next/router';
@@ -36,11 +38,13 @@ const DSLayout = ({ children }) => {
         <div className='block lg:hidden'>
           <DSTopBar data={DSpages} />
         </div>
+        
         <div className='pt-12 pb-24 px-4'>
           <div className='container max-w-lg mx-auto'>
             {children}
           </div>
         </div>
+        <Footer additionalClassNames="px-0 md:px-8" />
       </div>
       <div className='drawer-side scrollbar-hidden'>
         <label htmlFor='drawer-ds' className='drawer-overlay'></label>
@@ -79,7 +83,7 @@ const DSLayout = ({ children }) => {
           
           <div className='relative z-0 px-4 pb-4'>
             {DSpages.sections.map((item, itemIndex) => (
-              <div className={`${filter ? '' : 'mb-4'}`} key={itemIndex}>
+              <div className={`${filter ? '' : 'mb-4'}`} key={item}>
                 <button className={`flex items-center px-4 ${filter ? 'hidden' : 'py-2'}`}>
                   {/*
                     <span className={`icon icon-16 icon-${item.icon}`}></span>

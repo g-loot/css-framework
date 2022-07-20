@@ -55,7 +55,6 @@
     ;
     > *:not(.icon) {
       @apply
-      font-body
       tracking-wide
       ;
     }

@@ -1,11 +1,12 @@
+import React, { useEffect, useState } from "react";
+
 import Ad from "../../../components/Ad/Ad";
 import Link from "next/link";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import React from "react";
 import TabWalletHistory from "./tab-history";
 import TabWalletOverview from "./tab-overview";
 import TabWalletVoucher from "./tab-vouchers";
-import useFetch from "../../../hooks/use-fetch";
+import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 
 const TabsItems = [
@@ -27,10 +28,18 @@ const TabsItems = [
 ]
 
 export default function Home() {
-  const { query } = useRouter();
-  const hasAds = query.ads === 'true' ? true : false;
-  const defaultTab = 'overview';
-  const selectedTab = query.tab ? query.tab : defaultTab;
+  const router = useRouter();
+  const prototypeData = usePrototypeData();
+  const [selectedGame, setSelectedGame] = useState(null);
+  const hasAds = router.ads === "true" ? true : false;
+  const { game } = router.query;
+  const { tab } = router.query;
+  const defaultTab = "overview";
+  const selectedTab = tab ? tab : defaultTab;
+
+  useEffect(() => {
+    setSelectedGame(prototypeData.getGameBySlug(game));
+  }, [game]);
 
   return (
     <>
@@ -45,7 +54,7 @@ export default function Home() {
         </section>
 
         <nav>
-          <ul className="tabs">
+          <ul className="tabs border-b border-ui-700">
             { TabsItems.map((item, itemIndex)  => (
               <li key={item}>
                 <Link href={`${hasAds ? '?ads=true&' : '?'}tab=${item.url}`}>

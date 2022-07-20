@@ -64,6 +64,7 @@
     @apply
     py-2
     px-1
+    leading-none
     ;
     &:first-child {
       @apply

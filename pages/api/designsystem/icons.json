@@ -1592,6 +1592,10 @@
           "name": "handheld-console"
         },
         {
+          "tags": "play,controller,game,console,videogame,gaming,platform,handheld",
+          "name": "handheld-console-2"
+        },
+        {
           "tags": "increase,zoom,low,visibility,lens,vision,visual,impairment",
           "name": "low-vision"
         },

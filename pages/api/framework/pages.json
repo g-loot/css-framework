@@ -1,0 +1,163 @@
+{
+  "pages": [
+    {
+      "label": "CSS Framework",
+      "tags": "framework,about,css,gettingstarted,install,npm,package,reactjs,webpack,tailwindcss,nodejs,config",
+      "url": "/design-system/about"
+    },
+    {
+      "label": "Prototype",
+      "tags": "framework,about,css,gettingstarted,install,npm,package,reactjs,webpack,tailwindcss,nodejs,config",
+      "url": "/prototype"
+    },
+    {
+      "label": "Brand & assets",
+      "tags": "framework,about,css,gettingstarted,install,npm,package,reactjs,webpack,tailwindcss,nodejs,config",
+      "url": "/brand/introduction",
+      "isDisabled": true
+    },
+    {
+      "label": "About",
+      "tags": "framework,about,css,gettingstarted,install,npm,package,reactjs,webpack,tailwindcss,nodejs,config",
+      "url": "/about",
+      "isDisabled": true
+    }
+  ],
+  "sections": [
+    {
+      "title": "Home",
+      "pages": [
+        {
+          "label": "Home",
+          "url": "home",
+          "query": "",
+          "tags": "home, start, index"
+        }
+      ]
+    },
+    {
+      "title": "Profile",
+      "pages": [
+        {
+          "label": "Profile",
+          "url": "profile",
+          "query": "",
+          "tags": "profile, view, user"
+        },
+        {
+          "label": "Profile settings",
+          "url": "profile-settings",
+          "query": "",
+          "tags": "profile, edit, user, settings, form",
+          "tab": 1
+        }
+      ]
+    },
+    {
+      "title": "Teams",
+      "pages": [
+        {
+          "label": "Teams listing",
+          "url": "teams",
+          "query": "",
+          "tags": "team"
+        }
+      ]
+    },
+    {
+      "title": "Shop",
+      "pages": [
+        {
+          "label": "Shop listing",
+          "url": "shop",
+          "query": "",
+          "tags": "shop, voucher, riot games, amazon, steam, drkn, ifood, reward"
+        }
+      ]
+    },
+    {
+      "title": "Premium",
+      "pages": [
+        {
+          "label": "Premium",
+          "url": "premium",
+          "query": "",
+          "tags": "premium,"
+        }
+      ]
+    },
+    {
+      "title": "Wallet",
+      "pages": [
+        {
+          "label": "Overview",
+          "url": "wallet",
+          "query": "",
+          "tags": "wallet, rewards, transactions, payments"
+        },
+        {
+          "label": "History",
+          "url": "wallet",
+          "query": "tab=history",
+          "tags": "wallet, rewards, history, transactions"
+        },
+
+        {
+          "label": "History (empty state)",
+          "url": "wallet",
+          "query": "tab=history&empty=true",
+          "tags": "wallet, rewards, history, transactions",
+          "tab": 1
+        },
+        {
+          "label": "Voucher",
+          "url": "wallet",
+          "query": "tab=voucher",
+          "tags": "wallet, rewards, history, transactions,voucher, redeem"
+        }
+      ]
+    },
+    {
+      "title": "Missions",
+      "pages": [
+        {
+          "label": "Missions & rewards",
+          "url": "valorant/missions",
+          "query": "",
+          "tags": "game, missions"
+        },
+        {
+          "label": "How it works",
+          "url": "valorant/missions",
+          "query": "tab=how-it-works",
+          "tags": "game, missions, how it works, explanation"
+        }
+      ]
+    },
+    {
+      "title": "Brawls",
+      "pages": [
+        {
+          "label": "Ongoing Brawls listing",
+          "url": "valorant/brawls",
+          "query": "",
+          "tags": "game, brawls"
+        },
+        {
+          "label": "Your brawl matches",
+          "url": "valorant/brawls/0",
+          "query": "",
+          "tags": "game, brawls, matches, enrollment, token",
+          "tab": 1
+        },
+        {
+          "label": "Solo leaderboard",
+          "url": "valorant/brawls/0",
+          "query": "tab=solo-leaderboard",
+          "tags": "game, brawls, matches, enrollment, token, leaderboard",
+          "tab": 1
+        }
+      ]
+    }
+  ]
+}
