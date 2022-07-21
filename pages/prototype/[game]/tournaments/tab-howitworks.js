@@ -154,7 +154,7 @@ export default function TabTournamentsHowItWorks() {
                 <div className="text-sm text-ui-300">
                   Connect your Steam account to G-Loot.
                 </div>
-                <span></span>
+                <span/>
               </a>
             </li>
             <li>
@@ -163,14 +163,14 @@ export default function TabTournamentsHowItWorks() {
                 <div className="text-sm text-ui-300">
                   Have the G-Loot tracker installed and running.
                 </div>
-                <span></span>
+                <span/>
               </a>
             </li>
             <li>
               <a href="#">
                 <i>3</i>
                 <div className="text-sm text-ui-300">Launch your game.</div>
-                <span></span>
+                <span/>
               </a>
             </li>
             <li>
@@ -179,7 +179,7 @@ export default function TabTournamentsHowItWorks() {
                 <div className="text-sm text-ui-300">
                   Play a match in the correct game mode.
                 </div>
-                <span></span>
+                <span/>
               </a>
             </li>
             <li>
@@ -189,7 +189,7 @@ export default function TabTournamentsHowItWorks() {
                   The missions will be updated automatically once the match is
                   finished.
                 </div>
-                <span></span>
+                <span/>
               </a>
             </li>
             <li>
@@ -199,14 +199,14 @@ export default function TabTournamentsHowItWorks() {
                   XP will be added to the Mission Rewards when you complete a
                   mission.
                 </div>
-                <span></span>
+                <span/>
               </a>
             </li>
             <li>
               <a href="#">
                 <i>7</i>
                 <div className="text-sm text-ui-300">Claim your reward.</div>
-                <span></span>
+                <span/>
               </a>
             </li>
           </ul>
@@ -236,7 +236,7 @@ export default function TabTournamentsHowItWorks() {
                       </div>
                       <div className="item-actions">
                         <div>
-                          <span className="icon icon-24 icon-arrow-sm-down"></span>
+                          <span className="icon icon-24 icon-arrow-sm-down" />
                         </div>
                       </div>
                     </div>

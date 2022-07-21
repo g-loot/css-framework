@@ -1,0 +1,200 @@
+[
+  {
+    "id": 0,
+    "isYou": true,
+    "isPremium": false,
+    "nickname": "JackAttack123",
+    "firstname": "John",
+    "lastname": "JoKes",
+    "country": "Trinidad and Tobago",
+    "countryFlag": "tt",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg",
+    "email": "jackjack@gmail.com",
+    "clan": 0,
+    "socials": {
+      "riotNickname": "JackAttack123",
+      "riotHashtag": 8573,
+      "twitch": "@jackattack123"
+    },
+    "stats": {
+      "playedBrawls": 143,
+      "playedTournaments": 12
+    }
+  },
+  {
+    "id": 1,
+    "isYou": false,
+    "isPremium": false,
+    "nickname": "Kes2Band",
+    "firstname": "Kees",
+    "lastname": "Dieffenthaller",
+    "country": "Germany",
+    "countryFlag": "de",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
+    "email": "kes@gmail.com",
+    "clan": 1,
+    "socials": {
+      "riotNickname": "KeesDief",
+      "riotHashtag": 8953,
+      "twitch": "@KeesDief"
+    },
+    "stats": {
+      "playedBrawls": 34,
+      "playedTournaments": 0
+    }
+  },
+  {
+    "id": 2,
+    "isYou": false,
+    "isPremium": false,
+    "nickname": "MrKilla",
+    "firstname": "Johna",
+    "lastname": "Mapp",
+    "country": "Grenada",
+    "countryFlag": "gd",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg",
+    "email": "mrkil@gmail.com",
+    "clan": 3,
+    "socials": {
+      "riotNickname": "MrKilla",
+      "riotHashtag": 8573,
+      "twitch": "@misterkilla"
+    },
+    "stats": {
+      "playedBrawls": 243,
+      "playedTournaments": 22
+    }
+  },
+  {
+    "id": 3,
+    "isYou": false,
+    "isPremium": false,
+    "nickname": "Nomadiction",
+    "firstname": "Kyriakos",
+    "lastname": "Mitsotakis",
+    "country": "Greece",
+    "countryFlag": "gr",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg",
+    "email": "kykymimi@gmail.com",
+    "clan": 2,
+    "socials": {
+      "riotNickname": "kykymimiGr",
+      "riotHashtag": 8573,
+      "twitch": "@kykymimi"
+    },
+    "stats": {
+      "playedBrawls": 143,
+      "playedTournaments": 12
+    }
+  },
+  {
+    "id": 4,
+    "isYou": false,
+    "isPremium": false,
+    "nickname": "Johnny",
+    "firstname": "Johnny",
+    "lastname": "Deep",
+    "country": "United States",
+    "countryFlag": "us",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg",
+    "email": "dirtyjohnny@gmail.com",
+    "clan": 4,
+    "socials": {
+      "riotNickname": "DirtyJohnny",
+      "riotHashtag": 8573,
+      "twitch": "@dirtyjohnny"
+    },
+    "stats": {
+      "playedBrawls": 3,
+      "playedTournaments": 0
+    }
+  },
+  {
+    "id": 5,
+    "isYou": false,
+    "isPremium": false,
+    "nickname": "PopoRob",
+    "firstname": "Rob",
+    "lastname": "Williams",
+    "country": "United Kingdom",
+    "countryFlag": "uk",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg",
+    "email": "robbiewilliams@gmail.com",
+    "clan": 5,
+    "socials": {
+      "riotNickname": "PopoRob",
+      "riotHashtag": 8573,
+      "twitch": "@poporob"
+    },
+    "stats": {
+      "playedBrawls": 74,
+      "playedTournaments": 2
+    }
+  },
+  {
+    "id": 5,
+    "isYou": false,
+    "isPremium": false,
+    "nickname": "Valance",
+    "firstname": "Valérie",
+    "lastname": "Williams",
+    "country": "France",
+    "countryFlag": "fr",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg",
+    "email": "valance@gmail.com",
+    "clan": 4,
+    "socials": {
+      "riotNickname": "valance",
+      "riotHashtag": 1425,
+      "twitch": "@valance"
+    },
+    "stats": {
+      "playedBrawls": 15,
+      "playedTournaments": 0
+    }
+  },
+  {
+    "id": 6,
+    "isYou": false,
+    "isPremium": false,
+    "nickname": "Pilar",
+    "firstname": "Steven",
+    "lastname": "Catterpilar",
+    "country": "United Kingdom",
+    "countryFlag": "uk",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg",
+    "email": "PilarPilar@gmail.com",
+    "clan": 4,
+    "socials": {
+      "riotNickname": "Pilar",
+      "riotHashtag": 7482,
+      "twitch": "@PilarPilar"
+    },
+    "stats": {
+      "playedBrawls": 54,
+      "playedTournaments": 23
+    }
+  },
+  {
+    "id": 7,
+    "isYou": false,
+    "isPremium": false,
+    "nickname": "HansGrubby",
+    "firstname": "Hans",
+    "lastname": "Grubber",
+    "country": "Germany",
+    "countryFlag": "de",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg",
+    "email": "hanshans@gmail.com",
+    "clan": 6,
+    "socials": {
+      "riotNickname": "HansGrubby",
+      "riotHashtag": 1254,
+      "twitch": "@HansGrubby"
+    },
+    "stats": {
+      "playedBrawls": 54,
+      "playedTournaments": 23
+    }
+  }
+]

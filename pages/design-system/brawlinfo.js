@@ -28,7 +28,7 @@ const DSpage = () => {
                     <div className='item-image'>
                       <figure className="avatar avatar-xs avatar-simple">
                         <div>
-                          <span className="icon icon-reading"></span>
+                          <span className="icon icon-reading" />
                         </div>
                       </figure>
                     </div>
@@ -39,7 +39,7 @@ const DSpage = () => {
                     </div>
                     <div className='item-actions'>
                       <div>
-                        <span className='icon icon-24 icon-arrow-sm-down'></span>
+                        <span className='icon icon-24 icon-arrow-sm-down'/>
                       </div>
                     </div>
                   </div>
@@ -88,7 +88,7 @@ const DSpage = () => {
                     <h4 className='font-headings text-base uppercase text-ui-200'>Brawl ID</h4>
                     <button type='button' className='button button-sm button-secondary'>
                       <span>Copy</span>
-                      <span className='icon icon-document-copy'></span>
+                      <span className='icon icon-document-copy'/>
                     </button>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ const DSpage = () => {
                   <h4 className='font-headings text-base uppercase text-ui-400 mb-1'>Brawl ID</h4>
                   <button type='button' className='button button-sm button-secondary'>
                     <span>Copy</span>
-                    <span className='icon icon-document-copy'></span>
+                    <span className='icon icon-document-copy'/>
                   </button>
                 </div>
               </li>
@@ -206,7 +206,7 @@ const DSpage = () => {
                 <h4 className='font-headings text-base uppercase text-ui-400 mb-1'>Brawl ID</h4>
                 <button type='button' className='button button-sm button-secondary'>
                   <span>Copy</span>
-                  <span className='icon icon-document-copy'></span>
+                  <span className='icon icon-document-copy'/>
                 </button>
               </li>
             </ul>

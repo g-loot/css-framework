@@ -122,7 +122,7 @@ const PrototypePage = () => {
         <div className={`container max-w-[1280px] mx-auto max-w-xl mt-8 ${!TournamentLeaderboard[SelectedTournament].disabled ? '' : 'hidden'}`}>
           <div className='hidden justify-end gap-4 mb-8'>
             <button type='button' className='button button-secondary'>
-              <span className='icon icon-data-download'></span>
+              <span className='icon icon-data-download'/>
               <span>Download leaderboard</span>
             </button>
           </div>
@@ -169,7 +169,7 @@ const PrototypePage = () => {
                             </div>
                             <div className='item-actions'>
                               <div>
-                                <span className='icon icon-24 icon-arrow-sm-down'></span>
+                                <span className='icon icon-24 icon-arrow-sm-down'/>
                               </div>
                             </div>
                           </div>
@@ -184,13 +184,13 @@ const PrototypePage = () => {
                                     {group.name}
                                   </div>
                                   <div className='text-xs text-ui-300 flex items-center gap-1'>
-                                    <span className='icon icon-calendar'></span>
+                                    <span className='icon icon-calendar'/>
                                     <span>{group.date} • {group.time}</span>
                                   </div>
                                 </div>
                                 <div className='item-actions hidden'>
                                   <div>
-                                    <span className='icon icon-20 icon-arrow-sm-down'></span>
+                                    <span className='icon icon-20 icon-arrow-sm-down'/>
                                   </div>
                                 </div>
                               </div>
@@ -216,13 +216,13 @@ const PrototypePage = () => {
                                         {group.name}
                                       </div>
                                       <div className='text-xs text-ui-300 flex items-center gap-1'>
-                                        <span className='icon icon-calendar'></span>
+                                        <span className='icon icon-calendar'/>
                                         <span>{group.date} • {group.time}</span>
                                       </div>
                                     </div>
                                     <div className='item-actions'>
                                       <div>
-                                        <span className='icon icon-20 icon-arrow-sm-down'></span>
+                                        <span className='icon icon-20 icon-arrow-sm-down'/>
                                       </div>
                                     </div>
                                   </div>
@@ -255,7 +255,7 @@ const PrototypePage = () => {
 
               <div className={`absolute inset-x-0 top-0 h-96 flex items-center ${Loading === true ? 'block' : 'hidden'}`}>
                 <div className='loader-gloot loader-xl'>
-                  <div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  <div><i/><i/><i/><i/><i/><i/><i/><i/></div>
                 </div>
               </div>
               
@@ -337,11 +337,11 @@ const PrototypePage = () => {
             <div className={`relative z-0 surface surface-dimmed rounded-lg px-4 py-8 text-center mt-28`}>
               <div className={`absolute z-10 inset-0 flex items-center ${Loading === true ? 'flex' : 'hidden'}`}>
                 <div className='loader-gloot loader-xl'>
-                  <div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  <div><i/><i/><i/><i/><i/><i/><i/><i/></div>
                 </div>
               </div>
               <div className={`max-w-xs mx-auto ${Loading === true ? 'opacity-0' : ''}`}>
-                <span className='icon icon-game-pubg-symbol text-6xl text-ui-400 mt-4'></span>
+                <span className='icon icon-game-pubg-symbol text-6xl text-ui-400 mt-4'/>
                 <div className='mt-2 mb-6'>
                   <p className='text-lg text-ui-300 font-headings leading-tight'>
                     This part of the tournament has not started yet. Come back later.

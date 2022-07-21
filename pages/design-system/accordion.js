@@ -33,7 +33,7 @@ const DSpage = () => {
                   </div>
                   <div className='item-actions'>
                     <div>
-                      <span className='icon icon-24 icon-arrow-sm-down'></span>
+                      <span className='icon icon-24 icon-arrow-sm-down'/>
                     </div>
                   </div>
                 </div>
@@ -63,7 +63,7 @@ const DSpage = () => {
                 </div>
                 <div className='item-actions'>
                   <div>
-                    <span className='icon icon-24 icon-arrow-sm-down'></span>
+                    <span className='icon icon-24 icon-arrow-sm-down'/>
                   </div>
                 </div>
               </div>
@@ -91,7 +91,7 @@ const DSpage = () => {
                 </div>
                 <div className='item-actions'>
                   <div>
-                    <span className='icon icon-24 icon-arrow-sm-down'></span>
+                    <span className='icon icon-24 icon-arrow-sm-down'/>
                   </div>
                 </div>
               </div>
@@ -140,14 +140,14 @@ const DSpage = () => {
 
             <Accordion title='Before entering a Brawl' isopen header={(
             <>
-              <i className='bg-gradient-to-r from-game-valorant/0 via-game-valorant to-game-valorant/0'></i>
-              <i className='bg-gradient-to-r from-game-valorant/0 via-game-valorant to-game-valorant/0'></i>
+              <i className='bg-gradient-to-r from-game-valorant/0 via-game-valorant to-game-valorant/0'/>
+              <i className='bg-gradient-to-r from-game-valorant/0 via-game-valorant to-game-valorant/0'/>
           
               
               <div className='item'>
                 <div className='item-image'>
                   <div className={`rounded h-10 w-10 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-valorant`}>
-                    <span className={`icon icon-24 icon-game-valorant-symbol`}></span>
+                    <span className={`icon icon-24 icon-game-valorant-symbol`}/>
                   </div>
                 </div>
                 <div className='item-body'>
@@ -157,7 +157,7 @@ const DSpage = () => {
                 </div>
                 <div className='item-actions'>
                   <div>
-                    <span className='icon icon-24 icon-arrow-sm-down'></span>
+                    <span className='icon icon-24 icon-arrow-sm-down'/>
                   </div>
                 </div>
               </div>
@@ -165,22 +165,22 @@ const DSpage = () => {
             
           )}>
               <ul className="menu menu-secondary">
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Missions</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Brawls</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Tournaments</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Stats</span></a></li>
               </ul>
             </Accordion>
             <Accordion title='Play your first matches to join the leaderboard' header={(
             <>
-              <i className='bg-gradient-to-r from-game-pubg/0 via-game-pubg to-game-pubg/0'></i>
-              <i className='bg-gradient-to-r from-game-pubg/0 via-game-pubg to-game-pubg/0'></i>
+              <i className='bg-gradient-to-r from-game-pubg/0 via-game-pubg to-game-pubg/0'/>
+              <i className='bg-gradient-to-r from-game-pubg/0 via-game-pubg to-game-pubg/0'/>
           
               
               <div className='item'>
                 <div className='item-image'>
                   <div className={`rounded h-10 w-10 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-pubg`}>
-                    <span className={`icon icon-24 icon-game-pubg-symbol`}></span>
+                    <span className={`icon icon-24 icon-game-pubg-symbol`}/>
                   </div>
                 </div>
                 <div className='item-body'>
@@ -190,7 +190,7 @@ const DSpage = () => {
                 </div>
                 <div className='item-actions'>
                   <div>
-                    <span className='icon icon-24 icon-arrow-sm-down'></span>
+                    <span className='icon icon-24 icon-arrow-sm-down'/>
                   </div>
                 </div>
               </div>
@@ -198,22 +198,22 @@ const DSpage = () => {
             
           )}>
               <ul className="menu menu-secondary">
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Missions</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Brawls</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Tournaments</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Stats</span></a></li>
               </ul>
             </Accordion>
             <Accordion title='Pay tokens to activate Brawl matches' header={(
             <>
-              <i className='bg-gradient-to-r from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0'></i>
-              <i className='bg-gradient-to-r from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0'></i>
+              <i className='bg-gradient-to-r from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0'/>
+              <i className='bg-gradient-to-r from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0'/>
           
               
               <div className='item'>
                 <div className='item-image'>
                   <div className={`rounded h-10 w-10 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-rocketleague`}>
-                    <span className={`icon icon-24 icon-game-rocketleague-symbol`}></span>
+                    <span className={`icon icon-24 icon-game-rocketleague-symbol`}/>
                   </div>
                 </div>
                 <div className='item-body'>
@@ -223,7 +223,7 @@ const DSpage = () => {
                 </div>
                 <div className='item-actions'>
                   <div>
-                    <span className='icon icon-24 icon-arrow-sm-down'></span>
+                    <span className='icon icon-24 icon-arrow-sm-down'/>
                   </div>
                 </div>
               </div>
@@ -231,10 +231,10 @@ const DSpage = () => {
             
           )}>
               <ul className="menu menu-secondary">
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Missions</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Brawls</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Tournaments</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Stats</span></a></li>
               </ul>
             </Accordion>
             
@@ -263,14 +263,14 @@ const DSpage = () => {
 
             <Accordion title='Before entering a Brawl' isopen isselected header={(
             <>
-              <i className='bg-gradient-to-r from-game-valorant/0 via-game-valorant to-game-valorant/0'></i>
-              <i className='bg-gradient-to-r from-game-valorant/0 via-game-valorant to-game-valorant/0'></i>
+              <i className='bg-gradient-to-r from-game-valorant/0 via-game-valorant to-game-valorant/0'/>
+              <i className='bg-gradient-to-r from-game-valorant/0 via-game-valorant to-game-valorant/0'/>
           
               
               <div className='item'>
                 <div className='item-image'>
                   <div className={`rounded h-10 w-10 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-valorant`}>
-                    <span className={`icon icon-24 icon-game-valorant-symbol`}></span>
+                    <span className={`icon icon-24 icon-game-valorant-symbol`}/>
                   </div>
                 </div>
                 <div className='item-body'>
@@ -280,7 +280,7 @@ const DSpage = () => {
                 </div>
                 <div className='item-actions'>
                   <div>
-                    <span className='icon icon-24 icon-arrow-sm-down'></span>
+                    <span className='icon icon-24 icon-arrow-sm-down'/>
                   </div>
                 </div>
               </div>
@@ -288,22 +288,22 @@ const DSpage = () => {
             
           )}>
               <ul className="menu menu-secondary">
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
-                <li><a className='is-active'><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Missions</span></a></li>
+                <li><a className='is-active'><span className="icon icon-16 icon-undefined" /><span>Brawls</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Tournaments</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Stats</span></a></li>
               </ul>
             </Accordion>
             <Accordion title='Play your first matches to join the leaderboard' isopen header={(
             <>
-              <i className='bg-gradient-to-r from-game-pubg/0 via-game-pubg to-game-pubg/0'></i>
-              <i className='bg-gradient-to-r from-game-pubg/0 via-game-pubg to-game-pubg/0'></i>
+              <i className='bg-gradient-to-r from-game-pubg/0 via-game-pubg to-game-pubg/0'/>
+              <i className='bg-gradient-to-r from-game-pubg/0 via-game-pubg to-game-pubg/0'/>
           
               
               <div className='item'>
                 <div className='item-image'>
                   <div className={`rounded h-10 w-10 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-pubg`}>
-                    <span className={`icon icon-24 icon-game-pubg-symbol`}></span>
+                    <span className={`icon icon-24 icon-game-pubg-symbol`}/>
                   </div>
                 </div>
                 <div className='item-body'>
@@ -313,7 +313,7 @@ const DSpage = () => {
                 </div>
                 <div className='item-actions'>
                   <div>
-                    <span className='icon icon-24 icon-arrow-sm-down'></span>
+                    <span className='icon icon-24 icon-arrow-sm-down'/>
                   </div>
                 </div>
               </div>
@@ -321,22 +321,22 @@ const DSpage = () => {
             
           )}>
               <ul className="menu menu-secondary">
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Missions</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Brawls</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Tournaments</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Stats</span></a></li>
               </ul>
             </Accordion>
             <Accordion title='Pay tokens to activate Brawl matches' header={(
             <>
-              <i className='bg-gradient-to-r from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0'></i>
-              <i className='bg-gradient-to-r from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0'></i>
+              <i className='bg-gradient-to-r from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0'/>
+              <i className='bg-gradient-to-r from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0'/>
           
               
               <div className='item'>
                 <div className='item-image'>
                   <div className={`rounded h-10 w-10 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-rocketleague`}>
-                    <span className={`icon icon-24 icon-game-rocketleague-symbol`}></span>
+                    <span className={`icon icon-24 icon-game-rocketleague-symbol`}/>
                   </div>
                 </div>
                 <div className='item-body'>
@@ -346,7 +346,7 @@ const DSpage = () => {
                 </div>
                 <div className='item-actions'>
                   <div>
-                    <span className='icon icon-24 icon-arrow-sm-down'></span>
+                    <span className='icon icon-24 icon-arrow-sm-down'/>
                   </div>
                 </div>
               </div>
@@ -354,10 +354,10 @@ const DSpage = () => {
             
           )}>
               <ul className="menu menu-secondary">
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Missions</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Brawls</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Tournaments</span></a></li>
-                <li><a><span className="icon icon-16 icon-undefined"></span><span>Stats</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Missions</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Brawls</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Tournaments</span></a></li>
+                <li><a><span className="icon icon-16 icon-undefined" /><span>Stats</span></a></li>
               </ul>
             </Accordion>
             

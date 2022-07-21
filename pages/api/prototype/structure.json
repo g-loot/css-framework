@@ -4,27 +4,32 @@
       "label": "Home",
       "icon": "home-2",
       "url": "home",
-      "isHome": true
+      "isHome": true,
+      "slug": "home"
     },
     {
       "label": "Profile",
       "icon": "circle-09",
-      "url": "profile"
+      "url": "profile/0",
+      "slug": "profile"
     },
     {
       "label": "Teams",
       "icon": "multiple-12",
-      "url": "teams"
+      "url": "teams",
+      "slug": "teams"
     },
     {
       "label": "Shop",
       "icon": "shop",
-      "url": "shop"
+      "url": "shop",
+      "slug": "shop"
     },
     {
       "label": "Premium",
       "icon": "ic_stars_24px",
-      "url": "premium"
+      "url": "premium",
+      "slug": "premium"
     }
   ]
 }

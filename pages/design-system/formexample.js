@@ -59,7 +59,7 @@ const DSpage = () => {
                 <div className='form-dropzone'>
                   <label htmlFor='dropzone-file'>
                     <div>
-                        <span className='icon text-4xl icon-image mb-4'></span>
+                        <span className='icon text-4xl icon-image mb-4'/>
                         <p className='text-sm text-ui-200'><span className='font-semibold'>Click to upload</span> or drag and drop</p>
                         <p className='text-sm'>SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
                     </div>
@@ -75,14 +75,14 @@ const DSpage = () => {
               <div className='form-group flex items-center gap-2'>
                 <label htmlFor="social-twitter" className='flex-1'>Twitter:</label>
                 <div className="flex-3 input-group">
-                  <span className="icon icon-logo-twitter"></span>
+                  <span className="icon icon-logo-twitter" />
                   <input type="text" name="social-twitter" id="social-twitter" />
                 </div>
               </div>
               <div className='form-group flex items-center gap-2'>
                 <label htmlFor="social-twitch" className='flex-1'>Twitch:</label>
                 <div className="flex-3 input-group">
-                  <span className="icon icon-twitch"></span>
+                  <span className="icon icon-twitch" />
                   <input type="text" name="social-twitch" id="social-twitch" />
                 </div>
               </div>
@@ -92,7 +92,7 @@ const DSpage = () => {
                   <button className='button button-sm button-tertiary'>
                     <span>Connect</span>
                   </button>
-                  <span className="icon icon-discord"></span>
+                  <span className="icon icon-discord" />
                   <input type="text" name="social-discord" id="social-discord" />
                 </div>
               </div>
@@ -103,7 +103,7 @@ const DSpage = () => {
                     <button className='button button-sm button-secondary'>
                       <span>Login with steam</span>
                     </button>
-                    <span className="icon icon-steam"></span>
+                    <span className="icon icon-steam" />
                     <input type="text" name="social-steam" id="social-steam" />
                   </div>
                   <p className='text-ui-300 text-sm mt-1'>This site is not associated with Valve Corp.</p>
@@ -121,23 +121,23 @@ const DSpage = () => {
               <div className='form-group'>
                 <label className="form-toggle">
                   <input type="checkbox" name="data-meta" />
-                  <i className="form-icon"></i> Meta
+                  <i className="form-icon" /> Meta
                 </label>
                 <label className="form-toggle">
                   <input type="checkbox" name="data-google" />
-                  <i className="form-icon"></i> Google
+                  <i className="form-icon" /> Google
                 </label>
                 <label className="form-toggle">
                   <input type="checkbox" name="data-adroll" />
-                  <i className="form-icon"></i> Adroll
+                  <i className="form-icon" /> Adroll
                 </label>
                 <label className="form-toggle">
                   <input type="checkbox" name="data-bing" />
-                  <i className="form-icon"></i> Bing
+                  <i className="form-icon" /> Bing
                 </label>
                 <label className="form-toggle">
                   <input type="checkbox" name="data-quantcast" />
-                  <i className="form-icon"></i> Quantcast
+                  <i className="form-icon" /> Quantcast
                 </label>
               </div>
             </section>

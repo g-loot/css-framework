@@ -87,7 +87,7 @@ export default function PrototypeGamesNav({ children }) {
                         ? "from-game-valorant/0 via-game-valorant to-game-valorant/0"
                         : ""
                     }`}
-                  ></i>
+                  />
                   <i
                     className={`bg-gradient-to-r ${
                       item.slug === "apexlegends"
@@ -118,7 +118,7 @@ export default function PrototypeGamesNav({ children }) {
                         ? "from-game-valorant/0 via-game-valorant to-game-valorant/0"
                         : ""
                     }`}
-                  ></i>
+                  />
 
                   <div className="item p-0">
                     <div className="item-image">
@@ -133,7 +133,7 @@ export default function PrototypeGamesNav({ children }) {
                             /#|_/g,
                             ""
                           )}-symbol`}
-                        ></span>
+                        />
                       </div>
                     </div>
                     <div className="item-body">
@@ -143,7 +143,7 @@ export default function PrototypeGamesNav({ children }) {
                     </div>
                     <div className="item-actions">
                       <div>
-                        <span className="icon icon-24 icon-arrow-sm-down"></span>
+                        <span className="icon icon-24 icon-arrow-sm-down" />
                       </div>
                     </div>
                   </div>

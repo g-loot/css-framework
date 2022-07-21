@@ -25,7 +25,7 @@ export default function DSMainNav(props) {
         <li className={`${item.disabled === true ? 'is-disabled' : ''}`} key={item.id} onClick={props.onClick}>
           <Link href={item.url} >
             <a className={`${router.pathname.includes(item.url) || router.pathname === '' ? 'is-active' : ''}`}>
-              <span className={`icon icon-16 icon-${item.icon}`}></span>
+              <span className={`icon icon-16 icon-${item.icon}`}/>
               <span className=''>{item.label}</span>
             </a>
           </Link>

@@ -40,13 +40,13 @@
       "pages": [
         {
           "label": "Profile",
-          "url": "profile",
+          "url": "profile/0",
           "query": "",
           "tags": "profile, view, user"
         },
         {
           "label": "Profile settings",
-          "url": "profile-settings",
+          "url": "profile/settings",
           "query": "",
           "tags": "profile, edit, user, settings, form",
           "tab": 1

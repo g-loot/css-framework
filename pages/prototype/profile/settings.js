@@ -33,7 +33,7 @@ export default function Home() {
                     </div>
                     <div className="item-actions">
                       <div>
-                        <span className="icon icon-24 icon-arrow-sm-down"></span>
+                        <span className="icon icon-24 icon-arrow-sm-down" />
                       </div>
                     </div>
                   </div>
@@ -56,7 +56,7 @@ export default function Home() {
                               htmlFor="file-button"
                               className="button button-sm button-tertiary rounded-full"
                             >
-                              <span className="icon icon-camera"></span>
+                              <span className="icon icon-camera" />
                             </label>
                             <input
                               type="file"
@@ -90,7 +90,7 @@ export default function Home() {
                             className="tooltip tooltip-bottom text-ui-300 text-0"
                             data-tooltip="Contact support to change your country."
                           >
-                            <span className="icon icon-16 icon-c-info"></span>
+                            <span className="icon icon-16 icon-c-info" />
                           </button>
                         </div>
                       </div>
@@ -102,7 +102,7 @@ export default function Home() {
                           Twitter:
                         </label>
                         <div className="flex-3 input-group">
-                          <span className="icon icon-logo-twitter"></span>
+                          <span className="icon icon-logo-twitter" />
                           <input
                             type="text"
                             name="social-twitter"
@@ -115,7 +115,7 @@ export default function Home() {
                           Twitch:
                         </label>
                         <div className="flex-3 input-group">
-                          <span className="icon icon-twitch"></span>
+                          <span className="icon icon-twitch" />
                           <input
                             type="text"
                             name="social-twitch"
@@ -131,7 +131,7 @@ export default function Home() {
                           <button className="button button-sm button-secondary">
                             <span>Connect Discord</span>
                           </button>
-                          <span className="icon icon-discord"></span>
+                          <span className="icon icon-discord" />
                           <input
                             type="text"
                             name="social-discord"
@@ -148,7 +148,7 @@ export default function Home() {
                             <button className="button button-sm button-secondary">
                               <span>Login with Steam</span>
                             </button>
-                            <span className="icon icon-steam"></span>
+                            <span className="icon icon-steam" />
                             <input
                               type="text"
                               name="social-steam"
@@ -185,7 +185,7 @@ export default function Home() {
                     </div>
                     <div className="item-actions">
                       <div>
-                        <span className="icon icon-24 icon-arrow-sm-down"></span>
+                        <span className="icon icon-24 icon-arrow-sm-down" />
                       </div>
                     </div>
                   </div>
@@ -237,7 +237,7 @@ export default function Home() {
                           className="tooltip tooltip-bottom text-ui-300 text-0"
                           data-tooltip="Your in-game nickname is necessary if you want to join G-Loot tournaments"
                         >
-                          <span className="icon icon-16 icon-c-info"></span>
+                          <span className="icon icon-16 icon-c-info" />
                         </button>
                       </div>
                       <div className="form-group">
@@ -285,7 +285,7 @@ export default function Home() {
                     </div>
                     <div className="item-actions">
                       <div>
-                        <span className="icon icon-24 icon-arrow-sm-down"></span>
+                        <span className="icon icon-24 icon-arrow-sm-down" />
                       </div>
                     </div>
                   </div>
@@ -305,23 +305,23 @@ export default function Home() {
                       <div className='form-group'>
                         <label className="form-toggle">
                           <input type="checkbox" name="data-meta" />
-                          <i className="form-icon"></i> Meta
+                          <i className="form-icon" /> Meta
                         </label>
                         <label className="form-toggle">
                           <input type="checkbox" name="data-google" />
-                          <i className="form-icon"></i> Google
+                          <i className="form-icon" /> Google
                         </label>
                         <label className="form-toggle">
                           <input type="checkbox" name="data-adroll" />
-                          <i className="form-icon"></i> Adroll
+                          <i className="form-icon" /> Adroll
                         </label>
                         <label className="form-toggle">
                           <input type="checkbox" name="data-bing" />
-                          <i className="form-icon"></i> Bing
+                          <i className="form-icon" /> Bing
                         </label>
                         <label className="form-toggle">
                           <input type="checkbox" name="data-quantcast" />
-                          <i className="form-icon"></i> Quantcast
+                          <i className="form-icon" /> Quantcast
                         </label>
                       </div>
                     </div>

@@ -109,7 +109,7 @@ const DSpage = () => {
               <div className='form-dropzone'>
                 <label htmlFor='dropzone-file'>
                   <div>
-                      <span className='icon text-4xl icon-data-download mb-4'></span>
+                      <span className='icon text-4xl icon-data-download mb-4'/>
                       <p className='text-sm text-ui-200'><span className='font-semibold'>Click to upload</span> or drag and drop</p>
                       <p className='text-sm'>SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
                   </div>
@@ -137,7 +137,7 @@ const DSpage = () => {
           <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
             <div className='flex-1 space-y-4'>
               <div className='form-group'>
-                <label htmlFor='file-button' className='button button-tertiary rounded-full'><span className='icon icon-camera'></span></label>
+                <label htmlFor='file-button' className='button button-tertiary rounded-full'><span className='icon icon-camera'/></label>
                 <input type='file' name='file-button' id='file-button' aria-describedby='file_input_help' />
               </div>
             </div>

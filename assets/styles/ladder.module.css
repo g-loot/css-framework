@@ -41,6 +41,7 @@
   flex
   flex-nowrap
   gap-4
+  transform-gpu
   ;
 
   > li {
@@ -71,9 +72,6 @@
         ;
 
         > span {
-          @apply
-          transform-gpu
-          ;
           &:nth-child(1) {
             @apply
             text-center
@@ -95,7 +93,6 @@
               @apply
               absolute
               transition-transform
-              transform-gpu
               ease-[cubic-bezier(0.9,0,0.1,1)]
               duration-1000
               font-icon
@@ -103,7 +100,9 @@
               leading-5
               content-['\eb24']
               z-10
-              inset-0
+              inset-x-0
+              top-auto
+              bottom-auto
               translate-y-0
               text-ui-800
               ;
@@ -163,7 +162,6 @@
       duration-1000
       ease-[cubic-bezier(0.9,0,0.1,1)]
       opacity-50
-      transform-gpu
       scale-90
       origin-bottom
       ;
@@ -185,7 +183,6 @@
         flex-col
         items-center
         opacity-20
-        transform-gpu
         transition-all
         duration-500
         ease-[cubic-bezier(0.9,0,0.1,1)]

@@ -115,7 +115,7 @@ const DSpage = () => {
                     <>
                       <div className={`carousel-slide ${slideNumber === slideIndex ? 'is-active' : ''}`} key={slideIndex}>
                         <div className='carousel-image'>
-                          <span style={{ backgroundImage: `url(${slide.image})`}}></span>
+                          <span style={{ backgroundImage: `url(${slide.image})`}}/>
                         </div>
                         <div className='carousel-body'>
                           <div>
@@ -131,7 +131,7 @@ const DSpage = () => {
                           </div>
                         </div>
                         <div className='carousel-backdrop'>
-                          <span style={{ backgroundImage: `url(${slide.image})`}}></span>
+                          <span style={{ backgroundImage: `url(${slide.image})`}}/>
                         </div>
                       </div>
                     </>
@@ -151,7 +151,7 @@ const DSpage = () => {
                                 {item.title}
                               </div>
                             </div>
-                            <i></i>
+                            <i/>
                           </a>
                         </li>
                       </>
@@ -159,10 +159,10 @@ const DSpage = () => {
                   </ul>
                   <div className='carousel-control'>
                     <button className='button button-secondary' onClick={prevHandler.bind(this, slideNumber, slides.length)}>
-                      <span className='icon icon-ctrl-left'></span>
+                      <span className='icon icon-ctrl-left'/>
                     </button>
                     <button className='button button-secondary' onClick={nextHandler.bind(this, slideNumber, slides.length)}>
-                      <span className='icon icon-ctrl-right'></span>
+                      <span className='icon icon-ctrl-right'/>
                     </button>
                   </div>
                 </div>
@@ -199,7 +199,7 @@ const DSpage = () => {
                     <>
                       <div className={`carousel-slide ${slideOnboardingNumber === slideOnboardingIndex ? 'is-active' : ''}`} key={slideOnboardingIndex}>
                         <div className='carousel-image'>
-                          <span style={{ backgroundImage: `url(${slideOnboarding.image})`}}></span>
+                          <span style={{ backgroundImage: `url(${slideOnboarding.image})`}}/>
                         </div>
                         <div className='carousel-body'>
                           <div>
@@ -218,7 +218,7 @@ const DSpage = () => {
                           </div>
                         </div>
                         <div className='carousel-backdrop'>
-                          <span style={{ backgroundImage: `url(${slideOnboarding.image})`}}></span>
+                          <span style={{ backgroundImage: `url(${slideOnboarding.image})`}}/>
                         </div>
                       </div>
                     </>
@@ -240,10 +240,10 @@ const DSpage = () => {
                             </div>
                             <div className='item-actions'>
                               <div className={`checkmark checkmark-invisible checkmark-sm ${slideOnboardingNumber > slideOnboardingIndex ? 'is-active' : ''}`}>
-                                <i></i>
+                                <i/>
                               </div>
                             </div>
-                            <i></i>
+                            <i/>
                           </a>
                         </li>
                       </>

@@ -1,11 +1,14 @@
 import Button from "../Button/Button";
 import Icon from "../Icon/Icon";
 import Link from "next/link";
+import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from 'next/router';
 
 export default function Topbar() {
   const { query } = useRouter();
+  const prototypeData = usePrototypeData();
   const hasAds = query.ads === 'true' ? true : false;
+
   return (
     <div className="sticky top-0 z-50 bg-ui-800/50 navbar">
       <div className="container relative">
@@ -50,7 +53,7 @@ export default function Topbar() {
                   placeholder="Search"
                 />
                 <button type="submit" className="absolute mr-2 text-0">
-                  <span className="icon icon-16 icon-zoom text-ui-600"></span>
+                  <span className="icon icon-16 icon-zoom text-ui-600" />
                 </button>
               </div>
               <div className="flex justify-end items-center gap-2">
@@ -110,7 +113,7 @@ export default function Topbar() {
                     className="avatar avatar-circle avatar-xs"
                   >
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                      <img src={prototypeData.getUserByID(0)?.avatar} alt="avatar" />
                     </div>
                   </figure>
                   <div
@@ -121,23 +124,23 @@ export default function Topbar() {
                       <li>
                         <Link href={`/prototype/wallet${hasAds ? '?ads=true' : ''}`}>
                           <a>
-                            <span className="icon icon-wallet-43"></span>
+                            <span className="icon icon-wallet-43" />
                             <span>Wallet</span>
                           </a>
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/prototype/profile${hasAds ? '?ads=true' : ''}`}>
+                        <Link href={`/prototype/profile/0${hasAds ? '?ads=true' : ''}`}>
                           <a>
-                            <span className="icon icon-circle-09"></span>
+                            <span className="icon icon-circle-09" />
                             <span>Public profile</span>
                           </a>
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/prototype/profile-settings${hasAds ? '?ads=true' : ''}`}>
+                        <Link href={`/prototype/profile/settings${hasAds ? '?ads=true' : ''}`}>
                           <a>
-                            <span className="icon icon-cogwheel"></span>
+                            <span className="icon icon-cogwheel" />
                             <span>Settings</span>
                           </a>
                         </Link>
@@ -145,7 +148,7 @@ export default function Topbar() {
                       <li>
                         <Link href={`/prototype/logout${hasAds ? '?ads=true' : ''}`}>
                           <a>
-                            <span className="icon icon-leave"></span>
+                            <span className="icon icon-leave" />
                             <span>Log out</span>
                           </a>
                         </Link>

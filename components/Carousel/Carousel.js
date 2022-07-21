@@ -51,8 +51,6 @@ export default function Carousel(props) {
   }
   
   function nextHandler(varTarget, max) {
-    console.log(varTarget);
-
     if(varTarget === max - 1) {
       setSlideNumber(varTarget = 0)
     } else {
@@ -67,7 +65,7 @@ export default function Carousel(props) {
           <>
             <div className={`carousel-slide ${slideNumber === slideIndex ? 'is-active' : ''}`} key={slide}>
               <div className='carousel-image'>
-                <span style={{ backgroundImage: `url(${slide.image})`}}></span>
+                <span style={{ backgroundImage: `url(${slide.image})`}}/>
               </div>
               <div className='carousel-body'>
                 <div>
@@ -81,14 +79,14 @@ export default function Carousel(props) {
                     <span>{slide.buttonLabel}</span>
                     {slide.buttonExternal && (
                       <>
-                        <span className='icon icon-box-arrow-top-right'></span>
+                        <span className='icon icon-box-arrow-top-right'/>
                       </>
                     )}
                   </button>
                 </div>
               </div>
               <div className='carousel-backdrop'>
-                <span style={{ backgroundImage: `url(${slide.image})`}}></span>
+                <span style={{ backgroundImage: `url(${slide.image})`}}/>
               </div>
             </div>
           </>
@@ -106,7 +104,7 @@ export default function Carousel(props) {
                   <div>
                     {item.title}
                   </div>
-                  <i></i>
+                  <i/>
                 </a>
               </li>
             </>
@@ -114,10 +112,10 @@ export default function Carousel(props) {
         </ul>
         <div className='carousel-control'>
           <button className='button button-secondary' onClick={prevHandler.bind(this, slideNumber, slides.length)}>
-            <span className='icon icon-ctrl-left'></span>
+            <span className='icon icon-ctrl-left'/>
           </button>
           <button className='button button-secondary' onClick={nextHandler.bind(this, slideNumber, slides.length)}>
-            <span className='icon icon-ctrl-right'></span>
+            <span className='icon icon-ctrl-right'/>
           </button>
         </div>
       </div>

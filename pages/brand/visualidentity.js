@@ -39,7 +39,7 @@ const BrandPage = () => (
         <div>
           <Link href='introduction'>
             <a className='button button-ghost px-4'>
-              <span className='icon icon-arrow-sm-left'></span>
+              <span className='icon icon-arrow-sm-left'/>
               <span>Introduction</span>
             </a>
           </Link>
@@ -48,7 +48,7 @@ const BrandPage = () => (
           <Link href='logotype'>
             <a className='button button-ghost px-4'>
               <span>Logotype</span>
-              <span className='icon icon-arrow-sm-right'></span>
+              <span className='icon icon-arrow-sm-right'/>
             </a>
           </Link>
         </div>

@@ -2,14 +2,6 @@
 /* ANIMATION */
 /*----------------------------*/
 
-[class*='rotate'],
-[class*='scale'],
-[class*='translate'] {
-  @apply
-  transform-gpu
-  ;
-}
-
 .perspective {
   perspective: 500px;
 }
@@ -68,4 +60,10 @@
   &.animate-delay {
     transition-delay: var(--delay, 0.3s) !important;
   }
+}
+
+.lottie-blur {
+  @apply
+  drop-shadow-main-lg
+  ;
 }

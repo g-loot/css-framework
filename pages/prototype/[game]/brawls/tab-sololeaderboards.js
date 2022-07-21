@@ -1,209 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 
 import Accordion from "../../../../components/Accordion/Accordion";
 import HowToBrawl from "../../../../components/HowTo/HowToBrawl";
 import Link from "next/link";
+import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
-const Clans = [
-  {
-    id: 0,
-    name: "Clan Name 1",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png",
-  },
-  {
-    id: 1,
-    name: "Clan Name 2",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Un1c0rns.png",
-  },
-  {
-    id: 2,
-    name: "Clan Name 2",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png",
-  },
-  {
-    id: 3,
-    name: "Clan Name 2",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_GhOOOsTS.png",
-  },
-  {
-    id: 4,
-    name: "Clan Name 2",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png",
-  },
-];
-
-const LeaderboardResults = [
-  {
-    name: "Kes2Band",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1655292295/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
-    clanId: 0,
-    rewards: {
-      coin: 250000,
-      ticket: 1,
-    },
-    stats: {
-      brawlPoints: 123,
-      matchPlayed: 11,
-      tiebreakerPoints: 1402,
-      gameScore: 143,
-      bestPoints: {
-        one: 423,
-        two: 245,
-        three: 513,
-      },
-    },
-  },
-  {
-    name: "MisterKilla",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1655292295/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg",
-    clanId: 1,
-    rewards: {
-      coin: 200000,
-      ticket: 1,
-    },
-    stats: {
-      brawlPoints: 115,
-      matchPlayed: 11,
-      tiebreakerPoints: 1402,
-      gameScore: 143,
-      bestPoints: {
-        one: 423,
-        two: 245,
-        three: 513,
-      },
-    },
-  },
-  {
-    name: "Nomadiction",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1655292295/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg",
-    clanId: 3,
-    rewards: {
-      coin: 150000,
-      ticket: 1,
-    },
-    stats: {
-      brawlPoints: 113,
-      matchPlayed: 11,
-      tiebreakerPoints: 1402,
-      gameScore: 143,
-      bestPoints: {
-        one: 423,
-        two: 245,
-        three: 513,
-      },
-    },
-  },
-  {
-    name: "TestRobot",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1655292295/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg",
-    clanId: 2,
-    rewards: {
-      coin: 75000,
-      ticket: 1,
-    },
-    stats: {
-      brawlPoints: 108,
-      matchPlayed: 11,
-      tiebreakerPoints: 1402,
-      gameScore: 143,
-      bestPoints: {
-        one: 423,
-        two: 245,
-        three: 513,
-      },
-    },
-  },
-  {
-    name: "UglyDuck",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1655292295/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg",
-    clanId: 4,
-    rewards: {
-      coin: 50000,
-    },
-    stats: {
-      brawlPoints: 98,
-      matchPlayed: 11,
-      tiebreakerPoints: 1402,
-      gameScore: 143,
-      bestPoints: {
-        one: 423,
-        two: 245,
-        three: 513,
-      },
-    },
-  },
-  {
-    name: "Redemptor",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1655292295/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg",
-    clanId: 3,
-    rewards: {
-      coin: 250000,
-    },
-    stats: {
-      brawlPoints: 97,
-      matchPlayed: 11,
-      tiebreakerPoints: 1402,
-      gameScore: 143,
-      bestPoints: {
-        one: 423,
-        two: 245,
-        three: 513,
-      },
-    },
-  },
-  {
-    name: "Scapula",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1655292295/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg",
-    clanId: 2,
-    rewards: {
-      coin: 25000,
-    },
-    stats: {
-      brawlPoints: 78,
-      matchPlayed: 11,
-      tiebreakerPoints: 1402,
-      gameScore: 143,
-      bestPoints: {
-        one: 423,
-        two: 245,
-        three: 513,
-      },
-    },
-  },
-  {
-    name: "Guiderope",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1655292295/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg",
-    clanId: 0,
-    rewards: {
-      coin: 10000,
-    },
-    stats: {
-      brawlPoints: 77,
-      matchPlayed: 11,
-      tiebreakerPoints: 1402,
-      gameScore: 143,
-      bestPoints: {
-        one: 423,
-        two: 245,
-        three: 513,
-      },
-    },
-  },
-];
+const Groups = [
+  "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "N", "O", "P", "Q", "R", "S"
+]
 
 const sideScroll = (element, speed, distance, step) => {
   let scrollAmount = 0;
@@ -217,34 +22,64 @@ const sideScroll = (element, speed, distance, step) => {
 };
 
 export default function TabBrawlsSoloLeaderboards() {
-  const { query } = useRouter();
-  const hasAds = query.ads === "true" ? true : false;
-  const selectedGame = !query.game ? 0 : query.game;
+  const router = useRouter();
+  const prototypeData = usePrototypeData();
+  const [selectedGame, setSelectedGame] = useState(null);
+  const [selectedBrawl, setSelectedBrawl] = useState(null);
+  const { game } = router.query;
+  const { brawl_id } = router.query;
+
+  useEffect(() => {
+    setSelectedBrawl(prototypeData.getBrawlByID(game, brawl_id));
+  }, [brawl_id]);
+
   const sliderRankWrapper = useRef(null);
   const sliderRankItem = useRef(null);
-  const [sliderRankSize, setSliderRankSize] = useState(0);
+  const [sliderRankWidth, setSliderRankWidth] = useState(0);
   const sliderGroupWrapper = useRef(null);
   const sliderGroupItem = useRef(null);
-  const [sliderGroupSize, setSliderGroupSize] = useState(0);
+  const [sliderGroupWidth, setSliderGroupWidth] = useState(0);
+
+  const [isLoadingRank, setIsLoadingRank] = useState(false);
+  const [isLoadingGroup, setIsLoadingGroup] = useState(false);
+  const [selectedRank, setSelectedRank] = useState(2);
+  const [selectedGroup, setSelectedGroup] = useState(6);
 
   useEffect(() => {
-    if(sliderRankItem.current) {
-      setSliderRankSize(sliderRankItem.current.clientWidth);
-      console.log(sliderRankSize);
+    if (sliderRankItem.current) {
+      setSliderRankWidth(sliderRankItem.current.clientWidth);
     }
-}, [sliderRankItem]);
+  }, [sliderRankItem]);
 
   useEffect(() => {
-    if(sliderGroupItem.current) {
-      setSliderGroupSize(sliderGroupItem.current.clientWidth);
-      console.log(sliderGroupSize);
+    if (sliderGroupItem.current) {
+      setSliderGroupWidth(sliderGroupItem.current.clientWidth);
     }
-}, [sliderGroupItem]);
+  }, [sliderGroupItem]);
 
   function numberWithSpaces(x) {
     var parts = x.toString().split(".");
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     return parts.join(".");
+  }
+
+  function loadRank(target) {
+    setIsLoadingRank(true);
+    setIsLoadingGroup(true);
+    setSelectedRank(target);
+    const timer = setTimeout(() => {
+      setIsLoadingRank(false);
+      setIsLoadingGroup(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }
+  function loadGroup(target) {
+    setIsLoadingGroup(true);
+    setSelectedGroup(target);
+    const timer = setTimeout(() => {
+      setIsLoadingGroup(false);
+    }, 1000);
+    return () => clearTimeout(timer);
   }
 
   return (
@@ -314,7 +149,7 @@ export default function TabBrawlsSoloLeaderboards() {
                     All your matches
                   </div>
                   <div className="flex items-center justify-center gap-1 text-main">
-                    <span className="text-xs icon icon-star"></span>
+                    <span className="text-xs icon icon-star" />
                     <span className="text-xs"> = best matches</span>
                   </div>
                 </div>
@@ -336,7 +171,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       </tr>
                       <tr className="bg-ui-800 font-bold">
                         <th className="w-10">
-                          <span className="text-xs icon icon-star text-main"></span>
+                          <span className="text-xs icon icon-star text-main" />
                         </th>
                         <td>
                           <span className="text-xs">1</span>
@@ -365,7 +200,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       </tr>
                       <tr className="bg-ui-800 font-bold">
                         <th className="w-10">
-                          <span className="text-xs icon icon-star text-main"></span>
+                          <span className="text-xs icon icon-star text-main" />
                         </th>
                         <td>
                           <span className="text-xs">4</span>
@@ -441,8 +276,8 @@ export default function TabBrawlsSoloLeaderboards() {
                 <span className="text-sm text-ui-300">
                   What are the different Brawl levels?
                 </span>
-                <button className="text-ui-300 text-0">
-                  <span className="icon icon-16 icon-c-info"></span>
+                <button type="button" className="text-ui-300 text-0">
+                  <span className="icon icon-16 icon-c-info" />
                 </button>
               </div>
               <div className="overflow-x-auto relative scrollbar-hidden h-20 flex items-center my-4">
@@ -451,10 +286,15 @@ export default function TabBrawlsSoloLeaderboards() {
                     type="button"
                     className="button button-lg button-ghost rounded-full"
                     onClick={() => {
-                      sideScroll(sliderRankWrapper.current, 25, sliderRankSize, -sliderRankSize);
+                      sideScroll(
+                        sliderRankWrapper.current,
+                        25,
+                        sliderRankWidth,
+                        -sliderRankWidth
+                      );
                     }}
                   >
-                    <span className="icon icon-ctrl-left"></span>
+                    <span className="icon icon-ctrl-left" />
                   </button>
                 </div>
                 <div className="hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l from-ui-850 via-ui-850 to-ui-850/0 pr-4 pl-8">
@@ -462,19 +302,30 @@ export default function TabBrawlsSoloLeaderboards() {
                     type="button"
                     className="button button-lg button-ghost rounded-full"
                     onClick={() => {
-                      sideScroll(sliderRankWrapper.current, 25, sliderRankSize, sliderRankSize);
+                      sideScroll(
+                        sliderRankWrapper.current,
+                        25,
+                        sliderRankWidth,
+                        sliderRankWidth
+                      );
                     }}
                   >
-                    <span className="icon icon-ctrl-right"></span>
+                    <span className="icon icon-ctrl-right" />
                   </button>
                 </div>
 
-                <ul ref={sliderRankWrapper} className="absolute z-0 inset-0 tabs tabs-rank scrollbar-hidden px-10 md:px-20">
+                <ul
+                  ref={sliderRankWrapper}
+                  className="absolute z-0 inset-0 tabs tabs-rank scrollbar-hidden px-10 md:px-20"
+                >
                   <li className="tab-bronze" ref={sliderRankItem}>
-                    <a>
+                    <a
+                      onClick={loadRank.bind(this, 1)}
+                      className={selectedRank === 1 ? "is-active" : ""}
+                    >
                       <div>
                         <div>
-                          <span className="icon text-4xl icon-rank-bronze"></span>
+                          <span className="icon text-4xl icon-rank-bronze" />
                           <span className="font-headings text-2xl uppercase italic">
                             Bronze
                           </span>
@@ -483,10 +334,13 @@ export default function TabBrawlsSoloLeaderboards() {
                     </a>
                   </li>
                   <li className="tab-silver">
-                    <a>
+                    <a
+                      onClick={loadRank.bind(this, 2)}
+                      className={selectedRank === 2 ? "is-active" : ""}
+                    >
                       <div>
                         <div>
-                          <span className="icon text-4xl icon-rank-silver"></span>
+                          <span className="icon text-4xl icon-rank-silver" />
                           <span className="font-headings text-2xl uppercase italic">
                             Silver
                           </span>
@@ -495,16 +349,19 @@ export default function TabBrawlsSoloLeaderboards() {
                           <div>
                             <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                           </div>
-                          <i className="radar"></i>
+                          <i className="radar" />
                         </figure>
                       </div>
                     </a>
                   </li>
                   <li className="tab-gold">
-                    <a className="is-active">
+                    <a
+                      onClick={loadRank.bind(this, 3)}
+                      className={selectedRank === 3 ? "is-active" : ""}
+                    >
                       <div>
                         <div>
-                          <span className="icon text-4xl icon-rank-gold"></span>
+                          <span className="icon text-4xl icon-rank-gold" />
                           <span className="font-headings text-2xl uppercase italic">
                             Gold
                           </span>
@@ -513,10 +370,13 @@ export default function TabBrawlsSoloLeaderboards() {
                     </a>
                   </li>
                   <li className="tab-platinum">
-                    <a>
+                    <a
+                      onClick={loadRank.bind(this, 4)}
+                      className={selectedRank === 4 ? "is-active" : ""}
+                    >
                       <div>
                         <div>
-                          <span className="icon text-4xl icon-rank-platinum"></span>
+                          <span className="icon text-4xl icon-rank-platinum" />
                           <span className="font-headings text-2xl uppercase italic">
                             Platinum
                           </span>
@@ -525,10 +385,13 @@ export default function TabBrawlsSoloLeaderboards() {
                     </a>
                   </li>
                   <li className="tab-diamond">
-                    <a>
+                    <a
+                      onClick={loadRank.bind(this, 5)}
+                      className={selectedRank === 5 ? "is-active" : ""}
+                    >
                       <div>
                         <div>
-                          <span className="icon text-4xl icon-rank-diamond"></span>
+                          <span className="icon text-4xl icon-rank-diamond" />
                           <span className="font-headings text-2xl uppercase italic">
                             Diamond
                           </span>
@@ -548,7 +411,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       type="button"
                       className="chip rounded chip-secondary w-10"
                     >
-                      <span className="font-headings">C</span>
+                      <span className="font-headings">G</span>
                     </button>
                   </div>
                   <div className="flex-1 flex gap-2 items-center leading-none">
@@ -561,123 +424,43 @@ export default function TabBrawlsSoloLeaderboards() {
                           type="button"
                           className="button button-sm button-secondary rounded-full"
                           onClick={() => {
-                            sideScroll(sliderGroupWrapper.current, 25, sliderGroupSize, -sliderGroupSize*3);
+                            sideScroll(
+                              sliderGroupWrapper.current,
+                              25,
+                              sliderGroupWidth,
+                              -sliderGroupWidth * 3
+                            );
                           }}
                         >
-                          <span className="icon icon-arrow-sm-left"></span>
+                          <span className="icon icon-arrow-sm-left" />
                         </button>
                       </div>
-                      <div className="flex-1 overflow-hidden relative h-8 md:h-auto">
-                        <div ref={sliderGroupWrapper} className="flex items-center gap-2 absolute inset-0 overflow-x-auto scrollbar-hidden px-2 md:px-0">
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                            ref={sliderGroupItem}
-                          >
-                            <span className="font-headings">A</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">B</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-primary w-10"
-                          >
-                            <span className="font-headings">C</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">D</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">E</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">F</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">G</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">H</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">I</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">J</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">K</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">L</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">M</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">N</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">O</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">P</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">Q</span>
-                          </button>
-                          <button
-                            type="button"
-                            className="chip rounded shrink-0 chip-secondary w-10"
-                          >
-                            <span className="font-headings">R</span>
-                          </button>
+                      <div ref={sliderGroupWrapper} className="flex-1 overflow-hidden relative h-8 md:h-auto flex justify-center overflow-x-auto scrollbar-hidden">
+                        <div
+                          
+                          className="flex justify-start absolute inset-0 px-2 md:px-0"
+                        >
+                          <div className="flex items-center justify-start gap-2">
+                            {Groups.map((group, groupIndex) => (
+                              <>
+                                <button
+                                type="button"
+                                ref={sliderGroupItem}
+                                onClick={loadGroup.bind(this, groupIndex)}
+                                className={`chip rounded shrink-0 w-10 ${
+                                  selectedGroup === groupIndex
+                                    ? "chip-primary"
+                                    : "chip-secondary"
+                                }`}
+                              >
+                                  {groupIndex === 6 && (
+                                    <span className="icon icon-profile-2" />
+                                  )}
+                                  <span className="font-headings">{group}</span>
+                                </button>
+                              </>
+                            ))}
+                          </div>
                         </div>
                       </div>
                       <div className="hidden md:block">
@@ -685,10 +468,15 @@ export default function TabBrawlsSoloLeaderboards() {
                           type="button"
                           className="button button-sm button-secondary rounded-full"
                           onClick={() => {
-                            sideScroll(sliderGroupWrapper.current, 25, sliderGroupSize, sliderGroupSize*3);
+                            sideScroll(
+                              sliderGroupWrapper.current,
+                              25,
+                              sliderGroupWidth,
+                              sliderGroupWidth * 3
+                            );
                           }}
                         >
-                          <span className="icon icon-arrow-sm-right"></span>
+                          <span className="icon icon-arrow-sm-right" />
                         </button>
                       </div>
                     </div>
@@ -715,229 +503,311 @@ export default function TabBrawlsSoloLeaderboards() {
                       </div>
                       <div className="item-actions flex items-center gap-2 opacity-0">
                         <div>
-                          <span className="icon icon-24 icon-arrow-sm-down"></span>
+                          <span className="icon icon-24 icon-arrow-sm-down" />
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                {LeaderboardResults.map((user, userIndex) => (
-                  <>
-                    <div className="flex gap-2 items-start mb-2">
-                      <div className="surface rounded-lg w-1/3 h-[54px] flex items-stretch overflow-hidden">
-                        <div
-                          className={`w-1/3 text-center px-2 flex items-center justify-center ${
-                            userIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
-                          }`}
-                        >
-                          <span
-                            className={`font-headings text-2xl  ${
-                              userIndex === 0 ? "text-gold-500" : ""
-                            }${userIndex === 1 ? "text-silver-500" : ""} ${
-                              userIndex === 2 ? "text-bronze-500" : ""
-                            } ${userIndex > 2 ? "text-ui-300" : ""}`}
-                          >
-                            {userIndex + 1}
-                          </span>
-                          <div className="absolute">
-                            <svg
-                              className={`${
-                                userIndex === 0 ? "fill-gold-500" : ""
-                              }${userIndex === 1 ? "fill-silver-500" : ""} ${
-                                userIndex === 2 ? "fill-bronze-500" : ""
-                              } ${userIndex > 2 ? "hidden" : ""}`}
-                              width="52"
-                              height="30"
-                              viewBox="0 0 52 30"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path d="M11.7039 27.2265L7.12878 29.95L14.686 27.9073C15.3028 27.7406 15.866 27.409 16.3186 26.9461C16.7712 26.4831 17.0973 25.905 17.2638 25.2705L14.9254 24.8456C14.283 24.7288 13.701 24.3822 13.2816 23.867C12.8623 23.3518 12.6327 22.7008 12.6327 22.0282V0.950012L8.2045 17.6286L2.89837 11.1091L8.50356 23.6777L2 22.4956L11.7039 27.2265Z" />
-                              <path d="M39.5599 27.2265L44.135 29.95L36.5778 27.9073C35.961 27.7406 35.3978 27.409 34.9452 26.9461C34.4926 26.4831 34.1665 25.905 34 25.2705L36.3383 24.8456C36.9808 24.7288 37.5628 24.3822 37.9822 23.867C38.4015 23.3518 38.6311 22.7008 38.6311 22.0282V0.950012L43.0593 17.6286L48.3654 11.1091L42.7602 23.6777L49.2638 22.4956L39.5599 27.2265Z" />
-                            </svg>
+                {isLoadingGroup && (
+                  <ul className="items-spaced space-y-2 is-loading">
+                    {selectedBrawl && selectedBrawl.soloLeaderboard.map((user, userIndex) => (
+                      <>
+                        <div className="item rounded-lg h-[54px]">
+                          <div className="item-image">
+                            <figure className="avatar avatar-circle avatar-xs">
+                              <div />
+                            </figure>
+                          </div>
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                          <div className="item-body flex justify-around items-center">
+                            <span className="font-bold text-ui-300 leading-none">
+                              Loading
+                            </span>
+                            <figure className="avatar avatar-square avatar-xs">
+                              <div />
+                            </figure>
+                          </div>
+                          <div className="item-actions flex items-center gap-2">
+                            <div>
+                              <span className="icon icon-24 icon-arrow-sm-down" />
+                            </div>
                           </div>
                         </div>
-                        <div className="flex-1 flex items-center justify-center gap-4">
-                          {user.rewards.coin && (
-                            <div className="flex items-center gap-2">
-                              <img
-                                className="h-6"
-                                src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
-                                width="auto"
-                                height="auto"
-                                alt=""
-                              />
-                              <span className="font-headings text-lg italic">
-                                {numberWithSpaces(user.rewards.coin)}
+                      </>
+                    ))}
+                  </ul>
+                )}
+                {!isLoadingGroup && (
+                  <>
+                    {selectedBrawl && selectedBrawl.soloLeaderboard.map((user, userIndex) => (
+                      <>
+                        <div
+                          className={`flex gap-2 items-start mb-2 ${
+                            isLoadingGroup
+                              ? ""
+                              : "animate-slide-in-bottom animate-delay"
+                          }`}
+                          style={{
+                            "--delay": "calc(" + userIndex + " * 0.05s)",
+                          }}
+                        >
+                          <div className={`surface rounded-lg w-1/3 h-[54px] flex items-stretch overflow-hidden ${prototypeData.getUserByID(user.user)?.isYou ? "surface-highlight-blue" : ""}`}>
+                            <div
+                              className={`w-1/3 text-center px-2 flex items-center justify-center ${
+                                userIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
+                              }`}
+                            >
+                              <span
+                                className={`font-headings text-2xl  ${
+                                  userIndex === 0 ? "text-gold-500" : ""
+                                }${userIndex === 1 ? "text-silver-500" : ""} ${
+                                  userIndex === 2 ? "text-bronze-500" : ""
+                                } ${userIndex > 2 ? "text-ui-300" : ""}`}
+                              >
+                                {userIndex + 1}
                               </span>
+                              <div className="absolute">
+                                <svg
+                                  className={`${
+                                    userIndex === 0 ? "fill-gold-500" : ""
+                                  }${
+                                    userIndex === 1 ? "fill-silver-500" : ""
+                                  } ${
+                                    userIndex === 2 ? "fill-bronze-500" : ""
+                                  } ${userIndex > 2 ? "hidden" : ""}`}
+                                  width="52"
+                                  height="30"
+                                  viewBox="0 0 52 30"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path d="M11.7039 27.2265L7.12878 29.95L14.686 27.9073C15.3028 27.7406 15.866 27.409 16.3186 26.9461C16.7712 26.4831 17.0973 25.905 17.2638 25.2705L14.9254 24.8456C14.283 24.7288 13.701 24.3822 13.2816 23.867C12.8623 23.3518 12.6327 22.7008 12.6327 22.0282V0.950012L8.2045 17.6286L2.89837 11.1091L8.50356 23.6777L2 22.4956L11.7039 27.2265Z" />
+                                  <path d="M39.5599 27.2265L44.135 29.95L36.5778 27.9073C35.961 27.7406 35.3978 27.409 34.9452 26.9461C34.4926 26.4831 34.1665 25.905 34 25.2705L36.3383 24.8456C36.9808 24.7288 37.5628 24.3822 37.9822 23.867C38.4015 23.3518 38.6311 22.7008 38.6311 22.0282V0.950012L43.0593 17.6286L48.3654 11.1091L42.7602 23.6777L49.2638 22.4956L39.5599 27.2265Z" />
+                                </svg>
+                              </div>
                             </div>
-                          )}
-                          {user.rewards.token && (
-                            <div className="flex items-center gap-2">
-                              <img
-                                className="h-6"
-                                src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
-                                width="auto"
-                                height="auto"
-                                alt=""
-                              />
-                              <span className="font-headings text-lg italic">
-                                {numberWithSpaces(user.rewards.token)}
-                              </span>
-                            </div>
-                          )}
-                          {user.rewards.ticket && (
-                            <div className="flex items-center gap-2">
-                              <img
-                                className="h-6"
-                                src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}
-                                width="auto"
-                                height="auto"
-                                alt=""
-                              />
-                              <span className="font-headings text-lg italic">
-                                {numberWithSpaces(user.rewards.ticket)}
-                              </span>
-                            </div>
-                          )}
-                
-                        </div>
-                      </div>
-                      <div className="flex-1 accordion surface rounded-lg">
-                        <Accordion
-                          header={
-                            <>
-                              <div className="item">
-                                <div className="item-image">
-                                  <figure className="avatar avatar-circle avatar-xs">
-                                    <div>
-                                      <img src={user.avatar} />
-                                    </div>
-                                  </figure>
-                                </div>
-                                <div className="item-body">
-                                  <div className="item-title">{user.name}</div>
-                                </div>
-                                <div className="item-body flex justify-around items-center">
-                                  <span className="font-bold text-ui-300 leading-none">
-                                    {user.stats.brawlPoints}
+                            <div className="flex-1 flex items-center justify-center gap-4">
+                              {user.rewards.coin && (
+                                <div className="flex items-center gap-2">
+                                  <img
+                                    className="h-6"
+                                    src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
+                                    width="auto"
+                                    height="auto"
+                                    alt=""
+                                  />
+                                  <span className="font-headings text-lg italic">
+                                    {numberWithSpaces(user.rewards.coin)}
                                   </span>
-                                  <figure className="avatar avatar-square avatar-xs">
-                                    <div>
-                                      <img src={Clans[user.clanId].avatar} />
-                                    </div>
-                                  </figure>
                                 </div>
-                                <div className="item-actions flex items-center gap-2">
-                                  <div>
-                                    <span className="icon icon-24 icon-arrow-sm-down"></span>
+                              )}
+                              {user.rewards.token && (
+                                <div className="flex items-center gap-2">
+                                  <img
+                                    className="h-6"
+                                    src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
+                                    width="auto"
+                                    height="auto"
+                                    alt=""
+                                  />
+                                  <span className="font-headings text-lg italic">
+                                    {numberWithSpaces(user.rewards.token)}
+                                  </span>
+                                </div>
+                              )}
+                              {user.rewards.ticket && (
+                                <div className="flex items-center gap-2">
+                                  <img
+                                    className="h-6"
+                                    src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}
+                                    width="auto"
+                                    height="auto"
+                                    alt=""
+                                  />
+                                  <span className="font-headings text-lg italic">
+                                    {numberWithSpaces(user.rewards.ticket)}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                          <div className={`flex-1 accordion surface rounded-lg ${prototypeData.getUserByID(user.user)?.isYou ? "surface-highlight-blue" : ""}`}>
+                            <Accordion
+                              header={
+                                <>
+                                  <div className="item">
+                                    <div className="item-image">
+                                      <figure className="avatar avatar-circle avatar-xs">
+                                        <div>
+                                          <img src={prototypeData.getUserByID(user.user)?.avatar} />
+                                        </div>
+                                      </figure>
+                                    </div>
+                                    <div className="item-body">
+                                      <div className="item-title">
+                                        <span className={`${prototypeData.getUserByID(user.user)?.isYou ? "text-blue-300 font-bold" : ""}`}>{prototypeData.getUserByID(user.user)?.nickname}</span>
+                                      </div>
+                                    </div>
+                                    <div className="item-body flex justify-around items-center">
+                                      <span className="font-bold text-ui-300 leading-none">
+                                        {user.stats.brawlPoints}
+                                      </span>
+                                      <figure className="avatar avatar-square avatar-xs">
+                                        <div>
+                                          <img
+                                            src={prototypeData.getClanByID(prototypeData.getUserByID(user.user)?.clan)?.avatar}
+                                          />
+                                        </div>
+                                      </figure>
+                                    </div>
+                                    <div className="item-actions flex items-center gap-2">
+                                      <div>
+                                        <span className="icon icon-24 icon-arrow-sm-down" />
+                                      </div>
+                                    </div>
                                   </div>
+                                </>
+                              }
+                            >
+                              <div className="p-2">
+                                <ul className="gap-2 grid grid-cols-3">
+                                  <li className="col-span-3 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
+                                    <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                      Match points in best [number] matches
+                                    </h5>
+                                    <div className="flex justify-center gap-2">
+                                      <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
+                                        {user.stats.bestPoints.one}
+                                      </div>
+                                      <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
+                                        {user.stats.bestPoints.two}
+                                      </div>
+                                      <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
+                                        {user.stats.bestPoints.three}
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li className="col-span-3 md:col-span-1 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
+                                    <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                      Match played
+                                    </h5>
+                                    <div className="flex justify-center gap-2">
+                                      <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
+                                        243
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li className="col-span-3 md:col-span-1 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
+                                    <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                      Tiebreaker points
+                                    </h5>
+                                    <div className="flex justify-center gap-2">
+                                      <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
+                                        1100 damage
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li className="col-span-3 md:col-span-1 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
+                                    <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                      Player game score
+                                    </h5>
+                                    <div className="flex justify-center gap-2">
+                                      <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
+                                        243
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                                <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
+                                  <Link href="/prototype/profile/0">
+                                    <a className="link link-main link-hover flex items-center gap-1 text-sm">
+                                      <span className="icon icon-profile-2" />
+                                      <span>Go to Player profile</span>
+                                    </a>
+                                  </Link>
+                                  <Link href="/prototype/profile/0">
+                                    <a className="link link-main link-hover flex items-center gap-1 text-sm">
+                                      <span className="icon icon-multiple-12" />
+                                      <span>Go to Clan page</span>
+                                    </a>
+                                  </Link>
+                                  <button
+                                    type="button"
+                                    className="button button-tertiary button-sm"
+                                  >
+                                    <span className="icon icon-c-warning" />
+                                    <span>Report abuse</span>
+                                  </button>
                                 </div>
                               </div>
-                            </>
-                          }
-                        >
-                          <div className="p-2">
-                            <ul className="gap-2 grid grid-cols-3">
-                              <li className="col-span-3 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                                <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
-                                  Match points in best [number] matches
-                                </h5>
-                                <div className="flex justify-center gap-2">
-                                  <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
-                                    {user.stats.bestPoints.one}
-                                  </div>
-                                  <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
-                                    {user.stats.bestPoints.two}
-                                  </div>
-                                  <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
-                                    {user.stats.bestPoints.three}
-                                  </div>
-                                </div>
-                              </li>
-                              <li className="col-span-3 md:col-span-1 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                                <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
-                                  Match played
-                                </h5>
-                                <div className="flex justify-center gap-2">
-                                  <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
-                                    243
-                                  </div>
-                                </div>
-                              </li>
-                              <li className="col-span-3 md:col-span-1 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                                <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
-                                  Tiebreaker points
-                                </h5>
-                                <div className="flex justify-center gap-2">
-                                  <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
-                                    1100 damage
-                                  </div>
-                                </div>
-                              </li>
-                              <li className="col-span-3 md:col-span-1 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                                <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
-                                  Player game score
-                                </h5>
-                                <div className="flex justify-center gap-2">
-                                  <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
-                                    243
-                                  </div>
-                                </div>
-                              </li>
-                            </ul>
-                            <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
-                              <Link href="/prototype/profile">
-                                <a className="link link-main link-hover flex items-center gap-1 text-sm">
-                                  <span className="icon icon-profile-2"></span>
-                                  <span>Go to Player profile</span>
-                                </a>
-                              </Link>
-                              <Link href="/prototype/profile">
-                                <a className="link link-main link-hover flex items-center gap-1 text-sm">
-                                  <span className="icon icon-multiple-12"></span>
-                                  <span>Go to Clan page</span>
-                                </a>
-                              </Link>
-                              <button
-                                type="button"
-                                className="button button-tertiary button-sm"
-                              >
-                                <span className="icon icon-c-warning"></span>
-                                <span>Report abuse</span>
-                              </button>
-                            </div>
+                            </Accordion>
                           </div>
-                        </Accordion>
-                      </div>
-                    </div>
+                        </div>
+                      </>
+                    ))}
                   </>
-                ))}
+                )}
               </div>
             </div>
-            <div>
-              <div className="flex gap-2 justify-center items-center my-4">
-                <button type='button' className='button button-ghost'>
-                  <span className="icon icon-arrow-up"></span>
-                </button>
-                <button type='button' className='button button-ghost'>
-                  <span>Top 15</span>
-                </button>
-                <button type='button' className='button button-ghost is-active'>
-                  <span>My position</span>
-                </button>
-                <button type='button' className='button button-ghost'>
-                  <span>Bottom 15</span>
-                </button>
-                <button type='button' className='button button-ghost'>
-                  <span className="icon icon-arrow-down"></span>
-                </button>
+            {!isLoadingRank && (
+              <div>
+                <div className="flex gap-2 justify-center items-center my-4">
+                  <button
+                    type="button"
+                    onClick={loadGroup.bind(this, selectedGroup)}
+                    className="button button-ghost"
+                  >
+                    <span className="icon icon-arrow-up" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={loadGroup.bind(this, selectedGroup)}
+                    className="button button-ghost"
+                  >
+                    <span>Top 15</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="button button-ghost is-active"
+                  >
+                    <span>My position</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={loadGroup.bind(this, selectedGroup)}
+                    className="button button-ghost"
+                  >
+                    <span>Bottom 15</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={loadGroup.bind(this, selectedGroup)}
+                    className="button button-ghost"
+                  >
+                    <span className="icon icon-arrow-down" />
+                  </button>
+                </div>
+                <div className="text-center my-4 text-sm text-ui-300">
+                  <div>
+                    The leaderboard is updated every X minute,{" "}
+                    <a href="#" className="link">
+                      reload the page
+                    </a>{" "}
+                    for an update
+                  </div>
+                  <div>
+                    Leaderboard ID:{" "}
+                    <span className="text-ui-100 font-bold">
+                      [date:game:tier:groupId]
+                    </span>{" "}
+                    example: &quot;225VG19&quot;{" "}
+                  </div>
+                </div>
               </div>
-              <div className="text-center my-4 text-sm text-ui-300">
-                <div>The leaderboard is updated every X minute, <a href="#" className="link">reload the page</a> for an update</div>
-                <div>Leaderboard ID: <span className="text-ui-100 font-bold">[date:game:tier:groupId]</span> example: &quot;225VG19&quot; </div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </section>

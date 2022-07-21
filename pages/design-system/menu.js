@@ -105,25 +105,25 @@ const DSpage = () => {
                 <ul className="menu" role="menu">
                   <li>
                     <a>
-                      <span className="icon icon-missions"></span>
+                      <span className="icon icon-missions" />
                       <span>Missions</span>
                     </a>
                   </li>
                   <li>
                     <a>
-                      <span className="icon icon-brawl"></span>
+                      <span className="icon icon-brawl" />
                       <span>Brawls</span>
                     </a>
                   </li>
                   <li>
                     <a>
-                      <span className="icon icon-showdown"></span>
+                      <span className="icon icon-showdown" />
                       <span>Tournaments</span>
                     </a>
                   </li>
                   <li>
                     <a>
-                      <span className="icon icon-d-chart"></span>
+                      <span className="icon icon-d-chart" />
                       <span>Stats</span>
                     </a>
                   </li>
@@ -376,7 +376,7 @@ const DSpage = () => {
                   <li>
                     <a className="flex justify-between">
                       <span>Parent</span>
-                      <span className="icon icon-arrow-sm-right"></span>
+                      <span className="icon icon-arrow-sm-right" />
                     </a>
                     <ul>
                       <li>
@@ -432,7 +432,7 @@ const DSpage = () => {
                   <li>
                     <a className="flex gap-2">
                       <span>Parent</span>
-                      <span className="icon icon-arrow-sm-down"></span>
+                      <span className="icon icon-arrow-sm-down" />
                     </a>
                     <ul>
                       <li>

@@ -19,7 +19,7 @@ const DSpage = () => {
 
       <div className="surface rounded-lg px-4 py-8 text-center">
         <div className='max-w-xs mx-auto'>
-          <span className='icon icon-brawl text-6xl text-ui-500'></span>
+          <span className='icon icon-brawl text-6xl text-ui-500'/>
           <div className='mt-2 mb-6'>
             <p className='text-sm text-ui-400'>
               You have no active Brawl
@@ -49,7 +49,7 @@ const DSpage = () => {
 
       <div className="surface rounded-lg px-4 py-8 text-center">
         <div className='max-w-xs mx-auto'>
-          <span className='icon icon-smile text-6xl text-ui-500'></span>
+          <span className='icon icon-smile text-6xl text-ui-500'/>
           <div className='mt-2 mb-6'>
             <p className='text-sm text-ui-400'>
               You&lsquo;ve successfully signed up
@@ -84,7 +84,7 @@ const DSpage = () => {
 
       <div className="surface rounded-lg px-4 py-8 text-center">
         <div className='max-w-xs mx-auto'>
-          <span className='icon icon-manga-63 text-6xl text-ui-500'></span>
+          <span className='icon icon-manga-63 text-6xl text-ui-500'/>
           <div className='mt-2 mb-6'>
             <p className='text-sm text-ui-400'>
               You are not following anyone

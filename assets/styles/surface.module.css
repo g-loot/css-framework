@@ -14,12 +14,27 @@
 }
 .surface {
 
+
+  &.surface-highlight,
+  &.surface-highlight-main {
+    @apply
+    border-main
+    drop-shadow-main
+    ;
+  }
+
+  &.surface-highlight-blue {
+    @apply
+    border-blue-300
+    drop-shadow-blue
+    ;
+  }
+
   &.surface-halo {
     @apply
     relative
     overflow-hidden
     ;
-
     
     &::after {
       @apply

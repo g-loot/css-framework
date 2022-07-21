@@ -535,13 +535,13 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1 flex flex-wrap gap-2'>
                   <button className="button button-primary button-close">
-                    <span className='icon icon-e-remove'></span>
+                    <span className='icon icon-e-remove'/>
                   </button>
                   <button className="button button-secondary button-close">
-                    <span className='icon icon-e-remove'></span>
+                    <span className='icon icon-e-remove'/>
                   </button>
                   <button className="button button-tertiary button-close">
-                    <span className='icon icon-e-remove'></span>
+                    <span className='icon icon-e-remove'/>
                   </button>
                 </div>
               </div>

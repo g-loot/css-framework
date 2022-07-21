@@ -22,10 +22,10 @@ const DSpage = () => {
           <div className='flex-3'>
             <div className='modal surface'>
               <button className="button button-secondary button-close">
-                <span className='icon icon-e-remove'></span>
+                <span className='icon icon-e-remove'/>
               </button>
               <div className='modal-image'>
-                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`}}></span>
+                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`}}/>
               </div>
               <div className='modal-content'>
                 <div className='modal-body'>
@@ -70,10 +70,10 @@ const DSpage = () => {
           <div className='flex-3'>
             <div className='modal modal-inverted surface'>
               <button className="button button-secondary button-close">
-                <span className='icon icon-e-remove'></span>
+                <span className='icon icon-e-remove'/>
               </button>
               <div className='modal-image'>
-                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`}}></span>
+                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`}}/>
               </div>
               <div className='modal-content'>
                 <div className='modal-body'>
@@ -119,7 +119,7 @@ const DSpage = () => {
           <div className='flex-3'>
             <div className='modal  surface'>
               <button className="button button-secondary button-close">
-                <span className='icon icon-e-remove'></span>
+                <span className='icon icon-e-remove'/>
               </button>
               <div className='modal-image'>
                 <img src='https://res.cloudinary.com/gloot/image/upload/v1653326622/Marketing/2022_prototype/DummyContent/trophy.png' width='200' height='auto' alt='Trophy' />

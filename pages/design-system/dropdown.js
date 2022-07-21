@@ -14,7 +14,7 @@ const DSpage = () => {
             <div className="flex-1 flex justify-center items-center">
               <div className="dropdown">
                 <label tabIndex="0" className="button button-primary">
-                  <span className="icon icon-arrow-sm-down"></span>
+                  <span className="icon icon-arrow-sm-down" />
                   <span>Click me</span>
                 </label>
                 <div
@@ -62,7 +62,7 @@ const DSpage = () => {
               <div className="dropdown dropdown-end">
                 <label tabIndex="0" className="button button-primary">
                   <span>Click me</span>
-                  <span className="icon icon-arrow-sm-down"></span>
+                  <span className="icon icon-arrow-sm-down" />
                 </label>
                 <div
                   tabIndex="0"
@@ -108,7 +108,7 @@ const DSpage = () => {
             <div className="flex-1 flex justify-center items-center">
               <div className="dropdown dropdown-top">
                 <label tabIndex="0" className="button button-primary">
-                  <span className="icon icon-arrow-sm-up"></span>
+                  <span className="icon icon-arrow-sm-up" />
                   <span>Click me</span>
                 </label>
                 <div
@@ -156,7 +156,7 @@ const DSpage = () => {
               <div className="dropdown dropdown-top dropdown-end">
                 <label tabIndex="0" className="button button-primary">
                   <span>Click me</span>
-                  <span className="icon icon-arrow-sm-up"></span>
+                  <span className="icon icon-arrow-sm-up" />
                 </label>
                 <div
                   tabIndex="0"
@@ -202,7 +202,7 @@ const DSpage = () => {
             <div className="flex-1 flex justify-center items-center">
               <div className="dropdown dropdown-left">
                 <label tabIndex="0" className="button button-primary">
-                  <span className="icon icon-arrow-sm-left"></span>
+                  <span className="icon icon-arrow-sm-left" />
                   <span>Click me</span>
                 </label>
                 <div
@@ -249,7 +249,7 @@ const DSpage = () => {
             <div className="flex-1 flex justify-center items-center">
               <div className="dropdown dropdown-left dropdown-end">
                 <label tabIndex="0" className="button button-primary">
-                  <span className="icon icon-arrow-sm-left"></span>
+                  <span className="icon icon-arrow-sm-left" />
                   <span>Click me</span>
                 </label>
                 <div
@@ -297,7 +297,7 @@ const DSpage = () => {
               <div className="dropdown dropdown-right">
                 <label tabIndex="0" className="button button-primary">
                   <span>Click me</span>
-                  <span className="icon icon-arrow-sm-right"></span>
+                  <span className="icon icon-arrow-sm-right" />
                 </label>
                 <div
                   tabIndex="0"
@@ -344,7 +344,7 @@ const DSpage = () => {
               <div className="dropdown dropdown-right dropdown-end">
                 <label tabIndex="0" className="button button-primary">
                   <span>Click me</span>
-                  <span className="icon icon-arrow-sm-right"></span>
+                  <span className="icon icon-arrow-sm-right" />
                 </label>
                 <div
                   tabIndex="0"
@@ -391,7 +391,7 @@ const DSpage = () => {
               <div className="dropdown dropdown-open">
                 <label tabIndex="0" className="button button-primary">
                   <span>Click me</span>
-                  <span className="icon icon-arrow-sm-down"></span>
+                  <span className="icon icon-arrow-sm-down" />
                 </label>
                 <div
                   tabIndex="0"
@@ -439,7 +439,7 @@ const DSpage = () => {
               <div className="dropdown dropdown-hover">
                 <label tabIndex="0" className="button button-primary">
                   <span>Click me</span>
-                  <span className="icon icon-arrow-sm-down"></span>
+                  <span className="icon icon-arrow-sm-down" />
                 </label>
                 <div
                   tabIndex="0"
@@ -489,7 +489,7 @@ const DSpage = () => {
                   href="#"
                   className="text-0 rounded-full bg-ui-800 border border-ui-600 p-1 block"
                 >
-                  <span className="icon icon-gloot-symbol text-main text-2xl"></span>
+                  <span className="icon icon-gloot-symbol text-main text-2xl" />
                 </a>
                 <div className="dropdown dropdown-end">
                   <figure
@@ -507,26 +507,26 @@ const DSpage = () => {
                     <ul className="menu menu-rounded">
                       <li>
                         <a>
-                          <span className="icon icon-wallet-43"></span>
+                          <span className="icon icon-wallet-43" />
                           <span>Wallet</span>
                         </a>
                       </li>
                       <li>
                         <a>
-                          <span className="icon icon-circle-09"></span>
+                          <span className="icon icon-circle-09" />
                           <span>Public profile</span>
                         </a>
                       </li>
                       <li>
                         <a>
-                          <span className="icon icon-cogwheel"></span>
+                          <span className="icon icon-cogwheel" />
                           <span>Settings</span>
                         </a>
                       </li>
                       <li className="separator"></li>
                       <li>
                         <a>
-                          <span className="icon icon-leave"></span>
+                          <span className="icon icon-leave" />
                           <span>Log out</span>
                         </a>
                       </li>

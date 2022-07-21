@@ -41,7 +41,7 @@ const DSpage = () => {
             <div className="navbar bg-ui-900/95 rounded-lg shadow-lg">
               <div className='navbar-content container'>
                 <a className="button button-ghost text-xl"><span>G-Loot</span></a>
-                <a className="button button-ghost text-xl"><span className='icon icon-dots'></span></a>
+                <a className="button button-ghost text-xl"><span className='icon icon-dots'/></a>
               </div>
             </div>
           </div>
@@ -62,13 +62,13 @@ const DSpage = () => {
             <div className="navbar bg-ui-900/95 rounded-lg shadow-lg">
               <div className='navbar-content container'>
                 <div className='flex-none'>
-                  <a className="button button-ghost text-xl"><span className='icon icon-menu-8'></span></a>
+                  <a className="button button-ghost text-xl"><span className='icon icon-menu-8'/></a>
                 </div>
                 <div className='flex-1'>
                   <a className="button button-ghost text-xl"><span>G-Loot</span></a>
                 </div>
                 <div className='flex-none'>
-                  <a className="button button-ghost text-xl"><span className='icon icon-dots'></span></a>
+                  <a className="button button-ghost text-xl"><span className='icon icon-dots'/></a>
                 </div>
               </div>
             </div>
@@ -150,10 +150,10 @@ const DSpage = () => {
                     </figure>
                     <div tabIndex="0" className="dropdown-content bg-ui-600 w-52 p-1">
                       <ul className='menu menu-rounded'>
-                          <li><a><span className="icon icon-wallet-43"></span><span>Wallet</span></a></li>
-                          <li><a><span className="icon icon-circle-09"></span><span>Public profile</span></a></li>
-                          <li><a><span className="icon icon-cogwheel"></span><span>Settings</span></a></li>
-                          <li><a><span className="icon icon-leave"></span><span>Log out</span></a></li>
+                          <li><a><span className="icon icon-wallet-43" /><span>Wallet</span></a></li>
+                          <li><a><span className="icon icon-circle-09" /><span>Public profile</span></a></li>
+                          <li><a><span className="icon icon-cogwheel" /><span>Settings</span></a></li>
+                          <li><a><span className="icon icon-leave" /><span>Log out</span></a></li>
                       </ul>
                     </div>
                   </div>

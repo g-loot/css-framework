@@ -241,7 +241,7 @@ const DSpage = () => {
                     <th>
                       <label className="form-checkbox p-0">
                         <input type="checkbox" name="policy" />
-                        <i className="form-icon left-0"></i>
+                        <i className="form-icon left-0" />
                       </label>
                     </th>
                     <th>Name</th>
@@ -255,7 +255,7 @@ const DSpage = () => {
                     <th>
                       <label className="form-checkbox p-0">
                         <input type="checkbox" name="policy" />
-                        <i className="form-icon left-0"></i>
+                        <i className="form-icon left-0" />
                       </label>
                     </th>
                     <td>
@@ -278,13 +278,13 @@ const DSpage = () => {
                     </td>
                     <td>
                       <div className='chip chip-sliced chip-sm bg-game-apexlegends'>
-                        <span className='icon icon-game-apexlegends-symbol'></span>
+                        <span className='icon icon-game-apexlegends-symbol'/>
                         <span>Apex Legends</span>
                       </div>
                     </td>
                     <td>
                       <button type='button' className="button button-sm button-secondary rounded-full tooltip tooltip-left" data-tooltip="View details">
-                        <span className="icon icon-view"></span>
+                        <span className="icon icon-view" />
                       </button>
                     </td>
                   </tr>
@@ -292,7 +292,7 @@ const DSpage = () => {
                     <th>
                       <label className="form-checkbox p-0">
                         <input type="checkbox" name="policy" />
-                        <i className="form-icon left-0"></i>
+                        <i className="form-icon left-0" />
                       </label>
                     </th>
                     <td>
@@ -315,13 +315,13 @@ const DSpage = () => {
                     </td>
                     <td>
                       <div className='chip chip-sliced chip-sm bg-game-leagueoflegends'>
-                        <span className='icon icon-game-leagueoflegends-symbol'></span>
+                        <span className='icon icon-game-leagueoflegends-symbol'/>
                         <span>League of Legends</span>
                       </div>
                     </td>
                     <td>
                       <button type='button' className="button button-sm button-secondary rounded-full tooltip tooltip-left" data-tooltip="View details">
-                        <span className="icon icon-view"></span>
+                        <span className="icon icon-view" />
                       </button>
                     </td>
                   </tr>
@@ -329,7 +329,7 @@ const DSpage = () => {
                     <th>
                       <label className="form-checkbox p-0">
                         <input type="checkbox" name="policy" />
-                        <i className="form-icon left-0"></i>
+                        <i className="form-icon left-0" />
                       </label>
                     </th>
                     <td>
@@ -352,13 +352,13 @@ const DSpage = () => {
                     </td>
                     <td>
                       <div className='chip chip-sliced chip-sm bg-game-valorant'>
-                        <span className='icon icon-game-valorant-symbol'></span>
+                        <span className='icon icon-game-valorant-symbol'/>
                         <span>Valorant</span>
                       </div>
                     </td>
                     <td>
                       <button type='button' className="button button-sm button-secondary rounded-full tooltip tooltip-left" data-tooltip="View details">
-                        <span className="icon icon-view"></span>
+                        <span className="icon icon-view" />
                       </button>
                     </td>
                   </tr>

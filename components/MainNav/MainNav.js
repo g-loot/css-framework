@@ -19,9 +19,9 @@ export default function MainNav(props) {
         <>
           <li className={`${item.disabled === true ? 'is-disabled' : ''}`} key={itemIndex} onClick={props.onClick}>
             <Link href={`/prototype/${item.url}${hasAds ? '?ads=true' : ''}`}>
-              <a className={`${router.pathname.endsWith('prototype') && item.isHome ? 'is-active' : ''} ${router.pathname.includes(item.url) || router.pathname === '' ? 'is-active' : ''}`}>
+              <a className={`${router.pathname.endsWith('prototype') && item.isHome ? 'is-active' : ''} ${router.pathname.includes(item.slug) ? 'is-active' : ''}`}>
                 <span className="icon rounded w-8 flex items-center justify-center">
-                  <span className={`icon icon-16 icon-${item.icon}`}></span>
+                  <span className={`icon icon-16 icon-${item.icon}`}/>
                 </span>
                 <span className='uppercase'>{item.label}</span>
               </a>

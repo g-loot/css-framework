@@ -15,7 +15,7 @@ const DSpage = () => {
       </h1>
       <div className='form-group mb-1'>
         <div className='input-group'>
-          <span className='icon icon-zoom'></span>
+          <span className='icon icon-zoom'/>
           <input id='filter'
             name='filter'
             type='text'
@@ -42,7 +42,7 @@ const DSpage = () => {
             })
             .map(item => (
               <div key={item} description={item.keywords} className='surface surface-dimmed rounded-lg text-0 w-32 h-32 inline-flex flex-col justify-center items-center relative text-ui-300'>
-                <span className={`icon block text-4xl mb-4 icon-${item.name}`}></span>
+                <span className={`icon block text-4xl mb-4 icon-${item.name}`}/>
                 <div className='absolute bottom-0 p-2 text-ui-400 text-xs text-center leading-none'>
                       <div className="text-xs text-ui-300">
                         <span className="tooltip tooltip-top" data-tooltip="Copy">

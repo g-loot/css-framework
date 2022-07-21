@@ -146,35 +146,35 @@ export default function Home() {
 
                   <ul className="flex-1 space-y-8 my-8">
                     <li className="flex gap-4 items-center">
-                      <span className="icon text-2xl icon-verified text-premium-500"></span>
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Track your stats across all supported games and build
                         your player identity.
                       </span>
                     </li>
                     <li className="flex gap-4 items-center">
-                      <span className="icon text-2xl icon-verified text-premium-500"></span>
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Compete in missions, brawls and tournaments with rewards
                         and prize money.
                       </span>
                     </li>
                     <li className="flex gap-4 items-center">
-                      <span className="icon text-2xl icon-e-remove text-ui-400"></span>
+                      <span className="icon text-2xl icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
                         Access 3 extra missions every day to unlock rewards
                         faster.
                       </span>
                     </li>
                     <li className="flex gap-4 items-center">
-                      <span className="icon text-2xl icon-e-remove text-ui-400"></span>
+                      <span className="icon text-2xl icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
                         Create a Discord profile to describe who you are as a
                         gamer and find a team.
                       </span>
                     </li>
                     <li className="flex gap-4 items-center">
-                      <span className="icon text-2xl icon-e-remove text-ui-400"></span>
+                      <span className="icon text-2xl icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
                         Access an exclusive Discord channel, chat directly with
                         G-Loot devs, and try out new features before they are
@@ -182,7 +182,7 @@ export default function Home() {
                       </span>
                     </li>
                     <li className="flex gap-4 items-center">
-                      <span className="icon text-2xl icon-e-remove text-ui-400"></span>
+                      <span className="icon text-2xl icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
                         Enjoy an ad-free experience on G-Loot.
                       </span>
@@ -206,35 +206,35 @@ export default function Home() {
                   </div>
                   <ul className="flex-1 space-y-8 my-8">
                     <li className="flex gap-4 items-center">
-                      <span className="icon text-2xl icon-verified text-premium-500"></span>
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Track your stats across all supported games and build
                         your player identity.
                       </span>
                     </li>
                     <li className="flex gap-4 items-center">
-                      <span className="icon text-2xl icon-verified text-premium-500"></span>
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Compete in missions, brawls and tournaments with rewards
                         and prize money.
                       </span>
                     </li>
                     <li className="flex gap-4 items-center">
-                      <span className="icon text-2xl icon-verified text-premium-500"></span>
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Access 3 extra missions every day to unlock rewards
                         faster.
                       </span>
                     </li>
                     <li className="flex gap-4 items-center">
-                      <span className="icon text-2xl icon-verified text-premium-500"></span>
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Create a Discord profile to describe who you are as a
                         gamer and find a team.
                       </span>
                     </li>
                     <li className="flex gap-4 items-center">
-                      <span className="icon text-2xl icon-verified text-premium-500"></span>
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Access an exclusive Discord channel, chat directly with
                         G-Loot devs, and try out new features before they are
@@ -242,7 +242,7 @@ export default function Home() {
                       </span>
                     </li>
                     <li className="flex gap-4 items-center">
-                      <span className="icon text-2xl icon-verified text-premium-500"></span>
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Enjoy an ad-free experience on G-Loot.
                       </span>

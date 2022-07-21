@@ -35,7 +35,7 @@ const Index = () => {
               <h1 className="text-4xl">Page listing</h1>
               <div className="form-group mb-1">
                 <div className="input-group">
-                  <span className="icon icon-zoom"></span>
+                  <span className="icon icon-zoom" />
                   <input
                     id="filter"
                     name="filter"

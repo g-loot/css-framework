@@ -181,7 +181,7 @@ const DSpage = () => {
                               <div>
                                 <div className='bracket-meta'>
                                   <div>
-                                    <span className='icon icon-calendar-2'></span>
+                                    <span className='icon icon-calendar-2'/>
                                     <span>{match.date} • {match.time}</span>
                                   </div>
                                   <div>
@@ -262,7 +262,7 @@ const DSpage = () => {
                               <div>
                                 <div className='bracket-meta'>
                                   <div>
-                                    <span className='icon icon-calendar-2'></span>
+                                    <span className='icon icon-calendar-2'/>
                                     <span>{match.date} • {match.time}</span>
                                   </div>
                                   <div>

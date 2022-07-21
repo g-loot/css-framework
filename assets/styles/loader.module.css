@@ -6,7 +6,6 @@
 /* spinner */
 
 .loader {
-
   @apply
   h-16
   w-16
@@ -19,7 +18,6 @@
   border-4
   border-ui-700
   border-l-main
-  transform-gpu
   animate-[loader-rotate_1s_linear_infinite]
   ;
  }

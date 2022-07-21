@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Missions">
-        <Ad width="1005" height="124" />
+        <Ad width="1005" height="300" />
 
         {selectedGame && (
           <>
@@ -52,7 +52,7 @@ export default function Home() {
                   style={{ "--delay": "calc( 1 * 0.05s)" }}>
                           <Link href="/prototype/home">
                             <a href="#" className="inline-flex gap-2 items-center text-sm text-ui-300 hover:text-ui-100 active:opacity-50 focus-visible:text-main focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main transition-colors duration-75">
-                              <span className="icon icon-20 icon-home-2"></span>
+                              <span className="icon icon-20 icon-home-2" />
                               <span>Home</span>
                             </a>
                           </Link>
@@ -60,7 +60,7 @@ export default function Home() {
                         <li aria-current="page">
                           <div className="flex items-center animate-slide-in-top animate-delay"
                   style={{ "--delay": "calc( 3 * 0.05s)" }}>
-                            <span className="icon icon-20 text-ui-300 icon-arrow-sm-right"></span>
+                            <span className="icon icon-20 text-ui-300 icon-arrow-sm-right" />
                             <span className="ml-1 text-sm text-ui-300 md:ml-2">Missions</span>
                           </div>
                         </li>
@@ -104,23 +104,23 @@ export default function Home() {
                     <ul className="step step-primary step-sm w-full max-w-sm mx-auto">
                       <li>
                         <a href="#">
-                          <i></i>
+                          <i/>
                           <div></div>
-                          <span></span>
+                          <span/>
                         </a>
                       </li>
                       <li className="is-active">
                         <a href="#">
-                          <i></i>
+                          <i/>
                           <div></div>
-                          <span></span>
+                          <span/>
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i></i>
+                          <i/>
                           <div></div>
-                          <span></span>
+                          <span/>
                         </a>
                       </li>
                     </ul>

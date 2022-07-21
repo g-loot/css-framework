@@ -43,7 +43,7 @@ export default function Button(props) {
   const icon = props.icon && (
     <>
         <Icon icon={props.icon} className='icon'></Icon>
-        {/*<span className={`${styles.icon} icon-${props.icon}`}></span>*/}
+        {/*<span className={`${styles.icon} icon-${props.icon}`}/>*/}
     </>
   );
 

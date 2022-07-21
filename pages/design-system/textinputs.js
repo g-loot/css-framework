@@ -49,11 +49,11 @@ const DSpage = () => {
                       <label htmlFor="twitch">Twitch</label>
                       <div className="input-group">
                         <span>
-                          <span className="icon icon-twitch"></span>
+                          <span className="icon icon-twitch" />
                         </span>
                         <input type="text" name="twitch" id="twitch" />
                         <span>
-                          <span className="icon icon-lock"></span>
+                          <span className="icon icon-lock" />
                         </span>
                       </div>
                     </div>
@@ -168,7 +168,7 @@ const DSpage = () => {
                       <label htmlFor="name">Name</label>
                       <input type="text" name="name" id="name" />
                       <div className="form-info">
-                        The name is <span className="icon icon-check"></span> valid.
+                        The name is <span className="icon icon-check" /> valid.
                       </div>
                     </div>
                     <div
@@ -215,14 +215,14 @@ const DSpage = () => {
                     <div className="form-group">
                       <label htmlFor="teamname">Team name</label>
                       <div className="input-group">
-                        <span className="icon icon-a-chat"></span>
+                        <span className="icon icon-a-chat" />
                         <input type="text" name="teamname" id="teamname" />
                       </div>
                     </div>
                     <div className="form-group">
                       <label htmlFor="teamurl">Team URL</label>
                       <div className="input-group">
-                        <span className="icon icon-right icon-f-check"></span>
+                        <span className="icon icon-right icon-f-check" />
                         <input type="text" name="teamurl" id="teamurl" />
                       </div>
                     </div>
@@ -264,7 +264,7 @@ const DSpage = () => {
                     <div className="form-group is-loading">
                       <label htmlFor="city">City</label>
                       <div className="input-group">
-                        <span className="icon icon-right icon-flag-points-31"></span>
+                        <span className="icon icon-right icon-flag-points-31" />
                         <input type="text" name="city" id="city" />
                       </div>
                     </div>
@@ -337,7 +337,7 @@ const DSpage = () => {
                           role="button"
                           className="button button-tertiary"
                         >
-                          <span className="icon icon-zoom"></span>
+                          <span className="icon icon-zoom" />
                         </button>
                         <input
                           type="text"
@@ -388,7 +388,7 @@ const DSpage = () => {
                     <div className="form-group">
                       <label htmlFor="date">Choose a date</label>
                       <div className="input-group">
-                        <span className="icon icon-right icon-calendar-2"></span>
+                        <span className="icon icon-right icon-calendar-2" />
                         <input
                           id="date"
                           name="date"

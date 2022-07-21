@@ -59,6 +59,22 @@ const DSpage = () => {
       </div>
     </div>
 
+    {/* Highlight */}
+    <div className='mb-10' id='highlight'>
+      <h2 className='h3 mb-3'>
+        Highlight
+      </h2>
+      <div className='flex flex-col lg:flex-row gap-4'>
+        <div className='flex-1 space-y-4'>
+          <div className='surface surface-highlight-main rounded-lg h-24' />
+          <div className='surface surface-highlight-blue rounded-lg h-24' />
+        </div>
+        <div className='flex-1'>
+          <iframe className="rounded-lg" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/g1qde5x2/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+        </div>
+      </div>
+    </div>
+
     {/* Halo surface */}
     <div className='mb-10' id='halo-surface'>
       <h2 className='h3 mb-3'>

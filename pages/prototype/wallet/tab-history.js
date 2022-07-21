@@ -45,7 +45,7 @@ export default function TabWalletHistory() {
         <>
           <div className="surface rounded-lg px-4 py-8 text-center">
             <div className='max-w-xs mx-auto'>
-              <span className='icon icon-smile text-6xl text-ui-500'></span>
+              <span className='icon icon-smile text-6xl text-ui-500'/>
               <div className='mt-2 mb-6'>
                 <p className='text-sm text-ui-400'>
                   There are no events to be displayed yet.

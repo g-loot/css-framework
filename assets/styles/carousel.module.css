@@ -11,12 +11,14 @@
   lg:flex
   lg:flex-row
   lg:items-stretch
+  transform-gpu
   ;
 
   .carousel-slides {
     @apply
     h-[420px]
     lg:h-72
+    self-center
     ;
   }
 
@@ -46,7 +48,6 @@
       lg:flex-row
       items-stretch
       transition-all
-      transform-gpu
       duration-1000
       ease-[cubic-bezier(0.9,0,0.1,1)]
       ;
@@ -64,6 +65,7 @@
           > * {
             @apply
             scale-100
+            lg:scale-110
             ;
           }
         }
@@ -74,8 +76,6 @@
         relative
         z-10
         flex-4
-        
-        overflow-hidden
         ;
         > * {
           @apply
@@ -84,10 +84,9 @@
           bg-cover
           bg-center
           transition-transform
-          transform-gpu
           duration-[1.4s]
           ease-[cubic-bezier(0.7,0,0.3,1)]
-          scale-125
+          scale-150
           origin-right
           ;
         }
@@ -272,7 +271,6 @@
         text-ui-200
         gap-0
         transition-all
-        transform-gpu
         duration-1000
         ease-[cubic-bezier(0.9,0,0.1,1)]
         opacity-70
@@ -327,10 +325,8 @@
           inset-y-0
           right-0
           w-1.5
-          bg-ui-500
-          translate-x-2
-          transition-transform
-          transform-gpu
+          bg-ui-500/50
+          transition
           duration-[1.25s]
           ease-[cubic-bezier(0.8,0,0.2,1)]
           ;
@@ -342,10 +338,10 @@
             inset-0
             bg-interaction-500
             origin-top
-            scale-y-0
+            -translate-y-full
+            -skew-y-30
             opacity-0
-            transition-all
-            transform-gpu
+            transition
             duration-300
             ease-in-out
             ;
@@ -368,11 +364,17 @@
           @apply
           relative
           z-20
-          text-ellipsis
-          overflow-hidden
-          w-full
-          whitespace-nowrap
           ;
+        }
+        > :where(span, div) {
+          &:not(.item-actions) {
+            @apply
+            text-ellipsis
+            overflow-hidden
+            whitespace-nowrap
+            w-full
+            ;
+          }
         }
       }
       &.is-active {
@@ -383,7 +385,7 @@
           ;
           > i {
             @apply
-            translate-x-0
+            bg-ui-500
             ;
             &::before {
               @apply
@@ -410,10 +412,10 @@
 }
 @keyframes carousel-list-active {
   from {
-    transform: scaleY(0);
+    transform: translateY(-100%) skewY(-30deg);
   }
   to {
-    transform: scaleY(1);
+    transform: translateY(0) skewY(-30deg);
   }
 }
 @keyframes carousel-list-slidein {

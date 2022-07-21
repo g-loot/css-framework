@@ -284,6 +284,14 @@
       "name": "Partners & social media",
       "icons": [
         {
+          "tags": "media,partner,game editor,valorant,league of legends,riot games,logotype",
+          "name": "riotgames"
+        },
+        {
+          "tags": "media,partner,game editor,valorant,league of legends,riot games,symbol",
+          "name": "riotgames-symbol"
+        },
+        {
           "tags": "social,media,partner,communication,community,video,streaming,twitch",
           "name": "twitch"
         },

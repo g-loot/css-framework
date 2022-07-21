@@ -57,7 +57,7 @@ const BrandLayout = ({ children }) => {
             </div>
             <div className='form-group mt-4'>
               <div className='input-group'>
-                <span className='icon icon-zoom'></span>
+                <span className='icon icon-zoom'/>
                 <input id='filter'
                   name='filter'
                   type='text'
@@ -76,7 +76,7 @@ const BrandLayout = ({ children }) => {
               <div className={`${filter ? '' : 'mb-4'}`} key={item}>
                 <button className={`flex items-center px-4 ${filter ? 'hidden' : 'py-2'}`}>
                   {/*
-                    <span className={`icon icon-16 icon-${item.icon}`}></span>
+                    <span className={`icon icon-16 icon-${item.icon}`}/>
                   */}
                   <span className='font-headings uppercase text-ui-100'>{item.label}</span>
                 </button>

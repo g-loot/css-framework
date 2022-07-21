@@ -121,7 +121,7 @@ const DSpage = () => (
           <span>
             Read more
           </span>
-          <span className='icon icon-box-arrow-top-right'></span>
+          <span className='icon icon-box-arrow-top-right'/>
         </a>
       </div>
       */}

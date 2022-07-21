@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "name": "Clan Name 0",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png"
+  },
+  {
+    "id": 1,
+    "name": "Clan Name 1",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Un1c0rns.png"
+  },
+  {
+    "id": 2,
+    "name": "Clan Name 2",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png"
+  },
+  {
+    "id": 3,
+    "name": "Clan Name 3",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_GhOOOsTS.png"
+  },
+  {
+    "id": 4,
+    "name": "Clan Name 4",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_DeerGamer.png"
+  },
+  {
+    "id": 5,
+    "name": "Clan Name 5",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Foxy.png"
+  },
+  {
+    "id": 6,
+    "name": "Clan Name 6",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png"
+  },
+  {
+    "id": 7,
+    "name": "Clan Name 7",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_CockyStars.png"
+  }
+]

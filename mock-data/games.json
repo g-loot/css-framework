@@ -86,7 +86,149 @@
             "value": 5
           }
         ],
-        "progress": 0
+        "progress": 0,
+        "soloLeaderboard": [
+          {
+            "user": 1,
+            "rewards": {
+              "coin": 250000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 123,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143,
+              "bestPoints": {
+                "one": 423,
+                "two": 245,
+                "three": 513
+              }
+            }
+          },
+          {
+            "user": 2,
+            "rewards": {
+              "coin": 200000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 115,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143,
+              "bestPoints": {
+                "one": 423,
+                "two": 245,
+                "three": 513
+              }
+            }
+          },
+          {
+            "user": 3,
+            "rewards": {
+              "coin": 150000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 113,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143,
+              "bestPoints": {
+                "one": 423,
+                "two": 245,
+                "three": 513
+              }
+            }
+          },
+          {
+            "user": 0,
+            "rewards": {
+              "coin": 75000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 108,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143,
+              "bestPoints": {
+                "one": 423,
+                "two": 245,
+                "three": 513
+              }
+            }
+          },
+          {
+            "user": 4,
+            "rewards": {
+              "coin": 50000
+            },
+            "stats": {
+              "brawlPoints": 98,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143,
+              "bestPoints": {
+                "one": 423,
+                "two": 245,
+                "three": 513
+              }
+            }
+          },
+          {
+            "user": 5,
+            "rewards": {
+              "coin": 250000
+            },
+            "stats": {
+              "brawlPoints": 97,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143,
+              "bestPoints": {
+                "one": 423,
+                "two": 245,
+                "three": 513
+              }
+            }
+          },
+          {
+            "user": 6,
+            "rewards": {
+              "coin": 25000
+            },
+            "stats": {
+              "brawlPoints": 78,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143,
+              "bestPoints": {
+                "one": 423,
+                "two": 245,
+                "three": 513
+              }
+            }
+          },
+          {
+            "user": 7,
+            "rewards": {
+              "coin": 10000
+            },
+            "stats": {
+              "brawlPoints": 77,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143,
+              "bestPoints": {
+                "one": 423,
+                "two": 245,
+                "three": 513
+              }
+            }
+          }
+        ]
       },
       {
         "id": 1,

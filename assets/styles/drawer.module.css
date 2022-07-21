@@ -32,7 +32,9 @@
     transition-all
     duration-300
     ease-[.9,0,.1,1]
+    overflow-x-hidden
     overflow-y-auto
+    max-w-[100vw] 
     ;
     scroll-behavior: smooth; 
     scroll-padding-top: 5rem;

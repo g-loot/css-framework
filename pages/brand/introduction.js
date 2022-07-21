@@ -30,7 +30,7 @@ const BrandPage = () => (
           <Link href='visualidentity'>
             <a className='button button-ghost px-4'>
               <span>Our visual identity</span>
-              <span className='icon icon-arrow-sm-right'></span>
+              <span className='icon icon-arrow-sm-right'/>
             </a>
           </Link>
         </div>

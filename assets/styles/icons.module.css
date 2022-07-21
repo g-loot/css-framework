@@ -2181,3 +2181,11 @@
 .icon-rank-bronze::before {
   content: "\ec1a";
 }
+
+.icon-riotgames::before {
+  content: "\ec1b";
+}
+
+.icon-riotgames-symbol::before {
+  content: "\ec1c";
+}

@@ -145,7 +145,7 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-secondary rounded-full tooltip tooltip-left' data-tooltip='Join team'>
-                        <span className='icon icon-b-add'></span>
+                        <span className='icon icon-b-add'/>
                       </button>
                     </div>
                   </div>
@@ -169,7 +169,7 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-secondary rounded-full tooltip tooltip-left' data-tooltip='Join team'>
-                        <span className='icon icon-b-add'></span>
+                        <span className='icon icon-b-add'/>
                       </button>
                     </div>
                   </div>
@@ -193,7 +193,7 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-secondary rounded-full tooltip tooltip-left' data-tooltip='Join team'>
-                        <span className='icon icon-b-add'></span>
+                        <span className='icon icon-b-add'/>
                       </button>
                     </div>
                   </div>
@@ -217,7 +217,7 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-secondary rounded-full tooltip tooltip-left' data-tooltip='Join team'>
-                        <span className='icon icon-b-add'></span>
+                        <span className='icon icon-b-add'/>
                       </button>
                     </div>
                   </div>
@@ -282,7 +282,7 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-a-chart'></span>
+                        <span className='icon icon-a-chart'/>
                       </button>
                     </div>
                   </div>
@@ -325,7 +325,7 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-a-chart'></span>
+                        <span className='icon icon-a-chart'/>
                       </button>
                     </div>
                   </div>
@@ -368,7 +368,7 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-a-chart'></span>
+                        <span className='icon icon-a-chart'/>
                       </button>
                     </div>
                   </div>
@@ -411,7 +411,7 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-a-chart'></span>
+                        <span className='icon icon-a-chart'/>
                       </button>
                     </div>
                   </div>
@@ -449,21 +449,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -477,21 +477,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -505,21 +505,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -533,21 +533,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -561,21 +561,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -589,21 +589,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -617,21 +617,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -668,21 +668,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -696,21 +696,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -724,21 +724,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -752,21 +752,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -780,21 +780,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -808,21 +808,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -836,21 +836,21 @@ const DSpage = () => {
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='View details'>
-                        <span className='icon icon-view'></span>
+                        <span className='icon icon-view'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Share'>
-                        <span className='icon icon-network-communication'></span>
+                        <span className='icon icon-network-communication'/>
                       </button>
                     </div>
                   </div>
                   <div className='item-actions'>
                     <div>
                       <button className='button button-sm button-secondary rounded-full tooltip tooltip-left' data-tooltip='Delete'>
-                        <span className='icon icon-e-remove'></span>
+                        <span className='icon icon-e-remove'/>
                       </button>
                     </div>
                   </div>
@@ -926,7 +926,7 @@ const DSpage = () => {
                 <div className='item-image'>
                   <figure className='avatar avatar-tiny avatar-simple'>
                     <div>
-                    <span className='icon icon-chart-bar-33'></span>
+                    <span className='icon icon-chart-bar-33'/>
                     </div>
                   </figure>
                 </div>
@@ -937,7 +937,7 @@ const DSpage = () => {
                 </div>
                 <div className='item-actions'>
                   <div>
-                    <span className="icon icon-24 icon-arrow-sm-down text-ui-300"></span>
+                    <span className="icon icon-24 icon-arrow-sm-down text-ui-300" />
                   </div>
                 </div>
               </div>

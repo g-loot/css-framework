@@ -372,13 +372,13 @@ const DSpage = () => {
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
-                      <i></i>
+                      <i/>
                     </figure>
                     <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
-                      <i></i>
+                      <i/>
                     </figure>
                   </div>
                 </div>
@@ -393,13 +393,13 @@ const DSpage = () => {
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
-                      <i className="disabled"></i>
+                      <i className="disabled" />
                     </figure>
                     <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
-                      <i className="disabled"></i>
+                      <i className="disabled" />
                     </figure>
                   </div>
                 </div>
@@ -414,13 +414,13 @@ const DSpage = () => {
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
-                      <i className="error"></i>
+                      <i className="error" />
                     </figure>
                     <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
-                      <i className="error"></i>
+                      <i className="error" />
                     </figure>
                   </div>
                 </div>
@@ -435,13 +435,13 @@ const DSpage = () => {
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
-                      <i className="attention"></i>
+                      <i className="attention" />
                     </figure>
                     <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
-                      <i className="attention"></i>
+                      <i className="attention" />
                     </figure>
                   </div>
                 </div>
@@ -456,13 +456,13 @@ const DSpage = () => {
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
-                      <i className="info"></i>
+                      <i className="info" />
                     </figure>
                     <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
-                      <i className="info"></i>
+                      <i className="info" />
                     </figure>
                   </div>
                 </div>
@@ -477,13 +477,13 @@ const DSpage = () => {
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
-                      <i className="radar"></i>
+                      <i className="radar" />
                     </figure>
                     <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img src='https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg' />
                       </div>
-                      <i className="radar info"></i>
+                      <i className="radar info" />
                     </figure>
                   </div>
                 </div>
@@ -564,27 +564,27 @@ const DSpage = () => {
                   <div className='flex flex-wrap gap-4 justify-start items-center'>
                     <figure className="avatar avatar-squircle">
                       <div>
-                        <span className='icon icon-multiple-11'></span>
+                        <span className='icon icon-multiple-11'/>
                       </div>
                     </figure>
                     <figure className="avatar avatar-squircle avatar-md">
                       <div>
-                        <span className='icon icon-multiple-11'></span>
+                        <span className='icon icon-multiple-11'/>
                       </div>
                     </figure>
                     <figure className="avatar avatar-squircle avatar-sm">
                       <div>
-                        <span className='icon icon-multiple-11'></span>
+                        <span className='icon icon-multiple-11'/>
                       </div>
                     </figure>
                     <figure className="avatar avatar-squircle avatar-xs">
                       <div>
-                        <span className='icon icon-multiple-11'></span>
+                        <span className='icon icon-multiple-11'/>
                       </div>
                     </figure>
                     <figure className="avatar avatar-squircle avatar-tiny">
                       <div>
-                        <span className='icon icon-multiple-11'></span>
+                        <span className='icon icon-multiple-11'/>
                       </div>
                     </figure>
                   </div>

@@ -58,7 +58,7 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Brawls">
-        <Ad width="1005" height="124" />
+        <Ad width="1005" height="300" />
 
         {selectedGame && (
           <>
@@ -72,7 +72,7 @@ export default function Home() {
                   style={{ "--delay": "calc( 1 * 0.05s)" }}>
                           <Link href="/prototype/home">
                             <a href="#" className="inline-flex gap-2 items-center text-sm text-ui-300 hover:text-ui-100 active:opacity-50 focus-visible:text-main focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main transition-colors duration-75">
-                              <span className="icon icon-20 icon-home-2"></span>
+                              <span className="icon icon-20 icon-home-2" />
                               <span>Home</span>
                             </a>
                           </Link>
@@ -80,7 +80,7 @@ export default function Home() {
                         <li>
                           <div className="flex items-center animate-slide-in-top animate-delay"
                   style={{ "--delay": "calc( 2 * 0.05s)" }}>
-                            <span className="icon icon-20 text-ui-300 icon-arrow-sm-right"></span>
+                            <span className="icon icon-20 text-ui-300 icon-arrow-sm-right" />
                             <Link href={`/prototype/${game}/brawls/${hasAds ? "?ads=true" : ""}`}>
                               <a href="#" className="inline-flex gap-2 items-center text-sm text-ui-300 hover:text-ui-100 active:opacity-50 focus-visible:text-main focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main transition-colors duration-75 md:ml-2">Brawls</a>
                             </Link>
@@ -89,7 +89,7 @@ export default function Home() {
                         <li aria-current="page">
                           <div className="flex items-center animate-slide-in-top animate-delay"
                   style={{ "--delay": "calc( 3 * 0.05s)" }}>
-                            <span className="icon icon-20 text-ui-300 icon-arrow-sm-right"></span>
+                            <span className="icon icon-20 text-ui-300 icon-arrow-sm-right" />
                             <span className="ml-1 text-sm text-ui-300 md:ml-2">{selectedGame.brawls[brawl_id].name}</span>
                           </div>
                         </li>
@@ -112,19 +112,19 @@ export default function Home() {
                     No waiting, no dedicated servers. Play on your own schedule!
                     
                   </p>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col md:flex-row gap-2">
                     <button
                       type="button"
                       className="button button-sm button-primary button-play"
                     >
-                      <span className="icon icon-circle-caret-right"></span>
+                      <span className="icon icon-circle-caret-right" />
                       <span>Learn how to Brawl</span>
                     </button>
                     <button
                       type="button"
                       className="button button-sm button-secondary"
                     >
-                      <span className="icon icon-steam"></span>
+                      <span className="icon icon-steam" />
                       <span>Steam required</span>
                     </button>
                   </div>
@@ -132,7 +132,7 @@ export default function Home() {
                 <div className="col-span-8 xl:col-span-2 flex flex-col xl:items-end justify-start gap-4">
                   <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
                     <span className="font-headings italic text-ui-100 uppercase">Time Left:</span>
-                    <span className="icon icon-clock text-main"></span>
+                    <span className="icon icon-clock text-main" />
                     <Countdown additionalClassNames="flex items-baseline gap-0.5 font-headings italic uppercase text-main" hasDays={true} hasLabels={true} hasSeconds={false} separator=" • " labelsAbbr={true}></Countdown>
                   </div>
                 </div>

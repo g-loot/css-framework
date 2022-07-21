@@ -41,15 +41,15 @@ export default function Countdown(props) {
     <span className={`countdown ${additionalClassNames}`}>
       { hasDays && (
         <>
-          <span style={{"--value": timeLeft.days}}></span>{ hasLabels && !labelsAbbr && (<><i>Days</i></>)}{ hasLabels && labelsAbbr && (<><i>Days</i></>)}{separator}
+          <span style={{"--value": timeLeft.days}}/>{ hasLabels && !labelsAbbr && (<><i>Days</i></>)}{ hasLabels && labelsAbbr && (<><i>Days</i></>)}{separator}
         </>
       )}
-      <span style={{"--value": timeLeft.hours}}></span>{ hasLabels && !labelsAbbr && (<><i>Hours</i></>)}{ hasLabels && labelsAbbr && (<><i>Hrs</i></>)}{separator}
-      <span style={{"--value": timeLeft.minutes}}></span>{ hasLabels && !labelsAbbr && (<><i>Minutes</i></>)}{ hasLabels && labelsAbbr && (<><i>Min</i></>)}
+      <span style={{"--value": timeLeft.hours}}/>{ hasLabels && !labelsAbbr && (<><i>Hours</i></>)}{ hasLabels && labelsAbbr && (<><i>Hrs</i></>)}{separator}
+      <span style={{"--value": timeLeft.minutes}}/>{ hasLabels && !labelsAbbr && (<><i>Minutes</i></>)}{ hasLabels && labelsAbbr && (<><i>Min</i></>)}
       { hasSeconds && (
         <>
           {separator}
-          <span style={{"--value": timeLeft.seconds}}></span>{ hasLabels && !labelsAbbr && (<><i>Seconds</i></>)}{ hasLabels && labelsAbbr && (<><i>Sec</i></>)}
+          <span style={{"--value": timeLeft.seconds}}/>{ hasLabels && !labelsAbbr && (<><i>Seconds</i></>)}{ hasLabels && labelsAbbr && (<><i>Sec</i></>)}
         </>
       )}
       

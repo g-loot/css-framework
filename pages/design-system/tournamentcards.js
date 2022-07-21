@@ -40,7 +40,7 @@ const DSpage = () => {
                     <label>Entry</label>
                     <div>
                       <div className='chip chip-reward chip-ticket chip-inverted chip-sm'>
-                        <span className='icon icon-ticket'></span>
+                        <span className='icon icon-ticket'/>
                         <span>1 ticket</span>
                       </div>
                     </div>
@@ -60,7 +60,7 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="card-bg">
-                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-apexlegends_1.jpg)`}}></span>
+                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-apexlegends_1.jpg)`}}/>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@ const DSpage = () => {
                       <label>Prize Pool</label>
                       <div>
                         <div className='chip chip-reward chip-ticket chip-inverted chip-sm'>
-                          <span className='icon icon-ticket'></span>
+                          <span className='icon icon-ticket'/>
                           <span>1 ticket</span>
                         </div>
                       </div>
@@ -121,7 +121,7 @@ const DSpage = () => {
                   </div>
                 </div>
                 <div className="card-bg">
-                  <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-valorant_1.jpg)`}}></span>
+                  <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-valorant_1.jpg)`}}/>
                 </div>
             </div>
           </div>
@@ -167,7 +167,7 @@ const DSpage = () => {
                     <label>Prize Pool</label>
                     <div>
                       <div className='chip chip-reward chip-ticket chip-inverted chip-sm'>
-                        <span className='icon icon-ticket'></span>
+                        <span className='icon icon-ticket'/>
                         <span>1 ticket</span>
                       </div>
                     </div>
@@ -181,7 +181,7 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="card-bg">
-                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`}}></span>
+                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`}}/>
               </div>
             </div>
           </div>
@@ -229,7 +229,7 @@ const DSpage = () => {
                     <label>Prize Pool</label>
                     <div>
                       <div className='chip chip-reward chip-ticket chip-inverted chip-sm'>
-                        <span className='icon icon-ticket'></span>
+                        <span className='icon icon-ticket'/>
                         <span>1 ticket</span>
                       </div>
                     </div>
@@ -243,7 +243,7 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="card-bg">
-                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`}}></span>
+                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`}}/>
               </div>
             </div>
           </div>

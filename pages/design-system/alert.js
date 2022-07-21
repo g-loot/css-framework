@@ -23,7 +23,7 @@ const DSpage = () => {
             <div className='flex-1 space-y-4 text-center'>
               <div className="alert">
                 <div>
-                  <span className='icon icon-24 icon-c-info'></span>
+                  <span className='icon icon-24 icon-c-info'/>
                   <span>3 new tournaments available.</span>
                 </div>
               </div>
@@ -49,12 +49,12 @@ const DSpage = () => {
             <div className='flex-1 space-y-4 text-center'>
               <div className="alert">
                 <div>
-                  <span className='icon icon-24 icon-c-info'></span>
+                  <span className='icon icon-24 icon-c-info'/>
                   <span>3 new tournaments available.</span>
                 </div>
                 <div className="flex-none">
                   <button type='button' className="button button-tertiary button-close">
-                    <span className='icon icon-e-remove'></span>
+                    <span className='icon icon-e-remove'/>
                   </button>
                 </div>
               </div>
@@ -81,7 +81,7 @@ const DSpage = () => {
             <div className='flex-1 space-y-4 text-center'>
               <div className="alert">
                 <div>
-                  <span className='icon icon-24 icon-c-info'></span>
+                  <span className='icon icon-24 icon-c-info'/>
                   <span>3 new tournaments available.</span>
                 </div>
                 <div className="flex-none">
@@ -115,7 +115,7 @@ const DSpage = () => {
             <div className='flex-1 space-y-4 flex justify-center'>
               <div className="alert alert-green">
                 <div>
-                  <span className='icon icon-24 icon-f-check'></span>
+                  <span className='icon icon-24 icon-f-check'/>
                   <span>Your token purchase has been confirmed.</span>
                 </div>
               </div>
@@ -133,7 +133,7 @@ const DSpage = () => {
             <div className='flex-1 space-y-4 flex justify-center'>
               <div className="alert alert-blue">
                 <div>
-                  <span className='icon icon-24 icon-c-info'></span>
+                  <span className='icon icon-24 icon-c-info'/>
                   <span>3 new tournaments available.</span>
                 </div>
               </div>
@@ -151,7 +151,7 @@ const DSpage = () => {
             <div className='flex-1 space-y-4 flex justify-center'>
               <div className="alert alert-orange">
                 <div>
-                  <span className='icon icon-24 icon-warning-sign'></span>
+                  <span className='icon icon-24 icon-warning-sign'/>
                   <span>Warning. Tournament enrolment invalid.</span>
                 </div>
               </div>
@@ -169,7 +169,7 @@ const DSpage = () => {
             <div className='flex-1 space-y-4 flex justify-center'>
               <div className="alert alert-red">
                 <div>
-                  <span className='icon icon-24 icon-c-info'></span>
+                  <span className='icon icon-24 icon-c-info'/>
                   <span>Error! We were unable to retrieve your Brawl result.</span>
                 </div>
               </div>

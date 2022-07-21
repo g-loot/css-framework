@@ -56,10 +56,10 @@ const DSpage = () => {
             <div className='flex-1 space-y-4'>
               <div className='flex-1 flex justify-center flex-wrap gap-4'>
                 <div className={`checkmark ${randomNum0 === 1 ? 'is-active' : ''}`}>
-                  <i></i>
+                  <i/>
                 </div>
                 <div className={`checkmark ${randomNum0 === 0 ? 'is-active' : ''}`}>
-                  <i></i>
+                  <i/>
                 </div>
               </div>
               <div className='text-center'>
@@ -94,10 +94,10 @@ const DSpage = () => {
                 <div className='flex-1 space-y-4'>
                   <div className='flex-1 flex justify-center flex-wrap gap-4'>
                     <div className={`checkmark checkmark-sm ${randomNum1 === 1 ? 'is-active' : ''}`}>
-                      <i></i>
+                      <i/>
                     </div>
                     <div className={`checkmark checkmark-sm ${randomNum1 === 0 ? 'is-active' : ''}`}>
-                      <i></i>
+                      <i/>
                     </div>
                   </div>
                   <div className='text-center'>
@@ -114,10 +114,10 @@ const DSpage = () => {
                 <div className='flex-1 space-y-4'>
                   <div className='flex-1 flex justify-center flex-wrap gap-4'>
                     <div className={`checkmark checkmark-xs ${randomNum2 === 1 ? 'is-active' : ''}`}>
-                      <i></i>
+                      <i/>
                     </div>
                     <div className={`checkmark checkmark-xs ${randomNum2 === 0 ? 'is-active' : ''}`}>
-                      <i></i>
+                      <i/>
                     </div>
                   </div>
                   <div className='text-center'>
@@ -151,10 +151,10 @@ const DSpage = () => {
             <div className='flex-1 space-y-4'>
               <div className='flex-1 flex justify-center flex-wrap gap-4'>
                 <div className={`checkmark checkmark-invisible ${randomNum3 === 1 ? 'is-active' : ''}`}>
-                  <i></i>
+                  <i/>
                 </div>
                 <div className={`checkmark checkmark-invisible ${randomNum3 === 0 ? 'is-active' : ''}`}>
-                  <i></i>
+                  <i/>
                 </div>
               </div>
               <div className='text-center'>

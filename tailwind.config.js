@@ -239,6 +239,7 @@ module.exports = {
         'drop-in': 'dropIn 1.1s both',
         'bounce-right': 'bounceRight 1.1s infinite',
         'bounce-left': 'bounceLeft 1.1s infinite',
+        'floating': 'floating 6s cubic-bezier(0.47, 0, 0.49, 0.94) infinite',
       },
       keyframes: {
         slideInLeft: {
@@ -368,6 +369,34 @@ module.exports = {
             animationTimingFunction: 'ease-out',
           },
         },
+        floating: {
+          '0%,80%,100%': { 
+            transform: 'translateY(0)',
+          },
+          '40%,50%': { 
+            transform: 'translateY(-6%)',
+          },
+        },
+      },
+      dropShadow: {
+        'main': [
+          '0px 0px 10px rgba(19, 240, 148, 0.075)',
+          '0px 0px 3px rgba(19, 240, 148, 0.1)',
+          '0px 0px 1.3px rgba(19, 240, 148, 0.15)',
+          '0px 0px 0.5px rgba(19, 240, 148, 0.3)',
+        ],
+        'blue': [
+          '0px 0px 10px rgba(77 180 255, 0.125)',
+          '0px 0px 3px rgba(77 180 255, 0.2)',
+          '0px 0px 1.3px rgba(77 180 255, 0.3)',
+          '0px 0px 0.5px rgba(77 180 255, 0.6)',
+        ],
+        'main-lg': [
+          '0px 0px 3px rgba(19, 240, 148, 0.25)',
+          '0px 0px 6px rgba(19, 240, 148, 0.5)',
+          '0px 0px 16px rgba(19, 240, 148, 0.75)',
+          '0px 0px 32px rgba(19, 240, 148, 1)',
+        ]
       }
     }
   },

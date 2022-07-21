@@ -7,6 +7,7 @@
   m-0
   p-0
   list-none
+  transform-gpu
   ;
 
   &.menu-rounded {
@@ -22,7 +23,6 @@
   :where(li) {
     @apply
     transition-all
-    transform-gpu
     duration-200
     ease-in-out
     ;
@@ -50,7 +50,6 @@
     text-ui-300
     cursor-pointer
     transition-all
-    transform-gpu
     duration-200
     ease-[cubic-bezier(.7,0,.3,1)]
     focus-visible:outline
@@ -64,7 +63,6 @@
       z-20
       select-none
       transition
-      transform-gpu
       ease-linear
       duration-75
       ;
@@ -91,7 +89,6 @@
       inset-0
       bg-ui-700
       transition-all
-      transform-gpu
       duration-200
       ease-[cubic-bezier(.7,0,.3,1)]
       opacity-0

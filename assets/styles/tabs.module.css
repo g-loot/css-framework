@@ -178,7 +178,6 @@
   > li {
     @apply
     flex-none
-    transform-gpu
     ;
     
     > a {
@@ -195,7 +194,6 @@
       :where([class*=icon-rank]) {
         @apply
         duration-300
-        transform-gpu
         ease-in-out
         scale-75
         ;
@@ -260,7 +258,6 @@
           w-full
           -skew-x-30
           transition-all
-          transform-gpu
           duration-200
           ease-[cubic-bezier(.7,0,.3,1)]
           ;

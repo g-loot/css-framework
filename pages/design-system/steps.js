@@ -75,21 +75,21 @@ const DSpage = () => {
                   <a href='#'>
                     <i>1</i>
                     <div></div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li className={`${randomNum0 === 2 ? `is-active` : ''}`}>
                   <a href='#'>
                     <i>2</i>
                     <div></div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li className={`${randomNum0 === 3 ? `is-active` : ''}`}>
                   <a href='#'>
                     <i>3</i>
                     <div></div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
               </ul>
@@ -123,21 +123,21 @@ const DSpage = () => {
                   <a href='#'>
                     <i>1</i>
                     <div></div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li className={`${randomNum5 === 2 ? `is-active` : ''}`}>
                   <a href='#'>
                     <i>2</i>
                     <div></div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li className={`${randomNum5 === 3 ? `is-active` : ''}`}>
                   <a href='#'>
                     <i>3</i>
                     <div></div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
               </ul>
@@ -175,21 +175,21 @@ const DSpage = () => {
                   <a href='#'>
                     <i>1</i>
                     <div></div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li className={`${randomNum1 === 2 ? `is-active` : ''}`}>
                   <a href='#'>
                     <i>2</i>
                     <div></div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li className={`${randomNum1 === 3 ? `is-active` : ''}`}>
                   <a href='#'>
                     <i>3</i>
                     <div></div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
               </ul>
@@ -215,21 +215,21 @@ const DSpage = () => {
                   <a href='#'>
                     <i>1</i>
                     <div>Step 1</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li className={`${randomNum2 === 2 ? `is-active` : ''}`}>
                   <a href='#'>
                     <i>2</i>
                     <div>Step 2</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li className={`${randomNum2 === 3 ? `is-active` : ''}`}>
                   <a href='#'>
                     <i>3</i>
                     <div>Step 3</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
               </ul>
@@ -256,21 +256,21 @@ const DSpage = () => {
                   <a href='#'>
                     <i>1</i>
                     <div>Step 1</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li className={`${randomNum3 === 2 ? `is-active` : ''}`}>
                   <a href='#'>
                     <i>2</i>
                     <div>Step 2</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li className={`${randomNum3 === 3 ? `is-active` : ''}`}>
                   <a href='#'>
                     <i>3</i>
                     <div>Step 3</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
               </ul>
@@ -297,21 +297,21 @@ const DSpage = () => {
                   <a href='#'>
                     <i>1</i>
                     <div>Step 1</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li className={`${randomNum4 === 2 ? `is-active` : ''}`}>
                   <a href='#'>
                     <i>2</i>
                     <div>Step 2</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li className={`${randomNum4 === 3 ? `is-active` : ''}`}>
                   <a href='#'>
                     <i>3</i>
                     <div>Step 3</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
               </ul>
@@ -351,21 +351,21 @@ const DSpage = () => {
                   <a href='#'>
                     <i>1</i>
                     <div className='text-sm'>First you need to subscribe to G-Loot.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li>
                   <a href='#'>
                     <i>2</i>
                     <div className='text-sm'>Then you have to win a ticket by playing missions and competing in Brawls.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li>
                   <a href='#'>
                     <i>3</i>
                     <div className='text-sm'>Now you can join the tournament Make sure to check out how to play.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
               </ul>
@@ -398,21 +398,21 @@ const DSpage = () => {
                   <a href='#'>
                     <i>1</i>
                     <div>First you need to subscribe to G-Loot.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li>
                   <a href='#'>
                     <i>2</i>
                     <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li>
                   <a href='#'>
                     <i>3</i>
                     <div>Now you can join the tournament Make sure to check out how to play.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
               </ul>
@@ -422,21 +422,21 @@ const DSpage = () => {
                   <a href='#'>
                     <i>1</i>
                     <div>First you need to subscribe to G-Loot.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li>
                   <a href='#'>
                     <i>2</i>
                     <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li>
                   <a href='#'>
                     <i>3</i>
                     <div>Now you can join the tournament Make sure to check out how to play.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
               </ul>
@@ -446,21 +446,21 @@ const DSpage = () => {
                   <a href='#'>
                     <i>1</i>
                     <div>First you need to subscribe to G-Loot.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li>
                   <a href='#'>
                     <i>2</i>
                     <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li>
                   <a href='#'>
                     <i>3</i>
                     <div>Now you can join the tournament Make sure to check out how to play.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
               </ul>
@@ -470,21 +470,21 @@ const DSpage = () => {
                   <a href='#'>
                     <i>1</i>
                     <div>First you need to subscribe to G-Loot.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li>
                   <a href='#'>
                     <i>2</i>
                     <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
                 <li>
                   <a href='#'>
                     <i>3</i>
                     <div>Now you can join the tournament Make sure to check out how to play.</div>
-                    <span></span>
+                    <span/>
                   </a>
                 </li>
               </ul>

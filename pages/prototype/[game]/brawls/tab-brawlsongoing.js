@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import Accordion from "../../../../components/Accordion/Accordion";
-import Ad from "../../../../components/Ad/Ad";
 import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
-import PrototypeDataGames from "../../../../mock-data/games.json";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -42,7 +39,7 @@ export default function TabBrawlsOngoing() {
                           <div className="flex items-center gap-2 mt-2 text-xl text-ui-300">
                             {brawl.solo && (
                               <>
-                              <span className="icon icon-profile-2"></span>
+                              <span className="icon icon-profile-2" />
                               </>
                             )}
                             {brawl.solo && brawl.clan && (
@@ -52,7 +49,7 @@ export default function TabBrawlsOngoing() {
                             )}
                             {brawl.clan && (
                               <>
-                              <span className="icon icon-multiple-12"></span>
+                              <span className="icon icon-multiple-12" />
                               </>
                             )}
                           </div>
@@ -63,9 +60,9 @@ export default function TabBrawlsOngoing() {
                           <div className="relative z-10 flex p-4">
                             <figure className="avatar avatar-circle avatar-sm">
                               <div>
-                                <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                                <img src={prototypeData.getUserByID(0)?.avatar} />
                               </div>
-                              <i className="radar"></i>
+                              <i className="radar" />
                             </figure>
                           </div>
                         </>
@@ -90,7 +87,7 @@ export default function TabBrawlsOngoing() {
                           {brawl.name}
                         </h2>
                         <div className="chip chip-sm chip-secondary">
-                          <span className="icon icon-time-machine"></span>
+                          <span className="icon icon-time-machine" />
                           <span>
                             Time left:{" "}
                             <Countdown additionalClassName="ml-1" separator=":" />
@@ -140,23 +137,23 @@ export default function TabBrawlsOngoing() {
                           <ul className="step step-primary step-sm w-full max-w-xs">
                             <li>
                               <a href="#">
-                                <i></i>
+                                <i/>
                                 <div></div>
-                                <span></span>
+                                <span/>
                               </a>
                             </li>
                             <li className="is-active">
                               <a href="#">
-                                <i></i>
+                                <i/>
                                 <div></div>
-                                <span></span>
+                                <span/>
                               </a>
                             </li>
                             <li>
                               <a href="#">
-                                <i></i>
+                                <i/>
                                 <div></div>
-                                <span></span>
+                                <span/>
                               </a>
                             </li>
                           </ul>

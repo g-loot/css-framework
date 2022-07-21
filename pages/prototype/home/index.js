@@ -33,7 +33,7 @@ export default function Home() {
             </div>
             <div className="hidden sm:flex items-center gap-2">
               <div className="chip chip-sm chip-secondary">
-                <span className="icon icon-time-machine"></span>
+                <span className="icon icon-time-machine" />
                 <span>
                   Resets in{" "}
                   <Countdown additionalClassName="ml-1" separator=":" />
@@ -43,7 +43,7 @@ export default function Home() {
                 className="tooltip tooltip-left text-ui-300 text-0"
                 data-tooltip="Unlock rewards to earn XP"
               >
-                <span className="icon icon-16 icon-c-info"></span>
+                <span className="icon icon-16 icon-c-info" />
               </button>
             </div>
           </div>
@@ -65,7 +65,7 @@ export default function Home() {
                     className="tooltip text-ui-300"
                     data-tooltip="Claim a free reward each day you visit gloot.com"
                   >
-                    <span className="icon icon-16 icon-c-info"></span>
+                    <span className="icon icon-16 icon-c-info" />
                   </button>
                 </div>
                 <p className="text-sm text-ui-300 leading-none">
@@ -89,7 +89,7 @@ export default function Home() {
           <div className="surface surface-dimmed flex flex-col flex-1 min-h-[16rem] lg:min-h-fit relative overflow-hidden sm:rounded-lg p-4">
             <div className="relative z-30 flex-1 flex flex-col items-center justify-center text-center">
               <button className="button button-secondary button-sm button-play">
-                <span className="icon icon-circle-caret-right"></span>
+                <span className="icon icon-circle-caret-right" />
                 <span>How to brawl</span>
               </button>
               <h3 className="text-xl mt-6">
@@ -107,7 +107,7 @@ export default function Home() {
             <div className="relative z-30 flex-1">
               <div className="flex items-start gap-4">
                 <div className="rounded flex items-center justify-center h-12 w-12 bg-gradient-to-b from-ui-900/75 to-ui-800">
-                  <span className="icon icon-32 icon-game-valorant-symbol text-game-valorant color-white"></span>
+                  <span className="icon icon-32 icon-game-valorant-symbol text-game-valorant color-white" />
                 </div>
                 <div>
                   <div className="flex items-baseline gap-2 mb-1">

@@ -108,7 +108,7 @@ const DSpage = () => {
               <a className="is-active">
                 <div>
                   <div>
-                    <span className="icon text-4xl icon-rank-bronze"></span>
+                    <span className="icon text-4xl icon-rank-bronze" />
                     <span className="font-headings text-2xl uppercase italic">Bronze</span>
                   </div>
                 </div>
@@ -118,14 +118,14 @@ const DSpage = () => {
               <a>
                 <div>
                   <div>
-                    <span className="icon text-4xl icon-rank-silver"></span>
+                    <span className="icon text-4xl icon-rank-silver" />
                     <span className="font-headings text-2xl uppercase italic">Silver</span>
                   </div>
                   <figure className="avatar avatar-circle avatar-xs">
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                     </div>
-                    <i className="radar"></i>
+                    <i className="radar" />
                   </figure>
                 </div>
               </a>
@@ -134,7 +134,7 @@ const DSpage = () => {
               <a>
                 <div>
                   <div>
-                    <span className="icon text-4xl icon-rank-gold"></span>
+                    <span className="icon text-4xl icon-rank-gold" />
                     <span className="font-headings text-2xl uppercase italic">Gold</span>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ const DSpage = () => {
               <a>
                 <div>
                   <div>
-                    <span className="icon text-4xl icon-rank-platinum"></span>
+                    <span className="icon text-4xl icon-rank-platinum" />
                     <span className="font-headings text-2xl uppercase italic">Platinum</span>
                   </div>
                 </div>
@@ -154,7 +154,7 @@ const DSpage = () => {
               <a>
                 <div>
                   <div>
-                    <span className="icon text-4xl icon-rank-diamond"></span>
+                    <span className="icon text-4xl icon-rank-diamond" />
                     <span className="font-headings text-2xl uppercase italic">Diamond</span>
                   </div>
                 </div>

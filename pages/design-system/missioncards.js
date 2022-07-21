@@ -28,7 +28,7 @@ const DSpage = () => {
                 </div>
                 <div className='card-meta'>
                   <div className='chip chip-reward chip-xp chip-sm chip-inverted'>
-                    <span className='icon icon-xp-symbol-outline'></span>
+                    <span className='icon icon-xp-symbol-outline'/>
                     <span>100</span>
                   </div>
                   <div>
@@ -40,7 +40,7 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="card-bg">
-                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`}}></span>
+                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`}}/>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ const DSpage = () => {
                 </div>
                 <div className='card-meta'>
                   <div className='chip chip-reward chip-xp chip-sm chip-inverted'>
-                    <span className='icon icon-xp-symbol-outline'></span>
+                    <span className='icon icon-xp-symbol-outline'/>
                     <span>100</span>
                   </div>
                   <div>
@@ -83,7 +83,7 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="card-bg">
-                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-valorant_1.jpg)`}}></span>
+                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-valorant_1.jpg)`}}/>
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@ const DSpage = () => {
                 </div>
                 <div className='card-meta'>
                   <div className='chip chip-reward chip-xp chip-sm chip-inverted'>
-                    <span className='icon icon-xp-symbol-outline'></span>
+                    <span className='icon icon-xp-symbol-outline'/>
                     <span>100</span>
                   </div>
                   <div>
@@ -126,7 +126,7 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="card-bg">
-                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-apexlegends_1.jpg)`}}></span>
+                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-apexlegends_1.jpg)`}}/>
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ const DSpage = () => {
                 </div>
                 <div className='card-meta'>
                   <div className='chip chip-reward chip-xp chip-sm chip-inverted'>
-                    <span className='icon icon-xp-symbol-outline'></span>
+                    <span className='icon icon-xp-symbol-outline'/>
                     <span>100</span>
                   </div>
                   <div>
@@ -168,7 +168,7 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="card-bg">
-                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-rocketleague_1.jpg)`}}></span>
+                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-rocketleague_1.jpg)`}}/>
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@ const DSpage = () => {
                 </div>
                 <div className='card-meta'>
                   <div className='chip chip-reward chip-xp chip-sm chip-inverted'>
-                    <span className='icon icon-xp-symbol-outline'></span>
+                    <span className='icon icon-xp-symbol-outline'/>
                     <span>100</span>
                   </div>
                   <div>
@@ -210,7 +210,7 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="card-bg">
-                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-rocketleague_1.jpg)`}}></span>
+                <span style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-rocketleague_1.jpg)`}}/>
               </div>
             </div>
           </div>

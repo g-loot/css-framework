@@ -1,10 +1,11 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+
 import Ad from "../../../../components/Ad/Ad";
 import Countdown from "../../../../components/Countdown/Countdown";
+import Link from "next/link";
 import RewardLadder from "../../../../components/RewardLadder/RewardLadder";
 import { usePrototypeData } from "../../../../contexts/prototype";
+import { useRouter } from "next/router";
 
 export default function TabMissionsMissions() {
   const router = useRouter();
@@ -35,7 +36,7 @@ export default function TabMissionsMissions() {
               </div>
               <div className="hidden sm:flex items-center gap-2">
                 <div className="chip chip-sm chip-secondary">
-                  <span className="icon icon-time-machine"></span>
+                  <span className="icon icon-time-machine" />
                   <span>
                     Resets in <Countdown additionalClassName="ml-1" separator=":" />
                   </span>
@@ -44,7 +45,7 @@ export default function TabMissionsMissions() {
                   className="hidden tooltip tooltip-left text-ui-300 text-0"
                   data-tooltip="Unlock rewards to earn XP"
                 >
-                  <span className="icon icon-16 icon-c-info"></span>
+                  <span className="icon icon-16 icon-c-info" />
                 </button>
               </div>
             </div>
@@ -53,13 +54,13 @@ export default function TabMissionsMissions() {
                 <div className="px-4 sm:px-0">
                   <div className="alert mb-4">
                     <div>
-                      <span className="icon icon-24 icon-steam"></span>
+                      <span className="icon icon-24 icon-steam" />
                       <div>
                         <div className="font-bold uppercase">Important:</div>
                         <p className="max-w-[80ch] text-ui-300">
                           To complete Missions and earn rewards, you need to{" "}
                           <Link
-                            href={`profile-settings${hasAds ? "?ads=true" : ""}`}
+                            href={`profile/settings${hasAds ? "?ads=true" : ""}`}
                           >
                             <a className="link">
                               connect your Steam account to G-Loot
@@ -70,7 +71,7 @@ export default function TabMissionsMissions() {
                       </div>
                     </div>
                     <div className="flex-none">
-                      <Link href={`profile-settings${hasAds ? "?ads=true" : ""}`}>
+                      <Link href={`profile/settings${hasAds ? "?ads=true" : ""}`}>
                         <a className="button button-sm button-secondary">
                           <span>
                             Connect{" "}
@@ -101,7 +102,7 @@ export default function TabMissionsMissions() {
               </div>
               <div className="hidden sm:flex items-center gap-2">
                 <div className="chip chip-sm chip-secondary">
-                  <span className="icon icon-time-machine"></span>
+                  <span className="icon icon-time-machine" />
                   <span>
                     Resets in <Countdown additionalClassName="ml-1" separator=":" />
                   </span>
@@ -110,7 +111,7 @@ export default function TabMissionsMissions() {
                   className="hidden tooltip tooltip-left text-ui-300 text-0"
                   data-tooltip="Unlock rewards to earn XP"
                 >
-                  <span className="icon icon-16 icon-c-info"></span>
+                  <span className="icon icon-16 icon-c-info" />
                 </button>
               </div>
             </div>
@@ -119,7 +120,7 @@ export default function TabMissionsMissions() {
                 <div className="px-4 sm:px-0">
                   <div className="alert mb-4">
                     <div>
-                      <span className="icon icon-24 icon-steam"></span>
+                      <span className="icon icon-24 icon-steam" />
                       <div>
                         <div className="font-bold uppercase">
                           New &amp; improved stats tracking:
@@ -137,7 +138,7 @@ export default function TabMissionsMissions() {
                         type="button"
                         className="button button-tertiary button-close"
                       >
-                        <span className="icon icon-e-remove"></span>
+                        <span className="icon icon-e-remove" />
                       </button>
                     </div>
                   </div>
@@ -158,7 +159,7 @@ export default function TabMissionsMissions() {
                   data-tooltip="This might take up to 15 minutes. Make sure the match you’re trying to fetch is 100% completed."
                 >
                   <button className="button button-sm button-primary">
-                    <span className="icon icon-16 icon-refresh-02"></span>
+                    <span className="icon icon-16 icon-refresh-02" />
                     <span className="hidden sm:block">Request a stats update</span>
                     <span className="block sm:hidden">Update</span>
                   </button>
@@ -183,7 +184,7 @@ export default function TabMissionsMissions() {
                         <div className="card-title">{mission.name}</div>
                         <div className="card-meta">
                           <div className="chip chip-reward chip-xp chip-sm chip-inverted">
-                            <span className="icon icon-xp-symbol-outline"></span>
+                            <span className="icon icon-xp-symbol-outline" />
                             <span>{mission.xp}</span>
                           </div>
                           <div>
@@ -207,7 +208,7 @@ export default function TabMissionsMissions() {
                           style={{
                             backgroundImage: "url(" + mission.image + ")",
                           }}
-                        ></span>
+                        />
                       </div>
                     </div>
                   </>

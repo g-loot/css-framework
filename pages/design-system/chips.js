@@ -41,7 +41,7 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <button type='button' className='chip chip-primary'>
-                    <span className='icon icon-circle-caret-right'></span>
+                    <span className='icon icon-circle-caret-right'/>
                     <span>Label</span>
                   </button>
                 </div>
@@ -53,7 +53,7 @@ const DSpage = () => {
                 <div className='flex-1'>
                   <button type='button' className='chip chip-primary'>
                     <span>Label</span>
-                    <span className='icon icon-circle-caret-right'></span>
+                    <span className='icon icon-circle-caret-right'/>
                   </button>
                 </div>
               </div>
@@ -87,7 +87,7 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <button type='button' className='chip chip-secondary'>
-                    <span className='icon icon-circle-caret-right'></span>
+                    <span className='icon icon-circle-caret-right'/>
                     <span>Label</span>
                   </button>
                 </div>
@@ -99,7 +99,7 @@ const DSpage = () => {
                 <div className='flex-1'>
                   <button type='button' className='chip chip-secondary'>
                     <span>Label</span>
-                    <span className='icon icon-circle-caret-right'></span>
+                    <span className='icon icon-circle-caret-right'/>
                   </button>
                 </div>
               </div>
@@ -133,7 +133,7 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <button type='button' className='chip chip-premium'>
-                    <span className='icon icon-circle-caret-right'></span>
+                    <span className='icon icon-circle-caret-right'/>
                     <span>Label</span>
                   </button>
                 </div>
@@ -145,7 +145,7 @@ const DSpage = () => {
                 <div className='flex-1'>
                   <button type='button' className='chip chip-premium'>
                     <span>Label</span>
-                    <span className='icon icon-circle-caret-right'></span>
+                    <span className='icon icon-circle-caret-right'/>
                   </button>
                 </div>
               </div>
@@ -179,7 +179,7 @@ const DSpage = () => {
                   <div className='chip chip-primary'>
                     <span>Label</span>
                     <button type='button' className="button button-close">
-                      <span className='icon icon-e-remove'></span>
+                      <span className='icon icon-e-remove'/>
                     </button>
                   </div>
                 </div>
@@ -192,7 +192,7 @@ const DSpage = () => {
                   <div className='chip chip-secondary'>
                     <span>Label</span>
                     <button type='button' className="button button-close">
-                      <span className='icon icon-e-remove'></span>
+                      <span className='icon icon-e-remove'/>
                     </button>
                   </div>
                 </div>
@@ -229,19 +229,19 @@ const DSpage = () => {
                     <span>Label</span>
                   </div>
                   <div className='chip chip-secondary'>
-                    <span className='icon icon-circle-caret-right'></span>
+                    <span className='icon icon-circle-caret-right'/>
                     <span>Label</span>
                   </div>
                   <div className='chip chip-primary'>
                     <span>Label</span>
                     <button type='button' className="button button-close">
-                      <span className='icon icon-e-remove'></span>
+                      <span className='icon icon-e-remove'/>
                     </button>
                   </div>
                   <div className='chip chip-secondary'>
                     <span>Label</span>
                     <button type='button' className="button button-close">
-                      <span className='icon icon-e-remove'></span>
+                      <span className='icon icon-e-remove'/>
                     </button>
                   </div>
                 </div>
@@ -255,19 +255,19 @@ const DSpage = () => {
                     <span>Label</span>
                   </div>
                   <div className='chip chip-sm chip-secondary'>
-                    <span className='icon icon-circle-caret-right'></span>
+                    <span className='icon icon-circle-caret-right'/>
                     <span>Label</span>
                   </div>
                   <div className='chip chip-sm chip-primary'>
                     <span>Label</span>
                     <button type='button' className="button button-close">
-                      <span className='icon icon-e-remove'></span>
+                      <span className='icon icon-e-remove'/>
                     </button>
                   </div>
                   <div className='chip chip-sm chip-secondary'>
                     <span>Label</span>
                     <button type='button' className="button button-close">
-                      <span className='icon icon-e-remove'></span>
+                      <span className='icon icon-e-remove'/>
                     </button>
                   </div>
                 </div>
@@ -281,19 +281,19 @@ const DSpage = () => {
                     <span>Label</span>
                   </div>
                   <div className='chip chip-xs chip-secondary'>
-                    <span className='icon icon-circle-caret-right'></span>
+                    <span className='icon icon-circle-caret-right'/>
                     <span>Label</span>
                   </div>
                   <div className='chip chip-xs chip-primary'>
                     <span>Label</span>
                     <button type='button' className="button button-close">
-                      <span className='icon icon-e-remove'></span>
+                      <span className='icon icon-e-remove'/>
                     </button>
                   </div>
                   <div className='chip chip-xs chip-secondary'>
                     <span>Label</span>
                     <button type='button' className="button button-close">
-                      <span className='icon icon-e-remove'></span>
+                      <span className='icon icon-e-remove'/>
                     </button>
                   </div>
                 </div>
@@ -326,15 +326,15 @@ const DSpage = () => {
                 
                 <div className='flex-1 flex justify-center items-center gap-2'>
                   <div className='chip chip-secondary rounded-xs'>
-                    <span className='icon icon-tv'></span>
+                    <span className='icon icon-tv'/>
                     <span>Tracker required</span>
                   </div>
                   <div className='chip chip-secondary rounded'>
-                    <span className='icon icon-tv'></span>
+                    <span className='icon icon-tv'/>
                     <span>Tracker required</span>
                   </div>
                   <div className='chip chip-secondary rounded-lg'>
-                    <span className='icon icon-tv'></span>
+                    <span className='icon icon-tv'/>
                     <span>Tracker required</span>
                   </div>
                 </div>
@@ -431,7 +431,7 @@ const DSpage = () => {
                   Normal <button type='button' className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                 </div>
                 <div className='chip chip-reward chip-xp'>
-                  <span className='icon icon-xp-symbol-outline'></span>
+                  <span className='icon icon-xp-symbol-outline'/>
                   <span>500</span>
                 </div>
               </div>
@@ -440,7 +440,7 @@ const DSpage = () => {
                 Inverted
                 </div>
                 <div className='chip chip-reward chip-xp chip-inverted'>
-                  <span className='icon icon-xp-symbol-outline'></span>
+                  <span className='icon icon-xp-symbol-outline'/>
                   <span>500</span>
                 </div>
               </div>
@@ -463,7 +463,7 @@ const DSpage = () => {
                   Normal <button type='button' className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                 </div>
                 <div className='chip chip-reward chip-token'>
-                  <span className='icon icon-token'></span>
+                  <span className='icon icon-token'/>
                   <span>10</span>
                 </div>
               </div>
@@ -472,7 +472,7 @@ const DSpage = () => {
                 Inverted
                 </div>
                 <div className='chip chip-reward chip-token chip-inverted'>
-                  <span className='icon icon-token'></span>
+                  <span className='icon icon-token'/>
                   <span>10</span>
                 </div>
               </div>
@@ -495,7 +495,7 @@ const DSpage = () => {
                   Normal <button type='button' className='chip chip-xs chip-secondary pointer-events-none uppercase'><span>default</span></button>
                 </div>
                 <div className='chip chip-reward chip-ticket'>
-                  <span className='icon icon-ticket'></span>
+                  <span className='icon icon-ticket'/>
                   <span>1</span>
                 </div>
               </div>
@@ -504,7 +504,7 @@ const DSpage = () => {
                 Inverted
                 </div>
                 <div className='chip chip-reward chip-ticket chip-inverted'>
-                  <span className='icon icon-ticket'></span>
+                  <span className='icon icon-ticket'/>
                   <span>1</span>
                 </div>
               </div>
@@ -550,7 +550,7 @@ const DSpage = () => {
                   Small
                 </div>
                 <div className='chip chip-reward chip-ticket chip-inverted chip-sm'>
-                  <span className='icon icon-ticket'></span>
+                  <span className='icon icon-ticket'/>
                   <span>1 ticket</span>
                 </div>
               </div>
@@ -558,7 +558,7 @@ const DSpage = () => {
                 <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                 </div>
                 <div className='chip chip-reward chip-xp chip-inverted chip-sm'>
-                  <span className='icon icon-xp-symbol-outline'></span>
+                  <span className='icon icon-xp-symbol-outline'/>
                   <span>500 XP</span>
                 </div>
               </div>
@@ -566,7 +566,7 @@ const DSpage = () => {
                 <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
                 </div>
                 <div className='chip chip-reward chip-token chip-inverted chip-sm'>
-                  <span className='icon icon-token'></span>
+                  <span className='icon icon-token'/>
                   <span>500 tokens</span>
                 </div>
               </div>
@@ -599,7 +599,7 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <button type='button' className='chip chip-status'>
-                    <span className='icon icon-calendar-date-2'></span>
+                    <span className='icon icon-calendar-date-2'/>
                     <span>Label</span>
                   </button>
                 </div>
@@ -610,7 +610,7 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <button type='button' className='chip chip-status chip-attention'>
-                    <span className='icon icon-warning-sign'></span>
+                    <span className='icon icon-warning-sign'/>
                     <span>Label</span>
                   </button>
                 </div>
@@ -621,7 +621,7 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <button type='button' className='chip chip-status chip-success'>
-                    <span className='icon icon-check'></span>
+                    <span className='icon icon-check'/>
                     <span>Label</span>
                   </button>
                 </div>
@@ -632,7 +632,7 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <button type='button' className='chip chip-status chip-info'>
-                    <span className='icon icon-c-info'></span>
+                    <span className='icon icon-c-info'/>
                     <span>Label</span>
                   </button>
                 </div>
@@ -643,7 +643,7 @@ const DSpage = () => {
                 </div>
                 <div className='flex-1'>
                   <button type='button' className='chip chip-status chip-error'>
-                    <span className='icon icon-s-ban'></span>
+                    <span className='icon icon-s-ban'/>
                     <span>Label</span>
                   </button>
                 </div>

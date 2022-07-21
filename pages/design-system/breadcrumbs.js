@@ -25,19 +25,19 @@ const DSpage = () => {
               <ol className="inline-flex items-center space-x-1 md:space-x-3">
                 <li className="inline-flex items-center">
                   <a href="#" className="inline-flex gap-2 items-center text-sm text-ui-300 hover:text-ui-100 active:opacity-50 focus-visible:text-main focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main transition-colors duration-75">
-                    <span className='icon icon-20 icon-home-2'></span>
+                    <span className='icon icon-20 icon-home-2'/>
                     <span>Home</span>
                   </a>
                 </li>
                 <li>
                   <div className="flex items-center">
-                    <span className='icon icon-20 text-ui-300 icon-arrow-sm-right'></span>
+                    <span className='icon icon-20 text-ui-300 icon-arrow-sm-right'/>
                     <a href="#" className="ml-1 text-sm text-ui-300 hover:text-ui-100 active:opacity-50 focus-visible:text-main focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main transition-colors duration-75 md:ml-2">Games</a>
                   </div>
                 </li>
                 <li aria-current="page">
                   <div className="flex items-center">
-                    <span className='icon icon-20 text-ui-300 icon-arrow-sm-right'></span>
+                    <span className='icon icon-20 text-ui-300 icon-arrow-sm-right'/>
                     <span className="ml-1 text-sm text-ui-300 md:ml-2">Missions</span>
                   </div>
                 </li>

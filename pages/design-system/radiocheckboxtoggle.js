@@ -26,11 +26,11 @@ const DSpage = () => {
                   <div className="form-group">
                     <label className="form-radio">
                       <input type="radio" name="gender" checked />
-                      <i className="form-icon"></i> Male
+                      <i className="form-icon" /> Male
                     </label>
                     <label className="form-radio">
                       <input type="radio" name="gender" />
-                      <i className="form-icon"></i> Female
+                      <i className="form-icon" /> Female
                     </label>
                   </div>
                 </div>
@@ -61,11 +61,11 @@ const DSpage = () => {
                   <div className="form-group">
                     <label className="form-toggle">
                       <input type="checkbox" name="notification" />
-                      <i className="form-icon"></i> Send me notifications with news and tips
+                      <i className="form-icon" /> Send me notifications with news and tips
                     </label>
                     <label className="form-toggle">
                       <input type="checkbox" name="notification" />
-                      <i className="form-icon"></i> Send me emails with news and tips
+                      <i className="form-icon" /> Send me emails with news and tips
                     </label>
                   </div>
                 </div>
@@ -96,17 +96,17 @@ const DSpage = () => {
                   <div className="form-group">
                     <label className="form-checkbox">
                       <input type="checkbox" name="policy" />
-                      <i className="form-icon"></i> I agree with your policy
+                      <i className="form-icon" /> I agree with your policy
                     </label>
                     <label className="form-checkbox">
                       <input type="checkbox" name="policy" />
-                      <i className="form-icon"></i> I confirm that I have read the policity
+                      <i className="form-icon" /> I confirm that I have read the policity
                     </label>
                   </div>
                   <div className="form-group">
                     <label className="form-checkbox">
                       <input type="checkbox" name="select-all" indeterminate="true" />
-                      <i className="form-icon"></i> Select all
+                      <i className="form-icon" /> Select all
                     </label>
                   </div>
                 </div>
@@ -137,19 +137,19 @@ const DSpage = () => {
                   <div className="form-group" data-error="Please choose an option.">
                     <label className="form-radio">
                       <input type="radio" name="input-error" />
-                      <i className="form-icon"></i> Male
+                      <i className="form-icon" /> Male
                     </label>
                   </div>
                   <div className="form-group" data-success="Please choose an option.">
                     <label className="form-toggle">
                       <input type="checkbox" name="input-success" />
-                      <i className="form-icon"></i> I agree with your policy
+                      <i className="form-icon" /> I agree with your policy
                     </label>
                   </div>
                   <div className="form-group" data-attention="Please choose an option.">
                     <label className="form-checkbox">
                       <input type="checkbox" name="input-attention" />
-                      <i className="form-icon"></i> I confirm that I have read the policity
+                      <i className="form-icon" /> I confirm that I have read the policity
                     </label>
                   </div>
                   
@@ -182,19 +182,19 @@ const DSpage = () => {
                   <div className="form-group">
                     <label className="form-radio is-disabled">
                       <input type="radio" name="input-error" />
-                      <i className="form-icon"></i> Male
+                      <i className="form-icon" /> Male
                     </label>
                   </div>
                   <div className="form-group">
                     <label className="form-toggle is-disabled">
                       <input type="checkbox" name="input-success" />
-                      <i className="form-icon"></i> I agree with your policy
+                      <i className="form-icon" /> I agree with your policy
                     </label>
                   </div>
                   <div className="form-group">
                     <label className="form-checkbox is-disabled">
                       <input type="checkbox" name="input-attention" />
-                      <i className="form-icon"></i> I confirm that I have read the policity
+                      <i className="form-icon" /> I confirm that I have read the policity
                     </label>
                   </div>                  
                 </div>

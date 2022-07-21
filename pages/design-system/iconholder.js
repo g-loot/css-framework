@@ -56,7 +56,7 @@ const DSpage = () => {
                 
                 <div className='text-center'>
                   <div className='icon-holder'>
-                    <span className='icon icon-mission-headshot'></span>
+                    <span className='icon icon-mission-headshot'/>
                   </div>
                   <div>
                     <div className="text-3xl font-headings">25</div>
@@ -65,7 +65,7 @@ const DSpage = () => {
                 </div>
                 <div className='text-center'>
                   <div className='icon-holder'>
-                    <span className='icon icon-mission-kill'></span>
+                    <span className='icon icon-mission-kill'/>
                   </div>
                   <div>
                     <div className="text-3xl font-headings">42</div>
@@ -100,7 +100,7 @@ const DSpage = () => {
                 
                 <div className='text-center'>
                   <div className='icon-holder icon-holder-sm'>
-                    <span className='icon icon-mission-headshot'></span>
+                    <span className='icon icon-mission-headshot'/>
                   </div>
                   <div>
                     <div className="text-2xl font-headings">25</div>
@@ -109,7 +109,7 @@ const DSpage = () => {
                 </div>
                 <div className='text-center'>
                   <div className='icon-holder icon-holder-sm'>
-                    <span className='icon icon-mission-kill'></span>
+                    <span className='icon icon-mission-kill'/>
                   </div>
                   <div>
                     <div className="text-2xl font-headings">42</div>
@@ -149,7 +149,7 @@ const DSpage = () => {
                     </svg>
                   </div>
                   <div className='icon-holder'>
-                    <span className='icon icon-mission-headshot'></span>
+                    <span className='icon icon-mission-headshot'/>
                   </div>
                 </div>
                 <div className='text-center relative'>
@@ -159,7 +159,7 @@ const DSpage = () => {
                     </svg>
                   </div>
                   <div className='icon-holder'>
-                    <span className='icon icon-mission-kill'></span>
+                    <span className='icon icon-mission-kill'/>
                   </div>
                   
                 </div>
