@@ -84,3 +84,17 @@
     }
   }
 }
+.badge {
+  @apply
+  inline-block
+  w-2
+  h-2
+  min-w-[0.5rem]
+  rounded-full
+  ;
+  &:not([class*='bg-']) {
+    @apply
+    bg-main
+    ;
+  }
+}

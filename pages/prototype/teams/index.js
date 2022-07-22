@@ -1,8 +1,8 @@
-import { useRouter } from "next/router";
 import Ad from "../../../components/Ad/Ad";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import { usePrototypeData } from "../../../contexts/prototype";
 import useFetch from "../../../hooks/use-fetch";
+import { usePrototypeData } from "../../../contexts/prototype";
+import { useRouter } from "next/router";
 //import DataGames from '../../mock-data/games.json'
 
 const Teams = [
@@ -111,7 +111,7 @@ export default function Home() {
             }}
           >
             <div className="">
-              <h1 className="h2 leading-none">Teams</h1>
+              <h1 className="text-3xl leading-none">Teams</h1>
               <p className="leading-relaxed text-ui-300 mt-4 mb-6">
                 Want to be the next big thing or just play more with your
                 friends?
@@ -120,7 +120,7 @@ export default function Home() {
                 <br />
                 Create or join a team today.
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-2">
                 <button type="button" className="button button-primary">
                   <span>Create a team</span>
                 </button>

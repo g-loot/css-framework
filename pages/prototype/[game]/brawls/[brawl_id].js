@@ -42,9 +42,10 @@ const TabsItems = [
 
 export default function Home() {
   const router = useRouter();
+  const { query } = useRouter();
   const prototypeData = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
-  const hasAds = router.ads === "true" ? true : false;
+  const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
   const { tab } = router.query;
   const { brawl_id } = router.query;
@@ -102,6 +103,12 @@ export default function Home() {
                     height="auto"
                     alt=""
                   />
+                  {selectedGame.brawls[brawl_id].sponsor && (
+                    <>
+                      <p className="font-headings italic text-xl mb-2">Sponsored by</p>
+                      <img className="max-w-[125px] max-h-[125px] w-auto h-auto" src={selectedGame.brawls[brawl_id].sponsor} alt="sponsor" />
+                    </>
+                  )}
                 </div>
                 <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center md:items-start text-center md:text-left flex-1 pl-8 md:pl-0 pr-8 py-0 md:py-4 xl:py-4">
                   <h1 className="text-3xl mb-2 leading-none">

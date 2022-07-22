@@ -141,21 +141,61 @@
           "label": "Ongoing Brawls listing",
           "url": "valorant/brawls",
           "query": "",
-          "tags": "game, brawls"
+          "tags": "game, brawls",
+          "new": true
+        },
+        {
+          "label": "How it works",
+          "url": "valorant/brawls",
+          "query": "tab=how-it-works",
+          "tags": "game, brawls, how it works, explanation",
+          "new": true
+        },
+        {
+          "label": "G-Loot rules",
+          "url": "valorant/brawls",
+          "query": "tab=rules",
+          "tags": "game, brawls, rules, explanation, cheating, accounts, player protection",
+          "new": true
+        },
+        {
+          "label": "Your Brawl history",
+          "url": "valorant/brawls",
+          "query": "tab=history",
+          "tags": "game, listing, history, participation",
+          "new": true
         },
         {
           "label": "Your brawl matches",
           "url": "valorant/brawls/0",
           "query": "",
           "tags": "game, brawls, matches, enrollment, token",
-          "tab": 1
+          "tab": 1,
+          "new": true
         },
         {
           "label": "Solo leaderboard",
           "url": "valorant/brawls/0",
           "query": "tab=solo-leaderboard",
-          "tags": "game, brawls, matches, enrollment, token, leaderboard",
-          "tab": 1
+          "tags": "game, brawls, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Clan leaderboard",
+          "url": "valorant/brawls/0",
+          "query": "tab=clan-leaderboard",
+          "tags": "game, brawls, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze, clans, teams",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Rewards",
+          "url": "valorant/brawls/0",
+          "query": "tab=rewards",
+          "tags": "game, brawls, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze, clans, teams, rewards",
+          "tab": 1,
+          "new": true
         }
       ]
     }

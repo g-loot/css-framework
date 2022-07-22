@@ -9,6 +9,7 @@ export default function Accordion(props) {
   const [heightValue, setHeightValue]=useState(0);
   const elementRef = useRef(null);
   
+  
   useEffect(()=> {
     if(isClosed) {
       height = 0;
@@ -17,6 +18,7 @@ export default function Accordion(props) {
   }, [isClosed]);
 
   useEffect(() => {
+    setHeightValue(elementRef.current.clientHeight);
     if(elementRef.current) {
       setHeightValue(elementRef.current.clientHeight);
     }

@@ -29,9 +29,10 @@ const TabsItems = [
 
 export default function Home() {
   const router = useRouter();
+  const { query } = useRouter();
   const prototypeData = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
-  const hasAds = router.ads === "true" ? true : false;
+  const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
   const { tab } = router.query;
   const defaultTab = "overview";

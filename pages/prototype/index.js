@@ -84,8 +84,13 @@ const Index = () => {
                               }`}
                             >
                               <div className={`item-body ${item.tab ? "" : "pl-8"} ${item.tab === 1 ? "pl-16" : ""}  ${item.tab === 2 ? "pl-22" : ""}`}>
-                                <div className="item-title text-ui-300">
-                                  {item.label}
+                                <div className="item-title text-ui-300 flex gap-2">
+                                  <span>{item.label}</span>
+                                  {item.new && (
+                                    <div className='chip chip-xs chip-primary'>
+                                      <span>NEW</span>
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                               <div className="item-actions">

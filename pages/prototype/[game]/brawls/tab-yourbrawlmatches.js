@@ -40,15 +40,12 @@ export default function TabBrawlsYourBrawlMatches() {
 
   return (
     <>
-      <section
-        className="pb-4 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 1 * 0.05s)" }}
-      >
+      <section className="pb-4">
         <HowToBrawl />
       </section>
       <section
         className="relative pb-4 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 2 * 0.05s)" }}
+        style={{ "--delay": "calc( 1 * 0.05s)" }}
       >
         <div className="relative z-10">
           <div className="text-center py-8">
@@ -80,13 +77,13 @@ export default function TabBrawlsYourBrawlMatches() {
                   kills
                 </div>
               </div>
-              <div className="absolute w-40 top-1 left-[calc(50%-14rem)]">
+              <div className="absolute w-44 -top-2 left-[calc(50%-14rem)]">
                 <img className="absolute object-fill animate-floating animate-delay" style={{ '--delay': 'calc( 0 * 0.85s)'}} src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-1.svg" width="100%" height="auto" alt="" />
                 <img className="absolute object-fill animate-floating animate-delay top-3" style={{ '--delay': 'calc( 1 * 0.85s)'}} src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-2.svg" width="100%" height="auto" alt="" />
                 <img className="absolute object-fill animate-floating animate-delay top-5" style={{ '--delay': 'calc( 2 * 0.85s)'}} src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-3.svg" width="100%" height="auto" alt="" />
                 <img className="absolute object-fill animate-floating animate-delay top-8" style={{ '--delay': 'calc( 3 * 0.85s)'}} src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-4.svg" width="100%" height="auto" alt="" />
               </div>
-              <div className="absolute w-40 top-1 right-[calc(50%-14rem)] -scale-x-100">
+              <div className="absolute w-44 -top-2 right-[calc(50%-14rem)] -scale-x-100">
                 <img className="absolute object-fill animate-floating animate-delay" style={{ '--delay': 'calc( 0 * 0.85s)'}} src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-1.svg" width="100%" height="auto" alt="" />
                 <img className="absolute object-fill animate-floating animate-delay top-3" style={{ '--delay': 'calc( 1 * 0.85s)'}} src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-2.svg" width="100%" height="auto" alt="" />
                 <img className="absolute object-fill animate-floating animate-delay top-5" style={{ '--delay': 'calc( 2 * 0.85s)'}} src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-3.svg" width="100%" height="auto" alt="" />
@@ -123,11 +120,9 @@ export default function TabBrawlsYourBrawlMatches() {
                         </div>
                         { stepNumber === stepIndex && (
                           <>
-                          
-                          <div className={`absolute z-20 h-40 w-40 lottie-blur`}>
-                            
-                            <Lottie animationData={LottieExplosion2} loop={true} />
-                          </div>
+                            <div className={`absolute z-20 h-36 w-36 lottie-blur`}>
+                              <Lottie animationData={LottieExplosion2} loop={true} />
+                            </div>
                           </>
                         )}
                         

@@ -4,88 +4,173 @@ import { useRouter } from "next/router";
 
 const MissionsHowitworksTabs = [
   {
-    title: "Before you can do Missions & earn Mission Rewards",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-cpu.webp",
+    title: "Before entering a Brawl",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-cpu.webp",
     paragraphs: [
       {
-        text: "To complete Missions and earn rewards, you need to connect your Steam account to G-Loot. Go to your profile to connect Steam. Make sure you have the G-Loot Tracker installed and running on your PC. The application is lightweight and should not affect your gameplay. The Tracker is partly an anti-cheat to help us keep G-Loot free from users abusing the platform. Download G-Loot Tracker.",
-      }
-    ]
+        text: "Make sure you have the G-Loot Tracker installed and running on your PC.",
+      },
+      {
+        text: "See if everthing is working by running the G-Loot app on your PC, then start your game.",
+      },
+      {
+        text: "The G-Loot icon should appear in your game with a green dot. This means everything is up and running to track your Mission progress.",
+      },
+    ],
   },
   {
     title: "Launch the game",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
     paragraphs: [
       {
-        text: "When you launch your game, G-Loot Tracker will launch the Overlay. The Overlay is where you can see your Mission progress and the best scores from your Brawl rounds.",
-      }
-    ]
+        text: "To join the leaderboard, you need to complete a certain numbert of matches depending on the rules of the Brawl you want to compete in.",
+      },
+      {
+        text: "When you have played the minimum amount of matches, your Brawl points will be added to the leaderboard.",
+      },
+      {
+        text: "You can always play more matches as long as you have Tokens. Only your best scores will count.",
+      },
+    ],
   },
   {
-    title: "Daily Missions & how they are tracked",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-missions.webp",
+    title: "Pay tokens to activate Brawl matches",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1658483784/Marketing/2022_prototype/brawls-howitworks-tokens.webp",
     paragraphs: [
       {
-        text: "To start competing in Missions, you need to connect your Steam account and run the G-Loot Tracker while you play. When your match has finished within the game, we will fetch the stats from that game and update your Mission progress. Sometimes it can take a while to get the stats from the latest match. Please, contact support if you are having trouble getting the stats for the past x hours. You can complete a set number of Missions each day, and new ones appear every 24 hours.",
-      }
-    ]
+        text: "To play in the Brawl you need Tokens.",
+      },
+      {
+        text: "Each match costs a certain number of Tokens. When you have spent a Token and activated a Brawl match, your next game match in the correct game mode will count towards the Brawl.",
+      },
+    ],
+  },
+  {
+    title: "Have the tracker running",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657721633/Marketing/2022_prototype/missions-howitworks-cpu.webp",
+    paragraphs: [
+      {
+        text: "To track your stats you need the G-Loot Tracker installed and running on your PC.",
+      },
+      {
+        text: "The Tracker is lightweight and should not affect your gameplay.",
+      },
+      {
+        text: "The Tracker makes it possible to play Brawls by recording your progress and stats while you play.",
+      },
+    ],
+  },
+  {
+    title: "Launch the game",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657721634/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+    paragraphs: [
+      {
+        text: "When you launch your game, G-Loot will launch the Overlay.",
+      },
+      {
+        text: "The Overlay is where you can see your Mission progress and the best scores from your Brawl rounds.",
+      },
+      {
+        text: "The G-Loot Overlay will tell you if tracking is working or not, and will also notify you if something has gone wrong or if G-Loot goes into maintenance.",
+      },
+    ],
   },
   {
     title: "Play in the right mode",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-gamemode.webp",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657721633/Marketing/2022_prototype/missions-howitworks-gamemode.webp",
     paragraphs: [
       {
-        text: "Some Missions must be played in certain game modes. Make sure to check before you play.",
-      }
-    ]
-  },
-  {
-    title: "How XP works",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-xp.webp",
-    paragraphs: [
-      {
-        text: "You will earn XP from each Daily Mission The XP you earn will be added to the Mission Rewards.",
+        text: "To collect Brawl points, you need to play the game in the correct game mode. You can find the game mode, as well as other information about the Brawl, on the Brawl page.",
       },
       {
-        text: "For each milestone you reach in the Mission rewards, you will unlock a reward. XP is accumulated from all games you play on G-Loot. That means you can get XP from any game that is supported by G-Loot. Your XP will reset after a week and can not be transferred to the next week. XP is accumulated from all games you play on G-Loot. That means you can get XP from any game that is supported by G-Loot.",
+        text: "The Tracker will detect which game mode you are playing when you start your match. If you are in the correct game mode, the Tracker will automatically record your stats for the Brawl.",
       },
-      {
-        text: "Your XP will reset after a week and can not be transfered to the next week.",
-      }
-    ]
-  },
-  {
-    title: "Mission Rewards",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-rewards.webp",
-    paragraphs: [
-      {
-        text: "Mission Rewards are how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Mission Rewards, you unlock another reward. Mission Rewards reset each week so you`ll always have something new to work towards.",
-      }
-    ]
-  },
-  {
-    title: "Premium Missions",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-premiummissions.webp",
-    paragraphs: [
-      {
-        text: "By getting a Premium subscription you will increase your daily amount of Missions and unlock the Premium Missions.",
-      },
-      {
-        text: "You will then be able to earn more XP towards your Mission Rewards. If you are not a Premium subscriber, you will still progress in the Premium Missions but cannot earn XP from completing them. That means if you change your mind about Premium, you will unlock the XP right away.",
-      }
-    ]
-  },
-  {
-    title: "Premium Rewards",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-premiumrewards.webp",
-    paragraphs: [
-      {
-        text: "Become a Premium member to increase the number of rewards you can earn during the week."
-      }
     ],
-    hasButtonReward: true,
-  }
-]
+  },
+  {
+    title: "Only your best Brawl matches count",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1658483784/Marketing/2022_prototype/brawls-howitworks-bestmatches.webp",
+    paragraphs: [
+      {
+        text: "To make Brawls as fair as possible, only the points from your best Brawl matches count on the leaderboard.",
+      },
+      {
+        text: "This means that you can play as many matches you want if you have enough Tokens.",
+      },
+      {
+        text: "If you do better than you did in an earlier match, your points will be updated to the higher number.",
+      },
+      {
+        text: "If you do worse, your points will not change.",
+      },
+    ],
+  },
+  {
+    title: "If you are out of token",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1658483784/Marketing/2022_prototype/brawls-howitworks-tokenspile.webp",
+    paragraphs: [
+      {
+        text: "If run out of Tokens, there are several ways to get more.",
+      },
+      {
+        text: "• Earn Tokens by completing Missions and unlocking Mission Rewards.",
+      },
+      {
+        text: "• Buy Tokens in the G-Loot wallet.",
+      },
+      {
+        text: "• Claim free Tokens in your Daily Loot Streak.",
+      },
+    ],
+  },
+  {
+    title: "If there is a tie",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1658483784/Marketing/2022_prototype/brawls-howitworks-tiebreaker.webp",
+    paragraphs: [
+      {
+        text: "If there is a tie, the tiebreaker in your 3 best matches decides who wins.",
+      },
+      {
+        text: "If 2 users have the same points and the same tiebreaker score, a second tiebreaker will be used to determine the winner.",
+      },
+    ],
+  },
+  {
+    title: "Rewards",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657721634/Marketing/2022_prototype/missions-howitworks-premiumrewards.webp",
+    paragraphs: [
+      {
+        text: "Competing in the Brawl earns you Coins which you can spend in the G-Loot shop.",
+      },
+      {
+        text: "Some Brawls are also connected to tournaments like the Monthly Showdown. Winners of these Brawls earn tickets which they can use to compete in the Monthly Showdown.",
+      },
+    ],
+  },
+  {
+    title: "If a game goes into maintenance",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1658483784/Marketing/2022_prototype/brawls-howitworks-maintenance.webp",
+    paragraphs: [
+      {
+        text: "If G-Loot or the game goes into maintenance, all stats stops being recorded. If you have started a Brawl match, you will get your Tokens back.",
+      },
+      {
+        text: "Once the maintenance is over, the Brawl will continue. If there is a bigger issue or if the maintenance lasts for several days, G-Loot will decide if the Brawl will continue. If the Brawl is canceled, you will get your Tokens back.",
+      },
+    ],
+  },
+];
 
 export default function TabBrawlsHowItWorks() {
   const { query } = useRouter();
@@ -96,43 +181,40 @@ export default function TabBrawlsHowItWorks() {
         className="py-12 animate-slide-in-bottom animate-delay"
         style={{ "--delay": "calc( 1 * 0.05s)" }}
       >
-        <div className="grid gap-8 grid-cols-1 xl:grid-cols-2">
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
-            <img
-              className="rounded-lg"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657707945/Marketing/2022_prototype/missions-howitworks-missions.webp"
-              width="100%"
-              height="auto"
-              alt=""
-            />
-            <div className="px-4 sm:px-0">
-              <h2 className="text-2xl leading-none mb-4">What are Missions?</h2>
+        <div className="grid gap-8 grid-cols-1 xl:grid-cols-3 items-center">
+          <img
+            className="col-span-1 rounded-lg"
+            src="https://res.cloudinary.com/gloot/image/upload/v1658478391/Marketing/2022_prototype/brawls-howitworks-intro.webp"
+            width="100%"
+            height="auto"
+            alt=""
+          />
+          <div className="col-span-2 px-4 sm:px-0">
+            <h2 className="text-2xl leading-none mb-4">What is a Brawl?</h2>
+            <div className="columns-2 space-y-4 gap-8">
               <p className="text-ui-300 leading-relaxed">
-                Daily missions are daily objectives that resets every 24 hours.
-                By completing Missions you will earn XP. The XP from all your
-                Missions goes into the Weekly Mission Rewards. You can complete
-                Daily Missions across the different games on G-Loot.
+                In Brawls you compete against other G-Loot players to climb a
+                leaderboard.
               </p>
-            </div>
-          </div>
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
-            <img
-              className="rounded-lg"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657707945/Marketing/2022_prototype/missions-howitworks-rewards.webp"
-              width="100%"
-              height="auto"
-              alt=""
-            />
-            <div className="px-4 sm:px-0">
-              <h2 className="text-2xl leading-none mb-4">
-                What are Mission Rewards?
-              </h2>
-              <p className="text-ui-300 leading-relaxed">
-                Mission Rewards are how you turn your XP into useful stuff like
-                Coins or tokens. Each time you reach a milestone in the Mission
-                rewards, you unlock another reward. Mission rewards reset each
-                week so you will always have something new to work towards.
-              </p>
+              <ul className="list-inside list-disc space-y-4 text-ui-300 leading-relaxed">
+                <li>
+                  Brawls are based on your stats, just like Missions. You don’t
+                  need to be in the same server as the other Brawl players.
+                </li>
+                <li>
+                  You earn Brawl points based on the objective, e.g. kills,
+                  goals or score from the game.
+                </li>
+                <li>You need the G-Loot Tracker running while you play.</li>
+                <li>
+                  Brawls use a “best-of” format. You can enter as many times as
+                  you want, and only your best scores count.
+                </li>
+                <li>
+                  You need to complete a set numbers of matches before you can
+                  join and see the Brawl leaderboard.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -142,9 +224,15 @@ export default function TabBrawlsHowItWorks() {
         style={{ "--delay": "calc( 3 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
-          <h2 className="text-2xl leading-none mb-4">
-            How Missions and Missions Rewards work
-          </h2>
+          <h2 className="text-2xl leading-none mb-4">How Brawls work</h2>
+        </div>
+        <div className="surface sm:rounded-lg overflow-hidden max-w-sm mx-auto mb-4 relative">
+          <div className="absolute inset-0 flex items-center justify-center bg-ui-900/50">
+            <button type='button' className="button button-tertiary button-lg button-play">
+              <span className="icon icon-circle-caret-right"></span>
+            </button>
+          </div>
+          <img src="https://res.cloudinary.com/gloot/image/upload/v1658478390/Marketing/2022_prototype/brawls-howitworks-video.webp" width="100%" height="auto" alt="" />
         </div>
         <div className="overflow-x-auto scrollbar-desktop py-4">
           <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px]">
@@ -152,61 +240,63 @@ export default function TabBrawlsHowItWorks() {
               <a href="#">
                 <i>1</i>
                 <div className="text-sm text-ui-300">
-                  Connect your Steam account to G-Loot.
+                  Use Tokens to activate Brawl matches.
                 </div>
-                <span/>
+                <span />
               </a>
             </li>
             <li>
               <a href="#">
                 <i>2</i>
                 <div className="text-sm text-ui-300">
-                  Have the G-Loot tracker installed and running.
+                  Have the Tracker installed and running.
                 </div>
-                <span/>
+                <span />
               </a>
             </li>
             <li>
               <a href="#">
                 <i>3</i>
-                <div className="text-sm text-ui-300">Launch your game.</div>
-                <span/>
+                <div className="text-sm text-ui-300">
+                  Launch the game and play a match in the correct game mode.
+                </div>
+                <span />
               </a>
             </li>
             <li>
               <a href="#">
                 <i>4</i>
                 <div className="text-sm text-ui-300">
-                  Play a match in the correct game mode.
+                  When each match is finished you will get your Brawl points.
                 </div>
-                <span/>
+                <span />
               </a>
             </li>
             <li>
               <a href="#">
                 <i>5</i>
                 <div className="text-sm text-ui-300">
-                  The missions will be updated automatically once the match is
-                  finished.
+                  Join a leaderboard by playing the required matches.
                 </div>
-                <span/>
+                <span />
               </a>
             </li>
             <li>
               <a href="#">
                 <i>6</i>
                 <div className="text-sm text-ui-300">
-                  XP will be added to the Mission Rewards when you complete a
-                  mission.
+                  Once the Brawl finishes you can see the final results.
                 </div>
-                <span/>
+                <span />
               </a>
             </li>
             <li>
               <a href="#">
                 <i>7</i>
-                <div className="text-sm text-ui-300">Claim your reward.</div>
-                <span/>
+                <div className="text-sm text-ui-300">
+                  Top players will be able to claim their rewards.
+                </div>
+                <span />
               </a>
             </li>
           </ul>
@@ -218,11 +308,11 @@ export default function TabBrawlsHowItWorks() {
       >
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl leading-none mb-6">
-            Step by step - How to complete Missions and earn Rewards
+            Step by step - how to play in the Brawl
           </h2>
         </div>
         <div className="accordion surface sm:rounded-lg">
-          { MissionsHowitworksTabs.map((tab, tabIndex) => (
+          {MissionsHowitworksTabs.map((tab, tabIndex) => (
             <>
               <Accordion
                 key={tab}
@@ -254,11 +344,9 @@ export default function TabBrawlsHowItWorks() {
                       />
                     </div>
                     <div className=" text-ui-300 space-y-4 leading-relaxed">
-                      { tab.paragraphs.map((paragraph, paragraphIndex) => (
+                      {tab.paragraphs.map((paragraph, paragraphIndex) => (
                         <>
-                          <p key={paragraph}>
-                            {paragraph.text}
-                          </p>
+                          <p key={paragraph}>{paragraph.text}</p>
                         </>
                       ))}
                       {tab.hasButtonReward && (

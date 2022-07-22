@@ -77,7 +77,7 @@ h5,
 .h5 {
   @apply
   font-bold
-  text-xl
+  text-base
   ;
 }
 

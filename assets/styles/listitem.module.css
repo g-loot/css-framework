@@ -47,7 +47,7 @@
   }
 }
 
-.item.item-interactive {
+:where(.item-interactive > .item, .item.item-interactive ) {
   @apply
   transition
   duration-100

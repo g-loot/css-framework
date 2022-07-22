@@ -19,6 +19,11 @@
     "stats": {
       "playedBrawls": 143,
       "playedTournaments": 12
+    },
+    "wallet": {
+      "coins": 50000,
+      "tokens": 245,
+      "tickets": 3
     }
   },
   {

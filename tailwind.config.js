@@ -239,7 +239,7 @@ module.exports = {
         'drop-in': 'dropIn 1.1s both',
         'bounce-right': 'bounceRight 1.1s infinite',
         'bounce-left': 'bounceLeft 1.1s infinite',
-        'floating': 'floating 6s cubic-bezier(0.47, 0, 0.49, 0.94) infinite',
+        'floating': 'floating 6s cubic-bezier(.45,0,.4,1) infinite',
       },
       keyframes: {
         slideInLeft: {
@@ -374,7 +374,7 @@ module.exports = {
             transform: 'translateY(0)',
           },
           '40%,50%': { 
-            transform: 'translateY(-6%)',
+            transform: 'translateY(-7%)',
           },
         },
       },

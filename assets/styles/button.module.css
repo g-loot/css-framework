@@ -653,3 +653,14 @@
     background-position:150%
   }
 }
+
+.button {
+  > [data-badge="."] {
+    &::after {
+      @apply
+      -translate-y-2
+      translate-x-0
+      ;
+    }
+  }
+}

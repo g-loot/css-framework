@@ -1,15 +1,73 @@
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Ad from '../Ad/Ad';
 import Button from '../Button/Button';
-import JSONstructure from '../../pages/api/prototype/structure.json'
-import MainNav from '../MainNav/MainNav';
 import PrototypeGamesNav from './PrototypeGamesNav';
 
 export default function PrototypeLeftMenu(props) {
+  const router = useRouter();
+  const { query } = useRouter();
+  const hasAds = query.ads === 'true' ? true : false;
+  const { user_id } = router.query; 
+
   return (
     <>
     <div className='sticky top-[68px] space-y-4'>
       <div className="surface rounded-lg overflow-hidden">
-        <MainNav items={JSONstructure.pages} />
+        {/*<MainNav items={JSONstructure.pages} />*/}
+
+        <ul className="menu">
+          <li>
+            <Link href={`/prototype/home${hasAds ? '?ads=true' : ''}`}>
+              <a className={`${router.pathname.endsWith('prototype') ? 'is-active' : ''} ${router.pathname.includes("home") ? 'is-active' : ''}`}>
+                <span className="icon rounded w-8 flex items-center justify-center">
+                  <span className={`icon icon-16 icon-home-2`}/>
+                </span>
+                <span className='uppercase'>Home</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={`/prototype/profile/0${hasAds ? '?ads=true' : ''}`}>
+              <a className={`${router.pathname.includes("profile") && user_id == 0  ? 'is-active' : ''}`}>
+                <span className="icon rounded w-8 flex items-center justify-center">
+                  <span className={`icon icon-16 icon-circle-09`}/>
+                </span>
+                <span className='uppercase'>Profile</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={`/prototype/teams${hasAds ? '?ads=true' : ''}`}>
+              <a className={`${router.pathname.includes("teams") ? 'is-active' : ''}`}>
+                <span className="icon rounded w-8 flex items-center justify-center">
+                  <span className={`icon icon-16 icon-multiple-12`}/>
+                </span>
+                <span className='uppercase'>Teams</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={`/prototype/shop${hasAds ? '?ads=true' : ''}`}>
+              <a className={`${router.pathname.includes("shop") ? 'is-active' : ''}`}>
+                <span className="icon rounded w-8 flex items-center justify-center">
+                  <span className={`icon icon-16 icon-shop`}/>
+                </span>
+                <span className='uppercase'>Shop</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={`/prototype/premium${hasAds ? '?ads=true' : ''}`}>
+              <a className={`${router.pathname.includes("premium") ? 'is-active' : ''}`}>
+                <span className="icon rounded w-8 flex items-center justify-center">
+                  <span className={`icon icon-16 icon-ic_stars_24px`}/>
+                </span>
+                <span className='uppercase'>Premium</span>
+              </a>
+            </Link>
+          </li>
+        </ul>
       </div>
       <PrototypeGamesNav />
       <div className='text-center'>

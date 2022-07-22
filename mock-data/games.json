@@ -98,12 +98,7 @@
               "brawlPoints": 123,
               "matchPlayed": 11,
               "tiebreakerPoints": 1402,
-              "gameScore": 143,
-              "bestPoints": {
-                "one": 423,
-                "two": 245,
-                "three": 513
-              }
+              "gameScore": 143
             }
           },
           {
@@ -116,12 +111,7 @@
               "brawlPoints": 115,
               "matchPlayed": 11,
               "tiebreakerPoints": 1402,
-              "gameScore": 143,
-              "bestPoints": {
-                "one": 423,
-                "two": 245,
-                "three": 513
-              }
+              "gameScore": 143
             }
           },
           {
@@ -134,12 +124,7 @@
               "brawlPoints": 113,
               "matchPlayed": 11,
               "tiebreakerPoints": 1402,
-              "gameScore": 143,
-              "bestPoints": {
-                "one": 423,
-                "two": 245,
-                "three": 513
-              }
+              "gameScore": 143
             }
           },
           {
@@ -152,12 +137,7 @@
               "brawlPoints": 108,
               "matchPlayed": 11,
               "tiebreakerPoints": 1402,
-              "gameScore": 143,
-              "bestPoints": {
-                "one": 423,
-                "two": 245,
-                "three": 513
-              }
+              "gameScore": 143
             }
           },
           {
@@ -169,12 +149,7 @@
               "brawlPoints": 98,
               "matchPlayed": 11,
               "tiebreakerPoints": 1402,
-              "gameScore": 143,
-              "bestPoints": {
-                "one": 423,
-                "two": 245,
-                "three": 513
-              }
+              "gameScore": 143
             }
           },
           {
@@ -186,12 +161,7 @@
               "brawlPoints": 97,
               "matchPlayed": 11,
               "tiebreakerPoints": 1402,
-              "gameScore": 143,
-              "bestPoints": {
-                "one": 423,
-                "two": 245,
-                "three": 513
-              }
+              "gameScore": 143
             }
           },
           {
@@ -203,12 +173,7 @@
               "brawlPoints": 78,
               "matchPlayed": 11,
               "tiebreakerPoints": 1402,
-              "gameScore": 143,
-              "bestPoints": {
-                "one": 423,
-                "two": 245,
-                "three": 513
-              }
+              "gameScore": 143
             }
           },
           {
@@ -220,12 +185,103 @@
               "brawlPoints": 77,
               "matchPlayed": 11,
               "tiebreakerPoints": 1402,
-              "gameScore": 143,
-              "bestPoints": {
-                "one": 423,
-                "two": 245,
-                "three": 513
-              }
+              "gameScore": 143
+            }
+          }
+        ],
+        "clanLeaderboard": [
+          {
+            "clan": 1,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 123,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 2,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 115,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 3,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 113,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 0,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 108,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 4,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 98,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 5,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 97,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 6,
+            "rewards": {
+            },
+            "stats": {
+              "brawlPoints": 78,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 7,
+            "rewards": {
+            },
+            "stats": {
+              "brawlPoints": 77,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
             }
           }
         ]
@@ -238,6 +294,7 @@
         "cover" : "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
         "status": "ongoing",
         "gameMode": "Competitive",
+        "sponsor": "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         "rewards": [
           {
             "type": "coin",
@@ -248,7 +305,109 @@
             "value": 5
           }
         ],
-        "progress": 2
+        "progress": 2,
+        "soloLeaderboard": [
+          {
+            "user": 1,
+            "rewards": {
+              "coin": 250000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 123,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 2,
+            "rewards": {
+              "coin": 200000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 115,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 3,
+            "rewards": {
+              "coin": 150000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 113,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 0,
+            "rewards": {
+              "coin": 75000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 108,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 4,
+            "rewards": {
+              "coin": 50000
+            },
+            "stats": {
+              "brawlPoints": 98,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 5,
+            "rewards": {
+              "coin": 250000
+            },
+            "stats": {
+              "brawlPoints": 97,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 6,
+            "rewards": {
+              "coin": 25000
+            },
+            "stats": {
+              "brawlPoints": 78,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 7,
+            "rewards": {
+              "coin": 10000
+            },
+            "stats": {
+              "brawlPoints": 77,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          }
+        ]
       }
     ]
   },

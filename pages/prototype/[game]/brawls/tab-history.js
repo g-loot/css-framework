@@ -19,57 +19,82 @@ export default function TabBrawlsHistory() {
 
   return (
     <>
-    {isEmpty && (
-      <>
-        <div className="surface rounded-lg px-4 py-8 text-center">
-          <div className='max-w-xs mx-auto'>
-            <span className='icon icon-smile text-6xl text-ui-500'/>
-            <div className='mt-2 mb-6'>
-              <p className='text-sm text-ui-400'>
-                You have not taken part in any Brawls yet.
-              </p>
-              <p className='text-lg text-ui-300'>
-                Play tournaments and competitions to see the history of your earnings.
-              </p>
+      {isEmpty && (
+        <>
+          <div className="surface rounded-lg px-4 py-8 text-center">
+            <div className="max-w-xs mx-auto">
+              <span className="icon icon-smile text-6xl text-ui-500" />
+              <div className="mt-2 mb-6">
+                <p className="text-sm text-ui-400">
+                  You have not taken part in any Brawls yet.
+                </p>
+                <p className="text-lg text-ui-300">
+                  Play tournaments and competitions to see the history of your
+                  earnings.
+                </p>
+              </div>
+              <Link href="/prototype/valorant/brawls">
+                <a className="button button-main">
+                  <span>Browse Brawls</span>
+                </a>
+              </Link>
             </div>
-            <Link href="/prototype/valorant/brawls">
-              <a className='button button-main'>
-                <span>Browse Brawls</span>
-              </a>
-            </Link>
           </div>
-        </div>
-      </>
-    )}
-    {!isEmpty && (
-      <>
-        <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
+        </>
+      )}
+      {!isEmpty && (
+        <>
+          <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
             <table className="table table-rounded rounded-xl w-full">
               <thead>
                 <tr>
                   <th>Name</th>
-                  <th>Type</th>
-                  <th>Date</th>
+                  <th>Position</th>
+                  <th>Points</th>
+                  <th></th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
-                {
-                  selectedGame && selectedGame.brawls.map((brawl, brawlIndex) => (
+                {selectedGame &&
+                  selectedGame.brawls.map((brawl, brawlIndex) => (
                     <>
-                    <tr key={brawl} className='animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc('+brawlIndex+' * 0.05s)'}}>
-                      <td>
-                        {brawl.name}
-                      </td>
-                      <td>
-                        
-                      </td>
-                      <td>
-                        
-                      </td>
-                    </tr>
+                      <tr
+                        key={brawl}
+                        className="animate-slide-in-bottom animate-delay leading-tight"
+                        style={{
+                          "--delay": "calc(" + brawlIndex + " * 0.05s)",
+                        }}
+                      >
+                        <td>{brawl.name}</td>
+                        <td>
+                          <div className="font-headings">#92</div>
+                          <div className="text-ui-300 text-sm uppercase">
+                            Position
+                          </div>
+                        </td>
+                        <td>
+                          <div className="font-headings">18 kills</div>
+                          <div className="text-ui-300 text-sm uppercase">
+                            Total Brawl points
+                          </div>
+                        </td>
+                        <td>
+                          <div className="font-headings">--</div>
+                        </td>
+                        <td className="text-right">
+                          <Link
+                            href={`/prototype/${game}/brawls/${brawl.id}${
+                              hasAds ? "?ads=true&" : ""
+                            }`}>
+                            <a className="button button-sm button-secondary">
+                              <span>View Brawl</span>
+                            </a>
+                          </Link>
+                        </td>
+                      </tr>
                     </>
-                  ))
-                }
+                  ))}
               </tbody>
             </table>
           </div>
@@ -78,8 +103,8 @@ export default function TabBrawlsHistory() {
               <span>Load more</span>
             </button>
           </div>
-      </>
-    )}
-  </>
+        </>
+      )}
+    </>
   );
 }

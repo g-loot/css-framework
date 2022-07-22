@@ -13,9 +13,9 @@ export const PrototypeContext = createContext(
 const { Provider } = PrototypeContext;
 
 export const PrototypeProvider = ({ children }) => {
+  const clans = PrototypeDataClans;
   const games = PrototypeDataGames;
   const users = PrototypeDataUsers;
-  const clans = PrototypeDataClans;
   const getGameByID = (id) => {
     return games.find(game => {
       return game.id === parseInt(id);
@@ -24,6 +24,11 @@ export const PrototypeProvider = ({ children }) => {
   const getUserByID = (id) => {
     return users.find(user => {
       return user.id === parseInt(id);
+    })
+  }
+  const getUserProfile = () => {
+    return users.find(user => {
+      return user.isYou === true;
     })
   }
   const getGameBySlug = (slug) => {
@@ -43,6 +48,11 @@ export const PrototypeProvider = ({ children }) => {
       return clan.id === parseInt(id);
     })
   }
+  const getUserClan = () => {
+    return clans.find(clan => {
+      return clan.isYou === true;
+    })
+  }
   
   return (
     <Provider
@@ -53,8 +63,10 @@ export const PrototypeProvider = ({ children }) => {
         getGameByID,
         getGameBySlug,
         getUserByID,
+        getUserProfile,
         getBrawlByID,
         getClanByID,
+        getUserClan,
       }}
     >
       {children}
