@@ -145,6 +145,16 @@
           "label": "Alert",
           "tags": "content,alert,info,infobar,snack,attention,information",
           "url": "alert"
+        },
+        {
+          "label": "Chat",
+          "tags": "chat,ui,feed,conversation,dialog,discussion,information,whatsapp,messenger,text,message,writting,reaction",
+          "url": "chat"
+        },
+        {
+          "label": "Separator",
+          "tags": "ui,separator,content,section,space",
+          "url": "separator"
         }
       ]
     },
@@ -280,6 +290,22 @@
           "label": "Content cards",
           "tags": "content,card,display",
           "url": "contentcards"
+        }
+      ]
+    },
+    {
+      "label": "Effects",
+      "icon": "",
+      "pages": [
+        {
+          "label": "Explosion",
+          "tags": "effects,explosion,lottie,animations,after effects,motion design",
+          "url": "explosion"
+        },
+        {
+          "label": "Glow",
+          "tags": "effects,halo,glows,blur,gradient",
+          "url": "glow"
         }
       ]
     },

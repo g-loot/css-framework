@@ -21,7 +21,7 @@ export default function BrandTopBar({children, data}) {
           </div>
           <div className='w-1/2 md:w-9/12 xl:w-10/12 flex items-center justify-end'>
             <div className='flex gap-2 items-center justify-end'>
-              <div className='font-headings italic text-lg leading-none text-ui-300'>
+              <div className='font-headings font-bold italic text-lg leading-none text-ui-300'>
                 BRAND
               </div>
             </div>

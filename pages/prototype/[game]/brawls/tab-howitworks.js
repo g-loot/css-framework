@@ -320,7 +320,7 @@ export default function TabBrawlsHowItWorks() {
                   <>
                     <div className="item">
                       <div className="item-body">
-                        <div className="p-2 item-title font-headings text-lg italic">
+                        <div className="p-2 item-title font-headings font-bold text-lg italic">
                           {tab.title}
                         </div>
                       </div>

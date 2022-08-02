@@ -3,11 +3,13 @@
     "id": 0,
     "isYou": true,
     "isPremium": false,
+    "isOnline": true,
     "nickname": "JackAttack123",
     "firstname": "John",
     "lastname": "JoKes",
     "country": "Trinidad and Tobago",
     "countryFlag": "tt",
+    "lang": "ENG",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg",
     "email": "jackjack@gmail.com",
     "clan": 0,
@@ -24,17 +26,20 @@
       "coins": 50000,
       "tokens": 245,
       "tickets": 3
-    }
+    },
+    "games": [0,4]
   },
   {
     "id": 1,
     "isYou": false,
     "isPremium": false,
+    "isOnline": false,
     "nickname": "Kes2Band",
     "firstname": "Kees",
     "lastname": "Dieffenthaller",
     "country": "Germany",
     "countryFlag": "de",
+    "lang": "ENG",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
     "email": "kes@gmail.com",
     "clan": 1,
@@ -46,17 +51,25 @@
     "stats": {
       "playedBrawls": 34,
       "playedTournaments": 0
-    }
+    },
+    "wallet": {
+      "coins": 50000,
+      "tokens": 245,
+      "tickets": 3
+    },
+    "games": [0,1,2]
   },
   {
     "id": 2,
     "isYou": false,
     "isPremium": false,
+    "isOnline": true,
     "nickname": "MrKilla",
     "firstname": "Johna",
     "lastname": "Mapp",
     "country": "Grenada",
     "countryFlag": "gd",
+    "lang": "ENG",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg",
     "email": "mrkil@gmail.com",
     "clan": 3,
@@ -68,17 +81,25 @@
     "stats": {
       "playedBrawls": 243,
       "playedTournaments": 22
-    }
+    },
+    "wallet": {
+      "coins": 50000,
+      "tokens": 245,
+      "tickets": 3
+    },
+    "games": [0]
   },
   {
     "id": 3,
     "isYou": false,
     "isPremium": false,
+    "isOnline": true,
     "nickname": "Nomadiction",
     "firstname": "Kyriakos",
     "lastname": "Mitsotakis",
     "country": "Greece",
     "countryFlag": "gr",
+    "lang": "ENG",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg",
     "email": "kykymimi@gmail.com",
     "clan": 2,
@@ -90,17 +111,25 @@
     "stats": {
       "playedBrawls": 143,
       "playedTournaments": 12
-    }
+    },
+    "wallet": {
+      "coins": 50000,
+      "tokens": 245,
+      "tickets": 3
+    },
+    "games": [5]
   },
   {
     "id": 4,
     "isYou": false,
     "isPremium": false,
+    "isOnline": false,
     "nickname": "Johnny",
     "firstname": "Johnny",
     "lastname": "Deep",
     "country": "United States",
     "countryFlag": "us",
+    "lang": "ENG",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg",
     "email": "dirtyjohnny@gmail.com",
     "clan": 4,
@@ -112,17 +141,25 @@
     "stats": {
       "playedBrawls": 3,
       "playedTournaments": 0
-    }
+    },
+    "wallet": {
+      "coins": 50000,
+      "tokens": 245,
+      "tickets": 3
+    },
+    "games": [0,2]
   },
   {
     "id": 5,
     "isYou": false,
     "isPremium": false,
+    "isOnline": false,
     "nickname": "PopoRob",
     "firstname": "Rob",
     "lastname": "Williams",
     "country": "United Kingdom",
     "countryFlag": "uk",
+    "lang": "ENG",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg",
     "email": "robbiewilliams@gmail.com",
     "clan": 5,
@@ -134,17 +171,25 @@
     "stats": {
       "playedBrawls": 74,
       "playedTournaments": 2
-    }
+    },
+    "wallet": {
+      "coins": 50000,
+      "tokens": 245,
+      "tickets": 3
+    },
+    "games": [0]
   },
   {
     "id": 5,
     "isYou": false,
     "isPremium": false,
+    "isOnline": false,
     "nickname": "Valance",
     "firstname": "Valérie",
     "lastname": "Williams",
     "country": "France",
     "countryFlag": "fr",
+    "lang": "ENG",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg",
     "email": "valance@gmail.com",
     "clan": 4,
@@ -156,17 +201,25 @@
     "stats": {
       "playedBrawls": 15,
       "playedTournaments": 0
-    }
+    },
+    "wallet": {
+      "coins": 50000,
+      "tokens": 245,
+      "tickets": 3
+    },
+    "games": [0]
   },
   {
     "id": 6,
     "isYou": false,
     "isPremium": false,
+    "isOnline": false,
     "nickname": "Pilar",
     "firstname": "Steven",
     "lastname": "Catterpilar",
     "country": "United Kingdom",
     "countryFlag": "uk",
+    "lang": "ENG",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg",
     "email": "PilarPilar@gmail.com",
     "clan": 4,
@@ -178,17 +231,25 @@
     "stats": {
       "playedBrawls": 54,
       "playedTournaments": 23
-    }
+    },
+    "wallet": {
+      "coins": 50000,
+      "tokens": 245,
+      "tickets": 3
+    },
+    "games": [0,6]
   },
   {
     "id": 7,
     "isYou": false,
     "isPremium": false,
+    "isOnline": true,
     "nickname": "HansGrubby",
     "firstname": "Hans",
     "lastname": "Grubber",
     "country": "Germany",
     "countryFlag": "de",
+    "lang": "ENG",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg",
     "email": "hanshans@gmail.com",
     "clan": 6,
@@ -200,6 +261,12 @@
     "stats": {
       "playedBrawls": 54,
       "playedTournaments": 23
-    }
+    },
+    "wallet": {
+      "coins": 50000,
+      "tokens": 245,
+      "tickets": 3
+    },
+    "games": [0,2,3,4]
   }
 ]

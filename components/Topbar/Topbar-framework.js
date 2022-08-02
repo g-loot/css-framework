@@ -30,7 +30,7 @@ export default function TopbarFramework(props) {
                   src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
                   alt="G-Loot logo"
                 />
-                <span className="font-headings italic text-ui-300 text-xl leading-none pb-1">Design System</span>
+                <span className="font-headings font-bold italic text-ui-300 text-xl leading-none pb-1">Design System</span>
               </a>
               
             </Link>

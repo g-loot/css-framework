@@ -25,7 +25,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-center justify-center text-center mb-12 px-4 sm:px-0">
-              <h2 className="font-headings italic text-3xl md:text-4xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[30ch]">
+              <h2 className="font-headings font-bold italic text-3xl md:text-4xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[30ch]">
                 Join G-Loot Premium to unlock the full G-Loot gaming experience
               </h2>
             </div>
@@ -57,7 +57,7 @@ export default function Home() {
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
+              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
                 Get access to Premium
                 <br />
                 Mission each day
@@ -71,7 +71,7 @@ export default function Home() {
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
+              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
                 Earn mission
                 <br />
                 rewards faster
@@ -85,7 +85,7 @@ export default function Home() {
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
+              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
                 Remove ads
                 <br />
                 on the platform

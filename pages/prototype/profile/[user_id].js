@@ -12,13 +12,13 @@ import { useRouter } from "next/router";
 export default function Home() {
   const router = useRouter();
   const { query } = useRouter();
-  const prototypeData = usePrototypeData();
+  const prototype = usePrototypeData();
   const [selectedUser, setSelectedUser] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
   const { user_id } = router.query;
 
   useEffect(() => {
-    setSelectedUser(prototypeData.getUserByID(user_id));
+    setSelectedUser(prototype.getUserByID(user_id));
   }, [user_id]);
 
   return (
@@ -28,6 +28,133 @@ export default function Home() {
 
         {selectedUser && (
           <>
+            <section className="mb-8">
+              <div className="relative overflow-hidden surface sm:rounded-lg p-4 bg-cover bg-right bg-no-repeat">
+                <div className="relative z-10">
+                  <div className="flex flex-col md:flex-row gap-4 md:items-stretch md:justify-between">
+                    <div className="flex gap-4 items-center self-center">
+                      <figure className="avatar avatar-xl avatar-circle">
+                        <div>
+                          <img src={selectedUser.avatar} alt="avatar" />
+                        </div>
+                      </figure>
+                      <div className="flex-1">
+                        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                          <h1 className="text-3xl sm:text-4xl">
+                            {selectedUser.nickname}
+                          </h1>
+                          <div className="block md:hidden">
+                            {selectedUser.isYou && (
+                              <Link href="settings">
+                                <a
+                                  type="button"
+                                  className="button button-sm button-ghost"
+                                >
+                                  <span className="icon icon-cogwheel" />
+                                  <span>Profile settings</span>
+                                </a>
+                              </Link>
+                            )}
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 flex justify-center">
+                            <img
+                              src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
+                              className="aspect-video rounded-sm max-w-[1.5rem]"
+                            />
+                          </div>
+                          <span className="text-ui-300">
+                            {selectedUser.country}
+                          </span>
+                        </div>
+                        <a
+                          href="#"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="transition-colors duration-75 text-ui-300 hover:text-main flex items-center gap-2"
+                        >
+                          <div className="w-6 flex justify-center">
+                            <span className="icon icon-20 icon-twitch" />
+                          </div>
+                          <span>{selectedUser.socials.twitch}</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div className="hidden xl:flex justify-center gap-4">
+                      <div className="rounded-full surface p-1">
+                        <div className="progressbar-radial">
+                          <div>
+                            <div>
+                              <div className="text-4xl font-headings font-bold mb-1">
+                                {selectedUser.stats.playedBrawls}
+                              </div>
+                              <div className="text-xs text-ui-300 uppercase">
+                                Played
+                                <br />
+                                brawls
+                              </div>
+                            </div>
+                          </div>
+                          <svg
+                            viewBox="0 0 40 40"
+                            style={{ "--percent": "33" }}
+                          >
+                            <circle cx="20" cy="20" r="16" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="rounded-full surface p-1">
+                        <div className="progressbar-radial">
+                          <div>
+                            <div>
+                              <div className="text-4xl font-headings font-bold mb-1">
+                                {selectedUser.stats.playedTournaments}
+                              </div>
+                              <div className="text-xs text-ui-300 uppercase">
+                                Played
+                                <br />
+                                tournaments
+                              </div>
+                            </div>
+                          </div>
+                          <svg
+                            viewBox="0 0 40 40"
+                            style={{ "--percent": "15" }}
+                          >
+                            <circle cx="20" cy="20" r="16" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="hidden md:flex flex-col justify-between md:items-end gap-4">
+                      {selectedUser.isYou && (
+                        <Link href="settings">
+                          <a
+                            type="button"
+                            className="button button-sm button-ghost"
+                          >
+                            <span className="icon icon-cogwheel" />
+                            <span>Profile settings</span>
+                          </a>
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="absolute z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
+                  style={{ "--delay": "calc( 1 * 0.05s)" }}
+                >
+                  <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
+                  <img
+                    className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp"
+                  />
+                </div>
+              </div>
+            </section>
+            {/*
             <section className="flex items-center justify-between mb-4 py-8 px-4 sm:px-0">
               <div className="flex gap-4 items-center">
                 <figure className="avatar avatar-xl avatar-circle">
@@ -78,7 +205,9 @@ export default function Home() {
                   <div className="progressbar-radial">
                     <div>
                       <div>
-                        <div className="text-3xl font-headings mb-1">{selectedUser.stats.playedBrawls}</div>
+                        <div className="text-4xl font-headings font-bold mb-1">
+                          {selectedUser.stats.playedBrawls}
+                        </div>
                         <div className="text-xs text-ui-300 uppercase">
                           Played
                           <br />
@@ -95,7 +224,9 @@ export default function Home() {
                   <div className="progressbar-radial">
                     <div>
                       <div>
-                        <div className="text-3xl font-headings mb-1">{selectedUser.stats.playedTournaments}</div>
+                        <div className="text-4xl font-headings font-bold mb-1">
+                          {selectedUser.stats.playedTournaments}
+                        </div>
                         <div className="text-xs text-ui-300 uppercase">
                           Played
                           <br />
@@ -110,9 +241,10 @@ export default function Home() {
                 </div>
               </div>
             </section>
+                    */}
 
             <section
-              className="flex flex-col lg:flex-row gap-4 lg:items-start animate-slide-in-bottom animate-delay"
+              className="flex flex-col lg:flex-row gap-8 lg:items-start animate-slide-in-bottom animate-delay"
               style={{ "--delay": "calc( 1 * 0.05s)" }}
             >
               <div className="flex-1 space-y-4">
@@ -128,7 +260,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="item-body">
-                      <div className="item-title font-headings not-italic text-xl text-ui-100 uppercase">
+                      <div className="item-title font-headings font-bold text-xl text-ui-100 uppercase italic">
                         Valorant
                       </div>
                     </div>
@@ -147,7 +279,9 @@ export default function Home() {
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               WIN RATE
                             </div>
-                            <div className="text-2xl font-headings">25%</div>
+                            <div className="text-3xl font-headings font-bold">
+                              25%
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -163,7 +297,9 @@ export default function Home() {
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               K/D ratio
                             </div>
-                            <div className="text-2xl font-headings">0.71</div>
+                            <div className="text-3xl font-headings font-bold">
+                              0.71
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -179,7 +315,9 @@ export default function Home() {
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Headshots kill avg
                             </div>
-                            <div className="text-2xl font-headings">2.5</div>
+                            <div className="text-3xl font-headings font-bold">
+                              2.5
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -195,7 +333,9 @@ export default function Home() {
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Assist avg
                             </div>
-                            <div className="text-2xl font-headings">3.1</div>
+                            <div className="text-3xl font-headings font-bold">
+                              3.1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -208,7 +348,7 @@ export default function Home() {
                           <>
                             <div className="item">
                               <div className="item-body">
-                                <div className="p-2 item-title font-headings text-lg italic">
+                                <div className="p-2 item-title font-headings font-bold text-lg italic">
                                   All stats (total)
                                 </div>
                               </div>
@@ -226,43 +366,57 @@ export default function Home() {
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Assists
                             </div>
-                            <div className="text-2xl font-headings">151</div>
+                            <div className="text-3xl font-headings font-bold">
+                              151
+                            </div>
                           </div>
                           <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Kills
                             </div>
-                            <div className="text-2xl font-headings">405</div>
+                            <div className="text-3xl font-headings font-bold">
+                              405
+                            </div>
                           </div>
                           <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Deaths
                             </div>
-                            <div className="text-2xl font-headings">570</div>
+                            <div className="text-3xl font-headings font-bold">
+                              570
+                            </div>
                           </div>
                           <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Headshot kills
                             </div>
-                            <div className="text-2xl font-headings">144</div>
+                            <div className="text-3xl font-headings font-bold">
+                              144
+                            </div>
                           </div>
                           <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Wins
                             </div>
-                            <div className="text-2xl font-headings">35</div>
+                            <div className="text-3xl font-headings font-bold">
+                              35
+                            </div>
                           </div>
                           <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Losses
                             </div>
-                            <div className="text-2xl font-headings">24</div>
+                            <div className="text-3xl font-headings font-bold">
+                              24
+                            </div>
                           </div>
                           <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Draws
                             </div>
-                            <div className="text-2xl font-headings">1</div>
+                            <div className="text-3xl font-headings font-bold">
+                              1
+                            </div>
                           </div>
                         </div>
                       </Accordion>
@@ -281,7 +435,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="item-body">
-                      <div className="item-title font-headings not-italic text-xl text-ui-100 uppercase">
+                      <div className="item-title font-headings font-bold text-xl text-ui-100 uppercase italic">
                         PUBG: BATTLEGROUNDS
                       </div>
                     </div>
@@ -300,7 +454,9 @@ export default function Home() {
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               WIN RATE
                             </div>
-                            <div className="text-2xl font-headings">25%</div>
+                            <div className="text-3xl font-headings font-bold">
+                              25%
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -316,7 +472,9 @@ export default function Home() {
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               K/D ratio
                             </div>
-                            <div className="text-2xl font-headings">0.71</div>
+                            <div className="text-3xl font-headings font-bold">
+                              0.71
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -332,7 +490,9 @@ export default function Home() {
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Headshots kill avg
                             </div>
-                            <div className="text-2xl font-headings">2.5</div>
+                            <div className="text-3xl font-headings font-bold">
+                              2.5
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -348,7 +508,9 @@ export default function Home() {
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Assist avg
                             </div>
-                            <div className="text-2xl font-headings">3.1</div>
+                            <div className="text-3xl font-headings font-bold">
+                              3.1
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -361,7 +523,7 @@ export default function Home() {
                           <>
                             <div className="item">
                               <div className="item-body">
-                                <div className="p-2 item-title font-headings text-lg italic">
+                                <div className="p-2 item-title font-headings font-bold text-lg italic">
                                   All stats (total)
                                 </div>
                               </div>
@@ -379,43 +541,57 @@ export default function Home() {
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Assists
                             </div>
-                            <div className="text-2xl font-headings">151</div>
+                            <div className="text-3xl font-headings font-bold">
+                              151
+                            </div>
                           </div>
                           <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Kills
                             </div>
-                            <div className="text-2xl font-headings">405</div>
+                            <div className="text-3xl font-headings font-bold">
+                              405
+                            </div>
                           </div>
                           <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Deaths
                             </div>
-                            <div className="text-2xl font-headings">570</div>
+                            <div className="text-3xl font-headings font-bold">
+                              570
+                            </div>
                           </div>
                           <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Headshot kills
                             </div>
-                            <div className="text-2xl font-headings">144</div>
+                            <div className="text-3xl font-headings font-bold">
+                              144
+                            </div>
                           </div>
                           <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Wins
                             </div>
-                            <div className="text-2xl font-headings">35</div>
+                            <div className="text-3xl font-headings font-bold">
+                              35
+                            </div>
                           </div>
                           <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Losses
                             </div>
-                            <div className="text-2xl font-headings">24</div>
+                            <div className="text-3xl font-headings font-bold">
+                              24
+                            </div>
                           </div>
                           <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                             <div className="leading-none text-xs text-ui-300 uppercase">
                               Draws
                             </div>
-                            <div className="text-2xl font-headings">1</div>
+                            <div className="text-3xl font-headings font-bold">
+                              1
+                            </div>
                           </div>
                         </div>
                       </Accordion>
@@ -423,10 +599,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="lg:w-1/3 space-y-4">
+              <div className="lg:w-92 space-y-4">
                 <div className="surface sm:rounded-lg">
                   <div className="p-1 border-b border-ui-700 flex justify-between">
-                    <h2 className="p-2 text-xl not-italic">Weekly Brawls</h2>
+                    <h2 className="p-2 text-xl italic">Weekly Brawls</h2>
                   </div>
                   <div className="max-h-60 overflow-y-auto scrollbar-desktop">
                     <ul>
@@ -449,7 +625,9 @@ export default function Home() {
                             <div className="text-ui-300 text-xs uppercase">
                               placement
                             </div>
-                            <div className="font-headings text-xl">59</div>
+                            <div className="font-headings font-bold text-xl">
+                              59
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -472,7 +650,9 @@ export default function Home() {
                             <div className="text-ui-300 text-xs uppercase">
                               placement
                             </div>
-                            <div className="font-headings text-xl">59</div>
+                            <div className="font-headings font-bold text-xl">
+                              59
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -495,7 +675,9 @@ export default function Home() {
                             <div className="text-ui-300 text-xs uppercase">
                               placement
                             </div>
-                            <div className="font-headings text-xl">12</div>
+                            <div className="font-headings font-bold text-xl">
+                              12
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -518,7 +700,9 @@ export default function Home() {
                             <div className="text-ui-300 text-xs uppercase">
                               placement
                             </div>
-                            <div className="font-headings text-xl">42</div>
+                            <div className="font-headings font-bold text-xl">
+                              42
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -527,7 +711,7 @@ export default function Home() {
                 </div>
                 <div className="surface sm:rounded-lg">
                   <div className="p-1 border-b border-ui-700 flex justify-between">
-                    <h2 className="p-2 text-xl not-italic">Tournaments</h2>
+                    <h2 className="p-2 text-xl italic">Tournaments</h2>
                   </div>
                   <div className="max-h-60 overflow-y-auto scrollbar-desktop">
                     <ul>
@@ -554,7 +738,7 @@ export default function Home() {
                 </div>
                 <div className="surface sm:rounded-lg">
                   <div className="p-1 border-b border-ui-700 flex justify-between">
-                    <h2 className="p-2 text-xl not-italic" data-badge="3">
+                    <h2 className="p-2 text-xl italic" data-badge="3">
                       Teams
                     </h2>
                     <button

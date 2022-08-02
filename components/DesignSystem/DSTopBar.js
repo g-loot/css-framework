@@ -22,7 +22,7 @@ export default function DSTopBar({children, data}) {
           </div>
           <div className='w-1/2 md:w-9/12 xl:w-10/12 flex items-center justify-end'>
             <div className='flex gap-2 items-center justify-end'>
-              <div className='font-headings italic text-lg leading-none text-ui-300'>
+              <div className='font-headings font-bold italic text-lg leading-none text-ui-300'>
                 Framework
               </div>
               <a href='https://www.npmjs.com/package/@g-loot/css-framework' target='_blank' rel='noreferrer' className='chip chip-secondary chip-xs'>

@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import Modal1 from './modals/modal-example-1';
+import ModalContainer from '../../components/Modal/ModalContainer';
+import { UiContext } from '../../contexts/ui.js';
 import { getLayout } from '../../components/DesignSystem/DSLayout';
 
 const DSpage = () => {
 
+  const uiContext = useContext(UiContext);
+  function openModal() {
+    uiContext.openModal(<Modal1></Modal1>);
+  }
   return(
   <>
+    {uiContext.displayedModal && (
+        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
+      )}
     <h1 className='mb-2'>
       Modal
     </h1>
-
 
     {/* Structure */}
     <div className='mb-12' id='structure'>
@@ -20,6 +30,11 @@ const DSpage = () => {
       <div className='mb-10'>
         <div className='flex flex-col lg:flex-row gap-4'>
           <div className='flex-3'>
+            <div className='surface rounded-lg p-4 text-center'>
+              <button type="button" className='button button-primary' onClick={openModal}>
+                <span>Open modal</span>
+              </button>
+            </div>
             <div className='modal surface'>
               <button className="button button-secondary button-close">
                 <span className='icon icon-e-remove'/>

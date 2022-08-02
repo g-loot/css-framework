@@ -79,8 +79,8 @@ export default function Topbar() {
   return (
     <div className="sticky top-0 z-50 bg-ui-800/50 navbar">
       <div className="container relative">
-        <div className="max-w-2xl grid grid-cols-6 gap-4 lg:gap-8 items-center px-2 sm:px-0">
-          <div className="col-span-2 lg:col-span-1 flex items-center gap-2">
+        <div className="max-w-2xl flex gap-4 lg:gap-8 items-center px-2 sm:px-0">
+          <div className="w-56 flex items-center gap-2">
             <div className="block lg:hidden">
               <label
                 htmlFor="drawer-prototype"
@@ -97,14 +97,14 @@ export default function Topbar() {
                   src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
                   alt="G-Loot logo"
                 />
-                <span className="px-2 py-0.5 rounded bg-ui-900/90 text-main font-headings uppercase italic tracking-wider">
+                <span className="hidden md:block px-2 py-0.5 rounded bg-ui-900/90 text-main font-headings font-bold uppercase italic tracking-wider">
                   Beta
                 </span>
               </a>
             </Link>
           </div>
-          <div className="col-span-4 lg:col-span-5 flex items-center justify-end lg:justify-between">
-            <div className="hidden lg:flex gap-2 items-center ml-2">
+          <div className="flex-1 flex items-center justify-end lg:justify-between">
+            <div className="hidden lg:flex gap-2 items-center ml-2 xl:ml-0">
               <div className="flex space-x-3 items-center border border-ui-600 bg-ui-800/50 pr-2 rounded-full">
                 <div
                   className="flex items-center tooltip tooltip-bottom"
@@ -304,7 +304,7 @@ export default function Topbar() {
                                         <div className="text-ui-300 text-sm leading-tight">
                                           {notification.intro}
                                         </div>
-                                        <div className="item-title font-headings text-ui-100 text-lg italic my-1">
+                                        <div className="item-title font-headings font-bold text-ui-100 text-lg italic my-1">
                                           {notification.title}
                                         </div>
                                         <div className="text-ui-300 text-sm leading-tight">

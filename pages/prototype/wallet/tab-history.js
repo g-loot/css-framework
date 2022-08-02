@@ -81,7 +81,7 @@ export default function TabWalletHistory() {
                       <>
                       <tr key={transaction} className='animate-slide-in-bottom animate-delay' style={{ '--delay': 'calc('+transactionIndex+' * 0.05s)'}}>
                         <td>
-                          <div className={`ml-1 rounded w-24 text-center p-1 bg-gradient-to-b from-ui-900/50 to-ui-900/10 font-headings text-lg ${transaction.credit === true ? 'text-main' : 'text-error-500'}`}>
+                          <div className={`ml-1 rounded w-24 text-center p-1 bg-gradient-to-b from-ui-900/50 to-ui-900/10 font-headings font-bold text-lg ${transaction.credit === true ? 'text-main' : 'text-error-500'}`}>
                             {transaction.credit === true && (
                               <>
                                 +

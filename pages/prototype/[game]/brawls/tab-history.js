@@ -68,19 +68,19 @@ export default function TabBrawlsHistory() {
                       >
                         <td>{brawl.name}</td>
                         <td>
-                          <div className="font-headings">#92</div>
+                          <div className="font-headings font-bold">#92</div>
                           <div className="text-ui-300 text-sm uppercase">
                             Position
                           </div>
                         </td>
                         <td>
-                          <div className="font-headings">18 kills</div>
+                          <div className="font-headings font-bold">18 kills</div>
                           <div className="text-ui-300 text-sm uppercase">
                             Total Brawl points
                           </div>
                         </td>
                         <td>
-                          <div className="font-headings">--</div>
+                          <div className="font-headings font-bold">--</div>
                         </td>
                         <td className="text-right">
                           <Link

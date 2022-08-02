@@ -113,7 +113,7 @@ export default function TabBrawlsRewards() {
                     "--delay": "calc( " + rewardIndex + " * 0.05s)",
                   }}
                 >
-                  <span className="font-headings text-lg">{reward.name}</span>
+                  <span className="font-headings font-bold text-lg">{reward.name}</span>
                   <div className="flex items-center justify-center gap-4">
                     {reward.rewards.coin && (
                       <div className="flex items-center gap-2">
@@ -124,7 +124,7 @@ export default function TabBrawlsRewards() {
                           height="auto"
                           alt=""
                         />
-                        <span className="font-headings text-lg italic">
+                        <span className="font-headings font-bold text-lg italic">
                           {numberWithSpaces(reward.rewards.coin)}
                         </span>
                       </div>
@@ -138,7 +138,7 @@ export default function TabBrawlsRewards() {
                           height="auto"
                           alt=""
                         />
-                        <span className="font-headings text-lg italic">
+                        <span className="font-headings font-bold text-lg italic">
                           {numberWithSpaces(reward.rewards.token)}
                         </span>
                       </div>
@@ -152,7 +152,7 @@ export default function TabBrawlsRewards() {
                           height="auto"
                           alt=""
                         />
-                        <span className="font-headings text-lg italic">
+                        <span className="font-headings font-bold text-lg italic">
                           {numberWithSpaces(reward.rewards.ticket)}
                         </span>
                       </div>
@@ -179,7 +179,7 @@ export default function TabBrawlsRewards() {
                     "--delay": "calc( " + rewardIndex + " * 0.05s)",
                   }}
                 >
-                  <span className="font-headings text-lg">{reward.name}</span>
+                  <span className="font-headings font-bold text-lg">{reward.name}</span>
                   <div className="flex items-center justify-center gap-4">
                     {reward.rewards.coin && (
                       <div className="flex items-center gap-2">
@@ -190,7 +190,7 @@ export default function TabBrawlsRewards() {
                           height="auto"
                           alt=""
                         />
-                        <span className="font-headings text-lg italic">
+                        <span className="font-headings font-bold text-lg italic">
                           {numberWithSpaces(reward.rewards.coin)}
                         </span>
                       </div>
@@ -204,7 +204,7 @@ export default function TabBrawlsRewards() {
                           height="auto"
                           alt=""
                         />
-                        <span className="font-headings text-lg italic">
+                        <span className="font-headings font-bold text-lg italic">
                           {numberWithSpaces(reward.rewards.token)}
                         </span>
                       </div>
@@ -218,7 +218,7 @@ export default function TabBrawlsRewards() {
                           height="auto"
                           alt=""
                         />
-                        <span className="font-headings text-lg italic">
+                        <span className="font-headings font-bold text-lg italic">
                           {numberWithSpaces(reward.rewards.ticket)}
                         </span>
                       </div>

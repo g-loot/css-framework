@@ -2,21 +2,48 @@
   {
     "id": 0,
     "isYou": true,
+    "isFeatured": true,
     "nickname": "Racoon 5",
     "tag": "RAC",
-    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Foxy.png"
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Foxy.png",
+    "introduction": "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be playe...",
+    "lang": "English",
+    "games": [1,4,3,0],
+    "social": {
+      "twitch": "qdqsd",
+      "discord": "qsdqsd",
+      "youtube": "qsdqsd",
+      "twitter": "qsdqsd"
+    },
+    "admin": 1,
+    "members": [
+      1,0,2,3
+    ]
   },
   {
     "id": 1,
-    "nickname": "BBL Esports",
-    "tag": "BBL",
-    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Un1c0rns.png"
+    "isYou": false,
+    "isFeatured": true,
+    "nickname": "Team Vitality",
+    "tag": "VITA",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png",
+    "introduction": "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be playe...",
+    "lang": "English",
+    "games": [1,4,3,0],
+    "social": {
+      "discord": "qsdqsd",
+      "twitter": "qsdqsd"
+    },
+    "admin": 4,
+    "members": [
+      4,5,6,7
+    ]
   },
   {
     "id": 2,
-    "nickname": "Team Vitality",
-    "tag": "VITA",
-    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png"
+    "nickname": "BBL Esports",
+    "tag": "BBL",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Un1c0rns.png"
   },
   {
     "id": 3,

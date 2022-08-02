@@ -77,7 +77,7 @@ export default function TabBrawlsOngoing() {
                         <div className="absolute z-10 inset-y-0 w-1/2 left-0 bg-gradient-to-r from-ui-800 via-ui-800/75 to-ui-800/0"></div>
                         <div className="absolute z-10 inset-y-0 w-1/2 right-0 bg-gradient-to-r from-ui-800/0 to-ui-800"></div>
                         <img
-                          className="absolute z-0 object-right-top object-cover xl:object-cover inset-0 w-full h-full"
+                          className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
                           src={brawl.cover}
                         />
                       </div>
@@ -109,7 +109,7 @@ export default function TabBrawlsOngoing() {
                       {brawl.progress > 0 && (
                         <>
                           <div className="flex gap-1.5 items-baseline">
-                            <div className="font-headings text-3xl italic text-main">2/3</div>
+                            <div className="font-headings font-bold text-3xl italic text-main">2/3</div>
                             <div className="text-ui-300 text-sm">matches played to get your total Brawl points</div>
                           </div>
                         </>
@@ -125,7 +125,7 @@ export default function TabBrawlsOngoing() {
                                 <>
                                   <div className="flex items-center gap-1">
                                     <img className="h-8" src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-${reward.type}-unique.webp`} width="auto" height="auto" alt="" />
-                                    <span className="font-headings text-2xl italic">{reward.value}</span>
+                                    <span className="font-headings font-bold text-2xl italic">{reward.value}</span>
                                   </div>
                                 </>
                               ))}

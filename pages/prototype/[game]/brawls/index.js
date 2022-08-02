@@ -88,7 +88,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center md:items-start text-center md:text-left flex-1 pl-8 md:pl-0 pr-8 py-0 md:py-4 xl:py-4">
-                  <h1 className="text-3xl mb-2 leading-none">
+                  <h1 className="text-4xl mb-2 leading-none">
                     Brawls
                   </h1>
                   <p className="text-ui-300 max-w-[45ch] mb-4">
@@ -115,9 +115,9 @@ export default function Home() {
                 </div>
                 <div className="col-span-8 xl:col-span-2 flex flex-col xl:items-end justify-start gap-4">
                   <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                    <span className="font-headings italic text-ui-100 uppercase">Time Left:</span>
+                    <span className="font-headings font-bold italic text-ui-100 uppercase">Time Left:</span>
                     <span className="icon icon-clock text-main" />
-                    <Countdown additionalClassNames="flex items-baseline gap-0.5 font-headings italic uppercase text-main" hasDays={true} hasLabels={true} hasSeconds={false} separator=" • " labelsAbbr={true}></Countdown>
+                    <Countdown additionalClassNames="flex items-baseline gap-0.5 font-headings font-bold italic uppercase text-main" hasDays={true} hasLabels={true} hasSeconds={false} separator=" • " labelsAbbr={true}></Countdown>
                   </div>
                 </div>
               </div>
@@ -125,12 +125,11 @@ export default function Home() {
                 style={{ "--delay": "calc( 1 * 0.05s)" }}>
                 <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/75"></div>
                 <img
-                  className="absolute z-0 object-right-top object-cover xl:object-cover inset-0 w-full h-full"
+                  className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
                   src={selectedGame.assets.heroBrawl}
                 />
               </div>
             </section>
-
             <nav>
               <ul className="tabs border-b border-ui-700">
                 {TabsItems.map((item, itemIndex) => (

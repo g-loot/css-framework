@@ -100,6 +100,53 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Horizontally centered */}
+      <div className="mb-12" id="horizontally-centered">
+        <h2 className="h3 mb-3">Horizontally centered</h2>
+        <div className="surface rounded-lg p-4">
+          <div className="flex flex-col lg:flex-row gap-4">
+            <div className="flex-1 flex justify-center items-center">
+              <div className="dropdown dropdown-center">
+                <label tabIndex="0" className="button button-primary">
+                  <span>Click me</span>
+                  <span className="icon icon-arrow-sm-down" />
+                </label>
+                <div
+                  tabIndex="0"
+                  className="dropdown-content bg-ui-600 w-52 p-1"
+                >
+                  <ul className="menu menu-rounded">
+                    <li>
+                      <a>
+                        <span>Item 1</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span>Item 2</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span>Item 3</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/ot7yv5sn/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Dropdown top */}
       <div className="mb-12" id="dropdown-top">
         <h2 className="h3 mb-3">Dropdown top</h2>
@@ -154,6 +201,53 @@ const DSpage = () => {
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
               <div className="dropdown dropdown-top dropdown-end">
+                <label tabIndex="0" className="button button-primary">
+                  <span>Click me</span>
+                  <span className="icon icon-arrow-sm-up" />
+                </label>
+                <div
+                  tabIndex="0"
+                  className="dropdown-content bg-ui-600 w-52 p-1"
+                >
+                  <ul className="menu menu-rounded">
+                    <li>
+                      <a>
+                        <span>Item 1</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span>Item 2</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span>Item 3</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/dLc1nvoh/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Dropdown top / horizontally centered */}
+      <div className="mb-12" id="dropdown-top-horizontally-centered">
+        <h2 className="h3 mb-3">Dropdown top / horizontally centered</h2>
+        <div className="surface rounded-lg p-4">
+          <div className="flex flex-col lg:flex-row gap-4">
+            <div className="flex-1 flex justify-center items-center">
+              <div className="dropdown dropdown-top dropdown-center">
                 <label tabIndex="0" className="button button-primary">
                   <span>Click me</span>
                   <span className="icon icon-arrow-sm-up" />

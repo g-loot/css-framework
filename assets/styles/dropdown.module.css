@@ -99,6 +99,15 @@
   }
 }
 
+.dropdown-center {
+  .dropdown-content {
+    @apply
+    left-[50%]
+    -translate-x-[50%]
+    ;
+  }
+}
+
 .dropdown-top {
   .dropdown-content {
     @apply

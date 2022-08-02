@@ -19,11 +19,11 @@ export default function PrototypeStructure({children, title}) {
         <div className='drawer-content'>
           <Topbar />
           <div className='container relative'>
-            <div className="max-w-2xl grid grid-cols-6 gap-4 lg:gap-8">
-              <div className="lg:col-span-2 xl:col-span-1 hidden lg:block top-16 w-auto py-4">
+            <div className="max-w-2xl flex gap-4 lg:gap-8">
+              <div className="w-56 hidden lg:block top-16 py-4">
                 <PrototypeLeftMenu />
               </div>
-              <div className="col-span-6 lg:col-span-4 xl:col-span-5 pt-4 pb-8 min-h-screen">
+              <div className="flex-1 pt-4 pb-8 min-h-screen">
                 {children}
               </div>
             </div>

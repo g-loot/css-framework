@@ -1057,7 +1057,7 @@ const DSpage = () => {
                   </div>
                   <div className="item-body">
                     <div className="text-xs text-ui-300">Game or Area</div>
-                    <div className="item-title font-headings italic text-xl">
+                    <div className="item-title font-headings font-bold italic text-xl">
                       Notification title
                     </div>
                     <p className="text-sm text-ui-200">

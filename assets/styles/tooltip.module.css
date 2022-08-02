@@ -3,7 +3,7 @@
 /*----------------------------*/
 
 
-.tooltip {
+:where(.tooltip, [data-tooltip]) {
   @apply
   relative
   cursor-pointer

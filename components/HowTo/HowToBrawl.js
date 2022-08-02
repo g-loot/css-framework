@@ -19,7 +19,7 @@ export default function HowToBrawl(props) {
                   </figure>
                 </div>
                 <div className="item-body">
-                  <div className="p-2 item-title font-headings text-lg italic">
+                  <div className="p-2 item-title font-headings font-bold text-lg italic">
                     Brawl details / how to play
                   </div>
                 </div>
@@ -35,7 +35,7 @@ export default function HowToBrawl(props) {
           <div className="">
             <ul className="gap-2 p-2 grid grid-cols-2 md:grid-cols-3">
               <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                <h4 className="font-headings text-base uppercase text-ui-200 mb-1">
+                <h4 className="font-headings font-bold text-base uppercase text-ui-200 mb-1">
                   Objective
                 </h4>
                 <p className="text-sm text-ui-300 leading-relaxed">
@@ -44,7 +44,7 @@ export default function HowToBrawl(props) {
                 </p>
               </li>
               <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                <h4 className="font-headings text-base uppercase text-ui-200 mb-1">
+                <h4 className="font-headings font-bold text-base uppercase text-ui-200 mb-1">
                   Game mode
                 </h4>
                 <p className="text-sm text-ui-300 leading-relaxed">
@@ -52,7 +52,7 @@ export default function HowToBrawl(props) {
                 </p>
               </li>
               <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                <h4 className="font-headings text-base uppercase text-ui-200 mb-1">
+                <h4 className="font-headings font-bold text-base uppercase text-ui-200 mb-1">
                   Brawl points
                 </h4>
                 <p className="text-sm text-ui-300 leading-relaxed">
@@ -63,13 +63,13 @@ export default function HowToBrawl(props) {
                 </p>
               </li>
               <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                <h4 className="font-headings text-base uppercase text-ui-200 mb-1">
+                <h4 className="font-headings font-bold text-base uppercase text-ui-200 mb-1">
                   Tiebreaker
                 </h4>
                 <p className="text-sm text-ui-300 leading-relaxed">Damage.</p>
               </li>
               <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                <h4 className="font-headings text-base uppercase text-ui-200 mb-1">
+                <h4 className="font-headings font-bold text-base uppercase text-ui-200 mb-1">
                   Brawl type
                 </h4>
                 <p className="text-sm text-ui-300 leading-relaxed">
@@ -79,7 +79,7 @@ export default function HowToBrawl(props) {
                 </p>
               </li>
               <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                <h4 className="font-headings text-base uppercase text-ui-200 mb-1">
+                <h4 className="font-headings font-bold text-base uppercase text-ui-200 mb-1">
                   Brawl size
                 </h4>
                 <p className="text-sm text-ui-300 leading-relaxed">
@@ -90,7 +90,7 @@ export default function HowToBrawl(props) {
               </li>
             </ul>
             <div className="border-t border-ui-700 py-2 flex gap-2 items-center justify-center">
-              <h4 className="font-headings text-base uppercase text-ui-200">
+              <h4 className="font-headings font-bold text-base uppercase text-ui-200">
                 Brawl ID
               </h4>
               <button

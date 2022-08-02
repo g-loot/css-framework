@@ -153,7 +153,7 @@ const DSpage = () => {
           <div className='flex-1 flex justify-start items-start'>
             <div className='card w-96 bg-premium-700'>
               <div className='card-body text-ui-700'>
-                <h3 className='card-title text-2xl'>Premium</h3>
+                <h3 className='card-title text-2xl text-ui-700'>Premium</h3>
                 <p>Join G-Loot Premium to unlock the full gaming experience.</p>
                 <div className='card-actions justify-end'>
                   <button type='button' className='button button-tertiary'><span>View plans</span></button>

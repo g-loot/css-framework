@@ -43,10 +43,9 @@ export default function PrototypeGamesNav({ children }) {
     <>
       {PrototypeDataGames.map((item, itemIndex) => (
         <>
+        {item.isFavorite && (
           <div
-            className={`surface rounded-lg accordion accordion-sm accordion-halo accordion-halo-dimmed ${
-              itemIndex > 1 ? "hidden" : ""
-            }`}
+            className={`surface rounded-lg accordion accordion-sm accordion-halo accordion-halo-dimmed`}
             key={itemIndex}
           >
             <PrototypeGamesNavItem
@@ -138,7 +137,7 @@ export default function PrototypeGamesNav({ children }) {
                       </div>
                     </div>
                     <div className="item-body">
-                      <div className="item-title font-headings uppercase">
+                      <div className="item-title font-headings font-bold uppercase">
                         {item.name}
                       </div>
                     </div>
@@ -175,6 +174,7 @@ export default function PrototypeGamesNav({ children }) {
               </ul>
             </PrototypeGamesNavItem>
           </div>
+        )}
         </>
       ))}
     </>

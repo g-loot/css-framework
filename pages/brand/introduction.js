@@ -9,7 +9,7 @@ const BrandPage = () => (
       <div className='flex gap-8 flex-col lg:flex-row items-stretch justify-start'>
         <div className='flex-1 lg:border-r border-ui-400/25 pr-8 space-y-2 lg:pt-2'>
           <div className='lg:text-right'>
-            <span className='text-ui-300 text-lg font-headings uppercase'>G-Loot Styleguide</span>
+            <span className='text-ui-300 text-lg font-headings font-bold uppercase'>G-Loot Styleguide</span>
             <h1 className='leading-none'>
               Introduction
             </h1>

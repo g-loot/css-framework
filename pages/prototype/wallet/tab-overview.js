@@ -55,7 +55,7 @@ export default function TabWalletOverview() {
                 height="auto"
                 alt=""
               />
-              <div className="font-headings text-purple-500">
+              <div className="font-headings font-bold text-purple-500">
                 <span className="text-3xl">29</span>{" "}
                 <span className="text-lg">tokens</span>
               </div>
@@ -93,7 +93,7 @@ export default function TabWalletOverview() {
                 height="auto"
                 alt=""
               />
-              <div className="font-headings text-gold-500">
+              <div className="font-headings font-bold text-gold-500">
                 <span className="text-3xl">194</span>{" "}
                 <span className="text-lg">coins</span>
               </div>
@@ -132,7 +132,7 @@ export default function TabWalletOverview() {
                 height="auto"
                 alt=""
               />
-              <div className="font-headings text-bronze-500">
+              <div className="font-headings font-bold text-bronze-500">
                 <span className="text-3xl">2</span>{" "}
                 <span className="text-lg">tickets</span>
               </div>
@@ -167,7 +167,7 @@ export default function TabWalletOverview() {
                 height="auto"
                 alt=""
               />
-              <div className="font-headings text-ui-300">
+              <div className="font-headings font-bold text-ui-300">
                 <span className="text-3xl">0.00€</span>{" "}
                 <span className="text-lg">prize money</span>
               </div>

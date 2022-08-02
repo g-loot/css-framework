@@ -4,6 +4,27 @@
 
 @font-face {
   font-family: 'Podium Sharp';
+  src: url('https://res.cloudinary.com/gloot/raw/upload/v1652173357/GNOG%20assets/Fonts/PODIUM_Sharp/podiumsharp-3.7italic-webfont.woff2')
+      format('woff2'), url('https://res.cloudinary.com/gloot/raw/upload/v1652173357/GNOG%20assets/Fonts/PODIUM_Sharp/podiumsharp-3.7italic-webfont.woff')
+      format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Podium Sharp';
+  src: url('https://res.cloudinary.com/gloot/raw/upload/v1637672348/GNOG%20assets/Fonts/PODIUM_Sharp/podiumsharp-3.7-webfont.woff2')
+      format('woff2'),
+    url('https://res.cloudinary.com/gloot/raw/upload/v1636017636/GNOG%20assets/Fonts/PODIUM_Sharp/podiumsharp-3.7-webfont.woff')
+      format('woff');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Podium Sharp';
   src: url('https://res.cloudinary.com/gloot/raw/upload/v1652173357/GNOG%20assets/Fonts/PODIUM_Sharp/podiumsharp-3.9italic-webfont.woff2')
       format('woff2'), url('https://res.cloudinary.com/gloot/raw/upload/v1652173357/GNOG%20assets/Fonts/PODIUM_Sharp/podiumsharp-3.9italic-webfont.woff')
       format('woff');

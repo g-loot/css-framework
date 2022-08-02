@@ -27,7 +27,7 @@ const DSpage = () => {
               <>
                 <div className='item'>
                   <div className='item-body'>
-                    <div className='p-2 item-title font-headings text-lg italic'>
+                    <div className='p-2 item-title font-headings font-bold text-lg italic'>
                       Before entering a Brawl
                     </div>
                   </div>
@@ -57,7 +57,7 @@ const DSpage = () => {
             <>
               <div className='item'>
                 <div className='item-body'>
-                  <div className='p-2 item-title font-headings text-lg italic'>
+                  <div className='p-2 item-title font-headings font-bold text-lg italic'>
                     Play your first matches to join the leaderboard
                   </div>
                 </div>
@@ -85,7 +85,7 @@ const DSpage = () => {
             <>
               <div className='item'>
                 <div className='item-body'>
-                  <div className='p-2 item-title font-headings text-lg italic'>
+                  <div className='p-2 item-title font-headings font-bold text-lg italic'>
                     Pay tokens to activate Brawl matches
                   </div>
                 </div>
@@ -151,7 +151,7 @@ const DSpage = () => {
                   </div>
                 </div>
                 <div className='item-body'>
-                  <div className='item-title font-headings text-xl italic'>
+                  <div className='item-title font-headings font-bold text-xl italic'>
                     Valorant
                   </div>
                 </div>
@@ -184,7 +184,7 @@ const DSpage = () => {
                   </div>
                 </div>
                 <div className='item-body'>
-                  <div className='item-title font-headings text-xl italic'>
+                  <div className='item-title font-headings font-bold text-xl italic'>
                     PUBG: BATTLEGROUNDS
                   </div>
                 </div>
@@ -217,7 +217,7 @@ const DSpage = () => {
                   </div>
                 </div>
                 <div className='item-body'>
-                  <div className='item-title font-headings text-xl italic'>
+                  <div className='item-title font-headings font-bold text-xl italic'>
                     Rocket League
                   </div>
                 </div>
@@ -274,7 +274,7 @@ const DSpage = () => {
                   </div>
                 </div>
                 <div className='item-body'>
-                  <div className='item-title font-headings text-xl italic'>
+                  <div className='item-title font-headings font-bold text-xl italic'>
                     Valorant
                   </div>
                 </div>
@@ -307,7 +307,7 @@ const DSpage = () => {
                   </div>
                 </div>
                 <div className='item-body'>
-                  <div className='item-title font-headings text-xl italic'>
+                  <div className='item-title font-headings font-bold text-xl italic'>
                     PUBG: BATTLEGROUNDS
                   </div>
                 </div>
@@ -340,7 +340,7 @@ const DSpage = () => {
                   </div>
                 </div>
                 <div className='item-body'>
-                  <div className='item-title font-headings text-xl italic'>
+                  <div className='item-title font-headings font-bold text-xl italic'>
                     Rocket League
                   </div>
                 </div>

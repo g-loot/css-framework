@@ -109,7 +109,7 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-bronze" />
-                    <span className="font-headings text-2xl uppercase italic">Bronze</span>
+                    <span className="font-headings font-bold text-2xl uppercase italic">Bronze</span>
                   </div>
                 </div>
               </a>
@@ -119,7 +119,7 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-silver" />
-                    <span className="font-headings text-2xl uppercase italic">Silver</span>
+                    <span className="font-headings font-bold text-2xl uppercase italic">Silver</span>
                   </div>
                   <figure className="avatar avatar-circle avatar-xs">
                     <div>
@@ -135,7 +135,7 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-gold" />
-                    <span className="font-headings text-2xl uppercase italic">Gold</span>
+                    <span className="font-headings font-bold text-2xl uppercase italic">Gold</span>
                   </div>
                 </div>
               </a>
@@ -145,7 +145,7 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-platinum" />
-                    <span className="font-headings text-2xl uppercase italic">Platinum</span>
+                    <span className="font-headings font-bold text-2xl uppercase italic">Platinum</span>
                   </div>
                 </div>
               </a>
@@ -155,7 +155,7 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-diamond" />
-                    <span className="font-headings text-2xl uppercase italic">Diamond</span>
+                    <span className="font-headings font-bold text-2xl uppercase italic">Diamond</span>
                   </div>
                 </div>
               </a>

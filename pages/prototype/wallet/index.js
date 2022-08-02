@@ -47,11 +47,25 @@ export default function Home() {
       <PrototypeStructure title="Wallet">
         <Ad width="1005" height="124" />
 
-        <section className="px-4 md:px-0 my-8">
-          <h1 className="h2 leading-none mb-4">Wallet</h1>
-          <p className="text-ui-300 max-w-[70ch]">
-            Get to know the different currencies and rewards by clicking on the icons and keep track of your earnings from Missions, Weekly Brawls and Monthly Tournaments.
-          </p>
+        <section className="mb-8">
+          <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8">
+            <div className="relative z-10">
+              <h1 className="text-3xl sm:text-4xl">Wallet</h1>
+              <p className="text-ui-300 max-w-[70ch] mt-4">
+                Get to know the different currencies and rewards by clicking on the icons and keep track of your earnings from Missions, Weekly Brawls and Monthly Tournaments.
+              </p>
+            </div>
+            <div
+              className="absolute hidden md:block z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
+              style={{ "--delay": "calc( 1 * 0.05s)" }}
+            >
+              <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
+              <img
+                className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
+                src="https://res.cloudinary.com/gloot/image/upload/v1659462918/Marketing/2022_prototype/Wallet_bg.webp"
+              />
+            </div>
+          </div>
         </section>
 
         <nav>

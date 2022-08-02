@@ -110,7 +110,7 @@ const Index = () => {
                 <div className="col-span-12 lg:col-span-12 flex flex-col">
                   <div className="flex-1 lg:border-l border-ui-700 lg:pl-8 mb-12">
                     <h1 className="mb-8 leading-none mt-0">
-                      <small className="text-ui-200 text-3xl">
+                      <small className="text-ui-200 text-3xl font-normal">
                         Welcome to the
                       </small>
                       <div>G-Loot design system</div>
@@ -222,7 +222,7 @@ const Index = () => {
                   <div className="absolute inset-0 p-4 overflow-y-auto scrollbar-desktop">
                     <div className="hidden lg:block space-y-6">
                       <div>
-                        <div className="px-2 mb-2 uppercase font-headings text-ui-200">
+                        <div className="px-2 mb-2 uppercase font-headings font-bold text-ui-200">
                           Latest components:
                         </div>
                         <ul className="menu menu-secondary menu-rounded">
@@ -242,7 +242,7 @@ const Index = () => {
                         </ul>
                       </div>
                       <div>
-                        <div className="px-2 mb-2 uppercase font-headings text-ui-200">
+                        <div className="px-2 mb-2 uppercase font-headings font-bold text-ui-200">
                           Latest pages:
                         </div>
                         <ul className="menu menu-secondary menu-rounded">

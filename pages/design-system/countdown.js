@@ -71,7 +71,7 @@ const DSpage = () => {
         <div className=''>
           <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
             <div className='flex-1 space-y-4 text-center'>
-              <span className="countdown text-7xl font-headings">
+              <span className="countdown text-7xl font-headings font-bold">
                 <span style={{"--value": timeLeft.seconds}}/>
               </span>
             </div>
@@ -97,7 +97,7 @@ const DSpage = () => {
           </h3>
           <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
             <div className='flex-1 space-y-4 flex justify-center'>
-              <span className="countdown text-5xl font-headings">
+              <span className="countdown text-5xl font-headings font-bold">
                 <span style={{"--value": timeLeft.hours}}/>:
                 <span style={{"--value": timeLeft.minutes}}/>:
                 <span style={{"--value": timeLeft.seconds}}/>
@@ -114,7 +114,7 @@ const DSpage = () => {
           </h3>
           <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
             <div className='flex-1 space-y-4 flex justify-center'>
-              <span className="countdown text-5xl font-headings">
+              <span className="countdown text-5xl font-headings font-bold">
                 <span style={{"--value": timeLeft.hours}}/><small className='text-ui-300'>h</small>
                 <span style={{"--value": timeLeft.minutes}}/><small className='text-ui-300'>m</small>
                 <span style={{"--value": timeLeft.seconds}}/><small className='text-ui-300'>s</small>
@@ -132,19 +132,19 @@ const DSpage = () => {
           <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
             <div className='flex-1 flex flex-wrap justify-center gap-5 text-center'>
               <div className="flex flex-col gap-1">
-                <span className="countdown text-4xl font-headings">
+                <span className="countdown text-4xl font-headings font-bold">
                   <span style={{"--value": timeLeft.hours}}/>
                 </span>
                 <small className='text-ui-300 text-sm uppercase leading-none'>hours</small>
               </div> 
               <div className="flex flex-col gap-1">
-                <span className="countdown text-4xl font-headings">
+                <span className="countdown text-4xl font-headings font-bold">
                   <span style={{"--value": timeLeft.minutes}}/>
                 </span>
                 <small className='text-ui-300 text-sm uppercase leading-none'>minutes</small>
               </div> 
               <div className="flex flex-col gap-1">
-                <span className="countdown text-4xl font-headings">
+                <span className="countdown text-4xl font-headings font-bold">
                   <span style={{"--value": timeLeft.seconds}}/>
                 </span>
                 <small className='text-ui-300 text-sm uppercase leading-none'>seconds</small>
@@ -188,19 +188,19 @@ const DSpage = () => {
             <div className='flex-1 flex flex-wrap justify-center gap-5 text-center'>
               <div className='flex flex-wrap justify-center gap-5 text-center'>
                 <div className="flex flex-col gap-1 rounded-xl bg-gradient-radial-spotlight from-ui-500 to-ui-700 p-4">
-                  <span className="countdown text-4xl font-headings">
+                  <span className="countdown text-4xl font-headings font-bold">
                     <span style={{"--value": timeLeft.hours}}/>
                   </span>
                   <small className='text-ui-300 text-sm uppercase leading-none'>hours</small>
                 </div> 
                 <div className="flex flex-col gap-1 rounded-xl bg-gradient-radial-spotlight from-ui-500 to-ui-700 p-4">
-                  <span className="countdown text-4xl font-headings">
+                  <span className="countdown text-4xl font-headings font-bold">
                     <span style={{"--value": timeLeft.minutes}}/>
                   </span>
                   <small className='text-ui-300 text-sm uppercase leading-none'>minutes</small>
                 </div> 
                 <div className="flex flex-col gap-1 rounded-xl bg-gradient-radial-spotlight from-ui-500 to-ui-700 p-4">
-                  <span className="countdown text-4xl font-headings">
+                  <span className="countdown text-4xl font-headings font-bold">
                     <span style={{"--value": timeLeft.seconds}}/>
                   </span>
                   <small className='text-ui-300 text-sm uppercase leading-none'>seconds</small>

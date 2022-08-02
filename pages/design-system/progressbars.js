@@ -80,7 +80,7 @@ const DSpage = () => {
                 <div className='progressbar-radial'>
                   <div>
                     <div>
-                      <div className='text-2xl font-headings'>
+                      <div className='text-2xl font-headings font-bold'>
                         {random1}%
                       </div>
                       <div className='text-xs text-ui-300 uppercase'>
@@ -95,7 +95,7 @@ const DSpage = () => {
                 <div className='progressbar-radial'>
                   <div>
                     <div>
-                      <div className='text-2xl font-headings'>
+                      <div className='text-2xl font-headings font-bold'>
                         {random2}%
                       </div>
                       <div className='text-xs text-ui-300 uppercase'>
@@ -110,7 +110,7 @@ const DSpage = () => {
                 <div className='progressbar-radial'>
                   <div>
                     <div>
-                      <div className='text-2xl font-headings'>
+                      <div className='text-2xl font-headings font-bold'>
                         {random3}%
                       </div>
                       <div className='text-xs text-ui-300 uppercase'>
@@ -125,7 +125,7 @@ const DSpage = () => {
                 <div className='progressbar-radial'>
                   <div>
                     <div>
-                      <div className='text-2xl font-headings'>
+                      <div className='text-2xl font-headings font-bold'>
                         {random4}%
                       </div>
                       <div className='text-xs text-ui-300 uppercase'>
@@ -171,7 +171,7 @@ const DSpage = () => {
                   <div className='progressbar-sm progressbar-radial m-0'>
                     <div>
                       <div>
-                        <div className='text-xl font-headings'>
+                        <div className='text-xl font-headings font-bold'>
                           {random2}%
                         </div>
                         <div className='text-xs text-ui-300 uppercase'>

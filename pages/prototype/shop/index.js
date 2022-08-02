@@ -49,16 +49,29 @@ export default function Home() {
       <PrototypeStructure title="Shop">
         <Ad width="1005" height="124" />
 
-        <section className="px-4 md:px-0 my-8">
-          <h1 className="h2 leading-none mb-4">Shop</h1>
-          <p className="text-ui-300 max-w-[70ch]">
-            Turn your hard work and successes into rewards you can enjoy! Will
-            you invest in some new gaming gear or just treat yourself to
-            something you&#39;ve had your eye on? Earn more coins to spend in
-            the shop by finishing Missions or competing in Brawls.
-          </p>
+        <section className="mb-8">
+          <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8">
+            <div className="relative z-10">
+              <h1 className="text-3xl sm:text-4xl">Shop</h1>
+              <p className="text-ui-300 max-w-[70ch] mt-4">
+                Turn your hard work and successes into rewards you can enjoy! Will
+                you invest in some new gaming gear or just treat yourself to
+                something you&#39;ve had your eye on? Earn more coins to spend in
+                the shop by finishing Missions or competing in Brawls.
+              </p>
+            </div>
+            <div
+              className="absolute hidden md:block z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
+              style={{ "--delay": "calc( 1 * 0.05s)" }}
+            >
+              <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
+              <img
+                className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
+                src="https://res.cloudinary.com/gloot/image/upload/v1659462292/Marketing/2022_prototype/Shop_bg.webp"
+              />
+            </div>
+          </div>
         </section>
-
         <section className="px-4 md:px-0 my-8">
           <h2 className="px-2 sm:px-0 py-2 text-2xl">Gift cards</h2>
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4">
@@ -89,9 +102,9 @@ export default function Home() {
                       height="auto"
                       alt="Gift card"
                     />
-                    <h3 className="uppercase flex flex-col gap-2 items-center leading-none">
+                    <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
                       <span>Gift cards</span>
-                      <small className="text-ui-300">{giftcard.name}</small>
+                      <small className="text-ui-300 text-2xl">{giftcard.name}</small>
                     </h3>
                     <div className="mt-2 h-12 flex items-center">
                       {giftcard.exception && (

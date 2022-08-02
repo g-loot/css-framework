@@ -5,7 +5,7 @@ const PrototypeLayout = ({ children }) => {
   
   return (
     <>
-    <PrototypeHead title='PUBG Season 6' />
+    <PrototypeHead title='G-Loot' />
     <div>
       {children}
     </div>

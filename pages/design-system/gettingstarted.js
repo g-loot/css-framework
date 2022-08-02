@@ -6,7 +6,7 @@ const DSpage = () => (
   
   <div className='max-w-sm mx-auto space-y-8 text-ui-100 leading-tight mb-6'>
   <h1 className='leading-none'>
-    Getting started<br /><small className='text-ui-300'>with webpack</small>
+    Getting started<br /><small className='text-ui-300 font-normal'>with webpack</small>
   </h1>
   <ul className='space-y-8'>
     <li className='max-w-sm mx-auto space-y-4 text-ui-200 pb-8 border-b border-ui-800'>

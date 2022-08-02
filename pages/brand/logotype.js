@@ -8,12 +8,12 @@ const BrandPage = () => (
       <div className='flex gap-8'>
         <div className='flex-1 max-w-xs'>
           <div>
-            <span className='text-main text-xl font-headings uppercase'>G-Loot</span>
+            <span className='text-main text-xl font-headings font-bold uppercase'>G-Loot</span>
             <h1 className='leading-none text-6xl uppercase'>
               Logotype
             </h1>
             <div className='h-px w-full bg-gradient-to-r from-main via-blue-700 to-blue-700/0 mt-6 mb-4'></div>
-            <p className='text-xl font-headings italic text-ui-300 leading-loose'>
+            <p className='text-xl font-headings font-bold italic text-ui-300 leading-loose'>
               Our logo is the touchstone of our brand and one of our most valuable assets and should be handled with care.
             </p>
           </div>

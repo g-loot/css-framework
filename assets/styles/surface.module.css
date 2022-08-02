@@ -6,7 +6,6 @@
 .surface {
   @apply
   relative
-  transform-gpu
   bg-ui-800
   border
   border-ui-700

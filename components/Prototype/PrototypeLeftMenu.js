@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import Ad from '../Ad/Ad';
 import Button from '../Button/Button';
+import Link from 'next/link';
 import PrototypeGamesNav from './PrototypeGamesNav';
+import { useRouter } from 'next/router';
 
 export default function PrototypeLeftMenu(props) {
   const router = useRouter();
@@ -38,12 +38,12 @@ export default function PrototypeLeftMenu(props) {
             </Link>
           </li>
           <li>
-            <Link href={`/prototype/teams${hasAds ? '?ads=true' : ''}`}>
-              <a className={`${router.pathname.includes("teams") ? 'is-active' : ''}`}>
+            <Link href={`/prototype/clans${hasAds ? '?ads=true' : ''}`}>
+              <a className={`${router.pathname.includes("clans") ? 'is-active' : ''}`}>
                 <span className="icon rounded w-8 flex items-center justify-center">
                   <span className={`icon icon-16 icon-multiple-12`}/>
                 </span>
-                <span className='uppercase'>Teams</span>
+                <span className='uppercase'>Clans</span>
               </a>
             </Link>
           </li>
@@ -75,7 +75,7 @@ export default function PrototypeLeftMenu(props) {
       </div>
       <div className="rounded-xl overflow-hidden relative">
         <div className="flex flex-col xl:flex-row w-full px-4 py-8 xl:items-center xl:justify-between relative z-20">
-          <div className="font-headings italic text-xl leading-tight color-dark-300 mb-4 xl:mb-0">
+          <div className="font-headings font-bold italic text-xl leading-tight color-dark-300 mb-4 xl:mb-0">
             Tournament<br />
             Schedule 
           </div>
@@ -83,7 +83,7 @@ export default function PrototypeLeftMenu(props) {
             <Button variant='secondary' icon='arrow-sm-right'></Button>
           </div>
         </div>
-        <div className='absolute pointer-events-none inset-0 z-10 bg-right-bottom bg-no-repeat bg-contain rounded-xl' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653908737/Marketing/2022_prototype/bg-tournamentschedule.jpg)`}}></div>
+        <div className='absolute pointer-events-none inset-0 z-10 bg-right-bottom bg-no-repeat bg-contain rounded-xl' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1659467776/Marketing/2022_prototype/bg-tournamentschedule.webp)`}}></div>
       </div>
       <Ad width='260'height='260'/>
     </div>

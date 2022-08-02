@@ -135,13 +135,13 @@ export default function TabBrawlsSoloLeaderboards() {
             <div className="my-4 space-y-8 mt-8">
               <div className="text-center">
                 <div className="text-sm uppercase">The 3 best matches</div>
-                <div className="font-headings text-2xl italic text-ui-100">
+                <div className="font-headings font-bold text-2xl italic text-ui-100">
                   Your performance
                 </div>
               </div>
               <div className="flex items-center justify-around gap-4 text-center leading-none">
                 <div>
-                  <div className="text-3xl font-headings text-blue-300 mb-2">
+                  <div className="text-3xl font-headings font-bold text-blue-300 mb-2">
                     125
                   </div>
                   <div className="text-sm uppercase">
@@ -151,7 +151,7 @@ export default function TabBrawlsSoloLeaderboards() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-3xl font-headings text-blue-300 mb-2">
+                  <div className="text-3xl font-headings font-bold text-blue-300 mb-2">
                     #5
                   </div>
                   <div className="text-sm uppercase">
@@ -344,7 +344,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       <div>
                         <div>
                           <span className="icon text-4xl icon-rank-bronze" />
-                          <span className="font-headings text-2xl uppercase italic">
+                          <span className="font-headings font-bold text-2xl uppercase italic">
                             Bronze
                           </span>
                         </div>
@@ -359,7 +359,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       <div>
                         <div>
                           <span className="icon text-4xl icon-rank-silver" />
-                          <span className="font-headings text-2xl uppercase italic">
+                          <span className="font-headings font-bold text-2xl uppercase italic">
                             Silver
                           </span>
                         </div>
@@ -380,7 +380,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       <div>
                         <div>
                           <span className="icon text-4xl icon-rank-gold" />
-                          <span className="font-headings text-2xl uppercase italic">
+                          <span className="font-headings font-bold text-2xl uppercase italic">
                             Gold
                           </span>
                         </div>
@@ -395,7 +395,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       <div>
                         <div>
                           <span className="icon text-4xl icon-rank-platinum" />
-                          <span className="font-headings text-2xl uppercase italic">
+                          <span className="font-headings font-bold text-2xl uppercase italic">
                             Platinum
                           </span>
                         </div>
@@ -410,7 +410,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       <div>
                         <div>
                           <span className="icon text-4xl icon-rank-diamond" />
-                          <span className="font-headings text-2xl uppercase italic">
+                          <span className="font-headings font-bold text-2xl uppercase italic">
                             Diamond
                           </span>
                         </div>
@@ -432,7 +432,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         selectedGroup === 6 ? "chip-primary" : "chip-secondary"
                       }`}
                     >
-                      <span className="font-headings">G</span>
+                      <span className="font-headings font-bold">G</span>
                     </button>
                   </div>
                   <div className="flex-1 flex gap-2 items-center leading-none">
@@ -477,7 +477,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                   {groupIndex === 6 && (
                                     <span className="icon icon-profile-2" />
                                   )}
-                                  <span className="font-headings">{group}</span>
+                                  <span className="font-headings font-bold">{group}</span>
                                 </button>
                               </>
                             ))}
@@ -590,7 +590,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                 }`}
                               >
                                 <span
-                                  className={`font-headings text-2xl  ${
+                                  className={`font-headings font-bold text-2xl  ${
                                     userIndex === 0 ? "text-gold-500" : ""
                                   }${
                                     userIndex === 1 ? "text-silver-500" : ""
@@ -630,7 +630,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                       height="auto"
                                       alt=""
                                     />
-                                    <span className="font-headings text-lg italic">
+                                    <span className="font-headings font-bold text-lg italic">
                                       {numberWithSpaces(user.rewards.coin)}
                                     </span>
                                   </div>
@@ -644,7 +644,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                       height="auto"
                                       alt=""
                                     />
-                                    <span className="font-headings text-lg italic">
+                                    <span className="font-headings font-bold text-lg italic">
                                       {numberWithSpaces(user.rewards.token)}
                                     </span>
                                   </div>
@@ -658,7 +658,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                       height="auto"
                                       alt=""
                                     />
-                                    <span className="font-headings text-lg italic">
+                                    <span className="font-headings font-bold text-lg italic">
                                       {numberWithSpaces(user.rewards.ticket)}
                                     </span>
                                   </div>
@@ -742,13 +742,13 @@ export default function TabBrawlsSoloLeaderboards() {
                                         Match points in best [number] matches
                                       </h5>
                                       <div className="flex justify-center gap-2">
-                                        <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
+                                        <div className="px-3 py-1 rounded bg-ui-850 font-headings font-bold text-xl italic">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
-                                        <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
+                                        <div className="px-3 py-1 rounded bg-ui-850 font-headings font-bold text-xl italic">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
-                                        <div className="px-3 py-1 rounded bg-ui-850 font-headings text-xl italic">
+                                        <div className="px-3 py-1 rounded bg-ui-850 font-headings font-bold text-xl italic">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
                                       </div>
@@ -758,7 +758,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                         Match played
                                       </h5>
                                       <div className="flex justify-center gap-2">
-                                        <div className="px-3 py-1 rounded bg-ui-850/25 font-headings text-lg italic">
+                                        <div className="px-3 py-1 rounded bg-ui-850/25 font-headings font-bold text-lg italic">
                                           {numberWithSpaces(getRandomInt(500))}
                                         </div>
                                       </div>
@@ -768,7 +768,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                         Tiebreaker points
                                       </h5>
                                       <div className="flex justify-center gap-2">
-                                        <div className="px-3 py-1 rounded bg-ui-850/25 font-headings text-lg italic">
+                                        <div className="px-3 py-1 rounded bg-ui-850/25 font-headings font-bold text-lg italic">
                                           {numberWithSpaces(getRandomInt(2000))}{" "}
                                           damage
                                         </div>
@@ -779,7 +779,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                         Player game score
                                       </h5>
                                       <div className="flex justify-center gap-2">
-                                        <div className="px-3 py-1 rounded bg-ui-850/25 font-headings text-lg italic">
+                                        <div className="px-3 py-1 rounded bg-ui-850/25 font-headings font-bold text-lg italic">
                                           {numberWithSpaces(getRandomInt(500))}
                                         </div>
                                       </div>

@@ -137,7 +137,7 @@ export default function PrototypeGamesNav({ children }) {
                       </div>
                     </div>
                     <div className="item-body">
-                      <div className="item-title font-headings uppercase">
+                      <div className="item-title font-headings font-bold uppercase">
                         {item.name}
                       </div>
                     </div>

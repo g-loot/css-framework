@@ -60,7 +60,7 @@ const Index = () => {
                   >
                     <div className={`item ${filter ? "hidden" : ""}`}>
                       <div className="item-body py-0.5 px-4">
-                        <div className="item-title font-headings text-xl italic text-ui-100">
+                        <div className="item-title font-headings font-bold text-xl italic text-ui-100">
                           {section.title}
                         </div>
                       </div>
@@ -94,7 +94,18 @@ const Index = () => {
                                 </div>
                               </div>
                               <div className="item-actions">
-                                <div className="flex gap-2">
+                                <div className="block lg:hidden">
+                                  <Link
+                                    href={`/prototype/${item.url}${
+                                      item.query ? "?" : ""
+                                    }${item.query}`}
+                                  >
+                                    <a className="button button-sm button-primary">
+                                      <span>View</span>
+                                    </a>
+                                  </Link>
+                                </div>
+                                <div className="hidden lg:flex gap-2">
                                   <Link
                                     href={`/prototype/${item.url}${
                                       item.query ? "?" : ""

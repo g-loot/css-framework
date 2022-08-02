@@ -76,7 +76,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center md:items-start text-center md:text-left flex-1 pl-8 md:pl-0 pr-8 py-0 md:py-4 xl:py-4">
-                  <h1 className="text-3xl mb-2 leading-none">
+                  <h1 className="text-4xl mb-2 leading-none">
                     {selectedGame.name} Missions
                   </h1>
                   <p className="text-ui-300 max-w-[70ch] mb-4">
@@ -93,11 +93,11 @@ export default function Home() {
                 <div className="col-span-8 xl:col-span-2 flex flex-col items-center justify-center gap-4">
                   <div className="w-full flex flex-col justify-center items-center gap-2 pl-4 xl:pl-0 py-4 pr-4">
                     <div className="flex items-end gap-4 leading-tight">
-                      <div className="text-xl xl:text-4xl font-headings italic text-main">
+                      <div className="text-xl xl:text-4xl font-headings font-bold italic text-main">
                         2/3
                       </div>
                       <div className="xl:mb-2">
-                        <div className="text-xl font-headings italic text-ui-200 uppercase">
+                        <div className="text-xl font-headings font-bold italic text-ui-200 uppercase">
                           Daily missions completed
                         </div>
                       </div>
@@ -137,7 +137,7 @@ export default function Home() {
               >
                 <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/75"></div>
                 <img
-                  className="absolute z-0 object-right-top object-cover xl:object-cover inset-0 w-full h-full"
+                  className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
                   src={selectedGame.assets.heroMission}
                 />
               </div>

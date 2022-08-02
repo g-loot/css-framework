@@ -163,7 +163,7 @@ const PrototypePage = () => {
                         <>
                           <div className='item py-1'>
                             <div className='item-body'>
-                              <div className='p-1 item-title font-headings text-lg italic'>
+                              <div className='p-1 item-title font-headings font-bold text-lg italic'>
                                 {round.name}
                               </div>
                             </div>
@@ -180,7 +180,7 @@ const PrototypePage = () => {
                             <>
                               <div className='item py-1'>
                                 <div className='item-body pl-4'>
-                                  <div className='item-title font-headings'>
+                                  <div className='item-title font-headings font-bold'>
                                     {group.name}
                                   </div>
                                   <div className='text-xs text-ui-300 flex items-center gap-1'>
@@ -296,27 +296,27 @@ const PrototypePage = () => {
                       </figure>
                     </div>
                     <div className='item-body flex-2 lg:flex-3 text-left'>
-                      <div className='item-title font-headings italic text-xl text-ui-100'>
+                      <div className='item-title font-headings font-bold italic text-xl text-ui-100'>
                         {item.name}
                       </div>
                     </div>
                     <div className='item-body'>
-                      <span className='bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings'>
+                      <span className='bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings font-bold'>
                         {item.total_kills}
                       </span>
                     </div>
                     <div className='item-body'>
-                      <span className='bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings'>
+                      <span className='bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings font-bold'>
                         {item.kill_points}
                       </span>
                     </div>
                     <div className='item-body'>
-                      <span className='bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings'>
+                      <span className='bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings font-bold'>
                         {item.placement_points}
                       </span>
                     </div>
                     <div className='item-body'>
-                      <span className='bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings'>
+                      <span className='bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings font-bold'>
                         {item.total_score}
                       </span>
                     </div>
@@ -343,7 +343,7 @@ const PrototypePage = () => {
               <div className={`max-w-xs mx-auto ${Loading === true ? 'opacity-0' : ''}`}>
                 <span className='icon icon-game-pubg-symbol text-6xl text-ui-400 mt-4'/>
                 <div className='mt-2 mb-6'>
-                  <p className='text-lg text-ui-300 font-headings leading-tight'>
+                  <p className='text-lg text-ui-300 font-headings font-bold leading-tight'>
                     This part of the tournament has not started yet. Come back later.
                   </p>
                 </div>

@@ -54,7 +54,7 @@ const DSLayout = ({ children }) => {
               <Link href='../'>
                 <a className='hover:opacity-50 transition-opacity duration-150'>
                   <img className='' width='123' height='64' src='https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg' alt='G-Loot logo' />
-                  <div className='font-headings text-lg uppercase not-italic leading-none pl-10'>
+                  <div className='font-headings font-bold text-lg uppercase not-italic leading-none pl-10'>
                     Framework
                   </div>
                 </a>
@@ -88,7 +88,7 @@ const DSLayout = ({ children }) => {
                   {/*
                     <span className={`icon icon-16 icon-${item.icon}`}/>
                   */}
-                  <span className='font-headings uppercase text-ui-100'>{item.label}</span>
+                  <span className='font-headings font-bold uppercase text-ui-100'>{item.label}</span>
                 </button>
                 <div className={`${router.pathname.includes(item.url) ? 'is-active' : ''}`}>
                   <div className={`${filter ? '' : 'border-t border-ui-700/50'}`}>

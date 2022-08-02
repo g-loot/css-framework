@@ -141,6 +141,16 @@
     }
   }
 
+  &:not(.menu-secondary) {
+    :where(a, button) {
+      > * {
+        @apply
+        font-bold
+        ;
+      }
+    }
+  }
+
   &.menu-secondary {
     :where(a, button) {
       > * {

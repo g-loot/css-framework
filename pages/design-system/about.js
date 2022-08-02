@@ -7,8 +7,8 @@ const DSpage = () => (
 
     <div className='max-w-md mx-auto aspect-landscape bg-cover bg-center rounded-lg mb-12 border border-ui-700' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289722/Marketing/2022_prototype/cover-designsystem.jpg)`}}></div>
     <div className='max-w-sm mx-auto space-y-4 text-ui-100 leading-none mb-6'>
-      <h1 className='leading-none'>
-        G-Loot CSS Framework <small className='text-ui-300 uppercase text-2xl'>introduction</small>
+      <h1 className='leading-none h2'>
+        G-Loot CSS Framework <small className='text-ui-300 font-normal'>introduction</small>
       </h1>
     </div>
     
@@ -53,7 +53,7 @@ const DSpage = () => (
         Benefits
       </h3>
       <p className='border-b border-ui-700 pb-5'>
-        <strong className='font-headings text-xl text-main'>
+        <strong className='font-headings font-bold text-xl text-main'>
           Smart design
         </strong>
         <br />
@@ -62,7 +62,7 @@ const DSpage = () => (
         </span>
       </p>
       <p className='border-b border-ui-700 pb-5'>
-        <strong className='font-headings text-xl text-main'>
+        <strong className='font-headings font-bold text-xl text-main'>
           One place of truth
         </strong>
         <br />
@@ -71,7 +71,7 @@ const DSpage = () => (
         </span>
       </p>
       <p className='border-b border-ui-700 pb-5'>
-        <strong className='font-headings text-xl text-main'>
+        <strong className='font-headings font-bold text-xl text-main'>
           Technology agnostic
         </strong>
         <br />
@@ -80,7 +80,7 @@ const DSpage = () => (
         </span>
       </p>
       <p className='border-b border-ui-700 pb-5'>
-        <strong className='font-headings text-xl text-main'>
+        <strong className='font-headings font-bold text-xl text-main'>
           Flexible and quick
         </strong>
         <br />
@@ -89,7 +89,7 @@ const DSpage = () => (
         </span>
       </p>
       <p className='pb-5'>
-        <strong className='font-headings text-xl text-main'>
+        <strong className='font-headings font-bold text-xl text-main'>
           Faster render
         </strong>
         <br />
@@ -103,7 +103,7 @@ const DSpage = () => (
       </h3>
      
       <p className='pb-5'>
-        <strong className='font-headings text-xl text-error-300'>
+        <strong className='font-headings font-bold text-xl text-error-300'>
           Work
         </strong>
         <br />

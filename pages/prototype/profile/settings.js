@@ -27,7 +27,7 @@ export default function Home() {
                 <>
                   <div className="item">
                     <div className="item-body">
-                      <div className="py-1 px-2 item-title font-headings text-xl italic">
+                      <div className="py-1 px-2 item-title font-headings font-bold text-xl italic">
                         General
                       </div>
                     </div>
@@ -179,7 +179,7 @@ export default function Home() {
                 <>
                   <div className="item">
                     <div className="item-body">
-                      <div className="py-1 px-2 item-title font-headings text-xl italic">
+                      <div className="py-1 px-2 item-title font-headings font-bold text-xl italic">
                         G-Loot &amp; game accounts
                       </div>
                     </div>
@@ -279,7 +279,7 @@ export default function Home() {
                 <>
                   <div className="item">
                     <div className="item-body">
-                      <div className="py-1 px-2 item-title font-headings text-xl italic">
+                      <div className="py-1 px-2 item-title font-headings font-bold text-xl italic">
                         Data Privacy
                       </div>
                     </div>

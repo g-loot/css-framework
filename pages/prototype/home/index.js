@@ -122,25 +122,25 @@ export default function Home() {
               </div>
               <div className="w-full rounded-xl grid grid-cols-4 gap-2 leading-none mb-4 pt-10 pb-8">
                 <div className="flex-1 sm:rounded-lg bg-gradient-to-b from-ui-900/75 to-ui-800/75 backdrop-blur-sm text-center aspect-square flex flex-col gap-1 justify-center">
-                  <div className="text-2xl xl:text-3xl font-headings italic text-ui-100">
+                  <div className="text-2xl xl:text-3xl font-headings font-bold italic text-ui-100">
                     11
                   </div>
                   <div className="text-xs text-ui-300 h-5">Assists</div>
                 </div>
                 <div className="flex-1 rounded-lg bg-gradient-to-b from-ui-900/75 to-ui-800/75 backdrop-blur-sm text-center aspect-square flex flex-col gap-1 justify-center">
-                  <div className="text-2xl xl:text-3xl font-headings italic text-ui-100">
+                  <div className="text-2xl xl:text-3xl font-headings font-bold italic text-ui-100">
                     53
                   </div>
                   <div className="text-xs text-ui-300 h-5">Kills</div>
                 </div>
                 <div className="flex-1 rounded-lg bg-gradient-to-b from-ui-900/75 to-ui-800/75 backdrop-blur-sm text-center aspect-square flex flex-col gap-1 justify-center">
-                  <div className="text-2xl xl:text-3xl font-headings italic text-ui-100">
+                  <div className="text-2xl xl:text-3xl font-headings font-bold italic text-ui-100">
                     23
                   </div>
                   <div className="text-xs text-ui-300 h-5">Deaths</div>
                 </div>
                 <div className="flex-1 rounded-lg bg-gradient-to-b from-ui-900/75 to-ui-800/75 backdrop-blur-sm text-center aspect-square flex flex-col gap-1 justify-center">
-                  <div className="text-2xl xl:text-3xl font-headings italic text-ui-100">
+                  <div className="text-2xl xl:text-3xl font-headings font-bold italic text-ui-100">
                     38
                   </div>
                   <div className="text-xs text-ui-300 h-5">
