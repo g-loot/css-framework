@@ -97,7 +97,7 @@ export default function Home() {
   const prototype = usePrototypeData();
   const { data, loading } = useFetch("/api/brawls", { delay: 1000 });
 
-  console.log(prototype);
+  
   return (
     <>
       <PrototypeStructure title="Teams">

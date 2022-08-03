@@ -1,6 +1,11 @@
+import React, { useContext } from 'react';
+
 import Ad from "../../../components/Ad/Ad";
 import Link from "next/link";
+import ModalClanCreate from './modal-clan-create';
+import ModalContainer from '../../../components/Modal/ModalContainer';
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
+import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -9,10 +14,18 @@ export default function Home() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const hasAds = query.ads === "true" ? true : false;
+  const uiContext = useContext(UiContext);
 
-  console.log(prototype);
+  function openModalClanCreate() {
+    uiContext.openModal(<ModalClanCreate></ModalClanCreate>);
+  }
+
+  
   return (
     <>
+      {uiContext.displayedModal && (
+        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
+      )}
       <PrototypeStructure title="Clans">
         <Ad width="1005" height="124" />
         <section className="mb-8">
@@ -51,160 +64,158 @@ export default function Home() {
           </div>
         </section>
         <section
-          className="px-4 md:px-0 mb-8 animate-slide-in-bottom animate-delay"
+          className="mb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc( 2 * 0.05s)" }}
         >
-          <h2 className="py-2 text-2xl">Clans you might like to join:</h2>
-          <div className="overflow-x-auto xl:overflow-x-hidden scrollbar-hidden">
-            <div className="">
-              <div className="flex lg:grid gap-4 grid-cols-2">
-                {prototype.clans.map((clan, clanIndex) => (
-                  <>
-                    {clan.isFeatured && (
-                      <div className="surface rounded-lg p-4 flex flex-col items-between min-w-xs justify-center">
-                        <div className="flex gap-4 items-center">
-                          <Link
-                            href={`/prototype/clans/${clan.id}${
-                              hasAds ? "?ads=true" : ""
-                            }`}
-                          >
-                            <div className="flex-1 flex gap-4 items-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
-                              <figure className="avatar avatar-squircle avatar-md">
-                                <div>
-                                  <img src={clan.avatar} alt="avatar" />
-                                </div>
-                              </figure>
-                              <div className="flex-1">
-                                <h2 className="text-2xl">
-                                  &#91;
-                                  {clan.tag}
-                                  &#93; {clan.nickname}
-                                </h2>
-                                <div className="text-ui-300">
-                                  {clan.members?.length} / 30 members
-                                </div>
+          <h2 className="px-4 md:px-0 py-2 text-2xl">Clans you might like to join:</h2>
+          <div className="overflow-x-auto lg:overflow-x-hidden scrollbar-hidden">
+            <div className="flex lg:grid gap-4 grid-cols-2 px-4 md:px-0">
+              {prototype.clans.map((clan, clanIndex) => (
+                <>
+                  {clan.isFeatured && (
+                    <div className="surface rounded-lg p-4 flex flex-col items-between min-w-sm lg:min-w-xs justify-center">
+                      <div className="flex gap-4 items-center">
+                        <Link
+                          href={`/prototype/clans/${clan.id}${
+                            hasAds ? "?ads=true" : ""
+                          }`}
+                        >
+                          <div className="flex-1 flex gap-4 items-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
+                            <figure className="avatar avatar-squircle avatar-md">
+                              <div>
+                                <img src={clan.avatar} alt="avatar" />
+                              </div>
+                            </figure>
+                            <div className="flex-1">
+                              <h2 className="text-2xl">
+                                &#91;
+                                {clan.tag}
+                                &#93; {clan.nickname}
+                              </h2>
+                              <div className="text-ui-300">
+                                {clan.members?.length} / 30 members
                               </div>
                             </div>
-                          </Link>
-                          <button
-                            type="button"
-                            className="button button-sm button-secondary self-start"
-                          >
-                            <span>Join clan</span>
-                          </button>
+                          </div>
+                        </Link>
+                        <button
+                          type="button"
+                          className="button button-sm button-secondary self-start"
+                        >
+                          <span>Join clan</span>
+                        </button>
+                      </div>
+                      <div className="flex-1 py-4">
+                        <p className="text-ui-300">
+                          {clan.introduction?.substr(0, 150)}...
+                        </p>
+                      </div>
+                      <div className="flex gap-4 items-center justify-between border-t border-ui-700 pt-4">
+                        <div className="flex gap-3">
+                          {clan.social?.twitch && (
+                            <>
+                              <a
+                                href={clan.social.twitch}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                              >
+                                <span className="icon icon-twitch text-xl" />
+                              </a>
+                            </>
+                          )}
+                          {clan.social?.discord && (
+                            <>
+                              <a
+                                href={clan.social.discord}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                              >
+                                <span className="icon icon-discord text-xl" />
+                              </a>
+                            </>
+                          )}
+                          {clan.social?.youtube && (
+                            <>
+                              <a
+                                href={clan.social.youtube}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                              >
+                                <span className="icon icon-logo-youtube text-xl" />
+                              </a>
+                            </>
+                          )}
+                          {clan.social?.twitter && (
+                            <>
+                              <a
+                                href={clan.social.twitter}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                              >
+                                <span className="icon icon-logo-twitter text-xl" />
+                              </a>
+                            </>
+                          )}
                         </div>
-                        <div className="flex-1 py-4">
-                          <p className="text-ui-300">
-                            {clan.introduction?.substr(0, 150)}...
-                          </p>
+                        <div className="text-sm">
+                          <span className="text-ui-300">We speak: </span>
+                          <span className="text-main">{clan.lang}</span>
                         </div>
-                        <div className="flex gap-4 items-center justify-between border-t border-ui-700 pt-4">
-                          <div className="flex gap-3">
-                            {clan.social?.twitch && (
-                              <>
-                                <a
-                                  href={clan.social.twitch}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
-                                >
-                                  <span className="icon icon-twitch text-xl" />
-                                </a>
-                              </>
-                            )}
-                            {clan.social?.discord && (
-                              <>
-                                <a
-                                  href={clan.social.discord}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
-                                >
-                                  <span className="icon icon-discord text-xl" />
-                                </a>
-                              </>
-                            )}
-                            {clan.social?.youtube && (
-                              <>
-                                <a
-                                  href={clan.social.youtube}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
-                                >
-                                  <span className="icon icon-logo-youtube text-xl" />
-                                </a>
-                              </>
-                            )}
-                            {clan.social?.twitter && (
-                              <>
-                                <a
-                                  href={clan.social.twitter}
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
-                                >
-                                  <span className="icon icon-logo-twitter text-xl" />
-                                </a>
-                              </>
-                            )}
-                          </div>
-                          <div className="text-sm">
-                            <span className="text-ui-300">We speak: </span>
-                            <span className="text-main">{clan.lang}</span>
-                          </div>
-                          <div className="flex gap-1">
-                            {clan.games?.map((game, gameIndex) => (
-                              <>
-                                <div className="p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
-                                  <span
-                                    className={`icon text-xl ${
-                                      prototype.getGameByID(game).slug ===
-                                      "apexlegends"
-                                        ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                                        : ""
-                                    } ${
-                                      prototype.getGameByID(game).slug ===
-                                      "csgo"
-                                        ? "icon-game-csgo-symbol text-game-csgo"
-                                        : ""
-                                    }  ${
-                                      prototype.getGameByID(game).slug ===
-                                      "dota2"
-                                        ? "icon-game-dota2-symbol text-game-dota2"
-                                        : ""
-                                    }  ${
-                                      prototype.getGameByID(game).slug ===
-                                      "leagueoflegends"
-                                        ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                                        : ""
-                                    }  ${
-                                      prototype.getGameByID(game).slug ===
-                                      "rocketleague"
-                                        ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                                        : ""
-                                    } ${
-                                      prototype.getGameByID(game).slug ===
-                                      "pubg"
-                                        ? "icon-game-pubg-symbol text-game-pubg"
-                                        : ""
-                                    }  ${
-                                      prototype.getGameByID(game).slug ===
-                                      "valorant"
-                                        ? "icon-game-valorant-symbol text-game-valorant"
-                                        : ""
-                                    }`}
-                                  />
-                                </div>
-                              </>
-                            ))}
-                          </div>
+                        <div className="flex gap-1">
+                          {clan.games?.map((game, gameIndex) => (
+                            <>
+                              <div className="p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+                                <span
+                                  className={`icon text-xl ${
+                                    prototype.getGameByID(game).slug ===
+                                    "apexlegends"
+                                      ? "icon-game-apexlegends-symbol text-game-apexlegends"
+                                      : ""
+                                  } ${
+                                    prototype.getGameByID(game).slug ===
+                                    "csgo"
+                                      ? "icon-game-csgo-symbol text-game-csgo"
+                                      : ""
+                                  }  ${
+                                    prototype.getGameByID(game).slug ===
+                                    "dota2"
+                                      ? "icon-game-dota2-symbol text-game-dota2"
+                                      : ""
+                                  }  ${
+                                    prototype.getGameByID(game).slug ===
+                                    "leagueoflegends"
+                                      ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
+                                      : ""
+                                  }  ${
+                                    prototype.getGameByID(game).slug ===
+                                    "rocketleague"
+                                      ? "icon-game-rocketleague-symbol text-game-rocketleague"
+                                      : ""
+                                  } ${
+                                    prototype.getGameByID(game).slug ===
+                                    "pubg"
+                                      ? "icon-game-pubg-symbol text-game-pubg"
+                                      : ""
+                                  }  ${
+                                    prototype.getGameByID(game).slug ===
+                                    "valorant"
+                                      ? "icon-game-valorant-symbol text-game-valorant"
+                                      : ""
+                                  }`}
+                                />
+                              </div>
+                            </>
+                          ))}
                         </div>
                       </div>
-                    )}
-                  </>
-                ))}
-              </div>
+                    </div>
+                  )}
+                </>
+              ))}
             </div>
           </div>
         </section>
@@ -234,7 +245,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-4 flex gap-4 items-center">
-                  <button type="button" className="button button-primary">
+                  <button type="button" className="button button-sm button-primary">
                     <span>Browse clans</span>
                   </button>
                 </div>
@@ -263,11 +274,11 @@ export default function Home() {
                 <div className="mt-4 flex gap-4 items-center">
                   <button
                     type="button"
-                    className="button button-primary is-disabled whitespace-nowrap"
+                    className="button button-sm button-primary whitespace-nowrap" onClick={openModalClanCreate}
                   >
                     <span>Create clan</span>
                   </button>
-                  <span className="font-bold leading-tight">
+                  <span className="font-bold leading-tight hidden">
                     Reach XP XXX to unlock Clan creation
                   </span>
                 </div>

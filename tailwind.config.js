@@ -380,6 +380,9 @@ module.exports = {
         },
       },
       boxShadow: {
+        'main': [
+          '0px 0px 0px 2px rgba(19, 240, 148, 1)',
+        ],
         'xl': [
           '0px 54px 80px rgba(0, 0, 0, 0.14)',
           '0px 22px 33px rgba(0, 0, 0, 0.1)',

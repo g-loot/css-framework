@@ -2,6 +2,13 @@
 /* CHAT */
 /*----------------------------*/
 
+.chat {
+  &,
+  * {
+    --scroll-behavior: auto;
+  }
+}
+
 .chat-group {
   @apply
   flex

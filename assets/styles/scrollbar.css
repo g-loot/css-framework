@@ -5,13 +5,11 @@
 
 body {
   -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
 }
 
 .scrollbar,
 select[multiple] {
   -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
   &::-webkit-scrollbar {
     @apply
     w-1.5
@@ -94,7 +92,6 @@ select[multiple] {
 @media not all and (hover: none) and (pointer: coarse) { 
   .scrollbar-desktop {
     -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
     &::-webkit-scrollbar {
       @apply
       w-1.5

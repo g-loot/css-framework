@@ -1,11 +1,12 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+
 import Ad from "../../../../components/Ad/Ad";
 import Chat from "../../../../components/Chat/Chat";
 import Countdown from "../../../../components/Countdown/Countdown";
+import Link from "next/link";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "../../../../contexts/prototype";
+import { useRouter } from "next/router";
 
 const brawlsResults = [
   {
@@ -100,7 +101,7 @@ export default function Home() {
     return parts.join(".");
   }
 
-  console.log(prototype);
+  
   return (
     <>
       <PrototypeStructure title="Clan">
@@ -148,7 +149,7 @@ export default function Home() {
                         </button>
                       </div>
                       <div className="flex-1 py-4 max-w-[70ch]">
-                        <p className="text-ui-300">
+                        <p className="text-ui-300 mb-2">
                           {prototype
                             .getClanByID(clan_id)
                             .introduction?.substr(0, 150)}
@@ -157,7 +158,7 @@ export default function Home() {
                         <p>
                           <span className="text-ui-300">We speak: </span>
                           <span className="text-main">
-                            {selectedClan.language}
+                            {selectedClan.lang}
                           </span>
                         </p>
                       </div>

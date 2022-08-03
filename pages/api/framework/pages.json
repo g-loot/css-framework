@@ -39,8 +39,14 @@
       "title": "Profile",
       "pages": [
         {
-          "label": "Profile",
+          "label": "Profile (self)",
           "url": "profile/0",
+          "query": "",
+          "tags": "profile, view, user"
+        },
+        {
+          "label": "Profile",
+          "url": "profile/1",
           "query": "",
           "tags": "profile, view, user"
         },
@@ -54,13 +60,30 @@
       ]
     },
     {
-      "title": "Teams",
+      "title": "Clans",
       "pages": [
         {
-          "label": "Teams listing",
-          "url": "teams",
+          "label": "Clans listing",
+          "url": "clans",
           "query": "",
-          "tags": "team"
+          "tags": "clan,team",
+          "new": true
+        },
+        {
+          "label": "Clan detail (self)",
+          "url": "clans/0",
+          "query": "",
+          "tags": "clan,team",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Clan detail",
+          "url": "clans/1",
+          "query": "",
+          "tags": "clan,team",
+          "tab": 1,
+          "new": true
         }
       ]
     },

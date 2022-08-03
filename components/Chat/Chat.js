@@ -147,7 +147,7 @@ export default function Chat(props) {
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({
-      behavior: "auto",
+      behavior: "instant",
       block: "nearest",
       inline: "end",
     });

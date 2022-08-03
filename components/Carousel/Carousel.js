@@ -65,7 +65,7 @@ export default function Carousel(props) {
           <>
             <div className={`carousel-slide ${slideNumber === slideIndex ? 'is-active' : ''}`} key={slide}>
               <div className='carousel-image'>
-                <span style={{ backgroundImage: `url(${slide.image})`}}/>
+                <span style={{ backgroundImage: `url(${slide.image})`}} />
               </div>
               <div className='carousel-body'>
                 <div>

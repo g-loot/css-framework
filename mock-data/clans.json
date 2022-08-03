@@ -6,7 +6,7 @@
     "nickname": "Racoon 5",
     "tag": "RAC",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Foxy.png",
-    "introduction": "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be playe...",
+    "introduction": "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
     "lang": "English",
     "games": [1,4,3,0],
     "social": {
@@ -24,12 +24,12 @@
     "id": 1,
     "isYou": false,
     "isFeatured": true,
-    "nickname": "Team Vitality",
-    "tag": "VITA",
+    "nickname": "PizzaYOLO",
+    "tag": "YOLO",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png",
-    "introduction": "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be playe...",
-    "lang": "English",
-    "games": [1,4,3,0],
+    "introduction": "Siamo un clan prevalentemente italiano che gioca a League of Legends e DOTA2. Chi parla inglese va bene, ma gran parte delle chat avverrà in italiano, quindi lo sai ;-) Siamo abbastanza bravi con 4 giocatori Ultimate in LoL, ma siamo anche amichevoli con i noob!",
+    "lang": "Italian",
+    "games": [0,1],
     "social": {
       "discord": "qsdqsd",
       "twitter": "qsdqsd"
