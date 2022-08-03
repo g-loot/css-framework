@@ -91,7 +91,7 @@ export default function Home() {
                           <div className="flex items-center animate-slide-in-top animate-delay"
                   style={{ "--delay": "calc( 3 * 0.05s)" }}>
                             <span className="icon icon-20 text-ui-300 icon-arrow-sm-right" />
-                            <span className="ml-1 text-sm text-ui-300 md:ml-2">{selectedGame.brawls[brawl_id].name}</span>
+                            <span className="ml-1 text-sm text-ui-300 md:ml-2">{prototypeData.getBrawlByID(game, brawl_id).name}</span>
                           </div>
                         </li>
                       </ol>
@@ -103,16 +103,16 @@ export default function Home() {
                     height="auto"
                     alt=""
                   />
-                  {selectedGame.brawls[brawl_id].sponsor && (
+                  {prototypeData.getBrawlByID(game, brawl_id).sponsor && (
                     <>
                       <p className="font-headings font-bold italic text-xl mb-2">Sponsored by</p>
-                      <img className="max-w-[125px] max-h-[125px] w-auto h-auto" src={selectedGame.brawls[brawl_id].sponsor} alt="sponsor" />
+                      <img className="max-w-[125px] max-h-[125px] w-auto h-auto" src={prototypeData.getBrawlByID(game, brawl_id).sponsor} alt="sponsor" />
                     </>
                   )}
                 </div>
                 <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center md:items-start text-center md:text-left flex-1 pl-8 md:pl-0 pr-8 py-0 md:py-4 xl:py-4">
                   <h1 className="text-4xl mb-2 leading-none">
-                    {selectedGame.brawls[brawl_id].name} 
+                    {prototypeData.getBrawlByID(game, brawl_id).name} 
                   </h1>
                   <p className="text-ui-300 max-w-[45ch] mb-4">
                     Use your stats to climb the Brawl leaderboard and win prizes.
@@ -149,7 +149,7 @@ export default function Home() {
                 <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/75"></div>
                 <img
                   className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                  src={selectedGame.brawls[brawl_id].cover}
+                  src={prototypeData.getBrawlByID(game, brawl_id).cover}
                 />
               </div>
             </section>

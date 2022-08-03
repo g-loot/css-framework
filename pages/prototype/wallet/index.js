@@ -48,7 +48,7 @@ export default function Home() {
         <Ad width="1005" height="124" />
 
         <section className="mb-8">
-          <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8">
+          <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8 lg:min-h-[250px] lg:flex items-center">
             <div className="relative z-10">
               <h1 className="text-3xl sm:text-4xl">Wallet</h1>
               <p className="text-ui-300 max-w-[70ch] mt-4">

@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 const brawlsResults = [
   {
-    game: 0,
+    game: 1,
     name: "Clan Brawl #234",
     rewards: [
       {
@@ -46,7 +46,7 @@ const brawlsResults = [
     ],
   },
   {
-    game: 1,
+    game: 2,
     name: "Clan Brawl #523",
     rewards: [
       {
@@ -101,7 +101,6 @@ export default function Home() {
     return parts.join(".");
   }
 
-  
   return (
     <>
       <PrototypeStructure title="Clan">
@@ -112,8 +111,8 @@ export default function Home() {
             {!selectedClan.isYou && (
               <>
                 <section className="mb-8">
-                  <div className="relative overflow-hidden surface md:rounded-lg p-4 bg-cover bg-right bg-no-repeat">
-                    <div className="relative z-10">
+                  <div className="relative overflow-hidden surface md:rounded-lg p-4 lg:min-h-[250px] lg:flex items-center">
+                    <div className="relative z-10 flex-1">
                       <div className="flex flex-col sm:flex-row gap-4 items-stretch justify-between">
                         <div className="flex gap-4 items-center self-center">
                           <figure className="avatar avatar-xl avatar-squircle">
@@ -122,7 +121,7 @@ export default function Home() {
                             </div>
                           </figure>
                           <div className="flex-1">
-                            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                               <h1 className="text-3xl sm:text-4xl">
                                 &#91;
                                 {selectedClan.tag}
@@ -141,12 +140,6 @@ export default function Home() {
                             </div>
                           </div>
                         </div>
-                        <button
-                          type="button"
-                          className="button button-sm button-primary self-start"
-                        >
-                          <span>Join clan</span>
-                        </button>
                       </div>
                       <div className="flex-1 py-4 max-w-[70ch]">
                         <p className="text-ui-300 mb-2">
@@ -157,9 +150,7 @@ export default function Home() {
                         </p>
                         <p>
                           <span className="text-ui-300">We speak: </span>
-                          <span className="text-main">
-                            {selectedClan.lang}
-                          </span>
+                          <span className="text-main">{selectedClan.lang}</span>
                         </p>
                       </div>
                       <div className="flex gap-4 items-end justify-between">
@@ -270,6 +261,16 @@ export default function Home() {
                         className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
                         src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp"
                       />
+                    </div>
+                    <div className="hidden lg:block absolute z-20 top-4 right-4">
+                      <Link href="#">
+                        <a
+                          type="button"
+                          className="button button-sm button-primary"
+                        >
+                          <span>Join clan</span>
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </section>
@@ -525,8 +526,8 @@ export default function Home() {
             {selectedClan.isYou && (
               <>
                 <section className="mb-8">
-                  <div className="relative overflow-hidden surface md:rounded-lg p-4 bg-cover bg-right bg-no-repeat">
-                    <div className="relative z-10">
+                  <div className="relative overflow-hidden surface md:rounded-lg p-4 lg:min-h-[250px] lg:flex items-center">
+                    <div className="relative z-10 flex-1">
                       <div className="flex flex-col sm:flex-row gap-4 items-stretch justify-between">
                         <div className="flex gap-4 items-center self-center">
                           <figure className="avatar avatar-xl avatar-squircle">
@@ -535,7 +536,7 @@ export default function Home() {
                             </div>
                           </figure>
                           <div className="flex-1">
-                            <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                               <h1 className="text-3xl sm:text-4xl">
                                 &#91;
                                 {selectedClan.tag}
@@ -558,20 +559,7 @@ export default function Home() {
                           </div>
                         </div>
 
-                        <div className="flex flex-col justify-between items-center sm:items-end gap-4">
-                          <div className="hidden md:block">
-                            {selectedClan.isYou && (
-                              <Link href="settings">
-                                <a
-                                  type="button"
-                                  className="button button-sm button-ghost"
-                                >
-                                  <span className="icon icon-cogwheel" />
-                                  <span>Clan settings</span>
-                                </a>
-                              </Link>
-                            )}
-                          </div>
+                        <div className="flex flex-col justify-end items-center sm:items-end gap-4">
                           <div className="flex gap-4 items-end justify-end">
                             <div className="flex gap-3">
                               {selectedClan.social?.twitch && (
@@ -636,6 +624,19 @@ export default function Home() {
                         className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
                         src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp"
                       />
+                    </div>
+                    <div className="hidden lg:block absolute z-20 top-4 right-4">
+                      {selectedClan.isYou && (
+                        <Link href="settings">
+                          <a
+                            type="button"
+                            className="button button-sm button-ghost"
+                          >
+                            <span className="icon icon-cogwheel" />
+                            <span>Clan settings</span>
+                          </a>
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </section>

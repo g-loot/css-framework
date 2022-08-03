@@ -83,7 +83,7 @@ const Index = () => {
                                 filter ? "border-b" : ""
                               }`}
                             >
-                              <div className={`item-body ${item.tab ? "" : "pl-8"} ${item.tab === 1 ? "pl-16" : ""}  ${item.tab === 2 ? "pl-22" : ""}`}>
+                              <div className={`item-body ${item.tab ? "" : "pl-8"} ${item.tab === 1 ? "pl-16" : ""}  ${item.tab === 2 ? "pl-24" : ""}`}>
                                 <div className="item-title text-ui-300 flex gap-2">
                                   <span>{item.label}</span>
                                   {item.new && (

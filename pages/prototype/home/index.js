@@ -40,6 +40,7 @@ export default function Home() {
                 </span>
               </div>
               <button
+                type="button"
                 className="tooltip tooltip-left text-ui-300 text-0"
                 data-tooltip="Unlock rewards to earn XP"
               >
@@ -62,6 +63,7 @@ export default function Home() {
                     <span>Daily Loot Streak</span>
                   </h2>
                   <button
+                    type="button"
                     className="tooltip text-ui-300"
                     data-tooltip="Claim a free reward each day you visit gloot.com"
                   >
@@ -93,7 +95,9 @@ export default function Home() {
                 <span>How to brawl</span>
               </button>
               <h3 className="text-xl mt-6">
-                Install the <span className="text-main">tracker</span> to<br />track your stats and compete.
+                Install the <span className="text-main">tracker</span> to
+                <br />
+                track your stats and compete.
               </h3>
             </div>
             <div className="relative z-30 flex flex-col items-center justify-center">

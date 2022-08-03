@@ -24,6 +24,7 @@
     justify-center
     ;
   }
+  
   .card-body {
     @apply
     relative
@@ -34,7 +35,6 @@
     p-6
     gap-5
     ;
-
   }
 
   .card-title {
@@ -121,6 +121,8 @@
     font-headings
     italic
     leading-none
+    font-bold
+    text-ui-100
     ;
   }
   .card-meta {

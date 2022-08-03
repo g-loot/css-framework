@@ -117,7 +117,7 @@ export default function Topbar() {
                     alt="coins"
                   />
                   <span className="text-sm font-bold text-gold-500">
-                    {prototypeData.getUserByID(0)?.wallet.coins}
+                    {prototypeData.getUserByID(1)?.wallet.coins}
                   </span>
                 </div>
                 <div
@@ -131,7 +131,7 @@ export default function Topbar() {
                     alt="tokens"
                   />
                   <span className="text-sm font-bold text-purple-500">
-                    {prototypeData.getUserByID(0)?.wallet.tokens}
+                    {prototypeData.getUserByID(1)?.wallet.tokens}
                   </span>
                 </div>
                 <div
@@ -145,7 +145,7 @@ export default function Topbar() {
                     alt="tickets"
                   />
                   <span className="text-sm font-bold ml-1 text-bronze-500">
-                    {prototypeData.getUserByID(0)?.wallet.tickets}
+                    {prototypeData.getUserByID(1)?.wallet.tickets}
                   </span>
                 </div>
               </div>
@@ -182,7 +182,7 @@ export default function Topbar() {
                     <figure className="avatar avatar-circle avatar-xs">
                       <div>
                         <img
-                          src={prototypeData.getUserByID(0)?.avatar}
+                          src={prototypeData.getUserByID(1)?.avatar}
                           alt="avatar"
                         />
                       </div>
@@ -207,7 +207,7 @@ export default function Topbar() {
                       </li>
                       <li>
                         <Link
-                          href={`/prototype/profile/0${
+                          href={`/prototype/profile/1${
                             hasAds ? "?ads=true" : ""
                           }`}
                         >

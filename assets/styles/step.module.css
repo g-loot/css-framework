@@ -415,7 +415,7 @@
       }
       > span {
         @apply
-        h-2
+        h-1.5
         w-full
         rounded-full
         mx-2
@@ -440,6 +440,51 @@
       }
     }
   }
+}
+
+.step.step-quinary {
+  &:not([class*="gap-"]) {
+    @apply
+    gap-4
+    ;
+  }
+  li {
+    @apply
+    flex-1
+    ;
+    a {
+      @apply
+      w-full
+      ;
+      i {
+        @apply
+        hidden
+        ;
+      }
+      span {
+        @apply
+        h-1.5
+        rounded-sm
+        block
+        ;
+        &::before {
+          clip-path: none;
+        }
+      }
+    }
+    &.is-active {
+      a {
+        span {
+          &::before {
+            @apply
+            translate-x-0
+            ;
+          }
+        }
+      }
+    }
+  }
+  
 }
 
 /* label position */

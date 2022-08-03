@@ -9,6 +9,7 @@ const DSpage = () => {
   const [randomNum3, setRandomNum3] = useState(1);
   const [randomNum4, setRandomNum4] = useState(1);
   const [randomNum5, setRandomNum5] = useState(1);
+  const [randomNum6, setRandomNum6] = useState(1);
 
   function clickHandlerNum0(varTarget, max) {
     if(varTarget === max) {
@@ -324,6 +325,47 @@ const DSpage = () => {
             </div>
             <div className='flex-1'>
               <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/jx16my3c/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+            </div>
+          </div>
+        </div>
+        <div className='mb-0'>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+            <div className='flex-1 space-y-4'>
+              <div className="text-ui-400 text-sm leading-tight">
+                Quinary
+              </div>
+              <ul className={`step step-quinary ${randomNum5 === 0 ? `is-inactive` : ''}`}>
+                <li className={`${randomNum5 === 1 ? `is-active` : ''}`}>
+                  <a href='#'>
+                    <i>1</i>
+                    <div>Step 1</div>
+                    <span/>
+                  </a>
+                </li>
+                <li className={`${randomNum5 === 2 ? `is-active` : ''}`}>
+                  <a href='#'>
+                    <i>2</i>
+                    <div>Step 2</div>
+                    <span/>
+                  </a>
+                </li>
+                <li className={`${randomNum5 === 3 ? `is-active` : ''}`}>
+                  <a href='#'>
+                    <i>3</i>
+                    <div>Step 3</div>
+                    <span/>
+                  </a>
+                </li>
+              </ul>
+
+              <div className='text-center'>
+                <button className='button button-tertiary mx-auto' onClick={clickHandlerNum5.bind(this, randomNum5, 3)}>
+                  <span>Next step</span>
+                </button>
+              </div>
+            </div>
+            <div className='flex-1'>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/9yvb1s8h/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
             </div>
           </div>
         </div>

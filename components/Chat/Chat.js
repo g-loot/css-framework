@@ -20,7 +20,7 @@ const conversation = [
           },
           {
             emoji: "👏",
-            author: [0],
+            author: [1],
           },
         ],
       },
@@ -34,7 +34,7 @@ const conversation = [
   {
     id: 2,
     time: "Message seen 1.22pm",
-    author: 0,
+    author: 1,
     isYourself: true,
     messages: [
       {
@@ -67,7 +67,7 @@ const conversation = [
   {
     id: 4,
     time: "Message seen 1.22pm",
-    author: 0,
+    author: 1,
     isYourself: true,
     messages: [
       {
@@ -112,7 +112,7 @@ const conversation = [
   {
     id: 7,
     time: "Message seen 1.22pm",
-    author: 0,
+    author: 1,
     isYourself: true,
     messages: [
       {
@@ -177,7 +177,7 @@ export default function Chat(props) {
                     ...updatedReactions,
                     {
                       emoji,
-                      author: [0],
+                      author: [1],
                     },
                   ];
                 }

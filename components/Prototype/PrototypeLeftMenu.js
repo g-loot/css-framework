@@ -28,8 +28,8 @@ export default function PrototypeLeftMenu(props) {
             </Link>
           </li>
           <li>
-            <Link href={`/prototype/profile/0${hasAds ? '?ads=true' : ''}`}>
-              <a className={`${router.pathname.includes("profile") && user_id == 0  ? 'is-active' : ''}`}>
+            <Link href={`/prototype/profile/1${hasAds ? '?ads=true' : ''}`}>
+              <a className={`${router.pathname.includes("profile") && user_id == 1  ? 'is-active' : ''}`}>
                 <span className="icon rounded w-8 flex items-center justify-center">
                   <span className={`icon icon-16 icon-circle-09`}/>
                 </span>

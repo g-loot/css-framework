@@ -50,7 +50,7 @@ const lastestPages = [
   },
   {
     label: "Profile",
-    url: "/prototype/profile/0",
+    url: "/prototype/profile/1",
   },
   {
     label: "Teams",

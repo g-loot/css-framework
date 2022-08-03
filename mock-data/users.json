@@ -1,6 +1,6 @@
 [
   {
-    "id": 0,
+    "id": 1,
     "isYou": true,
     "isPremium": false,
     "isOnline": true,
@@ -12,25 +12,42 @@
     "lang": "ENG",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg",
     "email": "jackjack@gmail.com",
-    "clan": 0,
+    "clan": 1,
     "socials": {
       "riotNickname": "JackAttack123",
       "riotHashtag": 8573,
       "twitch": "@jackattack123"
     },
     "stats": {
+      "xp": 10000,
       "playedBrawls": 143,
-      "playedTournaments": 12
+      "playedTournaments": 12,
+      "gamestats": [
+        {
+          "game": 1,
+          "winrate": "25%",
+          "kdratio": "0.81",
+          "headshotkillsavg": "1.14",
+          "assistavg": "2.3"
+        },
+        {
+          "game": 2,
+          "winrate": "40%",
+          "kdratio": "1.4",
+          "headshotkillsavg": "1.87",
+          "assistavg": "2.3"
+        }
+      ]
     },
     "wallet": {
       "coins": 50000,
       "tokens": 245,
       "tickets": 3
     },
-    "games": [0,4]
+    "games": [1,4]
   },
   {
-    "id": 1,
+    "id": 2,
     "isYou": false,
     "isPremium": false,
     "isOnline": false,
@@ -49,18 +66,35 @@
       "twitch": "@KeesDief"
     },
     "stats": {
+      "xp": 234,
       "playedBrawls": 34,
-      "playedTournaments": 0
+      "playedTournaments": 0,
+      "gamestats": [
+        {
+          "game": 2,
+          "winrate": "25%",
+          "kdratio": "0.81",
+          "headshotkillsavg": "1.14",
+          "assistavg": "2.3"
+        },
+        {
+          "game": 3,
+          "winrate": "40%",
+          "kdratio": "1.4",
+          "headshotkillsavg": "1.87",
+          "assistavg": "2.3"
+        }
+      ]
     },
     "wallet": {
       "coins": 50000,
       "tokens": 245,
       "tickets": 3
     },
-    "games": [0,1,2]
+    "games": [1,2,5]
   },
   {
-    "id": 2,
+    "id": 3,
     "isYou": false,
     "isPremium": false,
     "isOnline": true,
@@ -79,6 +113,7 @@
       "twitch": "@misterkilla"
     },
     "stats": {
+      "xp": 9275,
       "playedBrawls": 243,
       "playedTournaments": 22
     },
@@ -87,10 +122,10 @@
       "tokens": 245,
       "tickets": 3
     },
-    "games": [0]
+    "games": [1]
   },
   {
-    "id": 3,
+    "id": 4,
     "isYou": false,
     "isPremium": false,
     "isOnline": true,
@@ -109,8 +144,18 @@
       "twitch": "@kykymimi"
     },
     "stats": {
+      "xp": 18970,
       "playedBrawls": 143,
-      "playedTournaments": 12
+      "playedTournaments": 12,
+      "gamestats": [
+        {
+          "game": 1,
+          "winrate": "25%",
+          "kdratio": "0.81",
+          "headshotkillsavg": "1.14",
+          "assistavg": "2.3"
+        }
+      ]
     },
     "wallet": {
       "coins": 50000,
@@ -120,7 +165,7 @@
     "games": [5]
   },
   {
-    "id": 4,
+    "id": 5,
     "isYou": false,
     "isPremium": false,
     "isOnline": false,
@@ -132,25 +177,42 @@
     "lang": "ENG",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg",
     "email": "dirtyjohnny@gmail.com",
-    "clan": 4,
+    "clan": null,
     "socials": {
       "riotNickname": "DirtyJohnny",
       "riotHashtag": 8573,
       "twitch": "@dirtyjohnny"
     },
     "stats": {
+      "xp": 874,
       "playedBrawls": 3,
-      "playedTournaments": 0
+      "playedTournaments": 0,
+      "gamestats": [
+        {
+          "game": 2,
+          "winrate": "25%",
+          "kdratio": "0.81",
+          "headshotkillsavg": "1.14",
+          "assistavg": "2.3"
+        },
+        {
+          "game": 3,
+          "winrate": "40%",
+          "kdratio": "1.4",
+          "headshotkillsavg": "1.87",
+          "assistavg": "2.3"
+        }
+      ]
     },
     "wallet": {
-      "coins": 50000,
-      "tokens": 245,
+      "coins": 532,
+      "tokens": 759,
       "tickets": 3
     },
-    "games": [0,2]
+    "games": [1,2]
   },
   {
-    "id": 5,
+    "id": 6,
     "isYou": false,
     "isPremium": false,
     "isOnline": false,
@@ -169,6 +231,7 @@
       "twitch": "@poporob"
     },
     "stats": {
+      "xp": 239,
       "playedBrawls": 74,
       "playedTournaments": 2
     },
@@ -177,10 +240,10 @@
       "tokens": 245,
       "tickets": 3
     },
-    "games": [0]
+    "games": [1]
   },
   {
-    "id": 5,
+    "id": 7,
     "isYou": false,
     "isPremium": false,
     "isOnline": false,
@@ -199,6 +262,7 @@
       "twitch": "@valance"
     },
     "stats": {
+      "xp": 198,
       "playedBrawls": 15,
       "playedTournaments": 0
     },
@@ -207,10 +271,10 @@
       "tokens": 245,
       "tickets": 3
     },
-    "games": [0]
+    "games": [7]
   },
   {
-    "id": 6,
+    "id": 8,
     "isYou": false,
     "isPremium": false,
     "isOnline": false,
@@ -229,6 +293,7 @@
       "twitch": "@PilarPilar"
     },
     "stats": {
+      "xp": 244,
       "playedBrawls": 54,
       "playedTournaments": 23
     },
@@ -237,10 +302,10 @@
       "tokens": 245,
       "tickets": 3
     },
-    "games": [0,6]
+    "games": [4,6]
   },
   {
-    "id": 7,
+    "id": 9,
     "isYou": false,
     "isPremium": false,
     "isOnline": true,
@@ -259,6 +324,7 @@
       "twitch": "@HansGrubby"
     },
     "stats": {
+      "xp": 10000,
       "playedBrawls": 54,
       "playedTournaments": 23
     },
@@ -267,6 +333,37 @@
       "tokens": 245,
       "tickets": 3
     },
-    "games": [0,2,3,4]
+    "games": [1,2,3,4]
+  },
+  {
+    "id": 10,
+    "isYou": false,
+    "isPremium": false,
+    "isOnline": true,
+    "nickname": "FrenzyMan",
+    "firstname": "Scott",
+    "lastname": "Fritz",
+    "country": "Austria",
+    "countryFlag": "at",
+    "lang": "GER",
+    "avatar": "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg",
+    "email": "frenzyman@gmail.com",
+    "clan": null,
+    "socials": {
+      "riotNickname": "FrenzyMan",
+      "riotHashtag": 1254,
+      "twitch": "@FrenzyMan"
+    },
+    "stats": {
+      "xp": 297,
+      "playedBrawls": 2,
+      "playedTournaments": 0
+    },
+    "wallet": {
+      "coins": 50000,
+      "tokens": 245,
+      "tickets": 3
+    },
+    "games": [1,7,3,4]
   }
 ]

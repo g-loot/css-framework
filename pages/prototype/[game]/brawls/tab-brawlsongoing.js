@@ -61,7 +61,7 @@ export default function TabBrawlsOngoing() {
                           <div className="relative z-10 flex p-4">
                             <figure className="avatar avatar-circle avatar-sm">
                               <div>
-                                <img src={prototypeData.getUserByID(0)?.avatar} />
+                                <img src={prototypeData.getUserByID(1)?.avatar} />
                               </div>
                               <i className="radar" />
                             </figure>
@@ -133,7 +133,7 @@ export default function TabBrawlsOngoing() {
                           </div>
                         </>
                       )}
-                      {brawl.progress > 0 && (
+                      {brawl.progress > 0 && brawl.progress < 3 && (
                         <>
                           <ul className="step step-primary step-sm w-full max-w-xs">
                             <li>

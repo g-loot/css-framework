@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import Ad from "../../../components/Ad/Ad";
 import Link from "next/link";
@@ -14,11 +14,20 @@ export default function Home() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const hasAds = query.ads === "true" ? true : false;
+  const modalCreate = query.modalcreate === "true" ? true : false;
   const uiContext = useContext(UiContext);
 
   function openModalClanCreate() {
     uiContext.openModal(<ModalClanCreate></ModalClanCreate>);
   }
+
+  useEffect(()=> {
+    console.log(modalCreate);
+    if(modalCreate) {
+      
+      openModalClanCreate();
+    }
+  }, [modalCreate]);
 
   
   return (
@@ -29,7 +38,7 @@ export default function Home() {
       <PrototypeStructure title="Clans">
         <Ad width="1005" height="124" />
         <section className="mb-8">
-          <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8">
+          <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8 lg:min-h-[250px] lg:flex items-center">
             <div className="relative z-10">
               <h1 className="text-3xl sm:text-4xl">Be stronger with Clans!</h1>
               <ul className="leading-relaxed text-ui-300 mt-4 list-disc ml-4">

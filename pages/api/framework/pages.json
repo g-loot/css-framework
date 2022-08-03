@@ -51,6 +51,14 @@
           "tags": "profile, view, user"
         },
         {
+          "label": "Profile (empty state: no stats, no clan)",
+          "url": "profile/1",
+          "query": "",
+          "tags": "profile, view, user, empty",
+          "tab": 1,
+          "new": true
+        },
+        {
           "label": "Profile settings",
           "url": "profile/settings",
           "query": "",
@@ -83,6 +91,14 @@
           "query": "",
           "tags": "clan,team",
           "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Create Clan (modal)",
+          "url": "clans",
+          "query": "modalcreate=true",
+          "tags": "clan,team",
+          "tab": 2,
           "new": true
         }
       ]

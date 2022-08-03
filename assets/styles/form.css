@@ -525,9 +525,10 @@ label.button {
         duration-300
         ease-in-out
         origin-center
-
         opacity-25
         scale-90
+        grayscale
+        brightness-90
         ;
 
         &::before,
@@ -582,6 +583,8 @@ label.button {
           opacity-100
           scale-100
           shadow-main
+          grayscale-0
+          brightness-100
           ;
           &::before,
           &::after {

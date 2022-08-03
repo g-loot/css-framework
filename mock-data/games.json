@@ -1,6 +1,6 @@
 [
   {
-    "id": 0,
+    "id": 1,
     "maintenance": false,
     "needsSteam": false,
     "isFavorite": true,
@@ -70,13 +70,14 @@
     ],
     "brawls": [
       {
-        "id": 0,
+        "id": 1,
         "solo": true,
         "clan": true,
         "name": "Competitive Brawl",
         "cover" : "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp",
         "status": "ongoing",
         "gameMode": "Competitive",
+        "sponsor": false,
         "rewards": [
           {
             "type": "coin",
@@ -288,7 +289,7 @@
         ]
       },
       {
-        "id": 1,
+        "id": 2,
         "solo": true,
         "clan": true,
         "name": "Brawl - the Winter edition",
@@ -408,12 +409,356 @@
               "gameScore": 143
             }
           }
+        ],
+        "clanLeaderboard": [
+          {
+            "clan": 1,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 123,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 2,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 115,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 3,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 113,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 0,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 108,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 4,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 98,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 5,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 97,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 6,
+            "rewards": {
+            },
+            "stats": {
+              "brawlPoints": 78,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 7,
+            "rewards": {
+            },
+            "stats": {
+              "brawlPoints": 77,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          }
         ]
+      }
+    ],
+    "tournaments": [
+      {
+        "id": 1,
+        "solo": true,
+        "clan": true,
+        "name": "Valorant Open Tour",
+        "cover" : "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
+        "status": "ongoing",
+        "gameMode": "Competitive",
+        "sponsor": false,
+        "rewards": [
+          {
+            "type": "coin",
+            "value": 10000
+          }
+        ],
+        "progress": 0,
+        "soloLeaderboard": [
+          {
+            "user": 1,
+            "rewards": {
+              "coin": 250000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 123,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 2,
+            "rewards": {
+              "coin": 200000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 115,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 3,
+            "rewards": {
+              "coin": 150000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 113,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 0,
+            "rewards": {
+              "coin": 75000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 108,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 4,
+            "rewards": {
+              "coin": 50000
+            },
+            "stats": {
+              "brawlPoints": 98,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 5,
+            "rewards": {
+              "coin": 250000
+            },
+            "stats": {
+              "brawlPoints": 97,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 6,
+            "rewards": {
+              "coin": 25000
+            },
+            "stats": {
+              "brawlPoints": 78,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 7,
+            "rewards": {
+              "coin": 10000
+            },
+            "stats": {
+              "brawlPoints": 77,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          }
+        ],
+        "stats": {
+          "placement": 53,
+          "kills": 54
+        } 
+      },
+      {
+        "id": 2,
+        "solo": true,
+        "clan": true,
+        "name": "Valorant Champions 2023",
+        "cover" : "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
+        "status": "scheduled",
+        "gameMode": "Competitive",
+        "sponsor": false,
+        "rewards": [
+          {
+            "type": "coin",
+            "value": 10000
+          }
+        ],
+        "progress": 0,
+        "soloLeaderboard": [
+          {
+            "user": 1,
+            "rewards": {
+              "coin": 250000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 123,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 2,
+            "rewards": {
+              "coin": 200000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 115,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 3,
+            "rewards": {
+              "coin": 150000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 113,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 0,
+            "rewards": {
+              "coin": 75000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 108,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 4,
+            "rewards": {
+              "coin": 50000
+            },
+            "stats": {
+              "brawlPoints": 98,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 5,
+            "rewards": {
+              "coin": 250000
+            },
+            "stats": {
+              "brawlPoints": 97,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 6,
+            "rewards": {
+              "coin": 25000
+            },
+            "stats": {
+              "brawlPoints": 78,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 7,
+            "rewards": {
+              "coin": 10000
+            },
+            "stats": {
+              "brawlPoints": 77,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          }
+        ],
+        "stats": {
+          "placement": 0,
+          "kills": 0
+        } 
       }
     ]
   },
   {
-    "id": 1,
+    "id": 2,
     "maintenance": false,
     "needsSteam": true,
     "isFavorite": true,
@@ -483,13 +828,14 @@
     ],
     "brawls": [
       {
-        "id": 0,
+        "id": 1,
         "solo": true,
         "clan": true,
         "name": "Competitive Brawl",
         "cover" : "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-pubg-4.webp",
         "status": "ongoing",
         "gameMode": "Competitive",
+        "sponsor": false,
         "rewards": [
           {
             "type": "coin",
@@ -500,12 +846,429 @@
             "value": 5
           }
         ],
-        "progress": 0
+        "progress": 0,
+        "soloLeaderboard": [
+          {
+            "user": 1,
+            "rewards": {
+              "coin": 250000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 123,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 2,
+            "rewards": {
+              "coin": 200000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 115,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 3,
+            "rewards": {
+              "coin": 150000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 113,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 0,
+            "rewards": {
+              "coin": 75000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 108,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 4,
+            "rewards": {
+              "coin": 50000
+            },
+            "stats": {
+              "brawlPoints": 98,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 5,
+            "rewards": {
+              "coin": 250000
+            },
+            "stats": {
+              "brawlPoints": 97,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 6,
+            "rewards": {
+              "coin": 25000
+            },
+            "stats": {
+              "brawlPoints": 78,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 7,
+            "rewards": {
+              "coin": 10000
+            },
+            "stats": {
+              "brawlPoints": 77,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          }
+        ],
+        "clanLeaderboard": [
+          {
+            "clan": 1,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 123,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 2,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 115,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 3,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 113,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 0,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 108,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 4,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 98,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 5,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 97,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 6,
+            "rewards": {
+            },
+            "stats": {
+              "brawlPoints": 78,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 7,
+            "rewards": {
+            },
+            "stats": {
+              "brawlPoints": 77,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "solo": true,
+        "clan": true,
+        "name": "Brawl - the Winter edition",
+        "cover" : "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-pubg-5.webp",
+        "status": "ongoing",
+        "gameMode": "Competitive",
+        "sponsor": "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+        "rewards": [
+          {
+            "type": "coin",
+            "value": 10000
+          },
+          {
+            "type": "ticket",
+            "value": 5
+          }
+        ],
+        "progress": 3,
+        "soloLeaderboard": [
+          {
+            "user": 1,
+            "rewards": {
+              "coin": 250000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 123,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 2,
+            "rewards": {
+              "coin": 200000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 115,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 3,
+            "rewards": {
+              "coin": 150000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 113,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 0,
+            "rewards": {
+              "coin": 75000,
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 108,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 4,
+            "rewards": {
+              "coin": 50000
+            },
+            "stats": {
+              "brawlPoints": 98,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 5,
+            "rewards": {
+              "coin": 250000
+            },
+            "stats": {
+              "brawlPoints": 97,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 6,
+            "rewards": {
+              "coin": 25000
+            },
+            "stats": {
+              "brawlPoints": 78,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "user": 7,
+            "rewards": {
+              "coin": 10000
+            },
+            "stats": {
+              "brawlPoints": 77,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          }
+        ],
+        "clanLeaderboard": [
+          {
+            "clan": 1,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 123,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 2,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 115,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 3,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 113,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 0,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 108,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 4,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 98,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 5,
+            "rewards": {
+              "ticket": 1
+            },
+            "stats": {
+              "brawlPoints": 97,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 6,
+            "rewards": {
+            },
+            "stats": {
+              "brawlPoints": 78,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          },
+          {
+            "clan": 7,
+            "rewards": {
+            },
+            "stats": {
+              "brawlPoints": 77,
+              "matchPlayed": 11,
+              "tiebreakerPoints": 1402,
+              "gameScore": 143
+            }
+          }
+        ]
       }
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "maintenance": false,
     "needsSteam": true,
     "isFavorite": false,
@@ -539,7 +1302,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "maintenance": false,
     "needsSteam": false,
     "isFavorite": false,
@@ -573,7 +1336,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 5,
     "maintenance": false,
     "needsSteam": false,
     "isFavorite": false,
@@ -607,7 +1370,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "maintenance": false,
     "needsSteam": false,
     "isFavorite": false,
@@ -641,7 +1404,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "maintenance": false,
     "needsSteam": false,
     "isFavorite": false,

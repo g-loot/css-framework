@@ -529,6 +529,12 @@
       px-2
       ;
     }
+    &.chip-sliced {
+      @apply
+      pl-1
+      pr-2
+      ;
+    }
     > .button-close {
       @apply
       p-0

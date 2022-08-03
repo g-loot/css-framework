@@ -786,13 +786,13 @@ export default function TabBrawlsSoloLeaderboards() {
                                     </li>
                                   </ul>
                                   <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
-                                    <Link href="/prototype/profile/0">
+                                    <Link href="/prototype/profile/1">
                                       <a className="link link-main link-hover flex items-center gap-1 text-sm">
                                         <span className="icon icon-profile-2" />
                                         <span>Go to Player profile</span>
                                       </a>
                                     </Link>
-                                    <Link href="/prototype/profile/0">
+                                    <Link href="/prototype/profile/1">
                                       <a className="link link-main link-hover flex items-center gap-1 text-sm">
                                         <span className="icon icon-multiple-12" />
                                         <span>Go to Clan page</span>
