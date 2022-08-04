@@ -1,5 +1,10 @@
+import React, { useContext, useEffect } from "react";
+
 import Accordion from "../../../../components/Accordion/Accordion";
 import Link from "next/link";
+import ModalBrawlHowitworksVideo from "./modal-howitworks-video";
+import ModalContainer from "../../../../components/Modal/ModalContainer";
+import { UiContext } from "../../../../contexts/ui";
 import { useRouter } from "next/router";
 
 const MissionsHowitworksTabs = [
@@ -175,8 +180,24 @@ const MissionsHowitworksTabs = [
 export default function TabBrawlsHowItWorks() {
   const { query } = useRouter();
   const hasAds = query.ads === "true" ? true : false;
+  const uiContext = useContext(UiContext);
+  const modalVideo = query.modalvideo === "true" ? true : false;
+
+  function openModalBrawlHowitworksVideo() {
+    uiContext.openModal(<ModalBrawlHowitworksVideo></ModalBrawlHowitworksVideo>);
+  }
+
+  useEffect(() => {
+    if (modalVideo) {
+      openModalBrawlHowitworksVideo();
+    }
+  }, [modalVideo]);
+
   return (
     <>
+      {uiContext.displayedModal && (
+        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
+      )}
       <section
         className="py-12 animate-slide-in-bottom animate-delay"
         style={{ "--delay": "calc( 1 * 0.05s)" }}
@@ -228,7 +249,7 @@ export default function TabBrawlsHowItWorks() {
         </div>
         <div className="surface sm:rounded-lg overflow-hidden max-w-sm mx-auto mb-4 relative">
           <div className="absolute inset-0 flex items-center justify-center bg-ui-900/50">
-            <button type='button' className="button button-tertiary button-lg button-play">
+            <button type='button' className="button button-tertiary button-lg button-play" onClick={openModalBrawlHowitworksVideo}>
               <span className="icon icon-circle-caret-right"></span>
             </button>
           </div>

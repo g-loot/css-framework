@@ -275,8 +275,6 @@ export default function TabBrawlsYourBrawlMatches() {
                   </div>
                 </>
               ))}
-              <div className="absolute z-0 rounded-full bg-gradient-to-r from-main via-blue-700 to-main/0 w-36 h-28 scale-y-75 blur-2xl transform-gpu -rotate-45 -bottom-6 left-[calc(50%-20rem)]"></div>
-              <div className="absolute z-0 rounded-full bg-gradient-to-r from-main via-blue-700 to-main/0 w-36 h-36 scale-y-75 blur-2xl transform-gpu -top-8 right-[calc(50%-24rem)] rotate-180 "></div>
             </div>
             <div className="my-8 max-w-md mx-auto text-center">
               <div className="flex items-center justify-center gap-4 mb-8">

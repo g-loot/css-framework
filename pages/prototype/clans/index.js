@@ -9,7 +9,7 @@ import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 
-export default function Home() {
+export default function Clan() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
@@ -22,9 +22,7 @@ export default function Home() {
   }
 
   useEffect(()=> {
-    console.log(modalCreate);
     if(modalCreate) {
-      
       openModalClanCreate();
     }
   }, [modalCreate]);
@@ -254,9 +252,11 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-4 flex gap-4 items-center">
-                  <button type="button" className="button button-sm button-primary">
-                    <span>Browse clans</span>
-                  </button>
+                  <Link href="/prototype/clans/search">
+                    <button type="button" className="button button-sm button-primary">
+                      <span>Browse clans</span>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

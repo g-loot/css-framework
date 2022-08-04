@@ -231,7 +231,7 @@ export default function TabMissionsMissions() {
                 alt=""
                 style={{ "--delay": "calc(2 * 0.05s)" }}
               />
-              <h4 className="text-2xl">
+              <h4 className="text-3xl">
                 <span>Join</span>{" "}
                 <span className="text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
                   G-Loot Premium

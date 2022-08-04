@@ -32,6 +32,14 @@
           "url": "home",
           "query": "",
           "tags": "home, start, index"
+        },
+        {
+          "label": "Claim daily rewards (modal)",
+          "url": "home",
+          "query": "modalclaim=true",
+          "tab": 1,
+          "new": true,
+          "tags": "home, start, index, modal, claim, rewards, daily missions,"
         }
       ]
     },
@@ -40,19 +48,19 @@
       "pages": [
         {
           "label": "Profile (self)",
-          "url": "profile/0",
+          "url": "profile/1",
           "query": "",
           "tags": "profile, view, user"
         },
         {
           "label": "Profile",
-          "url": "profile/1",
+          "url": "profile/2",
           "query": "",
           "tags": "profile, view, user"
         },
         {
           "label": "Profile (empty state: no stats, no clan)",
-          "url": "profile/1",
+          "url": "profile/10",
           "query": "",
           "tags": "profile, view, user, empty",
           "tab": 1,
@@ -75,6 +83,13 @@
           "url": "clans",
           "query": "",
           "tags": "clan,team",
+          "new": true
+        },
+        {
+          "label": "Clans search",
+          "url": "clans/search",
+          "query": "",
+          "tags": "clan,team,search,form,find",
           "new": true
         },
         {
@@ -188,6 +203,14 @@
           "url": "valorant/brawls",
           "query": "tab=how-it-works",
           "tags": "game, brawls, how it works, explanation",
+          "new": true
+        },
+        {
+          "label": "How it works (modal)",
+          "url": "valorant/brawls",
+          "query": "tab=how-it-works&modalvideo=true",
+          "tags": "game, brawls, how it works, explanation",
+          "tab": 1,
           "new": true
         },
         {

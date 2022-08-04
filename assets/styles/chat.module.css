@@ -7,19 +7,31 @@
   * {
     --scroll-behavior: auto;
   }
+  @apply
+  overflow-x-hidden
+  ;
 }
 
+.chat-feed {
+  @apply
+  overflow-y-hidden
+  md:overflow-y-auto
+  overflow-x-hidden
+  scrollbar-desktop
+  ;
+}
 .chat-group {
   @apply
   flex
   items-end
-  px-4
+  px-2
+  lg:px-4
   py-8
   relative
   ;
   .chat-messages {
     @apply
-    max-w-[70%]
+    lg:max-w-[70%]
     flex
     flex-col
     gap-4
@@ -54,7 +66,8 @@
     }
     .chat-messages {
       @apply
-      pl-4
+      pl-2
+      lg:pl-4
       ;
       .chat-message {
         .chat-bubble {
@@ -89,7 +102,8 @@
     }
     .chat-messages {
       @apply
-      pr-4
+      pr-2
+      lg:pr-4
       items-end
       ;
       .chat-message {
@@ -120,6 +134,12 @@
       ;
     }
   }
+  &:last-child {
+    @apply
+    pb-44
+    xl:pb-20
+    ;
+  }
 }
 
 .chat-author {
@@ -146,6 +166,7 @@
     ;
   }
 }
+
 .chat-bubble {
   @apply
   bg-ui-600
@@ -161,7 +182,8 @@
   }
   img {
     @apply
-    max-w-xs
+    max-w-[75vw]
+    lg:max-w-xs
     ;
   }
   &:not(.chat-bubble-image) {
@@ -235,10 +257,23 @@
   p-2
   border-t
   border-ui-700
+  bg-ui-800
   ;
   > .form-group {
     @apply
     flex-1
     ;
+  }
+}
+
+.chat.chat-responsive {
+  .chat-footer {
+    @apply
+    fixed
+    inset-x-0
+    bottom-0
+    xl:relative
+    ;
+    z-index: 10000;
   }
 }

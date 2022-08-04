@@ -250,8 +250,8 @@ export default function Chat(props) {
   }
   return (
     <>
-      <div className="chat">
-        <div className={`overflow-y-auto scrollbar-desktop ${maxHeight}`}>
+      <div className="chat chat-responsive">
+        <div className={`chat-feed ${maxHeight}`}>
           <ul className="chat-main">
             {messages?.map((message, messageIndex) => (
               <li

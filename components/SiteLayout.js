@@ -5,18 +5,10 @@ import { useRouter } from "next/router";
 const SiteLayout = ({ children }) => {
   const { query } = useRouter();
   const oldColors = query.oldcolors ? true : false;
-  return (
-    <div className={`${oldColors ? "oldcolors" : ""}`}>
-      {children}
-    </div>
-  ) 
+  return <div className={`${oldColors ? "oldcolors" : ""}`}>{children}</div>;
 };
 
-
-
-
 export const getLayout = (page) => (
-  
   <SiteLayout>
     <UiContextProvider>
       <PrototypeProvider>{page}</PrototypeProvider>

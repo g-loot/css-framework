@@ -12,22 +12,9 @@
   gap-3
   leading-none
   uppercase
-  text-ui-400
+  text-ui-300
   w-full
   ;
-
-  &:hover {
-    li {
-      @apply
-      opacity-30
-      ;
-      &:hover {
-        @apply
-        opacity-100
-        ;
-      }
-    }
-  }
 
   > li {
     &,

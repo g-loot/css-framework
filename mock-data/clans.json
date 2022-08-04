@@ -2,8 +2,9 @@
   {
     "id": 1,
     "isYou": true,
+    "isJoinable": true,
     "isFeatured": true,
-    "nickname": "Racoon 5",
+    "nickname": "Raccoon 5",
     "tag": "RAC",
     "avatar": "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Foxy.png",
     "introduction": "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
@@ -23,6 +24,7 @@
   {
     "id": 2,
     "isYou": false,
+    "isJoinable": true,
     "isFeatured": true,
     "nickname": "PizzaYOLO",
     "tag": "YOLO",
@@ -42,6 +44,7 @@
   {
     "id": 3,
     "isYou": false,
+    "isJoinable": false,
     "isFeatured": false,
     "nickname": "BBL Esports",
     "tag": "BBL",
@@ -63,6 +66,7 @@
   {
     "id": 4,
     "isYou": false,
+    "isJoinable": true,
     "isFeatured": false,
     "nickname": "Gorillas Esports",
     "tag": "GOR",
@@ -84,6 +88,7 @@
   {
     "id": 5,
     "isYou": false,
+    "isJoinable": false,
     "isFeatured": false,
     "nickname": "ACEND",
     "tag": "AC",
@@ -105,6 +110,7 @@
   {
     "id": 6,
     "isYou": false,
+    "isJoinable": true,
     "isFeatured": false,
     "nickname": "Dusty Smokers",
     "tag": "DST",
@@ -126,6 +132,7 @@
   {
     "id": 7,
     "isYou": false,
+    "isJoinable": true,
     "isFeatured": false,
     "nickname": "Valorians",
     "tag": "VAL",
@@ -147,6 +154,7 @@
   {
     "id": 8,
     "isYou": false,
+    "isJoinable": false,
     "isFeatured": false,
     "nickname": "#1",
     "tag": "ONE",

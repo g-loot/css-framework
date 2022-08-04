@@ -20,13 +20,12 @@ When a push is made on the main branch, **the library is automatically updated**
 - [Github packages](https://github.com/g-loot/css-framework/packages/1521083) (for internal use)
 - [npmjs](https://www.npmjs.com/package/@g-loot/css-framework) (for easy access by the UXs and UIs on tools such as [Stackblitz](https://stackblitz.com/edit/gloot-framework))
 
-⚠️ Before you push on main, make sure you **update the library version** on /framework/package.json
+⚠️ If by pushing to main you wish to update the update the library, make sure you **update its version** on /framework/package.json
 
 ```json
 { 	
   "name": "@g-loot/css-framework", 
-  "version": "👉{version to update}👈", 
-  "dependencies": {} 
+  "version": "👉{version to update}👈"
 }
 ```
 

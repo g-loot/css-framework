@@ -165,7 +165,7 @@
         
         {
           "label": "Pagination",
-          "tags": "nav,navigation,pages,next,previous",
+          "tags": "nav,navigation,pages,next,previous,pagination,listing",
           "url": "pagination"
         },
         {

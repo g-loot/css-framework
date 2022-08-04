@@ -32,7 +32,6 @@ const TabsItems = [
     url: "history",
     component: TabBrawlsHistory,
   },
-  
 ];
 
 export default function Home() {

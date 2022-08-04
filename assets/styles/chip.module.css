@@ -178,6 +178,7 @@
     > span:not(.icon) {
       @apply
       font-headings
+      font-bold
       uppercase
       text-lg
       ;

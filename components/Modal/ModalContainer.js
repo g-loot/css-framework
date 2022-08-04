@@ -14,7 +14,7 @@ const ModalOverlay = (props) => {
   return (
     <div onClick={overlayClickHandler} className="modal-container">
       <div className="modal-dialog">
-        <div className="modal surface">{props.children}</div>
+        {props.children}
       </div>
     </div>
   );

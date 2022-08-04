@@ -87,14 +87,12 @@ const Index = () => {
                                 <div className="item-title text-ui-300 flex gap-2">
                                   <span>{item.label}</span>
                                   {item.new && (
-                                    <div className='chip chip-xs chip-primary'>
-                                      <span>NEW</span>
-                                    </div>
+                                    <i className="badge" />
                                   )}
                                 </div>
                               </div>
                               <div className="item-actions">
-                                <div className="block lg:hidden">
+                                <div className="block xl:hidden">
                                   <Link
                                     href={`/prototype/${item.url}${
                                       item.query ? "?" : ""
@@ -105,7 +103,7 @@ const Index = () => {
                                     </a>
                                   </Link>
                                 </div>
-                                <div className="hidden lg:flex gap-2">
+                                <div className="hidden xl:flex gap-2">
                                   <Link
                                     href={`/prototype/${item.url}${
                                       item.query ? "?" : ""

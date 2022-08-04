@@ -1,18 +1,50 @@
+import React, { useContext, useEffect } from "react";
+
 import Ad from "../../../components/Ad/Ad";
 import Carousel from "../../../components/Carousel/Carousel";
 import Countdown from "../../../components/Countdown/Countdown";
+import ModalBrawlHowitworksVideo from "../[game]/brawls/modal-howitworks-video";
+import ModalClaimDailyRewards from "./modal-claim-dailyrewards";
+import ModalContainer from "../../../components/Modal/ModalContainer";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import RewardLadder from "../../../components/RewardLadder/RewardLadder";
-import useFetch from "../../../hooks/use-fetch";
+import { UiContext } from "../../../contexts/ui";
 import { useRouter } from "next/router";
+
 //import DataGames from '../../mock-data/games.json'
 
 export default function Home() {
   const router = useRouter();
-  const { data, loading } = useFetch("/api/brawls", { delay: 1000 });
+  const { query } = useRouter();
+  const uiContext = useContext(UiContext);
+  const modalCreate = query.modalclaim === "true" ? true : false;
+  const modalVideo = query.modalvideo === "true" ? true : false;
+
+  function openModalBrawlHowitworksVideo() {
+    uiContext.openModal(<ModalBrawlHowitworksVideo></ModalBrawlHowitworksVideo>);
+  }
+
+  useEffect(() => {
+    if (modalVideo) {
+      openModalBrawlHowitworksVideo();
+    }
+  }, [modalVideo]);
+
+  function openModalClaimDailyRewards() {
+    uiContext.openModal(<ModalClaimDailyRewards></ModalClaimDailyRewards>);
+  }
+
+  useEffect(() => {
+    if (modalCreate) {
+      openModalClaimDailyRewards();
+    }
+  }, [modalCreate]);
 
   return (
     <>
+      {uiContext.displayedModal && (
+        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
+      )}
       <PrototypeStructure title="Home">
         <Ad width="1005" height="300" />
 
@@ -76,7 +108,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative z-30 flex flex-col items-center justify-center">
-              <button className="button button-claim is-shining">
+              <button type="button" className="button button-claim is-shining" onClick={openModalClaimDailyRewards}>
                 <span>Claim rewards</span>
               </button>
             </div>
@@ -90,7 +122,11 @@ export default function Home() {
 
           <div className="surface surface-dimmed flex flex-col flex-1 min-h-[16rem] lg:min-h-fit relative overflow-hidden sm:rounded-lg p-4">
             <div className="relative z-30 flex-1 flex flex-col items-center justify-center text-center">
-              <button className="button button-secondary button-sm button-play">
+              <button
+                type="button"
+                className="button button-secondary button-sm button-play"
+                onClick={openModalBrawlHowitworksVideo}
+              >
                 <span className="icon icon-circle-caret-right" />
                 <span>How to brawl</span>
               </button>
@@ -101,7 +137,7 @@ export default function Home() {
               </h3>
             </div>
             <div className="relative z-30 flex flex-col items-center justify-center">
-              <button className="button button-primary">
+              <button type="button" className="button button-primary">
                 <span>Download tracker</span>
               </button>
             </div>
@@ -156,7 +192,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative z-30 flex flex-col items-center justify-center">
-              <button className="button button-secondary">
+              <button type="button" className="button button-secondary">
                 <span>View stats</span>
               </button>
             </div>
