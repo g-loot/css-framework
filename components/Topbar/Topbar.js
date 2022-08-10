@@ -73,7 +73,7 @@ const notificationsGroups = [
 
 export default function Topbar() {
   const { query } = useRouter();
-  const prototypeData = usePrototypeData();
+  const prototype = usePrototypeData();
   const hasAds = query.ads === "true" ? true : false;
 
   return (
@@ -117,7 +117,7 @@ export default function Topbar() {
                     alt="coins"
                   />
                   <span className="text-sm font-bold text-gold-500">
-                    {prototypeData.getUserByID(1)?.wallet.coins}
+                    {prototype.getUserByID(1)?.wallet.coins}
                   </span>
                 </div>
                 <div
@@ -131,7 +131,7 @@ export default function Topbar() {
                     alt="tokens"
                   />
                   <span className="text-sm font-bold text-purple-500">
-                    {prototypeData.getUserByID(1)?.wallet.tokens}
+                    {prototype.getUserByID(1)?.wallet.tokens}
                   </span>
                 </div>
                 <div
@@ -145,7 +145,7 @@ export default function Topbar() {
                     alt="tickets"
                   />
                   <span className="text-sm font-bold ml-1 text-bronze-500">
-                    {prototypeData.getUserByID(1)?.wallet.tickets}
+                    {prototype.getUserByID(1)?.wallet.tickets}
                   </span>
                 </div>
               </div>
@@ -182,7 +182,7 @@ export default function Topbar() {
                     <figure className="avatar avatar-circle avatar-xs">
                       <div>
                         <img
-                          src={prototypeData.getUserByID(1)?.avatar}
+                          src={prototype.getUserByID(1)?.avatar}
                           alt="avatar"
                         />
                       </div>

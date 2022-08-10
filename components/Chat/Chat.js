@@ -12,7 +12,8 @@ const conversation = [
       {
         id: 1,
         type: "text",
-        content: "Welcome aboard <a className='font-bold' href='#'>@James</a> 👋",
+        content:
+          "Welcome aboard <a className='font-bold' href='#'>@James</a> 👋",
         reactions: [
           {
             emoji: "❤️",
@@ -131,8 +132,10 @@ const conversation = [
 ];
 
 export default function Chat(props) {
-  const maxHeight = props.maxheight !== undefined ? props.maxheight : "h-[700px]";
-  const prototypeData = usePrototypeData();
+  const maxHeight =
+    props.maxheight !== undefined ? props.maxheight : "h-[700px]";
+  const isDisabled = props.isdisabled;
+  const prototype = usePrototypeData();
   const [messages, setMessages] = useState(conversation);
   const [newMessageAdded, setNewMessageAdded] = useState(false);
 
@@ -148,7 +151,7 @@ export default function Chat(props) {
   useEffect(() => {
     bottomRef.current?.scrollIntoView({
       behavior: "instant",
-      block: "nearest",
+      block: "end",
       inline: "end",
     });
   }, [
@@ -251,212 +254,247 @@ export default function Chat(props) {
   return (
     <>
       <div className="chat chat-responsive">
-        <div className={`chat-feed ${maxHeight}`}>
-          <ul className="chat-main">
-            {messages?.map((message, messageIndex) => (
-              <li
-                key={message.id}
-                className={`chat-group ${message.isYourself ? "is-owner" : ""}`}
-              >
-                <div className="chat-author">
-                  <figure className="avatar avatar-circle avatar-sm">
-                    <div>
-                      <img
-                        src={prototypeData.getUserByID(message.author)?.avatar}
-                        alt="avatar"
-                      />
-                    </div>
-                  </figure>
-                  <time dateTime="2008-02-14 20:00">{message.time}</time>
-                </div>
-                <div className="chat-messages">
-                  <span className="leading-none uppercase text-sm">
-                    {message.isYourself && <>You</>}
-                    {!message.isYourself && (
-                      <>{prototypeData.getUserByID(message.author)?.nickname}</>
-                    )}
-                  </span>
-                  {message.messages.map((messageBubble, messageBubbleIndex) => (
-                    <div key={messageBubble.id} className="chat-message">
-                      <div
-                        className={`chat-bubble ${
-                          messageBubble.type === "image" ? "chat-bubble-image" : ""
-                        }`}
-                      >
-                        {messageBubble.type === "text" && (
+        <div
+          className={`chat-feed ${maxHeight} ${isDisabled ? "flex items-center justify-center" : ""}`}
+        >
+          {!isDisabled && (
+            <ul className="chat-main">
+              {messages?.map((message, messageIndex) => (
+                <li
+                  key={message.id}
+                  className={`chat-group ${
+                    message.isYourself ? "is-owner" : ""
+                  }`}
+                >
+                  <div className="chat-author">
+                    <figure className="avatar avatar-circle avatar-sm">
+                      <div>
+                        <img
+                          src={
+                            prototype.getUserByID(message.author)?.avatar
+                          }
+                          alt="avatar"
+                        />
+                      </div>
+                    </figure>
+                    <time dateTime="2008-02-14 20:00">{message.time}</time>
+                  </div>
+                  <div className="chat-messages">
+                    <span className="leading-none uppercase text-sm">
+                      {message.isYourself && <>You</>}
+                      {!message.isYourself && (
+                        <>
+                          {prototype.getUserByID(message.author)?.nickname}
+                        </>
+                      )}
+                    </span>
+                    {message.messages.map(
+                      (messageBubble, messageBubbleIndex) => (
+                        <div key={messageBubble.id} className="chat-message">
                           <div
-                            dangerouslySetInnerHTML={{
-                              __html: messageBubble.content,
-                            }}
-                          />
-                        )}
-                        {messageBubble.type === "image" && (
-                          <>
-                            <img src={messageBubble.content} alt="" />
-                          </>
-                        )}
-                        {messageBubble.reactions && (
-                          <div className="chat-bubble-reactions">
-                            {messageBubble.reactions.map(
-                              (reaction, reactionIndex) => (
-                                <div
-                                  key={reactionIndex}
-                                  className={`animate-slide-in-top ${
-                                    reaction.author.find((author) => {
-                                      author === 0;
-                                    })
-                                      ? "is-owner"
-                                      : ""
-                                  }`}
-                                  data-tooltip={
-                                    prototypeData.getUserByID(reaction.author)
-                                      ?.nickname
-                                  }
-                                >
-                                  <span>{reaction.emoji}</span>
-                                  <span>{reaction.author.length}</span>
-                                </div>
-                              )
+                            className={`chat-bubble ${
+                              messageBubble.type === "image"
+                                ? "chat-bubble-image"
+                                : ""
+                            }`}
+                          >
+                            {messageBubble.type === "text" && (
+                              <div
+                                dangerouslySetInnerHTML={{
+                                  __html: messageBubble.content,
+                                }}
+                              />
+                            )}
+                            {messageBubble.type === "image" && (
+                              <>
+                                <img src={messageBubble.content} alt="" />
+                              </>
+                            )}
+                            {messageBubble.reactions && (
+                              <div className="chat-bubble-reactions">
+                                {messageBubble.reactions.map(
+                                  (reaction, reactionIndex) => (
+                                    <div
+                                      key={reactionIndex}
+                                      className={`animate-slide-in-top ${
+                                        reaction.author.find((author) => {
+                                          author === 0;
+                                        })
+                                          ? "is-owner"
+                                          : ""
+                                      }`}
+                                      data-tooltip={
+                                        prototype.getUserByID(
+                                          reaction.author
+                                        )?.nickname
+                                      }
+                                    >
+                                      <span>{reaction.emoji}</span>
+                                      <span>{reaction.author.length}</span>
+                                    </div>
+                                  )
+                                )}
+                              </div>
                             )}
                           </div>
-                        )}
-                      </div>
-                      <div className="chat-actions">
-                        <div
-                          className="chat-action-hidden"
-                          data-tooltip="React"
-                        >
-                          <div className="dropdown dropdown-center">
-                            <label
-                              tabIndex="0"
-                              className="button button-ghost rounded-full"
-                            >
-                              <span className="icon icon-smile"></span>
-                            </label>
+                          <div className="chat-actions">
                             <div
-                              tabIndex="0"
-                              className="dropdown-content bg-ui-500 p-1"
+                              className="chat-action-hidden"
+                              data-tooltip="React"
                             >
-                              <ul className="menu menu-secondary menu-rounded menu-horizontal">
-                                <li>
-                                  <a
-                                    onClick={addEmoji.bind(
-                                      this,
-                                      message.id,
-                                      messageBubble.id,
-                                      "❤️"
-                                    )}
-                                  >
-                                    <span>
-                                      <span className="text-xl">❤️</span>
-                                    </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    onClick={addEmoji.bind(
-                                      this,
-                                      message.id,
-                                      messageBubble.id,
-                                      "👍"
-                                    )}
-                                  >
-                                    <span>
-                                      <span className="text-xl">👍</span>
-                                    </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    onClick={addEmoji.bind(
-                                      this,
-                                      message.id,
-                                      messageBubble.id,
-                                      "😂"
-                                    )}
-                                  >
-                                    <span>
-                                      <span className="text-xl">😂</span>
-                                    </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a
-                                    onClick={addEmoji.bind(
-                                      this,
-                                      message.id,
-                                      messageBubble.id,
-                                      "👏"
-                                    )}
-                                  >
-                                    <span>
-                                      <span className="text-xl">👏</span>
-                                    </span>
-                                  </a>
-                                </li>
-                              </ul>
+                              <div className="dropdown dropdown-center">
+                                <label
+                                  tabIndex="0"
+                                  className="button button-ghost rounded-full"
+                                >
+                                  <span className="icon icon-smile"></span>
+                                </label>
+                                <div
+                                  tabIndex="0"
+                                  className="dropdown-content bg-ui-500 p-1"
+                                >
+                                  <ul className="menu menu-secondary menu-rounded menu-horizontal">
+                                    <li>
+                                      <a
+                                        onClick={addEmoji.bind(
+                                          this,
+                                          message.id,
+                                          messageBubble.id,
+                                          "❤️"
+                                        )}
+                                      >
+                                        <span>
+                                          <span className="text-xl">❤️</span>
+                                        </span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a
+                                        onClick={addEmoji.bind(
+                                          this,
+                                          message.id,
+                                          messageBubble.id,
+                                          "👍"
+                                        )}
+                                      >
+                                        <span>
+                                          <span className="text-xl">👍</span>
+                                        </span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a
+                                        onClick={addEmoji.bind(
+                                          this,
+                                          message.id,
+                                          messageBubble.id,
+                                          "😂"
+                                        )}
+                                      >
+                                        <span>
+                                          <span className="text-xl">😂</span>
+                                        </span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a
+                                        onClick={addEmoji.bind(
+                                          this,
+                                          message.id,
+                                          messageBubble.id,
+                                          "👏"
+                                        )}
+                                      >
+                                        <span>
+                                          <span className="text-xl">👏</span>
+                                        </span>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              className="chat-action-hidden"
+                              data-tooltip="More"
+                            >
+                              <div className="dropdown dropdown-center">
+                                <label
+                                  tabIndex="0"
+                                  className="button button-ghost rounded-full"
+                                >
+                                  <span className="icon icon-dots-vertical"></span>
+                                </label>
+                                <div
+                                  tabIndex="0"
+                                  className="dropdown-content bg-ui-500 w-44 p-1"
+                                >
+                                  <ul className="menu menu-secondary menu-rounded">
+                                    <li>
+                                      <a>
+                                        <span>
+                                          <span className="text-ui-200">
+                                            Remove
+                                          </span>
+                                        </span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a>
+                                        <span>
+                                          <span className="text-ui-200">
+                                            Forward
+                                          </span>
+                                        </span>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              className="chat-action-hidden"
+                              data-tooltip="Reply"
+                            >
+                              <button
+                                type="button"
+                                className="button button-ghost rounded-full"
+                              >
+                                <span className="icon icon-reply"></span>
+                              </button>
                             </div>
                           </div>
                         </div>
-                        <div className="chat-action-hidden" data-tooltip="More">
-                          <div className="dropdown dropdown-center">
-                            <label
-                              tabIndex="0"
-                              className="button button-ghost rounded-full"
-                            >
-                              <span className="icon icon-dots-vertical"></span>
-                            </label>
-                            <div
-                              tabIndex="0"
-                              className="dropdown-content bg-ui-500 w-44 p-1"
-                            >
-                              <ul className="menu menu-secondary menu-rounded">
-                                <li>
-                                  <a>
-                                    <span>
-                                      <span className="text-ui-200">
-                                        Remove
-                                      </span>
-                                    </span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a>
-                                    <span>
-                                      <span className="text-ui-200">
-                                        Forward
-                                      </span>
-                                    </span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div
-                          className="chat-action-hidden"
-                          data-tooltip="Reply"
-                        >
-                          <button
-                            type="button"
-                            className="button button-ghost rounded-full"
-                          >
-                            <span className="icon icon-reply"></span>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </li>
-            ))}
-          </ul>
+                      )
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+          {isDisabled && <div className="chat-main">
+            
+          <div className='max-w-xs mx-auto text-center'>
+            <img className="mx-auto" src="https://res.cloudinary.com/gloot/image/upload/v1659691391/Marketing/2022_prototype/Decoration-chat.webp" width="220" height="auto" alt="" />
+            <div className='mt-2 mb-6'>
+              <p className='text-sm text-ui-400'>
+                Chat with your clan
+              </p>
+              <p className='text-lg text-ui-300'>
+                Coordinate and have fun together!
+              </p>
+            </div>
+          </div>
+            </div>}
+
           <div ref={bottomRef} />
         </div>
-        <div className="chat-footer">
-          <div className="dropdown dropdown-top">
+        <div className={`chat-footer`}>
+          <div className={`dropdown dropdown-top  ${isDisabled ? "is-disabled" : ""}`}>
             <label tabIndex="0" className="button button-ghost rounded-full">
-              <span className="icon icon-c-add"></span>
+              <span
+                className={`icon ${isDisabled ? "icon-lock" : "icon-c-add"}`}
+              ></span>
             </label>
             <div tabIndex="0" className="dropdown-content bg-ui-500 p-1">
               <ul className="menu menu-secondary menu-rounded menu-horizontal">
@@ -491,21 +529,27 @@ export default function Chat(props) {
               </ul>
             </div>
           </div>
-          <div className="form-group">
+          <div className={`form-group ${isDisabled ? "is-disabled" : ""}`}>
             <form className="input-group" onSubmit={addMessage}>
-              <button
+              {!isDisabled && (
+                <button
                 type="submit"
                 role="button"
                 className="button button-tertiary"
               >
                 <span className="icon icon-send-message" />
               </button>
+              )}
               <input
                 ref={messageInput}
                 type="text"
                 name="send-message"
                 id="send-message"
-                placeholder="Message clan"
+                placeholder={`${
+                  !isDisabled
+                    ? "Message clan"
+                    : "You need to be a member of this clan to participate"
+                }`}
                 autoComplete="off"
               />
             </form>

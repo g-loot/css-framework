@@ -30,7 +30,7 @@ const TabsItems = [
 export default function Home() {
   const router = useRouter();
   const { query } = useRouter();
-  const prototypeData = usePrototypeData();
+  const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
@@ -39,7 +39,7 @@ export default function Home() {
   const selectedTab = tab ? tab : defaultTab;
 
   useEffect(() => {
-    setSelectedGame(prototypeData.getGameBySlug(game));
+    setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
 
   return (
@@ -47,7 +47,7 @@ export default function Home() {
       <PrototypeStructure title="Wallet">
         <Ad width="1005" height="124" />
 
-        <section className="mb-8">
+        <section className="mb-4">
           <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8 lg:min-h-[250px] lg:flex items-center">
             <div className="relative z-10">
               <h1 className="text-3xl sm:text-4xl">Wallet</h1>

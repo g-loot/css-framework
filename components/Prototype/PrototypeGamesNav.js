@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 
 import Link from "next/link";
-import PrototypeDataGames from "../../mock-data/games.json";
 import PrototypeGamesNavItem from "./PrototypeGamesNavItem";
+import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 
 const SubMenuItem = [
@@ -27,6 +27,7 @@ const SubMenuItem = [
 export default function PrototypeGamesNav({ children }) {
   const router = useRouter();
   const { query } = useRouter();
+  const prototype = usePrototypeData();
   const { game } = router.query;
   const [isActive, setActive] = useState(false);
   const elementRef = useRef(null);
@@ -41,7 +42,7 @@ export default function PrototypeGamesNav({ children }) {
 
   return (
     <>
-      {PrototypeDataGames.map((item, itemIndex) => (
+      {prototype.games.map((item, itemIndex) => (
         <>
         {item.isFavorite && (
           <div

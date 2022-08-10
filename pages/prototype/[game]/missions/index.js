@@ -24,7 +24,7 @@ const TabsItems = [
 export default function Home() {
   const router = useRouter();
   const { query } = useRouter();
-  const prototypeData = usePrototypeData();
+  const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
@@ -33,7 +33,7 @@ export default function Home() {
   const selectedTab = tab ? tab : defaultTab;
 
   useEffect(() => {
-    setSelectedGame(prototypeData.getGameBySlug(game));
+    setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
 
   return (
@@ -47,22 +47,34 @@ export default function Home() {
               <div className="relative z-10 grid grid-cols-8 gap-4 items-center min-h-[250px]">
                 <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-between items-center py-8">
                   <div className="absolute top-0 left-0 py-2 px-4">
-                    <nav className="flex" aria-label="Breadcrumb">
+                    <nav
+                      className="flex whitespace-nowrap"
+                      aria-label="Breadcrumb"
+                    >
                       <ol className="inline-flex items-center space-x-1 md:space-x-3">
-                        <li className="inline-flex items-center animate-slide-in-top animate-delay"
-                  style={{ "--delay": "calc( 1 * 0.05s)" }}>
+                        <li
+                          className="inline-flex items-center animate-slide-in-top animate-delay"
+                          style={{ "--delay": "calc( 1 * 0.05s)" }}
+                        >
                           <Link href="/prototype/home">
-                            <a href="#" className="inline-flex gap-2 items-center text-sm text-ui-300 hover:text-ui-100 active:opacity-50 focus-visible:text-main focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main transition-colors duration-75">
+                            <a
+                              href="#"
+                              className="inline-flex gap-2 items-center text-sm text-ui-300 hover:text-ui-100 active:opacity-50 focus-visible:text-main focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main transition-colors duration-75"
+                            >
                               <span className="icon icon-20 icon-home-2" />
                               <span>Home</span>
                             </a>
                           </Link>
                         </li>
-                        <li aria-current="page">
-                          <div className="flex items-center animate-slide-in-top animate-delay"
-                  style={{ "--delay": "calc( 3 * 0.05s)" }}>
+                        <li aria-current="page" className="max-w-[20ch]">
+                          <div
+                            className="flex items-center animate-slide-in-top animate-delay"
+                            style={{ "--delay": "calc( 3 * 0.05s)" }}
+                          >
                             <span className="icon icon-20 text-ui-300 icon-arrow-sm-right" />
-                            <span className="ml-1 text-sm text-ui-300 md:ml-2">Missions</span>
+                            <span className="ml-1 text-sm text-ui-300 md:ml-2 overflow-hidden overflow-ellipsis">
+                              Missions
+                            </span>
                           </div>
                         </li>
                       </ol>
@@ -105,23 +117,23 @@ export default function Home() {
                     <ul className="step step-primary step-sm w-full max-w-sm mx-auto">
                       <li>
                         <a href="#">
-                          <i/>
+                          <i />
                           <div></div>
-                          <span/>
+                          <span />
                         </a>
                       </li>
                       <li className="is-active">
                         <a href="#">
-                          <i/>
+                          <i />
                           <div></div>
-                          <span/>
+                          <span />
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <i/>
+                          <i />
                           <div></div>
-                          <span/>
+                          <span />
                         </a>
                       </li>
                     </ul>
@@ -148,10 +160,14 @@ export default function Home() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype/${game}/missions${hasAds ? "?ads=true&" : ""}${hasAds ? "&" : "?"}tab=${item.url}`}
+                      href={`/prototype/${game}/missions${
+                        hasAds ? "?ads=true&" : ""
+                      }${hasAds ? "&" : "?"}tab=${item.url}`}
                     >
                       <a
-                        className={`${selectedTab === item.url ? "is-active" : ""}`}
+                        className={`${
+                          selectedTab === item.url ? "is-active" : ""
+                        }`}
                       >
                         <span>{item.label}</span>
                       </a>
@@ -170,7 +186,6 @@ export default function Home() {
             </section>
           </>
         )}
-
       </PrototypeStructure>
     </>
   );

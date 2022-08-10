@@ -3,14 +3,17 @@ import React, { useContext, useState } from "react";
 import Lottie from "lottie-react";
 import LottieExplosion from "../../../assets/animations/explosion-2.json";
 import { UiContext } from "../../../contexts/ui.js";
+import { VariablesContext } from "../../../contexts/variables";
 
 export default function ModalClaimDailyRewards(props) {
   const uiContext = useContext(UiContext);
+  const variablesContext = useContext(VariablesContext);
   const [submitting, setSubmitting] = useState(false);
   function closeModalWithDelay() {
     setSubmitting(true);
 
     setTimeout(() => {
+      variablesContext.claimReward();
       uiContext.closeModal();
       setSubmitting(false);
     }, 1000);
@@ -92,7 +95,7 @@ export default function ModalClaimDailyRewards(props) {
         </div>
       </div>
       <div className="fixed inset-0 z-0 flex items-center justify-center">
-        <div className="lottie-blur h-[75vh] w-[75vh]">
+        <div className="lottie-blur h-[75vh] w-[75vh] flex items-center justify-center">
           <Lottie
             animationData={LottieExplosion}
             loop={false}

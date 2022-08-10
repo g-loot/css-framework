@@ -11,8 +11,6 @@ import RewardLadder from "../../../components/RewardLadder/RewardLadder";
 import { UiContext } from "../../../contexts/ui";
 import { useRouter } from "next/router";
 
-//import DataGames from '../../mock-data/games.json'
-
 export default function Home() {
   const router = useRouter();
   const { query } = useRouter();
@@ -80,7 +78,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <RewardLadder></RewardLadder>
+          <RewardLadder hasReward={true} />
         </section>
 
         <section

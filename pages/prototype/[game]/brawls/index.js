@@ -36,7 +36,7 @@ const TabsItems = [
 
 export default function Home() {
   const router = useRouter();
-  const prototypeData = usePrototypeData();
+  const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const { game } = router.query;
   const { hasAds } = router.query;
@@ -45,7 +45,7 @@ export default function Home() {
   const selectedTab = tab ? tab : defaultTab;
 
   useEffect(() => {
-    setSelectedGame(prototypeData.getGameBySlug(game));
+    setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
 
   return (
@@ -56,24 +56,36 @@ export default function Home() {
           <>
             <section className="relative surface sm:rounded-lg overflow-hidden mb-4">
               <div className="relative z-10 grid grid-cols-8 gap-4 items-flex min-h-[250px]">
-                <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center py-8">
+                <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center pt-14 pb-8 md:pt-8">
                   <div className="absolute top-0 left-0 py-2 px-4">
-                    <nav className="flex" aria-label="Breadcrumb">
+                    <nav
+                      className="flex whitespace-nowrap"
+                      aria-label="Breadcrumb"
+                    >
                       <ol className="inline-flex items-center space-x-1 md:space-x-3">
-                        <li className="inline-flex items-center animate-slide-in-top animate-delay"
-                  style={{ "--delay": "calc( 1 * 0.05s)" }}>
+                        <li
+                          className="inline-flex items-center animate-slide-in-top animate-delay"
+                          style={{ "--delay": "calc( 1 * 0.05s)" }}
+                        >
                           <Link href="/prototype/home">
-                            <a href="#" className="inline-flex gap-2 items-center text-sm text-ui-300 hover:text-ui-100 active:opacity-50 focus-visible:text-main focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main transition-colors duration-75">
+                            <a
+                              href="#"
+                              className="inline-flex gap-2 items-center text-sm text-ui-300 hover:text-ui-100 active:opacity-50 focus-visible:text-main focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main transition-colors duration-75"
+                            >
                               <span className="icon icon-20 icon-home-2" />
                               <span>Home</span>
                             </a>
                           </Link>
                         </li>
-                        <li aria-current="page">
-                          <div className="flex items-center animate-slide-in-top animate-delay"
-                  style={{ "--delay": "calc( 3 * 0.05s)" }}>
+                        <li aria-current="page" className="max-w-[20ch]">
+                          <div
+                            className="flex items-center animate-slide-in-top animate-delay"
+                            style={{ "--delay": "calc( 3 * 0.05s)" }}
+                          >
                             <span className="icon icon-20 text-ui-300 icon-arrow-sm-right" />
-                            <span className="ml-1 text-sm text-ui-300 md:ml-2">Brawls</span>
+                            <span className="ml-1 text-sm text-ui-300 md:ml-2 overflow-hidden overflow-ellipsis">
+                              Brawls
+                            </span>
                           </div>
                         </li>
                       </ol>
@@ -87,13 +99,11 @@ export default function Home() {
                   />
                 </div>
                 <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center md:items-start text-center md:text-left flex-1 pl-8 md:pl-0 pr-8 py-0 md:py-4 xl:py-4">
-                  <h1 className="text-4xl mb-2 leading-none">
-                    Brawls
-                  </h1>
+                  <h1 className="text-4xl mb-2 leading-none">Brawls</h1>
                   <p className="text-ui-300 max-w-[45ch] mb-4">
-                    Use your stats to climb the Brawl leaderboard and win prizes.
-                    No waiting, no dedicated servers. Play on your own schedule!
-                    
+                    Use your stats to climb the Brawl leaderboard and win
+                    prizes. No waiting, no dedicated servers. Play on your own
+                    schedule!
                   </p>
                   <div className="flex flex-col md:flex-row gap-2">
                     <button
@@ -103,25 +113,42 @@ export default function Home() {
                       <span className="icon icon-circle-caret-right" />
                       <span>Learn how to Brawl</span>
                     </button>
-                    <button
-                      type="button"
-                      className="button button-sm button-secondary"
+                    <Link
+                      href={`/prototype/profile/settings${
+                        hasAds ? "?ads=true" : ""
+                      }`}
                     >
-                      <span className="icon icon-steam" />
-                      <span>Steam required</span>
-                    </button>
+                      <button
+                        type="button"
+                        className="button button-sm button-secondary"
+                      >
+                        <span className="icon icon-steam" />
+                        <span>Steam required</span>
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="col-span-8 xl:col-span-2 flex flex-col xl:items-end justify-start gap-4">
                   <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                    <span className="font-headings font-bold italic text-ui-100 uppercase">Time Left:</span>
+                    <span className="font-headings font-bold italic text-ui-100 uppercase">
+                      Time Left:
+                    </span>
                     <span className="icon icon-clock text-main" />
-                    <Countdown additionalClassNames="flex items-baseline gap-0.5 font-headings font-bold italic uppercase text-main" hasDays={true} hasLabels={true} hasSeconds={false} separator=" • " labelsAbbr={true}></Countdown>
+                    <Countdown
+                      additionalClassNames="flex items-baseline gap-0.5 font-headings font-bold italic uppercase text-main"
+                      hasDays={true}
+                      hasLabels={true}
+                      hasSeconds={false}
+                      separator=" • "
+                      labelsAbbr={true}
+                    ></Countdown>
                   </div>
                 </div>
               </div>
-              <div className="absolute z-0 right-0 inset-y-0 w-full xl:w-2/3 animate-slide-in-right animate-delay"
-                style={{ "--delay": "calc( 1 * 0.05s)" }}>
+              <div
+                className="absolute z-0 right-0 inset-y-0 w-full xl:w-2/3 animate-slide-in-right animate-delay"
+                style={{ "--delay": "calc( 1 * 0.05s)" }}
+              >
                 <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/75"></div>
                 <img
                   className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
@@ -133,9 +160,15 @@ export default function Home() {
               <ul className="tabs border-b border-ui-700">
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
-                    <Link href={`/prototype/${game}/brawls${hasAds ? "?ads=true&" : ""}${hasAds ? "&" : "?"}tab=${item.url}`}>
+                    <Link
+                      href={`/prototype/${game}/brawls${
+                        hasAds ? "?ads=true&" : ""
+                      }${hasAds ? "&" : "?"}tab=${item.url}`}
+                    >
                       <a
-                        className={`${selectedTab === item.url ? "is-active" : ""}`}
+                        className={`${
+                          selectedTab === item.url ? "is-active" : ""
+                        }`}
                       >
                         <span>{item.label}</span>
                       </a>

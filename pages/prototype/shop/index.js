@@ -3,8 +3,6 @@ import PrototypeStructure from "../../../components/Prototype/PrototypeStructure
 import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
 
-//import DataGames from '../../mock-data/games.json'
-
 const GiftCards = [
   {
     validity: "United States & Europe",
@@ -54,10 +52,10 @@ export default function Home() {
             <div className="relative z-10">
               <h1 className="text-3xl sm:text-4xl">Shop</h1>
               <p className="text-ui-300 max-w-[70ch] mt-4">
-                Turn your hard work and successes into rewards you can enjoy! Will
-                you invest in some new gaming gear or just treat yourself to
-                something you&#39;ve had your eye on? Earn more coins to spend in
-                the shop by finishing Missions or competing in Brawls.
+                Turn your hard work and successes into rewards you can enjoy!
+                Will you invest in some new gaming gear or just treat yourself
+                to something you&#39;ve had your eye on? Earn more coins to
+                spend in the shop by finishing Missions or competing in Brawls.
               </p>
             </div>
             <div
@@ -104,7 +102,9 @@ export default function Home() {
                     />
                     <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
                       <span>Gift cards</span>
-                      <small className="text-ui-300 text-2xl">{giftcard.name}</small>
+                      <small className="text-ui-300 text-2xl">
+                        {giftcard.name}
+                      </small>
                     </h3>
                     <div className="mt-2 h-12 flex items-center">
                       {giftcard.exception && (
@@ -149,7 +149,7 @@ export default function Home() {
               alt=""
             />
             <img
-              className="hidden lg:block absolute pointer-events-none z-20 -bottom-20 -right-32 blur-sm rotate-[120deg]"
+              className="hidden lg:block absolute pointer-events-none z-20 -bottom-20 right-0 blur-sm rotate-[120deg]"
               src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-token-side_1.webp"
               width="210"
               height="auto"
@@ -190,7 +190,7 @@ export default function Home() {
                 Purchase tokens to enter brawls and keep on climbing the
                 leaderboards.
               </p>
-              <button type="button" className="button button-lg button-primary">
+              <button type="button" className="button button-primary">
                 <span>Buy tokens</span>
               </button>
             </div>

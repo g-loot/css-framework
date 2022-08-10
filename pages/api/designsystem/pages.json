@@ -93,7 +93,7 @@
         },
         {
           "label": "Loaders",
-          "tags": "content,loader,progressbar,wait,loading",
+          "tags": "content,loader,progressbar,wait,loading,spinner,spinning",
           "url": "loaders"
         },
         {

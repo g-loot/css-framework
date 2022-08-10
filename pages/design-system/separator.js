@@ -46,11 +46,22 @@ const DSpage = () => {
       <div className="mb-12" id="or">
         <h2 className="h3 mb-3">Or</h2>
 
-        <div className="surface rounded-lg p-4">
+        <div className="surface rounded-lg p-4 space-y-8">
+          <div className="text-ui-400 text-center text-sm leading-tight">
+            Horizontal:
+          </div>
           <div className="flex items-center justify-center gap-4 my-8">
             <hr className="separator flex-1" />
             <span className="font-bold uppercase">or</span>
             <hr className="separator flex-1" />
+          </div>
+          <div className="text-ui-400 text-center text-sm leading-tight mt-24">
+            Vertical:
+          </div>
+          <div className="flex flex-col items-center justify-center gap-4 my-8 h-56">
+            <hr className="separator separator-vertical flex-1" />
+            <span className="font-bold uppercase">or</span>
+            <hr className="separator separator-vertical flex-1" />
           </div>
         </div>
 
@@ -58,7 +69,7 @@ const DSpage = () => {
           <iframe
             className="rounded"
             width="100%"
-            height="170"
+            height="300"
             src="//jsfiddle.net/augustin_hiebel/736rnygL/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
           ></iframe>
         </div>

@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Accordion from "../../../../components/Accordion/Accordion";
 import HowToBrawl from "../../../../components/HowTo/HowToBrawl";
 import Link from "next/link";
+import Reward from "../../../../components/Reward/Reward";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -41,7 +42,7 @@ const sideScroll = (element, speed, distance, step) => {
 export default function TabBrawlsSoloLeaderboards() {
   const router = useRouter();
   const { query } = useRouter();
-  const prototypeData = usePrototypeData();
+  const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedBrawl, setSelectedBrawl] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
@@ -49,7 +50,7 @@ export default function TabBrawlsSoloLeaderboards() {
   const { brawl_id } = router.query;
 
   useEffect(() => {
-    setSelectedBrawl(prototypeData.getBrawlByID(game, brawl_id));
+    setSelectedBrawl(prototype.getBrawlByID(game, brawl_id));
   }, [brawl_id]);
 
   const sliderRankWrapper = useRef(null);
@@ -172,7 +173,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         <td>
                           <Link href="/prototype/profile/2">
                             <a className="text-xs text-ui-300 font-bold hover:opacity-50">
-                              &#91;{prototypeData.getUserClan().tag}&#93; {prototypeData.getUserByID(2).nickname}
+                              &#91;{prototype.getUserClan().tag}&#93; {prototype.getUserByID(2).nickname}
                             </a>
                           </Link>
                         </td>
@@ -186,7 +187,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         <td>
                           <Link href="/prototype/profile/3">
                             <a className="text-xs text-ui-300 font-bold hover:opacity-50">
-                              &#91;{prototypeData.getUserClan().tag}&#93; {prototypeData.getUserByID(3).nickname}
+                              &#91;{prototype.getUserClan().tag}&#93; {prototype.getUserByID(3).nickname}
                             </a>
                           </Link>
                         </td>
@@ -200,7 +201,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         <td>
                           <Link href="/prototype/profile/4">
                             <a className="text-xs text-ui-300 font-bold hover:opacity-50">
-                              &#91;{prototypeData.getUserClan().tag}&#93; {prototypeData.getUserByID(4).nickname}
+                              &#91;{prototype.getUserClan().tag}&#93; {prototype.getUserByID(4).nickname}
                             </a>
                           </Link>
                         </td>
@@ -214,7 +215,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         <td>
                           <Link href="/prototype/profile/5">
                             <a className="text-xs text-ui-300 font-bold hover:opacity-50">
-                              &#91;{prototypeData.getUserClan().tag}&#93; {prototypeData.getUserByID(5).nickname}
+                              &#91;{prototype.getUserClan().tag}&#93; {prototype.getUserByID(5).nickname}
                             </a>
                           </Link>
                         </td>
@@ -298,7 +299,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         <>
                           <div className="item rounded-lg h-[54px]">
                             <div className="item-image">
-                              <figure className="avatar avatar-circle avatar-xs">
+                              <figure className="avatar avatar-squircle avatar-xs">
                                 <div />
                               </figure>
                             </div>
@@ -309,7 +310,7 @@ export default function TabBrawlsSoloLeaderboards() {
                               <span className="font-bold text-ui-300 leading-none">
                                 Loading
                               </span>
-                              <figure className="avatar avatar-square avatar-xs">
+                              <figure className="avatar avatar-squircle avatar-xs">
                                 <div />
                               </figure>
                             </div>
@@ -340,7 +341,7 @@ export default function TabBrawlsSoloLeaderboards() {
                           >
                             <div
                               className={`surface rounded-lg w-1/3 h-[54px] flex items-stretch overflow-hidden ${
-                                prototypeData.getClanByID(user.clan)?.isYou
+                                prototype.getClanByID(user.clan)?.isYou
                                   ? "surface-highlight-blue"
                                   : ""
                               }`}
@@ -382,53 +383,14 @@ export default function TabBrawlsSoloLeaderboards() {
                                 </div>
                               </div>
                               <div className="flex-1 flex items-center justify-center gap-4">
-                                {user.rewards.coin && (
-                                  <div className="flex items-center gap-2">
-                                    <img
-                                      className="h-6"
-                                      src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
-                                      width="auto"
-                                      height="auto"
-                                      alt=""
-                                    />
-                                    <span className="font-headings font-bold text-lg italic">
-                                      {numberWithSpaces(user.rewards.coin)}
-                                    </span>
-                                  </div>
-                                )}
-                                {user.rewards.token && (
-                                  <div className="flex items-center gap-2">
-                                    <img
-                                      className="h-6"
-                                      src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
-                                      width="auto"
-                                      height="auto"
-                                      alt=""
-                                    />
-                                    <span className="font-headings font-bold text-lg italic">
-                                      {numberWithSpaces(user.rewards.token)}
-                                    </span>
-                                  </div>
-                                )}
-                                {user.rewards.ticket && (
-                                  <div className="flex items-center gap-2">
-                                    <img
-                                      className="h-6"
-                                      src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}
-                                      width="auto"
-                                      height="auto"
-                                      alt=""
-                                    />
-                                    <span className="font-headings font-bold text-lg italic">
-                                      {numberWithSpaces(user.rewards.ticket)}
-                                    </span>
-                                  </div>
+                                {user.rewards?.map((reward, rewardIndex) => 
+                                  <Reward key={rewardIndex} reward={reward} gap="gap-2" imageClassNames="h-6" textClassNames="font-headings font-bold text-lg italic" />
                                 )}
                               </div>
                             </div>
                             <div
                               className={`flex-1 accordion surface rounded-lg ${
-                                prototypeData.getClanByID(user.clan)?.isYou
+                                prototype.getClanByID(user.clan)?.isYou
                                   ? "surface-highlight-blue"
                                   : ""
                               }`}
@@ -438,11 +400,11 @@ export default function TabBrawlsSoloLeaderboards() {
                                   <>
                                     <div className="item">
                                       <div className="item-image">
-                                        <figure className="avatar avatar-xs">
+                                        <figure className="avatar avatar-squircle avatar-xs">
                                           <div>
                                             <img
                                               src={
-                                                prototypeData.getClanByID(
+                                                prototype.getClanByID(
                                                   user.clan
                                                 )?.avatar
                                               }
@@ -454,7 +416,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                         <div className="item-title">
                                           <span
                                             className={`${
-                                              prototypeData.getClanByID(
+                                              prototype.getClanByID(
                                                 user.clan
                                               )?.isYou
                                                 ? "text-blue-300 font-bold"
@@ -463,13 +425,13 @@ export default function TabBrawlsSoloLeaderboards() {
                                           >
                                             &#91;
                                             {
-                                              prototypeData.getClanByID(
+                                              prototype.getClanByID(
                                                 user.clan
                                               )?.tag
                                             }
                                             &#93;{" "}
                                             {
-                                              prototypeData.getClanByID(
+                                              prototype.getClanByID(
                                                 user.clan
                                               )?.nickname
                                             }
@@ -540,13 +502,13 @@ export default function TabBrawlsSoloLeaderboards() {
                                               <span className="text-ui-300">
                                                 &#91;
                                                 {
-                                                  prototypeData.getClanByID(
+                                                  prototype.getClanByID(
                                                     user.clan
                                                   )?.tag
                                                 }
                                                 &#93;{" "}
                                                 {
-                                                  prototypeData.getUserByID(2)
+                                                  prototype.getUserByID(2)
                                                     .nickname
                                                 }
                                               </span>
@@ -562,13 +524,13 @@ export default function TabBrawlsSoloLeaderboards() {
                                               <span className="text-ui-300">
                                                 &#91;
                                                 {
-                                                  prototypeData.getClanByID(
+                                                  prototype.getClanByID(
                                                     user.clan
                                                   )?.tag
                                                 }
                                                 &#93;{" "}
                                                 {
-                                                  prototypeData.getUserByID(3)
+                                                  prototype.getUserByID(3)
                                                     .nickname
                                                 }
                                               </span>
@@ -584,13 +546,13 @@ export default function TabBrawlsSoloLeaderboards() {
                                               <span className="text-ui-300">
                                                 &#91;
                                                 {
-                                                  prototypeData.getClanByID(
+                                                  prototype.getClanByID(
                                                     user.clan
                                                   )?.tag
                                                 }
                                                 &#93;{" "}
                                                 {
-                                                  prototypeData.getUserByID(4)
+                                                  prototype.getUserByID(4)
                                                     .nickname
                                                 }
                                               </span>
@@ -606,13 +568,13 @@ export default function TabBrawlsSoloLeaderboards() {
                                               <span className="text-ui-300">
                                                 &#91;
                                                 {
-                                                  prototypeData.getClanByID(
+                                                  prototype.getClanByID(
                                                     user.clan
                                                   )?.tag
                                                 }
                                                 &#93;{" "}
                                                 {
-                                                  prototypeData.getUserByID(5)
+                                                  prototype.getUserByID(5)
                                                     .nickname
                                                 }
                                               </span>
@@ -628,13 +590,13 @@ export default function TabBrawlsSoloLeaderboards() {
                                               <span className="text-ui-300">
                                                 &#91;
                                                 {
-                                                  prototypeData.getClanByID(
+                                                  prototype.getClanByID(
                                                     user.clan
                                                   )?.tag
                                                 }
                                                 &#93;{" "}
                                                 {
-                                                  prototypeData.getUserByID(6)
+                                                  prototype.getUserByID(6)
                                                     .nickname
                                                 }
                                               </span>

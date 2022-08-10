@@ -34,12 +34,13 @@
           "tags": "home, start, index"
         },
         {
-          "label": "Claim daily rewards (modal)",
+          "label": "Claim daily rewards",
+          "chip": "modal",
           "url": "home",
           "query": "modalclaim=true",
           "tab": 1,
           "new": true,
-          "tags": "home, start, index, modal, claim, rewards, daily missions,"
+          "tags": "home, start, index, claim, rewards, daily missions, modal, prompt"
         }
       ]
     },
@@ -59,11 +60,11 @@
           "tags": "profile, view, user"
         },
         {
-          "label": "Profile (empty state: no stats, no clan)",
+          "label": "Profile (no stats, no clan)",
+          "chip": "empty state",
           "url": "profile/10",
           "query": "",
-          "tags": "profile, view, user, empty",
-          "tab": 1,
+          "tags": "profile, view, user, empty state",
           "new": true
         },
         {
@@ -89,14 +90,14 @@
           "label": "Clans search",
           "url": "clans/search",
           "query": "",
-          "tags": "clan,team,search,form,find",
+          "tags": "clan, team, search, form, find",
           "new": true
         },
         {
           "label": "Clan detail (self)",
           "url": "clans/0",
           "query": "",
-          "tags": "clan,team",
+          "tags": "clan, team, self",
           "tab": 1,
           "new": true
         },
@@ -104,16 +105,16 @@
           "label": "Clan detail",
           "url": "clans/1",
           "query": "",
-          "tags": "clan,team",
+          "tags": "clan, team",
           "tab": 1,
           "new": true
         },
         {
-          "label": "Create Clan (modal)",
+          "label": "Create clan",
+          "chip": "modal",
           "url": "clans",
           "query": "modalcreate=true",
-          "tags": "clan,team",
-          "tab": 2,
+          "tags": "clan, team, modal, prompt",
           "new": true
         }
       ]
@@ -155,13 +156,12 @@
           "query": "tab=history",
           "tags": "wallet, rewards, history, transactions"
         },
-
         {
-          "label": "History (empty state)",
+          "label": "History",
+          "chip": "empty state",
           "url": "wallet",
           "query": "tab=history&empty=true",
-          "tags": "wallet, rewards, history, transactions",
-          "tab": 1
+          "tags": "wallet, rewards, history, transactions, empty state"
         },
         {
           "label": "Voucher",
@@ -196,66 +196,191 @@
           "url": "valorant/brawls",
           "query": "",
           "tags": "game, brawls",
-          "new": true
+          "new": false
         },
         {
           "label": "How it works",
           "url": "valorant/brawls",
           "query": "tab=how-it-works",
           "tags": "game, brawls, how it works, explanation",
-          "new": true
+          "new": false
         },
         {
-          "label": "How it works (modal)",
+          "label": "How it works video",
+          "chip": "modal",
           "url": "valorant/brawls",
           "query": "tab=how-it-works&modalvideo=true",
-          "tags": "game, brawls, how it works, explanation",
-          "tab": 1,
-          "new": true
+          "tags": "game, brawls, how it works, explanation, modal, prompt",
+          "new": false
         },
         {
           "label": "G-Loot rules",
           "url": "valorant/brawls",
           "query": "tab=rules",
           "tags": "game, brawls, rules, explanation, cheating, accounts, player protection",
-          "new": true
+          "new": false
         },
         {
           "label": "Your Brawl history",
           "url": "valorant/brawls",
           "query": "tab=history",
           "tags": "game, listing, history, participation",
-          "new": true
+          "new": false
         },
         {
           "label": "Your brawl matches",
-          "url": "valorant/brawls/0",
+          "url": "valorant/brawls/1",
           "query": "",
           "tags": "game, brawls, matches, enrollment, token",
+          "tab": 1,
+          "new": false
+        },
+        {
+          "label": "Before you play",
+          "chip": "modal",
+          "url": "valorant/brawls/1",
+          "query": "modalinfobeforeyouplay=true",
+          "tags": "game, brawls, matches, enrollment, token, modal, prompt",
           "tab": 1,
           "new": true
         },
         {
           "label": "Solo leaderboard",
-          "url": "valorant/brawls/0",
+          "url": "valorant/brawls/1",
           "query": "tab=solo-leaderboard",
           "tags": "game, brawls, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze",
           "tab": 1,
-          "new": true
+          "new": false
         },
         {
           "label": "Clan leaderboard",
-          "url": "valorant/brawls/0",
+          "url": "valorant/brawls/1",
           "query": "tab=clan-leaderboard",
           "tags": "game, brawls, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze, clans, teams",
+          "tab": 1,
+          "new": false
+        },
+        {
+          "label": "Rewards",
+          "url": "valorant/brawls/1",
+          "query": "tab=rewards",
+          "tags": "game, brawls, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze, clans, teams, rewards",
+          "tab": 1,
+          "new": false
+        }
+      ]
+    },
+    {
+      "title": "Tournaments",
+      "pages": [
+        {
+          "label": "Ongoing Tournaments listing",
+          "url": "valorant/tournaments",
+          "query": "",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open",
+          "new": true
+        },
+        {
+          "label": "Ongoing Tournaments listing",
+          "chip": "empty state",
+          "url": "pubg/tournaments/",
+          "query": "empty=true",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, empty state",
+          "new": true
+        },
+        {
+          "label": "Finished tournament listing",
+          "url": "valorant/tournaments/",
+          "query": "tab=finished",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, listing, history, past",
+          "new": true
+        },
+        {
+          "label": "Finished tournament listing",
+          "chip": "empty state",
+          "url": "valorant/tournaments/",
+          "query": "tab=finished&empty=true",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, listing, history, past, empty state",
+          "new": true
+        },
+        {
+          "label": "How it works",
+          "url": "valorant/tournaments/",
+          "query": "tab=how-it-works",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, how it works, explanation",
+          "new": true
+        },
+        {
+          "label": "Overview",
+          "url": "valorant/tournaments/1",
+          "query": "tab=overview",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, register, solo, team, party",
           "tab": 1,
           "new": true
         },
         {
-          "label": "Rewards",
-          "url": "valorant/brawls/0",
-          "query": "tab=rewards",
-          "tags": "game, brawls, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze, clans, teams, rewards",
+          "label": "Add Discord",
+          "chip": "modal",
+          "url": "valorant/tournaments/1",
+          "query": "tab=overview&modaladddiscord=true",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, register, solo, team, party, registered, discord, modal, prompt",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Leave party",
+          "chip": "modal",
+          "url": "valorant/tournaments/1",
+          "query": "tab=overview&modalleaveparty=true",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, register, solo, team, party, leave, quit, cancel, registered, discord, modal, prompt",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Overview (registered)",
+          "url": "valorant/tournaments/1",
+          "query": "tab=overview&registered=true",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, register, solo, team, party, registered",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Participants",
+          "url": "valorant/tournaments/1",
+          "query": "tab=participants",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, registered, participants, listing",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Leaderboard table",
+          "url": "pubg/tournaments/1",
+          "query": "tab=leaderboard",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, registered, participants, listing, winners, leaderboard, prize money",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Leaderboard brackets",
+          "url": "valorant/tournaments/1",
+          "query": "tab=leaderboard",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, registered, participants, listing, winners, leaderboard, prize money",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "How to play",
+          "url": "valorant/tournaments/1",
+          "query": "tab=how-to-play",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, explanation, how it works, how to play",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Rules",
+          "url": "valorant/tournaments/1",
+          "query": "tab=rules",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, explanation, rules, eligibility, consent, obligations, law",
           "tab": 1,
           "new": true
         }

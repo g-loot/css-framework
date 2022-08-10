@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { UiContext } from "../../contexts/ui.js";
 
 function overlayClickHandler() {
-  console.log("overlayClickHandler");
+  
 }
 
 const Backdrop = (props) => {

@@ -1,80 +1,134 @@
-import Ad from "../../../../components/Ad/Ad";
-import Countdown from "../../../../components/Countdown/Countdown";
-import Link from "next/link";
-import PrototypeDataGames from "../../../../mock-data/games.json";
+import Reward from "../../../../components/Reward/Reward";
 import { useRouter } from "next/router";
 
 const rewardDistribSolo = [
   {
     name: "Diamond",
-    rewards: {
-      coin: 150000,
-      ticket: 5,
-    },
+    rewards: [
+      {
+        type: "coin",
+        value: 150000,
+      },
+      {
+        type: "ticket",
+        value: 5,
+      },
+    ],
   },
   {
     name: "Platinum",
-    rewards: {
-      coin: 90000,
-      ticket: 3,
-    },
+    rewards: [
+      {
+        type: "coin",
+        value: 90000,
+      },
+      {
+        type: "ticket",
+        value: 3,
+      },
+    ],
   },
   {
     name: "Gold",
-    rewards: {
-      coin: 90000,
-      ticket: 2,
-    },
+    rewards: [
+      {
+        type: "coin",
+        value: 90000,
+      },
+      {
+        type: "ticket",
+        value: 2,
+      },
+    ],
   },
   {
     name: "Silver",
-    rewards: {
-      coin: 90000,
-      ticket: 1,
-    },
+    rewards: [
+      {
+        type: "coin",
+        value: 90000,
+      },
+      {
+        type: "ticket",
+        value: 1,
+      },
+    ],
   },
   {
     name: "Bronze",
-    rewards: {
-      coin: 90000,
-      ticket: 1,
-    },
+    rewards: [
+      {
+        type: "coin",
+        value: 90000,
+      },
+      {
+        type: "ticket",
+        value: 1,
+      },
+    ],
   },
 ];
 const rewardDistribClan = [
   {
     name: "1-10",
-    rewards: {
-      coin: 150000,
-      ticket: 1,
-    },
+    rewards: [
+      {
+        type: "coin",
+        value: 150000,
+      },
+      {
+        type: "ticket",
+        value: 1,
+      },
+    ],
   },
   {
     name: "11-20",
-    rewards: {
-      coin: 125000,
-      ticket: 1,
-    },
+    rewards: [
+      {
+        type: "coin",
+        value: 125000,
+      },
+      {
+        type: "ticket",
+        value: 1,
+      },
+    ],
   },
   {
     name: "21-50",
-    rewards: {
-      coin: 100000,
-      ticket: 1,
-    },
+    rewards: [
+      {
+        type: "coin",
+        value: 100000,
+      },
+      {
+        type: "ticket",
+        value: 1,
+      },
+    ],
   },
   {
     name: "51-150",
-    rewards: {
-      coin: 90000,
-      ticket: 1,
-    },
+    rewards: [
+      {
+        type: "coin",
+        value: 90000,
+      },
+      {
+        type: "ticket",
+        value: 1,
+      },
+    ],
   },
   {
     name: "151-300",
-    rewards: {
-      ticket: 1,
-    },
+    rewards: [
+      {
+        type: "ticket",
+        value: 1,
+      },
+    ],
   },
 ];
 
@@ -98,7 +152,7 @@ export default function TabBrawlsRewards() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="surface sm:rounded-lg p-4">
             <h2 className="text-3xl mb-4 px-4">
-              Solo <small className="text-ui-300">reward distribution</small>
+              Solo <small className="text-ui-300 font-normal">reward distribution</small>
             </h2>
             <ul className="leading-none space-y-1">
               <li className="flex justify-between gap-2 text-xs text-ui-300 uppercase px-4 pb-2">
@@ -113,50 +167,21 @@ export default function TabBrawlsRewards() {
                     "--delay": "calc( " + rewardIndex + " * 0.05s)",
                   }}
                 >
-                  <span className="font-headings font-bold text-lg">{reward.name}</span>
+                  <span className="font-headings font-bold text-lg">
+                    {reward.name}
+                  </span>
                   <div className="flex items-center justify-center gap-4">
-                    {reward.rewards.coin && (
-                      <div className="flex items-center gap-2">
-                        <img
-                          className="h-6"
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
-                          width="auto"
-                          height="auto"
-                          alt=""
+                    {reward.rewards.map((reward, rewardIndex) => (
+                      <>
+                        <Reward
+                          key={rewardIndex}
+                          reward={reward}
+                          gap="gap-2"
+                          imageClassNames="h-6"
+                          textClassNames="font-headings font-bold text-lg italic"
                         />
-                        <span className="font-headings font-bold text-lg italic">
-                          {numberWithSpaces(reward.rewards.coin)}
-                        </span>
-                      </div>
-                    )}
-                    {reward.rewards.token && (
-                      <div className="flex items-center gap-2">
-                        <img
-                          className="h-6"
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
-                          width="auto"
-                          height="auto"
-                          alt=""
-                        />
-                        <span className="font-headings font-bold text-lg italic">
-                          {numberWithSpaces(reward.rewards.token)}
-                        </span>
-                      </div>
-                    )}
-                    {reward.rewards.ticket && (
-                      <div className="flex items-center gap-2">
-                        <img
-                          className="h-6"
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}
-                          width="auto"
-                          height="auto"
-                          alt=""
-                        />
-                        <span className="font-headings font-bold text-lg italic">
-                          {numberWithSpaces(reward.rewards.ticket)}
-                        </span>
-                      </div>
-                    )}
+                      </>
+                    ))}
                   </div>
                 </li>
               ))}
@@ -164,7 +189,7 @@ export default function TabBrawlsRewards() {
           </div>
           <div className="surface sm:rounded-lg p-4">
             <h2 className="text-3xl mb-4 px-4">
-              Clan <small className="text-ui-300">reward distribution</small>
+              Clan <small className="text-ui-300 font-normal">reward distribution</small>
             </h2>
             <ul className="leading-none space-y-1">
               <li className="flex justify-between gap-2 text-xs text-ui-300 uppercase px-4 pb-2">
@@ -179,50 +204,21 @@ export default function TabBrawlsRewards() {
                     "--delay": "calc( " + rewardIndex + " * 0.05s)",
                   }}
                 >
-                  <span className="font-headings font-bold text-lg">{reward.name}</span>
+                  <span className="font-headings font-bold text-lg">
+                    {reward.name}
+                  </span>
                   <div className="flex items-center justify-center gap-4">
-                    {reward.rewards.coin && (
-                      <div className="flex items-center gap-2">
-                        <img
-                          className="h-6"
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
-                          width="auto"
-                          height="auto"
-                          alt=""
+                    {reward.rewards.map((reward, rewardIndex) => (
+                      <>
+                        <Reward
+                          key={rewardIndex}
+                          reward={reward}
+                          gap="gap-2"
+                          imageClassNames="h-6"
+                          textClassNames="font-headings font-bold text-lg italic"
                         />
-                        <span className="font-headings font-bold text-lg italic">
-                          {numberWithSpaces(reward.rewards.coin)}
-                        </span>
-                      </div>
-                    )}
-                    {reward.rewards.token && (
-                      <div className="flex items-center gap-2">
-                        <img
-                          className="h-6"
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
-                          width="auto"
-                          height="auto"
-                          alt=""
-                        />
-                        <span className="font-headings font-bold text-lg italic">
-                          {numberWithSpaces(reward.rewards.token)}
-                        </span>
-                      </div>
-                    )}
-                    {reward.rewards.ticket && (
-                      <div className="flex items-center gap-2">
-                        <img
-                          className="h-6"
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}
-                          width="auto"
-                          height="auto"
-                          alt=""
-                        />
-                        <span className="font-headings font-bold text-lg italic">
-                          {numberWithSpaces(reward.rewards.ticket)}
-                        </span>
-                      </div>
-                    )}
+                      </>
+                    ))}
                   </div>
                 </li>
               ))}
@@ -300,8 +296,8 @@ export default function TabBrawlsRewards() {
                 and prize money.{" "}
               </p>
               <p>
-                Create your own party with your teammates or join solo, and
-                we will match you with other G-Loot players to form a party.
+                Create your own party with your teammates or join solo, and we
+                will match you with other G-Loot players to form a party.
               </p>
               <p>
                 If you want to join the Showdown, you need to earn a Ticket.

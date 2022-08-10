@@ -3,7 +3,6 @@ import PrototypeStructure from "../../../components/Prototype/PrototypeStructure
 import useFetch from "../../../hooks/use-fetch";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
-//import DataGames from '../../mock-data/games.json'
 
 const Teams = [
   {
@@ -141,7 +140,7 @@ export default function Home() {
                   className="animate-slide-in-right animate-delay"
                   style={{ "--delay": `calc( ${teamIndex} * 0.05s)` }}
                 >
-                  <div className="surface surface-dimmed hover:scale-95 hover:opacity-50 transition-all duration-200 cursor-pointer rounded-xl p-4 flex flex-col gap-4 items-center">
+                  <div className="surface surface-dimmed hover:scale-95 interactive rounded-xl p-4 flex flex-col gap-4 items-center">
                     <figure className="avatar avatar-squircle">
                       <div>
                         <img src={team.avatar} />

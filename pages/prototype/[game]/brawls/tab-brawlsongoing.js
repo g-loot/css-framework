@@ -2,19 +2,20 @@ import React, { useEffect, useState } from "react";
 
 import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
+import Reward from "../../../../components/Reward/Reward";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function TabBrawlsOngoing() {
   const router = useRouter();
   const { query } = useRouter();
-  const prototypeData = usePrototypeData();
+  const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
 
   useEffect(() => {
-    setSelectedGame(prototypeData.getGameBySlug(game));
+    setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
 
   return (
@@ -29,11 +30,11 @@ export default function TabBrawlsOngoing() {
                 style={{ "--delay": "calc( " + brawlIndex + " * 0.05s)" }}
               >
                 <Link
-                  href={`/prototype/${game}/brawls/${brawl.id}${
+                  href={`/prototype/${selectedGame.slug}/brawls/${brawl.id}${
                     hasAds ? "?ads=true" : ""
                   }`}
                 >
-                  <a className="relative surface rounded-lg overflow-hidden mb-4 block transform-gpu hover:opacity-50 transition-all duration-200 cursor-pointer">
+                  <a className="relative surface rounded-lg overflow-hidden mb-4 block transform-gpu interactive">
                     <div className="relative z-10 grid grid-cols-3 gap-4 items-stretch min-h-[200px]">
                       <div className="relative col-span-3 md:col-span-1 flex flex-col justify-between h-full aspect-video md:aspect-auto">
                         <div className="relative z-10 flex flex-col justify-between p-4">
@@ -66,7 +67,7 @@ export default function TabBrawlsOngoing() {
                               <figure className="avatar avatar-circle avatar-sm">
                                 <div>
                                   <img
-                                    src={prototypeData.getUserByID(1)?.avatar}
+                                    src={prototype.getUserByID(1)?.avatar}
                                   />
                                 </div>
                                 <i className="radar" />
@@ -138,20 +139,10 @@ export default function TabBrawlsOngoing() {
                             </label>
                             <div className="md:h-8">
                               <div className="flex gap-3 items-center">
+                                
                                 {brawl.rewards.map((reward, rewardIndex) => (
                                   <>
-                                    <div className="flex items-center gap-1">
-                                      <img
-                                        className="h-8"
-                                        src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-${reward.type}-unique.webp`}
-                                        width="auto"
-                                        height="auto"
-                                        alt=""
-                                      />
-                                      <span className="font-headings font-bold text-2xl italic">
-                                        {reward.value}
-                                      </span>
-                                    </div>
+                                    <Reward key={rewardIndex} reward={reward} imageClassNames="h-8" textClassNames="font-headings font-bold text-2xl italic" />
                                   </>
                                 ))}
                               </div>

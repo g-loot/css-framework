@@ -10,6 +10,19 @@
   transform-gpu
   ;
 
+  &:not(.menu-secondary) {
+    :where(li) {
+      > * {
+        &:not([class*='icon']) {
+          @apply
+          font-headings
+          tracking-wide
+          ;
+        }
+      }
+    }
+  }
+
   &.menu-rounded {
     :where(a, button) {
       @apply
@@ -56,7 +69,7 @@
     focus-visible:outline-1
     focus-visible:outline-main
     ;
-
+    
     > * {
       @apply
       relative
@@ -69,8 +82,6 @@
 
       &:not([class*='icon']) {
         @apply 
-        font-headings
-        tracking-wide
         block
         ;
       }
@@ -143,22 +154,17 @@
 
   &:not(.menu-secondary) {
     :where(a, button) {
-      > * {
-        @apply
-        font-bold
-        ;
-      }
+      @apply
+      font-bold
+      ;
     }
   }
 
   &.menu-secondary {
     :where(a, button) {
-      > * {
-        @apply
-        font-body
+      @apply
         text-sm
         ;
-      }
       &.is-active {
         @apply
         font-bold

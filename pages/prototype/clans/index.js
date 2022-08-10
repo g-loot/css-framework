@@ -26,7 +26,6 @@ export default function Clan() {
       openModalClanCreate();
     }
   }, [modalCreate]);
-
   
   return (
     <>
@@ -74,7 +73,7 @@ export default function Clan() {
           className="mb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc( 2 * 0.05s)" }}
         >
-          <h2 className="px-4 md:px-0 py-2 text-2xl">Clans you might like to join:</h2>
+          <h2 className="px-4 md:px-0 py-2 text-2xl font-normal text-ui-300">Clans you might like to join:</h2>
           <div className="overflow-x-auto lg:overflow-x-hidden scrollbar-hidden">
             <div className="flex lg:grid gap-4 grid-cols-2 px-4 md:px-0">
               {prototype.clans.map((clan, clanIndex) => (
@@ -226,14 +225,14 @@ export default function Clan() {
             </div>
           </div>
         </section>
-        <section className="">
-          <h2 className="px-4 sm:px-0 py-2 text-2xl">
+        <section className=" animate-slide-in-bottom animate-delay"
+              style={{ "--delay": "calc( 2 * 0.05s)" }}>
+          <h2 className="px-4 sm:px-0 py-2 text-2xl font-normal text-ui-300">
             Didn&#39;t find what you were looking for?
           </h2>
           <div className="grid gap-4 md:grid-cols-2">
             <div
-              className="surface surface-dimmed sm:rounded-lg p-4 relative flex items-center gap-4 animate-slide-in-bottom animate-delay"
-              style={{ "--delay": "calc( 2 * 0.05s)" }}
+              className="surface surface-dimmed sm:rounded-lg p-4 relative flex items-center gap-4"
             >
               <div className="-rotate-45 pointer-events-none drop-shadow-lg">
                 <img

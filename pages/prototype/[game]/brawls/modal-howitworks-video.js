@@ -5,6 +5,7 @@ import { UiContext } from "../../../../contexts/ui.js";
 export default function ModalBrawlHowitworksVideo(props) {
   const uiContext = useContext(UiContext);
   const [submitting, setSubmitting] = useState(false);
+  
   function closeModalWithDelay() {
     setSubmitting(true);
 

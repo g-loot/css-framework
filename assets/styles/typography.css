@@ -106,6 +106,14 @@ hr {
     to-ui-600/0
     ;
   }
+
+  &.separator-vertical {
+    @apply
+    w-px
+    h-full
+    border-none
+    bg-ui-600
+  }
 }
 
 .text-gradient {

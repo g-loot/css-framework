@@ -7,14 +7,14 @@ import { useRouter } from "next/router";
 export default function TabBrawlsHistory() {
   const router = useRouter();
   const { query } = useRouter();
-  const prototypeData = usePrototypeData();
+  const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
   const isEmpty = query.empty === "true" ? true : false;
   const { game } = router.query;
 
   useEffect(() => {
-    setSelectedGame(prototypeData.getGameBySlug(game));
+    setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
 
   return (

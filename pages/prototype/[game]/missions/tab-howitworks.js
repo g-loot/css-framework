@@ -5,43 +5,48 @@ import { useRouter } from "next/router";
 const MissionsHowitworksTabs = [
   {
     title: "Before you can do Missions & earn Mission Rewards",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-cpu.webp",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-cpu.webp",
     paragraphs: [
       {
         text: "To complete Missions and earn rewards, you need to connect your Steam account to G-Loot. Go to your profile to connect Steam. Make sure you have the G-Loot Tracker installed and running on your PC. The application is lightweight and should not affect your gameplay. The Tracker is partly an anti-cheat to help us keep G-Loot free from users abusing the platform. Download G-Loot Tracker.",
-      }
-    ]
+      },
+    ],
   },
   {
     title: "Launch the game",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
     paragraphs: [
       {
         text: "When you launch your game, G-Loot Tracker will launch the Overlay. The Overlay is where you can see your Mission progress and the best scores from your Brawl rounds.",
-      }
-    ]
+      },
+    ],
   },
   {
     title: "Daily Missions & how they are tracked",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-missions.webp",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-missions.webp",
     paragraphs: [
       {
         text: "To start competing in Missions, you need to connect your Steam account and run the G-Loot Tracker while you play. When your match has finished within the game, we will fetch the stats from that game and update your Mission progress. Sometimes it can take a while to get the stats from the latest match. Please, contact support if you are having trouble getting the stats for the past x hours. You can complete a set number of Missions each day, and new ones appear every 24 hours.",
-      }
-    ]
+      },
+    ],
   },
   {
     title: "Play in the right mode",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-gamemode.webp",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-gamemode.webp",
     paragraphs: [
       {
         text: "Some Missions must be played in certain game modes. Make sure to check before you play.",
-      }
-    ]
+      },
+    ],
   },
   {
     title: "How XP works",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-xp.webp",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-xp.webp",
     paragraphs: [
       {
         text: "You will earn XP from each Daily Mission The XP you earn will be added to the Mission Rewards.",
@@ -51,41 +56,44 @@ const MissionsHowitworksTabs = [
       },
       {
         text: "Your XP will reset after a week and can not be transfered to the next week.",
-      }
-    ]
+      },
+    ],
   },
   {
     title: "Mission Rewards",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-rewards.webp",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-rewards.webp",
     paragraphs: [
       {
         text: "Mission Rewards are how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Mission Rewards, you unlock another reward. Mission Rewards reset each week so you`ll always have something new to work towards.",
-      }
-    ]
+      },
+    ],
   },
   {
     title: "Premium Missions",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-premiummissions.webp",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-premiummissions.webp",
     paragraphs: [
       {
         text: "By getting a Premium subscription you will increase your daily amount of Missions and unlock the Premium Missions.",
       },
       {
         text: "You will then be able to earn more XP towards your Mission Rewards. If you are not a Premium subscriber, you will still progress in the Premium Missions but cannot earn XP from completing them. That means if you change your mind about Premium, you will unlock the XP right away.",
-      }
-    ]
+      },
+    ],
   },
   {
     title: "Premium Rewards",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-premiumrewards.webp",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-premiumrewards.webp",
     paragraphs: [
       {
-        text: "Become a Premium member to increase the number of rewards you can earn during the week."
-      }
+        text: "Become a Premium member to increase the number of rewards you can earn during the week.",
+      },
     ],
     hasButtonReward: true,
-  }
-]
+  },
+];
 
 export default function TabMissionsHowItWorks() {
   const { query } = useRouter();
@@ -139,7 +147,7 @@ export default function TabMissionsHowItWorks() {
       </section>
       <section
         className="pt-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 3 * 0.05s)" }}
+        style={{ "--delay": "calc( 2 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl leading-none mb-4">
@@ -154,7 +162,7 @@ export default function TabMissionsHowItWorks() {
                 <div className="text-sm text-ui-300">
                   Connect your Steam account to G-Loot.
                 </div>
-                <span/>
+                <span />
               </a>
             </li>
             <li>
@@ -163,14 +171,14 @@ export default function TabMissionsHowItWorks() {
                 <div className="text-sm text-ui-300">
                   Have the G-Loot tracker installed and running.
                 </div>
-                <span/>
+                <span />
               </a>
             </li>
             <li>
               <a href="#">
                 <i>3</i>
                 <div className="text-sm text-ui-300">Launch your game.</div>
-                <span/>
+                <span />
               </a>
             </li>
             <li>
@@ -179,7 +187,7 @@ export default function TabMissionsHowItWorks() {
                 <div className="text-sm text-ui-300">
                   Play a match in the correct game mode.
                 </div>
-                <span/>
+                <span />
               </a>
             </li>
             <li>
@@ -189,7 +197,7 @@ export default function TabMissionsHowItWorks() {
                   The missions will be updated automatically once the match is
                   finished.
                 </div>
-                <span/>
+                <span />
               </a>
             </li>
             <li>
@@ -199,14 +207,14 @@ export default function TabMissionsHowItWorks() {
                   XP will be added to the Mission Rewards when you complete a
                   mission.
                 </div>
-                <span/>
+                <span />
               </a>
             </li>
             <li>
               <a href="#">
                 <i>7</i>
                 <div className="text-sm text-ui-300">Claim your reward.</div>
-                <span/>
+                <span />
               </a>
             </li>
           </ul>
@@ -214,7 +222,7 @@ export default function TabMissionsHowItWorks() {
       </section>
       <section
         className="py-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 2 * 0.05s)" }}
+        style={{ "--delay": "calc( 3 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl leading-none mb-6">
@@ -222,7 +230,7 @@ export default function TabMissionsHowItWorks() {
           </h2>
         </div>
         <div className="accordion surface sm:rounded-lg">
-          { MissionsHowitworksTabs.map((tab, tabIndex) => (
+          {MissionsHowitworksTabs.map((tab, tabIndex) => (
             <>
               <Accordion
                 key={tab}
@@ -254,12 +262,13 @@ export default function TabMissionsHowItWorks() {
                       />
                     </div>
                     <div className=" text-ui-300 space-y-4 leading-relaxed">
-                      { tab.paragraphs.map((paragraph, paragraphIndex) => (
-                        <>
-                          <p key={paragraph}>
-                            {paragraph.text}
-                          </p>
-                        </>
+                      {tab.paragraphs.map((paragraph, paragraphIndex) => (
+                        <p
+                          key={paragraph}
+                          dangerouslySetInnerHTML={{
+                            __html: paragraph.text,
+                          }}
+                        />
                       ))}
                       {tab.hasButtonReward && (
                         <Link href={`premium${hasAds ? "?ads=true" : ""}`}>

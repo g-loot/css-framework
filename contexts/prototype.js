@@ -3,9 +3,9 @@ import {
   useContext
 } from 'react';
 
-import PrototypeDataClans from '../mock-data/clans.json';
-import PrototypeDataGames from '../mock-data/games.json';
-import PrototypeDataUsers from '../mock-data/users.json';
+import { dataClans } from '../mock-data/data-clans';
+import { dataGames } from '../mock-data/data-games';
+import { dataUsers } from '../mock-data/data-users';
 
 export const PrototypeContext = createContext(
   undefined
@@ -13,9 +13,11 @@ export const PrototypeContext = createContext(
 const { Provider } = PrototypeContext;
 
 export const PrototypeProvider = ({ children }) => {
-  const clans = PrototypeDataClans;
-  const games = PrototypeDataGames;
-  const users = PrototypeDataUsers;
+
+  const clans = dataClans;
+  const games = dataGames;
+  const users = dataUsers;
+  
   const getGameByID = (id) => {
     return games.find(game => {
       return game.id === parseInt(id);
@@ -43,6 +45,13 @@ export const PrototypeProvider = ({ children }) => {
     });
     return selectedBrawl;
   }
+  const getTournamentByID = (slug, id) => {
+    const selectedGame = getGameBySlug(slug);
+    const selectedTournament = selectedGame.tournaments.find(tournament => {
+      return tournament.id === parseInt(id);
+    });
+    return selectedTournament;
+  }
   const getClanByID = (id) => {
     return clans.find(clan => {
       return clan.id === parseInt(id);
@@ -65,6 +74,7 @@ export const PrototypeProvider = ({ children }) => {
         getUserByID,
         getUserProfile,
         getBrawlByID,
+        getTournamentByID,
         getClanByID,
         getUserClan,
       }}

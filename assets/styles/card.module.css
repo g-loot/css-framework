@@ -114,6 +114,10 @@
     @apply
     relative
     z-20
+    flex
+    flex-col
+    items-start
+    space-y-3
     ;
   }
   .card-title {
@@ -149,8 +153,8 @@
   @apply
   aspect-square
   relative
-  max-w-xs
   ;
+
   .card-decoration {
     @apply
     flex
@@ -161,7 +165,8 @@
     > img {
       @apply
       justify-self-stretch
-      h-20
+      max-h-[5rem]
+      max-w-[65%]
       mt-1
       ml-1
       drop-shadow-lg
@@ -245,7 +250,7 @@
   }
   .card-bg {
     &::before {
-      background-image: linear-gradient(to bottom, rgba(var(--color-ui-900) / 75%) 25%, rgba(var(--color-ui-900) / 25%) 50%, rgba(var(--color-ui-900) / 95%) 75%, rgba(var(--color-ui-900) / 100%) 100%)
+      background-image: linear-gradient(to bottom, rgba(var(--color-ui-900) / 75%) 15%, rgba(var(--color-ui-900) / 50%) 33%, rgba(var(--color-ui-900) / 95%) 66%, rgba(var(--color-ui-900) / 100%) 100%)
     }
   }
 }
@@ -255,8 +260,9 @@
 .card-mission {
   @apply
   aspect-video
-  max-w-sm
   ;
+
+  
   .card-body {
     @apply
     bg-ui-900/75
@@ -466,3 +472,5 @@
     }
   }
 }
+
+

@@ -18,7 +18,6 @@ export default function Accordion(props) {
   }, [isClosed]);
 
   useEffect(() => {
-    setHeightValue(elementRef.current.clientHeight);
     if(elementRef.current) {
       setHeightValue(elementRef.current.clientHeight);
     }

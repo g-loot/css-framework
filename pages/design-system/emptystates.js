@@ -109,6 +109,33 @@ const DSpage = () => {
       </div>
 
     </div>
+
+    {/* With image */}
+    <div className='mb-12' id='with-image'>
+
+      <h2 className='h3 mb-3'>
+        With image
+      </h2>
+
+      <div className="surface rounded-lg px-4 py-8 text-center">
+        <div className='max-w-xs mx-auto'>
+          <img className="mx-auto" src="https://res.cloudinary.com/gloot/image/upload/v1659691391/Marketing/2022_prototype/Decoration-chat.webp" width="220" height="auto" alt="" />
+          <div className='mt-2 mb-6'>
+            <p className='text-sm text-ui-400'>
+              Chat with your clan
+            </p>
+            <p className='text-lg text-ui-300'>
+              Coordinate and have fun together!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className='mt-4'>
+        <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/8jf0xzat/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+      </div>
+
+    </div>
   </>
   )
 }

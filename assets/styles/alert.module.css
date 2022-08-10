@@ -32,6 +32,19 @@
     }
   }
 
+  &.alert-sm {
+    @apply
+    p-2
+    gap-2
+    rounded-lg
+    ;
+    > * {
+      @apply
+      gap-2
+      ;
+    }
+  }
+
   &.alert-green {
     @apply
     border-0

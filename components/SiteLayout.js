@@ -1,5 +1,6 @@
 import { PrototypeProvider } from "../contexts/prototype";
 import UiContextProvider from "../contexts/ui.js";
+import VariablesContextProvider from "../contexts/variables";
 import { useRouter } from "next/router";
 
 const SiteLayout = ({ children }) => {
@@ -11,7 +12,9 @@ const SiteLayout = ({ children }) => {
 export const getLayout = (page) => (
   <SiteLayout>
     <UiContextProvider>
-      <PrototypeProvider>{page}</PrototypeProvider>
+      <VariablesContextProvider>
+        <PrototypeProvider>{page}</PrototypeProvider>
+      </VariablesContextProvider>
     </UiContextProvider>
   </SiteLayout>
 );

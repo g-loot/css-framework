@@ -1,13 +1,8 @@
 import Accordion from "../../../components/Accordion/Accordion";
 import Ad from "../../../components/Ad/Ad";
-import Carousel from "../../../components/Carousel/Carousel";
-import Countdown from "../../../components/Countdown/Countdown";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import RewardLadder from "../../../components/RewardLadder/RewardLadder";
 import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
-
-//import DataGames from '../../mock-data/games.json'
 
 export default function Home() {
   const router = useRouter();

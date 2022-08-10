@@ -5,6 +5,7 @@ import { PrototypeProvider } from "../contexts/prototype";
 import React from "react";
 import SiteLayout from "../components/SiteLayout";
 import UiContextProvider from "../contexts/ui.js";
+import VariablesContextProvider from "../contexts/variables";
 
 class MyApp extends App {
   render() {
@@ -15,7 +16,9 @@ class MyApp extends App {
       ((page) => (
         <SiteLayout>
           <UiContextProvider>
-            <PrototypeProvider>{page}</PrototypeProvider>
+            <VariablesContextProvider>
+              <PrototypeProvider>{page}</PrototypeProvider>
+            </VariablesContextProvider>
           </UiContextProvider>
         </SiteLayout>
       ));

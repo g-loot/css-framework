@@ -1,7 +1,6 @@
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
-//import DataGames from '../../mock-data/games.json'
 
 export default function Home() {
   const router = useRouter();

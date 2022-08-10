@@ -7,8 +7,6 @@ import PrototypeStructure from "../../../components/Prototype/PrototypeStructure
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 
-//import DataGames from '../../mock-data/games.json'
-
 export default function Home() {
   const router = useRouter();
   const { query } = useRouter();
@@ -91,36 +89,36 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="flex-1 hidden xl:flex justify-center gap-4">
-                    <div className="rounded-full border border-ui-700 bg-gradient-to-b from-ui-900/50 to-ui-900/10 backdrop-blur-sm p-1 flex items-center justify-center w-36 h-36 text-center">
+                    <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
                       <div>
-                        <div className="text-4xl font-headings font-bold mb-1">
+                        <div className="text-4xl font-headings mb-0.5">
                           {selectedUser.stats.xp}
                         </div>
-                        <div className="text-xs text-ui-300 uppercase leading-none">
+                        <div className="text-xs text-ui-300 uppercase">
                           Total
                           <br />
                           XP
                         </div>
                       </div>
                     </div>
-                    <div className="rounded-full border border-ui-700 bg-gradient-to-b from-ui-900/50 to-ui-900/10 backdrop-blur-sm p-1 flex items-center justify-center w-36 h-36 text-center">
+                    <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
                       <div>
-                        <div className="text-4xl font-headings font-bold mb-1">
+                        <div className="text-4xl font-headings mb-0.5">
                           {selectedUser.stats.playedBrawls}
                         </div>
-                        <div className="text-xs text-ui-300 uppercase leading-none">
+                        <div className="text-xs text-ui-300 uppercase">
                           Played
                           <br />
                           brawls
                         </div>
                       </div>
                     </div>
-                    <div className="rounded-full border border-ui-700 bg-gradient-to-b from-ui-900/50 to-ui-900/10 backdrop-blur-sm p-1 flex items-center justify-center w-36 h-36 text-center">
+                    <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
                       <div>
-                        <div className="text-4xl font-headings font-bold mb-1">
+                        <div className="text-4xl font-headings mb-0.5">
                           {selectedUser.stats.playedTournaments}
                         </div>
-                        <div className="text-xs text-ui-300 uppercase leading-none">
+                        <div className="text-xs text-ui-300 uppercase">
                           Played
                           <br />
                           tournaments
@@ -364,7 +362,7 @@ export default function Home() {
                                   <div className="leading-none text-xs text-ui-300 uppercase">
                                     WIN RATE
                                   </div>
-                                  <div className="text-3xl font-headings font-bold">
+                                  <div className="text-3xl font-headings">
                                     {stat.winrate}
                                   </div>
                                 </div>
@@ -382,7 +380,7 @@ export default function Home() {
                                   <div className="leading-none text-xs text-ui-300 uppercase">
                                     K/D ratio
                                   </div>
-                                  <div className="text-3xl font-headings font-bold">
+                                  <div className="text-3xl font-headings">
                                     {stat.kdratio}
                                   </div>
                                 </div>
@@ -400,7 +398,7 @@ export default function Home() {
                                   <div className="leading-none text-xs text-ui-300 uppercase">
                                     Headshots kill avg
                                   </div>
-                                  <div className="text-3xl font-headings font-bold">
+                                  <div className="text-3xl font-headings">
                                     {stat.headshotkillsavg}
                                   </div>
                                 </div>
@@ -418,7 +416,7 @@ export default function Home() {
                                   <div className="leading-none text-xs text-ui-300 uppercase">
                                     Assist avg
                                   </div>
-                                  <div className="text-3xl font-headings font-bold">
+                                  <div className="text-3xl font-headings">
                                     {stat.assistavg}
                                   </div>
                                 </div>
@@ -451,7 +449,7 @@ export default function Home() {
                                   <div className="leading-none text-xs text-ui-300 uppercase">
                                     Assists
                                   </div>
-                                  <div className="text-3xl font-headings font-bold">
+                                  <div className="text-3xl font-headings">
                                     151
                                   </div>
                                 </div>
@@ -459,7 +457,7 @@ export default function Home() {
                                   <div className="leading-none text-xs text-ui-300 uppercase">
                                     Kills
                                   </div>
-                                  <div className="text-3xl font-headings font-bold">
+                                  <div className="text-3xl font-headings">
                                     405
                                   </div>
                                 </div>
@@ -467,7 +465,7 @@ export default function Home() {
                                   <div className="leading-none text-xs text-ui-300 uppercase">
                                     Deaths
                                   </div>
-                                  <div className="text-3xl font-headings font-bold">
+                                  <div className="text-3xl font-headings">
                                     570
                                   </div>
                                 </div>
@@ -475,7 +473,7 @@ export default function Home() {
                                   <div className="leading-none text-xs text-ui-300 uppercase">
                                     Headshot kills
                                   </div>
-                                  <div className="text-3xl font-headings font-bold">
+                                  <div className="text-3xl font-headings">
                                     144
                                   </div>
                                 </div>
@@ -483,7 +481,7 @@ export default function Home() {
                                   <div className="leading-none text-xs text-ui-300 uppercase">
                                     Wins
                                   </div>
-                                  <div className="text-3xl font-headings font-bold">
+                                  <div className="text-3xl font-headings">
                                     35
                                   </div>
                                 </div>
@@ -491,7 +489,7 @@ export default function Home() {
                                   <div className="leading-none text-xs text-ui-300 uppercase">
                                     Losses
                                   </div>
-                                  <div className="text-3xl font-headings font-bold">
+                                  <div className="text-3xl font-headings">
                                     24
                                   </div>
                                 </div>
@@ -499,7 +497,7 @@ export default function Home() {
                                   <div className="leading-none text-xs text-ui-300 uppercase">
                                     Draws
                                   </div>
-                                  <div className="text-3xl font-headings font-bold">
+                                  <div className="text-3xl font-headings">
                                     1
                                   </div>
                                 </div>

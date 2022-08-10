@@ -212,7 +212,7 @@
   max-w-xs
   opacity-0
   -translate-x-8
-  animate-[bracket-round-slidein_1.5s_cubic-bezier(0.9,0,0.1,1)_forwards]
+  animate-slide-in-right
   snap-mandatory
   ;
 
@@ -340,7 +340,7 @@
   &::after {
     @apply
     opacity-0
-    animate-[bracket-connectors-slidein_0.75s_ease_forwards_1.5s]
+    animate-[bracket-connectors-slidein_0.75s_ease_forwards_0.75s]
     ;
   }
 }
@@ -365,17 +365,6 @@
     --delay: 10;
   }
   animation-delay: calc(var(--delay, 1) * 0.05s);
-}
-
-@keyframes bracket-round-slidein {
-  0% {
-    transform: translateX(-2rem);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 @keyframes bracket-connectors-slidein {

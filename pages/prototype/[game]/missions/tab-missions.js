@@ -10,13 +10,13 @@ import { useRouter } from "next/router";
 export default function TabMissionsMissions() {
   const router = useRouter();
   const { query } = useRouter();
-  const prototypeData = usePrototypeData();
+  const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
 
   useEffect(() => {
-    setSelectedGame(prototypeData.getGameBySlug(game));
+    setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
 
   
@@ -86,7 +86,7 @@ export default function TabMissionsMissions() {
               </>
             )}
 
-            <RewardLadder></RewardLadder>
+            <RewardLadder hasReward={selectedGame.hasReward} />
             <div className="text-center text-sm text-ui-300 mt-4">
               XP is accumulated from all missions in all games on G-Loot.
             </div>

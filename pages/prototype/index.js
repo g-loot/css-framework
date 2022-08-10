@@ -10,6 +10,11 @@ import { getLayout } from "../../components/SiteLayout";
 const Index = () => {
   const [filter, setFilter] = useState("");
   const [checked, setChecked] = useState(false);
+  let counter = 0;
+  
+  for (const obj of FrameworkPages.sections) {
+    if (obj.title === 'profile') counter++;
+  }
 
   function SwitchTheme(isChecked, theme) {
     if (isChecked === false) {
@@ -19,6 +24,7 @@ const Index = () => {
     }
     setChecked(!checked);
   }
+
 
   return (
     <>
@@ -32,7 +38,7 @@ const Index = () => {
         <div className="py-16">
           <div className="container max-w-md">
             <div className="flex items-end justify-between mb-2">
-              <h1 className="text-4xl">Page listing</h1>
+              <h1 className="text-4xl">Page listing <small>{counter}</small></h1>
               <div className="form-group mb-1">
                 <div className="input-group">
                   <span className="icon icon-zoom" />
@@ -79,13 +85,18 @@ const Index = () => {
                         .map((item) => (
                           <>
                             <li
-                              className={`item border-ui-700 ${
+                              className={`item border-ui-700 ${item.isDisabled ? "is-disabled" : ""} ${
                                 filter ? "border-b" : ""
                               }`}
                             >
                               <div className={`item-body ${item.tab ? "" : "pl-8"} ${item.tab === 1 ? "pl-16" : ""}  ${item.tab === 2 ? "pl-24" : ""}`}>
                                 <div className="item-title text-ui-300 flex gap-2">
                                   <span>{item.label}</span>
+                                  {item.chip && (
+                                    <span className="text-xs text-ui-300 uppercase leading-tight rounded py-1 px-1.5 bg-ui-900/75">
+                                      {item.chip}
+                                    </span>
+                                  )}
                                   {item.new && (
                                     <i className="badge" />
                                   )}

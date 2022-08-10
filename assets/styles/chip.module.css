@@ -21,7 +21,6 @@
   scale-100
   min-h-[2rem]
   text-sm
-  backdrop-blur
   bg-[length:300%_auto]
   focus-visible:outline
   focus-visible:outline-offset-2
@@ -31,7 +30,7 @@
   transform-gpu
   ;
 
-  &:not([class*=bg-]){
+  &:not([class*=bg-], .chip-transparent){
     @apply
     bg-main
     ;
@@ -49,7 +48,7 @@
     ;
   }
 
-  &:not([class*='sliced']) {
+  &:not([class*='sliced'], [class*='px-']) {
     @apply
     px-2
     ;
@@ -81,7 +80,6 @@
     }
   }
   
-
   /* Primary */
 
   &.chip-primary {
@@ -482,8 +480,12 @@
     @apply
     rounded
     text-ui-300
-    bg-ui-500/50
     ;
+    &:not(.chip-transparent) {
+      @apply
+      bg-ui-500/50
+      ;
+    }
     &.chip-green {
       @apply
       text-interaction-500

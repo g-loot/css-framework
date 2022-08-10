@@ -184,7 +184,9 @@ export default function TabBrawlsHowItWorks() {
   const modalVideo = query.modalvideo === "true" ? true : false;
 
   function openModalBrawlHowitworksVideo() {
-    uiContext.openModal(<ModalBrawlHowitworksVideo></ModalBrawlHowitworksVideo>);
+    uiContext.openModal(
+      <ModalBrawlHowitworksVideo></ModalBrawlHowitworksVideo>
+    );
   }
 
   useEffect(() => {
@@ -242,18 +244,27 @@ export default function TabBrawlsHowItWorks() {
       </section>
       <section
         className="pt-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 3 * 0.05s)" }}
+        style={{ "--delay": "calc( 2 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl leading-none mb-4">How Brawls work</h2>
         </div>
         <div className="surface sm:rounded-lg overflow-hidden max-w-sm mx-auto mb-4 relative">
           <div className="absolute inset-0 flex items-center justify-center bg-ui-900/50">
-            <button type='button' className="button button-tertiary button-lg button-play" onClick={openModalBrawlHowitworksVideo}>
+            <button
+              type="button"
+              className="button button-tertiary button-lg button-play"
+              onClick={openModalBrawlHowitworksVideo}
+            >
               <span className="icon icon-circle-caret-right"></span>
             </button>
           </div>
-          <img src="https://res.cloudinary.com/gloot/image/upload/v1658478390/Marketing/2022_prototype/brawls-howitworks-video.webp" width="100%" height="auto" alt="" />
+          <img
+            src="https://res.cloudinary.com/gloot/image/upload/v1658478390/Marketing/2022_prototype/brawls-howitworks-video.webp"
+            width="100%"
+            height="auto"
+            alt=""
+          />
         </div>
         <div className="overflow-x-auto scrollbar-desktop py-4">
           <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px]">
@@ -325,7 +336,7 @@ export default function TabBrawlsHowItWorks() {
       </section>
       <section
         className="py-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 2 * 0.05s)" }}
+        style={{ "--delay": "calc( 3 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl leading-none mb-6">
@@ -366,9 +377,12 @@ export default function TabBrawlsHowItWorks() {
                     </div>
                     <div className=" text-ui-300 space-y-4 leading-relaxed">
                       {tab.paragraphs.map((paragraph, paragraphIndex) => (
-                        <>
-                          <p key={paragraph}>{paragraph.text}</p>
-                        </>
+                        <p
+                          key={paragraph}
+                          dangerouslySetInnerHTML={{
+                            __html: paragraph.text,
+                          }}
+                        />
                       ))}
                       {tab.hasButtonReward && (
                         <Link href={`premium${hasAds ? "?ads=true" : ""}`}>

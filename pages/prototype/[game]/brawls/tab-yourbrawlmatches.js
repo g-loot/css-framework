@@ -1,8 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 
 import HowToBrawl from "../../../../components/HowTo/HowToBrawl";
 import Lottie from "lottie-react";
 import LottieExplosion1 from "../../../../assets/animations/explosion-1.json";
+import ModalContainer from "../../../../components/Modal/ModalContainer";
+import ModalInfoBeforeYouPlay from "./modal-info-beforeyouplay";
+import { UiContext } from "../../../../contexts/ui";
+import { VariablesContext } from "../../../../contexts/variables";
 import { useRouter } from "next/router";
 
 const enrollSteps = [
@@ -22,10 +26,23 @@ export default function TabBrawlsYourBrawlMatches() {
   const hasAds = query.ads === "true" ? true : false;
   const selectedGame = !query.game ? 0 : query.game;
   const elementRef = useRef(null);
+  const uiContext = useContext(UiContext);
+  const variablesContext = useContext(VariablesContext);
+  const modalInfoBeforeYouPlay = query.modalinfobeforeyouplay === "true" ? true : false;
   const [heightValue, setHeightValue] = useState(0);
   const [StartAnim1, setStartAnim1] = useState(false);
 
   const delay = 1000;
+
+  function openModalInfoBeforeYouPlay(number) {
+    uiContext.openModal(<ModalInfoBeforeYouPlay incrementNumber={number}></ModalInfoBeforeYouPlay>);
+  }
+
+  useEffect(() => {
+    if (modalInfoBeforeYouPlay) {
+      openModalInfoBeforeYouPlay();
+    }
+  }, [modalInfoBeforeYouPlay]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -51,13 +68,11 @@ export default function TabBrawlsYourBrawlMatches() {
   const [stepNumber, setStepNumber] = useState(0);
   const maxStep = 3;
 
-  function clickHandlerStepNumber(varTarget) {
-    setStepNumber(varTarget);
-    setStartAnim1(true);
-  }
-
   return (
     <>
+      {uiContext.displayedModal && (
+        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
+      )}
       <section className="pb-4 relative z-10">
         <HowToBrawl />
       </section>
@@ -69,7 +84,7 @@ export default function TabBrawlsYourBrawlMatches() {
           <div className="flex-1 text-center py-8">
             <div
               className={`overflow-hidden transition-all transform-gpu duration-500 ease-[cubic-bezier(.7,0,.3,1)]`}
-              style={{ height: `${stepNumber === 0 ? heightValue : 0}px` }}
+              style={{ height: `${variablesContext.brawlStep === 0 ? heightValue : 0}px` }}
             >
               <div ref={elementRef}>
                 <h2 className="text-2xl max-w-[25ch] mx-auto">
@@ -88,7 +103,7 @@ export default function TabBrawlsYourBrawlMatches() {
                 <h3 className="text-xl not-italic text-ui-200 uppercase">
                   Your Brawl points
                 </h3>
-                <div className="text-blue-300 text-7xl font-headings font-bold mt-4 mb-2">
+                <div className="text-blue-300 text-8xl font-headings mt-4 mb-2">
                   0
                 </div>
                 <div className="text-blue-300 text-xl font-headings font-bold uppercase">
@@ -178,7 +193,7 @@ export default function TabBrawlsYourBrawlMatches() {
                     <div
                       key={step}
                       className={`surface rounded-xl p-4 transition transform-gpu duration-500 ease-[cubic-bezier(.7,0,.3,1)] md:w-60 ${
-                        stepIndex <= stepNumber
+                        stepIndex <= variablesContext.brawlStep
                           ? ""
                           : "scale-90 opacity-30 pointer-events-none"
                       }`}
@@ -187,7 +202,7 @@ export default function TabBrawlsYourBrawlMatches() {
                         <div className="rounded-full bg-gradient-to-b from-ui-900 to-ui-700 inline-flex items-center justify-center p-3 border border-ui-700 shadow-sm overflow-hidden">
                           <div
                             className={`absolute duration-500 ease-in-out ${
-                              stepNumber >= step.step
+                              variablesContext.brawlStep >= step.step
                                 ? "opacity-100 translate-y-0"
                                 : "opacity-0 translate-y-2"
                             }`}
@@ -201,7 +216,7 @@ export default function TabBrawlsYourBrawlMatches() {
                               <span className="sr-only">Loading...</span>
                             </div>
                           </div>
-                          {stepNumber === stepIndex && (
+                          {variablesContext.brawlStep === stepIndex && (
                             <>
                               <div
                                 className={`absolute z-20 h-36 w-36 lottie-blur`}
@@ -218,7 +233,7 @@ export default function TabBrawlsYourBrawlMatches() {
                           )}
                           <div
                             className={`relative z-10 rounded-full bg-gradient-radial-spotlight from-interaction-300 to-blue-300 flex items-center h-24 w-24 justify-center transition-opacity duration-300 ease-in-out ${
-                              stepNumber >= step.step ? "opacity-0" : ""
+                              variablesContext.brawlStep >= step.step ? "opacity-0" : ""
                             }`}
                           >
                             <span className="icon icon-lock text-ui-800 text-4xl" />
@@ -229,7 +244,7 @@ export default function TabBrawlsYourBrawlMatches() {
                         <div className="relative">
                           <div
                             className={`absolute inset-0 flex justify-center items-center text-sm text-ui-200 gap-2 transition duration-300 ${
-                              stepNumber >= step.step
+                              variablesContext.brawlStep >= step.step
                                 ? "opacity-100 translate-y-0"
                                 : "opacity-0 translate-y-2"
                             }`}
@@ -239,7 +254,7 @@ export default function TabBrawlsYourBrawlMatches() {
                           </div>
                           <div
                             className={`relative z-0 transition-opacity duration-300 ${
-                              stepNumber >= step.step
+                              variablesContext.brawlStep >= step.step
                                 ? "opacity-0 pointer-events-none"
                                 : "opacity-100"
                             }`}
@@ -247,12 +262,9 @@ export default function TabBrawlsYourBrawlMatches() {
                             <button
                               type="button"
                               className={`button button-primary button-currency button-token w-full ${
-                                stepIndex <= stepNumber ? "" : "is-disabled"
+                                stepIndex <= variablesContext.brawlStep ? "" : "is-disabled"
                               }`}
-                              onClick={clickHandlerStepNumber.bind(
-                                this,
-                                stepIndex + 1
-                              )}
+                              onClick={openModalInfoBeforeYouPlay.bind(this, 1)}
                             >
                               <div>
                                 <span>Activate</span>
@@ -285,9 +297,9 @@ export default function TabBrawlsYourBrawlMatches() {
               <button
                 type="button"
                 className={`button button-primary button-currency button-token max-w-xs w-full mx-auto ${
-                  stepNumber === maxStep ? "is-disabled" : ""
+                  variablesContext.brawlStep === maxStep ? "is-disabled" : ""
                 }`}
-                onClick={clickHandlerStepNumber.bind(this, 3)}
+                onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
               >
                 <div>
                   <span>Activate all 3 matches</span>
@@ -311,7 +323,7 @@ export default function TabBrawlsYourBrawlMatches() {
           <hr className="separator-gradient max-w-md my-8" />
           <div
               className={`transition-all duration-500 ease-in-out ${
-                stepNumber >= 1
+                variablesContext.brawlStep >= 1
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 -translate-y-2"
               }`}

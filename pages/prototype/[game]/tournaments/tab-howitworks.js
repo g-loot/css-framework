@@ -4,88 +4,157 @@ import { useRouter } from "next/router";
 
 const MissionsHowitworksTabs = [
   {
-    title: "Before you can do Missions & earn Mission Rewards",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-cpu.webp",
+    title: "Finding a tournament",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-cpu.webp",
     paragraphs: [
       {
-        text: "To complete Missions and earn rewards, you need to connect your Steam account to G-Loot. Go to your profile to connect Steam. Make sure you have the G-Loot Tracker installed and running on your PC. The application is lightweight and should not affect your gameplay. The Tracker is partly an anti-cheat to help us keep G-Loot free from users abusing the platform. Download G-Loot Tracker.",
-      }
-    ]
-  },
-  {
-    title: "Launch the game",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
-    paragraphs: [
-      {
-        text: "When you launch your game, G-Loot Tracker will launch the Overlay. The Overlay is where you can see your Mission progress and the best scores from your Brawl rounds.",
-      }
-    ]
-  },
-  {
-    title: "Daily Missions & how they are tracked",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-missions.webp",
-    paragraphs: [
-      {
-        text: "To start competing in Missions, you need to connect your Steam account and run the G-Loot Tracker while you play. When your match has finished within the game, we will fetch the stats from that game and update your Mission progress. Sometimes it can take a while to get the stats from the latest match. Please, contact support if you are having trouble getting the stats for the past x hours. You can complete a set number of Missions each day, and new ones appear every 24 hours.",
-      }
-    ]
-  },
-  {
-    title: "Play in the right mode",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-gamemode.webp",
-    paragraphs: [
-      {
-        text: "Some Missions must be played in certain game modes. Make sure to check before you play.",
-      }
-    ]
-  },
-  {
-    title: "How XP works",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-xp.webp",
-    paragraphs: [
-      {
-        text: "You will earn XP from each Daily Mission The XP you earn will be added to the Mission Rewards.",
+        text: "You can join lots of different types of tournaments on G-Loot. Tournaments can have different rewards, entry fees.",
       },
       {
-        text: "For each milestone you reach in the Mission rewards, you will unlock a reward. XP is accumulated from all games you play on G-Loot. That means you can get XP from any game that is supported by G-Loot. Your XP will reset after a week and can not be transferred to the next week. XP is accumulated from all games you play on G-Loot. That means you can get XP from any game that is supported by G-Loot.",
+        text: "Make sure to read the tournament rules and additional information before registering.",
       },
       {
-        text: "Your XP will reset after a week and can not be transfered to the next week.",
-      }
-    ]
-  },
-  {
-    title: "Mission Rewards",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-rewards.webp",
-    paragraphs: [
-      {
-        text: "Mission Rewards are how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Mission Rewards, you unlock another reward. Mission Rewards reset each week so you`ll always have something new to work towards.",
-      }
-    ]
-  },
-  {
-    title: "Premium Missions",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-premiummissions.webp",
-    paragraphs: [
-      {
-        text: "By getting a Premium subscription you will increase your daily amount of Missions and unlock the Premium Missions.",
+        text: "<b class='text-main'>Showdown</b>: Monthly tournaments with a prize pool and your honor on the line! To compete, you need a Ticket from a tournament or Brawl.",
       },
       {
-        text: "You will then be able to earn more XP towards your Mission Rewards. If you are not a Premium subscriber, you will still progress in the Premium Missions but cannot earn XP from completing them. That means if you change your mind about Premium, you will unlock the XP right away.",
-      }
-    ]
-  },
-  {
-    title: "Premium Rewards",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-premiumrewards.webp",
-    paragraphs: [
+        text: "<b class='text-main'>Skirmish</b>: Tournaments for seasoned players and novices alike. Some offer rewards such as Tickets.",
+      },
       {
-        text: "Become a Premium member to increase the number of rewards you can earn during the week."
-      }
+        text: "<b class='text-main'>Open</b>: Casual tournaments for beginners and players who want to practice and get experience.",
+      },
     ],
-    hasButtonReward: true,
-  }
-]
+  },
+  {
+    title: "How to register to a tournament",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+    paragraphs: [
+      {
+        text: "You can register to tournaments as a solo player or with your team.",
+      },
+      {
+        text: "Some tournaments cost a Ticket to enter (icon for ticket) If registering with team each team member needs to have one ticket.",
+      },
+      {
+        text: "<b class='text-main'>Solo</b>: Register as a solo player and you will be matched up with a party of other solo players.",
+      },
+      {
+        text: "<b class='text-main'>Team</b>: Invite your teammates to play with you. Make sure all invited members accept the invitation so that you can play.",
+      },
+    ],
+  },
+  {
+    title: "Solo party",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+    paragraphs: [
+      {
+        text: "You will be matched up with other solo players. When we have found a full party for you, your party will be registered.",
+      },
+      {
+        text: "<b class='text-main'>Discord</b>: Join the G-Loot Discord server to talk to other players in your party.",
+      },
+      {
+        text: "Hover over the Discord icon next to the player’s name to see their Discord username.",
+      },
+    ],
+  },
+  {
+    title: "Getting server info",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+    paragraphs: [
+      {
+        text: "Log on to the G-Loot website before the tournament is due to start!",
+      },
+      {
+        text: "You will see a drop down with your match connection information.",
+      },
+      {
+        text: "<a href='https://help.gloot.com/kb/en/article/how-do-i-join-a-match' target='_blank' class='link link-main'>How do I join a match on G-Loot</a>",
+      },
+    ],
+  },
+  {
+    title: "During tournament",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+    paragraphs: [
+      {
+        text: "Join the G-Loot Discord server to get up-to-date information about your tournament.",
+      },
+      {
+        text: "In the Discord server, you’ll find channels for specific games.",
+      },
+      {
+        text: "If you need help during a tournament, you can contact the tournament operators through Discord.",
+      },
+    ],
+  },
+  {
+    title: "After tournament",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+    paragraphs: [
+      {
+        text: "After the tournament you will get your placement. That could be a place on the leaderboard or in a bracket.",
+      },
+      {
+        text: "If you win a reward in a tournament, it will be available to claim once the results have been verified and approved.",
+      },
+      {
+        text: "This might take up to 7 business days.",
+      },
+    ],
+  },
+  {
+    title: "Why was my party cancelled?",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+    paragraphs: [
+      {
+        text: "There are a few reasons for your party to have been canceled.",
+      },
+      {
+        text: "Read more about canceled parties here: <a href='https://help.gloot.com/kb/en/article/why-was-my-tournament-enrollment-cancelled' target='_blank' class='link link-main'>why was my tournament enrollment canceled</a>",
+      },
+    ],
+  },
+  {
+    title: "Can I leave a party?",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+    paragraphs: [
+      {
+        text: "You can always leave a party before the tournament has started.",
+      },
+      {
+        text: "If you created the party, you can remove your party from the tournament.",
+      },
+      {
+        text: "Once the tournament has started, you cannot leave the party.",
+      },
+      {
+        text: "Leaving the party at any point might cause your team to be disqualified.",
+      },
+    ],
+  },
+  {
+    title: "My question isn't answer or I need more help",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+    paragraphs: [
+      {
+        text: "If you have further questions or need help, you can contact our support team.",
+      },
+      {
+        text: "Alternatively, join the G-Loot Discord to speak directly with the tournament operators.",
+      },
+    ],
+  },
+  
+];
 
 export default function TabTournamentsHowItWorks() {
   const { query } = useRouter();
@@ -93,120 +162,53 @@ export default function TabTournamentsHowItWorks() {
   return (
     <>
       <section
-        className="py-12 animate-slide-in-bottom animate-delay"
+        className="pt-12 animate-slide-in-bottom animate-delay"
         style={{ "--delay": "calc( 1 * 0.05s)" }}
       >
-        <div className="grid gap-8 grid-cols-1 xl:grid-cols-2">
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
-            <img
-              className="rounded-lg"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657707945/Marketing/2022_prototype/missions-howitworks-missions.webp"
-              width="100%"
-              height="auto"
-              alt=""
-            />
-            <div className="px-4 sm:px-0">
-              <h2 className="text-2xl leading-none mb-4">What are Missions?</h2>
-              <p className="text-ui-300 leading-relaxed">
-                Daily missions are daily objectives that resets every 24 hours.
-                By completing Missions you will earn XP. The XP from all your
-                Missions goes into the Weekly Mission Rewards. You can complete
-                Daily Missions across the different games on G-Loot.
-              </p>
-            </div>
-          </div>
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
-            <img
-              className="rounded-lg"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657707945/Marketing/2022_prototype/missions-howitworks-rewards.webp"
-              width="100%"
-              height="auto"
-              alt=""
-            />
-            <div className="px-4 sm:px-0">
-              <h2 className="text-2xl leading-none mb-4">
-                What are Mission Rewards?
-              </h2>
-              <p className="text-ui-300 leading-relaxed">
-                Mission Rewards are how you turn your XP into useful stuff like
-                Coins or tokens. Each time you reach a milestone in the Mission
-                rewards, you unlock another reward. Mission rewards reset each
-                week so you will always have something new to work towards.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        className="pt-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 3 * 0.05s)" }}
-      >
         <div className="px-4 sm:px-0">
-          <h2 className="text-2xl leading-none mb-4">
-            How Missions and Missions Rewards work
-          </h2>
+          <h2 className="text-2xl leading-none mb-4">How Tournaments work</h2>
         </div>
         <div className="overflow-x-auto scrollbar-desktop py-4">
           <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px]">
             <li>
               <a href="#">
                 <i>1</i>
-                <div className="text-sm text-ui-300">
-                  Connect your Steam account to G-Loot.
-                </div>
-                <span/>
+                <div className="text-sm text-ui-300">Find a tournament.</div>
+                <span />
               </a>
             </li>
             <li>
               <a href="#">
                 <i>2</i>
                 <div className="text-sm text-ui-300">
-                  Have the G-Loot tracker installed and running.
+                  Register to a tournament.
                 </div>
-                <span/>
+                <span />
               </a>
             </li>
             <li>
               <a href="#">
                 <i>3</i>
-                <div className="text-sm text-ui-300">Launch your game.</div>
-                <span/>
+                <div className="text-sm text-ui-300">
+                  Join solo or with team.
+                </div>
+                <span />
               </a>
             </li>
             <li>
               <a href="#">
                 <i>4</i>
-                <div className="text-sm text-ui-300">
-                  Play a match in the correct game mode.
-                </div>
-                <span/>
+                <div className="text-sm text-ui-300">Play tournament.</div>
+                <span />
               </a>
             </li>
             <li>
               <a href="#">
                 <i>5</i>
                 <div className="text-sm text-ui-300">
-                  The missions will be updated automatically once the match is
-                  finished.
+                  Placement and rewards.
                 </div>
-                <span/>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>6</i>
-                <div className="text-sm text-ui-300">
-                  XP will be added to the Mission Rewards when you complete a
-                  mission.
-                </div>
-                <span/>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>7</i>
-                <div className="text-sm text-ui-300">Claim your reward.</div>
-                <span/>
+                <span />
               </a>
             </li>
           </ul>
@@ -222,7 +224,7 @@ export default function TabTournamentsHowItWorks() {
           </h2>
         </div>
         <div className="accordion surface sm:rounded-lg">
-          { MissionsHowitworksTabs.map((tab, tabIndex) => (
+          {MissionsHowitworksTabs.map((tab, tabIndex) => (
             <>
               <Accordion
                 key={tab}
@@ -254,12 +256,13 @@ export default function TabTournamentsHowItWorks() {
                       />
                     </div>
                     <div className=" text-ui-300 space-y-4 leading-relaxed">
-                      { tab.paragraphs.map((paragraph, paragraphIndex) => (
-                        <>
-                          <p key={paragraph}>
-                            {paragraph.text}
-                          </p>
-                        </>
+                      {tab.paragraphs.map((paragraph, paragraphIndex) => (
+                        <p
+                          key={paragraph}
+                          dangerouslySetInnerHTML={{
+                            __html: paragraph.text,
+                          }}
+                        />
                       ))}
                       {tab.hasButtonReward && (
                         <Link href={`premium${hasAds ? "?ads=true" : ""}`}>

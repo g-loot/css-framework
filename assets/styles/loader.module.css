@@ -184,6 +184,7 @@
   }
 }
 
+
 /* cards */
 
 .card-mission,
@@ -200,6 +201,12 @@
     bg-no-repeat
     animate-[loader-card_1s_linear_infinite]
     ;
+
+    &,
+    [class*="text-"] {
+      @apply
+      text-ui-800/0;
+    }
     background-image: linear-gradient(to right, rgba(var(--color-ui-800) / 100%) 8%, rgba(var(--color-ui-700) / 100%) 18%, rgba(var(--color-ui-800) / 100%) 33%);
 
     :where(.card-decoration > img, .card-decoration::before, .card-decoration::after, .chip > *, .card-bg, .card-meta > * > * ) {

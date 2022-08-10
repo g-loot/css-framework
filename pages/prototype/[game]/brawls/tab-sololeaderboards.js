@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Accordion from "../../../../components/Accordion/Accordion";
 import HowToBrawl from "../../../../components/HowTo/HowToBrawl";
 import Link from "next/link";
+import Reward from "../../../../components/Reward/Reward";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -40,14 +41,14 @@ const sideScroll = (element, speed, distance, step) => {
 
 export default function TabBrawlsSoloLeaderboards() {
   const router = useRouter();
-  const prototypeData = usePrototypeData();
+  const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedBrawl, setSelectedBrawl] = useState(null);
   const { game } = router.query;
   const { brawl_id } = router.query;
 
   useEffect(() => {
-    setSelectedBrawl(prototypeData.getBrawlByID(game, brawl_id));
+    setSelectedBrawl(prototype.getBrawlByID(game, brawl_id));
   }, [brawl_id]);
 
   const sliderRankWrapper = useRef(null);
@@ -477,7 +478,9 @@ export default function TabBrawlsSoloLeaderboards() {
                                   {groupIndex === 6 && (
                                     <span className="icon icon-profile-2" />
                                   )}
-                                  <span className="font-headings font-bold">{group}</span>
+                                  <span className="font-headings font-bold">
+                                    {group}
+                                  </span>
                                 </button>
                               </>
                             ))}
@@ -548,7 +551,7 @@ export default function TabBrawlsSoloLeaderboards() {
                               <span className="font-bold text-ui-300 leading-none">
                                 Loading
                               </span>
-                              <figure className="avatar avatar-square avatar-xs">
+                              <figure className="avatar avatar-squircle avatar-xs">
                                 <div />
                               </figure>
                             </div>
@@ -579,7 +582,7 @@ export default function TabBrawlsSoloLeaderboards() {
                           >
                             <div
                               className={`surface rounded-lg w-1/3 h-[54px] flex items-stretch overflow-hidden ${
-                                prototypeData.getUserByID(user.user)?.isYou
+                                prototype.getUserByID(user.user)?.isYou
                                   ? "surface-highlight-blue"
                                   : ""
                               }`}
@@ -621,53 +624,20 @@ export default function TabBrawlsSoloLeaderboards() {
                                 </div>
                               </div>
                               <div className="flex-1 flex items-center justify-center gap-4">
-                                {user.rewards.coin && (
-                                  <div className="flex items-center gap-2">
-                                    <img
-                                      className="h-6"
-                                      src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
-                                      width="auto"
-                                      height="auto"
-                                      alt=""
-                                    />
-                                    <span className="font-headings font-bold text-lg italic">
-                                      {numberWithSpaces(user.rewards.coin)}
-                                    </span>
-                                  </div>
-                                )}
-                                {user.rewards.token && (
-                                  <div className="flex items-center gap-2">
-                                    <img
-                                      className="h-6"
-                                      src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
-                                      width="auto"
-                                      height="auto"
-                                      alt=""
-                                    />
-                                    <span className="font-headings font-bold text-lg italic">
-                                      {numberWithSpaces(user.rewards.token)}
-                                    </span>
-                                  </div>
-                                )}
-                                {user.rewards.ticket && (
-                                  <div className="flex items-center gap-2">
-                                    <img
-                                      className="h-6"
-                                      src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}
-                                      width="auto"
-                                      height="auto"
-                                      alt=""
-                                    />
-                                    <span className="font-headings font-bold text-lg italic">
-                                      {numberWithSpaces(user.rewards.ticket)}
-                                    </span>
-                                  </div>
-                                )}
+                                {user.rewards?.map((reward, rewardIndex) => (
+                                  <Reward
+                                    key={rewardIndex}
+                                    reward={reward}
+                                    gap="gap-2"
+                                    imageClassNames="h-6"
+                                    textClassNames="font-headings font-bold text-lg italic"
+                                  />
+                                ))}
                               </div>
                             </div>
                             <div
                               className={`flex-1 accordion surface rounded-lg ${
-                                prototypeData.getUserByID(user.user)?.isYou
+                                prototype.getUserByID(user.user)?.isYou
                                   ? "surface-highlight-blue"
                                   : ""
                               }`}
@@ -681,9 +651,8 @@ export default function TabBrawlsSoloLeaderboards() {
                                           <div>
                                             <img
                                               src={
-                                                prototypeData.getUserByID(
-                                                  user.user
-                                                )?.avatar
+                                                prototype.getUserByID(user.user)
+                                                  ?.avatar
                                               }
                                             />
                                           </div>
@@ -693,17 +662,15 @@ export default function TabBrawlsSoloLeaderboards() {
                                         <div className="item-title">
                                           <span
                                             className={`${
-                                              prototypeData.getUserByID(
-                                                user.user
-                                              )?.isYou
+                                              prototype.getUserByID(user.user)
+                                                ?.isYou
                                                 ? "text-blue-300 font-bold"
                                                 : ""
                                             }`}
                                           >
                                             {
-                                              prototypeData.getUserByID(
-                                                user.user
-                                              )?.nickname
+                                              prototype.getUserByID(user.user)
+                                                ?.nickname
                                             }
                                           </span>
                                         </div>
@@ -712,12 +679,20 @@ export default function TabBrawlsSoloLeaderboards() {
                                         <span className="font-bold text-ui-300 leading-none">
                                           {user.stats.brawlPoints}
                                         </span>
-                                        <figure className="avatar avatar-square avatar-xs">
+
+                                        <figure
+                                          className={`avatar avatar-squircle avatar-xs ${
+                                            !prototype.getUserByID(user.user)
+                                              .clan
+                                              ? "opacity-0"
+                                              : ""
+                                          }`}
+                                        >
                                           <div>
                                             <img
                                               src={
-                                                prototypeData.getClanByID(
-                                                  prototypeData.getUserByID(
+                                                prototype.getClanByID(
+                                                  prototype.getUserByID(
                                                     user.user
                                                   )?.clan
                                                 )?.avatar

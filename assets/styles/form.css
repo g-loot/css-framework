@@ -34,7 +34,18 @@
   ;
 }
 
-
+.is-disabled {
+  @apply
+  cursor-not-allowed
+  opacity-50
+  ;
+  &,
+  * {
+    @apply
+    pointer-events-none
+    ;
+  }
+}
 
 /*----------------------------*/
 /* TEXT INPUTS */

@@ -289,7 +289,7 @@ export default function TabBrawlsHowItWorks() {
               <h3 className="text-2xl text-ui-200 mb-2 uppercase">Fair Play</h3>
               <div className="text-ui-300">
                 <p>We promote Fair Play by:</p>
-                <ul className="list-inside list-disc">
+                <ul className="list-outside list-disc pl-4">
                   <li>
                     Having a set of rules that all players are obligied to
                     follow.
