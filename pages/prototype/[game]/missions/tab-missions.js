@@ -29,7 +29,7 @@ export default function TabMissionsMissions() {
         <>
           <section
             className="py-8 animate-slide-in-bottom animate-delay"
-            style={{ "--delay": "calc( 1 * 0.05s)" }}
+            style={{ "--delay": "calc(1 * 0.05s)" }}
           >
             <div className="flex items-center justify-between mb-2 px-4 sm:px-0">
               <div>
@@ -93,7 +93,7 @@ export default function TabMissionsMissions() {
           </section>
           <section
             className="py-8 animate-slide-in-bottom animate-delay"
-            style={{ "--delay": "calc( 2 * 0.05s)" }}
+            style={{ "--delay": "calc(2 * 0.05s)" }}
           >
             <div className="flex items-center justify-between mb-2 px-4 sm:px-0">
               <div>

@@ -26,7 +26,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Daily Missions & how they are tracked",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-missions.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1660131014/Marketing/2022_prototype/missions-howitworks-missions.webp",
     paragraphs: [
       {
         text: "To start competing in Missions, you need to connect your Steam account and run the G-Loot Tracker while you play. When your match has finished within the game, we will fetch the stats from that game and update your Mission progress. Sometimes it can take a while to get the stats from the latest match. Please, contact support if you are having trouble getting the stats for the past x hours. You can complete a set number of Missions each day, and new ones appear every 24 hours.",
@@ -102,13 +102,13 @@ export default function TabMissionsHowItWorks() {
     <>
       <section
         className="py-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 1 * 0.05s)" }}
+        style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="grid gap-8 grid-cols-1 xl:grid-cols-2">
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
             <img
               className="rounded-lg"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657707945/Marketing/2022_prototype/missions-howitworks-missions.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1660131014/Marketing/2022_prototype/missions-howitworks-missions.webp"
               width="100%"
               height="auto"
               alt=""
@@ -126,7 +126,7 @@ export default function TabMissionsHowItWorks() {
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
             <img
               className="rounded-lg"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657707945/Marketing/2022_prototype/missions-howitworks-rewards.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1660131014/Marketing/2022_prototype/missions-howitworks-rewards.webp"
               width="100%"
               height="auto"
               alt=""
@@ -147,7 +147,7 @@ export default function TabMissionsHowItWorks() {
       </section>
       <section
         className="pt-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 2 * 0.05s)" }}
+        style={{ "--delay": "calc(2 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl leading-none mb-4">
@@ -222,7 +222,7 @@ export default function TabMissionsHowItWorks() {
       </section>
       <section
         className="py-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 3 * 0.05s)" }}
+        style={{ "--delay": "calc(3 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl leading-none mb-6">

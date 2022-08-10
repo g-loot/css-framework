@@ -11,7 +11,7 @@ export default function Home() {
       <PrototypeStructure title="Premium">
         <div
           className="animate-slide-in-bottom animate-delay"
-          style={{ "--delay": "calc( 2 * 0.05s)" }}
+          style={{ "--delay": "calc(2 * 0.05s)" }}
         >
           <section>
             <div className="flex flex-col items-center justify-center">

@@ -113,7 +113,7 @@ export default function TabBrawlsSoloLeaderboards() {
       </section>
       <section
         className="pb-8 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 1 * 0.05s)" }}
+        style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="col-span-1 hidden lg:block">

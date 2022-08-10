@@ -55,7 +55,7 @@ export default function TabTournamentsOverview() {
           {isRegistered && (
             <section
               className="animate-slide-in-bottom animate-delay mt-4 surface sm:rounded-lg p-4 mb-8"
-              style={{ "--delay": "calc( 0 * 0.05s)" }}
+              style={{ "--delay": "calc(0 * 0.05s)" }}
             >
               <div className="flex items-center justify-between flex-col md:flex-row border-b border-ui-700 pb-4">
                 <div className="flex items-center gap-2 text-main font-bold">
@@ -113,7 +113,7 @@ export default function TabTournamentsOverview() {
           {!isRegistered && (
             <section
               className="animate-slide-in-bottom animate-delay flex flex-col lg:flex-row items-stretch gap-8 mb-8 mt-4"
-              style={{ "--delay": "calc( 1 * 0.05s)" }}
+              style={{ "--delay": "calc(1 * 0.05s)" }}
             >
               <div className="flex-1 surface sm:rounded-lg relative flex flex-col items-center justify-center overflow-hidden text-center hoverinside:opacity-100 hoverinside:translate-y-0 hoverinside:scale-100">
                 <div className="relative z-10 py-8">
@@ -181,7 +181,7 @@ export default function TabTournamentsOverview() {
           )}
           <section
             className="animate-slide-in-bottom animate-delay flex flex-col xl:flex-row xl:items-start gap-4 xl:gap-8"
-            style={{ "--delay": "calc( 2 * 0.05s)" }}
+            style={{ "--delay": "calc(2 * 0.05s)" }}
           >
             <div className="flex-1 space-y-4 overflow-hidden">
               <div className="surface surface-dimmed sm:rounded-lg overflow-hidden">
@@ -425,7 +425,7 @@ export default function TabTournamentsOverview() {
                         key={reward}
                         className="flex items-center justify-between gap-2 rounded bg-gradient-to-b from-ui-700/10 to-ui-700/25 p-4 py-2 px-4 animate-slide-in-bottom animate-delay"
                         style={{
-                          "--delay": "calc( " + rewardIndex + " * 0.05s)",
+                          "--delay": "calc(" + rewardIndex + " * 0.05s)",
                         }}
                       >
                         <span className="font-headings text-lg">

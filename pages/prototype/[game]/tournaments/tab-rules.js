@@ -359,7 +359,7 @@ export default function TabTournamentsRules() {
     <>
       <section
         className="pt-6 pb-12 animate-slide-in-bottom animate-delay flex flex-col xl:flex-row xl:items-stretch gap-4 xl:gap-8"
-        style={{ "--delay": "calc( 1 * 0.05s)" }}
+        style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="flex-1 xl:flex-none xl:w-64 space-y-4">
           <Sticky

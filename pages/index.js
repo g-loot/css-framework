@@ -127,7 +127,7 @@ const Index = () => {
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
                     <div
                       className="rounded-xl surface overflow-hidden transform-gpu flex flex-col gap-4 items-stretch w-full p-2 animate-slide-in-bottom animate-delay"
-                      style={{ "--delay": "calc( 1 * 0.05s)" }}
+                      style={{ "--delay": "calc(1 * 0.05s)" }}
                     >
                       <div
                         className="flex-none aspect-landscape bg-cover bg-center rounded"
@@ -160,7 +160,7 @@ const Index = () => {
                     </div>
                     <div
                       className="rounded-xl surface overflow-hidden transform-gpu flex flex-col gap-4 items-stretch w-full p-2 animate-slide-in-bottom animate-delay"
-                      style={{ "--delay": "calc( 2 * 0.05s)" }}
+                      style={{ "--delay": "calc(2 * 0.05s)" }}
                     >
                       <div
                         className="flex-none aspect-landscape bg-cover bg-center rounded"
@@ -191,7 +191,7 @@ const Index = () => {
                     </div>
                     <div
                       className="rounded-xl surface overflow-hidden transform-gpu flex flex-col gap-4 items-stretch w-full p-2 animate-slide-in-bottom animate-delay"
-                      style={{ "--delay": "calc( 3 * 0.05s)" }}
+                      style={{ "--delay": "calc(3 * 0.05s)" }}
                     >
                       <div
                         className="flex-none aspect-landscape bg-cover bg-center rounded"

@@ -284,7 +284,7 @@ export default function SectionTournamentsLeaderboardTable() {
         <>
           <section
             className="min-h-screen animate-slide-in-bottom animate-delay sm:rounded-lg mb-8"
-            style={{ "--delay": "calc( 1 * 0.05s)" }}
+            style={{ "--delay": "calc(1 * 0.05s)" }}
           >
             <div className="mx-auto max-w-xl flex overflow-x-auto scrollbar-desktop justify-start gap-4 py-4">
               <div className="flex-1 flex justify-center gap-4 lg:gap-8 ">

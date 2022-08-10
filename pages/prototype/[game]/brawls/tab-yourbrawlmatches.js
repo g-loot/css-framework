@@ -78,7 +78,7 @@ export default function TabBrawlsYourBrawlMatches() {
       </section>
       <section
         className="relative pb-4 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 1 * 0.05s)" }}
+        style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="relative z-10 xl:flex items-center justify-between gap-8">
           <div className="flex-1 text-center py-8">
@@ -114,7 +114,7 @@ export default function TabBrawlsYourBrawlMatches() {
                 <div className="absolute w-44 xl:w-1/3 left-0">
                   <img
                     className="absolute object-fill animate-floating animate-delay"
-                    style={{ "--delay": "calc( 0 * 0.85s)" }}
+                    style={{ "--delay": "calc(0 * 0.85s)" }}
                     src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-1.svg"
                     width="100%"
                     height="auto"
@@ -122,7 +122,7 @@ export default function TabBrawlsYourBrawlMatches() {
                   />
                   <img
                     className="absolute object-fill animate-floating animate-delay top-3"
-                    style={{ "--delay": "calc( 1 * 0.85s)" }}
+                    style={{ "--delay": "calc(1 * 0.85s)" }}
                     src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-2.svg"
                     width="100%"
                     height="auto"
@@ -130,7 +130,7 @@ export default function TabBrawlsYourBrawlMatches() {
                   />
                   <img
                     className="absolute object-fill animate-floating animate-delay top-5"
-                    style={{ "--delay": "calc( 2 * 0.85s)" }}
+                    style={{ "--delay": "calc(2 * 0.85s)" }}
                     src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-3.svg"
                     width="100%"
                     height="auto"
@@ -138,7 +138,7 @@ export default function TabBrawlsYourBrawlMatches() {
                   />
                   <img
                     className="absolute object-fill animate-floating animate-delay top-8"
-                    style={{ "--delay": "calc( 3 * 0.85s)" }}
+                    style={{ "--delay": "calc(3 * 0.85s)" }}
                     src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-4.svg"
                     width="100%"
                     height="auto"
@@ -148,7 +148,7 @@ export default function TabBrawlsYourBrawlMatches() {
                 <div className="absolute w-44 xl:w-1/3 right-0 -scale-x-100">
                   <img
                     className="absolute object-fill animate-floating animate-delay"
-                    style={{ "--delay": "calc( 0 * 0.85s)" }}
+                    style={{ "--delay": "calc(0 * 0.85s)" }}
                     src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-1.svg"
                     width="100%"
                     height="auto"
@@ -156,7 +156,7 @@ export default function TabBrawlsYourBrawlMatches() {
                   />
                   <img
                     className="absolute object-fill animate-floating animate-delay top-3"
-                    style={{ "--delay": "calc( 1 * 0.85s)" }}
+                    style={{ "--delay": "calc(1 * 0.85s)" }}
                     src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-2.svg"
                     width="100%"
                     height="auto"
@@ -164,7 +164,7 @@ export default function TabBrawlsYourBrawlMatches() {
                   />
                   <img
                     className="absolute object-fill animate-floating animate-delay top-5"
-                    style={{ "--delay": "calc( 2 * 0.85s)" }}
+                    style={{ "--delay": "calc(2 * 0.85s)" }}
                     src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-3.svg"
                     width="100%"
                     height="auto"
@@ -172,7 +172,7 @@ export default function TabBrawlsYourBrawlMatches() {
                   />
                   <img
                     className="absolute object-fill animate-floating animate-delay top-8"
-                    style={{ "--delay": "calc( 3 * 0.85s)" }}
+                    style={{ "--delay": "calc(3 * 0.85s)" }}
                     src="https://res.cloudinary.com/gloot/image/upload/v1658393885/Marketing/2022_prototype/Tournament_wings-4.svg"
                     width="100%"
                     height="auto"
@@ -188,7 +188,7 @@ export default function TabBrawlsYourBrawlMatches() {
                 <>
                   <div
                     className={`relative z-10 animate-slide-in-bottom animate-delay`}
-                    style={{ "--delay": "calc( 2 * 0.05s)" }}
+                    style={{ "--delay": "calc(2 * 0.05s)" }}
                   >
                     <div
                       key={step}

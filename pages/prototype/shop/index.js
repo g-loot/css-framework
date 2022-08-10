@@ -60,7 +60,7 @@ export default function Home() {
             </div>
             <div
               className="absolute hidden md:block z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-              style={{ "--delay": "calc( 1 * 0.05s)" }}
+              style={{ "--delay": "calc(1 * 0.05s)" }}
             >
               <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
               <img

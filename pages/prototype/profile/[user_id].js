@@ -129,7 +129,7 @@ export default function Home() {
                 </div>
                 <div
                   className="absolute z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-                  style={{ "--delay": "calc( 1 * 0.05s)" }}
+                  style={{ "--delay": "calc(1 * 0.05s)" }}
                 >
                   <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
                   <img
@@ -253,7 +253,7 @@ export default function Home() {
 
             <section
               className="flex flex-col lg:flex-row gap-8 lg:items-start animate-slide-in-bottom animate-delay"
-              style={{ "--delay": "calc( 1 * 0.05s)" }}
+              style={{ "--delay": "calc(1 * 0.05s)" }}
             >
               <div className="flex-1 space-y-4">
                 {!selectedUser.stats.gamestats && (
@@ -353,7 +353,7 @@ export default function Home() {
                             <div className="text-center border-r border-ui-700/50">
                               <div
                                 className="animate-slide-in-bottom animate-delay"
-                                style={{ "--delay": "calc( 2 * 0.05s)" }}
+                                style={{ "--delay": "calc(2 * 0.05s)" }}
                               >
                                 <div className="icon-holder icon-holder-sm mx-auto">
                                   <span className="icon icon-mission-gamematchbattlewon" />
@@ -371,7 +371,7 @@ export default function Home() {
                             <div className="text-center border-r border-ui-700/50">
                               <div
                                 className="animate-slide-in-bottom animate-delay"
-                                style={{ "--delay": "calc( 3 * 0.05s)" }}
+                                style={{ "--delay": "calc(3 * 0.05s)" }}
                               >
                                 <div className="icon-holder icon-holder-sm mx-auto">
                                   <span className="icon icon-mission-kill" />
@@ -389,7 +389,7 @@ export default function Home() {
                             <div className="text-center border-r border-ui-700/50">
                               <div
                                 className="animate-slide-in-bottom animate-delay"
-                                style={{ "--delay": "calc( 4 * 0.05s)" }}
+                                style={{ "--delay": "calc(4 * 0.05s)" }}
                               >
                                 <div className="icon-holder icon-holder-sm mx-auto">
                                   <span className="icon icon-mission-headshot" />
@@ -407,7 +407,7 @@ export default function Home() {
                             <div className="text-center">
                               <div
                                 className="animate-slide-in-bottom animate-delay"
-                                style={{ "--delay": "calc( 5 * 0.05s)" }}
+                                style={{ "--delay": "calc(5 * 0.05s)" }}
                               >
                                 <div className="icon-holder icon-holder-sm mx-auto">
                                   <span className="icon icon-mission-assist" />

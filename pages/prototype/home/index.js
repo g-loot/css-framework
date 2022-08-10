@@ -52,7 +52,7 @@ export default function Home() {
 
         <section
           className="mb-8 animate-slide-in-bottom animate-delay"
-          style={{ "--delay": "calc( 2 * 0.05s)" }}
+          style={{ "--delay": "calc(2 * 0.05s)" }}
         >
           <div className="flex items-center justify-between mb-4 px-4 sm:px-0">
             <div>
@@ -83,7 +83,7 @@ export default function Home() {
 
         <section
           className="mb-8 grid grid-cols-1 xl:grid-cols-3 gap-4 animate-slide-in-bottom animate-delay"
-          style={{ "--delay": "calc( 3 * 0.05s)" }}
+          style={{ "--delay": "calc(3 * 0.05s)" }}
         >
           <div className="surface flex flex-col flex-1 min-h-[16rem] lg:min-h-fit relative overflow-hidden sm:rounded-lg p-4">
             <div className="relative z-30 flex-1">

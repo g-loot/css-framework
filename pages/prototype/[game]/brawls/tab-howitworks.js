@@ -202,7 +202,7 @@ export default function TabBrawlsHowItWorks() {
       )}
       <section
         className="py-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 1 * 0.05s)" }}
+        style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="grid gap-8 grid-cols-1 xl:grid-cols-3 items-center">
           <img
@@ -244,7 +244,7 @@ export default function TabBrawlsHowItWorks() {
       </section>
       <section
         className="pt-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 2 * 0.05s)" }}
+        style={{ "--delay": "calc(2 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl leading-none mb-4">How Brawls work</h2>
@@ -336,7 +336,7 @@ export default function TabBrawlsHowItWorks() {
       </section>
       <section
         className="py-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 3 * 0.05s)" }}
+        style={{ "--delay": "calc(3 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl leading-none mb-6">

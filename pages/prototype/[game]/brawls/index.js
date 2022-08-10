@@ -58,34 +58,27 @@ export default function Home() {
               <div className="relative z-10 grid grid-cols-8 gap-4 items-flex min-h-[250px]">
                 <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center pt-14 pb-8 md:pt-8">
                   <div className="absolute top-0 left-0 py-2 px-4">
-                    <nav
-                      className="flex whitespace-nowrap"
-                      aria-label="Breadcrumb"
-                    >
-                      <ol className="inline-flex items-center space-x-1 md:space-x-3">
+                    <nav className="breadcrumbs" aria-label="Breadcrumb">
+                      <ol>
                         <li
-                          className="inline-flex items-center animate-slide-in-top animate-delay"
-                          style={{ "--delay": "calc( 1 * 0.05s)" }}
+                          className="animate-slide-in-top animate-delay"
+                          style={{ "--delay": "calc(0 * 0.05s)" }}
                         >
-                          <Link href="/prototype/home">
-                            <a
-                              href="#"
-                              className="inline-flex gap-2 items-center text-sm text-ui-300 hover:text-ui-100 active:opacity-50 focus-visible:text-main focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main transition-colors duration-75"
-                            >
+                          <Link
+                            href={`/prototype/home${hasAds ? "?ads=true" : ""}`}
+                          >
+                            <a href="#">
                               <span className="icon icon-20 icon-home-2" />
                               <span>Home</span>
                             </a>
                           </Link>
                         </li>
-                        <li aria-current="page" className="max-w-[20ch]">
-                          <div
-                            className="flex items-center animate-slide-in-top animate-delay"
-                            style={{ "--delay": "calc( 3 * 0.05s)" }}
-                          >
-                            <span className="icon icon-20 text-ui-300 icon-arrow-sm-right" />
-                            <span className="ml-1 text-sm text-ui-300 md:ml-2 overflow-hidden overflow-ellipsis">
-                              Brawls
-                            </span>
+                        <li
+                          className="animate-slide-in-top animate-delay"
+                          style={{ "--delay": "calc(1 * 0.05s)" }}
+                        >
+                          <div>
+                            <span>Brawls</span>
                           </div>
                         </li>
                       </ol>
@@ -147,7 +140,7 @@ export default function Home() {
               </div>
               <div
                 className="absolute z-0 right-0 inset-y-0 w-full xl:w-2/3 animate-slide-in-right animate-delay"
-                style={{ "--delay": "calc( 1 * 0.05s)" }}
+                style={{ "--delay": "calc(1 * 0.05s)" }}
               >
                 <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/75"></div>
                 <img

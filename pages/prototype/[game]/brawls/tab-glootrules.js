@@ -179,7 +179,7 @@ export default function TabBrawlsHowItWorks() {
     <>
       <section
         className="pt-6 pb-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 1 * 0.05s)" }}
+        style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="grid gap-8 grid-cols-1 xl:grid-cols-3 items-center">
           <img
@@ -203,7 +203,7 @@ export default function TabBrawlsHowItWorks() {
       </section>
       <section
         className="pb-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 2 * 0.05s)" }}
+        style={{ "--delay": "calc(2 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 text-center gap-8">
           <div className="col-span-4 md:col-span-2 xl:col-span-1">
@@ -271,7 +271,7 @@ export default function TabBrawlsHowItWorks() {
       </section>
       <section
         className="pb-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 3 * 0.05s)" }}
+        style={{ "--delay": "calc(3 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           <div className="col-span-1 md:col-span-2 xl:col-span-1 surface sm:rounded-lg p-4 sm:p-8 flex items-center gap-8">

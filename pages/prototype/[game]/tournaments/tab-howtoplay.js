@@ -98,7 +98,7 @@ export default function TabTournamentsHowToPlay() {
           key={howto}
           className="pt-6 pb-12 max-w-lg mx-auto animate-slide-in-bottom animate-delay"
           style={{
-            "--delay": "calc( " + howtoIndex + " * 0.05s)",
+            "--delay": "calc(" + howtoIndex + " * 0.05s)",
           }}
         >
           <div className="flex gap-12 items-center flex-col lg:flex-row">

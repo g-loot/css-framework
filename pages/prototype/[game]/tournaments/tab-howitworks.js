@@ -163,7 +163,7 @@ export default function TabTournamentsHowItWorks() {
     <>
       <section
         className="pt-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 1 * 0.05s)" }}
+        style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl leading-none mb-4">How Tournaments work</h2>
@@ -216,7 +216,7 @@ export default function TabTournamentsHowItWorks() {
       </section>
       <section
         className="py-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc( 2 * 0.05s)" }}
+        style={{ "--delay": "calc(2 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl leading-none mb-6">

@@ -8,40 +8,93 @@ const DSpage = () => {
     <>
       <h1 className="mb-2">Breadcrumbs</h1>
 
-      {/* Footer */}
-      <div className="mb-12" id="footer">
-        <div className="pt-4">
+      {/* Structure */}
+      <div className="mb-10" id="structure">
+        <h2 className="h3 mb-3">Structure</h2>
+        <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">
               <div className="flex-1 space-y-4 surface rounded-lg px-4 py-12 flex justify-center">
-                <nav className="flex whitespace-nowrap" aria-label="Breadcrumb">
-                  <ol className="inline-flex items-center space-x-1 md:space-x-3">
-                    <li className="inline-flex items-center">
-                      <a
-                        href="#"
-                        className="inline-flex gap-2 items-center text-sm text-ui-300 hover:text-ui-100 active:opacity-50 focus-visible:text-main focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main transition-colors duration-75"
-                      >
+                <nav className="breadcrumbs" aria-label="Breadcrumb">
+                  <ol>
+                    <li>
+                      <a href="#">
                         <span className="icon icon-20 icon-home-2" />
                         <span>Home</span>
                       </a>
                     </li>
                     <li>
-                      <div className="flex items-center">
-                        <span className="icon icon-20 text-ui-300 icon-arrow-sm-right" />
-                        <a
-                          href="#"
-                          className="ml-1 text-sm text-ui-300 hover:text-ui-100 active:opacity-50 focus-visible:text-main focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main transition-colors duration-75 md:ml-2"
-                        >
-                          Games
-                        </a>
+                      <a href="#">
+                        <span>Games</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <span>Tournaments</span>
+                      </a>
+                    </li>
+                    <li aria-current="page">
+                      <div>
+                        <span>European Champions European Champions</span>
                       </div>
                     </li>
-                    <li aria-current="page" className="max-w-[20ch]">
-                      <div className="flex items-center">
-                        <span className="icon icon-20 text-ui-300 icon-arrow-sm-right" />
-                        <span className="ml-1 text-sm text-ui-300 md:ml-2 overflow-hidden overflow-ellipsis">
-                          Missions
-                        </span>
+                  </ol>
+                </nav>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/ycj35Lfp/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* With animation */}
+      <div className="mb-10" id="with-animation">
+        <h2 className="h3 mb-3">With animation</h2>
+        <div className="">
+          <div className="">
+            <div className="flex gap-4 flex-col">
+              <div className="flex-1 space-y-4 surface rounded-lg px-4 py-12 flex justify-center">
+                <nav className="breadcrumbs" aria-label="Breadcrumb">
+                  <ol>
+                    <li
+                      className="animate-slide-in-top animate-delay"
+                      style={{ "--delay": "calc(0 * 0.05s)" }}
+                    >
+                      <a href="#">
+                        <span className="icon icon-20 icon-home-2" />
+                        <span>Home</span>
+                      </a>
+                    </li>
+                    <li
+                      className="animate-slide-in-top animate-delay"
+                      style={{ "--delay": "calc(1 * 0.05s)" }}
+                    >
+                      <a href="#">
+                        <span>Games</span>
+                      </a>
+                    </li>
+                    <li
+                      className="animate-slide-in-top animate-delay"
+                      style={{ "--delay": "calc(2 * 0.05s)" }}
+                    >
+                      <a href="#">
+                        <span>Tournaments</span>
+                      </a>
+                    </li>
+                    <li
+                      className="animate-slide-in-top animate-delay"
+                      style={{ "--delay": "calc(3 * 0.05s)" }}
+                      aria-current="page"
+                    >
+                      <div>
+                        <span>European Champions European Champions</span>
                       </div>
                     </li>
                   </ol>

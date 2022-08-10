@@ -79,7 +79,7 @@ export default function Topbar() {
   return (
     <div className="sticky top-0 z-50 bg-ui-800/50 navbar">
       <div className="container relative">
-        <div className="max-w-2xl flex gap-4 lg:gap-8 items-center px-2 sm:px-0">
+        <div className={`max-w-2xl flex gap-4 lg:gap-8 items-center px-2 sm:px-0 mx-auto ${hasAds ? "3xl:m-0" : ""}`}>
           <div className="w-56 flex items-center gap-2">
             <div className="block lg:hidden">
               <label

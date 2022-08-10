@@ -197,6 +197,11 @@
           "label": "Navbar",
           "tags": "nav,navigation,top,menu,fixed,topbar,navbar",
           "url": "navbar"
+        },
+        {
+          "label": "Breadcrumbs",
+          "tags": "breadcrumbs,website,navigation,page,structure,history,back,previous,next",
+          "url": "breadcrumbs"
         }
       ]
     },
@@ -317,11 +322,6 @@
           "label": "Footer",
           "tags": "footer,website,section,end,page",
           "url": "footer"
-        },
-        {
-          "label": "Breadcrumbs",
-          "tags": "breadcrumbs,website,navigation,page,structure",
-          "url": "breadcrumbs"
         },
         {
           "label": "Brawl info",

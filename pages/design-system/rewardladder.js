@@ -362,7 +362,7 @@ const DSpage = () => {
                       <>
                         <div
                           className="relative z-10 flex flex-col items-center justify-center gap-3 animate-slide-in-bottom animate-delay"
-                          style={{ "--delay": "calc( 1 * 0.05s)" }}
+                          style={{ "--delay": "calc(1 * 0.05s)" }}
                         >
                           <h2>2 rewards available</h2>
                           <button
@@ -409,11 +409,11 @@ const DSpage = () => {
                     {variablesContext.rewardClaimed && (
                       <div
                         className="flex flex-col items-center justify-center gap-3 animate-slide-in-bottom animate-delay"
-                        style={{ "--delay": "calc( 1 * 0.05s)" }}
+                        style={{ "--delay": "calc(1 * 0.05s)" }}
                       >
                         <div
                           className="relative z-10 flex flex-col items-center justify-center gap-3 animate-slide-in-bottom animate-delay"
-                          style={{ "--delay": "calc( 1 * 0.05s)" }}
+                          style={{ "--delay": "calc(1 * 0.05s)" }}
                         >
                           <h2>Well done!</h2>
                           <p className="text-ui-200">
@@ -762,11 +762,11 @@ const DSpage = () => {
                   <div className="absolute inset-0 z-50 backdrop-blur-sm bg-gradient-radial from-ui-900/90 via-ui-900/90 to-ui-900/60 gap-2 flex items-center justify-center overflow-hidden">
                     <div
                       className="flex flex-col items-center justify-center gap-3 animate-slide-in-bottom animate-delay"
-                      style={{ "--delay": "calc( 1 * 0.05s)" }}
+                      style={{ "--delay": "calc(1 * 0.05s)" }}
                     >
                       <div
                         className="relative z-10 flex flex-col items-center justify-center gap-3 animate-slide-in-bottom animate-delay"
-                        style={{ "--delay": "calc( 1 * 0.05s)" }}
+                        style={{ "--delay": "calc(1 * 0.05s)" }}
                       >
                         <h2>Well done!</h2>
                         <p className="text-ui-200">
@@ -1113,11 +1113,11 @@ const DSpage = () => {
                   <div className="absolute inset-0 z-50 backdrop-blur-sm bg-gradient-radial from-ui-900/90 via-ui-900/90 to-ui-900/60 gap-2 flex items-center justify-center overflow-hidden">
                     <div
                       className="flex flex-col items-center justify-center gap-3 animate-slide-in-bottom animate-delay"
-                      style={{ "--delay": "calc( 1 * 0.05s)" }}
+                      style={{ "--delay": "calc(1 * 0.05s)" }}
                     >
                       <div
                         className="relative z-10 flex flex-col items-center justify-center gap-3 animate-slide-in-bottom animate-delay"
-                        style={{ "--delay": "calc( 1 * 0.05s)" }}
+                        style={{ "--delay": "calc(1 * 0.05s)" }}
                       >
                         <h2>Oops</h2>
                         <p className="text-ui-200">

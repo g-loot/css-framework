@@ -1288,7 +1288,7 @@ const DSpage = () => {
                         ? "animate-slide-in-bottom animate-delay"
                         : ""
                     }`}
-                    style={{ "--delay": "calc( 1 * 0.05s)" }}
+                    style={{ "--delay": "calc(1 * 0.05s)" }}
                   >
                     <div className="item-image">
                       <figure className="avatar avatar-xs">
@@ -1308,7 +1308,7 @@ const DSpage = () => {
                         ? "animate-slide-in-bottom animate-delay"
                         : ""
                     }`}
-                    style={{ "--delay": "calc( 2 * 0.05s)" }}
+                    style={{ "--delay": "calc(2 * 0.05s)" }}
                   >
                     <div className="item-image">
                       <figure className="avatar avatar-xs">
@@ -1328,7 +1328,7 @@ const DSpage = () => {
                         ? "animate-slide-in-bottom animate-delay"
                         : ""
                     }`}
-                    style={{ "--delay": "calc( 3 * 0.05s)" }}
+                    style={{ "--delay": "calc(3 * 0.05s)" }}
                   >
                     <div className="item-image">
                       <figure className="avatar avatar-xs">
@@ -1348,7 +1348,7 @@ const DSpage = () => {
                         ? "animate-slide-in-bottom animate-delay"
                         : ""
                     }`}
-                    style={{ "--delay": "calc( 4 * 0.05s)" }}
+                    style={{ "--delay": "calc(4 * 0.05s)" }}
                   >
                     <div className="item-image">
                       <figure className="avatar avatar-xs">
@@ -1368,7 +1368,7 @@ const DSpage = () => {
                         ? "animate-slide-in-bottom animate-delay"
                         : ""
                     }`}
-                    style={{ "--delay": "calc( 5 * 0.05s)" }}
+                    style={{ "--delay": "calc(5 * 0.05s)" }}
                   >
                     <div className="item-image">
                       <figure className="avatar avatar-xs">

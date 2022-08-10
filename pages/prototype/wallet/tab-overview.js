@@ -44,7 +44,7 @@ export default function TabWalletOverview() {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
         <div
           className="surface rounded-xl flex flex-col items-stretch p-2 w-full max-w-xs lg:max-w-xl mx-auto animate-slide-in-right animate-delay"
-          style={{ "--delay": "calc( 1 * 0.05s)" }}
+          style={{ "--delay": "calc(1 * 0.05s)" }}
         >
           <div className="bg-gradient-to-b from-ui-900/50 to-ui-900/5 rounded overflow-hidden">
             <div className="flex gap-2 items-center justify-center">
@@ -82,7 +82,7 @@ export default function TabWalletOverview() {
         </div>
         <div
           className="surface rounded-xl flex flex-col items-stretch p-2 w-full max-w-xs lg:max-w-xl mx-auto animate-slide-in-right animate-delay"
-          style={{ "--delay": "calc( 2 * 0.05s)" }}
+          style={{ "--delay": "calc(2 * 0.05s)" }}
         >
           <div className="bg-gradient-to-b from-ui-900/50 to-ui-900/5 rounded overflow-hidden">
             <div className="flex gap-2 items-center justify-center">
@@ -121,7 +121,7 @@ export default function TabWalletOverview() {
         </div>
         <div
           className="surface rounded-xl flex flex-col items-stretch p-2 w-full max-w-xs lg:max-w-xl mx-auto animate-slide-in-right animate-delay"
-          style={{ "--delay": "calc( 3 * 0.05s)" }}
+          style={{ "--delay": "calc(3 * 0.05s)" }}
         >
           <div className="bg-gradient-to-b from-ui-900/50 to-ui-900/5 rounded overflow-hidden">
             <div className="flex gap-2 items-center justify-center">
@@ -156,7 +156,7 @@ export default function TabWalletOverview() {
         </div>
         <div
           className="surface rounded-xl flex flex-col items-stretch p-2 w-full max-w-xs lg:max-w-xl mx-auto animate-slide-in-right animate-delay"
-          style={{ "--delay": "calc( 4 * 0.05s)" }}
+          style={{ "--delay": "calc(4 * 0.05s)" }}
         >
           <div className="bg-gradient-to-b from-ui-900/50 to-ui-900/5 rounded overflow-hidden">
             <div className="flex gap-2 items-center justify-center">

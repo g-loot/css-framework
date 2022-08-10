@@ -59,7 +59,7 @@ export default function Clan() {
             </div>
             <div
               className="absolute hidden md:block z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-              style={{ "--delay": "calc( 1 * 0.05s)" }}
+              style={{ "--delay": "calc(1 * 0.05s)" }}
             >
               <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
               <img
@@ -71,7 +71,7 @@ export default function Clan() {
         </section>
         <section
           className="mb-8 animate-slide-in-bottom animate-delay"
-          style={{ "--delay": "calc( 2 * 0.05s)" }}
+          style={{ "--delay": "calc(2 * 0.05s)" }}
         >
           <h2 className="px-4 md:px-0 py-2 text-2xl font-normal text-ui-300">Clans you might like to join:</h2>
           <div className="overflow-x-auto lg:overflow-x-hidden scrollbar-hidden">
@@ -226,7 +226,7 @@ export default function Clan() {
           </div>
         </section>
         <section className=" animate-slide-in-bottom animate-delay"
-              style={{ "--delay": "calc( 2 * 0.05s)" }}>
+              style={{ "--delay": "calc(2 * 0.05s)" }}>
           <h2 className="px-4 sm:px-0 py-2 text-2xl font-normal text-ui-300">
             Didn&#39;t find what you were looking for?
           </h2>
@@ -261,7 +261,7 @@ export default function Clan() {
             </div>
             <div
               className="surface surface-dimmed sm:rounded-lg p-4 relative flex items-center gap-4 animate-slide-in-bottom animate-delay"
-              style={{ "--delay": "calc( 3 * 0.05s)" }}
+              style={{ "--delay": "calc(3 * 0.05s)" }}
             >
               <div className="-rotate-45 pointer-events-none drop-shadow-lg">
                 <img

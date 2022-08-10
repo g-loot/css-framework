@@ -199,7 +199,7 @@ export default function Home() {
                     </div>
                     <div
                       className="absolute z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-                      style={{ "--delay": "calc( 1 * 0.05s)" }}
+                      style={{ "--delay": "calc(1 * 0.05s)" }}
                     >
                       <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/0"></div>
                       <img
@@ -316,7 +316,7 @@ export default function Home() {
                     </div>
                     <div
                       className="absolute z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-                      style={{ "--delay": "calc( 1 * 0.05s)" }}
+                      style={{ "--delay": "calc(1 * 0.05s)" }}
                     >
                       <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/0"></div>
                       <img
@@ -344,7 +344,7 @@ export default function Home() {
 
             <section
               className="hidden xl:flex flex-col xl:flex-row xl:items-start gap-4 xl:gap-8 animate-slide-in-bottom animate-delay"
-              style={{ "--delay": "calc( 2 * 0.05s)" }}
+              style={{ "--delay": "calc(2 * 0.05s)" }}
             >
               <div className="flex-1 surface sm:rounded-lg overflow-hidden">
                 <Chat maxheight="xl:max-h-[calc(100vh-440px)]" isdisabled={!selectedClan.isYou} />

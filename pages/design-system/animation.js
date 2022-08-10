@@ -497,31 +497,31 @@ const DSpage = () => {
                     className={`w-full h-16 bg-ui-400 rounded-lg  animate-delay ${
                       StartAnim8 === true ? "animate-slide-in-bottom" : ""
                     }`}
-                    style={{ "--delay": "calc( 1 * 0.05s)" }}
+                    style={{ "--delay": "calc(1 * 0.05s)" }}
                   ></li>
                   <li
                     className={`w-full h-16 bg-ui-400 rounded-lg  animate-delay ${
                       StartAnim8 === true ? "animate-slide-in-bottom" : ""
                     }`}
-                    style={{ "--delay": "calc( 2 * 0.05s)" }}
+                    style={{ "--delay": "calc(2 * 0.05s)" }}
                   ></li>
                   <li
                     className={`w-full h-16 bg-ui-400 rounded-lg  animate-delay ${
                       StartAnim8 === true ? "animate-slide-in-bottom" : ""
                     }`}
-                    style={{ "--delay": "calc( 3 * 0.05s)" }}
+                    style={{ "--delay": "calc(3 * 0.05s)" }}
                   ></li>
                   <li
                     className={`w-full h-16 bg-ui-400 rounded-lg  animate-delay ${
                       StartAnim8 === true ? "animate-slide-in-bottom" : ""
                     }`}
-                    style={{ "--delay": "calc( 4 * 0.05s)" }}
+                    style={{ "--delay": "calc(4 * 0.05s)" }}
                   ></li>
                   <li
                     className={`w-full h-16 bg-ui-400 rounded-lg  animate-delay ${
                       StartAnim8 === true ? "animate-slide-in-bottom" : ""
                     }`}
-                    style={{ "--delay": "calc( 5 * 0.05s)" }}
+                    style={{ "--delay": "calc(5 * 0.05s)" }}
                   ></li>
                 </ul>
                 <div className="text-center mt-5">

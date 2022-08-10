@@ -27,7 +27,7 @@ export default function TabBrawlsOngoing() {
               <section
                 key={brawl}
                 className="animate-slide-in-bottom animate-delay"
-                style={{ "--delay": "calc( " + brawlIndex + " * 0.05s)" }}
+                style={{ "--delay": "calc(" + brawlIndex + " * 0.05s)" }}
               >
                 <Link
                   href={`/prototype/${selectedGame.slug}/brawls/${brawl.id}${
@@ -78,7 +78,7 @@ export default function TabBrawlsOngoing() {
                         <div
                           className="absolute z-0 right-0 inset-y-0 w-full animate-slide-in-left animate-delay"
                           style={{
-                            "--delay": "calc( " + brawlIndex + " * 0.15s)",
+                            "--delay": "calc(" + brawlIndex + " * 0.15s)",
                           }}
                         >
                           <div className="absolute z-10 inset-y-0 w-1/2 left-0 bg-gradient-to-r from-ui-800 via-ui-800/75 to-ui-800/0"></div>
@@ -185,7 +185,7 @@ export default function TabBrawlsOngoing() {
             <section
               className="surface surface-dimmed sm:rounded-lg p-8 animate-slide-in-bottom animate-delay text-center"
               style={{
-                "--delay": "calc( " + selectedGame.brawls?.length + " * 0.05s)",
+                "--delay": "calc(" + selectedGame.brawls?.length + " * 0.05s)",
               }}
             >
               <h3 className="text-2xl">

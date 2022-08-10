@@ -147,7 +147,7 @@ export default function TabBrawlsRewards() {
     <>
       <section
         className="pb-8 animate-slide-in-bottomNO animate-delay"
-        style={{ "--delay": "calc( 1 * 0.05s)" }}
+        style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="surface sm:rounded-lg p-4">
@@ -164,7 +164,7 @@ export default function TabBrawlsRewards() {
                   key={reward}
                   className="flex items-center justify-between gap-2 rounded bg-ui-850/50 py-2 px-4 animate-slide-in-bottom animate-delay"
                   style={{
-                    "--delay": "calc( " + rewardIndex + " * 0.05s)",
+                    "--delay": "calc(" + rewardIndex + " * 0.05s)",
                   }}
                 >
                   <span className="font-headings font-bold text-lg">
@@ -201,7 +201,7 @@ export default function TabBrawlsRewards() {
                   key={reward}
                   className="flex items-center justify-between gap-2 rounded bg-ui-850/50 py-2 px-4 animate-slide-in-bottom animate-delay"
                   style={{
-                    "--delay": "calc( " + rewardIndex + " * 0.05s)",
+                    "--delay": "calc(" + rewardIndex + " * 0.05s)",
                   }}
                 >
                   <span className="font-headings font-bold text-lg">
@@ -229,7 +229,7 @@ export default function TabBrawlsRewards() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div
             className="surface sm:rounded-lg p-4 relative flex flex-col items-stretch animate-slide-in-bottom animate-delay"
-            style={{ "--delay": "calc( 2 * 0.05s)" }}
+            style={{ "--delay": "calc(2 * 0.05s)" }}
           >
             <div className="absolute -top-6 -left-4 -rotate-12 pointer-events-none">
               <img
@@ -255,7 +255,7 @@ export default function TabBrawlsRewards() {
           </div>
           <div
             className="surface sm:rounded-lg p-4 relative flex flex-col items-stretch animate-slide-in-bottom animate-delay"
-            style={{ "--delay": "calc( 3 * 0.05s)" }}
+            style={{ "--delay": "calc(3 * 0.05s)" }}
           >
             <div className="absolute -top-6 -left-4 -rotate-12 pointer-events-none">
               <img
@@ -277,7 +277,7 @@ export default function TabBrawlsRewards() {
           </div>
           <div
             className="surface sm:rounded-lg p-4 relative flex flex-col items-stretch animate-slide-in-bottom animate-delay"
-            style={{ "--delay": "calc( 4 * 0.05s)" }}
+            style={{ "--delay": "calc(4 * 0.05s)" }}
           >
             <div className="absolute -top-6 -left-4 -rotate-12 pointer-events-none">
               <img

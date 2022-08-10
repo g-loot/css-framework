@@ -49,7 +49,7 @@ export default function TabTournamentsOverview() {
                 key={clan}
                 className="surface sm:rounded-lg mb-4 overflow-hidden animate-slide-in-bottom animate-delay"
                 style={{
-                  "--delay": "calc( " + clanIndex + " * 0.05s)",
+                  "--delay": "calc(" + clanIndex + " * 0.05s)",
                 }}
               >
                 <Accordion

@@ -1,0 +1,81 @@
+/*----------------------------*/
+/* BREADCRUMBGS */
+/*----------------------------*/
+
+.breadcrumbs {
+  @apply
+  inline-block
+  ;
+
+  > :where(ol,ul) {
+    @apply
+    inline-flex
+    items-center
+    justify-start
+    ;
+
+    &,
+    > li {
+      @apply
+      gap-1
+      md:gap-2
+      ;
+    }
+  
+    > li {
+      @apply 
+      inline-flex
+      items-center
+      text-sm
+      text-ui-300
+      ;
+  
+      > :where(div, a) {
+        @apply
+        inline-flex 
+        gap-2
+        items-center
+        text-sm
+        text-ui-300
+        ;
+  
+        > span:not(.icon) {
+          @apply
+          whitespace-nowrap
+          overflow-hidden
+          overflow-ellipsis
+          ;
+          &:not([class*="max-w"]) {
+            @apply
+            max-w-[20ch]
+            ;
+          }
+        }
+      }
+  
+      > a {
+        @apply
+        hover:text-ui-100
+        active:opacity-50
+        focus-visible:text-main
+        focus-visible:outline
+        focus-visible:outline-offset-2
+        focus-visible:outline-1
+        focus-visible:outline-main
+        transition-colors
+        duration-75
+        ;
+      }
+  
+      &:not(:first-child) {
+        &::before {
+          @apply
+          font-icon
+          content-['\ebb5']
+          text-xl
+          ;
+        }
+      }
+    }
+  }
+}

@@ -34,7 +34,7 @@ export default function RewardLadder(props) {
               <>
                 <div
                   className="relative z-10 flex flex-col items-center justify-center gap-3 animate-slide-in-bottom animate-delay"
-                  style={{ "--delay": "calc( 1 * 0.05s)" }}
+                  style={{ "--delay": "calc(1 * 0.05s)" }}
                 >
                   <h2>2 rewards available</h2>
                   <button
@@ -81,11 +81,11 @@ export default function RewardLadder(props) {
             {variablesContext.rewardClaimed && (
               <div
                 className="flex flex-col items-center justify-center gap-3 animate-slide-in-bottom animate-delay"
-                style={{ "--delay": "calc( 1 * 0.05s)" }}
+                style={{ "--delay": "calc(1 * 0.05s)" }}
               >
                 <div
                   className="relative z-10 flex flex-col items-center justify-center gap-3 animate-slide-in-bottom animate-delay"
-                  style={{ "--delay": "calc( 1 * 0.05s)" }}
+                  style={{ "--delay": "calc(1 * 0.05s)" }}
                 >
                   <h2 onClick={variablesContext.unclaimReward}>Well done!</h2>
                   <p className="text-ui-200">
