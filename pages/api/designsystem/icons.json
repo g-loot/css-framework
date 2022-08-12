@@ -608,11 +608,11 @@
           "name": "medal"
         },
         {
-          "tags": "emoticon,angry,furious,smiley,unhappy,upset",
+          "tags": "emoticon,angry,furious,smiley,unhappy,upset,error,warning",
           "name": "angry-10"
         },
         {
-          "tags": "emoticon,angry,furious,smiley,unhappy,upset",
+          "tags": "emoticon,angry,furious,smiley,unhappy,upset,error,warning",
           "name": "angry-44"
         },
         {
@@ -1196,7 +1196,7 @@
           "name": "satisfied"
         },
         {
-          "tags": "emoticon,smiley,unhappy,sad,disappointed",
+          "tags": "emoticon,smiley,unhappy,sad,disappointed,error",
           "name": "sad"
         },
         {
@@ -1216,7 +1216,7 @@
           "name": "radiation"
         },
         {
-          "tags": "emoticon,smiley,concern,confused,puzzled,thinking",
+          "tags": "emoticon,smiley,concern,confused,puzzled,thinking,error,warning",
           "name": "puzzled"
         },
         {
@@ -1336,7 +1336,7 @@
           "name": "ctrl-up"
         },
         {
-          "tags": "open,emoticon,smiley,surprise,surprised,mouth,disbelief,shocked",
+          "tags": "open,emoticon,smiley,surprise,surprised,mouth,disbelief,shocked,warning,error",
           "name": "surprise"
         },
         {
@@ -1448,7 +1448,7 @@
           "name": "video"
         },
         {
-          "tags": "emoticon,angry,furious,smiley,unhappy,upset",
+          "tags": "emoticon,angry,furious,smiley,unhappy,upset,error",
           "name": "upset-14"
         },
         {
@@ -1548,7 +1548,7 @@
           "name": "film"
         },
         {
-          "tags": "emoticon,angry,furious,smiley,unhappy,upset",
+          "tags": "emoticon,angry,furious,smiley,unhappy,upset,error",
           "name": "upset-13"
         },
         {

@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 
 import Modal1 from './modals/modal-example-1';
-import ModalContainer from '../../components/Modal/ModalContainer';
 import { UiContext } from '../../contexts/ui';
 import { getLayout } from '../../components/DesignSystem/DSLayout';
 
@@ -13,9 +12,6 @@ const DSpage = () => {
   }
   return(
   <>
-    {uiContext.displayedModal && (
-        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
-      )}
     <h1 className='mb-2'>
       Modal
     </h1>

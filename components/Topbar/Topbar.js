@@ -274,13 +274,13 @@ export default function Topbar() {
                     <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 space-y-4">
                       {notificationsGroups.map(
                         (notificationGroup, notificationGroupIndex) => (
-                          <div key={notificationGroup}>
+                          <div key={notificationGroupIndex}>
                             <h5 className="px-2 text-ui-300 text-sm mb-2">{notificationGroup.name}</h5>
                             <ul className="items-spaced space-y-2">
                               {notificationGroup.notifications?.map(
                                 (notification, notificationIndex) => (
                                   <Link
-                                    key={notification}
+                                    key={notificationIndex}
                                     href={`/prototype/wallet${
                                       hasAds ? "?ads=true" : ""
                                     }`}

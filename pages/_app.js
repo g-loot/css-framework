@@ -1,6 +1,7 @@
 import "../assets/styles/globals.css";
 
 import App from "next/app";
+import ModalToastProvider from "../components/ModalToastProvider";
 import { PrototypeProvider } from "../contexts/prototype";
 import React from "react";
 import SiteLayout from "../components/SiteLayout";
@@ -17,7 +18,9 @@ class MyApp extends App {
         <SiteLayout>
           <UiContextProvider>
             <VariablesContextProvider>
-              <PrototypeProvider>{page}</PrototypeProvider>
+              <PrototypeProvider>
+                <ModalToastProvider>{page}</ModalToastProvider>
+              </PrototypeProvider>
             </VariablesContextProvider>
           </UiContextProvider>
         </SiteLayout>

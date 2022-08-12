@@ -6,7 +6,6 @@
 /* content */
 
 .card {
-
   @apply
   transform-gpu
   overflow-hidden
@@ -132,7 +131,7 @@
   .card-meta {
     @apply
     flex
-    
+    w-full
     ;
   }
   .card-bg {

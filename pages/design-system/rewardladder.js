@@ -33,9 +33,6 @@ const DSpage = () => {
 
   return (
     <>
-      {uiContext.displayedModal && (
-        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
-      )}
       <h1 className="mb-2">Reward ladder</h1>
 
       {/* Reward ladder */}

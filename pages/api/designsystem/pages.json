@@ -57,7 +57,7 @@
         },
         {
           "label": "Modals",
-          "tags": "actions,modals,dialog,prompt,click,onclick",
+          "tags": "actions,modals,dialog,prompt,click,onclick,overlay,absolute,fixed,",
           "url": "modals"
         },
         {
@@ -69,6 +69,11 @@
           "label": "Dropdown",
           "tags": "actions,dropdown,click,hidden,hover,open",
           "url": "dropdown"
+        },
+        {
+          "label": "Toasts",
+          "tags": "actions,toasts,alert,info,click,hidden,hover,open,overlay,absolute,fixed,bottom,right,",
+          "url": "toasts"
         }
       ]
     },

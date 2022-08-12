@@ -28,9 +28,6 @@ export default function TabTournamentsLeaderboard() {
 
   return (
     <>
-      {uiContext.displayedModal && (
-        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
-      )}
       {selectedGame && (
         <div className="min-h-screen">
           {prototype.getTournamentByID(game, tournament_id).details

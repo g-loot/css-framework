@@ -623,9 +623,11 @@ label.button {
   ;
 
   > :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, button, .button, .button.button-primary) {
-    @apply
-    rounded-none
-    ;
+    &:not(input) {
+      @apply
+      rounded-none
+      ;
+    }
     &:first-child {
       @apply
       rounded-l

@@ -1,0 +1,136 @@
+/*----------------------------*/
+/* TOAST */
+/*----------------------------*/
+
+.toast-container {
+  @apply
+  fixed
+  bottom-4
+  right-4
+  lg:bottom-8
+  lg:right-8
+  flex
+  flex-col-reverse
+  items-end
+  pointer-events-none
+  ;
+  z-index: 1000;
+
+  > * {
+    @apply
+    pointer-events-auto
+    ;
+  }
+
+  .toast {
+    @apply
+    animate-slide-in-bottom
+    ;
+  }
+}
+
+.toast {
+  @apply
+  flex
+  items-start
+  p-3
+  mb-3
+  gap-3
+  w-full
+  max-w-xs
+  text-ui-200
+  bg-ui-600
+  border
+  border-ui-500
+  rounded-lg
+  shadow
+  leading-tight
+  ;
+
+  > div {
+    @apply
+    flex-1
+    ;
+  }
+
+  .toast-title {
+    @apply
+    mb-1
+    font-bold
+    text-ui-100
+    text-lg
+    font-headings
+    tracking-wide
+    ;
+  }
+  
+  .toast-text {
+    &:not(:last-child) {
+      @apply
+      mb-2
+      ;
+    }
+  }
+
+  > .button-close:last-child {
+    @apply
+    -mt-1.5
+    -mr-1.5
+    ;
+  }
+
+  &.toast-sm {
+    @apply
+    items-center
+    text-sm
+    p-2
+    gap-2
+    ;
+    > .icon {
+      @apply
+      text-lg
+      ;
+    }
+    > .button-close:last-child {
+      @apply
+      -my-1
+      ;
+    }
+  }
+
+  &:where(.toast-green, .toast-blue, .toast-orange, .toast-red) {
+    @apply
+    border-0
+    ;
+    &,
+    > * .icon,
+    .toast-title {
+      @apply
+      text-ui-800
+      ;
+    }
+  }
+
+  &.toast-green {
+    @apply
+    bg-interaction-500
+    ;
+  }
+  &.toast-blue {
+    @apply
+    bg-blue-500
+    ;
+    
+  }
+  &.toast-orange {
+    @apply
+    bg-attention-300
+    ;
+    
+  }
+  &.toast-red {
+    @apply
+    bg-error-300
+    ;
+  }
+}

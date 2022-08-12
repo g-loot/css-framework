@@ -10,6 +10,7 @@ export default class MyDocument extends Document {
                 <body>
                     <script>0</script>
                     <div id="overlays"></div>
+                    <div id="toasts"></div>
                     <Main />
                     <NextScript />
                 </body>

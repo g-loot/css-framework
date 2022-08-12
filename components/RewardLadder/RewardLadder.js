@@ -24,9 +24,6 @@ export default function RewardLadder(props) {
 
   return (
     <>
-      {uiContext.displayedModal && (
-        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
-      )}
       <div className="relative">
         {props.hasReward && (
           <div className="absolute inset-0 z-50 backdrop-blur-sm bg-gradient-radial from-ui-900/90 via-ui-900/90 to-ui-900/60 gap-2 flex items-center justify-center overflow-hidden">

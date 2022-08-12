@@ -1,12 +1,25 @@
+import { useContext, useState } from "react";
+
 import Accordion from "../../../components/Accordion/Accordion";
 import Ad from "../../../components/Ad/Ad";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
+import { UiContext } from "../../../contexts/ui";
 import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
 
 export default function Home() {
   const router = useRouter();
-  const { data, loading } = useFetch("/api/brawls", { delay: 1000 });
+  const uiContext = useContext(UiContext);
+  const [submitting, setSubmitting] = useState(false);
+
+  function addToastWithDelay(toast) {
+    setSubmitting(true);
+
+    setTimeout(() => {
+      uiContext.openToastr(toast);
+      setSubmitting(false);
+    }, 1000);
+  }
 
   return (
     <>
@@ -159,7 +172,20 @@ export default function Home() {
                   </div>
                   <hr className="my-8 opacity-50" />
                   <div className="flex justify-end gap-4">
-                    <button type="button" className="button button-primary">
+                    <button
+                      type="button"
+                      className={`button button-primary ${
+                        submitting ? "is-loading" : ""
+                      }`}
+                      onClick={addToastWithDelay.bind(this, {
+                        title: "Success",
+                        icon: "f-check",
+                        color: "green",
+                        text: "Settings saved successfully.",
+                        autoDelete: true,
+                        autoDeleteDelay: 5000,
+                      })}
+                    >
                       <span>Save changes</span>
                     </button>
                     <button type="button" className="button button-secondary">
@@ -250,16 +276,39 @@ export default function Home() {
                       <div className="form-group">
                         <label htmlFor="game-pubg">Riot ID:</label>
                         <div className="flex items-center gap-2">
-                          <input type="text" name="game-riot-name" id="game-riot-name" value="JackAttack123" />
+                          <input
+                            type="text"
+                            name="game-riot-name"
+                            id="game-riot-name"
+                            value="JackAttack123"
+                          />
                           <span className="text-lg text-ui-300">#</span>
-                          <input type="number" name="game-riot-id" id="game-riot-id" value="8573" />
+                          <input
+                            type="number"
+                            name="game-riot-id"
+                            id="game-riot-id"
+                            value="8573"
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
                   <hr className="my-8 opacity-50" />
                   <div className="flex justify-end gap-4">
-                    <button type="button" className="button button-primary">
+                    <button
+                      type="button"
+                      className={`button button-primary ${
+                        submitting ? "is-loading" : ""
+                      }`}
+                      onClick={addToastWithDelay.bind(this, {
+                        title: "Success",
+                        icon: "f-check",
+                        color: "green",
+                        text: "Settings saved successfully.",
+                        autoDelete: true,
+                        autoDeleteDelay: 5000,
+                      })}
+                    >
                       <span>Save changes</span>
                     </button>
                     <button type="button" className="button button-secondary">
@@ -291,13 +340,22 @@ export default function Home() {
                 <div className="max-w-lg mx-auto">
                   <div className="grid xl:grid-cols-2 gap-16">
                     <div className="space-y-4">
-                      <p className='leading-relaxed'>
-                        To make G-Loot better we collect information from you as visitor with help from cookies. We also conduct relevant marketing of G-Loot&lsquo;s services within Meta, Google, Adroll, Snapchat and Bing&lsquo;s network. Read more in our <a href="#" className="link" target="_blank">Privacy Policy</a>. <br/>
-                        Here you can consent to share your data with the following partners:
+                      <p className="leading-relaxed">
+                        To make G-Loot better we collect information from you as
+                        visitor with help from cookies. We also conduct relevant
+                        marketing of G-Loot&lsquo;s services within Meta,
+                        Google, Adroll, Snapchat and Bing&lsquo;s network. Read
+                        more in our{" "}
+                        <a href="#" className="link" target="_blank">
+                          Privacy Policy
+                        </a>
+                        . <br />
+                        Here you can consent to share your data with the
+                        following partners:
                       </p>
                     </div>
                     <div className="space-y-4">
-                      <div className='form-group'>
+                      <div className="form-group">
                         <label className="form-toggle">
                           <input type="checkbox" name="data-meta" />
                           <i className="form-icon" /> Meta

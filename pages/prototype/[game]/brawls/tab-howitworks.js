@@ -197,9 +197,6 @@ export default function TabBrawlsHowItWorks() {
 
   return (
     <>
-      {uiContext.displayedModal && (
-        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
-      )}
       <section
         className="py-12 animate-slide-in-bottom animate-delay"
         style={{ "--delay": "calc(1 * 0.05s)" }}

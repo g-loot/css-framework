@@ -37,9 +37,6 @@ export default function TabTournamentsOverview() {
 
   return (
     <>
-      {uiContext.displayedModal && (
-        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
-      )}
       {selectedGame && (
         <div className="accordion">
           {prototype

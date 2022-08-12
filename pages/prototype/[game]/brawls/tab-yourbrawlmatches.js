@@ -70,9 +70,6 @@ export default function TabBrawlsYourBrawlMatches() {
 
   return (
     <>
-      {uiContext.displayedModal && (
-        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
-      )}
       <section className="pb-4 relative z-10">
         <HowToBrawl />
       </section>

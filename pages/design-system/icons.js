@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from "react";
 
 import DSicons from '../api/designsystem/icons.json';
-import DSpages from '../api/designsystem/pages.json';
+import { UiContext } from "../../contexts/ui";
 import { getLayout } from '../../components/DesignSystem/DSLayout';
 
 const DSpage = () => {
   const [filter, setFilter] = useState('');
+  const uiContext = useContext(UiContext);
 
   return(
   <>
@@ -48,9 +49,7 @@ const DSpage = () => {
                         <span className="tooltip tooltip-top" data-tooltip="Copy">
                           <a
                             className="link"
-                            onClick={() => {
-                              navigator.clipboard.writeText(item.name);
-                            }}
+                            onClick={() => { uiContext.openToastr({size: "small", text: "Icon copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500}); navigator.clipboard.writeText(item.name); }}
                           >
                             {item.name}
                           </a>

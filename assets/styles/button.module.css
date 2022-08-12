@@ -594,24 +594,33 @@
     }
 
     &::before {
-      @apply
-      animation-delay-300
-      ;
+      animation-delay: 300ms;
     }
   }
 
   /* Close */ 
   &.button-close {
     @apply
-    h-10
-    w-10
     rounded-full
     hover:rotate-90
-    bg-ui-800/75
     transition-all
     duration-300
     ease-[cubic-bezier(.8,0,.3,1)]
     ;
+
+    &:not(.button-sm) {
+      @apply
+      h-10
+      w-10
+      ;
+    }
+
+    &.button-sm {
+      @apply
+      h-7
+      w-7
+      ;
+    }
 
     > .icon {
       @apply
@@ -630,9 +639,18 @@
         ;
       }
     }
+
+    &:where(.button-ghost, .button-secondary, .button-tertiary) {
+      &:hover {
+        > .icon {
+          @apply
+          text-ui-100
+          ;
+        }
+      }
+    }
   }
 }
-
 
 @keyframes button-loader-rotate {
   from {

@@ -12,7 +12,7 @@ export default function Reward(props) {
   return (
     <>
       {props.reward.type === "coin" && (
-        <div className={`flex items-center ${props.gap ? props.gap : "gap-2"}`}>
+        <div className={`flex items-center whitespace-nowrap ${props.gap ? props.gap : "gap-2"}`}>
           <img
             className={props.imageClassNames}
             src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
@@ -26,7 +26,7 @@ export default function Reward(props) {
         </div>
       )}
       {props.reward.type === "token" && (
-        <div className={`flex items-center ${props.gap ? props.gap : "gap-2"}`}>
+        <div className={`flex items-center whitespace-nowrap ${props.gap ? props.gap : "gap-2"}`}>
           <img
             className={props.imageClassNames}
             src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
@@ -40,7 +40,7 @@ export default function Reward(props) {
         </div>
       )}
       {props.reward.type === "ticket" && (
-        <div className={`flex items-center ${props.gap ? props.gap : "gap-2"}`}>
+        <div className={`flex items-center whitespace-nowrap ${props.gap ? props.gap : "gap-2"}`}>
           <img
             className={props.imageClassNames}
             src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}

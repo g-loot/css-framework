@@ -80,7 +80,7 @@ module.exports = {
     },
     fontFamily: {
       headings: ['Podium Sharp', 'sans-serif'],
-      body: ['Roboto Condensed', 'serif'],
+      body: ['Roboto Condensed', 'sans-serif'],
       icon: ['glooticons', 'serif'],
     },
     extend: {
@@ -236,6 +236,7 @@ module.exports = {
         'slide-in-top': 'slideInTop 0.88s cubic-bezier(0.7, 0, 0.1, 1) both',
         'slide-in-bottom': 'slideInBottom 0.88s cubic-bezier(0.7, 0, 0.1, 1) both',
         'fade-in': 'fadeIn 0.88s cubic-bezier(0.7, 0, 0.1, 1) both',
+        'fade-out': 'fadeOut 0.44s cubic-bezier(0.7, 0, 0.1, 1) both',
         'heartbeat': 'heartbeat 1.5s ease-in-out infinite both',
         'drop-in': 'dropIn 1.1s both',
         'bounce-right': 'bounceRight 1.1s infinite',
@@ -289,6 +290,14 @@ module.exports = {
           },
           '100%': { 
             opacity: '1',
+          },
+        },
+        fadeOut: {
+          '0%': { 
+            opacity: '1',
+          },
+          '100%': { 
+            opacity: '0',
           },
         },
         bounceRight: {
@@ -501,8 +510,5 @@ module.exports = {
     'text-game-pubg',
     'text-game-rocketleague',
     'text-game-valorant',
-  ],
-  plugins: [
-    require("tailwindcss-animation-delay")
   ],
 }

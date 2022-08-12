@@ -2,21 +2,21 @@ import React, { useReducer } from 'react';
 
 export const UiContext = React.createContext({
   displayedModal: null,
-  openModal: (modalName) => {},
-  closeModal: (modalName) => {},
-  displayedToastr: null,
+  openModal: (name) => {},
+  closeModal: (name) => {},
+  displayedToasts: [],
   openToastr: (toastrName) => {},
-  closeToastr: (toastrName) => {},
+  closeToastr: (id) => {},
 });
 
 const defaultUiState = {
   displayedModal: null,
+  displayedToasts: [],
 };
 const uiReducer = (state, action) => {
 
   if (action.type === 'OPEN_MODAL') {
-    const displayedModal = action.payload.modalName;
-
+    const displayedModal = action.payload.name;
     return {
       ...state,
       displayedModal,
@@ -28,43 +28,58 @@ const uiReducer = (state, action) => {
     };
   } else if (action.type === 'CLEAR') {
     return defaultUiState;
+  } else if (action.type === 'OPEN_TOASTR') {
+    const id = Date.now();
+    const newToast = {...action.payload.toast, id};
+    const displayedToasts = [...state.displayedToasts, newToast];
+    return {
+      ...state,
+      displayedToasts,
+    };
+  } else if (action.type === 'CLOSE_TOASTR') {
+    console.log(action.payload.id, "received");
+    const displayedToasts = [...state.displayedToasts].filter(toast => toast.id != action.payload.id);
+    return {
+      ...state,
+      displayedToasts,
+    };
   }
 };
 const UiContextProvider = (props) => {
   const [uiState, dispatchUiAction] = useReducer(uiReducer, defaultUiState);
 
-  const openModal = (modalName) => {
+  const openModal = (name) => {
     dispatchUiAction({
       type: 'OPEN_MODAL',
       payload: {
-        modalName,
+        name,
       },
     });
   };
 
-  const closeModal = (modalName) => {
+  const closeModal = (name) => {
     dispatchUiAction({
       type: 'CLOSE_MODAL',
       payload: {
-        modalName,
+        name,
       },
     });
   };
 
-  const openToastr = (toastrName) => {
+  const openToastr = (toast) => {
     dispatchUiAction({
       type: 'OPEN_TOASTR',
       payload: {
-        toastrName,
+        toast,
       },
     });
   };
 
-  const closeToastr = (toastrName) => {
+  const closeToastr = (id) => {
     dispatchUiAction({
       type: 'CLOSE_TOASTR',
       payload: {
-        toastrName,
+        id,
       },
     });
   };
@@ -79,7 +94,7 @@ const UiContextProvider = (props) => {
     displayedModal: uiState.displayedModal,
     openModal,
     closeModal,
-    displayedToastr: uiState.displayedToastr,
+    displayedToasts: uiState.displayedToasts,
     openToastr,
     closeToastr,
     clear,

@@ -175,7 +175,6 @@ export default function SectionTournamentsLeaderboarBrackers() {
     const selectRound = selectLeaderboardTarget[1];
     const selectGroup = selectLeaderboardTarget[2];
     const selectGame = selectLeaderboardTarget[3];
-    console.log(selectTournament, selectRound, selectGroup, selectGame);
     switchLeaderboard(selectTournament, selectRound, selectGroup, selectGame);
   }
 
@@ -202,9 +201,6 @@ export default function SectionTournamentsLeaderboarBrackers() {
 
   return (
     <>
-      {uiContext.displayedModal && (
-        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
-      )}
       {selectedGame && (
         <>
           <section className="min-h-screen sm:rounded-lg mb-8">

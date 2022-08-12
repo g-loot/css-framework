@@ -531,16 +531,38 @@ const DSpage = () => {
             <div className='flex-1 space-y-4'>
               <div className='w-full flex gap-4 items-center'>
                 <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
-                  Coins
+                  Normal
                 </div>
                 <div className='flex-1 flex flex-wrap gap-2'>
-                  <button className="button button-primary button-close">
+                  <button type="button" className="button button-primary button-close" aria-label="Close">
                     <span className='icon icon-e-remove'/>
                   </button>
-                  <button className="button button-secondary button-close">
+                  <button type="button" className="button button-secondary button-close" aria-label="Close">
                     <span className='icon icon-e-remove'/>
                   </button>
-                  <button className="button button-tertiary button-close">
+                  <button type="button" className="button button-tertiary button-close" aria-label="Close">
+                    <span className='icon icon-e-remove'/>
+                  </button>
+                  <button type="button" className="button button-ghost button-close" aria-label="Close">
+                    <span className='icon icon-e-remove'/>
+                  </button>
+                </div>
+              </div>
+              <div className='w-full flex gap-4 items-center'>
+                <div className='w-1/4 text-ui-400 text-right text-sm leading-tight'>
+                  Small
+                </div>
+                <div className='flex-1 flex flex-wrap gap-2'>
+                  <button type="button" className="button button-sm button-primary button-close" aria-label="Close">
+                    <span className='icon icon-e-remove'/>
+                  </button>
+                  <button type="button" className="button button-sm button-secondary button-close" aria-label="Close">
+                    <span className='icon icon-e-remove'/>
+                  </button>
+                  <button type="button" className="button button-sm button-tertiary button-close" aria-label="Close">
+                    <span className='icon icon-e-remove'/>
+                  </button>
+                  <button type="button" className="button button-sm button-ghost button-close" aria-label="Close">
                     <span className='icon icon-e-remove'/>
                   </button>
                 </div>
@@ -631,7 +653,7 @@ const DSpage = () => {
                   Currency
                 </div>
                 <div className='flex-1'>
-                  <button className="button button-primary button-currency button-coin is-loading">
+                  <button type="button" className="button button-primary button-currency button-coin is-loading">
                     <div>
                       <span>Purchase</span>
                     </div>
@@ -712,7 +734,7 @@ const DSpage = () => {
                   Currency
                 </div>
                 <div className='flex-1'>
-                  <button className="button button-primary button-currency button-coin is-disabled">
+                  <button type="button" className="button button-primary button-currency button-coin is-disabled">
                     <div>
                       <span>Purchase</span>
                     </div>
@@ -775,7 +797,7 @@ const DSpage = () => {
                   Currency
                 </div>
                 <div className='flex-1'>
-                  <button className="button button-primary button-currency button-coin is-shining">
+                  <button type="button" className="button button-primary button-currency button-coin is-shining">
                     <div>
                       <span>Purchase</span>
                     </div>

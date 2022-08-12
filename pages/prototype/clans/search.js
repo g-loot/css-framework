@@ -29,9 +29,6 @@ export default function ClanSearch() {
 
   return (
     <>
-      {uiContext.displayedModal && (
-        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
-      )}
       <PrototypeStructure title="Clans">
         <Ad width="1005" height="124" />
         <h1 className="text-3xl sm:text-4xl mb-4 px-4 sm:px-0">Find clans</h1>

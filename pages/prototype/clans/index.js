@@ -29,9 +29,6 @@ export default function Clan() {
   
   return (
     <>
-      {uiContext.displayedModal && (
-        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
-      )}
       <PrototypeStructure title="Clans">
         <Ad width="1005" height="124" />
         <section className="mb-8">

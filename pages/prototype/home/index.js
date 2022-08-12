@@ -40,9 +40,6 @@ export default function Home() {
 
   return (
     <>
-      {uiContext.displayedModal && (
-        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
-      )}
       <PrototypeStructure title="Home">
         <Ad width="1005" height="300" />
 
@@ -94,7 +91,7 @@ export default function Home() {
                   </h2>
                   <button
                     type="button"
-                    className="tooltip text-ui-300"
+                    className="tooltip tooltip-bottom text-ui-300"
                     data-tooltip="Claim a free reward each day you visit gloot.com"
                   >
                     <span className="icon icon-16 icon-c-info" />

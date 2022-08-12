@@ -47,9 +47,6 @@ export default function TabTournamentsOverview() {
 
   return (
     <>
-      {uiContext.displayedModal && (
-        <ModalContainer>{uiContext.displayedModal}</ModalContainer>
-      )}
       {selectedGame && (
         <>
           {isRegistered && (

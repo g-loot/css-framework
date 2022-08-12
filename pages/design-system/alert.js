@@ -58,7 +58,6 @@ const DSpage = () => {
                   </button>
                 </div>
               </div>
-            
             </div>
             <div className='flex-1'>
               <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/xz76pau0/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
@@ -120,7 +119,6 @@ const DSpage = () => {
                   <button type='button' className="button button-sm button-primary"><span>Accept</span></button>
                 </div>
               </div>
-            
             </div>
             <div className='flex-1'>
               <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/Lyonwxdb/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
@@ -200,7 +198,7 @@ const DSpage = () => {
             <div className='flex-1 space-y-4 flex justify-center'>
               <div className="alert alert-red">
                 <div>
-                  <span className='icon icon-24 icon-c-info'/>
+                  <span className='icon icon-24 icon-skull-2'/>
                   <span>Error! We were unable to retrieve your Brawl result.</span>
                 </div>
               </div>

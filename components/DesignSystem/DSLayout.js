@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 
 import DSHead from "./DSHead";
 import DSMainNav from "./DSMainNav";
@@ -6,7 +6,6 @@ import DSTopBar from "./DSTopBar";
 import DSpages from "../../pages/api/designsystem/pages.json";
 import Footer from "../Footer/Footer";
 import Link from "next/link";
-import TopbarFramework from "../Topbar/Topbar-framework";
 import { getLayout as getSiteLayout } from "../SiteLayout";
 import packageFramework from "../../framework/package.json";
 import { useRouter } from "next/router";
@@ -30,6 +29,7 @@ const DSLayout = ({ children }) => {
 
   return (
     <>
+      
       <DSHead title="Docs" />
       <div className="drawer drawer-mobile">
         <input id="drawer-ds" type="checkbox" className="drawer-toggle" />

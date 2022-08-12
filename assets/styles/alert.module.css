@@ -15,7 +15,6 @@
   bg-ui-700
   border
   border-ui-600
-  backdrop-blur-sm
   leading-tight
   ;
   > * {
@@ -45,10 +44,9 @@
     }
   }
 
-  &.alert-green {
+  &:where(.alert-green, .alert-blue, .alert-orange, .alert-red) {
     @apply
     border-0
-    bg-interaction-500
     ;
     &,
     > * .icon {
@@ -56,41 +54,28 @@
       text-ui-800
       ;
     }
+  }
+
+  &.alert-green {
+    @apply
+    bg-interaction-500
+    ;
   }
   &.alert-blue {
     @apply
-    border-0
     bg-blue-500
     ;
-    &,
-    > * .icon {
-      @apply
-      text-ui-800
-      ;
-    }
+    
   }
   &.alert-orange {
     @apply
-    border-0
     bg-attention-300
     ;
-    &,
-    > * .icon {
-      @apply
-      text-ui-800
-      ;
-    }
+    
   }
   &.alert-red {
     @apply
-    border-0
     bg-error-300
     ;
-    &,
-    > * .icon {
-      @apply
-      text-ui-800
-      ;
-    }
   }
 }

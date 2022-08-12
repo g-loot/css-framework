@@ -18,7 +18,7 @@ const DSpage = () => (
         Install <a href='https://www.npmjs.com/package/tailwindcss' target='_blank' rel='noreferrer' className='link'><samp className='text-sm'>tailwindcss</samp></a> and its peer dependencies via npm.
       </p>
       <div className='code surface'>
-        <pre data-prefix=">"><code>npm install -D tailwindcss postcss autoprefixer tailwindcss-animation-delay</code></pre>
+        <pre data-prefix=">"><code>npm install -D tailwindcss postcss autoprefixer</code></pre>
       </div>
     </li>
 

@@ -1,9 +1,5 @@
 import Ad from "../Ad/Ad";
-import Button from "../Button/Button";
 import Footer from "../Footer/Footer";
-import JSONstructure from "../../pages/api/prototype/structure.json";
-import MainNav from "../MainNav/MainNav";
-import PrototypeGamesNav from "./PrototypeGamesNav";
 import PrototypeHead from "./PrototypeHead";
 import PrototypeLeftMenu from "./PrototypeLeftMenu";
 import Topbar from "../Topbar/Topbar";
@@ -15,6 +11,7 @@ export default function PrototypeStructure({ children, title }) {
   const hasAds = query.ads === "true" ? true : false;
   return (
     <>
+     
       <PrototypeHead title={title} />
       <div className="drawer">
         <input
@@ -25,7 +22,11 @@ export default function PrototypeStructure({ children, title }) {
         <div className="drawer-content">
           <Topbar />
           <div className="container relative">
-            <div className={`max-w-2xl flex lg:gap-8 mx-auto ${hasAds ? "3xl:m-0" : ""}`}>
+            <div
+              className={`max-w-2xl flex lg:gap-8 mx-auto ${
+                hasAds ? "3xl:m-0" : ""
+              }`}
+            >
               <div className="w-56 hidden lg:block top-16 py-4">
                 <PrototypeLeftMenu />
               </div>
