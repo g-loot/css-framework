@@ -61,7 +61,7 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Tournaments">
-        <Ad width="1005" height="300" />
+        <Ad width="1005" height="124" />
 
         {selectedGame && (
           <>
@@ -144,13 +144,8 @@ export default function Home() {
                         : "400"
                     }`}
                     height="auto"
-                    className={`${
-                      prototype.getTournamentByID(game, tournament_id).type ===
-                      "custom"
-                        ? "max-h-[150px] max-w-xs"
-                        : ""
-                    }`}
-                    alt=""
+                    className="max-h-[175px] max-w-[350px] mt-6"
+                    alt={prototype.getTournamentByID(game, tournament_id).name}
                   />
                   {prototype.getTournamentByID(game, tournament_id).sponsor && (
                     <>

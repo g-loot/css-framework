@@ -64,7 +64,7 @@ export default function ModalAddDiscord(props) {
                     className="link"
                     href="https://discord.gg/gloot"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     discord.gg/gloot
                   </a>
@@ -76,7 +76,7 @@ export default function ModalAddDiscord(props) {
                       className="link"
                       href="https://help.gloot.com/"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                     >
                       help.gloot.com
                     </a>

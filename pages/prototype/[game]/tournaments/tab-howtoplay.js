@@ -148,7 +148,7 @@ export default function TabTournamentsHowToPlay() {
                             <span className="flex-none icon icon-discord text-4xl" />
                             <div>
                               <div><b>G-Loot Discord</b></div>
-                              <div><a className="link" href="https://discord.gg/gloot" target="_blank" rel="noreferrer">https://discord.gg/gloot</a></div>
+                              <div><a className="link" href="https://discord.gg/gloot" target="_blank" rel="noopener noreferrer">https://discord.gg/gloot</a></div>
                             </div>
                           </div>
                         )}

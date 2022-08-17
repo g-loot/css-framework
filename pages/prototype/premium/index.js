@@ -251,7 +251,7 @@ export default function Home() {
                   <a
                     href="https://gloot.com/features/premium"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="button button-premium is-shining w-full"
                   >
                     <span className="text-xl italic">View Premium Plans</span>

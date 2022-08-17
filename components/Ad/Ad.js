@@ -15,7 +15,7 @@ export default function Ad(props) {
           <a
             href="http://gloot.com/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="cursor-pointer active:opacity-25"
           >
             <iframe

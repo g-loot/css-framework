@@ -1,6 +1,9 @@
 import Button from "../Button/Button";
 import Icon from "../Icon/Icon";
 import Link from "next/link";
+import Lottie from "lottie-react";
+import LottieExplosion from "../../assets/animations/explosion-1.json";
+import Tooltip from "../Tooltip/Tooltip";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -79,7 +82,11 @@ export default function Topbar() {
   return (
     <div className="sticky top-0 z-50 bg-ui-800/50 navbar">
       <div className="container relative">
-        <div className={`max-w-2xl flex gap-4 lg:gap-8 items-center px-2 sm:px-0 mx-auto ${hasAds ? "3xl:m-0" : ""}`}>
+        <div
+          className={`max-w-2xl flex gap-4 lg:gap-8 items-center px-2 sm:px-0 mx-auto ${
+            hasAds ? "3xl:m-0" : ""
+          }`}
+        >
           <div className="w-56 flex items-center gap-2">
             <div className="block lg:hidden">
               <label
@@ -91,7 +98,9 @@ export default function Topbar() {
             </div>
             <Link href="/">
               <a className="flex items-center gap-2 transition-opacity duration-100 hover:opacity-50">
+                <span className="block md:hidden icon icon-gloot-symbol text-main text-3xl" />
                 <img
+                  className="hidden md:block"
                   width="123"
                   height="64"
                   src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
@@ -106,48 +115,153 @@ export default function Topbar() {
           <div className="flex-1 flex items-center justify-end lg:justify-between">
             <div className="hidden lg:flex gap-2 items-center ml-2 xl:ml-0">
               <div className="flex space-x-3 items-center border border-ui-600 bg-ui-800/50 pr-2 rounded-full">
-                <div
-                  className="flex items-center tooltip tooltip-bottom"
-                  data-tooltip="Coins"
+                <Tooltip
+                  tooltip={
+                    <div className="w-56 relative">
+                      <h6 className="mb-3">Coins</h6>
+                      <div className="absolute -top-3 -right-2">
+                        <img
+                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
+                          width="50"
+                          height="50"
+                          alt="coins"
+                          className=""
+                        />
+                        <div className="lottie-blur absolute -inset-1">
+                          <Lottie
+                            animationData={LottieExplosion}
+                            loop={false}
+                            autoplay={true}
+                          />
+                        </div>
+                      </div>
+                      <ul className="leading-tight space-y-2">
+                        <li className="flex gap-2 text-sm">
+                          <div className=" w-12 font-bold uppercase">Use</div>
+                          <div className="flex-1">
+                            To purchase items in the Shop.
+                          </div>
+                        </li>
+                        <li className="flex gap-2 text-sm">
+                          <div className=" w-12 font-bold uppercase">Get</div>
+                          <div className="flex-1">
+                            From <strong>Daily Loot</strong> Streak and{" "}
+                            <strong>Weekly Brawl winnings</strong>.
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  }
                 >
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                    width="32"
-                    height="32"
-                    alt="coins"
-                  />
-                  <span className="text-sm font-bold text-gold-500">
-                    {prototype.getUserByID(1)?.wallet.coins}
-                  </span>
-                </div>
-                <div
-                  className="flex items-center tooltip tooltip-bottom"
-                  data-tooltip="Tokens"
+                  <div className="flex items-center">
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
+                      width="32"
+                      height="32"
+                      alt="coins"
+                    />
+                    <span className="text-sm font-bold text-gold-500">
+                      {prototype.getUserByID(1)?.wallet.coins}
+                    </span>
+                  </div>
+                </Tooltip>
+                <Tooltip
+                  tooltip={
+                    <div className="w-56 relative">
+                      <h6 className="mb-3">Token</h6>
+                      <div className="absolute -top-3 -right-2">
+                        <img
+                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
+                          width="50"
+                          height="50"
+                          alt="tokens"
+                          className=""
+                        />
+                        <div className="lottie-blur absolute -inset-1">
+                          <Lottie
+                            animationData={LottieExplosion}
+                            loop={false}
+                            autoplay={true}
+                          />
+                        </div>
+                      </div>
+                      <ul className="leading-tight space-y-2">
+                        <li className="flex gap-2 text-sm">
+                          <div className=" w-12 font-bold uppercase">Use</div>
+                          <div className="flex-1">To enter Weekly Brawls.</div>
+                        </li>
+                        <li className="flex gap-2 text-sm">
+                          <div className=" w-12 font-bold uppercase">Get</div>
+                          <div className="flex-1">
+                            <strong>Missions, Daily Loot Streak</strong> or{" "}
+                            <strong>buy them</strong> directly from the Wallet.
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  }
                 >
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                    width="32"
-                    height="32"
-                    alt="tokens"
-                  />
-                  <span className="text-sm font-bold text-purple-500">
-                    {prototype.getUserByID(1)?.wallet.tokens}
-                  </span>
-                </div>
-                <div
-                  className="flex items-center tooltip tooltip-bottom"
-                  data-tooltip="Tickets"
+                  <div className="flex items-center">
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
+                      width="32"
+                      height="32"
+                      alt="tokens"
+                    />
+                    <span className="text-sm font-bold text-purple-500">
+                      {prototype.getUserByID(1)?.wallet.tokens}
+                    </span>
+                  </div>
+                </Tooltip>
+                <Tooltip
+                  tooltip={
+                    <div className="w-56 relative">
+                      <h6 className="mb-3">Tickets</h6>
+                      <div className="absolute -top-3 -right-2">
+                        <img
+                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
+                          width="50"
+                          height="50"
+                          alt="tickets"
+                          className=""
+                        />
+                        <div className="lottie-blur absolute -inset-1">
+                          <Lottie
+                            animationData={LottieExplosion}
+                            loop={false}
+                            autoplay={true}
+                          />
+                        </div>
+                      </div>
+                      <ul className="leading-tight space-y-2">
+                        <li className="flex gap-2 text-sm">
+                          <div className=" w-12 font-bold uppercase">Use</div>
+                          <div className="flex-1">
+                            To enter <strong>Monthly Tournaments</strong>.
+                          </div>
+                        </li>
+                        <li className="flex gap-2 text-sm">
+                          <div className=" w-12 font-bold uppercase">Get</div>
+                          <div className="flex-1">
+                            From <strong>Weekly Brawls</strong> winnings.
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  }
                 >
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
-                    width="32"
-                    height="32"
-                    alt="tickets"
-                  />
-                  <span className="text-sm font-bold ml-1 text-bronze-500">
-                    {prototype.getUserByID(1)?.wallet.tickets}
-                  </span>
-                </div>
+                  <div className="flex items-center">
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
+                      width="32"
+                      height="32"
+                      alt="tickets"
+                    />
+                    <span className="text-sm font-bold ml-1 text-bronze-500">
+                      {prototype.getUserByID(1)?.wallet.tickets}
+                    </span>
+                  </div>
+                </Tooltip>
               </div>
               <div className="flex items-center">
                 <Button variant="claim" size="sm" label="Download tracker" />
@@ -167,17 +281,61 @@ export default function Topbar() {
               </div>
               <div className="flex justify-end items-center gap-1 sm:gap-2">
                 <div className="rounded-full border border-ui-700 bg-ui-800">
-                  <button
-                    type="button"
-                    className="button button-sm button-ghost rounded-full"
+                  <Link
+                    href={`/prototype/clans/search${hasAds ? "?ads=true" : ""}`}
                   >
-                    <Icon icon="c-question"></Icon>
-                  </button>
+                    <a className="button button-sm button-ghost rounded-full">
+                      <Icon icon="zoom"></Icon>
+                    </a>
+                  </Link>
                 </div>
                 <div className="dropdown dropdown-end">
                   <div
                     tabIndex="0"
-                    className="flex items-center rounded-full border border-ui-700 bg-ui-800 hover:opacity-50 transition duration-200"
+                    className="flex items-center rounded-full border border-ui-700 bg-ui-800 interactive"
+                  >
+                    <button
+                      type="button"
+                      className="button button-sm button-ghost rounded-full"
+                    >
+                      <Icon icon="c-question"></Icon>
+                    </button>
+                  </div>
+
+                  <div
+                    tabIndex="0"
+                    className="dropdown-content bg-ui-600 w-52 p-1"
+                  >
+                    <ul className="menu menu-rounded">
+                      <li>
+                        <a
+                          href="https://help.gloot.com/kb/en"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <span className="icon icon-comments" />
+                          <span>Support &amp; FAQ</span>
+                        </a>
+                      </li>
+                      <li>
+                        <Link
+                          href={`/prototype/profile/1${
+                            hasAds ? "?ads=true" : ""
+                          }`}
+                        >
+                          <a>
+                            <span className="icon icon-file-article" />
+                            <span>How it works</span>
+                          </a>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="dropdown dropdown-end">
+                  <div
+                    tabIndex="0"
+                    className="flex items-center rounded-full border border-ui-700 bg-ui-800 interactive"
                   >
                     <figure className="avatar avatar-circle avatar-xs">
                       <div>
@@ -245,7 +403,7 @@ export default function Topbar() {
                 <div className="dropdown dropdown-end">
                   <div
                     tabIndex="0"
-                    className="flex items-center rounded-full border border-ui-700 bg-ui-800 hover:opacity-50 transition duration-200"
+                    className="flex items-center rounded-full border border-ui-700 bg-ui-800 interactive"
                   >
                     <button
                       type="button"
@@ -275,7 +433,9 @@ export default function Topbar() {
                       {notificationsGroups.map(
                         (notificationGroup, notificationGroupIndex) => (
                           <div key={notificationGroupIndex}>
-                            <h5 className="px-2 text-ui-300 text-sm mb-2">{notificationGroup.name}</h5>
+                            <h5 className="px-2 text-ui-300 text-sm mb-2">
+                              {notificationGroup.name}
+                            </h5>
                             <ul className="items-spaced space-y-2">
                               {notificationGroup.notifications?.map(
                                 (notification, notificationIndex) => (
@@ -286,11 +446,8 @@ export default function Topbar() {
                                     }`}
                                   >
                                     <li
-                                      
                                       className={`item rounded-xl item-interactive relative surface surface-ui-600 hover:opacity-50 ${
-                                        notification.read
-                                          ? "opacity-25"
-                                          : ""
+                                        notification.read ? "opacity-25" : ""
                                       }`}
                                     >
                                       <div className="item-image">

@@ -289,3 +289,68 @@
     background-position: 800px 0;
   }
 }
+
+/* loader-message */
+
+.loader-message {
+  @apply
+  text-ui-300
+  relative
+  -translate-y-9
+  ;
+  
+  &,
+  &::before,
+  &::after {
+    @apply
+    content-[""]
+    rounded-full
+    w-4
+    h-4
+    animate-[loader-message_1.8s_ease-in-out_both_infinite];
+  }
+
+  &::before,
+  &::after {
+    @apply
+    top-0
+    absolute
+    ;
+  }
+
+  &::before {
+    @apply
+    -left-5
+    ;
+    animation-delay: 0s;
+  }
+  &::after {
+    @apply
+    left-5
+    ;
+    animation-delay: 0.32s;
+  }
+  animation-delay: 0.16s;
+}
+
+
+@-webkit-keyframes loader-message {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.25em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.25em 0 0;
+  }
+}
+@keyframes loader-message {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.25em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.25em 0 0;
+  }
+}

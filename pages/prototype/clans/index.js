@@ -3,7 +3,6 @@ import React, { useContext, useEffect } from 'react';
 import Ad from "../../../components/Ad/Ad";
 import Link from "next/link";
 import ModalClanCreate from './modal-clan-create';
-import ModalContainer from '../../../components/Modal/ModalContainer';
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
@@ -120,7 +119,7 @@ export default function Clan() {
                               <a
                                 href={clan.social.twitch}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
                               >
                                 <span className="icon icon-twitch text-xl" />
@@ -132,7 +131,7 @@ export default function Clan() {
                               <a
                                 href={clan.social.discord}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
                               >
                                 <span className="icon icon-discord text-xl" />
@@ -144,7 +143,7 @@ export default function Clan() {
                               <a
                                 href={clan.social.youtube}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
                               >
                                 <span className="icon icon-logo-youtube text-xl" />
@@ -156,7 +155,7 @@ export default function Clan() {
                               <a
                                 href={clan.social.twitter}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
                               >
                                 <span className="icon icon-logo-twitter text-xl" />

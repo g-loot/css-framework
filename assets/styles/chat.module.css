@@ -20,6 +20,7 @@
   scrollbar-desktop
   ;
 }
+
 .chat-group {
   @apply
   flex
@@ -141,6 +142,31 @@
     ;
   }
 }
+@media only screen and (max-width: 768px) {
+  .chat-group:not(.is-owner) {
+    .dropdown.dropdown-center {
+      .dropdown-content {
+        @apply
+        right-0
+        left-auto
+        translate-x-0
+        ;
+      }
+    }
+  }
+  .chat-group.is-owner {
+    .dropdown.dropdown-center {
+      .dropdown-content {
+        @apply
+        left-0
+        right-auto
+        translate-x-0
+        ;
+      }
+    }
+  }
+}
+
 
 .chat-author {
   @apply
@@ -173,6 +199,7 @@
   max-w-[max-content]
   relative
   z-0
+  min-w-[100px]
   ;
   &,
   img {
@@ -275,5 +302,25 @@
     xl:relative
     ;
     z-index: 10000;
+  }
+}
+
+.chat-bubble {
+  &.is-writting {
+    @apply
+    p-0
+    ;
+
+    > div {
+      @apply
+      relative
+      h-12
+      w-24
+      flex
+      items-center
+      justify-center
+      ;
+
+    }    
   }
 }

@@ -66,7 +66,7 @@ const DSLayout = ({ children }) => {
                   <a
                     href="https://www.npmjs.com/package/@g-loot/css-framework"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="chip chip-secondary chip-xs"
                   >
                     <span>v{packageFramework.version}</span>

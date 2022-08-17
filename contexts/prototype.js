@@ -6,6 +6,7 @@ import {
 import { dataClans } from '../mock-data/data-clans';
 import { dataGames } from '../mock-data/data-games';
 import { dataUsers } from '../mock-data/data-users';
+import { dataVouchers } from '../mock-data/data-vouchers';
 
 export const PrototypeContext = createContext(
   undefined
@@ -17,6 +18,7 @@ export const PrototypeProvider = ({ children }) => {
   const clans = dataClans;
   const games = dataGames;
   const users = dataUsers;
+  const vouchers = dataVouchers;
   
   const getGameByID = (id) => {
     return games.find(game => {
@@ -62,6 +64,11 @@ export const PrototypeProvider = ({ children }) => {
       return clan.isYou === true;
     })
   }
+  const getVoucherByID = (id) => {
+    return vouchers.find(voucher => {
+      return voucher.id === parseInt(id);
+    })
+  }
   
   return (
     <Provider
@@ -69,6 +76,7 @@ export const PrototypeProvider = ({ children }) => {
         games,
         users,
         clans,
+        vouchers,
         getGameByID,
         getGameBySlug,
         getUserByID,
@@ -77,6 +85,7 @@ export const PrototypeProvider = ({ children }) => {
         getTournamentByID,
         getClanByID,
         getUserClan,
+        getVoucherByID,
       }}
     >
       {children}

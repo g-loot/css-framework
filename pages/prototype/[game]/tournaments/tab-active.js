@@ -159,7 +159,7 @@ export default function TabTournamentsActive() {
                       className="link link-main"
                       href="#"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                     >
                       Discord
                     </a>{" "}
@@ -214,7 +214,7 @@ export default function TabTournamentsActive() {
               <p className="text-lg mt-4 mb-6 max-w-sm">
                 Watch the latest highlights and content from the official <span className="whitespace-nowrap">G-Loot</span> stream. Featuring events, tournaments, and more from all our supported games!
               </p>
-              <a href="https://www.twitch.tv/glootvalorant" target="_blank" rel="noreferrer" className="button button-primary">
+              <a href="https://www.twitch.tv/glootvalorant" target="_blank" rel="noopener noreferrer" className="button button-primary">
                 <span>Watch now</span>
               </a>
             </div>

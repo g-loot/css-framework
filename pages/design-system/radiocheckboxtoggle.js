@@ -18,7 +18,7 @@ const DSpage = () => {
                   <div className="flex-1 space-y-4">
                     <div className="form-group">
                       <label className="form-radio">
-                        <input type="radio" name="gender" checked />
+                        <input type="radio" name="gender" defaultChecked />
                         <i className="form-icon" /> Male
                       </label>
                       <label className="form-radio">
@@ -239,6 +239,7 @@ const DSpage = () => {
                     <div className="form-group flex flex-wrap justify-center gap-4">
                       <label className="form-checkbox form-image">
                         <input type="checkbox" name="game-1" />
+                        <span className="sr-only">Valorant</span>
                         <div
                           className="w-32 h-48 bg-cover rounded-md"
                           style={{
@@ -248,6 +249,7 @@ const DSpage = () => {
                       </label>
                       <label className="form-checkbox form-image">
                         <input type="checkbox" name="game-2" />
+                        <span className="sr-only">Apex Legends</span>
                         <div
                           className="w-32 h-48 bg-cover rounded-md"
                           style={{
@@ -257,6 +259,7 @@ const DSpage = () => {
                       </label>
                       <label className="form-checkbox form-image">
                         <input type="checkbox" name="game-3" />
+                        <span className="sr-only">PUBG: BATTLEGROUNDS</span>
                         <div
                           className="w-32 h-48 bg-cover rounded-md"
                           style={{
@@ -266,6 +269,7 @@ const DSpage = () => {
                       </label>
                       <label className="form-checkbox form-image">
                         <input type="checkbox" name="game-4" />
+                        <span className="sr-only">CSGO</span>
                         <div
                           className="w-32 h-48 bg-cover rounded-md"
                           style={{
@@ -275,6 +279,7 @@ const DSpage = () => {
                       </label>
                       <label className="form-checkbox form-image">
                         <input type="checkbox" name="game-5" />
+                        <span className="sr-only">Rocket League</span>
                         <div
                           className="w-32 h-48 bg-cover rounded-md"
                           style={{
@@ -284,6 +289,7 @@ const DSpage = () => {
                       </label>
                       <label className="form-checkbox form-image">
                         <input type="checkbox" name="game-6" />
+                        <span className="sr-only">League of Legends</span>
                         <div
                           className="w-32 h-48 bg-cover rounded-md"
                           style={{
@@ -293,6 +299,7 @@ const DSpage = () => {
                       </label>
                       <label className="form-checkbox form-image">
                         <input type="checkbox" name="game-7" />
+                        <span className="sr-only">Dota 2</span>
                         <div
                           className="w-32 h-48 bg-cover rounded-md"
                           style={{
@@ -309,7 +316,7 @@ const DSpage = () => {
                 <iframe
                   className="rounded"
                   width="100%"
-                  height="300"
+                  height="500"
                   src="//jsfiddle.net/augustin_hiebel/ho95v46t/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>

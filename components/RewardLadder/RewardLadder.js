@@ -36,7 +36,7 @@ export default function RewardLadder(props) {
                   <h2>2 rewards available</h2>
                   <button
                     type="button"
-                    className="button button-claim"
+                    className="button button-claim is-shining"
                     onClick={openModalClaimDailyRewards}
                   >
                     <span>Claim rewards</span>

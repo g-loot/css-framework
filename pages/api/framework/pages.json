@@ -41,6 +41,24 @@
           "tab": 1,
           "new": true,
           "tags": "home, start, index, claim, rewards, daily missions, modal, prompt"
+        },
+        {
+          "label": "Edit favorite games",
+          "chip": "modal",
+          "url": "home",
+          "query": "modalfavoritegames=true",
+          "tab": 1,
+          "new": true,
+          "tags": "home, start, index, favorite games, preference, user, modal, prompt"
+        },
+        {
+          "label": "Tournament schedule",
+          "chip": "modal",
+          "url": "home",
+          "query": "modaltournamentschedule=true",
+          "tab": 1,
+          "new": true,
+          "tags": "home, start, index, tournament schedule, agenda, upcoming, competition, modal, prompt"
         }
       ]
     },
@@ -127,6 +145,22 @@
           "url": "shop",
           "query": "",
           "tags": "shop, voucher, riot games, amazon, steam, drkn, ifood, reward"
+        },
+        {
+          "label": "Voucher details",
+          "url": "shop/1",
+          "query": "",
+          "tags": "shop, voucher, riot games, amazon, steam, drkn, ifood, reward",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Voucher details (with banner)",
+          "url": "shop/2",
+          "query": "",
+          "tags": "shop, voucher, riot games, amazon, steam, drkn, ifood, reward",
+          "tab": 1,
+          "new": true
         }
       ]
     },
@@ -179,6 +213,14 @@
           "url": "valorant/missions",
           "query": "",
           "tags": "game, missions"
+        },
+        {
+          "label": "Missions & rewards (Steam banner)",
+          "url": "valorant/missions",
+          "query": "",
+          "tags": "game, missions",
+          "tab": 1,
+          "new": true
         },
         {
           "label": "How it works",

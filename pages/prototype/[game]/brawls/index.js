@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Brawls">
-        <Ad width="1005" height="300" />
+        <Ad width="1005" height="124" />
         {selectedGame && (
           <>
             <section className="relative surface sm:rounded-lg overflow-hidden mb-4">

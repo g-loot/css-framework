@@ -24,10 +24,20 @@
     items-center
     ;
 
+    :where(.icon, svg, img) {
+      @apply
+      shrink-0
+      ;
+    }
+
     .icon {
       @apply
       text-ui-300
       ;
+    }
+    svg path:not([fill]) {
+      @apply
+      fill-ui-300
     }
   }
 
@@ -53,6 +63,10 @@
       @apply
       text-ui-800
       ;
+    }
+    svg path:not([fill]) {
+      @apply
+      fill-ui-800
     }
   }
 

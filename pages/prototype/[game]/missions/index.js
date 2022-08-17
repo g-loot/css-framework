@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Missions">
-        <Ad width="1005" height="300" />
+        <Ad width="1005" height="124" />
 
         {selectedGame && (
           <>

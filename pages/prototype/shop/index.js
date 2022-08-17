@@ -1,54 +1,47 @@
 import Ad from "../../../components/Ad/Ad";
+import Link from "next/link";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import useFetch from "../../../hooks/use-fetch";
+import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
-
-const GiftCards = [
-  {
-    validity: "United States & Europe",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_riot.webp",
-    name: "Riot",
-  },
-  {
-    validity: "Worldwide",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_amazon.webp",
-    name: "Amazon.com",
-    exception:
-      "Available worldwide but only redeemable through Amazon US (amazon.com)",
-  },
-  {
-    validity: "United States, Europe, Philippines & Brazil",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_steam.webp",
-    name: "Steam",
-  },
-  {
-    validity: "Worldwide",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1643193561/shop/Gift_Card_Image_-_DRKN_1x.png",
-    name: "DRKN Gaming Streetwear",
-  },
-  {
-    validity: "Brazil",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_ifood.webp",
-    name: "iFood",
-  },
-];
 
 export default function Home() {
   const router = useRouter();
-  const { data, loading } = useFetch("/api/brawls", { delay: 1000 });
+  const { query } = useRouter();
+  const prototype = usePrototypeData();
+  const hasAds = query.ads === "true" ? true : false;
 
   return (
     <>
       <PrototypeStructure title="Shop">
         <Ad width="1005" height="124" />
 
-        <section className="mb-8">
+        <section className="mb-4">
           <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8 lg:min-h-[250px] lg:flex items-center">
+            <div className="absolute z-20 top-0 left-0 py-2 px-4">
+              <nav className="breadcrumbs" aria-label="Breadcrumb">
+                <ol>
+                  <li
+                    className="animate-slide-in-top animate-delay"
+                    style={{ "--delay": "calc(0 * 0.05s)" }}
+                  >
+                    <Link href={`/prototype/home${hasAds ? "?ads=true" : ""}`}>
+                      <a>
+                        <span className="icon icon-20 icon-home-2" />
+                        <span>Home</span>
+                      </a>
+                    </Link>
+                  </li>
+                  <li
+                    className="animate-slide-in-top animate-delay"
+                    style={{ "--delay": "calc(1 * 0.05s)" }}
+                  >
+                    <div>
+                      <span>Shop</span>
+                    </div>
+                  </li>
+                </ol>
+              </nav>
+            </div>
             <div className="relative z-10">
               <h1 className="text-3xl sm:text-4xl">Shop</h1>
               <p className="text-ui-300 max-w-[70ch] mt-4">
@@ -70,15 +63,15 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="px-4 md:px-0 my-8">
+        <section className="px-4 md:px-0 mb-4">
           <h2 className="px-2 sm:px-0 py-2 text-2xl">Gift cards</h2>
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4">
-            {GiftCards.map((giftcard, giftcardIndex) => (
+            {prototype.vouchers.map((voucher, voucherIndex) => (
               <>
                 <li
-                  key={giftcard}
+                  key={voucher.id}
                   className="surface rounded-2xl w-3/4 sm:w-2/3 md:w-auto p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
-                  style={{ "--delay": `calc( ${giftcardIndex} * 0.05s)` }}
+                  style={{ "--delay": `calc( ${voucherIndex} * 0.05s)` }}
                 >
                   <div className="flex-1 flex flex-col items-center gap-2">
                     <div className="py-2 relative">
@@ -89,13 +82,11 @@ export default function Home() {
                       <div className="leading-tight">
                         <strong className="uppercase">Valid in:</strong>
                         <br />
-                        <span className="leading-none">
-                          {giftcard.validity}
-                        </span>
+                        <span className="leading-none">{voucher.validity}</span>
                       </div>
                     </div>
                     <img
-                      src={giftcard.image}
+                      src={voucher.image}
                       className="w-4/5 rounded-xl shadow-2xl my-3"
                       height="auto"
                       alt="Gift card"
@@ -103,11 +94,11 @@ export default function Home() {
                     <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
                       <span>Gift cards</span>
                       <small className="text-ui-300 text-2xl">
-                        {giftcard.name}
+                        {voucher.name}
                       </small>
                     </h3>
                     <div className="mt-2 h-12 flex items-center">
-                      {giftcard.exception && (
+                      {voucher.exception && (
                         <>
                           <p className="text-ui-300 text-sm max-w-[45ch]">
                             *Available worldwide but only redeemable through
@@ -118,12 +109,15 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="border-t border-ui-700 pt-4">
-                    <button
-                      type="button"
-                      className="button button-primary w-full"
+                    <Link
+                      href={`/prototype/shop/${voucher.id}${
+                        hasAds ? "?ads=true" : ""
+                      }`}
                     >
-                      <span>View gift cards</span>
-                    </button>
+                      <a type="button" className="button button-primary w-full">
+                        <span>View gift cards</span>
+                      </a>
+                    </Link>
                   </div>
                 </li>
               </>
@@ -131,7 +125,7 @@ export default function Home() {
           </ul>
         </section>
 
-        <section className="px-4 md:px-0 my-8">
+        <section className="px-4 md:px-0 mb-4">
           <h2 className="px-2 sm:px-0 py-2 text-2xl">Tokens</h2>
           <div className="relative">
             <img

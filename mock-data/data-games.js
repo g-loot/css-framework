@@ -10,9 +10,10 @@ export const dataGames = [
     slug: "valorant",
     type: "FPS hero shooter",
     assets: {
-      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-1.webp",
-      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
-      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp"
+      cover: "https://res.cloudinary.com/gloot/image/upload/v1644677000/Marketing/202109_gloot2/Game_cover_Valorant.jpg",
+      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-1.webp",
+      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
+      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp"
     },
     missions: [
       {
@@ -76,7 +77,7 @@ export const dataGames = [
         solo: true,
         clan: true,
         name: "Competitive Brawl",
-        cover: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp",
+        cover: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp",
         status: "ongoing",
         gameMode: "Competitive",
         sponsor: false,
@@ -347,7 +348,7 @@ export const dataGames = [
         solo: true,
         clan: true,
         name: "Brawl - the Winter edition",
-        cover: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
+        cover: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
         status: "ongoing",
         gameMode: "Competitive",
         sponsor: "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
@@ -619,7 +620,7 @@ export const dataGames = [
         id: 1,
         type: "skirmish",
         name: "Valorant Open Tour",
-        cover: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
+        cover: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
         status: "ongoing",
         sponsor: false,
         details: {
@@ -711,9 +712,9 @@ export const dataGames = [
         id: 2,
         type: "showdown",
         name: "Valorant European Champions",
-        cover: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
+        cover: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
         status: "registration",
-        sponsor: false,
+        sponsor: "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         details: {
           region: "NA",
           date: "2023-02-19T18:00:00Z",
@@ -807,7 +808,7 @@ export const dataGames = [
         name: "Valorant 2022 Champions Tour",
         cover: "https://images.squarespace-cdn.com/content/v1/61a700ec7413220d43316e53/14672157-dacd-4278-b72c-8a8344be8389/hero-background.jpg?format=original",
         status: "registration",
-        sponsor: false,
+        sponsor: "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         details: {
           region: "Europe",
           date: "2023-02-19T18:00:00Z",
@@ -892,7 +893,7 @@ export const dataGames = [
         id: 4,
         type: "open",
         name: "Valorant New Zealand Champions",
-        cover: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
+        cover: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
         status: "finished",
         sponsor: false,
         details: {
@@ -993,9 +994,10 @@ export const dataGames = [
     slug: "pubg",
     type: "Squad FPP",
     assets: {
-      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
-      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-pubg-2.webp",
-      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-pubg-3.webp"
+      cover: "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_PUBG_Battlegrounds.jpg",
+      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
+      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-2.webp",
+      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-3.webp"
     },
     missions: [
       {
@@ -1059,7 +1061,7 @@ export const dataGames = [
         solo: true,
         clan: true,
         name: "Competitive Brawl",
-        cover: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-pubg-4.webp",
+        cover: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-4.webp",
         status: "ongoing",
         gameMode: "Competitive",
         sponsor: false,
@@ -1330,7 +1332,7 @@ export const dataGames = [
         solo: true,
         clan: true,
         name: "Brawl - the Winter edition",
-        cover: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-pubg-5.webp",
+        cover: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-5.webp",
         status: "ongoing",
         gameMode: "Competitive",
         sponsor: "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
@@ -1703,9 +1705,10 @@ export const dataGames = [
     slug: "apexlegends",
     type: "Battle royale-hero shooter",
     assets: {
-      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-1.webp",
-      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-2.webp",
-      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-3.webp"
+      cover: "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Apex_Legends.jpg",
+      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-1.webp",
+      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-2.webp",
+      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-3.webp"
     },
     missions: [
       {
@@ -1738,9 +1741,10 @@ export const dataGames = [
     slug: "csgo",
     type: "FPS",
     assets: {
-      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-csgo-1.webp",
-      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-csgo-2.webp",
-      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-csgo-3.webp"
+      cover: "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_CSGO.jpg",
+      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-1.webp",
+      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-2.webp",
+      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-3.webp"
     },
     missions: [
       {
@@ -1773,9 +1777,10 @@ export const dataGames = [
     slug: "dota2",
     type: "MOBA",
     assets: {
-      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-dota2-1.webp",
-      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-dota2-2.webp",
-      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-dota2-3.webp"
+      cover: "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Dota_2.jpg",
+      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-dota2-1.webp",
+      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-dota2-2.webp",
+      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-dota2-3.webp"
     },
     missions: [
       {
@@ -1808,9 +1813,10 @@ export const dataGames = [
     slug: "leagueoflegends",
     type: "MOBA",
     assets: {
-      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-1.webp",
-      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-2.webp",
-      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-3.webp"
+      cover: "https://res.cloudinary.com/gloot/image/upload/v1645621586/Marketing/202109_gloot2/Game_cover_League_of_Legends.jpg",
+      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-1.webp",
+      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-2.webp",
+      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-3.webp"
     },
     missions: [
       {
@@ -1843,9 +1849,10 @@ export const dataGames = [
     slug: "rocketleague",
     type: "Vehicular soccer",
     assets: {
-      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-1.webp",
-      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-2.webp",
-      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1657636877/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-3.webp"
+      cover: "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Rocket_League.jpg",
+      heroMission: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-1.webp",
+      heroBrawl: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-2.webp",
+      heroTournament: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-3.webp"
     },
     missions: [
       {

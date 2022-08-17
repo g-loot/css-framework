@@ -14,7 +14,6 @@ const defaultUiState = {
   displayedToasts: [],
 };
 const uiReducer = (state, action) => {
-
   if (action.type === 'OPEN_MODAL') {
     const displayedModal = action.payload.name;
     return {
@@ -37,7 +36,6 @@ const uiReducer = (state, action) => {
       displayedToasts,
     };
   } else if (action.type === 'CLOSE_TOASTR') {
-    console.log(action.payload.id, "received");
     const displayedToasts = [...state.displayedToasts].filter(toast => toast.id != action.payload.id);
     return {
       ...state,

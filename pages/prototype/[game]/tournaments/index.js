@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Brawls">
-        <Ad width="1005" height="300" />
+        <Ad width="1005" height="124" />
 
         {selectedGame && (
           <>
@@ -60,7 +60,9 @@ export default function Home() {
                           className="animate-slide-in-top animate-delay"
                           style={{ "--delay": "calc(0 * 0.05s)" }}
                         >
-                          <Link href={`/prototype/home${hasAds ? '?ads=true' : ''}`}>
+                          <Link
+                            href={`/prototype/home${hasAds ? "?ads=true" : ""}`}
+                          >
                             <a href="#">
                               <span className="icon icon-20 icon-home-2" />
                               <span>Home</span>

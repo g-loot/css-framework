@@ -4,7 +4,147 @@ export const dataVouchers = [
     validity: "United States & Europe",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_riot.webp",
-    name: "Riot",
+    name: "Riot Games",
+    description:
+      "What if playing games could give you new games? When you buy a Steam gift card through G-Loot, that’s exactly what happens. Choose from thousands of games, software, and even hardware from Steam.",
+    sections: [
+      {
+        id: 1,
+        name: "Europe",
+        countries: [
+          {
+            name: "Austria",
+            flag: "at",
+          },
+          {
+            name: "Belgium",
+            flag: "be",
+          },
+          {
+            name: "Bulgaria",
+            flag: "be",
+          },
+          {
+            name: "Cyprus",
+            flag: "cy",
+          },
+          {
+            name: "Denmark",
+            flag: "dk",
+          },
+          {
+            name: "Estonia",
+            flag: "ee",
+          },
+          {
+            name: "Finland",
+            flag: "fi",
+          },
+          {
+            name: "France",
+            flag: "fr",
+          },
+          {
+            name: "Germany",
+            flag: "de",
+          },
+          {
+            name: "Greece",
+            flag: "gr",
+          },
+          {
+            name: "Ireland",
+            flag: "ie",
+          },
+          {
+            name: "Italy",
+            flag: "it",
+          },
+          {
+            name: "Kosovo",
+            flag: "xk",
+          },
+          {
+            name: "Latvia",
+            flag: "lv",
+          },
+          {
+            name: "Lithuania",
+            flag: "lt",
+          },
+          {
+            name: "Luxembourg",
+            flag: "lu",
+          },
+          {
+            name: "Malta",
+            flag: "mt",
+          },
+          {
+            name: "Netherlands",
+            flag: "nl",
+          },
+          {
+            name: "Portugal",
+            flag: "pt",
+          },
+          {
+            name: "Slovakia",
+            flag: "sk",
+          },
+          {
+            name: "Slovenia",
+            flag: "si",
+          },
+          {
+            name: "Spain",
+            flag: "es",
+          },
+          {
+            name: "Sweden",
+            flag: "se",
+          },
+        ],
+        giftcards: [
+          {
+            id: 1,
+            amount: "20€",
+            price: "15000",
+          },
+          {
+            id: 2,
+            amount: "50€",
+            price: false,
+          },
+          {
+            id: 3,
+            amount: "100€",
+            price: false,
+          },
+        ],
+      },
+      {
+        id: 2,
+        name: "United States",
+        giftcards: [
+          {
+            id: 1,
+            amount: "$20",
+            price: 15000,
+          },
+          {
+            id: 2,
+            amount: "$50",
+            price: 34000,
+          },
+          {
+            id: 3,
+            amount: "$100",
+            price: 59000,
+          },
+        ],
+      },
+    ],
   },
   {
     id: 2,
@@ -14,6 +154,35 @@ export const dataVouchers = [
     name: "Amazon.com",
     exception:
       "Available worldwide but only redeemable through Amazon US (amazon.com)",
+    description:
+      "Turn your wins into games, movies, snacks, and more. With an Amazon gift card, you have millions of items to choose from. What will you pick?",
+      alert: {
+        title: "Please note",
+        description: "Available worldwide but only redeemable through Amazon US (amazon.com).",
+      },
+      sections: [
+        {
+          id: 1,
+          name: "Worldwide",
+          giftcards: [
+            {
+              id: 1,
+              amount: "$20",
+              price: 15000,
+            },
+            {
+              id: 2,
+              amount: "$50",
+              price: 34000,
+            },
+            {
+              id: 3,
+              amount: "$100",
+              price: 59000,
+            },
+          ],
+        },
+      ],
   },
   {
     id: 3,
@@ -21,6 +190,183 @@ export const dataVouchers = [
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_steam.webp",
     name: "Steam",
+    description: "What if playing games could give you new games? When you buy a Steam gift card through G-Loot, that’s exactly what happens. Choose from thousands of games, software, and even hardware from Steam.",
+    sections: [
+      {
+        id: 1,
+        name: "United Kingdom",
+        giftcards: [
+          {
+            id: 1,
+            amount: "£20",
+            price: 20000,
+          },
+          {
+            id: 2,
+            amount: "£50",
+            price: 46500,
+          },
+          {
+            id: 3,
+            amount: "£100",
+            price: 79000,
+          },
+        ],
+      },
+      {
+        id: 2,
+        name: "Brazil",
+        giftcards: [
+          {
+            id: 1,
+            amount: "R$20",
+            price: 15000,
+          },
+          {
+            id: 2,
+            amount: "R$50",
+            price: 27000,
+          },
+        ],
+      },
+      {
+        id: 3,
+        name: "Europe",
+        countries: [
+          {
+            name: "Austria",
+            flag: "at",
+          },
+          {
+            name: "Belgium",
+            flag: "be",
+          },
+          {
+            name: "Bulgaria",
+            flag: "be",
+          },
+          {
+            name: "Cyprus",
+            flag: "cy",
+          },
+          {
+            name: "Denmark",
+            flag: "dk",
+          },
+          {
+            name: "Estonia",
+            flag: "ee",
+          },
+          {
+            name: "Finland",
+            flag: "fi",
+          },
+          {
+            name: "France",
+            flag: "fr",
+          },
+          {
+            name: "Germany",
+            flag: "de",
+          },
+          {
+            name: "Greece",
+            flag: "gr",
+          },
+          {
+            name: "Ireland",
+            flag: "ie",
+          },
+          {
+            name: "Italy",
+            flag: "it",
+          },
+          {
+            name: "Kosovo",
+            flag: "xk",
+          },
+          {
+            name: "Latvia",
+            flag: "lv",
+          },
+          {
+            name: "Lithuania",
+            flag: "lt",
+          },
+          {
+            name: "Luxembourg",
+            flag: "lu",
+          },
+          {
+            name: "Malta",
+            flag: "mt",
+          },
+          {
+            name: "Netherlands",
+            flag: "nl",
+          },
+          {
+            name: "Portugal",
+            flag: "pt",
+          },
+          {
+            name: "Slovakia",
+            flag: "sk",
+          },
+          {
+            name: "Slovenia",
+            flag: "si",
+          },
+          {
+            name: "Spain",
+            flag: "es",
+          },
+          {
+            name: "Sweden",
+            flag: "se",
+          },
+        ],
+        giftcards: [
+          {
+            id: 1,
+            amount: "20€",
+            price: 15000,
+          },
+          {
+            id: 2,
+            amount: "50€",
+            price: 38000,
+          },
+          {
+            id: 3,
+            amount: "100€",
+            price: 65500,
+          },
+        ],
+      },
+      {
+        id: 4,
+        name: "Philippines",
+        giftcards: [
+          {
+            id: 1,
+            amount: "1000PHP",
+            price: 16500,
+          },
+        ],
+      },
+      {
+        id: 5,
+        name: "United States",
+        giftcards: [
+          {
+            id: 1,
+            amount: "$20",
+            price: 15000,
+          },
+        ],
+      },
+    ],
   },
   {
     id: 4,
@@ -28,6 +374,51 @@ export const dataVouchers = [
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1643193561/shop/Gift_Card_Image_-_DRKN_1x.png",
     name: "DRKN Gaming Streetwear",
+    description: "This is not your average gamer gear. DRKN creates chic, fashionable streetwear for everyone from casual gamers to esports enthusiasts. Level-up your look with high-quality clothes from DRKN.",
+    sections: [
+      {
+        id: 1,
+        name: "Europe",
+        giftcards: [
+          {
+            id: 1,
+            amount: "20€",
+            price: 16500,
+          },
+          {
+            id: 2,
+            amount: "50€",
+            price: 38000,
+          },
+          {
+            id: 3,
+            amount: "100€",
+            price: 65500,
+          },
+        ],
+      },
+      {
+        id: 2,
+        name: "Rest of the world",
+        giftcards: [
+          {
+            id: 1,
+            amount: "$20",
+            price: 15000,
+          },
+          {
+            id: 2,
+            amount: "$50",
+            price: 34000,
+          },
+          {
+            id: 3,
+            amount: "$100",
+            price: 59000,
+          },
+        ],
+      },
+    ],
   },
   {
     id: 5,
@@ -35,10 +426,32 @@ export const dataVouchers = [
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_ifood.webp",
     name: "iFood",
+    description: "Hungry? Fuel your gaming with iFood. Get dinner, drinks, and even groceries delivered to your door at the click of a button.",
+    alert: {
+      title: "Please note",
+      description: "These vouchers must be used within 3 months of purchase.",
+    },
+    sections: [
+      {
+        id: 1,
+        name: "Europe",
+        giftcards: [
+          {
+            id: 1,
+            amount: "R$100",
+            price: 15000,
+          },
+          {
+            id: 2,
+            amount: "R$250",
+            price: 34000,
+          },
+        ],
+      },
+    ],
   },
- 
-]
+];
 
 export default {
   dataVouchers,
-}
+};

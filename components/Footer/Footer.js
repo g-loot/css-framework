@@ -68,7 +68,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://gloot.com/company"
                   >
                     About
@@ -78,7 +78,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://investor.gloot.com/"
                   >
                     Investor
@@ -88,7 +88,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://career.gloot.com/"
                   >
                     Jobs
@@ -108,7 +108,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://gloot.com/terms-conditions"
                   >
                     Terms of service
@@ -118,7 +118,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://gloot.com/privacy-policy"
                   >
                     Privacy policy
@@ -128,7 +128,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://gloot.com/developer-terms"
                   >
                     Developer terms
@@ -138,7 +138,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://help.gloot.com/hc/en-us"
                   >
                     Support & FAQ
@@ -148,7 +148,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://gloot.com/how-it-works"
                   >
                     How it works
@@ -166,7 +166,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://discord.gg/gloot"
                   >
                     <span className="icon icon-discord icon-24" />
@@ -176,7 +176,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://www.youtube.com/channel/UCkd1qPsv1j10r914QU1vOFw"
                   >
                     <span className="icon icon-logo-youtube icon-24" />
@@ -186,7 +186,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://twitter.com/glootesports"
                   >
                     <span className="icon icon-logo-twitter icon-24" />
@@ -196,7 +196,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://www.facebook.com/glootesports"
                   >
                     <span className="icon icon-logo-facebook icon-24" />
@@ -206,7 +206,7 @@ export default function Footer(props) {
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://www.instagram.com/glootesports/"
                   >
                     <span className="icon icon-logo-instagram icon-24" />

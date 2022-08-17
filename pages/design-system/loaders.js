@@ -196,6 +196,31 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Message */}
+      <div className="mb-12" id="message">
+        <h2 className="h3 mb-3">Message</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 flex justify-center">
+                <div className="loader-message">
+                  <span className="sr-only">Loading...</span>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/7x0aghto/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Cards */}
       <div className="mb-12" id="cards">
         <h2 className="mb-3">Cards</h2>

@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Chat from "../../../../components/Chat/Chat";
-import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import SectionClanActivity from "./section-activity";
-import SectionClanStats from "./section-stats";
 import TabClanActivity from "./tab-activity";
 import TabClanChat from "./tab-chat";
 import { usePrototypeData } from "../../../../contexts/prototype";
@@ -105,7 +103,7 @@ export default function Home() {
                               <a
                                 href={selectedClan.social.twitch}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
                               >
                                 <span className="icon icon-twitch text-xl lg:text-2xl" />
@@ -117,7 +115,7 @@ export default function Home() {
                               <a
                                 href={selectedClan.social.discord}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
                               >
                                 <span className="icon icon-discord text-xl lg:text-2xl" />
@@ -129,7 +127,7 @@ export default function Home() {
                               <a
                                 href={selectedClan.social.youtube}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
                               >
                                 <span className="icon icon-logo-youtube text-xl lg:text-2xl" />
@@ -141,7 +139,7 @@ export default function Home() {
                               <a
                                 href={selectedClan.social.twitter}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
                               >
                                 <span className="icon icon-logo-twitter text-xl lg:text-2xl" />
@@ -266,7 +264,7 @@ export default function Home() {
                                   <a
                                     href={selectedClan.social.twitch}
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                     className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
                                   >
                                     <span className="icon icon-twitch text-xl lg:text-2xl" />
@@ -278,7 +276,7 @@ export default function Home() {
                                   <a
                                     href={selectedClan.social.discord}
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                     className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
                                   >
                                     <span className="icon icon-discord text-xl lg:text-2xl" />
@@ -290,7 +288,7 @@ export default function Home() {
                                   <a
                                     href={selectedClan.social.youtube}
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                     className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
                                   >
                                     <span className="icon icon-logo-youtube text-xl lg:text-2xl" />
@@ -302,7 +300,7 @@ export default function Home() {
                                   <a
                                     href={selectedClan.social.twitter}
                                     target="_blank"
-                                    rel="noreferrer"
+                                    rel="noopener noreferrer"
                                     className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
                                   >
                                     <span className="icon icon-logo-twitter text-xl lg:text-2xl" />

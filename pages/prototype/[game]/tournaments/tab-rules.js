@@ -60,7 +60,7 @@ const Rules = [
             text: [
               "Each player is only allowed to have one (1) G-Loot account.",
               "Players are only allowed to use their own G-Loot account.",
-              "Players are required to reach out via our <a class='link link-main' href='#' target='_blank'>help.gloot.com</a> if they face issues with their one (1) G-Loot account.",
+              "Players are required to reach out via our <a className='link link-main' href='#' target='_blank'>help.gloot.com</a> if they face issues with their one (1) G-Loot account.",
             ],
           },
         ],

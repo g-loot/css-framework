@@ -18,7 +18,7 @@
   &::after,
   > blockquote {
     @apply
-    bg-ui-600/90
+    bg-ui-600/95
     rounded
     transition
     duration-200
@@ -138,5 +138,62 @@
         }
       }
     }
+  }
+}
+
+/* large tooltip */
+
+.tooltip-lg {
+  @apply
+  bg-ui-600/95
+  rounded
+  backdrop-blur-sm
+  transform-gpu
+  p-3
+  transition
+  duration-200
+  ease-in-out
+  opacity-0
+  ;
+
+  &.tooltip-bottom {
+    @apply
+    -translate-y-1
+    opacity-0
+    ;
+    &.is-active {
+      @apply
+      animate-[tooltip-bottom_200ms_ease-in-out_forwards];
+    }
+  }
+  &.tooltip-top {
+    @apply
+    translate-y-1
+    opacity-0
+    ;
+    &.is-active {
+      @apply
+      animate-[tooltip-top_200ms_ease-in-out_forwards];
+    }
+  }
+}
+@keyframes tooltip-bottom {
+  from {
+    transform: translateY(-0.25rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tooltip-top {
+  from {
+    transform: translateY(0.25rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

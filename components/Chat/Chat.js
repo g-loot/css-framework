@@ -5,7 +5,7 @@ import { usePrototypeData } from "../../contexts/prototype";
 const conversation = [
   {
     id: 1,
-    time: "Message seen 1.22pm",
+    time: "Message sent 1.22pm",
     author: 2,
     isYourself: false,
     messages: [
@@ -34,7 +34,7 @@ const conversation = [
   },
   {
     id: 2,
-    time: "Message seen 1.22pm",
+    time: "Message sent 1.22pm",
     author: 1,
     isYourself: true,
     messages: [
@@ -53,7 +53,7 @@ const conversation = [
   },
   {
     id: 3,
-    time: "Message seen 1.22pm",
+    time: "Message sent 1.22pm",
     author: 4,
     isYourself: false,
     messages: [
@@ -67,7 +67,7 @@ const conversation = [
   },
   {
     id: 4,
-    time: "Message seen 1.22pm",
+    time: "Message sent 1.22pm",
     author: 1,
     isYourself: true,
     messages: [
@@ -80,7 +80,7 @@ const conversation = [
   },
   {
     id: 5,
-    time: "Message seen 1.22pm",
+    time: "Message sent 1.22pm",
     author: 2,
     isYourself: false,
     messages: [
@@ -93,7 +93,7 @@ const conversation = [
   },
   {
     id: 6,
-    time: "Message seen 1.22pm",
+    time: "Message sent 1.22pm",
     author: 4,
     isYourself: false,
     messages: [
@@ -112,7 +112,7 @@ const conversation = [
   },
   {
     id: 7,
-    time: "Message seen 1.22pm",
+    time: "Message sent 1.22pm",
     author: 1,
     isYourself: true,
     messages: [
@@ -217,7 +217,7 @@ export default function Chat(props) {
         updatedState = [
           ...state,
           {
-            time: "Message seen 1.22pm",
+            time: "Message sent 1.22pm",
             author: 1,
             isYourself: true,
             messages: [

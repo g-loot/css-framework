@@ -11,10 +11,8 @@ const Index = () => {
   const [filter, setFilter] = useState("");
   const [checked, setChecked] = useState(false);
   const [pageCount, setPageCount] = useState(0);
-  
-  useEffect(() => {
- 
 
+  useEffect(() => {
     const totalPagesCount = FrameworkPages.sections.reduce((acc, curr) => {
       const currentSetionPagesCount = curr.pages.length;
       acc = acc + currentSetionPagesCount;
@@ -22,8 +20,7 @@ const Index = () => {
     }, 0);
 
     setPageCount(totalPagesCount);
-
-  }, [FrameworkPages])
+  }, [FrameworkPages]);
 
   function SwitchTheme(isChecked, theme) {
     if (isChecked === false) {
@@ -33,7 +30,6 @@ const Index = () => {
     }
     setChecked(!checked);
   }
-
 
   return (
     <>
@@ -46,8 +42,13 @@ const Index = () => {
         </div>
         <div className="py-16">
           <div className="container max-w-md">
-            <div className="flex items-end justify-between mb-2">
-              <h1 className="text-4xl">Prototype <small className="font-normal text-ui-300">{pageCount} pages</small></h1>
+            <div className="flex items-end justify-between mb-2 px-4 md:px-0">
+              <h1 className="text-4xl">
+                Prototype{" "}
+                <small className="font-normal text-ui-300">
+                  {pageCount} pages
+                </small>
+              </h1>
               <div className="form-group mb-1">
                 <div className="input-group">
                   <span className="icon icon-zoom" />
@@ -65,13 +66,18 @@ const Index = () => {
             </div>
             <div
               className={`overflow-hidden ${
-                filter ? "surface sm:rounded-lg -mb-2" : ""
+                filter ? "surface md:rounded-lg -mb-2" : ""
               }`}
             >
               {FrameworkPages.sections.map((section, sectionIndex) => (
                 <>
                   <section
-                    className={`${filter ? "" : "surface sm:rounded-lg mb-2 animate-slide-in-bottom animate-delay"}`} style={{ '--delay': 'calc('+sectionIndex+' * 0.05s)'}}
+                    className={`${
+                      filter
+                        ? ""
+                        : "surface md:rounded-lg mb-2 animate-slide-in-bottom animate-delay"
+                    }`}
+                    style={{ "--delay": "calc(" + sectionIndex + " * 0.05s)" }}
                   >
                     <div className={`item ${filter ? "hidden" : ""}`}>
                       <div className="item-body py-0.5 px-4">
@@ -94,36 +100,35 @@ const Index = () => {
                         .map((item) => (
                           <>
                             <li
-                              className={`item border-ui-700 ${item.isDisabled ? "is-disabled" : ""} ${
-                                filter ? "border-b" : ""
-                              }`}
+                              className={`item border-ui-700 ${
+                                item.isDisabled ? "is-disabled" : ""
+                              } ${filter ? "border-b" : ""}`}
                             >
-                              <div className={`item-body ${item.tab ? "" : "pl-8"} ${item.tab === 1 ? "pl-16" : ""}  ${item.tab === 2 ? "pl-24" : ""}`}>
+                              <div
+                                className={`item-body ${
+                                  item.tab ? "" : "pl-8"
+                                } ${item.tab === 1 ? "pl-16" : ""}  ${
+                                  item.tab === 2 ? "pl-24" : ""
+                                }`}
+                              >
                                 <div className="item-title text-ui-300 flex gap-2">
-                                  <span>{item.label}</span>
-                                  {item.chip && (
-                                    <span className="text-xs text-ui-300 uppercase leading-tight rounded py-1 px-1.5 bg-ui-900/75">
-                                      {item.chip}
-                                    </span>
-                                  )}
-                                  {item.new && (
-                                    <i className="badge" />
-                                  )}
-                                </div>
-                              </div>
-                              <div className="item-actions">
-                                <div className="block xl:hidden">
                                   <Link
                                     href={`/prototype/${item.url}${
                                       item.query ? "?" : ""
                                     }${item.query}`}
                                   >
-                                    <a className="button button-sm button-primary">
-                                      <span>View</span>
-                                    </a>
+                                    <a>{item.label}</a>
                                   </Link>
+                                  {item.chip && (
+                                    <span className="text-xs text-ui-300 uppercase leading-tight rounded py-1 px-1.5 bg-ui-900/75">
+                                      {item.chip}
+                                    </span>
+                                  )}
+                                  {item.new && <i className="badge" />}
                                 </div>
-                                <div className="hidden xl:flex gap-2">
+                              </div>
+                              <div className="item-actions hidden xl:flex">
+                                <div className="flex gap-2">
                                   <Link
                                     href={`/prototype/${item.url}${
                                       item.query ? "?" : ""

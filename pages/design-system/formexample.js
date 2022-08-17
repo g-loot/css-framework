@@ -124,11 +124,11 @@ const DSpage = () => {
                   <i className="form-icon" /> Meta
                 </label>
                 <label className="form-toggle">
-                  <input type="checkbox" name="data-google" />
+                  <input type="checkbox" name="data-google" defaultChecked />
                   <i className="form-icon" /> Google
                 </label>
                 <label className="form-toggle">
-                  <input type="checkbox" name="data-adroll" />
+                  <input type="checkbox" name="data-adroll" defaultChecked />
                   <i className="form-icon" /> Adroll
                 </label>
                 <label className="form-toggle">

@@ -113,7 +113,7 @@ export default function TabTournamentsOverview() {
               style={{ "--delay": "calc(1 * 0.05s)" }}
             >
               <div className="flex-1 surface sm:rounded-lg relative flex flex-col items-center justify-center overflow-hidden text-center hoverinside:opacity-100 hoverinside:translate-y-0 hoverinside:scale-100">
-                <div className="relative z-10 py-8">
+                <div className="relative z-10 py-8 px-4">
                   <h2 className="h4">
                     Register <span className="text-main">solo</span>
                   </h2>
@@ -147,7 +147,7 @@ export default function TabTournamentsOverview() {
                 <hr className="separator separator-vertical hidden lg:block flex-1" />
               </div>
               <div className="flex-1 surface sm:rounded-lg relative flex flex-col items-center justify-center overflow-hidden text-center hoverinside:opacity-100 hoverinside:translate-y-0 hoverinside:scale-100">
-                <div className="relative z-10 py-8">
+                <div className="relative z-10 py-8 px-4">
                   <h2 className="h4">
                     Register with a <span className="text-main">team</span>
                   </h2>
@@ -471,7 +471,7 @@ export default function TabTournamentsOverview() {
                       className="button button-sm button-secondary"
                       href="https://discord.gg/gloot"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                     >
                       <span>Join Discord</span>
                     </a>

@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Accordion from "../../../components/Accordion/Accordion";
 import Ad from "../../../components/Ad/Ad";
 import Link from "next/link";
+import ListItemBrawl from "../../../components/ListItem/ListItemBrawl";
+import ListItemTournament from "../../../components/ListItem/ListItemTournament";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -78,7 +80,7 @@ export default function Home() {
                       <a
                         href="#"
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="transition-colors duration-75 text-ui-300 hover:text-main flex items-center gap-2"
                       >
                         <div className="w-6 flex justify-center">
@@ -197,7 +199,7 @@ export default function Home() {
                   <a
                     href="#"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="transition-colors duration-75 text-ui-300 hover:text-main flex items-center gap-2"
                   >
                     <div className="w-6 flex justify-center">
@@ -522,7 +524,7 @@ export default function Home() {
                           hasAds ? "?ads=true" : ""
                         }`}
                       >
-                        <div className="rounded surface surface-ui-700 p-2 flex items-center gap-2 cursor-pointer hover:opacity-50 transition-opacity duratino-300 ease-in-out">
+                        <div className="rounded surface surface-ui-700 p-2 flex items-center gap-2 interactive">
                           <figure className="avatar avatar-sm avatar-squircle">
                             <div>
                               <img
@@ -574,165 +576,13 @@ export default function Home() {
                         Showing your latest Solo Brawls
                       </span>
                     </div>
-                    <button
-                      type="button"
-                      className="tooltip tooltip-left text-ui-300 text-0"
-                      data-tooltip="Bla bla bla"
-                    >
-                      <span className="icon icon-16 icon-c-info" />
-                    </button>
                   </div>
                   <div className="max-h-60 overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto scrollbar-desktop">
                     <ul className="space-x-2 lg:space-x-0 lg:space-y-2 p-2 flex lg:block">
                       {prototype.games.map((game, gameIndex) => (
                         <>
                           {game.brawls?.map((brawl, brawlIndex) => (
-                            <li key={brawl.id}>
-                              <Link
-                                href={`${
-                                  brawl.progress !== 3
-                                    ? `/prototype/${game.slug}/brawls/${brawl.id}?tab=solo-leaderboard`
-                                    : "#"
-                                }`}
-                              >
-                                <div
-                                  className={`rounded overflow-hidden surface surface-ui-700 p-2 relative ${
-                                    brawl.progress !== 3
-                                      ? "cursor-pointer hover:opacity-50 transition-opacity duratino-300 ease-in-out"
-                                      : ""
-                                  }`}
-                                >
-                                  {brawl.progress === 3 && (
-                                    <>
-                                      <div className="absolute inset-0 z-40 bg-ui-700/95 backdrop-blur-sm flex items-center justify-center">
-                                        <button
-                                          type="button"
-                                          className="button button-claim"
-                                        >
-                                          <span>Claim reward</span>
-                                        </button>
-                                      </div>
-                                    </>
-                                  )}
-
-                                  <div className="relative z-10 leading-tight w-72 lg:w-auto h-24 flex flex-col items-start justify-between">
-                                    <div
-                                      className={`chip chip-sliced chip-sm ${
-                                        brawl.status === "ongoing" ? "" : ""
-                                      } ${
-                                        brawl.status === "finished"
-                                          ? "chip-blue"
-                                          : ""
-                                      }`}
-                                    >
-                                      <span>{brawl.status}</span>
-                                    </div>
-                                    <div className="font-bold mt-2">
-                                      {brawl.name}
-                                    </div>
-                                    <div className="">
-                                      {brawl.progress === 0 && (
-                                        <>
-                                          <span className="text-sm text-ui-300">
-                                            Position:{" "}
-                                            <span className="font-bold">
-                                              53
-                                            </span>
-                                          </span>
-                                        </>
-                                      )}
-
-                                      {brawl.progress === 3 && (
-                                        <>
-                                          <span className="text-sm text-ui-300">
-                                            Final osition:{" "}
-                                            <span className="font-bold">
-                                              53
-                                            </span>
-                                          </span>
-                                        </>
-                                      )}
-
-                                      {brawl.progress > 0 &&
-                                        brawl.progress < 3 && (
-                                          <>
-                                            <ul className="step step-quinary w-full max-w-xs gap-2 mt-3">
-                                              <li>
-                                                <a href="#">
-                                                  <i />
-                                                  <div></div>
-                                                  <span />
-                                                </a>
-                                              </li>
-                                              <li className="is-active">
-                                                <a href="#">
-                                                  <i />
-                                                  <div></div>
-                                                  <span />
-                                                </a>
-                                              </li>
-                                              <li>
-                                                <a href="#">
-                                                  <i />
-                                                  <div></div>
-                                                  <span />
-                                                </a>
-                                              </li>
-                                            </ul>
-                                          </>
-                                        )}
-                                    </div>
-                                  </div>
-                                  <div className="absolute z-20 top-2 right-2 p-1 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
-                                    <span
-                                      className={`icon text-xl ${
-                                        prototype.getGameByID(game.id).slug ===
-                                        "apexlegends"
-                                          ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                                          : ""
-                                      } ${
-                                        prototype.getGameByID(game.id).slug ===
-                                        "csgo"
-                                          ? "icon-game-csgo-symbol text-game-csgo"
-                                          : ""
-                                      }  ${
-                                        prototype.getGameByID(game.id).slug ===
-                                        "dota2"
-                                          ? "icon-game-dota2-symbol text-game-dota2"
-                                          : ""
-                                      }  ${
-                                        prototype.getGameByID(game.id).slug ===
-                                        "leagueoflegends"
-                                          ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                                          : ""
-                                      }  ${
-                                        prototype.getGameByID(game.id).slug ===
-                                        "rocketleague"
-                                          ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                                          : ""
-                                      } ${
-                                        prototype.getGameByID(game.id).slug ===
-                                        "pubg"
-                                          ? "icon-game-pubg-symbol text-game-pubg"
-                                          : ""
-                                      }  ${
-                                        prototype.getGameByID(game.id).slug ===
-                                        "valorant"
-                                          ? "icon-game-valorant-symbol text-game-valorant"
-                                          : ""
-                                      }`}
-                                    />
-                                  </div>
-                                  <div className="absolute z-0 right-0 inset-y-0 w-1/2">
-                                    <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-700 to-ui-700/50"></div>
-                                    <img
-                                      className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                                      src={brawl.cover}
-                                    />
-                                  </div>
-                                </div>
-                              </Link>
-                            </li>
+                            <ListItemBrawl key={brawlIndex} game={game} brawl={brawl} />
                           ))}
                         </>
                       ))}
@@ -752,126 +602,7 @@ export default function Home() {
                         <>
                           {game.tournaments?.map(
                             (tournament, tournamentIndex) => (
-                              <li key={tournament.id}>
-                                <Link
-                                  href={`${
-                                    tournament.progress !== 3
-                                      ? `/prototype/${game.slug}/tournaments/${tournament.id}`
-                                      : ""
-                                  }`}
-                                >
-                                  <div
-                                    className={`rounded overflow-hidden surface surface-ui-700 p-2 relative`}
-                                  >
-                                    <div className="relative z-10 leading-tight w-72 lg:w-auto h-24 flex flex-col items-start justify-between">
-                                      <div
-                                        className={`chip chip-sliced chip-sm ${
-                                          tournament.status === "ongoing"
-                                            ? ""
-                                            : ""
-                                        } ${
-                                          tournament.status === "finished"
-                                            ? "chip-blue"
-                                            : ""
-                                        } ${
-                                          tournament.status === "scheduled"
-                                            ? "chip-gray"
-                                            : ""
-                                        }`}
-                                      >
-                                        <span>{tournament.status}</span>
-                                      </div>
-                                      <div className="font-bold mt-2">
-                                        {tournament.name}
-                                      </div>
-                                      {tournament.status === "scheduled" && (
-                                        <div className="flex gap-3 items-center">
-                                          <span className="text-sm text-ui-300">
-                                            Prize pool:
-                                          </span>
-                                          {tournament.rewards.map(
-                                            (reward, rewardIndex) => (
-                                              <>
-                                                <div className="flex items-center gap-1">
-                                                  <img
-                                                    className="h-4"
-                                                    src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-${reward.type}-unique.webp`}
-                                                    width="auto"
-                                                    height="auto"
-                                                    alt=""
-                                                  />
-                                                  <span className="font-headings font-bold text-lg italic">
-                                                    {reward.value}
-                                                  </span>
-                                                </div>
-                                              </>
-                                            )
-                                          )}
-                                        </div>
-                                      )}
-                                      {tournament.status !== "scheduled" && (
-                                        <div className="flex gap-3 items-center">
-                                          <span className="text-sm text-ui-300">
-                                            Placement:{" "}
-                                            <b>{tournament.stats.placement}</b>
-                                          </span>
-                                          <span className="text-sm text-ui-300">
-                                            Kills:{" "}
-                                            <b>{tournament.stats.kills}</b>
-                                          </span>
-                                        </div>
-                                      )}
-                                    </div>
-                                    <div className="absolute z-20 top-2 right-2 p-1 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
-                                      <span
-                                        className={`icon text-xl ${
-                                          prototype.getGameByID(game.id)
-                                            .slug === "apexlegends"
-                                            ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                                            : ""
-                                        } ${
-                                          prototype.getGameByID(game.id)
-                                            .slug === "csgo"
-                                            ? "icon-game-csgo-symbol text-game-csgo"
-                                            : ""
-                                        }  ${
-                                          prototype.getGameByID(game.id)
-                                            .slug === "dota2"
-                                            ? "icon-game-dota2-symbol text-game-dota2"
-                                            : ""
-                                        }  ${
-                                          prototype.getGameByID(game.id)
-                                            .slug === "leagueoflegends"
-                                            ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                                            : ""
-                                        }  ${
-                                          prototype.getGameByID(game.id)
-                                            .slug === "rocketleague"
-                                            ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                                            : ""
-                                        } ${
-                                          prototype.getGameByID(game.id)
-                                            .slug === "pubg"
-                                            ? "icon-game-pubg-symbol text-game-pubg"
-                                            : ""
-                                        }  ${
-                                          prototype.getGameByID(game.id)
-                                            .slug === "valorant"
-                                            ? "icon-game-valorant-symbol text-game-valorant"
-                                            : ""
-                                        }`}
-                                      />
-                                    </div>
-                                    <div className="absolute z-0 right-0 inset-y-0 w-1/2">
-                                      <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-700 to-ui-700/50"></div>
-                                      <img
-                                        className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                                        src={tournament.cover}
-                                      />
-                                    </div>
-                                  </div>
-                                </Link>
-                              </li>
+                              <ListItemTournament key={tournamentIndex} game={game} tournament={tournament} />
                             )
                           )}
                         </>
