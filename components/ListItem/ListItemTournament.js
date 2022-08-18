@@ -31,7 +31,7 @@ export default function ListItemTournament(props) {
               >
                 <span>{tournament.status}</span>
               </div>
-              <div className="font-bold mt-2">{tournament.name}</div>
+              <h6 className="mt-2 text-lg">{tournament.name}</h6>
               {tournament.status === "scheduled" && (
                 <div className="flex gap-3 items-center">
                   <span className="text-sm text-ui-300">Prize pool:</span>

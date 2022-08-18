@@ -72,7 +72,15 @@
           "tags": "profile, view, user"
         },
         {
-          "label": "Profile",
+          "label": "Profile (self, no clan)",
+          "url": "profile/1",
+          "query": "emptyclan=true",
+          "tags": "profile, view, user, empty state",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Profile (others)",
           "url": "profile/2",
           "query": "",
           "tags": "profile, view, user"
@@ -83,6 +91,7 @@
           "url": "profile/10",
           "query": "",
           "tags": "profile, view, user, empty state",
+          "tab": 1,
           "new": true
         },
         {
@@ -90,7 +99,7 @@
           "url": "profile/settings",
           "query": "",
           "tags": "profile, edit, user, settings, form",
-          "tab": 1
+          "tab": 0
         }
       ]
     },
@@ -116,15 +125,15 @@
           "url": "clans/0",
           "query": "",
           "tags": "clan, team, self",
-          "tab": 1,
+          "tab": 0,
           "new": true
         },
         {
-          "label": "Clan detail",
+          "label": "Clan detail (others)",
           "url": "clans/1",
           "query": "",
           "tags": "clan, team",
-          "tab": 1,
+          "tab": 0,
           "new": true
         },
         {
@@ -133,6 +142,7 @@
           "url": "clans",
           "query": "modalcreate=true",
           "tags": "clan, team, modal, prompt",
+          "tab": 1,
           "new": true
         }
       ]
@@ -151,7 +161,7 @@
           "url": "shop/1",
           "query": "",
           "tags": "shop, voucher, riot games, amazon, steam, drkn, ifood, reward",
-          "tab": 1,
+          "tab": 0,
           "new": true
         },
         {
@@ -195,7 +205,8 @@
           "chip": "empty state",
           "url": "wallet",
           "query": "tab=history&empty=true",
-          "tags": "wallet, rewards, history, transactions, empty state"
+          "tags": "wallet, rewards, history, transactions, empty state",
+          "tab": 1
         },
         {
           "label": "Voucher",
@@ -253,6 +264,7 @@
           "url": "valorant/brawls",
           "query": "tab=how-it-works&modalvideo=true",
           "tags": "game, brawls, how it works, explanation, modal, prompt",
+          "tab": 1,
           "new": false
         },
         {
@@ -283,7 +295,7 @@
           "url": "valorant/brawls/1",
           "query": "modalinfobeforeyouplay=true",
           "tags": "game, brawls, matches, enrollment, token, modal, prompt",
-          "tab": 1,
+          "tab": 2,
           "new": false
         },
         {
@@ -336,6 +348,7 @@
           "url": "pubg/tournaments/",
           "query": "empty=true",
           "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, empty state",
+          "tab": 1,
           "new": false
         },
         {
@@ -351,6 +364,7 @@
           "url": "valorant/tournaments/",
           "query": "tab=finished&empty=true",
           "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, listing, history, past, empty state",
+          "tab": 1,
           "new": false
         },
         {
@@ -369,12 +383,20 @@
           "new": false
         },
         {
+          "label": "Overview (registered)",
+          "url": "valorant/tournaments/1",
+          "query": "tab=overview&registered=true",
+          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, register, solo, team, party, registered",
+          "tab": 2,
+          "new": false
+        },
+        {
           "label": "Add Discord",
           "chip": "modal",
           "url": "valorant/tournaments/1",
           "query": "tab=overview&modaladddiscord=true",
           "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, register, solo, team, party, registered, discord, modal, prompt",
-          "tab": 1,
+          "tab": 2,
           "new": false
         },
         {
@@ -383,15 +405,7 @@
           "url": "valorant/tournaments/1",
           "query": "tab=overview&modalleaveparty=true",
           "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, register, solo, team, party, leave, quit, cancel, registered, discord, modal, prompt",
-          "tab": 1,
-          "new": false
-        },
-        {
-          "label": "Overview (registered)",
-          "url": "valorant/tournaments/1",
-          "query": "tab=overview&registered=true",
-          "tags": "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, register, solo, team, party, registered",
-          "tab": 1,
+          "tab": 2,
           "new": false
         },
         {

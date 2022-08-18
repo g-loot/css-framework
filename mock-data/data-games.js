@@ -347,23 +347,7 @@ export const dataGames = [
           movement: 2,
           isPositive: true,
         },
-        topPerformers: [
-          {
-            id: 1,
-            score: 532,
-            matches: 59,
-          },
-          {
-            id: 5,
-            score: 422,
-            matches: 23,
-          },
-          {
-            id: 6,
-            score: 235,
-            matches: 14,
-          },
-        ],
+        topPerformers: [1,5,6],
       },
       {
         id: 2,
@@ -634,7 +618,13 @@ export const dataGames = [
               gameScore: 143
             }
           }
-        ]
+        ],
+        result: {
+          position: 12,
+          movement: 4,
+          isPositive: false,
+        },
+        topPerformers: [2,3,4],
       }
     ],
     tournaments: [
@@ -1347,7 +1337,13 @@ export const dataGames = [
               gameScore: 143
             }
           }
-        ]
+        ],
+        result: {
+          position: 67,
+          movement: 12,
+          isPositive: true,
+        },
+        topPerformers: [5,7,8],
       },
       {
         id: 2,
@@ -1618,7 +1614,13 @@ export const dataGames = [
               gameScore: 143
             }
           }
-        ]
+        ],
+        result: {
+          position: 4,
+          movement: 2,
+          isPositive: false,
+        },
+        topPerformers: [5,1,4],
       }
     ],
     tournaments: [

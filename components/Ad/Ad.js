@@ -29,7 +29,7 @@ export default function Ad(props) {
               allow="encrypted-media"
             ></iframe>
           </a>
-          <Link href={`premium${hasAds ? "?ads=true" : ""}`}>
+          <Link href={`/prototype/premium${hasAds ? "?ads=true" : ""}`}>
             <a className="link link-main text-sm">Remove ads</a>
           </Link>
         </div>

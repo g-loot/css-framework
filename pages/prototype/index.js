@@ -117,7 +117,12 @@ const Index = () => {
                                       item.query ? "?" : ""
                                     }${item.query}`}
                                   >
-                                    <a>{item.label}</a>
+                                    <a>
+                                      {item.tab === 2 && <>&#8259; </>}
+                                      {item.tab === 1 && <>&#8226; </>}
+                                      {!item.tab && <>&#9205;</>}
+                                      {item.label}
+                                    </a>
                                   </Link>
                                   {item.chip && (
                                     <span className="text-xs text-ui-300 uppercase leading-tight rounded py-1 px-1.5 bg-ui-900/75">

@@ -105,6 +105,23 @@ export default function SectionClanActivity() {
         <>
           <div className="surface surface-dimmed sm:rounded-lg p-2 xl:max-h-[500px] overflow-x-auto xl:overflow-x-hidden xl:overflow-y-auto scrollbar-desktop">
             <ul className="space-x-2 xl:space-x-0 xl:space-y-2 flex xl:flex-col">
+              {prototype.games.map((game, gameIndex) => (
+                <>
+                  {game.brawls?.map((brawl, brawlIndex) => (
+                    <>
+                      {brawl.status === "ongoing" && (
+                        <ListItemBrawl
+                          key={brawlIndex}
+                          brawl={brawl}
+                          game={game}
+                          variant={2}
+                        />
+                      )}
+                    </>
+                  ))}
+                </>
+              ))}
+              {/*
               {brawlsResults.map((brawl, brawlIndex) => (
                 <>
                   <li key={brawl} className="surface rounded">
@@ -280,6 +297,7 @@ export default function SectionClanActivity() {
                   </li>
                 </>
               ))}
+                                    */}
             </ul>
           </div>
           <div className="surface sm:rounded-lg">
@@ -302,7 +320,7 @@ export default function SectionClanActivity() {
               <ul>
                 {prototype
                   .getClanByID(clan_id)
-                  .members.map((user, userIndex) => (
+                  .members?.map((user, userIndex) => (
                     <li key={user.id} className="item">
                       <div className="item-image">
                         <Link

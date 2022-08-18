@@ -105,21 +105,8 @@ export default function Home() {
                     </div>
                     <div className="space-y-4">
                       <h2 className="h4">Social</h2>
-                      <div className="form-group flex items-center gap-2">
-                        <label htmlFor="social-twitter" className="flex-1">
-                          Twitter:
-                        </label>
-                        <div className="flex-3 input-group">
-                          <span className="icon icon-logo-twitter" />
-                          <input
-                            type="text"
-                            name="social-twitter"
-                            id="social-twitter"
-                          />
-                        </div>
-                      </div>
-                      <div className="form-group flex items-center gap-2">
-                        <label htmlFor="social-twitch" className="flex-1">
+                      <div className="form-group flex items-start gap-2">
+                        <label htmlFor="social-twitch" className="flex-1 mt-3">
                           Twitch:
                         </label>
                         <div className="flex-3 input-group">
@@ -131,41 +118,59 @@ export default function Home() {
                           />
                         </div>
                       </div>
-                      <div className="form-group flex items-center gap-2">
-                        <label htmlFor="social-discord" className="flex-1">
-                          Discord:
+                      <div className="form-group flex items-start gap-2">
+                        <label htmlFor="social-twitter" className="flex-1 mt-3">
+                          Twitter:
                         </label>
                         <div className="flex-3 input-group">
-                          <button className="button button-sm button-secondary">
-                            <span>Connect Discord</span>
-                          </button>
-                          <span className="icon icon-discord" />
+                          <span className="icon icon-logo-twitter" />
                           <input
                             type="text"
-                            name="social-discord"
-                            id="social-discord"
+                            name="social-twitter"
+                            id="social-twitter"
                           />
                         </div>
                       </div>
-                      <div className="form-group flex items-center gap-2">
-                        <label htmlFor="social-steam" className="flex-1 -mt-4">
+                      <div className="form-group flex items-start gap-2">
+                        <label htmlFor="social-discord" className="flex-1 mt-3">
+                          Discord:
+                        </label>
+                        <div className="flex-3">
+                          <button className="button button-primary w-full">
+                            <span className="icon icon-discord" />
+                            <span>Connect Discord</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div className="form-group flex items-start gap-2">
+                        <label htmlFor="social-steam" className="flex-1 mt-3">
                           Steam:
                         </label>
                         <div className="flex-3">
-                          <div className="input-group">
-                            <button className="button button-sm button-secondary">
-                              <span>Login with Steam</span>
-                            </button>
+                          <button className="button button-primary w-full">
                             <span className="icon icon-steam" />
-                            <input
-                              type="text"
-                              name="social-steam"
-                              id="social-steam"
-                            />
-                          </div>
-                          <p className="text-ui-300 text-sm mt-1">
+                            <span>Login with Steam</span>
+                          </button>
+                          <p className="text-ui-300 text-sm mt-2 leading-tight">
                             This site is not associated with Valve Corp.
                           </p>
+                        </div>
+                      </div>
+                      <div className="form-group flex items-start gap-2">
+                        <label htmlFor="social-steam" className="flex-1 mt-3">
+                          Riot Games:
+                        </label>
+                        <div className="flex-3">
+                          <button className="button button-primary w-full">
+                            <span className="icon icon-steam" />
+                            <span>Login with Riot ID</span>
+                          </button>
+                          <div className="text-ui-300 text-sm mt-1 leading-tight">
+                            <label className="form-checkbox">
+                              <input type="checkbox" name="policy" />
+                              <i className="form-icon" /> I acknowledge signing in makes my profile public to all users.
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
