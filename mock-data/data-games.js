@@ -341,7 +341,29 @@ export const dataGames = [
               gameScore: 143
             }
           }
-        ]
+        ],
+        result: {
+          position: 23,
+          movement: 2,
+          isPositive: true,
+        },
+        topPerformers: [
+          {
+            id: 1,
+            score: 532,
+            matches: 59,
+          },
+          {
+            id: 5,
+            score: 422,
+            matches: 23,
+          },
+          {
+            id: 6,
+            score: 235,
+            matches: 14,
+          },
+        ],
       },
       {
         id: 2,

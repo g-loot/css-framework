@@ -46,7 +46,7 @@ const Index = () => {
               <h1 className="text-4xl">
                 Prototype{" "}
                 <small className="font-normal text-ui-300">
-                  {pageCount} pages
+                  {pageCount} screens
                 </small>
               </h1>
               <div className="form-group mb-1">

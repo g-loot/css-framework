@@ -8,6 +8,19 @@
   inline-block
   ;
 
+  .menu {
+    :where(a, button) {
+      @apply
+      text-ui-200
+      ;
+    }
+    :where(li).separator {
+      @apply
+      bg-ui-500
+      ;
+    }
+  }
+
   > [tabIndex]:first-child {
     @apply
     m-1

@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import ModalClaimDailyRewards from "../../pages/prototype/home/modal-claim-dailyrewards";
-import ModalContainer from "../../components/Modal/ModalContainer";
 import { UiContext } from "../../contexts/ui";
 import { VariablesContext } from "../../contexts/variables";
 

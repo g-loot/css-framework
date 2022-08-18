@@ -11,6 +11,14 @@ export default function ModalFavoriteGames(props) {
   const prototype = usePrototypeData();
   const variablesContext = useContext(VariablesContext);
   const [submitting, setSubmitting] = useState(false);
+  const [selectedGamesCount, setSelectedGamesCount] = useState(0);
+  const [disabled, setDisable] = useState(false);
+
+  const handlechange = (event) => {
+    console.log(event.target.checked);
+    console.log(selectedGamesCount);
+  };
+
   function closeModalWithDelay() {
     setSubmitting(true);
 
@@ -37,27 +45,32 @@ export default function ModalFavoriteGames(props) {
                 Edit your favorite games
               </h2>
               <p>It will help us customize the platform for you.</p>
-              <div className="form-group flex flex-wrap justify-center gap-4 border-t border-ui-700 mt-4 pt-8">
-                {prototype.games.map((game, gameIndex) => (
-                  <label key={game.id} className="form-checkbox form-image">
-                    <input
-                      type="checkbox"
-                      name={game.slug}
-                      defaultChecked={game.isFavorite}
-                    />
-                    <span className="sr-only">{game.name}</span>
-                    <div
-                      className="w-28 h-40 bg-cover rounded-md"
-                      style={{ backgroundImage: `url(${game.assets.cover})` }}
-                    />
-                  </label>
-                ))}
+              <div className="border-t border-ui-700 mt-4 pt-4">
+                <div className="label mb-4 leading-tight">Click on the games you play the most</div>
+                <div className="form-group flex flex-wrap justify-center gap-4">
+                  {prototype.games.map((game, gameIndex) => (
+                    <label key={game.id} className="form-checkbox form-image">
+                      <input
+                        type="checkbox"
+                        name={game.slug}
+                        defaultChecked={game.isFavorite}
+                        onChange={handlechange}
+                        setSelectedGamesCount={setSelectedGamesCount}
+                      />
+                      <span className="sr-only">{game.name}</span>
+                      <div
+                        className="w-28 h-40 bg-cover rounded-md"
+                        style={{ backgroundImage: `url(${game.assets.cover})` }}
+                      />
+                    </label>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="modal-action justify-center">
               <button className={`button button-primary w-32 ${
                   submitting ? "is-loading" : ""
-                }`}
+                } ${disabled ? "is-disabled" : ""}`}
                 onClick={closeModalWithDelay}>
                 <span>Save</span>
               </button>

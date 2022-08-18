@@ -2081,7 +2081,7 @@
           "name": "research"
         },
         {
-          "tags": "connection,network,internet,wireless,signal,pulse,radar,online,wifi,connectivity,router,wave,contactless",
+          "tags": "connection,network,internet,wireless,signal,pulse,radar,online,wifi,connectivity,router,wave,contactless,tracker,client",
           "name": "contactless"
         },
         {

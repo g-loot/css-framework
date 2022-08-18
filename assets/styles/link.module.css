@@ -75,3 +75,30 @@
     }
   }
 }
+
+/* hover highlight */
+
+
+.hoverhighlight {
+  > * {
+    @apply
+    transition
+    duration-200
+    ease-in-out
+    cursor-pointer
+    ;
+  }
+  
+  &:hover {
+    > * {
+      @apply
+      opacity-30
+      ;
+      &:hover {
+        @apply
+        opacity-100
+        ;
+      }
+    }
+  }
+}

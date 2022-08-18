@@ -106,162 +106,193 @@ export default function Topbar() {
                   src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
                   alt="G-Loot logo"
                 />
-                <span className="hidden md:block px-2 py-0.5 rounded bg-ui-900/90 text-main font-headings font-bold uppercase italic tracking-wider">
-                  Beta
-                </span>
               </a>
             </Link>
+            <Tooltip
+                    tooltip={
+                      <div className="w-56 relative">
+                        <h6 className="mb-3 leading-tight">Welcome to the<br />G-Loot Beta</h6>
+                        <div className="absolute -top-2 -right-2 p-2">
+                          <span className="icon icon-gloot-symbol text-3xl text-main" />
+                          <div className="lottie-blur absolute -inset-1">
+                            <Lottie
+                              animationData={LottieExplosion}
+                              loop={false}
+                              autoplay={true}
+                            />
+                          </div>
+                        </div>
+                        <ul className="leading-tight space-y-2">
+                          <li className="flex gap-2 text-sm">
+                            <div className="flex-1">
+                              If you encounter any bugs, glitches, lack of functionality, or other problems, or if you have any feedback, please reach out to us.
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    }
+                  >
+                    <span className="hidden md:block px-2 py-0.5 rounded bg-ui-900/90 text-main font-headings font-bold uppercase italic tracking-wider">
+                      Beta
+                    </span>
+                  </Tooltip>
           </div>
           <div className="flex-1 flex items-center justify-end lg:justify-between">
             <div className="hidden lg:flex gap-2 items-center ml-2 xl:ml-0">
-              <div className="flex space-x-3 items-center border border-ui-600 bg-ui-800/50 pr-2 rounded-full">
-                <Tooltip
-                  tooltip={
-                    <div className="w-56 relative">
-                      <h6 className="mb-3">Coins</h6>
-                      <div className="absolute -top-3 -right-2">
-                        <img
-                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                          width="50"
-                          height="50"
-                          alt="coins"
-                          className=""
-                        />
-                        <div className="lottie-blur absolute -inset-1">
-                          <Lottie
-                            animationData={LottieExplosion}
-                            loop={false}
-                            autoplay={true}
+              <div className="flex space-x-3 items-center border border-ui-600 bg-ui-800/50 pr-2 rounded-full hoverhighlight">
+                <div>
+                  <Tooltip
+                    tooltip={
+                      <div className="w-56 relative">
+                        <h6 className="mb-3 leading-tight">Coins</h6>
+                        <div className="absolute -top-3 -right-2">
+                          <img
+                            src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
+                            width="50"
+                            height="50"
+                            alt="coins"
+                            className=""
                           />
+                          <div className="lottie-blur absolute -inset-1">
+                            <Lottie
+                              animationData={LottieExplosion}
+                              loop={false}
+                              autoplay={true}
+                            />
+                          </div>
                         </div>
+                        <ul className="leading-tight space-y-2">
+                          <li className="flex gap-2 text-sm">
+                            <div className=" w-12 font-bold uppercase">Use</div>
+                            <div className="flex-1">
+                              To purchase items in the Shop.
+                            </div>
+                          </li>
+                          <li className="flex gap-2 text-sm">
+                            <div className=" w-12 font-bold uppercase">Get</div>
+                            <div className="flex-1">
+                              From <strong>Daily Loot</strong> Streak and{" "}
+                              <strong>Weekly Brawl winnings</strong>.
+                            </div>
+                          </li>
+                        </ul>
                       </div>
-                      <ul className="leading-tight space-y-2">
-                        <li className="flex gap-2 text-sm">
-                          <div className=" w-12 font-bold uppercase">Use</div>
-                          <div className="flex-1">
-                            To purchase items in the Shop.
-                          </div>
-                        </li>
-                        <li className="flex gap-2 text-sm">
-                          <div className=" w-12 font-bold uppercase">Get</div>
-                          <div className="flex-1">
-                            From <strong>Daily Loot</strong> Streak and{" "}
-                            <strong>Weekly Brawl winnings</strong>.
-                          </div>
-                        </li>
-                      </ul>
+                    }
+                  >
+                    <div className="flex items-center">
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
+                        width="32"
+                        height="32"
+                        alt="coins"
+                      />
+                      <span className="text-sm font-bold text-gold-500">
+                        {prototype.getUserByID(1)?.wallet.coins}
+                      </span>
                     </div>
-                  }
-                >
-                  <div className="flex items-center">
-                    <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                      width="32"
-                      height="32"
-                      alt="coins"
-                    />
-                    <span className="text-sm font-bold text-gold-500">
-                      {prototype.getUserByID(1)?.wallet.coins}
-                    </span>
-                  </div>
-                </Tooltip>
-                <Tooltip
-                  tooltip={
-                    <div className="w-56 relative">
-                      <h6 className="mb-3">Token</h6>
-                      <div className="absolute -top-3 -right-2">
-                        <img
-                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                          width="50"
-                          height="50"
-                          alt="tokens"
-                          className=""
-                        />
-                        <div className="lottie-blur absolute -inset-1">
-                          <Lottie
-                            animationData={LottieExplosion}
-                            loop={false}
-                            autoplay={true}
+                  </Tooltip>
+                </div>
+                <div>
+                  <Tooltip
+                    tooltip={
+                      <div className="w-56 relative">
+                        <h6 className="mb-3 leading-tight">Token</h6>
+                        <div className="absolute -top-3 -right-2">
+                          <img
+                            src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
+                            width="50"
+                            height="50"
+                            alt="tokens"
+                            className=""
                           />
-                        </div>
-                      </div>
-                      <ul className="leading-tight space-y-2">
-                        <li className="flex gap-2 text-sm">
-                          <div className=" w-12 font-bold uppercase">Use</div>
-                          <div className="flex-1">To enter Weekly Brawls.</div>
-                        </li>
-                        <li className="flex gap-2 text-sm">
-                          <div className=" w-12 font-bold uppercase">Get</div>
-                          <div className="flex-1">
-                            <strong>Missions, Daily Loot Streak</strong> or{" "}
-                            <strong>buy them</strong> directly from the Wallet.
+                          <div className="lottie-blur absolute -inset-1">
+                            <Lottie
+                              animationData={LottieExplosion}
+                              loop={false}
+                              autoplay={true}
+                            />
                           </div>
-                        </li>
-                      </ul>
+                        </div>
+                        <ul className="leading-tight space-y-2">
+                          <li className="flex gap-2 text-sm">
+                            <div className=" w-12 font-bold uppercase">Use</div>
+                            <div className="flex-1">To enter Weekly Brawls.</div>
+                          </li>
+                          <li className="flex gap-2 text-sm">
+                            <div className=" w-12 font-bold uppercase">Get</div>
+                            <div className="flex-1">
+                              <strong>Missions, Daily Loot Streak</strong> or{" "}
+                              <strong>buy them</strong> directly from the Wallet.
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    }
+                  >
+                    <div className="flex items-center">
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
+                        width="32"
+                        height="32"
+                        alt="tokens"
+                      />
+                      <span className="text-sm font-bold text-purple-500">
+                        {prototype.getUserByID(1)?.wallet.tokens}
+                      </span>
                     </div>
-                  }
-                >
-                  <div className="flex items-center">
-                    <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                      width="32"
-                      height="32"
-                      alt="tokens"
-                    />
-                    <span className="text-sm font-bold text-purple-500">
-                      {prototype.getUserByID(1)?.wallet.tokens}
-                    </span>
-                  </div>
-                </Tooltip>
-                <Tooltip
-                  tooltip={
-                    <div className="w-56 relative">
-                      <h6 className="mb-3">Tickets</h6>
-                      <div className="absolute -top-3 -right-2">
-                        <img
-                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
-                          width="50"
-                          height="50"
-                          alt="tickets"
-                          className=""
-                        />
-                        <div className="lottie-blur absolute -inset-1">
-                          <Lottie
-                            animationData={LottieExplosion}
-                            loop={false}
-                            autoplay={true}
+                  </Tooltip>
+                </div>
+                <div>
+                  <Tooltip
+                    tooltip={
+                      <div className="w-56 relative">
+                        <h6 className="mb-3 leading-tight">Tickets</h6>
+                        <div className="absolute -top-3 -right-2">
+                          <img
+                            src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
+                            width="50"
+                            height="50"
+                            alt="tickets"
+                            className=""
                           />
+                          <div className="lottie-blur absolute -inset-1">
+                            <Lottie
+                              animationData={LottieExplosion}
+                              loop={false}
+                              autoplay={true}
+                            />
+                          </div>
                         </div>
+                        <ul className="leading-tight space-y-2">
+                          <li className="flex gap-2 text-sm">
+                            <div className=" w-12 font-bold uppercase">Use</div>
+                            <div className="flex-1">
+                              To enter <strong>Monthly Tournaments</strong>.
+                            </div>
+                          </li>
+                          <li className="flex gap-2 text-sm">
+                            <div className=" w-12 font-bold uppercase">Get</div>
+                            <div className="flex-1">
+                              From <strong>Weekly Brawls</strong> winnings.
+                            </div>
+                          </li>
+                        </ul>
                       </div>
-                      <ul className="leading-tight space-y-2">
-                        <li className="flex gap-2 text-sm">
-                          <div className=" w-12 font-bold uppercase">Use</div>
-                          <div className="flex-1">
-                            To enter <strong>Monthly Tournaments</strong>.
-                          </div>
-                        </li>
-                        <li className="flex gap-2 text-sm">
-                          <div className=" w-12 font-bold uppercase">Get</div>
-                          <div className="flex-1">
-                            From <strong>Weekly Brawls</strong> winnings.
-                          </div>
-                        </li>
-                      </ul>
+                    }
+                  >
+                    <div className="flex items-center">
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
+                        width="32"
+                        height="32"
+                        alt="tickets"
+                      />
+                      <span className="text-sm font-bold ml-1 text-bronze-500">
+                        {prototype.getUserByID(1)?.wallet.tickets}
+                      </span>
                     </div>
-                  }
-                >
-                  <div className="flex items-center">
-                    <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
-                      width="32"
-                      height="32"
-                      alt="tickets"
-                    />
-                    <span className="text-sm font-bold ml-1 text-bronze-500">
-                      {prototype.getUserByID(1)?.wallet.tickets}
-                    </span>
-                  </div>
-                </Tooltip>
+                  </Tooltip>
+                </div>
               </div>
               <div className="flex items-center">
                 <Button variant="claim" size="sm" label="Download tracker" />
@@ -280,7 +311,7 @@ export default function Topbar() {
                 </button>
               </div>
               <div className="flex justify-end items-center gap-1 sm:gap-2">
-                <div className="rounded-full border border-ui-700 bg-ui-800">
+                <div className="rounded-full border border-ui-700 bg-ui-800 interactive">
                   <Link
                     href={`/prototype/clans/search${hasAds ? "?ads=true" : ""}`}
                   >
@@ -289,6 +320,7 @@ export default function Topbar() {
                     </a>
                   </Link>
                 </div>
+                {/*
                 <div className="dropdown dropdown-end">
                   <div
                     tabIndex="0"
@@ -332,6 +364,7 @@ export default function Topbar() {
                     </ul>
                   </div>
                 </div>
+                */}
                 <div className="dropdown dropdown-end">
                   <div
                     tabIndex="0"
@@ -352,7 +385,19 @@ export default function Topbar() {
                     tabIndex="0"
                     className="dropdown-content bg-ui-600 w-52 p-1"
                   >
-                    <ul className="menu menu-rounded">
+                    <ul className="menu menu-rounded menu-secondary">
+                    <li>
+                        <Link
+                          href={`/prototype/profile/1${
+                            hasAds ? "?ads=true" : ""
+                          }`}
+                        >
+                          <a>
+                            <span className="icon icon-circle-09" />
+                            <span>Profile</span>
+                          </a>
+                        </Link>
+                      </li>
                       <li>
                         <Link
                           href={`/prototype/wallet${hasAds ? "?ads=true" : ""}`}
@@ -363,18 +408,7 @@ export default function Topbar() {
                           </a>
                         </Link>
                       </li>
-                      <li>
-                        <Link
-                          href={`/prototype/profile/1${
-                            hasAds ? "?ads=true" : ""
-                          }`}
-                        >
-                          <a>
-                            <span className="icon icon-circle-09" />
-                            <span>Public profile</span>
-                          </a>
-                        </Link>
-                      </li>
+                      <li className="separator"></li>
                       <li>
                         <Link
                           href={`/prototype/profile/settings${
@@ -389,7 +423,29 @@ export default function Topbar() {
                       </li>
                       <li>
                         <Link
-                          href={`/prototype/logout${hasAds ? "?ads=true" : ""}`}
+                          href={`/prototype/profile/1${
+                            hasAds ? "?ads=true" : ""
+                          }`}
+                        >
+                          <a>
+                            <span className="icon icon-file-article" />
+                            <span>How G-Loot works</span>
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          rel="noopener noreferrer"
+                        >
+                          <span className="icon icon-cloud-data-download" />
+                          <span>Download tracker</span>
+                        </a>
+                      </li>
+                      <li className="separator"></li>
+                      <li>
+                        <Link
+                          href={`/${hasAds ? "?ads=true" : ""}`}
                         >
                           <a>
                             <span className="icon icon-leave" />

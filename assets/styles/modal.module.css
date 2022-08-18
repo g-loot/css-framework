@@ -12,6 +12,8 @@
   flex-col
   justify-start
   items-center
+  mx-2
+  md:mx-auto
   ;
   z-index: 999;
 
