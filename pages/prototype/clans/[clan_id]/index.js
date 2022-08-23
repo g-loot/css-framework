@@ -47,57 +47,59 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Clan">
-        <Ad width="1005" height="124" />
+        <Ad width="1005" height="300" />
 
         {selectedClan && (
           <>
             {!selectedClan.isYou && (
               <>
                 <section className="mb-8">
-                  <div className="relative overflow-hidden surface md:rounded-lg p-4 lg:min-h-[250px] lg:flex items-center">
-                    <div className="relative z-10 flex-1">
-                      <div className="flex flex-col sm:flex-row gap-4 items-stretch justify-between">
-                        <div className="flex gap-4 items-center self-center">
-                          <figure className="avatar avatar-xl avatar-squircle">
-                            <div>
-                              <img src={selectedClan.avatar} alt="avatar" />
-                            </div>
-                          </figure>
-                          <div className="flex-1">
-                            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                              <h1 className="text-3xl sm:text-4xl">
-                                &#91;
-                                {selectedClan.tag}
-                                &#93; {selectedClan.nickname}
-                              </h1>
-                              <div className="block md:hidden">
-                                <Link href="settings">
-                                  <a
-                                    type="button"
-                                    className="button button-sm button-primary"
-                                  >
-                                    <span>Join clan</span>
-                                  </a>
-                                </Link>
+                  <div className="header surface sm:rounded-lg">
+                    <div className="header-content">
+                      <div className="header-body">
+                        <div className="flex flex-col sm:flex-row gap-4 items-stretch text-left justify-between">
+                          <div className="flex gap-4 items-center self-center">
+                            <figure className="avatar avatar-xl avatar-squircle">
+                              <div>
+                                <img src={selectedClan.avatar} alt="avatar" />
+                              </div>
+                            </figure>
+                            <div className="flex-1">
+                              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                                <h1 className="text-3xl sm:text-4xl">
+                                  &#91;
+                                  {selectedClan.tag}
+                                  &#93; {selectedClan.nickname}
+                                </h1>
+                                <div className="block lg:hidden">
+                                  <Link href="settings">
+                                    <a
+                                      type="button"
+                                      className="button button-sm button-primary"
+                                    >
+                                      <span>Join clan</span>
+                                    </a>
+                                  </Link>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="flex-1 py-4 max-w-[70ch]">
-                        <p className="text-ui-300 mb-2">
-                          {prototype
-                            .getClanByID(clan_id)
-                            .introduction?.substr(0, 150)}
-                          ...
-                        </p>
-                        <p>
-                          <span className="text-ui-300">We speak: </span>
-                          <span className="text-main">{selectedClan.lang}</span>
-                        </p>
-                      </div>
-                      <div className="flex gap-4 items-end justify-between">
-                        <div className="flex gap-3">
+                        <div className="flex-1 py-4 max-w-[70ch]">
+                          <p className="text-ui-300 mb-2">
+                            {prototype
+                              .getClanByID(clan_id)
+                              .introduction?.substr(0, 150)}
+                            ...
+                          </p>
+                          <p>
+                            <span className="text-ui-300">We speak: </span>
+                            <span className="text-main">
+                              {selectedClan.lang}
+                            </span>
+                          </p>
+                        </div>
+                        <div className="flex gap-3 justify-center md:justify-start">
                           {selectedClan.social?.twitch && (
                             <>
                               <a
@@ -147,65 +149,9 @@ export default function Home() {
                             </>
                           )}
                         </div>
-                        <div className="flex gap-1">
-                          {selectedClan.games?.map((game, gameIndex) => (
-                            <>
-                              <div
-                                key={game}
-                                className="p-2 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center"
-                              >
-                                <span
-                                  className={`icon text-2xl ${
-                                    prototype.getGameByID(game).slug ===
-                                    "apexlegends"
-                                      ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                                      : ""
-                                  } ${
-                                    prototype.getGameByID(game).slug === "csgo"
-                                      ? "icon-game-csgo-symbol text-game-csgo"
-                                      : ""
-                                  }  ${
-                                    prototype.getGameByID(game).slug === "dota2"
-                                      ? "icon-game-dota2-symbol text-game-dota2"
-                                      : ""
-                                  }  ${
-                                    prototype.getGameByID(game).slug ===
-                                    "leagueoflegends"
-                                      ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                                      : ""
-                                  }  ${
-                                    prototype.getGameByID(game).slug ===
-                                    "rocketleague"
-                                      ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                                      : ""
-                                  } ${
-                                    prototype.getGameByID(game).slug === "pubg"
-                                      ? "icon-game-pubg-symbol text-game-pubg"
-                                      : ""
-                                  }  ${
-                                    prototype.getGameByID(game).slug ===
-                                    "valorant"
-                                      ? "icon-game-valorant-symbol text-game-valorant"
-                                      : ""
-                                  }`}
-                                />
-                              </div>
-                            </>
-                          ))}
-                        </div>
                       </div>
                     </div>
-                    <div
-                      className="absolute z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-                      style={{ "--delay": "calc(1 * 0.05s)" }}
-                    >
-                      <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/0"></div>
-                      <img
-                        className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp"
-                      />
-                    </div>
-                    <div className="hidden lg:block absolute z-20 top-4 right-4">
+                    <div className="hidden lg:block absolute z-20 top-2 right-2">
                       <Link href="#">
                         <a
                           type="button"
@@ -215,6 +161,57 @@ export default function Home() {
                         </a>
                       </Link>
                     </div>
+                    <div className="header-meta justify-end items-end">
+                      <div className="flex gap-1 pb-4">
+                        {selectedClan.games?.map((game, gameIndex) => (
+                          <>
+                            <div
+                              key={game}
+                              className="p-2 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center"
+                            >
+                              <span
+                                className={`icon text-2xl ${
+                                  prototype.getGameByID(game).slug ===
+                                  "apexlegends"
+                                    ? "icon-game-apexlegends-symbol text-game-apexlegends"
+                                    : ""
+                                } ${
+                                  prototype.getGameByID(game).slug === "csgo"
+                                    ? "icon-game-csgo-symbol text-game-csgo"
+                                    : ""
+                                }  ${
+                                  prototype.getGameByID(game).slug === "dota2"
+                                    ? "icon-game-dota2-symbol text-game-dota2"
+                                    : ""
+                                }  ${
+                                  prototype.getGameByID(game).slug ===
+                                  "leagueoflegends"
+                                    ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
+                                    : ""
+                                }  ${
+                                  prototype.getGameByID(game).slug ===
+                                  "rocketleague"
+                                    ? "icon-game-rocketleague-symbol text-game-rocketleague"
+                                    : ""
+                                } ${
+                                  prototype.getGameByID(game).slug === "pubg"
+                                    ? "icon-game-pubg-symbol text-game-pubg"
+                                    : ""
+                                }  ${
+                                  prototype.getGameByID(game).slug ===
+                                  "valorant"
+                                    ? "icon-game-valorant-symbol text-game-valorant"
+                                    : ""
+                                }`}
+                              />
+                            </div>
+                          </>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="header-bg">
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp" />
+                    </div>
                   </div>
                 </section>
               </>
@@ -223,9 +220,9 @@ export default function Home() {
             {selectedClan.isYou && (
               <>
                 <section className="mb-4 lg:mb-8">
-                  <div className="relative overflow-hidden surface md:rounded-lg p-4 lg:min-h-[250px] lg:flex items-center">
-                    <div className="relative z-10 flex-1">
-                      <div className="flex flex-col sm:flex-row gap-4 items-stretch justify-between">
+                  <div className="header surface rounded-lg">
+                    <div className="header-content">
+                      <div className="header-body">
                         <div className="flex gap-4 items-center self-center">
                           <figure className="avatar avatar-xl avatar-squircle">
                             <div>
@@ -255,85 +252,73 @@ export default function Home() {
                             </div>
                           </div>
                         </div>
-
-                        <div className="flex flex-col justify-end items-center sm:items-end gap-4">
-                          <div className="flex gap-4 items-end justify-end">
-                            <div className="flex gap-3">
-                              {selectedClan.social?.twitch && (
-                                <>
-                                  <a
-                                    href={selectedClan.social.twitch}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
-                                  >
-                                    <span className="icon icon-twitch text-xl lg:text-2xl" />
-                                  </a>
-                                </>
-                              )}
-                              {selectedClan.social?.discord && (
-                                <>
-                                  <a
-                                    href={selectedClan.social.discord}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
-                                  >
-                                    <span className="icon icon-discord text-xl lg:text-2xl" />
-                                  </a>
-                                </>
-                              )}
-                              {selectedClan.social?.youtube && (
-                                <>
-                                  <a
-                                    href={selectedClan.social.youtube}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
-                                  >
-                                    <span className="icon icon-logo-youtube text-xl lg:text-2xl" />
-                                  </a>
-                                </>
-                              )}
-                              {selectedClan.social?.twitter && (
-                                <>
-                                  <a
-                                    href={selectedClan.social.twitter}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
-                                  >
-                                    <span className="icon icon-logo-twitter text-xl lg:text-2xl" />
-                                  </a>
-                                </>
-                              )}
-                            </div>
-                          </div>
-                        </div>
                       </div>
                     </div>
-                    <div
-                      className="absolute z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-                      style={{ "--delay": "calc(1 * 0.05s)" }}
-                    >
-                      <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/0"></div>
-                      <img
-                        className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp"
-                      />
+                    <div className="hidden lg:block absolute z-20 top-2 right-2">
+                      <Link href="#">
+                        <a
+                          type="button"
+                          className="button button-sm button-tertiary"
+                        >
+                          <span className="icon icon-cogwheel" />
+                          <span>Clan settings</span>
+                        </a>
+                      </Link>
                     </div>
-                    <div className="hidden lg:block absolute z-20 top-4 right-4">
-                      {selectedClan.isYou && (
-                        <Link href="settings">
-                          <a
-                            type="button"
-                            className="button button-sm button-ghost"
-                          >
-                            <span className="icon icon-cogwheel" />
-                            <span>Clan settings</span>
-                          </a>
-                        </Link>
-                      )}
+                    <div className="header-meta justify-end items-end">
+                      <div className="flex gap-3 pb-4">
+                        {selectedClan.social?.twitch && (
+                          <>
+                            <a
+                              href={selectedClan.social.twitch}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                            >
+                              <span className="icon icon-twitch text-xl lg:text-2xl" />
+                            </a>
+                          </>
+                        )}
+                        {selectedClan.social?.discord && (
+                          <>
+                            <a
+                              href={selectedClan.social.discord}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                            >
+                              <span className="icon icon-discord text-xl lg:text-2xl" />
+                            </a>
+                          </>
+                        )}
+                        {selectedClan.social?.youtube && (
+                          <>
+                            <a
+                              href={selectedClan.social.youtube}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                            >
+                              <span className="icon icon-logo-youtube text-xl lg:text-2xl" />
+                            </a>
+                          </>
+                        )}
+                        {selectedClan.social?.twitter && (
+                          <>
+                            <a
+                              href={selectedClan.social.twitter}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                            >
+                              <span className="icon icon-logo-twitter text-xl lg:text-2xl" />
+                            </a>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                    <div className="header-bg">
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp" />
                     </div>
                   </div>
                 </section>
@@ -345,7 +330,10 @@ export default function Home() {
               style={{ "--delay": "calc(2 * 0.05s)" }}
             >
               <div className="flex-1 surface sm:rounded-lg overflow-hidden">
-                <Chat maxheight="xl:max-h-[calc(100vh-440px)]" isdisabled={!selectedClan.isYou} />
+                <Chat
+                  maxheight="xl:max-h-[calc(100vh-440px)]"
+                  isdisabled={!selectedClan.isYou}
+                />
               </div>
               <div className="xl:w-96 space-y-4">
                 <SectionClanActivity />

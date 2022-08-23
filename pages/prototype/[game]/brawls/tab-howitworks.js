@@ -337,7 +337,7 @@ export default function TabBrawlsHowItWorks() {
       >
         <div className="px-4 sm:px-0">
           <h2 className="text-2xl leading-none mb-6">
-            Step by step - how to play in the Brawl
+            Learn everything about the Brawls
           </h2>
         </div>
         <div className="accordion surface sm:rounded-lg">

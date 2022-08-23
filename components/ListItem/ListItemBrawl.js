@@ -51,6 +51,40 @@ export default function ListItemBrawl(props) {
                       <span>Claim reward</span>
                     </button>
                   </div>
+                  <div className="absolute z-50 top-2 right-2 p-1 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+                    <span
+                      className={`icon text-xl ${
+                        prototype.getGameByID(game.id).slug === "apexlegends"
+                          ? "icon-game-apexlegends-symbol text-game-apexlegends"
+                          : ""
+                      } ${
+                        prototype.getGameByID(game.id).slug === "csgo"
+                          ? "icon-game-csgo-symbol text-game-csgo"
+                          : ""
+                      }  ${
+                        prototype.getGameByID(game.id).slug === "dota2"
+                          ? "icon-game-dota2-symbol text-game-dota2"
+                          : ""
+                      }  ${
+                        prototype.getGameByID(game.id).slug ===
+                        "leagueoflegends"
+                          ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
+                          : ""
+                      }  ${
+                        prototype.getGameByID(game.id).slug === "rocketleague"
+                          ? "icon-game-rocketleague-symbol text-game-rocketleague"
+                          : ""
+                      } ${
+                        prototype.getGameByID(game.id).slug === "pubg"
+                          ? "icon-game-pubg-symbol text-game-pubg"
+                          : ""
+                      }  ${
+                        prototype.getGameByID(game.id).slug === "valorant"
+                          ? "icon-game-valorant-symbol text-game-valorant"
+                          : ""
+                      }`}
+                    />
+                  </div>
                 </>
               )}
 
@@ -67,7 +101,10 @@ export default function ListItemBrawl(props) {
                   {brawl.progress === 0 && (
                     <>
                       <span className="text-sm text-ui-300">
-                        Position: <span className="font-bold">53</span>
+                        Position:{" "}
+                        <span className="font-bold">
+                          #{brawl.result.position}
+                        </span>
                       </span>
                     </>
                   )}
@@ -75,7 +112,10 @@ export default function ListItemBrawl(props) {
                   {brawl.progress === 3 && (
                     <>
                       <span className="text-sm text-ui-300">
-                        Final osition: <span className="font-bold">53</span>
+                        Final position:{" "}
+                        <span className="font-bold">
+                          #{brawl.result.position}
+                        </span>
                       </span>
                     </>
                   )}
@@ -178,6 +218,40 @@ export default function ListItemBrawl(props) {
                       <span>Claim reward</span>
                     </button>
                   </div>
+                  <div className="absolute z-50 top-2 right-2 p-1 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+                    <span
+                      className={`icon text-xl ${
+                        prototype.getGameByID(game.id).slug === "apexlegends"
+                          ? "icon-game-apexlegends-symbol text-game-apexlegends"
+                          : ""
+                      } ${
+                        prototype.getGameByID(game.id).slug === "csgo"
+                          ? "icon-game-csgo-symbol text-game-csgo"
+                          : ""
+                      }  ${
+                        prototype.getGameByID(game.id).slug === "dota2"
+                          ? "icon-game-dota2-symbol text-game-dota2"
+                          : ""
+                      }  ${
+                        prototype.getGameByID(game.id).slug ===
+                        "leagueoflegends"
+                          ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
+                          : ""
+                      }  ${
+                        prototype.getGameByID(game.id).slug === "rocketleague"
+                          ? "icon-game-rocketleague-symbol text-game-rocketleague"
+                          : ""
+                      } ${
+                        prototype.getGameByID(game.id).slug === "pubg"
+                          ? "icon-game-pubg-symbol text-game-pubg"
+                          : ""
+                      }  ${
+                        prototype.getGameByID(game.id).slug === "valorant"
+                          ? "icon-game-valorant-symbol text-game-valorant"
+                          : ""
+                      }`}
+                    />
+                  </div>
                 </>
               )}
 
@@ -186,11 +260,12 @@ export default function ListItemBrawl(props) {
                 <div className="">
                   {brawl.result && (
                     <div className="flex items-center gap-2">
-                      <div className="text-4xl font-headings leading-none">
-                        {brawl.result.position}
+                      <div className="font-headings leading-none flex items-start gap-1">
+                        <span className="text-xl">#</span>
+                        <span className="text-4xl">{brawl.result.position}</span>
                       </div>
                       <div
-                        className={`leading-none text-center -space-y-1 ${
+                        className={`hidden leading-none text-center -space-y-1 ${
                           brawl.result.isPositive
                             ? "text-success-500 -mt-1"
                             : "text-error-300 -mb-1"

@@ -27,13 +27,13 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Shop">
-        <Ad width="1005" height="124" />
+        <Ad width="1005" height="300" />
 
         {selectedVoucher && (
           <>
             <section className="mb-4">
-              <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8 lg:min-h-[250px] lg:flex items-center">
-                <div className="absolute z-20 top-0 left-0 py-2 px-4">
+              <div className="header surface sm:rounded-lg">
+                <div className="header-breadcrumbs">
                   <nav className="breadcrumbs" aria-label="Breadcrumb">
                     <ol>
                       <li
@@ -72,23 +72,18 @@ export default function Home() {
                     </ol>
                   </nav>
                 </div>
-                <div className="relative z-10">
-                  <h1 className="text-3xl sm:text-4xl">
-                    {selectedVoucher.name}
-                  </h1>
-                  <p className="text-ui-300 max-w-[70ch] mt-4">
-                    {selectedVoucher.description}
-                  </p>
+                <div className="header-content">
+                  <div className="header-body">
+                    <h1 className="text-3xl sm:text-4xl">
+                      {selectedVoucher.name}
+                    </h1>
+                    <p className="text-ui-300 max-w-[70ch] mt-4">
+                      {selectedVoucher.description}
+                    </p>
+                  </div>
                 </div>
-                <div
-                  className="absolute hidden md:block z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-                  style={{ "--delay": "calc(1 * 0.05s)" }}
-                >
-                  <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
-                  <img
-                    className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                    src="https://res.cloudinary.com/gloot/image/upload/v1659462292/Marketing/2022_prototype/Shop_bg.webp"
-                  />
+                <div className="header-bg">
+                  <img src="https://res.cloudinary.com/gloot/image/upload/v1659462292/Marketing/2022_prototype/Shop_bg.webp" />
                 </div>
               </div>
             </section>
@@ -97,7 +92,9 @@ export default function Home() {
                 <div>
                   <span className="icon icon-24 icon-c-info" />
                   <div>
-                    <div className="font-bold uppercase">{selectedVoucher.alert.title}</div>
+                    <div className="font-bold uppercase">
+                      {selectedVoucher.alert.title}
+                    </div>
                     <p className="max-w-[80ch]">
                       {selectedVoucher.alert.description}
                     </p>
@@ -119,10 +116,12 @@ export default function Home() {
                           key={countryIndex}
                           className="flex gap-1 items-center"
                         >
-                          <img
-                            src={`https://flagcdn.com/${country.flag}.svg`}
-                            className="aspect-square rounded-full w-4"
-                          />
+                          <div className="w-4 h-4 rounded-full relative overflow-hidden">
+                            <img
+                              src={`https://flagcdn.com/${country.flag}.svg`}
+                              className="object-cover object-center absolute inset-0 w-full h-full"
+                            />
+                          </div>
                           <span>{country.name}</span>
                         </li>
                       ))}

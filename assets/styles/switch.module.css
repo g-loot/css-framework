@@ -16,6 +16,7 @@
     @apply
     transition-all
     duration-300
+    ease-[cubic-bezier(.7,0,.3,1)]
     ease-in-out
     ;
   }

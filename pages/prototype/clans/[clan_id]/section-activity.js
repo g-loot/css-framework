@@ -6,81 +6,6 @@ import ListItemBrawl from "../../../../components/ListItem/ListItemBrawl";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
-const brawlsResults = [
-  {
-    game: 1,
-    name: "Clan Brawl #234",
-    rewards: [
-      {
-        type: "money",
-        value: 10000,
-      },
-      {
-        type: "ticket",
-        value: 1,
-      },
-    ],
-    result: {
-      position: 23,
-      movement: 2,
-      isPositive: true,
-    },
-    topPerformers: [
-      {
-        id: 1,
-        score: 532,
-        matches: 59,
-      },
-      {
-        id: 5,
-        score: 422,
-        matches: 23,
-      },
-      {
-        id: 6,
-        score: 235,
-        matches: 14,
-      },
-    ],
-  },
-  {
-    game: 2,
-    name: "Clan Brawl #523",
-    rewards: [
-      {
-        type: "coin",
-        value: 20000,
-      },
-      {
-        type: "token",
-        value: 5,
-      },
-    ],
-    result: {
-      position: 12,
-      movement: 4,
-      isPositive: false,
-    },
-    topPerformers: [
-      {
-        id: 2,
-        score: 532,
-        matches: 59,
-      },
-      {
-        id: 3,
-        score: 422,
-        matches: 23,
-      },
-      {
-        id: 4,
-        score: 235,
-        matches: 14,
-      },
-    ],
-  },
-];
-
 export default function SectionClanActivity() {
   const router = useRouter();
   const { query } = useRouter();
@@ -88,6 +13,7 @@ export default function SectionClanActivity() {
   const [selectedClan, setSelectedClan] = useState(null);
   const { clan_id } = router.query;
   const hasAds = query.ads === "true" ? true : false;
+  const emptyState = query.emptystate === "true" ? true : false;
 
   useEffect(() => {
     setSelectedClan(prototype.getClanByID(clan_id));
@@ -103,25 +29,26 @@ export default function SectionClanActivity() {
     <>
       {selectedClan && (
         <>
-          <div className="surface surface-dimmed sm:rounded-lg p-2 xl:max-h-[500px] overflow-x-auto xl:overflow-x-hidden xl:overflow-y-auto scrollbar-desktop">
-            <ul className="space-x-2 xl:space-x-0 xl:space-y-2 flex xl:flex-col">
-              {prototype.games.map((game, gameIndex) => (
-                <>
-                  {game.brawls?.map((brawl, brawlIndex) => (
-                    <>
-                      {brawl.status === "ongoing" && (
-                        <ListItemBrawl
-                          key={brawlIndex}
-                          brawl={brawl}
-                          game={game}
-                          variant={2}
-                        />
-                      )}
-                    </>
-                  ))}
-                </>
-              ))}
-              {/*
+          {!emptyState && (
+            <div className="surface surface-dimmed sm:rounded-lg p-2 xl:max-h-[500px] overflow-x-auto xl:overflow-x-hidden xl:overflow-y-auto scrollbar-desktop">
+              <ul className="space-x-2 xl:space-x-0 xl:space-y-2 flex xl:flex-col">
+                {prototype.games.map((game, gameIndex) => (
+                  <>
+                    {game.brawls?.map((brawl, brawlIndex) => (
+                      <>
+                        {brawl.status === "ongoing" && (
+                          <ListItemBrawl
+                            key={brawlIndex}
+                            brawl={brawl}
+                            game={game}
+                            variant={2}
+                          />
+                        )}
+                      </>
+                    ))}
+                  </>
+                ))}
+                {/*
               {brawlsResults.map((brawl, brawlIndex) => (
                 <>
                   <li key={brawl} className="surface rounded">
@@ -298,8 +225,46 @@ export default function SectionClanActivity() {
                 </>
               ))}
                                     */}
-            </ul>
-          </div>
+              </ul>
+            </div>
+          )}
+
+          {emptyState && (
+            <div className="surface sm:rounded-lg px-4 py-8 text-center">
+              <div className="max-w-xs mx-auto leading-tight">
+                <span className="icon icon-brawl text-6xl text-ui-500" />
+                {selectedClan.isYou && (
+                  <>
+                    <div className="mt-2">
+                      <p className="text-sm text-ui-400 mb-2">
+                        {selectedClan.nickname} has no ongoing Brawls
+                      </p>
+                      <p className="text-lg text-ui-300">
+                        Find a Brawl with the <span className="icon icon-multiple-12" /> icon and compete with your Clan!
+                      </p>
+                    </div>
+                    {/*
+                      <Link href={`/prototype/valorant/brawls${hasAds ? "?ads=true" : ""}`}>
+                        <a className="button button-primary">
+                          <span>Browse Brawls</span>
+                        </a>
+                      </Link>
+                    */}
+                  </>
+                )}
+                {!selectedClan.isYou && (
+                  <>
+                    <div className="mt-2">
+                      <p className="text-lg text-ui-300">
+                        {selectedClan.nickname} has no ongoing Brawls
+                      </p>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
+          )}
+
           <div className="surface sm:rounded-lg">
             <div className="p-1 border-b border-ui-700 flex gap-2 justify-between">
               <h2 className="p-2 text-xl italic">
@@ -308,13 +273,15 @@ export default function SectionClanActivity() {
                   {selectedClan.members.length} / 30
                 </span>
               </h2>
-              <button
-                type="button"
-                className="button button-sm button-tertiary"
-              >
-                <span className="icon icon-a-add" />
-                <span>Add member</span>
-              </button>
+              {selectedClan.isYou && (
+                <button
+                  type="button"
+                  className="button button-sm button-tertiary"
+                >
+                  <span className="icon icon-a-add" />
+                  <span>Add member</span>
+                </button>
+              )}
             </div>
             <div className="max-h-60 overflow-y-auto scrollbar-desktop">
               <ul>

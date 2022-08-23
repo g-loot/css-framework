@@ -537,6 +537,7 @@
     to-disabled-500/25
     text-disabled-300
     shadow-[inset_0_0_0_1px_rgba(var(--color-disabled-700),50%)]
+    opacity-100
     ;
     > * {
       @apply

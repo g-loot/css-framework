@@ -162,7 +162,7 @@ export default function Home() {
                         </label>
                         <div className="flex-3">
                           <button className="button button-primary w-full">
-                            <span className="icon icon-steam" />
+                            <span className="icon icon-riotgames-symbol" />
                             <span>Login with Riot ID</span>
                           </button>
                           <div className="text-ui-300 text-sm mt-1 leading-tight">

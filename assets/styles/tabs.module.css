@@ -178,12 +178,14 @@
   > li {
     @apply
     flex-none
+    items-center
     ;
     
     > a {
       @apply
       relative
       block
+      min-w-[255px]
       ;
       &:not(.is-active) {
         @apply
@@ -235,7 +237,7 @@
         w-full
         gap-8
         items-center
-        justify-between
+        justify-center
         px-5
         ;
         > * {
@@ -270,7 +272,6 @@
           -skew-x-30
           translate-y-2
           opacity-0
-          
           ;
         }
         &::after {

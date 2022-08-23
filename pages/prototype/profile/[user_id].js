@@ -30,68 +30,95 @@ export default function Home() {
         {selectedUser && (
           <>
             <section className="mb-8">
-              <div className="relative overflow-hidden surface sm:rounded-lg p-4 lg:min-h-[250px] lg:flex items-center">
-                <div className="relative z-10 flex-1 flex flex-col md:flex-row gap-4 md:items-stretch md:justify-between">
-                  <div className="flex gap-4 items-center self-center">
-                    <figure className="avatar avatar-xl avatar-circle">
-                      <div>
-                        <img src={selectedUser.avatar} alt="avatar" />
-                      </div>
-                    </figure>
-                    <div className="flex-1">
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                        <h1 className="text-3xl sm:text-4xl">
-                          {selectedUser.nickname}
-                        </h1>
-                        <div className="block lg:hidden">
-                          {selectedUser.isYou && (
-                            <Link href="settings">
-                              <a
-                                type="button"
-                                className="button button-sm button-ghost"
-                              >
-                                <span className="icon icon-cogwheel" />
-                                <span>Profile settings</span>
-                              </a>
-                            </Link>
-                          )}
-                          {!selectedUser.isYou && (
-                            <Link href="#">
-                              <a
-                                type="button"
-                                className="button button-sm button-primary"
-                              >
-                                <span>Invite to your clan</span>
-                              </a>
-                            </Link>
-                          )}
+              <div className="header surface sm:rounded-lg">
+                <div className="header-content">
+                  <div className="header-body">
+                    <div className="flex gap-4 items-center self-center">
+                      <figure className="avatar avatar-xl avatar-circle">
+                        <div>
+                          <img src={selectedUser.avatar} alt="avatar" />
                         </div>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <div className="w-6 flex justify-center">
-                          <img
-                            src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
-                            className="aspect-video rounded-sm max-w-[1.5rem]"
-                          />
+                      </figure>
+                      <div className="flex-1">
+                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                          <h1 className="text-3xl sm:text-4xl">
+                            {selectedUser.nickname}
+                          </h1>
+                          <div className="block lg:hidden">
+                            {selectedUser.isYou && (
+                              <Link href="settings">
+                                <a
+                                  type="button"
+                                  className="button button-sm button-ghost"
+                                >
+                                  <span className="icon icon-cogwheel" />
+                                  <span>Profile settings</span>
+                                </a>
+                              </Link>
+                            )}
+                            {!selectedUser.isYou && (
+                              <Link href="#">
+                                <a
+                                  type="button"
+                                  className="button button-sm button-primary"
+                                >
+                                  <span>Invite to your clan</span>
+                                </a>
+                              </Link>
+                            )}
+                          </div>
                         </div>
-                        <span className="text-ui-300">
-                          {selectedUser.country}
-                        </span>
-                      </div>
-                      <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="transition-colors duration-75 text-ui-300 hover:text-main flex items-center gap-2"
-                      >
-                        <div className="w-6 flex justify-center">
-                          <span className="icon icon-20 icon-twitch" />
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 flex justify-center">
+                            <img
+                              src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
+                              className="aspect-video rounded-sm max-w-[1.5rem]"
+                            />
+                          </div>
+                          <span className="text-ui-300">
+                            {selectedUser.country}
+                          </span>
                         </div>
-                        <span>{selectedUser.socials.twitch}</span>
-                      </a>
+                        <a
+                          href="#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="transition-colors duration-75 text-ui-300 hover:text-main flex items-center gap-2"
+                        >
+                          <div className="w-6 flex justify-center">
+                            <span className="icon icon-20 icon-twitch" />
+                          </div>
+                          <span>{selectedUser.socials.twitch}</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
-                  <div className="flex-1 hidden xl:flex justify-center gap-4">
+                </div>
+                <div className="hidden lg:block absolute z-20 top-2 right-2">
+                  {selectedUser.isYou && (
+                    <Link href="settings">
+                      <a
+                        type="button"
+                        className="button button-sm button-tertiary"
+                      >
+                        <span className="icon icon-cogwheel" />
+                        <span>Profile settings</span>
+                      </a>
+                    </Link>
+                  )}
+                  {!selectedUser.isYou && (
+                    <Link href="#">
+                      <a
+                        type="button"
+                        className="button button-sm button-primary"
+                      >
+                        <span>Invite to your clan</span>
+                      </a>
+                    </Link>
+                  )}
+                </div>
+                <div className="header-meta">
+                  <div className="flex justify-center gap-4 py-4">
                     <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
                       <div>
                         <div className="text-4xl font-headings mb-0.5">
@@ -130,38 +157,8 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div
-                  className="absolute z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-                  style={{ "--delay": "calc(1 * 0.05s)" }}
-                >
-                  <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
-                  <img
-                    className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                    src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp"
-                  />
-                </div>
-                <div className="hidden lg:block absolute z-20 top-4 right-4">
-                  {selectedUser.isYou && (
-                    <Link href="settings">
-                      <a
-                        type="button"
-                        className="button button-sm button-ghost"
-                      >
-                        <span className="icon icon-cogwheel" />
-                        <span>Profile settings</span>
-                      </a>
-                    </Link>
-                  )}
-                  {!selectedUser.isYou && (
-                    <Link href="#">
-                      <a
-                        type="button"
-                        className="button button-sm button-primary"
-                      >
-                        <span>Invite to your clan</span>
-                      </a>
-                    </Link>
-                  )}
+                <div className="header-bg">
+                  <img src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp" />
                 </div>
               </div>
             </section>

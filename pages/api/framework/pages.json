@@ -122,18 +122,36 @@
         },
         {
           "label": "Clan detail (self)",
-          "url": "clans/0",
+          "url": "clans/1",
           "query": "",
           "tags": "clan, team, self",
           "tab": 0,
           "new": true
         },
         {
-          "label": "Clan detail (others)",
+          "label": "Clan detail (self) (no Brawls)",
+          "chip": "empty state",
           "url": "clans/1",
+          "query": "emptystate=true",
+          "tags": "clan, team, empty state",
+          "tab": 1,
+          "new": true
+        },
+        {
+          "label": "Clan detail (others)",
+          "url": "clans/2",
           "query": "",
           "tags": "clan, team",
           "tab": 0,
+          "new": true
+        },
+        {
+          "label": "Clan detail (others) (no Brawls)",
+          "chip": "empty state",
+          "url": "clans/2",
+          "query": "emptystate=true",
+          "tags": "clan, team, empty state",
+          "tab": 1,
           "new": true
         },
         {
@@ -195,6 +213,21 @@
           "tags": "wallet, rewards, transactions, payments"
         },
         {
+          "label": "Overview (alternative layout)",
+          "url": "wallet",
+          "query": "alternativelayout=true",
+          "tags": "wallet, rewards, transactions, payments",
+          "tab": 1
+        },
+        {
+          "label": "Buy tokens",
+          "chip": "modal",
+          "url": "wallet",
+          "query": "modalbuytokens=true",
+          "tags": "wallet, rewards, transactions, payments, buy, tokens, shop, transaction, money, prompt, modal",
+          "tab": 1
+        },
+        {
           "label": "History",
           "url": "wallet",
           "query": "tab=history",
@@ -227,7 +260,7 @@
         },
         {
           "label": "Missions & rewards (Steam banner)",
-          "url": "valorant/missions",
+          "url": "pubg/missions",
           "query": "",
           "tags": "game, missions",
           "tab": 1,

@@ -39,48 +39,46 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Missions">
-        <Ad width="1005" height="124" />
+        <Ad width="1005" height="300" />
 
         {selectedGame && (
           <>
-            <section className="relative surface sm:rounded-lg overflow-hidden mb-4">
-              <div className="relative z-10 grid grid-cols-8 gap-4 items-center min-h-[250px]">
-                <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-between items-center py-8">
-                  <div className="absolute top-0 left-0 py-2 px-4">
-                    <nav className="breadcrumbs" aria-label="Breadcrumb">
-                      <ol>
-                        <li
-                          className="animate-slide-in-top animate-delay"
-                          style={{ "--delay": "calc(0 * 0.05s)" }}
-                        >
-                          <Link
-                            href={`/prototype/home${hasAds ? "?ads=true" : ""}`}
-                          >
-                            <a href="#">
-                              <span className="icon icon-20 icon-home-2" />
-                              <span>Home</span>
-                            </a>
-                          </Link>
-                        </li>
-                        <li
-                          className="animate-slide-in-top animate-delay"
-                          style={{ "--delay": "calc(1 * 0.05s)" }}
-                        >
-                          <div>
-                            <span>Missions</span>
-                          </div>
-                        </li>
-                      </ol>
-                    </nav>
-                  </div>
+            <section className="header surface sm:rounded-lg mb-4">
+              <div className="header-breadcrumbs">
+                <nav className="breadcrumbs" aria-label="Breadcrumb">
+                  <ol>
+                    <li
+                      className="animate-slide-in-top animate-delay"
+                      style={{ "--delay": "calc(0 * 0.05s)" }}
+                    >
+                      <Link
+                        href={`/prototype/home${hasAds ? "?ads=true" : ""}`}
+                      >
+                        <a href="#">
+                          <span className="icon icon-20 icon-home-2" />
+                          <span>Home</span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className="animate-slide-in-top animate-delay"
+                      style={{ "--delay": "calc(1 * 0.05s)" }}
+                    >
+                      <div>
+                        <span>Missions</span>
+                      </div>
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+              <div className="header-content">
+                <div className="header-image">
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1657888944/Marketing/2022_prototype/Logo/samesize-missions.svg"
-                    width="400"
-                    height="auto"
-                    alt=""
+                    alt="Missions"
                   />
                 </div>
-                <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center md:items-start text-center md:text-left flex-1 pl-8 md:pl-0 pr-8 py-0 md:py-4 xl:py-4">
+                <div className="header-body">
                   <h1 className="text-4xl mb-2 leading-none">
                     {selectedGame.name} Missions
                   </h1>
@@ -95,59 +93,51 @@ export default function Home() {
                     <span>Tracker required</span>
                   </button>
                 </div>
-                <div className="col-span-8 xl:col-span-2 flex flex-col items-center justify-center gap-4">
-                  <div className="w-full flex flex-col justify-center items-center gap-2 pl-4 xl:pl-0 py-4 pr-4">
-                    <div className="flex items-end gap-4 leading-tight">
-                      <div className="text-xl xl:text-4xl font-headings font-bold italic text-main">
-                        2/3
-                      </div>
-                      <div className="xl:mb-2">
-                        <div className="text-xl font-headings font-bold italic text-ui-200 uppercase">
-                          Daily missions completed
-                        </div>
+              </div>
+              <div className="header-meta">
+                <div className="w-full flex flex-col justify-center items-center gap-2 xl:pl-0 py-4">
+                  <div className="flex items-end gap-4 leading-tight">
+                    <div className="text-xl xl:text-4xl font-headings font-bold italic text-main">
+                      2/3
+                    </div>
+                    <div className="xl:mb-2">
+                      <div className="text-xl font-headings font-bold italic text-ui-200 uppercase">
+                        Daily missions completed
                       </div>
                     </div>
-                    <ul className="step step-primary step-sm w-full max-w-sm mx-auto">
-                      <li>
-                        <a href="#">
-                          <i />
-                          <div></div>
-                          <span />
-                        </a>
-                      </li>
-                      <li className="is-active">
-                        <a href="#">
-                          <i />
-                          <div></div>
-                          <span />
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <i />
-                          <div></div>
-                          <span />
-                        </a>
-                      </li>
-                    </ul>
-                    <p className="text-ui-200 text-sm text-center my-4 leading-tight">
-                      You can complete the daily missions in any game.
-                    </p>
                   </div>
+                  <ul className="step step-primary step-sm w-full max-w-sm mx-auto">
+                    <li>
+                      <a href="#">
+                        <i />
+                        <div></div>
+                        <span />
+                      </a>
+                    </li>
+                    <li className="is-active">
+                      <a href="#">
+                        <i />
+                        <div></div>
+                        <span />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i />
+                        <div></div>
+                        <span />
+                      </a>
+                    </li>
+                  </ul>
+                  <p className="text-ui-200 text-sm text-center my-4 leading-tight">
+                    You can complete the daily missions in any game.
+                  </p>
                 </div>
               </div>
-              <div
-                className="absolute z-0 right-0 inset-y-0 w-full xl:w-2/3 animate-slide-in-right animate-delay"
-                style={{ "--delay": "calc(1 * 0.05s)" }}
-              >
-                <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/75"></div>
-                <img
-                  className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                  src={selectedGame.assets.heroMission}
-                />
+              <div className="header-bg">
+                <img src={selectedGame.assets.heroMission} />
               </div>
             </section>
-
             <nav>
               <ul className="tabs border-b border-ui-700">
                 {TabsItems.map((item, itemIndex) => (

@@ -68,6 +68,7 @@ const DSpage = () => {
         <div className='flex-1 space-y-4'>
           <div className='surface surface-highlight-main rounded-lg h-24' />
           <div className='surface surface-highlight-blue rounded-lg h-24' />
+          <div className='surface surface-highlight-premium rounded-lg h-24' />
         </div>
         <div className='flex-1'>
           <iframe className="rounded-lg" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/g1qde5x2/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>

@@ -160,6 +160,11 @@
           "label": "Separator",
           "tags": "ui,separator,content,section,space",
           "url": "separator"
+        },
+        {
+          "label": "Header",
+          "tags": "ui,header,introduction,banner,hero,content",
+          "url": "header"
         }
       ]
     },

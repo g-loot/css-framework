@@ -4,6 +4,7 @@ import Accordion from "../../../../components/Accordion/Accordion";
 import HowToBrawl from "../../../../components/HowTo/HowToBrawl";
 import Link from "next/link";
 import Reward from "../../../../components/Reward/Reward";
+import Tooltip from "../../../../components/Tooltip/Tooltip";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -271,10 +272,24 @@ export default function TabBrawlsSoloLeaderboards() {
           <div className="col-span-1 lg:col-span-3">
             <div className="mt-4 overflow-x-auto scrollbar-hidden">
               <div className="min-w-md px-2 md:px-0">
-                <div className="flex gap-2 items-start text-center text-sm text-ui-300 uppercase mb-2">
+                <div className="flex gap-2 items-start text-center text-sm text-ui-300 uppercase mb-2 relative z-10">
                   <div className="w-1/3 flex items-stretch overflow-hidden">
                     <div className="w-1/3 px-2">#</div>
-                    <div className="flex-1">Rewards</div>
+                    <div className="flex-1 flex gap-2 items-center">
+                      <span>Clan rewards</span>
+                      <Tooltip
+                      tooltip={
+                        <div className="max-w-xs text-sm text-left text-ui-200 leading-tight normal-case space-y-2">
+                          <p>Rewards will be distributed evenly to everyone in the clan once the Brawl has ended.</p>
+                          <p>For example, if the Clan reward is [number] Coins and [number] Golden tickets - each Clan member will split on the [number] Coins and [number] Golden tickets.</p>
+                        </div>
+                      }
+                    >
+                      <button className="text-ui-300 text-0 translate-y-0.5">
+                        <span className="icon icon-16 icon-c-info" />
+                      </button>
+                    </Tooltip>
+                    </div>
                   </div>
                   <div className="flex-1">
                     <div className="item py-0">
@@ -293,7 +308,7 @@ export default function TabBrawlsSoloLeaderboards() {
                   </div>
                 </div>
                 {isLoadingGroup && (
-                  <ul className="items-spaced space-y-2 is-loading">
+                  <ul className="items-spaced space-y-2 is-loading relative z-0">
                     {selectedBrawl &&
                       selectedBrawl.clanLeaderboard.map((user, userIndex) => (
                         <>
@@ -342,7 +357,7 @@ export default function TabBrawlsSoloLeaderboards() {
                             <div
                               className={`surface rounded-lg w-1/3 h-[54px] flex items-stretch overflow-hidden ${
                                 prototype.getClanByID(user.clan)?.isYou
-                                  ? "surface-highlight-blue"
+                                  ? ""
                                   : ""
                               }`}
                             >
@@ -391,7 +406,7 @@ export default function TabBrawlsSoloLeaderboards() {
                             <div
                               className={`flex-1 accordion surface rounded-lg ${
                                 prototype.getClanByID(user.clan)?.isYou
-                                  ? "surface-highlight-blue"
+                                  ? ""
                                   : ""
                               }`}
                             >

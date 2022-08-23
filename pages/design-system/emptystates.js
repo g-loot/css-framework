@@ -28,7 +28,7 @@ const DSpage = () => {
               Click the button to browse available Brawls
             </p>
           </div>
-          <button className='button button-primary'>
+          <button type="button" className='button button-primary'>
             <span>Browse Brawls</span>
           </button>
         </div>
@@ -58,7 +58,7 @@ const DSpage = () => {
               Click the button to invite your friends
             </p>
           </div>
-          <button className='button button-main'>
+          <button type="button" className='button button-main'>
             <span>Invite your friends</span>
           </button>
           <div className='mt-4'>
@@ -95,7 +95,7 @@ const DSpage = () => {
           </div>
           <div className='form-group'>
             <div className='input-group'>
-              <button className='button button-primary'>
+              <button type="button" className='button button-primary'>
                 <span>Search</span>
               </button>
               <input type='text' name='search-friends' id='search-friends' />

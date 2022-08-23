@@ -47,7 +47,7 @@
       @apply
       transition
       transform-gpu
-      duration-500
+      duration-300
       text-ui-400
       ease-[cubic-bezier(.7,0,.3,1)]
       ;

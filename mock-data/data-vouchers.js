@@ -104,6 +104,10 @@ export const dataVouchers = [
             name: "Sweden",
             flag: "se",
           },
+          {
+            name: "United Kingdom",
+            flag: "gb",
+          },
         ],
         giftcards: [
           {

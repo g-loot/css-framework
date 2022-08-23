@@ -1,4 +1,5 @@
 import Reward from "../../../../components/Reward/Reward";
+import Tooltip from "../../../../components/Tooltip/Tooltip";
 import { useRouter } from "next/router";
 
 const rewardDistribSolo = [
@@ -152,12 +153,26 @@ export default function TabBrawlsRewards() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div className="surface sm:rounded-lg p-4">
             <h2 className="text-3xl mb-4 px-4">
-              Solo <small className="text-ui-300 font-normal">reward distribution</small>
+              Solo{" "}
+              <small className="text-ui-300 font-normal">
+                reward distribution
+              </small>
             </h2>
             <ul className="leading-none space-y-1">
               <li className="flex justify-between gap-2 text-xs text-ui-300 uppercase px-4 pb-2">
                 <span>Level</span>
-                <span>Prizepool for each group</span>
+                <div className="flex gap-2 items-center">
+                  <span>Prizepool for each group</span>
+                  <Tooltip
+                    tooltip={
+                      <div className="max-w-xs text-sm text-ui-200 leading-tight normal-case space-y-2"></div>
+                    }
+                  >
+                    <button className="text-ui-300 text-0 opacity-0 pointer-events-none w-0">
+                      <span className="icon icon-16 icon-c-info" />
+                    </button>
+                  </Tooltip>
+                </div>
               </li>
               {rewardDistribSolo.map((reward, rewardIndex) => (
                 <li
@@ -189,17 +204,41 @@ export default function TabBrawlsRewards() {
           </div>
           <div className="surface sm:rounded-lg p-4">
             <h2 className="text-3xl mb-4 px-4">
-              Clan <small className="text-ui-300 font-normal">reward distribution</small>
+              Clan{" "}
+              <small className="text-ui-300 font-normal">
+                reward distribution
+              </small>
             </h2>
             <ul className="leading-none space-y-1">
-              <li className="flex justify-between gap-2 text-xs text-ui-300 uppercase px-4 pb-2">
-                <span>Level</span>
-                <span>Prizepool for each group</span>
+              <li className="flex justify-between gap-2 text-xs text-ui-300 uppercase px-4 pb-2 relative z-10">
+                <span>Position</span>
+                <div className="flex gap-2 items-center">
+                  <span>Clan rewards</span>
+                  <Tooltip
+                    tooltip={
+                      <div className="max-w-xs text-sm text-ui-200 leading-tight normal-case space-y-2">
+                        <p>
+                          Rewards will be distributed evenly to everyone in the
+                          clan once the Brawl has ended.
+                        </p>
+                        <p>
+                          For example, if the Clan reward is [number] Coins and
+                          [number] Golden tickets - each Clan member will split
+                          on the [number] Coins and [number] Golden tickets.
+                        </p>
+                      </div>
+                    }
+                  >
+                    <button className="text-ui-300 text-0">
+                      <span className="icon icon-16 icon-c-info" />
+                    </button>
+                  </Tooltip>
+                </div>
               </li>
               {rewardDistribClan.map((reward, rewardIndex) => (
                 <li
                   key={reward}
-                  className="flex items-center justify-between gap-2 rounded bg-ui-850/50 py-2 px-4 animate-slide-in-bottom animate-delay"
+                  className="flex items-center justify-between gap-2 rounded bg-ui-850/50 py-2 px-4 relative z-0 animate-slide-in-bottom animate-delay"
                   style={{
                     "--delay": "calc(" + rewardIndex + " * 0.05s)",
                   }}

@@ -177,13 +177,13 @@ export default function TabBrawlsSoloLeaderboards() {
                     <div className="text-xs uppercase text-ui-300">
                       All your matches
                     </div>
-                    <div className="flex items-center justify-center gap-1 text-main">
+                    <div className="flex items-center justify-center gap-1 text-blue-300">
                       <span className="text-xs icon icon-star" />
                       <span className="text-xs"> = best matches</span>
                     </div>
                   </div>
                   <div className="border-t border-ui-700 max-h-[200px] overflow-y-auto scrollbar-desktop">
-                    <table className="table table-comptact w-full text-center">
+                    <table className="table table-comptact w-full text-center leading-tight">
                       <tbody>
                         <tr>
                           <th className="w-10"></th>
@@ -198,9 +198,9 @@ export default function TabBrawlsSoloLeaderboards() {
                             </span>
                           </td>
                         </tr>
-                        <tr className="bg-ui-800 font-bold">
+                        <tr className="bg-ui-800 font-bold text-blue-300">
                           <th className="w-10">
-                            <span className="text-xs icon icon-star text-main" />
+                            <span className="text-xs icon icon-star" />
                           </th>
                           <td>
                             <span className="text-xs">1</span>
@@ -227,9 +227,9 @@ export default function TabBrawlsSoloLeaderboards() {
                             <span className="text-xs">78</span>
                           </td>
                         </tr>
-                        <tr className="bg-ui-800 font-bold">
+                        <tr className="bg-ui-800 font-bold text-blue-300">
                           <th className="w-10">
-                            <span className="text-xs icon icon-star text-main" />
+                            <span className="text-xs icon icon-star" />
                           </th>
                           <td>
                             <span className="text-xs">4</span>
@@ -300,7 +300,7 @@ export default function TabBrawlsSoloLeaderboards() {
           </div>*/}
             </div>
             <div className="col-span-1 lg:col-span-3">
-              <div className="surface surface-dimmed sm:rounded-lg pt-4">
+              <div className="sm:rounded-lg">
                 <div className="flex items-center justify-end gap-2 px-4">
                   <span className="text-sm text-ui-300">
                     What are the different Brawl levels?
@@ -309,8 +309,8 @@ export default function TabBrawlsSoloLeaderboards() {
                     <span className="icon icon-16 icon-c-info" />
                   </button>
                 </div>
-                <div className="overflow-x-auto relative scrollbar-hidden h-20 flex items-center my-4">
-                  <div className="hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r from-ui-850 via-ui-850 to-ui-850/0 pl-4 pr-8">
+                <div className="overflow-x-auto relative scrollbar-hidden h-16 flex items-center my-4">
+                  <div className="hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r from-ui-900 via-ui-900 to-ui-900/0 pl-4 pr-8">
                     <button
                       type="button"
                       className="button button-lg button-ghost rounded-full"
@@ -326,7 +326,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       <span className="icon icon-ctrl-left" />
                     </button>
                   </div>
-                  <div className="hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l from-ui-850 via-ui-850 to-ui-850/0 pr-4 pl-8">
+                  <div className="hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l from-ui-900 via-ui-900 to-ui-900/0 pr-4 pl-8">
                     <button
                       type="button"
                       className="button button-lg button-ghost rounded-full"
@@ -430,22 +430,28 @@ export default function TabBrawlsSoloLeaderboards() {
                     </li>
                   </ul>
                 </div>
-                <div className="border-t border-ui-700/50">
-                  <div className="flex items-center md:px-4 py-4 gap-4">
+                <div className="">
+                  <div className="flex items-center py-4 gap-4">
                     <div className="hidden md:flex gap-2 items-center pr-4 leading-none border-r border-ui-700">
                       <span className="uppercase font-bold text-sm text-ui-300">
-                        Your group
+                        Your group:
                       </span>
                       <button
                         type="button"
                         onClick={loadGroup.bind(this, 6)}
-                        className={`chip rounded shrink-0 w-10 ${
+                        className={`chip chip-secondary rounded shrink-0 w-10 ${
                           selectedGroup === 6
-                            ? "chip-primary"
-                            : "chip-secondary"
+                            ? "pointer-events-none"
+                            : "opacity-40"
                         }`}
                       >
-                        <span className="font-headings font-bold">G</span>
+                        <span
+                          className={`font-headings font-bold ${
+                            selectedGroup === 6 ? "text-blue-300" : ""
+                          }`}
+                        >
+                          G
+                        </span>
                       </button>
                     </div>
                     <div className="flex-1 flex gap-2 items-center leading-none">
@@ -464,6 +470,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                 sliderGroupWidth,
                                 -sliderGroupWidth * 3
                               );
+                              loadGroup.bind(this, selectedGroup - 2);
                             }}
                           >
                             <span className="icon icon-arrow-sm-left" />
@@ -474,23 +481,35 @@ export default function TabBrawlsSoloLeaderboards() {
                           className="flex-1 overflow-hidden relative h-8 md:h-auto flex justify-center overflow-x-auto scrollbar-hidden"
                         >
                           <div className="flex justify-start absolute inset-0 px-2 md:px-0">
-                            <div className="flex items-center justify-start gap-2">
+                            <div className="flex flex-row-reverse items-center justify-start gap-2">
                               {Groups.map((group, groupIndex) => (
                                 <>
                                   <button
                                     type="button"
                                     ref={sliderGroupItem}
                                     onClick={loadGroup.bind(this, groupIndex)}
-                                    className={`chip rounded shrink-0 w-10 ${
+                                    className={`chip chip-secondary rounded shrink-0 w-10 ${
                                       selectedGroup === groupIndex
-                                        ? "chip-primary"
-                                        : "chip-secondary"
+                                        ? "pointer-events-none"
+                                        : "opacity-40"
                                     }`}
                                   >
                                     {groupIndex === 6 && (
-                                      <span className="icon icon-profile-2" />
+                                      <span
+                                        className={`icon icon-profile-2 ${
+                                          selectedGroup === groupIndex
+                                            ? "text-blue-300"
+                                            : ""
+                                        }`}
+                                      />
                                     )}
-                                    <span className="font-headings font-bold">
+                                    <span
+                                      className={`font-headings font-bold ${
+                                        selectedGroup === groupIndex
+                                          ? "text-blue-300"
+                                          : ""
+                                      }`}
+                                    >
                                       {group}
                                     </span>
                                   </button>
@@ -510,6 +529,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                 sliderGroupWidth,
                                 sliderGroupWidth * 3
                               );
+                              loadGroup.bind(this, selectedGroup + 1);
                             }}
                           >
                             <span className="icon icon-arrow-sm-right" />
@@ -596,7 +616,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                 <div
                                   className={`surface rounded-lg w-1/3 h-[54px] flex items-stretch overflow-hidden ${
                                     prototype.getUserByID(user.user)?.isYou
-                                      ? "surface-highlight-blue"
+                                      ? ""
                                       : ""
                                   }`}
                                 >
@@ -659,7 +679,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                 <div
                                   className={`flex-1 accordion surface rounded-lg ${
                                     prototype.getUserByID(user.user)?.isYou
-                                      ? "surface-highlight-blue"
+                                      ? ""
                                       : ""
                                   }`}
                                 >
@@ -738,7 +758,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                     <div className="p-2">
                                       <ul className="gap-2 grid grid-cols-3">
                                         <li className="col-span-3 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                                          <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                          <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1 not-italic">
                                             Match points in best [number]
                                             matches
                                           </h5>
@@ -760,40 +780,52 @@ export default function TabBrawlsSoloLeaderboards() {
                                             </div>
                                           </div>
                                         </li>
-                                        <li className="col-span-3 md:col-span-1 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                                          <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                        <li className="col-span-3 md:col-span-1 p-3 flex flex-col text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
+                                          <h5 className="flex-none uppercase font-normal font-body text-sm text-ui-300 mb-1 not-italic">
                                             Match played
                                           </h5>
-                                          <div className="flex justify-center gap-2">
-                                            <div className="px-3 py-1 rounded bg-ui-850/25 font-headings font-bold text-lg italic">
-                                              {numberWithSpaces(
-                                                getRandomInt(500)
-                                              )}
+                                          <div className="flex-1 flex justify-center gap-2">
+                                            <div className="px-3 py-1 flex flex-col justify-center items-center font-headings font-bold text-lg italic">
+                                              <div>
+                                                {numberWithSpaces(
+                                                  getRandomInt(500)
+                                                )}
+                                              </div>
                                             </div>
                                           </div>
                                         </li>
-                                        <li className="col-span-3 md:col-span-1 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                                          <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                        <li className="col-span-3 md:col-span-1 p-3 flex flex-col text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
+                                          <h5 className="flex-none uppercase font-normal font-body text-sm text-ui-300 mb-1 not-italic">
                                             Tiebreaker points
                                           </h5>
-                                          <div className="flex justify-center gap-2">
-                                            <div className="px-3 py-1 rounded bg-ui-850/25 font-headings font-bold text-lg italic">
-                                              {numberWithSpaces(
-                                                getRandomInt(2000)
-                                              )}{" "}
-                                              damage
+                                          <div className="flex-1 flex justify-center gap-2">
+                                            <div className="px-3 py-1 flex flex-col justify-center items-center font-headings font-bold text-lg italic">
+                                              <div>
+                                                {numberWithSpaces(
+                                                  getRandomInt(2000)
+                                                )}{" "}
+                                                damage
+                                              </div>
+                                              <div>
+                                                {numberWithSpaces(
+                                                  getRandomInt(50)
+                                                )}{" "}
+                                                headshots
+                                              </div>
                                             </div>
                                           </div>
                                         </li>
-                                        <li className="col-span-3 md:col-span-1 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                                          <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                        <li className="col-span-3 md:col-span-1 p-3 flex flex-col text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
+                                          <h5 className="flex-none uppercase font-normal font-body text-sm text-ui-300 mb-1 not-italic">
                                             Player game score
                                           </h5>
-                                          <div className="flex justify-center gap-2">
-                                            <div className="px-3 py-1 rounded bg-ui-850/25 font-headings font-bold text-lg italic">
-                                              {numberWithSpaces(
-                                                getRandomInt(500)
-                                              )}
+                                          <div className="flex-1 flex justify-center gap-2">
+                                            <div className="px-3 py-1 flex flex-col justify-center items-center font-headings font-bold text-lg italic">
+                                              <div>
+                                                {numberWithSpaces(
+                                                  getRandomInt(500)
+                                                )}
+                                              </div>
                                             </div>
                                           </div>
                                         </li>
@@ -868,20 +900,19 @@ export default function TabBrawlsSoloLeaderboards() {
                       <span className="icon icon-arrow-down" />
                     </button>
                   </div>
-                  <div className="text-center my-4 text-sm text-ui-300">
-                    <div>
+                  <div className="text-center my-4 text-sm">
+                    <div className="text-ui-400">
                       The leaderboard is updated every X minute,{" "}
                       <a href="#" className="link link-main">
                         reload the page
                       </a>{" "}
                       for an update
                     </div>
-                    <div>
+                    <div className="text-ui-300">
                       Leaderboard ID:{" "}
                       <span className="text-ui-100 font-bold">
-                        [date:game:tier:groupId]
-                      </span>{" "}
-                      example: &quot;225VG19&quot;{" "}
+                        225VG19
+                      </span>
                     </div>
                   </div>
                 </div>

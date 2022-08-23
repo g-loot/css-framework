@@ -13,11 +13,11 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Shop">
-        <Ad width="1005" height="124" />
+        <Ad width="1005" height="300" />
 
         <section className="mb-4">
-          <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8 lg:min-h-[250px] lg:flex items-center">
-            <div className="absolute z-20 top-0 left-0 py-2 px-4">
+          <div className="header surface sm:rounded-lg">
+            <div className="header-breadcrumbs">
               <nav className="breadcrumbs" aria-label="Breadcrumb">
                 <ol>
                   <li
@@ -42,24 +42,20 @@ export default function Home() {
                 </ol>
               </nav>
             </div>
-            <div className="relative z-10">
-              <h1 className="text-3xl sm:text-4xl">Shop</h1>
-              <p className="text-ui-300 max-w-[70ch] mt-4">
-                Turn your hard work and successes into rewards you can enjoy!
-                Will you invest in some new gaming gear or just treat yourself
-                to something you&#39;ve had your eye on? Earn more coins to
-                spend in the shop by finishing Missions or competing in Brawls.
-              </p>
+            <div className="header-content">
+              <div className="header-body">
+                <h1 className="text-3xl sm:text-4xl">Shop</h1>
+                <p className="text-ui-300 max-w-[70ch] mt-4">
+                  Turn your hard work and successes into rewards you can enjoy!
+                  Will you invest in some new gaming gear or just treat yourself
+                  to something you&#39;ve had your eye on? Earn more coins to
+                  spend in the shop by finishing Missions or competing in
+                  Brawls.
+                </p>
+              </div>
             </div>
-            <div
-              className="absolute hidden md:block z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-              style={{ "--delay": "calc(1 * 0.05s)" }}
-            >
-              <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
-              <img
-                className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                src="https://res.cloudinary.com/gloot/image/upload/v1659462292/Marketing/2022_prototype/Shop_bg.webp"
-              />
+            <div className="header-bg">
+              <img src="https://res.cloudinary.com/gloot/image/upload/v1659462292/Marketing/2022_prototype/Shop_bg.webp" />
             </div>
           </div>
         </section>

@@ -45,7 +45,7 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Wallet">
-        <Ad width="1005" height="124" />
+        <Ad width="1005" height="300" />
 
         <section className="mb-4">
           <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8 lg:min-h-[250px] lg:flex items-center">

@@ -417,6 +417,12 @@ module.exports = {
           '0px 0px 1.3px rgba(77 180 255, 0.3)',
           '0px 0px 0.5px rgba(77 180 255, 0.6)',
         ],
+        'premium': [
+          '0px 0px 10px rgba(251 192 45, 0.125)',
+          '0px 0px 3px rgba(251 192 45, 0.2)',
+          '0px 0px 1.3px rgba(251 192 45, 0.3)',
+          '0px 0px 0.5px rgba(251 192 45, 0.6)',
+        ],
         'main-lg': [
           '0px 0px 3px rgba(19, 240, 148, 0.25)',
           '0px 0px 6px rgba(19, 240, 148, 0.5)',

@@ -1,0 +1,176 @@
+/*----------------------------*/
+/* HEADER */
+/*----------------------------*/
+
+.header {
+  @apply
+  relative
+  flex
+  flex-col
+  xl:flex-row
+  items-stretch
+  min-h-[250px]
+  bg-ui-800
+  overflow-hidden
+  ;
+
+  &:not([class*="rounded"]) {
+    @apply
+    rounded-lg
+    ;
+  }
+  
+  > .header-bg {
+    @apply
+    absolute
+    hidden
+    md:block
+    z-0
+    right-0
+    inset-y-0
+    w-full
+    animate-slide-in-right
+    animate-delay
+    ;
+    --delay: calc(1 * 0.05s);
+
+    &::before,
+    > img {
+      @apply
+      absolute
+      inset-y-0
+      right-0
+      w-full
+      xl:w-2/3
+      h-full
+    }
+    &::before {
+      @apply
+      content-[""]
+      z-10
+      bg-gradient-to-r
+      from-ui-800
+      via-ui-800/50
+      to-ui-800/0
+      ;
+    }
+    > img {
+      @apply
+      z-0
+      object-right
+      object-cover
+      xl:object-cover
+      ;
+    }
+  }
+
+  > .header-breadcrumbs {
+    @apply
+    absolute
+    z-20
+    top-1
+    left-2
+    ;
+
+    + .header-content > *:first-child {
+      @apply
+      pt-12
+      md:pt-10
+      ;
+    }
+  }
+
+  > .header-content {
+    @apply
+    relative
+    z-10
+    flex-5
+    flex
+    flex-col
+    md:flex-row
+    items-center
+    ;
+
+    .header-image {
+      @apply
+      px-4
+      md:px-8
+      py-4
+      flex
+      flex-col
+      items-center
+      justify-center
+      gap-4
+      w-full
+      md:w-1/2
+      lg:w-[375px]
+      ;
+      > img:first-child {
+        @apply
+        max-h-[175px]
+        max-w-[350px]
+        w-full
+        ;
+      }
+    }
+
+    .header-body {
+      @apply
+      flex-1
+      flex-col
+      items-start
+      justify-center
+      pt-8
+      pb-4
+      xl:py-8
+      pl-4
+      md:pl-0
+      pr-4
+      lg:pr-0
+      text-center
+      md:text-left
+      ;
+      &:first-child {
+        @apply
+        pl-4
+        lg:pl-8
+        ;
+      }
+      :where(p, ul, li) {
+        @apply
+        max-w-[70ch]
+        ;
+      }
+    }
+  }
+  > .header-meta {
+    @apply
+    relative
+    z-10
+    flex-2
+    flex
+    flex-col
+    ;
+    &:not([class*="justify-"]) {
+      @apply
+      justify-center
+      ;
+    }
+    &:not([class*="px-"]):not([class*="pr-"]) {
+      @apply
+      px-4
+      ;
+    }
+
+    + .header-bg {
+      &::before {
+        @apply
+        from-ui-800
+        via-ui-800/90
+        to-ui-800/50
+        ;
+      }
+    }
+  }
+
+}

@@ -61,59 +61,59 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Tournaments">
-        <Ad width="1005" height="124" />
+        <Ad width="1005" height="300" />
 
         {selectedGame && (
           <>
-            <section className="relative surface sm:rounded-lg overflow-hidden mb-4">
-              <div className="relative z-10 grid grid-cols-8 gap-4 items-flex min-h-[250px]">
-                <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center pt-14 pb-8 md:pt-8">
-                  <div className="absolute top-0 left-0 py-2 px-4">
-                    <nav className="breadcrumbs" aria-label="Breadcrumb">
-                      <ol>
-                        <li
-                          className="animate-slide-in-top animate-delay"
-                          style={{ "--delay": "calc(0 * 0.05s)" }}
-                        >
-                          <Link
-                            href={`/prototype/home${hasAds ? "?ads=true" : ""}`}
-                          >
-                            <a>
-                              <span className="icon icon-20 icon-home-2" />
-                              <span>Home</span>
-                            </a>
-                          </Link>
-                        </li>
-                        <li
-                          className="animate-slide-in-top animate-delay"
-                          style={{ "--delay": "calc(1 * 0.05s)" }}
-                        >
-                          <Link
-                            href={`/prototype/${game}/tournaments/${
-                              hasAds ? "?ads=true" : ""
-                            }`}
-                          >
-                            <a>
-                              <span>Tournaments</span>
-                            </a>
-                          </Link>
-                        </li>
-                        <li
-                          className="animate-slide-in-top animate-delay"
-                          style={{ "--delay": "calc(2 * 0.05s)" }}
-                        >
-                          <div>
-                            <span>
-                              {
-                                prototype.getTournamentByID(game, tournament_id)
-                                  .name
-                              }
-                            </span>
-                          </div>
-                        </li>
-                      </ol>
-                    </nav>
-                  </div>
+            <section className="header surface sm:rounded-lg mb-4">
+              <div className="header-breadcrumbs">
+                <nav className="breadcrumbs" aria-label="Breadcrumb">
+                  <ol>
+                    <li
+                      className="animate-slide-in-top animate-delay"
+                      style={{ "--delay": "calc(0 * 0.05s)" }}
+                    >
+                      <Link
+                        href={`/prototype/home${hasAds ? "?ads=true" : ""}`}
+                      >
+                        <a>
+                          <span className="icon icon-20 icon-home-2" />
+                          <span>Home</span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className="animate-slide-in-top animate-delay"
+                      style={{ "--delay": "calc(1 * 0.05s)" }}
+                    >
+                      <Link
+                        href={`/prototype/${game}/tournaments/${
+                          hasAds ? "?ads=true" : ""
+                        }`}
+                      >
+                        <a>
+                          <span>Tournaments</span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className="animate-slide-in-top animate-delay"
+                      style={{ "--delay": "calc(2 * 0.05s)" }}
+                    >
+                      <div>
+                        <span>
+                          {
+                            prototype.getTournamentByID(game, tournament_id)
+                              .name
+                          }
+                        </span>
+                      </div>
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+              <div className="header-content">
+                <div className="header-image">
                   <img
                     src={`${
                       prototype.getTournamentByID(game, tournament_id).type ===
@@ -137,14 +137,6 @@ export default function Home() {
                             .customLogo
                         : ""
                     }`}
-                    width={`${
-                      prototype.getTournamentByID(game, tournament_id).type ===
-                      "custom"
-                        ? "auto"
-                        : "400"
-                    }`}
-                    height="auto"
-                    className="max-h-[175px] max-w-[350px] mt-6"
                     alt={prototype.getTournamentByID(game, tournament_id).name}
                   />
                   {prototype.getTournamentByID(game, tournament_id).sponsor && (
@@ -163,7 +155,7 @@ export default function Home() {
                     </>
                   )}
                 </div>
-                <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center md:items-start text-center md:text-left flex-1 pl-8 md:pl-0 pr-8 py-0 md:py-4 xl:py-4">
+                <div className="header-body">
                   <h1 className="text-4xl mb-2 leading-none">
                     {prototype.getTournamentByID(game, tournament_id).name}
                   </h1>
@@ -225,40 +217,34 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="col-span-8 xl:col-span-2 flex flex-col xl:items-end justify-start gap-4">
-                  {prototype.getTournamentByID(game, tournament_id).status !==
-                    "finished" && (
-                    <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                      <span className="font-headings font-bold italic text-ui-100 uppercase">
-                        {prototype.getTournamentByID(game, tournament_id)
-                          .status === "registration" ||
-                          (prototype.getTournamentByID(game, tournament_id)
-                            .status === "scheduled" && <>Starts in</>)}
-                      </span>
-                      <span className="icon icon-clock text-main" />
-                      <span className="font-headings font-bold italic uppercase text-main">
-                        {moment(
-                          prototype.getTournamentByID(game, tournament_id)
-                            .details.date,
-                          "YYYY-MM-DDThh:mm:ss.SSS"
-                        ).fromNow()}
-                      </span>
-                    </div>
-                  )}
-                </div>
               </div>
-              <div
-                className="absolute z-0 right-0 inset-y-0 w-full xl:w-2/3 animate-slide-in-right animate-delay"
-                style={{ "--delay": "calc(1 * 0.05s)" }}
-              >
-                <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/75"></div>
+              <div className="header-meta justify-start pr-0">
+                {prototype.getTournamentByID(game, tournament_id).status !==
+                  "finished" && (
+                  <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
+                    <span className="font-headings font-bold italic text-ui-100 uppercase">
+                      {prototype.getTournamentByID(game, tournament_id)
+                        .status === "registration" ||
+                        (prototype.getTournamentByID(game, tournament_id)
+                          .status === "scheduled" && <>Starts in</>)}
+                    </span>
+                    <span className="icon icon-clock text-main" />
+                    <span className="font-headings font-bold italic uppercase text-main">
+                      {moment(
+                        prototype.getTournamentByID(game, tournament_id).details
+                          .date,
+                        "YYYY-MM-DDThh:mm:ss.SSS"
+                      ).fromNow()}
+                    </span>
+                  </div>
+                )}
+              </div>
+              <div className="header-bg">
                 <img
-                  className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
                   src={prototype.getTournamentByID(game, tournament_id).cover}
                 />
               </div>
             </section>
-
             <nav>
               <ul className="tabs border-b border-ui-700">
                 {TabsItems.map((item, itemIndex) => (
@@ -280,7 +266,6 @@ export default function Home() {
                 ))}
               </ul>
             </nav>
-
             <div className="py-4">
               {TabsItems.map((item) => {
                 if (item.url === selectedTab) {

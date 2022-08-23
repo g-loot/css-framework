@@ -117,11 +117,11 @@ const Index = () => {
                                       item.query ? "?" : ""
                                     }${item.query}`}
                                   >
-                                    <a>
-                                      {item.tab === 2 && <>&#8259; </>}
-                                      {item.tab === 1 && <>&#8226; </>}
-                                      {!item.tab && <>&#9205;</>}
-                                      {item.label}
+                                    <a className="flex items-center gap-2">
+                                      {item.tab === 2 && <>—</>}
+                                      {item.tab === 1 && <>&#8226;</>}
+                                      {!item.tab && <><span className="icon icon-circle-caret-right" /></>}
+                                      <span>{item.label}</span>
                                     </a>
                                   </Link>
                                   {item.chip && (

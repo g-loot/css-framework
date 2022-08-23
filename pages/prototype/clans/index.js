@@ -29,41 +29,52 @@ export default function Clan() {
   return (
     <>
       <PrototypeStructure title="Clans">
-        <Ad width="1005" height="124" />
+        <Ad width="1005" height="300" />
         <section className="mb-8">
-          <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8 lg:min-h-[250px] lg:flex items-center">
-            <div className="relative z-10">
-              <h1 className="text-3xl sm:text-4xl">Be stronger with Clans!</h1>
-              <ul className="leading-relaxed text-ui-300 mt-4 list-disc ml-4">
-                <li>
-                  Work together in Clan Brawls to earn{" "}
-                  <span className="text-ui-100 font-bold">extra Coins</span>.
-                </li>
-                <li>
-                  <span className="text-ui-100 font-bold">Compete</span> in epic
-                  Showdowns with your clanmates for big rewards.
-                </li>
-                <li>
-                  Fight to take your Clan to the top of the leaderboard or just{" "}
-                  <span className="text-ui-100 font-bold">play for fun</span>.
-                </li>
-                <li>
-                  Find the perfect Clan for your playstyle and make{" "}
-                  <span className="text-ui-100 font-bold">new friends</span>.
-                </li>
-              </ul>
-            </div>
-            <div
-              className="absolute hidden md:block z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-              style={{ "--delay": "calc(1 * 0.05s)" }}
-            >
-              <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
-              <img
-                className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clans_bg.webp"
-              />
-            </div>
-          </div>
+        <div className="header surface sm:rounded-lg">
+                  <div className="header-content">
+                    <div className="header-body">
+                      <h2 className="text-3xl sm:text-4xl">
+                        Be stronger with Clans!
+                      </h2>
+                      <ul className="leading-relaxed text-ui-300 mt-4 list-disc ml-4">
+                        <li>
+                          Work together in Clan Brawls to earn{" "}
+                          <span className="text-ui-100 font-bold">
+                            extra Coins
+                          </span>
+                          .
+                        </li>
+                        <li>
+                          <span className="text-ui-100 font-bold">Compete</span>{" "}
+                          in epic Showdowns with your clanmates for big rewards.
+                        </li>
+                        <li>
+                          Fight to take your Clan to the top of the leaderboard
+                          or just{" "}
+                          <span className="text-ui-100 font-bold">
+                            play for fun
+                          </span>
+                          .
+                        </li>
+                        <li>
+                          Find the perfect Clan for your playstyle and make{" "}
+                          <span className="text-ui-100 font-bold">
+                            new friends
+                          </span>
+                          .
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="header-bg">
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clans_bg.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+          
         </section>
         <section
           className="mb-8 animate-slide-in-bottom animate-delay"

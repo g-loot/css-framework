@@ -21,10 +21,14 @@
     @apply
     shadow-lg
     animate-slide-in-top
-    max-w-md
     w-full
     ;
     animation-duration: 500ms;
+    &:not([class*="max-w"]) {
+      @apply
+      max-w-md
+      ;
+    }
   }
 }
 
@@ -81,7 +85,7 @@
   .modal-image {
     @apply
     flex-1
-    aspect-landscape
+    aspect-video
     lg:aspect-square
     relative
     bg-ui-900
@@ -90,6 +94,13 @@
     justify-center
     overflow-hidden
     ;
+
+    > span {
+      @apply
+      bg-cover
+      bg-center
+      ;
+    }
 
     > img {
       @apply

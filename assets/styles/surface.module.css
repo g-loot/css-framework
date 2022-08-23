@@ -29,6 +29,13 @@
     ;
   }
 
+  &.surface-highlight-premium {
+    @apply
+    border-gold-300
+    drop-shadow-premium
+    ;
+  }
+
   &.surface-halo {
     @apply
     relative

@@ -1,7 +1,5 @@
 import React, { useContext, useState } from "react";
 
-import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion-2.json";
 import { UiContext } from "../../contexts/ui.js";
 import { VariablesContext } from "../../contexts/variables";
 import { usePrototypeData } from "../../contexts/prototype";
@@ -11,12 +9,16 @@ export default function ModalFavoriteGames(props) {
   const prototype = usePrototypeData();
   const variablesContext = useContext(VariablesContext);
   const [submitting, setSubmitting] = useState(false);
-  const [selectedGamesCount, setSelectedGamesCount] = useState(0);
+  const [selectedGamesCount, setSelectedGamesCount] = useState(prototype.games.filter(g => g.isFavorite).length);
   const [disabled, setDisable] = useState(false);
 
   const handlechange = (event) => {
     console.log(event.target.checked);
-    console.log(selectedGamesCount);
+    if(event.target.checked) {
+      setSelectedGamesCount(selectedGamesCount + 1);
+    } else {
+      setSelectedGamesCount(selectedGamesCount - 1);
+    }
   };
 
   function closeModalWithDelay() {
@@ -26,6 +28,10 @@ export default function ModalFavoriteGames(props) {
       uiContext.closeModal();
       setSubmitting(false);
     }, 1000);
+  }
+
+  function clearSelectedGame() {
+    setSelectedGamesCount(0);
   }
 
   return (
@@ -70,11 +76,12 @@ export default function ModalFavoriteGames(props) {
             <div className="modal-action justify-center">
               <button className={`button button-primary w-32 ${
                   submitting ? "is-loading" : ""
-                } ${disabled ? "is-disabled" : ""}`}
-                onClick={closeModalWithDelay}>
+                }`}
+                onClick={closeModalWithDelay}
+                disabled={selectedGamesCount === 0}>
                 <span>Save</span>
               </button>
-              <button className="button button-secondary w-32" onClick={uiContext.closeModal}>
+              <button className="button button-secondary w-32" onClick={clearSelectedGame}>
                 <span>Clear all</span>
               </button>
             </div>

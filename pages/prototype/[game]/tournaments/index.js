@@ -46,48 +46,46 @@ export default function Home() {
   return (
     <>
       <PrototypeStructure title="Brawls">
-        <Ad width="1005" height="124" />
+        <Ad width="1005" height="300" />
 
         {selectedGame && (
           <>
-            <section className="relative surface sm:rounded-lg overflow-hidden mb-4">
-              <div className="relative z-10 grid grid-cols-8 gap-4 items-flex min-h-[250px]">
-                <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center pt-14 pb-8 md:pt-8">
-                  <div className="absolute top-0 left-0 py-2 px-4">
-                    <nav className="breadcrumbs" aria-label="Breadcrumb">
-                      <ol>
-                        <li
-                          className="animate-slide-in-top animate-delay"
-                          style={{ "--delay": "calc(0 * 0.05s)" }}
-                        >
-                          <Link
-                            href={`/prototype/home${hasAds ? "?ads=true" : ""}`}
-                          >
-                            <a href="#">
-                              <span className="icon icon-20 icon-home-2" />
-                              <span>Home</span>
-                            </a>
-                          </Link>
-                        </li>
-                        <li
-                          className="animate-slide-in-top animate-delay"
-                          style={{ "--delay": "calc(1 * 0.05s)" }}
-                        >
-                          <div>
-                            <span>Tournaments</span>
-                          </div>
-                        </li>
-                      </ol>
-                    </nav>
-                  </div>
+            <section className="header surface sm:rounded-lg mb-4">
+              <div className="header-breadcrumbs">
+                <nav className="breadcrumbs" aria-label="Breadcrumb">
+                  <ol>
+                    <li
+                      className="animate-slide-in-top animate-delay"
+                      style={{ "--delay": "calc(0 * 0.05s)" }}
+                    >
+                      <Link
+                        href={`/prototype/home${hasAds ? "?ads=true" : ""}`}
+                      >
+                        <a href="#">
+                          <span className="icon icon-20 icon-home-2" />
+                          <span>Home</span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className="animate-slide-in-top animate-delay"
+                      style={{ "--delay": "calc(1 * 0.05s)" }}
+                    >
+                      <div>
+                        <span>Tournaments</span>
+                      </div>
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+              <div className="header-content">
+                <div className="header-image">
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1657888944/Marketing/2022_prototype/Logo/samesize-tournaments.svg"
-                    width="400"
-                    height="auto"
-                    alt=""
+                    alt="Tournaments"
                   />
                 </div>
-                <div className="col-span-8 md:col-span-4 xl:col-span-3 flex flex-col justify-center items-center md:items-start text-center md:text-left flex-1 pl-8 md:pl-0 pr-8 py-0 md:py-4 xl:py-4">
+                <div className="header-body">
                   <h1 className="text-4xl mb-2 leading-none">
                     {selectedGame.name} tournaments
                   </h1>
@@ -112,32 +110,25 @@ export default function Home() {
                     </Link>
                   )}
                 </div>
-                <div className="col-span-8 xl:col-span-2 flex flex-col xl:items-end justify-start gap-4">
-                  <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                    <span className="font-headings font-bold italic text-ui-100 uppercase">
-                      Time Left:
-                    </span>
-                    <span className="icon icon-clock text-main" />
-                    <Countdown
-                      additionalClassNames="flex items-baseline gap-0.5 font-headings font-bold italic uppercase text-main"
-                      hasDays={true}
-                      hasLabels={true}
-                      hasSeconds={false}
-                      separator=" • "
-                      labelsAbbr={true}
-                    ></Countdown>
-                  </div>
+              </div>
+              <div className="header-meta justify-start pr-0">
+                <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
+                  <span className="font-headings font-bold italic text-ui-100 uppercase">
+                    Time Left:
+                  </span>
+                  <span className="icon icon-clock text-main" />
+                  <Countdown
+                    additionalClassNames="flex items-baseline gap-0.5 font-headings font-bold italic uppercase text-main"
+                    hasDays={true}
+                    hasLabels={true}
+                    hasSeconds={false}
+                    separator=" • "
+                    labelsAbbr={true}
+                  ></Countdown>
                 </div>
               </div>
-              <div
-                className="absolute z-0 right-0 inset-y-0 w-full xl:w-2/3 animate-slide-in-right animate-delay"
-                style={{ "--delay": "calc(1 * 0.05s)" }}
-              >
-                <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/95 to-ui-800/75"></div>
-                <img
-                  className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                  src={selectedGame.assets.heroTournament}
-                />
+              <div className="header-bg">
+                <img src={selectedGame.assets.heroTournament} />
               </div>
             </section>
 
