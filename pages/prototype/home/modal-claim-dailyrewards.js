@@ -13,9 +13,9 @@ export default function ModalClaimDailyRewards(props) {
     setSubmitting(true);
 
     setTimeout(() => {
-      variablesContext.claimReward();
-      uiContext.closeModal();
+      variablesContext.claimDailyReward();
       setSubmitting(false);
+      uiContext.closeModal();
     }, 1000);
   }
 
@@ -73,14 +73,6 @@ export default function ModalClaimDailyRewards(props) {
               </div>
             </div>
             <div className="modal-action">
-              {/*
-            {submitting && <span>...Submitting</span>}
-            {!submitting && (
-              <button type="button" onClick={closeModalWithDelay}>
-                Ok
-              </button>
-            )}
-            */}
               <button
                 type="button"
                 className={`button button-claim w-full ${

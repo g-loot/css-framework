@@ -32,6 +32,7 @@ const slides = [
 ];
 
 export default function Carousel(props) {
+  const isOnboarding = props.isOnboarding !== undefined ? props.isOnboarding : false;
   const [slideNumber, setSlideNumber] = useState(0);
   const interval = setTimeout(() => {
     nextHandler(slideNumber, slides.length);
@@ -106,7 +107,28 @@ export default function Carousel(props) {
                 className={`${slideNumber === itemIndex ? "is-active" : ""}`}
               >
                 <a onClick={slideHandler.bind(this, itemIndex)}>
-                  <span>Step {itemIndex + 1}</span>
+                  {isOnboarding && (
+                    <span>Step {itemIndex + 1}</span>
+                  )}
+                  {!isOnboarding && (
+                    <>
+                      {
+                        itemIndex === 0 && (
+                          <span>G-Loot</span>
+                        )
+                      }
+                      {
+                        itemIndex === 1 && (
+                          <span>News &amp; updates</span>
+                        )
+                      }
+                      {
+                        itemIndex === 2 && (
+                          <span>Shop</span>
+                        )
+                      }
+                    </>
+                  )}
                   <div>{item.title}</div>
                   <i />
                 </a>

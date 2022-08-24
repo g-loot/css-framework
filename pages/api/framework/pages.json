@@ -340,6 +340,15 @@
           "new": false
         },
         {
+          "label": "Solo leaderboard",
+          "chip": "empty state",
+          "url": "valorant/brawls/1",
+          "query": "tab=solo-leaderboard&empty=true",
+          "tags": "game, brawls, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze, empty state",
+          "tab": 2,
+          "new": true
+        },
+        {
           "label": "Solo leaderboard (with rewards to claim)",
           "url": "valorant/brawls/1",
           "query": "tab=solo-leaderboard&hasclaim=true",

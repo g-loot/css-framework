@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 
-import ModalClaimDailyRewards from "../prototype/home/modal-claim-dailyrewards";
+import ModalClaimLadderRewards from "../prototype/home/modal-claim-dailyrewards";
 import ModalContainer from "../../components/Modal/ModalContainer";
 import { UiContext } from "../../contexts/ui";
 import { VariablesContext } from "../../contexts/variables";
@@ -27,8 +27,8 @@ const DSpage = () => {
       setRandomNum2(varTarget + 1);
     }
   }
-  function openModalClaimDailyRewards() {
-    uiContext.openModal(<ModalClaimDailyRewards></ModalClaimDailyRewards>);
+  function openModalClaimLadderRewards() {
+    uiContext.openModal(<ModalClaimLadderRewards></ModalClaimLadderRewards>);
   }
 
   return (
@@ -365,7 +365,7 @@ const DSpage = () => {
                           <button
                             type="button"
                             className="button button-claim"
-                            onClick={openModalClaimDailyRewards}
+                            onClick={openModalClaimLadderRewards}
                           >
                             <span>Claim rewards</span>
                           </button>

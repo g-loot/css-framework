@@ -5,7 +5,7 @@ import LottieExplosion from "../../../assets/animations/explosion-2.json";
 import { UiContext } from "../../../contexts/ui.js";
 import { VariablesContext } from "../../../contexts/variables";
 
-export default function ModalClaimDailyRewards(props) {
+export default function ModalClaimLadderRewards(props) {
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
   const [submitting, setSubmitting] = useState(false);

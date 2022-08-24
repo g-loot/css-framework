@@ -540,6 +540,9 @@ label.button {
         scale-90
         grayscale
         brightness-90
+        hover:scale-95
+        hover:opacity-50
+        hover:grayscale-0
         ;
 
         &::before,

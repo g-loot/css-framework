@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import Accordion from "../../../components/Accordion/Accordion";
 import Link from "next/link";
@@ -58,6 +58,18 @@ export default function TabWalletOverview() {
   const uiContext = useContext(UiContext);
   const alernativeLayout = query.alternativelayout === "true" ? true : false;
   const modaBuyTokens = query.modalbuytokens === "true" ? true : false;
+  const [isMobile, setIsMobile] = useState(false);
+  const [windowSize, setWindowSize] = useState(0);
+
+  useEffect(() => {
+    handleResize();
+    
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   function openModalBuyTokens() {
     uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
@@ -68,6 +80,21 @@ export default function TabWalletOverview() {
       openModalBuyTokens();
     }
   }, [modaBuyTokens]);
+
+  function handleResize() {
+    if (window.innerWidth < 720) {
+        setIsMobile(true);
+    } else {
+        setIsMobile(false)
+    }
+    console.log(isMobile);
+  }
+  
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+  }, []);
+  
+
   return (
     <>
       {alernativeLayout && (
@@ -161,6 +188,7 @@ export default function TabWalletOverview() {
                 >
                   <Accordion
                     buttonActivation={true}
+                    isopen={isMobile}
                     header={
                       <>
                         <div className="flex gap-8 items-center justify-between">

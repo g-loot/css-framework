@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 
+import DailyReward from "../../components/DailyReward/DailyReward";
 import ModalClaimDailyRewards from "../prototype/home/modal-claim-dailyrewards";
 import ModalContainer from "../../components/Modal/ModalContainer";
 import { UiContext } from "../../contexts/ui";
@@ -131,6 +132,30 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/2jxumtby/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* With claim */}
+      <div className="mb-12" id="with-claim">
+        <h2 className="h3 mb-3">With claim</h2>
+        <div className="">
+          <div className="">
+            <div className="flex gap-4 flex-col">
+              <div className="flex-1 space-y-4">
+                <div className="max-w-sm surface rounded-lg p-2 mx-auto">
+                  <DailyReward />
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/oyneg1v8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

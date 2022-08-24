@@ -1,6 +1,6 @@
 import Countdown from "../Countdown/Countdown";
 import Link from "next/link";
-import ModalClaimDailyRewards from "../../pages/prototype/home/modal-claim-dailyrewards";
+import ModalClaimLadderRewards from "../../pages/prototype/home/modal-claim-dailyrewards";
 import { UiContext } from "../../contexts/ui";
 import { useContext } from "react";
 import { usePrototypeData } from "../../contexts/prototype";
@@ -14,8 +14,8 @@ export default function ListItemBrawl(props) {
   const uiContext = useContext(UiContext);
   const hasAds = query.ads === "true" ? true : false;
 
-  function openModalClaimDailyRewards() {
-    uiContext.openModal(<ModalClaimDailyRewards></ModalClaimDailyRewards>);
+  function openModalClaimLadderRewards() {
+    uiContext.openModal(<ModalClaimLadderRewards></ModalClaimLadderRewards>);
   }
 
   function numberWithSpaces(x) {
@@ -46,7 +46,7 @@ export default function ListItemBrawl(props) {
                     <button
                       type="button"
                       className="button button-claim"
-                      onClick={openModalClaimDailyRewards}
+                      onClick={openModalClaimLadderRewards}
                     >
                       <span>Claim reward</span>
                     </button>
@@ -213,7 +213,7 @@ export default function ListItemBrawl(props) {
                     <button
                       type="button"
                       className="button button-claim"
-                      onClick={openModalClaimDailyRewards}
+                      onClick={openModalClaimLadderRewards}
                     >
                       <span>Claim reward</span>
                     </button>

@@ -26,7 +26,7 @@ export default function TabTournamentsActive() {
         <>
           {selectedGame.tournaments?.length && (
             <section className="pb-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 hoverhighlight">
                 {selectedGame.tournaments?.map((tournament, tournamentIndex) => (
                   <Link
                     key={tournament.id}
@@ -34,105 +34,107 @@ export default function TabTournamentsActive() {
                       tournament.id
                     }${hasAds ? "?ads=true" : ""}`}
                   >
-                    <div
-                      className="animate-slide-in-right animate-delay"
-                      style={{
-                        "--delay": "calc(" + tournamentIndex + " * 0.05s)",
-                      }}
-                    >
-                      <div className="interactive card-tournament surface">
-                        <div className="card-decoration">
-                          <img
-                            src={`${
-                              tournament.type === "skirmish"
-                                ? "https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Skirmish-sameheight.svg"
-                                : ""
-                            } ${
-                              tournament.type === "showdown"
-                                ? "https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Showdown-sameheight.svg"
-                                : ""
-                            } ${
-                              tournament.type === "open"
-                                ? "https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
-                                : ""
-                            } ${
-                              tournament.type === "custom"
-                                ? tournament.customLogo
-                                : ""
-                            }`}
-                            width="auto"
-                            height="auto"
-                            alt={tournament.type}
-                            className="max-w-[75%] h-auto"
-                          />
-                          <div className="chip chip-secondary chip-xs">
-                            <span>{tournament.details.region}</span>
+                    <div>
+                      <div
+                        className="animate-slide-in-right animate-delay"
+                        style={{
+                          "--delay": "calc(" + tournamentIndex + " * 0.05s)",
+                        }}
+                      >
+                        <div className="card-tournament surface">
+                          <div className="card-decoration">
+                            <img
+                              src={`${
+                                tournament.type === "skirmish"
+                                  ? "https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Skirmish-sameheight.svg"
+                                  : ""
+                              } ${
+                                tournament.type === "showdown"
+                                  ? "https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Showdown-sameheight.svg"
+                                  : ""
+                              } ${
+                                tournament.type === "open"
+                                  ? "https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
+                                  : ""
+                              } ${
+                                tournament.type === "custom"
+                                  ? tournament.customLogo
+                                  : ""
+                              }`}
+                              width="auto"
+                              height="auto"
+                              alt={tournament.type}
+                              className="max-w-[75%] h-auto"
+                            />
+                            <div className="chip chip-secondary chip-xs">
+                              <span>{tournament.details.region}</span>
+                            </div>
                           </div>
-                        </div>
-                        <div className="card-body">
-                          <div
-                            className={`chip chip-sm chip-sliced ${
-                              tournament.status === "ongoing" ? "chip-blue" : ""
-                            } ${
-                              tournament.status === "finished" ? "chip-gray" : ""
-                            }`}
-                          >
-                            <span>
-                              {tournament.status === "ongoing" && <>Ongoing</>}
-                              {tournament.status === "registration" && (
-                                <>Reg open</>
-                              )}
-                              {tournament.status === "finished" && (
-                                <>Finished</>
-                              )}
-                            </span>
-                          </div>
-                          <div className="card-title">{tournament.name}</div>
-                          <div className="flex gap-2 text-sm text-ui-300 items-center">
-                            <span className="icon icon-calendar-date-2" />
-                            <span>{moment(
-                            tournament.details.date,
-                            "YYYY-MM-DDThh:mm:ss.SSS"
-                          ).format("MMM Do [•] h A")}</span>
-                          </div>
-                          <div className="card-meta">
-                            <div>
-                              <label>Entry</label>
-                              <div className="font-bold">
-                                {tournament.details.entryFee === "free" && (
-                                  <>FREE</>
+                          <div className="card-body">
+                            <div
+                              className={`chip chip-sm chip-sliced ${
+                                tournament.status === "ongoing" ? "chip-blue" : ""
+                              } ${
+                                tournament.status === "finished" ? "chip-gray" : ""
+                              }`}
+                            >
+                              <span>
+                                {tournament.status === "ongoing" && <>Ongoing</>}
+                                {tournament.status === "registration" && (
+                                  <>Reg open</>
                                 )}
-                                {tournament.details.entryFee !== "free" && (
-                                  <>
-                                  {tournament.details.entryFee.map((reward, rewardIndex) =>
+                                {tournament.status === "finished" && (
+                                  <>Finished</>
+                                )}
+                              </span>
+                            </div>
+                            <div className="card-title">{tournament.name}</div>
+                            <div className="flex gap-2 text-sm text-ui-300 items-center">
+                              <span className="icon icon-calendar-date-2" />
+                              <span>{moment(
+                              tournament.details.date,
+                              "YYYY-MM-DDThh:mm:ss.SSS"
+                            ).format("MMM Do [•] h A")}</span>
+                            </div>
+                            <div className="card-meta">
+                              <div>
+                                <label>Entry</label>
+                                <div className="font-bold">
+                                  {tournament.details.entryFee === "free" && (
+                                    <>FREE</>
+                                  )}
+                                  {tournament.details.entryFee !== "free" && (
+                                    <>
+                                    {tournament.details.entryFee.map((reward, rewardIndex) =>
+                                      <Reward key={rewardIndex} reward={reward} gap="gap-1" imageClassNames="h-4" textClassNames="text-ui-200 font-bold" />
+                                    )}
+                                    </>
+                                  )}
+                                </div>
+                              </div>
+                              <div>
+                                <label>Prize Pool</label>
+                                <div className="flex items-center gap-2">
+                                  {tournament.rewards.map((reward, rewardIndex) =>
                                     <Reward key={rewardIndex} reward={reward} gap="gap-1" imageClassNames="h-4" textClassNames="text-ui-200 font-bold" />
                                   )}
-                                  </>
-                                )}
+                                </div>
                               </div>
-                            </div>
-                            <div>
-                              <label>Prize Pool</label>
-                              <div className="flex items-center gap-2">
-                                {tournament.rewards.map((reward, rewardIndex) =>
-                                  <Reward key={rewardIndex} reward={reward} gap="gap-1" imageClassNames="h-4" textClassNames="text-ui-200 font-bold" />
-                                )}
+                              <div>
+                                <ul>
+                                  <li>4v4</li>
+                                  <li>64 slots</li>
+                                </ul>
                               </div>
-                            </div>
-                            <div>
-                              <ul>
-                                <li>4v4</li>
-                                <li>64 slots</li>
-                              </ul>
                             </div>
                           </div>
-                        </div>
-                        <div className="card-bg">
-                          <span
-                            style={{
-                              backgroundImage: `url(${tournament.cover})`,
-                            }}
-                          />
+                          <div className="card-bg">
+                            <span
+                              style={{
+                                backgroundImage: `url(${tournament.cover})`,
+                              }}
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>

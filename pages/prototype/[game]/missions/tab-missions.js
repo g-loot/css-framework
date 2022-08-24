@@ -251,15 +251,15 @@ export default function TabMissionsMissions() {
               <p className="max-w-[50ch] text-sm text-ui-300 mx-auto mt-2 mb-5">
                 Increase your amount of daily missions and XP you can earn each
                 day with a{" "}
-                <Link href={`premium${hasAds ? "?ads=true" : ""}`}>
-                  <a href="#" className="link">
+                <Link href={`/prototype/premium${hasAds ? "?ads=true" : ""}`}>
+                  <a className="link">
                     Premium subscription
                   </a>
                 </Link>
                 .
               </p>
               <div className="mx-auto">
-                <Link href={`premium${hasAds ? "?ads=true" : ""}`}>
+                <Link href={`/prototype/premium${hasAds ? "?ads=true" : ""}`}>
                   <a className="button button-premium is-shining">
                     <span>Join Premium</span>
                   </a>
