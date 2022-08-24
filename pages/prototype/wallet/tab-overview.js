@@ -183,7 +183,7 @@ export default function TabWalletOverview() {
                             </div>
                           </div>
                           <div className="flex-1 flex justify-start items-center">
-                            <div className="lg:w-40">
+                            <div className="lg:w-40 hidden lg:block">
                               {item.button && (
                                 <>
                                   {item.button === "buy" && (
@@ -217,9 +217,9 @@ export default function TabWalletOverview() {
                       </>
                     }
                   >
-                    <div className="py-8 flex flex-col lg:flex-row gap-4 lg:gap-8 items-start leading-tight">
+                    <div className="p-4 lg:px-0 lg:py-8 flex flex-col lg:flex-row gap-4 lg:gap-8 items-start leading-tight">
                       <div className="flex gap-2 items-start justify-start lg:w-96">
-                        <div className="w-28" />
+                        <div className="hidden md:block w-28" />
                         <div className="flex gap-4">
                           <div className="font-bold uppercase">Use</div>
                           <div
@@ -231,7 +231,7 @@ export default function TabWalletOverview() {
                         </div>
                       </div>
                       <div className="flex gap-2 items-start justify-start lg:w-96">
-                        <div className="w-28 lg:hidden" />
+                        <div className="hidden md:block w-28" />
                         <div className="font-bold uppercase">Get</div>
                         <div
                           className="text-ui-300"
@@ -239,6 +239,35 @@ export default function TabWalletOverview() {
                             __html: item.get,
                           }}
                         />
+                      </div>
+                      <div className="block lg:hidden">
+                        {item.button && (
+                          <>
+                            {item.button === "buy" && (
+                              <button
+                                type="button"
+                                className="button button-primary w-full"
+                                onClick={openModalBuyTokens}
+                              >
+                                <span>Buy tokens</span>
+                              </button>
+                            )}
+                            {item.button === "visitshop" && (
+                              <Link
+                                href={`/prototype/shop${
+                                  hasAds ? "?ads=true" : ""
+                                }`}
+                              >
+                                <button
+                                  type="button"
+                                  className="button button-secondary w-full"
+                                >
+                                  <span>Visit shop</span>
+                                </button>
+                              </Link>
+                            )}
+                          </>
+                        )}
                       </div>
                     </div>
                   </Accordion>

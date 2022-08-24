@@ -98,7 +98,6 @@ export default function Home() {
                   {selectedUser.isYou && (
                     <Link href="settings">
                       <a
-                        type="button"
                         className="button button-sm button-tertiary"
                       >
                         <span className="icon icon-cogwheel" />
@@ -109,7 +108,6 @@ export default function Home() {
                   {!selectedUser.isYou && (
                     <Link href="#">
                       <a
-                        type="button"
                         className="button button-sm button-primary"
                       >
                         <span>Invite to your clan</span>

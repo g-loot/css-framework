@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../components/Ad/Ad";
 import Carousel from "../../../components/Carousel/Carousel";
@@ -14,6 +14,51 @@ import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 
+const DailyRewards = [
+  {
+    name: "Day 1",
+    reward: "",
+    rewardImage:
+      "https://res.cloudinary.com/gloot/image/upload/v1653393860/Marketing/2022_prototype/CurrencyRewards/Reward-coin-unique.png",
+  },
+  {
+    name: "Day 2",
+    reward: "",
+    rewardImage:
+      "https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png",
+  },
+  {
+    name: "Day 3",
+    reward: "",
+    rewardImage:
+      "https://res.cloudinary.com/gloot/image/upload/v1653393860/Marketing/2022_prototype/CurrencyRewards/Reward-coin-unique.png",
+  },
+  {
+    name: "Day 4",
+    reward: "",
+    rewardImage:
+      "https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-coin-small.png",
+  },
+  {
+    name: "Day 5",
+    reward: "",
+    rewardImage:
+      "https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png",
+  },
+  {
+    name: "Day 6",
+    reward: "",
+    rewardImage:
+      "https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-mixed-small.png",
+  },
+  {
+    name: "Day 7",
+    reward: "",
+    rewardImage:
+      "https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png",
+  },
+];
+
 export default function Home() {
   const router = useRouter();
   const { query } = useRouter();
@@ -22,6 +67,7 @@ export default function Home() {
   const prototype = usePrototypeData();
   const modalCreate = query.modalclaim === "true" ? true : false;
   const modalVideo = query.modalvideo === "true" ? true : false;
+  const [dailyNumber, setDailyNumber] = useState(0);
 
   function openModalBrawlHowitworksVideo() {
     uiContext.openModal(
@@ -155,6 +201,107 @@ export default function Home() {
 
             */}
 
+          <div className="xl:h-96 surface sm:rounded-lg flex flex-col flex-1 relative overflow-hidden">
+            <div className="flex-none">
+              <div className="p-2 border-b border-ui-700 flex justify-between items-start">
+                <div>
+                  <h2 className="text-2xl">Daily rewards</h2>
+                  <span className="text-sm text-ui-300">
+                    Claim a free reward each day
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="flex-1 flex min-h-[200px] p-2">
+              <ul className="dailyreward">
+                {DailyRewards.map((reward, rewardIndex) => (
+                  <li
+                    key={rewardIndex}
+                    className={`${
+                      dailyNumber > rewardIndex ? `is-active` : ""
+                    }`}
+                  >
+                    <div className="mx-auto flip">
+                      <div className="flip-front">
+                        <span className="text-sm text-ui-300 uppercase">
+                          {reward.name}
+                        </span>
+                        <img src={reward.rewardImage} alt={reward.name} />
+                      </div>
+                      <div className="flip-back">
+                        <span className="text-sm text-ui-400 uppercase">
+                          {reward.name}
+                        </span>
+                        <div className="checkmark checkmark-sm">
+                          <i></i>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="xl:h-96 surface sm:rounded-lg flex flex-col">
+            <div className="flex-none">
+              <div className="p-2 border-b border-ui-700 flex justify-between items-start">
+                <div>
+                  <h2 className="text-2xl">Clan Brawls</h2>
+                  <span className="text-sm text-ui-300">
+                    Showing your Clans latest Brawls
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="flex-1 flex flex-col items-center justify-center text-center relative pt-8 min-h-[200px]">
+              <div className="absolute z-0 inset-0 flex items-center justify-center overflow-hidden">
+                <img
+                  className="relative z-10"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1660741451/Marketing/2022_prototype/3Dobjects/3dobject-clan.webp"
+                  width="200"
+                  height="auto"
+                  alt="Clan"
+                />
+                <div className="absolute z-0 rounded-full bg-gradient-to-r from-main via-blue-700 to-main/0 w-10 h-10 blur-lg transform-gpu"></div>
+              </div>
+              <h3 className="text-xl max-w-[30ch] mt-8 relative z-10">
+                You can earn more rewards when playing Brawls with a Clan!
+              </h3>
+            </div>
+            <div className="flex-none relative z-30 flex flex-col items-center justify-center mb-4">
+              <Link href={`/prototype/clans${hasAds ? "?ads=true" : ""}`}>
+                <button type="button" className="button button-primary">
+                  <span>View clans</span>
+                </button>
+              </Link>
+            </div>
+          </div>
+          <div className="xl:h-96 surface sm:rounded-lg flex flex-col">
+            <div className="flex-none p-2 border-b border-ui-700 flex justify-between items-start">
+              <div>
+                <h2 className="text-2xl">Your Brawls</h2>
+                <span className="text-sm text-ui-300">
+                  Showing your latest Solo Brawls
+                </span>
+              </div>
+            </div>
+            <div className="max-h-150px overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto scrollbar-desktop">
+              <ul className="space-x-2 lg:space-x-0 lg:space-y-2 p-2 flex lg:block">
+                {prototype.games.map((game, gameIndex) => (
+                  <>
+                    {game.brawls?.map((brawl, brawlIndex) => (
+                      <ListItemBrawl
+                        key={brawlIndex}
+                        game={game}
+                        brawl={brawl}
+                      />
+                    ))}
+                  </>
+                ))}
+              </ul>
+            </div>
+          </div>
           <div className="xl:h-96 surface sm:rounded-lg flex flex-col flex-1 relative overflow-hidden p-4">
             <div className="relative z-10 flex items-start gap-4">
               <div className="rounded flex items-center justify-center h-12 w-12 bg-gradient-to-b from-ui-900/75 to-ui-800">
@@ -215,61 +362,6 @@ export default function Home() {
                 backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289889/Marketing/202109_gloot2/laststats-valorant.png)`,
               }}
             ></div>
-          </div>
-          <div className="xl:h-96 surface sm:rounded-lg flex flex-col">
-            <div className="flex-none">
-              <div className="p-2 border-b border-ui-700 flex justify-between items-start">
-                <div>
-                  <h2 className="text-2xl">Clan Brawls</h2>
-                  <span className="text-sm text-ui-300">
-                    Showing your Clans latest Brawls
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div className="flex-1 flex flex-col items-center justify-center text-center relative pt-8 min-h-[200px]">
-              <div className="absolute z-0 inset-0 flex items-center justify-center overflow-hidden">
-                <img
-                  className="relative z-10"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1660741451/Marketing/2022_prototype/3Dobjects/3dobject-clan.webp"
-                  width="200"
-                  height="auto"
-                  alt="Clan"
-                />
-                <div className="absolute z-0 rounded-full bg-gradient-to-r from-main via-blue-700 to-main/0 w-10 h-10 blur-lg transform-gpu"></div>
-              </div>
-              <h3 className="text-xl max-w-[30ch] mt-8 relative z-10">
-                You can earn more rewards when playing Brawls with a Clan!
-              </h3>
-            </div>
-            <div className="flex-none relative z-30 flex flex-col items-center justify-center mb-4">
-              <Link href={`/prototype/clans${hasAds ? "?ads=true" : ""}`}>
-                <button type="button" className="button button-primary">
-                  <span>View clans</span>
-                </button>
-              </Link>
-            </div>
-          </div>
-          <div className="xl:h-96 surface sm:rounded-lg flex flex-col">
-            <div className="flex-none p-2 border-b border-ui-700 flex justify-between items-start">
-              <div>
-                <h2 className="text-2xl">Your Brawls</h2>
-                <span className="text-sm text-ui-300">
-                  Showing your latest Solo Brawls
-                </span>
-              </div>
-            </div>
-            <div className="max-h-150px overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto scrollbar-desktop">
-              <ul className="space-x-2 lg:space-x-0 lg:space-y-2 p-2 flex lg:block">
-                {prototype.games.map((game, gameIndex) => (
-                  <>
-                    {game.brawls?.map((brawl, brawlIndex) => (
-                      <ListItemBrawl key={brawlIndex} game={game} brawl={brawl} />
-                    ))}
-                  </>
-                ))}
-              </ul>
-            </div>
           </div>
         </section>
       </PrototypeStructure>

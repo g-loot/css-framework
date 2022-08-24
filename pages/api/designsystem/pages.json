@@ -133,7 +133,7 @@
         },
         {
           "label": "Reward ladder",
-          "tags": "content,reward,ladder,progression,leaderboard",
+          "tags": "content,reward,ladder,progression,leaderboard,claim,tokens,coins,prize,delight",
           "url": "rewardladder"
         },
         {
@@ -165,6 +165,11 @@
           "label": "Header",
           "tags": "ui,header,introduction,banner,hero,content",
           "url": "header"
+        },
+        {
+          "label": "Daily reward",
+          "tags": "content,reward,ladder,progression,leaderboard,claim,tokens,coins,prize,delight,daily rewards",
+          "url": "dailyreward"
         }
       ]
     },

@@ -250,6 +250,90 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* With extra elements */}
+      <div className="mb-12" id="with-extra-elements">
+        <h2 className="h3 mb-3">With extra elements</h2>
+        <div className="">
+          <div className="">
+            <div className="flex gap-4 flex-col">
+              <div className="flex-1 space-y-4">
+                <div className="header surface rounded-lg">
+                  <div className="header-breadcrumbs">
+                    <nav className="breadcrumbs" aria-label="Breadcrumb">
+                      <ol>
+                        <li>
+                          <a href="#">
+                            <span className="icon icon-20 icon-home-2" />
+                            <span>Home</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <span>Games</span>
+                          </a>
+                        </li>
+                        <li aria-current="page">
+                          <div>
+                            <span>Tournaments</span>
+                          </div>
+                        </li>
+                      </ol>
+                    </nav>
+                  </div>
+                  <div className="header-content">
+                    <div className="header-image">
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1657888944/Marketing/2022_prototype/Logo/samesize-showdown.svg"
+                        alt=""
+                      />
+                    </div>
+                    <div className="header-body">
+                      <h2 className="text-4xl mb-2 leading-none">Showdown</h2>
+                      <p className="text-ui-300 max-w-[45ch] mb-4">
+                        Compete in esports tournaments in your favorite games! Invite your friends and compete for bragging rights, prizes, or just for fun.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="absolute z-50 top-3 right-3 md:top-auto md:bottom-3 text-0">
+                    <span className="icon icon-adult-content text-3xl" />
+                  </div>
+                  <div className="header-meta justify-start pr-0">
+                    <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
+                      <span className="font-headings font-bold italic text-ui-100 uppercase">
+                        Time Left:
+                      </span>
+                      <span className="icon icon-clock text-main" />
+                      <Countdown
+                        additionalClassNames="flex items-baseline gap-0.5 font-headings font-bold italic uppercase text-main"
+                        hasDays={true}
+                        hasLabels={true}
+                        hasSeconds={false}
+                        separator=" • "
+                        labelsAbbr={true}
+                      ></Countdown>
+                    </div>
+                  </div>
+                  <div className="header-bg">
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/3gxabjt8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Simple */}
       <div className="mb-12" id="simple">
         <h2 className="h3 mb-3">Simple</h2>
@@ -373,6 +457,15 @@ const DSpage = () => {
                         </div>
                       </div>
                     </div>
+                  </div>
+                  <div className="hidden lg:block absolute z-20 top-2 right-2">
+                    <button
+                      type="button"
+                      className="button button-sm button-tertiary"
+                    >
+                      <span className="icon icon-cogwheel" />
+                      <span>Profile settings</span>
+                    </button>
                   </div>
                   <div className="header-meta">
                     <div className="flex justify-center gap-4 py-4">

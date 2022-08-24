@@ -111,21 +111,8 @@ export default function Home() {
                   )}
                 </div>
               </div>
-              <div className="header-meta justify-start pr-0">
-                <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                  <span className="font-headings font-bold italic text-ui-100 uppercase">
-                    Time Left:
-                  </span>
-                  <span className="icon icon-clock text-main" />
-                  <Countdown
-                    additionalClassNames="flex items-baseline gap-0.5 font-headings font-bold italic uppercase text-main"
-                    hasDays={true}
-                    hasLabels={true}
-                    hasSeconds={false}
-                    separator=" • "
-                    labelsAbbr={true}
-                  ></Countdown>
-                </div>
+              <div className="header-meta justify-end items-end p-3 text-0">
+                <span className="icon icon-adult-content text-3xl" />
               </div>
               <div className="header-bg">
                 <img src={selectedGame.assets.heroTournament} />

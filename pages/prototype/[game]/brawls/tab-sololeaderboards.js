@@ -711,6 +711,22 @@ export default function TabBrawlsSoloLeaderboards() {
                                                     : ""
                                                 }`}
                                               >
+                                                {prototype.getUserByID(
+                                                  user.user
+                                                )?.clan && (
+                                                  <>
+                                                    &#91;
+                                                    {
+                                                      prototype.getClanByID(
+                                                        prototype.getUserByID(
+                                                          user.user
+                                                        )?.clan
+                                                      )?.tag
+                                                    }
+                                                    &#93;{" "}
+                                                  </>
+                                                )}
+
                                                 {
                                                   prototype.getUserByID(
                                                     user.user
@@ -910,9 +926,7 @@ export default function TabBrawlsSoloLeaderboards() {
                     </div>
                     <div className="text-ui-300">
                       Leaderboard ID:{" "}
-                      <span className="text-ui-100 font-bold">
-                        225VG19
-                      </span>
+                      <span className="text-ui-100 font-bold">225VG19</span>
                     </div>
                   </div>
                 </div>

@@ -1,0 +1,127 @@
+/*----------------------------*/
+/* DAILY REWARD */
+/*----------------------------*/
+
+.dailyreward {
+  @apply
+  grid
+  grid-cols-5
+  grid-rows-2
+  gap-2
+  w-full
+  h-full
+  ;
+  perspective: 500px;
+
+  .flip {
+    @apply
+    w-full
+    h-full
+    aspect-card
+    ;
+    > * {
+      @apply
+      rounded
+      flex
+      flex-col
+      gap-2
+      items-center
+      justify-center
+      overflow-hidden
+      transition-all
+      duration-500
+      ease-in-out
+      ;
+
+      img {
+        @apply
+        max-h-[50%]
+        max-w-[120px]
+        drop-shadow-lg
+        transition-all
+        duration-500
+        ease-in-out
+        scale-100
+        ;
+      }
+    }
+
+    > .flip-front {
+      @apply
+      bg-ui-700/50
+      shadow-[inset_0_0_0.5rem_0_rgba(var(--color-ui-600)/0)]
+      ;
+    }
+
+    > .flip-back {
+      @apply
+      bg-gradient-to-b
+      from-ui-900/50
+      to-ui-900/10
+      ;
+      img {
+        @apply
+        translate-y-4
+        opacity-0
+        transition-all
+        duration-[1.25s]
+        ease-[cubic-bezier(0.8,0,0.2,1)]
+        ;
+      }
+    }
+  }
+
+  .checkmark {
+    > i {
+      &::before,
+      &::after {
+        @apply
+        delay-500
+        ;
+      }
+    }
+  }
+
+  > :where(li, div) {
+    &.is-active {
+      .flip {
+        transform: translate3d(0,0,0) rotateY(180deg);
+        .flip-front {
+          @apply
+          shadow-[inset_0_-600px_0.5rem_0_rgb(var(--color-ui-600))]
+          ;
+          img {
+            @apply
+            scale-110
+            ;
+          }
+        }
+        .flip-back {
+          img {
+            @apply
+            translate-y-0
+            opacity-100
+            ;
+          }
+        }
+        .checkmark {
+          @apply
+          shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
+          ;
+          > i {
+            &::before,
+            &::after {
+              @apply
+              translate-y-0
+              ;
+            }
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      grid-area: 1 / 4 / span 2 / 6;
+    }
+  }
+}

@@ -72,7 +72,7 @@
     left-2
     ;
 
-    + .header-content > *:first-child {
+    ~ .header-content > *:first-child {
       @apply
       pt-12
       md:pt-10
@@ -162,7 +162,7 @@
       ;
     }
 
-    + .header-bg {
+    ~ .header-bg {
       &::before {
         @apply
         from-ui-800

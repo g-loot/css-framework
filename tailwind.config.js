@@ -215,6 +215,7 @@ module.exports = {
       },
       aspectRatio: {
         'story': '9 / 16',
+        'card': '5 / 7',
         'landscape': '10 / 3',
       },
       height: {
