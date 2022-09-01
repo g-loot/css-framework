@@ -23,9 +23,9 @@
 
   > [tabIndex]:first-child {
     @apply
-    m-1
     cursor-pointer
     ;
+    
   }
 
   .dropdown-content {

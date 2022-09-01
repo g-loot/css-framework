@@ -1,9 +1,13 @@
+import { useContext, useEffect } from "react";
+
 import Button from "../Button/Button";
 import Icon from "../Icon/Icon";
 import Link from "next/link";
 import Lottie from "lottie-react";
 import LottieExplosion from "../../assets/animations/explosion-1.json";
+import ModalDownloadStarted from "../../pages/prototype/modal-downloadstarted";
 import Tooltip from "../Tooltip/Tooltip";
+import { UiContext } from "../../contexts/ui";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -77,7 +81,19 @@ const notificationsGroups = [
 export default function Topbar() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
+  const uiContext = useContext(UiContext);
   const hasAds = query.ads === "true" ? true : false;
+  const modalDownloadStarted = query.modaldownloadstarted === "true" ? true : false;
+
+  useEffect(() => {
+    if (modalDownloadStarted) {
+      openModalDownloadStarted();
+    }
+  }, [modalDownloadStarted]);
+
+  function openModalDownloadStarted() {
+    uiContext.openModal(<ModalDownloadStarted></ModalDownloadStarted>);
+  }
 
   return (
     <div className="sticky top-0 z-50 bg-ui-800/50 navbar">
@@ -295,7 +311,11 @@ export default function Topbar() {
                 </div>
               </div>
               <div className="flex items-center">
-                <Button variant="claim" size="sm" label="Download tracker" />
+                <button type="button" className="button button-claim button-sm" onClick={openModalDownloadStarted}>
+                  <span>
+                    Download tracker
+                  </span>
+                </button>
               </div>
             </div>
             <div className="flex items-center justify-end">

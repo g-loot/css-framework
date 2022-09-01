@@ -65,7 +65,6 @@
     bg-ui-700
     border
     border-ui-500
-    rounded
     focus-visible:outline
     focus-visible:outline-1
     focus-visible:outline-ui-300
@@ -80,6 +79,15 @@
       ;
     }
   }
+
+  > :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, .form-select > select) {
+    &:not([class*="rounded-"]) {
+      @apply
+      rounded
+      ;
+    }
+  }
+  
 }
 
 
@@ -620,21 +628,35 @@ label.button {
 
 .input-group {
   @apply
-  rounded
   flex
   relative
   ;
+  &:not([class*="rounded-"]) {
+    @apply
+    rounded
+    ;
+  }
 
-  > :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, button, .button, .button.button-primary) {
-    &:not(input) {
-      @apply
-      rounded-none
-      ;
-    }
+  /* :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, button, .button, .button.button-primary) */
+
+  > * {
+    @apply
+    rounded-none
+    ;
     &:first-child {
       @apply
       rounded-l
       ;
+      + input {
+        @apply
+        border-l-0
+        ;
+        &:not(::last-child) {
+          @apply
+          border-r-0
+          ;
+        }
+      }
     }
     &:last-child {
       @apply
@@ -644,27 +666,33 @@ label.button {
   }
 
   > :where(.icon, .button) {
-    @apply
-    relative
-    z-30
-    ;
     &:first-child {
-      + :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea) {
+      @apply
+      relative
+      z-30
+      ;
+      + input {
         @apply
         rounded-l
+        border-l
+        relative 
+        z-10
         ;
       }
     }
   }
 
   > .button.button-primary {
-    @apply
-    rounded-l-none
-    ;
-    + :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea) {
+    &:first-child {
       @apply
-      rounded-r-none
+      rounded-l-none
       ;
+      + input {
+        @apply
+        border-r-0
+        rounded-r-none
+        ;
+      }
     }
   }
 
@@ -681,32 +709,6 @@ label.button {
       text-ui-200
       text-sm
       ;
-      &:first-child {
-        @apply
-        rounded-l
-        border-l
-        ;
-      }
-      &:last-child {
-        @apply
-        rounded-r
-        ;
-      }
-
-      &:not(:last-child) {
-        @apply
-        border-r-0
-        rounded-r-none
-        ;
-      }
-
-      ~ :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea) {
-        &:last-child {
-          @apply
-          rounded-r
-          ;
-        }
-      }
     }
   }
   
@@ -939,6 +941,7 @@ label.button {
       @apply
       content-['']
       absolute
+      z-40
       h-6
       w-6
       block

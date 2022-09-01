@@ -171,10 +171,18 @@
 
       p {
         @apply
-        leading-loose
-        text-ui-200
         my-2
         ;
+        &:not([class*="leading-"]) {
+          @apply
+          leading-loose
+          ;
+        }
+        &:not([class*="text-"]) {
+          @apply
+          text-ui-200
+          ;
+        }
       }
     }
   }

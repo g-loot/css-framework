@@ -90,10 +90,14 @@ h6,
   ;
 }
 
-hr {
+hr,
+.separator {
   @apply
   border-ui-600
   mx-auto
+  block
+  w-full
+  h-px
   ;
 
   &.separator-gradient {

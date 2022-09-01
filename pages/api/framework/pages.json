@@ -39,7 +39,7 @@
           "url": "home",
           "query": "modalclaim=true",
           "tab": 1,
-          "new": true,
+          "new": false,
           "tags": "home, start, index, claim, rewards, daily missions, modal, prompt"
         },
         {
@@ -48,8 +48,17 @@
           "url": "home",
           "query": "modalfavoritegames=true",
           "tab": 1,
-          "new": true,
+          "new": false,
           "tags": "home, start, index, favorite games, preference, user, modal, prompt"
+        },
+        {
+          "label": "Download started",
+          "chip": "modal",
+          "url": "home",
+          "query": "modaldownloadstarted=true",
+          "tab": 1,
+          "new": false,
+          "tags": "home, start, index, favorite games, preference, user, modal, prompt, download, tracker, install, client"
         },
         {
           "label": "Tournament schedule",
@@ -57,7 +66,7 @@
           "url": "home",
           "query": "modaltournamentschedule=true",
           "tab": 1,
-          "new": true,
+          "new": false,
           "tags": "home, start, index, tournament schedule, agenda, upcoming, competition, modal, prompt"
         }
       ]
@@ -77,7 +86,7 @@
           "query": "emptyclan=true",
           "tags": "profile, view, user, empty state",
           "tab": 1,
-          "new": true
+          "new": false
         },
         {
           "label": "Profile (others)",
@@ -92,7 +101,7 @@
           "query": "",
           "tags": "profile, view, user, empty state",
           "tab": 1,
-          "new": true
+          "new": false
         },
         {
           "label": "Profile settings",
@@ -100,6 +109,13 @@
           "query": "",
           "tags": "profile, edit, user, settings, form",
           "tab": 0
+        },
+        {
+          "label": "Profile settings (connected to Riot)",
+          "url": "profile/settings",
+          "query": "connected=true",
+          "tags": "profile, edit, user, settings, form, connected, game account, riot games",
+          "tab": 1
         }
       ]
     },
@@ -111,14 +127,14 @@
           "url": "clans",
           "query": "",
           "tags": "clan,team",
-          "new": true
+          "new": false
         },
         {
           "label": "Clans search",
           "url": "clans/search",
           "query": "",
           "tags": "clan, team, search, form, find",
-          "new": true
+          "new": false
         },
         {
           "label": "Clan detail (self)",
@@ -126,7 +142,7 @@
           "query": "",
           "tags": "clan, team, self",
           "tab": 0,
-          "new": true
+          "new": false
         },
         {
           "label": "Clan detail (self) (no Brawls)",
@@ -135,7 +151,7 @@
           "query": "emptystate=true",
           "tags": "clan, team, empty state",
           "tab": 1,
-          "new": true
+          "new": false
         },
         {
           "label": "Clan detail (others)",
@@ -143,7 +159,7 @@
           "query": "",
           "tags": "clan, team",
           "tab": 0,
-          "new": true
+          "new": false
         },
         {
           "label": "Clan detail (others) (no Brawls)",
@@ -152,7 +168,7 @@
           "query": "emptystate=true",
           "tags": "clan, team, empty state",
           "tab": 1,
-          "new": true
+          "new": false
         },
         {
           "label": "Create clan",
@@ -161,7 +177,7 @@
           "query": "modalcreate=true",
           "tags": "clan, team, modal, prompt",
           "tab": 1,
-          "new": true
+          "new": false
         }
       ]
     },
@@ -180,7 +196,7 @@
           "query": "",
           "tags": "shop, voucher, riot games, amazon, steam, drkn, ifood, reward",
           "tab": 0,
-          "new": true
+          "new": false
         },
         {
           "label": "Voucher details (with banner)",
@@ -188,7 +204,7 @@
           "query": "",
           "tags": "shop, voucher, riot games, amazon, steam, drkn, ifood, reward",
           "tab": 1,
-          "new": true
+          "new": false
         }
       ]
     },
@@ -264,7 +280,7 @@
           "query": "",
           "tags": "game, missions",
           "tab": 1,
-          "new": true
+          "new": false
         },
         {
           "label": "How it works",
@@ -346,7 +362,7 @@
           "query": "tab=solo-leaderboard&empty=true",
           "tags": "game, brawls, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze, empty state",
           "tab": 2,
-          "new": true
+          "new": false
         },
         {
           "label": "Solo leaderboard (with rewards to claim)",
@@ -354,7 +370,7 @@
           "query": "tab=solo-leaderboard&hasclaim=true",
           "tags": "game, brawls, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze, claim, rewards",
           "tab": 2,
-          "new": true
+          "new": false
         },
         {
           "label": "Clan leaderboard",

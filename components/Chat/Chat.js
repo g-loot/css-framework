@@ -139,6 +139,19 @@ export default function Chat(props) {
   const [messages, setMessages] = useState(conversation);
   const [newMessageAdded, setNewMessageAdded] = useState(false);
 
+  const minRows = 0;
+
+  const [rows, setRows] = useState(minRows);
+  const [value, setValue] = useState("");
+
+  useEffect(() => {
+    const rowlen = value.split("\n");
+
+    if (rowlen.length > minRows) {
+      setRows(rowlen.length);
+    }
+  }, [value]);
+
   let initialTotalMessageNumber = messages.reduce((acc, curr) => {
     const currentMesssageNomberOfMessages = curr.messages.length;
     acc = acc + currentMesssageNomberOfMessages;
@@ -255,7 +268,9 @@ export default function Chat(props) {
     <>
       <div className="chat chat-responsive">
         <div
-          className={`chat-feed ${maxHeight} ${isDisabled ? "flex items-center justify-center" : ""}`}
+          className={`chat-feed ${maxHeight} ${
+            isDisabled ? "flex items-center justify-center" : ""
+          }`}
         >
           {!isDisabled && (
             <ul className="chat-main">
@@ -266,26 +281,25 @@ export default function Chat(props) {
                     message.isYourself ? "is-owner" : ""
                   }`}
                 >
-                  <div className="chat-author">
+                  {!message.isYourself && (
+                    <div className="chat-author">
                     <figure className="avatar avatar-circle avatar-sm">
                       <div>
                         <img
-                          src={
-                            prototype.getUserByID(message.author)?.avatar
-                          }
+                          src={prototype.getUserByID(message.author)?.avatar}
                           alt="avatar"
                         />
                       </div>
                     </figure>
                     <time dateTime="2008-02-14 20:00">{message.time}</time>
                   </div>
+                  )}
+                  
                   <div className="chat-messages">
                     <span className="leading-none uppercase text-sm">
                       {message.isYourself && <>You</>}
                       {!message.isYourself && (
-                        <>
-                          {prototype.getUserByID(message.author)?.nickname}
-                        </>
+                        <>{prototype.getUserByID(message.author)?.nickname}</>
                       )}
                     </span>
                     {message.messages.map(
@@ -324,9 +338,8 @@ export default function Chat(props) {
                                           : ""
                                       }`}
                                       data-tooltip={
-                                        prototype.getUserByID(
-                                          reaction.author
-                                        )?.nickname
+                                        prototype.getUserByID(reaction.author)
+                                          ?.nickname
                                       }
                                     >
                                       <span>{reaction.emoji}</span>
@@ -472,26 +485,35 @@ export default function Chat(props) {
               ))}
             </ul>
           )}
-          {isDisabled && <div className="chat-main">
-            
-          <div className='max-w-xs mx-auto text-center'>
-            <img className="mx-auto" src="https://res.cloudinary.com/gloot/image/upload/v1659691391/Marketing/2022_prototype/Decoration-chat.webp" width="220" height="auto" alt="" />
-            <div className='mt-2 mb-6'>
-              <p className='text-sm text-ui-400'>
-                Chat with your clan
-              </p>
-              <p className='text-lg text-ui-300'>
-                Coordinate and have fun together!
-              </p>
+          {isDisabled && (
+            <div className="chat-main">
+              <div className="max-w-xs mx-auto text-center">
+                <img
+                  className="mx-auto"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1659691391/Marketing/2022_prototype/Decoration-chat.webp"
+                  width="220"
+                  height="auto"
+                  alt=""
+                />
+                <div className="mt-2 mb-6">
+                  <p className="text-sm text-ui-400">Chat with your clan</p>
+                  <p className="text-lg text-ui-300">
+                    Coordinate and have fun together!
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-            </div>}
+          )}
 
           <div ref={bottomRef} />
         </div>
-        <div className={`chat-footer`}>
-          <div className={`dropdown dropdown-top  ${isDisabled ? "is-disabled" : ""}`}>
-            <label tabIndex="0" className="button button-ghost rounded-full">
+        <form className={`chat-footer flex items-end`} onSubmit={addMessage}>
+          <div
+            className={`dropdown dropdown-top  ${
+              isDisabled ? "is-disabled" : ""
+            }`}
+          >
+            <label tabIndex="0" className="button button-ghost rounded-full m-0">
               <span
                 className={`icon ${isDisabled ? "icon-lock" : "icon-c-add"}`}
               ></span>
@@ -530,31 +552,31 @@ export default function Chat(props) {
             </div>
           </div>
           <div className={`form-group ${isDisabled ? "is-disabled" : ""}`}>
-            <form className="input-group" onSubmit={addMessage}>
-              {!isDisabled && (
-                <button
-                type="submit"
-                role="button"
-                className="button button-tertiary"
-              >
-                <span className="icon icon-send-message" />
-              </button>
-              )}
-              <input
-                ref={messageInput}
-                type="text"
-                name="send-message"
-                id="send-message"
-                placeholder={`${
-                  !isDisabled
-                    ? "Message clan"
-                    : "You need to be a member of this clan to participate"
-                }`}
-                autoComplete="off"
-              />
-            </form>
+            <textarea
+              ref={messageInput}
+              name="send-message"
+              id="send-message"
+              className="rounded-3xl max-h-[200px] resize-none"
+              rows={rows}
+              onChange={(text) => setValue(text.target.value)}
+              placeholder={`${
+                !isDisabled
+                  ? "Message clan"
+                  : "You need to be a member of this clan to participate"
+              }`}
+            ></textarea>
           </div>
-        </div>
+          {!isDisabled && (
+            <button
+              type="submit"
+              role="button"
+              className="button button-tertiary rounded-full"
+              disabled={value.length === 0}
+            >
+              <span className="icon icon-send-message" />
+            </button>
+          )}
+        </form>
       </div>
     </>
   );

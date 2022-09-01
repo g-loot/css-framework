@@ -11,6 +11,8 @@ export default function Home() {
   const router = useRouter();
   const uiContext = useContext(UiContext);
   const [submitting, setSubmitting] = useState(false);
+  const { query } = useRouter();
+  const isConnected = query.connected === "true" ? true : false;
 
   function addToastWithDelay(toast) {
     setSubmitting(true);
@@ -103,73 +105,103 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="space-y-4">
-                      <h2 className="h4">Social</h2>
-                      <div className="form-group flex items-start gap-2">
-                        <label htmlFor="social-twitch" className="flex-1 mt-3">
-                          Twitch:
-                        </label>
-                        <div className="flex-3 input-group">
-                          <span className="icon icon-twitch" />
-                          <input
-                            type="text"
-                            name="social-twitch"
-                            id="social-twitch"
-                          />
+                    <div>
+                      <div className="space-y-4">
+                        <h2 className="h4">My social links</h2>
+                        <div className="form-group flex items-start gap-2">
+                          <label htmlFor="social-twitch" className="flex-1 mt-3">
+                            Twitch:
+                          </label>
+                          <div className="flex-3 input-group">
+                            <span className="icon icon-twitch" />
+                            <input
+                              type="text"
+                              name="social-twitch"
+                              id="social-twitch"
+                            />
+                          </div>
+                        </div>
+                        <div className="form-group flex items-start gap-2">
+                          <label htmlFor="social-twitter" className="flex-1 mt-3">
+                            Twitter:
+                          </label>
+                          <div className="flex-3 input-group">
+                            <span className="icon icon-logo-twitter" />
+                            <input
+                              type="text"
+                              name="social-twitter"
+                              id="social-twitter"
+                            />
+                          </div>
+                        </div>
+                        <div className="form-group flex items-start gap-2">
+                          <label htmlFor="social-discord" className="flex-1 mt-3">
+                            Discord:
+                          </label>
+                          <div className="flex-3">
+                            <button className="button button-primary w-full">
+                              <span className="icon icon-discord" />
+                              <span>Connect with Discord</span>
+                            </button>
+                          </div>
                         </div>
                       </div>
-                      <div className="form-group flex items-start gap-2">
-                        <label htmlFor="social-twitter" className="flex-1 mt-3">
-                          Twitter:
-                        </label>
-                        <div className="flex-3 input-group">
-                          <span className="icon icon-logo-twitter" />
-                          <input
-                            type="text"
-                            name="social-twitter"
-                            id="social-twitter"
-                          />
+                      <hr className="mt-8 mb-4" />
+                      <div className="space-y-4">
+                        <h2 className="h4">Game accounts</h2>
+                        <div className="form-group flex items-start gap-2">
+                          <label htmlFor="social-steam" className="flex-1 mt-3">
+                            Steam:
+                          </label>
+                          <div className="flex-3">
+                            <button className="button button-primary w-full">
+                              <span className="icon icon-steam" />
+                              <span>Connect with Steam</span>
+                            </button>
+                            <p className="text-ui-300 text-sm mt-2 leading-tight">
+                              This site is not associated with Valve Corp.
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                      <div className="form-group flex items-start gap-2">
-                        <label htmlFor="social-discord" className="flex-1 mt-3">
-                          Discord:
-                        </label>
-                        <div className="flex-3">
-                          <button className="button button-primary w-full">
-                            <span className="icon icon-discord" />
-                            <span>Connect Discord</span>
-                          </button>
+                        <div className="form-group flex items-start gap-2">
+                          <label htmlFor="social-steam" className="flex-1 mt-3">
+                            Riot Games:
+                          </label>
+                          <div className="flex-3">
+                            {isConnected && (
+                              <div className="flex-3 input-group">
+                                <span>
+                                  <span className="icon icon-riotgames-symbol" />
+                                </span>
+                                <input type="text" name="gameaccount-riot" id="gameaccount-riot" disabled value="jackattack#3827" />
+                              </div>
+                            )}
+                            {!isConnected && (
+                              <button className="button button-primary w-full">
+                                <span className="icon icon-riotgames-symbol" />
+                                <span>Connect with Riot ID</span>
+                              </button>
+                            )}
+                            
+                            <p className="text-ui-300 text-sm mt-2 leading-tight">
+                              By connecting with Riot I acknowledge making my profile public to all users.
+                            </p>
+                            {/*
+                              <div className="text-ui-300 text-sm mt-1 leading-tight">
+                                <label className="form-checkbox">
+                                  <input type="checkbox" name="policy" />
+                                  <i className="form-icon" /> I acknowledge signing in makes my profile public to all users.
+                                </label>
+                              </div>
+                            */}
+                          </div>
                         </div>
-                      </div>
-                      <div className="form-group flex items-start gap-2">
-                        <label htmlFor="social-steam" className="flex-1 mt-3">
-                          Steam:
-                        </label>
-                        <div className="flex-3">
-                          <button className="button button-primary w-full">
-                            <span className="icon icon-steam" />
-                            <span>Login with Steam</span>
-                          </button>
-                          <p className="text-ui-300 text-sm mt-2 leading-tight">
-                            This site is not associated with Valve Corp.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="form-group flex items-start gap-2">
-                        <label htmlFor="social-steam" className="flex-1 mt-3">
-                          Riot Games:
-                        </label>
-                        <div className="flex-3">
-                          <button className="button button-primary w-full">
-                            <span className="icon icon-riotgames-symbol" />
-                            <span>Login with Riot ID</span>
-                          </button>
-                          <div className="text-ui-300 text-sm mt-1 leading-tight">
-                            <label className="form-checkbox">
-                              <input type="checkbox" name="policy" />
-                              <i className="form-icon" /> I acknowledge signing in makes my profile public to all users.
-                            </label>
+                        <div className="form-group flex items-start gap-2">
+                          <div className="flex-1 mt-3" />
+                          <div className="flex-3">
+                            <p className="text-ui-300 text-sm mt-2 leading-tight">
+                              Contact support if you need to update your game accounts.
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -278,24 +310,6 @@ export default function Home() {
                         </label>
                         <input type="text" name="game-pubg" id="game-pubg" />
                       </div>
-                      <div className="form-group">
-                        <label htmlFor="game-pubg">Riot ID:</label>
-                        <div className="flex items-center gap-2">
-                          <input
-                            type="text"
-                            name="game-riot-name"
-                            id="game-riot-name"
-                            value="JackAttack123"
-                          />
-                          <span className="text-lg text-ui-300">#</span>
-                          <input
-                            type="number"
-                            name="game-riot-id"
-                            id="game-riot-id"
-                            value="8573"
-                          />
-                        </div>
-                      </div>
                     </div>
                   </div>
                   <hr className="my-8 opacity-50" />
@@ -323,6 +337,8 @@ export default function Home() {
                 </div>
               </div>
             </Accordion>
+
+            { /* 
             <Accordion
               header={
                 <>
@@ -387,6 +403,7 @@ export default function Home() {
                 </div>
               </div>
             </Accordion>
+            */}
           </div>
         </section>
       </PrototypeStructure>
