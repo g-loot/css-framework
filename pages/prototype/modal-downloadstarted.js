@@ -22,7 +22,7 @@ export default function ModalDownloadStarted(props) {
   return (
     <>
       <div className="relative z-10 max-w-sm w-full">
-        <div className="modal surface w-full">
+        <div className="modal w-full">
           <button
             type="button"
             className="button button-secondary button-close"
@@ -39,7 +39,7 @@ export default function ModalDownloadStarted(props) {
                   Download started
                 </h2>
               </div>
-              <ul className="rounded-lg p-6 space-y-2 bg-ui-850 my-4">
+              <ul className="rounded-lg p-6 space-y-2 bg-gradient-to-b from-ui-800 to-ui-800/50 my-4 text-left">
                 <li className="flex gap-2 items-center animate-slide-in-bottom animate-delay" style={{ '--delay': 'calc( 2 * 0.05s)'}}>
                   <span className="icon icon-check text-main text-2xl" />
                   <span className="flex-1">An official Overwolf app for Windows</span>

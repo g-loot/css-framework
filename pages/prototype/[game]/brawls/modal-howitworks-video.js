@@ -17,7 +17,7 @@ export default function ModalBrawlHowitworksVideo(props) {
 
   return (
     <>
-        <div className="modal surface w-full">
+        <div className="modal w-full">
           <button
             type="button"
             className="button button-secondary button-close"

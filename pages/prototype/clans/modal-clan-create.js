@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react";
 
 import { UiContext } from "../../../contexts/ui.js";
+import { usePrototypeData } from "../../../contexts/prototype.js";
 
 export default function ModalClanCreate(props) {
   const uiContext = useContext(UiContext);
+  const prototype = usePrototypeData();
   const [submitting, setSubmitting] = useState(false);
   function closeModalWithDelay() {
     setSubmitting(true);
@@ -16,7 +18,7 @@ export default function ModalClanCreate(props) {
 
   return (
     <>
-      <div className="modal surface">
+      <div className="modal">
         <button
           type="button"
           className="button button-secondary button-close"
@@ -65,7 +67,7 @@ export default function ModalClanCreate(props) {
                 </div>
                 <div className="lg:w-40 form-group">
                   <label htmlFor="clan-tag">Tag</label>
-                  <input type="text" name="clan-tag" id="clan-tag" />
+                  <input type="text" name="clan-tag" id="clan-tag" placeholder="[CLAN]" />
                   <div className="text-sm text-ui-300 mt-1">
                     4 characters max.
                   </div>
@@ -125,75 +127,22 @@ export default function ModalClanCreate(props) {
               </div>
               <div>
                 <div className="flex gap-2 items-baseline mb-4">
-                  <label className="label">Clan games</label>
+                  <label className="label">Clan favorite games</label>
                   <span className="text-attention-500 text-sm">
                     you must pick at least 1 game
                   </span>
                 </div>
-                <div className="form-group flex flex-wrap justify-center gap-8">
-                  <label className="form-checkbox form-image">
-                    <input type="checkbox" name="game-1" />
-                    <div
-                      className="w-24 h-36 bg-cover rounded-md"
-                      style={{
-                        backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644677000/Marketing/202109_gloot2/Game_cover_Valorant.jpg)`,
-                      }}
-                    />
-                  </label>
-                  <label className="form-checkbox form-image">
-                    <input type="checkbox" name="game-2" />
-                    <div
-                      className="w-24 h-36 bg-cover rounded-md"
-                      style={{
-                        backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Apex_Legends.jpg)`,
-                      }}
-                    />
-                  </label>
-                  <label className="form-checkbox form-image">
-                    <input type="checkbox" name="game-3" />
-                    <div
-                      className="w-24 h-36 bg-cover rounded-md"
-                      style={{
-                        backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_PUBG_Battlegrounds.jpg)`,
-                      }}
-                    />
-                  </label>
-                  <label className="form-checkbox form-image">
-                    <input type="checkbox" name="game-4" />
-                    <div
-                      className="w-24 h-36 bg-cover rounded-md"
-                      style={{
-                        backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_CSGO.jpg)`,
-                      }}
-                    />
-                  </label>
-                  <label className="form-checkbox form-image">
-                    <input type="checkbox" name="game-5" />
-                    <div
-                      className="w-24 h-36 bg-cover rounded-md"
-                      style={{
-                        backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Rocket_League.jpg)`,
-                      }}
-                    />
-                  </label>
-                  <label className="form-checkbox form-image">
-                    <input type="checkbox" name="game-6" />
-                    <div
-                      className="w-24 h-36 bg-cover rounded-md"
-                      style={{
-                        backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1645621586/Marketing/202109_gloot2/Game_cover_League_of_Legends.jpg)`,
-                      }}
-                    />
-                  </label>
-                  <label className="form-checkbox form-image">
-                    <input type="checkbox" name="game-7" />
-                    <div
-                      className="w-24 h-36 bg-cover rounded-md"
-                      style={{
-                        backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Dota_2.jpg)`,
-                      }}
-                    />
-                  </label>
+                <div className="form-group flex flex-wrap justify-center gap-1.5 xl:gap-4">
+                  {prototype.games.map((game, gameIndex) => (
+                    <label className="form-checkbox form-image">
+                      <input type="checkbox" name={`game-${gameIndex}`} />
+                      <div
+                        className="w-20 h-32 bg-cover rounded-md"
+                        style={{ backgroundImage: `url(${game.assets.cover})` }}
+                      />
+                      <span className="sr-only">{game.name}</span>
+                    </label>
+                  ))}
                 </div>
               </div>
             </div>
@@ -228,4 +177,4 @@ export default function ModalClanCreate(props) {
       </div>
     </>
   );
-};
+}

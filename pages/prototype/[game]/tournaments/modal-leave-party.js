@@ -37,7 +37,7 @@ export default function ModalLeaveParty(props) {
   return (
     <>
       <div className="relative z-10 max-w-sm w-full">
-        <div className="modal surface">
+        <div className="modal">
           <button
             type="button"
             className="button button-secondary button-close"

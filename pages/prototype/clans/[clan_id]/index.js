@@ -161,7 +161,7 @@ export default function Home() {
                         </a>
                       </Link>
                     </div>
-                    <div className="header-meta justify-end items-end">
+                    <div className="header-meta justify-end items-center md:items-end">
                       <div className="flex gap-1 pb-4">
                         {selectedClan.games?.map((game, gameIndex) => (
                           <>
@@ -230,13 +230,63 @@ export default function Home() {
                             </div>
                           </figure>
                           <div className="flex-1">
-                            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                            <div className="">
                               <h1 className="text-3xl sm:text-4xl">
                                 &#91;
                                 {selectedClan.tag}
                                 &#93; {selectedClan.nickname}
                               </h1>
-                              <div className="block md:hidden">
+                              <div className="flex gap-3 mt-4">
+                                {selectedClan.social?.twitch && (
+                                  <>
+                                    <a
+                                      href={selectedClan.social.twitch}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                                    >
+                                      <span className="icon icon-twitch text-xl lg:text-2xl" />
+                                    </a>
+                                  </>
+                                )}
+                                {selectedClan.social?.discord && (
+                                  <>
+                                    <a
+                                      href={selectedClan.social.discord}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                                    >
+                                      <span className="icon icon-discord text-xl lg:text-2xl" />
+                                    </a>
+                                  </>
+                                )}
+                                {selectedClan.social?.youtube && (
+                                  <>
+                                    <a
+                                      href={selectedClan.social.youtube}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                                    >
+                                      <span className="icon icon-logo-youtube text-xl lg:text-2xl" />
+                                    </a>
+                                  </>
+                                )}
+                                {selectedClan.social?.twitter && (
+                                  <>
+                                    <a
+                                      href={selectedClan.social.twitter}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                                    >
+                                      <span className="icon icon-logo-twitter text-xl lg:text-2xl" />
+                                    </a>
+                                  </>
+                                )}
+                              </div>
+                              <div className="flex md:hidden mt-4">
                                 {selectedClan.isYou && (
                                   <Link href="settings">
                                     <a
@@ -254,7 +304,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="hidden lg:block absolute z-20 top-2 right-2">
+                    <div className="hidden md:block absolute z-20 top-2 right-2">
                       <Link href="#">
                         <a
                           type="button"
@@ -265,56 +315,52 @@ export default function Home() {
                         </a>
                       </Link>
                     </div>
-                    <div className="header-meta justify-end items-end">
-                      <div className="flex gap-3 pb-4">
-                        {selectedClan.social?.twitch && (
+                    <div className="header-meta justify-end items-center md:items-end">
+                      <div className="flex gap-1 pb-4">
+                        {selectedClan.games?.map((game, gameIndex) => (
                           <>
-                            <a
-                              href={selectedClan.social.twitch}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                            <div
+                              key={game}
+                              className="p-2 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center"
                             >
-                              <span className="icon icon-twitch text-xl lg:text-2xl" />
-                            </a>
+                              <span
+                                className={`icon text-2xl ${
+                                  prototype.getGameByID(game).slug ===
+                                  "apexlegends"
+                                    ? "icon-game-apexlegends-symbol text-game-apexlegends"
+                                    : ""
+                                } ${
+                                  prototype.getGameByID(game).slug === "csgo"
+                                    ? "icon-game-csgo-symbol text-game-csgo"
+                                    : ""
+                                }  ${
+                                  prototype.getGameByID(game).slug === "dota2"
+                                    ? "icon-game-dota2-symbol text-game-dota2"
+                                    : ""
+                                }  ${
+                                  prototype.getGameByID(game).slug ===
+                                  "leagueoflegends"
+                                    ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
+                                    : ""
+                                }  ${
+                                  prototype.getGameByID(game).slug ===
+                                  "rocketleague"
+                                    ? "icon-game-rocketleague-symbol text-game-rocketleague"
+                                    : ""
+                                } ${
+                                  prototype.getGameByID(game).slug === "pubg"
+                                    ? "icon-game-pubg-symbol text-game-pubg"
+                                    : ""
+                                }  ${
+                                  prototype.getGameByID(game).slug ===
+                                  "valorant"
+                                    ? "icon-game-valorant-symbol text-game-valorant"
+                                    : ""
+                                }`}
+                              />
+                            </div>
                           </>
-                        )}
-                        {selectedClan.social?.discord && (
-                          <>
-                            <a
-                              href={selectedClan.social.discord}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
-                            >
-                              <span className="icon icon-discord text-xl lg:text-2xl" />
-                            </a>
-                          </>
-                        )}
-                        {selectedClan.social?.youtube && (
-                          <>
-                            <a
-                              href={selectedClan.social.youtube}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
-                            >
-                              <span className="icon icon-logo-youtube text-xl lg:text-2xl" />
-                            </a>
-                          </>
-                        )}
-                        {selectedClan.social?.twitter && (
-                          <>
-                            <a
-                              href={selectedClan.social.twitter}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
-                            >
-                              <span className="icon icon-logo-twitter text-xl lg:text-2xl" />
-                            </a>
-                          </>
-                        )}
+                        ))}
                       </div>
                     </div>
                     <div className="header-bg">

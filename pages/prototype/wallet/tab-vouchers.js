@@ -20,14 +20,15 @@ export default function TabWalletVoucher() {
         />
         <div className="relative z-10 surface rounded-xl p-4 w-full max-w-xs mx-auto animate-slide-in-bottom">
           <h2 className="text-2xl text-center mt-4">Claim your voucher</h2>
+          {/*
           <p className="text-sm text-ui-300 mt-4 mb-8 text-center max-w-[25ch] mx-auto">
             Enter your voucher code below and click on Claim voucher.
           </p>
-          <div className="form-group">
+          */}
+          <div className="form-group my-8">
             <label htmlFor="voucher">Voucher code:</label>
             <input type="text" name="voucher" id="voucher" />
           </div>
-          <hr className="my-4" />
           <button type="button" className="button button-primary w-full">
             <span>Claim voucher</span>
           </button>

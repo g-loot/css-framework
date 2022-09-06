@@ -73,6 +73,14 @@
     ;
   }
 
+  &:not([class*='surface']) {
+    @apply
+    bg-ui-700
+    border
+    border-ui-600
+    ;
+  }
+
   > .button-close {
     @apply
     absolute

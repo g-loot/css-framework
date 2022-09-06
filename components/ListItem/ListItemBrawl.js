@@ -194,7 +194,7 @@ export default function ListItemBrawl(props) {
         </li>
       )}
       {props.variant === 2 && (
-        <li className="flex items-stretch">
+        <li className="flex items-stretch min-w-xs xl:min-w-[0px]">
           <Link
             href={`${
               brawl.progress !== 3
@@ -262,7 +262,9 @@ export default function ListItemBrawl(props) {
                     <div className="flex items-center gap-2">
                       <div className="font-headings leading-none flex items-start gap-1">
                         <span className="text-xl">#</span>
-                        <span className="text-4xl">{brawl.result.position}</span>
+                        <span className="text-4xl">
+                          {brawl.result.position}
+                        </span>
                       </div>
                       <div
                         className={`hidden leading-none text-center -space-y-1 ${
@@ -350,6 +352,8 @@ export default function ListItemBrawl(props) {
                   </div>
                 </div>
 
+                {/*
+
                 {brawl.progress > 0 && brawl.progress < 3 && (
                   <>
                     <ul className="step step-quinary w-full gap-2 mt-3">
@@ -377,6 +381,8 @@ export default function ListItemBrawl(props) {
                     </ul>
                   </>
                 )}
+
+                */}
               </div>
               <div className="absolute z-20 top-2 right-2 p-1 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
                 <span

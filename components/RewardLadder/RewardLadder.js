@@ -146,7 +146,7 @@ export default function RewardLadder(props) {
               <div className="ladder-info">
                 <div>
                   <span>1</span>
-                  <span>0/200</span>
+                  <span>0/200 XP</span>
                 </div>
               </div>
               <div className="ladder-content">
@@ -170,7 +170,7 @@ export default function RewardLadder(props) {
               <div className="ladder-info">
                 <div>
                   <span>2</span>
-                  <span>0/200</span>
+                  <span>0/200XP</span>
                 </div>
               </div>
               <div className="ladder-content">
@@ -194,7 +194,7 @@ export default function RewardLadder(props) {
               <div className="ladder-info">
                 <div>
                   <span>3</span>
-                  <span>0/200</span>
+                  <span>0/200XP</span>
                 </div>
               </div>
               <div className="ladder-content">
@@ -218,7 +218,7 @@ export default function RewardLadder(props) {
               <div className="ladder-info">
                 <div>
                   <span>4</span>
-                  <span>0/200</span>
+                  <span>0/200XP</span>
                 </div>
               </div>
               <div className="ladder-content">
@@ -242,7 +242,7 @@ export default function RewardLadder(props) {
               <div className="ladder-info">
                 <div>
                   <span>5</span>
-                  <span>0/200</span>
+                  <span>0/200XP</span>
                 </div>
               </div>
               <div className="ladder-content">
@@ -266,7 +266,7 @@ export default function RewardLadder(props) {
               <div className="ladder-info">
                 <div>
                   <span>6</span>
-                  <span>0/200</span>
+                  <span>0/200XP</span>
                 </div>
               </div>
               <div className="ladder-content">
@@ -290,7 +290,7 @@ export default function RewardLadder(props) {
               <div className="ladder-info">
                 <div>
                   <span>7</span>
-                  <span>0/200</span>
+                  <span>0/200XP</span>
                 </div>
               </div>
               <div className="ladder-content">
@@ -314,7 +314,7 @@ export default function RewardLadder(props) {
               <div className="ladder-info">
                 <div>
                   <span>8</span>
-                  <span>0/200</span>
+                  <span>0/200XP</span>
                 </div>
               </div>
               <div className="ladder-content">
@@ -341,7 +341,7 @@ export default function RewardLadder(props) {
               <div className="ladder-info">
                 <div>
                   <span>9</span>
-                  <span>0/200</span>
+                  <span>0/200XP</span>
                 </div>
               </div>
               <div className="ladder-content">
@@ -368,7 +368,7 @@ export default function RewardLadder(props) {
               <div className="ladder-info">
                 <div>
                   <span>10</span>
-                  <span>0/200</span>
+                  <span>0/200XP</span>
                 </div>
               </div>
               <div className="ladder-content">

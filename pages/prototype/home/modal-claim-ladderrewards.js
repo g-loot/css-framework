@@ -22,7 +22,7 @@ export default function ModalClaimLadderRewards(props) {
   return (
     <>
       <div className="relative z-10 max-w-sm w-full">
-        <div className="modal surface w-full">
+        <div className="modal w-full">
           <button
             type="button"
             className="button button-secondary button-close"

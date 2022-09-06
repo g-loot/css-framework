@@ -31,7 +31,7 @@ export default function ModalInfoBeforeYouPlay(props) {
   return (
     <>
       <div className="relative z-10">
-        <div className="modal surface">
+        <div className="modal">
           <button
             type="button"
             className="button button-secondary button-close"

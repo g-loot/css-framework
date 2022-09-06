@@ -455,6 +455,7 @@ export default function Topbar() {
                       </li>
                       <li>
                         <a
+                          onClick={openModalDownloadStarted}
                           href="#"
                           rel="noopener noreferrer"
                         >

@@ -109,7 +109,7 @@
         @apply
         max-h-[175px]
         max-w-[350px]
-        w-full
+        w-auto
         ;
       }
     }

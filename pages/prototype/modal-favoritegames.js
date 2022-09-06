@@ -37,7 +37,7 @@ export default function ModalFavoriteGames(props) {
   return (
     <>
       <div className="relative z-10 max-w-md w-full">
-        <div className="modal surface w-full">
+        <div className="modal w-full">
           <button
             type="button"
             className="button button-secondary button-close"

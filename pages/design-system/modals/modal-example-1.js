@@ -16,7 +16,7 @@ const Modal1 = (props) => {
 
   return (
     <>
-      <div className="modal surface">
+      <div className="modal">
         <button
           type="button"
           className="button button-secondary button-close"

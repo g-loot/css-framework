@@ -58,6 +58,7 @@
     > .ladder-info {
       @apply
       relative
+      whitespace-nowrap
       ;
 
       > div {
@@ -225,7 +226,7 @@
       }
       > .ladder-content {
         @apply
-        shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))]
+        shadow-main
         via-ui-800
         to-ui-700
         scale-100
