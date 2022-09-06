@@ -249,11 +249,11 @@ const DSpage = () => {
       
     </div>
 
-    {/* With halo <small className="text-ui-200">dimmed</small>*/}
+    {/* With halo <small className="text-ui-200 font-normal">dimmed</small>*/}
     <div className='mb-12' id='with-halo-dimmed'>
 
       <h2 className='h3 mb-3'>
-        With halo <small className="text-ui-200">dimmed</small>
+        With halo <small className="text-ui-200 font-normal">dimmed</small>
       </h2>
 
       <div className='mb-10'>

@@ -647,7 +647,8 @@ label.button {
       @apply
       rounded-l
       ;
-      + input {
+      + input,
+      + textarea {
         @apply
         border-l-0
         ;
@@ -671,7 +672,8 @@ label.button {
       relative
       z-30
       ;
-      + input {
+      + input,
+      + textarea {
         @apply
         rounded-l
         border-l
@@ -687,7 +689,8 @@ label.button {
       @apply
       rounded-l-none
       ;
-      + input {
+      + input,
+      + textarea {
         @apply
         border-r-0
         rounded-r-none
@@ -727,7 +730,7 @@ label.button {
     pointer-events-none
     ;
 
-    ~ :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file]) {
+    ~ :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea) {
       @apply
       pl-9
       ;
@@ -739,12 +742,14 @@ label.button {
       left-auto
       ;
 
-      ~ input {
+      ~ input,
+      ~ textarea {
         @apply
         pl-2.5
         ;
       }
-      ~ input:not([type=date]) {
+      ~ input:not([type=date]),
+      ~ textarea {
         @apply
         pr-9
         ;

@@ -1,4 +1,5 @@
 import React from "react";
+import TextareaExpandable from "../../components/Textarea/TextareaExpandable";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
 
 const DSpage = () => {
@@ -28,11 +29,7 @@ const DSpage = () => {
                     </div>
                     <div className="form-group">
                       <label htmlFor="age">Age</label>
-                      <input
-                        type="number"
-                        name="age"
-                        id="age"
-                        />
+                      <input type="number" name="age" id="age" />
                     </div>
                     <div className="form-group">
                       <label htmlFor="company-website">Company Website</label>
@@ -64,15 +61,6 @@ const DSpage = () => {
                         <span> .gloot.com </span>
                       </div>
                     </div>
-                    <div className="form-group">
-                      <label htmlFor="about">About</label>
-                      <textarea
-                        id="about"
-                        name="about"
-                        rows="4"
-                        placeholder="you@example.com"
-                      ></textarea>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -89,9 +77,68 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* Validation <small className="text-ui-200">with attribute</small> */}
+      {/* With textarea */}
+      <div className="mb-12" id="with-textarea">
+        <h2 className="h3 mb-3">With textarea <small className="text-ui-200 font-normal">auto-expandable</small></h2>
+
+        {/* structure: primary */}
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="flex-1 space-y-4">
+                    <div className="form-group">
+                      <label htmlFor="first-name">Your message:</label>
+                      <TextareaExpandable />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="company-website">Company Website</label>
+                      <div className="input-group">
+                        <span> http:// </span>
+                        <TextareaExpandable />
+                      </div>
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="twitch">Twitch</label>
+                      <div className="input-group">
+                        <span>
+                          <span className="icon icon-twitch" />
+                        </span>
+                        <TextareaExpandable />
+                        <span>
+                          <span className="icon icon-lock" />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="subdomain">Subdomain</label>
+                      <div className="input-group">
+                        <TextareaExpandable />
+                        <span> .gloot.com </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/ob6j0qmz/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Validation <small className="text-ui-200 font-normal">with attribute</small> */}
       <div className="mb-12" id="validation">
-        <h2 className="h3 mb-3">Validation <small className="text-ui-200">with attribute</small></h2>
+        <h2 className="h3 mb-3">
+          Validation <small className="text-ui-200 font-normal">with attribute</small>
+        </h2>
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -141,9 +188,11 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* Validation <small className="text-ui-200">with tag</small> */}
+      {/* Validation <small className="text-ui-200 font-normal">with tag</small> */}
       <div className="mb-12" id="validation-with-tag">
-        <h2 className="h3 mb-3">Validation <small className="text-ui-200">with tag</small></h2>
+        <h2 className="h3 mb-3">
+          Validation <small className="text-ui-200 font-normal">with tag</small>
+        </h2>
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -151,30 +200,21 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <div className="w-full flex gap-4 items-center">
                   <div className="flex-1 space-y-8 py-4">
-                    <div
-                      className="form-group"
-                      data-error
-                    >
+                    <div className="form-group" data-error>
                       <label htmlFor="password">Password</label>
                       <input type="password" name="password" id="password" />
                       <div className="form-info">
                         Passwords must have at least <b>8 characters</b>.
                       </div>
                     </div>
-                    <div
-                      className="form-group"
-                      data-success
-                    >
+                    <div className="form-group" data-success>
                       <label htmlFor="name">Name</label>
                       <input type="text" name="name" id="name" />
                       <div className="form-info">
                         The name is <span className="icon icon-check" /> valid.
                       </div>
                     </div>
-                    <div
-                      className="form-group"
-                      data-attention
-                    >
+                    <div className="form-group" data-attention>
                       <label htmlFor="summary">Summary</label>
                       <textarea
                         id="summary"
@@ -209,8 +249,9 @@ const DSpage = () => {
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
-              <div className="flex-1 space-y-4">
-                <div className="w-full flex gap-4 items-center">
+              <div className="flex-1 space-y-8">
+                <div className="">
+                  <h3 className="h4 my-4">Input</h3>
                   <div className="flex-1 space-y-4">
                     <div className="form-group">
                       <label htmlFor="teamname">Team name</label>
@@ -224,6 +265,25 @@ const DSpage = () => {
                       <div className="input-group">
                         <span className="icon icon-right icon-f-check" />
                         <input type="text" name="teamurl" id="teamurl" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="">
+                  <h3 className="h4 my-4">Textarea</h3>
+                  <div className="flex-1 space-y-4">
+                    <div className="form-group">
+                      <label htmlFor="teamname">Team name</label>
+                      <div className="input-group">
+                        <span className="icon icon-a-chat" />
+                        <TextareaExpandable />
+                      </div>
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="teamurl">Team URL</label>
+                      <div className="input-group">
+                        <span className="icon icon-right icon-f-check" />
+                        <TextareaExpandable />
                       </div>
                     </div>
                   </div>
@@ -268,6 +328,13 @@ const DSpage = () => {
                         <input type="text" name="city" id="city" />
                       </div>
                     </div>
+                    <div className="form-group is-loading">
+                      <label htmlFor="message">Your message:</label>
+                      <div className="input-group">
+                        <span className="icon icon-right icon-flag-points-31" />
+                        <TextareaExpandable />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -276,7 +343,7 @@ const DSpage = () => {
                   className="rounded"
                   width="100%"
                   height="300"
-                  src="//jsfiddle.net/augustin_hiebel/1jL870xb/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                  src="//jsfiddle.net/augustin_hiebel/19ehL5p4/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>
@@ -333,7 +400,7 @@ const DSpage = () => {
                     <div className="form-group">
                       <label htmlFor="search-field">Search</label>
                       <div className="input-group">
-                      <button
+                        <button
                           role="button"
                           className="button button-tertiary"
                         >

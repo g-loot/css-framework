@@ -134,7 +134,7 @@ export default function ModalClanCreate(props) {
                 </div>
                 <div className="form-group flex flex-wrap justify-center gap-1.5 xl:gap-4">
                   {prototype.games.map((game, gameIndex) => (
-                    <label className="form-checkbox form-image">
+                    <label className="form-checkbox form-image" key={game.id}>
                       <input type="checkbox" name={`game-${gameIndex}`} />
                       <div
                         className="w-20 h-32 bg-cover rounded-md"

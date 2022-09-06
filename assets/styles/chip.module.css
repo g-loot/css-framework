@@ -452,7 +452,7 @@
   /* with close button */
 
 
-  > .button-close {
+  > .button.button-close {
     @apply
     w-6
     h-6
