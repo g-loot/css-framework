@@ -19,7 +19,7 @@ const TabsItems = [
     component: TabBrawlsYourBrawlMatches,
   },
   {
-    label: "Solo Leaderboard",
+    label: "Solo Leaderboards",
     url: "solo-leaderboard",
     component: TabBrawlsSoloLeaderboards,
   },

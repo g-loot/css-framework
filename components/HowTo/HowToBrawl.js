@@ -12,11 +12,9 @@ export default function HowToBrawl(props) {
             <>
               <div className="item">
                 <div className="item-image">
-                  <figure className="avatar avatar-xs avatar-simple">
-                    <div>
-                      <span className="icon icon-reading" />
-                    </div>
-                  </figure>
+                  <div className="w-10 h-10 rounded bg-gradient-to-b from-ui-800 to-ui-700 flex items-center justify-center">
+                    <span className="icon icon-reading text-gradient bg-gradient-to-b from-main to-blue-300 text-3xl" />
+                  </div>
                 </div>
                 <div className="item-body">
                   <div className="p-2 item-title font-headings font-bold text-lg italic">

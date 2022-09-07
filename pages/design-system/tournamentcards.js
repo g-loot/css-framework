@@ -13,7 +13,7 @@ const DSpage = () => {
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 xl:flex-2 flex justify-start items-start">
-              <div className="card-tournament surface">
+              <div className="card-tournament">
                 <div className="card-decoration">
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Showdown-sameheight.svg"
@@ -86,7 +86,7 @@ const DSpage = () => {
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 xl:flex-2 flex justify-start items-start">
-              <div className="card-tournament surface">
+              <div className="card-tournament">
                 <div className="card-decoration">
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Skirmish-sameheight.svg"
@@ -157,7 +157,7 @@ const DSpage = () => {
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 xl:flex-2 flex justify-start items-start">
-              <div className="card-tournament surface">
+              <div className="card-tournament">
                 <div className="card-decoration">
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"

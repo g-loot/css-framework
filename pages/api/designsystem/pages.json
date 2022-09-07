@@ -298,18 +298,23 @@
       "pages": [
         {
           "label": "Mission cards",
-          "tags": "card,mission,objective,content,games",
+          "tags": "listing,card,mission,objective,content,games",
           "url": "missioncards"
         },
         {
           "label": "Tournament cards",
-          "tags": "card,tournament,competition,showdown,open,skirmish,objective,content,games",
+          "tags": "listing,card,tournament,competition,showdown,open,skirmish,objective,content,games",
           "url": "tournamentcards"
         },
         {
           "label": "Content cards",
-          "tags": "content,card,display",
+          "tags": "content,listing,card,display",
           "url": "contentcards"
+        },
+        {
+          "label": "Brawl cards",
+          "tags": "brawl,listing,card,display,leaderboard,solo,clan",
+          "url": "brawlcards"
         }
       ]
     },

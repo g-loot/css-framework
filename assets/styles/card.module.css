@@ -5,16 +5,29 @@
 
 /* content */
 
-.card {
+
+:where(.card, .card-brawl, .card-mission, .card-tournament) {
   @apply
   transform-gpu
   overflow-hidden
+  relative
   ;
   &:not([class*='rounded']) {
     @apply
     rounded-xl
     ;
   }
+
+  &:not([class*='surface']) {
+    @apply
+    bg-ui-800
+    border
+    border-ui-700
+    ;
+  }
+}
+
+.card {
 
   .card-image {
     @apply
@@ -360,6 +373,8 @@
   &.card-locked {
     @apply
     pointer-events-none
+    transform-gpu
+    overflow-hidden
     ;
 
     .card-decoration {
@@ -472,4 +487,150 @@
   }
 }
 
+/* card-brawl */
 
+.card-brawl {
+  @apply
+  grid
+  grid-cols-3
+  items-stretch
+  min-h-[200px]
+  ;
+
+  .card-image {
+    @apply
+    relative
+    col-span-3
+    md:col-span-1
+    flex
+    flex-col
+    items-start
+    justify-between
+    h-full
+    aspect-video
+    md:aspect-auto
+    ;
+
+    > .card-image-content {
+      @apply
+      relative
+      z-10
+      flex
+      flex-col
+      h-full
+      items-start
+      justify-between
+      p-4
+      ;
+    }
+
+    > .card-image-bg {
+      @apply
+      absolute
+      z-0
+      right-0
+      inset-y-0
+      w-full
+      ;
+      &::before,
+      &::after {
+        @apply
+        content-[""]
+        absolute
+        z-10
+        inset-y-0
+        w-1/2
+        ;
+      }
+      &::before {
+        @apply
+        left-0
+        bg-gradient-to-r
+        from-ui-800
+        via-ui-800/75
+        to-ui-800/0
+        ;
+      }
+      &::after {
+        @apply
+        right-0
+        bg-gradient-to-r
+        from-ui-800/0
+        to-ui-800
+        ;
+      }
+      > img {
+        @apply
+        absolute
+        z-0
+        object-right
+        object-cover
+        xl:object-cover
+        inset-0
+        w-full
+        h-full
+        ;
+      }
+    }
+  }
+
+  .card-content {
+    @apply
+    relative
+    col-span-3
+    md:col-span-2
+    flex
+    flex-col
+    p-4
+    ;
+
+    &:not([class*="items-"]) {
+      @apply
+      items-stretch
+      ;
+    }
+    &:not([class*="justify-"]) {
+      @apply
+      justify-between
+      ;
+    }
+
+    > .card-body,
+    > .card-meta {
+      @apply
+      flex-1
+      flex
+      flex-col
+      md:flex-row
+      gap-4
+      ;
+      &:not([class*="justify-"]) {
+        @apply
+        justify-between
+        ;
+      }
+    }
+
+
+    > .card-body {
+      @apply
+        items-start
+      ;
+    }
+
+    > .card-meta {
+      @apply
+      items-start
+      md:items-end
+      border-t
+      border-ui-700
+      md:border-none
+      mt-4
+      pt-4
+      md:mt-0
+      md:pt-0
+      ;
+    }
+  }
+
+}

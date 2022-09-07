@@ -45,11 +45,12 @@ export default function TabBrawlsYourBrawlMatches() {
   }, [modalInfoBeforeYouPlay]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    setStartAnim1(true);
+    const timer = setTimeout(() => {
       handleStartAnim1();
-    }, delay);
-    return () => clearInterval(interval);
-  }, [StartAnim1])
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [variablesContext.brawlStep])
 
   function handleStartAnim1() {
     setStartAnim1(true);
@@ -77,8 +78,8 @@ export default function TabBrawlsYourBrawlMatches() {
         className="relative pb-4 animate-slide-in-bottom animate-delay"
         style={{ "--delay": "calc(1 * 0.05s)" }}
       >
-        <div className="relative z-10 xl:flex items-center justify-between gap-8">
-          <div className="flex-1 text-center py-8">
+        <div className="relative z-10 xl:flex flex-col items-center justify-between">
+          <div className="flex-1 text-center py-8 max-w-sm w-full">
             <div
               className={`overflow-hidden transition-all transform-gpu duration-500 ease-[cubic-bezier(.7,0,.3,1)]`}
               style={{ height: `${variablesContext.brawlStep === 0 ? heightValue : 0}px` }}
@@ -229,11 +230,11 @@ export default function TabBrawlsYourBrawlMatches() {
                             </>
                           )}
                           <div
-                            className={`relative z-10 rounded-full bg-gradient-radial-spotlight from-interaction-300 to-blue-300 flex items-center h-24 w-24 justify-center transition-opacity duration-300 ease-in-out ${
+                            className={`relative z-10 rounded-full bg-gradient-radial-spotlight from-ui-700 to-ui-800 flex items-center h-24 w-24 justify-center transition-opacity duration-300 ease-in-out ${
                               variablesContext.brawlStep >= step.step ? "opacity-0" : ""
                             }`}
                           >
-                            <span className="icon icon-lock text-ui-800 text-4xl" />
+                            <span className="icon icon-lock text-gradient bg-gradient-to-b from-main to-blue-300 text-4xl" />
                           </div>
                         </div>
                       </div>
