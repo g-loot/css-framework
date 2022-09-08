@@ -39,6 +39,28 @@ const TabsItems = [
     component: TabBrawlsHowItWorks,
   },
 ];
+const TabsItemsNoClan = [
+  {
+    label: "Your Brawl Matches",
+    url: "your-matches",
+    component: TabBrawlsYourBrawlMatches,
+  },
+  {
+    label: "Solo Leaderboards",
+    url: "solo-leaderboard",
+    component: TabBrawlsSoloLeaderboards,
+  },
+  {
+    label: "Rewards",
+    url: "rewards",
+    component: TabBrawlsRewards,
+  },
+  {
+    label: "How it works",
+    url: "how-it-works",
+    component: TabBrawlsHowItWorks,
+  },
+];
 
 export default function Home() {
   const router = useRouter();
@@ -171,23 +193,48 @@ export default function Home() {
 
             <nav>
               <ul className="tabs border-b border-ui-700">
-                {TabsItems.map((item, itemIndex) => (
-                  <li key={item}>
-                    <Link
-                      href={`/prototype/${game}/brawls/${brawl_id}${
-                        hasAds ? "?ads=true&" : ""
-                      }${hasAds ? "&" : "?"}tab=${item.url}`}
-                    >
-                      <a
-                        className={`${
-                          selectedTab === item.url ? "is-active" : ""
-                        }`}
-                      >
-                        <span>{item.label}</span>
-                      </a>
-                    </Link>
-                  </li>
-                ))}
+                {prototype.getBrawlByID(game, brawl_id).clan && (
+                  <>
+                    {TabsItems.map((item, itemIndex) => (
+                      <li key={item}>
+                        <Link
+                          href={`/prototype/${game}/brawls/${brawl_id}${
+                            hasAds ? "?ads=true&" : ""
+                          }${hasAds ? "&" : "?"}tab=${item.url}`}
+                        >
+                          <a
+                            className={`${
+                              selectedTab === item.url ? "is-active" : ""
+                            }`}
+                          >
+                            <span>{item.label}</span>
+                          </a>
+                        </Link>
+                      </li>
+                    ))}
+                  </>
+                )}
+                {!prototype.getBrawlByID(game, brawl_id).clan && (
+                  <>
+                    {TabsItemsNoClan.map((item, itemIndex) => (
+                      <li key={item}>
+                        <Link
+                          href={`/prototype/${game}/brawls/${brawl_id}${
+                            hasAds ? "?ads=true&" : ""
+                          }${hasAds ? "&" : "?"}tab=${item.url}`}
+                        >
+                          <a
+                            className={`${
+                              selectedTab === item.url ? "is-active" : ""
+                            }`}
+                          >
+                            <span>{item.label}</span>
+                          </a>
+                        </Link>
+                      </li>
+                    ))}
+                  </>
+                )}
               </ul>
             </nav>
 

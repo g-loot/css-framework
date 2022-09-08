@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 
 import { useRouter } from 'next/router';
 
-export default function DSMainNavMobile(props) {
+export default function SBMainNavMobile(props) {
   const router = useRouter();
   const handleClick = e => {
     e.preventDefault()

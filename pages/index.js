@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import DSHead from "../components/DesignSystem/DSHead";
 import Footer from "../components/Footer/Footer";
-import FrameworkPages from "../pages/api/framework/pages.json";
+import { FrameworkPages } from "./api/framework/pages";
 import Link from "next/link";
 import TopbarFramework from "../components/Topbar/Topbar-framework";
 import { getLayout } from "../components/SiteLayout";

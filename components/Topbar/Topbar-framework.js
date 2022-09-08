@@ -1,4 +1,4 @@
-import FrameworkPages from '../../pages/api/framework/pages.json';
+import { FrameworkPages } from '../../pages/api/framework/pages';
 import Link from "next/link";
 import packageFramework from '../../framework/package.json';
 import { useRouter } from 'next/router';

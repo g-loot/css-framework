@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import DSHead from "../../components/DesignSystem/DSHead";
 import Footer from "../../components/Footer/Footer";
-import FrameworkPages from "../../pages/api/framework/pages.json";
+import { FrameworkPages } from "../api/framework/pages";
 import Link from "next/link";
 import TopbarFramework from "../../components/Topbar/Topbar-framework";
 import { getLayout } from "../../components/SiteLayout";
@@ -14,7 +14,7 @@ const Index = () => {
 
   useEffect(() => {
     const totalPagesCount = FrameworkPages.sections.reduce((acc, curr) => {
-      const currentSetionPagesCount = curr.pages.length;
+      const currentSetionPagesCount = curr.pages.filter((g) => !g.title).length;
       acc = acc + currentSetionPagesCount;
       return acc;
     }, 0);
@@ -91,8 +91,9 @@ const Index = () => {
                         .filter((item) => {
                           if (!filter) return true;
                           if (
-                            item.label.includes(filter.toLowerCase()) ||
-                            item.tags.includes(filter.toLowerCase())
+                            !item.title &&
+                            (item.label.includes(filter.toLowerCase()) ||
+                              item.tags.includes(filter.toLowerCase()))
                           ) {
                             return true;
                           }
@@ -102,14 +103,16 @@ const Index = () => {
                             <li
                               className={`item border-ui-700 ${
                                 item.isDisabled ? "is-disabled" : ""
-                              } ${filter ? "border-b" : ""}`}
+                              } ${item.title ? "pointer-events-none" : ""} ${
+                                filter ? "border-b" : ""
+                              }`}
                             >
                               <div
                                 className={`item-body ${
-                                  item.tab ? "" : "pl-8"
-                                } ${item.tab === 1 ? "pl-16" : ""}  ${
-                                  item.tab === 2 ? "pl-24" : ""
-                                }`}
+                                  item.tab ? "" : "pl-4 md:pl-8"
+                                } ${item.tab === 1 ? "pl-8 md:pl-16" : ""}  ${
+                                  item.tab === 2 ? "pl-12 md:pl-24" : ""
+                                } ${item.tab === 3 ? "pl-16 md:pl-32" : ""} ${item.tab === 4 ? "pl-20 md:pl-40" : ""}`}
                               >
                                 <div className="item-title text-ui-300 flex gap-2">
                                   <Link
@@ -120,7 +123,11 @@ const Index = () => {
                                     <a className="flex items-center gap-2">
                                       {item.tab === 2 && <>—</>}
                                       {item.tab === 1 && <>&#8226;</>}
-                                      {!item.tab && <><span className="icon icon-circle-caret-right" /></>}
+                                      {!item.tab && (
+                                        <>
+                                          <span className="icon icon-circle-caret-right" />
+                                        </>
+                                      )}
                                       <span>{item.label}</span>
                                     </a>
                                   </Link>

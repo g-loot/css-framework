@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Ad from "../../../../components/Ad/Ad";
 import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
+import ModalBrawlHowitworksVideo from "./modal-howitworks-video";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import TabBrawlsHistory from "./tab-history";
 import TabBrawlsHowItWorks from "./tab-howitworks";
@@ -47,6 +48,12 @@ export default function Home() {
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
+
+  function openModalBrawlHowitworksVideo() {
+    uiContext.openModal(
+      <ModalBrawlHowitworksVideo></ModalBrawlHowitworksVideo>
+    );
+  }
 
   return (
     <>
@@ -102,6 +109,7 @@ export default function Home() {
                     <button
                       type="button"
                       className="button button-sm button-primary button-play"
+                      onClick={openModalBrawlHowitworksVideo}
                     >
                       <span className="icon icon-circle-caret-right" />
                       <span>Learn how to Brawl</span>

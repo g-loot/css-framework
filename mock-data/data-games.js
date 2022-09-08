@@ -1348,7 +1348,7 @@ export const dataGames = [
       {
         id: 2,
         solo: true,
-        clan: true,
+        clan: false,
         name: "Brawl - the Winter edition",
         cover: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-5.webp",
         status: "ongoing",

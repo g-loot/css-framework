@@ -1,7 +1,5 @@
 import React, { useRef, useState } from "react";
 
-import Icon from "../Icon/Icon";
-
 export default function Footer(props) {
   const [isActive, setActive] = useState(false);
   const elementRef = useRef(null);

@@ -1,7 +1,5 @@
 import { useContext, useEffect } from "react";
 
-import Button from "../Button/Button";
-import Icon from "../Icon/Icon";
 import Link from "next/link";
 import Lottie from "lottie-react";
 import LottieExplosion from "../../assets/animations/explosion-1.json";
@@ -336,55 +334,10 @@ export default function Topbar() {
                     href={`/prototype/clans/search${hasAds ? "?ads=true" : ""}`}
                   >
                     <a className="button button-sm button-ghost rounded-full">
-                      <Icon icon="zoom"></Icon>
+                      <span className="icon icon-zoom" />
                     </a>
                   </Link>
                 </div>
-                {/*
-                <div className="dropdown dropdown-end">
-                  <div
-                    tabIndex="0"
-                    className="flex items-center rounded-full border border-ui-700 bg-ui-800 interactive"
-                  >
-                    <button
-                      type="button"
-                      className="button button-sm button-ghost rounded-full"
-                    >
-                      <Icon icon="c-question"></Icon>
-                    </button>
-                  </div>
-
-                  <div
-                    tabIndex="0"
-                    className="dropdown-content bg-ui-600 w-52 p-1"
-                  >
-                    <ul className="menu menu-rounded">
-                      <li>
-                        <a
-                          href="https://help.gloot.com/kb/en"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <span className="icon icon-comments" />
-                          <span>Support &amp; FAQ</span>
-                        </a>
-                      </li>
-                      <li>
-                        <Link
-                          href={`/prototype/profile/1${
-                            hasAds ? "?ads=true" : ""
-                          }`}
-                        >
-                          <a>
-                            <span className="icon icon-file-article" />
-                            <span>How it works</span>
-                          </a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                */}
                 <div className="dropdown dropdown-end">
                   <div
                     tabIndex="0"

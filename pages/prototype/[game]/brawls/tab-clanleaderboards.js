@@ -169,12 +169,22 @@ export default function TabBrawlsSoloLeaderboards() {
                 </div>
                 <div className="border-t border-ui-700 max-h-[200px] overflow-y-auto scrollbar-desktop">
                   <table className="table table-comptact w-full">
+                    <thead>
+                      <tr>
+                        <td className="text-left">
+                          <span className="text-xs">Player</span>
+                        </td>
+                        <td className="text-right">
+                        <span className="text-xs">Match points</span>
+                        </td>
+                      </tr>
+                    </thead>
                     <tbody>
                       <tr>
                         <td>
                           <Link href="/prototype/profile/2">
                             <a className="text-xs text-ui-300 font-bold hover:opacity-50">
-                              &#91;{prototype.getUserClan().tag}&#93; {prototype.getUserByID(2).nickname}
+                              {prototype.getUserByID(2).nickname}
                             </a>
                           </Link>
                         </td>
@@ -188,7 +198,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         <td>
                           <Link href="/prototype/profile/3">
                             <a className="text-xs text-ui-300 font-bold hover:opacity-50">
-                              &#91;{prototype.getUserClan().tag}&#93; {prototype.getUserByID(3).nickname}
+                              {prototype.getUserByID(3).nickname}
                             </a>
                           </Link>
                         </td>
@@ -202,7 +212,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         <td>
                           <Link href="/prototype/profile/4">
                             <a className="text-xs text-ui-300 font-bold hover:opacity-50">
-                              &#91;{prototype.getUserClan().tag}&#93; {prototype.getUserByID(4).nickname}
+                              {prototype.getUserByID(4).nickname}
                             </a>
                           </Link>
                         </td>
@@ -216,7 +226,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         <td>
                           <Link href="/prototype/profile/5">
                             <a className="text-xs text-ui-300 font-bold hover:opacity-50">
-                              &#91;{prototype.getUserClan().tag}&#93; {prototype.getUserByID(5).nickname}
+                              {prototype.getUserByID(5).nickname}
                             </a>
                           </Link>
                         </td>
@@ -278,17 +288,25 @@ export default function TabBrawlsSoloLeaderboards() {
                     <div className="flex-1 flex gap-2 items-center">
                       <span>Clan rewards</span>
                       <Tooltip
-                      tooltip={
-                        <div className="max-w-xs text-sm text-left text-ui-200 leading-tight normal-case space-y-2">
-                          <p>Rewards will be distributed evenly to everyone in the clan once the Brawl has ended.</p>
-                          <p>For example, if the Clan reward is [number] Coins and [number] Golden tickets - each Clan member will split on the [number] Coins and [number] Golden tickets.</p>
-                        </div>
-                      }
-                    >
-                      <button className="text-ui-300 text-0 translate-y-0.5">
-                        <span className="icon icon-16 icon-c-info" />
-                      </button>
-                    </Tooltip>
+                        tooltip={
+                          <div className="max-w-xs text-sm text-left text-ui-200 leading-tight normal-case space-y-2">
+                            <p>
+                              Rewards will be distributed evenly to everyone in
+                              the clan once the Brawl has ended.
+                            </p>
+                            <p>
+                              For example, if the Clan reward is [number] Coins
+                              and [number] Golden tickets - each Clan member
+                              will split on the [number] Coins and [number]
+                              Golden tickets.
+                            </p>
+                          </div>
+                        }
+                      >
+                        <button className="text-ui-300 text-0 translate-y-0.5">
+                          <span className="icon icon-16 icon-c-info" />
+                        </button>
+                      </Tooltip>
                     </div>
                   </div>
                   <div className="flex-1">
@@ -398,9 +416,15 @@ export default function TabBrawlsSoloLeaderboards() {
                                 </div>
                               </div>
                               <div className="flex-1 flex items-center justify-center gap-4">
-                                {user.rewards?.map((reward, rewardIndex) => 
-                                  <Reward key={rewardIndex} reward={reward} gap="gap-2" imageClassNames="h-6" textClassNames="font-headings font-bold text-lg italic" />
-                                )}
+                                {user.rewards?.map((reward, rewardIndex) => (
+                                  <Reward
+                                    key={rewardIndex}
+                                    reward={reward}
+                                    gap="gap-2"
+                                    imageClassNames="h-6"
+                                    textClassNames="font-headings font-bold text-lg italic"
+                                  />
+                                ))}
                               </div>
                             </div>
                             <div
@@ -419,9 +443,8 @@ export default function TabBrawlsSoloLeaderboards() {
                                           <div>
                                             <img
                                               src={
-                                                prototype.getClanByID(
-                                                  user.clan
-                                                )?.avatar
+                                                prototype.getClanByID(user.clan)
+                                                  ?.avatar
                                               }
                                             />
                                           </div>
@@ -431,24 +454,21 @@ export default function TabBrawlsSoloLeaderboards() {
                                         <div className="item-title">
                                           <span
                                             className={`${
-                                              prototype.getClanByID(
-                                                user.clan
-                                              )?.isYou
+                                              prototype.getClanByID(user.clan)
+                                                ?.isYou
                                                 ? "text-blue-300 font-bold"
                                                 : ""
                                             }`}
                                           >
                                             &#91;
                                             {
-                                              prototype.getClanByID(
-                                                user.clan
-                                              )?.tag
+                                              prototype.getClanByID(user.clan)
+                                                ?.tag
                                             }
                                             &#93;{" "}
                                             {
-                                              prototype.getClanByID(
-                                                user.clan
-                                              )?.nickname
+                                              prototype.getClanByID(user.clan)
+                                                ?.nickname
                                             }
                                           </span>
                                         </div>
@@ -709,20 +729,17 @@ export default function TabBrawlsSoloLeaderboards() {
                     <span className="icon icon-arrow-down" />
                   </button>
                 </div>
-                <div className="text-center my-4 text-sm text-ui-300">
-                  <div>
+                <div className="text-center my-4 text-sm">
+                  <div className="text-ui-400">
                     The leaderboard is updated every X minute,{" "}
                     <a href="#" className="link link-main">
                       reload the page
                     </a>{" "}
                     for an update
                   </div>
-                  <div>
+                  <div className="text-ui-300">
                     Leaderboard ID:{" "}
-                    <span className="text-ui-100 font-bold">
-                      [date:game:tier:groupId]
-                    </span>{" "}
-                    example: &quot;225VG19&quot;{" "}
+                    <span className="text-ui-100 font-bold">225VG19</span>
                   </div>
                 </div>
               </div>

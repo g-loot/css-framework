@@ -1,16 +1,15 @@
 import React, { useContext, useRef, useState } from "react";
 
-import DSHead from "./DSHead";
-import DSMainNav from "./DSMainNav";
-import DSTopBar from "./DSTopBar";
-import { DSpages } from "../../pages/api/designsystem/pages";
 import Footer from "../Footer/Footer";
 import Link from "next/link";
+import SBHead from "./SBHead";
+import SBMainNav from "./SBMainNav";
+import SBTopBar from "./SBTopBar";
+import { SBpages } from "../../pages/sandbox/pages";
 import { getLayout as getSiteLayout } from "../SiteLayout";
-import packageFramework from "../../framework/package.json";
 import { useRouter } from "next/router";
 
-const DSLayout = ({ children }) => {
+const SBLayout = ({ children }) => {
   const [filter, setFilter] = useState("");
 
   const router = useRouter();
@@ -30,12 +29,12 @@ const DSLayout = ({ children }) => {
   return (
     <>
       
-      <DSHead title="Docs" />
+      <SBHead title="Docs" />
       <div className="drawer drawer-mobile">
         <input id="drawer-ds" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content" ref={myRef}>
           <div className="block lg:hidden">
-            <DSTopBar data={DSpages} />
+            <SBTopBar data={SBpages} />
           </div>
 
           <div className="pt-12 pb-24 px-4">
@@ -58,20 +57,10 @@ const DSLayout = ({ children }) => {
                       alt="G-Loot logo"
                     />
                     <div className="font-headings font-bold text-lg uppercase not-italic leading-none pl-10">
-                      Framework
+                      Sandbox
                     </div>
                   </a>
                 </Link>
-                <div className="text-xs text-ui-400">
-                  <a
-                    href="https://www.npmjs.com/package/@g-loot/css-framework"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="chip chip-secondary chip-xs"
-                  >
-                    <span>v{packageFramework.version}</span>
-                  </a>
-                </div>
               </div>
               <div className="form-group mt-4">
                 <div className="input-group">
@@ -91,7 +80,7 @@ const DSLayout = ({ children }) => {
             </div>
 
             <div className="relative z-0 px-4 pb-4">
-              {DSpages.map((item, itemIndex) => (
+              {SBpages.map((item, itemIndex) => (
                 <div className={`${filter ? "" : "mb-4"}`} key={item}>
                   <button
                     className={`flex items-center px-4 ${
@@ -113,7 +102,7 @@ const DSLayout = ({ children }) => {
                     <div
                       className={`${filter ? "" : "border-t border-ui-700/50"}`}
                     >
-                      <DSMainNav
+                      <SBMainNav
                         filter={filter}
                         items={item.pages.sort((a, b) =>
                           a.label.localeCompare(b.label)
@@ -134,6 +123,6 @@ const DSLayout = ({ children }) => {
   );
 };
 
-export const getLayout = (page) => getSiteLayout(<DSLayout>{page}</DSLayout>);
+export const getLayout = (page) => getSiteLayout(<SBLayout>{page}</SBLayout>);
 
-export default DSLayout;
+export default SBLayout;

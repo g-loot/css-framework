@@ -1,24 +1,7 @@
-import Icon from '../Icon/Icon';
 import React from 'react';
 import classNames from 'classnames';
-import styles from '../../assets/styles/button.module.css'
 
 export default function Button(props) {
- /*
-  const buttonClass = classNames({
-    [styles.button]: true,
-    [styles["button-"+props.variant]]: props.variant,
-    "rounded-full": !props.label,
-    [styles["button-play"]]: props.play,
-    [styles["button-lg"]]: props.size && props.size === 'lg',
-    [styles["button-md"]]: props.size && props.size === 'md',
-    [styles["button-sm"]]: props.size && props.size === 'sm',
-    [styles["button-currency"]]: props.currency,
-    [styles["button-coin"]]: props.currency === 'coin',
-    [styles["button-token"]]: props.currency === 'token',
-    [styles["button-ticket"]]: props.currency === 'ticket'
-  });
-  */
  
   const buttonClass = classNames({
     "button": true,
@@ -42,8 +25,7 @@ export default function Button(props) {
 
   const icon = props.icon && (
     <>
-        <Icon icon={props.icon} className='icon'></Icon>
-        {/*<span className={`${styles.icon} icon-${props.icon}`}/>*/}
+        <span className={`icon ${props.icon}`}/>
     </>
   );
 

@@ -26,6 +26,7 @@
   ease-[cubic-bezier(0.8,0,0.2,1)]
   ;
   transform-style: preserve-3d;
+  backface-visibility: hidden;
   
   > * {
     @apply
@@ -46,15 +47,15 @@
     @apply
     z-10
     ;
-    transform: translate3d(0,0,0) rotateY(180deg);
+    transform: translate3d(0,0,0) rotateY(180deg) rotateX(0deg);
   }
 
   &:not(.animate-flip) {
-    transform: translate3d(0,0,0) rotateY(0deg);
+    transform: translate3d(0,0,0) rotateY(0deg) rotateX(0deg);
   }
 
   &.animate-flip {
-    transform: translate3d(0,0,0) rotateY(180deg);
+    transform: translate3d(0,0,0) rotateY(180deg) rotateX(0deg);
   }
 
   &.animate-delay {
