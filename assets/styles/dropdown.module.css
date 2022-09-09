@@ -76,8 +76,8 @@
 
   &.dropdown-open,
   &.dropdown-hover:hover,
-  &:not(.dropdown-hover):focus,
-  &:not(.dropdown-hover):focus-within {
+  &:not(.dropdown-hover, .dropdown-open, .dropdown-closed):focus,
+  &:not(.dropdown-hover, .dropdown-open, .dropdown-closed):focus-within {
     .dropdown-content {
       @apply
       visible
@@ -107,6 +107,24 @@
       ;
     }
   }
+
+  
+  &.dropdown-closed {
+    &,
+    &:focus,
+    &:focus-within {
+      .dropdown-content {
+        @apply
+        scale-90
+        invisible
+        pointer-events-none
+        opacity-0
+        translate-y-0
+        ;
+      }
+    }
+  }
+  
 }
 
 .dropdown-end {

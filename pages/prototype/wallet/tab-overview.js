@@ -187,6 +187,7 @@ export default function TabWalletOverview() {
                   style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                 >
                   <Accordion
+                    isNoHover={true}
                     buttonActivation={true}
                     isopen={isMobile}
                     header={

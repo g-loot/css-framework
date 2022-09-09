@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+
 import { getLayout } from "../../components/DesignSystem/DSLayout";
 
 const DSpage = () => {
+  const [isActive, setActive] = useState(false);
+  const ref = useRef(null);
+
+  const dropdownActive = (e) => {
+    e.preventDefault();
+    setActive(!isActive);
+  };
+
+  const handleClickOutside = (e) => {
+    if (ref.current && !ref.current.contains(e.target)) {
+      setActive(false);
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside, true)
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true)
+    }
+  })
+
+  
   return (
     <>
       <h1 className="mb-2">Dropdown</h1>
@@ -455,8 +478,8 @@ const DSpage = () => {
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
-              <div className="dropdown dropdown-open">
-                <label tabIndex="1" className="button button-primary">
+              <div ref={ref} className={`dropdown ${isActive ? "dropdown-open" : "dropdown-closed"}`}>
+                <label tabIndex="1" className="button button-primary" onClick={dropdownActive}>
                   <span>Click me</span>
                   <span className="icon icon-arrow-sm-down" />
                 </label>
@@ -486,7 +509,7 @@ const DSpage = () => {
                 className="rounded"
                 width="100%"
                 height="300"
-                src="//jsfiddle.net/augustin_hiebel/w03vp2bj/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/w03vp2bj/embedded/js/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
               ></iframe>
             </div>
           </div>

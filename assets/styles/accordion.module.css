@@ -29,7 +29,6 @@
     select-none
     transition-colors
     duration-100
-    cursor-pointer
     ;
     :where(.icon[class*='icon-game'], .item-title) {
       @apply
@@ -124,6 +123,7 @@
       &:hover {
         .accordion-header {
           @apply
+          cursor-pointer
           bg-ui-700/50
           ;
         }

@@ -191,14 +191,14 @@ export default function TabBrawlsSoloLeaderboards() {
                         <tr>
                           <th className="w-10"></th>
                           <td>
-                            <span className="text-xs text-ui-300 uppercase">
+                            <div className="text-xs text-ui-300 uppercase">
                               Match
-                            </span>
+                            </div>
                           </td>
                           <td>
-                            <span className="text-xs text-ui-300 uppercase">
+                            <div className="text-xs text-ui-300 uppercase">
                               Points
-                            </span>
+                            </div>
                           </td>
                         </tr>
                         <tr className="bg-ui-800 font-bold text-blue-300">
@@ -327,15 +327,34 @@ export default function TabBrawlsSoloLeaderboards() {
             {!isEmpty && (
               <div className="col-span-1 lg:col-span-3">
                 <div className="sm:rounded-lg">
-                  <div className="flex items-center justify-end gap-2 px-4">
+                  <div className="relative z-10 flex items-center justify-end gap-2 px-4">
                     <span className="text-sm text-ui-300">
                       What are the different Brawl levels?
                     </span>
-                    <button type="button" className="text-ui-300 text-0">
-                      <span className="icon icon-16 icon-c-info" />
-                    </button>
+                    <Tooltip
+                      tooltip={
+                        <div className="max-w-xs leading-tight">
+                          <h5 className="text-lg">Brawl levels</h5>
+                          <p className="text-sm mb-2">
+                            Some Brawls put players into different levels based
+                            on their skills and performance while others are
+                            open for everyone no matter the skill level.
+                          </p>
+                          <h5 className="text-lg">Groups &amp; leaderboards</h5>
+                          <p className="text-sm">
+                            Some Brawls are so big that they are split into
+                            smaller groups to give everyone a better chance to
+                            win. Each group has its own leaderboard and rewards.
+                          </p>
+                        </div>
+                      }
+                    >
+                      <button type="button" className="text-ui-300">
+                        <span className="icon icon-16 icon-c-info" />
+                      </button>
+                    </Tooltip>
                   </div>
-                  <div className="overflow-x-auto relative scrollbar-hidden h-16 flex items-center my-4">
+                  <div className="relative z-0 overflow-x-auto scrollbar-hidden h-16 flex items-center my-4">
                     <div className="hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r from-ui-900 via-ui-900 to-ui-900/0 pl-4 pr-8">
                       <button
                         type="button"

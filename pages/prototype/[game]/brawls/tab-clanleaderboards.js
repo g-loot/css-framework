@@ -169,17 +169,19 @@ export default function TabBrawlsSoloLeaderboards() {
                 </div>
                 <div className="border-t border-ui-700 max-h-[200px] overflow-y-auto scrollbar-desktop">
                   <table className="table table-comptact w-full">
-                    <thead>
+                    <tbody>
                       <tr>
-                        <td className="text-left">
-                          <span className="text-xs">Player</span>
+                        <td>
+                          <div className="text-xs text-ui-300 uppercase">
+                            Player
+                          </div>
                         </td>
-                        <td className="text-right">
-                        <span className="text-xs">Match points</span>
+                        <td>
+                          <div className="text-xs text-ui-300 uppercase text-right">
+                            Points
+                          </div>
                         </td>
                       </tr>
-                    </thead>
-                    <tbody>
                       <tr>
                         <td>
                           <Link href="/prototype/profile/2">
@@ -435,53 +437,61 @@ export default function TabBrawlsSoloLeaderboards() {
                               }`}
                             >
                               <Accordion
+                                isNoHover={true}
+                                buttonActivation={true}
+                                buttonActivationSimple={true}
                                 header={
                                   <>
                                     <div className="item">
-                                      <div className="item-image">
-                                        <figure className="avatar avatar-squircle avatar-xs">
-                                          <div>
-                                            <img
-                                              src={
-                                                prototype.getClanByID(user.clan)
-                                                  ?.avatar
-                                              }
-                                            />
-                                          </div>
-                                        </figure>
-                                      </div>
                                       <div className="item-body">
-                                        <div className="item-title">
-                                          <span
-                                            className={`${
-                                              prototype.getClanByID(user.clan)
-                                                ?.isYou
-                                                ? "text-blue-300 font-bold"
-                                                : ""
-                                            }`}
-                                          >
-                                            &#91;
-                                            {
-                                              prototype.getClanByID(user.clan)
-                                                ?.tag
-                                            }
-                                            &#93;{" "}
-                                            {
-                                              prototype.getClanByID(user.clan)
-                                                ?.nickname
-                                            }
-                                          </span>
-                                        </div>
+                                        <Link
+                                          href={`/prototype/clans/${user.clan}${
+                                            hasAds ? "?ads=true" : ""
+                                          }`}
+                                        >
+                                          <div className="flex gap-2 items-center interactive">
+                                            <figure className="avatar avatar-squircle avatar-xs">
+                                              <div>
+                                                <img
+                                                  src={
+                                                    prototype.getClanByID(
+                                                      user.clan
+                                                    )?.avatar
+                                                  }
+                                                />
+                                              </div>
+                                            </figure>
+                                            <div className="item-title">
+                                              <span
+                                                className={`${
+                                                  prototype.getClanByID(
+                                                    user.clan
+                                                  )?.isYou
+                                                    ? "text-blue-300 font-bold"
+                                                    : ""
+                                                }`}
+                                              >
+                                                &#91;
+                                                {
+                                                  prototype.getClanByID(
+                                                    user.clan
+                                                  )?.tag
+                                                }
+                                                &#93;{" "}
+                                                {
+                                                  prototype.getClanByID(
+                                                    user.clan
+                                                  )?.nickname
+                                                }
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </Link>
                                       </div>
                                       <div className="item-body flex justify-around items-center">
                                         <span className="font-bold text-ui-300 leading-none">
                                           {user.stats.brawlPoints}
                                         </span>
-                                      </div>
-                                      <div className="item-actions flex items-center gap-2">
-                                        <div>
-                                          <span className="icon icon-24 icon-arrow-sm-down" />
-                                        </div>
                                       </div>
                                     </div>
                                   </>
