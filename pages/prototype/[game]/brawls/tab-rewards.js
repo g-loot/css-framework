@@ -209,7 +209,7 @@ export default function TabBrawlsRewards() {
               ))}
             </ul>
           </div>
-          {prototype.getBrawlByID(game, brawl_id).clan && (
+          {prototype.getBrawlByID(game, brawl_id)?.clan && (
             <div className="flex-1 surface sm:rounded-lg p-4">
               <h2 className="text-3xl mb-4 px-4">
                 Clan{" "}
