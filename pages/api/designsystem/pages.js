@@ -350,3 +350,6 @@ export const DSpages = [
     ],
   },
 ];
+
+
+export default DSpages;

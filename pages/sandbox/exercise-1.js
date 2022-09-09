@@ -12,6 +12,6 @@ const SBpage = () => (
   </div>
 )
 
-SBpage.getLayout = getLayout
+SBpage.getLayout = getLayout;
 
-export default SBpage
+export default SBpage;

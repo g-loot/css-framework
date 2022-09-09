@@ -606,3 +606,5 @@ export const FrameworkPages = {
     },
   ],
 };
+
+export default FrameworkPages;
