@@ -23,4 +23,6 @@ export const SBpages = [
   },
 ];
 
-export default SBpages;
+export default {
+  SBpages,
+}
