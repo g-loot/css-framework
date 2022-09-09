@@ -140,6 +140,7 @@ export default function TabBrawlsRewards() {
   const hasAds = query.ads === "true" ? true : false;
   const selectedGame = !query.game ? 0 : query.game;
   const noShowdown = query.noshowdown === "true" ? true : false;
+  const noClan = query.noclan === "true" ? true : false;
   const { game } = router.query;
   const { tab } = router.query;
   const { brawl_id } = router.query;
@@ -209,7 +210,7 @@ export default function TabBrawlsRewards() {
               ))}
             </ul>
           </div>
-          {prototype.getBrawlByID(game, brawl_id)?.clan && (
+          {!noClan && (
             <div className="flex-1 surface sm:rounded-lg p-4">
               <h2 className="text-3xl mb-4 px-4">
                 Clan{" "}
