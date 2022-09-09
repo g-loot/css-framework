@@ -150,11 +150,17 @@
   backdrop-blur-sm
   transform-gpu
   p-3
-  transition
+  transition-all
   duration-200
   ease-in-out
   opacity-0
   ;
+
+  &.is-active {
+    @apply
+    opacity-100
+    ;
+  }
 
   &.tooltip-bottom {
     @apply

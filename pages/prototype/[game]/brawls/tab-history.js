@@ -99,6 +99,7 @@ export default function TabBrawlsHistory() {
             </table>
           </div>
           <div className="text-center mt-4 mb-8">
+            
             <button type="button" className="button button-sm button-primary">
               <span>Load more</span>
             </button>

@@ -55,6 +55,11 @@
       shadow-xl
       ;
     }
+    &:not([class*='bg-']) {
+      @apply
+      bg-ui-600
+      ;
+    }
     .menu {
       > li {
         @apply

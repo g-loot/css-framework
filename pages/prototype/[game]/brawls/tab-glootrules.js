@@ -181,15 +181,17 @@ export default function TabBrawlsHowItWorks() {
         className="pt-6 pb-12 animate-slide-in-bottom animate-delay"
         style={{ "--delay": "calc(1 * 0.05s)" }}
       >
-        <div className="grid gap-8 grid-cols-1 xl:grid-cols-3 items-center">
+        <div className="max-w-lg mx-auto gap-8 flex flex-col md:flex-row items-center px-4 sm:px-0">
+          <div className="flex-1">
           <img
-            className="col-span-1 rounded-lg"
+            className="rounded-lg"
             src="https://res.cloudinary.com/gloot/image/upload/v1658493815/Marketing/2022_prototype/gloot-rules-intro.webp"
             width="100%"
             height="auto"
             alt=""
           />
-          <div className="col-span-1 px-4 sm:px-0">
+          </div>
+          <div className="flex-1">
             <h2 className="text-3xl leading-none mb-4">G-Loot rules</h2>
             <p className="text-ui-300 leading-relaxed">
               G-Loot wants esports to be safe and fun for everyone, so we take

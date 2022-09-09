@@ -5,6 +5,7 @@ import HowToBrawl from "../../../../components/HowTo/HowToBrawl";
 import Link from "next/link";
 import ModalClaimLadderRewards from "../../home/modal-claim-dailyrewards";
 import Reward from "../../../../components/Reward/Reward";
+import Tooltip from "../../../../components/Tooltip/Tooltip";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -44,6 +45,7 @@ const sideScroll = (element, speed, distance, step) => {
 export default function TabBrawlsSoloLeaderboards() {
   const router = useRouter();
   const { query } = useRouter();
+  const hasAds = query.ads === "true" ? true : false;
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedBrawl, setSelectedBrawl] = useState(null);
@@ -302,14 +304,21 @@ export default function TabBrawlsSoloLeaderboards() {
             </div>
             {isEmpty && (
               <div className="col-span-1 lg:col-span-3 px-4 py-8 text-center">
-                <div className='max-w-sm mx-auto'>
-                  <img className="mx-auto" src="https://res.cloudinary.com/gloot/image/upload/v1661353259/Marketing/2022_prototype/Decoration-crown.png" width="220" height="auto" alt="" />
-                  <div className='mt-2 mb-6'>
-                    <h3 className='h4 text-ui-300 leading-tight mb-1'>
-                      Be the first to join this leaderboard! 
+                <div className="max-w-sm mx-auto">
+                  <img
+                    className="mx-auto"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1661353259/Marketing/2022_prototype/Decoration-crown.png"
+                    width="220"
+                    height="auto"
+                    alt=""
+                  />
+                  <div className="mt-2 mb-6">
+                    <h3 className="h4 text-ui-300 leading-tight mb-1">
+                      Be the first to join this leaderboard!
                     </h3>
-                    <p className='max-w-[45ch] text-ui-400 mx-auto'>
-                      The top position is currently all yours for taking if your skill is on this level ;) 
+                    <p className="max-w-[45ch] text-ui-400 mx-auto">
+                      The top position is currently all yours for taking if your
+                      skill is on this level ;)
                     </p>
                   </div>
                 </div>
@@ -712,89 +721,133 @@ export default function TabBrawlsSoloLeaderboards() {
                                     }`}
                                   >
                                     <Accordion
+                                      isNoHover={true}
+                                      buttonActivation={true}
+                                      buttonActivationSimple={true}
                                       header={
                                         <>
                                           <div className="item">
-                                            <div className="item-image">
-                                              <figure className="avatar avatar-circle avatar-xs">
-                                                <div>
-                                                  <img
-                                                    src={
-                                                      prototype.getUserByID(
-                                                        user.user
-                                                      )?.avatar
-                                                    }
-                                                  />
-                                                </div>
-                                              </figure>
-                                            </div>
-                                            <div className="item-body">
-                                              <div className="item-title">
-                                                <span
-                                                  className={`${
-                                                    prototype.getUserByID(
-                                                      user.user
-                                                    )?.isYou
-                                                      ? "text-blue-300 font-bold"
-                                                      : ""
-                                                  }`}
-                                                >
-                                                  {prototype.getUserByID(
-                                                    user.user
-                                                  )?.clan && (
-                                                    <>
-                                                      &#91;
-                                                      {
-                                                        prototype.getClanByID(
+                                            <div className="flex-1">
+                                              <Link
+                                                href={`/prototype/profile/${
+                                                  user.user
+                                                }${hasAds ? "?ads=true" : ""}`}
+                                              >
+                                                <div className="flex gap-2 items-center interactive">
+                                                  <figure className="avatar avatar-circle avatar-xs">
+                                                    <div>
+                                                      <img
+                                                        src={
                                                           prototype.getUserByID(
                                                             user.user
-                                                          )?.clan
-                                                        )?.tag
-                                                      }
-                                                      &#93;{" "}
-                                                    </>
-                                                  )}
-
-                                                  {
-                                                    prototype.getUserByID(
+                                                          )?.avatar
+                                                        }
+                                                      />
+                                                    </div>
+                                                    {prototype.getUserByID(
                                                       user.user
-                                                    )?.nickname
-                                                  }
-                                                </span>
-                                              </div>
+                                                    )?.isYou && (
+                                                      <i className="radar" />
+                                                    )}
+                                                  </figure>
+                                                  <div className="item-title">
+                                                    <span
+                                                      className={`${
+                                                        prototype.getUserByID(
+                                                          user.user
+                                                        )?.isYou
+                                                          ? "text-blue-300 font-bold"
+                                                          : ""
+                                                      }`}
+                                                    >
+                                                      {prototype.getUserByID(
+                                                        user.user
+                                                      )?.clan && (
+                                                        <>
+                                                          &#91;
+                                                          {
+                                                            prototype.getClanByID(
+                                                              prototype.getUserByID(
+                                                                user.user
+                                                              )?.clan
+                                                            )?.tag
+                                                          }
+                                                          &#93;{" "}
+                                                        </>
+                                                      )}
+
+                                                      {
+                                                        prototype.getUserByID(
+                                                          user.user
+                                                        )?.nickname
+                                                      }
+                                                    </span>
+                                                  </div>
+                                                </div>
+                                              </Link>
                                             </div>
                                             <div className="item-body flex justify-around items-center">
                                               <span className="font-bold text-ui-300 leading-none">
                                                 {user.stats.brawlPoints}
                                               </span>
-
-                                              <figure
-                                                className={`avatar avatar-squircle avatar-xs ${
-                                                  !prototype.getUserByID(
+                                              {
+                                                prototype.getUserByID(user.user)
+                                                  ?.clan
+                                              }
+                                              <Link
+                                                href={`/prototype/clans/${
+                                                  prototype.getUserByID(
                                                     user.user
                                                   ).clan
-                                                    ? "opacity-0"
-                                                    : ""
-                                                }`}
+                                                }${hasAds ? "?ads=true" : ""}`}
                                               >
-                                                <div>
-                                                  <img
-                                                    src={
-                                                      prototype.getClanByID(
-                                                        prototype.getUserByID(
-                                                          user.user
-                                                        )?.clan
-                                                      )?.avatar
+                                                <a>
+                                                  <Tooltip
+                                                    placement="left"
+                                                    tooltip={
+                                                      <div className="max-w-xs text-sm text-center leading-tight">
+                                                        {
+                                                          prototype.getClanByID(
+                                                            prototype.getUserByID(
+                                                              user.user
+                                                            )?.clan
+                                                          )?.nickname
+                                                        }
+                                                      </div>
                                                     }
-                                                  />
-                                                </div>
-                                              </figure>
+                                                  >
+                                                    <figure
+                                                      className={`avatar avatar-squircle avatar-xs interactive ${
+                                                        !prototype.getUserByID(
+                                                          user.user
+                                                        ).clan
+                                                          ? "opacity-0"
+                                                          : ""
+                                                      }`}
+                                                    >
+                                                      <div>
+                                                        <img
+                                                          src={
+                                                            prototype.getClanByID(
+                                                              prototype.getUserByID(
+                                                                user.user
+                                                              )?.clan
+                                                            )?.avatar
+                                                          }
+                                                        />
+                                                      </div>
+                                                    </figure>
+                                                  </Tooltip>
+                                                </a>
+                                              </Link>
                                             </div>
+                                            {/*
                                             <div className="item-actions flex items-center gap-2">
                                               <div>
                                                 <span className="icon icon-24 icon-arrow-sm-down" />
                                               </div>
                                             </div>
+                                                        */}
                                           </div>
                                         </>
                                       }

@@ -118,10 +118,13 @@
           ;
         }
       }
+    }
+
+    &:not(.is-active, .is-nohover) {
       &:hover {
         .accordion-header {
           @apply
-          bg-ui-700/25
+          bg-ui-700/50
           ;
         }
       }

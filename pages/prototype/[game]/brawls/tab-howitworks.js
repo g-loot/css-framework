@@ -12,7 +12,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Before entering a Brawl",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-cpu.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1662645651/Marketing/2022_prototype/Illustrations/brawl_logo.webp",
     content: [
       {
         type: "p",
@@ -35,7 +35,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Pay tokens to activate Brawl matches",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1658483784/Marketing/2022_prototype/brawls-howitworks-tokens.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1662645308/Marketing/2022_prototype/Illustrations/token.webp",
     content: [
       {
         type: "p",
@@ -62,7 +62,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Playing your matches & climbing the leaderboard",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657721633/Marketing/2022_prototype/missions-howitworks-cpu.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/leaderboard_details.webp",
     content: [
       {
         type: "p",
@@ -81,7 +81,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Brawl levels & groups",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657721634/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1662645307/Marketing/2022_prototype/Illustrations/ranks_levels.webp",
     content: [
       {
         type: "h3",
@@ -106,70 +106,9 @@ const MissionsHowitworksTabs = [
     ],
   },
   {
-    title: "Play in the right mode",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657721633/Marketing/2022_prototype/missions-howitworks-gamemode.webp",
-    content: [
-      {
-        type: "p",
-        text: "To collect Brawl points, you need to play the game in the correct game mode. You can find the game mode, as well as other information about the Brawl, on the Brawl page.",
-      },
-      {
-        type: "p",
-        text: "The Tracker will detect which game mode you are playing when you start your match. If you are in the correct game mode, the Tracker will automatically record your stats for the Brawl.",
-      },
-    ],
-  },
-  {
-    title: "Only your best Brawl matches count",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1658483784/Marketing/2022_prototype/brawls-howitworks-bestmatches.webp",
-    content: [
-      {
-        type: "p",
-        text: "To make Brawls as fair as possible, only the points from your best Brawl matches count on the leaderboard.",
-      },
-      {
-        type: "p",
-        text: "This means that you can play as many matches you want if you have enough Tokens.",
-      },
-      {
-        type: "p",
-        text: "If you do better than you did in an earlier match, your points will be updated to the higher number.",
-      },
-      {
-        type: "p",
-        text: "If you do worse, your points will not change.",
-      },
-    ],
-  },
-  {
-    title: "If you are out of token",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1658483784/Marketing/2022_prototype/brawls-howitworks-tokenspile.webp",
-    content: [
-      {
-        type: "p",
-        text: "If run out of Tokens, there are several ways to get more.",
-      },
-      {
-        type: "p",
-        text: "• Earn Tokens by completing Missions and unlocking Mission Rewards.",
-      },
-      {
-        type: "p",
-        text: "• Buy Tokens in the G-Loot wallet.",
-      },
-      {
-        type: "p",
-        text: "• Claim free Tokens in your Daily Loot Streak.",
-      },
-    ],
-  },
-  {
     title: "If there is a tie",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1658483784/Marketing/2022_prototype/brawls-howitworks-tiebreaker.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1662645308/Marketing/2022_prototype/Illustrations/tiebreaker.webp",
     content: [
       {
         type: "p",
@@ -182,24 +121,55 @@ const MissionsHowitworksTabs = [
     ],
   },
   {
-    title: "Rewards",
+    title: "Playing with your clan",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657721634/Marketing/2022_prototype/missions-howitworks-premiumrewards.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/clans.webp",
     content: [
       {
         type: "p",
-        text: "Competing in the Brawl earns you Coins which you can spend in the G-Loot shop.",
+        text: "In Clan Brawls, your Brawl matches count for both the Solo and the Clan leaderboards.",
       },
       {
         type: "p",
-        text: "Some Brawls are also connected to tournaments like the Monthly Showdown. Winners of these Brawls earn tickets which they can use to compete in the Monthly Showdown.",
+        text: "To play in a Clan Brawl, your Clan must have that game as one of their played games on the Clan profile.",
+      },
+      {
+        type: "p",
+        text: "Enough Clan members must play in the Brawl for the Clan to appear on the leaderboard.",
+      },
+      {
+        type: "p",
+        text: "The Clan Brawl points are made up of the best Brawl points from the best Clan players.",
+      },
+    ],
+  },
+  {
+    title: "If you leave your clan in the middle of a Brawl",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1662645389/Marketing/2022_prototype/Illustrations/picture_gamer_2.webp",
+    content: [
+      {
+        type: "p",
+        text: "If you leave a Clan in an ongoing Brawl and have contributed to the Clan by playing matches, you will still get rewarded if that Clan wins any rewards when the Brawl ends.",
+      },
+      {
+        type: "p",
+        text: "If you change Clans during an ongoing Brawl and have already played a Brawl match with the old Clan, you will not get rewards with the new Clan. ",
+      },
+      {
+        type: "p",
+        text: "The points you contribute with still belong to the old Clan until the Brawl ends. ",
+      },
+      {
+        type: "p",
+        text: "You are free to join a new Clan and get rewards with that Clan if you haven’t played matches in an ongoing Brawl with a previous Clan.",
       },
     ],
   },
   {
     title: "If a game goes into maintenance",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1658483784/Marketing/2022_prototype/brawls-howitworks-maintenance.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/maintenance.webp",
     content: [
       {
         type: "p",
@@ -207,7 +177,27 @@ const MissionsHowitworksTabs = [
       },
       {
         type: "p",
-        text: "Once the maintenance is over, the Brawl will continue. If there is a bigger issue or if the maintenance lasts for several days, G-Loot will decide if the Brawl will continue. If the Brawl is canceled, you will get your Tokens back.",
+        text: "Once the maintenance is over, the Brawl will continue. If there is a bigger issue or if the maintenance lasts for several days, G-Loot will decide if the Brawl will continue. If the Brawl is canceled, you will get your Tokens back",
+      },
+    ],
+  },
+  {
+    title: "If I'm having a problem with the Brawl",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/error.webp",
+    content: [
+      {
+        type: "p",
+        text: "If your Brawl stats aren’t tracking correctly, try these steps.",
+      },
+      {
+        type: "ul",
+        text: [
+          "Make sure the G-Loot overlay is running and the icon is green. Or that you have added your correct game account in your Profile settings.",
+          "Make sure you’re playing in the correct game mode as shown on the Brawl page.",
+          "Wait a little while. Stats can take some time to be updated.",
+          "Check out the help page for more tips.",
+        ],
       },
     ],
   },
@@ -286,7 +276,7 @@ export default function TabBrawlsHowItWorks() {
           <div className="absolute inset-0 flex items-center justify-center bg-ui-900/50">
             <button
               type="button"
-              className="button button-tertiary button-lg button-play"
+              className="button button-primary button-lg button-play"
               onClick={openModalBrawlHowitworksVideo}
             >
               <span className="icon icon-circle-caret-right"></span>

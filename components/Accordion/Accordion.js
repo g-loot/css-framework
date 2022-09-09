@@ -7,6 +7,10 @@ export default function Accordion(props) {
   const isDisabled = props.isdisabled !== undefined ? props.isdisabled : false;
   const buttonActivation =
     props.buttonActivation !== undefined ? props.buttonActivation : false;
+  const buttonActivationSimple =
+    props.buttonActivationSimple !== undefined ? props.buttonActivationSimple : false;
+  const isNoHover =
+    props.isNoHover !== undefined ? props.isNoHover : false;
   const [isActive, setActive] = useState(isOpen);
   const [heightValue, setHeightValue] = useState(0);
   const elementRef = useRef(null);
@@ -47,7 +51,7 @@ export default function Accordion(props) {
   return (
     <>
       <div
-        className={`accordion-item ${isActive ? "is-active" : ""} ${
+        className={`accordion-item ${isActive ? "is-active" : ""} ${isNoHover ? "is-nohover" : ""} ${
           isSelected ? "is-selected" : ""
         } ${isDisabled ? "is-disabled pointer-events-none opacity-50" : ""}`}
       >
@@ -60,9 +64,19 @@ export default function Accordion(props) {
           <div
             className={`accordion-header flex items-center justify-between w-full`}
           >
-            <div>{props.header}</div>
+            <div className="flex-1">{props.header}</div>
             <div className="hidden md:block">
-              <button
+              {buttonActivationSimple && (
+                <button
+                type="button"
+                className="button button-ghost rounded-full mr-1"
+                onClick={handleToggle}
+              >
+                <span className="icon icon-24 icon-arrow-sm-down" />
+              </button>
+              )}
+              {!buttonActivationSimple && (
+                <button
                 type="button"
                 className="button button-ghost"
                 onClick={handleToggle}
@@ -74,6 +88,8 @@ export default function Accordion(props) {
                 </label>
                 <span className="icon icon-24 icon-arrow-sm-down" />
               </button>
+              )}
+              
             </div>
             <div className="block md:hidden">
               <button

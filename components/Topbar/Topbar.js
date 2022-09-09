@@ -81,7 +81,8 @@ export default function Topbar() {
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
   const hasAds = query.ads === "true" ? true : false;
-  const modalDownloadStarted = query.modaldownloadstarted === "true" ? true : false;
+  const modalDownloadStarted =
+    query.modaldownloadstarted === "true" ? true : false;
 
   useEffect(() => {
     if (modalDownloadStarted) {
@@ -123,33 +124,39 @@ export default function Topbar() {
               </a>
             </Link>
             <Tooltip
-                    tooltip={
-                      <div className="w-56 relative">
-                        <h6 className="mb-3 leading-tight">Welcome to the<br />G-Loot Beta</h6>
-                        <div className="absolute -top-2 -right-2 p-2">
-                          <span className="icon icon-gloot-symbol text-3xl text-main" />
-                          <div className="lottie-blur absolute -inset-1">
-                            <Lottie
-                              animationData={LottieExplosion}
-                              loop={false}
-                              autoplay={true}
-                            />
-                          </div>
-                        </div>
-                        <ul className="leading-tight space-y-2">
-                          <li className="flex gap-2 text-sm">
-                            <div className="flex-1">
-                              If you encounter any bugs, glitches, lack of functionality, or other problems, or if you have any feedback, please reach out to us.
-                            </div>
-                          </li>
-                        </ul>
+              tooltip={
+                <div className="w-56 relative">
+                  <h6 className="mb-3 leading-tight">
+                    Welcome to the
+                    <br />
+                    G-Loot Beta
+                  </h6>
+                  <div className="absolute -top-2 -right-2 p-2">
+                    <span className="icon icon-gloot-symbol text-3xl text-main" />
+                    <div className="lottie-blur absolute -inset-1">
+                      <Lottie
+                        animationData={LottieExplosion}
+                        loop={false}
+                        autoplay={true}
+                      />
+                    </div>
+                  </div>
+                  <ul className="leading-tight space-y-2">
+                    <li className="flex gap-2 text-sm">
+                      <div className="flex-1">
+                        If you encounter any bugs, glitches, lack of
+                        functionality, or other problems, or if you have any
+                        feedback, please reach out to us.
                       </div>
-                    }
-                  >
-                    <span className="hidden md:block px-2 py-0.5 rounded bg-ui-900/90 text-main font-headings font-bold uppercase italic tracking-wider">
-                      Beta
-                    </span>
-                  </Tooltip>
+                    </li>
+                  </ul>
+                </div>
+              }
+            >
+              <span className="hidden md:block px-2 py-0.5 rounded bg-ui-900/90 text-main font-headings font-bold uppercase italic tracking-wider">
+                Beta
+              </span>
+            </Tooltip>
           </div>
           <div className="flex-1 flex items-center justify-end lg:justify-between">
             <div className="hidden lg:flex gap-2 items-center ml-2 xl:ml-0">
@@ -230,13 +237,16 @@ export default function Topbar() {
                         <ul className="leading-tight space-y-2">
                           <li className="flex gap-2 text-sm">
                             <div className=" w-12 font-bold uppercase">Use</div>
-                            <div className="flex-1">To enter Weekly Brawls.</div>
+                            <div className="flex-1">
+                              To enter Weekly Brawls.
+                            </div>
                           </li>
                           <li className="flex gap-2 text-sm">
                             <div className=" w-12 font-bold uppercase">Get</div>
                             <div className="flex-1">
                               <strong>Missions, Daily Loot Streak</strong> or{" "}
-                              <strong>buy them</strong> directly from the Wallet.
+                              <strong>buy them</strong> directly from the
+                              Wallet.
                             </div>
                           </li>
                         </ul>
@@ -309,10 +319,12 @@ export default function Topbar() {
                 </div>
               </div>
               <div className="flex items-center">
-                <button type="button" className="button button-claim button-sm" onClick={openModalDownloadStarted}>
-                  <span>
-                    Download tracker
-                  </span>
+                <button
+                  type="button"
+                  className="button button-claim button-sm"
+                  onClick={openModalDownloadStarted}
+                >
+                  <span>Download tracker</span>
                 </button>
               </div>
             </div>
@@ -340,7 +352,7 @@ export default function Topbar() {
                 </div>
                 <div className="dropdown dropdown-end">
                   <div
-                    tabIndex="0"
+                    tabIndex="1"
                     className="flex items-center rounded-full border border-ui-700 bg-ui-800 interactive"
                   >
                     <figure className="avatar avatar-circle avatar-xs">
@@ -355,17 +367,17 @@ export default function Topbar() {
                   </div>
 
                   <div
-                    tabIndex="0"
+                    tabIndex="1"
                     className="dropdown-content bg-ui-600 w-52 p-1"
                   >
                     <ul className="menu menu-rounded menu-secondary">
-                    <li>
+                      <li>
                         <Link
                           href={`/prototype/profile/1${
                             hasAds ? "?ads=true" : ""
                           }`}
                         >
-                          <a>
+                          <a tabIndex="1">
                             <span className="icon icon-circle-09" />
                             <span>Profile</span>
                           </a>
@@ -375,7 +387,7 @@ export default function Topbar() {
                         <Link
                           href={`/prototype/wallet${hasAds ? "?ads=true" : ""}`}
                         >
-                          <a>
+                          <a tabIndex="1">
                             <span className="icon icon-wallet-43" />
                             <span>Wallet</span>
                           </a>
@@ -388,7 +400,7 @@ export default function Topbar() {
                             hasAds ? "?ads=true" : ""
                           }`}
                         >
-                          <a>
+                          <a tabIndex="1">
                             <span className="icon icon-cogwheel" />
                             <span>Settings</span>
                           </a>
@@ -400,7 +412,7 @@ export default function Topbar() {
                             hasAds ? "?ads=true" : ""
                           }`}
                         >
-                          <a>
+                          <a tabIndex="1">
                             <span className="icon icon-file-article" />
                             <span>How G-Loot works</span>
                           </a>
@@ -408,6 +420,7 @@ export default function Topbar() {
                       </li>
                       <li>
                         <a
+                          tabIndex="1"
                           onClick={openModalDownloadStarted}
                           href="#"
                           rel="noopener noreferrer"
@@ -418,10 +431,8 @@ export default function Topbar() {
                       </li>
                       <li className="separator"></li>
                       <li>
-                        <Link
-                          href={`/${hasAds ? "?ads=true" : ""}`}
-                        >
-                          <a>
+                        <Link href={`/${hasAds ? "?ads=true" : ""}`}>
+                          <a tabIndex="1">
                             <span className="icon icon-leave" />
                             <span>Log out</span>
                           </a>
@@ -432,7 +443,7 @@ export default function Topbar() {
                 </div>
                 <div className="dropdown dropdown-end">
                   <div
-                    tabIndex="0"
+                    tabIndex="1"
                     className="flex items-center rounded-full border border-ui-700 bg-ui-800 interactive"
                   >
                     <button
@@ -447,7 +458,7 @@ export default function Topbar() {
                   </div>
 
                   <div
-                    tabIndex="0"
+                    tabIndex="1"
                     className="dropdown-content bg-ui-800 w-[320px] sm:w-[420px] overflow-hidden shadow-xl"
                   >
                     <div className="flex items-center justify-between mb-2 p-2">

@@ -3,13 +3,18 @@ import React, { useState } from "react";
 import { usePopperTooltip } from "react-popper-tooltip";
 
 const Tooltip = (props) => {
+  const tooltipPosition =
+    props.placement !== undefined ? props.placement : "auto";
+
   const {
     getArrowProps,
     getTooltipProps,
     setTooltipRef,
     setTriggerRef,
     visible,
-  } = usePopperTooltip({});
+  } = usePopperTooltip({
+    placement: tooltipPosition,
+  });
 
   const placement = getTooltipProps()["data-popper-placement"];
 
@@ -26,7 +31,7 @@ const Tooltip = (props) => {
           <div
             className={`tooltip-lg ${
               placement === "bottom" ? "tooltip-bottom" : ""
-            } ${placement === "top" ? "tooltip-top" : ""} ${
+            } ${placement === "top" ? "tooltip-top" : ""} ${placement === "left" ? "tooltip-left" : ""}  ${
               visible ? "is-active" : ""
             }`}
           >

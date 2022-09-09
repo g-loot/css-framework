@@ -211,6 +211,7 @@ export default function TabMissionsMissions() {
                 <>
                   {mission.ispremium && (
                     <Tooltip
+                      placement="left"
                       tooltip={
                         <div className="max-w-xs text-sm text-center leading-tight">
                           Unlock rewards as you earn XP from Missions. XP is
