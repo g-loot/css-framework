@@ -257,9 +257,10 @@ export default function ListItemBrawl(props) {
 
               <div className="relative z-10 leading-tight flex-1 flex flex-col items-stretch justify-between space-y-2">
                 <h6 className="text-xl">{brawl.name}</h6>
-                <div className="">
+                <div className="flex gap-2 items-end">
+                  <div className="flex-1 flex gap-3 items-end">
                   {brawl.result && (
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-3">
                       <div className="font-headings leading-none flex items-start gap-1">
                         <span className="text-xl">#</span>
                         <span className="text-4xl">
@@ -283,73 +284,76 @@ export default function ListItemBrawl(props) {
                       </div>
                     </div>
                   )}
-                </div>
-                <div className="flex items-end justify-between">
-                  <div>
-                    <div className="text-sm text-ui-300">Top spot reward:</div>
-                    <div className="flex gap-4 items-center">
-                      {brawl.rewards?.map((reward, rewardIndex) => (
-                        <>
-                          {reward.type === "money" && (
-                            <div className="flex items-center gap-2">
-                              <span className="font-headings font-bold text-lg italic">
-                                $ {numberWithSpaces(reward.value)}
-                              </span>
-                            </div>
-                          )}
-                          {reward.type === "coin" && (
-                            <div className="flex items-center gap-2">
-                              <img
-                                className="h-6"
-                                src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
-                                width="auto"
-                                height="auto"
-                                alt=""
-                              />
-                              <span className="font-headings font-bold text-lg italic">
-                                {numberWithSpaces(reward.value)}
-                              </span>
-                            </div>
-                          )}
-                          {reward.type === "token" && (
-                            <div className="flex items-center gap-2">
-                              <img
-                                className="h-6"
-                                src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
-                                width="auto"
-                                height="auto"
-                                alt=""
-                              />
-                              <span className="font-headings font-bold text-lg italic">
-                                {numberWithSpaces(reward.value)}
-                              </span>
-                            </div>
-                          )}
-                          {reward.type === "ticket" && (
-                            <div className="flex items-center gap-2">
-                              <img
-                                className="h-6"
-                                src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}
-                                width="auto"
-                                height="auto"
-                                alt=""
-                              />
-                              <span className="font-headings font-bold text-lg italic">
-                                {numberWithSpaces(reward.value)}
-                              </span>
-                            </div>
-                          )}
-                        </>
-                      ))}
+                  <div className="flex items-end justify-between">
+                    <div>
+                      <div className="text-sm text-ui-300">
+                        Top spot reward:
+                      </div>
+                      <div className="flex gap-4 items-center">
+                        {brawl.rewards?.map((reward, rewardIndex) => (
+                          <>
+                            {reward.type === "money" && (
+                              <div className="flex items-center gap-2">
+                                <span className="font-headings font-bold text-lg italic">
+                                  $ {numberWithSpaces(reward.value)}
+                                </span>
+                              </div>
+                            )}
+                            {reward.type === "coin" && (
+                              <div className="flex items-center gap-2">
+                                <img
+                                  className="h-6"
+                                  src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
+                                  width="auto"
+                                  height="auto"
+                                  alt=""
+                                />
+                                <span className="font-headings font-bold text-lg italic">
+                                  {numberWithSpaces(reward.value)}
+                                </span>
+                              </div>
+                            )}
+                            {reward.type === "token" && (
+                              <div className="flex items-center gap-2">
+                                <img
+                                  className="h-6"
+                                  src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
+                                  width="auto"
+                                  height="auto"
+                                  alt=""
+                                />
+                                <span className="font-headings font-bold text-lg italic">
+                                  {numberWithSpaces(reward.value)}
+                                </span>
+                              </div>
+                            )}
+                            {reward.type === "ticket" && (
+                              <div className="flex items-center gap-2">
+                                <img
+                                  className="h-6"
+                                  src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}
+                                  width="auto"
+                                  height="auto"
+                                  alt=""
+                                />
+                                <span className="font-headings font-bold text-lg italic">
+                                  {numberWithSpaces(reward.value)}
+                                </span>
+                              </div>
+                            )}
+                          </>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                  <div className="chip chip-sm chip-secondary">
-                    <span className="icon icon-time-machine" />
-                    <span>
-                      Time left:{" "}
-                      <Countdown additionalClassName="ml-1" separator=":" />
-                    </span>
                   </div>
+                  <div className="chip chip-sm chip-secondary">
+                      <span className="icon icon-time-machine" />
+                      <span>
+                        Time left:{" "}
+                        <Countdown additionalClassName="ml-1" separator=":" />
+                      </span>
+                    </div>
                 </div>
 
                 {/*

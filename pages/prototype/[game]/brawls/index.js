@@ -62,33 +62,6 @@ export default function Home() {
         {selectedGame && (
           <>
             <section className="header surface sm:rounded-lg mb-4">
-              <div className="header-breadcrumbs">
-                <nav className="breadcrumbs" aria-label="Breadcrumb">
-                  <ol>
-                    <li
-                      className="animate-slide-in-top animate-delay"
-                      style={{ "--delay": "calc(0 * 0.05s)" }}
-                    >
-                      <Link
-                        href={`/prototype/home${hasAds ? "?ads=true" : ""}`}
-                      >
-                        <a href="#">
-                          <span className="icon icon-20 icon-home-2" />
-                          <span>Home</span>
-                        </a>
-                      </Link>
-                    </li>
-                    <li
-                      className="animate-slide-in-top animate-delay"
-                      style={{ "--delay": "calc(1 * 0.05s)" }}
-                    >
-                      <div>
-                        <span>Brawls</span>
-                      </div>
-                    </li>
-                  </ol>
-                </nav>
-              </div>
               <div className="header-content">
                 <div className="header-image">
                   <img
@@ -128,22 +101,6 @@ export default function Home() {
                       </button>
                     </Link>
                   </div>
-                </div>
-              </div>
-              <div className="header-meta justify-start pr-0">
-                <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                  <span className="font-headings font-bold italic text-ui-100 uppercase">
-                    Time Left:
-                  </span>
-                  <span className="icon icon-clock text-main" />
-                  <Countdown
-                    additionalClassNames="flex items-baseline gap-0.5 font-headings font-bold italic uppercase text-main"
-                    hasDays={true}
-                    hasLabels={true}
-                    hasSeconds={false}
-                    separator=" • "
-                    labelsAbbr={true}
-                  ></Countdown>
                 </div>
               </div>
               <div className="header-bg">

@@ -87,6 +87,13 @@
   }
 }
 
+.surface-transparent {
+  @apply
+  border-ui-700/0
+  bg-ui-800/0
+  ;
+}
+
 /* blur container */
 
 .blurcontainer {

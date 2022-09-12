@@ -56,7 +56,7 @@ const DSpage = () => {
                     </div>
                     <div>
                       <label className="text-ui-300 uppercase text-sm text-right">
-                        Reward
+                        Rewards
                       </label>
                       <div className="md:h-8">
                         <div className="flex gap-3 items-center">

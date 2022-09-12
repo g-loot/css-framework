@@ -73,25 +73,25 @@ const DSpage = () => {
             <div className='flex-1 space-y-4'>
               <ul className={`step step-primary ${randomNum0 === 0 ? `is-inactive` : ''}`}>
                 <li className={`${randomNum0 === 1 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>1</i>
                     <div></div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum0 === 2 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>2</i>
                     <div></div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum0 === 3 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>3</i>
                     <div></div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
               </ul>
               <div className='text-center'>
@@ -121,25 +121,25 @@ const DSpage = () => {
             <div className='flex-1 space-y-4'>
               <ul className={`step step-primary step-sm ${randomNum5 === 0 ? `is-inactive` : ''}`}>
                 <li className={`${randomNum5 === 1 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>1</i>
                     <div></div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum5 === 2 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>2</i>
                     <div></div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum5 === 3 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>3</i>
                     <div></div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
               </ul>
               <div className='text-center'>
@@ -173,25 +173,25 @@ const DSpage = () => {
               </div>
               <ul className={`step step-primary ${randomNum1 === 0 ? `is-inactive` : ''}`}>
                 <li className={`${randomNum1 === 1 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>1</i>
                     <div></div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum1 === 2 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>2</i>
                     <div></div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum1 === 3 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>3</i>
                     <div></div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
               </ul>
               <div className='text-center'>
@@ -213,25 +213,25 @@ const DSpage = () => {
               </div>
               <ul className={`step step-secondary ${randomNum2 === 0 ? `is-inactive` : ''}`}>
                 <li className={`${randomNum2 === 1 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>1</i>
                     <div>Step 1</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum2 === 2 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>2</i>
                     <div>Step 2</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum2 === 3 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>3</i>
                     <div>Step 3</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
               </ul>
 
@@ -254,25 +254,25 @@ const DSpage = () => {
               </div>
               <ul className={`step step-tertiary ${randomNum3 === 0 ? `is-inactive` : ''}`}>
                 <li className={`${randomNum3 === 1 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>1</i>
                     <div>Step 1</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum3 === 2 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>2</i>
                     <div>Step 2</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum3 === 3 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>3</i>
                     <div>Step 3</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
               </ul>
 
@@ -295,25 +295,25 @@ const DSpage = () => {
               </div>
               <ul className={`step step-quaternary ${randomNum4 === 0 ? `is-inactive` : ''}`}>
                 <li className={`${randomNum4 === 1 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>1</i>
                     <div>Step 1</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum4 === 2 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>2</i>
                     <div>Step 2</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum4 === 3 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>3</i>
                     <div>Step 3</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
               </ul>
 
@@ -336,25 +336,25 @@ const DSpage = () => {
               </div>
               <ul className={`step step-quinary ${randomNum5 === 0 ? `is-inactive` : ''}`}>
                 <li className={`${randomNum5 === 1 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>1</i>
                     <div>Step 1</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum5 === 2 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>2</i>
                     <div>Step 2</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li className={`${randomNum5 === 3 ? `is-active` : ''}`}>
-                  <a href='#'>
+                  <div>
                     <i>3</i>
                     <div>Step 3</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
               </ul>
 
@@ -390,25 +390,25 @@ const DSpage = () => {
               </div>
               <ul className='step step-label-bottom step-primary'>
                 <li className='is-active'>
-                  <a href='#'>
+                  <div>
                     <i>1</i>
                     <div className='text-sm'>First you need to subscribe to G-Loot.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href='#'>
+                  <div>
                     <i>2</i>
                     <div className='text-sm'>Then you have to win a ticket by playing missions and competing in Brawls.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href='#'>
+                  <div>
                     <i>3</i>
                     <div className='text-sm'>Now you can join the tournament Make sure to check out how to play.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
               </ul>
               
@@ -437,97 +437,97 @@ const DSpage = () => {
               
               <ul className='step step-label-bottom step-primary step-vertical'>
                 <li className='is-active'>
-                  <a href='#'>
+                  <div>
                     <i>1</i>
                     <div>First you need to subscribe to G-Loot.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href='#'>
+                  <div>
                     <i>2</i>
                     <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href='#'>
+                  <div>
                     <i>3</i>
                     <div>Now you can join the tournament Make sure to check out how to play.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
               </ul>
 
               <ul className='step step-label-bottom step-secondary step-vertical'>
                 <li className='is-active'>
-                  <a href='#'>
+                  <div>
                     <i>1</i>
                     <div>First you need to subscribe to G-Loot.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href='#'>
+                  <div>
                     <i>2</i>
                     <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href='#'>
+                  <div>
                     <i>3</i>
                     <div>Now you can join the tournament Make sure to check out how to play.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
               </ul>
 
               <ul className='step step-label-bottom step-tertiary step-vertical'>
                 <li className='is-active'>
-                  <a href='#'>
+                  <div>
                     <i>1</i>
                     <div>First you need to subscribe to G-Loot.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href='#'>
+                  <div>
                     <i>2</i>
                     <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href='#'>
+                  <div>
                     <i>3</i>
                     <div>Now you can join the tournament Make sure to check out how to play.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
               </ul>
 
               <ul className='step step-label-bottom step-quaternary step-vertical'>
                 <li className='is-active'>
-                  <a href='#'>
+                  <div>
                     <i>1</i>
                     <div>First you need to subscribe to G-Loot.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href='#'>
+                  <div>
                     <i>2</i>
                     <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
                 <li>
-                  <a href='#'>
+                  <div>
                     <i>3</i>
                     <div>Now you can join the tournament Make sure to check out how to play.</div>
                     <span/>
-                  </a>
+                  </div>
                 </li>
               </ul>
               

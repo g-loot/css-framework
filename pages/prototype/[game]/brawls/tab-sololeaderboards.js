@@ -146,6 +146,11 @@ export default function TabBrawlsSoloLeaderboards() {
                   <span>1</span>
                 </div>
               </button>
+              <div>
+                <Link href="#">
+                  <a href="#">Buy more tokens</a>
+                </Link>
+              </div>
               <div className="my-4 space-y-8 mt-8">
                 <div className="text-center">
                   <div className="text-sm uppercase">The 3 best matches</div>

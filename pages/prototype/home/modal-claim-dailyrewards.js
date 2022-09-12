@@ -22,7 +22,7 @@ export default function ModalClaimDailyRewards(props) {
   return (
     <>
       <div className="relative z-10 max-w-sm w-full">
-        <div className="modal w-full">
+        <div className="modal surface-transparent w-full">
           <button
             type="button"
             className="button button-secondary button-close"
@@ -71,17 +71,17 @@ export default function ModalClaimDailyRewards(props) {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="modal-action">
-              <button
-                type="button"
-                className={`button button-claim w-full ${
-                  submitting ? "is-loading" : ""
-                }`}
-                onClick={closeModalWithDelay}
-              >
-                <span>Claim rewards</span>
-              </button>
+              <div className="mt-12">
+                <button
+                  type="button"
+                  className={`button button-claim w-full ${
+                    submitting ? "is-loading" : ""
+                  }`}
+                  onClick={closeModalWithDelay}
+                >
+                  <span>Claim rewards</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -21,7 +21,8 @@
     text-center
     ;
 
-    > a {
+    > a,
+    > div {
       @apply
       p-0
       flex
@@ -156,7 +157,8 @@
       bg-ui-600
       ;
     }
-    a {
+    > a,
+    > div {
       @apply
       text-ui-400
       ;
@@ -199,7 +201,8 @@
 }
 .step.step-primary.step-sm {
   > li {
-    > a {
+    > a,
+    > div {
       > i {
         @apply
         h-8
@@ -218,7 +221,8 @@
   }
   & > li.is-active ~ li,
   &.is-inactive > li {
-    > a {
+    > a,
+    > div {
       > i {
         @apply
         shadow-[0_0_0_3px_rgb(var(--color-ui-600))]
@@ -231,7 +235,8 @@
 
 .step.step-secondary {
   > li {
-    > a {
+    > a,
+    > div {
       @apply
       p-0
       flex
@@ -315,7 +320,8 @@
 
 .step.step-tertiary {
   > li {
-    > a {
+    > a,
+    > div {
       @apply
       p-0
       flex
@@ -497,7 +503,8 @@
     gap-4
     ;
     > li {
-      > a {
+      > a,
+      > div {
         @apply
         gap-4
         ;
@@ -516,7 +523,8 @@
       lg:min-w-[10rem]
       ;
     }
-    > a {
+    > a,
+    > div {
       > div {
         @apply
         block
@@ -530,7 +538,8 @@
   &,
   &.step-primary {
     > li {
-      > a {
+      > a,
+      > div {
         > div {
           @apply
           block
@@ -543,7 +552,8 @@
   }
   &.step-secondary {
     > li {
-      > a {
+      > a,
+      > div {
         > div {
           @apply
           top-7
@@ -555,7 +565,8 @@
   }
   &.step-tertiary {
     > li {
-      > a {
+      > a,
+      > div {
         > div {
           @apply
           top-14
@@ -584,7 +595,8 @@
     flex
     items-stretch
     ;
-    > a {
+    > a,
+    > div {
       @apply
       flex
       gap-4
@@ -622,7 +634,8 @@
   &,
   &.step-primary {
     > li {
-      > a {
+      > a,
+      > div {
         > span {
           @apply
           left-[calc(1.5rem-0.125rem)]
@@ -645,7 +658,8 @@
   }
   &.step-secondary {
     > li {
-      > a {
+      > a,
+      > div {
         > span {
           @apply
           left-[calc(0.5rem-2.5px)]
@@ -660,10 +674,11 @@
   }
   &.step-quaternary {
     > li {
-      > a {
+      > a,
+      > div {
         > span {
           @apply
-          left-0.5
+          left-[calc(1.5rem-0.25rem)]
           top-[calc(50%+1rem)]
           w-2
           h-[calc(100%-2rem)]

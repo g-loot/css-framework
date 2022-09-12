@@ -81,6 +81,12 @@
     ;
   }
 
+  &.surface-transparent {
+    @apply
+    shadow-none
+    ;
+  }
+
   > .button-close {
     @apply
     absolute

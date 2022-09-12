@@ -23,9 +23,13 @@
   @apply
   text-sm
   uppercase
-  text-ui-200
   font-bold
   ;
+  &:not([class*="text-ui"]) {
+    @apply
+    text-ui-200
+    ;
+  }
 }
 .form-group > label:not(.form-radio):not(.form-checkbox):not(.form-toggle):not(.button) {
   @apply

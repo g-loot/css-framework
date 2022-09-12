@@ -334,6 +334,22 @@ export const DSpages = [
     ],
   },
   {
+    label: "Typography",
+    icon: "",
+    pages: [
+      {
+        label: "Lists",
+        tags: "typography,text,paragraphs,fonts,line height,quotes,lists,unordered lists, ordered lists",
+        url: "lists",
+      },
+      {
+        label: "Format",
+        tags: "typography,text,paragraphs,fonts,line height,lists,quotes,prose,format",
+        url: "format",
+      },
+    ],
+  },
+  {
     label: "Templates",
     icon: "",
     pages: [

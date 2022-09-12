@@ -22,7 +22,7 @@ export default function ModalClaimLadderRewards(props) {
   return (
     <>
       <div className="relative z-10 max-w-sm w-full">
-        <div className="modal w-full">
+        <div className="modal surface-transparent w-full">
           <button
             type="button"
             className="button button-secondary button-close"
@@ -72,25 +72,17 @@ export default function ModalClaimLadderRewards(props) {
                 </div>
               </div>
             </div>
-            <div className="modal-action">
-              {/*
-            {submitting && <span>...Submitting</span>}
-            {!submitting && (
-              <button type="button" onClick={closeModalWithDelay}>
-                Ok
-              </button>
-            )}
-            */}
-              <button
-                type="button"
-                className={`button button-claim w-full ${
-                  submitting ? "is-loading" : ""
-                }`}
-                onClick={closeModalWithDelay}
-              >
-                <span>Claim rewards</span>
-              </button>
-            </div>
+            <div className="mt-12">
+                <button
+                  type="button"
+                  className={`button button-claim w-full ${
+                    submitting ? "is-loading" : ""
+                  }`}
+                  onClick={closeModalWithDelay}
+                >
+                  <span>Claim rewards</span>
+                </button>
+              </div>
           </div>
         </div>
       </div>

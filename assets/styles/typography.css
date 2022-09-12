@@ -124,3 +124,251 @@ hr,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+ul, ol {
+  &.list-bullet {
+    @apply
+    pl-8
+    list-outside
+    ;
+
+    > li {
+      @apply
+      relative
+      pb-8
+      ;
+      &::before,
+      &::after {
+        @apply
+        content-[""]
+        absolute
+        ;
+      }
+      &::before {
+        @apply
+        z-10
+        w-4
+        h-4
+        bg-main
+        rounded-full
+        shadow-[0_0_0_1px_rgb(var(--color-interaction-500)),_inset_0_0_0_4px_rgb(var(--color-ui-800))]
+        -left-8
+        top-1
+        ;
+      }
+      &::after {
+        @apply
+        z-0
+        w-px
+        h-full
+        bg-ui-600
+        -left-[calc(1.5rem+0.5px)]
+        top-5
+        ;
+      }
+      &:last-of-type {
+        @apply
+        pb-0
+        ;
+        &::after {
+          @apply
+          hidden
+          opacity-0;
+          ;
+        }
+      }
+    }
+  }
+}
+
+.format {
+  :where(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      leading-none
+      ;
+    }
+  }
+  :where(h1, .h1) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      mb-10
+      text-4xl
+      md:text-5xl
+      ;
+    }
+  }
+  :where(h2, .h2) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      mb-7
+      text-3xl
+      md:text-4xl
+      ;
+    }
+  }
+  :where(h3, .h3) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      mb-7
+      text-2xl
+      md:text-3xl
+      ;
+    }
+  }
+  :where(h4, .h4) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      mb-7
+      text-xl
+      md:text-2xl
+      ;
+    }
+  }
+  :where(h5, .h5) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      mb-7
+      text-lg
+      md:text-xl
+      ;
+    }
+  }
+  :where(h6, .h6) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      mb-7
+      text-lg
+      ;
+    }
+  }
+  :where(p, ul, ol) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      text-ui-200
+      my-7
+      leading-loose
+      ;
+    }
+  }
+  :where([class~=lead]) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      text-xl
+      my-7
+      text-ui-300
+      ;
+    }
+  }
+  :where(blockquote) {
+    &:not(:where([class~=not-format] *)) {
+      > p {
+        @apply
+        pl-8
+        py-4
+        border-l-2
+        border-ui-600
+        text-2xl
+        text-ui-300
+        font-headings
+        italic
+        tracking-wider
+        leading-tight
+        ;
+      }
+      + figcaption {
+        @apply
+        text-base
+        pl-8
+        ;
+      }
+    }
+  }
+  :where(figure) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      my-7
+      ;
+      > img {
+        @apply
+        rounded-lg
+        ;
+      }
+    }
+  }
+  :where(figcaption) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      text-sm
+      ;
+      p {
+        @apply
+        text-ui-300
+        ;
+      }
+    }
+  }
+  :where(ul, ol) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      list-outside
+      pl-8
+      ;
+
+      > li {
+        &:not(:last-of-type) {
+          @apply
+          my-4
+          pl-2
+          ;
+          :where(strong, b) {
+            @apply
+            text-ui-100
+            ;
+          }
+        } 
+      }
+    }
+  }
+  :where(ul) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      list-disc
+      ;
+    }
+  }
+  :where(ol) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      list-decimal
+      ;
+    }
+  }
+  :where(a) {
+    &:not(:where([class~=not-format] *)) {
+      @apply
+      text-main
+      underline
+      hover:no-underline
+      ;
+    }
+  }
+
+  &.format-lg {
+    :where([class~=lead]) {
+      &:not(:where([class~=not-format] *)) {
+        @apply
+        text-2xl
+        ;
+      }
+    }
+    :where(p, ul, ol) {
+      &:not(:where([class~=not-format] *)) {
+        @apply
+        text-lg
+        ;
+      }
+    }
+  }
+}

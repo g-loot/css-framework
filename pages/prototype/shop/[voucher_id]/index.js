@@ -33,45 +33,6 @@ export default function Home() {
           <>
             <section className="mb-4">
               <div className="header surface sm:rounded-lg">
-                <div className="header-breadcrumbs">
-                  <nav className="breadcrumbs" aria-label="Breadcrumb">
-                    <ol>
-                      <li
-                        className="animate-slide-in-top animate-delay"
-                        style={{ "--delay": "calc(0 * 0.05s)" }}
-                      >
-                        <Link
-                          href={`/prototype/home${hasAds ? "?ads=true" : ""}`}
-                        >
-                          <a>
-                            <span className="icon icon-20 icon-home-2" />
-                            <span>Home</span>
-                          </a>
-                        </Link>
-                      </li>
-                      <li
-                        className="animate-slide-in-top animate-delay"
-                        style={{ "--delay": "calc(1 * 0.05s)" }}
-                      >
-                        <Link
-                          href={`/prototype/shop/${hasAds ? "?ads=true" : ""}`}
-                        >
-                          <a>
-                            <span>Shop</span>
-                          </a>
-                        </Link>
-                      </li>
-                      <li
-                        className="animate-slide-in-top animate-delay"
-                        style={{ "--delay": "calc(2 * 0.05s)" }}
-                      >
-                        <div>
-                          <span>{selectedVoucher.name}</span>
-                        </div>
-                      </li>
-                    </ol>
-                  </nav>
-                </div>
                 <div className="header-content">
                   <div className="header-body">
                     <h1 className="text-3xl sm:text-4xl">

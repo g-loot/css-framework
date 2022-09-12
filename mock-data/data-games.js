@@ -75,8 +75,8 @@ export const dataGames = [
       {
         id: 1,
         solo: true,
-        clan: true,
-        name: "Competitive Brawl",
+        clan: false,
+        name: "Unrated Brawl",
         cover: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp",
         status: "ongoing",
         gameMode: "Competitive",
@@ -369,6 +369,283 @@ export const dataGames = [
           }
         ],
         progress: 2,
+        soloLeaderboard: [
+          {
+            user: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 250000
+              },
+              {
+                type: "ticket",
+                value: 1
+              }
+            ],
+            stats: {
+              brawlPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            user: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 200000
+              },
+              {
+                type: "ticket",
+                value: 1
+              }
+            ],
+            stats: {
+              brawlPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            user: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 150000
+              },
+              {
+                type: "ticket",
+                value: 1
+              }
+            ],
+            stats: {
+              brawlPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            user: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 75000
+              },
+              {
+                type: "ticket",
+                value: 1
+              }
+            ],
+            stats: {
+              brawlPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            user: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 50000
+              }
+            ],
+            stats: {
+              brawlPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            user: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 25000
+              }
+            ],
+            stats: {
+              brawlPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            user: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 25000
+              }
+            ],
+            stats: {
+              brawlPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            user: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 10000
+              }
+            ],
+            stats: {
+              brawlPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          }
+        ],
+        clanLeaderboard: [
+          {
+            clan: 1,
+            rewards: [
+              {
+                type: "ticket",
+                value: 1
+              }
+            ],
+            stats: {
+              brawlPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "ticket",
+                value: 1
+              }
+            ],
+            stats: {
+              brawlPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "ticket",
+                value: 1
+              }
+            ],
+            stats: {
+              brawlPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "ticket",
+                value: 1
+              }
+            ],
+            stats: {
+              brawlPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "ticket",
+                value: 1
+              }
+            ],
+            stats: {
+              brawlPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            clan: 5,
+            rewards: [
+              {
+                type: "ticket",
+                value: 1
+              }
+            ],
+            stats: {
+              brawlPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            clan: 6,
+            rewards: null,
+            stats: {
+              brawlPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          },
+          {
+            clan: 7,
+            rewards: null,
+            stats: {
+              brawlPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143
+            }
+          }
+        ],
+        result: {
+          position: 12,
+          movement: 4,
+          isPositive: false,
+        },
+        topPerformers: [2,3,4],
+      },
+      {
+        id: 3,
+        solo: true,
+        clan: true,
+        name: "Competitive Brawl",
+        cover: "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-6.webp",
+        status: "finished",
+        gameMode: "Competitive",
+        sponsor: "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+        rewards: [
+          {
+            type: "coin",
+            value: 10000
+          },
+          {
+            type: "ticket",
+            value: 5
+          }
+        ],
+        progress: 3,
         soloLeaderboard: [
           {
             user: 1,

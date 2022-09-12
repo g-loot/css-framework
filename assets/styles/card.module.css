@@ -494,7 +494,7 @@
   grid
   grid-cols-3
   items-stretch
-  h-56
+  md:h-56
   ;
 
   .card-image {
@@ -547,7 +547,7 @@
         left-0
         bg-gradient-to-r
         from-ui-800
-        via-ui-800/75
+        via-ui-800/80
         to-ui-800/0
         ;
       }
