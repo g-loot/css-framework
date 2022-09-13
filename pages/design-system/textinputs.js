@@ -59,7 +59,7 @@ const DSpage = () => {
                         />
                       </div>
                     </div>
-                    <div className="form-group" data-attention="The name is valid.">
+                    <div className="form-group">
                       <label htmlFor="twitch">Twitch</label>
                       <div className="input-group">
                         <span>
@@ -172,10 +172,18 @@ const DSpage = () => {
                     </div>
                     <div
                       className="form-group"
-                      data-success="The name is valid."
+                      data-success="The account is valid."
                     >
-                      <label htmlFor="name">Name</label>
-                      <input type="text" name="name" id="name" />
+                      <label htmlFor="name">Riot account</label>
+                      <div className="input-group">
+                        <span>
+                          <span className="icon icon-riotgames-symbol" />
+                        </span>
+                        <input type="text" name="riot-account" id="riot-account" />
+                        <span>
+                          <span className="icon icon-lock" />
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="form-group"
@@ -225,10 +233,18 @@ const DSpage = () => {
                       </div>
                     </div>
                     <div className="form-group" data-success>
-                      <label htmlFor="name">Name</label>
-                      <input type="text" name="name" id="name" />
+                      <label htmlFor="riot-account">Riot account</label>
+                      <div className="input-group">
+                        <span>
+                          <span className="icon icon-riotgames-symbol" />
+                        </span>
+                        <input type="text" name="riot-account" id="riot-account" />
+                        <span>
+                          <span className="icon icon-lock" />
+                        </span>
+                      </div>
                       <div className="form-info">
-                        The name is <span className="icon icon-check" /> valid.
+                        The account is <span className="icon icon-check" /> valid.
                       </div>
                     </div>
                     <div className="form-group" data-attention>
