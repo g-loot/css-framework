@@ -651,23 +651,36 @@ label.button {
       @apply
       rounded-l
       ;
-      + input,
-      + textarea {
+      &:is(span, div) {
         @apply
-        border-l-0
+        border-r-0
         ;
-        &:not(::last-child) {
-          @apply
-          border-r-0
-          ;
-        }
       }
     }
     &:last-child {
       @apply
       rounded-r
       ;
+      &:is(span, div) {
+        @apply
+        border-l-0
+        ;
+      }
     }
+  }
+
+  :where(span, div) {
+    @apply
+    relative
+    z-10
+    ;
+  }
+
+  :where(input, textarea) {
+    @apply
+    relative
+    z-20
+    ;
   }
 
   > :where(.icon, .button) {
@@ -711,7 +724,6 @@ label.button {
       px-3
       border
       border-ui-500
-      border-l-0
       bg-ui-500/75
       text-ui-200
       text-sm
@@ -829,7 +841,10 @@ label.button {
     text-0
     px-1
     border
-    border-ui-500
+    border-r-ui-500
+    border-l-ui-500/50
+    border-t-ui-500
+    border-b-ui-500
     hover:bg-ui-600
     duration-300
     ease-in-out
@@ -867,8 +882,7 @@ label.button {
     &:last-of-type {
       @apply
       bottom-0
-      border-t
-      border-ui-500
+      border-t-ui-500/50
       h-[calc(50%+0.5px)]
       rounded-br
       ;
@@ -916,6 +930,27 @@ label.button {
       content-[attr(data-error)]
       ;
     }
+    &.is-loading::before {
+      @apply
+      border-l-error-700
+      ;
+    }
+    .input-group {
+      > :where(span, div) {
+        &:not(.icon) {
+          @apply
+          border-error-700
+          ;
+        }
+      }
+    }
+    .input-number {
+      > button {
+        @apply
+        border-error-700
+        ;
+      }
+    }
     &:not([data-error=false]) {
       :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
         @apply
@@ -954,6 +989,27 @@ label.button {
       @apply
       content-[attr(data-success)]
       ;
+    }
+    &.is-loading::before {
+      @apply
+      border-l-interaction-700
+      ;
+    }
+    .input-group {
+      > :where(span, div) {
+        &:not(.icon) {
+          @apply
+          border-interaction-700
+          ;
+        }
+      }
+    }
+    .input-number {
+      > button {
+        @apply
+        border-interaction-700
+        ;
+      }
     }
     &:not([data-success=false]) {
       :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
@@ -994,6 +1050,27 @@ label.button {
       content-[attr(data-attention)]
       ;
     }
+    &.is-loading::before {
+      @apply
+      border-l-attention-700
+      ;
+    }
+    .input-group {
+      > :where(span, div) {
+        &:not(.icon) {
+          @apply
+          border-attention-700
+          ;
+        }
+      }
+    }
+    .input-number {
+      > button {
+        @apply
+        border-attention-700
+        ;
+      }
+    }
     &:not([data-attention=false]) {
       :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
         @apply
@@ -1026,12 +1103,11 @@ label.button {
   /* loading */
 
   &.is-loading {
-
     @apply
     relative
     ;
 
-    &::after {
+    &::before {
       @apply
       content-['']
       absolute
@@ -1134,7 +1210,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 /* range */
 input[type=range].form-range {
-
   @apply
   h-4
   w-full

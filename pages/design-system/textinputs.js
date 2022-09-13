@@ -59,7 +59,7 @@ const DSpage = () => {
                         />
                       </div>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group" data-attention="The name is valid.">
                       <label htmlFor="twitch">Twitch</label>
                       <div className="input-group">
                         <span>
