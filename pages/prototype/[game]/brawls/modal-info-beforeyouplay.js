@@ -73,10 +73,12 @@ export default function ModalInfoBeforeYouPlay(props) {
                 win. The combined points from your best matches decide your
                 place on the leaderboard.
               </p>
-              <label className="form-checkbox mt-3">
-                <input type="checkbox" name="policy" />
-                <i className="form-icon" /> Got it! Skip this next time
-              </label>
+              <div className="flex justify-center md:justify-start">
+                <label className="form-checkbox mt-3">
+                  <input type="checkbox" name="policy" />
+                  <i className="form-icon" /> Got it! Skip this next time
+                </label>
+              </div>
             </div>
             <div className="modal-action">
               {/* 

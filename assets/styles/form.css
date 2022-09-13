@@ -718,7 +718,6 @@ label.button {
       ;
     }
   }
-  
 
 /*----------------------------*/
 /* ICON */
@@ -786,6 +785,92 @@ label.button {
       rounded-l-none
       rounded-r
       order-2
+      ;
+    }
+  }
+}
+
+/*----------------------------*/
+/* NUMBER */
+/*----------------------------*/
+
+.input-number {
+  @apply
+  relative
+  flex
+  box-border
+  ;
+
+  * {
+    @apply
+    box-border
+    ;
+  }
+
+  :where(input) {
+    @apply
+    flex-1
+    relative
+    z-0
+    w-full
+    rounded
+    pr-10
+    ;
+  }
+
+  :where(button) {
+    @apply
+    outline-none
+    bg-ui-800/0
+    cursor-pointer
+    absolute
+    z-30
+    right-0
+    text-0
+    px-1
+    border
+    border-ui-500
+    hover:bg-ui-600
+    duration-300
+    ease-in-out
+    ;
+    -webkit-appearance: none;
+
+
+    > * {
+      @apply
+      text-lg
+      duration-75
+      ease-in-out
+      ;
+    }
+    &:active {
+      @apply
+      bg-ui-500
+      ;
+      > * {
+        @apply
+        scale-110
+        text-ui-100
+        ;
+      }
+    }
+
+    &:first-of-type {
+      @apply
+      top-0
+      h-[calc(50%-0.5px)]
+      border-b-0
+      rounded-tr
+      ;
+    }
+    &:last-of-type {
+      @apply
+      bottom-0
+      border-t
+      border-ui-500
+      h-[calc(50%+0.5px)]
+      rounded-br
       ;
     }
   }

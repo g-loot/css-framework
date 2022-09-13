@@ -24,7 +24,7 @@
   }
 
   &.menu-rounded {
-    :where(a, button) {
+    :where(a, button, div) {
       @apply
       rounded
       overflow-hidden
@@ -51,7 +51,7 @@
     ;
   }
 
-  :where(a, button) {
+  :where(a, button, div) {
     @apply
     relative
     inline-flex
@@ -153,7 +153,7 @@
   }
 
   &:not(.menu-secondary) {
-    :where(a, button) {
+    :where(a, button, div) {
       @apply
       font-bold
       ;
@@ -161,7 +161,7 @@
   }
 
   &.menu-secondary {
-    :where(a, button) {
+    :where(a, button, div) {
       @apply
         text-sm
         ;
@@ -211,7 +211,7 @@
 }
 
 .menu:not([class*=horizontal]) {
-  :where(a, button) {
+  :where(a, button, div) {
     &:hover,
     &:focus-visible,
     &.is-active {
@@ -230,7 +230,7 @@
   inline-flex
   flex-row
   ;
-  :where(a, button) {
+  :where(a, button, div) {
     @apply 
     px-4
     ;
@@ -256,7 +256,7 @@
       inline-flex
       flex-row
       ;
-      :where(a, button) {
+      :where(a, button, div) {
         @apply 
         px-4
         ;
@@ -276,7 +276,7 @@
       inline-flex
       flex-row
       ;
-      :where(a, button) {
+      :where(a, button, div) {
         @apply 
         px-4
         ;
@@ -296,7 +296,7 @@
       inline-flex
       flex-row
       ;
-      :where(a, button) {
+      :where(a, button, div) {
         @apply 
         px-4
         ;
@@ -316,7 +316,7 @@
       inline-flex
       flex-row
       ;
-      :where(a, button) {
+      :where(a, button, div) {
         @apply 
         px-4
         ;

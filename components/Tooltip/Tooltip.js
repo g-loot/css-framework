@@ -20,7 +20,7 @@ const Tooltip = (props) => {
 
   return (
     <>
-      <div ref={setTriggerRef} className="cursor-pointer">
+      <div ref={setTriggerRef} className="inline-block cursor-pointer">
         {props.children}
       </div>
       {visible && (

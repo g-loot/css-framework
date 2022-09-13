@@ -1,8 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
+
 import TextareaExpandable from "../../components/Textarea/TextareaExpandable";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
 
 const DSpage = () => {
+  const minValue = 0;
+  const maxValue = 1000;
+  const [inputNumber, setInputNumber] = useState(4);
+
+  function inputNumberPlus(){
+    if(inputNumber < maxValue) {
+      setInputNumber(inputNumber + 1);
+    }
+  }
+
+  function inputNumberMinus(){
+    if(inputNumber > minValue) {
+      setInputNumber(inputNumber - 1);
+    }
+  }
+
   return (
     <>
       <h1 className="mb-2">Text inputs</h1>
@@ -473,6 +490,44 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/m2z3ynba/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Input number */}
+      <div className="mb-12" id="input-number">
+        <h2 className="h3 mb-3">Input number</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="flex-1 space-y-4">
+                    <div className="form-group">
+                      <label htmlFor="token">How many tokens to you want to gift Jamlog?</label>
+                        <div className="input-number">
+                          <button type="button" onClick={inputNumberPlus}>
+                            <span className="icon icon-i-add" />
+                          </button>
+                          <input min={1} name="token" value={inputNumber} type="number" />
+                          <button type="button" onClick={inputNumberMinus}>
+                            <span className="icon icon-i-delete" />
+                          </button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/28xoecqj/embedded/js/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

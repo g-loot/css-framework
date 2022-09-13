@@ -60,7 +60,7 @@
 
   &:not(.switch) {
     @apply
-    space-x-2
+    gap-2
     ;
     > * {
       &:first-child {
@@ -224,7 +224,7 @@
   &.button-play {
     @apply
     rounded-full
-    space-x-3
+    gap-3
     ;
     
     .icon {

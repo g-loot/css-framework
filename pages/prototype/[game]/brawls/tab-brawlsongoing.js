@@ -51,48 +51,60 @@ export default function TabBrawlsOngoing() {
                                 </div>
                               )}
                               <div className="mt-2">
-                              {brawl.solo && !brawl.clan && (
-                                <Tooltip
-                                  tooltip={
-                                    <div className="max-w-xs text-sm text-center leading-tight">
-                                      <h5>Solo Brawl</h5>
-                                      <p>Play this Brawl and compete against other players in the Solo leaderboard.</p>
+                                {brawl.solo && !brawl.clan && (
+                                  <Tooltip
+                                    tooltip={
+                                      <div className=" w-60 text-sm leading-tight space-y-1">
+                                        <h6>Solo Brawl</h6>
+                                        <p>
+                                          Play this Brawl and compete against
+                                          other players in the Solo leaderboard.
+                                        </p>
+                                      </div>
+                                    }
+                                  >
+                                    <div className="inline-flex items-center gap-2 text-xl text-ui-300">
+                                      <span className="icon icon-profile-2"></span>
                                     </div>
-                                  }
-                                >
-                                  <div className="flex items-center gap-2 text-xl text-ui-300">
-                                    <span className="icon icon-profile-2"></span>
-                                  </div>
-                                </Tooltip>
-                              )}
-                              {brawl.solo && brawl.clan && (
-                                <Tooltip
-                                  tooltip={
-                                    <div className="max-w-xs text-sm text-center leading-tight">
-                                      Solo &amp; Clan Brawl
+                                  </Tooltip>
+                                )}
+                                {brawl.solo && brawl.clan && (
+                                  <Tooltip
+                                    tooltip={
+                                      <div className=" w-60 text-sm leading-tight space-y-1">
+                                        <h6>Combined Solo &amp; Clan Brawl</h6>
+                                        <p>
+                                          You can play this Brawl solo and with
+                                          your Clan at the same time.
+                                        </p>
+                                        <p>
+                                          If you are part of a Clan, your Brawl
+                                          matches count towards both the Solo
+                                          and Clan leaderboards.
+                                        </p>
+                                      </div>
+                                    }
+                                  >
+                                    <div className="flex items-center gap-2 text-xl text-ui-300">
+                                      <span className="icon icon-profile-2"></span>
+                                      <span className="">/</span>
+                                      <span className="icon icon-multiple-12"></span>
                                     </div>
-                                  }
-                                >
-                                  <div className="flex items-center gap-2 text-xl text-ui-300">
-                                    <span className="icon icon-profile-2"></span>
-                                    <span className="">/</span>
-                                    <span className="icon icon-multiple-12"></span>
-                                  </div>
-                                </Tooltip>
-                              )}
-                              {!brawl.solo && brawl.clan && (
-                                <Tooltip
-                                  tooltip={
-                                    <div className="max-w-xs text-sm text-center leading-tight">
-                                      Clan Brawl
+                                  </Tooltip>
+                                )}
+                                {!brawl.solo && brawl.clan && (
+                                  <Tooltip
+                                    tooltip={
+                                      <div className="max-w-xs text-sm text-center leading-tight">
+                                        Clan Brawl
+                                      </div>
+                                    }
+                                  >
+                                    <div className="flex items-center gap-2 text-xl text-ui-300">
+                                      <span className="icon icon-multiple-12"></span>
                                     </div>
-                                  }
-                                >
-                                  <div className="flex items-center gap-2 text-xl text-ui-300">
-                                    <span className="icon icon-multiple-12"></span>
-                                  </div>
-                                </Tooltip>
-                              )}
+                                  </Tooltip>
+                                )}
                               </div>
                             </div>
                             <div className="flex items-center gap-4">
@@ -110,7 +122,11 @@ export default function TabBrawlsOngoing() {
                                 <figure className="avatar avatar-squircle avatar-xs">
                                   <div>
                                     <img
-                                      src={prototype.getClanByID(prototype.getUserByID(1).id)?.avatar}
+                                      src={
+                                        prototype.getClanByID(
+                                          prototype.getUserByID(1).id
+                                        )?.avatar
+                                      }
                                     />
                                   </div>
                                 </figure>
@@ -136,9 +152,7 @@ export default function TabBrawlsOngoing() {
                                 </span>
                               </div>
                             </div>
-                            <div>
-                             
-                            </div>
+                            <div></div>
                           </div>
                           <div className="card-meta">
                             <div>
@@ -173,38 +187,38 @@ export default function TabBrawlsOngoing() {
                             <div>
                               {brawl.progress === 0 && (
                                 <div>
-                                <label className="text-ui-300 uppercase text-sm text-right">
-                                  Rewards
-                                </label>
-                                <div className="md:h-8">
-                                  <div className="flex gap-3 items-center">
-                                    <div className="flex items-center whitespace-nowrap gap-2">
-                                      <img
-                                        className="h-8"
-                                        src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
-                                        width="auto"
-                                        height="auto"
-                                        alt=""
-                                      />
-                                      <span className="font-headings font-bold text-2xl italic">
-                                        10 000
-                                      </span>
-                                    </div>
-                                    <div className="flex items-center whitespace-nowrap gap-2">
-                                      <img
-                                        className="h-8"
-                                        src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp"
-                                        width="auto"
-                                        height="auto"
-                                        alt=""
-                                      />
-                                      <span className="font-headings font-bold text-2xl italic">
-                                        5
-                                      </span>
+                                  <label className="text-ui-300 uppercase text-sm text-right">
+                                    Rewards
+                                  </label>
+                                  <div className="md:h-8">
+                                    <div className="flex gap-3 items-center">
+                                      <div className="flex items-center whitespace-nowrap gap-2">
+                                        <img
+                                          className="h-8"
+                                          src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
+                                          width="auto"
+                                          height="auto"
+                                          alt=""
+                                        />
+                                        <span className="font-headings font-bold text-2xl italic">
+                                          10 000
+                                        </span>
+                                      </div>
+                                      <div className="flex items-center whitespace-nowrap gap-2">
+                                        <img
+                                          className="h-8"
+                                          src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp"
+                                          width="auto"
+                                          height="auto"
+                                          alt=""
+                                        />
+                                        <span className="font-headings font-bold text-2xl italic">
+                                          5
+                                        </span>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
-                              </div>
                               )}
                               {brawl.progress > 0 && brawl.progress < 3 && (
                                 <div className="w-60">
@@ -234,14 +248,16 @@ export default function TabBrawlsOngoing() {
                                 </div>
                               )}
                               {brawl.progress >= 3 && (
-                                <div className="flex items-stretch gap-2 justify-end leading-tight">
+                                <div className="flex items-stretch gap-4 justify-end leading-tight">
                                   {brawl.solo && (
-                                    <div className="w-36 rounded-lg bg-ui-900/50 py-2 px-4 text-center flex flex-col items-center gap-2">
+                                    <div className="w-40 rounded-lg bg-gradient-to-b from-ui-900/50 to-ui-900/10 py-2 px-4 text-center flex flex-col items-center gap-2">
                                       <div className="flex items-center gap-2">
                                         <figure className="avatar avatar-circle avatar-tiny">
                                           <div>
                                             <img
-                                              src={prototype.getUserByID(1)?.avatar}
+                                              src={
+                                                prototype.getUserByID(1)?.avatar
+                                              }
                                             />
                                           </div>
                                         </figure>
@@ -255,7 +271,7 @@ export default function TabBrawlsOngoing() {
                                           <div className="text-xs uppercase text-ui-300">
                                             points
                                           </div>
-                                          <div className="font-headings font-bold text-2xl">
+                                          <div className="font-headings font-bold text-2xl text-blue-300">
                                             67
                                           </div>
                                         </div>
@@ -263,7 +279,7 @@ export default function TabBrawlsOngoing() {
                                           <div className="text-xs uppercase text-ui-300">
                                             position
                                           </div>
-                                          <div className="font-headings font-bold text-2xl">
+                                          <div className="font-headings font-bold text-2xl text-blue-300">
                                             #5
                                           </div>
                                         </div>
@@ -271,12 +287,16 @@ export default function TabBrawlsOngoing() {
                                     </div>
                                   )}
                                   {brawl.clan && (
-                                    <div className="w-36 rounded-lg bg-ui-900/50 py-2 px-4 text-center flex flex-col items-center gap-2">
+                                    <div className="w-40 rounded-lg bg-gradient-to-b from-ui-900/50 to-ui-900/10 py-2 px-4 text-center flex flex-col items-center gap-2">
                                       <div className="flex items-center gap-2">
                                         <figure className="avatar avatar-squircle avatar-tiny">
                                           <div>
                                             <img
-                                              src={prototype.getClanByID(prototype.getUserByID(1).id)?.avatar}
+                                              src={
+                                                prototype.getClanByID(
+                                                  prototype.getUserByID(1).id
+                                                )?.avatar
+                                              }
                                             />
                                           </div>
                                         </figure>
@@ -290,7 +310,7 @@ export default function TabBrawlsOngoing() {
                                           <div className="text-xs uppercase text-ui-300">
                                             points
                                           </div>
-                                          <div className="font-headings font-bold text-2xl">
+                                          <div className="font-headings font-bold text-2xl text-blue-300">
                                             112
                                           </div>
                                         </div>
@@ -298,7 +318,7 @@ export default function TabBrawlsOngoing() {
                                           <div className="text-xs uppercase text-ui-300">
                                             position
                                           </div>
-                                          <div className="font-headings font-bold text-2xl">
+                                          <div className="font-headings font-bold text-2xl text-blue-300">
                                             #545
                                           </div>
                                         </div>
