@@ -235,7 +235,7 @@ export default function SectionTournamentsLeaderboarBrackers() {
                                     }`}
                                     key={teamIndex}
                                   >
-                                    <figure className="avatar avatar-tiny">
+                                    <div className="avatar avatar-tiny">
                                       <div>
                                         <img
                                           src={
@@ -248,7 +248,7 @@ export default function SectionTournamentsLeaderboarBrackers() {
                                           }
                                         />
                                       </div>
-                                    </figure>
+                                    </div>
                                     <b>
                                       &#91;
                                       {prototype.getClanByID(team.clan)?.tag}

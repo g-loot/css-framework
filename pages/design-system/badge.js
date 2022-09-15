@@ -60,11 +60,11 @@ const DSpage = () => {
                 <button className='button button-secondary' data-badge="88">
                   <span>Notifications</span>
                 </button>
-                <figure className='avatar avatar-simple' data-badge="88">
+                <div className='avatar avatar-simple' data-badge="88">
                     <div>
                       <img src='https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png' />
                     </div>
-                </figure>
+                </div>
               </div>
             </div>
             <div className='flex-1'>

@@ -424,12 +424,12 @@ export default function TabBrawlsSoloLeaderboards() {
                                 Silver
                               </span>
                             </div>
-                            <figure className="avatar avatar-circle avatar-xs">
+                            <div className="avatar avatar-circle avatar-xs">
                               <div>
                                 <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                               </div>
                               <i className="radar" />
-                            </figure>
+                            </div>
                           </div>
                         </a>
                       </li>
@@ -623,9 +623,9 @@ export default function TabBrawlsSoloLeaderboards() {
                               <>
                                 <div className="item rounded-lg h-[54px]">
                                   <div className="item-image">
-                                    <figure className="avatar avatar-circle avatar-xs">
+                                    <div className="avatar avatar-circle avatar-xs">
                                       <div />
-                                    </figure>
+                                    </div>
                                   </div>
                                   <div className="item-body">
                                     <div className="item-title">Loading</div>
@@ -634,9 +634,9 @@ export default function TabBrawlsSoloLeaderboards() {
                                     <span className="font-bold text-ui-300 leading-none">
                                       Loading
                                     </span>
-                                    <figure className="avatar avatar-squircle avatar-xs">
+                                    <div className="avatar avatar-squircle avatar-xs">
                                       <div />
-                                    </figure>
+                                    </div>
                                   </div>
                                   <div className="item-actions flex items-center gap-2">
                                     <div>
@@ -758,7 +758,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                                 }${hasAds ? "?ads=true" : ""}`}
                                               >
                                                 <div className="flex gap-2 items-center interactive">
-                                                  <figure className="avatar avatar-circle avatar-xs">
+                                                  <div className="avatar avatar-circle avatar-xs">
                                                     <div>
                                                       <img
                                                         src={
@@ -773,7 +773,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                                     )?.isYou && (
                                                       <i className="radar" />
                                                     )}
-                                                  </figure>
+                                                  </div>
                                                   <div className="item-title">
                                                     <span
                                                       className={`${
@@ -840,7 +840,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                                       </div>
                                                     }
                                                   >
-                                                    <figure
+                                                    <div
                                                       className={`avatar avatar-squircle avatar-xs interactive ${
                                                         !prototype.getUserByID(
                                                           user.user
@@ -860,7 +860,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                                           }
                                                         />
                                                       </div>
-                                                    </figure>
+                                                    </div>
                                                   </Tooltip>
                                                 </a>
                                               </Link>

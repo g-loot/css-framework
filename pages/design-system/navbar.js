@@ -143,11 +143,11 @@ const DSpage = () => {
                 </div>
                 <div className='flex-none flex items-center ml-1'>
                   <div className="dropdown dropdown-end">
-                    <figure tabIndex="0" className="avatar avatar-circle avatar-xs ">
+                    <div tabIndex="0" className="avatar avatar-circle avatar-xs ">
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                       </div>
-                    </figure>
+                    </div>
                     <div tabIndex="0" className="dropdown-content bg-ui-600 w-52 p-1">
                       <ul className='menu menu-rounded'>
                           <li><a><span className="icon icon-wallet-43" /><span>Wallet</span></a></li>

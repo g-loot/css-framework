@@ -283,14 +283,14 @@ export default function Chat(props) {
                 >
                   {!message.isYourself && (
                     <div className="chat-author">
-                    <figure className="avatar avatar-circle avatar-sm">
+                    <div className="avatar avatar-circle avatar-sm">
                       <div>
                         <img
                           src={prototype.getUserByID(message.author)?.avatar}
                           alt="avatar"
                         />
                       </div>
-                    </figure>
+                    </div>
                     <time dateTime="2008-02-14 20:00">{message.time}</time>
                   </div>
                   )}

@@ -346,11 +346,11 @@ const DSpage = () => {
                 <ul className="is-loading border rounded-lg border-ui-600">
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-square avatar-simple avatar-xs">
+                      <div className="avatar avatar-square avatar-simple avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Croc Esports</div>
@@ -359,11 +359,11 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-square avatar-simple avatar-xs">
+                      <div className="avatar avatar-square avatar-simple avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Croc Esports</div>
@@ -372,11 +372,11 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-square avatar-simple avatar-xs">
+                      <div className="avatar avatar-square avatar-simple avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Croc Esports</div>
@@ -385,11 +385,11 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-square avatar-simple avatar-xs">
+                      <div className="avatar avatar-square avatar-simple avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Croc Esports</div>

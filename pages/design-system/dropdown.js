@@ -580,14 +580,14 @@ const DSpage = () => {
                     tabIndex="1"
                     className="flex items-center rounded-full border border-ui-600 bg-ui-600/25 interactive"
                   >
-                    <figure className="avatar avatar-circle avatar-xs">
+                    <div className="avatar avatar-circle avatar-xs">
                       <div>
                         <img
                           src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg"
                           alt="avatar"
                         />
                       </div>
-                    </figure>
+                    </div>
                     <span className="icon icon-arrow-sm-down mx-2" />
                   </div>
 

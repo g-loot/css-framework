@@ -197,7 +197,7 @@ export default function SectionClanActivity() {
                               }${hasAds ? "?ads=true" : ""}`}
                             >
                               <div className="flex items-center gap-2 cursor-pointer">
-                                <figure className="avatar avatar-xs avatar-circle">
+                                <div className="avatar avatar-xs avatar-circle">
                                   <div>
                                     <img
                                       src={
@@ -206,7 +206,7 @@ export default function SectionClanActivity() {
                                       alt="avatar"
                                     />
                                   </div>
-                                </figure>
+                                </div>
                                 <div className="text-sm">
                                   <div>
                                     Score: <b>{user.score}</b>
@@ -295,12 +295,12 @@ export default function SectionClanActivity() {
                             prototype.getUserByID(user).id
                           }${hasAds ? "?ads=true" : ""}`}
                         >
-                          <figure className="avatar avatar-square avatar-simple avatar-xs interactive">
+                          <div className="avatar avatar-square avatar-simple avatar-xs interactive">
                             <div>
                               <img src={prototype.getUserByID(user).avatar} />
                             </div>
                             {prototype.getUserByID(user).isOnline && <i />}
-                          </figure>
+                          </div>
                         </Link>
                       </div>
                       <div className="item-body">
@@ -380,7 +380,7 @@ export default function SectionClanActivity() {
                               : ""
                           }`}
                         >
-                          <div className="dropdown dropdown-left">
+                          <div className={`dropdown dropdown-left ${userIndex + 1 === prototype.getClanByID(clan_id).members?.length ? "dropdown-end" : ""}`}>
                             <label
                               tabIndex="0"
                               className="button button-ghost rounded-full"

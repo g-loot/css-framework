@@ -94,11 +94,11 @@ export default function Clan() {
                           }`}
                         >
                           <div className="flex-1 flex gap-4 items-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
-                            <figure className="avatar avatar-squircle avatar-md">
+                            <div className="avatar avatar-squircle avatar-md">
                               <div>
                                 <img src={clan.avatar} alt="avatar" />
                               </div>
-                            </figure>
+                            </div>
                             <div className="flex-1">
                               <h2 className="text-2xl">
                                 &#91;

@@ -25,7 +25,7 @@ export default function ModalBrawlHowitworksVideo(props) {
           >
             <span className="icon icon-e-remove" />
           </button>
-          <div className="modal-content">
+          <div className="modal-content p-0">
             <div className="modal-body text-center">
               <iframe
                 className="mx-auto aspect-video rounded"

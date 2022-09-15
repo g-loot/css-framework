@@ -38,11 +38,11 @@ export default function ModalClanCreate(props) {
             <div className="space-y-8 mt-8">
               <div className="w-full flex flex-col lg:flex-row gap-8 items-stretch lg:items-center">
                 <div className="relative">
-                  <figure className="avatar avatar-lg avatar-squircle z-0">
+                  <div className="avatar avatar-lg avatar-squircle z-0">
                     <div>
                       <span className="icon icon-multiple-11" />
                     </div>
-                  </figure>
+                  </div>
                   <div className="form-group absolute z-10 bottom-0 right-0">
                     <label
                       htmlFor="file-button"
@@ -67,7 +67,15 @@ export default function ModalClanCreate(props) {
                 </div>
                 <div className="lg:w-40 form-group">
                   <label htmlFor="clan-tag">Tag</label>
-                  <input type="text" name="clan-tag" id="clan-tag" placeholder="[CLAN]" />
+                  <div className="input-group">
+                    <span>
+                      &#91;
+                    </span>
+                    <input type="text" name="twitch" id="twitch" />
+                    <span>
+                      &#93;
+                    </span>
+                  </div>
                   <div className="text-sm text-ui-300 mt-1">
                     4 characters max.
                   </div>

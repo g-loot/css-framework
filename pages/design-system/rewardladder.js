@@ -48,7 +48,7 @@ const DSpage = () => {
                   <div className="ladder-avatar">
                     <div>
                       <div>
-                        <figure className="avatar avatar-circle avatar-sm">
+                        <div className="avatar avatar-circle avatar-sm">
                           <div>
                             <img
                               src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
@@ -56,7 +56,7 @@ const DSpage = () => {
                             />
                           </div>
                           <i className="radar" />
-                        </figure>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -458,7 +458,7 @@ const DSpage = () => {
                     <div className="ladder-avatar">
                       <div>
                         <div>
-                          <figure className="avatar avatar-circle avatar-sm">
+                          <div className="avatar avatar-circle avatar-sm">
                             <div>
                               <img
                                 src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
@@ -466,7 +466,7 @@ const DSpage = () => {
                               />
                             </div>
                             <i className="radar" />
-                          </figure>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -809,7 +809,7 @@ const DSpage = () => {
                     <div className="ladder-avatar">
                       <div>
                         <div>
-                          <figure className="avatar avatar-circle avatar-sm">
+                          <div className="avatar avatar-circle avatar-sm">
                             <div>
                               <img
                                 src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
@@ -817,7 +817,7 @@ const DSpage = () => {
                               />
                             </div>
                             <i className="radar" />
-                          </figure>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1130,7 +1130,7 @@ const DSpage = () => {
                     <div className="ladder-avatar">
                       <div>
                         <div>
-                          <figure className="avatar avatar-circle avatar-sm">
+                          <div className="avatar avatar-circle avatar-sm">
                             <div>
                               <img
                                 src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
@@ -1138,7 +1138,7 @@ const DSpage = () => {
                               />
                             </div>
                             <i className="radar" />
-                          </figure>
+                          </div>
                         </div>
                       </div>
                     </div>

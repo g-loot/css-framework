@@ -76,7 +76,7 @@ const notificationsGroups = [
   },
 ];
 
-export default function Topbar() {
+export default function TopbarNew() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);

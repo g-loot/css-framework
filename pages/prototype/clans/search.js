@@ -142,11 +142,11 @@ export default function ClanSearch() {
                           }`}
                         >
                           <div className="flex gap-3 items-center self-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
-                            <figure className="avatar avatar-xs avatar-squircle">
+                            <div className="avatar avatar-xs avatar-squircle">
                               <div>
                                 <img src={clan.avatar} alt="avatar" />
                               </div>
-                            </figure>
+                            </div>
                             <div className="">{clan.nickname}</div>
                           </div>
                         </Link>

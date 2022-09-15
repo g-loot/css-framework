@@ -409,14 +409,14 @@ const DSpage = () => {
                   <div className="header-content">
                     <div className="header-body">
                       <div className="flex gap-4 items-center self-center">
-                        <figure className="avatar avatar-xl avatar-circle">
+                        <div className="avatar avatar-xl avatar-circle">
                           <div>
                             <img
                               src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg"
                               alt="avatar"
                             />
                           </div>
-                        </figure>
+                        </div>
                         <div className="flex-1">
                           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                             <h2 className="text-3xl sm:text-4xl">

@@ -121,12 +121,12 @@ const DSpage = () => {
                     <span className="icon text-4xl icon-rank-silver" />
                     <span className="font-headings font-bold text-2xl uppercase italic">Silver</span>
                   </div>
-                  <figure className="avatar avatar-circle avatar-xs">
+                  <div className="avatar avatar-circle avatar-xs">
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                     </div>
                     <i className="radar" />
-                  </figure>
+                  </div>
                 </div>
               </a>
             </li>

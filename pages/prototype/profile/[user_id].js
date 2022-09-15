@@ -34,11 +34,11 @@ export default function Home() {
                 <div className="header-content">
                   <div className="header-body">
                     <div className="flex gap-4 items-center self-center">
-                      <figure className="avatar avatar-xl avatar-circle">
+                      <div className="avatar avatar-xl avatar-circle">
                         <div>
                           <img src={selectedUser.avatar} alt="avatar" />
                         </div>
-                      </figure>
+                      </div>
                       <div className="flex-1">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                           <h1 className="text-3xl sm:text-4xl">
@@ -163,11 +163,11 @@ export default function Home() {
             {/*
             <section className="flex items-center justify-between mb-4 py-8 px-4 sm:px-0">
               <div className="flex gap-4 items-center">
-                <figure className="avatar avatar-xl avatar-circle">
+                <div className="avatar avatar-xl avatar-circle">
                   <div>
                     <img src={selectedUser.avatar} />
                   </div>
-                </figure>
+                </div>
                 <div className="">
                   <div className="flex flex-col sm:flex-row gap-3 mb-3">
                     <h2 className="h3 leading-none">{selectedUser.nickname}</h2>
@@ -552,7 +552,7 @@ export default function Home() {
                           }`}
                         >
                           <div className="rounded surface surface-ui-700 p-2 flex items-center gap-2 interactive">
-                            <figure className="avatar avatar-sm avatar-squircle">
+                            <div className="avatar avatar-sm avatar-squircle">
                               <div>
                                 <img
                                   src={
@@ -562,7 +562,7 @@ export default function Home() {
                                   alt="avatar"
                                 />
                               </div>
-                            </figure>
+                            </div>
                             <div>
                               <div className="text-xl font-headings font-bold italic text-ui-100">
                                 &#91;

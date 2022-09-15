@@ -54,11 +54,11 @@ export default function TabTournamentsOverview() {
                     <>
                       <div className="item">
                         <div className="item-image">
-                          <figure className="avatar avatar-squircle avatar-sm">
+                          <div className="avatar avatar-squircle avatar-sm">
                             <div>
                               <img src={prototype.getClanByID(clan)?.avatar} />
                             </div>
-                          </figure>
+                          </div>
                         </div>
                         <div className="item-body">
                           <div className="item-title font-bold">
@@ -104,12 +104,12 @@ export default function TabTournamentsOverview() {
                           }${hasAds ? "?ads=true" : ""}`}
                         >
                           <div className="flex flex-col items-center gap-2 interactive">
-                            <figure className="avatar avatar-circle">
+                            <div className="avatar avatar-circle">
                               <div>
                                 <img src={prototype.getUserByID(user).avatar} />
                               </div>
                               {prototype.getUserByID(user).isYou && <i />}
-                            </figure>
+                            </div>
                             {prototype.getUserByID(user).nickname}
                           </div>
                         </Link>

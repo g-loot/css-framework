@@ -178,11 +178,11 @@ const DSpage = () => {
             <div className="flex-1 flex justify-center items-center">
               <div>
                 <div className="toast" role="alert" aria-live="assertive">
-                  <figure className="avatar avatar-circle avatar-sm">
+                  <div className="avatar avatar-circle avatar-sm">
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg" alt="avatar" />
                     </div>
-                  </figure>
+                  </div>
                   <div>
                     <div className="toast-title">
                       Jamlog

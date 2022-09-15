@@ -59,11 +59,11 @@ export default function Home() {
                       <div className="header-body">
                         <div className="flex flex-col sm:flex-row gap-4 items-stretch text-left justify-between">
                           <div className="flex gap-4 items-center self-center">
-                            <figure className="avatar avatar-xl avatar-squircle">
+                            <div className="avatar avatar-xl avatar-squircle">
                               <div>
                                 <img src={selectedClan.avatar} alt="avatar" />
                               </div>
-                            </figure>
+                            </div>
                             <div className="flex-1">
                               <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                                 <h1 className="text-3xl sm:text-4xl">
@@ -224,11 +224,11 @@ export default function Home() {
                     <div className="header-content">
                       <div className="header-body">
                         <div className="flex gap-4 items-center self-center">
-                          <figure className="avatar avatar-xl avatar-squircle">
+                          <div className="avatar avatar-xl avatar-squircle">
                             <div>
                               <img src={selectedClan.avatar} alt="avatar" />
                             </div>
-                          </figure>
+                          </div>
                           <div className="flex-1">
                             <div className="">
                               <h1 className="text-3xl sm:text-4xl">

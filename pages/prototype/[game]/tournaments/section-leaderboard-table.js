@@ -616,14 +616,14 @@ export default function SectionTournamentsLeaderboardTable() {
                                 prototype.getUserByID(user).id
                               }${hasAds ? "?ads=true" : ""}`}
                             >
-                              <figure className="avatar avatar-circle avatar-md interactive">
+                              <div className="avatar avatar-circle avatar-md interactive">
                                 <div>
                                   <img
                                     src={prototype.getUserByID(user).avatar}
                                     alt={prototype.getUserByID(user).nickname}
                                   />
                                 </div>
-                              </figure>
+                              </div>
                             </Link>
                           </div>
                           <div className="item-body flex-2 lg:flex-3 text-left">

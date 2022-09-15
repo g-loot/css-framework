@@ -190,6 +190,161 @@ const DSpage = () => {
           </div>
         </div>
       </div>
+
+      {/* Centered */}
+      <div className="mb-12" id="centered">
+        <h2 className="h3 mb-3">Centered</h2>
+        <div className="mb-10">
+          <div className="flex flex-col lg:flex-row gap-4">
+            <div className="flex-3">
+              <div className="modal modal-center">
+                <button
+                  type="button"
+                  className="button button-secondary button-close"
+                >
+                  <span className="icon icon-e-remove" />
+                </button>
+                <div className="modal-content">
+                  <div className="modal-body">
+                    <h2 className="modal-title">Leave party?</h2>
+                    <p>
+                      We are looking to find you the best match. Leaving the
+                      party means you lose your spot in the queue for the
+                      tournament.
+                    </p>
+                  </div>
+                  <div className="modal-action">
+                    <button className="button button-primary">
+                      <span>Stay in party</span>
+                    </button>
+                    <button className="button button-secondary">
+                      <span>Leave party</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex-2">
+              <iframe
+                className="rounded-lg"
+                width="100%"
+                height="345"
+                src="//jsfiddle.net/augustin_hiebel/groact7q/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Flexibility */}
+      <div className="mb-12" id="flexibility">
+        <h2 className="h3 mb-3">Flexibility</h2>
+        <p className="text-ui-300 mb-6">
+          The modals have been designed to cater for various usages, you can
+          pass extra class names such as <code>.surface-transparent</code> (to
+          hide the modal surface) or <code>.max-w-xx</code> (to make the modal
+          thiner), choose wether or not to have an image or actions or even padding.
+        </p>
+        <div className="mb-10">
+          <div className="flex flex-col lg:flex-row gap-4">
+            <div className="flex-3">
+              <div className="modal max-w-sm mx-auto">
+                <button
+                  type="button"
+                  className="button button-secondary button-close"
+                >
+                  <span className="icon icon-e-remove" />
+                </button>
+                <div className="modal-content p-0">
+                  <div className="modal-body text-center">
+                    <iframe
+                      className="mx-auto aspect-video rounded"
+                      width="100%"
+                      height="auto"
+                      src="https://www.youtube.com/embed/3A-d57PMKEk?autoplay=1"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex-2">
+              <iframe
+                className="rounded-lg"
+                width="100%"
+                height="345"
+                src="//jsfiddle.net/augustin_hiebel/9osdvhmc/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div className="mb-10">
+          <div className="flex flex-col lg:flex-row gap-4">
+            <div className="flex-3">
+              <div className="modal modal-center surface-transparent">
+                <button
+                  type="button"
+                  className="button button-secondary button-close"
+                >
+                  <span className="icon icon-e-remove" />
+                </button>
+                <div className="modal-content">
+                  <h2 className="modal-title animate-slide-in-top">
+                    Congratulations
+                  </h2>
+                  <div className="flex gap-8 items-start justify-center leading-tight mt-4 animate-slide-in-bottom">
+                    <div className="">
+                      <img
+                        className="mx-auto"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-coin-small.png"
+                        width="140"
+                        height="auto"
+                        alt=""
+                      />
+                      <div className="flex gap-2 items-baseline justify-center">
+                        <div className="text-4xl font-headings text-gold-500">
+                          5
+                        </div>
+                        <div className="font-headings font-bold uppercase text-lg text-gold-500">
+                          Coins
+                        </div>
+                      </div>
+                    </div>
+                    <div className="">
+                      <img
+                        className="mx-auto"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-extrasmall.png"
+                        width="140"
+                        height="auto"
+                        alt=""
+                      />
+                      <div className="flex gap-2 items-baseline justify-center">
+                        <div className="text-4xl font-headings text-purple-500">
+                          1
+                        </div>
+                        <div className="font-headings font-bold uppercase text-lg text-purple-500">
+                          Token
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex-2">
+              <iframe
+                className="rounded-lg"
+                width="100%"
+                height="345"
+                src="//jsfiddle.net/augustin_hiebel/yktnfa5b/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

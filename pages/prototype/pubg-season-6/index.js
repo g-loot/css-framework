@@ -290,9 +290,9 @@ const PrototypePage = () => {
                       <div className={`chip chip-reward chip-xs chip-inverted h-6 min-w-[1.5rem] text-xs ${itemIndex === 0 ? 'chip-gold' : ''} ${itemIndex === 1 ? 'chip-silver' : ''} ${itemIndex === 2 ? 'chip-bronze' : ''} ${itemIndex > 2 ? 'chip-neutral' : ''}`}><span>{itemIndex+1}</span></div>
                     </div>
                     <div className='item-image w-20'>
-                      <figure className='avatar avatar-md'>
+                      <div className='avatar avatar-md'>
                         <div><img src={item.avatar} alt={item.name} /></div>
-                      </figure>
+                      </div>
                     </div>
                     <div className='item-body flex-2 lg:flex-3 text-left'>
                       <div className='item-title font-headings font-bold italic text-xl text-ui-100'>

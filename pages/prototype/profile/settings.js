@@ -56,11 +56,11 @@ export default function Home() {
                     <div className="flex flex-col gap-4 items-center">
                       <div className="flex justify-center items-center gap-4">
                         <div className="relative">
-                          <figure className="avatar avatar-lg avatar-circle z-0">
+                          <div className="avatar avatar-lg avatar-circle z-0">
                             <div>
                               <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                             </div>
-                          </figure>
+                          </div>
                           <div className="form-group absolute z-10 bottom-0 right-0">
                             <label
                               htmlFor="file-button"

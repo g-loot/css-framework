@@ -85,12 +85,12 @@ const DSpage = () => {
                     </div>
                   </div>
                   <div className="stat-image">
-                    <figure className='avatar avatar-simple avatar-squircle avatar-sm'>
+                    <div className='avatar avatar-simple avatar-squircle avatar-sm'>
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                       </div>
                       <i/>
-                    </figure>
+                    </div>
                   </div>
                 </div>
               </div> 

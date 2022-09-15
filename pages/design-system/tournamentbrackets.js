@@ -201,14 +201,14 @@ const DSpage = () => {
                                         }`}
                                         key={teamIndex}
                                       >
-                                        <figure className="avatar avatar-tiny">
+                                        <div className="avatar avatar-tiny">
                                           <div>
                                             <img
                                               src={team.image}
                                               alt={team.name}
                                             />
                                           </div>
-                                        </figure>
+                                        </div>
                                         <b>{team.name}</b>
                                         <i>{team.score}</i>
                                       </li>
@@ -280,14 +280,14 @@ const DSpage = () => {
                                         }`}
                                         key={teamIndex}
                                       >
-                                        <figure className="avatar avatar-tiny">
+                                        <div className="avatar avatar-tiny">
                                           <div>
                                             <img
                                               src={team.image}
                                               alt={team.name}
                                             />
                                           </div>
-                                        </figure>
+                                        </div>
                                         <b>{team.name}</b>
                                         <i>{team.score}</i>
                                       </li>

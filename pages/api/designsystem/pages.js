@@ -10,7 +10,7 @@ export const DSpages = [
       },
       {
         label: "Getting started",
-        tags: "framework,about,css,gettingstarted,install,npm,package,reactjs,webpack,tailwindcss,nodejs,config",
+        tags: "framework,about,css,getting started,install,npm,package,reactjs,webpack,tailwindcss,nodejs,config",
         url: "gettingstarted",
       },
     ],
@@ -123,17 +123,17 @@ export const DSpages = [
       },
       {
         label: "Tournament brackets",
-        tags: "content,tournament,brackets,showdown",
+        tags: "content,tournament,brackets,showdown,tournament brackets",
         url: "tournamentbrackets",
       },
       {
         label: "Empty states",
-        tags: "content,empty,states",
+        tags: "content,empty,states,empty states",
         url: "emptystates",
       },
       {
         label: "Reward ladder",
-        tags: "content,reward,ladder,progression,leaderboard,claim,tokens,coins,prize,delight",
+        tags: "content,reward,ladder,progression,leaderboard,claim,tokens,coins,prize,delight,reward ladder",
         url: "rewardladder",
       },
       {
@@ -225,7 +225,7 @@ export const DSpages = [
     pages: [
       {
         label: "Progress bars",
-        tags: "stats,numbers,progress,bar,loading",
+        tags: "stats,numbers,progress,bar,loading,progress bars",
         url: "progressbars",
       },
       {
@@ -235,7 +235,7 @@ export const DSpages = [
       },
       {
         label: "Icon holder",
-        tags: "stats,numbers,icon,holder,stats,,graphs,charts",
+        tags: "stats,numbers,icon,holder,stats,,graphs,charts,icon holder",
         url: "iconholder",
       },
       {
@@ -261,12 +261,12 @@ export const DSpages = [
     pages: [
       {
         label: "Form example",
-        tags: "form,example,layout,sheet,type,radio,checkbox,toggle,input,ui",
+        tags: "form,example,layout,sheet,type,radio,checkbox,toggle,input,ui,form example",
         url: "formexample",
       },
       {
         label: "Text inputs",
-        tags: "form,data,input,range,value,ui,text,number,date",
+        tags: "form,data,input,range,value,ui,text,number,date,text inputs",
         url: "textinputs",
       },
       {
@@ -276,17 +276,17 @@ export const DSpages = [
       },
       {
         label: "Select inputs",
-        tags: "form,data,select,input,choice,ui",
+        tags: "form,data,select,input,choice,ui,select inputs",
         url: "selectinputs",
       },
       {
         label: "Range inputs",
-        tags: "form,data,input,range,value,ui",
+        tags: "form,data,input,range,value,ui,range inputs",
         url: "rangeinputs",
       },
       {
         label: "File inputs",
-        tags: "form,data,input,file,upload,drop,drag",
+        tags: "form,data,input,file,upload,drop,drag,file inputs",
         url: "fileinputs",
       },
     ],
@@ -297,22 +297,22 @@ export const DSpages = [
     pages: [
       {
         label: "Mission cards",
-        tags: "listing,card,mission,objective,content,games",
+        tags: "listing,card,mission,objective,content,games,mission cards",
         url: "missioncards",
       },
       {
         label: "Tournament cards",
-        tags: "listing,card,tournament,competition,showdown,open,skirmish,objective,content,games",
+        tags: "listing,card,tournament,competition,showdown,open,skirmish,objective,content,games,tournament cards",
         url: "tournamentcards",
       },
       {
         label: "Content cards",
-        tags: "content,listing,card,display",
+        tags: "content,listing,card,display,content cards",
         url: "contentcards",
       },
       {
         label: "Brawl cards",
-        tags: "brawl,listing,card,display,leaderboard,solo,clan",
+        tags: "brawl,listing,card,display,leaderboard,solo,clan,brawl cards",
         url: "brawlcards",
       },
     ],
@@ -360,7 +360,7 @@ export const DSpages = [
       },
       {
         label: "Brawl info",
-        tags: "brawl,information,info,leaderboard",
+        tags: "brawl,information,info,leaderboard,brawl info",
         url: "brawlinfo",
       },
     ],

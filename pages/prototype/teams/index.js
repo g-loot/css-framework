@@ -141,11 +141,11 @@ export default function Home() {
                   style={{ "--delay": `calc( ${teamIndex} * 0.05s)` }}
                 >
                   <div className="surface surface-dimmed hover:scale-95 interactive rounded-xl p-4 flex flex-col gap-4 items-center">
-                    <figure className="avatar avatar-squircle">
+                    <div className="avatar avatar-squircle">
                       <div>
                         <img src={team.avatar} />
                       </div>
-                    </figure>
+                    </div>
                     <h3 className="text-xl not-italic flex gap-2">
                       <span className="max-w-[20ch] whitespace-nowrap overflow-hidden overflow-ellipsis">
                         {team.name}

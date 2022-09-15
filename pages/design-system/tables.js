@@ -260,11 +260,11 @@ const DSpage = () => {
                     </th>
                     <td>
                     <div className="flex items-center space-x-3">
-                      <figure className="avatar avatar-xs avatar-circle">
+                      <div className="avatar avatar-xs avatar-circle">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
-                      </figure>
+                      </div>
                       <div>
                         <div className="font-bold">Jérôme Weiss</div>
                         <div className="text-sm text-ui-300">France</div>
@@ -297,11 +297,11 @@ const DSpage = () => {
                     </th>
                     <td>
                     <div className="flex items-center space-x-3">
-                      <figure className="avatar avatar-xs avatar-circle">
+                      <div className="avatar avatar-xs avatar-circle">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                         </div>
-                      </figure>
+                      </div>
                       <div>
                         <div className="font-bold">Hart Hagerty</div>
                         <div className="text-sm text-ui-300">United States</div>
@@ -334,11 +334,11 @@ const DSpage = () => {
                     </th>
                     <td>
                     <div className="flex items-center space-x-3">
-                      <figure className="avatar avatar-xs avatar-circle">
+                      <div className="avatar avatar-xs avatar-circle">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
-                      </figure>
+                      </div>
                       <div>
                         <div className="font-bold">Kees Dieffenthaller</div>
                         <div className="text-sm text-ui-300">Trinidad and Tobago</div>

@@ -29,11 +29,11 @@ const DSpage = () => {
                 <ul>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Croc Esports</div>
@@ -42,11 +42,11 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Kingzz</div>
@@ -55,11 +55,11 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Angry Beavers</div>
@@ -68,11 +68,11 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Bunny Hunger</div>
@@ -105,11 +105,11 @@ const DSpage = () => {
                 <ul>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Croc Esports</div>
@@ -128,11 +128,11 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Kingzz</div>
@@ -151,11 +151,11 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Angry Beavers</div>
@@ -174,11 +174,11 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Bunny Hunger</div>
@@ -226,11 +226,11 @@ const DSpage = () => {
                       </div>
                     </div>
                     <div className="item-image">
-                      <figure className="avatar avatar-tiny">
+                      <div className="avatar avatar-tiny">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Croc Esports</div>
@@ -278,11 +278,11 @@ const DSpage = () => {
                       </div>
                     </div>
                     <div className="item-image">
-                      <figure className="avatar avatar-tiny">
+                      <div className="avatar avatar-tiny">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Kingzz</div>
@@ -330,11 +330,11 @@ const DSpage = () => {
                       </div>
                     </div>
                     <div className="item-image">
-                      <figure className="avatar avatar-tiny">
+                      <div className="avatar avatar-tiny">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Angry Beavers</div>
@@ -382,11 +382,11 @@ const DSpage = () => {
                       </div>
                     </div>
                     <div className="item-image">
-                      <figure className="avatar avatar-tiny">
+                      <div className="avatar avatar-tiny">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_12.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Bunny Hunger</div>
@@ -1049,11 +1049,11 @@ const DSpage = () => {
               <div className="flex-1 surface rounded-lg overflow-hidden">
                 <div className="item">
                   <div className="item-image">
-                    <figure className="avatar avatar-simple rounded-sm overflow-hidden">
+                    <div className="avatar avatar-simple rounded-sm overflow-hidden">
                       <div>
                         <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                       </div>
-                    </figure>
+                    </div>
                   </div>
                   <div className="item-body">
                     <div className="text-xs text-ui-300">Game or Area</div>
@@ -1092,11 +1092,11 @@ const DSpage = () => {
               <div className="flex-1 surface rounded-lg overflow-hidden">
                 <div className="item">
                   <div className="item-image">
-                    <figure className="avatar avatar-tiny avatar-simple">
+                    <div className="avatar avatar-tiny avatar-simple">
                       <div>
                         <span className="icon icon-chart-bar-33" />
                       </div>
-                    </figure>
+                    </div>
                   </div>
                   <div className="item-body">
                     <div className="item-title">Your stats</div>
@@ -1132,11 +1132,11 @@ const DSpage = () => {
                 <ul className="is-loading">
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Croc Esports</div>
@@ -1145,11 +1145,11 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Kingzz</div>
@@ -1158,11 +1158,11 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Angry Beavers</div>
@@ -1171,11 +1171,11 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Bunny Hunger</div>
@@ -1208,11 +1208,11 @@ const DSpage = () => {
                 <ul className="items-spaced space-y-2">
                   <li className="item rounded-xl">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Croc Esports</div>
@@ -1221,11 +1221,11 @@ const DSpage = () => {
                   </li>
                   <li className="item rounded-xl">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Kingzz</div>
@@ -1234,11 +1234,11 @@ const DSpage = () => {
                   </li>
                   <li className="item rounded-xl">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Angry Beavers</div>
@@ -1247,11 +1247,11 @@ const DSpage = () => {
                   </li>
                   <li className="item rounded-xl">
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Bunny Hunger</div>
@@ -1291,11 +1291,11 @@ const DSpage = () => {
                     style={{ "--delay": "calc(1 * 0.05s)" }}
                   >
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Croc Esports</div>
@@ -1311,11 +1311,11 @@ const DSpage = () => {
                     style={{ "--delay": "calc(2 * 0.05s)" }}
                   >
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Kingzz</div>
@@ -1331,11 +1331,11 @@ const DSpage = () => {
                     style={{ "--delay": "calc(3 * 0.05s)" }}
                   >
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Angry Beavers</div>
@@ -1351,11 +1351,11 @@ const DSpage = () => {
                     style={{ "--delay": "calc(4 * 0.05s)" }}
                   >
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">Bunny Hunger</div>
@@ -1371,11 +1371,11 @@ const DSpage = () => {
                     style={{ "--delay": "calc(5 * 0.05s)" }}
                   >
                     <div className="item-image">
-                      <figure className="avatar avatar-xs">
+                      <div className="avatar avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
-                      </figure>
+                      </div>
                     </div>
                     <div className="item-body">
                       <div className="item-title">DoubleM</div>

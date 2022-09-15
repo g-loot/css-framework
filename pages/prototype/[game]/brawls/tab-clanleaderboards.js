@@ -334,9 +334,9 @@ export default function TabBrawlsSoloLeaderboards() {
                         <>
                           <div className="item rounded-lg h-[54px]">
                             <div className="item-image">
-                              <figure className="avatar avatar-squircle avatar-xs">
+                              <div className="avatar avatar-squircle avatar-xs">
                                 <div />
-                              </figure>
+                              </div>
                             </div>
                             <div className="item-body">
                               <div className="item-title">Loading</div>
@@ -345,9 +345,9 @@ export default function TabBrawlsSoloLeaderboards() {
                               <span className="font-bold text-ui-300 leading-none">
                                 Loading
                               </span>
-                              <figure className="avatar avatar-squircle avatar-xs">
+                              <div className="avatar avatar-squircle avatar-xs">
                                 <div />
-                              </figure>
+                              </div>
                             </div>
                             <div className="item-actions flex items-center gap-2">
                               <div>
@@ -450,7 +450,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                           }`}
                                         >
                                           <div className="flex gap-2 items-center interactive">
-                                            <figure className="avatar avatar-squircle avatar-xs">
+                                            <div className="avatar avatar-squircle avatar-xs">
                                               <div>
                                                 <img
                                                   src={
@@ -460,7 +460,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                                   }
                                                 />
                                               </div>
-                                            </figure>
+                                            </div>
                                             <div className="item-title">
                                               <span
                                                 className={`${

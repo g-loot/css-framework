@@ -33,14 +33,14 @@ const DSpage = () => {
         <div className="surface rounded-lg">
           <div className="chat-group ">
             <div className="chat-author">
-              <figure className="avatar avatar-circle avatar-sm">
+              <div className="avatar avatar-circle avatar-sm">
                 <div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg"
                     alt="avatar"
                   />
                 </div>
-              </figure>
+              </div>
               <time dateTime="2008-02-14 20:00">Message sent 1.22pm</time>
             </div>
             <div className="chat-messages">

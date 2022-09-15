@@ -157,11 +157,16 @@
     flex
     flex-col
     items-stretch
-    p-4
-    lg:p-6
     text-center
     lg:text-left
     ;
+
+    &:not([class*="p-"]) {
+      @apply
+      p-4
+      lg:p-6
+      ;
+    }
 
     .modal-body {
       @apply
@@ -228,4 +233,36 @@
   mt-4
   lg:mt-6
   ;
+}
+
+
+.modal {
+  &.modal-center {
+    .modal-content,
+    .modal-body {
+      @apply
+      text-center
+      lg:text-center
+      ;
+    }
+    .modal-action {
+      @apply
+      lg:justify-center
+      ;
+    }
+  }
+  &.modal-right {
+    .modal-content,
+    .modal-body {
+      @apply
+      text-right
+      lg:text-right
+      ;
+    }
+    .modal-action {
+      @apply
+      lg:justify-end
+      ;
+    }
+  }
 }

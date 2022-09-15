@@ -50,7 +50,7 @@ export default function TabBrawlsOngoing() {
                                   <span>Finished</span>
                                 </div>
                               )}
-                              <div className="mt-2">
+                              <div className="mt-4">
                                 {brawl.solo && !brawl.clan && (
                                   <Tooltip
                                     tooltip={
@@ -63,8 +63,15 @@ export default function TabBrawlsOngoing() {
                                       </div>
                                     }
                                   >
-                                    <div className="inline-flex items-center gap-2 text-xl text-ui-300">
-                                      <span className="icon icon-profile-2"></span>
+                                    <div className="chip chip-secondary">
+                                      <div className="avatar avatar-simple avatar-circle avatar-tiny -ml-1.5">
+                                        <div>
+                                          <span className="icon icon-profile-2"></span>
+                                        </div>
+                                      </div>
+                                      <span className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${brawl.progress <= 0 ? "text-ui-400" : "text-ui-200"}`}>
+                                        Solo Brawl
+                                      </span>
                                     </div>
                                   </Tooltip>
                                 )}
@@ -85,52 +92,57 @@ export default function TabBrawlsOngoing() {
                                       </div>
                                     }
                                   >
-                                    <div className="flex items-center gap-2 text-xl text-ui-300">
-                                      <span className="icon icon-profile-2"></span>
-                                      <span className="">/</span>
-                                      <span className="icon icon-multiple-12"></span>
-                                    </div>
-                                  </Tooltip>
-                                )}
-                                {!brawl.solo && brawl.clan && (
-                                  <Tooltip
-                                    tooltip={
-                                      <div className="max-w-xs text-sm text-center leading-tight">
-                                        Clan Brawl
+                                    <div className="flex flex-col items-start gap-1">
+                                      <div className="chip chip-secondary">
+                                        {brawl.progress > 0 && (
+                                          <div className="avatar avatar-circle avatar-tiny -ml-1.5">
+                                            <div>
+                                              <img
+                                                src={prototype.getUserByID(1)?.avatar}
+                                              />
+                                            </div>
+                                            <i className="radar" />
+                                          </div>
+                                        )}
+                                        {brawl.progress <= 0 && (
+                                          <div className="avatar avatar-simple avatar-circle avatar-tiny -ml-1.5">
+                                            <div>
+                                              <span className="icon icon-profile-2"></span>
+                                            </div>
+                                          </div>
+                                        )}
+                                        <span className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${brawl.progress <= 0 ? "text-ui-400" : "text-ui-200"}`}>
+                                          Solo Brawl
+                                        </span>
                                       </div>
-                                    }
-                                  >
-                                    <div className="flex items-center gap-2 text-xl text-ui-300">
-                                      <span className="icon icon-multiple-12"></span>
+                                      <div className="chip chip-secondary">
+                                      {brawl.progressClan > 0 && (
+                                          <div className="avatar avatar-squircle avatar-tiny -ml-1.5">
+                                            <div>
+                                              <img
+                                                src={prototype.getClanByID(
+                                                  prototype.getUserByID(1).id
+                                                )?.avatar}
+                                              />
+                                            </div>
+                                            <i className="radar" />
+                                          </div>
+                                        )}
+                                        {brawl.progressClan <= 0 && (
+                                          <div className="avatar avatar-simple avatar-circle avatar-tiny -ml-1.5">
+                                            <div>
+                                              <span className="icon icon-multiple-12"></span>
+                                            </div>
+                                          </div>
+                                        )}
+                                        <span className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${brawl.progressClan <= 0 ? "text-ui-400" : "text-ui-200"}`}>
+                                          Clan Brawl
+                                        </span>
+                                      </div>
                                     </div>
                                   </Tooltip>
                                 )}
                               </div>
-                            </div>
-                            <div className="flex items-center gap-4">
-                              {brawl.progress > 0 && (
-                                <figure className="avatar avatar-circle avatar-xs">
-                                  <div>
-                                    <img
-                                      src={prototype.getUserByID(1)?.avatar}
-                                    />
-                                  </div>
-                                  <i className="radar" />
-                                </figure>
-                              )}
-                              {brawl.clan && (
-                                <figure className="avatar avatar-squircle avatar-xs">
-                                  <div>
-                                    <img
-                                      src={
-                                        prototype.getClanByID(
-                                          prototype.getUserByID(1).id
-                                        )?.avatar
-                                      }
-                                    />
-                                  </div>
-                                </figure>
-                              )}
                             </div>
                           </div>
                           <div className="card-image-bg">
@@ -252,7 +264,7 @@ export default function TabBrawlsOngoing() {
                                   {brawl.solo && (
                                     <div className="w-40 rounded-lg bg-gradient-to-b from-ui-900/50 to-ui-900/10 py-2 px-4 text-center flex flex-col items-center gap-2">
                                       <div className="flex items-center gap-2">
-                                        <figure className="avatar avatar-circle avatar-tiny">
+                                        <div className="avatar avatar-circle avatar-tiny">
                                           <div>
                                             <img
                                               src={
@@ -260,7 +272,7 @@ export default function TabBrawlsOngoing() {
                                               }
                                             />
                                           </div>
-                                        </figure>
+                                        </div>
                                         <span className="text-md uppercase font-bold text-ui-300">
                                           Solo
                                         </span>
@@ -289,7 +301,7 @@ export default function TabBrawlsOngoing() {
                                   {brawl.clan && (
                                     <div className="w-40 rounded-lg bg-gradient-to-b from-ui-900/50 to-ui-900/10 py-2 px-4 text-center flex flex-col items-center gap-2">
                                       <div className="flex items-center gap-2">
-                                        <figure className="avatar avatar-squircle avatar-tiny">
+                                        <div className="avatar avatar-squircle avatar-tiny">
                                           <div>
                                             <img
                                               src={
@@ -299,7 +311,7 @@ export default function TabBrawlsOngoing() {
                                               }
                                             />
                                           </div>
-                                        </figure>
+                                        </div>
                                         <span className="text-md uppercase font-bold text-ui-300">
                                           Clan
                                         </span>

@@ -92,6 +92,7 @@ export const dataGames = [
           }
         ],
         progress: 0,
+        progressClan: 0,
         soloLeaderboard: [
           {
             user: 1,
@@ -369,6 +370,7 @@ export const dataGames = [
           }
         ],
         progress: 2,
+        progressClan: 1,
         soloLeaderboard: [
           {
             user: 1,
@@ -646,6 +648,7 @@ export const dataGames = [
           }
         ],
         progress: 3,
+        progressClan: 0,
         soloLeaderboard: [
           {
             user: 1,
@@ -1365,6 +1368,7 @@ export const dataGames = [
           }
         ],
         progress: 0,
+        progressClan: 0,
         soloLeaderboard: [
           {
             user: 1,
@@ -1642,6 +1646,7 @@ export const dataGames = [
           }
         ],
         progress: 3,
+        progressClan: 0,
         soloLeaderboard: [
           {
             user: 1,

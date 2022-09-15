@@ -18,11 +18,11 @@ const DSpage = () => {
                     <>
                       <div className="item">
                         <div className="item-image">
-                          <figure className="avatar avatar-xs avatar-simple">
+                          <div className="avatar avatar-xs avatar-simple">
                             <div>
                               <span className="icon icon-reading" />
                             </div>
-                          </figure>
+                          </div>
                         </div>
                         <div className="item-body">
                           <div className="p-2 item-title font-headings font-bold text-lg italic">

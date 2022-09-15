@@ -78,24 +78,24 @@ export default function TabTournamentsOverview() {
                     }${hasAds ? "?ads=true" : ""}`}
                   >
                     <div className="flex flex-col items-center gap-2 interactive">
-                      <figure className="avatar avatar-circle">
+                      <div className="avatar avatar-circle">
                         <div>
                           <img src={prototype.getUserByID(user).avatar} />
                         </div>
                         {prototype.getUserByID(user).isYou && (
                           <i />
                         )}
-                      </figure>
+                      </div>
                       {prototype.getUserByID(user).nickname}
                     </div>
                   </Link>
                 ))}
                 <div className="flex flex-col items-center gap-2 opacity-25">
-                  <figure className="avatar avatar-circle">
+                  <div className="avatar avatar-circle">
                     <div>
                       <span className="icon icon-profile-2" />
                     </div>
-                  </figure>
+                  </div>
                   <span className="text-ui-300">Empty slot</span>
                 </div>
               </div>
