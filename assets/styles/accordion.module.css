@@ -24,11 +24,16 @@
       ;
     }
   }
+  .accordion-header,
+  .accordion-collapse {
+    @apply
+    transition-colors
+    duration-100
+    ;
+  }
   .accordion-header {
     @apply
     select-none
-    transition-colors
-    duration-100
     ;
     :where(.icon[class*='icon-game'], .item-title) {
       @apply
@@ -62,10 +67,12 @@
     ;
 
     > div {
-      @apply
-      border-t
-      border-ui-700
-      ;
+      &:not(.border-none) {
+        @apply
+        border-t
+        border-ui-700
+        ;
+      }
     }
     ul.menu {
       > li {
@@ -124,7 +131,7 @@
         .accordion-header {
           @apply
           cursor-pointer
-          bg-ui-700/50
+          bg-ui-700/30
           ;
         }
       }
@@ -337,44 +344,49 @@
 /* accordion halo dimmed */
 
 .accordion.accordion-halo.accordion-halo-dimmed {
-  .accordion-item.is-active {
-    .accordion-header {
-      @apply
-      bg-ui-800
-      ;
-      > i {
-        &:nth-of-type(1) {
-          @apply
-          opacity-0
-          ;
+  .accordion-item {
+    &.is-active,
+    &.is-selected {
+      :where(.accordion-header, .accordion-collapse) {
+        @apply
+        bg-ui-700/30
+        ;
+      }
+    }
+    &.is-active {
+      .accordion-header {
+        > i {
+          &:nth-of-type(1) {
+            @apply
+            opacity-0
+            ;
+          }
+          &:nth-of-type(2) {
+            @apply
+            opacity-0
+            ;
+          }
         }
-        &:nth-of-type(2) {
-          @apply
-          opacity-0
-          ;
+      }
+    }
+    &.is-selected {
+      .accordion-header {
+        > i {
+          &:nth-of-type(1) {
+            @apply
+            translate-y-0
+            opacity-30
+            ;
+          }
+          &:nth-of-type(2) {
+            @apply
+            translate-x-0
+            opacity-75
+            ;
+          }
         }
       }
     }
   }
-  .accordion-item.is-selected {
-    .accordion-header {
-      @apply
-      bg-ui-800
-      ;
-      > i {
-        &:nth-of-type(1) {
-          @apply
-          translate-y-0
-          opacity-30
-          ;
-        }
-        &:nth-of-type(2) {
-          @apply
-          translate-x-0
-          opacity-75
-          ;
-        }
-      }
-    }
-  }
+  
 } 

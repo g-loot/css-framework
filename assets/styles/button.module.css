@@ -86,8 +86,6 @@
     }
   }
 
-  
-
   &:not([disabled]),
   &:not(.is-disabled) {
     &:hover,
@@ -300,9 +298,11 @@
     ;
 
     > * {
-      @apply
-      text-xl
-      ;
+      &:not([class*="text-"]) {
+        @apply
+        text-xl
+        ;
+      }
     }
     &[class*='rounded-full']{
       @apply
@@ -316,9 +316,11 @@
     ;
 
     > * {
-      @apply
-      text-base
-      ;
+      &:not([class*="text-"]) {
+        @apply
+        text-base
+        ;
+      }
     }
     &[class*='rounded-full']{
       @apply

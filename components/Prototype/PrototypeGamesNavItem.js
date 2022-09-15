@@ -24,7 +24,7 @@ export default function PrototypeGamesNavItem(props) {
       {props.header}
     </div>
     <div className={`accordion-collapse`} style={{height: `${isActive ? height : 0}px`}}>
-      <div ref={elementRef}>
+      <div ref={elementRef} className={`${!props.border ? "border-none" : ""}`}>
         {props.children}
       </div>
     </div>

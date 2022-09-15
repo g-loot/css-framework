@@ -110,13 +110,13 @@ export default function PrototypeStructure({ children, title }) {
                 htmlFor="drawer-prototype"
                 className="drawer-overlay"
               ></label>
-              <aside className="w-64 bg-ui-800 border-r border-ui-700 flex flex-col shadow-2xl">
-                <div className="h-14 flex items-center justify-between border-b border-ui-700 pl-3 pr-2">
+              <aside className="w-80 bg-ui-800 border-r border-ui-700 flex flex-col shadow-2xl">
+                <div className="h-14 flex items-center justify-between border-b border-ui-700 pl-7 pr-2">
                   <Link href={`/prototype/home${prototype.getURLparams()}`}>
                     <a className="flex items-center gap-2 interactive">
                       <img
-                        width="123"
-                        height="64"
+                        width="110"
+                        height="auto"
                         src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
                         alt="G-Loot logo"
                       />

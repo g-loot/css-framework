@@ -9,18 +9,22 @@ import { useRouter } from "next/router";
 const SubMenuItem = [
   {
     url: "missions",
+    icon: "icon-missions",
     label: "Missions",
   },
   {
     url: "brawls",
+    icon: "icon-brawl",
     label: "Brawls",
   },
   {
     url: "tournaments",
+    icon: "icon-showdown",
     label: "Tournaments",
   },
   {
     url: "stats",
+    icon: "icon-statistics",
     label: "Stats",
   },
 ];
@@ -52,6 +56,7 @@ export default function PrototypeGamesNavNew({ children }) {
               <PrototypeGamesNavItem
                 isopen={item.slug === game ? true : false}
                 isselected={item.slug === game ? true : false}
+                border={false}
                 header={
                   <>
                     <i
@@ -116,7 +121,7 @@ export default function PrototypeGamesNavNew({ children }) {
                           : ""
                       }`}
                     />
-                    <div className="item">
+                    <div className="item px-6">
                       <div className="item-image">
                         <div className="avatar avatar-simple avatar-xs">
                           <div>
@@ -133,7 +138,7 @@ export default function PrototypeGamesNavNew({ children }) {
                         </div>
                       </div>
                       <div className="item-body">
-                        <div className="item-title text-sm uppercase">
+                        <div className={`item-title text-sm uppercase ${item.slug === game ? "font-bold" : ""}`}>
                           {item.name}
                         </div>
                       </div>
@@ -146,7 +151,7 @@ export default function PrototypeGamesNavNew({ children }) {
                   </>
                 }
               >
-                <ul className="menu menu-secondary">
+                <ul className="menu menu-secondary menu-rounded px-4 pb-4">
                   {SubMenuItem.map((subItem, subItemIndex) => (
                     <>
                       <li key={subItem}>
@@ -163,7 +168,8 @@ export default function PrototypeGamesNavNew({ children }) {
                                 : ""
                             }`}
                           >
-                            <span className="pl-12">{subItem.label}</span>
+                            <span className={`pl-3 pr-3 icon icon-20 ${subItem.icon}`} />
+                            <span className="uppercase">{subItem.label}</span>
                           </a>
                         </Link>
                       </li>

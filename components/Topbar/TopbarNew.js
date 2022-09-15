@@ -99,7 +99,7 @@ export default function TopbarNew() {
     <div className="sticky top-0 z-50 bg-ui-900/90 navbar h-14 flex items-center border-b border-ui-700">
       <div className="container relative">
         <div
-          className={`max-w-2xl flex lg:gap-8 mx-auto px-0 md:px-10 xl:px-20  ${
+          className={`max-w-2xl flex lg:gap-8 mx-auto px-2 md:px-10 xl:px-20  ${
             hasAds ? "3xl:m-0" : ""
           }`}
         >

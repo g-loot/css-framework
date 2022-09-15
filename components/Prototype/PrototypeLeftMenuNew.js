@@ -47,7 +47,7 @@ export default function PrototypeLeftMenuNew(props) {
         <div className="flex-1">
           <Link href={`/prototype/clans${prototype.getURLparams()}`}>
             <div
-              className={`item item-interactive ${
+              className={`item px-6 item-interactive ${
                 router.pathname.includes("clans") ? "is-active" : ""
               }`}
             >
@@ -80,7 +80,7 @@ export default function PrototypeLeftMenuNew(props) {
           </Link>
           <Link href={`/prototype/shop${prototype.getURLparams()}`}>
             <div
-              className={`lg:hidden item item-interactive ${
+              className={`lg:hidden item px-6 item-interactive ${
                 router.pathname.includes("shop") ? "is-active" : ""
               }`}
             >
@@ -102,7 +102,7 @@ export default function PrototypeLeftMenuNew(props) {
           </Link>
           <Link href={`/prototype/premium${prototype.getURLparams()}`}>
             <div
-              className={`lg:hidden item item-interactive ${
+              className={`lg:hidden item px-6 item-interactive ${
                 router.pathname.includes("premium") ? "is-active" : ""
               }`}
             >
@@ -127,10 +127,10 @@ export default function PrototypeLeftMenuNew(props) {
             <button
               onClick={openModalFavoriteGames}
               type="button"
-              className="button button-sm button-ghost w-full"
+              className="button button-sm button-ghost w-full justify-start opacity-50 hover:opacity-100"
             >
-              <span className="icon icon-pen-2" />
-              <span>Edit favorite games</span>
+              <span className="icon icon-pen-2 px-3" />
+              <span className="font-body tracking-normal font-normal text-sm">Edit favorite games</span>
             </button>
           </div>
         </div>
