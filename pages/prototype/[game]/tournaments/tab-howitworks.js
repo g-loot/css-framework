@@ -265,7 +265,7 @@ export default function TabTournamentsHowItWorks() {
                         />
                       ))}
                       {tab.hasButtonReward && (
-                        <Link href={`/prototype/premium${hasAds ? "?ads=true" : ""}`}>
+                        <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                           <a className="button button-premium is-shining">
                             <span>Join G-Loot Premium</span>
                           </a>

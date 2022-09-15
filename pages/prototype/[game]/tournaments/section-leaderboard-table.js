@@ -614,7 +614,7 @@ export default function SectionTournamentsLeaderboardTable() {
                             <Link
                               href={`/prototype/profile/${
                                 prototype.getUserByID(user).id
-                              }${hasAds ? "?ads=true" : ""}`}
+                              }${prototype.getURLparams()}`}
                             >
                               <div className="avatar avatar-circle avatar-md interactive">
                                 <div>
@@ -630,7 +630,7 @@ export default function SectionTournamentsLeaderboardTable() {
                             <Link
                               href={`/prototype/profile/${
                                 prototype.getUserByID(user).id
-                              }${hasAds ? "?ads=true" : ""}`}
+                              }${prototype.getURLparams()}`}
                             >
                               <div className="item-title font-headings font-bold italic text-xl text-ui-100 interactive">
                                 {prototype.getUserByID(user).nickname}

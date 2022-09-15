@@ -22,7 +22,7 @@ export default function TopbarFramework(props) {
             </div>
             <Link href="/">
               <a
-                className="flex items-end gap-2 transition-opacity duration-100 hover:opacity-50"
+                className="flex items-end gap-2 interactive"
               >
                 <img
                   width="123"

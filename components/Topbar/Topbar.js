@@ -112,7 +112,7 @@ export default function Topbar() {
               </label>
             </div>
             <Link href="/">
-              <a className="flex items-center gap-2 transition-opacity duration-100 hover:opacity-50">
+              <a className="flex items-center gap-2 interactive">
                 <span className="block md:hidden icon icon-gloot-symbol text-main text-3xl" />
                 <img
                   className="hidden md:block"
@@ -343,7 +343,7 @@ export default function Topbar() {
               <div className="flex justify-end items-center gap-1 sm:gap-2">
                 <div className="rounded-full border border-ui-700 bg-ui-800 interactive">
                   <Link
-                    href={`/prototype/clans/search${hasAds ? "?ads=true" : ""}`}
+                    href={`/prototype/clans/search${prototype.getURLparams()}`}
                   >
                     <a className="button button-sm button-ghost rounded-full">
                       <span className="icon icon-zoom" />
@@ -373,9 +373,7 @@ export default function Topbar() {
                     <ul className="menu menu-rounded menu-secondary">
                       <li>
                         <Link
-                          href={`/prototype/profile/1${
-                            hasAds ? "?ads=true" : ""
-                          }`}
+                          href={`/prototype/profile/1${prototype.getURLparams()}`}
                         >
                           <a tabIndex="1">
                             <span className="icon icon-circle-09" />
@@ -385,7 +383,7 @@ export default function Topbar() {
                       </li>
                       <li>
                         <Link
-                          href={`/prototype/wallet${hasAds ? "?ads=true" : ""}`}
+                          href={`/prototype/wallet${prototype.getURLparams()}`}
                         >
                           <a tabIndex="1">
                             <span className="icon icon-wallet-43" />
@@ -396,9 +394,7 @@ export default function Topbar() {
                       <li className="separator"></li>
                       <li>
                         <Link
-                          href={`/prototype/profile/settings${
-                            hasAds ? "?ads=true" : ""
-                          }`}
+                          href={`/prototype/profile/settings${prototype.getURLparams()}`}
                         >
                           <a tabIndex="1">
                             <span className="icon icon-cogwheel" />
@@ -408,9 +404,7 @@ export default function Topbar() {
                       </li>
                       <li>
                         <Link
-                          href={`/prototype/profile/1${
-                            hasAds ? "?ads=true" : ""
-                          }`}
+                          href={`/prototype/profile/1${prototype.getURLparams()}`}
                         >
                           <a tabIndex="1">
                             <span className="icon icon-file-article" />
@@ -431,7 +425,7 @@ export default function Topbar() {
                       </li>
                       <li className="separator"></li>
                       <li>
-                        <Link href={`/${hasAds ? "?ads=true" : ""}`}>
+                        <Link href={`/`}>
                           <a tabIndex="1">
                             <span className="icon icon-leave" />
                             <span>Log out</span>
@@ -482,9 +476,7 @@ export default function Topbar() {
                                 (notification, notificationIndex) => (
                                   <Link
                                     key={notificationIndex}
-                                    href={`/prototype/wallet${
-                                      hasAds ? "?ads=true" : ""
-                                    }`}
+                                    href={`/prototype/wallet${prototype.getURLparams()}`}
                                   >
                                     <li
                                       className={`item rounded-xl item-interactive relative surface surface-ui-600 hover:opacity-50 ${

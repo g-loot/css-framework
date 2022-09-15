@@ -13,7 +13,6 @@ export default function ClanSearch() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
-  const hasAds = query.ads === "true" ? true : false;
   const modalCreate = query.modalcreate === "true" ? true : false;
   const uiContext = useContext(UiContext);
 
@@ -137,9 +136,7 @@ export default function ClanSearch() {
                     >
                       <td>
                         <Link
-                          href={`/prototype/clans/${clan.id}${
-                            hasAds ? "?ads=true" : ""
-                          }`}
+                          href={`/prototype/clans/${clan.id}${prototype.getURLparams()}`}
                         >
                           <div className="flex gap-3 items-center self-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
                             <div className="avatar avatar-xs avatar-squircle">

@@ -53,14 +53,47 @@
   duration-100
   cursor-pointer
   ;
+  .item-title {
+    &:not([class*="text-"]) {
+      @apply
+      text-ui-300
+      transition
+      duration-300
+      ;
+    }
+  }
   &:hover {
     @apply
     bg-ui-700/50
     ;
+    .item-title {
+      &:not([class*="hover:text-"]) {
+        @apply
+        text-ui-100
+        ;
+      }
+    }
+  }
+  &.is-active {
+    @apply
+    bg-ui-700
+    ;
+    .item-title {
+      &:not([class*="text-"]) {
+        @apply
+        text-ui-100
+        ;
+      }
+      &:not([class*="font-regular"]) {
+        @apply
+        font-bold
+        ;
+      }
+    }
   }
   &:active {
     @apply
-    bg-ui-800
+    bg-ui-700/50
     ;
   }
 }

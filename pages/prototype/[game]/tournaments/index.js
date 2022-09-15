@@ -69,9 +69,7 @@ export default function Home() {
                   </p>
                   {selectedGame.needsSteam && (
                     <Link
-                      href={`/prototype/profile/settings${
-                        hasAds ? "?ads=true" : ""
-                      }`}
+                      href={`/prototype/profile/settings${prototype.getURLparams()}`}
                     >
                       <button
                         type="button"
@@ -97,9 +95,7 @@ export default function Home() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype/${game}/tournaments${
-                        hasAds ? "?ads=true&" : ""
-                      }${hasAds ? "&" : "?"}tab=${item.url}`}
+                      href={`/prototype/${game}/tournaments?tab=${item.url}${prototype.getURLparams("&")}`}
                     >
                       <a
                         className={`${

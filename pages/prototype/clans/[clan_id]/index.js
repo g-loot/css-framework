@@ -28,7 +28,6 @@ export default function Home() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const [selectedClan, setSelectedClan] = useState(null);
-  const hasAds = query.ads === "true" ? true : false;
   const { clan_id } = router.query;
   const { tab } = router.query;
   const defaultTab = "activity";
@@ -391,9 +390,7 @@ export default function Home() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype/clans/${clan_id}${
-                        hasAds ? "?ads=true" : ""
-                      }${hasAds ? "&" : "?"}tab=${item.url}`}
+                      href={`/prototype/clans/${clan_id}?tab=${item.url}${prototype.getURLparams("&")}`}
                     >
                       <a
                         className={`${

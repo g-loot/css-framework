@@ -16,7 +16,7 @@ export default function ListItemTournament(props) {
             tournament.progress !== 3
               ? `/prototype/${game.slug}/tournaments/${tournament.id}`
               : ""
-          }${hasAds ? "?ads=true" : ""}`}
+          }${prototype.getURLparams()}`}
         >
           <div
             className={`rounded overflow-hidden surface surface-ui-700 p-2 relative interactive`}

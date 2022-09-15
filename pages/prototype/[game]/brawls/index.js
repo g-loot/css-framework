@@ -40,7 +40,6 @@ export default function Home() {
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const { game } = router.query;
-  const { hasAds } = router.query;
   const { tab } = router.query;
   const defaultTab = "ongoing";
   const selectedTab = tab ? tab : defaultTab;
@@ -88,9 +87,7 @@ export default function Home() {
                       <span>Learn how to Brawl</span>
                     </button>
                     <Link
-                      href={`/prototype/profile/settings${
-                        hasAds ? "?ads=true" : ""
-                      }`}
+                      href={`/prototype/profile/settings${prototype.getURLparams()}`}
                     >
                       <button
                         type="button"
@@ -112,9 +109,7 @@ export default function Home() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype/${game}/brawls${
-                        hasAds ? "?ads=true&" : ""
-                      }${hasAds ? "&" : "?"}tab=${item.url}`}
+                      href={`/prototype/${game}/brawls?tab=${item.url}${prototype.getURLparams("&")}`}
                     >
                       <a
                         className={`${

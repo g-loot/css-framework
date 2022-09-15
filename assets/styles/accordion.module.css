@@ -339,6 +339,9 @@
 .accordion.accordion-halo.accordion-halo-dimmed {
   .accordion-item.is-active {
     .accordion-header {
+      @apply
+      bg-ui-800
+      ;
       > i {
         &:nth-of-type(1) {
           @apply
@@ -356,7 +359,7 @@
   .accordion-item.is-selected {
     .accordion-header {
       @apply
-      bg-ui-800/0
+      bg-ui-800
       ;
       > i {
         &:nth-of-type(1) {

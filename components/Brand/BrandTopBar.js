@@ -14,7 +14,7 @@ export default function BrandTopBar({children, data}) {
               </label>
             </div>
             <Link href='../'>
-              <a className='block transition-opacity duration-100 hover:opacity-50'>
+              <a className='block interactive'>
                 <img width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
               </a>
             </Link>

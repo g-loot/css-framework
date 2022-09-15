@@ -34,7 +34,7 @@ export default function TabBrawlsOngoing() {
                     <Link
                       href={`/prototype/${selectedGame.slug}/brawls/${
                         brawl.id
-                      }${hasAds ? "?ads=true" : ""}`}
+                      }${prototype.getURLparams()}`}
                     >
                       <a className="card-brawl">
                         <div className="card-image">

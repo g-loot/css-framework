@@ -156,7 +156,7 @@ export default function PrototypeGamesNav({ children }) {
                   <>
                     <li key={subItem}>
                       <Link
-                        href={`/prototype/${item.slug}/${subItem.url}${hasAds ? "?ads=true" : ""}`}
+                        href={`/prototype/${item.slug}/${subItem.url}${prototype.getURLparams()}`}
                       >
                         <a
                           className={`${

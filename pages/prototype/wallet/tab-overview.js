@@ -4,6 +4,7 @@ import Accordion from "../../../components/Accordion/Accordion";
 import Link from "next/link";
 import ModalBuyTokens from "./modal-buytokens";
 import { UiContext } from "../../../contexts/ui";
+import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 
 const WalletItems = [
@@ -53,8 +54,8 @@ const WalletItems = [
 ];
 
 export default function TabWalletOverview() {
+  const prototype = usePrototypeData();
   const { query } = useRouter();
-  const hasAds = query.ads === "true" ? true : false;
   const uiContext = useContext(UiContext);
   const alernativeLayout = query.alternativelayout === "true" ? true : false;
   const modaBuyTokens = query.modalbuytokens === "true" ? true : false;
@@ -87,7 +88,6 @@ export default function TabWalletOverview() {
     } else {
         setIsMobile(false)
     }
-    console.log(isMobile);
   }
   
   useEffect(() => {
@@ -160,7 +160,7 @@ export default function TabWalletOverview() {
                     )}
                     {item.button === "visitshop" && (
                       <Link
-                        href={`/prototype/shop${hasAds ? "?ads=true" : ""}`}
+                        href={`/prototype/shop${prototype.getURLparams()}`}
                       >
                         <button
                           type="button"
@@ -226,9 +226,7 @@ export default function TabWalletOverview() {
                                   )}
                                   {item.button === "visitshop" && (
                                     <Link
-                                      href={`/prototype/shop${
-                                        hasAds ? "?ads=true" : ""
-                                      }`}
+                                      href={`/prototype/shop${prototype.getURLparams()}`}
                                     >
                                       <button
                                         type="button"
@@ -283,9 +281,7 @@ export default function TabWalletOverview() {
                             )}
                             {item.button === "visitshop" && (
                               <Link
-                                href={`/prototype/shop${
-                                  hasAds ? "?ads=true" : ""
-                                }`}
+                                href={`/prototype/shop${prototype.getURLparams()}`}
                               >
                                 <button
                                   type="button"

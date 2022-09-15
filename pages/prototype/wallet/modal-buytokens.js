@@ -95,7 +95,7 @@ export default function ModalBuyTokens(props) {
                 </div>
                 <div></div>
                 <div className="py-4">
-                  <Link href={`/prototype/premium${hasAds ? "?ads=true" : ""}`}>
+                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                     <a className="button button-premium is-shining whitespace-nowrap">
                       <span>Subscribe now</span>
                     </a>

@@ -999,7 +999,7 @@ const DSpage = () => {
                       <div className="item-title">Brawl #2</div>
                     </div>
                   </li>
-                  <li className="item">
+                  <li className="item is-active">
                     <div className="item-body">
                       <div className="item-title">Brawl #3</div>
                     </div>

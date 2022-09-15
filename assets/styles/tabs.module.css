@@ -2,7 +2,6 @@
 /* TABS */
 /*----------------------------*/
 
-
 .tabs {
   @apply
   flex
@@ -48,9 +47,7 @@
     }
   }
 
-  a,
-  button,
-  .button {
+  :where(a, button, .button, div) {
     @apply
     relative
     block
@@ -60,7 +57,6 @@
     font-bold
     font-headings
     tracking-wide
-    text-lg
     text-ui-300
     cursor-pointer
     select-none
@@ -69,6 +65,12 @@
     ease-in-out
     leading-[1]
     ;
+
+    &:not([class*="text-"]) {
+      @apply
+      text-lg
+      ;
+    }
 
     > span {
       @apply
@@ -144,6 +146,22 @@
     ;
   }
 }
+
+.tabs.tabs-secondary {
+  :where(a, button, .button, div) {
+    @apply
+    font-normal
+    font-body
+    leading-none
+    tracking-normal
+    ;
+    &:not([class*="text-"]) {
+      @apply
+      text-base
+      ;
+    }
+  }
+} 
 
 /* scrollbar hidden if overflow */
 .tabs:not([class*=scrollbar]) {

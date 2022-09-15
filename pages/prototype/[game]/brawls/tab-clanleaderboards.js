@@ -123,9 +123,7 @@ export default function TabBrawlsSoloLeaderboards() {
               leaderboard.
             </div>
             <Link
-              href={`/prototype/${game}/brawls/${brawl_id}${
-                hasAds ? "?ads=true&" : ""
-              }${hasAds ? "&" : "?"}tab=solo-leaderboard`}
+              href={`/prototype/${game}/brawls/${brawl_id}?tab=solo-leaderboard${prototype.getURLparams()}`}
             >
               <a className="button button-secondary w-full">
                 <span className="icon icon-arrow-left" />
@@ -445,9 +443,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                     <div className="item">
                                       <div className="item-body">
                                         <Link
-                                          href={`/prototype/clans/${user.clan}${
-                                            hasAds ? "?ads=true" : ""
-                                          }`}
+                                          href={`/prototype/clans/${user.clan}${prototype.getURLparams()}`}
                                         >
                                           <div className="flex gap-2 items-center interactive">
                                             <div className="avatar avatar-squircle avatar-xs">

@@ -125,9 +125,7 @@ export default function Home() {
                       <span>Learn how to Brawl</span>
                     </button>
                     <Link
-                      href={`/prototype/profile/settings${
-                        hasAds ? "?ads=true" : ""
-                      }`}
+                      href={`/prototype/profile/settings${prototype.getURLparams()}`}
                     >
                       <button
                         type="button"
@@ -171,9 +169,7 @@ export default function Home() {
                     {TabsItems.map((item, itemIndex) => (
                       <li key={item}>
                         <Link
-                          href={`/prototype/${game}/brawls/${brawl_id}${
-                            hasAds ? "?ads=true&" : ""
-                          }${hasAds ? "&" : "?"}tab=${item.url}`}
+                          href={`/prototype/${game}/brawls/${brawl_id}?tab=${item.url}${prototype.getURLparams("&")}`}
                         >
                           <a
                             className={`${
@@ -192,9 +188,7 @@ export default function Home() {
                     {TabsItemsNoClan.map((item, itemIndex) => (
                       <li key={item}>
                         <Link
-                          href={`/prototype/${game}/brawls/${brawl_id}${
-                            hasAds ? "?ads=true&" : ""
-                          }${hasAds ? "&" : "?"}tab=${item.url}`}
+                          href={`/prototype/${game}/brawls/${brawl_id}?tab=${item.url}${prototype.getURLparams("&")}`}
                         >
                           <a
                             className={`${

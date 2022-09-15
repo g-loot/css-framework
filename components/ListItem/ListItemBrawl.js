@@ -33,7 +33,7 @@ export default function ListItemBrawl(props) {
               brawl.progress !== 3
                 ? `/prototype/${game.slug}/brawls/${brawl.id}?tab=solo-leaderboard`
                 : "#"
-            }${hasAds ? "?ads=true" : ""}`}
+            }${prototype.getURLparams()}`}
           >
             <div
               className={`rounded overflow-hidden surface surface-ui-700 p-2 relative ${
@@ -200,7 +200,7 @@ export default function ListItemBrawl(props) {
               brawl.progress !== 3
                 ? `/prototype/${game.slug}/brawls/${brawl.id}?tab=solo-leaderboard`
                 : "#"
-            }${hasAds ? "?ads=true" : ""}`}
+            }${prototype.getURLparams()}`}
           >
             <div
               className={`flex flex-1 rounded overflow-hidden surface surface-ui-700 p-2 relative ${

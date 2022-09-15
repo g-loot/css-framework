@@ -101,7 +101,7 @@ export default function TabTournamentsOverview() {
                           key={user}
                           href={`/prototype/profile/${
                             prototype.getUserByID(user).id
-                          }${hasAds ? "?ads=true" : ""}`}
+                          }${prototype.getURLparams()}`}
                         >
                           <div className="flex flex-col items-center gap-2 interactive">
                             <div className="avatar avatar-circle">

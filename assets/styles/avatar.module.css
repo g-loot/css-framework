@@ -32,15 +32,15 @@
       items-center
       justify-center
       ;
-      & {
-        @apply
-        text-ui-400
-        text-5xl
-        ;
-      }
       &:not(.icon) {
         @apply
         font-headings
+        ;
+      }
+      &:not([class*="text-"]) {
+        @apply
+        text-ui-400
+        text-5xl
         ;
       }
     }

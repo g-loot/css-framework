@@ -72,7 +72,7 @@ export default function Home() {
           <ul className="tabs border-b border-ui-700">
             { TabsItems.map((item, itemIndex)  => (
               <li key={item}>
-                <Link href={`${hasAds ? '?ads=true&' : '?'}tab=${item.url}`}>
+                <Link href={`/prototype/wallet/?tab=${item.url}${prototype.getURLparams("&")}`}>
                   <a className={`${selectedTab === item.url ? 'is-active' : ''}`}>
                     <span>{item.label}</span>
                   </a>

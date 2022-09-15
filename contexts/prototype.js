@@ -7,6 +7,7 @@ import { dataClans } from '../mock-data/data-clans';
 import { dataGames } from '../mock-data/data-games';
 import { dataUsers } from '../mock-data/data-users';
 import { dataVouchers } from '../mock-data/data-vouchers';
+import { useRouter } from "next/router";
 
 export const PrototypeContext = createContext(
   undefined
@@ -14,7 +15,7 @@ export const PrototypeContext = createContext(
 const { Provider } = PrototypeContext;
 
 export const PrototypeProvider = ({ children }) => {
-
+  const { query } = useRouter();
   const clans = dataClans;
   const games = dataGames;
   const users = dataUsers;
@@ -69,7 +70,23 @@ export const PrototypeProvider = ({ children }) => {
       return voucher.id === parseInt(id);
     })
   }
-  
+  function getURLparams(prep) {
+    const hasAds = query.ads === "true" ? true : false;
+    const hasNewStructure = query.newstructure === "true" ? true : false;
+    const Prep = prep === undefined ? "?" : prep;
+    if(hasAds && hasNewStructure) {
+      const param = "newstructure=true&ads=true";
+      return(Prep+param);
+    } else if(hasAds && !hasNewStructure) {
+      const param = "ads=true";
+      return(Prep+param);
+    } else if(!hasAds && hasNewStructure) {
+      const param = "newstructure=true";
+      return(Prep+param);
+    } else {
+      return("");
+    }
+  }
   return (
     <Provider
       value={{
@@ -86,6 +103,7 @@ export const PrototypeProvider = ({ children }) => {
         getClanByID,
         getUserClan,
         getVoucherByID,
+        getURLparams,
       }}
     >
       {children}

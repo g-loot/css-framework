@@ -2,13 +2,9 @@ import Ad from "../../../components/Ad/Ad";
 import Link from "next/link";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "../../../contexts/prototype";
-import { useRouter } from "next/router";
 
 export default function Home() {
-  const router = useRouter();
-  const { query } = useRouter();
   const prototype = usePrototypeData();
-  const hasAds = query.ads === "true" ? true : false;
 
   return (
     <>
@@ -81,9 +77,7 @@ export default function Home() {
                   </div>
                   <div className="border-t border-ui-700 pt-4">
                     <Link
-                      href={`/prototype/shop/${voucher.id}${
-                        hasAds ? "?ads=true" : ""
-                      }`}
+                      href={`/prototype/shop/${voucher.id}${prototype.getURLparams()}`}
                     >
                       <a type="button" className="button button-primary w-full">
                         <span>View gift cards</span>

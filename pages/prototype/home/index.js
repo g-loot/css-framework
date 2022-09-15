@@ -265,10 +265,12 @@ export default function Home() {
               </h3>
             </div>
             <div className="flex-none relative z-30 flex flex-col items-center justify-center mb-4">
-              <Link href={`/prototype/clans${hasAds ? "?ads=true" : ""}`}>
-                <button type="button" className="button button-primary">
-                  <span>View clans</span>
-                </button>
+              <Link href={`/prototype/clans${prototype.getURLparams()}`}>
+                <a>
+                  <button type="button" className="button button-primary">
+                    <span>View clans</span>
+                  </button>
+                </a>
               </Link>
             </div>
           </div>

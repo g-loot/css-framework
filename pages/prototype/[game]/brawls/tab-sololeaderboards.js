@@ -755,7 +755,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                               <Link
                                                 href={`/prototype/profile/${
                                                   user.user
-                                                }${hasAds ? "?ads=true" : ""}`}
+                                                }${prototype.getURLparams()}`}
                                               >
                                                 <div className="flex gap-2 items-center interactive">
                                                   <div className="avatar avatar-circle avatar-xs">
@@ -823,7 +823,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                                   prototype.getUserByID(
                                                     user.user
                                                   ).clan
-                                                }${hasAds ? "?ads=true" : ""}`}
+                                                }${prototype.getURLparams()}`}
                                               >
                                                 <a>
                                                   <Tooltip

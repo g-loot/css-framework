@@ -86,9 +86,7 @@ export default function TabMissionsMissions() {
                         <p className="max-w-[80ch]">
                           To complete Missions and earn rewards, you need to{" "}
                           <Link
-                            href={`/prototype/profile/settings${
-                              hasAds ? "?ads=true" : ""
-                            }`}
+                            href={`/prototype/profile/settings${prototype.getURLparams()}`}
                           >
                             <a className="link">
                               connect your Steam account to G-Loot
@@ -100,9 +98,7 @@ export default function TabMissionsMissions() {
                     </div>
                     <div className="flex-none">
                       <Link
-                        href={`/prototype/profile/settings${
-                          hasAds ? "?ads=true" : ""
-                        }`}
+                        href={`/prototype/profile/settings${prototype.getURLparams()}`}
                       >
                         <a className="button button-sm button-tertiary">
                           <span>
@@ -252,7 +248,7 @@ export default function TabMissionsMissions() {
               <p className="max-w-[50ch] text-sm text-ui-300 mx-auto mt-2 mb-5">
                 Increase your amount of daily missions and XP you can earn each
                 day with a{" "}
-                <Link href={`/prototype/premium${hasAds ? "?ads=true" : ""}`}>
+                <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                   <a className="link">
                     Premium subscription
                   </a>
@@ -260,7 +256,7 @@ export default function TabMissionsMissions() {
                 .
               </p>
               <div className="mx-auto">
-                <Link href={`/prototype/premium${hasAds ? "?ads=true" : ""}`}>
+                <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                   <a className="button button-premium is-shining">
                     <span>Join Premium</span>
                   </a>

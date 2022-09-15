@@ -23,10 +23,8 @@ const TabsItems = [
 
 export default function Home() {
   const router = useRouter();
-  const { query } = useRouter();
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
-  const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
   const { tab } = router.query;
   const defaultTab = "missions";
@@ -116,9 +114,7 @@ export default function Home() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype/${game}/missions${
-                        hasAds ? "?ads=true&" : ""
-                      }${hasAds ? "&" : "?"}tab=${item.url}`}
+                      href={`/prototype/${game}/missions?tab=${item.url}${prototype.getURLparams("&")}`}
                     >
                       <a
                         className={`${

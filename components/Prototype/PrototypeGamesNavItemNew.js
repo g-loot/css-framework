@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-export default function PrototypeGamesNavItem(props) {
+export default function PrototypeGamesNavItemNew(props) {
   const [isActive, setActive] = useState(props.isopen);
   const [isDisabled, setIsDisabled] = useState(props.isdisabled);
   const isSelected = props.isselected !== undefined ? props.isselected : false
@@ -21,7 +21,7 @@ export default function PrototypeGamesNavItem(props) {
   return (
   <div className={`accordion-item ${isActive ? 'is-active' : ''} ${isSelected ? 'is-selected' : ''}`}>
     <div className='accordion-header' aria-expanded={`${isActive ? true : false}`} aria-controls onClick={handleToggle}>
-      {props.header}
+      {props.isopen} {props.header}
     </div>
     <div className={`accordion-collapse`} style={{height: `${isActive ? height : 0}px`}}>
       <div ref={elementRef}>

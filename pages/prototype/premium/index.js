@@ -2,7 +2,7 @@ import PrototypeStructure from "../../../components/Prototype/PrototypeStructure
 import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
 
-export default function Home() {
+export default function Premium() {
   const router = useRouter();
   const { data, loading } = useFetch("/api/brawls", { delay: 1000 });
 

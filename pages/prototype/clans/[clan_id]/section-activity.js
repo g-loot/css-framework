@@ -194,7 +194,7 @@ export default function SectionClanActivity() {
                               key={userIndex}
                               href={`/prototype/profile/${
                                 prototype.getUserByID(user.id).id
-                              }${hasAds ? "?ads=true" : ""}`}
+                              }${prototype.getURLparams()}`}
                             >
                               <div className="flex items-center gap-2 cursor-pointer">
                                 <div className="avatar avatar-xs avatar-circle">
@@ -244,7 +244,7 @@ export default function SectionClanActivity() {
                       </p>
                     </div>
                     {/*
-                      <Link href={`/prototype/valorant/brawls${hasAds ? "?ads=true" : ""}`}>
+                      <Link href={`/prototype/valorant/brawls${prototype.getURLparams()}`}>
                         <a className="button button-primary">
                           <span>Browse Brawls</span>
                         </a>
@@ -293,7 +293,7 @@ export default function SectionClanActivity() {
                         <Link
                           href={`/prototype/profile/${
                             prototype.getUserByID(user).id
-                          }${hasAds ? "?ads=true" : ""}`}
+                          }${prototype.getURLparams()}`}
                         >
                           <div className="avatar avatar-square avatar-simple avatar-xs interactive">
                             <div>
@@ -307,7 +307,7 @@ export default function SectionClanActivity() {
                         <Link
                           href={`/prototype/profile/${
                             prototype.getUserByID(user).id
-                          }${hasAds ? "?ads=true" : ""}`}
+                          }${prototype.getURLparams()}`}
                         >
                           <div className="item-title flex gap-2 items-center interactive">
                             {prototype.getUserByID(user).nickname}

@@ -32,7 +32,7 @@ export default function TabTournamentsActive() {
                     key={tournament.id}
                     href={`/prototype/${selectedGame.slug}/tournaments/${
                       tournament.id
-                    }${hasAds ? "?ads=true" : ""}`}
+                    }${prototype.getURLparams()}`}
                   >
                     <div>
                       <div

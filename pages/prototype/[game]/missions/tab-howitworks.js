@@ -1,6 +1,6 @@
 import Accordion from "../../../../components/Accordion/Accordion";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePrototypeData } from "../../../../contexts/prototype";
 
 const MissionsHowitworksTabs = [
   {
@@ -96,8 +96,7 @@ const MissionsHowitworksTabs = [
 ];
 
 export default function TabMissionsHowItWorks() {
-  const { query } = useRouter();
-  const hasAds = query.ads === "true" ? true : false;
+  const prototype = usePrototypeData();
   return (
     <>
       <section
@@ -271,7 +270,7 @@ export default function TabMissionsHowItWorks() {
                         />
                       ))}
                       {tab.hasButtonReward && (
-                        <Link href={`/prototype/premium${hasAds ? "?ads=true" : ""}`}>
+                        <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                           <a className="button button-premium is-shining">
                             <span>Join G-Loot Premium</span>
                           </a>

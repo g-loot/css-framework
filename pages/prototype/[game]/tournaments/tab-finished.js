@@ -100,7 +100,7 @@ export default function TabBrawlsHistory() {
                             <Link
                               href={`/prototype/${game}/tournaments/${
                                 tournament.id
-                              }${hasAds ? "?ads=true&" : ""}`}
+                              }${prototype.getURLparams()}`}
                             >
                               <a className="button button-sm button-secondary">
                                 <span>View tournament</span>

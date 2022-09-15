@@ -84,9 +84,7 @@ export default function TabBrawlsHistory() {
                         </td>
                         <td className="text-right">
                           <Link
-                            href={`/prototype/${game}/brawls/${brawl.id}${
-                              hasAds ? "?ads=true&" : ""
-                            }`}>
+                            href={`/prototype/${game}/brawls/${brawl.id}${prototype.getURLparams()}`}>
                             <a className="button button-sm button-secondary">
                               <span>View Brawl</span>
                             </a>

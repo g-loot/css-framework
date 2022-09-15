@@ -14,7 +14,6 @@ export default function Home() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const [selectedUser, setSelectedUser] = useState(null);
-  const hasAds = query.ads === "true" ? true : false;
   const emptyClan = query.emptyclan === "true" ? true : false;
   const { user_id } = router.query;
 
@@ -160,95 +159,6 @@ export default function Home() {
                 </div>
               </div>
             </section>
-            {/*
-            <section className="flex items-center justify-between mb-4 py-8 px-4 sm:px-0">
-              <div className="flex gap-4 items-center">
-                <div className="avatar avatar-xl avatar-circle">
-                  <div>
-                    <img src={selectedUser.avatar} />
-                  </div>
-                </div>
-                <div className="">
-                  <div className="flex flex-col sm:flex-row gap-3 mb-3">
-                    <h2 className="h3 leading-none">{selectedUser.nickname}</h2>
-                    {selectedUser.isYou && (
-                      <Link href="settings">
-                        <a
-                          type="button"
-                          className="button button-sm button-secondary"
-                        >
-                          <span className="icon icon-cogwheel" />
-                          <span>Profile settings</span>
-                        </a>
-                      </Link>
-                    )}
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 flex justify-center">
-                      <img
-                        src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
-                        className="aspect-video rounded-sm max-w-[1.5rem]"
-                      />
-                    </div>
-                    <span className="text-ui-300">{selectedUser.country}</span>
-                  </div>
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-colors duration-75 text-ui-300 hover:text-main flex items-center gap-2"
-                  >
-                    <div className="w-6 flex justify-center">
-                      <span className="icon icon-20 icon-twitch" />
-                    </div>
-                    <span>{selectedUser.socials.twitch}</span>
-                  </a>
-                </div>
-              </div>
-
-              <div className="w-1/3 hidden xl:flex justify-center gap-4">
-                <div className="rounded-full surface p-1">
-                  <div className="progressbar-radial">
-                    <div>
-                      <div>
-                        <div className="text-4xl font-headings font-bold mb-1">
-                          {selectedUser.stats.playedBrawls}
-                        </div>
-                        <div className="text-xs text-ui-300 uppercase">
-                          Played
-                          <br />
-                          brawls
-                        </div>
-                      </div>
-                    </div>
-                    <svg viewBox="0 0 40 40" style={{ "--percent": "33" }}>
-                      <circle cx="20" cy="20" r="16" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="rounded-full surface p-1">
-                  <div className="progressbar-radial">
-                    <div>
-                      <div>
-                        <div className="text-4xl font-headings font-bold mb-1">
-                          {selectedUser.stats.playedTournaments}
-                        </div>
-                        <div className="text-xs text-ui-300 uppercase">
-                          Played
-                          <br />
-                          tournaments
-                        </div>
-                      </div>
-                    </div>
-                    <svg viewBox="0 0 40 40" style={{ "--percent": "15" }}>
-                      <circle cx="20" cy="20" r="16" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </section>
-                    */}
-
             <section
               className="flex flex-col lg:flex-row gap-8 lg:items-start animate-slide-in-bottom animate-delay"
               style={{ "--delay": "calc(1 * 0.05s)" }}
@@ -516,9 +426,7 @@ export default function Home() {
                       <div className="p-4 flex justify-between gap-3 items-center">
                         <span>You are not in a clan.</span>
                         <Link
-                          href={`/prototype/clans/search${
-                            hasAds ? "?ads=true" : ""
-                          }`}
+                          href={`/prototype/clans/search${prototype.getURLparams()}`}
                         >
                           <button
                             type="button"
@@ -547,9 +455,7 @@ export default function Home() {
                           Proud member of
                         </div>
                         <Link
-                          href={`/prototype/clans/${selectedUser.clan}${
-                            hasAds ? "?ads=true" : ""
-                          }`}
+                          href={`/prototype/clans/${selectedUser.clan}${prototype.getURLparams()}`}
                         >
                           <div className="rounded surface surface-ui-700 p-2 flex items-center gap-2 interactive">
                             <div className="avatar avatar-sm avatar-squircle">

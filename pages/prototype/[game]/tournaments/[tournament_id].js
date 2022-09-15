@@ -47,7 +47,6 @@ export default function Home() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
-  const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
   const { tab } = router.query;
   const { tournament_id } = router.query;
@@ -221,9 +220,7 @@ export default function Home() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype/${game}/tournaments/${tournament_id}${
-                        hasAds ? "?ads=true&" : ""
-                      }${hasAds ? "&" : "?"}tab=${item.url}`}
+                      href={`/prototype/${game}/tournaments/${tournament_id}?tab=${item.url}${prototype.getURLparams("&")}`}
                     >
                       <a
                         className={`${

@@ -2,8 +2,11 @@ import React, { useRef, useState } from "react";
 
 import Accordion from "../Accordion/Accordion";
 import Link from "next/link";
+import { usePrototypeData } from "../../contexts/prototype";
 
 export default function FAQ(props) {
+  const prototype = usePrototypeData();  
+  
   return (
     <>
       <Accordion
@@ -63,7 +66,7 @@ export default function FAQ(props) {
               ))}
 
               {props.content.hasButtonReward && (
-                <Link href={`/prototype/premium${hasAds ? "?ads=true" : ""}`}>
+                <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                   <a className="button button-premium is-shining">
                     <span>Join G-Loot Premium</span>
                   </a>
