@@ -150,9 +150,11 @@ ul, ol {
         z-10
         w-4
         h-4
-        bg-main
         rounded-full
-        shadow-[0_0_0_1px_rgb(var(--color-interaction-500)),_inset_0_0_0_4px_rgb(var(--color-ui-800))]
+        bg-gradient-to-b
+        from-interaction-300
+        to-interaction-700
+        shadow-[0_0_0_1px_rgb(var(--color-interaction-300)),_inset_0_0_0_4px_rgb(var(--color-ui-800))]
         -left-8
         top-1
         ;
@@ -189,6 +191,43 @@ ul, ol {
         @apply
         list-disc
         ;
+      }
+    }
+
+    &.list-premium {
+      > li {
+        &::before {
+          @apply
+          bg-gradient-to-b
+          from-premium-300
+          to-premium-700
+          shadow-[0_0_0_1px_rgb(var(--color-premium-300)),_inset_0_0_0_4px_rgb(var(--color-ui-800))]
+          ;
+        }
+      }
+    }
+    &.list-blue {
+      > li {
+        &::before {
+          @apply
+          bg-gradient-to-b
+          from-blue-300
+          to-blue-700
+          shadow-[0_0_0_1px_rgb(var(--color-blue-300)),_inset_0_0_0_4px_rgb(var(--color-ui-800))]
+          ;
+        }
+      }
+    }
+    &.list-purple {
+      > li {
+        &::before {
+          @apply
+          bg-gradient-to-b
+          from-purple-300
+          to-purple-700
+          shadow-[0_0_0_1px_rgb(var(--color-purple-300)),_inset_0_0_0_4px_rgb(var(--color-ui-800))]
+          ;
+        }
       }
     }
   }

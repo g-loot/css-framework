@@ -32,6 +32,95 @@
       pointer-events-none
       ;
     }
+    > a, 
+    > button, 
+    > .button, 
+    > div {
+      @apply
+      relative
+      block
+      px-5
+      pt-3
+      pb-4
+      font-bold
+      font-headings
+      tracking-wide
+      text-ui-300
+      cursor-pointer
+      select-none
+      transition
+      duration-300
+      ease-in-out
+      leading-[1]
+      ;
+  
+      &:not([class*="text-"]) {
+        @apply
+        text-lg
+        ;
+      }
+  
+      > span {
+        @apply
+        block
+        transition
+        ease-linear
+        duration-[50ms]
+        ;
+      }
+  
+      &:active {
+        &:hover,
+        &:focus {
+          > span {
+            @apply 
+            translate-y-0.5
+            ;
+          }
+        }
+      }
+  
+  
+      &.is-active,
+      &:active,
+      &:hover {
+        @apply
+        text-white
+        ;
+        &::after {
+          @apply
+          opacity-100
+          scale-x-100
+          -skew-x-30
+          ;
+        }
+      }
+  
+      &::before,
+      &::after {
+        @apply
+        transition
+        duration-300
+        ease-[cubic-bezier(0.7,0,0.3,1)]
+        ;
+      }
+  
+      &::after {
+        @apply
+        content-['']
+        absolute
+        block
+        h-1
+        w-full
+        bottom-0
+        inset-x-0
+        bg-main
+        opacity-0
+        scale-x-0
+        -skew-x-30
+        ;
+      }
+    }
   }
 
   /*
@@ -49,92 +138,7 @@
   }
   */
 
-  :where(a, button, .button, div) {
-    @apply
-    relative
-    block
-    px-5
-    pt-3
-    pb-4
-    font-bold
-    font-headings
-    tracking-wide
-    text-ui-300
-    cursor-pointer
-    select-none
-    transition
-    duration-300
-    ease-in-out
-    leading-[1]
-    ;
-
-    &:not([class*="text-"]) {
-      @apply
-      text-lg
-      ;
-    }
-
-    > span {
-      @apply
-      block
-      transition
-      ease-linear
-      duration-[50ms]
-      ;
-    }
-
-    &:active {
-      &:hover,
-      &:focus {
-        > span {
-          @apply 
-          translate-y-0.5
-          ;
-        }
-      }
-    }
-
-
-    &.is-active,
-    &:active,
-    &:hover {
-      @apply
-      text-white
-      ;
-      &::after {
-        @apply
-        opacity-100
-        scale-x-100
-        -skew-x-30
-        ;
-      }
-    }
-
-    &::before,
-    &::after {
-      @apply
-      transition
-      duration-300
-      ease-[cubic-bezier(0.7,0,0.3,1)]
-      ;
-    }
-
-    &::after {
-      @apply
-      content-['']
-      absolute
-      block
-      h-1
-      w-full
-      bottom-0
-      inset-x-0
-      bg-main
-      opacity-0
-      scale-x-0
-      -skew-x-30
-      ;
-    }
-  }
+ 
   &::after {
     @apply
     content-['']
@@ -203,6 +207,7 @@
     
     > a {
       @apply
+      p-0
       relative
       block
       min-w-[255px]
@@ -258,7 +263,7 @@
         gap-8
         items-center
         justify-center
-        px-5
+        p-4
         ;
         > * {
           @apply
