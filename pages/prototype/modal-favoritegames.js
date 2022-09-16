@@ -25,6 +25,7 @@ export default function ModalFavoriteGames(props) {
     setSubmitting(true);
 
     setTimeout(() => {
+      uiContext.openToastr({size: "small", text: "Favorite games updated", color: "green", autoDelete: true, autoDeleteDelay: 2500});
       uiContext.closeModal();
       setSubmitting(false);
     }, 1000);

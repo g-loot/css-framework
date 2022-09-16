@@ -15,6 +15,7 @@ export default function ModalAddDiscord(props) {
     setSubmitting(true);
 
     setTimeout(() => {
+      uiContext.openToastr({size: "small", text: "Discord connected successfully", color: "green", autoDelete: true, autoDeleteDelay: 2500});
       router.push(
         `${router.asPath}${hasAds || tab !== undefined ? "&" : "?"}registered=true`
       );

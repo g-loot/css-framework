@@ -28,6 +28,7 @@ export default function ModalLeaveParty(props) {
     setSubmitting(true);
 
     setTimeout(() => {
+      uiContext.openToastr({size: "small", text: "You have unregistered from the tournament", color: "green", autoDelete: true, autoDeleteDelay: 2500});
       removeQueryParam('registered');
       uiContext.closeModal();
       setSubmitting(false);

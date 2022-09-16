@@ -58,7 +58,7 @@ export default function ModalBuyTokens(props) {
     setSubmitting(true);
 
     setTimeout(() => {
-      uiContext.openToastr({size: "", text: "You have bought tokens", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+      uiContext.openToastr({size: "", text: "Tokens bought successfully", color: "green", autoDelete: true, autoDeleteDelay: 2500});
       uiContext.closeModal();
       setSubmitting(false);
     }, 1000);

@@ -1,6 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 
+import ModalReportMessage from "../../pages/prototype/clans/modal-report-message";
+import { UiContext } from "../../contexts/ui";
 import { usePrototypeData } from "../../contexts/prototype";
+import { useRouter } from "next/router";
 
 const conversation = [
   {
@@ -138,6 +141,20 @@ export default function Chat(props) {
   const prototype = usePrototypeData();
   const [messages, setMessages] = useState(conversation);
   const [newMessageAdded, setNewMessageAdded] = useState(false);
+
+  const { query } = useRouter();
+  const uiContext = useContext(UiContext);
+  const modalReportMessage = query.modalreportmessage === "true" ? true : false;
+
+  function openModalReportMessage() {
+    uiContext.openModal(<ModalReportMessage></ModalReportMessage>);
+  }
+
+  useEffect(() => {
+    if (modalReportMessage) {
+      openModalReportMessage();
+    }
+  }, [modalReportMessage]);
 
   const minRows = 0;
 
@@ -283,18 +300,18 @@ export default function Chat(props) {
                 >
                   {!message.isYourself && (
                     <div className="chat-author">
-                    <div className="avatar avatar-circle avatar-sm">
-                      <div>
-                        <img
-                          src={prototype.getUserByID(message.author)?.avatar}
-                          alt="avatar"
-                        />
+                      <div className="avatar avatar-circle avatar-sm">
+                        <div>
+                          <img
+                            src={prototype.getUserByID(message.author)?.avatar}
+                            alt="avatar"
+                          />
+                        </div>
                       </div>
+                      <time dateTime="2008-02-14 20:00">{message.time}</time>
                     </div>
-                    <time dateTime="2008-02-14 20:00">{message.time}</time>
-                  </div>
                   )}
-                  
+
                   <div className="chat-messages">
                     <span className="leading-none uppercase text-sm">
                       {message.isYourself && <>You</>}
@@ -443,24 +460,26 @@ export default function Chat(props) {
                                   className="dropdown-content bg-ui-500 w-44 p-1"
                                 >
                                   <ul className="menu menu-secondary menu-rounded">
-                                    <li>
-                                      <a>
-                                        <span>
+                                    {!message.isYourself && (
+                                      <li>
+                                        <a onClick={openModalReportMessage}>
+                                          <span className="icon icon-flag-diagonal-33" />
+                                          <span className="text-ui-200">
+                                            Report message
+                                          </span>
+                                        </a>
+                                      </li>
+                                    )}
+                                    {message.isYourself && (
+                                      <li>
+                                        <a>
+                                          <span className="icon icon-f-delete" />
                                           <span className="text-ui-200">
                                             Remove
                                           </span>
-                                        </span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <span>
-                                          <span className="text-ui-200">
-                                            Forward
-                                          </span>
-                                        </span>
-                                      </a>
-                                    </li>
+                                        </a>
+                                      </li>
+                                    )}
                                   </ul>
                                 </div>
                               </div>
@@ -513,7 +532,10 @@ export default function Chat(props) {
               isDisabled ? "is-disabled" : ""
             }`}
           >
-            <label tabIndex="0" className="button button-ghost rounded-full m-0">
+            <label
+              tabIndex="0"
+              className="button button-ghost rounded-full m-0"
+            >
               <span
                 className={`icon ${isDisabled ? "icon-lock" : "icon-c-add"}`}
               ></span>

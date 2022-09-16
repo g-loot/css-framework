@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
 import ListItemBrawl from "../../../../components/ListItem/ListItemBrawl";
+import ModalGiftTokens from "../modal-gift-tokens";
+import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -10,10 +12,26 @@ export default function SectionClanActivity() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
+  const uiContext = useContext(UiContext);
   const [selectedClan, setSelectedClan] = useState(null);
   const { clan_id } = router.query;
-  const hasAds = query.ads === "true" ? true : false;
   const emptyState = query.emptystate === "true" ? true : false;
+  const modalGiftTokens = query.modalgifttokens === "true" ? true : false;
+  const [selectedUser, setSelectedUser] = useState(
+    prototype.getUserByID(2).nickname
+  );
+
+  function openModalGiftTokens() {
+    uiContext.openModal(
+      <ModalGiftTokens selectedUser={selectedUser}></ModalGiftTokens>
+    );
+  }
+
+  useEffect(() => {
+    if (modalGiftTokens) {
+      openModalGiftTokens();
+    }
+  }, [modalGiftTokens]);
 
   useEffect(() => {
     setSelectedClan(prototype.getClanByID(clan_id));
@@ -240,7 +258,9 @@ export default function SectionClanActivity() {
                         {selectedClan.nickname} has no ongoing Brawls
                       </p>
                       <p className="text-lg text-ui-300">
-                        Find a Brawl with the <span className="icon icon-multiple-12" /> icon and compete with your Clan!
+                        Find a Brawl with the{" "}
+                        <span className="icon icon-multiple-12" /> icon and
+                        compete with your Clan!
                       </p>
                     </div>
                     {/*
@@ -373,14 +393,16 @@ export default function SectionClanActivity() {
                       </div>
                       {selectedClan.isYou && (
                         <div
-                          className={`item-actions ${
-                            selectedClan.admin ===
-                            prototype.getUserByID(user).id
-                              ? "opacity-0 pointer-events-none"
-                              : ""
-                          }`}
+                          className="item-actions"
                         >
-                          <div className={`dropdown dropdown-left ${userIndex + 1 === prototype.getClanByID(clan_id).members?.length ? "dropdown-end" : ""}`}>
+                          <div
+                            className={`dropdown dropdown-left ${
+                              userIndex + 1 ===
+                              prototype.getClanByID(clan_id).members?.length
+                                ? "dropdown-end"
+                                : ""
+                            }`}
+                          >
                             <label
                               tabIndex="0"
                               className="button button-ghost rounded-full"
@@ -392,16 +414,47 @@ export default function SectionClanActivity() {
                               className="dropdown-content bg-ui-600 w-52 p-1"
                             >
                               <ul className="menu menu-rounded menu-secondary">
-                                <li>
-                                  <a>
-                                    <span>Kick</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a>
-                                    <span>Promote to captain</span>
-                                  </a>
-                                </li>
+                                {selectedClan.admin ===
+                                  prototype.getUserByID(user).id && (
+                                  <>
+                                    <li>
+                                      <a>
+                                        <span className="icon icon-leave" />
+                                        <span>Leave clan</span>
+                                      </a>
+                                    </li>
+                                  </>
+                                )}
+                                {selectedClan.admin !==
+                                  prototype.getUserByID(user).id && (
+                                  <>
+                                    <li>
+                                      <a>
+                                        <span className="icon icon-chess-king" />
+                                        <span>Promote to captain</span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a>
+                                        <span className="icon icon-s-ban" />
+                                        <span>Kick</span>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a
+                                        onClick={() => {
+                                          setSelectedUser(
+                                            prototype.getUserByID(user).nickname
+                                          );
+                                          openModalGiftTokens();
+                                        }}
+                                      >
+                                        <span className="icon icon-token" />
+                                        <span>Gift tokens</span>
+                                      </a>
+                                    </li>
+                                  </>
+                                )}
                               </ul>
                             </div>
                           </div>

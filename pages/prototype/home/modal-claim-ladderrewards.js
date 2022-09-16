@@ -13,6 +13,7 @@ export default function ModalClaimLadderRewards(props) {
     setSubmitting(true);
 
     setTimeout(() => {
+      uiContext.openToastr({size: "small", text: "Reward claimed successfully", color: "green", autoDelete: true, autoDeleteDelay: 2500});
       variablesContext.claimReward();
       uiContext.closeModal();
       setSubmitting(false);

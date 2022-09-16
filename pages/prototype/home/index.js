@@ -278,7 +278,7 @@ export default function Home() {
             <div className="p-2 border-b border-ui-700 relative z-10 flex-none flex items-start justify-between">
               <div className="flex justify-between items-start">
                 <div>
-                  <h2 className="text-2xl">Your Brawls</h2>
+                  <h2 className="text-2xl">Solo Brawls</h2>
                   <span className="text-sm text-ui-300">
                     Showing your latest Solo Brawls
                   </span>

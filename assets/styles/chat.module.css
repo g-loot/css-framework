@@ -32,7 +32,7 @@
   ;
   .chat-messages {
     @apply
-    lg:max-w-[70%]
+    lg:max-w-[60%]
     flex
     flex-col
     gap-4
