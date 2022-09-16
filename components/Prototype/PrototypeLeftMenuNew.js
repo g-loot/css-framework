@@ -45,83 +45,90 @@ export default function PrototypeLeftMenuNew(props) {
     <>
       <div className="flex-1 flex flex-col justify-between">
         <div className="flex-1">
-          <Link href={`/prototype/clans${prototype.getURLparams()}`}>
-            <div
-              className={`item px-6 item-interactive ${
-                router.pathname.includes("clans") ? "is-active" : ""
-              }`}
-            >
-              <div className="item-image">
-                <div className="avatar avatar-squircle avatar-xs">
-                  <div>
-                    <img
-                      src={
+          <div className="">
+            <Link href={`/prototype/clans${prototype.getURLparams()}`}>
+              <div
+                className={`item px-6 item-interactive md:py-4 ${
+                  router.pathname.includes("clans") ? "is-active" : ""
+                }`}
+              >
+                <div className="item-image">
+                  <div className="avatar avatar-squircle avatar-xs">
+                    <div>
+                      <img
+                        src={
+                          prototype.getClanByID(prototype.getUserByID(1).id)
+                            ?.avatar
+                        }
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="item-body">
+                  <div className="item-title">
+                    <span className="text-sm uppercase">
+                      &#91;
+                      {prototype.getClanByID(prototype.getUserByID(1).id)?.tag}
+                      &#93;{" "}
+                      {
                         prototype.getClanByID(prototype.getUserByID(1).id)
-                          ?.avatar
+                          ?.nickname
                       }
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="item-body">
-                <div className="item-title">
-                  <span className="text-sm uppercase">
-                    &#91;
-                    {prototype.getClanByID(prototype.getUserByID(1).id)?.tag}
-                    &#93;{" "}
-                    {
-                      prototype.getClanByID(prototype.getUserByID(1).id)
-                        ?.nickname
-                    }
-                  </span>
-                </div>
-              </div>
-            </div>
-          </Link>
-          <Link href={`/prototype/shop${prototype.getURLparams()}`}>
-            <div
-              className={`lg:hidden item px-6 item-interactive ${
-                router.pathname.includes("shop") ? "is-active" : ""
-              }`}
-            >
-              <div className="item-image">
-                <div className="avatar avatar-simple avatar-xs">
-                  <div>
-                    <span>
-                      <span className="icon icon-20 icon-shop" />
                     </span>
                   </div>
                 </div>
-              </div>
-              <div className="item-body">
-                <div className="item-title">
-                  <span className="text-sm uppercase">Shop</span>
-                </div>
-              </div>
-            </div>
-          </Link>
-          <Link href={`/prototype/premium${prototype.getURLparams()}`}>
-            <div
-              className={`lg:hidden item px-6 item-interactive ${
-                router.pathname.includes("premium") ? "is-active" : ""
-              }`}
-            >
-              <div className="item-image">
-                <div className="avatar avatar-simple avatar-xs">
-                  <div>
-                    <span>
-                      <span className="icon icon-20 icon-ic_stars_24px" />
-                    </span>
+                <div className="item-action">
+                  <div className="text-0">
+                    <span className="icon icon-24 icon-arrow-sm-right text-ui-400" />
                   </div>
                 </div>
               </div>
-              <div className="item-body">
-                <div className="item-title">
-                  <span className="text-sm uppercase">Premium</span>
+            </Link>
+            <Link href={`/prototype/shop${prototype.getURLparams()}`}>
+              <div
+                className={`lg:hidden item px-6 item-interactive ${
+                  router.pathname.includes("shop") ? "is-active" : ""
+                }`}
+              >
+                <div className="item-image">
+                  <div className="avatar avatar-simple avatar-xs">
+                    <div>
+                      <span>
+                        <span className="icon icon-20 icon-shop" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="item-body">
+                  <div className="item-title">
+                    <span className="text-sm uppercase">Shop</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+            <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+              <div
+                className={`lg:hidden item px-6 item-interactive ${
+                  router.pathname.includes("premium") ? "is-active" : ""
+                }`}
+              >
+                <div className="item-image">
+                  <div className="avatar avatar-simple avatar-xs">
+                    <div>
+                      <span>
+                        <span className="icon icon-20 icon-ic_stars_24px" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="item-body">
+                  <div className="item-title">
+                    <span className="text-sm uppercase">Premium</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
           <PrototypeGamesNavNew />
           <div className="text-left p-2">
             <button

@@ -96,10 +96,10 @@ export default function TopbarNew() {
   }
 
   return (
-    <div className="sticky top-0 z-50 bg-ui-900/90 navbar h-14 flex items-center border-b border-ui-700">
+    <div className="sticky top-0 z-50 bg-ui-800/90 navbar h-14 flex items-center border-b border-ui-700">
       <div className="container relative">
         <div
-          className={`max-w-2xl flex lg:gap-8 mx-auto px-2 md:px-10 xl:px-20  ${
+          className={`flex lg:gap-8 mx-auto px-2  ${
             hasAds ? "3xl:m-0" : ""
           }`}
         >
@@ -110,7 +110,7 @@ export default function TopbarNew() {
                   htmlFor="drawer-prototype"
                   className="drawer-button button button-sm button-tertiary rounded-full"
                 >
-                  <div className="icon icon-menu-8"></div>
+                  <div className="icon icon-menu-8 text-ui-200"></div>
                 </label>
               </div>
               <div className="hidden lg:flex">
@@ -163,7 +163,12 @@ export default function TopbarNew() {
                           router.pathname.includes("tracker") ? "is-active" : ""
                         }`}
                       >
-                        <span className="text-sm uppercase">Download tracker</span>
+                        <div className="flex gap-2 items-center">
+                          <span className="icon icon-data-download" />
+                          <span className="text-sm uppercase">
+                            Download tracker
+                          </span>
+                        </div>
                       </a>
                     </Link>
                   </li>
@@ -171,18 +176,28 @@ export default function TopbarNew() {
               </div>
             </div>
             <div className="flex justify-end items-center gap-1 sm:gap-2">
-              <div className="rounded-full bg-ui-800 interactive">
-                <Link
-                  href={`/prototype/clans/search${prototype.getURLparams()}`}
-                >
-                  <a className="button button-sm button-ghost rounded-full">
-                    <span className="icon icon-zoom" />
-                  </a>
-                </Link>
-              </div>
+              <Tooltip
+                tooltip={
+                  <div className="relative text-sm">
+                    <span>Search clans</span>
+                  </div>
+                }
+              >
+                <div className="rounded-full bg-ui-800 interactive">
+                  <Link
+                    href={`/prototype/clans/search${prototype.getURLparams()}`}
+                  >
+                    <a className="button button-sm button-ghost rounded-full">
+                      <span className="icon icon-zoom text-ui-200" />
+                    </a>
+                  </Link>
+                </div>
+              </Tooltip>
+
               <div className="hidden lg:flex gap-x-3 items-center bg-ui-800 h-9 pr-2 rounded-full hoverhighlight">
                 <div className="inline-flex pl-4">
                   <Tooltip
+                    placement="bottom"
                     tooltip={
                       <div className="w-56 relative">
                         <h6 className="mb-3 leading-tight">Prize money</h6>
