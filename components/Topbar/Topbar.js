@@ -329,27 +329,26 @@ export default function Topbar() {
               </div>
             </div>
             <div className="flex items-center justify-end">
-              <div className="hidden xl:hiden relative text-ui-500 items-center justify-end rounded border border-ui-700">
-                <input
-                  className="border border-ui-600 bg-transparent h-8 px-3 pr-16 rounded text-sm focus:outline-none"
-                  type="search"
-                  name="search"
-                  placeholder="Search"
-                />
-                <button type="submit" className="absolute mr-2 text-0">
-                  <span className="icon icon-16 icon-zoom text-ui-600" />
-                </button>
-              </div>
+              
               <div className="flex justify-end items-center gap-1 sm:gap-2">
+              <Tooltip
+                placement="bottom"
+                tooltip={
+                  <div className="relative text-sm">
+                    <span>Search clans</span>
+                  </div>
+                }
+              >
                 <div className="rounded-full border border-ui-700 bg-ui-800 interactive">
                   <Link
                     href={`/prototype/clans/search${prototype.getURLparams()}`}
                   >
                     <a className="button button-sm button-ghost rounded-full">
-                      <span className="icon icon-zoom" />
+                      <span className="icon icon-zoom text-ui-200" />
                     </a>
                   </Link>
                 </div>
+              </Tooltip>
                 <div className="dropdown dropdown-end">
                   <div
                     tabIndex="1"
@@ -445,7 +444,7 @@ export default function Topbar() {
                       className="button button-sm button-ghost rounded-full"
                     >
                       <span data-badge=".">
-                        <span className="icon icon-alarm" />
+                        <span className="icon icon-alarm text-ui-200" />
                       </span>
                     </button>
                     <span className="icon icon-arrow-sm-down mr-2" />

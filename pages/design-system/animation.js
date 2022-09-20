@@ -83,10 +83,10 @@ const DSpage = () => {
     return () => clearTimeout(timer);
   }
   function handleStartAnim11() {
-    setStartAnim11(true);
+    setStartAnim11(false);
     const timer = setTimeout(() => {
-      setStartAnim11(false);
-    }, 1000);
+      setStartAnim11(true);
+    }, 10);
     return () => clearTimeout(timer);
   }
   function handleStartAnim12() {

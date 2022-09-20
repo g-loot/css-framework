@@ -20,16 +20,6 @@ export const DSpages = [
     icon: "",
     pages: [
       {
-        label: "Colors",
-        tags: "basics,colors,background,text,main,ui,main,accent,gradient,colour",
-        url: "colors",
-      },
-      {
-        label: "Icons",
-        tags: "basics,icons,picto,size,nucleo,font",
-        url: "icons",
-      },
-      {
         label: "Typography",
         tags: "basics,typography,headings,font,size,bold,italic,font,family,roboto,condensed,podium,sharp,title",
         url: "typography",
@@ -43,6 +33,38 @@ export const DSpages = [
         label: "Animation",
         tags: "basics,animation,slide,in,out,fade,loading,bounce,spin,heartbeat,infinite,delay,keyframes,animate",
         url: "animation",
+      },
+    ],
+  },
+  {
+    label: "Colors",
+    icon: "",
+    pages: [
+      {
+        label: "Introduction",
+        tags: "basics,colors,background,text,main,ui,main,accent,gradient,colour",
+        url: "colorsintroduction",
+      },
+      {
+        label: "References",
+        tags: "basics,colors,background,text,main,ui,main,accent,gradient,colour,references,class names",
+        url: "colorsrefs",
+      },
+    ],
+  },
+  {
+    label: "Icons",
+    icon: "",
+    pages: [
+      {
+        label: "Introduction",
+        tags: "basics,icons,picto,size,nucleo,font,iconography,material icons",
+        url: "iconsintroduction",
+      },
+      {
+        label: "References",
+        tags: "basics,icons,picto,size,nucleo,font,iconography,material icons,references,class names",
+        url: "iconsrefs",
       },
     ],
   },

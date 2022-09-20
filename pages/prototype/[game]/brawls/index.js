@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Countdown from "../../../../components/Countdown/Countdown";
@@ -9,6 +9,7 @@ import TabBrawlsHistory from "./tab-history";
 import TabBrawlsHowItWorks from "./tab-howitworks";
 import TabBrawlsOngoing from "./tab-brawlsongoing";
 import TabBrawlsRules from "./tab-glootrules";
+import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -43,6 +44,13 @@ export default function Brawls() {
   const { tab } = router.query;
   const defaultTab = "ongoing";
   const selectedTab = tab ? tab : defaultTab;
+  const uiContext = useContext(UiContext);
+
+  function openModalBrawlHowitworksVideo() {
+    uiContext.openModal(
+      <ModalBrawlHowitworksVideo></ModalBrawlHowitworksVideo>
+    );
+  }
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
@@ -54,11 +62,7 @@ export default function Brawls() {
     }
   }, [selectedGame]);
 
-  function openModalBrawlHowitworksVideo() {
-    uiContext.openModal(
-      <ModalBrawlHowitworksVideo></ModalBrawlHowitworksVideo>
-    );
-  }
+  
 
   return (
     <>

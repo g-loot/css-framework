@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
+import ModalBrawlHowitworksVideo from "./modal-howitworks-video";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import TabBrawlsClanLeaderboard from "./tab-clanleaderboards";
 import TabBrawlsHowItWorks from "./tab-howitworks";
 import TabBrawlsRewards from "./tab-rewards";
 import TabBrawlsSoloLeaderboards from "./tab-sololeaderboards";
 import TabBrawlsYourBrawlMatches from "./tab-yourbrawlmatches";
+import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -73,6 +75,13 @@ export default function Home() {
   const { brawl_id } = router.query;
   const defaultTab = "your-matches";
   const selectedTab = tab ? tab : defaultTab;
+  const uiContext = useContext(UiContext)
+
+  function openModalBrawlHowitworksVideo() {
+    uiContext.openModal(
+      <ModalBrawlHowitworksVideo></ModalBrawlHowitworksVideo>
+    );
+  }
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
@@ -126,6 +135,7 @@ export default function Home() {
                     <button
                       type="button"
                       className="button button-sm button-primary button-play"
+                      onClick={openModalBrawlHowitworksVideo}
                     >
                       <span className="icon icon-circle-caret-right" />
                       <span>Learn how to Brawl</span>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import TextareaExpandable from "../../components/Textarea/TextareaExpandable";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
@@ -8,14 +8,14 @@ const DSpage = () => {
   const maxValue = 1000;
   const [inputNumber, setInputNumber] = useState(4);
 
-  function inputNumberPlus(){
-    if(inputNumber < maxValue) {
+  function inputNumberPlus() {
+    if (inputNumber < maxValue) {
       setInputNumber(inputNumber + 1);
     }
   }
 
-  function inputNumberMinus(){
-    if(inputNumber > minValue) {
+  function inputNumberMinus() {
+    if (inputNumber > minValue) {
       setInputNumber(inputNumber - 1);
     }
   }
@@ -96,7 +96,10 @@ const DSpage = () => {
 
       {/* With textarea */}
       <div className="mb-12" id="with-textarea">
-        <h2 className="h3 mb-3">With textarea <small className="text-ui-200 font-normal">auto-expandable</small></h2>
+        <h2 className="h3 mb-3">
+          With textarea{" "}
+          <small className="text-ui-200 font-normal">auto-expandable</small>
+        </h2>
 
         {/* structure: primary */}
         <div className="surface rounded-lg p-4">
@@ -154,7 +157,8 @@ const DSpage = () => {
       {/* Validation <small className="text-ui-200 font-normal">with attribute</small> */}
       <div className="mb-12" id="validation">
         <h2 className="h3 mb-3">
-          Validation <small className="text-ui-200 font-normal">with attribute</small>
+          Validation{" "}
+          <small className="text-ui-200 font-normal">with attribute</small>
         </h2>
 
         <div className="surface rounded-lg p-4">
@@ -179,7 +183,11 @@ const DSpage = () => {
                         <span>
                           <span className="icon icon-riotgames-symbol" />
                         </span>
-                        <input type="text" name="riot-account" id="riot-account" />
+                        <input
+                          type="text"
+                          name="riot-account"
+                          id="riot-account"
+                        />
                         <span>
                           <span className="icon icon-lock" />
                         </span>
@@ -238,13 +246,18 @@ const DSpage = () => {
                         <span>
                           <span className="icon icon-riotgames-symbol" />
                         </span>
-                        <input type="text" name="riot-account" id="riot-account" />
+                        <input
+                          type="text"
+                          name="riot-account"
+                          id="riot-account"
+                        />
                         <span>
                           <span className="icon icon-lock" />
                         </span>
                       </div>
                       <div className="form-info">
-                        The account is <span className="icon icon-check" /> valid.
+                        The account is <span className="icon icon-check" />{" "}
+                        valid.
                       </div>
                     </div>
                     <div className="form-group" data-attention>
@@ -504,7 +517,7 @@ const DSpage = () => {
                 <iframe
                   className="rounded"
                   width="100%"
-                  height="300"
+                  height="200"
                   src="//jsfiddle.net/augustin_hiebel/m2z3ynba/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
@@ -518,23 +531,46 @@ const DSpage = () => {
         <h2 className="h3 mb-3">Input number</h2>
 
         <div className="surface rounded-lg p-4">
-          <div className="">
+          <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
+            <h3 className="h4 mb-6 lg:mb-10">Default (browser)</h3>
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
-                <div className="w-full flex gap-4 items-center">
-                  <div className="flex-1 space-y-4">
-                    <div className="form-group">
-                      <label htmlFor="token">How many tokens to you want to gift Jamlog?</label>
-                        <div className="input-number">
-                          <button type="button" onClick={inputNumberPlus}>
-                            <span className="icon icon-i-add" />
-                          </button>
-                          <input min={1} name="token" value={inputNumber} type="number" />
-                          <button type="button" onClick={inputNumberMinus}>
-                            <span className="icon icon-i-delete" />
-                          </button>
-                        </div>
+              <div className="form-group">
+                      <label htmlFor="token2">How many tokens to you want to gift Jamlog?</label>
+                      <input min="1" max="100" name="token2" type="number" />
                     </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="150"
+                  src="//jsfiddle.net/augustin_hiebel/fqbmv056/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div className="">
+            <h3 className="h4 mb-6 lg:mb-10">Customized</h3>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="form-group">
+                  <label htmlFor="token">
+                    How many tokens to you want to gift Jamlog?
+                  </label>
+                  <div className="input-number">
+                    <button type="button" onClick={inputNumberPlus}>
+                      <span className="icon icon-i-add" />
+                    </button>
+                    <input
+                      min={1}
+                      name="token"
+                      value={inputNumber}
+                      type="number"
+                    />
+                    <button type="button" onClick={inputNumberMinus}>
+                      <span className="icon icon-i-delete" />
+                    </button>
                   </div>
                 </div>
               </div>

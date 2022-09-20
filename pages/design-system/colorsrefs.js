@@ -5,33 +5,39 @@ import { UiContext } from "../../contexts/ui";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
 
 function isMultipleOfThree(number) {
-  if (number % 3 == 0) 
-  {
+  if (number % 3 == 0) {
     return true;
-  } 
-  else {
+  } else {
     return false;
   }
 }
 function isAfterAMultipleofThree(number) {
-  isMultipleOfThree(number-1)
+  isMultipleOfThree(number - 1);
 }
 
 const DSpage = () => {
   const uiContext = useContext(UiContext);
   return (
     <>
-      <h1 className="mb-2">Colors</h1>
-
+      <h1 className="mb-2">Colors <small className="text-ui-300 font-normal">references</small></h1>
       {DScolors.colors.map((item, indexItem) => (
         <div className="mb-8" key={item}>
           <div className="">
-            <h2 className="text-3xl mb-2">{item.title}</h2>
+            <h3 className="text-3xl mb-2">{item.title}</h3>
             <div className={`grid grid-cols-3 gap-4 xl:grid-cols-5`}>
               {item.colors.map((item2, indexItem2) => (
                 <>
                   <div
-                    className={`rounded-lg overflow-hidden surface ${isMultipleOfThree(indexItem2 + 1) && item.cols === 3 ? "col-end-4" : ""} ${isMultipleOfThree(indexItem2) && item.cols === 3 ? "col-start-1" : ""}`}
+                    id={item2.value}
+                    className={`rounded-lg overflow-hidden surface ${
+                      isMultipleOfThree(indexItem2 + 1) && item.cols === 3
+                        ? "col-end-4"
+                        : ""
+                    } ${
+                      isMultipleOfThree(indexItem2) && item.cols === 3
+                        ? "col-start-1"
+                        : ""
+                    }`}
                     key={indexItem2}
                   >
                     <div className={`h-32 relative ${item2.value}`}></div>
@@ -42,11 +48,20 @@ const DSpage = () => {
                       </div>
                       <div className="flex items-baseline justify-between">
                         <div className="text-xs text-ui-300">
-                          <span className="tooltip tooltip-right" data-tooltip="Copy">
+                          <span
+                            className="tooltip tooltip-right"
+                            data-tooltip="Copy"
+                          >
                             <a
                               className="link"
                               onClick={() => {
-                                uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                                uiContext.openToastr({
+                                  size: "small",
+                                  text: "Class name copied to your clipboard",
+                                  color: "green",
+                                  autoDelete: true,
+                                  autoDeleteDelay: 2500,
+                                });
                                 navigator.clipboard.writeText(item2.value);
                               }}
                             >
@@ -55,11 +70,20 @@ const DSpage = () => {
                           </span>
                         </div>
                         <div className="text-xs text-ui-300">
-                          <span className="tooltip tooltip-left" data-tooltip="Copy">
+                          <span
+                            className="tooltip tooltip-left"
+                            data-tooltip="Copy"
+                          >
                             <a
                               className="link"
                               onClick={() => {
-                                uiContext.openToastr({size: "small", text: "HEX color copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                                uiContext.openToastr({
+                                  size: "small",
+                                  text: "HEX color copied to your clipboard",
+                                  color: "green",
+                                  autoDelete: true,
+                                  autoDeleteDelay: 2500,
+                                });
                                 navigator.clipboard.writeText(item2.hex);
                               }}
                             >
@@ -77,7 +101,7 @@ const DSpage = () => {
         </div>
       ))}
     </>
-  )
+  );
 };
 
 DSpage.getLayout = getLayout;

@@ -841,10 +841,10 @@ const DSpage = () => {
         <div className="surface rounded-lg p-4" id="status-loading">
           <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
             <h3 className="h4 mb-3">Loading</h3>
-            <p className="mb-4">
+            <p className="mb-5">
               Display a loading effect by adding the
               <code
-                className="interactive"
+                className="interactive text-xs"
                 onClick={() => {
                   uiContext.openToastr({
                     size: "small",
@@ -951,10 +951,10 @@ const DSpage = () => {
 
           <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12" id="status-disabled">
             <h3 className="h4 mb-3">Disabled</h3>
-            <p className="mb-4">
+            <p className="mb-5">
               Disable a button by adding either a
               <code
-                className="interactive"
+                className="interactive text-xs"
                 onClick={() => {
                   uiContext.openToastr({
                     size: "small",
@@ -970,7 +970,7 @@ const DSpage = () => {
               </code>{" "}
               class name or a{" "}
               <code
-                className="interactive"
+                className="interactive text-xs"
                 onClick={() => {
                   uiContext.openToastr({
                     size: "small",
@@ -1077,10 +1077,10 @@ const DSpage = () => {
 
           <div id="status-shining">
             <h3 className="h4 mb-3">Shining</h3>
-            <p className="mb-4">
+            <p className="mb-5">
               Simply add the{" "}
               <code
-                className="interactive"
+                className="interactive text-xs"
                 onClick={() => {
                   uiContext.openToastr({
                     size: "small",
@@ -1167,10 +1167,10 @@ const DSpage = () => {
 
           <div id="status-feedback">
             <h3 className="h4 mb-3">Feedback</h3>
-            <p className="mb-4">
+            <p className="mb-5">
               Display a textual feedback to your button by adding a
               <code
-                className="interactive"
+                className="interactive text-xs"
                 onClick={() => {
                   uiContext.openToastr({
                     size: "small",

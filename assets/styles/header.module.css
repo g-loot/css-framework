@@ -50,8 +50,8 @@
       z-10
       bg-gradient-to-r
       from-ui-800
-      via-ui-800/50
-      to-ui-800/0
+      via-ui-800/60
+      to-ui-800/10
       ;
     }
     > img {
@@ -120,13 +120,11 @@
       flex-col
       items-start
       justify-center
-      pt-8
-      pb-4
-      xl:py-8
+      py-8
       pl-4
       md:pl-0
       pr-4
-      lg:pr-0
+      xl:pr-0
       text-center
       md:text-left
       ;
@@ -147,7 +145,7 @@
     @apply
     relative
     z-10
-    flex-2
+    xl:flex-2
     flex
     flex-col
     ;
