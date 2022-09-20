@@ -21,7 +21,7 @@ const TabsItems = [
   },
 ];
 
-export default function Home() {
+export default function Missions() {
   const router = useRouter();
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
@@ -32,7 +32,13 @@ export default function Home() {
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
-  }, [game]);
+  }, [game, prototype]);
+  
+  useEffect(() => {
+    if(selectedGame != null) {
+      prototype.defineDefaultGameID(selectedGame.id);
+    }
+  }, [selectedGame]);
 
   return (
     <>

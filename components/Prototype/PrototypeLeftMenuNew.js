@@ -139,11 +139,11 @@ export default function PrototypeLeftMenuNew(props) {
               <div className="avatar avatar-simple avatar-xs">
                 <div className="border border-ui-600">
                   <div>
-                    <span className="icon icon-pen-2 px-3 icon-16" />
+                    <span className="icon icon-e-add px-3 icon-16" />
                   </div>
                 </div>
               </div>
-              <span className="font-body tracking-normal font-normal text-sm pl-2">Edit favorite games</span>
+              <span className="font-body tracking-normal font-normal text-sm pl-2 uppercase">Add games</span>
             </button>
           </div>
         </div>

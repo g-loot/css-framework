@@ -55,7 +55,13 @@ export default function Home() {
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
-  }, [game]);
+  }, [game, prototype]);
+  
+  useEffect(() => {
+    if(selectedGame != null) {
+      prototype.defineDefaultGameID(selectedGame.id);
+    }
+  }, [selectedGame]);
 
   return (
     <>
