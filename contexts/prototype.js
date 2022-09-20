@@ -1,6 +1,7 @@
 import {
   createContext,
-  useContext
+  useContext,
+  useState
 } from 'react';
 
 import { dataClans } from '../mock-data/data-clans';
@@ -20,6 +21,7 @@ export const PrototypeProvider = ({ children }) => {
   const games = dataGames;
   const users = dataUsers;
   const vouchers = dataVouchers;
+  const [defaultGameID, setDefaultGameID] = useState(1);
   
   const getGameByID = (id) => {
     return games.find(game => {
@@ -87,6 +89,9 @@ export const PrototypeProvider = ({ children }) => {
       return("");
     }
   }
+  const defineDefaultGameID = (id) => {
+    setDefaultGameID(id);
+  }
   return (
     <Provider
       value={{
@@ -94,6 +99,7 @@ export const PrototypeProvider = ({ children }) => {
         users,
         clans,
         vouchers,
+        defaultGameID,
         getGameByID,
         getGameBySlug,
         getUserByID,
@@ -104,6 +110,7 @@ export const PrototypeProvider = ({ children }) => {
         getUserClan,
         getVoucherByID,
         getURLparams,
+        defineDefaultGameID,
       }}
     >
       {children}

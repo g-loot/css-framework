@@ -38,10 +38,7 @@
     > div {
       @apply
       relative
-      block
-      px-5
-      pt-3
-      pb-4
+      block 
       font-bold
       font-headings
       tracking-wide
@@ -57,6 +54,21 @@
       &:not([class*="text-"]) {
         @apply
         text-lg
+        ;
+      }
+      &:not([class*="pt-"]) {
+        @apply
+        pt-3
+        ;
+      }
+      &:not([class*="pb-"]) {
+        @apply
+        pb-4
+        ;
+      }
+      &:not([class*="px-"]) {
+        @apply
+        px-5
         ;
       }
   

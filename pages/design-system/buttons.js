@@ -1,8 +1,53 @@
+import React, { useContext, useState } from "react";
+
 import Button from "../../components/Button/Button";
-import React from "react";
+import { UiContext } from "../../contexts/ui";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
 
 const DSpage = () => {
+  const [buttonFeedbackMessage1, setButtonFeedbackMessage1] = useState("");
+  const [buttonFeedbackMessage2, setButtonFeedbackMessage2] = useState("");
+  const [buttonFeedbackMessage3, setButtonFeedbackMessage3] = useState("");
+  const [buttonFeedbackMessage4, setButtonFeedbackMessage4] = useState("");
+  const [buttonFeedbackMessage5, setButtonFeedbackMessage5] = useState("");
+  const uiContext = useContext(UiContext);
+
+  function buttonFeedback1(message) {
+    setButtonFeedbackMessage1(message);
+    const interval1 = setTimeout(() => {
+      setButtonFeedbackMessage1("");
+    }, 4000);
+    return () => clearTimeout(interval1);
+  }
+  function buttonFeedback2(message) {
+    setButtonFeedbackMessage2(message);
+    const interval2 = setTimeout(() => {
+      setButtonFeedbackMessage2("");
+    }, 4000);
+    return () => clearTimeout(interval2);
+  }
+  function buttonFeedback3(message) {
+    setButtonFeedbackMessage3(message);
+    const interval3 = setTimeout(() => {
+      setButtonFeedbackMessage3("");
+    }, 4000);
+    return () => clearTimeout(interval3);
+  }
+  function buttonFeedback4(message) {
+    setButtonFeedbackMessage4(message);
+    const interval4 = setTimeout(() => {
+      setButtonFeedbackMessage4("");
+    }, 4000);
+    return () => clearTimeout(interval4);
+  }
+  function buttonFeedback5(message) {
+    setButtonFeedbackMessage5(message);
+    const interval5 = setTimeout(() => {
+      setButtonFeedbackMessage5("");
+    }, 4000);
+    return () => clearTimeout(interval4);
+  }
+
   return (
     <>
       <h1 className="mb-2">Buttons</h1>
@@ -793,10 +838,29 @@ const DSpage = () => {
         <h2 className="h3 mb-3">Status</h2>
 
         {/* status: loading */}
-        <div className="surface rounded-lg p-4">
+        <div className="surface rounded-lg p-4" id="status-loading">
           <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
-            <h3 className="h4 mb-6 lg:mb-10">Loading</h3>
-            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+            <h3 className="h4 mb-3">Loading</h3>
+            <p className="mb-4">
+              Display a loading effect by adding the
+              <code
+                className="interactive"
+                onClick={() => {
+                  uiContext.openToastr({
+                    size: "small",
+                    text: "class name copied to your clipboard",
+                    color: "green",
+                    autoDelete: true,
+                    autoDeleteDelay: 2500,
+                  });
+                  navigator.clipboard.writeText("is-loading");
+                }}
+              >
+                .is-loading
+              </code>{" "}
+              class name to your button.
+            </p>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
               <div className="flex-1 space-y-4">
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
@@ -885,9 +949,44 @@ const DSpage = () => {
             </div>
           </div>
 
-          <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
-            <h3 className="h4 mb-6 lg:mb-10">Disabled</h3>
-            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+          <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12" id="status-disabled">
+            <h3 className="h4 mb-3">Disabled</h3>
+            <p className="mb-4">
+              Disable a button by adding either a
+              <code
+                className="interactive"
+                onClick={() => {
+                  uiContext.openToastr({
+                    size: "small",
+                    text: "class name copied to your clipboard",
+                    color: "green",
+                    autoDelete: true,
+                    autoDeleteDelay: 2500,
+                  });
+                  navigator.clipboard.writeText("is-disabled");
+                }}
+              >
+                .is-disabled
+              </code>{" "}
+              class name or a{" "}
+              <code
+                className="interactive"
+                onClick={() => {
+                  uiContext.openToastr({
+                    size: "small",
+                    text: "attribute copied to your clipboard",
+                    color: "green",
+                    autoDelete: true,
+                    autoDeleteDelay: 2500,
+                  });
+                  navigator.clipboard.writeText("disabled");
+                }}
+              >
+                &#91;disabled&#93;
+              </code>
+              attribute to your button.
+            </p>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
               <div className="flex-1 space-y-4">
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
@@ -976,9 +1075,28 @@ const DSpage = () => {
             </div>
           </div>
 
-          <div className="">
-            <h3 className="h4 mb-6 lg:mb-10">Shining</h3>
-            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+          <div id="status-shining">
+            <h3 className="h4 mb-3">Shining</h3>
+            <p className="mb-4">
+              Simply add the{" "}
+              <code
+                className="interactive"
+                onClick={() => {
+                  uiContext.openToastr({
+                    size: "small",
+                    text: "class name copied to your clipboard",
+                    color: "green",
+                    autoDelete: true,
+                    autoDeleteDelay: 2500,
+                  });
+                  navigator.clipboard.writeText("is-shining");
+                }}
+              >
+                .is-shining
+              </code>{" "}
+              class name to add a shiny animation to your button
+            </p>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
               <div className="flex-1 space-y-4">
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
@@ -1042,6 +1160,128 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/5e286Lgw/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div id="status-feedback">
+            <h3 className="h4 mb-3">Feedback</h3>
+            <p className="mb-4">
+              Display a textual feedback to your button by adding a
+              <code
+                className="interactive"
+                onClick={() => {
+                  uiContext.openToastr({
+                    size: "small",
+                    text: "attribute copied to your clipboard",
+                    color: "green",
+                    autoDelete: true,
+                    autoDeleteDelay: 2500,
+                  });
+                  navigator.clipboard.writeText('data-feedback=""');
+                }}
+              >
+                &#91;data-feedback=&#34;feedback message&#34;&#93;
+              </code>{" "}
+              attribute to your button. Feeedback message are visible for 4
+              seconds.
+            </p>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Primary
+                  </div>
+                  <div className="flex-1">
+                    <button
+                      className="button button-primary"
+                      data-feedback={buttonFeedbackMessage1}
+                      onClick={buttonFeedback1.bind(this, "Copied!")}
+                    >
+                      <span>Click to copy URL</span>
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Secondary
+                  </div>
+                  <div className="flex-1">
+                    <button
+                      className="button button-secondary"
+                      data-feedback={buttonFeedbackMessage2}
+                      onClick={buttonFeedback2.bind(this, "Copied!")}
+                    >
+                      <span>Click to copy URL</span>
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Tertiary
+                  </div>
+                  <div className="flex-1">
+                    <button
+                      className="button button-tertiary"
+                      data-feedback={buttonFeedbackMessage3}
+                      onClick={buttonFeedback3.bind(this, "Copied!")}
+                    >
+                      <span>Click to copy URL</span>
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Ghost
+                  </div>
+                  <div className="flex-1">
+                    <button
+                      className="button button-sm button-ghost"
+                      data-feedback={buttonFeedbackMessage4}
+                      onClick={buttonFeedback4.bind(
+                        this,
+                        "Longer feedback take 2 lines"
+                      )}
+                    >
+                      <span>Click to copy URL</span>
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Currency
+                  </div>
+                  <div className="flex-1">
+                    <button
+                      type="button"
+                      className="button button-primary button-currency button-coin"
+                      data-feedback={buttonFeedbackMessage5}
+                      onClick={buttonFeedback5.bind(this, "Enrolled successfully!")}
+                    >
+                      <div>
+                        <span>Purchase</span>
+                      </div>
+                      <div>
+                        <img
+                          className="dropshadow-xs"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
+                          width="34"
+                          height="34"
+                          alt="coin"
+                        />
+                        <span>2,000</span>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/j7ubhsft/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

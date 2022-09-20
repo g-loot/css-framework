@@ -63,9 +63,9 @@ const DSpage = () => {
                 <div className="w-full flex gap-4 items-center justify-center">
                   <ul className="tabs tabs-secondary border-b border-ui-700">
                     <li>
-                      <a className="is-active">
+                      <button type="button" className="is-active">
                         <span>Brawls</span>
-                      </a>
+                      </button>
                     </li>
                     <li>
                       <a>

@@ -54,7 +54,9 @@ export default function PrototypeGamesNavNew({ children }) {
               key={itemIndex}
             >
               <PrototypeGamesNavItem
-                isopen={true}
+                isopen={item.id === prototype.defaultGameID ? true : false}
+                gameID={item.id}
+                gameSlug={item.slug}
                 isselected={item.slug === game ? true : false}
                 border={false}
                 header={

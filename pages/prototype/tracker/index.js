@@ -21,7 +21,7 @@ export default function Tracker() {
             <span className="icon icon-gloot-symbol text-main text-7xl mx-auto animate-slide-in-top my-4" />
             <div className="flex gap-4 items-center justify-center">
               <span className="icon icon-data-download text-4xl text-ui-200" />
-              <h2 className="modal-title">Download started</h2>
+              <h2 className="modal-title h3">Download started</h2>
             </div>
             <ul className="rounded-lg p-6 space-y-2 bg-gradient-to-b from-ui-800 to-ui-800/50 my-4 text-left">
               <li

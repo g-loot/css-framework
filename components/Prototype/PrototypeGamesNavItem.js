@@ -1,10 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+
+import { PrototypeContext } from '../../contexts/prototype';
+import { useRouter } from 'next/router';
 
 export default function PrototypeGamesNavItem(props) {
+  
   const [isActive, setActive] = useState(props.isopen);
   const [isDisabled, setIsDisabled] = useState(props.isdisabled);
   const isSelected = props.isselected !== undefined ? props.isselected : false
   const elementRef = useRef(null);
+  const prototype = useContext(PrototypeContext)
+  const router = useRouter();
+
+  /* /prototype/${item.slug}/missions/${prototype.getURLparams()} */
 
   var height = elementRef.current?.clientHeight;
 
@@ -14,8 +22,11 @@ export default function PrototypeGamesNavItem(props) {
   }, [props.isopen, props.isdisabled])
 
   const handleToggle = e => {
-    e.preventDefault()
+    e.preventDefault();
+    prototype.defineDefaultGameID(props.gameID);
+    console.log(props.gameID);
     setActive(!isActive);
+    router.push(`/prototype/${props.gameSlug}/missions/${prototype.getURLparams()}`);
   };
   
   return (

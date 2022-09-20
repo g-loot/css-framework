@@ -13,6 +13,8 @@ const DSpage = () => {
   const [StartAnim8, setStartAnim8] = useState(false);
   const [StartAnim9, setStartAnim9] = useState(false);
   const [StartAnim10, setStartAnim10] = useState(false);
+  const [StartAnim11, setStartAnim11] = useState(false);
+  const [StartAnim12, setStartAnim12] = useState(false);
 
   function handleStartAnim1() {
     setStartAnim1(true);
@@ -70,6 +72,27 @@ const DSpage = () => {
     setStartAnim9(true);
     const timer = setTimeout(() => {
       setStartAnim9(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }
+  function handleStartAnim10() {
+    setStartAnim10(true);
+    const timer = setTimeout(() => {
+      setStartAnim10(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }
+  function handleStartAnim11() {
+    setStartAnim11(true);
+    const timer = setTimeout(() => {
+      setStartAnim11(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }
+  function handleStartAnim12() {
+    setStartAnim12(true);
+    const timer = setTimeout(() => {
+      setStartAnim12(false);
     }, 1000);
     return () => clearTimeout(timer);
   }
@@ -438,6 +461,76 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Scale in */}
+      <div className="mb-12" id="scale-in">
+        <h2 className="h3 mb-3">Scale in</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div
+                  className={`w-24 h-24 rounded-full bg-ui-400 mx-auto ${
+                    StartAnim10 === true ? "animate-scale-in" : ""
+                  }`}
+                ></div>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim10.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/jsp34f5n/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scale out */}
+      <div className="mb-12" id="scale-out">
+        <h2 className="h3 mb-3">Scale out</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div
+                  className={`w-24 h-24 rounded-full bg-ui-400 mx-auto ${
+                    StartAnim11 === true ? "animate-scale-out" : ""
+                  }`}
+                ></div>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim11.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/agnpfj9x/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Drop in */}
       <div className="mb-12" id="drop-in">
         <h2 className="h3 mb-3">Drop in</h2>
@@ -466,6 +559,41 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/3Ljhykp8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Shake */}
+      <div className="mb-12" id="shake">
+        <h2 className="h3 mb-3">Shake</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div
+                  className={`w-24 h-24 rounded-full bg-ui-400 mx-auto ${
+                    StartAnim12 === true ? "animate-shake" : ""
+                  }`}
+                ></div>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim12.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/oq6yv4cm/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

@@ -24,7 +24,7 @@
 .chat-group {
   @apply
   flex
-  items-end
+  items-start
   px-2
   lg:px-4
   py-8
@@ -74,15 +74,14 @@
         .chat-bubble {
           @apply
           bg-ui-600
+          rounded-tl-sm
           ;
         }
         &:last-child {
           .chat-bubble {
             &,
             img {
-              @apply
-              rounded-bl-sm
-              ;
+              
             }
           }
         }
@@ -115,15 +114,14 @@
           @apply
           bg-main
           text-ui-800
+          rounded-br-sm
           ;
         }
         &:last-child {
           .chat-bubble {
             &,
             img {
-              @apply
-              rounded-br-sm
-              ;
+              
             }
           }
         }
@@ -219,9 +217,20 @@
     py-3
     ;
   }
-  .chat-bubble-reactions {
+  .chat-bubble-actions {
     @apply
     absolute
+    -bottom-3
+    right-1
+    flex
+    justify-end
+    gap-1
+    items-center
+    ;
+  }
+  .chat-bubble-reactions {
+    @apply
+    
     -bottom-3
     right-1
     flex

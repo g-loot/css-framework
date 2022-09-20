@@ -136,13 +136,19 @@ export default function PrototypeLeftMenuNew(props) {
               type="button"
               className="button button-sm button-ghost w-full justify-start opacity-50 hover:opacity-100"
             >
-              <span className="icon icon-pen-2 px-3" />
-              <span className="font-body tracking-normal font-normal text-sm">Edit favorite games</span>
+              <div className="avatar avatar-simple avatar-xs">
+                <div className="border border-ui-600">
+                  <div>
+                    <span className="icon icon-pen-2 px-3 icon-16" />
+                  </div>
+                </div>
+              </div>
+              <span className="font-body tracking-normal font-normal text-sm pl-2">Edit favorite games</span>
             </button>
           </div>
         </div>
 
-        <Ad width="260" height="260" rounded={false} />
+        <Ad width="260" height="260" />
       </div>
     </>
   );

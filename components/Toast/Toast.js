@@ -26,10 +26,7 @@ export default function Toast(props) {
 
   useEffect(() => {
     if(isClosing === true) {
-      console.log(isClosing);
       const interval = setTimeout(() => {
-        console.log(props.id);
-        console.log(isClosing);
         uiContext.closeToastr(props.id);
       }, 440);
       return () => {clearTimeout(interval);}

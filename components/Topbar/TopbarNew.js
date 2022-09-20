@@ -96,7 +96,7 @@ export default function TopbarNew() {
   }
 
   return (
-    <div className="sticky top-0 z-50 bg-ui-800/90 navbar h-14 flex items-center border-b border-ui-700">
+    <div className="sticky top-0 z-50 bg-ui-800/50 navbar h-14 flex items-center border-b border-ui-700">
       <div className="container relative">
         <div
           className={`flex lg:gap-8 mx-auto px-2  ${
@@ -114,11 +114,11 @@ export default function TopbarNew() {
                 </label>
               </div>
               <div className="hidden lg:flex">
-                <ul className="tabs tabs-secondary translate-y-1">
+                <ul className="tabs tabs-secondary">
                   <li>
                     <Link href={`/prototype/home${prototype.getURLparams()}`}>
                       <a
-                        className={`${
+                        className={`pt-5 pb-5 ${
                           router.pathname.endsWith("prototype")
                             ? "is-active"
                             : ""
@@ -133,7 +133,7 @@ export default function TopbarNew() {
                   <li>
                     <Link href={`/prototype/shop${prototype.getURLparams()}`}>
                       <a
-                        className={`${
+                        className={`pt-5 pb-5 ${
                           router.pathname.includes("shop") ? "is-active" : ""
                         }`}
                       >
@@ -146,7 +146,7 @@ export default function TopbarNew() {
                       href={`/prototype/premium${prototype.getURLparams()}`}
                     >
                       <a
-                        className={`${
+                        className={`pt-5 pb-5 ${
                           router.pathname.includes("premium") ? "is-active" : ""
                         }`}
                       >
@@ -159,7 +159,7 @@ export default function TopbarNew() {
                       href={`/prototype/tracker${prototype.getURLparams()}`}
                     >
                       <a
-                        className={`${
+                        className={`pt-5 pb-5 ${
                           router.pathname.includes("tracker") ? "is-active" : ""
                         }`}
                       >
@@ -177,13 +177,14 @@ export default function TopbarNew() {
             </div>
             <div className="flex justify-end items-center gap-1 sm:gap-2">
               <Tooltip
+                placement="bottom"
                 tooltip={
                   <div className="relative text-sm">
                     <span>Search clans</span>
                   </div>
                 }
               >
-                <div className="rounded-full bg-ui-800 interactive">
+                <div className="rounded-full bg-ui-700 interactive">
                   <Link
                     href={`/prototype/clans/search${prototype.getURLparams()}`}
                   >
@@ -194,38 +195,13 @@ export default function TopbarNew() {
                 </div>
               </Tooltip>
 
-              <div className="hidden lg:flex gap-x-3 items-center bg-ui-800 h-9 pr-2 rounded-full hoverhighlight">
+              <div className="hidden lg:flex gap-x-3 items-center bg-ui-700 h-9 pr-2 rounded-full hoverhighlight">
                 <div className="inline-flex pl-4">
                   <Tooltip
                     placement="bottom"
                     tooltip={
-                      <div className="w-56 relative">
-                        <h6 className="mb-3 leading-tight">Prize money</h6>
-                        <div className="absolute -top-3 -right-2">
-                          <div className="w-12 h-12 flex items-center justify-center">
-                            <span className="icon icon-wallet-43" />
-                          </div>
-                          <div className="lottie-blur absolute -inset-1">
-                            <Lottie
-                              animationData={LottieExplosion}
-                              loop={false}
-                              autoplay={true}
-                            />
-                          </div>
-                        </div>
-                        <ul className="leading-tight space-y-2">
-                          <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Use</div>
-                            <div className="flex-1">
-                              To purchase Tokens or withdraw them to your bank
-                              or PayPal account.
-                            </div>
-                          </li>
-                          <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Get</div>
-                            <div className="flex-1">From Tournaments.</div>
-                          </li>
-                        </ul>
+                      <div className="relative text-sm">
+                        <span>View wallet</span>
                       </div>
                     }
                   >
@@ -236,7 +212,7 @@ export default function TopbarNew() {
                     </Link>
                   </Tooltip>
                 </div>
-                <div className="w-px h-full bg-ui-700" />
+                <div className="w-px h-full bg-ui-600" />
                 <div className="inline-flex">
                   <Tooltip
                     tooltip={
@@ -403,7 +379,7 @@ export default function TopbarNew() {
               <div className="dropdown dropdown-end">
                 <div
                   tabIndex="1"
-                  className="flex items-center rounded-full bg-ui-800 interactive"
+                  className="flex items-center rounded-full bg-ui-700 interactive"
                 >
                   <div className="avatar avatar-simple avatar-circle avatar-xs">
                     <div>
@@ -475,7 +451,7 @@ export default function TopbarNew() {
                         href="#"
                         rel="noopener noreferrer"
                       >
-                        <span className="icon icon-cloud-data-download" />
+                        <span className="icon icon-data-download" />
                         <span>Download tracker</span>
                       </a>
                     </li>
@@ -494,14 +470,14 @@ export default function TopbarNew() {
               <div className="dropdown dropdown-end">
                 <div
                   tabIndex="1"
-                  className="flex items-center rounded-full bg-ui-800 interactive"
+                  className="flex items-center rounded-full bg-ui-700 interactive"
                 >
                   <button
                     type="button"
                     className="button button-sm button-ghost rounded-full"
                   >
                     <span data-badge="." className="leading-[0]">
-                      <span className="icon icon-alarm" />
+                      <span className="icon icon-alarm text-ui-200" />
                     </span>
                   </button>
                   <span className="icon icon-arrow-sm-down mr-2" />
@@ -509,7 +485,7 @@ export default function TopbarNew() {
 
                 <div
                   tabIndex="1"
-                  className="dropdown-content bg-ui-800 w-[320px] sm:w-[420px] overflow-hidden shadow-xl"
+                  className="dropdown-content bg-ui-700 w-[320px] sm:w-[420px] overflow-hidden shadow-xl"
                 >
                   <div className="flex items-center justify-between mb-2 p-2">
                     <h4 className="text-2xl ml-2 pt-1">Notifications</h4>

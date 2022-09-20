@@ -110,7 +110,7 @@ export default function PrototypeStructure({ children, title }) {
                 htmlFor="drawer-prototype"
                 className="drawer-overlay"
               ></label>
-              <aside className="w-80 bg-ui-800 border-r border-ui-700 flex flex-col shadow-2xl">
+              <aside className="w-72 bg-ui-800 border-r border-ui-700 flex flex-col shadow-2xl">
                 <div className="h-14 flex items-center justify-between border-b border-ui-700 pl-7 pr-2">
                   <Link href={`/prototype/home${prototype.getURLparams()}`}>
                     <a className="flex items-center gap-2 interactive">

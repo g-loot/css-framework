@@ -341,31 +341,102 @@ export default function Chat(props) {
                                 <img src={messageBubble.content} alt="" />
                               </>
                             )}
-                            {messageBubble.reactions && (
-                              <div className="chat-bubble-reactions">
-                                {messageBubble.reactions.map(
-                                  (reaction, reactionIndex) => (
-                                    <div
-                                      key={reactionIndex}
-                                      className={`animate-slide-in-top ${
-                                        reaction.author.find((author) => {
-                                          author === 0;
-                                        })
-                                          ? "is-owner"
-                                          : ""
-                                      }`}
-                                      data-tooltip={
-                                        prototype.getUserByID(reaction.author)
-                                          ?.nickname
-                                      }
+                            <div className="chat-bubble-actions">
+                                <div className="chat-bubble-reactions">
+                                  {messageBubble.reactions?.map(
+                                    (reaction, reactionIndex) => (
+                                      <div
+                                        key={reactionIndex}
+                                        className={`animate-scale-in ${
+                                          reaction.author.find((author) => {
+                                            author === 0;
+                                          })
+                                            ? "is-owner"
+                                            : ""
+                                        }`}
+                                        data-tooltip={
+                                          prototype.getUserByID(reaction.author)
+                                            ?.nickname
+                                        }
+                                      >
+                                        <span>{reaction.emoji}</span>
+                                        <span>{reaction.author.length}</span>
+                                      </div>
+                                    )
+                                  )}
+                                  <div className="dropdown dropdown-bottom dropdown-center" data-tooltip="React">
+                                    <label
+                                      tabIndex="0"
+                                      className="rounded-full"
                                     >
-                                      <span>{reaction.emoji}</span>
-                                      <span>{reaction.author.length}</span>
+                                      <span className="icon icon-smile"></span>
+                                    </label>
+                                    <div
+                                      tabIndex="0"
+                                      className="dropdown-content bg-ui-500 p-1"
+                                    >
+                                      <ul className="menu menu-secondary menu-rounded menu-horizontal">
+                                        <li>
+                                          <a
+                                            onClick={addEmoji.bind(
+                                              this,
+                                              message.id,
+                                              messageBubble.id,
+                                              "❤️"
+                                            )}
+                                          >
+                                            <span>
+                                              <span className="text-xl">❤️</span>
+                                            </span>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a
+                                            onClick={addEmoji.bind(
+                                              this,
+                                              message.id,
+                                              messageBubble.id,
+                                              "👍"
+                                            )}
+                                          >
+                                            <span>
+                                              <span className="text-xl">👍</span>
+                                            </span>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a
+                                            onClick={addEmoji.bind(
+                                              this,
+                                              message.id,
+                                              messageBubble.id,
+                                              "😂"
+                                            )}
+                                          >
+                                            <span>
+                                              <span className="text-xl">😂</span>
+                                            </span>
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a
+                                            onClick={addEmoji.bind(
+                                              this,
+                                              message.id,
+                                              messageBubble.id,
+                                              "👏"
+                                            )}
+                                          >
+                                            <span>
+                                              <span className="text-xl">👏</span>
+                                            </span>
+                                          </a>
+                                        </li>
+                                      </ul>
                                     </div>
-                                  )
-                                )}
-                              </div>
-                            )}
+                                  </div>
+                                </div>
+                            </div>
                           </div>
                           <div className="chat-actions">
                             <div
