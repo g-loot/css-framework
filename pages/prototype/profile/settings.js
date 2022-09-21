@@ -187,14 +187,6 @@ export default function Home() {
                             <p className="text-ui-300 text-sm mt-2 leading-tight">
                               By connecting with Riot I acknowledge making my profile public to all users.
                             </p>
-                            {/*
-                              <div className="text-ui-300 text-sm mt-1 leading-tight">
-                                <label className="form-checkbox">
-                                  <input type="checkbox" name="policy" />
-                                  <i className="form-icon" /> I acknowledge signing in makes my profile public to all users.
-                                </label>
-                              </div>
-                            */}
                           </div>
                         </div>
                         <div className="form-group flex items-start gap-2">

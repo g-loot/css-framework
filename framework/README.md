@@ -15,7 +15,7 @@ For full documentation, visit [gloot-framework.netlify.app](https://gloot-framew
 Install tailwindcss and its peer dependencies via npm.
 
 ```bash
-npm install -D tailwindcss postcss autoprefixer tailwindcss-animation-delay
+npm install -D tailwindcss postcss autoprefixer
 ```
 
 ### 2. Install the framework

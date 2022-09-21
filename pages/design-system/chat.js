@@ -41,7 +41,6 @@ const DSpage = () => {
                   />
                 </div>
               </div>
-              <time dateTime="2008-02-14 20:00">Message sent 1.22pm</time>
             </div>
             <div className="chat-messages">
               <span className="leading-none uppercase text-sm">Kes2Band</span>
@@ -54,6 +53,7 @@ const DSpage = () => {
                   </div>
                 </div>
               </div>
+              <time dateTime="2008-02-14 20:00">Message sent 1.22pm</time>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ const DSpage = () => {
                   />
                 </div>
               </div>
-              <time dateTime="2008-02-14 20:00">Message sent 1.22pm</time>
+              
             </div>
             <div className="chat-messages">
               <span className="leading-none uppercase text-sm">Kes2Band</span>
@@ -99,6 +99,7 @@ const DSpage = () => {
 
                 </div>
               </div>
+              <time dateTime="2008-02-14 20:00">Message sent 1.22pm</time>
             </div>
           </div>
         </div>

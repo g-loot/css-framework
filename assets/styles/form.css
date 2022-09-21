@@ -209,19 +209,20 @@ label.button {
 
 :where(.form-radio,.form-checkbox, .form-toggle) {
   @apply
-  block
-  pl-12
-  py-2
-  pr-2
+  flex
   relative
   select-none
-  min-h-[24px]
-  min-w-[24px]
   ;
 
-  &:not(.is-disabled) {
+  label {
     @apply
+    pl-14
+    py-2
+    pr-2
     cursor-pointer
+    min-h-[24px]
+    min-w-[24px]
+    rounded
     ;
   }
 
@@ -234,6 +235,18 @@ label.button {
     * {
       @apply
       pointer-events-none
+      ;
+    }
+  }
+
+  &:is(li) {
+    label {
+      @apply
+      w-full
+      transition-all
+      duration-200
+      ease-[cubic-bezier(.7,0,.3,1)]
+      hover:bg-ui-700
       ;
     }
   }
@@ -252,55 +265,70 @@ label.button {
     clip: rect(0px, 0px, 0px, 0px);
 
     &:checked {
-      + .form-icon {
-        @apply
-        bg-interaction-500
-        shadow-[0_0_0_1px_rgb(var(--color-interaction-300))]
-        ;
+      + label {
+        &::before {
+          @apply
+          bg-interaction-500
+          shadow-[0_0_0_1px_rgb(var(--color-interaction-300))]
+          ;
+        }
       }
     }
   }
 
-  .form-icon {
+  label {
     @apply
-    absolute
-    overflow-hidden
-    inline-block
-    left-0
-    bottom-[calc(50%-0.75rem)]
-    transition-all
-    transform-gpu
-    duration-300
-    ease-[cubic-bezier(.9,0,.2,1)]
-    shadow-[0_0_0_1px_rgb(var(--color-ui-600))]
+    flex
+    items-center
     ;
+    &::before,
     &::after {
       @apply
       content-['']
       absolute
-      transition
+      overflow-hidden
+      block
+      left-0
+      my-auto
+      transition-all
+      transform-gpu
       duration-300
       ease-[cubic-bezier(.9,0,.2,1)]
+      shadow-[0_0_0_1px_rgb(var(--color-ui-600))]
+      ;
+    }
+    &::before {
+      @apply
+      shadow-[0_0_0_1px_rgb(var(--color-ui-600))]
+      ;
+    }
+    &::after {
+      @apply
+      absolute
       ;
     }
   }
 
   input:checked {
-    + .form-icon {
-      @apply
-      bg-gradient-to-b
-      from-interaction-700
-      to-interaction-300
-      shadow-[0_0_0_2px_rgb(var(--color-interaction-300))]
-      ;
+    + label {
+      &::before {
+        @apply
+        bg-gradient-to-b
+        from-interaction-700
+        to-interaction-300
+        shadow-[0_0_0_2px_rgb(var(--color-interaction-300))]
+        ;
+      }
     }
   }
   input:not(:checked) {
-    + .form-icon {
-      @apply
-      bg-ui-700
-      shadow-[0_0_0_1px_rgb(var(--color-ui-500))]
-      ;
+    + label {
+      &::before {
+        @apply
+        bg-ui-700
+        shadow-[0_0_0_1px_rgb(var(--color-ui-500))]
+        ;
+      }
     }
   }
 
@@ -308,58 +336,57 @@ label.button {
   &:not(.is-disabled) {
     &:focus-visible {
       input {
-        + .form-icon {
-          @apply
-          outline
-          outline-offset-2
-          outline-ui-500
-          ;
+        + label {
+          &::before {
+            @apply
+            outline
+            outline-offset-2
+            outline-ui-500
+            ;
+          }
         }
       }
       input:checked {
-        + .form-icon {
-          @apply
-          outline
-          outline-interaction-300
-          ;
+        + label {
+          &::before {
+            @apply
+            outline
+            outline-interaction-300
+            ;
+          }
         }
       }
     }
   }
 
-
   /* radio */
 
   &.form-radio {
-    .form-icon {
-      @apply
-      h-6
-      w-6
-      rounded-full
-      shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
-      ;
-      &:not([class*=left-]){
+    label {
+      &::before {
         @apply
-        left-2
+        h-6
+        w-6
+        rounded-full
+        shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
+        left-3
         ;
       }
-
       &::after {
         @apply
         w-4
         h-4
         rounded-full
-        left-1
-        top-1
+        left-4
         ;
       }
     }
 
     input:not(:checked){
-      + .form-icon {
+      + label {
         &::after {
           @apply
-          translate-y-2
+          scale-0
           opacity-0
           bg-gradient-to-b
           from-ui-300
@@ -370,10 +397,10 @@ label.button {
     }
 
     input:checked {
-      + .form-icon {
+      + label {
         &::after {
           @apply
-          translate-y-0
+          scale-100
           opacity-100
           bg-gradient-to-b
           from-ui-500
@@ -387,16 +414,14 @@ label.button {
   /* toggle */
 
   &.form-toggle {
-    .form-icon {
-      @apply
-      h-6
-      w-10
-      rounded-full
-      shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
-      ;
-      &:not([class*=left-]){
+    label {
+      &::before {
         @apply
-        left-0
+        h-6
+        w-10
+        rounded-full
+        shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
+        left-1
         ;
       }
 
@@ -406,14 +431,13 @@ label.button {
         h-4
         rounded-full
         bg-ui-800
-        left-1
-        top-1
+        left-2
         ;
       }
     }
 
     input:not(:checked){
-      + .form-icon {
+      + label {
         &::after {
           @apply
           translate-x-0
@@ -426,7 +450,7 @@ label.button {
     }
 
     input:checked {
-      + .form-icon {
+      + label {
         &::after {
           @apply
           translate-x-4
@@ -442,16 +466,14 @@ label.button {
   /* checkbox */
 
   &.form-checkbox {
-    .form-icon {
-      @apply
-      h-6
-      w-6
-      rounded
-      shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
-      ;
-      &:not([class*=left-]){
+    label {
+      &::before {
         @apply
-        left-2
+        h-6
+        w-6
+        rounded
+        shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
+        left-3
         ;
       }
 
@@ -460,17 +482,17 @@ label.button {
         w-4
         h-2.5
         border-[3px]
+        shadow-[0_0_0_0_rgb(var(--color-ui-400))]
         border-ui-800/0
         border-l-ui-800
         border-b-ui-800
-        left-1
-        top-1
+        left-4
         ;
       }
     }
 
     input:not(:checked){
-      + .form-icon {
+      + label {
         &::after {
           @apply
           scale-110
@@ -482,10 +504,11 @@ label.button {
     }
 
     input:indeterminate {
-      + .form-icon {
+      + label {
         &::after {
           @apply
           h-1
+          -translate-y-0.5
           border-l-ui-800/0
           ;
         }
@@ -494,14 +517,83 @@ label.button {
 
     input:checked,
     input:indeterminate {
-      + .form-icon {
+      + label {
         &::after {
           @apply
-          translate-y-0
+          -translate-y-0.5
           -rotate-45
           scale-100
           opacity-100
           ;
+        }
+      }
+    }
+  }
+
+  /* align to end */
+
+  &.form-end {
+    @apply
+    text-right
+    justify-end
+    ;
+    label {
+      @apply
+      pr-14
+      pl-2
+      ;
+      &::before,
+      &::after {
+        @apply
+        left-auto
+        ;
+      }
+    }
+    &.form-radio,
+    &.form-checkbox {
+      label {
+        &::before {
+          @apply
+          right-3
+          ;
+        }
+        &::after {
+          @apply
+          right-4
+          ;
+        }
+      }
+    }
+    &.form-toggle {
+      label {
+        &::before {
+          @apply
+          right-1
+          ;
+        }
+        &::after {
+          @apply
+          right-2
+          ;
+        }
+      }
+      input:not(:checked){
+        + label {
+          &::after {
+            @apply
+            -translate-x-4
+            ;
+          }
+        }
+      }
+  
+      input:checked {
+        + label {
+          &::after {
+            @apply
+            translate-x-0
+            ;
+          }
         }
       }
     }
@@ -512,17 +604,22 @@ label.button {
 
   &:not([disabled]),
   &:not(.is-disabled) {
+    label {
+      @apply
+      cursor-pointer
+      ;
+    }
     &:focus-visible {
       @apply
       outline-none
       ;
-      .form-icon {
+      label {
         @apply
-        outline
-        outline-offset-2
-        outline-1
-        outline-main
-        ;      
+        focus:outline
+        focus:outline-offset-2
+        focus:outline-1
+        focus:outline-main
+        ;
       }
     }
   }
@@ -812,7 +909,6 @@ label.button {
   flex
   box-border
   ;
-  
 
   * {
     @apply
@@ -970,14 +1066,14 @@ label.button {
         text-error-500
         ;
         input {
-          &:checked + .form-icon {
+          &:checked + label::before {
             @apply
             bg-error-500
             from-error-700
             to-error-300
             ;
           }
-          & + .form-icon {
+          & + label::before {
             @apply
             shadow-[0_0_0_2px_rgb(var(--color-error-300))]
           }
@@ -1030,14 +1126,14 @@ label.button {
         text-interaction-500
         ;
         input {
-          &:checked + .form-icon {
+          &:checked + label::before {
             @apply
             bg-interaction-500
             from-interaction-700
             to-interaction-300
             ;
           }
-          & + .form-icon {
+          & + label::before {
             @apply
             shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
           }
@@ -1090,14 +1186,14 @@ label.button {
         text-attention-500
         ;
         input {
-          &:checked + .form-icon {
+          &:checked + label::before {
             @apply
             bg-attention-500
             from-attention-700
             to-attention-300
             ;
           }
-          & + .form-icon {
+          & + label::before {
             @apply
             shadow-[0_0_0_2px_rgb(var(--color-attention-300))]
           }

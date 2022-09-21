@@ -73,10 +73,10 @@ export default function ClanSearch() {
               </div>
             </div>
             <div className="form-group pb-1 flex items-center gap-2">
-              <label className="form-toggle">
-                <input type="checkbox" name="notification" />
-                <i className="form-icon" /> Joinable only
-              </label>
+              <div className="form-toggle">
+                <input type="checkbox" name="joinableOnly" id="joinableOnly" />
+                <label htmlFor="joinableOnly">Joinable only</label>
+              </div>
               <span className="icon icon-b-add text-ui-300" />
             </div>
             <div className="w-full h-px xl:h-auto xl:w-px bg-ui-700 self-stretch justify-self-stretch" />

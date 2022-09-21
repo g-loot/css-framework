@@ -17,14 +17,19 @@ const DSpage = () => {
                 <div className="w-full flex gap-4 items-center">
                   <div className="flex-1 space-y-4">
                     <div className="form-group">
-                      <label className="form-radio">
-                        <input type="radio" name="gender" defaultChecked />
-                        <i className="form-icon" /> Male
-                      </label>
-                      <label className="form-radio">
-                        <input type="radio" name="gender" />
-                        <i className="form-icon" /> Female
-                      </label>
+                      <div className="form-radio">
+                        <input
+                          type="radio"
+                          name="gender"
+                          id="genderMale"
+                          defaultChecked
+                        />
+                        <label htmlFor="genderMale">Male</label>
+                      </div>
+                      <div className="form-radio">
+                        <input type="radio" name="gender" id="genderFemale" />
+                        <label htmlFor="genderFemale">Female</label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -53,16 +58,26 @@ const DSpage = () => {
                 <div className="w-full flex gap-4 items-center">
                   <div className="flex-1 space-y-4">
                     <div className="form-group">
-                      <label className="form-toggle">
-                        <input type="checkbox" name="notification" />
-                        <i className="form-icon" /> Send me notifications with
-                        news and tips
-                      </label>
-                      <label className="form-toggle">
-                        <input type="checkbox" name="notification" />
-                        <i className="form-icon" /> Send me emails with news and
-                        tips
-                      </label>
+                      <div className="form-toggle">
+                        <input
+                          type="checkbox"
+                          name="notification"
+                          id="notificationPush"
+                        />
+                        <label htmlFor="notificationPush">
+                          Send me notifications with news and tips
+                        </label>
+                      </div>
+                      <div className="form-toggle">
+                        <input
+                          type="checkbox"
+                          name="notification"
+                          id="notificationEmail"
+                        />
+                        <label htmlFor="notificationEmail">
+                          Send me emails with news and tips
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -91,25 +106,22 @@ const DSpage = () => {
                 <div className="w-full flex gap-4 items-center">
                   <div className="flex-1 space-y-4">
                     <div className="form-group">
-                      <label className="form-checkbox">
-                        <input type="checkbox" name="policy" />
-                        <i className="form-icon" /> I agree with your policy
-                      </label>
-                      <label className="form-checkbox">
-                        <input type="checkbox" name="policy" />
-                        <i className="form-icon" /> I confirm that I have read
-                        the policity
-                      </label>
-                    </div>
-                    <div className="form-group">
-                      <label className="form-checkbox">
+                      <div className="form-checkbox">
+                        <input type="checkbox" name="policy" id="policyAgree" />
+                        <label htmlFor="policyAgree">
+                          I agree with your policy
+                        </label>
+                      </div>
+                      <div className="form-checkbox">
                         <input
                           type="checkbox"
-                          name="select-all"
-                          indeterminate="true"
+                          name="policy"
+                          id="policyConfirm"
                         />
-                        <i className="form-icon" /> Select all
-                      </label>
+                        <label htmlFor="policyConfirm">
+                          I confirm that I have read the policity
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -141,29 +153,44 @@ const DSpage = () => {
                       className="form-group"
                       data-error="Please choose an option."
                     >
-                      <label className="form-radio">
-                        <input type="radio" name="input-error" />
-                        <i className="form-icon" /> Male
-                      </label>
+                      <div className="form-radio">
+                        <input
+                          type="radio"
+                          name="input-error"
+                          id="inputError"
+                        />
+                        <label htmlFor="inputError">Male</label>
+                      </div>
                     </div>
                     <div
                       className="form-group"
                       data-success="Please choose an option."
                     >
-                      <label className="form-toggle">
-                        <input type="checkbox" name="input-success" />
-                        <i className="form-icon" /> I agree with your policy
-                      </label>
+                      <div className="form-toggle">
+                        <input
+                          type="checkbox"
+                          name="input-success"
+                          id="inputSuccess"
+                        />
+                        <label htmlFor="inputSuccess">
+                          I agree with your policy
+                        </label>
+                      </div>
                     </div>
                     <div
                       className="form-group"
                       data-attention="Please choose an option."
                     >
-                      <label className="form-checkbox">
-                        <input type="checkbox" name="input-attention" />
-                        <i className="form-icon" /> I confirm that I have read
-                        the policity
-                      </label>
+                      <div className="form-checkbox">
+                        <input
+                          type="checkbox"
+                          name="input-attention"
+                          id="inputAttention"
+                        />
+                        <label htmlFor="inputAttention">
+                          I confirm that I have read the policity
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -192,23 +219,34 @@ const DSpage = () => {
                 <div className="w-full flex gap-4 items-center">
                   <div className="flex-1 space-y-4">
                     <div className="form-group">
-                      <label className="form-radio is-disabled">
-                        <input type="radio" name="input-error" />
-                        <i className="form-icon" /> Male
-                      </label>
+                      <div className="form-radio is-disabled">
+                        <input type="radio" name="radio" id="radioDisabled" />
+                        <label htmlFor="radioDisabled">Male</label>
+                      </div>
                     </div>
                     <div className="form-group">
-                      <label className="form-toggle is-disabled">
-                        <input type="checkbox" name="input-success" />
-                        <i className="form-icon" /> I agree with your policy
-                      </label>
+                      <div className="form-toggle is-disabled">
+                        <input
+                          type="checkbox"
+                          name="toggle"
+                          id="toggleDisabled"
+                        />
+                        <label htmlFor="toggleDisabled">
+                          I agree with your policy
+                        </label>
+                      </div>
                     </div>
                     <div className="form-group">
-                      <label className="form-checkbox is-disabled">
-                        <input type="checkbox" name="input-attention" />
-                        <i className="form-icon" /> I confirm that I have read
-                        the policity
-                      </label>
+                      <div className="form-checkbox is-disabled">
+                        <input
+                          type="checkbox"
+                          name="checkbox"
+                          id="checkboxDisabled"
+                        />
+                        <label htmlFor="checkboxDisabled">
+                          I confirm that I have read the policity
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -219,6 +257,110 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/1j2ueya3/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Align to end */}
+      <div className="mb-12" id="align-end">
+        <h2 className="h3 mb-3">Align to end</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="flex-1 space-y-4">
+                    <div className="form-radio form-end">
+                      <input type="radio" name="radio" id="radioAlignEnd" />
+                      <label htmlFor="radioAlignEnd">Male</label>
+                    </div>
+
+                    <div className="form-toggle form-end">
+                      <input
+                        type="checkbox"
+                        name="toggle"
+                        id="toggleAlignEnd"
+                      />
+                      <label htmlFor="toggleAlignEnd">
+                        I agree with your policy
+                      </label>
+                    </div>
+
+                    <div className="form-checkbox form-end">
+                      <input
+                        type="checkbox"
+                        name="checkbox"
+                        id="checkboxAlignEnd"
+                      />
+                      <label htmlFor="checkboxAlignEnd">
+                        I confirm that I have read the policity
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/8cpyrb9v/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* As list */}
+      <div className="mb-12" id="as-list">
+        <h2 className="h3 mb-3">As list</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="flex-1 space-y-4">
+                    <ul>
+                      <li className="form-radio">
+                        <input type="radio" name="radio" id="radioAsList" />
+                        <label htmlFor="radioAsList">Male</label>
+                      </li>
+                      <li className="form-toggle">
+                        <input
+                          type="checkbox"
+                          name="toggle"
+                          id="toggleAsList"
+                        />
+                        <label htmlFor="toggleAsList">
+                          I agree with your policy
+                        </label>
+                      </li>
+                      <li className="form-checkbox">
+                        <input
+                          type="checkbox"
+                          name="checkbox"
+                          id="checkboxAsList"
+                        />
+                        <label htmlFor="checkboxAsList">
+                          I confirm that I have read the policity
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/r4vhztyq/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>
@@ -307,7 +449,6 @@ const DSpage = () => {
                           }}
                         />
                       </label>
-                      
                     </div>
                   </div>
                 </div>

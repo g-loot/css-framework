@@ -125,7 +125,7 @@ const DSpage = () => {
             <tbody>
               <tr>
                 <td className="w-1/3">
-                  <b>Gradient to the bottom</b>
+                  <b>Linear gradient to the bottom</b>
                 </td>
                 <td className="w-1/3">
                   <span className="tooltip tooltip-right" data-tooltip="Copy">
@@ -146,11 +146,11 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradients from top to bottom</td>
+                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to bottom</td>
               </tr>
               <tr>
                 <td className="w-1/3">
-                  <b>Gradient to the right</b>
+                  <b>Linear gradient to the right</b>
                 </td>
                 <td className="w-1/3">
                   <span className="tooltip tooltip-right" data-tooltip="Copy">
@@ -171,11 +171,11 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradients from top to right</td>
+                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to right</td>
               </tr>
               <tr>
                 <td className="w-1/3">
-                  <b>Gradient to the top</b>
+                  <b>Linear gradient to the top</b>
                 </td>
                 <td className="w-1/3">
                   <span className="tooltip tooltip-right" data-tooltip="Copy">
@@ -196,11 +196,11 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradients from top to top</td>
+                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to top</td>
               </tr>
               <tr>
                 <td className="w-1/3">
-                  <b>Gradient to the left</b>
+                  <b>Linear gradient to the left</b>
                 </td>
                 <td className="w-1/3">
                   <span className="tooltip tooltip-right" data-tooltip="Copy">
@@ -221,11 +221,11 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradients from top to left</td>
+                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to left</td>
               </tr>
               <tr>
                 <td className="w-1/3">
-                  <b>Gradient to the bottom right</b>
+                  <b>Linear gradient to the bottom right</b>
                 </td>
                 <td className="w-1/3">
                   <span className="tooltip tooltip-right" data-tooltip="Copy">
@@ -246,11 +246,11 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradients from top to bottom right</td>
+                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to bottom right</td>
               </tr>
               <tr>
                 <td className="w-1/3">
-                  <b>Gradient to the bottom left</b>
+                  <b>Linear gradient to the bottom left</b>
                 </td>
                 <td className="w-1/3">
                   <span className="tooltip tooltip-right" data-tooltip="Copy">
@@ -271,11 +271,11 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradients from top to bottom left</td>
+                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to bottom left</td>
               </tr>
               <tr>
                 <td className="w-1/3">
-                  <b>Gradient to the top right</b>
+                  <b>Linear gradient to the top right</b>
                 </td>
                 <td className="w-1/3">
                   <span className="tooltip tooltip-right" data-tooltip="Copy">
@@ -296,11 +296,11 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradients from top to top right</td>
+                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to top right</td>
               </tr>
               <tr>
                 <td className="w-1/3">
-                  <b>Gradient to the top left</b>
+                  <b>Linear gradient to the top left</b>
                 </td>
                 <td className="w-1/3">
                   <span className="tooltip tooltip-right" data-tooltip="Copy">
@@ -321,7 +321,82 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradients from top to top left</td>
+                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to top left</td>
+              </tr>
+              <tr>
+                <td className="w-1/3">
+                  <b>Radial gradient from the center</b>
+                </td>
+                <td className="w-1/3">
+                  <span className="tooltip tooltip-right" data-tooltip="Copy">
+                    <code
+                      className="interactive text-xs"
+                      onClick={() => {
+                        uiContext.openToastr({
+                          size: "small",
+                          text: "Class name copied to your clipboard",
+                          color: "green",
+                          autoDelete: true,
+                          autoDeleteDelay: 2500,
+                        });
+                        navigator.clipboard.writeText("bg-gradient-radial");
+                      }}
+                    >
+                      .bg-gradient-radial
+                    </code>
+                  </span>
+                </td>
+                <td className="w-1/3 text-sm text-ui-300">Creates a radial gradient from the center</td>
+              </tr>
+              <tr>
+                <td className="w-1/3">
+                  <b>Radial gradient spotlight</b>
+                </td>
+                <td className="w-1/3">
+                  <span className="tooltip tooltip-right" data-tooltip="Copy">
+                    <code
+                      className="interactive text-xs"
+                      onClick={() => {
+                        uiContext.openToastr({
+                          size: "small",
+                          text: "Class name copied to your clipboard",
+                          color: "green",
+                          autoDelete: true,
+                          autoDeleteDelay: 2500,
+                        });
+                        navigator.clipboard.writeText("bg-gradient-radial-spotlight");
+                      }}
+                    >
+                      .bg-gradient-radial-spotlight
+                    </code>
+                  </span>
+                </td>
+                <td className="w-1/3 text-sm text-ui-300">Creates a spotlight radial gradient</td>
+              </tr>
+              <tr>
+                <td className="w-1/3">
+                  <b>Radial gradient to the bottom</b>
+                </td>
+                <td className="w-1/3">
+                  <span className="tooltip tooltip-right" data-tooltip="Copy">
+                    <code
+                      className="interactive text-xs"
+                      onClick={() => {
+                        uiContext.openToastr({
+                          size: "small",
+                          text: "Class name copied to your clipboard",
+                          color: "green",
+                          autoDelete: true,
+                          autoDeleteDelay: 2500,
+                        });
+                        navigator.clipboard.writeText("bg-gradient-radial-to-b");
+                      }}
+                    >
+                      .bg-gradient-radial-to-b
+                    </code>
+                  </span>
+                </td>
+                <td className="w-1/3 text-sm text-ui-300">Creates a radial gradient to the bottom</td>
               </tr>
             </tbody>
           </table>

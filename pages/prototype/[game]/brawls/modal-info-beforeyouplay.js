@@ -75,10 +75,10 @@ export default function ModalInfoBeforeYouPlay(props) {
                 place on the leaderboard.
               </p>
               <div className="flex justify-center md:justify-start">
-                <label className="form-checkbox mt-3">
-                  <input type="checkbox" name="policy" />
-                  <i className="form-icon" /> Got it! Skip this next time
-                </label>
+                <div className="form-checkbox mt-3">
+                  <input type="checkbox" name="policy" id="skip" />
+                  <label htmlFor="skip">Got it! Skip this next time</label>
+                </div>
               </div>
             </div>
             <div className="modal-action">

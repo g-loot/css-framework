@@ -119,26 +119,26 @@ const DSpage = () => {
                 Here you can consent to share your data with the following partners:
               </p>
               <div className='form-group'>
-                <label className="form-toggle">
-                  <input type="checkbox" name="data-meta" />
-                  <i className="form-icon" /> Meta
-                </label>
-                <label className="form-toggle">
-                  <input type="checkbox" name="data-google" defaultChecked />
-                  <i className="form-icon" /> Google
-                </label>
-                <label className="form-toggle">
-                  <input type="checkbox" name="data-adroll" defaultChecked />
-                  <i className="form-icon" /> Adroll
-                </label>
-                <label className="form-toggle">
-                  <input type="checkbox" name="data-bing" />
-                  <i className="form-icon" /> Bing
-                </label>
-                <label className="form-toggle">
-                  <input type="checkbox" name="data-quantcast" />
-                  <i className="form-icon" /> Quantcast
-                </label>
+                <div className="form-toggle">
+                  <input type="checkbox" name="data-meta" id="data-meta" />
+                  <label htmlFor="data-meta">Meta</label>
+                </div>
+                <div className="form-toggle">
+                  <input type="checkbox" name="data-google" id="data-google" defaultChecked />
+                  <label htmlFor="data-google">Google</label>
+                </div>
+                <div className="form-toggle">
+                  <input type="checkbox" name="data-adroll" id="data-adroll" defaultChecked />
+                  <label htmlFor="data-adroll">Adroll</label>
+                </div>
+                <div className="form-toggle">
+                  <input type="checkbox" name="data-bing" id="data-bing" />
+                  <label htmlFor="data-bing">Bing</label>
+                </div>
+                <div className="form-toggle">
+                  <input type="checkbox" name="data-quantcast" id="data-quantcast" />
+                  <label htmlFor="data-quantcast">Quantcast</label>
+                </div>
               </div>
             </section>
             <section className='mt-4 lg:mt-8 pt-4 lg:pt-8 border-t border-ui-600 flex gap-4'>

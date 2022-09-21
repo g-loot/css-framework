@@ -173,20 +173,28 @@
   > time {
     @apply
     absolute
-    whitespace-nowrap
-    text-xs
-    text-ui-300
-    transition-colors
-    duration-200
-    ease-in-out
     -bottom-7
-    hover:text-ui-200
     ;
   }
   > .avatar {
     @apply
     -mb-6
     shrink-0
+    ;
+  }
+}
+
+.chat-messages,
+.chat-author {
+  time {
+    @apply
+    whitespace-nowrap
+    text-xs
+    text-ui-300
+    transition-colors
+    duration-200
+    ease-in-out
+    hover:text-ui-200
     ;
   }
 }
