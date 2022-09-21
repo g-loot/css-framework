@@ -10,6 +10,9 @@
 .animate-delay {
   animation-delay: var(--delay, 0.3s) !important;
 }
+.transition-delay {
+  transition-delay: var(--delay, 0.3s) !important;
+}
 
 /* iteration count */
 .animate-infinite {

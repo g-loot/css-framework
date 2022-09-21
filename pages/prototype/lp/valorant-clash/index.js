@@ -53,17 +53,17 @@ const PrototypePage = () => {
         <div className="relative z-20 container max-w-lg mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-center">
           <div>
             <img
-              className="w-72 md:w-[450px]"
+              className="w-72 md:w-[450px] mx-auto md:mx-0"
               src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/G-Loot_Valorant_Clash_Logo.svg"
               width="auto"
               height="auto"
               alt=""
             />
           </div>
-          <div className="pl-8 relative border-l border-ui-100/30">
-            <div className="h1 leading-none mb-4 flex gap-3 items-baseline">
+          <div className=" relative lg:border-l lg:border-ui-100/30 text-center lg:text-left px-4 lg:pr-0 lg:pl-8">
+            <div className="h1 leading-none mb-4 flex items-baseline justify-center lg:justify-start">
               <h1 className="sr-only">Where clans collide</h1>
-              <div className="relative overflow-hidden" aria-hidden="true">
+              <div className="relative overflow-hidden mr-3" aria-hidden="true">
                 <span className="opacity-0">Where</span>
                 <span
                   className="absolute inset-0 animate-slide-in-bottom animate-delay"
@@ -72,7 +72,7 @@ const PrototypePage = () => {
                   Where
                 </span>
               </div>
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden mr-3">
                 <span className="opacity-0">clans</span>
                 <span
                   className="absolute inset-0 animate-slide-in-bottom animate-delay"
@@ -87,14 +87,14 @@ const PrototypePage = () => {
                   className="absolute inset-0 animate-slide-in-bottom animate-delay"
                   style={{ "--delay": "calc(6 * 0.2s)" }}
                 >
-                  <span className="text-gradient bg-gradient-to-r from-interaction-300 to-blue-500">
+                  <span className="text-gradient bg-gradient-to-r from-interaction-500 to-blue-500">
                     collide
                   </span>
                 </span>
               </div>
             </div>
             <h2 className="font-headings text-2xl font-normal mb-3">OCTOBER 28 - NOVEMBER 27</h2>
-            <p className="text-mono-100 opacity-75 max-w-xs text-lg">
+            <p className="text-mono-100 opacity-75 max-w-xs text-lg mx-auto lg:mx-0">
               We are proud to announce their first Premier VALORANT tournament
               for all players in the EMEA region: G-Loot VALORANT Clash.
             </p>

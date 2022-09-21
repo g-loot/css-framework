@@ -2,7 +2,7 @@ export default function ValorantClashTabPartake() {
   return (
     <>
       <section className="py-24">
-        <div className="container max-w-lg mx-auto">
+        <div className="container max-w-lg mx-auto px-4 lg:px-0">
           <div className="animate-pulse">
           <img className="mx-auto animate-[loader-rotate_30s_linear_infinite] opacity-50" src="https://res.cloudinary.com/gloot/image/upload/v1663770400/Marketing/2022_Valorant_clash/Valorant_Clash_spike.svg" width="75" height="75" alt="" />
           </div>
@@ -22,7 +22,7 @@ export default function ValorantClashTabPartake() {
             className="mt-10 animate-slide-in-bottom animate-delay text-center"
             style={{ "--delay": "calc(3 * 0.1s)" }}
           >
-            <button type="button" className="button button-primary w-52">
+            <button type="button" className="button button-lg button-claim w-52 is-shining">
               <span>Create account</span>
             </button>
           </div>

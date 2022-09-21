@@ -61,27 +61,26 @@ export default function ValorantClashTabLearnMore() {
         >
           <div
             className="relative z-10 container max-w-lg mx-auto text-center !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000"
-            data-aos="fade-up"
           >
             <h2 className="mb-8">Clash dates</h2>
-            <div className="flex gap-4 items-stretch md:justify-center overflow-auto scrollbar-hidden whitespace-nowrap">
-              <div className="p-4">
-                <h3>Qualifiers</h3>
-                <p className="font-headings uppercase text-xl text-ui-300">
+            <div className="flex flex-col lg:flex-row gap-4 items-stretch justify-center whitespace-nowrap px-4 lg:px-0">
+              <div className="p-4 transition-delay !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000" data-aos="fade-up" style={{ "--delay": "calc(1 * 0.1s)" }}>
+                <h3 className="text-ui-200">Qualifiers</h3>
+                <p className="font-headings uppercase tracking-wider text-xl text-ui-300">
                   October
                 </p>
               </div>
-              <span className="bg-ui-100 opacity-25 w-px" />
-              <div className="p-4">
-                <h3>Showdown</h3>
-                <p className="font-headings uppercase text-xl text-ui-300">
+              <span className="bg-ui-100 opacity-25 h-px w-full lg:w-px lg:h-auto" data-aos="flip-up" />
+              <div className="p-4 transition-delay !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000" data-aos="fade-up" style={{ "--delay": "calc(2 * 0.1s)" }}>
+                <h3 className="text-ui-100">Showdown</h3>
+                <p className="font-headings uppercase tracking-wider text-xl text-ui-300">
                   October 28-30
                 </p>
               </div>
-              <span className="bg-ui-100 opacity-25 w-px" />
-              <div className="p-4">
+              <span className="bg-ui-100 opacity-25 h-px w-full lg:w-px lg:h-auto" data-aos="flip-up" />
+              <div className="p-4 transition-delay !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000" data-aos="fade-up" style={{ "--delay": "calc(3 * 0.1s)" }}>
                 <h3 className="text-main">Grand Final</h3>
-                <p className="font-headings uppercase text-xl text-ui-300">
+                <p className="font-headings uppercase tracking-wider text-xl text-ui-300">
                   November 25-27
                 </p>
               </div>
@@ -99,7 +98,7 @@ export default function ValorantClashTabLearnMore() {
           data-aos="fade-up"
         >
           <h2 className="mb-8">Format</h2>
-          <div className="max-w-[60ch] mx-auto space-y-8">
+          <div className="max-w-[60ch] mx-auto space-y-8 px-4 lg:px-0">
             <p className="text-lg text-ui-300 leading-loose">
               The tournament will feature invited pro teams from VCT in the EMEA
               region as well as a chance for anyone else to qualify.
@@ -140,7 +139,7 @@ export default function ValorantClashTabLearnMore() {
           >
             <h2 className="mb-8">Contact us</h2>
             <p
-              className="text-gradient text-lg leading-loose bg-gradient-to-r from-interaction-500 to-blue-500 animate-slide-in-bottom animate-delay text-center"
+              className="text-gradient text-lg leading-loose bg-gradient-to-r from-interaction-500 to-blue-500 animate-slide-in-bottom animate-delay text-center px-4 lg:px-0"
               style={{ "--delay": "calc(2 * 0.1s)" }}
             >
               If you have any questions about the tournament, partnership, team
@@ -152,7 +151,7 @@ export default function ValorantClashTabLearnMore() {
                 href="https://discord.gg/gloot"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button button-primary w-52"
+                className="button button-lg button-claim w-52"
               >
                 <span className="icon icon-discord" />
                 <span>Contact us</span>
