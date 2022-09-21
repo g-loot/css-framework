@@ -15,12 +15,14 @@ const TabsItems = [
     label: "partake",
     url: "partake",
     component: ValorantClashTabPartake,
+    disabled: false,
   },
   {
     sublabel: "I want to",
     label: "learn more",
     url: "learn-more",
     component: ValorantClashTabLearnMore,
+    disabled: false,
   },
   {
     sublabel: "I want to",
