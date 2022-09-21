@@ -6,6 +6,7 @@ import LottieExplosion1 from "../../../../assets/animations/explosion-4.json";
 
 export default function ValorantClashTabItem(props) {
   const [StartAnim1, setStartAnim1] = useState(false);
+  const item = props.item;
 
   function handleStartAnim1() {
     setStartAnim1(true);
@@ -18,37 +19,37 @@ export default function ValorantClashTabItem(props) {
   return (
     <>
       <li
-        className={`flex-1 animate-slide-in-right animate-delay relative ${props.item.disabled ? "pointer-events-none" : ""}`}
+        className={`flex-1 animate-slide-in-right animate-delay relative ${(item.disabled != undefined && item.disabled === true) ? "pointer-events-none" : ""}`}
         onClick={handleStartAnim1}
         style={{
           "--delay": `calc( ${props.index} * 0.1s)`,
         }}
       >
-        <Link href={`?tab=${props.item.url}`}>
+        <Link href={`?tab=${item.url}`}>
           <button
             type="button"
-            className={`w-full min-w-xs lg:min-w-[0px] cursor-pointer hoverinside:opacity-100 hoverinside:translate-y-0 hoverinside:scale-100 relative rounded-2xl bg-gradient-to-b p-0.5 overflow-hidden active:scale-[0.99] transition duration-100 ${props.item.disabled ? "from-ui-800 to-ui-800" : "from-ui-500 to-ui-800"} ${
-              props.selectedTab === props.item.url ? "is-active" : ""
+            className={`w-full min-w-xs lg:min-w-[0px] cursor-pointer hoverinside:opacity-100 hoverinside:translate-y-0 hoverinside:scale-100 relative rounded-2xl bg-gradient-to-b p-0.5 overflow-hidden active:scale-[0.99] transition duration-100 ${(item.disabled != undefined && item.disabled === true) ? "from-ui-800 to-ui-800" : "from-ui-500 to-ui-800"} ${
+              props.selectedTab === item.url ? "is-active" : ""
             }
-            ${props.item.disabled ? "focus:outline-none pointer-events-none" : "focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main"}
+            ${(item.disabled != undefined && item.disabled === true) ? "focus:outline-none pointer-events-none" : "focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main"}
             `}
           >
-            <div className={`relative z-10 rounded-[calc(1rem-0.125rem)] bg-gradient-to-b w-full flex props.items-center justify-center text-center px-4 py-8 ${props.item.disabled ? "from-ui-900 to-ui-900" : "from-ui-900 to-ui-800"}`}>
+            <div className={`relative z-10 rounded-[calc(1rem-0.125rem)] bg-gradient-to-b w-full flex items-center justify-center text-center px-4 py-8 ${(item.disabled != undefined && item.disabled === true) ? "from-ui-900 to-ui-900" : "from-ui-900 to-ui-800"}`}>
               <div
-                className={`font-headings leading-none tracking-wide select-none ${props.item.disabled ? "opacity-50" : ""}`}
+                className={`font-headings leading-none tracking-wide select-none ${(item.disabled != undefined && item.disabled === true) ? "opacity-50" : ""}`}
               >
                 <div
                   className={`text-2xl italic text-ui-300 origin-bottom hoverinside duration-500 transition ease-[cubic-bezier(0.8,0,0.2,1)] ${
-                    props.selectedTab === props.item.url
+                    props.selectedTab === item.url
                       ? ""
                       : "opacity-40 scale-75"
                   }`}
                 >
-                  {props.item.sublabel}
+                  {item.sublabel}
                 </div>
                 <div
                   className={`text-4xl font-bold italic text-ui-100 origin-top hoverinside duration-700 transition-delay transition ease-[cubic-bezier(0.8,0,0.2,1)] ${
-                    props.selectedTab === props.item.url
+                    props.selectedTab === item.url
                       ? ""
                       : "opacity-40 scale-75"
                   }`}
@@ -56,13 +57,13 @@ export default function ValorantClashTabItem(props) {
                     "--delay": `calc( 1 * 0.1s)`,
                   }}
                 >
-                  {props.item.label}
+                  {item.label}
                 </div>
               </div>
             </div>
             <div
               className={`hoverinside transition-all duration-500 ease-[cubic-bezier(0.5,0,0.5,1)] opacity-100 absolute z-0 inset-0 bg-gradient-to-b from-interaction-500 to-blue-500 ${
-                props.selectedTab === props.item.url ? "" : "translate-y-[100%]"
+                props.selectedTab === item.url ? "" : "translate-y-[100%]"
               }`}
             />
           </button>

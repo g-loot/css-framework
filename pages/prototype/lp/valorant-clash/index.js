@@ -61,8 +61,8 @@ const PrototypePage = () => {
             />
           </div>
           <div className="pl-8 relative border-l border-ui-100/30">
-            <h1 className="leading-none mb-4 flex gap-3 items-baseline">
-              <span className="sr-only">Where clans collide</span>
+            <div className="h1 leading-none mb-4 flex gap-3 items-baseline">
+              <h1 className="sr-only">Where clans collide</h1>
               <div className="relative overflow-hidden" aria-hidden="true">
                 <span className="opacity-0">Where</span>
                 <span
@@ -92,7 +92,7 @@ const PrototypePage = () => {
                   </span>
                 </span>
               </div>
-            </h1>
+            </div>
             <h2 className="font-headings text-2xl font-normal mb-3">OCTOBER 28 - NOVEMBER 27</h2>
             <p className="text-mono-100 opacity-75 max-w-xs text-lg">
               We are proud to announce their first Premier VALORANT tournament
