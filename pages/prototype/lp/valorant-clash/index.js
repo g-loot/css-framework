@@ -118,7 +118,7 @@ const PrototypePage = () => {
         <nav>
           <ul className="container max-w-lg mx-auto flex items-center lg:justify-center p-4 gap-4 lg:gap-8 overflow-x-auto scrollbar-hidden whitespace-nowrap">
             {TabsItems.map((item, itemIndex) => (
-              <ValorantClashTabItem key={itemIndex} index={itemIndex} item={item} selectedTab={selectedTab} />
+              <ValorantClashTabItem key={itemIndex} index={itemIndex} itemSublabel={item.sublabel} itemLabel={item.label} itemURL={item.url} itemDisabled={item.disabled} selectedTab={selectedTab} />
             ))}
           </ul>
         </nav>
