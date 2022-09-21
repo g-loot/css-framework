@@ -1,4 +1,4 @@
-import { Match, SVGViewer, SingleEliminationBracket } from '@g-loot/react-tournament-brackets';
+/*import { Match, SVGViewer, SingleEliminationBracket } from '@g-loot/react-tournament-brackets';
 
 import matches from "./brackets.json";
 
@@ -15,6 +15,15 @@ export default function ValorantClashBrackets(props) {
       </SVGViewer>
     )}
   />
+    </>
+  );
+}
+*/
+
+export default function ValorantClashBrackets(props) {
+  return (
+    <>
+   
     </>
   );
 }
