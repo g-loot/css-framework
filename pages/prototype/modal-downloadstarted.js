@@ -14,7 +14,7 @@ export default function ModalDownloadStarted(props) {
     setSubmitting(true);
 
     setTimeout(() => {
-      uiContext.openToastr({size: "small", text: "Download has started", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+      uiContext.openToastr({size: "medium", text: "Download has started", color: "green", autoDelete: true, autoDeleteDelay: 2500});
       uiContext.closeModal();
       setSubmitting(false);
     }, 1000);

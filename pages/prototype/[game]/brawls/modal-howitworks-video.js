@@ -31,7 +31,7 @@ export default function ModalBrawlHowitworksVideo(props) {
                 className="mx-auto aspect-video rounded"
                 width="100%"
                 height="auto"
-                src="https://www.youtube.com/embed/3A-d57PMKEk?autoplay=1"
+                src="https://www.youtube.com/embed/3A-d57PMKEk?autoplay=1&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"
                 title="YouTube video player"
                 frameBorder="0"
                 

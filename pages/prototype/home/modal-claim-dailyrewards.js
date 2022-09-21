@@ -13,7 +13,7 @@ export default function ModalClaimDailyRewards(props) {
     setSubmitting(true);
 
     setTimeout(() => {
-      uiContext.openToastr({size: "small", text: "Reward claimed successfully", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+      uiContext.openToastr({size: "medium", text: "Reward claimed successfully", color: "green", autoDelete: true, autoDeleteDelay: 2500});
       variablesContext.claimDailyReward();
       setSubmitting(false);
       uiContext.closeModal();

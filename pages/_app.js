@@ -1,4 +1,5 @@
 import "../assets/styles/globals.css";
+import "aos/dist/aos.css";
 
 import App from "next/app";
 import ModalToastProvider from "../components/ModalToastProvider";

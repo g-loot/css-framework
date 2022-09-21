@@ -368,6 +368,42 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Single element */}
+      <div className="mb-12" id="as-list">
+        <h2 className="h3 mb-3">Single element</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="flex-1 space-y-4">
+                      <div className="flex items-center justify-center gap-2">
+                        <div className="form-radio">
+                          <input type="radio" name="radioYesNo" id="radioSingleYes" />
+                          <label htmlFor="radioSingleYes" />
+                        </div>
+                        <div className="form-radio">
+                          <input type="radio" name="radioYesNo" id="radioSingleNo" />
+                          <label htmlFor="radioSingleNo" />
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/gaze7rfm/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* With image */}
       <div className="mb-12" id="with-image">
         <h2 className="h3 mb-3">With image</h2>

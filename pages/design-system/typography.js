@@ -42,7 +42,7 @@ const DSpage = () => {
                     <span className="tooltip tooltip-right" data-tooltip="Copy">
                       <a
                         className="link"
-                        onClick={() => { uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500}); navigator.clipboard.writeText("font-headings"); }}
+                        onClick={() => { uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500}); navigator.clipboard.writeText("font-headings"); }}
                       >
                         font-headings
                       </a>
@@ -81,7 +81,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("font-body");
                         }}
                       >
@@ -121,7 +121,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("font-headings font-bold text-5xl italic");
                         }}
                       >
@@ -133,7 +133,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("h1");
                         }}
                       >
@@ -179,7 +179,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("font-headings font-bold text-4xl italic");
                         }}
                       >
@@ -191,7 +191,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("h2");
                         }}
                       >
@@ -237,7 +237,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("font-headings font-bold text-3xl italic");
                         }}
                       >
@@ -249,7 +249,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("h3");
                         }}
                       >
@@ -295,7 +295,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("font-headings font-bold text-3xl italic");
                         }}
                       >
@@ -307,7 +307,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("h4");
                         }}
                       >
@@ -353,7 +353,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("font-headings font-bold text-2xl italic");
                         }}
                       >
@@ -365,7 +365,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("h5");
                         }}
                       >
@@ -413,7 +413,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("font-bold text-2xl uppercase");
                         }}
                       >
@@ -425,7 +425,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("h6");
                         }}
                       >
@@ -472,7 +472,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("text-lg");
                         }}
                       >
@@ -505,7 +505,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("text-base");
                         }}
                       >
@@ -538,7 +538,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("text-sm");
                         }}
                       >
@@ -571,7 +571,7 @@ const DSpage = () => {
                       <a
                         className="link"
                         onClick={() => {
-                          uiContext.openToastr({size: "small", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+                          uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
                           navigator.clipboard.writeText("text-xs");
                         }}
                       >

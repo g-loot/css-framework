@@ -49,7 +49,7 @@ const DSpage = () => {
                         <span className="tooltip tooltip-top" data-tooltip="Copy">
                           <a
                             className="link"
-                            onClick={() => { uiContext.openToastr({size: "small", text: "Icon copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500}); navigator.clipboard.writeText(item.name); }}
+                            onClick={() => { uiContext.openToastr({size: "medium", text: "Icon copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500}); navigator.clipboard.writeText(item.name); }}
                           >
                             {item.name}
                           </a>

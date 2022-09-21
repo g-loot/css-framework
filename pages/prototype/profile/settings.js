@@ -18,7 +18,6 @@ export default function Home() {
     setSubmitting(true);
 
     setTimeout(() => {
-      uiContext.openToastr({size: "small", text: "Settings updated successfully", color: "green", autoDelete: true, autoDeleteDelay: 2500});
       uiContext.openToastr(toast);
       setSubmitting(false);
     }, 1000);

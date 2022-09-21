@@ -86,7 +86,6 @@
   }
 }
 .drawer-toggle:checked {
-
   ~ .drawer-side {
     @apply
     overflow-y-auto
@@ -106,8 +105,9 @@
     }
   }
 }
+
 @media screen and (min-width: 1024px) {
-  .drawer-mobile {
+  .drawer-mobile:not(.drawer-right) {
     grid-auto-columns: max-content auto;
     
     > .drawer-toggle {
@@ -145,7 +145,6 @@
 /* right */
 
 .drawer {
-
   &.drawer-right {
 
     &,
@@ -185,6 +184,45 @@
           @apply
           -translate-x-2
           ;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .drawer-mobile.drawer-right {
+    grid-auto-columns: max-content auto;
+    
+    > .drawer-toggle {
+
+      ~ .drawer-content {
+        @apply
+        col-start-1
+        h-auto
+        ;
+      }
+
+      ~ .drawer-side {
+        @apply
+        col-start-2
+        overflow-y-auto
+        ;
+        
+        > .drawer-overlay {
+          @apply
+          visible
+          col-start-2
+          opacity-[.999999]
+          ;
+          + * {
+            @apply
+            col-start-2
+            translate-x-0
+            pointer-events-auto
+            ;
+          }
         }
       }
     }

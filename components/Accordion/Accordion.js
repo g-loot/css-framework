@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 
 export default function Accordion(props) {
   const isOpen = props.isopen !== undefined ? props.isopen : false;
@@ -14,6 +14,7 @@ export default function Accordion(props) {
   const [isActive, setActive] = useState(isOpen);
   const [heightValue, setHeightValue] = useState(0);
   const elementRef = useRef(null);
+  const id = useId();
 
   useEffect(() => {
     if (isOpen) {
@@ -56,7 +57,7 @@ export default function Accordion(props) {
         } ${isDisabled ? "is-disabled pointer-events-none opacity-50" : ""}`}
       >
         {!buttonActivation && (
-          <div className={`accordion-header`} onClick={handleToggle}>
+          <div className={`accordion-header`} onClick={handleToggle} id={`${id}-accordion-button`}>
             {props.header}
           </div>
         )}
@@ -105,6 +106,9 @@ export default function Accordion(props) {
         <div
           className={`accordion-collapse ${isClosed ? "h-0" : ""}`}
           style={{ height: `${isActive ? heightValue : 0}px` }}
+          aria-hidden={!isActive}
+          aria-labelledby={`${id}-accordion-button`}
+          role="region"
         >
           <div ref={elementRef}>{props.children}</div>
         </div>

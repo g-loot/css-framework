@@ -221,7 +221,7 @@ export const DSpages = [
       },
       {
         label: "Links",
-        tags: "nav,navigation,links,href,target",
+        tags: "nav,navigation,links,href,target,interaction,interactive,hover",
         url: "links",
       },
       {
