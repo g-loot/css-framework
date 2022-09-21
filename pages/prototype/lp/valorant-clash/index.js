@@ -42,7 +42,7 @@ const PrototypePage = () => {
   
   const router = useRouter();
   const { tab } = router.query;
-  const defaultTab = "missions";
+  const defaultTab = "learn-more";
   const selectedTab = tab ? tab : defaultTab;
 
   return (

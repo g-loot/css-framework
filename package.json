@@ -31,7 +31,6 @@
     "tailwind.config.js"
   ],
   "dependencies": {
-    "@g-loot/react-tournament-brackets": "^1.0.18-beta.1",
     "aos": "^2.3.4",
     "react-parallax": "^3.5.1",
     "react-stickynode": "^4.1.0",
