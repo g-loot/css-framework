@@ -53,7 +53,7 @@ const PrototypePage = () => {
         <div className="relative z-20 container max-w-lg mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-center">
           <div>
             <img
-              className="w-72 md:w-[450px] mx-auto md:mx-0"
+              className="w-72 md:w-[450px] md:h-[320px] mx-auto md:mx-0"
               src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/G-Loot_Valorant_Clash_Logo.svg"
               width="auto"
               height="auto"

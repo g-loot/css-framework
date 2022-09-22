@@ -27,7 +27,7 @@ export default function ValorantClashTabItem(props) {
         <Link href={`?tab=${props.itemURL}`}>
           <button
             type="button"
-            className={`w-full min-w-[200px] lg:min-w-[0px] cursor-pointer hoverinside:opacity-100 hoverinside:translate-y-0 hoverinside:scale-100 relative rounded-2xl bg-gradient-to-b p-0.5 overflow-hidden active:scale-[0.99] transition duration-100 ${(props.itemDisabled != undefined && props.itemDisabled === true) ? "from-ui-800 to-ui-800" : "from-ui-500 to-ui-800"} ${
+            className={`w-full min-w-[200px] lg:min-w-[0px] cursor-pointer hoverinside:opacity-100 hoverinside:translate-y-0 hoverinside:scale-100 relative rounded-2xl overflow-hidden bg-gradient-to-b p-0.5 transform-gpu active:scale-[0.99] transition duration-100 ${(props.itemDisabled != undefined && props.itemDisabled === true) ? "from-ui-800 to-ui-800" : "from-ui-500 to-ui-800"} ${
               props.selectedTab === props.itemURL ? "is-active" : ""
             }
             ${(props.itemDisabled != undefined && props.itemDisabled === true) ? "focus:outline-none pointer-events-none" : "focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-1 focus-visible:outline-main"}
