@@ -66,7 +66,7 @@ export default function TabBrawlsOngoing() {
                                     <div className="chip chip-secondary">
                                       <div className="avatar avatar-simple avatar-circle avatar-tiny -ml-1.5">
                                         <div>
-                                          <span className="icon icon-profile-2"></span>
+                                          <span className="icon icon-male"></span>
                                         </div>
                                       </div>
                                       <span className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${brawl.progress <= 0 ? "text-ui-400" : "text-ui-200"}`}>
@@ -107,7 +107,7 @@ export default function TabBrawlsOngoing() {
                                         {brawl.progress <= 0 && (
                                           <div className="avatar avatar-simple avatar-circle avatar-tiny -ml-1.5">
                                             <div>
-                                              <span className="icon icon-profile-2"></span>
+                                              <span className="icon icon-male"></span>
                                             </div>
                                           </div>
                                         )}
@@ -131,7 +131,7 @@ export default function TabBrawlsOngoing() {
                                         {brawl.progressClan <= 0 && (
                                           <div className="avatar avatar-simple avatar-circle avatar-tiny -ml-1.5">
                                             <div>
-                                              <span className="icon icon-multiple-12"></span>
+                                              <span className="icon icon-multiple-11"></span>
                                             </div>
                                           </div>
                                         )}

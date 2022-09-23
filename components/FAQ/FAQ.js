@@ -28,7 +28,7 @@ export default function FAQ(props) {
         }
       >
         <div className="p-4 md:p-8">
-          <div className="max-w-lg mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-8">
+          <div className="mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-8">
             <div className="col-span-1 surface rounded-lg overflow-hidden">
               <img
                 src={props.content.image}

@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: 'glooticons';
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1652250740/GNOG%20assets/Fonts/Icons/glooticons.woff2') format('woff2'), 
-  url('https://res.cloudinary.com/gloot/raw/upload/v1652250740/GNOG%20assets/Fonts/Icons/glooticons.woff') format('woff');
+  src: url('https://res.cloudinary.com/gloot/raw/upload/v1663917684/GNOG%20assets/Fonts/Icons/backup/glooticons.woff2') format('woff2'), 
+  url('https://res.cloudinary.com/gloot/raw/upload/v1663917684/GNOG%20assets/Fonts/Icons/backup/glooticons.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -1799,7 +1799,7 @@
   content: "\ebb3";
 }
 
-.icon-arrow-sm-up::before {
+.icon-caret-sm-up::before {
   content: "\ebb4";
 }
 
@@ -2039,10 +2039,6 @@
   content: "\ebf7";
 }
 
-.icon-game-pubg-symbol::before {
-  content: "\ea01";
-}
-
 .icon-bullet-list-67::before {
   content: "\ebf8";
 }
@@ -2159,15 +2155,11 @@
   content: "\ec15";
 }
 
-.icon-game-pubg-symbol::before {
-  content: "\ea01";
-}
-
 .icon-rank-silver::before {
   content: "\ec16";
 }
 
-.icon-rank-platinum::before {
+.icon-pin::before {
   content: "\ec17";
 }
 
@@ -2190,3 +2182,16 @@
 .icon-riotgames-symbol::before {
   content: "\ec1c";
 }
+
+.icon-rank-platinum::before {
+  content: "\ec1d";
+}
+
+.icon-squircle-10::before {
+  content: "\ec1f";
+}
+
+.icon-game-pubg-symbol::before {
+  content: "\ea01";
+}
+

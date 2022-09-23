@@ -41,7 +41,7 @@ const DSLayout = ({ children }) => {
           <div className="pt-12 pb-24 px-4">
             <div className="container max-w-lg mx-auto">{children}</div>
           </div>
-          <Footer additionalClassNames="px-0 md:px-8" />
+          <Footer className="px-0 md:px-8" />
         </div>
         <div className="drawer-side scrollbar-hidden">
           <label htmlFor="drawer-ds" className="drawer-overlay"></label>

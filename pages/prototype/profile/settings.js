@@ -267,10 +267,24 @@ export default function Home() {
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="text-sm text-ui-300">
-                          <span className="label">G-LOOT ID:</span>
-                          <code className="font-bold font-body">
-                            4769554309840896
-                          </code>
+                          <span className="label">G-Loot ID:</span>
+                          <span className="tooltip" data-tooltip="Copy">
+                            <code
+                              className="interactive text-xs"
+                              onClick={() => {
+                                uiContext.openToastr({
+                                  size: "small",
+                                  text: "G-Loot ID copied to your clipboard",
+                                  color: "green",
+                                  autoDelete: true,
+                                  autoDeleteDelay: 2500,
+                                });
+                                navigator.clipboard.writeText("4769554309840896");
+                              }}
+                            >
+                              4769554309840896
+                            </code>
+                          </span>
                         </div>
                         <button
                           type="button"

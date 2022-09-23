@@ -1,19 +1,8 @@
 import React, { useContext } from "react";
 
-import DScolors from "../api/designsystem/colors.json";
+import Link from "next/link";
 import { UiContext } from "../../contexts/ui";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
-
-function isMultipleOfThree(number) {
-  if (number % 3 == 0) {
-    return true;
-  } else {
-    return false;
-  }
-}
-function isAfterAMultipleofThree(number) {
-  isMultipleOfThree(number - 1);
-}
 
 const DSpage = () => {
   const uiContext = useContext(UiContext);
@@ -22,7 +11,7 @@ const DSpage = () => {
       <h1 className="mb-6">
         Icons <small className="text-ui-300 font-normal">introduction</small>
       </h1>
-      <div className="format mb-8">
+      <div className="format mb-8" id="using-icons">
         <h2 id="using-icons">Using icons</h2>
         <p>Adding an icon is achieved by using the following icons:</p>
         <div className="surface rounded-lg overflow-x-auto mb-10">
@@ -73,11 +62,28 @@ const DSpage = () => {
                   </span>
                 </td>
                 <td className="w-1/3 text-sm text-ui-300">
-                  displays the icon font character
+                  displays the icon font character  <Link href="/design-system/iconsrefs"><a className="link link-main">view all icons</a></Link>
                 </td>
               </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+      <div className="format mb-8" id="example">
+        <h2 id="using-icons">Example</h2>
+        <p>Here is an example of how to use icons. Use the typogrpahy rules to style it the way you want.</p>
+        <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
+          <div className="flex-1 flex items-center justify-center">
+            <span className="icon icon-ticket text-9xl text-gradient bg-gradient-to-b from-gold-700 to-gold-300" />
+          </div>
+          <div className="flex-1">
+            <iframe
+              className="rounded"
+              width="100%"
+              height="100"
+              src="//jsfiddle.net/augustin_hiebel/n9x7ao0e/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            ></iframe>
+          </div>
         </div>
       </div>
     </>

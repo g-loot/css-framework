@@ -13,7 +13,7 @@ export default function PrototypeStructure({ children, title }) {
   const prototype = usePrototypeData();
   const { query } = useRouter();
   const hasAds = query.ads === "true" ? true : false;
-  const isNewStructure = query.newstructure === "true" ? true : false;
+  const isNewStructure = query.newstructure === "true" || query.newstructure === undefined ? true : false;
   return (
     <>
       {!isNewStructure && (

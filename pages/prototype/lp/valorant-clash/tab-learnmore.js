@@ -13,7 +13,7 @@ export default function ValorantClashTabLearnMore() {
             className="mx-auto aspect-video rounded-xl mb-24"
             width="100%"
             height="auto"
-            src="https://www.youtube.com/embed/ufVtGu3CubI?autoplay=1&mute=1&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&loop=1"
+            src="https://www.youtube.com/embed/H9radMFO1h0?autoplay=1&mute=1&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&loop=1"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -161,35 +161,7 @@ export default function ValorantClashTabLearnMore() {
         </Parallax>
         <div className="bg-gradient-to-b from-ui-900/50 via-ui-900/0 to-ui-900/50 absolute z-0 inset-0" />
       </section>
-      <section
-        className="py-24 relative animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc(4 * 0.1s)" }}
-      >
-        <div className="relative z-10 container max-w-lg mx-auto text-center">
-          <img
-            className="mx-auto"
-            src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/G-Loot_Valorant_Clash_Logo.svg"
-            width="600"
-            height="auto"
-            alt=""
-          />
-        </div>
-        <ValorantClashCTA />
-        <img
-          className="absolute top-0 right-0 mix-blend-lighten hidden md:block"
-          width="650"
-          height="auto"
-          src="https://res.cloudinary.com/gloot/image/upload/v1663762265/Marketing/2022_Valorant_clash/Valorant_Clash_hero_character_2.jpg"
-          alt=""
-        />
-        <img
-          className="absolute bottom-0 left-0 mix-blend-lighten hidden md:block"
-          width="650"
-          height="auto"
-          src="https://res.cloudinary.com/gloot/image/upload/v1663762265/Marketing/2022_Valorant_clash/Valorant_Clash_hero_character_1.jpg"
-          alt=""
-        />
-      </section>
+      <ValorantClashCTA />
     </>
   );
 }

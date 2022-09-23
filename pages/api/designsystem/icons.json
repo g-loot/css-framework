@@ -964,11 +964,11 @@
           "name": "notes"
         },
         {
-          "tags": "user,group,team,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower,community,people,collaboration,collective",
+          "tags": "user,group,team,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower,community,people,collaboration,collective,clans,team,players",
           "name": "multiple-11"
         },
         {
-          "tags": "user,group,team,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower,community,people,collaboration,collective",
+          "tags": "user,group,team,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower,community,people,collaboration,collective,clans,team,players",
           "name": "multiple-12"
         },
         {
@@ -1152,7 +1152,7 @@
           "name": "profile-2"
         },
         {
-          "tags": "user,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower,body",
+          "tags": "user,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower,body,solo,player",
           "name": "male"
         },
         {
@@ -1943,6 +1943,10 @@
         {
           "tags": "user,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower",
           "name": "circle-09"
+        },
+        {
+          "tags": "user,profile,account,avatar,contact,male,man,person,users,member,human,friend,follower,clans,group,profile,team",
+          "name": "squircle-10"
         },
         {
           "tags": "arrow,bottom,descend,down,downward,data,download,file,input,save,share,storage,transfer,inbox,folder",

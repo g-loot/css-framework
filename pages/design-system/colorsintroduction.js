@@ -22,13 +22,13 @@ const DSpage = () => {
       <h1 className="mb-6">
         Colors <small className="text-ui-300 font-normal">introduction</small>
       </h1>
-      <div className="format mb-8">
+      <div className="format mb-8" id="using-colors">
         <h2 id="using-colors">Using colors</h2>
         <p>
           You can control the colors of any element using the generic tailwind
           class names:
         </p>
-        <div className="surface rounded-lg overflow-x-auto mb-10">
+        <div className="surface rounded-lg overflow-x-auto">
           <table className="table w-full">
             <tbody>
               <tr>
@@ -115,12 +115,14 @@ const DSpage = () => {
             </tbody>
           </table>
         </div>
+      </div>
+      <div className="format mb-8" id="gradients">
         <h2 id="gradients">Gradients</h2>
         <p>
           To create a gradient background, first indicate the direction of the
           gradient using one of the following class names:
         </p>
-        <div className="surface rounded-lg overflow-x-auto mb-10">
+        <div className="surface rounded-lg overflow-x-auto">
           <table className="table w-full">
             <tbody>
               <tr>
@@ -146,7 +148,9 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to bottom</td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  Creates a gradient from top to bottom
+                </td>
               </tr>
               <tr>
                 <td className="w-1/3">
@@ -171,7 +175,9 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to right</td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  Creates a gradient from top to right
+                </td>
               </tr>
               <tr>
                 <td className="w-1/3">
@@ -196,7 +202,9 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to top</td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  Creates a gradient from top to top
+                </td>
               </tr>
               <tr>
                 <td className="w-1/3">
@@ -221,7 +229,9 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to left</td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  Creates a gradient from top to left
+                </td>
               </tr>
               <tr>
                 <td className="w-1/3">
@@ -246,7 +256,9 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to bottom right</td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  Creates a gradient from top to bottom right
+                </td>
               </tr>
               <tr>
                 <td className="w-1/3">
@@ -271,7 +283,9 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to bottom left</td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  Creates a gradient from top to bottom left
+                </td>
               </tr>
               <tr>
                 <td className="w-1/3">
@@ -296,7 +310,9 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to top right</td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  Creates a gradient from top to top right
+                </td>
               </tr>
               <tr>
                 <td className="w-1/3">
@@ -321,7 +337,9 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a gradient from top to top left</td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  Creates a gradient from top to top left
+                </td>
               </tr>
               <tr>
                 <td className="w-1/3">
@@ -346,7 +364,9 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a radial gradient from the center</td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  Creates a radial gradient from the center
+                </td>
               </tr>
               <tr>
                 <td className="w-1/3">
@@ -364,14 +384,18 @@ const DSpage = () => {
                           autoDelete: true,
                           autoDeleteDelay: 2500,
                         });
-                        navigator.clipboard.writeText("bg-gradient-radial-spotlight");
+                        navigator.clipboard.writeText(
+                          "bg-gradient-radial-spotlight"
+                        );
                       }}
                     >
                       .bg-gradient-radial-spotlight
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a spotlight radial gradient</td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  Creates a spotlight radial gradient
+                </td>
               </tr>
               <tr>
                 <td className="w-1/3">
@@ -389,22 +413,24 @@ const DSpage = () => {
                           autoDelete: true,
                           autoDeleteDelay: 2500,
                         });
-                        navigator.clipboard.writeText("bg-gradient-radial-to-b");
+                        navigator.clipboard.writeText(
+                          "bg-gradient-radial-to-b"
+                        );
                       }}
                     >
                       .bg-gradient-radial-to-b
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300">Creates a radial gradient to the bottom</td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  Creates a radial gradient to the bottom
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p>
-          Then indicates the color stops for your gradient:
-        </p>
-        <div className="surface rounded-lg overflow-x-auto mb-10">
+        <p>Then indicates the color stops for your gradient:</p>
+        <div className="surface rounded-lg overflow-x-auto">
           <table className="table w-full">
             <tbody>
               <tr>
@@ -430,11 +456,18 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300"><i>.from-interaction-500</i></td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  <i>.from-interaction-500</i>
+                </td>
               </tr>
               <tr>
                 <td className="w-1/3">
-                  <b>Via (50%) <div className="chip chip-xs chip-secondary pointer-events-none uppercase font-normal"><span>optional</span></div></b>
+                  <b>
+                    Via (50%){" "}
+                    <div className="chip chip-xs chip-secondary pointer-events-none uppercase font-normal">
+                      <span>optional</span>
+                    </div>
+                  </b>
                 </td>
                 <td className="w-1/3">
                   <span className="tooltip tooltip-right" data-tooltip="Copy">
@@ -455,7 +488,9 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300"><i>.via-interaction-300</i></td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  <i>.via-interaction-300</i>
+                </td>
               </tr>
               <tr>
                 <td className="w-1/3">
@@ -480,16 +515,21 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300"><i>.to-blue-500</i></td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  <i>.to-blue-500</i>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
+      </div>
+      <div className="format mb-8" id="text-gradient">
         <h2 id="text-gradient">Text gradient</h2>
         <p>
-          You can apply gradient to text elements by adding the background class names explained above and that following class name:
+          You can apply gradient to text elements by adding the background class
+          names explained above and that following class name:
         </p>
-        <div className="surface rounded-lg overflow-x-auto mb-10">
+        <div className="surface rounded-lg overflow-x-auto">
           <table className="table w-full">
             <tbody>
               <tr>
@@ -515,7 +555,11 @@ const DSpage = () => {
                     </code>
                   </span>
                 </td>
-                <td className="w-1/3 text-sm text-ui-300"><i>.text-gradient .bg-gradient-to-b .from-main .to-blue-500</i></td>
+                <td className="w-1/3 text-sm text-ui-300">
+                  <i>
+                    .text-gradient .bg-gradient-to-b .from-main .to-blue-500
+                  </i>
+                </td>
               </tr>
             </tbody>
           </table>

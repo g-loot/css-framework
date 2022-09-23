@@ -16,39 +16,34 @@ export const DSpages = [
     ],
   },
   {
-    label: "Basics",
-    icon: "",
-    pages: [
-      {
-        label: "Typography",
-        tags: "basics,typography,headings,font,size,bold,italic,font,family,roboto,condensed,podium,sharp,title",
-        url: "typography",
-      },
-      {
-        label: "Surfaces",
-        tags: "basics,surfaces,cards,container,box,halo",
-        url: "surfaces",
-      },
-      {
-        label: "Animation",
-        tags: "basics,animation,slide,in,out,fade,loading,bounce,spin,heartbeat,infinite,delay,keyframes,animate",
-        url: "animation",
-      },
-    ],
-  },
-  {
     label: "Colors",
     icon: "",
     pages: [
       {
         label: "Introduction",
-        tags: "basics,colors,background,text,main,ui,main,accent,gradient,colour",
+        tags: "basics,colors,background,text,main,ui,main,accent,gradient,colour,introduction",
         url: "colorsintroduction",
       },
       {
         label: "References",
         tags: "basics,colors,background,text,main,ui,main,accent,gradient,colour,references,class names",
         url: "colorsrefs",
+      },
+    ],
+  },
+  {
+    label: "Typography",
+    icon: "",
+    pages: [
+      {
+        label: "Introduction",
+        tags: "basics,typography,headings,font size,font weight,text decoration,bold,italic,font family,roboto,condensed,podium sharp,title,body,introduction",
+        url: "typographyintroduction",
+      },
+      {
+        label: "References",
+        tags: "basics,typography,headings,font size,font weight,text decoration,bold,italic,font family,roboto,condensed,podium sharp,title,body,references,class names",
+        url: "typographyrefs",
       },
     ],
   },
@@ -65,6 +60,22 @@ export const DSpages = [
         label: "References",
         tags: "basics,icons,picto,size,nucleo,font,iconography,material icons,references,class names",
         url: "iconsrefs",
+      },
+    ],
+  },
+  {
+    label: "Basics",
+    icon: "",
+    pages: [
+      {
+        label: "Surfaces",
+        tags: "basics,surfaces,cards,container,box,halo",
+        url: "surfaces",
+      },
+      {
+        label: "Animation",
+        tags: "basics,animation,slide,in,out,fade,loading,bounce,spin,heartbeat,infinite,delay,keyframes,animate",
+        url: "animation",
       },
     ],
   },
@@ -388,6 +399,5 @@ export const DSpages = [
     ],
   },
 ];
-
 
 export default DSpages;

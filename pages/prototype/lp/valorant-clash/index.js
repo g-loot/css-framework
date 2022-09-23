@@ -26,25 +26,55 @@ const TabsItems = [
   },
   {
     sublabel: "I want to",
-    label: "follow",
-    url: "follow",
+    label: "watch stream",
+    url: "watch-stream",
     component: ValorantClashTabFollow,
     disabled: false,
   },
 ];
 
+const today = new Date().toISOString();
+const registrationOpen = new Date("2022-10-03T07:00:00.959Z").toISOString();
+const registrationClosed = new Date("2022-10-18T07:00:00.959Z").toISOString();
+const competitionStarted = new Date("2022-10-18T07:00:00.959Z").toISOString();
+const competitionFinished = new Date("2022-11-28T07:00:00.959Z").toISOString();
+
 const PrototypePage = () => {
+  const [competitionStatus, setCompetitionStatus] = useState(1);
+  const [defaultTab, setDefaultTab] = useState("learn-more");
+
+  useEffect(() => {
+    console.log(today, registrationOpen)
+    if (today < registrationOpen) {
+      setDefaultTab('learn-more')
+      console.log('Competition status:', 'registrations not yet started')
+    } else if (today > registrationOpen && today < registrationClosed) {
+      setDefaultTab('partake')
+      console.log('Competition status:', 'registrations open')
+    } else if (today > registrationClosed && today < competitionStarted) {
+      setDefaultTab('learn-more')
+      console.log('Competition status:', 'registrations closed & competition not started')
+    } else if (today > competitionStarted) {
+      setDefaultTab('watch-stream')
+      console.log('Competition status:', 'competition started')
+    } else if (today > competitionFinished) {
+      setDefaultTab('watch-stream')
+      console.log('Competition status:', 'finished')
+    } else {
+      console.log('Competition status:', 'unknown')
+    }
+  }, [])
+
   useEffect(() => {
     Aos.init({
-      easing: 'ease-out-quad',
-    })
+      easing: "ease-out-quad",
+    });
 
-    window.addEventListener('load', Aos.refresh)
+    window.addEventListener("load", Aos.refresh);
   }, []);
-  
+
   const router = useRouter();
   const { tab } = router.query;
-  const defaultTab = "learn-more";
   const selectedTab = tab ? tab : defaultTab;
 
   return (
@@ -93,7 +123,9 @@ const PrototypePage = () => {
                 </span>
               </div>
             </div>
-            <h2 className="font-headings text-2xl font-normal mb-3">OCTOBER 28 - NOVEMBER 27</h2>
+            <h2 className="font-headings text-2xl font-normal mb-3">
+              OCTOBER 28 - NOVEMBER 27
+            </h2>
             <p className="text-mono-100 opacity-75 max-w-xs text-lg mx-auto lg:mx-0">
               We are proud to announce their first Premier VALORANT tournament
               for all players in the EMEA region: G-Loot VALORANT Clash.
@@ -118,16 +150,24 @@ const PrototypePage = () => {
         <nav>
           <ul className="container max-w-lg mx-auto flex items-center lg:justify-center p-4 gap-4 lg:gap-8 overflow-x-auto scrollbar-hidden whitespace-nowrap">
             {TabsItems.map((item, itemIndex) => (
-              <ValorantClashTabItem key={itemIndex} index={itemIndex} itemSublabel={item.sublabel} itemLabel={item.label} itemURL={item.url} itemDisabled={item.disabled} selectedTab={selectedTab} />
+              <ValorantClashTabItem
+                key={itemIndex}
+                index={itemIndex}
+                itemSublabel={item.sublabel}
+                itemLabel={item.label}
+                itemURL={item.url}
+                itemDisabled={item.disabled}
+                selectedTab={selectedTab}
+              />
             ))}
           </ul>
         </nav>
       </section>
       {TabsItems.map((item) => {
-          if (item.url === selectedTab) {
-            return React.createElement(item.component);
-          }
-        })}
+        if (item.url === selectedTab) {
+          return React.createElement(item.component);
+        }
+      })}
       <Footer />
     </>
   );
