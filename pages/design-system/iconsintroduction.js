@@ -71,7 +71,7 @@ const DSpage = () => {
       </div>
       <div className="format mb-8" id="example">
         <h2 id="using-icons">Example</h2>
-        <p>Here is an example of how to use icons. Use the typogrpahy rules to style it the way you want.</p>
+        <p>Here is an example of how to use icons. Use the <Link href="/design-system/typographyintroduction"><a className="link link-main">typography</a></Link> and <Link href="/design-system/colorsintroduction"><a className="link link-main">colors</a></Link> class names to style it the way you want.</p>
         <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
           <div className="flex-1 flex items-center justify-center">
             <span className="icon icon-ticket text-9xl text-gradient bg-gradient-to-b from-gold-700 to-gold-300" />

@@ -17,6 +17,7 @@ export default function Button(props) {
     "button-lg": props.size && props.size === 'lg',
     "button-md": props.size && props.size === 'md',
     "button-sm": props.size && props.size === 'sm',
+    "button-xs": props.size && props.size === 'xs',
     "button-currency": props.currency,
     "button-coin": props.currency === 'coin',
     "button-token": props.currency === 'token',

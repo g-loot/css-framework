@@ -3,6 +3,59 @@ import React, { useEffect, useRef, useState } from "react";
 import Chat from "../../components/Chat/Chat";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
 
+const conversationSingleOthers = [
+  {
+    id: 1,
+    time: "Message sent 1.22pm",
+    author: 2,
+    isYourself: false,
+    messages: [
+      {
+        id: 1,
+        type: "text",
+        content:
+          "Welcome aboard <a className='font-bold' href='#'>@James</a> 👋",
+        reactions: [
+          {
+            emoji: "❤️",
+            author: [4, 0],
+          },
+          {
+            emoji: "👏",
+            author: [1],
+          },
+        ],
+      },
+    ],
+  },
+];
+const conversationSingleSelf = [
+  {
+    id: 1,
+    time: "Message sent 1.22pm",
+    author: 2,
+    isYourself: true,
+    messages: [
+      {
+        id: 1,
+        type: "text",
+        content:
+          "Welcome aboard <a className='font-bold' href='#'>@James</a> 👋",
+        reactions: [
+          {
+            emoji: "❤️",
+            author: [4, 0],
+          },
+          {
+            emoji: "👏",
+            author: [1],
+          },
+        ],
+      },
+    ],
+  },
+];
+
 const DSpage = () => {
   return (
     <>
@@ -15,13 +68,131 @@ const DSpage = () => {
         <div className="surface rounded-lg">
           <Chat />
         </div>
-
         <div className="mt-4">
           <iframe
             className="rounded"
             width="100%"
             height="300"
             src="//jsfiddle.net/augustin_hiebel/4q6jn89g/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+          ></iframe>
+        </div>
+      </div>
+
+      {/* Chat group (others) */}
+      <div className="mb-12" id="chat-group-others">
+        <h2 className="h3 mb-3">Chat group (others)</h2>
+
+        <div className="surface rounded-lg">
+          <Chat
+            conversation={conversationSingleOthers}
+            demo={true}
+            maxheight={"auto"}
+          />
+        </div>
+
+        <div className="mt-4">
+          <iframe
+            className="rounded"
+            width="100%"
+            height="300"
+            src="//jsfiddle.net/augustin_hiebel/9bwjd47f/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+          ></iframe>
+        </div>
+      </div>
+
+      {/* Chat group (self) */}
+      <div className="mb-12" id="chat-group-self">
+        <h2 className="h3 mb-3">Chat group (self)</h2>
+
+        <div className="surface rounded-lg">
+          <Chat
+            conversation={conversationSingleSelf}
+            demo={true}
+            maxheight={"auto"}
+          />
+        </div>
+
+        <div className="mt-4">
+          <iframe
+            className="rounded"
+            width="100%"
+            height="300"
+            src="//jsfiddle.net/augustin_hiebel/3oa8Lces/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+          ></iframe>
+        </div>
+      </div>
+
+      {/* Chat footer */}
+      <div className="mb-12" id="chat-footer">
+        <h2 className="h3 mb-3">Chat footer</h2>
+
+        <div className="surface rounded-lg">
+          <form className="chat-footer flex items-end">
+            <div className="dropdown dropdown-top">
+              <label
+                tabIndex="0"
+                className="button button-ghost rounded-full m-0"
+              >
+                <span className="icon icon-c-add"></span>
+              </label>
+              <div tabIndex="0" className="dropdown-content bg-ui-500 p-1">
+                <ul className="menu menu-secondary menu-rounded menu-horizontal">
+                  <li>
+                    <a>
+                      <span>
+                        <span className="text-xl">❤️</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span>
+                        <span className="text-xl">👍</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span>
+                        <span className="text-xl">😂</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span>
+                        <span className="text-xl">👏</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="form-group">
+              <textarea
+                name="send-message"
+                id="send-message"
+                className="rounded-3xl max-h-[200px] resize-none"
+                rows={1}
+                placeholder="Message clan"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              role="button"
+              className="button button-tertiary rounded-full"
+            >
+              <span className="icon icon-send-message" />
+            </button>
+          </form>
+        </div>
+
+        <div className="mt-4">
+          <iframe
+            className="rounded"
+            width="100%"
+            height="300"
+            src="//jsfiddle.net/augustin_hiebel/jr2nv5a3/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
           ></iframe>
         </div>
       </div>
@@ -62,44 +233,25 @@ const DSpage = () => {
           <iframe
             className="rounded"
             width="100%"
-            height="220"
+            height="200"
             src="//jsfiddle.net/augustin_hiebel/87n65jcf/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
           ></iframe>
         </div>
       </div>
 
-      {/* Actions in bubble */}
-      <div className="mb-12" id="actions-in-bubble">
-        <h2 className="h3 mb-3">Actions in bubble</h2>
+      {/* Chat reactions */}
+      <div className="mb-12" id="chat-reactions">
+        <h2 className="h3 mb-3">Chat reactions</h2>
 
-        <div className="surface rounded-lg">
-          <div className="chat-group ">
-            <div className="chat-author">
-              <div className="avatar avatar-circle avatar-sm">
-                <div>
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg"
-                    alt="avatar"
-                  />
-                </div>
-              </div>
-              
+        <div className="surface rounded-lg p-4 flex items-center justify-center">
+          <div className="chat-reactions">
+            <div className="chat-reaction">
+              <span>👍</span>
+              <span>3</span>
             </div>
-            <div className="chat-messages">
-              <span className="leading-none uppercase text-sm">Kes2Band</span>
-              <div className="chat-message">
-                <div className="chat-bubble is-writting">
-                  <div>
-                    <div className="loader-message">
-                      <span className="sr-only">Loading...</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="chat-actions is-inbubble">
-
-                </div>
-              </div>
-              <time dateTime="2008-02-14 20:00">Message sent 1.22pm</time>
+            <div className="chat-reaction is-owner">
+              <span>❤️</span>
+              <span>1</span>
             </div>
           </div>
         </div>
@@ -108,8 +260,8 @@ const DSpage = () => {
           <iframe
             className="rounded"
             width="100%"
-            height="100"
-            src="//jsfiddle.net/augustin_hiebel/87n65jcf/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            height="250"
+            src="//jsfiddle.net/augustin_hiebel/rveL6xt8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
           ></iframe>
         </div>
       </div>

@@ -44,11 +44,24 @@
       items-center
       relative
       hover:z-20
+      rounded-3xl
+      outline-none
+      focus-visible:outline
+      focus-visible:outline-offset-2
+      focus-visible:outline-1
+      focus-visible:outline-main
       ;
+      
       &:hover {
         .chat-action-hidden {
           @apply
           opacity-100
+          ;
+        }
+        .chat-react {
+          @apply
+          opacity-100
+          translate-y-0
           ;
         }
       }
@@ -71,6 +84,9 @@
       lg:pl-4
       ;
       .chat-message {
+        @apply
+        rounded-tl-sm
+        ;
         .chat-bubble {
           @apply
           bg-ui-600
@@ -109,13 +125,25 @@
       .chat-message {
         @apply
         flex-row-reverse
+        rounded-br-sm
         ;
         .chat-bubble {
           @apply
           bg-main
-          text-ui-800
           rounded-br-sm
+          min-w-[fit-content]
+          z-[unset]
           ;
+          > *:not(.chat-reactions) {
+            @apply
+            text-ui-800
+            ;
+          }
+          > .chat-reactions {
+            @apply
+            text-left
+            ;
+          }
         }
         &:last-child {
           .chat-bubble {
@@ -202,7 +230,6 @@
 .chat-bubble {
   @apply
   bg-ui-600
-  max-w-[max-content]
   relative
   z-0
   min-w-[fit-content]
@@ -212,6 +239,14 @@
     @apply
     rounded-3xl
     ;
+  }
+  > div:first-child {
+    a {
+      @apply
+      underline
+      hover:no-underline
+      ;
+    }
   }
   img {
     @apply
@@ -225,49 +260,13 @@
     py-3
     ;
   }
-  .chat-bubble-actions {
+  .chat-reactions {
     @apply
     absolute
+    z-10
     -bottom-3
     right-1
-    flex
-    justify-end
-    gap-1
-    items-center
     ;
-  }
-  .chat-bubble-reactions {
-    @apply
-    
-    -bottom-3
-    right-1
-    flex
-    items-center
-    gap-0.5
-    ;
-    > div {
-      @apply
-      bg-gradient-radial-spotlight
-      from-ui-400
-      to-ui-500
-      rounded-full
-      text-ui-200
-      px-1.5
-      py-1
-      flex
-      items-center
-      gap-1
-      text-sm
-      leading-none
-      after:bg-ui-500
-      ;
-      &.is-owner {
-        @apply
-        from-interaction-300
-        to-interaction-700
-        ;
-      }
-    } 
   }
 }
 
@@ -301,6 +300,98 @@
   > .form-group {
     @apply
     flex-1
+    ;
+  }
+}
+
+
+.chat-reactions {
+  @apply
+  flex
+  justify-end
+  gap-1
+  items-center
+  ;
+}
+
+.chat-reaction {
+  @apply
+  bg-gradient-radial-spotlight
+  from-ui-400
+  to-ui-500
+  rounded-full
+  border
+  border-ui-500
+  hover:border-ui-400
+  text-ui-200
+  px-1.5
+  py-1
+  flex
+  items-center
+  gap-1
+  text-sm
+  leading-none
+  animate-scale-in
+  select-none
+  ;
+  animation-duration: 0.35s;
+  animation-timing-function: cubic-bezier(.75,0,.1,1.5);
+  * {
+    @apply
+    transition
+    duration-75
+    ;
+  }
+  &:active {
+    * {
+      @apply
+      scale-95
+      opacity-75
+      ;
+    }
+  }
+  &.is-owner {
+    @apply
+    from-interaction-300
+    to-interaction-700
+    text-ui-800
+    border-interaction-500/0
+    hover:border-interaction-300
+    ;
+  }
+}
+.chat-react {
+  @apply
+  bg-gradient-radial-spotlight
+  from-ui-400
+  to-ui-500
+  rounded-full
+  w-6
+  h-6
+  flex
+  items-center
+  justify-center
+  text-center
+  transition-all
+  duration-200
+  ease-in-out
+  opacity-0
+  translate-y-1
+  ;
+  label,
+  button {
+    @apply
+    block
+    w-[18px]
+    h-[18px]
+    active:scale-95
+    active:opacity-75
+    ;
+  }
+  .icon {
+    @apply
+    text-lg
+    text-ui-200
     ;
   }
 }

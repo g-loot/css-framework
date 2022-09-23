@@ -10,42 +10,139 @@ const DSpage = () => {
   const [buttonFeedbackMessage3, setButtonFeedbackMessage3] = useState("");
   const [buttonFeedbackMessage4, setButtonFeedbackMessage4] = useState("");
   const [buttonFeedbackMessage5, setButtonFeedbackMessage5] = useState("");
+  const [buttonFeedbackMessage6, setButtonFeedbackMessage6] = useState("");
+  const [buttonFeedbackMessage7, setButtonFeedbackMessage7] = useState("");
+  const [buttonFeedbackMessage8, setButtonFeedbackMessage8] = useState("");
+  const [buttonFeedbackMessage9, setButtonFeedbackMessage9] = useState("");
+  const [buttonFeedbackMessage10, setButtonFeedbackMessage10] = useState("");
+  const [buttonFeedbackMessage11, setButtonFeedbackMessage11] = useState("");
+  const [buttonFeedbackMessage12, setButtonFeedbackMessage12]= useState("");
+  const [buttonFeedbackMessage13, setButtonFeedbackMessage13]= useState("");
+  const [buttonFeedbackMessage14, setButtonFeedbackMessage14] = useState("");
+  const [buttonFeedbackMessage15, setButtonFeedbackMessage15] = useState("");
+  const [buttonFeedbackMessage16, setButtonFeedbackMessage16]= useState("");
+  const [buttonFeedbackMessage17, setButtonFeedbackMessage17]= useState("");
+  const delay = 4000;
   const uiContext = useContext(UiContext);
 
   function buttonFeedback1(message) {
     setButtonFeedbackMessage1(message);
-    const interval1 = setTimeout(() => {
+    const interval = setTimeout(() => {
       setButtonFeedbackMessage1("");
-    }, 4000);
-    return () => clearTimeout(interval1);
+    }, delay);
+    return () => clearTimeout(interval);
   }
   function buttonFeedback2(message) {
     setButtonFeedbackMessage2(message);
-    const interval2 = setTimeout(() => {
+    const interval = setTimeout(() => {
       setButtonFeedbackMessage2("");
-    }, 4000);
-    return () => clearTimeout(interval2);
+    }, delay);
+    return () => clearTimeout(interval);
   }
   function buttonFeedback3(message) {
     setButtonFeedbackMessage3(message);
-    const interval3 = setTimeout(() => {
+    const interval = setTimeout(() => {
       setButtonFeedbackMessage3("");
-    }, 4000);
-    return () => clearTimeout(interval3);
+    }, delay);
+    return () => clearTimeout(interval);
   }
   function buttonFeedback4(message) {
     setButtonFeedbackMessage4(message);
-    const interval4 = setTimeout(() => {
+    const interval = setTimeout(() => {
       setButtonFeedbackMessage4("");
-    }, 4000);
-    return () => clearTimeout(interval4);
+    }, delay);
+    return () => clearTimeout(interval);
   }
   function buttonFeedback5(message) {
     setButtonFeedbackMessage5(message);
-    const interval5 = setTimeout(() => {
+    const interval = setTimeout(() => {
       setButtonFeedbackMessage5("");
-    }, 4000);
-    return () => clearTimeout(interval4);
+    }, delay);
+    return () => clearTimeout(interval);
+  }
+  function buttonFeedback6(message) {
+    setButtonFeedbackMessage6(message);
+    const interval = setTimeout(() => {
+      setButtonFeedbackMessage6("");
+    }, delay);
+    return () => clearTimeout(interval);
+  }
+  function buttonFeedback7(message) {
+    setButtonFeedbackMessage7(message);
+    const interval = setTimeout(() => {
+      setButtonFeedbackMessage7("");
+    }, delay);
+    return () => clearTimeout(interval);
+  }
+  function buttonFeedback8(message) {
+    setButtonFeedbackMessage8(message);
+    const interval = setTimeout(() => {
+      setButtonFeedbackMessage8("");
+    }, delay);
+    return () => clearTimeout(interval);
+  }
+  function buttonFeedback9(message) {
+    setButtonFeedbackMessage9(message);
+    const interval = setTimeout(() => {
+      setButtonFeedbackMessage9("");
+    }, delay);
+    return () => clearTimeout(interval);
+  }
+  function buttonFeedback10(message) {
+    setButtonFeedbackMessage10(message);
+    const interval = setTimeout(() => {
+      setButtonFeedbackMessage10("");
+    }, delay);
+    return () => clearTimeout(interval);
+  }
+  function buttonFeedback11(message) {
+    setButtonFeedbackMessage11(message);
+    const interval = setTimeout(() => {
+      setButtonFeedbackMessage11("");
+    }, delay);
+    return () => clearTimeout(interval);
+  }
+  function buttonFeedback12(message) {
+    setButtonFeedbackMessage12(message);
+    const interval = setTimeout(() => {
+      setButtonFeedbackMessage12("");
+    }, delay);
+    return () => clearTimeout(interval);
+  }
+  function buttonFeedback13(message) {
+    setButtonFeedbackMessage13(message);
+    const interval = setTimeout(() => {
+      setButtonFeedbackMessage13("");
+    }, delay);
+    return () => clearTimeout(interval);
+  }
+  function buttonFeedback14(message) {
+    setButtonFeedbackMessage14(message);
+    const interval = setTimeout(() => {
+      setButtonFeedbackMessage14("");
+    }, delay);
+    return () => clearTimeout(interval);
+  }
+  function buttonFeedback15(message) {
+    setButtonFeedbackMessage15(message);
+    const interval = setTimeout(() => {
+      setButtonFeedbackMessage15("");
+    }, delay);
+    return () => clearTimeout(interval);
+  }
+  function buttonFeedback16(message) {
+    setButtonFeedbackMessage16(message);
+    const interval = setTimeout(() => {
+      setButtonFeedbackMessage16("");
+    }, delay);
+    return () => clearTimeout(interval);
+  }
+  function buttonFeedback17(message) {
+    setButtonFeedbackMessage17(message);
+    const interval = setTimeout(() => {
+      setButtonFeedbackMessage17("");
+    }, delay);
+    return () => clearTimeout(interval);
   }
 
   return (
@@ -727,6 +824,36 @@ const DSpage = () => {
                     ></Button>
                   </div>
                 </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Extra small
+                  </div>
+                  <div className="flex-1 flex flex-col items-start flex-wrap gap-2">
+                    <Button
+                      label="Button Label"
+                      variant="primary"
+                      size="xs"
+                    ></Button>
+                    <Button
+                      label="Button Label"
+                      variant="secondary"
+                      icon="icon-heart"
+                      size="xs"
+                    ></Button>
+                    <Button
+                      label="Purchase"
+                      variant="primary"
+                      currency="coin"
+                      amount="15,000"
+                      size="xs"
+                    ></Button>
+                    <Button
+                      variant="tertiary"
+                      icon="icon-heart"
+                      size="xs"
+                    ></Button>
+                  </div>
+                </div>
               </div>
               <div className="flex-1">
                 <iframe
@@ -838,8 +965,11 @@ const DSpage = () => {
         <h2 className="h3 mb-3">Status</h2>
 
         {/* status: loading */}
-        <div className="surface rounded-lg p-4" id="status-loading">
-          <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
+        <div className="surface rounded-lg p-4">
+          <div
+            className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12"
+            id="status-loading"
+          >
             <h3 className="h4 mb-3">Loading</h3>
             <p className="mb-5">
               Display a loading effect by adding the
@@ -949,7 +1079,10 @@ const DSpage = () => {
             </div>
           </div>
 
-          <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12" id="status-disabled">
+          <div
+            className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12"
+            id="status-disabled"
+          >
             <h3 className="h4 mb-3">Disabled</h3>
             <p className="mb-5">
               Disable a button by adding either a
@@ -1164,9 +1297,19 @@ const DSpage = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div id="status-feedback">
-            <h3 className="h4 mb-3">Feedback</h3>
+      {/* feedback */}
+      <div className="mb-12" id="feedback">
+        <h2 className="h3 mb-3">Feedback</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div
+            className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12"
+            id="feedback-in-label"
+          >
+            <h3 className="h4 mb-3">In label</h3>
             <p className="mb-5">
               Display a textual feedback to your button by adding a
               <code
@@ -1184,7 +1327,7 @@ const DSpage = () => {
               >
                 &#91;data-feedback=&#34;feedback message&#34;&#93;
               </code>{" "}
-              attribute to your button. Feeedback message are visible for 4
+              attribute to your button. The feeedback message is visible for 4
               seconds.
             </p>
             <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
@@ -1257,7 +1400,10 @@ const DSpage = () => {
                       type="button"
                       className="button button-primary button-currency button-coin"
                       data-feedback={buttonFeedbackMessage5}
-                      onClick={buttonFeedback5.bind(this, "Enrolled successfully!")}
+                      onClick={buttonFeedback5.bind(
+                        this,
+                        "Enrolled successfully!"
+                      )}
                     >
                       <div>
                         <span>Purchase</span>
@@ -1282,6 +1428,160 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/j7ubhsft/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div
+            id="feedback-in-tooltip"
+          >
+            <h3 className="h4 mb-3">In tooltip</h3>
+            <p className="mb-5">
+              You can choose to put the feedback in a tooltip message by adding a
+              <code
+                className="interactive text-xs"
+                onClick={() => {
+                  uiContext.openToastr({
+                    size: "small",
+                    text: "attribute copied to your clipboard",
+                    color: "green",
+                    autoDelete: true,
+                    autoDeleteDelay: 2500,
+                  });
+                  navigator.clipboard.writeText('data-feedback-icon="success"');
+                }}
+              >
+                &#91;data-feedback-icon=&#34;success || error || attention&#34;&#93;
+              </code>{" "}
+              attribute to your button. Like the label feeedback, the message is visible for 4
+              seconds.
+            </p>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Success
+                  </div>
+                  <div className="flex-1 flex gap-8 items-center">
+                    <button
+                      className="button rounded-full button-primary"
+                      data-feedback={buttonFeedbackMessage6}
+                      data-feedback-icon="success"
+                      onClick={buttonFeedback6.bind(this, "Link copied successfully")}
+                    >
+                      <span className="icon icon-network-communication" />
+                    </button>
+                    <button
+                      className="button rounded-full button-secondary"
+                      data-feedback={buttonFeedbackMessage7}
+                      data-feedback-icon="success"
+                      onClick={buttonFeedback7.bind(this, "Link copied successfully")}
+                    >
+                      <span className="icon icon-network-communication" />
+                    </button>
+                    <button
+                      className="button rounded-full button-tertiary"
+                      data-feedback={buttonFeedbackMessage8}
+                      data-feedback-icon="success"
+                      onClick={buttonFeedback8.bind(this, "Link copied successfully")}
+                    >
+                      <span className="icon icon-network-communication" />
+                    </button>
+                    <button
+                      className="button rounded-full button-ghost"
+                      data-feedback={buttonFeedbackMessage9}
+                      data-feedback-icon="success"
+                      onClick={buttonFeedback9.bind(this, "Link copied successfully")}
+                    >
+                      <span className="icon icon-network-communication" />
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Error
+                  </div>
+                  <div className="flex-1 flex gap-8 items-center">
+                    <button
+                      className="button rounded-full button-primary"
+                      data-feedback={buttonFeedbackMessage10}
+                      data-feedback-icon="error"
+                      onClick={buttonFeedback10.bind(this, "An error occurred")}
+                    >
+                      <span className="icon icon-network-communication" />
+                    </button>
+                    <button
+                      className="button rounded-full button-secondary"
+                      data-feedback={buttonFeedbackMessage11}
+                      data-feedback-icon="error"
+                      onClick={buttonFeedback11.bind(this, "An error occurred")}
+                    >
+                      <span className="icon icon-network-communication" />
+                    </button>
+                    <button
+                      className="button rounded-full button-tertiary"
+                      data-feedback={buttonFeedbackMessage12}
+                      data-feedback-icon="error"
+                      onClick={buttonFeedback12.bind(this, "An error occurred")}
+                    >
+                      <span className="icon icon-network-communication" />
+                    </button>
+                    <button
+                      className="button rounded-full button-ghost"
+                      data-feedback={buttonFeedbackMessage13}
+                      data-feedback-icon="error"
+                      onClick={buttonFeedback13.bind(this, "An error occurred")}
+                    >
+                      <span className="icon icon-network-communication" />
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Attention
+                  </div>
+                  <div className="flex-1 flex gap-8 items-center">
+                    <button
+                      className="button rounded-full button-primary"
+                      data-feedback={buttonFeedbackMessage14}
+                      data-feedback-icon="attention"
+                      onClick={buttonFeedback14.bind(this, "Please be careful")}
+                    >
+                      <span className="icon icon-network-communication" />
+                    </button>
+                    <button
+                      className="button rounded-full button-secondary"
+                      data-feedback={buttonFeedbackMessage15}
+                      data-feedback-icon="attention"
+                      onClick={buttonFeedback15.bind(this, "Please be careful")}
+                    >
+                      <span className="icon icon-network-communication" />
+                    </button>
+                    <button
+                      className="button rounded-full button-tertiary"
+                      data-feedback={buttonFeedbackMessage16}
+                      data-feedback-icon="attention"
+                      onClick={buttonFeedback16.bind(this, "Please be careful")}
+                    >
+                      <span className="icon icon-network-communication" />
+                    </button>
+                    <button
+                      className="button rounded-full button-ghost"
+                      data-feedback={buttonFeedbackMessage17}
+                      data-feedback-icon="attention"
+                      onClick={buttonFeedback17.bind(this, "Please be careful")}
+                    >
+                      <span className="icon icon-network-communication" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/3s8qwck6/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

@@ -338,6 +338,29 @@
       ;
     }
   }
+  &.button-xs {
+    @apply
+    py-2
+    ;
+
+    > * {
+      &:not([class*="text-"]) {
+        @apply
+        text-[0.875rem]
+        ;
+      }
+    }
+    &[data-feedback]::before {
+      @apply
+      text-[0.875rem]
+      ;
+    }
+    &[class*='rounded-full']{
+      @apply
+      px-2
+      ;
+    }
+  }
 
   /* Currency */
 
@@ -438,6 +461,11 @@
     &.button-sm {
       @apply
       h-[36px]
+      ;
+    }
+    &.button-xs {
+      @apply
+      h-[30px]
       ;
     }
   }
@@ -696,7 +724,7 @@
 }
 
 .button {
-  &[data-feedback]:not([data-feedback=""]) {
+  &[data-feedback]:not([data-feedback=""]):not([data-feedback-icon]) {
     @apply
     overflow-hidden
     ;
@@ -711,6 +739,123 @@
     > * {
       @apply
       animate-[button-feedback-label_4s_cubic-bezier(1,0,0,0.9)_forwards]
+      ;
+    }
+  }
+}
+
+.button {
+  &[data-feedback][data-feedback-icon]:not([data-feedback=""]) {
+    @apply
+    relative
+    ;
+    &::before {
+      @apply
+      content-[attr(data-feedback)]
+      absolute
+      animate-[button-feedback-tooltip_4s_cubic-bezier(0.9,0,0,1)_forwards]
+      inset-x-full
+      rounded
+      backdrop-blur-sm
+      font-body
+      font-normal
+      text-sm
+      block
+      left-[50%]
+      bottom-[100%]
+      py-2
+      px-3
+      pointer-events-none
+      leading-tight
+      -translate-x-[50%]
+      translate-y-0.5
+      max-w-[20rem]
+      w-[max-content]
+      bg-ui-600/95
+      ;
+    }
+    &::after {
+      @apply
+      font-icon
+      absolute
+      inset-x-0
+      animate-[button-feedback-icon_4s_cubic-bezier(0.9,0,0,1)_forwards]
+      ;
+    }
+    > * {
+      @apply
+      animate-[button-feedback-icon-label_4s_cubic-bezier(1,0,0,0.9)_forwards]
+      ;
+    }
+  }
+  &[data-feedback-icon="success"] {
+    &::before {
+      @apply
+      text-interaction-500
+      ;
+    }
+    &::after {
+      @apply
+      content-['\ec14']
+      text-interaction-500
+      ;
+    }
+    &.button-primary {
+      &::after {
+        @apply
+        text-ui-800
+        ;
+      }
+    }
+  }
+  &[data-feedback-icon="error"] {
+    &::before {
+      @apply
+      text-error-500
+      ;
+    }
+    &::after {
+      @apply
+      content-['\ebd5']
+      text-error-500
+      ;
+    }
+    &.button-primary {
+      &::after {
+        @apply
+        text-ui-800
+        ;
+      }
+    }
+  }
+  &[data-feedback-icon="attention"] {
+    &::before {
+      @apply
+      text-attention-500
+      ;
+    }
+    &::after {
+      @apply
+      content-['\eb5d']
+      text-attention-500
+      ;
+    }
+    &.button-primary {
+      &::after {
+        @apply
+        text-ui-800
+        ;
+      }
+    }
+  }
+}
+
+.button {
+  &[data-feedback=""] {
+    &::before,
+    &::after {
+      @apply
+      hidden
       ;
     }
   }
@@ -734,6 +879,24 @@
     opacity: 0;
   }
 }
+@keyframes button-feedback-tooltip {
+  0% {
+    transform: translate(-50%, -0.1rem);
+    opacity: 0;
+  }
+  10% {
+    transform: translate(-50%, -0.35rem);
+    opacity: 1;
+  }
+  90% {
+    transform: translate(-50%, -0.35rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -0.1rem);
+    opacity: 0;
+  }
+}
 @keyframes button-feedback-label {
   0% {
     transform: translateY(0);
@@ -749,6 +912,42 @@
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes button-feedback-icon {
+  0% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+  90% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+}
+@keyframes button-feedback-icon-label {
+  0% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+  10% {
+    transform: scale(0) rotate(-45deg);
+    opacity: 0;
+  }
+  90% {
+    transform: scale(0) rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0);
     opacity: 1;
   }
 }

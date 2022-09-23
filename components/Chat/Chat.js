@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 
 import ModalReportMessage from "../../pages/prototype/clans/modal-report-message";
+import Tooltip from "../Tooltip/Tooltip";
 import { UiContext } from "../../contexts/ui";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 
-const conversation = [
+const conversationFull = [
   {
     id: 1,
     time: "Message sent 1.22pm",
@@ -20,7 +21,7 @@ const conversation = [
         reactions: [
           {
             emoji: "❤️",
-            author: [4],
+            author: [4, 0],
           },
           {
             emoji: "👏",
@@ -49,6 +50,10 @@ const conversation = [
           {
             emoji: "❤️",
             author: [4],
+          },
+          {
+            emoji: "👏",
+            author: [0],
           },
         ],
       },
@@ -104,12 +109,24 @@ const conversation = [
         id: 1,
         type: "text",
         content: "Awesome, can’t wait.",
+        reactions: [
+          {
+            emoji: "❤️",
+            author: [0],
+          },
+        ],
       },
       {
         id: 2,
         type: "text",
         content:
           "Is this the right link that you’ve sent? <a className='link' href='#' target='_blank'>https://gloot.com/</a>",
+        reactions: [
+          {
+            emoji: "👍",
+            author: [4, 0, 1],
+          },
+        ],
       },
     ],
   },
@@ -126,7 +143,7 @@ const conversation = [
         reactions: [
           {
             emoji: "❤️",
-            author: [4],
+            author: [4, 0, 1],
           },
         ],
       },
@@ -138,13 +155,31 @@ export default function Chat(props) {
   const maxHeight =
     props.maxheight !== undefined ? props.maxheight : "h-[700px]";
   const isDisabled = props.isdisabled;
+  const isDemo = props.demo;
   const prototype = usePrototypeData();
-  const [messages, setMessages] = useState(conversation);
   const [newMessageAdded, setNewMessageAdded] = useState(false);
+  const conversationSelector =
+    props.conversation === undefined ? conversationFull : props.conversation;
+  const conversation = conversationSelector;
+  const [messages, setMessages] = useState(conversation);
 
   const { query } = useRouter();
   const uiContext = useContext(UiContext);
   const modalReportMessage = query.modalreportmessage === "true" ? true : false;
+
+  const [isActive, setActive] = useState(false);
+  const ref = useRef(null);
+
+  const dropdownActive = (e) => {
+    e.preventDefault();
+    setActive(!isActive);
+  };
+
+  const handleHoverOutside = (e) => {
+    if (ref.current && !ref.current.contains(e.target)) {
+      setActive(false);
+    }
+  };
 
   function openModalReportMessage() {
     uiContext.openModal(<ModalReportMessage></ModalReportMessage>);
@@ -283,7 +318,7 @@ export default function Chat(props) {
   }
   return (
     <>
-      <div className="chat chat-responsive">
+      <div className={`chat ${isDemo ? "chat-responsive" : ""}`}>
         <div
           className={`chat-feed ${maxHeight} ${
             isDisabled ? "flex items-center justify-center" : ""
@@ -321,7 +356,12 @@ export default function Chat(props) {
                     </span>
                     {message.messages.map(
                       (messageBubble, messageBubbleIndex) => (
-                        <div key={messageBubble.id} className="chat-message">
+                        <div
+                          key={messageBubble.id}
+                          tabIndex={1}
+                          className="chat-message"
+                          onMouseLeave={handleHoverOutside}
+                        >
                           <div
                             className={`chat-bubble ${
                               messageBubble.type === "image"
@@ -341,180 +381,133 @@ export default function Chat(props) {
                                 <img src={messageBubble.content} alt="" />
                               </>
                             )}
-                            <div className="chat-bubble-actions">
-                                <div className="chat-bubble-reactions">
-                                  {messageBubble.reactions?.map(
-                                    (reaction, reactionIndex) => (
-                                      <div
-                                        key={reactionIndex}
-                                        className={`animate-scale-in ${
-                                          reaction.author.find((author) => {
-                                            author === 0;
-                                          })
-                                            ? "is-owner"
-                                            : ""
-                                        }`}
-                                        data-tooltip={
-                                          prototype.getUserByID(reaction.author)
-                                            ?.nickname
-                                        }
-                                      >
-                                        <span>{reaction.emoji}</span>
-                                        <span>{reaction.author.length}</span>
+                            <div className="chat-reactions">
+                              {messageBubble.reactions?.map(
+                                (reaction, reactionIndex) => (
+                                  <Tooltip
+                                    key={reactionIndex}
+                                    placement="top"
+                                    tooltip={
+                                      <div className="relative text-sm">
+                                        <ul>
+                                          <li>
+                                            {
+                                              prototype.getUserByID(
+                                                reaction.author
+                                              )?.nickname
+                                            }
+                                          </li>
+                                          <li>Jamlog</li>
+                                          <li>Peta</li>
+                                        </ul>
                                       </div>
-                                    )
-                                  )}
-                                  <div className="dropdown dropdown-bottom dropdown-center" data-tooltip="React">
-                                    <label
-                                      tabIndex="0"
-                                      className="rounded-full"
-                                    >
-                                      <span className="icon icon-smile"></span>
-                                    </label>
+                                    }
+                                  >
                                     <div
-                                      tabIndex="0"
-                                      className="dropdown-content bg-ui-500 p-1"
+                                      key={reactionIndex}
+                                      className={`chat-reaction ${
+                                        reaction.author.find((author) => {
+                                          author === 1;
+                                        })
+                                          ? "is-owner"
+                                          : ""
+                                      }`}
                                     >
-                                      <ul className="menu menu-secondary menu-rounded menu-horizontal">
-                                        <li>
-                                          <a
-                                            onClick={addEmoji.bind(
-                                              this,
-                                              message.id,
-                                              messageBubble.id,
-                                              "❤️"
-                                            )}
-                                          >
-                                            <span>
-                                              <span className="text-xl">❤️</span>
-                                            </span>
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a
-                                            onClick={addEmoji.bind(
-                                              this,
-                                              message.id,
-                                              messageBubble.id,
-                                              "👍"
-                                            )}
-                                          >
-                                            <span>
-                                              <span className="text-xl">👍</span>
-                                            </span>
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a
-                                            onClick={addEmoji.bind(
-                                              this,
-                                              message.id,
-                                              messageBubble.id,
-                                              "😂"
-                                            )}
-                                          >
-                                            <span>
-                                              <span className="text-xl">😂</span>
-                                            </span>
-                                          </a>
-                                        </li>
-                                        <li>
-                                          <a
-                                            onClick={addEmoji.bind(
-                                              this,
-                                              message.id,
-                                              messageBubble.id,
-                                              "👏"
-                                            )}
-                                          >
-                                            <span>
-                                              <span className="text-xl">👏</span>
-                                            </span>
-                                          </a>
-                                        </li>
-                                      </ul>
+                                      <span>{reaction.emoji}</span>
+                                      <span>{reaction.author.length}</span>
                                     </div>
-                                  </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div className="chat-actions">
-                            <div
-                              className="chat-action-hidden"
-                              data-tooltip="React"
-                            >
-                              <div className="dropdown dropdown-center">
-                                <label
-                                  tabIndex="0"
-                                  className="button button-ghost rounded-full"
-                                >
-                                  <span className="icon icon-smile"></span>
-                                </label>
+                                  </Tooltip>
+                                )
+                              )}
+                              <div className="chat-react">
                                 <div
-                                  tabIndex="0"
-                                  className="dropdown-content bg-ui-500 p-1"
+                                  ref={ref}
+                                  className={`dropdown dropdown-bottom ${
+                                    message.isYourself
+                                      ? "dropdown-end"
+                                      : "dropdown-start"
+                                  } ${
+                                    isActive
+                                      ? "dropdown-open"
+                                      : "dropdown-closed"
+                                  }`}
+                                  data-tooltip="React"
                                 >
-                                  <ul className="menu menu-secondary menu-rounded menu-horizontal">
-                                    <li>
-                                      <a
-                                        onClick={addEmoji.bind(
-                                          this,
-                                          message.id,
-                                          messageBubble.id,
-                                          "❤️"
-                                        )}
-                                      >
-                                        <span>
-                                          <span className="text-xl">❤️</span>
-                                        </span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a
-                                        onClick={addEmoji.bind(
-                                          this,
-                                          message.id,
-                                          messageBubble.id,
-                                          "👍"
-                                        )}
-                                      >
-                                        <span>
-                                          <span className="text-xl">👍</span>
-                                        </span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a
-                                        onClick={addEmoji.bind(
-                                          this,
-                                          message.id,
-                                          messageBubble.id,
-                                          "😂"
-                                        )}
-                                      >
-                                        <span>
-                                          <span className="text-xl">😂</span>
-                                        </span>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a
-                                        onClick={addEmoji.bind(
-                                          this,
-                                          message.id,
-                                          messageBubble.id,
-                                          "👏"
-                                        )}
-                                      >
-                                        <span>
-                                          <span className="text-xl">👏</span>
-                                        </span>
-                                      </a>
-                                    </li>
-                                  </ul>
+                                  <button
+                                    type="button"
+                                    onClick={dropdownActive}
+                                    className="rounded-full"
+                                  >
+                                    <span className="icon icon-smile"></span>
+                                  </button>
+                                  <div
+                                    tabIndex="0"
+                                    className="dropdown-content bg-ui-500 p-1"
+                                  >
+                                    <ul className="menu menu-secondary menu-rounded menu-horizontal">
+                                      <li>
+                                        <a
+                                          onClick={addEmoji.bind(
+                                            this,
+                                            message.id,
+                                            messageBubble.id,
+                                            "❤️"
+                                          )}
+                                        >
+                                          <span>
+                                            <span className="text-xl">❤️</span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a
+                                          onClick={addEmoji.bind(
+                                            this,
+                                            message.id,
+                                            messageBubble.id,
+                                            "👍"
+                                          )}
+                                        >
+                                          <span>
+                                            <span className="text-xl">👍</span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a
+                                          onClick={addEmoji.bind(
+                                            this,
+                                            message.id,
+                                            messageBubble.id,
+                                            "😂"
+                                          )}
+                                        >
+                                          <span>
+                                            <span className="text-xl">😂</span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a
+                                          onClick={addEmoji.bind(
+                                            this,
+                                            message.id,
+                                            messageBubble.id,
+                                            "👏"
+                                          )}
+                                        >
+                                          <span>
+                                            <span className="text-xl">👏</span>
+                                          </span>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
                                 </div>
                               </div>
                             </div>
+                          </div>
+                          <div className="chat-actions">
                             <div
                               className="chat-action-hidden"
                               data-tooltip="More"
@@ -555,6 +548,7 @@ export default function Chat(props) {
                                 </div>
                               </div>
                             </div>
+                            {/*
                             <div
                               className="chat-action-hidden"
                               data-tooltip="Reply"
@@ -566,6 +560,7 @@ export default function Chat(props) {
                                 <span className="icon icon-reply"></span>
                               </button>
                             </div>
+                                    */}
                           </div>
                         </div>
                       )
@@ -597,79 +592,81 @@ export default function Chat(props) {
 
           <div ref={bottomRef} />
         </div>
-        <form className={`chat-footer flex items-end`} onSubmit={addMessage}>
-          <div
-            className={`dropdown dropdown-top  ${
-              isDisabled ? "is-disabled" : ""
-            }`}
-          >
-            <label
-              tabIndex="0"
-              className="button button-ghost rounded-full m-0"
-            >
-              <span
-                className={`icon ${isDisabled ? "icon-lock" : "icon-c-add"}`}
-              ></span>
-            </label>
-            <div tabIndex="0" className="dropdown-content bg-ui-500 p-1">
-              <ul className="menu menu-secondary menu-rounded menu-horizontal">
-                <li>
-                  <a>
-                    <span>
-                      <span className="text-xl">❤️</span>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <span>
-                      <span className="text-xl">👍</span>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <span>
-                      <span className="text-xl">😂</span>
-                    </span>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <span>
-                      <span className="text-xl">👏</span>
-                    </span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className={`form-group ${isDisabled ? "is-disabled" : ""}`}>
-            <textarea
-              ref={messageInput}
-              name="send-message"
-              id="send-message"
-              className="rounded-3xl max-h-[200px] resize-none"
-              rows={rows}
-              onChange={(text) => setValue(text.target.value)}
-              placeholder={`${
-                !isDisabled
-                  ? "Message clan"
-                  : "You need to be a member of this clan to participate"
+        {!isDemo && (
+          <form className={`chat-footer flex items-end`} onSubmit={addMessage}>
+            <div
+              className={`dropdown dropdown-top  ${
+                isDisabled ? "is-disabled" : ""
               }`}
-            ></textarea>
-          </div>
-          {!isDisabled && (
-            <button
-              type="submit"
-              role="button"
-              className="button button-tertiary rounded-full"
-              disabled={value.length === 0}
             >
-              <span className="icon icon-send-message" />
-            </button>
-          )}
-        </form>
+              <label
+                tabIndex="0"
+                className="button button-ghost rounded-full m-0"
+              >
+                <span
+                  className={`icon ${isDisabled ? "icon-lock" : "icon-c-add"}`}
+                ></span>
+              </label>
+              <div tabIndex="0" className="dropdown-content bg-ui-500 p-1">
+                <ul className="menu menu-secondary menu-rounded menu-horizontal">
+                  <li>
+                    <a>
+                      <span>
+                        <span className="text-xl">❤️</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span>
+                        <span className="text-xl">👍</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span>
+                        <span className="text-xl">😂</span>
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span>
+                        <span className="text-xl">👏</span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className={`form-group ${isDisabled ? "is-disabled" : ""}`}>
+              <textarea
+                ref={messageInput}
+                name="send-message"
+                id="send-message"
+                className="rounded-3xl max-h-[200px] resize-none"
+                rows={rows}
+                onChange={(text) => setValue(text.target.value)}
+                placeholder={`${
+                  !isDisabled
+                    ? "Message clan"
+                    : "You need to be a member of this clan to participate"
+                }`}
+              ></textarea>
+            </div>
+            {!isDisabled && (
+              <button
+                type="submit"
+                role="button"
+                className="button button-tertiary rounded-full"
+                disabled={value.length === 0}
+              >
+                <span className="icon icon-send-message" />
+              </button>
+            )}
+          </form>
+        )}
       </div>
     </>
   );

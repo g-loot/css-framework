@@ -42,6 +42,20 @@
     ;
   }
 
+
+  > *:not(.icon) {
+    &:first-child {
+      @apply
+      ml-1
+      ;
+    }
+    &:last-child {
+      @apply
+      mr-1
+      ;
+    }
+  }
+
   &:not([class*='rounded'], [class*='sliced']) {
     @apply
     rounded-full

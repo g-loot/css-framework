@@ -527,7 +527,7 @@ const DSpage = () => {
         <h2 id="text-gradient">Text gradient</h2>
         <p>
           You can apply gradient to text elements by adding the background class
-          names explained above and that following class name:
+          names explained above and that following class name. Note that you cannot add strokes or shadows to text gradients.
         </p>
         <div className="surface rounded-lg overflow-x-auto">
           <table className="table w-full">
