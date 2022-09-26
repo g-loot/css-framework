@@ -163,9 +163,9 @@ const PrototypePage = () => {
           </ul>
         </nav>
       </section>
-      {TabsItems.map((item) => {
+      {TabsItems.map((item, itemIndex) => {
         if (item.url === selectedTab) {
-          return React.createElement(item.component);
+          return React.createElement(item.component, { key: itemIndex })
         }
       })}
       <Footer />

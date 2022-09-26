@@ -376,6 +376,93 @@ export default function TopbarNew() {
                   </Tooltip>
                 </div>
               </div>
+              
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex="1"
+                  className="flex items-center rounded-full bg-ui-700 interactive"
+                >
+                  <button
+                    type="button"
+                    className="button button-sm button-ghost rounded-full"
+                  >
+                    <span data-badge="." className="leading-[0]">
+                      <span className="icon icon-alarm text-ui-200" />
+                    </span>
+                  </button>
+                  <span className="icon icon-arrow-sm-down mr-2" />
+                </div>
+
+                <div
+                  tabIndex="1"
+                  className="dropdown-content bg-ui-700 w-[320px] sm:w-[420px] overflow-hidden shadow-xl"
+                >
+                  <div className="flex items-center justify-between mb-2 p-2">
+                    <h4 className="text-2xl ml-2 pt-1">Notifications</h4>
+                    <button
+                      type="button"
+                      className="button button-sm button-secondary"
+                    >
+                      <span>Settings</span>
+                    </button>
+                  </div>
+                  <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 space-y-4">
+                    {notificationsGroups.map(
+                      (notificationGroup, notificationGroupIndex) => (
+                        <div key={notificationGroupIndex}>
+                          <h5 className="px-2 text-ui-300 text-sm mb-2">
+                            {notificationGroup.name}
+                          </h5>
+                          <ul className="items-spaced space-y-2">
+                            {notificationGroup.notifications?.map(
+                              (notification, notificationIndex) => (
+                                <Link
+                                  key={notificationIndex}
+                                  href={`/prototype/wallet${prototype.getURLparams()}`}
+                                >
+                                  <li
+                                    className={`item rounded-xl item-interactive relative surface surface-ui-600 hover:opacity-50 ${
+                                      notification.read ? "opacity-25" : ""
+                                    }`}
+                                  >
+                                    <div className="item-image">
+                                      <div className="avatar avatar-square avatar-simple avatar-md">
+                                        <div>
+                                          <img src={notification.image} />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="item-body leading-tight">
+                                      <div className="text-ui-300 text-sm leading-tight">
+                                        {notification.intro}
+                                      </div>
+                                      <div className="item-title font-headings font-bold text-ui-100 text-lg italic my-1">
+                                        {notification.title}
+                                      </div>
+                                      <div className="text-ui-300 text-sm leading-tight">
+                                        {notification.text}
+                                      </div>
+                                    </div>
+                                    <div className="absolute top-2 right-4">
+                                      <div className=" flex items-center justify-end gap-1">
+                                        <div className="text-xs text-ui-300">
+                                          {notification.time}
+                                        </div>
+                                        <i className="badge bg-error-500" />
+                                      </div>
+                                    </div>
+                                  </li>
+                                </Link>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                      )
+                    )}
+                  </div>
+                </div>
+              </div>
+
               <div className="dropdown dropdown-end">
                 <div
                   tabIndex="1"
@@ -465,91 +552,6 @@ export default function TopbarNew() {
                       </Link>
                     </li>
                   </ul>
-                </div>
-              </div>
-              <div className="dropdown dropdown-end">
-                <div
-                  tabIndex="1"
-                  className="flex items-center rounded-full bg-ui-700 interactive"
-                >
-                  <button
-                    type="button"
-                    className="button button-sm button-ghost rounded-full"
-                  >
-                    <span data-badge="." className="leading-[0]">
-                      <span className="icon icon-alarm text-ui-200" />
-                    </span>
-                  </button>
-                  <span className="icon icon-arrow-sm-down mr-2" />
-                </div>
-
-                <div
-                  tabIndex="1"
-                  className="dropdown-content bg-ui-700 w-[320px] sm:w-[420px] overflow-hidden shadow-xl"
-                >
-                  <div className="flex items-center justify-between mb-2 p-2">
-                    <h4 className="text-2xl ml-2 pt-1">Notifications</h4>
-                    <button
-                      type="button"
-                      className="button button-sm button-secondary"
-                    >
-                      <span>Settings</span>
-                    </button>
-                  </div>
-                  <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 space-y-4">
-                    {notificationsGroups.map(
-                      (notificationGroup, notificationGroupIndex) => (
-                        <div key={notificationGroupIndex}>
-                          <h5 className="px-2 text-ui-300 text-sm mb-2">
-                            {notificationGroup.name}
-                          </h5>
-                          <ul className="items-spaced space-y-2">
-                            {notificationGroup.notifications?.map(
-                              (notification, notificationIndex) => (
-                                <Link
-                                  key={notificationIndex}
-                                  href={`/prototype/wallet${prototype.getURLparams()}`}
-                                >
-                                  <li
-                                    className={`item rounded-xl item-interactive relative surface surface-ui-600 hover:opacity-50 ${
-                                      notification.read ? "opacity-25" : ""
-                                    }`}
-                                  >
-                                    <div className="item-image">
-                                      <div className="avatar avatar-square avatar-simple avatar-md">
-                                        <div>
-                                          <img src={notification.image} />
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div className="item-body leading-tight">
-                                      <div className="text-ui-300 text-sm leading-tight">
-                                        {notification.intro}
-                                      </div>
-                                      <div className="item-title font-headings font-bold text-ui-100 text-lg italic my-1">
-                                        {notification.title}
-                                      </div>
-                                      <div className="text-ui-300 text-sm leading-tight">
-                                        {notification.text}
-                                      </div>
-                                    </div>
-                                    <div className="absolute top-2 right-4">
-                                      <div className=" flex items-center justify-end gap-1">
-                                        <div className="text-xs text-ui-300">
-                                          {notification.time}
-                                        </div>
-                                        <i className="badge bg-error-500" />
-                                      </div>
-                                    </div>
-                                  </li>
-                                </Link>
-                              )
-                            )}
-                          </ul>
-                        </div>
-                      )
-                    )}
-                  </div>
                 </div>
               </div>
             </div>

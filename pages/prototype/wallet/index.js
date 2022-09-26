@@ -12,20 +12,20 @@ import { useRouter } from "next/router";
 const TabsItems = [
   {
     label: "Overview",
-    url: 'overview',
+    url: "overview",
     component: TabWalletOverview,
   },
   {
     label: "History",
-    url: 'history',
+    url: "history",
     component: TabWalletHistory,
   },
   {
     label: "Voucher",
-    url: 'voucher',
+    url: "voucher",
     component: TabWalletVoucher,
-  }
-]
+  },
+];
 
 export default function Home() {
   const router = useRouter();
@@ -52,7 +52,9 @@ export default function Home() {
             <div className="relative z-10">
               <h1 className="text-3xl sm:text-4xl">Wallet</h1>
               <p className="text-ui-300 max-w-[70ch] mt-4">
-                Get to know the different currencies and rewards by clicking on the icons and keep track of your earnings from Missions, Weekly Brawls and Monthly Tournaments.
+                Get to know the different currencies and rewards by clicking on
+                the icons and keep track of your earnings from Missions, Weekly
+                Brawls and Monthly Tournaments.
               </p>
             </div>
             <div
@@ -70,10 +72,16 @@ export default function Home() {
 
         <nav>
           <ul className="tabs border-b border-ui-700">
-            { TabsItems.map((item, itemIndex)  => (
+            {TabsItems.map((item, itemIndex) => (
               <li key={item}>
-                <Link href={`/prototype/wallet/?tab=${item.url}${prototype.getURLparams("&")}`}>
-                  <a className={`${selectedTab === item.url ? 'is-active' : ''}`}>
+                <Link
+                  href={`/prototype/wallet/?tab=${
+                    item.url
+                  }${prototype.getURLparams("&")}`}
+                >
+                  <a
+                    className={`${selectedTab === item.url ? "is-active" : ""}`}
+                  >
                     <span>{item.label}</span>
                   </a>
                 </Link>
@@ -83,13 +91,11 @@ export default function Home() {
         </nav>
 
         <section className="py-4">
-
-          { TabsItems.map(item => {
-          if (item.url === selectedTab) {
-              return React.createElement(item.component)
+          {TabsItems.map((item, itemIndex) => {
+            if (item.url === selectedTab) {
+              return React.createElement(item.component, { key: itemIndex });
             }
           })}
-          
         </section>
       </PrototypeStructure>
     </>

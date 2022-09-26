@@ -32,6 +32,7 @@
   ;
   .chat-messages {
     @apply
+    max-w-[60%]
     lg:max-w-[60%]
     flex
     flex-col
@@ -161,6 +162,47 @@
       ;
     }
   }
+  &.is-event {
+    .chat-author {
+      @apply
+      hidden
+      ;
+    }
+    .chat-messages {
+      @apply
+      pl-0
+      lg:pl-0
+      w-full
+      max-w-[100%]
+      lg:max-w-[100%]
+      ;
+      .chat-message {
+        @apply
+        rounded
+        ;
+        .chat-bubble {
+          @apply
+          w-full
+          bg-gradient-to-r
+          bg-ui-700/0
+          from-ui-700/0
+          via-ui-700
+          to-ui-700/0
+          rounded
+          text-ui-200
+          text-center
+          ;
+          /* shadow-xl */
+        }
+        .chat-reactions,
+        .chat-actions {
+          @apply
+          hidden
+          ;
+        }
+      }
+    }
+  }
   &:last-child {
     @apply
     pb-44
@@ -168,6 +210,8 @@
     ;
   }
 }
+
+
 @media only screen and (max-width: 768px) {
   .chat-group:not(.is-owner) {
     .dropdown.dropdown-center {
@@ -222,7 +266,6 @@
     transition-colors
     duration-200
     ease-in-out
-    hover:text-ui-200
     ;
   }
 }
@@ -233,6 +276,7 @@
   relative
   z-0
   min-w-[fit-content]
+  whitespace-pre-wrap
   ;
   &,
   img {
@@ -262,7 +306,9 @@
   }
   .chat-reactions {
     @apply
-    absolute
+    relative
+    h-px
+    -mx-2
     z-10
     -bottom-3
     right-1
@@ -304,12 +350,11 @@
   }
 }
 
-
 .chat-reactions {
   @apply
   flex
   justify-end
-  gap-1
+  gap-0.5
   items-center
   ;
 }
@@ -324,11 +369,11 @@
   border-ui-500
   hover:border-ui-400
   text-ui-200
-  px-1.5
-  py-1
+  px-1
+  py-0.5
   flex
   items-center
-  gap-1
+  gap-0.5
   text-sm
   leading-none
   animate-scale-in
@@ -380,6 +425,7 @@
   ;
   label,
   button {
+   &.chat-react-button {
     @apply
     block
     w-[18px]
@@ -387,6 +433,7 @@
     active:scale-95
     active:opacity-75
     ;
+   }
   }
   .icon {
     @apply

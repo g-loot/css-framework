@@ -58,8 +58,6 @@
     w-full
     items-center
     space-x-2
-    px-2
-    py-2
     text-ui-300
     cursor-pointer
     transition-all
@@ -69,6 +67,13 @@
     focus-visible:outline-1
     focus-visible:outline-main
     ;
+
+    &:not([class*="p-"]) {
+      @apply
+      px-2
+      py-2
+      ;
+    }
     
     > * {
       @apply
@@ -231,9 +236,11 @@
   flex-row
   ;
   :where(a, button, div) {
-    @apply 
-    px-4
-    ;
+    &:not([class*="p-"]) {
+      @apply
+      px-4
+      ;
+    }
     &::after {
       @apply 
       rounded

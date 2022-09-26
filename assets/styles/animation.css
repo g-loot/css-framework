@@ -19,7 +19,6 @@
   animation-iteration-count: infinite;
 }
 
-
 /* flip */ 
 .flip {
   @apply
@@ -78,3 +77,14 @@
 .animate-running {
   animation-play-state: running !important;
 }
+
+/* no anim */
+
+.noanimation {
+  [class*="animate-"],
+  .header > .header-bg,
+  .chat-reaction {
+    animation: none !important;
+  }
+}
+

@@ -13,6 +13,24 @@ export default function Home() {
   const [submitting, setSubmitting] = useState(false);
   const { query } = useRouter();
   const isConnected = query.connected === "true" ? true : false;
+  const [buttonFeedbackMessage1, setButtonFeedbackMessage1] = useState("");
+  const [buttonFeedbackMessage2, setButtonFeedbackMessage2] = useState("");
+  const delay = 4000;
+
+  function buttonFeedback1(message) {
+    setButtonFeedbackMessage1(message);
+    setTimeout(() => {
+      setButtonFeedbackMessage1("");
+    }, delay);
+    return;
+  }
+  function buttonFeedback2(message) {
+    setButtonFeedbackMessage2(message);
+    setTimeout(() => {
+      setButtonFeedbackMessage2("");
+    }, delay);
+    return;
+  }
 
   function addToastWithDelay(toast) {
     setSubmitting(true);
@@ -217,7 +235,8 @@ export default function Home() {
                     >
                       <span>Save changes</span>
                     </button>
-                    <button type="button" className="button button-secondary">
+                    <button type="button" className="button button-secondary" data-feedback-icon="success" data-feedback={buttonFeedbackMessage1}
+                      onClick={buttonFeedback1.bind(this, "Settings reset")}>
                       <span>Reset</span>
                     </button>
                   </div>
@@ -336,7 +355,8 @@ export default function Home() {
                     >
                       <span>Save changes</span>
                     </button>
-                    <button type="button" className="button button-secondary">
+                    <button type="button" className="button button-secondary" data-feedback-icon="success" data-feedback={buttonFeedbackMessage2}
+                      onClick={buttonFeedback2.bind(this, "Settings reset")}>
                       <span>Reset</span>
                     </button>
                   </div>

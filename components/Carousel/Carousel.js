@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
+import DigitalClock from "./DigitalClock";
 
 const slides = [
   {
@@ -31,23 +33,42 @@ const slides = [
   },
 ];
 
+const modes = {
+  name: "Pomodoro",
+  code: "pomodoro",
+  duration: 5,
+};
+
+
 export default function Carousel(props) {
-  const isOnboarding = props.isOnboarding !== undefined ? props.isOnboarding : false;
+  
+  const isOnboarding =
+    props.isOnboarding !== undefined ? props.isOnboarding : false;
   const [slideNumber, setSlideNumber] = useState(0);
-  const interval = setTimeout(() => {
-    nextHandler(slideNumber, slides.length);
-  }, 5000);
+  const [percent, setPercent] = useState(0);
+  const slideDuration = 2500;
+  const [date, setDate] = useState(new Date());
+
+  const [fixedDate, setFixedDate] = useState(date);
+  const [mode, setMode] = useState(modes);
+  const [pause, setPause] = useState(false);
+  const [standby, setStandby] = useState(false);
+
+  const [duration, setDuration] = useState(slideDuration);
+  const [currentMode, setCurrentMode] = useState(mode);
 
   useEffect(() => {
-    interval;
-    return () => clearTimeout(interval);
-  }, [interval]);
+    setPercent((Math.floor(-(100 / (slideDuration / 1000)) * duration / 1000)).toString());
+    console.log(percent);
+  }, [duration]);
 
   function slideHandler(varTarget) {
+    resetCoundown();
     setSlideNumber(varTarget);
   }
 
   function prevHandler(varTarget, max) {
+    resetCoundown();
     if (varTarget === 0) {
       setSlideNumber((varTarget = max - 1));
     } else {
@@ -56,6 +77,7 @@ export default function Carousel(props) {
   }
 
   function nextHandler(varTarget, max) {
+    resetCoundown();
     if (varTarget === max - 1) {
       setSlideNumber((varTarget = 0));
     } else {
@@ -63,94 +85,152 @@ export default function Carousel(props) {
     }
   }
 
+  function resetCoundown() {
+    setDuration(slideDuration);
+  }
+
+  let countdown;
+  countdown = useInterval(
+    () => {
+      let minutes, seconds;
+
+      setDuration((duration) => duration - 1);
+      seconds = parseInt(duration, 10);
+      if (standby) {
+        setDuration(slideDuration * 60 - 1);
+      } else {
+        if (duration < 0) {
+          clearInterval(countdown);
+        }
+      }
+    },
+    !pause && duration >= 0 ? 1000 : null,
+    mode,
+    duration,
+    standby,
+    currentMode
+  );
+
+  function useInterval(callback, delay, mode, duration) {
+    const savedCallback = useRef();
+    let id;
+
+    useEffect(() => {
+      savedCallback.current = callback;
+    }, [callback]);
+
+    useEffect(() => {
+      if (standby) {
+        setDuration(slideDuration);
+        setCurrentMode(mode);
+      }
+      function tick() {
+        savedCallback.current();
+      }
+      if (delay !== null && !standby) {
+        id = setInterval(tick, delay / 1000);
+        return () => clearInterval(id);
+      } else if(!pause) {
+        nextHandler(slideNumber, slides.length);
+      }
+    }, [delay, mode, duration, standby, currentMode]);
+  }
+
   return (
-    <div className="carousel">
-      <div className="carousel-slides">
-        {slides.map((slide, slideIndex) => (
-          <>
-            <div
-              className={`carousel-slide ${
-                slideNumber === slideIndex ? "is-active" : ""
-              }`}
-              key={slide}
-            >
-              <div className="carousel-image">
-                <span style={{ backgroundImage: `url(${slide.image})` }} />
-              </div>
-              <div className="carousel-body">
-                <div>
-                  <h2 className="h3 text-ui-100">{slide.title}</h2>
-                  <p className="mb-5 mt-2 text-ui-200">{slide.description}</p>
-                  <button className="button button-primary">
-                    <span>{slide.buttonLabel}</span>
-                    {slide.buttonExternal && (
-                      <>
-                        <span className="icon icon-box-arrow-top-right" />
-                      </>
-                    )}
-                  </button>
+    <>
+      <div
+        className="carousel"
+        onMouseEnter={() => {
+          setPause(true);
+        }}
+        onMouseLeave={() => {
+          if (pause) {
+            setPause(false);
+          } else {
+            setStandby(false);
+            setFixedDate(date);
+          }
+        }}
+      >
+        <div className="carousel-slides">
+          {slides.map((slide, slideIndex) => (
+            <>
+              <div
+                className={`carousel-slide ${
+                  slideNumber === slideIndex ? "is-active" : ""
+                }`}
+                key={slide}
+              >
+                <div className="carousel-image">
+                  <span style={{ backgroundImage: `url(${slide.image})` }} />
+                </div>
+                <div className="carousel-body">
+                  <div>
+                    <h2 className="h3 text-ui-100">
+                      {slide.title}
+                    </h2>
+                    <p className="mb-5 mt-2 text-ui-200">{slide.description}</p>
+                    <button className="button button-primary">
+                      <span>{slide.buttonLabel}</span>
+                      {slide.buttonExternal && (
+                        <>
+                          <span className="icon icon-box-arrow-top-right" />
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+                <div className="carousel-backdrop">
+                  <span style={{ backgroundImage: `url(${slide.image})` }} />
                 </div>
               </div>
-              <div className="carousel-backdrop">
-                <span style={{ backgroundImage: `url(${slide.image})` }} />
-              </div>
-            </div>
-          </>
-        ))}
-      </div>
-      <div className="carousel-nav">
-        <ul className="carousel-list">
-          {slides.map((item, itemIndex) => (
-            <>
-              <li
-                key={item}
-                className={`${slideNumber === itemIndex ? "is-active" : ""}`}
-              >
-                <a onClick={slideHandler.bind(this, itemIndex)}>
-                  {isOnboarding && (
-                    <span>Step {itemIndex + 1}</span>
-                  )}
-                  {!isOnboarding && (
-                    <>
-                      {
-                        itemIndex === 0 && (
-                          <span>G-Loot</span>
-                        )
-                      }
-                      {
-                        itemIndex === 1 && (
-                          <span>News &amp; updates</span>
-                        )
-                      }
-                      {
-                        itemIndex === 2 && (
-                          <span>Shop</span>
-                        )
-                      }
-                    </>
-                  )}
-                  <div>{item.title}</div>
-                  <i />
-                </a>
-              </li>
             </>
           ))}
-        </ul>
-        <div className="carousel-control">
-          <button
-            className="button button-secondary"
-            onClick={prevHandler.bind(this, slideNumber, slides.length)}
-          >
-            <span className="icon icon-ctrl-left" />
-          </button>
-          <button
-            className="button button-secondary"
-            onClick={nextHandler.bind(this, slideNumber, slides.length)}
-          >
-            <span className="icon icon-ctrl-right" />
-          </button>
+        </div>
+        <div className="carousel-nav">
+          <ul className="carousel-list">
+            {slides.map((item, itemIndex) => (
+              <>
+                <li
+                  key={item}
+                  className={`${slideNumber === itemIndex ? "is-active" : ""}`}
+                >
+                  <a onClick={slideHandler.bind(this, itemIndex)}>
+                    {isOnboarding && <span>Step {itemIndex + 1}</span>}
+                    {!isOnboarding && (
+                      <>
+                        {itemIndex === 0 && <span>G-Loot</span>}
+                        {itemIndex === 1 && <span>News &amp; updates</span>}
+                        {itemIndex === 2 && <span>Shop</span>}
+                      </>
+                    )}
+                    <div>{item.title}</div>
+                    <i>
+                      <span style={{
+                        transform: `translateY(${percent}%) skewY(-30deg)`
+                      }} />
+                    </i>
+                  </a>
+                </li>
+              </>
+            ))}
+          </ul>
+          <div className="carousel-control">
+            <button
+              className="button button-secondary"
+              onClick={prevHandler.bind(this, slideNumber, slides.length)}
+            >
+              <span className="icon icon-ctrl-left" />
+            </button>
+            <button
+              className="button button-secondary"
+              onClick={nextHandler.bind(this, slideNumber, slides.length)}
+            >
+              <span className="icon icon-ctrl-right" />
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

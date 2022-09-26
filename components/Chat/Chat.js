@@ -8,6 +8,18 @@ import { useRouter } from "next/router";
 
 const conversationFull = [
   {
+    id: 0,
+    author: 2,
+    isEvent: true,
+    messages: [
+      {
+        id: 1,
+        type: "text",
+        content: "Welcome Martin to the Clan!",
+      },
+    ],
+  },
+  {
     id: 1,
     time: "Message sent 1.22pm",
     author: 2,
@@ -127,6 +139,19 @@ const conversationFull = [
             author: [4, 0, 1],
           },
         ],
+      },
+    ],
+  },
+  {
+    id: 8,
+    time: "Message sent 1.22pm",
+    author: 2,
+    isEvent: true,
+    messages: [
+      {
+        id: 1,
+        type: "text",
+        content: "Welcome Martin to the Clan!",
       },
     ],
   },
@@ -331,9 +356,9 @@ export default function Chat(props) {
                   key={message.id}
                   className={`chat-group ${
                     message.isYourself ? "is-owner" : ""
-                  }`}
+                  } ${message.isEvent ? "is-event" : ""}`}
                 >
-                  {!message.isYourself && (
+                  {(!message.isYourself || !message.isEvent) && (
                     <div className="chat-author">
                       <div className="avatar avatar-circle avatar-sm">
                         <div>
@@ -343,17 +368,19 @@ export default function Chat(props) {
                           />
                         </div>
                       </div>
-                      <time dateTime="2008-02-14 20:00">{message.time}</time>
                     </div>
                   )}
 
                   <div className="chat-messages">
-                    <span className="leading-none uppercase text-sm">
-                      {message.isYourself && <>You</>}
-                      {!message.isYourself && (
-                        <>{prototype.getUserByID(message.author)?.nickname}</>
-                      )}
-                    </span>
+                    {!message.isEvent && (
+                      <span className="leading-none uppercase text-sm">
+                        {message.isYourself && <>You</>}
+                        {!message.isYourself && (
+                          <>{prototype.getUserByID(message.author)?.nickname}</>
+                        )}
+                      </span>
+                    )}
+
                     {message.messages.map(
                       (messageBubble, messageBubbleIndex) => (
                         <div
@@ -435,8 +462,9 @@ export default function Chat(props) {
                                 >
                                   <button
                                     type="button"
+                                    tabIndex="0"
                                     onClick={dropdownActive}
-                                    className="rounded-full"
+                                    className="chat-react-button rounded-full"
                                   >
                                     <span className="icon icon-smile"></span>
                                   </button>
@@ -446,7 +474,10 @@ export default function Chat(props) {
                                   >
                                     <ul className="menu menu-secondary menu-rounded menu-horizontal">
                                       <li>
-                                        <a
+                                        <button
+                                          type="button"
+                                          className="p-0 w-7 h-7 flex justify-center items-center"
+                                          tabIndex={0}
                                           onClick={addEmoji.bind(
                                             this,
                                             message.id,
@@ -457,10 +488,13 @@ export default function Chat(props) {
                                           <span>
                                             <span className="text-xl">❤️</span>
                                           </span>
-                                        </a>
+                                        </button>
                                       </li>
                                       <li>
-                                        <a
+                                        <button
+                                          type="button"
+                                          className="p-0 w-7 h-7 flex justify-center items-center"
+                                          tabIndex={0}
                                           onClick={addEmoji.bind(
                                             this,
                                             message.id,
@@ -471,10 +505,13 @@ export default function Chat(props) {
                                           <span>
                                             <span className="text-xl">👍</span>
                                           </span>
-                                        </a>
+                                        </button>
                                       </li>
                                       <li>
-                                        <a
+                                        <button
+                                          type="button"
+                                          className="p-0 w-7 h-7 flex justify-center items-center"
+                                          tabIndex={0}
                                           onClick={addEmoji.bind(
                                             this,
                                             message.id,
@@ -485,10 +522,13 @@ export default function Chat(props) {
                                           <span>
                                             <span className="text-xl">😂</span>
                                           </span>
-                                        </a>
+                                        </button>
                                       </li>
                                       <li>
-                                        <a
+                                        <button
+                                          type="button"
+                                          className="p-0 w-7 h-7 flex justify-center items-center"
+                                          tabIndex={0}
                                           onClick={addEmoji.bind(
                                             this,
                                             message.id,
@@ -499,7 +539,7 @@ export default function Chat(props) {
                                           <span>
                                             <span className="text-xl">👏</span>
                                           </span>
-                                        </a>
+                                        </button>
                                       </li>
                                     </ul>
                                   </div>
@@ -564,6 +604,10 @@ export default function Chat(props) {
                           </div>
                         </div>
                       )
+                    )}
+
+                    {message.time && !message.isEvent && (
+                      <time dateTime="2008-02-14 20:00">{message.time}</time>
                     )}
                   </div>
                 </li>

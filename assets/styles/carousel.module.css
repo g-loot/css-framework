@@ -331,7 +331,7 @@
           ease-[cubic-bezier(0.8,0,0.2,1)]
           ;
 
-          &::before {
+          > span {
             @apply
             content-['']
             absolute
@@ -341,10 +341,10 @@
             -translate-y-full
             -skew-y-30
             opacity-0
-            transition
-            duration-300
-            ease-in-out
             ;
+            /* transition
+            duration-300
+            ease-in-out */
           }
         }
 
@@ -387,11 +387,11 @@
             @apply
             bg-ui-500
             ;
-            &::before {
+            > span {
               @apply
               opacity-100
-              animate-[carousel-list-active_6s_linear_forwards]
               ;
+              /* animate-[carousel-list-active_6s_linear_forwards] */
             }
           }
         }
