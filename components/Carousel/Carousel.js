@@ -34,19 +34,17 @@ const slides = [
 ];
 
 const modes = {
-  name: "Pomodoro",
-  code: "pomodoro",
+  name: "carouselmode",
+  code: "carouselmode",
   duration: 5,
 };
 
-
 export default function Carousel(props) {
-  
   const isOnboarding =
     props.isOnboarding !== undefined ? props.isOnboarding : false;
   const [slideNumber, setSlideNumber] = useState(0);
   const [percent, setPercent] = useState(0);
-  const slideDuration = 2500;
+  const slideDuration = 3000;
   const [date, setDate] = useState(new Date());
 
   const [fixedDate, setFixedDate] = useState(date);
@@ -58,7 +56,9 @@ export default function Carousel(props) {
   const [currentMode, setCurrentMode] = useState(mode);
 
   useEffect(() => {
-    setPercent((Math.floor(-(100 / (slideDuration / 1000)) * duration / 1000)).toString());
+    setPercent(
+      Math.floor((-(100 / (slideDuration / 1000)) * duration) / 1000).toString()
+    );
     console.log(percent);
   }, [duration]);
 
@@ -130,7 +130,7 @@ export default function Carousel(props) {
       if (delay !== null && !standby) {
         id = setInterval(tick, delay / 1000);
         return () => clearInterval(id);
-      } else if(!pause) {
+      } else if (!pause) {
         nextHandler(slideNumber, slides.length);
       }
     }, [delay, mode, duration, standby, currentMode]);
@@ -138,21 +138,21 @@ export default function Carousel(props) {
 
   return (
     <>
-      <div
-        className="carousel"
-        onMouseEnter={() => {
-          setPause(true);
-        }}
-        onMouseLeave={() => {
-          if (pause) {
-            setPause(false);
-          } else {
-            setStandby(false);
-            setFixedDate(date);
-          }
-        }}
-      >
-        <div className="carousel-slides">
+      <div className="carousel">
+        <div
+          className="carousel-slides"
+          onMouseEnter={() => {
+            setPause(true);
+          }}
+          onMouseLeave={() => {
+            if (pause) {
+              setPause(false);
+            } else {
+              setStandby(false);
+              setFixedDate(date);
+            }
+          }}
+        >
           {slides.map((slide, slideIndex) => (
             <>
               <div
@@ -166,9 +166,7 @@ export default function Carousel(props) {
                 </div>
                 <div className="carousel-body">
                   <div>
-                    <h2 className="h3 text-ui-100">
-                      {slide.title}
-                    </h2>
+                    <h2 className="h3 text-ui-100">{slide.title}</h2>
                     <p className="mb-5 mt-2 text-ui-200">{slide.description}</p>
                     <button className="button button-primary">
                       <span>{slide.buttonLabel}</span>
@@ -206,9 +204,11 @@ export default function Carousel(props) {
                     )}
                     <div>{item.title}</div>
                     <i>
-                      <span style={{
-                        transform: `translateY(${percent}%) skewY(-30deg)`
-                      }} />
+                      <span
+                        style={{
+                          transform: `translateY(${percent}%) skewY(-30deg)`,
+                        }}
+                      />
                     </i>
                   </a>
                 </li>
