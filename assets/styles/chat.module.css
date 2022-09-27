@@ -168,14 +168,6 @@
             }
           }
         }
-        &:last-child {
-          .chat-bubble {
-            &,
-            img {
-              
-            }
-          }
-        }
       }
     }
     .chat-actions {
@@ -290,7 +282,7 @@
   @apply
   bg-ui-600
   relative
-  z-0
+  z-10
   min-w-[fit-content]
   whitespace-pre-wrap
   ;
@@ -344,7 +336,8 @@
   flex
   items-center
   relative
-  z-10
+  z-0
+  hover:z-20
   ;
   .chat-action-hidden {
     @apply
@@ -505,7 +498,6 @@
     @apply
     p-0
     ;
-
     > div {
       @apply
       relative
@@ -515,7 +507,6 @@
       items-center
       justify-center
       ;
-
     }    
   }
 }
