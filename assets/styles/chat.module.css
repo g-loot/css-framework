@@ -30,14 +30,29 @@
   pt-4
   relative
   ;
+  [data-tooltip] {
+    &::after {
+      @apply
+      bg-ui-500/95
+      shadow-sm
+      ;
+    }
+  }
   .chat-messages {
     @apply
-    max-w-[60%]
+    max-w-[calc(100%-150px)]
     lg:max-w-[60%]
     flex
     flex-col
-    gap-3
     ;
+
+    > * {
+      &:not(:last-child) {
+        @apply
+        pb-4
+        ;
+      }
+    }
     .chat-message {
       @apply
       flex
