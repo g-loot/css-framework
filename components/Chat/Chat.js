@@ -46,6 +46,23 @@ const conversationFull = [
         type: "image",
         content: "https://media.giphy.com/media/HFMUv2KLirAyA7noXQ/giphy.gif",
       },
+      {
+        id: 3,
+        type: "text",
+        isDeleted: true,
+        content:
+          "Welcome aboard <a className='font-bold' href='#'>@James</a> 👋",
+        reactions: [
+          {
+            emoji: "❤️",
+            author: [4, 0],
+          },
+          {
+            emoji: "👏",
+            author: [1],
+          },
+        ],
+      },
     ],
   },
   {
@@ -394,14 +411,26 @@ export default function Chat(props) {
                               messageBubble.type === "image"
                                 ? "chat-bubble-image"
                                 : ""
+                            } ${
+                              messageBubble.isDeleted
+                                ? "is-deleted"
+                                : ""
                             }`}
                           >
                             {messageBubble.type === "text" && (
-                              <div
-                                dangerouslySetInnerHTML={{
-                                  __html: messageBubble.content,
-                                }}
-                              />
+                              <>
+                                {!messageBubble.isDeleted && (
+                                  <div
+                                    dangerouslySetInnerHTML={{
+                                      __html: messageBubble.content,
+                                    }}
+                                  />
+                                )}
+                                {messageBubble.isDeleted && (
+                                  <div>Message deleted</div>
+                                )}
+                              </>
+                              
                             )}
                             {messageBubble.type === "image" && (
                               <>

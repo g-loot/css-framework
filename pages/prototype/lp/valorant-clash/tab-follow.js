@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { TwitchChat, TwitchPlayer } from "react-twitch-embed";
 
 export default function ValorantClashTabFollow() {
   const embed = useRef(); // We use a ref instead of state to avoid rerenders.

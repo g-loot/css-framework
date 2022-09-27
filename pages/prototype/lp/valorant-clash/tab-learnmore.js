@@ -29,22 +29,30 @@ export default function ValorantClashTabLearnMore() {
               VALORANT Champions Tour 2022 Off-season!
             </h2>
             <div className="max-w-[60ch] mx-auto space-y-8">
-            <p className="text-lg text-ui-300 leading-loose">
-              The tournament is a part of the VALORANT Championship Tour
-              OFF//SEASON in partnership with Riot Games and features invited
-              VALORANT pro teams as well as a chance for anyone else to qualify.
-              The tournament will culminate in November with a prize pool of
-              $50,000.
-            </p>
-            <p className="text-lg text-ui-300 leading-loose">
-              The event will take place in three stages, which will include
-              Qualifiers, G-Loot Showdown, and the Grand Finals, and will run
-              from October 21 to November 27. The G-Loot Showdown on October
-              28-30 and the Grand Finals on November 25-27 will be broadcast
-              live from Stockholm with a team of professional casters and
-              analysts.
-            </p>
+              <p className="text-lg text-ui-300 leading-loose">
+                The tournament is a part of the{' '}
+                <b className="text-ui-200">VALORANT Championship Tour OFF//SEASON</b> in partnership
+                with Riot Games and features invited VALORANT{' '}
+                <b className="text-ui-200">pro teams</b> as well as a chance for{' '}
+                <b className="text-ui-200">anyone</b> else to qualify. The tournament will culminate
+                in November with a prize pool of <b className="text-ui-200">$50,000</b>.
+              </p>
+              <p className="text-lg text-ui-300 leading-loose">
+                The event will take place in <b className="text-ui-200">three stages</b>, which will
+                include
+                <b className="text-ui-200">Qualifiers</b>,{' '}
+                <b className="text-ui-200">G-Loot Showdown</b>, and the{' '}
+                <b className="text-ui-200">Grand Finals</b>, and will run from October 21 to
+                November 27. The G-Loot Showdown on <b className="text-ui-200">October 28-30</b> and
+                the Grand Finals on <b className="text-ui-200">November 25-27</b> will be broadcast
+                live from <b className="text-ui-200">Stockholm</b> with a team of professional
+                casters and analysts.
+              </p>
             </div>
+            <a href="https://res.cloudinary.com/gloot/raw/upload/v1664272203/Marketing/2022_Valorant_clash/G-Loot_VALROANT_CLASH_Presskit.zip" target="_blank" rel="noopener noreferrer" className="button button-lg button-secondary">
+              <span className="icon icon-data-download" />
+              <span>Download presskit</span>
+            </a>
           </div>
         </div>
       </section>
@@ -100,20 +108,20 @@ export default function ValorantClashTabLearnMore() {
           <h2 className="mb-8">Format</h2>
           <div className="max-w-[60ch] mx-auto space-y-8 px-4 lg:px-0">
             <p className="text-lg text-ui-300 leading-loose">
-              The tournament will feature invited pro teams from VCT in the EMEA
-              region as well as a chance for anyone else to qualify.
+              The tournament will feature invited <b className="text-ui-200">pro teams</b> from VCT in the EMEA
+              region as well as a chance for <b className="text-ui-200">anyone</b> else to qualify.
             </p>
             <p className="text-lg text-ui-300 leading-loose">
-              There will be three separate qualifiers: EU West, EU East, and
-              Türkiye &amp; MENA. Besides the qualifiers, the top teams from the
-              G-Loot Brawl will also get a chance. Qualified teams and Brawl
-              teams will face off in the Monthly Showdown that will take place
+              There will be three separate qualifiers: <b className="text-ui-200">EU West</b>, <b className="text-ui-200">EU East</b>, and
+              <b className="text-ui-200">Türkiye</b> &amp; <b className="text-ui-200">MENA</b>. Besides the qualifiers, the top teams from the
+              <b className="text-ui-200">G-Loot Brawl</b> will also get a chance. Qualified teams and Brawl
+              teams will face off in the <b className="text-ui-200">Monthly Showdown</b> that will take place
               in October.
             </p>
             <p className="text-lg text-ui-300 leading-loose">
-              The Grand Final will showcase 16 teams competing against one
-              another and will feature a full-on production live with analysts &amp;
-              commentators from Stockholm, Sweden.
+              The Grand Final will showcase <b className="text-ui-200">16 teams</b> competing against one
+              another and will feature a full-on production <b className="text-ui-200">live</b> with analysts &amp;
+              commentators from <b className="text-ui-200">Stockholm, Sweden</b>.
             </p>
             <p className="text-lg text-ui-300 leading-loose">
               The exact format for the tournament will be announced when the
@@ -151,7 +159,7 @@ export default function ValorantClashTabLearnMore() {
                 href="https://discord.gg/gloot"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button button-lg button-claim w-52"
+                className="button button-lg button-primary w-52"
               >
                 <span className="icon icon-discord" />
                 <span>Contact us</span>

@@ -27,7 +27,7 @@
   items-start
   px-2
   lg:px-4
-  py-8
+  pt-4
   relative
   ;
   .chat-messages {
@@ -36,7 +36,7 @@
     lg:max-w-[60%]
     flex
     flex-col
-    gap-4
+    gap-3
     ;
     .chat-message {
       @apply
@@ -93,6 +93,17 @@
           bg-ui-600
           rounded-tl-sm
           ;
+          &.is-deleted {
+            @apply
+            bg-ui-600/0
+            shadow-[inset_0_0_0_1px_rgb(var(--color-ui-600))];
+            ;
+            > *:not(.chat-reactions) {
+              @apply
+              text-ui-400
+              ;
+            }
+          }
         }
         &:last-child {
           .chat-bubble {
@@ -144,6 +155,17 @@
             @apply
             text-left
             ;
+          }
+          &.is-deleted {
+            @apply
+            bg-ui-600/0
+            shadow-[inset_0_0_0_1px_rgb(var(--color-ui-600))];
+            ;
+            > *:not(.chat-reactions) {
+              @apply
+              text-ui-400
+              ;
+            }
           }
         }
         &:last-child {
@@ -205,8 +227,7 @@
   }
   &:last-child {
     @apply
-    pb-44
-    xl:pb-20
+    pb-4
     ;
   }
 }
@@ -242,12 +263,6 @@
   @apply
   relative
   ;
-  > time {
-    @apply
-    absolute
-    -bottom-7
-    ;
-  }
   > .avatar {
     @apply
     -mb-6
@@ -266,6 +281,7 @@
     transition-colors
     duration-200
     ease-in-out
+    leading-none
     ;
   }
 }
@@ -303,6 +319,13 @@
     px-4
     py-3
     ;
+  }
+  &.chat-bubble-image {
+    > .chat-reactions {
+      @apply
+      bottom-0
+      ;
+    }
   }
   .chat-reactions {
     @apply
@@ -453,9 +476,31 @@
     ;
     z-index: 10000;
   }
+  .chat-group {
+    &:last-child {
+      @apply
+      pb-44
+      xl:pb-4
+      ;
+    }
+  }
 }
 
 .chat-bubble {
+  &.is-deleted {
+    .chat-reactions {
+      @apply
+      hidden
+      pointer-events-none
+      ;
+    }
+    ~ .chat-actions {
+      @apply
+      hidden
+      pointer-events-none
+      ;
+    }
+  }
   &.is-writting {
     @apply
     p-0

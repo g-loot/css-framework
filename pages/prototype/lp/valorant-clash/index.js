@@ -124,10 +124,10 @@ const PrototypePage = () => {
               </div>
             </div>
             <h2 className="font-headings text-2xl font-normal mb-3">
-              OCTOBER 29 - NOVEMBER 27
+              OCTOBER 3 - NOVEMBER 27
             </h2>
             <p className="text-mono-100 opacity-75 max-w-xs text-lg mx-auto lg:mx-0">
-              We are proud to announce their first Premier VALORANT tournament
+              We are proud to announce our first Premier VALORANT tournament
               for all players in the EMEA region: G-Loot VALORANT Clash.
             </p>
           </div>
