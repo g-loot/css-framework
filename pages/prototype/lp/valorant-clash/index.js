@@ -34,36 +34,39 @@ const TabsItems = [
 ];
 
 const today = new Date().toISOString();
-const registrationOpen = new Date('2022-10-03T07:00:00.959Z').toISOString();
-const registrationClosed = new Date('2022-10-18T07:00:00.959Z').toISOString();
-const competitionStarted = new Date('2022-10-29T07:00:00.959Z').toISOString();
-const competitionFinished = new Date('2022-11-28T07:00:00.959Z').toISOString();
+const registrationOpen = new Date("2022-10-03T07:00:00.959Z").toISOString();
+const registrationClosed = new Date("2022-10-18T07:00:00.959Z").toISOString();
+const competitionStarted = new Date("2022-10-29T07:00:00.959Z").toISOString();
+const competitionFinished = new Date("2022-11-28T07:00:00.959Z").toISOString();
 
 const PrototypePage = () => {
   const [competitionStatus, setCompetitionStatus] = useState(1);
   const [defaultTab, setDefaultTab] = useState("learn-more");
 
   useEffect(() => {
-    console.log(today, registrationOpen)
+    console.log(today, registrationOpen);
     if (today < registrationOpen) {
-      setDefaultTab('learn-more')
-      console.log('Competition status:', 'registrations not yet started')
+      setDefaultTab("learn-more");
+      console.log("Competition status:", "registrations not yet started");
     } else if (today > registrationOpen && today < registrationClosed) {
-      setDefaultTab('partake')
-      console.log('Competition status:', 'registrations open')
+      setDefaultTab("partake");
+      console.log("Competition status:", "registrations open");
     } else if (today > registrationClosed && today < competitionStarted) {
-      setDefaultTab('learn-more')
-      console.log('Competition status:', 'registrations closed & competition not started')
+      setDefaultTab("learn-more");
+      console.log(
+        "Competition status:",
+        "registrations closed & competition not started"
+      );
     } else if (today > competitionStarted) {
-      setDefaultTab('watch-stream')
-      console.log('Competition status:', 'competition started')
+      setDefaultTab("watch-stream");
+      console.log("Competition status:", "competition started");
     } else if (today > competitionFinished) {
-      setDefaultTab('watch-stream')
-      console.log('Competition status:', 'finished')
+      setDefaultTab("watch-stream");
+      console.log("Competition status:", "finished");
     } else {
-      console.log('Competition status:', 'unknown')
+      console.log("Competition status:", "unknown");
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
     Aos.init({
@@ -127,8 +130,9 @@ const PrototypePage = () => {
               OCTOBER 3 - NOVEMBER 27
             </h2>
             <p className="text-mono-100 opacity-75 max-w-xs text-lg mx-auto lg:mx-0">
-              We are proud to announce our first Premier VALORANT tournament
-              for all players in the EMEA region: G-Loot VALORANT Clash.
+              We are teaming up with Riot Games to bring you our first Premier
+              VALORANT tournament for all players in the EMEA region: G-Loot
+              VALORANT Clash.
             </p>
           </div>
         </div>
@@ -165,7 +169,7 @@ const PrototypePage = () => {
       </section>
       {TabsItems.map((item, itemIndex) => {
         if (item.url === selectedTab) {
-          return React.createElement(item.component, { key: itemIndex })
+          return React.createElement(item.component, { key: itemIndex });
         }
       })}
       <Footer />

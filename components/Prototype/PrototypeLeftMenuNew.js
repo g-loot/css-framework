@@ -43,7 +43,7 @@ export default function PrototypeLeftMenuNew(props) {
 
   return (
     <>
-      <div className="flex-1 flex flex-col justify-between">
+      <div className="relative z-0 flex-1 flex flex-col justify-between">
         <div className="flex-1">
           <div className="">
             <Link href={`/prototype/clans${prototype.getURLparams()}`}>
@@ -66,7 +66,7 @@ export default function PrototypeLeftMenuNew(props) {
                 </div>
                 <div className="item-body">
                   <div className="item-title">
-                    <span className="text-sm uppercase">
+                    <span className="text-sm">
                       &#91;
                       {prototype.getClanByID(prototype.getUserByID(1).id)?.tag}
                       &#93;{" "}
