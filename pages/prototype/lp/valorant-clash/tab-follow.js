@@ -18,13 +18,10 @@ export default function ValorantClashTabFollow() {
             <input id="drawer-chat" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col items-center justify-start">
               <div className="rounded-xl overflow-hidden w-full">
-                <TwitchPlayer
-                  className="aspect-video !w-full !h-auto"
-                  channel="riotgames"
-                  autoplay
-                  muted
-                  onReady={handleReady}
-                />
+                <iframe src="https://player.twitch.tv/?channel=riotgames&parent=gloot-framework.netlify.app&parent=gloot.com"
+                  height="522"
+                  width="928">
+                </iframe>
               </div>
               <div className="block lg:hidden mt-4">
               <label
@@ -39,7 +36,10 @@ export default function ValorantClashTabFollow() {
               <label htmlFor="drawer-chat" className="drawer-overlay"></label>
               <div className="px-4 overflow-y-auto w-1/2 lg:w-80 bg-ui-700/0 text-base-content flex items-start">
                 <div className="rounded-xl overflow-hidden">
-                  <TwitchChat channel="riotgames" darkMode />
+                  <iframe src="https://www.twitch.tv/embed/riotgames/chat?parent=gloot-framework.netlify.app&parent=gloot.com"
+                    height="468"
+                    width="288">
+                  </iframe>
                 </div>
               </div>
             </div>

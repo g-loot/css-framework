@@ -34,10 +34,10 @@ const TabsItems = [
 ];
 
 const today = new Date().toISOString();
-const registrationOpen = new Date("2022-10-03T07:00:00.959Z").toISOString();
-const registrationClosed = new Date("2022-10-18T07:00:00.959Z").toISOString();
-const competitionStarted = new Date("2022-10-18T07:00:00.959Z").toISOString();
-const competitionFinished = new Date("2022-11-28T07:00:00.959Z").toISOString();
+const registrationOpen = new Date('2022-10-03T07:00:00.959Z').toISOString();
+const registrationClosed = new Date('2022-10-18T07:00:00.959Z').toISOString();
+const competitionStarted = new Date('2022-10-29T07:00:00.959Z').toISOString();
+const competitionFinished = new Date('2022-11-28T07:00:00.959Z').toISOString();
 
 const PrototypePage = () => {
   const [competitionStatus, setCompetitionStatus] = useState(1);
@@ -90,8 +90,8 @@ const PrototypePage = () => {
               alt=""
             />
           </div>
-          <div className=" relative lg:border-l lg:border-ui-100/30 text-center lg:text-left px-4 lg:pr-0 lg:pl-8">
-            <div className="h1 leading-none mb-4 flex items-baseline justify-center lg:justify-start">
+          <div className="relative lg:border-l lg:border-ui-100/30 text-center lg:text-left px-4 lg:pr-0 lg:pl-8">
+            <div className="h2 leading-none mb-4 flex items-baseline justify-center lg:justify-start">
               <h1 className="sr-only">Where clans collide</h1>
               <div className="relative overflow-hidden mr-3" aria-hidden="true">
                 <span className="opacity-0">Where</span>
@@ -124,7 +124,7 @@ const PrototypePage = () => {
               </div>
             </div>
             <h2 className="font-headings text-2xl font-normal mb-3">
-              OCTOBER 28 - NOVEMBER 27
+              OCTOBER 29 - NOVEMBER 27
             </h2>
             <p className="text-mono-100 opacity-75 max-w-xs text-lg mx-auto lg:mx-0">
               We are proud to announce their first Premier VALORANT tournament

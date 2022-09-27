@@ -105,14 +105,14 @@ export default function ValorantClashTabLearnMore() {
             </p>
             <p className="text-lg text-ui-300 leading-loose">
               There will be three separate qualifiers: EU West, EU East, and
-              Turkey &amp; MENA. Besides the qualifiers, the top teams from the
+              Türkiye &amp; MENA. Besides the qualifiers, the top teams from the
               G-Loot Brawl will also get a chance. Qualified teams and Brawl
               teams will face off in the Monthly Showdown that will take place
               in October.
             </p>
             <p className="text-lg text-ui-300 leading-loose">
               The Grand Final will showcase 16 teams competing against one
-              another and will feature a full-on production live with analysts &
+              another and will feature a full-on production live with analysts &amp;
               commentators from Stockholm, Sweden.
             </p>
             <p className="text-lg text-ui-300 leading-loose">

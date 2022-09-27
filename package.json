@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@headlessui/react": "^1.6.2",
+    "aos": "^2.3.4",
     "autoprefixer": "^10.4.7",
     "classnames": "^2.3.1",
     "eslint": "^8.16.0",
@@ -21,20 +22,17 @@
     "postcss-import": "^14.1.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-parallax": "^3.5.1",
     "react-popper-tooltip": "^4.4.2",
     "react-spring": "^9.5.2",
     "react-sticky-box": "^1.0.2",
+    "react-stickynode": "^4.1.0",
+    "react-twitch-embed": "^3.0.1",
+    "styled-components": "^5.3.5",
     "tailwindcss": "^3.1.6"
   },
   "files": [
     "assets/styles/*",
     "tailwind.config.js"
-  ],
-  "dependencies": {
-    "aos": "^2.3.4",
-    "react-parallax": "^3.5.1",
-    "react-stickynode": "^4.1.0",
-    "react-twitch-embed": "^3.0.1",
-    "styled-components": "^5.3.5"
-  }
+  ]
 }
