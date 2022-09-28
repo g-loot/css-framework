@@ -251,7 +251,8 @@
       }
       animation-delay: calc(var(--delay, 1) * 0.05s);
       
-      > a {
+      > a,
+      > button {
         @apply
         flex-1
         ml-2
@@ -283,6 +284,7 @@
         justify-center
         whitespace-nowrap
         overflow-hidden
+        transform-gpu
         ;
 
         &.item {

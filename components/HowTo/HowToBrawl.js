@@ -6,7 +6,7 @@ export default function HowToBrawl(props) {
 
   return (
     <>
-      <div className={`flex-1 surface accordion sm:rounded-lg ${props.additionalClassNames}`}>
+      <div className={`flex-1 surface accordion accordion-highlighted sm:rounded-lg ${props.additionalClassNames}`}>
         <Accordion
           header={
             <>

@@ -11,7 +11,14 @@
     rounded
     ;
   }
-
+  .accordion-item,
+  .accordion-header {
+    @apply
+    transition-colors
+    duration-300
+    ease-in-out
+    ;
+  }
   > .accordion-item {
     @apply
     overflow-ellipsis
@@ -29,11 +36,13 @@
     @apply
     transition-colors
     duration-100
+    w-full
     ;
   }
   .accordion-header {
     @apply
     select-none
+    text-left
     ;
     :where(.icon[class*='icon-game'], .item-title) {
       @apply
@@ -66,196 +75,194 @@
     ease-[cubic-bezier(.7,0,.3,1)]
     ;
 
-    > div {
-      &:not(.border-none) {
-        @apply
-        border-t
-        border-ui-700
-        ;
-      }
-    }
     ul.menu {
       > li {
         @apply
-        translate-y-2
+        translate-y-4
         opacity-0
-        duration-500
-        delay-100
+        duration-300
         ;
       }
     }
   }
+}
 
-  .accordion-item {
-    &:hover {
-      [aria-controls] {
-        @apply
-        cursor-pointer
-        transition-all
-        duration-200
-        ease-[cubic-bezier(.7,0,.3,1)]
-        ;
-    
-        &:not([disabled]),
-        &:not(.is-disabled) {
-          &:hover,
-          &:focus-visible {
-            @apply 
-            opacity-100
+.accordion-item {
+  &:hover {
+    [aria-controls] {
+      @apply
+      cursor-pointer
+      transition-all
+      duration-200
+      ease-[cubic-bezier(.7,0,.3,1)]
+      ;
+  
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply 
+          opacity-100
+          ;
+          .item-title {
+            @apply
+            text-ui-100
             ;
-            .item-title {
-              @apply
-              text-ui-100
-              ;
-            }
           }
         }
       }
     }
-    &:not(.is-active) {
-      .accordion-header {
+  }
+  .accordion-header {
+    @apply
+    cursor-pointer
+    focus-visible:outline
+    focus-visible:outline-offset-[-2px]
+    focus-visible:outline-1
+    focus-visible:outline-main
+    ;
+  }
+  &:not(.is-active) {
+    @apply
+    hover:bg-ui-700/10
+    ;
+    .accordion-header {
+      @apply
+      text-ui-200
+      ;
+      .icon[class*='icon-game'] {
         @apply
-        text-ui-200
-        bg-ui-700/0
+        text-ui-300
         ;
-        .icon[class*='icon-game'] {
-          @apply
-          text-ui-300
-          ;
-        }
       }
     }
-
-    &:not(.is-active, .is-nohover) {
-      &:hover {
-        .accordion-header {
-          @apply
-          cursor-pointer
-          bg-ui-700/30
-          ;
-        }
-      }
+    .accordion-collapse {
+      @apply
+      select-none
+      ;
     }
+  }
 
-    &.is-active {
-      > .accordion-header {
+  &.is-active {
+    @apply
+    bg-ui-700/30
+    ;
+    > .accordion-header {
+      @apply
+      text-ui-100
+      ;
+      .item-title {
         @apply
         text-ui-100
-        bg-ui-700
         ;
-        .item-title {
-          @apply
-          text-ui-100
-          ;
-        }
-        .icon[class*='down']{
-          @apply
-          text-ui-200
-          -rotate-180
-          ;
-        }
       }
-      .accordion-collapse {
-        ul.menu {
-          > li {
-            @apply
-            translate-y-0
-            opacity-100
-            delay-[calc(var(--delay,1)*0.05s)]
-            ;
-            &:nth-child(1) {
-              --delay: 1;
-            }
-            &:nth-child(2) {
-              --delay: 2;
-            }
-            &:nth-child(3) {
-              --delay: 3;
-            }
-            &:nth-child(4) {
-              --delay: 4;
-            }
-            &:nth-child(5) {
-              --delay: 5;
-            }
-            &:nth-child(6) {
-              --delay: 6;
-            }
-            &:nth-child(7) {
-              --delay: 7;
-            }
-            &:nth-child(8) {
-              --delay: 8;
-            }
-            &:nth-child(9) {
-              --delay: 9;
-            }
-            &:nth-child(10) {
-              --delay: 10;
-            }
-            &:nth-child(11) {
-              --delay: 11;
-            }
-            &:nth-child(12) {
-              --delay: 12;
-            }
-            &:nth-child(13) {
-              --delay: 13;
-            }
-            &:nth-child(14) {
-              --delay: 14;
-            }
-            &:nth-child(15) {
-              --delay: 15;
-            }
-            &:nth-child(16) {
-              --delay: 16;
-            }
-            &:nth-child(17) {
-              --delay: 17;
-            }
-            &:nth-child(18) {
-              --delay: 18;
-            }
-            &:nth-child(19) {
-              --delay: 19;
-            }
-            &:nth-child(20) {
-              --delay: 20;
-            }
-            &:nth-child(20) {
-              --delay: 20;
-            }
-            &:nth-child(21) {
-              --delay: 21;
-            }
-            &:nth-child(22) {
-              --delay: 22;
-            }
-            &:nth-child(23) {
-              --delay: 23;
-            }
-            &:nth-child(24) {
-              --delay: 24;
-            }
-            &:nth-child(25) {
-              --delay: 25;
-            }
-            &:nth-child(26) {
-              --delay: 26;
-            }
-            &:nth-child(27) {
-              --delay: 27;
-            }
-            &:nth-child(28) {
-              --delay: 28;
-            }
-            &:nth-child(29) {
-              --delay: 29;
-            }
-            &:nth-child(30) {
-              --delay: 30;
-            }
+      .icon[class*='down']{
+        @apply
+        text-ui-200
+        -rotate-180
+        ;
+      }
+    }
+    .accordion-collapse {
+      ul.menu {
+        > li {
+          @apply
+          translate-y-0
+          opacity-100
+          delay-[calc(var(--delay,1)*0.1s)]
+          ;
+          &:nth-child(1) {
+            --delay: 1;
+          }
+          &:nth-child(2) {
+            --delay: 2;
+          }
+          &:nth-child(3) {
+            --delay: 3;
+          }
+          &:nth-child(4) {
+            --delay: 4;
+          }
+          &:nth-child(5) {
+            --delay: 5;
+          }
+          &:nth-child(6) {
+            --delay: 6;
+          }
+          &:nth-child(7) {
+            --delay: 7;
+          }
+          &:nth-child(8) {
+            --delay: 8;
+          }
+          &:nth-child(9) {
+            --delay: 9;
+          }
+          &:nth-child(10) {
+            --delay: 10;
+          }
+          &:nth-child(11) {
+            --delay: 11;
+          }
+          &:nth-child(12) {
+            --delay: 12;
+          }
+          &:nth-child(13) {
+            --delay: 13;
+          }
+          &:nth-child(14) {
+            --delay: 14;
+          }
+          &:nth-child(15) {
+            --delay: 15;
+          }
+          &:nth-child(16) {
+            --delay: 16;
+          }
+          &:nth-child(17) {
+            --delay: 17;
+          }
+          &:nth-child(18) {
+            --delay: 18;
+          }
+          &:nth-child(19) {
+            --delay: 19;
+          }
+          &:nth-child(20) {
+            --delay: 20;
+          }
+          &:nth-child(20) {
+            --delay: 20;
+          }
+          &:nth-child(21) {
+            --delay: 21;
+          }
+          &:nth-child(22) {
+            --delay: 22;
+          }
+          &:nth-child(23) {
+            --delay: 23;
+          }
+          &:nth-child(24) {
+            --delay: 24;
+          }
+          &:nth-child(25) {
+            --delay: 25;
+          }
+          &:nth-child(26) {
+            --delay: 26;
+          }
+          &:nth-child(27) {
+            --delay: 27;
+          }
+          &:nth-child(28) {
+            --delay: 28;
+          }
+          &:nth-child(29) {
+            --delay: 29;
+          }
+          &:nth-child(30) {
+            --delay: 30;
           }
         }
       }
@@ -271,9 +278,9 @@
   }
 }
 
-/* accordion halo */
+/* accordion highlighted */
 
-.accordion.accordion-halo {
+.accordion.accordion-highlighted {
 
   .accordion-header {
     @apply
@@ -316,77 +323,13 @@
       }
     }
   }
-}
-.accordion.accordion-halo:not(.accordion-halo-dimmed) {
-  .accordion-item.is-active {
-    .accordion-header {
-      @apply
-      bg-ui-800/0
-      ;
-      > i {
-        &:nth-of-type(1) {
-          @apply
-          translate-y-0
-          opacity-30
-          ;
-        }
-        &:nth-of-type(2) {
-          @apply
-          translate-x-0
-          opacity-75
-          ;
-        }
-      }
-    }
-  }
-}
-
-/* accordion halo dimmed */
-
-.accordion.accordion-halo.accordion-halo-dimmed {
   .accordion-item {
-    &.is-active,
-    &.is-selected {
-      :where(.accordion-header, .accordion-collapse) {
+    &.is-active {
+      > .accordion-header {
         @apply
-        bg-ui-700/30
+        bg-ui-700
         ;
       }
     }
-    &.is-active {
-      .accordion-header {
-        > i {
-          &:nth-of-type(1) {
-            @apply
-            opacity-0
-            ;
-          }
-          &:nth-of-type(2) {
-            @apply
-            opacity-0
-            ;
-          }
-        }
-      }
-    }
-    &.is-selected {
-      .accordion-header {
-        > i {
-          &:nth-of-type(1) {
-            @apply
-            translate-y-0
-            opacity-30
-            ;
-          }
-          &:nth-of-type(2) {
-            @apply
-            translate-x-0
-            opacity-75
-            ;
-          }
-        }
-      }
-    }
   }
-  
-} 
+}

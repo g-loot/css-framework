@@ -631,6 +631,7 @@ label.button {
     @apply
     p-0
     text-0
+    cursor-pointer
     ;
 
     > input {

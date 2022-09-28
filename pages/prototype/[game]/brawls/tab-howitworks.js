@@ -368,7 +368,7 @@ export default function TabBrawlsHowItWorks() {
             Learn everything about the Brawls
           </h2>
         </div>
-        <div className="accordion surface sm:rounded-lg">
+        <div className="accordion accordion-highlighted surface sm:rounded-lg">
           {MissionsHowitworksTabs.map((tab, tabIndex) => (
             <FAQ key={tabIndex} content={tab} />
           ))}

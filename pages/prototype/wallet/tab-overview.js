@@ -183,7 +183,7 @@ export default function TabWalletOverview() {
             {WalletItems.map((item, itemIndex) => (
               <>
                 <div
-                  className="accordion surface sm:rounded-lg overflow-hidden animate-slide-in-bottom animate-delay"
+                  className="accordion accordion-highlighted surface sm:rounded-lg overflow-hidden animate-slide-in-bottom animate-delay"
                   style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                 >
                   <Accordion

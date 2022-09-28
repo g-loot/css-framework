@@ -57,9 +57,9 @@ export default function Accordion(props) {
         } ${isDisabled ? "is-disabled pointer-events-none opacity-50" : ""}`}
       >
         {!buttonActivation && (
-          <div className={`accordion-header`} onClick={handleToggle} id={`${id}-accordion-button`}>
+          <button type="button" tabIndex={1} className="accordion-header" onClick={handleToggle} id={`${id}-accordion-content`} aria-expanded={isActive} aria-controls={`${id}-accordion-button`}>
             {props.header}
-          </div>
+          </button>
         )}
         {buttonActivation && (
           <div
@@ -106,6 +106,7 @@ export default function Accordion(props) {
         <div
           className={`accordion-collapse ${isClosed ? "h-0" : ""}`}
           style={{ height: `${isActive ? heightValue : 0}px` }}
+          id={`${id}-accordion-content`}
           aria-hidden={!isActive}
           aria-labelledby={`${id}-accordion-button`}
           role="region"

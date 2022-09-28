@@ -65,6 +65,7 @@
     ease-[cubic-bezier(.7,0,.3,1)]
     focus-visible:outline
     focus-visible:outline-1
+    focus-visible:outline-offset-0
     focus-visible:outline-main
     ;
 

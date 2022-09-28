@@ -50,7 +50,7 @@ export default function PrototypeGamesNavNew({ children }) {
         <>
           {item.isFavorite && (
             <div
-              className={`accordion accordion-halo accordion-halo-dimmed border-b border-ui-700 rounded-none`}
+              className={`accordion border-b border-ui-700 rounded-none`}
               key={itemIndex}
             >
               <PrototypeGamesNavItem
@@ -61,68 +61,6 @@ export default function PrototypeGamesNavNew({ children }) {
                 border={false}
                 header={
                   <>
-                    <i
-                      className={`hidden bg-gradient-to-r ${
-                        item.slug === "apexlegends"
-                          ? "from-game-apexlegends/0 via-game-apexlegends to-game-apexlegends/0"
-                          : ""
-                      } ${
-                        item.slug === "csgo"
-                          ? "from-game-csgo/0 via-game-csgo to-game-csgo/0"
-                          : ""
-                      }  ${
-                        item.slug === "dota2"
-                          ? "from-game-dota2/0 via-game-dota2 to-game-dota2/0"
-                          : ""
-                      }  ${
-                        item.slug === "leagueoflegends"
-                          ? "from-game-leagueoflegends/0 via-game-leagueoflegends to-game-leagueoflegends/0"
-                          : ""
-                      }  ${
-                        item.slug === "rocketleague"
-                          ? "from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0"
-                          : ""
-                      } ${
-                        item.slug === "pubg"
-                          ? "from-game-pubg/0 via-game-pubg to-game-pubg/0"
-                          : ""
-                      }  ${
-                        item.slug === "valorant"
-                          ? "from-game-valorant/0 via-game-valorant to-game-valorant/0"
-                          : ""
-                      }`}
-                    />
-                    <i
-                      className={`hidden bg-gradient-to-r ${
-                        item.slug === "apexlegends"
-                          ? "from-game-apexlegends/0 via-game-apexlegends to-game-apexlegends/0"
-                          : ""
-                      } ${
-                        item.slug === "csgo"
-                          ? "from-game-csgo/0 via-game-csgo to-game-csgo/0"
-                          : ""
-                      }  ${
-                        item.slug === "dota2"
-                          ? "from-game-dota2/0 via-game-dota2 to-game-dota2/0"
-                          : ""
-                      }  ${
-                        item.slug === "leagueoflegends"
-                          ? "from-game-leagueoflegends/0 via-game-leagueoflegends to-game-leagueoflegends/0"
-                          : ""
-                      }  ${
-                        item.slug === "rocketleague"
-                          ? "from-game-rocketleague/0 via-game-rocketleague to-game-rocketleague/0"
-                          : ""
-                      } ${
-                        item.slug === "pubg"
-                          ? "from-game-pubg/0 via-game-pubg to-game-pubg/0"
-                          : ""
-                      }  ${
-                        item.slug === "valorant"
-                          ? "from-game-valorant/0 via-game-valorant to-game-valorant/0"
-                          : ""
-                      }`}
-                    />
                     <div className="item px-6">
                       <div className="item-image">
                         <div className="avatar avatar-simple avatar-xs">

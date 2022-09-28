@@ -48,7 +48,7 @@ export default function Home() {
 
         <section>
           <h1 className="px-2 sm:px-0 py-2 text-2xl">Profile settings</h1>
-          <div className="accordion surface sm:rounded-lg">
+          <div className="accordion accordion-highlighted surface sm:rounded-lg">
             <Accordion
               isopen={true}
               header={

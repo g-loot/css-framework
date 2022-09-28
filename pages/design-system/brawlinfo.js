@@ -12,7 +12,7 @@ const DSpage = () => {
         <div className="pt-4">
           <div className="">
             <div className="flex gap-4 flex-col">
-              <div className="flex-1 surface accordion rounded-lg">
+              <div className="flex-1 surface accordion accordion-highlighted rounded-lg">
                 <Accordion
                   header={
                     <>

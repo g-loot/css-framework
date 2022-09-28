@@ -223,7 +223,7 @@ export default function TabTournamentsHowItWorks() {
             Step by step - How to complete Missions and earn Rewards
           </h2>
         </div>
-        <div className="accordion surface sm:rounded-lg">
+        <div className="accordion accordion-highlighted surface sm:rounded-lg">
           {MissionsHowitworksTabs.map((tab, tabIndex) => (
             <>
               <Accordion

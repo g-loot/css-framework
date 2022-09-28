@@ -64,7 +64,7 @@ export default function TabBrawlsOngoing() {
                                     }
                                   >
                                     <div className="chip chip-secondary">
-                                      <div className="avatar avatar-simple avatar-circle avatar-tiny -ml-1.5">
+                                      <div className="avatar avatar-simple avatar-circle avatar-tiny">
                                         <div>
                                           <span className="icon icon-male"></span>
                                         </div>
@@ -95,7 +95,7 @@ export default function TabBrawlsOngoing() {
                                     <div className="flex flex-col items-start gap-1">
                                       <div className="chip chip-secondary">
                                         {brawl.progress > 0 && (
-                                          <div className="avatar avatar-circle avatar-tiny -ml-1.5">
+                                          <div className="avatar avatar-circle avatar-tiny">
                                             <div>
                                               <img
                                                 src={prototype.getUserByID(1)?.avatar}
@@ -105,7 +105,7 @@ export default function TabBrawlsOngoing() {
                                           </div>
                                         )}
                                         {brawl.progress <= 0 && (
-                                          <div className="avatar avatar-simple avatar-circle avatar-tiny -ml-1.5">
+                                          <div className="avatar avatar-simple avatar-circle avatar-tiny">
                                             <div>
                                               <span className="icon icon-male"></span>
                                             </div>
@@ -117,7 +117,7 @@ export default function TabBrawlsOngoing() {
                                       </div>
                                       <div className="chip chip-secondary">
                                       {brawl.progressClan > 0 && (
-                                          <div className="avatar avatar-squircle avatar-tiny -ml-1.5">
+                                          <div className="avatar avatar-squircle avatar-tiny">
                                             <div>
                                               <img
                                                 src={prototype.getClanByID(
@@ -129,7 +129,7 @@ export default function TabBrawlsOngoing() {
                                           </div>
                                         )}
                                         {brawl.progressClan <= 0 && (
-                                          <div className="avatar avatar-simple avatar-circle avatar-tiny -ml-1.5">
+                                          <div className="avatar avatar-simple avatar-circle avatar-tiny">
                                             <div>
                                               <span className="icon icon-multiple-11"></span>
                                             </div>
