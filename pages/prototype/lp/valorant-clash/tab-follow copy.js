@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
 
-import ValorantClashBrackets from "./component-brackets";
-
 export default function ValorantClashTabFollow() {
   const embed = useRef(); // We use a ref instead of state to avoid rerenders.
 
@@ -51,9 +49,7 @@ export default function ValorantClashTabFollow() {
         className="py-12 animate-slide-in-bottom animate-delay"
         style={{ "--delay": "calc(2 * 0.1s)" }}
       >
-        <div className="container max-w-2xl px-4 mx-auto flex items-stretch justify-center gap-4">
-          <ValorantClashBrackets />
-        </div>
+        <div className="container max-w-2xl px-4 mx-auto flex items-stretch justify-center gap-4"></div>
       </section>
     </>
   );
