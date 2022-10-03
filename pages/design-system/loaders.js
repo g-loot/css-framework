@@ -246,7 +246,7 @@ const DSpage = () => {
                       className="progressbar progressbar-sm"
                       style={{ "--percent": "90" }}
                     >
-                      <div></div>
+                      <div />
                     </div>
                   </div>
                   <div className="card-bg">

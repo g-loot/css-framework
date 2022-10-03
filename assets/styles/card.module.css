@@ -103,7 +103,6 @@
   @apply
   w-full
   relative
-  min-w-xs
   overflow-hidden
   flex
   flex-col
@@ -372,7 +371,6 @@
 
   &.card-locked {
     @apply
-    pointer-events-none
     transform-gpu
     overflow-hidden
     ;

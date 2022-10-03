@@ -75,21 +75,21 @@ const DSpage = () => {
                 <li className={`${randomNum0 === 1 ? `is-active` : ''}`}>
                   <div>
                     <i>1</i>
-                    <div></div>
+                    <div />
                     <span/>
                   </div>
                 </li>
                 <li className={`${randomNum0 === 2 ? `is-active` : ''}`}>
                   <div>
                     <i>2</i>
-                    <div></div>
+                    <div />
                     <span/>
                   </div>
                 </li>
                 <li className={`${randomNum0 === 3 ? `is-active` : ''}`}>
                   <div>
                     <i>3</i>
-                    <div></div>
+                    <div />
                     <span/>
                   </div>
                 </li>
@@ -123,21 +123,21 @@ const DSpage = () => {
                 <li className={`${randomNum5 === 1 ? `is-active` : ''}`}>
                   <div>
                     <i>1</i>
-                    <div></div>
+                    <div />
                     <span/>
                   </div>
                 </li>
                 <li className={`${randomNum5 === 2 ? `is-active` : ''}`}>
                   <div>
                     <i>2</i>
-                    <div></div>
+                    <div />
                     <span/>
                   </div>
                 </li>
                 <li className={`${randomNum5 === 3 ? `is-active` : ''}`}>
                   <div>
                     <i>3</i>
-                    <div></div>
+                    <div />
                     <span/>
                   </div>
                 </li>
@@ -175,21 +175,21 @@ const DSpage = () => {
                 <li className={`${randomNum1 === 1 ? `is-active` : ''}`}>
                   <div>
                     <i>1</i>
-                    <div></div>
+                    <div />
                     <span/>
                   </div>
                 </li>
                 <li className={`${randomNum1 === 2 ? `is-active` : ''}`}>
                   <div>
                     <i>2</i>
-                    <div></div>
+                    <div />
                     <span/>
                   </div>
                 </li>
                 <li className={`${randomNum1 === 3 ? `is-active` : ''}`}>
                   <div>
                     <i>3</i>
-                    <div></div>
+                    <div />
                     <span/>
                   </div>
                 </li>

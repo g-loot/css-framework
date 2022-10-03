@@ -2191,7 +2191,10 @@
   content: "\ec1f";
 }
 
+.icon-reddit::before {
+  content: "\ec20";
+}
+
 .icon-game-pubg-symbol::before {
   content: "\ea01";
 }
-

@@ -87,21 +87,21 @@ export default function Missions() {
                     <li>
                       <a href="#">
                         <i />
-                        <div></div>
+                        <div />
                         <span />
                       </a>
                     </li>
                     <li className="is-active">
                       <a href="#">
                         <i />
-                        <div></div>
+                        <div />
                         <span />
                       </a>
                     </li>
                     <li>
                       <a href="#">
                         <i />
-                        <div></div>
+                        <div />
                         <span />
                       </a>
                     </li>

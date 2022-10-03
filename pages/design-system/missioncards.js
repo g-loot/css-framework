@@ -28,7 +28,7 @@ const DSpage = () => {
                     className="progressbar progressbar-sm"
                     style={{ "--percent": "75" }}
                   >
-                    <div></div>
+                    <div />
                   </div>
                 </div>
                 <div className="card-bg">
@@ -81,7 +81,7 @@ const DSpage = () => {
                     className="progressbar progressbar-sm"
                     style={{ "--percent": "66" }}
                   >
-                    <div></div>
+                    <div />
                   </div>
                 </div>
                 <div className="card-bg">
@@ -134,7 +134,7 @@ const DSpage = () => {
                     className="progressbar progressbar-sm"
                     style={{ "--percent": "33" }}
                   >
-                    <div></div>
+                    <div />
                   </div>
                 </div>
                 <div className="card-bg">
@@ -180,7 +180,7 @@ const DSpage = () => {
                     className="progressbar progressbar-sm"
                     style={{ "--percent": "90" }}
                   >
-                    <div></div>
+                    <div />
                   </div>
                 </div>
                 <div className="card-bg">
@@ -226,7 +226,7 @@ const DSpage = () => {
                     className="progressbar progressbar-sm"
                     style={{ "--percent": "90" }}
                   >
-                    <div></div>
+                    <div />
                   </div>
                 </div>
                 <div className="card-bg">

@@ -91,7 +91,7 @@ export default function Home() {
                   <span className="icon icon-time-machine" />
                   <span>
                     Resets in{" "}
-                    <Countdown additionalClassName="ml-1" separator=":" />
+                    <Countdown className="ml-0.5" separator=":" hasHours={true} hasMinutes={true} hasSeconds={true} />
                   </span>
                 </div>
               </div>

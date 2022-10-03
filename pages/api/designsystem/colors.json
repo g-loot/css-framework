@@ -399,7 +399,7 @@
           "value": "bg-error-500",
           "number": "500",
           "data": "system.error.main",
-          "hex": "#151532"
+          "hex": "#FF3333"
         },
         {
           "name": "Error Dark",

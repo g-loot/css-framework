@@ -93,7 +93,7 @@ export default function ModalBuyTokens(props) {
                   Premium subscribers get up to 10 free extra tokens every time
                   they make a token bundle purchase.
                 </div>
-                <div></div>
+                <div />
                 <div className="py-4">
                   <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                     <a className="button button-premium is-shining whitespace-nowrap">

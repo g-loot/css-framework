@@ -164,7 +164,7 @@ export default function TabBrawlsOngoing() {
                                 </span>
                               </div>
                             </div>
-                            <div></div>
+                            <div />
                           </div>
                           <div className="card-meta">
                             <div>
@@ -238,21 +238,21 @@ export default function TabBrawlsOngoing() {
                                     <li>
                                       <a href="#">
                                         <i />
-                                        <div></div>
+                                        <div />
                                         <span />
                                       </a>
                                     </li>
                                     <li className="is-active">
                                       <a href="#">
                                         <i />
-                                        <div></div>
+                                        <div />
                                         <span />
                                       </a>
                                     </li>
                                     <li>
                                       <a href="#">
                                         <i />
-                                        <div></div>
+                                        <div />
                                         <span />
                                       </a>
                                     </li>

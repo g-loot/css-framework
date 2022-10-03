@@ -25,7 +25,7 @@ const BrandPage = () => (
         </div>
       </div>
       <div className='flex gap-8 justify-between'>
-        <div></div>
+        <div />
         <div>
           <Link href='visualidentity'>
             <a className='button button-ghost px-4'>

@@ -84,7 +84,7 @@ export default function CardMission(props) {
               "--percent": calculatePercent(mission.target, mission.current),
             }}
           >
-            <div></div>
+            <div />
           </div>
         </div>
         <div className="card-bg">

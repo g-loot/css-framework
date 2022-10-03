@@ -63,7 +63,7 @@ const DSpage = () => {
                           onClick={() => {
                             uiContext.openToastr({
                               size: "medium",
-                              text: "Icon copied to your clipboard",
+                              text: "Icon class name copied to your clipboard",
                               color: "green",
                               autoDelete: true,
                               autoDeleteDelay: 2500,

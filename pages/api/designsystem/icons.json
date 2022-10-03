@@ -332,6 +332,10 @@
           "name": "discord"
         },
         {
+          "tags": "social,media,partner,communication,community,social,game,reddit,gaming",
+          "name": "reddit"
+        },
+        {
           "tags": "social,media,partner,communication,community,VKontakte,vk",
           "name": "logo-vk"
         },

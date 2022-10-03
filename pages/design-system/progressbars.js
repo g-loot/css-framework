@@ -40,17 +40,17 @@ const DSpage = () => {
           <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
             <div className='flex-1 space-y-4'>
               <div className='w-full flex flex-col gap-4 items-center'>
-                <div className='progressbar w-full' style={{"--percent": random1}}>
-                  <div></div>
+                <div className='progressbar w-full'>
+                  <div style={{ width: `${random1}%` }} />
                 </div>
                 <div className='progressbar w-full' style={{"--percent": random2}}>
-                  <div></div>
+                  <div />
                 </div>
                 <div className='progressbar w-full' style={{"--percent": random3}}>
-                  <div></div>
+                  <div />
                 </div>
                 <div className='progressbar w-full' style={{"--percent": random4}}>
-                  <div></div>
+                  <div />
                 </div>
               </div>
             </div>
@@ -165,7 +165,7 @@ const DSpage = () => {
                 <div className='flex-1 w-full flex flex-col gap-4 justify-start items-start pl-8 border-l border-ui-700'>
 
                   <div className='progressbar progressbar-sm w-full mt-0.5' style={{"--percent": random1}}>
-                    <div></div>
+                    <div />
                   </div>
 
                   <div className='progressbar-sm progressbar-radial m-0'>
@@ -193,7 +193,7 @@ const DSpage = () => {
                 <div className='flex-1 w-full flex flex-col gap-4 justify-start items-start pl-8 border-l border-ui-700'>
 
                   <div className='progressbar progressbar-xs w-full mt-0.5' style={{"--percent": random1}}>
-                    <div></div>
+                    <div />
                   </div>
 
                   <div className='progressbar-xs progressbar-radial m-0'>

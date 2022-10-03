@@ -50,7 +50,7 @@ export default function TabMissionsMissions() {
                   <span className="icon icon-time-machine" />
                   <span>
                     Resets in{" "}
-                    <Countdown additionalClassName="ml-1" separator=":" />
+                    <Countdown className="ml-0.5" separator=":" hasHours={true} hasMinutes={true} hasSeconds={true} />
                   </span>
                 </div>
                 <Tooltip
@@ -133,7 +133,7 @@ export default function TabMissionsMissions() {
                   <span className="icon icon-time-machine" />
                   <span>
                     Resets in{" "}
-                    <Countdown additionalClassName="ml-1" separator=":" />
+                    <Countdown className="ml-0.5" separator=":" hasHours={true} hasMinutes={true} hasSeconds={true} />
                   </span>
                 </div>
               </div>
@@ -207,7 +207,7 @@ export default function TabMissionsMissions() {
                 <>
                   {mission.ispremium && (
                     <Tooltip
-                      placement="left"
+                      placement="top"
                       tooltip={
                         <div className="max-w-xs text-sm text-center leading-tight">
                           Unlock rewards as you earn XP from Missions. XP is

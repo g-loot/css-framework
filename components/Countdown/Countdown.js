@@ -1,58 +1,104 @@
-import React, { useRef, useState } from 'react';
+import React from "react";
+import { useCountdown } from "../../hooks/useCountdown";
 
-function calculateTimeLeft() {
-  const year = new Date().getFullYear();
-  const date = new Date().getUTCDate();
-  const difference = +new Date(`${year}-10-1`) - +new Date();
-  let timeLeft = {};
+const ExpiredNotice = () => {
+  return (
+    <div className="expired-notice">
+      <span>Expired!!!</span>
+      <p>Please select a future date and time.</p>
+    </div>
+  );
+};
+const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
+const NOW_IN_MS = new Date().getTime();
+const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 
-  if (difference > 0) {
-    timeLeft = {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / 1000 / 60) % 60),
-      seconds: Math.floor((difference / 1000) % 60)
-    };
-  }
-  return timeLeft;
-}
-
-export default function Countdown(props) {
+const Countdown = (props) => {
   const hasDays = props.hasDays !== undefined ? props.hasDays : false;
+  const hasHours = props.hasHours !== undefined ? props.hasHours : false;
+  const hasMinutes = props.hasMinutes !== undefined ? props.hasMinutes : false;
   const hasSeconds = props.hasSeconds !== undefined ? props.hasSeconds : true;
   const hasLabels = props.hasLabels !== undefined ? props.hasLabels : false;
   const labelsAbbr = props.labelsAbbr !== undefined ? props.labelsAbbr : false;
-  const additionalClassNames = props.additionalClassNames !== undefined ? props.additionalClassNames : '';
-  const separator = props.separator !== undefined ? props.separator : '';
+  const className = props.className !== undefined ? props.className : "";
+  const separator = props.separator !== undefined ? props.separator : "";
+  const targetDate =
+    props.targetDate !== undefined ? props.targetDate : dateTimeAfterThreeDays;
 
-  const [timeLeft, setTimeLeft] = React.useState(calculateTimeLeft());
+  const [days, hours, minutes, seconds] = useCountdown(targetDate);
 
-  React.useEffect(() => {
-    const id = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
+  if (days + hours + minutes + seconds <= 0) {
+    return <ExpiredNotice />;
+  } else {
+    return (
+      <span className={`countdown ${className}`}>
+        {hasDays && (
+          <>
+            <span style={{ "--value": days }} />
+            {hasLabels && !labelsAbbr && (
+              <>
+                <small>Days</small>
+              </>
+            )}
+            {hasLabels && labelsAbbr && (
+              <>
+                <small>Days</small>
+              </>
+            )}
+            {separator}
+          </>
+        )}
+        {hasHours && (
+          <>
+            <span style={{ "--value": hours }} />
 
-    return () => {
-      clearInterval(id);
-    };
-  }, []);
-  
-  return (
-    <span className={`countdown ${additionalClassNames}`}>
-      { hasDays && (
-        <>
-          <span style={{"--value": timeLeft.days}}/>{ hasLabels && !labelsAbbr && (<><i>Days</i></>)}{ hasLabels && labelsAbbr && (<><i>Days</i></>)}{separator}
-        </>
-      )}
-      <span style={{"--value": timeLeft.hours}}/>{ hasLabels && !labelsAbbr && (<><i>Hours</i></>)}{ hasLabels && labelsAbbr && (<><i>Hrs</i></>)}{separator}
-      <span style={{"--value": timeLeft.minutes}}/>{ hasLabels && !labelsAbbr && (<><i>Minutes</i></>)}{ hasLabels && labelsAbbr && (<><i>Min</i></>)}
-      { hasSeconds && (
-        <>
-          {separator}
-          <span style={{"--value": timeLeft.seconds}}/>{ hasLabels && !labelsAbbr && (<><i>Seconds</i></>)}{ hasLabels && labelsAbbr && (<><i>Sec</i></>)}
-        </>
-      )}
-      
-    </span>
-  );
-}
+            {hasLabels && !labelsAbbr && (
+              <>
+                <small>Hours</small>
+              </>
+            )}
+            {hasLabels && labelsAbbr && (
+              <>
+                <small>Hrs</small>
+              </>
+            )}
+            {separator}
+          </>
+        )}
+        {hasMinutes && (
+          <>
+            <span style={{ "--value": minutes }} />
+            {hasLabels && !labelsAbbr && (
+              <>
+                <small>Minutes</small>
+              </>
+            )}
+            {hasLabels && labelsAbbr && (
+              <>
+                <small>Min</small>
+              </>
+            )}
+            {separator}
+          </>
+        )}
+        {hasSeconds && (
+          <>
+            <span style={{ "--value": seconds }} />
+            {hasLabels && !labelsAbbr && (
+              <>
+                <small>Seconds</small>
+              </>
+            )}
+            {hasLabels && labelsAbbr && (
+              <>
+                <small>Sec</small>
+              </>
+            )}
+          </>
+        )}
+      </span>
+    );
+  }
+};
+
+export default Countdown;

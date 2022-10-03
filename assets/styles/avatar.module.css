@@ -20,6 +20,7 @@
     via-ui-300
     to-ui-100
     overflow-hidden
+    transform-gpu
     ;
 
     > * {

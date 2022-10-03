@@ -185,21 +185,21 @@ const DSpage = () => {
                         <li>
                           <a href="#">
                             <i></i>
-                            <div></div>
+                            <div />
                             <span></span>
                           </a>
                         </li>
                         <li className="is-active">
                           <a href="#">
                             <i></i>
-                            <div></div>
+                            <div />
                             <span></span>
                           </a>
                         </li>
                         <li>
                           <a href="#">
                             <i></i>
-                            <div></div>
+                            <div />
                             <span></span>
                           </a>
                         </li>
@@ -303,21 +303,21 @@ const DSpage = () => {
                         <li>
                           <a href="#">
                             <i></i>
-                            <div></div>
+                            <div />
                             <span></span>
                           </a>
                         </li>
                         <li className="is-active">
                           <a href="#">
                             <i></i>
-                            <div></div>
+                            <div />
                             <span></span>
                           </a>
                         </li>
                         <li>
                           <a href="#">
                             <i></i>
-                            <div></div>
+                            <div />
                             <span></span>
                           </a>
                         </li>
