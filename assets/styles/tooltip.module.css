@@ -85,6 +85,24 @@
       }
     }
 
+    /* position */
+
+    &.tooltip-top {
+      &::after {
+        @apply
+        left-[50%]
+        bottom-[100%]
+        translate-y-0.5
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          -translate-y-0.5
+          ;
+        }
+      }
+    }
     &.tooltip-right {
       &::after {
         @apply
@@ -102,8 +120,6 @@
         }
       }
     }
-
-    /* direction */
     &.tooltip-left {
       &::after {
         @apply
@@ -201,5 +217,293 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+
+/* responsive positioning */
+
+@media only screen and (min-width: 640px) {
+	.tooltip[data-tooltip] {
+    &.sm\:tooltip-top {
+      &::after {
+        @apply
+        left-[50%]
+        bottom-[100%]
+        translate-y-0.5
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          -translate-y-0.5
+          ;
+        }
+      }
+    }
+    &.sm\:tooltip-right {
+      &::after {
+        @apply
+        bottom-[50%]
+        left-[100%]
+        -translate-x-1
+        translate-y-[50%]
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          translate-x-1
+          ;
+        }
+      }
+    }
+    &.sm\:tooltip-left {
+      &::after {
+        @apply
+        bottom-[50%]
+        right-[100%]
+        left-auto
+        translate-x-1
+        translate-y-[50%]
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          -translate-x-1
+          ;
+        }
+      }
+    }
+    &.sm\:tooltip-bottom {
+      &::after {
+        @apply
+        bottom-auto
+        top-[100%]
+        -translate-y-1
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          translate-y-1
+          ;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+	.tooltip[data-tooltip] {
+    &.md\:tooltip-top {
+      &::after {
+        @apply
+        left-[50%]
+        bottom-[100%]
+        translate-y-0.5
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          -translate-y-0.5
+          ;
+        }
+      }
+    }
+    &.md\:tooltip-right {
+      &::after {
+        @apply
+        bottom-[50%]
+        left-[100%]
+        -translate-x-1
+        translate-y-[50%]
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          translate-x-1
+          ;
+        }
+      }
+    }
+    &.md\:tooltip-left {
+      &::after {
+        @apply
+        bottom-[50%]
+        right-[100%]
+        left-auto
+        translate-x-1
+        translate-y-[50%]
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          -translate-x-1
+          ;
+        }
+      }
+    }
+    &.md\:tooltip-bottom {
+      &::after {
+        @apply
+        bottom-auto
+        top-[100%]
+        -translate-y-1
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          translate-y-1
+          ;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+	.tooltip[data-tooltip] {
+    &.lg\:tooltip-top {
+      &::after {
+        @apply
+        left-[50%]
+        bottom-[100%]
+        translate-y-0.5
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          -translate-y-0.5
+          ;
+        }
+      }
+    }
+    &.lg\:tooltip-right {
+      &::after {
+        @apply
+        bottom-[50%]
+        left-[100%]
+        -translate-x-1
+        translate-y-[50%]
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          translate-x-1
+          ;
+        }
+      }
+    }
+    &.lg\:tooltip-left {
+      &::after {
+        @apply
+        bottom-[50%]
+        right-[100%]
+        left-auto
+        translate-x-1
+        translate-y-[50%]
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          -translate-x-1
+          ;
+        }
+      }
+    }
+    &.lg\:tooltip-bottom {
+      &::after {
+        @apply
+        bottom-auto
+        top-[100%]
+        -translate-y-1
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          translate-y-1
+          ;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+	.tooltip[data-tooltip] {
+    &.xl\:tooltip-top {
+      &::after {
+        @apply
+        left-[50%]
+        bottom-[100%]
+        translate-y-0.5
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          -translate-y-0.5
+          ;
+        }
+      }
+    }
+    &.xl\:tooltip-right {
+      &::after {
+        @apply
+        bottom-[50%]
+        left-[100%]
+        -translate-x-1
+        translate-y-[50%]
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          translate-x-1
+          ;
+        }
+      }
+    }
+    &.xl\:tooltip-left {
+      &::after {
+        @apply
+        bottom-[50%]
+        right-[100%]
+        left-auto
+        translate-x-1
+        translate-y-[50%]
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          -translate-x-1
+          ;
+        }
+      }
+    }
+    &.xl\:tooltip-bottom {
+      &::after {
+        @apply
+        bottom-auto
+        top-[100%]
+        -translate-y-1
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          translate-y-1
+          ;
+        }
+      }
+    }
   }
 }

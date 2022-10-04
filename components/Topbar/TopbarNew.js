@@ -96,7 +96,7 @@ export default function TopbarNew() {
   }
 
   return (
-    <div className="sticky top-0 z-50 bg-ui-800/50 navbar h-14 flex items-center border-b border-ui-700">
+    <div className="sticky top-0 z-50 bg-ui-800/50 navbar h-12 flex items-center border-b border-ui-700">
       <div className="container relative">
         <div
           className={`flex lg:gap-8 mx-auto px-2  ${
@@ -118,7 +118,7 @@ export default function TopbarNew() {
                   <li>
                     <Link href={`/prototype/home${prototype.getURLparams()}`}>
                       <a
-                        className={`pt-5 pb-5 ${
+                        className={` ${
                           router.pathname.endsWith("prototype")
                             ? "is-active"
                             : ""
@@ -133,7 +133,7 @@ export default function TopbarNew() {
                   <li>
                     <Link href={`/prototype/shop${prototype.getURLparams()}`}>
                       <a
-                        className={`pt-5 pb-5 ${
+                        className={` ${
                           router.pathname.includes("shop") ? "is-active" : ""
                         }`}
                       >
@@ -146,7 +146,7 @@ export default function TopbarNew() {
                       href={`/prototype/premium${prototype.getURLparams()}`}
                     >
                       <a
-                        className={`pt-5 pb-5 ${
+                        className={` ${
                           router.pathname.includes("premium") ? "is-active" : ""
                         }`}
                       >
@@ -159,7 +159,7 @@ export default function TopbarNew() {
                       href={`/prototype/tracker${prototype.getURLparams()}`}
                     >
                       <a
-                        className={`pt-5 pb-5 ${
+                        className={` ${
                           router.pathname.includes("tracker") ? "is-active" : ""
                         }`}
                       >

@@ -378,16 +378,24 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <div className="w-full flex gap-4 items-center">
                   <div className="flex-1 space-y-4">
-                      <div className="flex items-center justify-center gap-2">
-                        <div className="form-radio">
-                          <input type="radio" name="radioYesNo" id="radioSingleYes" />
-                          <label htmlFor="radioSingleYes" />
-                        </div>
-                        <div className="form-radio">
-                          <input type="radio" name="radioYesNo" id="radioSingleNo" />
-                          <label htmlFor="radioSingleNo" />
-                        </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <div className="form-radio">
+                        <input
+                          type="radio"
+                          name="radioYesNo"
+                          id="radioSingleYes"
+                        />
+                        <label htmlFor="radioSingleYes" />
                       </div>
+                      <div className="form-radio">
+                        <input
+                          type="radio"
+                          name="radioYesNo"
+                          id="radioSingleNo"
+                        />
+                        <label htmlFor="radioSingleNo" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -414,7 +422,78 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <div className="w-full flex gap-4 items-center">
                   <div className="flex-1 space-y-4">
-                    enu
+                    <div className="form-group flex flex-wrap justify-center gap-4">
+                      <label className="form-checkbox form-image">
+                        <input type="checkbox" name="game-1" />
+                        <span className="sr-only">Valorant</span>
+                        <div
+                          className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
+                          style={{
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644677000/Marketing/202109_gloot2/Game_cover_Valorant.jpg)`,
+                          }}
+                        />
+                      </label>
+                      <label className="form-checkbox form-image">
+                        <input type="checkbox" name="game-2" />
+                        <span className="sr-only">Apex Legends</span>
+                        <div
+                          className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
+                          style={{
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Apex_Legends.jpg)`,
+                          }}
+                        />
+                      </label>
+                      <label className="form-checkbox form-image">
+                        <input type="checkbox" name="game-3" />
+                        <span className="sr-only">PUBG: BATTLEGROUNDS</span>
+                        <div
+                          className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
+                          style={{
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_PUBG_Battlegrounds.jpg)`,
+                          }}
+                        />
+                      </label>
+                      <label className="form-checkbox form-image">
+                        <input type="checkbox" name="game-4" />
+                        <span className="sr-only">CSGO</span>
+                        <div
+                          className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
+                          style={{
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_CSGO.jpg)`,
+                          }}
+                        />
+                      </label>
+                      <label className="form-checkbox form-image">
+                        <input type="checkbox" name="game-5" />
+                        <span className="sr-only">Rocket League</span>
+                        <div
+                          className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
+                          style={{
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Rocket_League.jpg)`,
+                          }}
+                        />
+                      </label>
+                      <label className="form-checkbox form-image">
+                        <input type="checkbox" name="game-6" />
+                        <span className="sr-only">League of Legends</span>
+                        <div
+                          className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
+                          style={{
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1645621586/Marketing/202109_gloot2/Game_cover_League_of_Legends.jpg)`,
+                          }}
+                        />
+                      </label>
+                      <label className="form-checkbox form-image">
+                        <input type="checkbox" name="game-7" />
+                        <span className="sr-only">Dota 2</span>
+                        <div
+                          className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
+                          style={{
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Dota_2.jpg)`,
+                          }}
+                        />
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>

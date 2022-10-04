@@ -71,7 +71,7 @@ export default function ModalBuyTokens(props) {
   return (
     <>
       <div className="relative z-10 max-w-lg w-full">
-        <div className="modal max-w-lg">
+        <div className="modal surface-transparent max-w-lg">
           <button
             type="button"
             className="button button-secondary button-close"

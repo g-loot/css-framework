@@ -141,8 +141,9 @@
       &:focus-visible,
       &.is-active {
         @apply
+        bg-ui-700
         text-ui-200
-        shadow-[inset_0_0_0_1px_rgb(var(--color-ui-600))];
+        shadow-[inset_0_0_0_1px_rgb(var(--color-ui-300))];
       }
     }
   }
@@ -570,11 +571,11 @@
     @apply
     pointer-events-none
     select-none
-    bg-disabled-500/25
+    bg-disabled-700
     bg-gradient-to-r
-    from-disabled-500/25
-    via-disabled-500/25
-    to-disabled-500/25
+    from-disabled-700
+    via-disabled-700
+    to-disabled-700
     text-disabled-300
     shadow-[inset_0_0_0_1px_rgba(var(--color-disabled-700),50%)]
     opacity-100

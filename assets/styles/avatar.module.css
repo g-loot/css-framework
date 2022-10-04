@@ -3,6 +3,8 @@
 /*----------------------------*/
 
 .avatar {
+  --inner-padding-one: 0.5rem;
+  --inner-padding-two: 0.5rem/2;
   @apply
   block
   relative
@@ -66,11 +68,11 @@
   &:not([class*=rounded]):not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
     > div {
       @apply
-      rounded-[0.75rem]
+      rounded-[calc(var(--inner-padding-one)*2)]
       ;
       > * {
         @apply
-        rounded-[calc(0.75rem-0.25rem)]
+        rounded-[calc((var(--inner-padding-one)*2)-calc(var(--inner-padding-two)))]
         ;
       }
     }
@@ -78,72 +80,25 @@
   > div {
     > * {
       @apply
-      inset-[calc(0.5rem/2)]
-      w-[calc(100%-0.5rem)]
-      h-[calc(100%-0.5rem)]
+      inset-[calc(var(--inner-padding-one)/2)]
+      w-[calc(100%-var(--inner-padding-one))]
+      h-[calc(100%-var(--inner-padding-one))]
+      ;
       ;
     }
   }
 
-
   /* size */
 
-  &.avatar-md {
-    @apply
-    h-20
-    w-20
-    ;
-    &:not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
-      > div {
-        @apply
-        rounded-[calc(0.3rem*2)]
-        ;
-        > * {
-          @apply
-          rounded-[calc((0.3rem*2)-(0.3rem/2))]
-          ;
-        }
-      }
-    }
-    > div {
-      > * {
-        @apply
-        inset-[calc(0.3rem/2)]
-        w-[calc(100%-0.3rem)]
-        h-[calc(100%-0.3rem)]
-        ;
-        & {
-          @apply
-          text-4xl
-          ;
-        }
-      }
-    }
-  }
   &.avatar-xl {
+    --inner-padding-one: 0.6rem;
+    --inner-padding-two: 0.6rem/2;
     @apply
     h-32
     w-32
     ;
-    &:not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
-      > div {
-        @apply
-        rounded-[calc(0.6rem*2)]
-        ;
-        > * {
-          @apply
-          rounded-[calc((0.6rem*2)-(0.6rem/2))]
-          ;
-        }
-      }
-    }
     > div {
       > * {
-        @apply
-        inset-[calc(0.6rem/2)]
-        w-[calc(100%-0.6rem)]
-        h-[calc(100%-0.6rem)]
-        ;
         & {
           @apply
           text-5xl
@@ -152,30 +107,49 @@
       }
     }
   }
-  &.avatar-sm {
+  &.avatar-lg {
+    --inner-padding-one: 0.5rem;
+    --inner-padding-two: 0.5rem/2;
     @apply
-    h-14
-    w-14
+    h-24
+    w-24
     ;
-    &:not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
-      > div {
-        @apply
-        rounded-[calc(0.25rem*2)]
-        ;
-        > * {
+    > div {
+      > * {
+        & {
           @apply
-          rounded-[calc((0.25rem*2)-(0.25rem/2))]
+          text-5xl
           ;
         }
       }
     }
+  }
+  &.avatar-md {
+    --inner-padding-one: 0.3rem;
+    --inner-padding-two: 0.3rem/2;
+    @apply
+    h-20
+    w-20
+    ;
     > div {
       > * {
-        @apply
-        inset-[calc(0.25rem/2)]
-        w-[calc(100%-0.25rem)]
-        h-[calc(100%-0.25rem)]
-        ;
+        & {
+          @apply
+          text-4xl
+          ;
+        }
+      }
+    }
+  }
+  &.avatar-sm {
+    --inner-padding-one: 0.25rem;
+    --inner-padding-two: 0.25rem/2;
+    @apply
+    h-14
+    w-14
+    ;
+    > div {
+      > * {
         & {
           @apply
           text-3xl
@@ -185,29 +159,14 @@
     }
   }
   &.avatar-xs {
+    --inner-padding-one: 0.2rem;
+    --inner-padding-two: 0.2rem/2;
     @apply
     h-9
     w-9
     ;
-    &:not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
-      > div {
-        @apply
-        rounded-[calc(0.2rem*2)]
-        ;
-        > * {
-          @apply
-          rounded-[calc((0.2rem*2)-(0.2rem/2))]
-          ;
-        }
-      }
-    }
     > div {
       > * {
-        @apply
-        inset-[calc(0.2rem/2)]
-        w-[calc(100%-0.2rem)]
-        h-[calc(100%-0.2rem)]
-        ;
         & {
           @apply
           text-2xl
@@ -217,29 +176,14 @@
     }
   }
   &.avatar-tiny {
+    --inner-padding-one: 0.15rem;
+    --inner-padding-two: 0.15rem/2;
     @apply
     h-7
     w-7
     ;
-    &:not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
-      > div {
-        @apply
-        rounded-[calc(0.15rem*2)]
-        ;
-        > * {
-          @apply
-          rounded-[calc((0.15rem*2)-(0.15rem/2))]
-          ;
-        }
-      }
-    }
     > div {
       > * {
-        @apply
-        inset-[calc(0.15rem/2)]
-        w-[calc(100%-0.15rem)]
-        h-[calc(100%-0.15rem)]
-        ;
         & {
           @apply
           text-xl
@@ -456,5 +400,432 @@
     @apply
     rounded-full
     ;
+  }
+}
+
+/* responsive sizes */
+
+@media only screen and (min-width: 640px) {
+	.avatar {
+    &.sm\:avatar-xl {
+      --inner-padding-one: 0.6rem;
+      --inner-padding-two: 0.6rem/2;
+      @apply
+      h-32
+      w-32
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-5xl
+            ;
+          }
+        }
+      }
+    }
+    &.sm\:avatar-lg {
+      --inner-padding-one: 0.6rem;
+      --inner-padding-two: 0.6rem/2;
+      @apply
+      h-24
+      w-24
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-4xl
+            ;
+          }
+        }
+      }
+    }
+    &.sm\:avatar-md {
+      --inner-padding-one: 0.3rem;
+      --inner-padding-two: 0.3rem/2;
+      @apply
+      h-20
+      w-20
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-4xl
+            ;
+          }
+        }
+      }
+    }
+    &.sm\:avatar-sm {
+      --inner-padding-one: 0.25rem;
+      --inner-padding-two: 0.25rem/2;
+      @apply
+      h-14
+      w-14
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-3xl
+            ;
+          }
+        }
+      }
+    }
+    &.sm\:avatar-xs {
+      --inner-padding-one: 0.2rem;
+      --inner-padding-two: 0.2rem/2;
+      @apply
+      h-9
+      w-9
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-2xl
+            ;
+          }
+        }
+      }
+    }
+    &.sm\:avatar-tiny {
+      --inner-padding-one: 0.15rem;
+      --inner-padding-two: 0.15rem/2;
+      @apply
+      h-7
+      w-7
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-xl
+            ;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+	.avatar {
+    &.md\:avatar-xl {
+      --inner-padding-one: 0.6rem;
+      --inner-padding-two: 0.6rem/2;
+      @apply
+      h-32
+      w-32
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-5xl
+            ;
+          }
+        }
+      }
+    }
+    &.md\:avatar-lg {
+      --inner-padding-one: 0.6rem;
+      --inner-padding-two: 0.6rem/2;
+      @apply
+      h-24
+      w-24
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-4xl
+            ;
+          }
+        }
+      }
+    }
+    &.md\:avatar-md {
+      --inner-padding-one: 0.3rem;
+      --inner-padding-two: 0.3rem/2;
+      @apply
+      h-20
+      w-20
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-4xl
+            ;
+          }
+        }
+      }
+    }
+    &.md\:avatar-sm {
+      --inner-padding-one: 0.25rem;
+      --inner-padding-two: 0.25rem/2;
+      @apply
+      h-14
+      w-14
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-3xl
+            ;
+          }
+        }
+      }
+    }
+    &.md\:avatar-xs {
+      --inner-padding-one: 0.2rem;
+      --inner-padding-two: 0.2rem/2;
+      @apply
+      h-9
+      w-9
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-2xl
+            ;
+          }
+        }
+      }
+    }
+    &.md\:avatar-tiny {
+      --inner-padding-one: 0.15rem;
+      --inner-padding-two: 0.15rem/2;
+      @apply
+      h-7
+      w-7
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-xl
+            ;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+	.avatar {
+    &.lg\:avatar-xl {
+      --inner-padding-one: 0.6rem;
+      --inner-padding-two: 0.6rem/2;
+      @apply
+      h-32
+      w-32
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-5xl
+            ;
+          }
+        }
+      }
+    }
+    &.lg\:avatar-lg {
+      --inner-padding-one: 0.6rem;
+      --inner-padding-two: 0.6rem/2;
+      @apply
+      h-24
+      w-24
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-4xl
+            ;
+          }
+        }
+      }
+    }
+    &.lg\:avatar-md {
+      --inner-padding-one: 0.3rem;
+      --inner-padding-two: 0.3rem/2;
+      @apply
+      h-20
+      w-20
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-4xl
+            ;
+          }
+        }
+      }
+    }
+    &.lg\:avatar-sm {
+      --inner-padding-one: 0.25rem;
+      --inner-padding-two: 0.25rem/2;
+      @apply
+      h-14
+      w-14
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-3xl
+            ;
+          }
+        }
+      }
+    }
+    &.lg\:avatar-xs {
+      --inner-padding-one: 0.2rem;
+      --inner-padding-two: 0.2rem/2;
+      @apply
+      h-9
+      w-9
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-2xl
+            ;
+          }
+        }
+      }
+    }
+    &.lg\:avatar-tiny {
+      --inner-padding-one: 0.15rem;
+      --inner-padding-two: 0.15rem/2;
+      @apply
+      h-7
+      w-7
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-xl
+            ;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+	.avatar {
+    &.xl\:avatar-xl {
+      --inner-padding-one: 0.6rem;
+      --inner-padding-two: 0.6rem/2;
+      @apply
+      h-32
+      w-32
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-5xl
+            ;
+          }
+        }
+      }
+    }
+    &.xl\:avatar-lg {
+      --inner-padding-one: 0.6rem;
+      --inner-padding-two: 0.6rem/2;
+      @apply
+      h-24
+      w-24
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-4xl
+            ;
+          }
+        }
+      }
+    }
+    &.xl\:avatar-md {
+      --inner-padding-one: 0.3rem;
+      --inner-padding-two: 0.3rem/2;
+      @apply
+      h-20
+      w-20
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-4xl
+            ;
+          }
+        }
+      }
+    }
+    &.xl\:avatar-sm {
+      --inner-padding-one: 0.25rem;
+      --inner-padding-two: 0.25rem/2;
+      @apply
+      h-14
+      w-14
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-3xl
+            ;
+          }
+        }
+      }
+    }
+    &.xl\:avatar-xs {
+      --inner-padding-one: 0.2rem;
+      --inner-padding-two: 0.2rem/2;
+      @apply
+      h-9
+      w-9
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-2xl
+            ;
+          }
+        }
+      }
+    }
+    &.xl\:avatar-tiny {
+      --inner-padding-one: 0.15rem;
+      --inner-padding-two: 0.15rem/2;
+      @apply
+      h-7
+      w-7
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-xl
+            ;
+          }
+        }
+      }
+    }
   }
 }

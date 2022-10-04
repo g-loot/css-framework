@@ -133,8 +133,8 @@ const DSpage = () => {
                       </div>
                     </div>
                   </div>
-                  <svg viewBox="0 0 40 40" style={{"--percent": random4}}>
-                      <circle cx="20" cy="20" r="16" />
+                  <svg viewBox="0 0 40 40">
+                      <circle cx="20" cy="20" r="16" style={{ strokeDashoffset : `calc((1px * ${random4}) - 100px)`}} />
                   </svg>
                 </div>
               </div>  

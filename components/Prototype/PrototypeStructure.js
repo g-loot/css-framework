@@ -111,7 +111,7 @@ export default function PrototypeStructure({ children, title }) {
                 className="drawer-overlay"
               ></label>
               <aside className="w-72 bg-ui-800 border-r border-ui-700 flex flex-col shadow-2xl">
-                <div className="h-14 flex items-center justify-between border-b border-ui-700 pl-7 pr-2 sticky z-10 top-0 bg-ui-800/95 backdrop-blur">
+                <div className="h-12 flex items-center justify-between border-b border-ui-700 pl-7 pr-2 sticky z-10 top-0 bg-ui-800/95 backdrop-blur">
                   <Link href={`/prototype/home${prototype.getURLparams()}`}>
                     <a className="flex items-center gap-2 interactive">
                       <img
