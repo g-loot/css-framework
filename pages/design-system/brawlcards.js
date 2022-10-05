@@ -1,3 +1,4 @@
+import Countdown from "../../components/Countdown/Countdown";
 import React from "react";
 import Tooltip from "../../components/Tooltip/Tooltip";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
@@ -38,22 +39,24 @@ const DSpage = () => {
                         <span className="icon icon-time-machine"></span>
                         <span>
                           Time left:{" "}
-                          <span className="countdown ">
-                            <span style={{ "--value": 14 }}></span>:
-                            <span style={{ "--value": 43 }}></span>:
-                            <span style={{ "--value": 23 }}></span>
-                          </span>
+                          <Countdown
+                            separator=":"
+                            hasDays={false}
+                            hasHours={true}
+                            hasMinutes={true}
+                            hasSeconds={true}
+                          />
                         </span>
                       </div>
                     </div>
-                  </div>
-                  <div className="card-meta">
                     <div>
                       <label className="text-ui-300 uppercase text-sm">
                         Game mode
                       </label>
                       <p className="text-ui-200 font-bold">Competitive</p>
                     </div>
+                  </div>
+                  <div className="card-meta">
                     <div>
                       <label className="text-ui-300 uppercase text-sm text-right">
                         Rewards
@@ -145,31 +148,16 @@ const DSpage = () => {
                         <span className="icon icon-time-machine"></span>
                         <span>
                           Time left:{" "}
-                          <span className="countdown ">
-                            <span style={{ "--value": 14 }}></span>:
-                            <span style={{ "--value": 43 }}></span>:
-                            <span style={{ "--value": 23 }}></span>
-                          </span>
+                          <Countdown
+                            separator=":"
+                            hasDays={false}
+                            hasHours={true}
+                            hasMinutes={true}
+                            hasSeconds={true}
+                          />
                         </span>
                       </div>
                     </div>
-                    <div>
-                      <Tooltip
-                        tooltip={
-                          <div className="max-w-xs text-sm text-center leading-tight">
-                            Solo &amp; Clan Brawl
-                          </div>
-                        }
-                      >
-                        <div className="flex items-center gap-2 text-xl text-ui-300">
-                          <span className="icon icon-profile-2"></span>
-                          <span className="">/</span>
-                          <span className="icon icon-multiple-12"></span>
-                        </div>
-                      </Tooltip>
-                    </div>
-                  </div>
-                  <div className="card-meta">
                     <div>
                       <div className="flex gap-1.5 items-baseline">
                         <div className="font-headings font-bold text-3xl italic text-main">
@@ -179,6 +167,20 @@ const DSpage = () => {
                           matches played to get your total Brawl points
                         </div>
                       </div>
+                    </div>
+                  </div>
+                  <div className="card-meta">
+                    
+                    <div className="flex justify-center">
+                      <Tooltip
+                        tooltip={
+                          <div className="max-w-xs text-sm text-center leading-tight">
+                            Place high on the Clan leaderboard for a chance to quality for VALORANT Clash
+                          </div>
+                        }
+                      >
+                        <img alt="" height="300px" width="200px" src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/G-Loot_Valorant_Clash_Logo.svg" />
+                      </Tooltip>
                     </div>
                     <div className="w-60">
                       <ul className="step step-primary step-sm w-full max-w-xs">

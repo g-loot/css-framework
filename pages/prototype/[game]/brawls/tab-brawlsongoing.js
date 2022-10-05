@@ -69,7 +69,13 @@ export default function TabBrawlsOngoing() {
                                           <span className="icon icon-male"></span>
                                         </div>
                                       </div>
-                                      <span className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${brawl.progress <= 0 ? "text-ui-400" : "text-ui-200"}`}>
+                                      <span
+                                        className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${
+                                          brawl.progress <= 0
+                                            ? "text-ui-400"
+                                            : "text-ui-200"
+                                        }`}
+                                      >
                                         Solo Brawl
                                       </span>
                                     </div>
@@ -98,7 +104,10 @@ export default function TabBrawlsOngoing() {
                                           <div className="avatar avatar-circle avatar-tiny">
                                             <div>
                                               <img
-                                                src={prototype.getUserByID(1)?.avatar}
+                                                src={
+                                                  prototype.getUserByID(1)
+                                                    ?.avatar
+                                                }
                                               />
                                             </div>
                                             <i className="radar" />
@@ -111,18 +120,26 @@ export default function TabBrawlsOngoing() {
                                             </div>
                                           </div>
                                         )}
-                                        <span className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${brawl.progress <= 0 ? "text-ui-400" : "text-ui-200"}`}>
+                                        <span
+                                          className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${
+                                            brawl.progress <= 0
+                                              ? "text-ui-400"
+                                              : "text-ui-200"
+                                          }`}
+                                        >
                                           Solo Brawl
                                         </span>
                                       </div>
                                       <div className="chip chip-secondary">
-                                      {brawl.progressClan > 0 && (
+                                        {brawl.progressClan > 0 && (
                                           <div className="avatar avatar-squircle avatar-tiny">
                                             <div>
                                               <img
-                                                src={prototype.getClanByID(
-                                                  prototype.getUserByID(1).id
-                                                )?.avatar}
+                                                src={
+                                                  prototype.getClanByID(
+                                                    prototype.getUserByID(1).id
+                                                  )?.avatar
+                                                }
                                               />
                                             </div>
                                             <i className="radar" />
@@ -135,7 +152,13 @@ export default function TabBrawlsOngoing() {
                                             </div>
                                           </div>
                                         )}
-                                        <span className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${brawl.progressClan <= 0 ? "text-ui-400" : "text-ui-200"}`}>
+                                        <span
+                                          className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${
+                                            brawl.progressClan <= 0
+                                              ? "text-ui-400"
+                                              : "text-ui-200"
+                                          }`}
+                                        >
                                           Clan Brawl
                                         </span>
                                       </div>
@@ -158,15 +181,15 @@ export default function TabBrawlsOngoing() {
                                 <span>
                                   Time left:{" "}
                                   <Countdown
-                                    additionalClassName="ml-1"
                                     separator=":"
+                                    hasDays={false}
+                                    hasHours={true}
+                                    hasMinutes={true}
+                                    hasSeconds={true}
                                   />
                                 </span>
                               </div>
                             </div>
-                            <div />
-                          </div>
-                          <div className="card-meta">
                             <div>
                               {brawl.progress === 0 && (
                                 <>
@@ -196,6 +219,8 @@ export default function TabBrawlsOngoing() {
                                 </>
                               )}
                             </div>
+                          </div>
+                          <div className="card-meta">
                             <div>
                               {brawl.progress === 0 && (
                                 <div>

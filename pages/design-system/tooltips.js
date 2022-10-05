@@ -145,7 +145,7 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <p className="text-ui-300 mb-6">
                   You can change the position of the tooltip based on the screen size
-                  using the following class names:
+                  using the following class name:
                   <code
                     className="interactive text-xs"
                     onClick={() => {

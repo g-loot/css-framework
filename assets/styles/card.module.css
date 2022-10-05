@@ -492,8 +492,12 @@
   grid
   grid-cols-3
   items-stretch
-  md:h-56
   ;
+  &:not([class*="h-"]) {
+    @apply
+    min-h-[15rem]
+    ;
+  }
 
   .card-image {
     @apply
@@ -544,8 +548,8 @@
         @apply
         left-0
         bg-gradient-to-r
-        from-ui-800
-        via-ui-800/80
+        from-ui-800/95
+        via-ui-800/70
         to-ui-800/0
         ;
       }
@@ -579,6 +583,7 @@
     md:col-span-2
     flex
     flex-col
+    md:flex-row
     p-4
     ;
 
@@ -596,12 +601,21 @@
     > .card-body,
     > .card-meta {
       @apply
-      flex-1
       flex
-      flex-col
-      md:flex-row
       gap-4
       ;
+    }
+
+    > .card-body {
+      @apply
+      flex-col
+      items-start
+      ;
+      &:not([class*="items-"]) {
+        @apply
+        items-stretch
+        ;
+      }
       &:not([class*="justify-"]) {
         @apply
         justify-between
@@ -609,17 +623,13 @@
       }
     }
 
-
-    > .card-body {
-      @apply
-        items-start
-      ;
-    }
-
     > .card-meta {
       @apply
-      items-start
-      md:items-end
+      grid
+      grid-flow-row
+      auto-rows-auto
+      justify-center
+      md:justify-end
       border-t
       border-ui-700
       md:border-none
@@ -628,14 +638,26 @@
       md:mt-0
       md:pt-0
       ;
+      &:not([class*="items-"]) {
+        @apply
+        items-start
+        md:items-end
+        ;
+      }
+      &:not([class*="justify-"]) {
+        @apply
+        justify-center
+        md:justify-between
+        ;
+      }
+      > *:first-child:last-child {
+        @apply
+        row-span-2
+        ;
+      }
     }
   }
-
 }
-
-
-
-
 
 
 /* loading */
