@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Lottie from "lottie-react";
 import LottieExplosion1 from "../../assets/animations/explosion-1.json";
 import LottieExplosion10 from "../../assets/animations/explosion-10.json";
+import LottieExplosion11 from "../../assets/animations/explosion-11.json";
 import LottieExplosion2 from "../../assets/animations/explosion-2.json";
 import LottieExplosion3 from "../../assets/animations/explosion-3.json";
 import LottieExplosion4 from "../../assets/animations/explosion-4.json";
@@ -24,6 +25,7 @@ const DSpage = () => {
   const [StartAnim8, setStartAnim8] = useState(false);
   const [StartAnim9, setStartAnim9] = useState(false);
   const [StartAnim10, setStartAnim10] = useState(false);
+  const [StartAnim11, setStartAnim11] = useState(false);
 
   function handleStartAnim1() {
     setStartAnim1(true);
@@ -92,6 +94,13 @@ const DSpage = () => {
     setStartAnim10(true);
     const timer = setTimeout(() => {
       setStartAnim10(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }
+  function handleStartAnim11() {
+    setStartAnim11(true);
+    const timer = setTimeout(() => {
+      setStartAnim11(false);
     }, 1000);
     return () => clearTimeout(timer);
   }
@@ -514,6 +523,48 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/2waehzv1/embedded/js,html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Explosion #11 */}
+      <div className="mb-12" id="explosion-11">
+        <h2 className="h3 mb-3">Explosion #11</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div className="relative w-72 h-72 flex items-center justify-center mx-auto">
+                  {StartAnim11 && (
+                    <div className="lottie-blur absolute inset-0">
+                      <Lottie
+                        animationData={LottieExplosion11}
+                        loop={false}
+                        autoplay={true}
+                      />
+                    </div>
+                  )}
+                </div>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim11.bind(this)}
+                    disabled={StartAnim11}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/a2hw01g5/embedded/js,html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

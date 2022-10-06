@@ -64,10 +64,10 @@ const DSpage = () => {
                                   autoDelete: true,
                                   autoDeleteDelay: 2500,
                                 });
-                                navigator.clipboard.writeText(item2.value);
+                                navigator.clipboard.writeText(item2.value.replace('bg-',''));
                               }}
                             >
-                              {item2.value}
+                              {item2.value.replace('bg-','')}
                             </a>
                           </span>
                         </div>

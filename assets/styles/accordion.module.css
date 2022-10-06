@@ -73,6 +73,7 @@
     transform-gpu
     duration-500
     ease-[cubic-bezier(.7,0,.3,1)]
+    invisible
     ;
 
     ul.menu {
@@ -120,6 +121,7 @@
     focus-visible:outline-offset-[-2px]
     focus-visible:outline-1
     focus-visible:outline-main
+    active:bg-ui-700/30
     ;
   }
   &:not(.is-active) {
@@ -164,6 +166,9 @@
       }
     }
     .accordion-collapse {
+      @apply
+      visible
+      ;
       ul.menu {
         > li {
           @apply

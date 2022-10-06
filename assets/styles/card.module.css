@@ -585,6 +585,9 @@
     flex-col
     md:flex-row
     p-4
+    border-t
+    border-ui-700
+    md:border-none
     ;
 
     &:not([class*="items-"]) {
