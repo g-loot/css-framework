@@ -63,11 +63,19 @@
     transition-all
     duration-200
     ease-[cubic-bezier(.7,0,.3,1)]
-    focus-visible:outline
-    focus-visible:outline-1
-    focus-visible:outline-offset-0
-    focus-visible:outline-main
+    outline-none
+    focus-visible:outline-none
     ;
+
+    &:focus-visible {
+      &::before {
+        @apply
+        outline
+        outline-1
+        outline-main
+        ;
+      }
+    }
 
     &:not([class*="p-"]) {
       @apply
@@ -96,6 +104,16 @@
         text-base
         ;
       }
+    }
+    &::before {
+      @apply 
+      content-['']
+      absolute
+      z-20
+      inset-0.5
+      rounded
+      pointer-events-none
+      ;
     }
 
     &::after {

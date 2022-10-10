@@ -32,9 +32,9 @@
       pointer-events-none
       ;
     }
+
     > a, 
-    > button, 
-    > .button, 
+    > button,
     > div {
       @apply
       relative
@@ -49,6 +49,11 @@
       duration-300
       ease-in-out
       leading-[1]
+      outline-offset-[-1px]
+      focus-visible:rounded
+      focus-visible:outline
+      focus-visible:outline-1
+      focus-visible:outline-main
       ;
   
       &:not([class*="text-"]) {
@@ -82,22 +87,9 @@
         @apply
         transition
         ease-linear
-        duration-[50ms]
+        duration-75
         ;
       }
-  
-      &:active {
-        &:hover,
-        &:focus {
-          > span,
-          > div {
-            @apply 
-            translate-y-0.5
-            ;
-          }
-        }
-      }
-  
   
       &.is-active,
       &:active,
@@ -140,22 +132,6 @@
       }
     }
   }
-
-  /*
-  &:hover {
-    li {
-      @apply
-      opacity-30
-      ;
-      &:hover {
-        @apply
-        opacity-100
-        ;
-      }
-    }
-  }
-  */
-
  
   &::after {
     @apply
@@ -170,6 +146,23 @@
     ;
   }
 }
+
+.tabs:not(.tabs-rank) {
+  > li {
+    > a,
+    > button,
+    > div {
+      &:active {
+        > span,
+        > div {
+          @apply 
+          translate-y-0.5
+          ;
+        }
+      }
+    }
+  }
+} 
 
 .tabs.tabs-secondary {
   :where(a, button, .button, div) {
@@ -223,12 +216,15 @@
     items-center
     ;
     
-    > a {
+    > a, 
+    > button,
+    > div {
       @apply
       p-0
       relative
       block
       min-w-[255px]
+      focus-visible:outline-main/0
       ;
       &:not(.is-active) {
         @apply
@@ -242,6 +238,20 @@
         ease-in-out
         scale-75
         ;
+      }
+
+      &:focus-visible {
+        > div {
+          > div:first-child {
+            @apply
+            rounded
+            outline
+            outline-offset-2
+            outline-1
+            outline-main
+            ;
+          }
+        }
       }
       
       &::before,
@@ -362,7 +372,9 @@
         @apply
         scale-100
         ;
-        > a {
+        > a, 
+        > button, 
+        > div {
           @apply
           opacity-100
           scale-100
@@ -390,11 +402,15 @@
               ;
             }
           }
-        }
-        &:active {
-          @apply
-          scale-95
-          ;
+          &:active {
+            > div {
+              > div {
+                @apply
+                opacity-75
+                ;
+              }
+            }
+          }
         }
       }
     }
@@ -482,7 +498,9 @@
     }  
   }
   li.tab-bronze {
-    > a {
+    > a, 
+    > button,
+    > div {
       &::before,
       &::after {
         @apply
@@ -494,7 +512,9 @@
     } 
   }
   li.tab-silver {
-    > a {
+    > a, 
+    > button,
+    > div {
       &::before,
       &::after {
         @apply
@@ -506,7 +526,9 @@
     } 
   }
   li.tab-gold {
-    > a {
+    > a, 
+    > button,
+    > div {
       &::before,
       &::after {
         @apply
@@ -518,7 +540,9 @@
     } 
   }
   li.tab-platinum {
-    > a {
+    > a, 
+    > button,
+    > div {
       &::before,
       &::after {
         @apply
@@ -530,7 +554,9 @@
     } 
   }
   li.tab-diamond {
-    > a {
+    > a, 
+    > button,
+    > div {
       &::before,
       &::after {
         @apply

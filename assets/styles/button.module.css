@@ -4,6 +4,10 @@
 /* BUTTON */
 /*----------------------------*/
 
+button {
+  text-align: inherit;
+}
+
 .button {
   @apply
   outline-none

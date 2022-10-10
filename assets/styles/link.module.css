@@ -7,9 +7,10 @@
   cursor-pointer
   hover:opacity-80
   active:opacity-80
+  rounded
+  outline-offset-2
   focus-visible:outline
-  focus-visible:outline-interaction-500
-  focus-visible:outline-offset-2
+  focus-visible:outline-main
   transition-all
   duration-200
   ease-in-out
@@ -109,4 +110,10 @@
       }
     }
   }
+}
+
+.link-outline {
+  @apply
+  outline-offset-2
+  ;
 }

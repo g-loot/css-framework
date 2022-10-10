@@ -16,24 +16,24 @@ const DSpage = () => {
               <div className="flex-1 surface rounded-lg overflow-hidden">
                 <ul className="menu" role="menu">
                   <li>
-                    <a>
+                    <button>
                       <span>Missions</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a className="is-active">
+                    <button className="is-active">
                       <span>Brawls</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Tournaments</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Stats</span>
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -60,24 +60,24 @@ const DSpage = () => {
               <div className="flex-1 surface rounded-lg overflow-hidden">
                 <ul className="menu menu-secondary">
                   <li>
-                    <a>
+                    <button>
                       <span>Missions</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a className="is-active">
+                    <button className="is-active">
                       <span>Brawls</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Tournaments</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Stats</span>
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -104,28 +104,28 @@ const DSpage = () => {
               <div className="flex-1 surface rounded-lg overflow-hidden">
                 <ul className="menu" role="menu">
                   <li>
-                    <a>
+                    <button>
                       <span className="icon icon-missions" />
                       <span>Missions</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span className="icon icon-brawl" />
                       <span>Brawls</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span className="icon icon-showdown" />
                       <span>Tournaments</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span className="icon icon-d-chart" />
                       <span>Stats</span>
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -152,35 +152,35 @@ const DSpage = () => {
               <div className="flex-1 surface rounded-lg overflow-hidden">
                 <ul className="menu" role="menu">
                   <li>
-                    <a>
+                    <button>
                       <span>Home</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Profile</span>
-                    </a>
+                    </button>
                   </li>
                   <li className="separator"></li>
                   <li>
-                    <a>
+                    <button>
                       <span>Missions</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Brawls</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Tournaments</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Stats</span>
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -207,34 +207,34 @@ const DSpage = () => {
               <div className="flex-1 surface rounded-lg p-1">
                 <ul className="menu menu-rounded" role="menu">
                   <li>
-                    <a>
+                    <button>
                       <span>Home</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Profile</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Missions</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Brawls</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Tournaments</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Stats</span>
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -260,34 +260,34 @@ const DSpage = () => {
               <div className="flex-1 surface rounded-lg">
                 <ul className="menu menu-horizontal" role="menu">
                   <li>
-                    <a>
+                    <button>
                       <span>Home</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Profile</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Missions</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Brawls</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Tournaments</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Stats</span>
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -316,34 +316,34 @@ const DSpage = () => {
               <div className="flex-1 surface rounded-lg">
                 <ul className="menu lg:menu-horizontal" role="menu">
                   <li>
-                    <a>
+                    <button>
                       <span>Home</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Profile</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Missions</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Brawls</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Tournaments</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Stats</span>
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -369,37 +369,37 @@ const DSpage = () => {
               <div className="flex-1 surface rounded-lg">
                 <ul className="menu" role="menu">
                   <li>
-                    <a>
+                    <button>
                       <span>Home</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a className="flex justify-between">
+                    <button className="flex justify-between">
                       <span>Parent</span>
                       <span className="icon icon-arrow-sm-right" />
-                    </a>
+                    </button>
                     <ul>
                       <li>
-                        <a>
+                        <button>
                           <span>Submenu 1</span>
-                        </a>
+                        </button>
                       </li>
                       <li>
-                        <a>
+                        <button>
                           <span>Submenu 2</span>
-                        </a>
+                        </button>
                       </li>
                       <li>
-                        <a>
+                        <button>
                           <span>Submenu 3</span>
-                        </a>
+                        </button>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Missions</span>
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>
@@ -425,37 +425,37 @@ const DSpage = () => {
               <div className="flex-1 surface rounded-lg p-1">
                 <ul className="menu menu-horizontal" role="menu">
                   <li>
-                    <a>
+                    <button>
                       <span>Home</span>
-                    </a>
+                    </button>
                   </li>
                   <li>
-                    <a className="flex gap-2">
+                    <button className="flex gap-2">
                       <span>Parent</span>
                       <span className="icon icon-arrow-sm-down" />
-                    </a>
+                    </button>
                     <ul>
                       <li>
-                        <a>
+                        <button>
                           <span>Submenu 1</span>
-                        </a>
+                        </button>
                       </li>
                       <li>
-                        <a>
+                        <button>
                           <span>Submenu 2</span>
-                        </a>
+                        </button>
                       </li>
                       <li>
-                        <a>
+                        <button>
                           <span>Submenu 3</span>
-                        </a>
+                        </button>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a>
+                    <button>
                       <span>Missions</span>
-                    </a>
+                    </button>
                   </li>
                 </ul>
               </div>

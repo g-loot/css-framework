@@ -47,7 +47,8 @@ export default function PrototypeLeftMenuNew(props) {
         <div className="flex-1">
           <div className="">
             <Link href={`/prototype/clans${prototype.getURLparams()}`}>
-              <div
+              <button
+                type="button"
                 className={`item px-6 item-interactive md:py-4 ${
                   router.pathname.includes("clans") ? "is-active" : ""
                 }`}
@@ -82,7 +83,7 @@ export default function PrototypeLeftMenuNew(props) {
                     <span className="icon icon-24 icon-arrow-sm-right text-ui-400" />
                   </div>
                 </div>
-              </div>
+              </button>
             </Link>
             <Link href={`/prototype/shop${prototype.getURLparams()}`}>
               <div

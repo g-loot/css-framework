@@ -47,47 +47,65 @@ export default function Premium() {
             </div>
           </section>
 
-          <section className="flex flex-col lg:flex-row lg:items-start justify-between text-center space-y-4 md:space-y-0 mb-24">
-            <div>
+          <section className="flex flex-wrap flex-col lg:flex-row lg:items-start justify-center gap-4 md:gap-0 text-center space-y-4 md:space-y-0 mb-24">
+            <div className="w-96 shrink-0">
               <img
                 className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1645610357/Marketing/202109_gloot2/premium-missions.png"
+                src="https://res.cloudinary.com/gloot/image/upload/v1665059216/Marketing/2022_prototype/Illustrations/picture_premium_missions.webp"
                 width="400"
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
-                Get access to Premium
-                <br />
-                Mission each day
+              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+                Get access to Premium Missions each day
               </h3>
             </div>
-            <div>
+            <div className="w-96 shrink-0">
               <img
                 className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1645610357/Marketing/202109_gloot2/premium-rewards.png"
+                src="https://res.cloudinary.com/gloot/image/upload/v1665053771/Marketing/2022_prototype/Illustrations/picture_premium_rewards.webp"
                 width="400"
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
-                Earn mission
-                <br />
-                rewards faster
+              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+                Earn mission rewards faster
               </h3>
             </div>
-            <div>
+            <div className="w-96 shrink-0">
               <img
                 className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1645610357/Marketing/202109_gloot2/premium-ads.png"
+                src="https://res.cloudinary.com/gloot/image/upload/v1665053771/Marketing/2022_prototype/Illustrations/picture_premium_extra_tokens.webp"
                 width="400"
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
-                Remove ads
-                <br />
-                on the platform
+              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+                Get free extra tokens for each token purchase
+              </h3>
+            </div>
+            <div className="w-96 shrink-0">
+              <img
+                className="mx-auto block"
+                src="https://res.cloudinary.com/gloot/image/upload/v1665053771/Marketing/2022_prototype/Illustrations/picture_premium_no_ads.webp"
+                width="400"
+                height="auto"
+                alt=""
+              />
+              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+                Get Premium content features
+              </h3>
+            </div>
+            <div className="w-96 shrink-0">
+              <img
+                className="mx-auto block"
+                src="https://res.cloudinary.com/gloot/image/upload/v1665053771/Marketing/2022_prototype/Illustrations/picture_premium_discord.webp"
+                width="400"
+                height="auto"
+                alt=""
+              />
+              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+                Remove ads on the platform
               </h3>
             </div>
           </section>

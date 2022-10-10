@@ -105,9 +105,9 @@ export default function Home() {
                                 href={selectedClan.social.twitch}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                                className="link"
                               >
-                                <span className="icon icon-twitch text-xl lg:text-2xl" />
+                                <span className="icon icon-twitch text-xl lg:text-2xl text-ui-300" />
                               </a>
                             </>
                           )}
@@ -117,9 +117,9 @@ export default function Home() {
                                 href={selectedClan.social.discord}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                                className="link"
                               >
-                                <span className="icon icon-discord text-xl lg:text-2xl" />
+                                <span className="icon icon-discord text-xl lg:text-2xl text-ui-300" />
                               </a>
                             </>
                           )}
@@ -129,9 +129,9 @@ export default function Home() {
                                 href={selectedClan.social.youtube}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                                className="link"
                               >
-                                <span className="icon icon-logo-youtube text-xl lg:text-2xl" />
+                                <span className="icon icon-logo-youtube text-xl lg:text-2xl text-ui-300" />
                               </a>
                             </>
                           )}
@@ -141,9 +141,9 @@ export default function Home() {
                                 href={selectedClan.social.twitter}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                                className="link"
                               >
-                                <span className="icon icon-logo-twitter text-xl lg:text-2xl" />
+                                <span className="icon icon-logo-twitter text-xl lg:text-2xl text-ui-300" />
                               </a>
                             </>
                           )}
@@ -242,9 +242,9 @@ export default function Home() {
                                       href={selectedClan.social.twitch}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                                      className="link"
                                     >
-                                      <span className="icon icon-twitch text-xl lg:text-2xl" />
+                                      <span className="icon icon-twitch text-xl lg:text-2xl text-ui-300" />
                                     </a>
                                   </>
                                 )}
@@ -254,9 +254,9 @@ export default function Home() {
                                       href={selectedClan.social.discord}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                                      className="link"
                                     >
-                                      <span className="icon icon-discord text-xl lg:text-2xl" />
+                                      <span className="icon icon-discord text-xl lg:text-2xl text-ui-300" />
                                     </a>
                                   </>
                                 )}
@@ -266,9 +266,9 @@ export default function Home() {
                                       href={selectedClan.social.youtube}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                                      className="link"
                                     >
-                                      <span className="icon icon-logo-youtube text-xl lg:text-2xl" />
+                                      <span className="icon icon-logo-youtube text-xl lg:text-2xl text-ui-300" />
                                     </a>
                                   </>
                                 )}
@@ -278,9 +278,9 @@ export default function Home() {
                                       href={selectedClan.social.twitter}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="text-ui-300 transition-colors duration-200 hover:text-ui-100"
+                                      className="link"
                                     >
-                                      <span className="icon icon-logo-twitter text-xl lg:text-2xl" />
+                                      <span className="icon icon-logo-twitter text-xl lg:text-2xl text-ui-300" />
                                     </a>
                                   </>
                                 )}

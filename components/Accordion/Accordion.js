@@ -1,4 +1,10 @@
-import React, { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
+import React, {
+  useEffect,
+  useId,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 
 export default function Accordion(props) {
   const isOpen = props.isopen !== undefined ? props.isopen : false;
@@ -8,9 +14,10 @@ export default function Accordion(props) {
   const buttonActivation =
     props.buttonActivation !== undefined ? props.buttonActivation : false;
   const buttonActivationSimple =
-    props.buttonActivationSimple !== undefined ? props.buttonActivationSimple : false;
-  const isNoHover =
-    props.isNoHover !== undefined ? props.isNoHover : false;
+    props.buttonActivationSimple !== undefined
+      ? props.buttonActivationSimple
+      : false;
+  const isNoHover = props.isNoHover !== undefined ? props.isNoHover : false;
   const [isActive, setActive] = useState(isOpen);
   const [heightValue, setHeightValue] = useState(0);
   const elementRef = useRef(null);
@@ -35,6 +42,18 @@ export default function Accordion(props) {
     }
   }, [elementRef]);
 
+  const updateSize = () => {
+    if (elementRef.current) {
+      setHeightValue(elementRef.current.clientHeight);
+    }
+  };
+
+  useLayoutEffect(() => {
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
   useLayoutEffect(() => {
     function updateSize() {
       setHeightValue(elementRef.current.clientHeight);
@@ -52,12 +71,22 @@ export default function Accordion(props) {
   return (
     <>
       <div
-        className={`accordion-item ${isActive ? "is-active" : ""} ${isNoHover ? "is-nohover" : ""} ${
-          isSelected ? "is-selected" : ""
-        } ${isDisabled ? "is-disabled pointer-events-none opacity-50" : ""}`}
+        className={`accordion-item ${isActive ? "is-active" : ""} ${
+          isNoHover ? "is-nohover" : ""
+        } ${isSelected ? "is-selected" : ""} ${
+          isDisabled ? "is-disabled pointer-events-none opacity-50" : ""
+        }`}
       >
         {!buttonActivation && (
-          <button type="button" tabIndex={1} className="accordion-header" onClick={handleToggle} id={`${id}-accordion-content`} aria-expanded={isActive} aria-controls={`${id}-accordion-button`}>
+          <button
+            type="button"
+            tabIndex={1}
+            className="accordion-header"
+            onClick={handleToggle}
+            id={`${id}-accordion-content`}
+            aria-expanded={isActive}
+            aria-controls={`${id}-accordion-button`}
+          >
             {props.header}
           </button>
         )}
@@ -69,28 +98,27 @@ export default function Accordion(props) {
             <div className="hidden md:block">
               {buttonActivationSimple && (
                 <button
-                type="button"
-                className="button button-ghost rounded-full mr-1"
-                onClick={handleToggle}
-              >
-                <span className="icon icon-24 icon-arrow-sm-down" />
-              </button>
+                  type="button"
+                  className="button button-ghost rounded-full mr-1"
+                  onClick={handleToggle}
+                >
+                  <span className="icon icon-24 icon-arrow-sm-down" />
+                </button>
               )}
               {!buttonActivationSimple && (
                 <button
-                type="button"
-                className="button button-ghost"
-                onClick={handleToggle}
-              >
-                <label className="switch text-base">
-                  <input type="checkbox" checked={isActive} />
-                  <div className="switch-on">Collapse</div>
-                  <div className="switch-off">Learn more</div>
-                </label>
-                <span className="icon icon-24 icon-arrow-sm-down" />
-              </button>
+                  type="button"
+                  className="button button-ghost"
+                  onClick={handleToggle}
+                >
+                  <label className="switch text-base">
+                    <input type="checkbox" checked={isActive} />
+                    <div className="switch-on">Collapse</div>
+                    <div className="switch-off">Learn more</div>
+                  </label>
+                  <span className="icon icon-24 icon-arrow-sm-down" />
+                </button>
               )}
-              
             </div>
             <div className="block md:hidden">
               <button

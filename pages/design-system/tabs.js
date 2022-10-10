@@ -17,24 +17,24 @@ const DSpage = () => {
                 <div className="w-full flex gap-4 items-center justify-center">
                   <ul className="tabs border-b border-ui-700">
                     <li>
-                      <a className="is-active">
+                      <button className="is-active">
                         <span>Brawls</span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a>
+                      <button>
                         <span>How it works</span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a>
+                      <button>
                         <span>Rules</span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a>
+                      <button>
                         <span>Brawl history</span>
-                      </a>
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -68,19 +68,19 @@ const DSpage = () => {
                       </button>
                     </li>
                     <li>
-                      <a>
+                      <button>
                         <span>How it works</span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a>
+                      <button>
                         <span>Rules</span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a>
+                      <button>
                         <span>Brawl history</span>
-                      </a>
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -109,24 +109,24 @@ const DSpage = () => {
                 <div className="w-full flex gap-4 items-center justify-center">
                   <ul className="tabs">
                     <li>
-                      <a className="is-active">
+                      <button className="is-active">
                         <span data-badge="4">Brawls</span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a>
+                      <button>
                         <span>How it works</span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a>
+                      <button>
                         <span>Rules</span>
-                      </a>
+                      </button>
                     </li>
                     <li>
-                      <a>
+                      <button>
                         <span data-badge="1">Brawl history</span>
-                      </a>
+                      </button>
                     </li>
                   </ul>
                 </div>
@@ -151,17 +151,17 @@ const DSpage = () => {
         <div className="rounded-lg text-center">
           <ul className="tabs tabs-rank">
             <li className="tab-bronze">
-              <a className="is-active">
+              <button className="is-active">
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-bronze" />
                     <span className="font-headings font-bold text-2xl uppercase italic">Bronze</span>
                   </div>
                 </div>
-              </a>
+              </button>
             </li>
             <li className="tab-silver">
-              <a>
+              <button>
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-silver" />
@@ -174,37 +174,37 @@ const DSpage = () => {
                     <i className="radar" />
                   </div>
                 </div>
-              </a>
+              </button>
             </li>
             <li className="tab-gold">
-              <a>
+              <button>
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-gold" />
                     <span className="font-headings font-bold text-2xl uppercase italic">Gold</span>
                   </div>
                 </div>
-              </a>
+              </button>
             </li>
             <li className="tab-platinum">
-              <a>
+              <button>
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-platinum" />
                     <span className="font-headings font-bold text-2xl uppercase italic">Platinum</span>
                   </div>
                 </div>
-              </a>
+              </button>
             </li>
             <li className="tab-diamond">
-              <a>
+              <button>
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-diamond" />
                     <span className="font-headings font-bold text-2xl uppercase italic">Diamond</span>
                   </div>
                 </div>
-              </a>
+              </button>
             </li>
           </ul>
         </div>

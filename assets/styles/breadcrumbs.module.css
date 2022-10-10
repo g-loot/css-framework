@@ -30,13 +30,19 @@
       text-ui-300
       ;
   
-      > :where(div, a) {
+      > :where(a, button, div) {
         @apply
         inline-flex 
         gap-2
         items-center
         text-sm
         text-ui-300
+        rounded
+        focus-visible:text-ui-100
+        focus-visible:outline
+        focus-visible:outline-offset-2
+        focus-visible:outline-1
+        focus-visible:outline-main
         ;
   
         > span:not(.icon) {
@@ -53,15 +59,12 @@
         }
       }
   
-      > a {
+      > a,
+      > button,
+      > div {
         @apply
         hover:text-ui-100
         active:opacity-50
-        focus-visible:text-main
-        focus-visible:outline
-        focus-visible:outline-offset-2
-        focus-visible:outline-1
-        focus-visible:outline-main
         transition-colors
         duration-75
         ;

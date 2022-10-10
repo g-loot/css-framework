@@ -116,14 +116,34 @@
   }
   .accordion-header {
     @apply
+    relative
     cursor-pointer
-    focus-visible:outline
-    focus-visible:outline-offset-[-2px]
-    focus-visible:outline-1
-    focus-visible:outline-main
     active:bg-ui-700/30
+    outline-none
+    focus-visible:outline-none
     ;
+
+    &:focus-visible {
+      &::before {
+        @apply
+        outline
+        outline-1
+        outline-main
+        ;
+      }
+    }
+    &::before {
+      @apply 
+      content-['']
+      absolute
+      z-20
+      inset-0.5
+      rounded
+      pointer-events-none
+      ;
+    }
   }
+  
   &:not(.is-active) {
     @apply
     hover:bg-ui-700/10
