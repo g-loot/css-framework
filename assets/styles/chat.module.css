@@ -27,7 +27,7 @@
   items-start
   px-2
   lg:px-4
-  pt-4
+  pt-3
   relative
   ;
   [data-tooltip] {
@@ -46,12 +46,16 @@
     flex-col
     ;
 
-    > * {
-      &:not(:last-child) {
-        @apply
-        pb-4
-        ;
-      }
+    > *:not(.chat-message) {
+      @apply
+      pb-1
+      ;
+    }
+
+    > .chat-message {
+      @apply
+      pb-3
+      ;
     }
     .chat-message {
       @apply
@@ -152,12 +156,12 @@
       .chat-message {
         @apply
         flex-row-reverse
-        rounded-br-sm
+        rounded-tr-sm
         ;
         .chat-bubble {
           @apply
           bg-main
-          rounded-br-sm
+          rounded-tr-sm
           min-w-[fit-content]
           z-[unset]
           ;

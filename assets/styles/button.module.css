@@ -739,6 +739,7 @@ button {
       absolute
       inset-x-0
       animate-[button-feedback-message_4s_cubic-bezier(0.9,0,0,1)_forwards]
+      text-center
       ;
     }
     > * {
@@ -759,6 +760,7 @@ button {
       content-[attr(data-feedback)]
       absolute
       animate-[button-feedback-tooltip_4s_cubic-bezier(0.9,0,0,1)_forwards]
+      text-center
       inset-x-full
       rounded
       backdrop-blur-sm
@@ -785,6 +787,7 @@ button {
       absolute
       inset-x-0
       animate-[button-feedback-icon_4s_cubic-bezier(0.9,0,0,1)_forwards]
+      text-center
       ;
     }
     > * {

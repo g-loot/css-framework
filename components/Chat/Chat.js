@@ -21,7 +21,7 @@ const conversationFull = [
   },
   {
     id: 1,
-    time: "Message sent 1.22pm",
+    time: "15 min. ago",
     author: 2,
     isYourself: false,
     messages: [
@@ -29,7 +29,7 @@ const conversationFull = [
         id: 1,
         type: "text",
         content:
-          "Welcome aboard <a className='font-bold' href='#'>@James</a> 👋",
+          "Welcome aboard <a className='font-bold' href='#'>@Dimitar</a> 👋",
         reactions: [
           {
             emoji: "❤️",
@@ -67,7 +67,7 @@ const conversationFull = [
   },
   {
     id: 2,
-    time: "Message sent 1.22pm",
+    time: "15 min. ago",
     author: 1,
     isYourself: true,
     messages: [
@@ -90,7 +90,7 @@ const conversationFull = [
   },
   {
     id: 3,
-    time: "Message sent 1.22pm",
+    time: "15 min. ago",
     author: 4,
     isYourself: false,
     messages: [
@@ -104,7 +104,7 @@ const conversationFull = [
   },
   {
     id: 4,
-    time: "Message sent 1.22pm",
+    time: "15 min. ago",
     author: 1,
     isYourself: true,
     messages: [
@@ -117,7 +117,7 @@ const conversationFull = [
   },
   {
     id: 5,
-    time: "Message sent 1.22pm",
+    time: "15 min. ago",
     author: 2,
     isYourself: false,
     messages: [
@@ -130,7 +130,7 @@ const conversationFull = [
   },
   {
     id: 6,
-    time: "Message sent 1.22pm",
+    time: "15 min. ago",
     author: 4,
     isYourself: false,
     messages: [
@@ -161,7 +161,7 @@ const conversationFull = [
   },
   {
     id: 8,
-    time: "Message sent 1.22pm",
+    time: "15 min. ago",
     author: 2,
     isEvent: true,
     messages: [
@@ -174,7 +174,7 @@ const conversationFull = [
   },
   {
     id: 7,
-    time: "Message sent 1.22pm",
+    time: "15 min. ago",
     author: 1,
     isYourself: true,
     messages: [
@@ -324,7 +324,7 @@ export default function Chat(props) {
         updatedState = [
           ...state,
           {
-            time: "Message sent 1.22pm",
+            time: "15 min. ago",
             author: 1,
             isYourself: true,
             messages: [
@@ -375,27 +375,47 @@ export default function Chat(props) {
                     message.isYourself ? "is-owner" : ""
                   } ${message.isEvent ? "is-event" : ""}`}
                 >
-                  {(!message.isYourself || !message.isEvent) && (
-                    <div className="chat-author">
-                      <div className="avatar avatar-circle avatar-sm">
-                        <div>
-                          <img
-                            src={prototype.getUserByID(message.author)?.avatar}
-                            alt="avatar"
-                          />
+                  {!message.isEvent && (
+                    <>
+                      {!message.isYourself && (
+                        <div className="chat-author">
+                          <div className="avatar avatar-circle avatar-sm">
+                            <div>
+                              <img
+                                src={
+                                  prototype.getUserByID(message.author)?.avatar
+                                }
+                                alt="avatar"
+                              />
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
+                      )}
+                    </>
                   )}
 
                   <div className="chat-messages">
                     {!message.isEvent && (
-                      <span className="leading-none uppercase text-sm">
-                        {message.isYourself && <>You</>}
-                        {!message.isYourself && (
-                          <>{prototype.getUserByID(message.author)?.nickname}</>
-                        )}
-                      </span>
+                      <>
+                        <div className="flex items-baseline gap-1">
+                          <span className="leading-none uppercase text-sm">
+                            {message.isYourself && <>You</>}
+                            {!message.isYourself && (
+                              <>
+                                {
+                                  prototype.getUserByID(message.author)
+                                    ?.nickname
+                                }
+                              </>
+                            )}
+                          </span>
+                          {message.time && (
+                            <time dateTime="2008-02-14 20:00">
+                              {message.time}
+                            </time>
+                          )}
+                        </div>
+                      </>
                     )}
 
                     {message.messages.map(
@@ -411,11 +431,7 @@ export default function Chat(props) {
                               messageBubble.type === "image"
                                 ? "chat-bubble-image"
                                 : ""
-                            } ${
-                              messageBubble.isDeleted
-                                ? "is-deleted"
-                                : ""
-                            }`}
+                            } ${messageBubble.isDeleted ? "is-deleted" : ""}`}
                           >
                             {messageBubble.type === "text" && (
                               <>
@@ -430,7 +446,6 @@ export default function Chat(props) {
                                   <div>Message deleted</div>
                                 )}
                               </>
-                              
                             )}
                             {messageBubble.type === "image" && (
                               <>
@@ -636,7 +651,9 @@ export default function Chat(props) {
                     )}
 
                     {message.time && !message.isEvent && (
-                      <time dateTime="2008-02-14 20:00">{message.time}</time>
+                      <time className="hidden" dateTime="2008-02-14 20:00">
+                        {message.time}
+                      </time>
                     )}
                   </div>
                 </li>

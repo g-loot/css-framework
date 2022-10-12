@@ -6,7 +6,7 @@ import { getLayout } from "../../components/DesignSystem/DSLayout";
 const conversationSingleOthers = [
   {
     id: 1,
-    time: "Message sent 1.22pm",
+    time: "15 min. ago",
     author: 2,
     isYourself: false,
     messages: [
@@ -32,7 +32,7 @@ const conversationSingleOthers = [
 const conversationSingleSelf = [
   {
     id: 1,
-    time: "Message sent 1.22pm",
+    time: "15 min. ago",
     author: 2,
     isYourself: true,
     messages: [
@@ -58,7 +58,7 @@ const conversationSingleSelf = [
 const conversationSingleEvent = [
   {
     id: 1,
-    time: "Message sent 1.22pm",
+    time: "15 min. ago",
     author: 2,
     isEvent: true,
     messages: [
@@ -188,7 +188,7 @@ const DSpage = () => {
                   </div>
                 </div>
               </div>
-              <time dateTime="2008-02-14 20:00">Message sent 1.22pm</time>
+              <time dateTime="2008-02-14 20:00">15 min. ago</time>
             </div>
           </div>
         </div>

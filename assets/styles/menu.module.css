@@ -95,9 +95,11 @@
       ;
 
       &:not([class*='icon']) {
+        /*
         @apply 
         block
         ;
+        */
       }
       &.icon {
         @apply
@@ -353,5 +355,53 @@
         }
       }
     }
+  }
+}
+
+/* Loading */
+
+.menu.is-loading,
+.menu > li.is-loading {
+  @apply
+  relative
+  pointer-events-none
+  ;
+  
+  &,
+  *[class*='text-'],
+  span {
+    @apply
+    text-ui-200/0
+    ;
+  }
+  
+  span {
+    @apply
+    relative
+    ;
+    &::after {
+      @apply
+      absolute
+      inset-0
+      content-['']
+      block
+      rounded
+      bg-ui-700
+      bg-[length:800px_100%]
+      bg-[-200%_center]
+      bg-no-repeat
+      animate-[loader-menu_1s_linear_infinite]
+      ;
+      background-image: linear-gradient(to right, rgba(var(--color-ui-700) / 100%) 8%, rgba(var(--color-ui-600) / 100%) 18%, rgba(var(--color-ui-700) / 100%) 33%);
+    }
+  }
+}
+
+@keyframes loader-menu {
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
   }
 }

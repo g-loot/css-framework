@@ -56,13 +56,13 @@
 /*----------------------------*/
 
 .form-group {
-  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
+  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text, select) {
     @apply
     block
     ;
   }
 
-  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, .form-select > select) {
+  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text, .form-select > select) {
     @apply
     w-full
     shadow-sm
@@ -1056,7 +1056,7 @@ label.button {
       }
     }
     &:not([data-error=false]) {
-      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
+      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text, select) {
         @apply
         border-error-700
         focus-visible:outline-error-500
@@ -1116,7 +1116,7 @@ label.button {
       }
     }
     &:not([data-success=false]) {
-      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
+      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text, select) {
         @apply
         border-interaction-700
         focus-visible:outline-interaction-500
@@ -1176,7 +1176,7 @@ label.button {
       }
     }
     &:not([data-attention=false]) {
-      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, select) {
+      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text, select) {
         @apply
         border-attention-700
         focus-visible:outline-attention-500

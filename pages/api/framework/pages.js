@@ -34,6 +34,15 @@ export const FrameworkPages = {
           tags: "home, start, index",
         },
         {
+          label: "Loading",
+          chip: "modal",
+          url: "home",
+          query: "loading=true",
+          tab: 1,
+          new: false,
+          tags: "home, start, index, claim, rewards, daily missions, loading, status",
+        },
+        {
           label: "Claim daily rewards",
           chip: "modal",
           url: "home",

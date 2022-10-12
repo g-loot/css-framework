@@ -118,7 +118,7 @@ export default function Missions() {
             <nav>
               <ul className="tabs border-b border-ui-700">
                 {TabsItems.map((item, itemIndex) => (
-                  <li key={item}>
+                  <li key={itemIndex}>
                     <Link
                       href={`/prototype/${game}/missions?tab=${item.url}${prototype.getURLparams("&")}`}
                     >

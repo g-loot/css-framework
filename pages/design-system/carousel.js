@@ -197,6 +197,94 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* With buttons */}
+      <div className="mb-12" id="with-buttons">
+        <div className="">
+          <div className="">
+            <div className="flex gap-4 flex-col">
+              <div className="flex-1 space-y-4">
+                <h2 className="h3 mb-3">With buttons</h2>
+                <section className="surface sm:rounded-lg overflow-hidden mb-8">
+                  <Carousel isWithButtons={true} />
+                </section>
+
+                {/*
+              <div className='surface rounded-xl overflow-hidden carousel'>
+                <div className='carousel-slides'>
+
+                  {slides.map((slide, slideIndex) => (
+                    <>
+                      <div className={`carousel-slide ${slideNumber === slideIndex ? 'is-active' : ''}`} key={slideIndex}>
+                        <div className='carousel-image'>
+                          <span style={{ backgroundImage: `url(${slide.image})`}}/>
+                        </div>
+                        <div className='carousel-body'>
+                          <div>
+                            <h2 className='h3'>
+                              {slide.title}
+                            </h2>
+                            <p className='mb-5 mt-2'>
+                              {slide.description}
+                            </p>
+                            <button className='button button-primary'>
+                              <span>{slide.buttonLabel}</span>
+                            </button>
+                          </div>
+                        </div>
+                        <div className='carousel-backdrop'>
+                          <span style={{ backgroundImage: `url(${slide.image})`}}/>
+                        </div>
+                      </div>
+                    </>
+                  ))}
+                </div>
+                <div className='carousel-nav'>
+                  <ul className='carousel-list'>
+                    {slides.map((item, itemIndex) => (
+                      <>
+                        <li key={itemIndex} className={`${slideNumber === itemIndex ? 'is-active' : ''}`}>
+                          <a onClick={slideHandler.bind(this, itemIndex)} className='item'>
+                            <div className='item-body'>
+                            <span className='text-xs text-ui-300'>
+                                Step {itemIndex + 1}
+                              </span>
+                              <div className='item-title'>
+                                {item.title}
+                              </div>
+                            </div>
+                            <i/>
+                          </a>
+                        </li>
+                      </>
+                    ))}
+                  </ul>
+                  <div className='carousel-control'>
+                    <button className='button button-secondary' onClick={prevHandler.bind(this, slideNumber, slides.length)}>
+                      <span className='icon icon-ctrl-left'/>
+                    </button>
+                    <button className='button button-secondary' onClick={nextHandler.bind(this, slideNumber, slides.length)}>
+                      <span className='icon icon-ctrl-right'/>
+                    </button>
+                  </div>
+                </div>
+                
+
+              </div>
+                    */}
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="400"
+                  src="//jsfiddle.net/augustin_hiebel/kjq7t1rd/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Carousel step (onboarding) */}
       <div className="mb-12" id="step">
         <div className="pt-4">
@@ -205,7 +293,7 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <h2 className="h3 mb-3">
                   Carousel step{" "}
-                  <small className="text-ui-300">onboarding</small>
+                  <small className="text-ui-300 font-normal">onboarding</small>
                 </h2>
 
                 <div className="surface rounded-xl overflow-hidden carousel carousel-step">
@@ -286,7 +374,7 @@ const DSpage = () => {
                                 </div>
                                 <div className="item-actions">
                                   <div
-                                    className={`checkmark checkmark-invisible checkmark-sm ${
+                                    className={`checkmark checkmark-sm ${
                                       slideOnboardingNumber >
                                       slideOnboardingIndex
                                         ? "is-active"

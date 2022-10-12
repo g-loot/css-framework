@@ -4,6 +4,7 @@ import DigitalClock from "./DigitalClock";
 
 const slides = [
   {
+    subtitle: "G-Loot",
     title: "Season 6 is here",
     description:
       "32 teams will duke it out over 3 days across 18 matches. The top teams will move on to the Grand Final. Do not miss out!",
@@ -13,6 +14,7 @@ const slides = [
     buttonURL: "#",
   },
   {
+    subtitle: "News & updates",
     title: "New tournaments available",
     description:
       "There are some new tournaments for you to compete in. Check them out now!",
@@ -22,6 +24,7 @@ const slides = [
     buttonURL: "#",
   },
   {
+    subtitle: "Shop",
     title: "Apex Legends: Fade, the Phasing Punisher",
     description:
       "Apex Legends Mobile is finally here, and it brings a new, mobile-exclusive Legend to the fold.",
@@ -29,6 +32,16 @@ const slides = [
       "https://res.cloudinary.com/gloot/image/upload/v1654158114/Marketing/2022_prototype/DummyContent/carousel-item-apexlegends-fade.jpg",
     buttonLabel: "Read the blog",
     buttonExternal: true,
+    buttonURL: "#",
+  },
+  {
+    subtitle: "Rewards",
+    title: "Earn more on this week's Brawls",
+    description:
+      "This week you can get 2x the usual rewards by competing on Brawls.",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1662645308/Marketing/2022_prototype/Illustrations/token_coin_piles.webp",
+    buttonLabel: "Learn more",
     buttonURL: "#",
   },
 ];
@@ -42,6 +55,8 @@ const modes = {
 export default function Carousel(props) {
   const isOnboarding =
     props.isOnboarding !== undefined ? props.isOnboarding : false;
+  const isWithButtons =
+    props.isWithButtons !== undefined ? props.isWithButtons : false;
   const [slideNumber, setSlideNumber] = useState(0);
   const [percent, setPercent] = useState(0);
   const slideDuration = 3000;
@@ -59,7 +74,6 @@ export default function Carousel(props) {
     setPercent(
       Math.floor((-(100 / (slideDuration / 1000)) * duration) / 1000).toString()
     );
-    console.log(percent);
   }, [duration]);
 
   function slideHandler(varTarget) {
@@ -197,9 +211,7 @@ export default function Carousel(props) {
                     {isOnboarding && <span>Step {itemIndex + 1}</span>}
                     {!isOnboarding && (
                       <>
-                        {itemIndex === 0 && <span>G-Loot</span>}
-                        {itemIndex === 1 && <span>News &amp; updates</span>}
-                        {itemIndex === 2 && <span>Shop</span>}
+                        <span>{item.subtitle}</span>
                       </>
                     )}
                     <div>{item.title}</div>
@@ -215,7 +227,8 @@ export default function Carousel(props) {
               </>
             ))}
           </ul>
-          <div className="carousel-control">
+          {isWithButtons && (
+            <div className="carousel-control">
             <button
               className="button button-secondary"
               onClick={prevHandler.bind(this, slideNumber, slides.length)}
@@ -229,6 +242,8 @@ export default function Carousel(props) {
               <span className="icon icon-ctrl-right" />
             </button>
           </div>
+          )}
+          
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion-2.json";
+import LottieExplosion from "../../../assets/animations/explosion-11.json";
 import { UiContext } from "../../../contexts/ui.js";
 import { VariablesContext } from "../../../contexts/variables";
 
@@ -13,7 +13,13 @@ export default function ModalClaimDailyRewards(props) {
     setSubmitting(true);
 
     setTimeout(() => {
-      uiContext.openToastr({size: "medium", text: "Reward claimed successfully", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+      uiContext.openToastr({
+        size: "medium",
+        text: "Reward claimed successfully",
+        color: "green",
+        autoDelete: true,
+        autoDeleteDelay: 2500,
+      });
       variablesContext.claimDailyReward();
       setSubmitting(false);
       uiContext.closeModal();
@@ -37,9 +43,10 @@ export default function ModalClaimDailyRewards(props) {
                 Congratulations
               </h2>
               <div className="flex gap-8 items-start justify-center leading-tight mt-4 animate-slide-in-bottom">
-                <div className="">
+                <div>
                   <img
-                    className="mx-auto"
+                    className="mx-auto animate-drop-in animate-delay"
+                    style={{ "--delay": "calc( 1 * 0.1s)" }}
                     src="https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-coin-small.png"
                     width="140"
                     height="auto"
@@ -54,9 +61,10 @@ export default function ModalClaimDailyRewards(props) {
                     </div>
                   </div>
                 </div>
-                <div className="">
+                <div>
                   <img
-                    className="mx-auto"
+                    className="mx-auto animate-drop-in animate-delay"
+                    style={{ "--delay": "calc( 2 * 0.1s)" }}
                     src="https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-extrasmall.png"
                     width="140"
                     height="auto"
@@ -72,10 +80,10 @@ export default function ModalClaimDailyRewards(props) {
                   </div>
                 </div>
               </div>
-              <div className="mt-12">
+              <div className="mt-12 flex justify-center">
                 <button
                   type="button"
-                  className={`button button-claim w-full ${
+                  className={`button button-claim button-lg is-shining w-72 ${
                     submitting ? "is-loading" : ""
                   }`}
                   onClick={closeModalWithDelay}

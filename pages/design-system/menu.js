@@ -13,7 +13,7 @@ const DSpage = () => {
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
-              <div className="flex-1 surface rounded-lg overflow-hidden">
+              <div className="flex-1 surface rounded overflow-hidden">
                 <ul className="menu" role="menu">
                   <li>
                     <button>
@@ -57,7 +57,7 @@ const DSpage = () => {
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
-              <div className="flex-1 surface rounded-lg overflow-hidden">
+              <div className="flex-1 surface rounded overflow-hidden">
                 <ul className="menu menu-secondary">
                   <li>
                     <button>
@@ -101,7 +101,7 @@ const DSpage = () => {
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
-              <div className="flex-1 surface rounded-lg overflow-hidden">
+              <div className="flex-1 surface rounded overflow-hidden">
                 <ul className="menu" role="menu">
                   <li>
                     <button>
@@ -149,7 +149,7 @@ const DSpage = () => {
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
-              <div className="flex-1 surface rounded-lg overflow-hidden">
+              <div className="flex-1 surface rounded overflow-hidden">
                 <ul className="menu" role="menu">
                   <li>
                     <button>
@@ -257,7 +257,7 @@ const DSpage = () => {
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
-              <div className="flex-1 surface rounded-lg">
+              <div className="flex-1 surface rounded">
                 <ul className="menu menu-horizontal" role="menu">
                   <li>
                     <button>
@@ -313,7 +313,7 @@ const DSpage = () => {
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
-              <div className="flex-1 surface rounded-lg">
+              <div className="flex-1 surface rounded">
                 <ul className="menu lg:menu-horizontal" role="menu">
                   <li>
                     <button>
@@ -366,7 +366,7 @@ const DSpage = () => {
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
-              <div className="flex-1 surface rounded-lg">
+              <div className="flex-1 surface rounded">
                 <ul className="menu" role="menu">
                   <li>
                     <button>
@@ -415,6 +415,7 @@ const DSpage = () => {
           </div>
         </div>
       </div>
+
       {/* Horizontal with submenu */}
       <div className="mb-12" id="horizontal-submenu">
         <h2 className="h3 mb-3">Horizontal with submenu</h2>
@@ -422,7 +423,7 @@ const DSpage = () => {
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
-              <div className="flex-1 surface rounded-lg p-1">
+              <div className="flex-1 surface rounded p-1">
                 <ul className="menu menu-horizontal" role="menu">
                   <li>
                     <button>
@@ -430,9 +431,11 @@ const DSpage = () => {
                     </button>
                   </li>
                   <li>
-                    <button className="flex gap-2">
-                      <span>Parent</span>
-                      <span className="icon icon-arrow-sm-down" />
+                    <button>
+                      <span className="flex gap-2">
+                        <span>Parent</span>
+                        <span className="icon icon-arrow-sm-down" />
+                      </span>
                     </button>
                     <ul>
                       <li>
@@ -465,6 +468,54 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/vwyL7euo/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Loading */}
+      <div className="mb-12" id="loading">
+        <h2 className="h3 mb-3">Loading</h2>
+
+        <div className="">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
+              <div className="flex-1 surface rounded overflow-hidden">
+                <ul className="menu is-loading" role="menu">
+                  <li>
+                    <button>
+                      <span className="icon icon-missions" />
+                      <span>Missions</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <span className="icon icon-brawl" />
+                      <span>Brawls</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <span className="icon icon-showdown" />
+                      <span>Tournaments</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <span className="icon icon-d-chart" />
+                      <span>Stats</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="160"
+                  src="//jsfiddle.net/augustin_hiebel/fv34o8hr/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>
