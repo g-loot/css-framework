@@ -621,7 +621,7 @@ export default function TabBrawlsSoloLeaderboards() {
                           selectedBrawl.soloLeaderboard.map(
                             (user, userIndex) => (
                               <>
-                                <div className="item rounded-lg h-[54px]">
+                                <div className="item rounded-lg h-[58px]">
                                   <div className="item-image">
                                     <div className="avatar avatar-circle avatar-xs">
                                       <div />
@@ -667,7 +667,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                   }}
                                 >
                                   <div
-                                    className={`surface rounded-lg w-1/3 h-[54px] flex items-stretch overflow-hidden ${
+                                    className={`surface rounded-lg w-1/3 h-[58px] flex items-stretch overflow-hidden ${
                                       prototype.getUserByID(user.user)?.isYou
                                         ? ""
                                         : ""

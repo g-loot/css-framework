@@ -207,7 +207,7 @@ export default function Carousel(props) {
                   key={item}
                   className={`${slideNumber === itemIndex ? "is-active" : ""}`}
                 >
-                  <a onClick={slideHandler.bind(this, itemIndex)}>
+                  <button type="button" onClick={slideHandler.bind(this, itemIndex)}>
                     {isOnboarding && <span>Step {itemIndex + 1}</span>}
                     {!isOnboarding && (
                       <>
@@ -222,7 +222,7 @@ export default function Carousel(props) {
                         }}
                       />
                     </i>
-                  </a>
+                  </button>
                 </li>
               </>
             ))}

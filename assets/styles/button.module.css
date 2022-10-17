@@ -258,16 +258,6 @@ button {
         }
       }
     }
-    &.button-lg {
-      @apply
-      px-4
-      ;
-    } 
-    &.button-sm {
-      @apply
-      px-2.5
-      ;
-    } 
   }
 
   &.button-ghost {
@@ -314,9 +304,34 @@ button {
       text-xl
       ;
     }
-    &[class*='rounded-full']{
+    &[class*='rounded-full'],
+    &.button-play {
       @apply
       px-4
+      ;
+    }
+  }
+  &.button-md {
+    @apply
+    py-3
+    ;
+
+    > * {
+      &:not([class*="text-"]) {
+        @apply
+        text-lg
+        ;
+      }
+    }
+    &[data-feedback]::before {
+      @apply
+      text-lg
+      ;
+    }
+    &[class*='rounded-full'],
+    &.button-play {
+      @apply
+      px-3
       ;
     }
   }
@@ -337,7 +352,8 @@ button {
       text-base
       ;
     }
-    &[class*='rounded-full']{
+    &[class*='rounded-full'],
+    &.button-play {
       @apply
       px-2.5
       ;
@@ -360,7 +376,8 @@ button {
       text-[0.875rem]
       ;
     }
-    &[class*='rounded-full']{
+    &[class*='rounded-full'],
+    &.button-play {
       @apply
       px-2
       ;
@@ -957,5 +974,397 @@ button {
   100% {
     transform: scale(1) rotate(0);
     opacity: 1;
+  }
+}
+
+
+/* responsive sizes */
+
+@media only screen and (min-width: 640px) {
+	.button {
+    &.sm\:button-lg {
+      @apply
+      py-4
+      px-5
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-xl
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-xl
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-4
+        ;
+      }
+    }
+    &.sm\:button-md {
+      @apply
+      py-3
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-lg
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-lg
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-3
+        ;
+      }
+    }
+    &.sm\:button-sm {
+      @apply
+      py-2.5
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-base
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-base
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-2.5
+        ;
+      }
+    }
+    &.sm\:button-xs {
+      @apply
+      py-2
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-[0.875rem]
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-[0.875rem]
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-2
+        ;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+	.button {
+    &.md\:button-lg {
+      @apply
+      py-4
+      px-5
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-xl
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-xl
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-4
+        ;
+      }
+    }
+    &.md\:button-md {
+      @apply
+      py-3
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-lg
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-lg
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-3
+        ;
+      }
+    }
+    &.md\:button-sm {
+      @apply
+      py-2.5
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-base
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-base
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-2.5
+        ;
+      }
+    }
+    &.md\:button-xs {
+      @apply
+      py-2
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-[0.875rem]
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-[0.875rem]
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-2
+        ;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+	.button {
+    &.lg\:button-lg {
+      @apply
+      py-4
+      px-5
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-xl
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-xl
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-4
+        ;
+      }
+    }
+    &.lg\:button-md {
+      @apply
+      py-3
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-lg
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-lg
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-3
+        ;
+      }
+    }
+    &.lg\:button-sm {
+      @apply
+      py-2.5
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-base
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-base
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-2.5
+        ;
+      }
+    }
+    &.lg\:button-xs {
+      @apply
+      py-2
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-[0.875rem]
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-[0.875rem]
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-2
+        ;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+	.button {
+    &.xl\:button-lg {
+      @apply
+      py-4
+      px-5
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-xl
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-xl
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-4
+        ;
+      }
+    }
+    &.xl\:button-md {
+      @apply
+      py-3
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-lg
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-lg
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-3
+        ;
+      }
+    }
+    &.xl\:button-sm {
+      @apply
+      py-2.5
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-base
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-base
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-2.5
+        ;
+      }
+    }
+    &.xl\:button-xs {
+      @apply
+      py-2
+      ;  
+      > * {
+        &:not([class*="text-"]) {
+          @apply
+          text-[0.875rem]
+          ;
+        }
+      }
+      &[data-feedback]::before {
+        @apply
+        text-[0.875rem]
+        ;
+      }
+      &[class*='rounded-full'],
+      &.button-play {
+        @apply
+        px-2
+        ;
+      }
+    }
   }
 }

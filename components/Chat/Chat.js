@@ -398,7 +398,7 @@ export default function Chat(props) {
                     {!message.isEvent && (
                       <>
                         <div className="flex items-baseline gap-1">
-                          <span className="leading-none uppercase text-sm">
+                          <span className="leading-none font-bold text-sm">
                             {message.isYourself && <>You</>}
                             {!message.isYourself && (
                               <>

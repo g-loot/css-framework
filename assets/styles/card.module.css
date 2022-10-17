@@ -11,6 +11,10 @@
   transform-gpu
   overflow-hidden
   relative
+  focus-visible:outline
+  focus-visible:outline-offset-2
+  focus-visible:outline-1
+  focus-visible:outline-main
   ;
   &:not([class*='rounded']) {
     @apply

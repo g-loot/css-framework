@@ -15,7 +15,7 @@ const DSpage = () => {
         <div className="">
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-col gap-4">
-              <div className="card-brawl">
+              <button type="button" className="card-brawl">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div>
@@ -92,7 +92,7 @@ const DSpage = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </button>
             </div>
             <div className="flex-1">
               <iframe
@@ -113,7 +113,7 @@ const DSpage = () => {
         <div className="">
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-col gap-4">
-              <div className="card-brawl">
+              <button type="button" className="card-brawl">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div>
@@ -209,7 +209,7 @@ const DSpage = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </button>
             </div>
             <div className="flex-1">
               <iframe

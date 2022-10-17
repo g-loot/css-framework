@@ -679,7 +679,7 @@ const DSpage = () => {
                       navigator.clipboard.writeText("sm:avatar-lg");
                     }}
                   >
-                    .&#123;xx&#x7D;:avatar-lg
+                    .&#123;xx&#x7D;:avatar-&#123;xx&#x7D;
                   </code>.<br />
                   &#123;xx&#x7D; can be <code className="text-xs">xs</code>, <code className="text-xs">sm</code>,{" "}
                   <code className="text-xs">md</code>, <code className="text-xs">lg</code>, <code className="text-xs">xl</code>.

@@ -34,14 +34,16 @@ export default function PrototypeLeftMenuNew(props) {
   }, [modalFavoriteGames]);
 
   useEffect(() => {
-    setLoading(statusLoading);
-  }, [statusLoading]);
+    if(statusLoading || router.pathname.includes("home")) {
+      setLoading(true);
+    }
+  }, []);
 
   useEffect(() => {
     if (loading) {
       setTimeout(() => {
         setLoading(false);
-      }, 3000);
+      }, 2500);
     }
   }, [loading]);
 
@@ -108,7 +110,7 @@ export default function PrototypeLeftMenuNew(props) {
               <Link href={`/prototype/clans${prototype.getURLparams()}`}>
                 <button
                   type="button"
-                  className={`item px-6 item-interactive md:py-4 ${
+                  className={`item pl-6 item-interactive md:py-4 ${
                     router.pathname.includes("clans") ? "is-active" : ""
                   }`}
                 >
@@ -141,7 +143,13 @@ export default function PrototypeLeftMenuNew(props) {
                     </div>
                   </div>
                   <div className="item-action">
+                    <div className="relative px-3 mr-2">
+                      <span className="badge absolute -top-1 right-0 animate-scale-in" />
+                      <span className="icon icon-a-chat text-ui-200"></span>
+                    </div>
+                    {/*
                     <span className="rounded-full w-2 h-2 bg-error-300 block mr-2" />
+                    */}
                   </div>
                 </button>
               </Link>

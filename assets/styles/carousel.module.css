@@ -154,8 +154,6 @@
     flex
     lg:flex-col
     items-stretch
-    bg-ui-900/50
-    lg:bg-ui-900/0
     flex-2
     shrink-0
     relative
@@ -165,7 +163,8 @@
 
   .carousel-control {
     @apply
-    flex
+    hidden
+    lg:flex
     justify-end
     gap-2
     py-2
@@ -187,11 +186,13 @@
     flex
     items-center
     lg:flex-col
-    lg:justify-center
-    gap-2
-    px-2
+    justify-center
+    gap-4
+    lg:gap-2
+    px-4
     lg:px-0
-    py-2
+    py-4
+    lg:py-2
     ;
 
     -webkit-overflow-scrolling: touch;
@@ -255,18 +256,20 @@
       > button {
         @apply
         flex-1
-        p-4
+        p-1
+        lg:p-4
         leading-tight
         relative
         cursor-pointer
         rounded
-        bg-ui-700/75
+        bg-ui-600
+        lg:bg-ui-700/75
         text-ui-200
         gap-0
         transition-all
         duration-1000
         ease-[cubic-bezier(0.9,0,0.1,1)]
-        opacity-50
+        lg:opacity-50
         origin-right
         select-none
         flex
@@ -277,6 +280,11 @@
         overflow-hidden
         transform-gpu
         lg:translate-x-4
+        outline-offset-2
+        focus-visible:outline
+        focus-visible:outline-offset-2
+        focus-visible:outline-1
+        focus-visible:outline-main
         ;
 
         &.item {
@@ -300,6 +308,12 @@
           }
         }
 
+        > * {
+          @apply
+          hidden
+          lg:block
+        }
+
         > div {
           @apply
           text-sm
@@ -315,6 +329,8 @@
         > i {
           @apply
           absolute
+          overflow-hidden
+          lg:overflow-auto
           inset-y-0
           right-0
           w-1.5
@@ -335,9 +351,6 @@
             -skew-y-30
             opacity-0
             ;
-            /* transition
-            duration-300
-            ease-in-out */
           }
         }
 
@@ -376,7 +389,8 @@
           @apply
           opacity-100
           translate-x-0
-          bg-ui-600
+          bg-main
+          lg:bg-ui-600
           ;
           > i {
             @apply
@@ -386,7 +400,6 @@
               @apply
               opacity-100
               ;
-              /* animate-[carousel-list-active_6s_linear_forwards] */
             }
           }
         }

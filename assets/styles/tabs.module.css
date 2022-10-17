@@ -39,16 +39,12 @@
       @apply
       relative
       block 
-      font-bold
-      font-headings
-      tracking-wide
       text-ui-300
       cursor-pointer
       select-none
       transition
       duration-300
       ease-in-out
-      leading-[1]
       outline-offset-[-1px]
       focus-visible:rounded
       focus-visible:outline
@@ -56,11 +52,6 @@
       focus-visible:outline-main
       ;
   
-      &:not([class*="text-"]) {
-        @apply
-        text-lg
-        ;
-      }
       &:not([class*="pt-"]) {
         @apply
         pt-3
@@ -147,6 +138,18 @@
   }
 }
 
+.tabs:not(.tabs-secondary) {
+  :where(a, button, .button, div) {
+    @apply
+    font-bold
+    font-headings
+    tracking-wide
+    leading-[1]
+    text-lg
+    ;
+  }
+}
+
 .tabs:not(.tabs-rank) {
   > li {
     > a,
@@ -167,16 +170,11 @@
 .tabs.tabs-secondary {
   :where(a, button, .button, div) {
     @apply
-    font-normal
     font-body
     leading-none
-    tracking-normal
+    text-sm
+    uppercase
     ;
-    &:not([class*="text-"]) {
-      @apply
-      text-base
-      ;
-    }
   }
 } 
 
