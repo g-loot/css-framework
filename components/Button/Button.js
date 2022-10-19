@@ -10,6 +10,7 @@ export default function Button(props) {
     "button-tertiary": props.variant === 'tertiary',
     "button-ghost": props.variant === 'ghost',
     "button-premium": props.variant === 'premium',
+    "button-error": props.variant === 'error',
     "button-claim": props.variant === 'claim',
     "button-play": props.variant === 'play',
     "rounded-full": !props.label,

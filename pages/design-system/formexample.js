@@ -25,12 +25,21 @@ const DSpage = () => {
                 <div className="flex-1 form-group">
                   <label htmlFor="email">Email</label>
                   <div className='input-group'>
-                    <button className='button button-sm button-tertiary'>
+                    <button className='button button-sm button-ghost'>
                       <span>Change</span>
                     </button>
                     <input type="password" name="password" id="password" />
                   </div>
                 </div>
+              </div>
+              <div className="form-group form-select">
+                <label htmlFor="gender">Gender:</label>
+                <select id="gender">
+                  <option disabled selected>Choose an option</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Not defined</option>
+                </select>
               </div>
               <div className='form-group'>
                 <label htmlFor="about">About</label>
@@ -89,10 +98,10 @@ const DSpage = () => {
               <div className='form-group flex items-center gap-2'>
                 <label htmlFor="social-discord" className='flex-1'>Discord:</label>
                 <div className="flex-3 input-group">
-                  <button className='button button-sm button-tertiary'>
+                  <span className="icon icon-discord" />
+                  <button className='button button-sm button-ghost'>
                     <span>Connect</span>
                   </button>
-                  <span className="icon icon-discord" />
                   <input type="text" name="social-discord" id="social-discord" />
                 </div>
               </div>
@@ -100,10 +109,10 @@ const DSpage = () => {
                 <label htmlFor="social-steam" className='flex-1 -mt-4'>Steam:</label>
                 <div className="flex-3">
                   <div className='input-group'>
+                    <span className="icon icon-steam" />
                     <button className='button button-sm button-secondary'>
                       <span>Login with steam</span>
                     </button>
-                    <span className="icon icon-steam" />
                     <input type="text" name="social-steam" id="social-steam" />
                   </div>
                   <p className='text-ui-300 text-sm mt-1'>This site is not associated with Valve Corp.</p>

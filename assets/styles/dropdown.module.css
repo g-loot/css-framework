@@ -25,7 +25,6 @@
     @apply
     cursor-pointer
     ;
-    
   }
 
   .dropdown-content {
@@ -33,46 +32,8 @@
     absolute
     z-50
     origin-top
-    scale-90
-    invisible
-    pointer-events-none
-    opacity-0
-    transition-all
-    transform-gpu
-    duration-200
-    ease-[cubic-bezier(.7,0,.3,1)]
-    outline-none
     ;
-
-    &:not([class*='rounded']) {
-      @apply
-      rounded-lg
-      overflow-hidden
-      ;
-    }
-    &:not([class*='shadow']) {
-      @apply
-      shadow-xl
-      ;
-    }
-    &:not([class*='bg-']) {
-      @apply
-      bg-ui-600
-      ;
-    }
-    .menu {
-      > li {
-        @apply
-        -translate-y-4
-        opacity-0
-        delay-200
-        ;
-      }
-    }
   }
-}
-
-.dropdown {
 
   &.dropdown-open,
   &.dropdown-hover:hover,
@@ -107,7 +68,6 @@
       ;
     }
   }
-
   
   &.dropdown-closed {
     &,
@@ -124,8 +84,8 @@
       }
     }
   }
-  
 }
+
 
 .dropdown-end {
   .dropdown-content {
@@ -157,6 +117,16 @@
         translate-y-4
         ;
       }
+    }
+  }
+}
+
+.dropdown-content.dropdown-top {
+  .menu {
+    > li {
+      @apply
+      translate-y-4
+      ;
     }
   }
 }
@@ -208,3 +178,61 @@
   }
 }
 
+
+.dropdown-content {
+  @apply
+  origin-top
+  scale-90
+  invisible
+  pointer-events-none
+  opacity-0
+  transition-all
+  duration-200
+  ease-[cubic-bezier(.7,0,.3,1)]
+  outline-none
+  ;
+
+  &:not([class*='rounded']) {
+    @apply
+    rounded-lg
+    overflow-hidden
+    ;
+  }
+  &:not([class*='shadow']) {
+    @apply
+    shadow-xl
+    ;
+  }
+  &:not([class*='bg-']) {
+    @apply
+    bg-ui-600
+    ;
+  }
+  .menu {
+    > li {
+      @apply
+      -translate-y-4
+      opacity-0
+      delay-200
+      ;
+    }
+  }
+  &.dropdown-open {
+    @apply
+    scale-100
+    translate-y-0
+    visible
+    pointer-events-auto
+    opacity-100
+    outline-none
+    ;
+    .menu {
+      > li {
+        @apply
+        translate-y-0
+        opacity-100
+        ;
+      }
+    }
+  }
+}

@@ -68,7 +68,7 @@
     shadow-sm
     bg-ui-700
     border
-    border-ui-500
+    border-ui-600
     focus-visible:outline
     focus-visible:outline-1
     focus-visible:outline-ui-300
@@ -83,6 +83,18 @@
       ;
     }
   }
+
+  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text) {
+    @apply
+    shadow-[inset_2px_2px_6px_0px_rgb(0,0,0,0.3)]
+    ;
+  }
+  :where( .form-select > select) {
+    @apply
+    shadow-[2px_2px_6px_0px_rgb(0,0,0,0.3)]
+    ;
+  }
+
 
   > :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, .form-select > select) {
     &:not([class*="rounded-"]) {
@@ -782,20 +794,18 @@ label.button {
   }
 
   > :where(.icon, .button) {
-    &:first-child {
+    @apply
+    relative
+    z-30
+    ;
+    + input,
+    + textarea {
       @apply
-      relative
-      z-30
+      rounded-l
+      border-l
+      relative 
+      z-0
       ;
-      + input,
-      + textarea {
-        @apply
-        rounded-l
-        border-l
-        relative 
-        z-10
-        ;
-      }
     }
   }
 
@@ -945,16 +955,13 @@ label.button {
     text-0
     px-1
     border
-    border-r-ui-500
-    border-l-ui-500/50
-    border-t-ui-500
-    border-b-ui-500
+    border-ui-600
+    bg-ui-700
     hover:bg-ui-600
     duration-300
     ease-in-out
     ;
     -webkit-appearance: none;
-
 
     > * {
       @apply

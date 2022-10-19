@@ -197,6 +197,32 @@ button {
       }
     }
   }
+  &.button-error {
+    @apply 
+    bg-gradient-to-r
+    from-error-500
+    via-error-500
+    to-error-300
+    shadow-[inset_0_0_0_1px_rgba(var(--color-error-300),0)]
+    ;
+
+    > * {
+      @apply
+      drop-shadow-[0_-1px_0_rgba(var(--color-error-300)/50%)]
+      ;
+    }
+
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible,
+      &.is-active {
+        @apply
+        shadow-[inset_0_0_0_1px_rgba(var(--color-error-300),50%)]
+        ;
+      }
+    }
+  }
   &.button-claim {
     @apply 
     bg-gradient-to-r

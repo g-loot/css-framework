@@ -7,7 +7,6 @@
   grid
   justify-start
   items-start
-  overflow-x-scroll
   pb-4
   ;
 }
@@ -18,6 +17,7 @@
   items-stretch
   snap-x
   snap-mandatory
+  overflow-x-scroll
   ;
 
   > * {
@@ -32,7 +32,6 @@
     @apply
     rounded-t
     overflow-hidden
-    
     ;
   }
   > li:not(:first-child):not(:last-child) {

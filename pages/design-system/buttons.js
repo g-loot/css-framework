@@ -444,6 +444,64 @@ const DSpage = () => {
             </div>
           </div>
 
+          {/* variant:error */}
+          <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
+            <h3 className="h4 mb-6 lg:mb-10">Error</h3>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Text only
+                  </div>
+                  <div className="flex-1">
+                    <Button label="Button Label" variant="error"></Button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Icon + text
+                  </div>
+                  <div className="flex-1">
+                    <Button
+                      label="Button Label"
+                      variant="error"
+                      icon="icon-heart"
+                    ></Button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Text + icon
+                  </div>
+                  <div className="flex-1">
+                    <Button
+                      label="Button Label"
+                      variant="error"
+                      icon="icon-heart"
+                      iconDirection="right"
+                    ></Button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Icon only
+                  </div>
+                  <div className="flex-1">
+                    <Button variant="error" icon="icon-heart"></Button>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/ed8xkz2c/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
           {/* variant:claim */}
           <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
             <h3 className="h4 mb-6 lg:mb-10">Claim</h3>
