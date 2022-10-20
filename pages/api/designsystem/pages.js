@@ -231,7 +231,7 @@ export const DSpages = [
         url: "accordion",
       },
       {
-        label: "Links",
+        label: "Links & hovers",
         tags: "nav,navigation,links,href,target,interaction,interactive,hover",
         url: "links",
       },

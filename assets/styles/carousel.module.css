@@ -345,6 +345,7 @@
             content-['']
             absolute
             inset-0
+            w-1.5
             bg-interaction-500
             origin-top
             -translate-y-full

@@ -181,7 +181,7 @@ export default function Carousel(props) {
                 <div className="carousel-body">
                   <div>
                     <h2 className="h3 text-ui-100">{slide.title}</h2>
-                    <p className="mb-5 mt-2 text-ui-200">{slide.description}</p>
+                    <p className="mb-5 mt-3 text-ui-200">{slide.description}</p>
                     <button className="button button-primary">
                       <span>{slide.buttonLabel}</span>
                       {slide.buttonExternal && (
