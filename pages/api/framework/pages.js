@@ -35,12 +35,21 @@ export const FrameworkPages = {
         },
         {
           label: "Loading",
-          chip: "modal",
+          chip: "loading state",
           url: "home",
           query: "loading=true",
           tab: 1,
           new: false,
           tags: "home, start, index, claim, rewards, daily missions, loading, status",
+        },
+        {
+          label: "Content card",
+          chip: "extra",
+          url: "home",
+          query: "contentcard=true",
+          tab: 1,
+          new: false,
+          tags: "home, start, index, claim, rewards, daily missions, content card, braze, marketing, status",
         },
         {
           label: "Claim daily rewards",

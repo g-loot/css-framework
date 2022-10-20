@@ -13,7 +13,11 @@ export default function PrototypeStructure({ children, title }) {
   const prototype = usePrototypeData();
   const { query } = useRouter();
   const hasAds = query.ads === "true" ? true : false;
-  const isNewStructure = query.newstructure === "true" || query.newstructure === undefined ? true : false;
+  const hasContentCard = query.contentcard === "true" ? true : false;
+  const isNewStructure =
+    query.newstructure === "true" || query.newstructure === undefined
+      ? true
+      : false;
   return (
     <>
       {!isNewStructure && (
@@ -92,6 +96,40 @@ export default function PrototypeStructure({ children, title }) {
                   }`}
                 >
                   <div className="flex-1 pt-4 pb-8 min-h-screen overflow-hidden">
+                    {hasContentCard && (
+                      <div className="fixed bottom-8 right-8 z-50">
+                        <div className="min-h-[300px] w-64 surface surface-ui-700 rounded-xl shadow-xl overflow-hidden">
+                          <img
+                            src="https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/brawl_leaderboard.webp"
+                            alt=""
+                            className="object-cover aspect-video"
+                          />
+                          <button
+                            type="button"
+                            className="button button-tertiary button-sm button-close absolute top-2 right-2"
+                          >
+                            <span className="icon icon-e-remove" />
+                          </button>
+                          <div className="p-4">
+                            <h6 className="leading-none">Buy more Tokens</h6>
+                            <p className="text-sm mt-2">
+                              Uh oh. Out of Tokens? Do not worry you do not have
+                              to give up on the Weekly Brawl. You can buy more
+                              Tokens whenever you need them. Visit your Wallet
+                              page to take advantage of special bundle deals.
+                              Happy Brawling!
+                            </p>
+                            <button
+                              type="button"
+                              className="button button-primary button-sm w-full mt-3"
+                            >
+                              <span>Shop now</span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
                     {children}
                   </div>
                 </div>
