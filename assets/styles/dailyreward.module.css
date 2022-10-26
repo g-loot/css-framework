@@ -83,7 +83,8 @@
     }
   }
 
-  > :where(li, div) {
+  > li,
+  > div {
     &.is-active {
       .flip {
         transform: translate3d(0,0,0) rotateY(180deg);

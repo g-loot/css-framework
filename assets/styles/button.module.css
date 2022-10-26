@@ -527,7 +527,6 @@ button {
   }
 
   &.is-loading {
-
     &:not([class*='currency']),
     &.button-currency > *:first-child {
       > span {
@@ -539,6 +538,7 @@ button {
         @apply
         content-['']
         absolute
+        inset-auto
         h-6
         w-6
         block
@@ -550,6 +550,7 @@ button {
         mx-auto
         left-[calc(50%-0.75rem)]
         animate-[button-loader-rotate_1s_linear_infinite]
+        bg-none
         ;
       }
     }

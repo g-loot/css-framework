@@ -185,7 +185,7 @@ const DSpage = () => {
         <div className=''>
           <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
             <div className="flex-1 surface rounded-lg overflow-x-auto">
-              <table className="table table-comptact w-full">
+              <table className="table table-compact text-sm w-full">
                 <thead>
                   <tr>
                     <th></th>
@@ -223,6 +223,58 @@ const DSpage = () => {
         </div>
       </div>
     </div>
+
+
+    {/* Interactive, compact & rounded */}
+    <div className='mb-12' id='interactive-compact-rounded'>
+
+      <h2 className='h3 mb-3'>
+        Interactive, compact & rounded
+      </h2>
+
+      <div className=''>
+        <div className=''>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-start'>
+          <div className="flex-1 overflow-x-auto">
+            <table className="table table-interactive table-compact table-rounded table-w-full text-sm">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Name</th>
+                  <th>ID</th>
+                  <th>Favorite game</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>1</th>
+                  <td>Jérôme Weiss</td>
+                  <td>5778816157089792</td>
+                  <td>Apex Legends</td>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <td>Hart Hagerty</td>
+                  <td>5870578368249856</td>
+                  <td>League of Legends</td>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <td>Kees Dieffenthaller</td>
+                  <td>5858640415686656</td>
+                  <td>Valorant</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <div className='flex-1'>
+              <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/e3fnvrhq/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     {/* With visual elements */}
     <div className='mb-12' id='with-visual-elements'>

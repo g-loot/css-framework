@@ -530,7 +530,8 @@
         block
         absolute
         w-32
-        -left-16
+        -left-10
+        top-16
         ;
       }
     }

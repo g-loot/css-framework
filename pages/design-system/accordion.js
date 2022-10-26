@@ -224,7 +224,8 @@ const DSpage = () => {
                       <img
                         src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Brawl.svg"
                         width="auto"
-                        className="h-26 mx-auto"
+                        height="110"
+                        className="mx-auto"
                       />
                     </div>
                     <div className="text-ui-300 space-y-4">

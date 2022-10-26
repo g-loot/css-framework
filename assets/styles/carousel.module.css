@@ -372,7 +372,8 @@
           z-20
           ;
         }
-        > :where(span, div) {
+        > span,
+        > div {
           &:not(.item-actions) {
             @apply
             text-ellipsis

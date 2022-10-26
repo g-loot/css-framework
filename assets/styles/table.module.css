@@ -59,7 +59,7 @@
   }
 }
 
-.table.table-comptact {
+.table.table-compact {
   :where(th,td) {
     @apply
     py-2

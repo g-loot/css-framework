@@ -6,7 +6,10 @@
 /* content */
 
 
-:where(.card, .card-brawl, .card-mission, .card-tournament) {
+.card, 
+.card-brawl, 
+.card-mission, 
+.card-tournament {
   @apply
   transform-gpu
   overflow-hidden

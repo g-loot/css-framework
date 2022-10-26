@@ -199,15 +199,15 @@
     }
   }
 
-  > :where(li) {
-    :where(ul) {
+  > li {
+    ul {
       @apply
       flex
       flex-col
       items-stretch
       ;
     }
-    >:where(ul) {
+    > ul {
       @apply
       absolute
       hidden
@@ -219,7 +219,7 @@
       overflow-hidden
       top-0
       ;
-      :where(li) {
+      li {
         @apply
         w-full
         whitespace-nowrap
@@ -227,7 +227,7 @@
       }
     }
     &:hover {
-      >:where(ul) {
+      > ul {
         @apply
         flex
         ;
@@ -268,8 +268,8 @@
       ;
     }
   }
-  >:where(li) {
-    > :where(ul) {
+  > li {
+    > ul {
       @apply
       top-full
       left-[initial]

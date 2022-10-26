@@ -529,3 +529,41 @@
     }    
   }
 }
+
+.chat {
+  .twemoji-character {
+    @apply
+    inline-block
+    h-5
+    w-auto
+    ;
+  }
+}
+
+[contenteditable='true'] {
+  .twemoji-character {
+    @apply
+    relative
+    -top-0.5
+    ;
+  }
+  &:empty::before {
+    content: attr(placeholder);
+    @apply
+    content-[attr(placeholder)]
+    block
+    text-ui-300
+    ;
+  }
+}
+
+.giphyGrid-container {
+  &:hover {
+    @apply
+    outline
+    outline-main
+    outline-2
+    cursor-pointer
+    ;
+  }
+}

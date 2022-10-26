@@ -44,7 +44,8 @@
     select-none
     text-left
     ;
-    :where(.icon[class*='icon-game'], .item-title) {
+    .icon[class*='icon-game'], 
+    .item-title {
       @apply
       transition
       duration-300

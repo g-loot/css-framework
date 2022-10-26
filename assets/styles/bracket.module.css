@@ -334,7 +334,8 @@
   }
 }
 
-:where(.bracket-item, .bracket-teams) {
+.bracket-item, 
+.bracket-teams {
   &::before,
   &::after {
     @apply
@@ -363,7 +364,7 @@
   &:nth-child(6) {
     --delay: 10;
   }
-  animation-delay: calc(var(--delay, 1) * 0.05s);
+  animation-delay: calc(var(--delay, 1) * 0.1s);
 }
 
 @keyframes bracket-connectors-slidein {
@@ -390,7 +391,8 @@
   ;
 }
 
-:where(.brackets-container.brackets-responsive > .brackets, .brackets.brackets-responsive) {
+.brackets-container.brackets-responsive > .brackets, 
+.brackets.brackets-responsive {
 
   @apply
   grid
@@ -433,7 +435,8 @@
       }
     }
   }
-  :where(.bracket-item, .bracket-teams) {
+  .bracket-item,
+  .bracket-teams {
     &::before,
     &::after {
       @apply

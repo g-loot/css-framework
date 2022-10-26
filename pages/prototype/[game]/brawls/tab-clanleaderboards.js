@@ -166,7 +166,7 @@ export default function TabBrawlsSoloLeaderboards() {
                   </div>
                 </div>
                 <div className="border-t border-ui-700 max-h-[200px] overflow-y-auto scrollbar-desktop">
-                  <table className="table table-comptact w-full">
+                  <table className="table table-compact w-full">
                     <tbody>
                       <tr>
                         <td>

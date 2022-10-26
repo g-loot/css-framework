@@ -448,7 +448,7 @@ const DSpage = () => {
                       <div className="input-group">
                         <button
                           role="button"
-                          className="button button-tertiary"
+                          className="button button-ghost"
                         >
                           <span className="icon icon-zoom" />
                         </button>

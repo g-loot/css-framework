@@ -54,7 +54,10 @@
     }
   }
 
-  &:where(.alert-green, .alert-blue, .alert-orange, .alert-red) {
+  &.alert-green, 
+  &.alert-blue, 
+  &.alert-orange, 
+  &.alert-red {
     @apply
     border-0
     ;
