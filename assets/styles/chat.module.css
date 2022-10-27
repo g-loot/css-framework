@@ -534,7 +534,7 @@
   .twemoji-character {
     @apply
     inline-block
-    h-5
+    h-4
     w-auto
     ;
   }

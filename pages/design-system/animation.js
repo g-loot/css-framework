@@ -15,6 +15,7 @@ const DSpage = () => {
   const [StartAnim10, setStartAnim10] = useState(false);
   const [StartAnim11, setStartAnim11] = useState(false);
   const [StartAnim12, setStartAnim12] = useState(false);
+  const [StartAnim13, setStartAnim13] = useState(false);
 
   function handleStartAnim1() {
     setStartAnim1(true);
@@ -95,6 +96,9 @@ const DSpage = () => {
       setStartAnim12(false);
     }, 1000);
     return () => clearTimeout(timer);
+  }
+  function handleStartAnim13() {
+    setStartAnim13(!StartAnim13);
   }
 
   return (
@@ -640,6 +644,52 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/s3z92cag/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Flip vertical */}
+      <div className="mb-12" id="flip-vertical">
+        <h2 className="h3 mb-3">Flip vertical</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div className="perspective">
+                  <div
+                    className={`w-32 h-32 mx-auto flip flip-vertical ${
+                      StartAnim13 === true ? "animate-flip" : ""
+                    }`}
+                  >
+                    <div className="flip-front rounded-lg flex items-center justify-center bg-ui-400">
+                      <span className="text-4xl font-headings font-bold">A</span>
+                    </div>
+                    <div className="flip-back rounded-lg flex items-center justify-center bg-main">
+                      <span className="text-4xl font-headings font-bold text-ui-800">
+                        B
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim13.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/tvkwj7e1/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

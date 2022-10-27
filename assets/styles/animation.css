@@ -43,7 +43,6 @@
     @apply
     z-20
     ;
-    
   }
   > .flip-back {
     @apply
@@ -58,6 +57,24 @@
 
   &.animate-flip {
     transform: translate3d(0,0,0) rotateY(180deg) rotateX(0deg);
+  }
+
+  &.animate-delay {
+    transition-delay: var(--delay, 0.3s) !important;
+  }
+}
+
+.flip.flip-vertical {
+  > .flip-back {
+    transform: translate3d(0,0,0) rotateX(180deg) rotateY(0deg);
+  }
+
+  &:not(.animate-flip) {
+    transform: translate3d(0,0,0) rotateX(0deg) rotateY(0deg);
+  }
+
+  &.animate-flip {
+    transform: translate3d(0,0,0) rotateX(180deg) rotateY(0deg);
   }
 
   &.animate-delay {
