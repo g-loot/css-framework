@@ -203,9 +203,9 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* Onboarding tooltip */}
-      <div className="mb-12" id="responsive-positioning">
-        <h2 className="h3 mb-3">Responsive positioning</h2>
+      {/* Onboarding tooltip template */}
+      <div className="mb-12" id="onboarding-tooltip-template">
+        <h2 className="h3 mb-3">Onboarding tooltip template</h2>
 
         <div className="surface rounded-lg p-4">
           <div className="">
