@@ -9,6 +9,8 @@ export default function BrawlPlacementItem(props) {
   const variablesContext = useContext(VariablesContext);
 
   const [StartAnim, setStartAnim] = useState(false);
+  const [resultsDone, setResultsDone] = useState(false);
+  const [shining, setShining] = useState(false);
 
   useEffect(() => {
     setStartAnim(true);
@@ -17,6 +19,34 @@ export default function BrawlPlacementItem(props) {
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    setShining(false);
+    const timer = setTimeout(() => {
+      setShining(true);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [variablesContext.brawlStep]);
+
+  useEffect(() => {
+    if(variablesContext.brawlStep <=3) {
+      if(variablesContext.brawlStep >= props.item?.step) {
+        setResultsDone(false);
+        const timer = setTimeout(() => {
+          setResultsDone(true);
+        }, 5000);
+        return () => clearTimeout(timer);
+      }
+    } else {
+      if(variablesContext.brawlStep === props.item?.step) {
+        setResultsDone(false);
+        const timer = setTimeout(() => {
+          setResultsDone(true);
+        }, 5000);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [variablesContext.brawlStep]);
 
   function handleStartAnim() {
     setStartAnim(true);
@@ -54,7 +84,7 @@ export default function BrawlPlacementItem(props) {
             <div className="absolute z-20 inset-0 p-4 flex items-center justify-center overflow-hidden rounded-lg">
                 <button
                   type="button"
-                  className="button button-sm button-primary button-currency button-token w-full animate-slide-in-bottom"
+                  className={`button button-sm button-primary button-currency button-token w-full animate-slide-in-bottom ${shining ? 'is-shining' : ''}`}
                   onClick={incrementBrawlStep.bind(this, 1)}
                 >
                   <div>
@@ -86,18 +116,18 @@ export default function BrawlPlacementItem(props) {
               <span className="icon icon-lock text-xl text-ui-600" />
             </div>
         </div>
-        <div className={`flip-back rounded-lg shadow-lg flex items-center justify-between px-4 gap-2 w-44 h-16 overflow-hidden ${variablesContext.brawlStep === props.item?.step ? 'animate-pulse surface-ui-600 surface surface-halo' : 'surface-ui-700'}`}>
-          <div className={`font-headings uppercase font-bold text-ui-300 text-xl italic ${variablesContext.brawlStep === props.item?.step ? 'text-ui-100' : 'text-ui-300'}`}>
+        <div className={`flip-back rounded-lg shadow-lg flex items-center justify-between px-4 gap-2 w-44 h-16 overflow-hidden ${!resultsDone ? 'animate-pulse surface-ui-600 surface surface-halo' : 'surface-ui-700'}`}>
+          <div className={`font-headings uppercase font-bold text-ui-300 text-xl italic ${resultsDone ? 'text-ui-100' : 'text-ui-300'}`}>
             Match {props.item?.step}
           </div>
           <div className="flex items-center gap-1 italic font-bold font-headings text-blue-300">
-            {variablesContext.brawlStep > props.item?.step && (
+            {resultsDone && (
               <>
                 <span className="text-3xl animate-slide-in-right animate-delay" style={{ "--delay": "calc(1 * 0.05s)" }}>{props.item?.kills}</span>
                 <span className="text-xl animate-slide-in-right animate-delay" style={{ "--delay": "calc(2 * 0.05s)" }}>kills</span>
               </>
             )}
-            {variablesContext.brawlStep === props.item?.step && (
+            {!resultsDone && (
               <>
                 <span className="text-3xl">--</span>
               </>

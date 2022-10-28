@@ -59,6 +59,7 @@ export default function BrawlPlacements() {
   const sliderContainer = useRef(null);
   const [sliderContainerWidth, setSliderContainerWidth] = useState(192);
   const [sliderItemWidth, setSliderItemWidth] = useState(192);
+  const [resultsDone, setResultsDone] = useState(false);
 
   function openModalInfoBeforeYouPlay(number) {
     uiContext.openModal(
@@ -116,6 +117,14 @@ export default function BrawlPlacements() {
   function openModalBuyTokens() {
     uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
   }
+
+  useEffect(() => {
+    setResultsDone(false);
+    const timer = setTimeout(() => {
+      setResultsDone(true);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [variablesContext.brawlStep]);
 
   return (
     <>
@@ -216,10 +225,18 @@ export default function BrawlPlacements() {
               Buy more tokens
             </a>
           </div>
-          {variablesContext.brawlStep >= 3 && (
+          {variablesContext.brawlStep >= 3 && !resultsDone && (
             <div className="animate-slide-in-bottom">
               <div className="text-center text-blue-300 text-sm animate-pulse">
-                Waiting for <b className="text-lg">3</b> match results
+                {variablesContext.brawlStep <= 3 ? (
+                  <>
+                    Waiting for <b className="text-lg">3</b> match results
+                  </>
+                ) : (
+                  <>
+                    Waiting for <b className="text-lg">1</b> match result
+                  </>
+                )}
               </div>
             </div>
           )}

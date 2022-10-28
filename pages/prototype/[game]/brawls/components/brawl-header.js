@@ -38,9 +38,15 @@ export default function BrawlHeader() {
   return (
     <>
       {selectedGame && (
-        <section className="surface sm:rounded-lg mb-4 p-4">
+        <section className="surface surface-dimmed sm:rounded-lg mb-4 p-4">
           <div className="flex flex-col md:flex-row gap-1 justify-between items-center">
-            <div className="flex gap-1.5 items-center">
+            <div className="flex gap-3 items-center">
+              <span
+                className={`icon icon-24 text-game-${game.replace(
+                  /#|_/g,
+                  ""
+                )} icon-game-${game.replace(/#|_/g, "")}-symbol`}
+              />
               <h1 className="text-2xl leading-none">
                 {prototype.getBrawlByID(game, brawl_id)?.name}
               </h1>
@@ -62,7 +68,7 @@ export default function BrawlHeader() {
               />
             </div>
           </div>
-          <hr className="separator my-4" />
+          <hr className="separator border-ui-700/50 my-4" />
           <div className="flex flex-col lg:flex-row gap-4 items-start justify-between leading-none">
             <div className="">
               <div className="flex items-center gap-1.5">

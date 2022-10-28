@@ -82,7 +82,7 @@ export default function ModalBuyTokens(props) {
           <div className="modal-content">
             <div className="modal-body text-center">
               <h2 className="modal-title">Get more tokens</h2>
-              <div className="surface surface-highlight-premium rounded-lg overflow-hidden flex items-center gap-4 px-4 mt-2 mb-4">
+              <div className="surface surface-highlight-premium rounded-lg overflow-hidden flex flex-col md:flex-row items-center md:gap-4 px-4 mt-2 mb-4">
                 <img
                   src="https://res.cloudinary.com/gloot/image/upload/v1636112328/GNOG%20assets/Premium/gloot-premium-horizontal.png"
                   width="240"
@@ -104,7 +104,7 @@ export default function ModalBuyTokens(props) {
               </div>
 
               <div className="overflow-x-auto scrollbar-desktop">
-                <div className="flex gap-4 items-stretch justify-center mx-auto">
+                <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto">
                   {Offers.map((item, itemIndex) => (
                     <div
                       key={itemIndex}
