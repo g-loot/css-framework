@@ -59,10 +59,8 @@ const TabsItemsNoClan = [
 
 export default function Home() {
   const router = useRouter();
-  const { query } = useRouter();
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
-  const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
   const { tab } = router.query;
   const { brawl_id } = router.query;

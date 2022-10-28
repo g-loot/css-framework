@@ -220,6 +220,7 @@ export default function BrawlPlacements() {
                 submitting ? "is-loading" : ""
               }`}
               onClick={addToastWithDelay.bind(this, {
+                size: "small",
                 icon: "f-check",
                 color: "green",
                 text: "Your stats have been updated.",
