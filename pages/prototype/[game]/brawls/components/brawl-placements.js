@@ -180,7 +180,7 @@ export default function BrawlPlacements() {
             {variablesContext.brawlStep < 3 ? (
               <button
                 type="button"
-                className="button button-sm button-primary button-currency button-token"
+                className="button button-sm button-primary button-currency button-token is-shining"
                 onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
               >
                 <div>
@@ -242,30 +242,32 @@ export default function BrawlPlacements() {
           )}
           <div className="flex gap-3">
             {variablesContext.brawlStep >= 3 && (
-              <button
-                type="button"
-                className={`button button-sm button-secondary ${
-                  submitting ? "is-loading" : ""
-                }`}
-                onClick={addToastWithDelay.bind(this, {
-                  size: "small",
-                  icon: "f-check",
-                  color: "green",
-                  text: "Your stats have been updated.",
-                  autoDelete: true,
-                  autoDeleteDelay: 2500,
-                })}
-              >
-                <span className="icon icon-refresh-01" />
-                <span>Request status update</span>
-              </button>
+              <>
+                <button
+                  type="button"
+                  className={`button button-sm button-secondary ${
+                    submitting ? "is-loading" : ""
+                  }`}
+                  onClick={addToastWithDelay.bind(this, {
+                    size: "small",
+                    icon: "f-check",
+                    color: "green",
+                    text: "Your stats have been updated.",
+                    autoDelete: true,
+                    autoDeleteDelay: 2500,
+                  })}
+                >
+                  <span className="icon icon-refresh-01" />
+                  <span>Request status update</span>
+                </button>
+                <button
+                  type="button"
+                  className="button button-sm button-ghost rounded-full"
+                >
+                  <span className="icon icon-c-info" />
+                </button>
+              </>
             )}
-            <button
-              type="button"
-              className="button button-sm button-ghost rounded-full"
-            >
-              <span className="icon icon-c-info" />
-            </button>
           </div>
         </div>
       </section>
