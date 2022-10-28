@@ -21,6 +21,7 @@ const Countdown = (props) => {
   const hasLabels = props.hasLabels !== undefined ? props.hasLabels : false;
   const labelsAbbr = props.labelsAbbr !== undefined ? props.labelsAbbr : false;
   const className = props.className !== undefined ? props.className : "";
+  const labelClassName = props.labelClassName !== undefined ? props.className : "";
   const separator = props.separator !== undefined ? props.separator : "";
   const targetDate =
     props.targetDate !== undefined ? props.targetDate : dateTimeAfterThreeDays;
@@ -37,12 +38,12 @@ const Countdown = (props) => {
             <span style={{ "--value": days }} />
             {hasLabels && !labelsAbbr && (
               <>
-                <small>Days</small>
+                <small className={labelClassName}>Days</small>
               </>
             )}
             {hasLabels && labelsAbbr && (
               <>
-                <small>Days</small>
+                <small className={labelClassName}>D</small>
               </>
             )}
             {separator}
@@ -54,12 +55,12 @@ const Countdown = (props) => {
 
             {hasLabels && !labelsAbbr && (
               <>
-                <small>Hours</small>
+                <small className={labelClassName}>Hours</small>
               </>
             )}
             {hasLabels && labelsAbbr && (
               <>
-                <small>Hrs</small>
+                <small className={labelClassName}>H</small>
               </>
             )}
             {separator}
@@ -70,12 +71,12 @@ const Countdown = (props) => {
             <span style={{ "--value": minutes }} />
             {hasLabels && !labelsAbbr && (
               <>
-                <small>Minutes</small>
+                <small className={labelClassName}>Minutes</small>
               </>
             )}
             {hasLabels && labelsAbbr && (
               <>
-                <small>Min</small>
+                <small className={labelClassName}>M</small>
               </>
             )}
             {separator}
@@ -86,12 +87,12 @@ const Countdown = (props) => {
             <span style={{ "--value": seconds }} />
             {hasLabels && !labelsAbbr && (
               <>
-                <small>Seconds</small>
+                <small className={labelClassName}>Seconds</small>
               </>
             )}
             {hasLabels && labelsAbbr && (
               <>
-                <small>Sec</small>
+                <small className={labelClassName}>S</small>
               </>
             )}
           </>

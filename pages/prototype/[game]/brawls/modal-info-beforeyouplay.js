@@ -17,7 +17,7 @@ export default function ModalInfoBeforeYouPlay(props) {
     setSubmitting(true);
 
     setTimeout(() => {
-      uiContext.openToastr({size: "medium", text: "You have successfully registered to the tournament", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+      uiContext.openToastr({size: "small", text: "You have successfully registered to the Brawl", color: "green", autoDelete: true, autoDeleteDelay: 2500});
       router.push(
         `${router.asPath}${
           hasAds || tab !== undefined ? "&" : "?"

@@ -118,9 +118,11 @@ export default function TabBrawlsSoloLeaderboards() {
 
   return (
     <>
+      {/*
       <section className="pb-4">
         <HowToBrawl />
       </section>
+  */}
       {!hasClaim && (
         <section
           className="pb-8 animate-slide-in-bottom animate-delay"
@@ -128,32 +130,8 @@ export default function TabBrawlsSoloLeaderboards() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <div className="col-span-1 hidden lg:block">
-              <button
-                type="button"
-                className="button button-primary button-currency button-token w-full"
-              >
-                <div>
-                  <span>Activate 1 match</span>
-                </div>
-                <div>
-                  <img
-                    className="dropshadow-xs"
-                    src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                    width="34"
-                    height="34"
-                    alt="coin"
-                  />
-                  <span>1</span>
-                </div>
-              </button>
-              <div>
-                <Link href="#">
-                  <a href="#">Buy more tokens</a>
-                </Link>
-              </div>
-              <div className="my-4 space-y-8 mt-8">
+              <div className="mb-4 space-y-8 surface surface-dimmed rounded-lg px-2 pb-2 pt-4">
                 <div className="text-center">
-                  <div className="text-sm uppercase">The 3 best matches</div>
                   <div className="font-headings font-bold text-2xl italic text-ui-100">
                     Your performance
                   </div>
@@ -180,94 +158,75 @@ export default function TabBrawlsSoloLeaderboards() {
                     </div>
                   </div>
                 </div>
-                <div className="surface surface-dimmed rounded-lg">
-                  <div className="text-center p-4">
-                    <div className="text-xs uppercase text-ui-300">
-                      All your matches
+                <div className="space-y-2">
+                  <div className="text-sm uppercase text-blue-300 text-center">The 3 best matches</div>
+                  <div className="surface surface-ui-700 rounded">
+                    <div className="text-center text-sm text-ui-100 p-2 font-bold border-b border-ui-600">
+                      Match 7
                     </div>
-                    <div className="flex items-center justify-center gap-1 text-blue-300">
-                      <span className="text-xs icon icon-star" />
-                      <span className="text-xs"> = best matches</span>
-                    </div>
+                    <table className="table table-compact w-full text-sm leading-tight">
+                        <tbody>
+                          <tr>
+                            <td className="text-left">43</td>
+                            <td className="text-right">Kills</td>
+                          </tr>
+                          <tr className="bg-ui-600">
+                            <td className="text-left">3</td>
+                            <td className="text-right">Tiebreaker 1</td>
+                          </tr>
+                          <tr>
+                            <td className="text-left">2</td>
+                            <td className="text-right">Tiebreaker 2</td>
+                          </tr>
+                        </tbody>
+                      </table>
                   </div>
-                  <div className="border-t border-ui-700 max-h-[200px] overflow-y-auto scrollbar-desktop">
-                    <table className="table table-compact w-full text-center leading-tight">
-                      <tbody>
-                        <tr>
-                          <th className="w-10"></th>
-                          <td>
-                            <div className="text-xs text-ui-300 uppercase">
-                              Match
-                            </div>
-                          </td>
-                          <td>
-                            <div className="text-xs text-ui-300 uppercase">
-                              Points
-                            </div>
-                          </td>
-                        </tr>
-                        <tr className="bg-ui-800 font-bold text-blue-300">
-                          <th className="w-10">
-                            <span className="text-xs icon icon-star" />
-                          </th>
-                          <td>
-                            <span className="text-xs">1</span>
-                          </td>
-                          <td>
-                            <span className="text-xs">254</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th className="w-10"></th>
-                          <td>
-                            <span className="text-xs">2</span>
-                          </td>
-                          <td>
-                            <span className="text-xs">124</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th className="w-10"></th>
-                          <td>
-                            <span className="text-xs">3</span>
-                          </td>
-                          <td>
-                            <span className="text-xs">78</span>
-                          </td>
-                        </tr>
-                        <tr className="bg-ui-800 font-bold text-blue-300">
-                          <th className="w-10">
-                            <span className="text-xs icon icon-star" />
-                          </th>
-                          <td>
-                            <span className="text-xs">4</span>
-                          </td>
-                          <td>
-                            <span className="text-xs">254</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th className="w-10"></th>
-                          <td>
-                            <span className="text-xs">5</span>
-                          </td>
-                          <td>
-                            <span className="text-xs">124</span>
-                          </td>
-                        </tr>
-                        <tr>
-                          <th className="w-10"></th>
-                          <td>
-                            <span className="text-xs">6</span>
-                          </td>
-                          <td>
-                            <span className="text-xs">78</span>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div className="surface surface-ui-700 rounded">
+                    <div className="text-center text-sm text-ui-100 p-2 font-bold border-b border-ui-600">
+                      Match 2
+                    </div>
+                    <table className="table table-compact w-full text-sm leading-tight">
+                        <tbody>
+                          <tr>
+                            <td className="text-left">33</td>
+                            <td className="text-right">Kills</td>
+                          </tr>
+                          <tr className="bg-ui-600">
+                            <td className="text-left">3</td>
+                            <td className="text-right">Tiebreaker 1</td>
+                          </tr>
+                          <tr>
+                            <td className="text-left">2</td>
+                            <td className="text-right">Tiebreaker 2</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+                  <div className="surface surface-ui-700 rounded">
+                    <div className="text-center text-sm text-ui-100 p-2 font-bold border-b border-ui-600">
+                      Match 1
+                    </div>
+                    <table className="table table-compact w-full text-sm leading-tight">
+                        <tbody>
+                          <tr>
+                            <td className="text-left">21</td>
+                            <td className="text-right">Kills</td>
+                          </tr>
+                          <tr className="bg-ui-600">
+                            <td className="text-left">3</td>
+                            <td className="text-right">Tiebreaker 1</td>
+                          </tr>
+                          <tr>
+                            <td className="text-left">2</td>
+                            <td className="text-right">Tiebreaker 2</td>
+                          </tr>
+                        </tbody>
+                      </table>
                   </div>
                 </div>
+              </div>
+              <div className="flex justify-center">
+                <button type="button" className="button button-ghost is-active mx-auto"><span>My position</span></button>
               </div>
               {/*
               <div className="surface surface-dimmed rounded-lg p-4 text-center relative my-4 space-y-3">

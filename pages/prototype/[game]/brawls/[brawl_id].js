@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Countdown from "../../../../components/Countdown/Countdown";
@@ -13,13 +13,11 @@ import TabBrawlsYourBrawlMatches from "./tab-yourbrawlmatches";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
+import BrawlHeader from "./components/brawl-header";
+import BrawlPlacements from "./components/brawl-placements";
+
 
 const TabsItems = [
-  {
-    label: "Your Brawl Matches",
-    url: "your-matches",
-    component: TabBrawlsYourBrawlMatches,
-  },
   {
     label: "Solo Leaderboards",
     url: "solo-leaderboard",
@@ -42,11 +40,6 @@ const TabsItems = [
   },
 ];
 const TabsItemsNoClan = [
-  {
-    label: "Your Brawl Matches",
-    url: "your-matches",
-    component: TabBrawlsYourBrawlMatches,
-  },
   {
     label: "Solo Leaderboards",
     url: "solo-leaderboard",
@@ -73,9 +66,9 @@ export default function Home() {
   const { game } = router.query;
   const { tab } = router.query;
   const { brawl_id } = router.query;
-  const defaultTab = "your-matches";
+  const defaultTab = "solo-leaderboard";
   const selectedTab = tab ? tab : defaultTab;
-  const uiContext = useContext(UiContext)
+  const uiContext = useContext(UiContext);
 
   function openModalBrawlHowitworksVideo() {
     uiContext.openModal(
@@ -86,12 +79,13 @@ export default function Home() {
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game, prototype]);
-  
+
   useEffect(() => {
-    if(selectedGame != null) {
+    if (selectedGame != null) {
       prototype.defineDefaultGameID(selectedGame.id);
     }
   }, [selectedGame]);
+
 
   return (
     <>
@@ -100,6 +94,7 @@ export default function Home() {
 
         {selectedGame && (
           <>
+            {/*
             <section className="header surface sm:rounded-lg mb-4">
               <div className="header-content">
                 <div className="header-image">
@@ -177,6 +172,10 @@ export default function Home() {
                 />
               </div>
             </section>
+            */}
+            <BrawlHeader />
+
+            <BrawlPlacements />
 
             <nav>
               <ul className="tabs border-b border-ui-700">
@@ -185,7 +184,9 @@ export default function Home() {
                     {TabsItems.map((item, itemIndex) => (
                       <li key={item}>
                         <Link
-                          href={`/prototype/${game}/brawls/${brawl_id}?tab=${item.url}${prototype.getURLparams("&")}`}
+                          href={`/prototype/${game}/brawls/${brawl_id}?tab=${
+                            item.url
+                          }${prototype.getURLparams("&")}`}
                         >
                           <a
                             className={`${
@@ -204,7 +205,9 @@ export default function Home() {
                     {TabsItemsNoClan.map((item, itemIndex) => (
                       <li key={item}>
                         <Link
-                          href={`/prototype/${game}/brawls/${brawl_id}?tab=${item.url}${prototype.getURLparams("&")}`}
+                          href={`/prototype/${game}/brawls/${brawl_id}?tab=${
+                            item.url
+                          }${prototype.getURLparams("&")}`}
                         >
                           <a
                             className={`${
@@ -224,7 +227,9 @@ export default function Home() {
             <section className="py-4">
               {TabsItems.map((item, itemIndex) => {
                 if (item.url === selectedTab) {
-                  return React.createElement(item.component, { key: itemIndex })
+                  return React.createElement(item.component, {
+                    key: itemIndex,
+                  });
                 }
               })}
             </section>
