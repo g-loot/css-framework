@@ -36,7 +36,7 @@ export default function BrawlHeader() {
         <div className="flex flex-col md:flex-row gap-1 justify-between items-center">
           <div className="flex gap-1.5 items-center">
             <h1 className="text-2xl leading-none">
-              {prototype.getBrawlByID(game, brawl_id).name}
+              {prototype.getBrawlByID(game, brawl_id)?.name}
             </h1>
           </div>
           <div className="flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap font-headings font-bold italic">
