@@ -18,17 +18,22 @@ export default function BrawlPlacementItem(props) {
     return () => clearTimeout(timer);
   }, []);
 
-  function randomNumberInRange(min, max) {
-    // 👇️ get number between min (inclusive) and max (inclusive)
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
   function handleStartAnim() {
     setStartAnim(true);
     const timer = setTimeout(() => {
       setStartAnim(false);
     }, 1000);
     return () => clearTimeout(timer);
+  }
+
+  function incrementBrawlStep(value) {
+    if (variablesContext.brawlStep < 9) {
+      variablesContext.incrementBrawlStep(value);
+      if (variablesContext.brawlStep >= 3) {
+      }
+    } else {
+      variablesContext.incrementBrawlStep(-9);
+    }
   }
 
   return (
@@ -45,21 +50,44 @@ export default function BrawlPlacementItem(props) {
         <div className={`flip-front rounded-lg surface-ui-700 shadow-lg flex items-center justify-between px-4 gap-2 w-44 h-16 transition-opacity duration-100 ${
           props.item?.step > 3 && variablesContext.brawlStep + 1 < props.item?.step ? "opacity-25" : ""
         }`}>
+          {(props.item?.step > 3 && variablesContext.brawlStep + 1 === props.item?.step) && (
+            <div className="absolute z-20 inset-0 p-4 flex items-center justify-center overflow-hidden rounded-lg">
+                <button
+                  type="button"
+                  className="button button-sm button-primary button-currency button-token w-full animate-slide-in-bottom"
+                  onClick={incrementBrawlStep.bind(this, 1)}
+                >
+                  <div>
+                    <span>Activate</span>
+                  </div>
+                  <div>
+                    <img
+                      className="dropshadow-xs"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
+                      width="34"
+                      height="34"
+                      alt="coin"
+                    />
+                    <span>1</span>
+                  </div>
+                </button>
+            </div>
+          )}
           {variablesContext.brawlStep >= props.item?.step && (
-            <div className="absolute inset-x-0 top-0 bottom-1 flex items-center justify-center lottie-blur">
+            <div className="absolute z-10 inset-x-0 top-0 bottom-1 flex items-center justify-center lottie-blur">
               <Lottie animationData={LottieExplosion1} loop={false} />
               <Lottie animationData={LottieExplosion2} loop={false} />
             </div>
           )}
-          <div className="font-headings uppercase font-bold text-ui-300 text-xl italic">
-            Match {props.item?.step}
-          </div>
-          <div className="w-12 h-12 rounded-full bg-gradient-to-b from-interaction-300 to-blue-500 flex items-center justify-center">
-            <span className="icon icon-lock text-xl text-ui-600" />
-          </div>
+            <div className={`font-headings uppercase font-bold text-ui-300 text-xl italic ${props.item?.step > 3 && variablesContext.brawlStep + 1 === props.item?.step ? 'opacity-0' : ''}`}>
+              Match {props.item?.step}
+            </div>
+            <div className={`w-12 h-12 rounded-full bg-gradient-to-b from-interaction-300 to-blue-500 flex items-center justify-center ${props.item?.step > 3 && variablesContext.brawlStep + 1 === props.item?.step ? 'opacity-0' : ''}`}>
+              <span className="icon icon-lock text-xl text-ui-600" />
+            </div>
         </div>
-        <div className="flip-back rounded-lg surface-ui-600 shadow-lg flex items-center justify-between px-4 gap-2 w-44 h-16 overflow-hidden">
-          <div className="font-headings uppercase font-bold text-ui-100 text-xl italic">
+        <div className={`flip-back rounded-lg shadow-lg flex items-center justify-between px-4 gap-2 w-44 h-16 overflow-hidden ${variablesContext.brawlStep === props.item?.step ? 'animate-pulse surface-ui-600 surface surface-halo' : 'surface-ui-700'}`}>
+          <div className={`font-headings uppercase font-bold text-ui-300 text-xl italic ${variablesContext.brawlStep === props.item?.step ? 'text-ui-100' : 'text-ui-300'}`}>
             Match {props.item?.step}
           </div>
           <div className="flex items-center gap-1 italic font-bold font-headings text-blue-300">

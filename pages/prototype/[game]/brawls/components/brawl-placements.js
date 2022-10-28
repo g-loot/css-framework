@@ -5,6 +5,7 @@ import { VariablesContext } from "../../../../../contexts/variables";
 import { useRouter } from "next/router";
 import ModalInfoBeforeYouPlay from "../modal-info-beforeyouplay";
 import BrawlPlacementItem from "./brawl-placementitem";
+import ModalBuyTokens from "../../../wallet/modal-buytokens";
 
 const enrollSteps = [
   {
@@ -55,7 +56,7 @@ export default function BrawlPlacements() {
   const [submitting, setSubmitting] = useState(false);
   const sliderWrapper = useRef(null);
   const sliderItem = useRef(null);
-  const sliderContainer= useRef(null);
+  const sliderContainer = useRef(null);
   const [sliderContainerWidth, setSliderContainerWidth] = useState(192);
   const [sliderItemWidth, setSliderItemWidth] = useState(192);
 
@@ -112,6 +113,10 @@ export default function BrawlPlacements() {
     }, 1000);
   }
 
+  function openModalBuyTokens() {
+    uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
+  }
+
   return (
     <>
       <section className="surface sm:rounded-lg mb-4">
@@ -145,7 +150,10 @@ export default function BrawlPlacements() {
             </button>
           </div>
 
-          <div ref={sliderWrapper} className="overflow-x-auto scrollbar-hidden last:after:content-[''] last:after:w-24 last:after:block">
+          <div
+            ref={sliderWrapper}
+            className="overflow-x-auto scrollbar-hidden last:after:content-[''] last:after:w-24 last:after:block"
+          >
             <div className="flex" ref={sliderContainer}>
               {enrollSteps.map((step, stepIndex) => (
                 <BrawlPlacementItem
@@ -183,7 +191,7 @@ export default function BrawlPlacements() {
             ) : (
               <button
                 type="button"
-                className="button button-sm button-primary button-currency button-token"
+                className="button button-sm button-primary button-currency button-token hidden"
                 onClick={incrementBrawlStep.bind(this, 1)}
               >
                 <div>
@@ -201,8 +209,10 @@ export default function BrawlPlacements() {
                 </div>
               </button>
             )}
-
-            <a href="#" className="link text-sm text-ui-300">
+            <a
+              onClick={openModalBuyTokens}
+              className="link text-sm text-ui-300"
+            >
               Buy more tokens
             </a>
           </div>
@@ -214,25 +224,25 @@ export default function BrawlPlacements() {
             </div>
           )}
           <div className="flex gap-3">
-            <button
-              type="button"
-              className={`button button-sm button-secondary ${
-                submitting ? "is-loading" : ""
-              }`}
-              onClick={addToastWithDelay.bind(this, {
-                size: "small",
-                icon: "f-check",
-                color: "green",
-                text: "Your stats have been updated.",
-                autoDelete: true,
-                autoDeleteDelay: 2500,
-              })}
-            >
-              <span className="icon icon-refresh-01" />
-              <span>
-                Request status update
-              </span>
-            </button>
+            {variablesContext.brawlStep >= 3 && (
+              <button
+                type="button"
+                className={`button button-sm button-secondary ${
+                  submitting ? "is-loading" : ""
+                }`}
+                onClick={addToastWithDelay.bind(this, {
+                  size: "small",
+                  icon: "f-check",
+                  color: "green",
+                  text: "Your stats have been updated.",
+                  autoDelete: true,
+                  autoDeleteDelay: 2500,
+                })}
+              >
+                <span className="icon icon-refresh-01" />
+                <span>Request status update</span>
+              </button>
+            )}
             <button
               type="button"
               className="button button-sm button-ghost rounded-full"

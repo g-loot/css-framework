@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 
 import Accordion from "../../../../components/Accordion/Accordion";
 import HowToBrawl from "../../../../components/HowTo/HowToBrawl";
+import { VariablesContext } from "../../../../contexts/variables";
 import Link from "next/link";
 import ModalClaimLadderRewards from "../../home/modal-claim-dailyrewards";
 import Reward from "../../../../components/Reward/Reward";
@@ -54,6 +55,7 @@ export default function TabBrawlsSoloLeaderboards() {
   const hasClaim = query.hasclaim === "true" ? true : false;
   const isEmpty = query.empty === "true" ? true : false;
   const uiContext = useContext(UiContext);
+  const variablesContext = useContext(VariablesContext);
 
   useEffect(() => {
     setSelectedBrawl(prototype.getBrawlByID(game, brawl_id));
@@ -129,105 +131,129 @@ export default function TabBrawlsSoloLeaderboards() {
           style={{ "--delay": "calc(1 * 0.05s)" }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-            <div className="col-span-1 hidden lg:block">
-              <div className="mb-4 space-y-8 surface surface-dimmed rounded-lg px-2 pb-2 pt-4">
-                <div className="text-center">
-                  <div className="font-headings font-bold text-2xl italic text-ui-100">
-                    Your performance
+            <div className="col-span-1 hidden lg:block pt-10">
+              {variablesContext.brawlStep >= 3 ? (
+                <>
+                  <div className="mb-4 space-y-8 surface surface-dimmed rounded-lg px-2 pb-2 pt-4">
+                    <div className="font-headings font-bold text-2xl italic text-ui-100 text-center relative z-10">
+                      Your performance
+                    </div>
+                    <div className="flex items-center justify-around gap-4 text-center leading-none">
+                      <div>
+                        <div className="text-3xl font-headings font-bold text-blue-300 mb-2">
+                          125
+                        </div>
+                        <div className="text-sm uppercase">
+                          Total Brawl
+                          <br />
+                          points
+                        </div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-headings font-bold text-blue-300 mb-2">
+                          #5
+                        </div>
+                        <div className="text-sm uppercase">
+                          Current Brawl
+                          <br />
+                          position
+                        </div>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="text-sm uppercase text-blue-300 text-center">
+                        The 3 best matches
+                      </div>
+                      <div className="surface rounded">
+                        <div className="text-center text-sm text-ui-100 p-2 font-bold border-b border-ui-700">
+                          Match 7
+                        </div>
+                        <table className="table table-compact w-full text-sm leading-tight">
+                          <tbody>
+                            <tr>
+                              <td className="text-left"><span className="font-bold px-4 text-ui-100">43</span><span className="text-ui-300">Kills</span></td>
+                            </tr>
+                            <tr>
+                              <td className="text-left"><span className="font-bold px-4 text-ui-100">3</span><span className="text-ui-300">Tiebreaker 1</span></td>
+                            </tr>
+                            <tr>
+                              <td className="text-left"><span className="font-bold px-4 text-ui-100">3</span><span className="text-ui-300">Tiebreaker 2</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div className="surface rounded">
+                        <div className="text-center text-sm text-ui-100 p-2 font-bold border-b border-ui-700">
+                          Match 2
+                        </div>
+                        <table className="table table-compact w-full text-sm leading-tight">
+                        <tbody>
+                            <tr>
+                              <td className="text-left"><span className="font-bold px-4 text-ui-100">33</span><span className="text-ui-300">Kills</span></td>
+                            </tr>
+                            <tr>
+                              <td className="text-left"><span className="font-bold px-4 text-ui-100">3</span><span className="text-ui-300">Tiebreaker 1</span></td>
+                            </tr>
+                            <tr>
+                              <td className="text-left"><span className="font-bold px-4 text-ui-100">3</span><span className="text-ui-300">Tiebreaker 2</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div className="surface rounded">
+                        <div className="text-center text-sm text-ui-100 p-2 font-bold border-b border-ui-700">
+                          Match 1
+                        </div>
+                        <table className="table table-compact w-full text-sm leading-tight">
+                          <tbody>
+                            <tr>
+                              <td className="text-left"><span className="font-bold px-4 text-ui-100">21</span><span className="text-ui-300">Kills</span></td>
+                            </tr>
+                            <tr>
+                              <td className="text-left"><span className="font-bold px-4 text-ui-100">3</span><span className="text-ui-300">Tiebreaker 1</span></td>
+                            </tr>
+                            <tr>
+                              <td className="text-left"><span className="font-bold px-4 text-ui-100">3</span><span className="text-ui-300">Tiebreaker 2</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <button
+                      type="button"
+                      className="button button-ghost is-active mx-auto"
+                    >
+                      <span>My position</span>
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <div className="relative flex flex-col items-center">
+                  <img
+                    className="absolute z-10 -top-4 left-auto right-auto"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1666949979/Marketing/2022_prototype/3Dobjects/3dobject-megaphone.png"
+                    width="136"
+                    height="auto"
+                    alt=""
+                  />
+                  <div className="mb-4 surface surface-dimmed surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
+                    <h2 className="h4 mb-2">Compete in this Brawl</h2>
+                    <div className="uppercase font-bold text-ui-100">
+                      Play at least <span className="text-blue-300">3 matches</span>
+                    </div>
+                    <p className="text-ui-300 my-4">
+                      The total of your Brawl points from your X best matches
+                      will decide your place on a leaderboard.
+                    </p>
+                    <p className="text-ui-300 max-w-[30ch] mx-auto">
+                      You can play as many matches as you like to improve your
+                      Brawl points.
+                    </p>
                   </div>
                 </div>
-                <div className="flex items-center justify-around gap-4 text-center leading-none">
-                  <div>
-                    <div className="text-3xl font-headings font-bold text-blue-300 mb-2">
-                      125
-                    </div>
-                    <div className="text-sm uppercase">
-                      Total Brawl
-                      <br />
-                      points
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-headings font-bold text-blue-300 mb-2">
-                      #5
-                    </div>
-                    <div className="text-sm uppercase">
-                      Current Brawl
-                      <br />
-                      position
-                    </div>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="text-sm uppercase text-blue-300 text-center">The 3 best matches</div>
-                  <div className="surface surface-ui-700 rounded">
-                    <div className="text-center text-sm text-ui-100 p-2 font-bold border-b border-ui-600">
-                      Match 7
-                    </div>
-                    <table className="table table-compact w-full text-sm leading-tight">
-                        <tbody>
-                          <tr>
-                            <td className="text-left">43</td>
-                            <td className="text-right">Kills</td>
-                          </tr>
-                          <tr className="bg-ui-600">
-                            <td className="text-left">3</td>
-                            <td className="text-right">Tiebreaker 1</td>
-                          </tr>
-                          <tr>
-                            <td className="text-left">2</td>
-                            <td className="text-right">Tiebreaker 2</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                  </div>
-                  <div className="surface surface-ui-700 rounded">
-                    <div className="text-center text-sm text-ui-100 p-2 font-bold border-b border-ui-600">
-                      Match 2
-                    </div>
-                    <table className="table table-compact w-full text-sm leading-tight">
-                        <tbody>
-                          <tr>
-                            <td className="text-left">33</td>
-                            <td className="text-right">Kills</td>
-                          </tr>
-                          <tr className="bg-ui-600">
-                            <td className="text-left">3</td>
-                            <td className="text-right">Tiebreaker 1</td>
-                          </tr>
-                          <tr>
-                            <td className="text-left">2</td>
-                            <td className="text-right">Tiebreaker 2</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                  </div>
-                  <div className="surface surface-ui-700 rounded">
-                    <div className="text-center text-sm text-ui-100 p-2 font-bold border-b border-ui-600">
-                      Match 1
-                    </div>
-                    <table className="table table-compact w-full text-sm leading-tight">
-                        <tbody>
-                          <tr>
-                            <td className="text-left">21</td>
-                            <td className="text-right">Kills</td>
-                          </tr>
-                          <tr className="bg-ui-600">
-                            <td className="text-left">3</td>
-                            <td className="text-right">Tiebreaker 1</td>
-                          </tr>
-                          <tr>
-                            <td className="text-left">2</td>
-                            <td className="text-right">Tiebreaker 2</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                  </div>
-                </div>
-              </div>
-              <div className="flex justify-center">
-                <button type="button" className="button button-ghost is-active mx-auto"><span>My position</span></button>
-              </div>
+              )}
               {/*
               <div className="surface surface-dimmed rounded-lg p-4 text-center relative my-4 space-y-3">
                 <h3 className="text-2xl">
@@ -282,7 +308,7 @@ export default function TabBrawlsSoloLeaderboards() {
                     </h3>
                     <p className="max-w-[45ch] text-ui-400 mx-auto">
                       The top position is currently all yours for taking if your
-                      skill is on this level ;)
+                      skill is on this level
                     </p>
                   </div>
                 </div>
@@ -709,7 +735,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                       buttonActivationSimple={true}
                                       header={
                                         <>
-                                          <div className="item">
+                                          <div className="item h-[56px]">
                                             <div className="flex-1">
                                               <Link
                                                 href={`/prototype/profile/${
