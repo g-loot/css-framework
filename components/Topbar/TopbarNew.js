@@ -32,7 +32,7 @@ const notificationsGroups = [
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634597/Marketing/2022_prototype/DummyContent/missions/mission-apexlegends_3.webp",
         time: "1 day",
-        read: false,
+        read: true,
         accepted: true,
       },
       {
@@ -43,14 +43,9 @@ const notificationsGroups = [
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
         time: "2 days",
-        read: false,
+        read: true,
         accepted: false,
       },
-    ],
-  },
-  {
-    name: "Previously",
-    notifications: [
       {
         type: "clan",
         intro: "Clan",
@@ -60,7 +55,7 @@ const notificationsGroups = [
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
         time: "4 days",
         read: true,
-        accepted: false,
+        accepted: undefined,
       },
       {
         type: "clan",
@@ -398,9 +393,9 @@ export default function TopbarNew() {
                 >
                   <div className="flex items-center justify-between p-2">
                     <div className="form-group form-select">
-                      <select id="favorite-game">
-                        <option disabled selected>
-                          Show all types
+                      <select id="favorite-game" className="input-sm">
+                        <option selected>
+                          Show all categories
                         </option>
                         <option>Clans</option>
                         <option>Brawls</option>
@@ -422,9 +417,11 @@ export default function TopbarNew() {
                       (notificationGroup, notificationGroupIndex) => (
                         <>
                           <div key={notificationGroupIndex}>
-                            <h5 className="px-2 font-body uppercase text-ui-300 text-sm font-normal not-italic mb-2">
-                              {notificationGroup.name}
-                            </h5>
+                            {notificationsGroups.length > 1 && (
+                              <h5 className="px-2 font-body uppercase text-ui-300 text-sm font-normal not-italic mb-2">
+                                {notificationGroup.name}
+                              </h5>
+                            )}
                             <ul className="items-spaced space-y-2">
                               {notificationGroup.notifications?.map(
                                 (notification, notificationIndex) => (
@@ -433,11 +430,11 @@ export default function TopbarNew() {
                                     href={`/prototype/wallet${prototype.getURLparams()}`}
                                   >
                                     <li
-                                      className={`rounded-lg relative surface surface-ui-600 shadow-md ${
-                                        notification.read ? "opacity-25" : ""
+                                      className={`rounded-lg relative surface  shadow-md ${
+                                        notification.read ? 'surface-ui-700 opacity-75' : 'surface-ui-600'
                                       }`}
                                     >
-                                      <i className={`absolute top-2 right-2 badge ${notification.read || notification.accepted != undefined ? 'bg-ui-400' : 'bg-error-300'}`} />
+                                      <i className={`absolute top-2 right-2 badge ${notification.read ? 'bg-ui-400' : 'bg-error-300'}`} />
                                       <div className="flex items-center justify-between p-2 pr-6 gap-2">
                                         <div className="rounded w-7 h-7 bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
                                           {notification.type === "clan" && (
