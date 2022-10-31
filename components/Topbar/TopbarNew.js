@@ -11,10 +11,10 @@ import { useRouter } from "next/router";
 
 const notificationsGroups = [
   {
-    name: "Today",
+    name: "New",
     notifications: [
       {
-        game: "valorant",
+        type: "clan",
         intro: "Clan",
         title: "Clan invite",
         text: "<a href='#' class='link font-bold'>augieaugie</a> has invited you to join his clan <a href='#' class='link font-bold'>[CHA] We are the Champions</a>.",
@@ -22,10 +22,10 @@ const notificationsGroups = [
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
         time: "2 min.",
         read: false,
-        accepted: false,
+        accepted: undefined,
       },
       {
-        game: "pubg",
+        type: "clan",
         intro: "Clan",
         title: "Clan invite",
         text: "<a href='#' class='link font-bold'>augieaugie</a> has invited you to join his clan <a href='#' class='link font-bold'>[CHA] We are the Champions</a>.",
@@ -36,13 +36,40 @@ const notificationsGroups = [
         accepted: true,
       },
       {
-        game: "valorant",
+        type: "clan",
         intro: "Clan",
         title: "Clan invite",
         text: "<a href='#' class='link font-bold'>friendlyfire</a> has invited you to join his clan <a href='#' class='link font-bold'>[MAL] Maltese falcons</a>.",
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
         time: "2 days",
+        read: false,
+        accepted: false,
+      },
+    ],
+  },
+  {
+    name: "Previously",
+    notifications: [
+      {
+        type: "clan",
+        intro: "Clan",
+        title: "Clan invite",
+        text: "<a href='#' class='link font-bold'>augieaugie</a> has invited you to join his clan <a href='#' class='link font-bold'>[CHA] We are the Champions</a>.",
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
+        time: "4 days",
+        read: true,
+        accepted: false,
+      },
+      {
+        type: "clan",
+        intro: "Clan",
+        title: "Clan invite",
+        text: "<a href='#' class='link font-bold'>augieaugie</a> has invited you to join his clan <a href='#' class='link font-bold'>[CHA] We are the Champions</a>.",
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1657634597/Marketing/2022_prototype/DummyContent/missions/mission-apexlegends_3.webp",
+        time: "5 days",
         read: true,
         accepted: true,
       },
@@ -73,9 +100,7 @@ export default function TopbarNew() {
     <div className="sticky top-0 z-50 bg-ui-800/50 navbar h-12 flex items-center border-b border-ui-700">
       <div className="container relative">
         <div
-          className={`flex lg:gap-8 mx-auto px-2  ${
-            hasAds ? "3xl:m-0" : ""
-          }`}
+          className={`flex lg:gap-8 mx-auto px-2  ${hasAds ? "3xl:m-0" : ""}`}
         >
           <div className="flex-1 flex items-center justify-between">
             <div>
@@ -350,7 +375,7 @@ export default function TopbarNew() {
                   </Tooltip>
                 </div>
               </div>
-              
+
               <div className="dropdown dropdown-end">
                 <div
                   tabIndex="1"
@@ -360,7 +385,7 @@ export default function TopbarNew() {
                     type="button"
                     className="button button-sm button-ghost rounded-full"
                   >
-                    <span data-badge="." className="leading-[0]">
+                    <span data-badge="." className="leading-[0] after:bg-error-300">
                       <span className="icon icon-alarm text-ui-200" />
                     </span>
                   </button>
@@ -371,94 +396,132 @@ export default function TopbarNew() {
                   tabIndex="1"
                   className="dropdown-content bg-ui-700 w-[320px] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
                 >
-                  <div className="flex items-center justify-between mb-2 p-2">
-                    <h4 className="text-2xl ml-2 pt-1">Notifications</h4>
+                  <div className="flex items-center justify-between p-2">
+                    <div className="form-group form-select">
+                      <select id="favorite-game">
+                        <option disabled selected>
+                          Show all types
+                        </option>
+                        <option>Clans</option>
+                        <option>Brawls</option>
+                        <option>Missions</option>
+                        <option>Wallet</option>
+                      </select>
+                    </div>
+
                     <button
                       type="button"
-                      className="button button-sm button-secondary"
+                      className="button button-sm button-ghost"
                     >
-                      <span>Settings</span>
+                      <span className="icon icon-check-double" />
+                      <span>Mark all as read</span>
                     </button>
                   </div>
                   <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 pb-2 space-y-4">
                     {notificationsGroups.map(
                       (notificationGroup, notificationGroupIndex) => (
                         <>
-                        <div key={notificationGroupIndex}>
-                          <h5 className="px-2 text-ui-300 text-sm mb-2 hidden">
-                            {notificationGroup.name}
-                          </h5>
-                          <ul className="items-spaced space-y-2">
-                            {notificationGroup.notifications?.map(
-                              (notification, notificationIndex) => (
-                                <Link
-                                  key={notificationIndex}
-                                  href={`/prototype/wallet${prototype.getURLparams()}`}
-                                >
-                                  <li
-                                    className={`rounded-lg relative surface surface-ui-600 shadow-md ${
-                                      notification.read ? "opacity-25" : ""
-                                    }`}
+                          <div key={notificationGroupIndex}>
+                            <h5 className="px-2 font-body uppercase text-ui-300 text-sm font-normal not-italic mb-2">
+                              {notificationGroup.name}
+                            </h5>
+                            <ul className="items-spaced space-y-2">
+                              {notificationGroup.notifications?.map(
+                                (notification, notificationIndex) => (
+                                  <Link
+                                    key={notificationIndex}
+                                    href={`/prototype/wallet${prototype.getURLparams()}`}
                                   >
-                                    <i className="absolute top-2 right-2 badge bg-error-500" />
-                                    <div className="flex items-center justify-between p-2 pr-6 gap-2">
-                                      <div className="rounded w-7 h-7 bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
-                                        <span className={`icon icon-game-${prototype.getGameBySlug(notification.game).slug}-symbol text-game-${prototype.getGameBySlug(notification.game).slug}`} />
-                                      </div>
-                                      <div className="flex-1 flex items-baseline justify-between">
-                                        <div className="text-ui-300 text-sm">
-                                          {notification.intro}
+                                    <li
+                                      className={`rounded-lg relative surface surface-ui-600 shadow-md ${
+                                        notification.read ? "opacity-25" : ""
+                                      }`}
+                                    >
+                                      <i className={`absolute top-2 right-2 badge ${notification.read || notification.accepted != undefined ? 'bg-ui-400' : 'bg-error-300'}`} />
+                                      <div className="flex items-center justify-between p-2 pr-6 gap-2">
+                                        <div className="rounded w-7 h-7 bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+                                          {notification.type === "clan" && (
+                                            <span className="icon icon-multiple-12 text-ui-300" />
+                                          )}
+                                          {notification.type === "game" && (
+                                            <span
+                                              className={`icon icon-game-${
+                                                prototype.getGameBySlug(
+                                                  notification.game
+                                                ).slug
+                                              }-symbol text-game-${
+                                                prototype.getGameBySlug(
+                                                  notification.game
+                                                ).slug
+                                              }`}
+                                            />
+                                          )}
                                         </div>
-                                        <div className="text-xs text-ui-300">
-                                          {notification.time}
+                                        <div className="flex-1 flex items-baseline justify-between">
+                                          <div className="text-ui-300 text-sm">
+                                            {notification.intro}
+                                          </div>
+                                          <div className="text-xs text-ui-300">
+                                            {notification.time}
+                                          </div>
                                         </div>
                                       </div>
-                                    </div>
-                                    <div className="flex flex-col md:flex-row items-stretch px-2 pb-2 gap-4">
-                                      <div className="flex-1">
-                                        <h3 className="font-body uppercase text-sm font-bold not-italic leading-none mb-2">
-                                          {notification.title}
-                                        </h3>
-                                        <p
-                                          className="text-ui-300 text-sm leading-tight"
-                                          dangerouslySetInnerHTML={{
-                                            __html: notification.text,
-                                          }}
-                                        />
+                                      <div className="flex flex-col md:flex-row items-stretch px-2 pb-2 gap-4">
+                                        <div className="flex-1">
+                                          <h6 className="font-body uppercase text-sm font-bold not-italic leading-none mb-2">
+                                            {notification.title}
+                                          </h6>
+                                          <p
+                                            className="text-ui-300 text-sm leading-tight"
+                                            dangerouslySetInnerHTML={{
+                                              __html: notification.text,
+                                            }}
+                                          />
+                                        </div>
+                                        <div className="w-20 flex flex-row md:flex-col justify-end gap-2 leading-none text-center">
+                                          {notification.accepted === undefined && (
+                                            <>
+                                              <button
+                                                type="button"
+                                                className="button button-secondary button-xs w-full"
+                                              >
+                                                <span>Decline</span>
+                                              </button>
+                                              <button
+                                                type="button"
+                                                className="button button-primary button-xs w-full"
+                                              >
+                                                <span>Accept</span>
+                                              </button>
+                                            </>
+                                          )}
+                                          {notification.accepted === true && (
+                                            <>
+                                              <span className="text-main text-xl icon icon-check" />
+                                              <span className="text-main text-xs mb-1">
+                                                Invitation accepted
+                                              </span>
+                                            </>
+                                          )}
+                                          {notification.accepted === false && (
+                                            <>
+                                              <span className="text-error-300 text-xl icon icon-e-remove" />
+                                              <span className="text-error-300 text-xs mb-1">
+                                                Invitation declined
+                                              </span>
+                                            </>
+                                          )}
+                                        </div>
                                       </div>
-                                      <div className="w-24 flex flex-row md:flex-col justify-end gap-1 leading-none text-center">
-                                        {notification.accepted ? (
-                                          <>
-                                            <span className="text-main text-xl icon icon-check" />
-                                            <span className="text-ui-300 text-sm mb-1">Invitation accepted</span>
-                                          </>
-                                        ) : (
-                                          <>
-                                            <button type="button" className="button button-secondary button-sm w-full">
-                                              <span>No, thanks</span>
-                                            </button>
-                                            <button type="button" className="button button-primary button-sm w-full">
-                                              <span>Join clan</span>
-                                            </button>
-                                          </>
-                                        )}
-                                        
-                                      </div>
-                                    </div>
-                                    <div className="item-body leading-tight">
-                                     
-                                      
-                                    </div>
-                                    <div className="absolute top-2 right-4">
-                                      
-                                    </div>
-                                  </li>
-                                </Link>
-                              )
-                            )}
-                          </ul>
-                        </div>
-                        {/*
+                                      <div className="item-body leading-tight"></div>
+                                      <div className="absolute top-2 right-4"></div>
+                                    </li>
+                                  </Link>
+                                )
+                              )}
+                            </ul>
+                          </div>
+                          {/*
                         <div key={notificationGroupIndex}>
                           <h5 className="px-2 text-ui-300 text-sm mb-2">
                             {notificationGroup.name}
