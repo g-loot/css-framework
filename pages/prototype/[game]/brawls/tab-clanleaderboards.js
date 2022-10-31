@@ -120,128 +120,114 @@ export default function TabBrawlsSoloLeaderboards() {
       >
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           <div className="col-span-1 hidden lg:block">
-            <div className="mb-4 surface surface-dimmed rounded-lg px-2 pb-2 pt-4">
-              <div className="text-center text-sm text-ui-300 mb-4 px-4 leading-tight">
-                Play solo matches to improving the Clans position in the
-                leaderboard.
+            <div className="mb-4 space-y-8 surface surface-dimmed rounded-lg px-2 pb-2 pt-4">
+              <div className="text-center">
+                <div className="text-sm uppercase">The 10 best matches</div>
+                <div className="font-headings font-bold text-2xl italic text-ui-100">
+                  Clan performance
+                </div>
               </div>
-              <Link
-                href={`/prototype/${game}/brawls/${brawl_id}?tab=solo-leaderboard${prototype.getURLparams()}`}
-              >
-                <a className="button button-secondary w-full">
-                  <span className="icon icon-arrow-left" />
-                  <span>Solo leaderboards</span>
-                </a>
-              </Link>
-              <div className="space-y-8 mt-8">
-                <div className="text-center">
-                  <div className="text-sm uppercase">The 10 best matches</div>
-                  <div className="font-headings font-bold text-2xl italic text-ui-100">
-                    Clan performance
+              <div className="flex items-center justify-around gap-4 text-center leading-none">
+                <div>
+                  <div className="text-3xl font-headings font-bold text-blue-300 mb-2">
+                    125
+                  </div>
+                  <div className="text-sm uppercase">
+                    Total Brawl
+                    <br />
+                    points
                   </div>
                 </div>
-                <div className="flex items-center justify-around gap-4 text-center leading-none">
-                  <div>
-                    <div className="text-3xl font-headings font-bold text-blue-300 mb-2">
-                      125
-                    </div>
-                    <div className="text-sm uppercase">
-                      Total Brawl
-                      <br />
-                      points
-                    </div>
+                <div>
+                  <div className="text-3xl font-headings font-bold text-blue-300 mb-2">
+                    #5
                   </div>
-                  <div>
-                    <div className="text-3xl font-headings font-bold text-blue-300 mb-2">
-                      #5
-                    </div>
-                    <div className="text-sm uppercase">
-                      Current Brawl
-                      <br />
-                      position
-                    </div>
+                  <div className="text-sm uppercase">
+                    Current Brawl
+                    <br />
+                    position
                   </div>
                 </div>
-                <div className="surface rounded-lg">
-                  <div className="text-center p-4">
-                    <div className="text-xs uppercase text-ui-300">
-                      Top 10 matches
-                    </div>
+              </div>
+              <div className="surface rounded-lg">
+                <div className="text-center p-4">
+                  <div className="text-xs uppercase text-ui-300">
+                    Top 10 matches
                   </div>
-                  <div className="border-t border-ui-700 max-h-[200px] overflow-y-auto scrollbar-desktop">
-                    <table className="table table-compact w-full">
-                      <tbody>
-                        <tr>
-                          <td>
-                            <div className="text-xs text-ui-300 uppercase">
-                              Player
-                            </div>
-                          </td>
-                          <td>
-                            <div className="text-xs text-ui-300 uppercase text-right">
-                              Points
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <Link href="/prototype/profile/2">
-                              <a className="text-xs text-ui-300 interactive">
-                                {prototype.getUserByID(2).nickname}
-                              </a>
-                            </Link>
-                          </td>
-                          <td>
-                            <div className="text-xs text-right text-ui-100 font-bold">
-                              {numberWithSpaces(2000)}
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <Link href="/prototype/profile/3">
-                              <a className="text-xs text-ui-300 interactive">
-                                {prototype.getUserByID(3).nickname}
-                              </a>
-                            </Link>
-                          </td>
-                          <td>
-                            <div className="text-xs text-right text-ui-100 font-bold">
-                              {numberWithSpaces(2000)}
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <Link href="/prototype/profile/4">
-                              <a className="text-xs text-ui-300 interactive">
-                                {prototype.getUserByID(4).nickname}
-                              </a>
-                            </Link>
-                          </td>
-                          <td>
-                            <div className="text-xs text-right text-ui-100 font-bold">
-                              {numberWithSpaces(2000)}
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <Link href="/prototype/profile/5">
-                              <a className="text-xs text-ui-300 interactive">
-                                {prototype.getUserByID(5).nickname}
-                              </a>
-                            </Link>
-                          </td>
-                          <td>
-                            <div className="text-xs text-right text-ui-100 font-bold">
-                              {numberWithSpaces(2000)}
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                </div>
+                <div className="border-t border-ui-700 max-h-[200px] overflow-y-auto scrollbar-desktop">
+                  <table className="table table-compact w-full">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div className="text-xs text-ui-300 uppercase">
+                            Player
+                          </div>
+                        </td>
+                        <td>
+                          <div className="text-xs text-ui-300 uppercase text-right">
+                            Points
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <Link href="/prototype/profile/2">
+                            <a className="text-xs text-ui-300 interactive">
+                              {prototype.getUserByID(2).nickname}
+                            </a>
+                          </Link>
+                        </td>
+                        <td>
+                          <div className="text-xs text-right text-ui-100 font-bold">
+                            {numberWithSpaces(2000)}
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <Link href="/prototype/profile/3">
+                            <a className="text-xs text-ui-300 interactive">
+                              {prototype.getUserByID(3).nickname}
+                            </a>
+                          </Link>
+                        </td>
+                        <td>
+                          <div className="text-xs text-right text-ui-100 font-bold">
+                            {numberWithSpaces(2000)}
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <Link href="/prototype/profile/4">
+                            <a className="text-xs text-ui-300 interactive">
+                              {prototype.getUserByID(4).nickname}
+                            </a>
+                          </Link>
+                        </td>
+                        <td>
+                          <div className="text-xs text-right text-ui-100 font-bold">
+                            {numberWithSpaces(2000)}
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <Link href="/prototype/profile/5">
+                            <a className="text-xs text-ui-300 interactive">
+                              {prototype.getUserByID(5).nickname}
+                            </a>
+                          </Link>
+                        </td>
+                        <td>
+                          <div className="text-xs text-right text-ui-100 font-bold">
+                            {numberWithSpaces(2000)}
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

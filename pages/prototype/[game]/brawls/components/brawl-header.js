@@ -52,7 +52,7 @@ export default function BrawlHeader() {
               </h1>
             </div>
             <div className="flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap font-headings font-bold italic">
-              <span className="text-ui-300 uppercase">Time Left:</span>
+              <span className="text-ui-300 uppercase">Time Left</span>
               <span className="icon icon-clock text-interaction-300" />
               <Countdown
                 separator={"  "}
@@ -74,7 +74,7 @@ export default function BrawlHeader() {
               <div className="flex items-center gap-1.5">
                 <span className="icon icon-archery-target icon-20 text-ui-200" />
                 <h2 className="text-lg text-ui-200 whitespace-nowrap">
-                  Objective:
+                  Objective
                 </h2>
               </div>
               <div className="pl-6 text-ui-300 text-sm">Kills</div>
@@ -83,7 +83,7 @@ export default function BrawlHeader() {
               <div className="flex items-center gap-1.5">
                 <span className="icon icon-handheld-console-2 icon-20 text-ui-200" />
                 <h2 className="text-lg text-ui-200 whitespace-nowrap">
-                  Game mode:
+                  Game mode
                 </h2>
               </div>
               <div className="pl-6 text-ui-300 text-sm">
@@ -94,7 +94,7 @@ export default function BrawlHeader() {
               <div className="flex items-center gap-1.5">
                 <span className="icon icon-lightning icon-20 text-ui-200" />
                 <h2 className="text-lg text-ui-200 whitespace-nowrap">
-                  Tiebreaker:
+                  Tiebreaker
                 </h2>
               </div>
               <div className="pl-6 text-ui-300 text-sm">

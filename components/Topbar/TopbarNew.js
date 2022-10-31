@@ -14,63 +14,37 @@ const notificationsGroups = [
     name: "Today",
     notifications: [
       {
-        intro: "Tournaments",
-        title: "Party registered",
-        text: "“party name” is a full party and now registered for the tournament, be ready to play!",
+        game: "valorant",
+        intro: "Clan",
+        title: "Clan invite",
+        text: "<a href='#' class='link font-bold'>augieaugie</a> has invited you to join his clan <a href='#' class='link font-bold'>[CHA] We are the Champions</a>.",
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
         time: "2 min.",
         read: false,
+        accepted: false,
       },
       {
-        intro: "Tournaments",
-        title: "Tournament finished",
-        text: "“Tournament name” is finished, go here to see your placement (icon)",
+        game: "pubg",
+        intro: "Clan",
+        title: "Clan invite",
+        text: "<a href='#' class='link font-bold'>augieaugie</a> has invited you to join his clan <a href='#' class='link font-bold'>[CHA] We are the Champions</a>.",
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634597/Marketing/2022_prototype/DummyContent/missions/mission-apexlegends_3.webp",
         time: "1 day",
         read: false,
+        accepted: true,
       },
       {
-        intro: "Tournaments",
-        title: "Tournament canceled",
-        text: "”tournament name” is canceled and will not be played.",
-        image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634597/Marketing/2022_prototype/DummyContent/missions/mission-pubg_3.webp",
-        time: "2 days",
-        read: true,
-      },
-    ],
-  },
-  {
-    name: "2 days ago",
-    notifications: [
-      {
-        intro: "Tournaments",
-        title: "Party registered",
-        text: "“party name” is a full party and now registered for the tournament, be ready to play!",
+        game: "valorant",
+        intro: "Clan",
+        title: "Clan invite",
+        text: "<a href='#' class='link font-bold'>friendlyfire</a> has invited you to join his clan <a href='#' class='link font-bold'>[MAL] Maltese falcons</a>.",
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
-        time: "2 min.",
-        read: false,
-      },
-      {
-        intro: "Tournaments",
-        title: "Tournament finished",
-        text: "“Tournament name” is finished, go here to see your placement (icon)",
-        image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634597/Marketing/2022_prototype/DummyContent/missions/mission-apexlegends_3.webp",
-        time: "1 day",
-        read: false,
-      },
-      {
-        intro: "Tournaments",
-        title: "Tournament canceled",
-        text: "”tournament name” is canceled and will not be played.",
-        image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634597/Marketing/2022_prototype/DummyContent/missions/mission-pubg_3.webp",
         time: "2 days",
         read: true,
+        accepted: true,
       },
     ],
   },
@@ -395,7 +369,7 @@ export default function TopbarNew() {
 
                 <div
                   tabIndex="1"
-                  className="dropdown-content bg-ui-700 w-[320px] sm:w-[420px] overflow-hidden shadow-xl"
+                  className="dropdown-content bg-ui-700 w-[320px] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
                 >
                   <div className="flex items-center justify-between mb-2 p-2">
                     <h4 className="text-2xl ml-2 pt-1">Notifications</h4>
@@ -406,9 +380,85 @@ export default function TopbarNew() {
                       <span>Settings</span>
                     </button>
                   </div>
-                  <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 space-y-4">
+                  <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 pb-2 space-y-4">
                     {notificationsGroups.map(
                       (notificationGroup, notificationGroupIndex) => (
+                        <>
+                        <div key={notificationGroupIndex}>
+                          <h5 className="px-2 text-ui-300 text-sm mb-2 hidden">
+                            {notificationGroup.name}
+                          </h5>
+                          <ul className="items-spaced space-y-2">
+                            {notificationGroup.notifications?.map(
+                              (notification, notificationIndex) => (
+                                <Link
+                                  key={notificationIndex}
+                                  href={`/prototype/wallet${prototype.getURLparams()}`}
+                                >
+                                  <li
+                                    className={`rounded-lg relative surface surface-ui-600 shadow-md ${
+                                      notification.read ? "opacity-25" : ""
+                                    }`}
+                                  >
+                                    <i className="absolute top-2 right-2 badge bg-error-500" />
+                                    <div className="flex items-center justify-between p-2 pr-6 gap-2">
+                                      <div className="rounded w-7 h-7 bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+                                        <span className={`icon icon-game-${prototype.getGameBySlug(notification.game).slug}-symbol text-game-${prototype.getGameBySlug(notification.game).slug}`} />
+                                      </div>
+                                      <div className="flex-1 flex items-baseline justify-between">
+                                        <div className="text-ui-300 text-sm">
+                                          {notification.intro}
+                                        </div>
+                                        <div className="text-xs text-ui-300">
+                                          {notification.time}
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="flex flex-col md:flex-row items-stretch px-2 pb-2 gap-4">
+                                      <div className="flex-1">
+                                        <h3 className="font-body uppercase text-sm font-bold not-italic leading-none mb-2">
+                                          {notification.title}
+                                        </h3>
+                                        <p
+                                          className="text-ui-300 text-sm leading-tight"
+                                          dangerouslySetInnerHTML={{
+                                            __html: notification.text,
+                                          }}
+                                        />
+                                      </div>
+                                      <div className="w-24 flex flex-row md:flex-col justify-end gap-1 leading-none text-center">
+                                        {notification.accepted ? (
+                                          <>
+                                            <span className="text-main text-xl icon icon-check" />
+                                            <span className="text-ui-300 text-sm mb-1">Invitation accepted</span>
+                                          </>
+                                        ) : (
+                                          <>
+                                            <button type="button" className="button button-secondary button-sm w-full">
+                                              <span>No, thanks</span>
+                                            </button>
+                                            <button type="button" className="button button-primary button-sm w-full">
+                                              <span>Join clan</span>
+                                            </button>
+                                          </>
+                                        )}
+                                        
+                                      </div>
+                                    </div>
+                                    <div className="item-body leading-tight">
+                                     
+                                      
+                                    </div>
+                                    <div className="absolute top-2 right-4">
+                                      
+                                    </div>
+                                  </li>
+                                </Link>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                        {/*
                         <div key={notificationGroupIndex}>
                           <h5 className="px-2 text-ui-300 text-sm mb-2">
                             {notificationGroup.name}
@@ -457,6 +507,8 @@ export default function TopbarNew() {
                             )}
                           </ul>
                         </div>
+                        */}
+                        </>
                       )
                     )}
                   </div>
