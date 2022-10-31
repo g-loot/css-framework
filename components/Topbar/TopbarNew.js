@@ -434,7 +434,10 @@ export default function TopbarNew() {
                                         notification.read ? 'surface-ui-700 opacity-75' : 'surface-ui-600'
                                       }`}
                                     >
-                                      <i className={`absolute top-2 right-2 badge ${notification.read ? 'bg-ui-400' : 'bg-error-300'}`} />
+                                      {!notification.read && (
+                                        <i className={`absolute top-2 right-2 badge bg-error-300`} />
+                                      )}
+                                      
                                       <div className="flex items-center justify-between p-2 pr-6 gap-2">
                                         <div className="rounded w-7 h-7 bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
                                           {notification.type === "clan" && (
