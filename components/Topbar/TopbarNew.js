@@ -380,11 +380,10 @@ export default function TopbarNew() {
                     type="button"
                     className="button button-sm button-ghost rounded-full"
                   >
-                    <span data-badge="." className="leading-[0] after:bg-error-300">
+                    <span data-badge="23" className="leading-[0] after:absolute after:-right-3 after:top-1 after:bg-error-300">
                       <span className="icon icon-alarm text-ui-200" />
                     </span>
                   </button>
-                  <span className="icon icon-arrow-sm-down mr-2" />
                 </div>
 
                 <div
