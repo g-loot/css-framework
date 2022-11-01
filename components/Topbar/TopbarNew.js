@@ -478,18 +478,18 @@ export default function TopbarNew() {
                                             }}
                                           />
                                         </div>
-                                        <div className="w-20 flex flex-row md:flex-col justify-end gap-2 leading-none text-center">
+                                        <div className="md:w-20 flex flex-row md:flex-col md:justify-end gap-2 leading-none text-center">
                                           {notification.accepted === undefined && (
                                             <>
                                               <button
                                                 type="button"
-                                                className="button button-secondary button-xs w-full"
+                                                className="button button-secondary button-xs md:w-full"
                                               >
                                                 <span>Decline</span>
                                               </button>
                                               <button
                                                 type="button"
-                                                className="button button-primary button-xs w-full"
+                                                className="button button-primary button-xs md:w-full"
                                               >
                                                 <span>Accept</span>
                                               </button>

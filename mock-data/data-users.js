@@ -62,7 +62,7 @@ export const dataUsers = [
     lang: "ENG",
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
     email: "kes@gmail.com",
-    clan: 1,
+    clan: null,
     socials: {
       riotNickname: "KeesDief",
       riotHashtag: 8953,

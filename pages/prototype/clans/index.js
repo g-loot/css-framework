@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from "react";
 
 import Ad from "../../../components/Ad/Ad";
 import Link from "next/link";
-import ModalClanCreate from './modal-clan-create';
+import ModalClanCreate from "./modal-clan-create";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
@@ -19,67 +19,59 @@ export default function Clan() {
     uiContext.openModal(<ModalClanCreate></ModalClanCreate>);
   }
 
-  useEffect(()=> {
-    if(modalCreate) {
+  useEffect(() => {
+    if (modalCreate) {
       openModalClanCreate();
     }
   }, [modalCreate]);
-  
+
   return (
     <>
       <PrototypeStructure title="Clans">
         <Ad width="1005" height="300" />
         <section className="mb-8">
-        <div className="header surface sm:rounded-lg">
-                  <div className="header-content">
-                    <div className="header-body">
-                      <h2 className="text-3xl sm:text-4xl">
-                        Be stronger with Clans!
-                      </h2>
-                      <ul className="leading-relaxed text-ui-300 mt-4 list-disc ml-4">
-                        <li>
-                          Work together in Clan Brawls to earn{" "}
-                          <span className="text-ui-100 font-bold">
-                            extra Coins
-                          </span>
-                          .
-                        </li>
-                        <li>
-                          <span className="text-ui-100 font-bold">Compete</span>{" "}
-                          in epic Showdowns with your clanmates for big rewards.
-                        </li>
-                        <li>
-                          Fight to take your Clan to the top of the leaderboard
-                          or just{" "}
-                          <span className="text-ui-100 font-bold">
-                            play for fun
-                          </span>
-                          .
-                        </li>
-                        <li>
-                          Find the perfect Clan for your playstyle and make{" "}
-                          <span className="text-ui-100 font-bold">
-                            new friends
-                          </span>
-                          .
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="header-bg">
-                    <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clans_bg.webp"
-                      alt=""
-                    />
-                  </div>
-                </div>
-          
+          <div className="header surface sm:rounded-lg">
+            <div className="header-content">
+              <div className="header-body">
+                <h2 className="text-3xl sm:text-4xl">
+                  Be stronger with Clans!
+                </h2>
+                <ul className="leading-relaxed text-ui-300 mt-4 list-disc ml-4">
+                  <li>
+                    Work together in Clan Brawls to earn{" "}
+                    <span className="text-ui-100 font-bold">extra Coins</span>.
+                  </li>
+                  <li>
+                    <span className="text-ui-100 font-bold">Compete</span> in
+                    epic Showdowns with your clanmates for big rewards.
+                  </li>
+                  <li>
+                    Fight to take your Clan to the top of the leaderboard or
+                    just{" "}
+                    <span className="text-ui-100 font-bold">play for fun</span>.
+                  </li>
+                  <li>
+                    Find the perfect Clan for your playstyle and make{" "}
+                    <span className="text-ui-100 font-bold">new friends</span>.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="header-bg">
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clans_bg.webp"
+                alt=""
+              />
+            </div>
+          </div>
         </section>
         <section
           className="mb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(2 * 0.05s)" }}
         >
-          <h2 className="px-4 md:px-0 py-2 text-2xl font-normal text-ui-300">Clans you might like to join:</h2>
+          <h2 className="px-4 md:px-0 py-2 text-2xl font-normal text-ui-300">
+            Clans you might like to join:
+          </h2>
           <div className="overflow-x-auto lg:overflow-x-hidden scrollbar-hidden">
             <div className="flex lg:grid gap-4 grid-cols-2 px-4 md:px-0">
               {prototype.clans.map((clan, clanIndex) => (
@@ -88,7 +80,9 @@ export default function Clan() {
                     <div className="surface rounded-lg p-4 flex flex-col items-between min-w-sm lg:min-w-xs justify-center">
                       <div className="flex gap-4 items-center">
                         <Link
-                          href={`/prototype/clans/${clan.id}${prototype.getURLparams()}`}
+                          href={`/prototype/clans/${
+                            clan.id
+                          }${prototype.getURLparams()}`}
                         >
                           <div className="flex-1 flex gap-4 items-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
                             <div className="avatar avatar-squircle avatar-md">
@@ -186,13 +180,11 @@ export default function Clan() {
                                       ? "icon-game-apexlegends-symbol text-game-apexlegends"
                                       : ""
                                   } ${
-                                    prototype.getGameByID(game).slug ===
-                                    "csgo"
+                                    prototype.getGameByID(game).slug === "csgo"
                                       ? "icon-game-csgo-symbol text-game-csgo"
                                       : ""
                                   }  ${
-                                    prototype.getGameByID(game).slug ===
-                                    "dota2"
+                                    prototype.getGameByID(game).slug === "dota2"
                                       ? "icon-game-dota2-symbol text-game-dota2"
                                       : ""
                                   }  ${
@@ -206,8 +198,7 @@ export default function Clan() {
                                       ? "icon-game-rocketleague-symbol text-game-rocketleague"
                                       : ""
                                   } ${
-                                    prototype.getGameByID(game).slug ===
-                                    "pubg"
+                                    prototype.getGameByID(game).slug === "pubg"
                                       ? "icon-game-pubg-symbol text-game-pubg"
                                       : ""
                                   }  ${
@@ -229,15 +220,15 @@ export default function Clan() {
             </div>
           </div>
         </section>
-        <section className=" animate-slide-in-bottom animate-delay"
-              style={{ "--delay": "calc(2 * 0.05s)" }}>
+        <section
+          className=" animate-slide-in-bottom animate-delay"
+          style={{ "--delay": "calc(2 * 0.05s)" }}
+        >
           <h2 className="px-4 sm:px-0 py-2 text-2xl font-normal text-ui-300">
             Didn&#39;t find what you were looking for?
           </h2>
           <div className="grid gap-4 md:grid-cols-2">
-            <div
-              className="surface surface-dimmed sm:rounded-lg p-4 relative flex items-center gap-4"
-            >
+            <div className="surface surface-dimmed sm:rounded-lg p-4 relative flex items-center gap-4">
               <div className="-rotate-45 pointer-events-none drop-shadow-lg">
                 <img
                   src="https://res.cloudinary.com/gloot/image/upload/v1659430626/Marketing/2022_prototype/Decoration-magnifyingglass.webp"
@@ -256,7 +247,10 @@ export default function Clan() {
                 </div>
                 <div className="mt-4 flex gap-4 items-center">
                   <Link href="/prototype/clans/search">
-                    <button type="button" className="button button-sm button-primary">
+                    <button
+                      type="button"
+                      className="button button-sm button-primary"
+                    >
                       <span>Browse clans</span>
                     </button>
                   </Link>
@@ -286,7 +280,8 @@ export default function Clan() {
                 <div className="mt-4 flex gap-4 items-center">
                   <button
                     type="button"
-                    className="button button-sm button-primary whitespace-nowrap" onClick={openModalClanCreate}
+                    className="button button-sm button-primary whitespace-nowrap"
+                    onClick={openModalClanCreate}
                   >
                     <span>Create clan</span>
                   </button>

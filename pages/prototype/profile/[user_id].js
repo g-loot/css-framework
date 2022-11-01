@@ -28,7 +28,7 @@ export default function Home() {
 
         {selectedUser && (
           <>
-            <section className="mb-8">
+            <section className="mb-4">
               <div className="header surface sm:rounded-lg">
                 <div className="header-content">
                   <div className="header-body">
@@ -40,9 +40,15 @@ export default function Home() {
                       </div>
                       <div className="flex-1">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                          <h1 className="text-3xl sm:text-4xl">
-                            {selectedUser.nickname}
-                          </h1>
+                          <div className="flex items-baseline gap-1">
+                            <h1 className="text-3xl sm:text-4xl">
+                              {selectedUser.nickname}
+                            </h1>
+                            <img
+                              src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
+                              className="aspect-video rounded-sm max-w-[1.5rem]"
+                            />
+                          </div>
                           <div className="block lg:hidden">
                             {selectedUser.isYou && (
                               <Link href="settings">
@@ -55,7 +61,7 @@ export default function Home() {
                                 </a>
                               </Link>
                             )}
-                            {!selectedUser.isYou && (
+                            {!selectedUser.isYou && !selectedUser.clan && (
                               <Link href="#">
                                 <a
                                   type="button"
@@ -67,6 +73,7 @@ export default function Home() {
                             )}
                           </div>
                         </div>
+                        {/*
                         <div className="flex items-center gap-2">
                           <div className="w-6 flex justify-center">
                             <img
@@ -78,17 +85,33 @@ export default function Home() {
                             {selectedUser.country}
                           </span>
                         </div>
-                        <a
-                          href="#"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="transition-colors duration-75 text-ui-300 hover:text-main flex items-center gap-2"
-                        >
-                          <div className="w-6 flex justify-center">
-                            <span className="icon icon-20 icon-twitch" />
-                          </div>
-                          <span>{selectedUser.socials.twitch}</span>
-                        </a>
+                            */}
+                        <div className="flex gap-3 mt-4">
+                          <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="link"
+                          >
+                            <span className="icon text-xl lg:text-2xl text-ui-300 icon-twitch" />
+                          </a>
+                          <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="link"
+                          >
+                            <span className="icon text-xl lg:text-2xl text-ui-300 icon-logo-twitter" />
+                          </a>
+                          <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="link"
+                          >
+                            <span className="icon text-xl lg:text-2xl text-ui-300 icon-discord" />
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -96,24 +119,21 @@ export default function Home() {
                 <div className="hidden lg:block absolute z-20 top-2 right-2">
                   {selectedUser.isYou && (
                     <Link href="settings">
-                      <a
-                        className="button button-sm button-tertiary"
-                      >
+                      <a className="button button-sm button-tertiary">
                         <span className="icon icon-cogwheel" />
                         <span>Profile settings</span>
                       </a>
                     </Link>
                   )}
-                  {!selectedUser.isYou && (
+                  {!selectedUser.isYou && !selectedUser.clan && (
                     <Link href="#">
-                      <a
-                        className="button button-sm button-primary"
-                      >
+                      <a className="button button-sm button-primary">
                         <span>Invite to your clan</span>
                       </a>
                     </Link>
                   )}
                 </div>
+                {/*
                 <div className="header-meta">
                   <div className="flex justify-center gap-4 py-4">
                     <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
@@ -140,18 +160,53 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
-                      <div>
-                        <div className="text-4xl font-headings mb-0.5">
-                          {selectedUser.stats.playedTournaments}
+                  </div>
+                </div>
+                  */}
+                <div className="header-meta justify-end items-center md:items-end">
+                  <div className="flex gap-1 pb-4">
+                    {selectedUser.games?.map((game, gameIndex) => (
+                      <>
+                        <div
+                          key={game}
+                          className="p-2 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center"
+                        >
+                          <span
+                            className={`icon text-2xl ${
+                              prototype.getGameByID(game).slug === "apexlegends"
+                                ? "icon-game-apexlegends-symbol text-game-apexlegends"
+                                : ""
+                            } ${
+                              prototype.getGameByID(game).slug === "csgo"
+                                ? "icon-game-csgo-symbol text-game-csgo"
+                                : ""
+                            }  ${
+                              prototype.getGameByID(game).slug === "dota2"
+                                ? "icon-game-dota2-symbol text-game-dota2"
+                                : ""
+                            }  ${
+                              prototype.getGameByID(game).slug ===
+                              "leagueoflegends"
+                                ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
+                                : ""
+                            }  ${
+                              prototype.getGameByID(game).slug ===
+                              "rocketleague"
+                                ? "icon-game-rocketleague-symbol text-game-rocketleague"
+                                : ""
+                            } ${
+                              prototype.getGameByID(game).slug === "pubg"
+                                ? "icon-game-pubg-symbol text-game-pubg"
+                                : ""
+                            }  ${
+                              prototype.getGameByID(game).slug === "valorant"
+                                ? "icon-game-valorant-symbol text-game-valorant"
+                                : ""
+                            }`}
+                          />
                         </div>
-                        <div className="text-xs text-ui-300 uppercase">
-                          Played
-                          <br />
-                          tournaments
-                        </div>
-                      </div>
-                    </div>
+                      </>
+                    ))}
                   </div>
                 </div>
                 <div className="header-bg">
@@ -160,263 +215,11 @@ export default function Home() {
               </div>
             </section>
             <section
-              className="flex flex-col lg:flex-row gap-8 lg:items-start animate-slide-in-bottom animate-delay"
+              className="flex flex-col lg:flex-row gap-4 lg:items-stretch animate-slide-in-bottom animate-delay mb-4"
               style={{ "--delay": "calc(1 * 0.05s)" }}
             >
-              <div className="flex-1 space-y-4">
-                {!selectedUser.stats.gamestats && (
-                  <div className="surface rounded-lg px-4 py-8 text-center">
-                    <div className="max-w-sm mx-auto">
-                      <span className="icon icon-mission-roundwon text-8xl text-ui-500" />
-                      <div className="mt-2 mb-6">
-                        {selectedUser.isYou && (
-                          <>
-                            <h2 className="text-3xl mb-4">
-                              No stats to brag about
-                            </h2>
-                            <p className=" text-ui-300">
-                              Run the{" "}
-                              <a href="#" className="link link-main">
-                                G-Loot app
-                              </a>{" "}
-                              while you play to track your stat
-                            </p>
-                          </>
-                        )}
-                        {!selectedUser.isYou && (
-                          <>
-                            <h2 className="text-3xl mb-4">
-                              No stats to brag about
-                            </h2>
-                            <p className=" text-ui-300">
-                              {selectedUser.nickname} has no stats to brag
-                              about. Poor him.
-                            </p>
-                          </>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {selectedUser.stats.gamestats && (
-                  <>
-                    {selectedUser.stats.gamestats?.map((stat, statIndex) => (
-                      <div
-                        key={statIndex}
-                        className="surface sm:rounded-lg w-full"
-                      >
-                        <div className="item">
-                          <div className="item-image">
-                            <div
-                              className={`rounded h-12 w-12 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-valorant`}
-                            >
-                              <span
-                                className={`icon text-xl ${
-                                  prototype.getGameByID(stat.game).slug ===
-                                  "apexlegends"
-                                    ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                                    : ""
-                                } ${
-                                  prototype.getGameByID(stat.game).slug ===
-                                  "csgo"
-                                    ? "icon-game-csgo-symbol text-game-csgo"
-                                    : ""
-                                }  ${
-                                  prototype.getGameByID(stat.game).slug ===
-                                  "dota2"
-                                    ? "icon-game-dota2-symbol text-game-dota2"
-                                    : ""
-                                }  ${
-                                  prototype.getGameByID(stat.game).slug ===
-                                  "leagueoflegends"
-                                    ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                                    : ""
-                                }  ${
-                                  prototype.getGameByID(stat.game).slug ===
-                                  "rocketleague"
-                                    ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                                    : ""
-                                } ${
-                                  prototype.getGameByID(stat.game).slug ===
-                                  "pubg"
-                                    ? "icon-game-pubg-symbol text-game-pubg"
-                                    : ""
-                                }  ${
-                                  prototype.getGameByID(stat.game).slug ===
-                                  "valorant"
-                                    ? "icon-game-valorant-symbol text-game-valorant"
-                                    : ""
-                                }`}
-                              />
-                            </div>
-                          </div>
-                          <div className="item-body">
-                            <div className="item-title font-headings font-bold text-xl text-ui-100 uppercase italic">
-                              {prototype.getGameByID(stat.game).name}
-                            </div>
-                          </div>
-                        </div>
-                        <div className="p-4">
-                          <div className="grid grid-cols-2 lg:grid-cols-4">
-                            <div className="text-center border-r border-ui-700/50">
-                              <div
-                                className="animate-slide-in-bottom animate-delay"
-                                style={{ "--delay": "calc(2 * 0.05s)" }}
-                              >
-                                <div className="icon-holder icon-holder-sm mx-auto">
-                                  <span className="icon icon-mission-gamematchbattlewon" />
-                                </div>
-                                <div>
-                                  <div className="leading-none text-xs text-ui-300 uppercase">
-                                    WIN RATE
-                                  </div>
-                                  <div className="text-3xl font-headings">
-                                    {stat.winrate}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="text-center border-r border-ui-700/50">
-                              <div
-                                className="animate-slide-in-bottom animate-delay"
-                                style={{ "--delay": "calc(3 * 0.05s)" }}
-                              >
-                                <div className="icon-holder icon-holder-sm mx-auto">
-                                  <span className="icon icon-mission-kill" />
-                                </div>
-                                <div>
-                                  <div className="leading-none text-xs text-ui-300 uppercase">
-                                    K/D ratio
-                                  </div>
-                                  <div className="text-3xl font-headings">
-                                    {stat.kdratio}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="text-center border-r border-ui-700/50">
-                              <div
-                                className="animate-slide-in-bottom animate-delay"
-                                style={{ "--delay": "calc(4 * 0.05s)" }}
-                              >
-                                <div className="icon-holder icon-holder-sm mx-auto">
-                                  <span className="icon icon-mission-headshot" />
-                                </div>
-                                <div>
-                                  <div className="leading-none text-xs text-ui-300 uppercase">
-                                    Headshots kill avg
-                                  </div>
-                                  <div className="text-3xl font-headings">
-                                    {stat.headshotkillsavg}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div className="text-center">
-                              <div
-                                className="animate-slide-in-bottom animate-delay"
-                                style={{ "--delay": "calc(5 * 0.05s)" }}
-                              >
-                                <div className="icon-holder icon-holder-sm mx-auto">
-                                  <span className="icon icon-mission-assist" />
-                                </div>
-                                <div>
-                                  <div className="leading-none text-xs text-ui-300 uppercase">
-                                    Assist avg
-                                  </div>
-                                  <div className="text-3xl font-headings">
-                                    {stat.assistavg}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="border-t border-ui-700">
-                          <div className="accordion rounded-none">
-                            <Accordion
-                              header={
-                                <>
-                                  <div className="item">
-                                    <div className="item-body">
-                                      <div className="p-2 item-title font-headings font-bold text-lg italic">
-                                        All stats (total)
-                                      </div>
-                                    </div>
-                                    <div className="item-actions">
-                                      <div>
-                                        <span className="icon icon-24 icon-arrow-sm-down" />
-                                      </div>
-                                    </div>
-                                  </div>
-                                </>
-                              }
-                            >
-                              <div className="grid grid-cols-3 lg:grid-cols-4 items-center gap-2 text-center p-2">
-                                <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                  <div className="leading-none text-xs text-ui-300 uppercase">
-                                    Assists
-                                  </div>
-                                  <div className="text-3xl font-headings">
-                                    151
-                                  </div>
-                                </div>
-                                <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                  <div className="leading-none text-xs text-ui-300 uppercase">
-                                    Kills
-                                  </div>
-                                  <div className="text-3xl font-headings">
-                                    405
-                                  </div>
-                                </div>
-                                <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                  <div className="leading-none text-xs text-ui-300 uppercase">
-                                    Deaths
-                                  </div>
-                                  <div className="text-3xl font-headings">
-                                    570
-                                  </div>
-                                </div>
-                                <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                  <div className="leading-none text-xs text-ui-300 uppercase">
-                                    Headshot kills
-                                  </div>
-                                  <div className="text-3xl font-headings">
-                                    144
-                                  </div>
-                                </div>
-                                <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                  <div className="leading-none text-xs text-ui-300 uppercase">
-                                    Wins
-                                  </div>
-                                  <div className="text-3xl font-headings">
-                                    35
-                                  </div>
-                                </div>
-                                <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                  <div className="leading-none text-xs text-ui-300 uppercase">
-                                    Losses
-                                  </div>
-                                  <div className="text-3xl font-headings">
-                                    24
-                                  </div>
-                                </div>
-                                <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                  <div className="leading-none text-xs text-ui-300 uppercase">
-                                    Draws
-                                  </div>
-                                  <div className="text-3xl font-headings">
-                                    1
-                                  </div>
-                                </div>
-                              </div>
-                            </Accordion>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </>
-                )}
+              <div className="flex-1 space-y-4 surface sm:rounded-lg">
+                qsdqsd
               </div>
 
               <div className="lg:w-1/3 xl:w-1/4 space-y-4">
@@ -455,7 +258,9 @@ export default function Home() {
                           Proud member of
                         </div>
                         <Link
-                          href={`/prototype/clans/${selectedUser.clan}${prototype.getURLparams()}`}
+                          href={`/prototype/clans/${
+                            selectedUser.clan
+                          }${prototype.getURLparams()}`}
                         >
                           <div className="rounded surface surface-ui-700 p-2 flex items-center gap-2 interactive">
                             <div className="avatar avatar-sm avatar-squircle">
@@ -511,7 +316,7 @@ export default function Home() {
                       </span>
                     </div>
                   </div>
-                  <div className="max-h-60 overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto scrollbar-desktop">
+                  <div className="max-h-80 overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto scrollbar-desktop">
                     <ul className="space-x-2 lg:space-x-0 lg:space-y-2 p-2 flex lg:block">
                       {prototype.games.map((game, gameIndex) => (
                         <>
@@ -528,6 +333,7 @@ export default function Home() {
                   </div>
                 </div>
 
+                {/*
                 <div className="surface sm:rounded-lg">
                   <div className="p-2 border-b border-ui-700 flex justify-between items-start">
                     <div>
@@ -552,7 +358,255 @@ export default function Home() {
                     </ul>
                   </div>
                 </div>
+                            */}
               </div>
+            </section>
+            <section className="space-y-4">
+              {!selectedUser.stats.gamestats && (
+                <div className="surface rounded-lg px-4 py-8 text-center">
+                  <div className="max-w-sm mx-auto">
+                    <span className="icon icon-mission-roundwon text-8xl text-ui-500" />
+                    <div className="mt-2 mb-6">
+                      {selectedUser.isYou && (
+                        <>
+                          <h2 className="text-3xl mb-4">
+                            No stats to brag about
+                          </h2>
+                          <p className=" text-ui-300">
+                            Run the{" "}
+                            <a href="#" className="link link-main">
+                              G-Loot app
+                            </a>{" "}
+                            while you play to track your stat
+                          </p>
+                        </>
+                      )}
+                      {!selectedUser.isYou && (
+                        <>
+                          <h2 className="text-3xl mb-4">
+                            No stats to brag about
+                          </h2>
+                          <p className=" text-ui-300">
+                            {selectedUser.nickname} has no stats to brag about.
+                            Poor him.
+                          </p>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+              {selectedUser.stats.gamestats && (
+                <>
+                  {selectedUser.stats.gamestats?.map((stat, statIndex) => (
+                    <div
+                      key={statIndex}
+                      className="surface sm:rounded-lg w-full"
+                    >
+                      <div className="item">
+                        <div className="item-image">
+                          <div
+                            className={`rounded h-12 w-12 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-valorant`}
+                          >
+                            <span
+                              className={`icon text-xl ${
+                                prototype.getGameByID(stat.game).slug ===
+                                "apexlegends"
+                                  ? "icon-game-apexlegends-symbol text-game-apexlegends"
+                                  : ""
+                              } ${
+                                prototype.getGameByID(stat.game).slug === "csgo"
+                                  ? "icon-game-csgo-symbol text-game-csgo"
+                                  : ""
+                              }  ${
+                                prototype.getGameByID(stat.game).slug ===
+                                "dota2"
+                                  ? "icon-game-dota2-symbol text-game-dota2"
+                                  : ""
+                              }  ${
+                                prototype.getGameByID(stat.game).slug ===
+                                "leagueoflegends"
+                                  ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
+                                  : ""
+                              }  ${
+                                prototype.getGameByID(stat.game).slug ===
+                                "rocketleague"
+                                  ? "icon-game-rocketleague-symbol text-game-rocketleague"
+                                  : ""
+                              } ${
+                                prototype.getGameByID(stat.game).slug === "pubg"
+                                  ? "icon-game-pubg-symbol text-game-pubg"
+                                  : ""
+                              }  ${
+                                prototype.getGameByID(stat.game).slug ===
+                                "valorant"
+                                  ? "icon-game-valorant-symbol text-game-valorant"
+                                  : ""
+                              }`}
+                            />
+                          </div>
+                        </div>
+                        <div className="item-body">
+                          <div className="item-title font-headings font-bold text-xl text-ui-100 uppercase italic">
+                            {prototype.getGameByID(stat.game).name}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <div className="grid grid-cols-2 lg:grid-cols-4">
+                          <div className="text-center border-r border-ui-700/50">
+                            <div
+                              className="animate-slide-in-bottom animate-delay"
+                              style={{ "--delay": "calc(2 * 0.05s)" }}
+                            >
+                              <div className="icon-holder icon-holder-sm mx-auto">
+                                <span className="icon icon-mission-gamematchbattlewon" />
+                              </div>
+                              <div>
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  WIN RATE
+                                </div>
+                                <div className="text-3xl font-headings">
+                                  {stat.winrate}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="text-center border-r border-ui-700/50">
+                            <div
+                              className="animate-slide-in-bottom animate-delay"
+                              style={{ "--delay": "calc(3 * 0.05s)" }}
+                            >
+                              <div className="icon-holder icon-holder-sm mx-auto">
+                                <span className="icon icon-mission-kill" />
+                              </div>
+                              <div>
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  K/D ratio
+                                </div>
+                                <div className="text-3xl font-headings">
+                                  {stat.kdratio}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="text-center border-r border-ui-700/50">
+                            <div
+                              className="animate-slide-in-bottom animate-delay"
+                              style={{ "--delay": "calc(4 * 0.05s)" }}
+                            >
+                              <div className="icon-holder icon-holder-sm mx-auto">
+                                <span className="icon icon-mission-headshot" />
+                              </div>
+                              <div>
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Headshots kill avg
+                                </div>
+                                <div className="text-3xl font-headings">
+                                  {stat.headshotkillsavg}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="text-center">
+                            <div
+                              className="animate-slide-in-bottom animate-delay"
+                              style={{ "--delay": "calc(5 * 0.05s)" }}
+                            >
+                              <div className="icon-holder icon-holder-sm mx-auto">
+                                <span className="icon icon-mission-assist" />
+                              </div>
+                              <div>
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Assist avg
+                                </div>
+                                <div className="text-3xl font-headings">
+                                  {stat.assistavg}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="border-t border-ui-700">
+                        <div className="accordion rounded-none">
+                          <Accordion
+                            header={
+                              <>
+                                <div className="item">
+                                  <div className="item-body">
+                                    <div className="p-2 item-title font-headings font-bold text-lg italic">
+                                      All stats (total)
+                                    </div>
+                                  </div>
+                                  <div className="item-actions">
+                                    <div>
+                                      <span className="icon icon-24 icon-arrow-sm-down" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </>
+                            }
+                          >
+                            <div className="grid grid-cols-3 lg:grid-cols-4 items-center gap-2 text-center p-2">
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Assists
+                                </div>
+                                <div className="text-3xl font-headings">
+                                  151
+                                </div>
+                              </div>
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Kills
+                                </div>
+                                <div className="text-3xl font-headings">
+                                  405
+                                </div>
+                              </div>
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Deaths
+                                </div>
+                                <div className="text-3xl font-headings">
+                                  570
+                                </div>
+                              </div>
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Headshot kills
+                                </div>
+                                <div className="text-3xl font-headings">
+                                  144
+                                </div>
+                              </div>
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Wins
+                                </div>
+                                <div className="text-3xl font-headings">35</div>
+                              </div>
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Losses
+                                </div>
+                                <div className="text-3xl font-headings">24</div>
+                              </div>
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Draws
+                                </div>
+                                <div className="text-3xl font-headings">1</div>
+                              </div>
+                            </div>
+                          </Accordion>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </>
+              )}
             </section>
           </>
         )}

@@ -124,7 +124,6 @@ export default function BrawlPlacementItem(props) {
             {resultsDone && (
               <>
                 <span className="text-3xl animate-slide-in-right animate-delay" style={{ "--delay": "calc(1 * 0.05s)" }}>{props.item?.kills}</span>
-                <span className="text-xl animate-slide-in-right animate-delay" style={{ "--delay": "calc(2 * 0.05s)" }}>kills</span>
               </>
             )}
             {!resultsDone && (

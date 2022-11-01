@@ -390,7 +390,9 @@ export default function Home() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype/clans/${clan_id}?tab=${item.url}${prototype.getURLparams("&")}`}
+                      href={`/prototype/clans/${clan_id}?tab=${
+                        item.url
+                      }${prototype.getURLparams("&")}`}
                     >
                       <a
                         className={`${
@@ -408,7 +410,9 @@ export default function Home() {
             <section className="block xl:hidden py-4">
               {TabsItems.map((item, itemIndex) => {
                 if (item.url === selectedTab) {
-                  return React.createElement(item.component, { key: itemIndex })
+                  return React.createElement(item.component, {
+                    key: itemIndex,
+                  });
                 }
               })}
             </section>
