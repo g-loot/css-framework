@@ -70,11 +70,11 @@ export default function Home() {
                                   {selectedClan.tag}
                                   &#93; {selectedClan.nickname}
                                 </h1>
-                                <div className="block lg:hidden">
+                                <div className="block lg:hidden text-left">
                                   <Link href="settings">
                                     <a
                                       type="button"
-                                      className="button button-sm button-primary"
+                                      className="button button-xs button-primary"
                                     >
                                       <span>Join clan</span>
                                     </a>
@@ -285,12 +285,12 @@ export default function Home() {
                                   </>
                                 )}
                               </div>
-                              <div className="flex md:hidden mt-4">
+                              <div className="flex md:hidden text-left mt-4">
                                 {selectedClan.isYou && (
                                   <Link href="settings">
                                     <a
                                       type="button"
-                                      className="button button-sm button-ghost"
+                                      className="button button-xs button-secondary"
                                     >
                                       <span className="icon icon-cogwheel" />
                                       <span>Clan settings</span>

@@ -626,7 +626,7 @@ export default function TopbarNew() {
                   <ul className="menu menu-rounded menu-secondary">
                     <li>
                       <Link
-                        href={`/prototype/profile/1?newstructure=true${
+                        href={`/prototype/profile/1${
                           hasAds ? "&ads=true" : ""
                         }`}
                       >
@@ -649,7 +649,7 @@ export default function TopbarNew() {
                     <li className="separator"></li>
                     <li>
                       <Link
-                        href={`/prototype/profile/settings?newstructure=true${
+                        href={`/prototype/profile/settings${
                           hasAds ? "&ads=true" : ""
                         }`}
                       >
