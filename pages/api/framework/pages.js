@@ -43,6 +43,15 @@ export const FrameworkPages = {
           tags: "home, start, index, claim, rewards, daily missions, loading, status",
         },
         {
+          label: "Notifications",
+          chip: "empty state",
+          url: "home",
+          query: "empty=true",
+          tab: 1,
+          new: false,
+          tags: "home, start, notifications, empty state, no notifications",
+        },
+        {
           label: "Content card",
           chip: "extra",
           url: "home",

@@ -84,6 +84,13 @@
     }
   }
 }
+[data-badge=""] {
+  &::after {
+    @apply
+    hidden
+    ;
+  }
+}
 .badge {
   @apply
   inline-block
