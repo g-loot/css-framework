@@ -172,6 +172,13 @@ export default function BrawlPlacements() {
                   key={step.step}
                 />
               ))}
+              <div className="ml-4 my-4">
+                <div className="w-44 h-16 flex items-center gap-1 pl-12">
+                  <div className="w-1 h-1 bg-ui-400 animate-pulse" />
+                  <div className="w-1 h-1 bg-ui-400 animate-pulse" />
+                  <div className="w-1 h-1 bg-ui-400 animate-pulse" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -84,7 +84,7 @@ export default function BrawlPlacementItem(props) {
             <div className="absolute z-20 inset-0 p-4 flex items-center justify-center overflow-hidden rounded-lg">
                 <button
                   type="button"
-                  className={`button button-sm button-primary button-currency button-token w-full animate-slide-in-bottom ${shining ? 'is-shining' : ''}`}
+                  className={`button button-sm button-primary button-currency button-token w-full animate-slide-in-bottom ${shining ? 'is-shining' : 'pointer-events-none'}`}
                   onClick={incrementBrawlStep.bind(this, 1)}
                 >
                   <div>
@@ -124,6 +124,7 @@ export default function BrawlPlacementItem(props) {
             {resultsDone && (
               <>
                 <span className="text-3xl animate-slide-in-right animate-delay" style={{ "--delay": "calc(1 * 0.05s)" }}>{props.item?.kills}</span>
+                <span className="text-xl animate-slide-in-right animate-delay" style={{ "--delay": "calc(2 * 0.05s)" }}>pts</span>
               </>
             )}
             {!resultsDone && (
