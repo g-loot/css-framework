@@ -2,60 +2,95 @@ import PrototypeStructure from "../../../components/Prototype/PrototypeStructure
 import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
 
+const HowItWorksTabs = [
+  {
+    id: 1,
+    subtitle: "Missions",
+    title: "Compete & earn XP",
+    slug: "missions",
+    icon: "icon-missions",
+    img: "",
+    content: [
+      {
+        type: "p",
+        text: "In special cases G-Loot, League Operations, and Tournament Operators reserve the right to override. remove, and/or add any rule stated below to guarantee fair play.",
+      },
+    ],
+  },
+  {
+    id: 2,
+    subtitle: "Missions Rewards",
+    title: "Reach milestione & ulock rewards",
+    slug: "missions-rewards",
+    icon: "icon-military-medal",
+    img: "",
+    content: [
+      {
+        type: "p",
+        text: "In special cases G-Loot, League Operations, and Tournament Operators reserve the right to override. remove, and/or add any rule stated below to guarantee fair play.",
+      },
+    ],
+  },
+];
+
 export default function HowItWorks() {
   const router = useRouter();
-  const { data, loading } = useFetch("/api/brawls", { delay: 1000 });
+  const { tab } = router.query;
+  const defaultTab = "missions";
+  const selectedTab = tab ? tab : defaultTab;
 
   return (
     <>
-      <PrototypeStructure title="Premium">
-        <div
-          className="animate-slide-in-bottom animate-delay"
-          style={{ "--delay": "calc(2 * 0.05s)" }}
+      <PrototypeStructure title="How it works">
+        <section
+          className="animate-slide-in-bottom animate-delay mb-4"
+          style={{ "--delay": "calc(0 * 0.05s)" }}
         >
-          <section>
-            <div className="flex flex-col items-center justify-center">
-              <img width="220" height="auto" className="my-12" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
-            </div>
-
-            <div className="text-center px-4 sm:px-0 max-w-[50ch] mx-auto">
-              <h1 className="mb-2 h3">
-                How it works
-              </h1>
-              <div className="text-lg text-gradient bg-gradient-to-b from-main to-blue-300 space-y-2">
-                <p>
-                  G-Loot is an esports platform for PC where you can track your gaming stats, play G-Loot Missions in your favorite games, and compete in competitions and tournaments.
+          <div className="header surface rounded-lg">
+            <div className="header-content">
+              <div className="header-body">
+                <h1 className="text-4xl mb-4 leading-none">How G-Loot works</h1>
+                <p className="text-ui-300 max-w-[70ch] mb-2">
+                  G-Loot is an esports platform for PC where you can track your
+                  gaming stats, play G-Loot Missions in your favorite games, and
+                  compete in competitions and tournaments.
                 </p>
-                <p>
-                Prove to the world (and yourself) that you have got the skills and win cool prizes.
+                <p className="text-ui-300 max-w-[70ch]">
+                  Prove to the world (and yourself) that you have got the skills
+                  and win cool prizes.
                 </p>
               </div>
             </div>
-          </section>
-
-          <section>
-            <div className="flex flex-col md:flex-row items-center justify-between pb-24 md:pb-32">
-              <div className="w-full relative z-10 md:w-8/12 md:-ml-16">
-
-              </div>
-              <div className="relative z-20 md:w-4/12 flex flex-col items-center md:items-start text-center md:text-left">
-                <h2 className="h4 leading-none">
-                  Missions
-                </h2>
-                <div className="text-lg text-ui-300 space-y-2">
-                  <p>
-                    Missions add a little extra challenge to your game by giving you objectives to achieve while you play. These could range from winning a certain number of rounds to getting kills with a particular weapon and are available across all of our supported games.
-                  </p>
-                  <p>
-                    To start competing in Missions, all you need to do is run the G-Loot Tracker while you play. Each time you successfully complete a Mission, you earn XP, which you use to claim Mission Rewards. You can complete a set number of Missions each day, and new ones appear every 24 hours. Keep an eye on the Tracker and gloot.com to see your progress and check out what&#39;s new.
-                  </p>
-                </div>
-
-              </div>
+            <div className="header-bg">
+              <img src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp" />
             </div>
-          </section>
+          </div>
+        </section>
+        <section
+          className="flex flex-col lg:flex-row gap-4 lg:items-stretch animate-slide-in-bottom animate-delay mb-4"
+          style={{ "--delay": "calc(1 * 0.05s)" }}
+        >
+          <div className="lg:w-1/3 xl:w-3/7 space-y-4 flex flex-col">
+            <ul className="items-spaced item-interactive space-y-2">
+              {HowItWorksTabs.map((item, itemIndex) => (
+                <li key={item.id} className={`item ${selectedTab === item.slug ? 'is-active' : ''}`}>
+                  <div className="item-body">
+                    <div className="text-ui-300 text-xs uppercase">{item.subtitle}</div>
+                    <div className="text-ui-100 item-title">{item.title}</div>
+                  </div>
+                  <div className="item-actions">
+                    <div>
+                      <span className={`icon text-3xl ${item.icon}`} />
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex-1">
 
-        </div>
+          </div>
+        </section>
       </PrototypeStructure>
     </>
   );

@@ -218,41 +218,41 @@ export default function Home() {
               className="flex flex-col lg:flex-row gap-4 lg:items-stretch animate-slide-in-bottom animate-delay mb-4"
               style={{ "--delay": "calc(1 * 0.05s)" }}
             >
-              <div className="flex-1 surface surface-halo halo-t sm:rounded-lg py-8 px-4 space-y-8">
-                <div>
+              <div className="flex-1 surface surface-halo halo-b halo-r sm:rounded-lg py-8 px-4 space-y-8">
+                <div className="flex items-center">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1657888942/Marketing/2022_prototype/Logo/samesize-brawl.svg"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1667405873/Marketing/2022_prototype/Logo/samesize-brawl-sm.svg"
                     width="auto"
-                    height="70"
+                    height="auto"
                     alt=""
-                    className="drop-shadow-xl mx-auto"
+                    className="drop-shadow-xl mx-8 h-28 flex-none"
                   />
-                  <div className="flex flex-wrap gap-2 items-stretch justify-center text-center">
-                    <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-3 w-32 flex flex-col items-center justify-end">
+                  <div className="flex-1 flex flex-wrap gap-2 items-stretch justify-center text-center">
+                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         Number of Brawls played
                       </div>
                       <div className="text-3xl font-headings text-ui-100">22</div>
                     </div>
-                    <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-3 w-32 flex flex-col items-center justify-end">
+                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         Times in top 50
                       </div>
                       <div className="text-3xl font-headings text-ui-100">2</div>
                     </div>
-                    <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-3 w-32 flex flex-col items-center justify-end">
+                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         Best placement
                       </div>
                       <div className="text-3xl font-headings text-ui-100">1</div>
                     </div>
-                    <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-3 w-32 flex flex-col items-center justify-end">
+                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         Most matches in a Brawl
                       </div>
                       <div className="text-3xl font-headings text-ui-100">16</div>
                     </div>
-                    <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-3 w-32 flex flex-col items-center justify-end">
+                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         Avg. matches / Brawl
                       </div>
@@ -260,22 +260,23 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div>
+                <hr className="my-8 border-ui-700" />
+                <div className="flex items-center">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1657888942/Marketing/2022_prototype/Logo/samesize-missions.svg"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1667405873/Marketing/2022_prototype/Logo/samesize-missions-sm.svg"
                     width="auto"
-                    height="70"
+                    height="50"
                     alt=""
-                    className="drop-shadow-xl mx-auto"
+                    className="drop-shadow-xl mx-8 h-28 flex-none"
                   />
-                  <div className="flex flex-wrap gap-2 items-stretch justify-center text-center">
-                    <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-3 w-32 flex flex-col items-center justify-end">
+                  <div className="flex-1 flex flex-wrap gap-2 items-stretch justify-center text-center">
+                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         No. of missions completed
                       </div>
                       <div className="text-3xl font-headings text-ui-100">143</div>
                     </div>
-                    <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-3 w-32 flex flex-col items-center justify-end">
+                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         Missions / day avg.
                       </div>

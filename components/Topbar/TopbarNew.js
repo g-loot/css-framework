@@ -661,7 +661,7 @@ export default function TopbarNew() {
                     </li>
                     <li>
                       <Link
-                        href={`/prototype/profile/1${
+                        href={`/prototype/how-it-works${
                           hasAds ? "&ads=true" : ""
                         }`}
                       >
