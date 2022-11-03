@@ -1,13 +1,14 @@
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
-const HowItWorksTabs = [
+const TabsItems = [
   {
     id: 1,
     subtitle: "Missions",
     title: "Compete & earn XP",
-    slug: "missions",
+    url: "missions",
     icon: "icon-missions",
     img: "",
     content: [
@@ -20,8 +21,8 @@ const HowItWorksTabs = [
   {
     id: 2,
     subtitle: "Missions Rewards",
-    title: "Reach milestione & ulock rewards",
-    slug: "missions-rewards",
+    title: "Reach milestione & unlock rewards",
+    url: "missions-rewards",
     icon: "icon-military-medal",
     img: "",
     content: [
@@ -72,23 +73,71 @@ export default function HowItWorks() {
         >
           <div className="lg:w-1/3 xl:w-3/7 space-y-4 flex flex-col">
             <ul className="items-spaced item-interactive space-y-2">
-              {HowItWorksTabs.map((item, itemIndex) => (
-                <li key={item.id} className={`item ${selectedTab === item.slug ? 'is-active' : ''}`}>
-                  <div className="item-body">
-                    <div className="text-ui-300 text-xs uppercase">{item.subtitle}</div>
-                    <div className="text-ui-100 item-title">{item.title}</div>
-                  </div>
-                  <div className="item-actions">
-                    <div>
-                      <span className={`icon text-3xl ${item.icon}`} />
+              {TabsItems.map((item, itemIndex) => (
+                <Link href={`?tab=${item.url}`} key={item.id}>
+                  <li
+                    className={`item ${
+                      selectedTab === item.url ? "is-active" : ""
+                    }`}
+                  >
+                    <div className="item-body">
+                      <div className="text-ui-300 text-xs uppercase">
+                        {item.subtitle}
+                      </div>
+                      <div className="text-ui-100 item-title">{item.title}</div>
                     </div>
-                  </div>
-                </li>
+                    <div className="item-actions">
+                      <div>
+                        <span className={`icon text-3xl ${item.icon}`} />
+                      </div>
+                    </div>
+                  </li>
+                </Link>
               ))}
             </ul>
           </div>
           <div className="flex-1">
+            {TabsItems.map((item, itemIndex) => {
+              if (item.url === selectedTab) {
+                return item.title;
+              }
+            })}
 
+            {TabsItems.map((item, itemIndex) => {
+              if (item.url === selectedTab) {
+                return (
+                  <div key={item.id}>
+                    <h2>{item.title}</h2>
+                    {item.content.map((content, contentIndex) => (
+                      <div key={contentIndex}>
+                        {content.type === "p" && (
+                          <p
+                            dangerouslySetInnerHTML={{
+                              __html: content.text,
+                            }}
+                          />
+                        )}
+                        {content.type === "h3" && (
+                          <h3 className="h5 mb-4">{content.text}</h3>
+                        )}
+                        {content.type === "ul" && (
+                          <ul className=" list-outside pl-8 list-disc space-y-4 ">
+                            {content.text.map((listItem, listItemIndex) => (
+                              <li
+                                key={listItemIndex}
+                                dangerouslySetInnerHTML={{
+                                  __html: listItem,
+                                }}
+                              />
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
+            })}
           </div>
         </section>
       </PrototypeStructure>

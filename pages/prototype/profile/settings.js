@@ -1,11 +1,12 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 
 import Accordion from "../../../components/Accordion/Accordion";
 import Ad from "../../../components/Ad/Ad";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
+import { usePrototypeData } from "../../../contexts/prototype";
 import { UiContext } from "../../../contexts/ui";
-import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
+import TextareaExpandable from "../../../components/Textarea/TextareaExpandable";
 
 export default function Home() {
   const router = useRouter();
@@ -16,6 +17,12 @@ export default function Home() {
   const [buttonFeedbackMessage1, setButtonFeedbackMessage1] = useState("");
   const [buttonFeedbackMessage2, setButtonFeedbackMessage2] = useState("");
   const delay = 4000;
+  const prototype = usePrototypeData();
+  const [selectedUser, setSelectedUser] = useState(prototype.getUserByID(1));
+
+  useEffect(() => {
+    setSelectedUser(prototype.getUserByID(1));
+  }, []);
 
   function buttonFeedback1(message) {
     setButtonFeedbackMessage1(message);
@@ -76,7 +83,7 @@ export default function Home() {
                         <div className="relative">
                           <div className="avatar avatar-lg avatar-circle z-0">
                             <div>
-                              <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                              <img src={selectedUser.avatar} />
                             </div>
                           </div>
                           <div className="form-group absolute z-10 bottom-0 right-0">
@@ -97,7 +104,7 @@ export default function Home() {
                         <div className="">
                           <div className="flex flex-col sm:flex-row gap-3 mb-3">
                             <h2 className="text-2xl leading-none">
-                              JackAttack123
+                              {selectedUser.nickname}
                             </h2>
                           </div>
                         </div>
@@ -127,7 +134,10 @@ export default function Home() {
                       <div className="space-y-4">
                         <h2 className="h4">My social links</h2>
                         <div className="form-group flex items-start gap-2">
-                          <label htmlFor="social-twitch" className="flex-1 mt-3">
+                          <label
+                            htmlFor="social-twitch"
+                            className="flex-1 mt-3"
+                          >
                             Twitch:
                           </label>
                           <div className="flex-3 input-group">
@@ -140,7 +150,10 @@ export default function Home() {
                           </div>
                         </div>
                         <div className="form-group flex items-start gap-2">
-                          <label htmlFor="social-twitter" className="flex-1 mt-3">
+                          <label
+                            htmlFor="social-twitter"
+                            className="flex-1 mt-3"
+                          >
                             Twitter:
                           </label>
                           <div className="flex-3 input-group">
@@ -153,7 +166,10 @@ export default function Home() {
                           </div>
                         </div>
                         <div className="form-group flex items-start gap-2">
-                          <label htmlFor="social-discord" className="flex-1 mt-3">
+                          <label
+                            htmlFor="social-discord"
+                            className="flex-1 mt-3"
+                          >
                             Discord:
                           </label>
                           <div className="flex-3">
@@ -191,7 +207,13 @@ export default function Home() {
                                 <span>
                                   <span className="icon icon-riotgames-symbol" />
                                 </span>
-                                <input type="text" name="gameaccount-riot" id="gameaccount-riot" disabled value="jackattack#3827" />
+                                <input
+                                  type="text"
+                                  name="gameaccount-riot"
+                                  id="gameaccount-riot"
+                                  disabled
+                                  value="jackattack#3827"
+                                />
                               </div>
                             )}
                             {!isConnected && (
@@ -200,9 +222,10 @@ export default function Home() {
                                 <span>Connect with Riot ID</span>
                               </button>
                             )}
-                            
+
                             <p className="text-ui-300 text-sm mt-2 leading-tight">
-                              By connecting with Riot I acknowledge making my profile public to all users.
+                              By connecting with Riot I acknowledge making my
+                              profile public to all users.
                             </p>
                           </div>
                         </div>
@@ -210,7 +233,8 @@ export default function Home() {
                           <div className="flex-1 mt-3" />
                           <div className="flex-3">
                             <p className="text-ui-300 text-sm mt-2 leading-tight">
-                              Contact support if you need to update your game accounts.
+                              Contact support if you need to update your game
+                              accounts.
                             </p>
                           </div>
                         </div>
@@ -235,8 +259,13 @@ export default function Home() {
                     >
                       <span>Save changes</span>
                     </button>
-                    <button type="button" className="button button-secondary" data-feedback-icon="success" data-feedback={buttonFeedbackMessage1}
-                      onClick={buttonFeedback1.bind(this, "Settings reset")}>
+                    <button
+                      type="button"
+                      className="button button-secondary"
+                      data-feedback-icon="success"
+                      data-feedback={buttonFeedbackMessage1}
+                      onClick={buttonFeedback1.bind(this, "Settings reset")}
+                    >
                       <span>Reset</span>
                     </button>
                   </div>
@@ -272,7 +301,7 @@ export default function Home() {
                           type="text"
                           name="account-username"
                           id="account-username"
-                          value="JackAttack123"
+                          value={selectedUser.nickname}
                         />
                       </div>
                       <div className="form-group">
@@ -281,7 +310,7 @@ export default function Home() {
                           type="email"
                           name="account-email"
                           id="account-email"
-                          value="jackjack@gmail.com"
+                          value={selectedUser.email}
                         />
                       </div>
                       <div className="flex items-center justify-between">
@@ -298,7 +327,9 @@ export default function Home() {
                                   autoDelete: true,
                                   autoDeleteDelay: 2500,
                                 });
-                                navigator.clipboard.writeText("4769554309840896");
+                                navigator.clipboard.writeText(
+                                  "4769554309840896"
+                                );
                               }}
                             >
                               4769554309840896
@@ -337,6 +368,12 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
+                  <div className="mt-4">
+                    <div className="form-group">
+                      <label htmlFor="first-name">Your bio:</label>
+                      <TextareaExpandable text={selectedUser.bio} rows={2} />
+                    </div>
+                  </div>
                   <hr className="my-8 opacity-50" />
                   <div className="flex justify-end gap-4">
                     <button
@@ -355,8 +392,13 @@ export default function Home() {
                     >
                       <span>Save changes</span>
                     </button>
-                    <button type="button" className="button button-secondary" data-feedback-icon="success" data-feedback={buttonFeedbackMessage2}
-                      onClick={buttonFeedback2.bind(this, "Settings reset")}>
+                    <button
+                      type="button"
+                      className="button button-secondary"
+                      data-feedback-icon="success"
+                      data-feedback={buttonFeedbackMessage2}
+                      onClick={buttonFeedback2.bind(this, "Settings reset")}
+                    >
                       <span>Reset</span>
                     </button>
                   </div>
@@ -364,7 +406,7 @@ export default function Home() {
               </div>
             </Accordion>
 
-            { /* 
+            {/* 
             <Accordion
               header={
                 <>

@@ -10,8 +10,12 @@
   items-center
   gap-2
   p-2
-  w-full
   ;
+  &:not([class*='w-auto']) {
+    @apply
+    w-full
+    ;
+  }
   .item-body {
     @apply
     overflow-hidden

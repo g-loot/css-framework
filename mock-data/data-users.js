@@ -13,6 +13,7 @@ export const dataUsers = [
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg",
     email: "jackjack@gmail.com",
     clan: 1,
+    bio: "Hi, I'm Jack, I love to play VALORANT & CS:GO with my friends. I was born in 1976 but I move my mouse quicker than anyone. I have 7 children that I named based on my favorite games: Link, Mario, Zelda, Kane, Fox, Raiden and Valentine.",
     socials: {
       riotNickname: "JackAttack123",
       riotHashtag: 8573,
@@ -63,6 +64,7 @@ export const dataUsers = [
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
     email: "kes@gmail.com",
     clan: null,
+    bio: "Call me Kees. I'm a Tv geek. Student. Web fan. Organizer. Coffee ninja. Zombie scholar. Communicator. Twitter fanatic.",
     socials: {
       riotNickname: "KeesDief",
       riotHashtag: 8953,
@@ -114,6 +116,7 @@ export const dataUsers = [
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg",
     email: "mrkil@gmail.com",
     clan: 3,
+    bio: "Extreme alcohol guru. Hardcore troublemaker. Food lover. Musicaholic. Typical social media geek.",
     socials: {
       riotNickname: "MrKilla",
       riotHashtag: 8573,
@@ -147,6 +150,7 @@ export const dataUsers = [
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg",
     email: "kykymimi@gmail.com",
     clan: 2,
+    bio: "Do not disturb, I am Gaming.",
     socials: {
       riotNickname: "kykymimiGr",
       riotHashtag: 8573,
@@ -189,6 +193,7 @@ export const dataUsers = [
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg",
     email: "dirtyjohnny@gmail.com",
     clan: null,
+    bio: "Nothing epic happens in real life, so I chose to be a gamer.",
     socials: {
       riotNickname: "DirtyJohnny",
       riotHashtag: 8573,
@@ -239,6 +244,7 @@ export const dataUsers = [
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg",
     email: "robbiewilliams@gmail.com",
     clan: 5,
+    bio: "Hi everyone! My name is PopoRob, but around the Internet I go by Zentouro (don’t ask, its a weird story involving an elven name generator when I was 8). I’m an Environmental Studies major at Middlebury College, focusing in Film and Media Culture. I also have minors in Chinese and Computer Science.",
     socials: {
       riotNickname: "PopoRob",
       riotHashtag: 8573,
@@ -272,6 +278,7 @@ export const dataUsers = [
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg",
     email: "valance@gmail.com",
     clan: 4,
+    bio: "Gamer. Entrepreneur. Analyst. Hardcore problem solver. Alcohol evangelist. Internet aficionado. Food specialist.",
     socials: {
       riotNickname: "valance",
       riotHashtag: 1425,
@@ -300,7 +307,7 @@ export const dataUsers = [
     firstname: "Steven",
     lastname: "Catterpilar",
     country: "United Kingdom",
-    countryFlag: "uk",
+    countryFlag: "gb",
     lang: "ENG",
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg",
     email: "PilarPilar@gmail.com",
@@ -339,6 +346,7 @@ export const dataUsers = [
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg",
     email: "hanshans@gmail.com",
     clan: 6,
+    bio: "I'm an unapologetic gamer. Social media enthusiast. Student. Certified alcohol guru. Problem solver. Hardcore twitter maven. Tv evangelist.",
     socials: {
       riotNickname: "HansGrubby",
       riotHashtag: 1254,
@@ -375,6 +383,7 @@ export const dataUsers = [
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg",
     email: "frenzyman@gmail.com",
     clan: null,
+    bio: "Just one more game.",
     socials: {
       riotNickname: "FrenzyMan",
       riotHashtag: 1254,
@@ -411,6 +420,7 @@ export const dataUsers = [
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg",
     email: "jamlog@gmail.com",
     clan: null,
+    bio: "Sleep. Eat. Game. Repeat.",
     socials: {
       riotNickname: "Jamlog",
       riotHashtag: 1254,

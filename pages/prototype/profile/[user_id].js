@@ -8,6 +8,7 @@ import ListItemTournament from "../../../components/ListItem/ListItemTournament"
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
+import ReadMore from "../../../components/ReadMore/ReadMore";
 
 export default function Home() {
   const router = useRouter();
@@ -29,7 +30,7 @@ export default function Home() {
         {selectedUser && (
           <>
             <section className="mb-4">
-              <div className="header surface sm:rounded-lg">
+              <div className="header surface sm:rounded-lg min-h-4">
                 <div className="header-content">
                   <div className="header-body">
                     <div className="flex gap-4 items-center self-center">
@@ -76,37 +77,96 @@ export default function Home() {
                           </span>
                         </div>
                             */}
-                        <div className="flex gap-3 mt-4">
-                          <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="link"
-                          >
-                            <span className="icon text-xl lg:text-2xl text-ui-300 icon-twitch" />
-                          </a>
-                          <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="link"
-                          >
-                            <span className="icon text-xl lg:text-2xl text-ui-300 icon-logo-twitter" />
-                          </a>
-                          <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="link"
-                          >
-                            <span className="icon text-xl lg:text-2xl text-ui-300 icon-discord" />
-                          </a>
+
+                        {selectedUser.bio && (
+                          <p className="text-ui-300 mt-1">
+                            <ReadMore content={selectedUser.bio} max={150} />
+                          </p>
+                        )}
+
+                        <div className="flex items-center justify-start mt-4 gap-2">
+                          <div className="flex gap-1">
+                            {selectedUser.games?.map((game, gameIndex) => (
+                              <>
+                                <div
+                                  key={game}
+                                  className="p-1 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center"
+                                >
+                                  <span
+                                    className={`icon icon-20 ${
+                                      prototype.getGameByID(game).slug ===
+                                      "apexlegends"
+                                        ? "icon-game-apexlegends-symbol text-game-apexlegends"
+                                        : ""
+                                    } ${
+                                      prototype.getGameByID(game).slug ===
+                                      "csgo"
+                                        ? "icon-game-csgo-symbol text-game-csgo"
+                                        : ""
+                                    }  ${
+                                      prototype.getGameByID(game).slug ===
+                                      "dota2"
+                                        ? "icon-game-dota2-symbol text-game-dota2"
+                                        : ""
+                                    }  ${
+                                      prototype.getGameByID(game).slug ===
+                                      "leagueoflegends"
+                                        ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
+                                        : ""
+                                    }  ${
+                                      prototype.getGameByID(game).slug ===
+                                      "rocketleague"
+                                        ? "icon-game-rocketleague-symbol text-game-rocketleague"
+                                        : ""
+                                    } ${
+                                      prototype.getGameByID(game).slug ===
+                                      "pubg"
+                                        ? "icon-game-pubg-symbol text-game-pubg"
+                                        : ""
+                                    }  ${
+                                      prototype.getGameByID(game).slug ===
+                                      "valorant"
+                                        ? "icon-game-valorant-symbol text-game-valorant"
+                                        : ""
+                                    }`}
+                                  />
+                                </div>
+                              </>
+                            ))}
+                          </div>
+                          <hr className="m-0 separator separator-vertical h-7" />
+                          <div className="flex gap-1">
+                            <a
+                              href="#"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="link p-1 text-0"
+                            >
+                              <span className="icon icon-20 text-ui-300 icon-twitch" />
+                            </a>
+                            <a
+                              href="#"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="link p-1 text-0"
+                            >
+                              <span className="icon icon-20 text-ui-300 icon-logo-twitter" />
+                            </a>
+                            <a
+                              href="#"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="link p-1 text-0"
+                            >
+                              <span className="icon icon-20 text-ui-300 icon-discord" />
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute z-20 top-2 right-2">
+                <div className="hidden lg:block absolute z-20 top-3 right-3">
                   {selectedUser.isYou && (
                     <Link href="settings">
                       <a className="button button-sm button-tertiary">
@@ -114,6 +174,95 @@ export default function Home() {
                         <span>Profile settings</span>
                       </a>
                     </Link>
+                  )}
+                </div>
+                <div className="header-meta lg:items-end p-3">
+                  {!emptyClan && (
+                    <>
+                      {selectedUser.clan && (
+                        <Link
+                          href={`/prototype/clans/${
+                            selectedUser.clan
+                          }${prototype.getURLparams()}`}
+                        >
+                          <div className="item bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg interactive w-auto">
+                            <div className="item-image">
+                              <div className="avatar avatar-sm avatar-squircle interactive">
+                                <div>
+                                  <img
+                                    src={
+                                      prototype.getClanByID(selectedUser.clan)
+                                        .avatar
+                                    }
+                                    alt="avatar"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div className="item-body pr-2">
+                              <div className="text-sm text-ui-300 leading-none">
+                                Clan member of
+                              </div>
+                              <div className="item-title text-xl font-headings font-bold italic text-ui-100 interactive">
+                                &#91;
+                                {prototype.getClanByID(selectedUser.clan).tag}
+                                &#93;{" "}
+                                {
+                                  prototype.getClanByID(selectedUser.clan)
+                                    .nickname
+                                }
+                              </div>
+                              {/*
+                            <div className="text-sm text-ui-300">
+                              {
+                                prototype.getClanByID(selectedUser.clan).members
+                                  .length
+                              }{" "}
+                              members
+                            </div>
+                            */}
+                            </div>
+                          </div>
+                        </Link>
+                      )}
+                      {!selectedUser.isYou ? (
+                        <>
+                          {!selectedUser.clan && (
+                            <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                              <div className="text-center">
+                                {selectedUser.nickname} is not part of a clan.
+                              </div>
+                              <Link href="#">
+                                <a
+                                  type="button"
+                                  className="button button-sm button-primary w-full"
+                                >
+                                  <span>Recruit to your clan</span>
+                                </a>
+                              </Link>
+                            </div>
+                          )}
+                        </>
+                      ) : (
+                        <>
+                          {!selectedUser.clan && (
+                            <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                              <div className="text-center">
+                                You are not part of a clan.
+                              </div>
+                              <Link href="/prototype/clans/search">
+                                <a
+                                  type="button"
+                                  className="button button-sm button-primary w-full"
+                                >
+                                  <span>Join a clan</span>
+                                </a>
+                              </Link>
+                            </div>
+                          )}
+                        </>
+                      )}
+                    </>
                   )}
                 </div>
                 {/*
@@ -146,57 +295,12 @@ export default function Home() {
                   </div>
                 </div>
                   */}
-                <div className="header-meta justify-end items-center md:items-end">
-                  <div className="flex gap-1 pb-4">
-                    {selectedUser.games?.map((game, gameIndex) => (
-                      <>
-                        <div
-                          key={game}
-                          className="p-2 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center"
-                        >
-                          <span
-                            className={`icon text-2xl ${
-                              prototype.getGameByID(game).slug === "apexlegends"
-                                ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                                : ""
-                            } ${
-                              prototype.getGameByID(game).slug === "csgo"
-                                ? "icon-game-csgo-symbol text-game-csgo"
-                                : ""
-                            }  ${
-                              prototype.getGameByID(game).slug === "dota2"
-                                ? "icon-game-dota2-symbol text-game-dota2"
-                                : ""
-                            }  ${
-                              prototype.getGameByID(game).slug ===
-                              "leagueoflegends"
-                                ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                                : ""
-                            }  ${
-                              prototype.getGameByID(game).slug ===
-                              "rocketleague"
-                                ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                                : ""
-                            } ${
-                              prototype.getGameByID(game).slug === "pubg"
-                                ? "icon-game-pubg-symbol text-game-pubg"
-                                : ""
-                            }  ${
-                              prototype.getGameByID(game).slug === "valorant"
-                                ? "icon-game-valorant-symbol text-game-valorant"
-                                : ""
-                            }`}
-                          />
-                        </div>
-                      </>
-                    ))}
-                  </div>
-                </div>
                 <div className="header-bg">
                   <img src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp" />
                 </div>
               </div>
             </section>
+            {/*
             <section
               className="surface sm:rounded-lg p-2 animate-slide-in-bottom animate-delay mb-4"
               style={{ "--delay": "calc(1 * 0.05s)" }}
@@ -236,7 +340,7 @@ export default function Home() {
                               type="button"
                               className="button button-sm button-primary"
                             >
-                              <span>Invite to your clan</span>
+                              <span>Recruit to your clan</span>
                             </a>
                           </Link>
                         </div>
@@ -249,7 +353,7 @@ export default function Home() {
                 <div className="flex gap-4 items-center">
                   {selectedUser.clan && (
                     <>
-                      <div className="flex-none text-sm text-ui-300 font-bold uppercase">
+                      <div className="flex-none ml-2 text-sm text-ui-300 font-bold uppercase">
                         Proud member of
                       </div>
 
@@ -297,59 +401,6 @@ export default function Home() {
                             members
                           </div>
                         </div>
-                        <div className="item-actions">
-                          <div className="flex gap-1">
-                            {prototype
-                              .getClanByID(selectedUser.clan)
-                              .games?.map((game, gameIndex) => (
-                                <>
-                                  <div
-                                    key={game}
-                                    className="p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center"
-                                  >
-                                    <span
-                                      className={`icon text-xl ${
-                                        prototype.getGameByID(game).slug ===
-                                        "apexlegends"
-                                          ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                                          : ""
-                                      } ${
-                                        prototype.getGameByID(game).slug ===
-                                        "csgo"
-                                          ? "icon-game-csgo-symbol text-game-csgo"
-                                          : ""
-                                      }  ${
-                                        prototype.getGameByID(game).slug ===
-                                        "dota2"
-                                          ? "icon-game-dota2-symbol text-game-dota2"
-                                          : ""
-                                      }  ${
-                                        prototype.getGameByID(game).slug ===
-                                        "leagueoflegends"
-                                          ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                                          : ""
-                                      }  ${
-                                        prototype.getGameByID(game).slug ===
-                                        "rocketleague"
-                                          ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                                          : ""
-                                      } ${
-                                        prototype.getGameByID(game).slug ===
-                                        "pubg"
-                                          ? "icon-game-pubg-symbol text-game-pubg"
-                                          : ""
-                                      }  ${
-                                        prototype.getGameByID(game).slug ===
-                                        "valorant"
-                                          ? "icon-game-valorant-symbol text-game-valorant"
-                                          : ""
-                                      }`}
-                                    />
-                                  </div>
-                                </>
-                              ))}
-                          </div>
-                        </div>
                       </div>
                     </>
                   )}
@@ -371,7 +422,7 @@ export default function Home() {
                               type="button"
                               className="button button-sm button-primary"
                             >
-                              <span>Invite to your clan</span>
+                              <span>Recruit to your clan</span>
                             </a>
                           </Link>
                         </div>
@@ -381,18 +432,19 @@ export default function Home() {
                 </div>
               )}
             </section>
+                  */}
             <section
               className="flex flex-col lg:flex-row gap-4 lg:items-stretch animate-slide-in-bottom animate-delay mb-4"
               style={{ "--delay": "calc(2 * 0.05s)" }}
             >
               <div className="flex-1 surface surface-halo halo-b halo-r sm:rounded-lg py-8 px-4 space-y-8">
-                <div className="flex items-center">
+                <div className="flex flex-col md:flex-row items-center">
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-brawl-sm.svg"
                     width="auto"
                     height="auto"
                     alt=""
-                    className="drop-shadow-xl mx-8 h-28 flex-none"
+                    className="drop-shadow-xl mx-8 h-24 flex-none"
                   />
                   <div className="flex-1 flex flex-wrap gap-2 items-stretch justify-center text-center">
                     <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
@@ -438,13 +490,13 @@ export default function Home() {
                   </div>
                 </div>
                 <hr className="my-8 border-ui-700" />
-                <div className="flex items-center">
+                <div className="flex flex-col md:flex-row items-center">
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-missions-sm.svg"
                     width="auto"
                     height="50"
                     alt=""
-                    className="drop-shadow-xl mx-8 h-28 flex-none"
+                    className="drop-shadow-xl mx-8 h-24 flex-none"
                   />
                   <div className="flex-1 flex flex-wrap gap-2 items-stretch justify-center text-center">
                     <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">

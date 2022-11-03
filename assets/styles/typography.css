@@ -114,9 +114,14 @@ hr,
   &.separator-vertical {
     @apply
     w-px
-    h-full
     border-none
     bg-ui-600
+    ;
+    &:not([class*='h-']) {
+      @apply
+      h-full
+      ;
+    }
   }
 }
 

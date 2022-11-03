@@ -29,7 +29,7 @@ const conversationFull = [
         id: 1,
         type: "text",
         content:
-          "Welcome aboard <a className='font-bold' href='#'>@Dimitar</a> 👋",
+          "Welcome aboard <code class='tag' href='#'>@Martin</code> 👋",
         reactions: [
           {
             emoji: "❤️",
@@ -51,7 +51,7 @@ const conversationFull = [
         type: "text",
         isDeleted: true,
         content:
-          "Welcome aboard <a className='font-bold' href='#'>@James</a> 👋",
+          "Welcome aboard <code class='tag is-owner' href='#' content-editable='false'>@JackAttack123</code> 👋",
         reactions: [
           {
             emoji: "❤️",
@@ -98,7 +98,7 @@ const conversationFull = [
         id: 1,
         type: "text",
         content:
-          "Nice to meet you guys, thank you for having me. Who is up for a quick valorant brawl game?",
+          "Nice to meet you guys, thank you for having me. Who is up for a quick valorant brawl game? <code class='tag' href='#'>@Kes2Band</code>, <code class='tag' href='#'>@Nomadiction</code>, <code class='tag is-owner' href='#'>@JackAttack123</code>?",
       },
     ],
   },
@@ -111,7 +111,7 @@ const conversationFull = [
       {
         id: 1,
         type: "text",
-        content: "I will be available in about 5 min.",
+        content: "I will be available in about 5 min. <code class='tag' href='#'>@Kes2Band</code> <code class='tag is-owner' href='#'>@JackAttack123</code>",
       },
     ],
   },
@@ -124,7 +124,7 @@ const conversationFull = [
       {
         id: 1,
         type: "text",
-        content: "Coming now",
+        content: "Coming now <code class='tag' href='#'>@Kes2Band</code>",
       },
     ],
   },
