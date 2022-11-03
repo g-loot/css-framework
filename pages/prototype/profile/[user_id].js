@@ -61,16 +61,6 @@ export default function Home() {
                                 </a>
                               </Link>
                             )}
-                            {!selectedUser.isYou && !selectedUser.clan && (
-                              <Link href="#">
-                                <a
-                                  type="button"
-                                  className="button button-sm button-primary"
-                                >
-                                  <span>Invite to your clan</span>
-                                </a>
-                              </Link>
-                            )}
                           </div>
                         </div>
                         {/*
@@ -122,13 +112,6 @@ export default function Home() {
                       <a className="button button-sm button-tertiary">
                         <span className="icon icon-cogwheel" />
                         <span>Profile settings</span>
-                      </a>
-                    </Link>
-                  )}
-                  {!selectedUser.isYou && !selectedUser.clan && (
-                    <Link href="#">
-                      <a className="button button-sm button-primary">
-                        <span>Invite to your clan</span>
                       </a>
                     </Link>
                   )}
@@ -215,13 +198,197 @@ export default function Home() {
               </div>
             </section>
             <section
-              className="flex flex-col lg:flex-row gap-4 lg:items-stretch animate-slide-in-bottom animate-delay mb-4"
+              className="surface sm:rounded-lg p-2 animate-slide-in-bottom animate-delay mb-4"
               style={{ "--delay": "calc(1 * 0.05s)" }}
+            >
+              {emptyClan && (
+                <div className="surface sm:rounded-lg">
+                  {selectedUser.isYou && (
+                    <div className="p-4 flex justify-between gap-3 items-center">
+                      <span>You are not in a clan.</span>
+                      <Link
+                        href={`/prototype/clans/search${prototype.getURLparams()}`}
+                      >
+                        <button
+                          type="button"
+                          className="button button-sm button-primary"
+                        >
+                          <span>Find a clan</span>
+                        </button>
+                      </Link>
+                    </div>
+                  )}
+                  {!selectedUser.isYou && (
+                    <div className="item">
+                      <div className="item-image text-0">
+                        <span className="icon icon-puzzled text-2xl text-ui-400" />
+                      </div>
+                      <div className="item-body">
+                        <span>
+                          {selectedUser.nickname} is not part of a clan.
+                        </span>
+                      </div>
+                      <div className="item-actions">
+                        <div>
+                          {" "}
+                          <Link href="#">
+                            <a
+                              type="button"
+                              className="button button-sm button-primary"
+                            >
+                              <span>Invite to your clan</span>
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+              {!emptyClan && (
+                <div className="flex gap-4 items-center">
+                  {selectedUser.clan && (
+                    <>
+                      <div className="flex-none text-sm text-ui-300 font-bold uppercase">
+                        Proud member of
+                      </div>
+
+                      <div className="item">
+                        <div className="item-image">
+                          <Link
+                            href={`/prototype/clans/${
+                              selectedUser.clan
+                            }${prototype.getURLparams()}`}
+                          >
+                            <div className="avatar avatar-sm avatar-squircle interactive">
+                              <div>
+                                <img
+                                  src={
+                                    prototype.getClanByID(selectedUser.clan)
+                                      .avatar
+                                  }
+                                  alt="avatar"
+                                />
+                              </div>
+                            </div>
+                          </Link>
+                        </div>
+                        <div className="item-body">
+                          <Link
+                            href={`/prototype/clans/${
+                              selectedUser.clan
+                            }${prototype.getURLparams()}`}
+                          >
+                            <div className="item-title text-xl font-headings font-bold italic text-ui-100 interactive">
+                              &#91;
+                              {prototype.getClanByID(selectedUser.clan).tag}
+                              &#93;{" "}
+                              {
+                                prototype.getClanByID(selectedUser.clan)
+                                  .nickname
+                              }
+                            </div>
+                          </Link>
+                          <div className="text-sm text-ui-300">
+                            {
+                              prototype.getClanByID(selectedUser.clan).members
+                                .length
+                            }{" "}
+                            members
+                          </div>
+                        </div>
+                        <div className="item-actions">
+                          <div className="flex gap-1">
+                            {prototype
+                              .getClanByID(selectedUser.clan)
+                              .games?.map((game, gameIndex) => (
+                                <>
+                                  <div
+                                    key={game}
+                                    className="p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center"
+                                  >
+                                    <span
+                                      className={`icon text-xl ${
+                                        prototype.getGameByID(game).slug ===
+                                        "apexlegends"
+                                          ? "icon-game-apexlegends-symbol text-game-apexlegends"
+                                          : ""
+                                      } ${
+                                        prototype.getGameByID(game).slug ===
+                                        "csgo"
+                                          ? "icon-game-csgo-symbol text-game-csgo"
+                                          : ""
+                                      }  ${
+                                        prototype.getGameByID(game).slug ===
+                                        "dota2"
+                                          ? "icon-game-dota2-symbol text-game-dota2"
+                                          : ""
+                                      }  ${
+                                        prototype.getGameByID(game).slug ===
+                                        "leagueoflegends"
+                                          ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
+                                          : ""
+                                      }  ${
+                                        prototype.getGameByID(game).slug ===
+                                        "rocketleague"
+                                          ? "icon-game-rocketleague-symbol text-game-rocketleague"
+                                          : ""
+                                      } ${
+                                        prototype.getGameByID(game).slug ===
+                                        "pubg"
+                                          ? "icon-game-pubg-symbol text-game-pubg"
+                                          : ""
+                                      }  ${
+                                        prototype.getGameByID(game).slug ===
+                                        "valorant"
+                                          ? "icon-game-valorant-symbol text-game-valorant"
+                                          : ""
+                                      }`}
+                                    />
+                                  </div>
+                                </>
+                              ))}
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
+                  {!selectedUser.clan && (
+                    <div className="item">
+                      <div className="item-image text-0">
+                        <span className="icon icon-puzzled text-2xl text-ui-400" />
+                      </div>
+                      <div className="item-body">
+                        <span>
+                          {selectedUser.nickname} is not part of a clan.
+                        </span>
+                      </div>
+                      <div className="item-actions">
+                        <div>
+                          {" "}
+                          <Link href="#">
+                            <a
+                              type="button"
+                              className="button button-sm button-primary"
+                            >
+                              <span>Invite to your clan</span>
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </section>
+            <section
+              className="flex flex-col lg:flex-row gap-4 lg:items-stretch animate-slide-in-bottom animate-delay mb-4"
+              style={{ "--delay": "calc(2 * 0.05s)" }}
             >
               <div className="flex-1 surface surface-halo halo-b halo-r sm:rounded-lg py-8 px-4 space-y-8">
                 <div className="flex items-center">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1667405873/Marketing/2022_prototype/Logo/samesize-brawl-sm.svg"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-brawl-sm.svg"
                     width="auto"
                     height="auto"
                     alt=""
@@ -232,38 +399,48 @@ export default function Home() {
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         Number of Brawls played
                       </div>
-                      <div className="text-3xl font-headings text-ui-100">22</div>
+                      <div className="text-3xl font-headings text-ui-100">
+                        22
+                      </div>
                     </div>
                     <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         Times in top 50
                       </div>
-                      <div className="text-3xl font-headings text-ui-100">2</div>
+                      <div className="text-3xl font-headings text-ui-100">
+                        2
+                      </div>
                     </div>
                     <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         Best placement
                       </div>
-                      <div className="text-3xl font-headings text-ui-100">1</div>
+                      <div className="text-3xl font-headings text-ui-100">
+                        1
+                      </div>
                     </div>
                     <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         Most matches in a Brawl
                       </div>
-                      <div className="text-3xl font-headings text-ui-100">16</div>
+                      <div className="text-3xl font-headings text-ui-100">
+                        16
+                      </div>
                     </div>
                     <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         Avg. matches / Brawl
                       </div>
-                      <div className="text-3xl font-headings text-ui-100">13</div>
+                      <div className="text-3xl font-headings text-ui-100">
+                        13
+                      </div>
                     </div>
                   </div>
                 </div>
                 <hr className="my-8 border-ui-700" />
                 <div className="flex items-center">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1667405873/Marketing/2022_prototype/Logo/samesize-missions-sm.svg"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-missions-sm.svg"
                     width="auto"
                     height="50"
                     alt=""
@@ -274,19 +451,24 @@ export default function Home() {
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         No. of missions completed
                       </div>
-                      <div className="text-3xl font-headings text-ui-100">143</div>
+                      <div className="text-3xl font-headings text-ui-100">
+                        143
+                      </div>
                     </div>
                     <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
                       <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
                         Missions / day avg.
                       </div>
-                      <div className="text-3xl font-headings text-ui-100">3</div>
+                      <div className="text-3xl font-headings text-ui-100">
+                        3
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="lg:w-1/3 xl:w-3/7 space-y-4 flex flex-col">
+                {/*
                 {emptyClan && (
                   <div className="surface sm:rounded-lg">
                     {selectedUser.isYou && (
@@ -370,6 +552,7 @@ export default function Home() {
                     )}
                   </div>
                 )}
+                    */}
 
                 <div className="flex-1 flex flex-col surface sm:rounded-lg">
                   <div className="p-2 border-b border-ui-700 flex justify-between items-start">
@@ -429,8 +612,8 @@ export default function Home() {
             </section>
             {!selectedUser.stats.gamestats && (
               <section
-                className="surface rounded-lg px-4 py-8 text-center animate-slide-in-bottom animate-delay mb-4"
-                style={{ "--delay": "calc(1 * 0.05s)" }}
+                className="surface sm:rounded-lg px-4 py-8 text-center animate-slide-in-bottom animate-delay mb-4"
+                style={{ "--delay": "calc(3 * 0.05s)" }}
               >
                 <div className="max-w-sm mx-auto">
                   <span className="icon icon-mission-roundwon text-8xl text-ui-500" />
@@ -471,7 +654,7 @@ export default function Home() {
                     key={statIndex}
                     className="surface sm:rounded-lg animate-slide-in-bottom animate-delay mb-4"
                     style={{
-                      "--delay": "calc(" + statIndex + 3 + " * 0.05s)",
+                      "--delay": "calc(" + statIndex + 4 + " * 0.05s)",
                     }}
                   >
                     <div className="item">
@@ -623,43 +806,57 @@ export default function Home() {
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Assists
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">151</div>
+                              <div className="text-3xl font-headings text-ui-100">
+                                151
+                              </div>
                             </div>
                             <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Kills
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">405</div>
+                              <div className="text-3xl font-headings text-ui-100">
+                                405
+                              </div>
                             </div>
                             <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Deaths
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">570</div>
+                              <div className="text-3xl font-headings text-ui-100">
+                                570
+                              </div>
                             </div>
                             <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Headshot kills
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">144</div>
+                              <div className="text-3xl font-headings text-ui-100">
+                                144
+                              </div>
                             </div>
                             <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Wins
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">35</div>
+                              <div className="text-3xl font-headings text-ui-100">
+                                35
+                              </div>
                             </div>
                             <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Losses
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">24</div>
+                              <div className="text-3xl font-headings text-ui-100">
+                                24
+                              </div>
                             </div>
                             <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Draws
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">1</div>
+                              <div className="text-3xl font-headings text-ui-100">
+                                1
+                              </div>
                             </div>
                           </div>
                         </Accordion>

@@ -229,7 +229,7 @@ export default function BrawlPlacements() {
               onClick={openModalBuyTokens}
               className="link text-sm text-ui-300"
             >
-              Buy more tokens
+              Get more tokens
             </a>
           </div>
           {variablesContext.brawlStep >= 3 && !resultsDone && (

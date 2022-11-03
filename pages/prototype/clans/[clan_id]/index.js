@@ -52,7 +52,7 @@ export default function Home() {
           <>
             {!selectedClan.isYou && (
               <>
-                <section className="mb-8">
+                <section className="mb-4">
                   <div className="header surface sm:rounded-lg">
                     <div className="header-content">
                       <div className="header-body">
@@ -218,7 +218,7 @@ export default function Home() {
 
             {selectedClan.isYou && (
               <>
-                <section className="mb-4 lg:mb-8">
+                <section className="mb-4">
                   <div className="header surface rounded-lg">
                     <div className="header-content">
                       <div className="header-body">
@@ -371,7 +371,7 @@ export default function Home() {
             )}
 
             <section
-              className="hidden xl:flex flex-col xl:flex-row xl:items-start gap-4 xl:gap-8 animate-slide-in-bottom animate-delay"
+              className="hidden xl:flex flex-col xl:flex-row xl:items-start gap-4 animate-slide-in-bottom animate-delay"
               style={{ "--delay": "calc(2 * 0.05s)" }}
             >
               <div className="flex-1 surface sm:rounded-lg overflow-hidden">
