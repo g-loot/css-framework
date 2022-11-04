@@ -190,8 +190,8 @@ export default function TopbarNew() {
                 </div>
               </Tooltip>
 
-              <div className="hidden lg:flex gap-x-3 items-center bg-ui-700 h-9 pr-2 rounded-full hoverhighlight">
-                <div className="inline-flex pl-4">
+              <div className="hidden lg:flex gap-x-3 items-center bg-ui-700 h-9 px-4 rounded-full hoverhighlight">
+                <div className="inline-flex">
                   <Tooltip
                     placement="bottom"
                     tooltip={
@@ -317,6 +317,7 @@ export default function TopbarNew() {
                     </Link>
                   </Tooltip>
                 </div>
+                {/*
                 <div className="inline-flex">
                   <Tooltip
                     tooltip={
@@ -370,6 +371,7 @@ export default function TopbarNew() {
                     </Link>
                   </Tooltip>
                 </div>
+                  */}
               </div>
 
               <div className="dropdown dropdown-end">

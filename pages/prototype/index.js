@@ -10,6 +10,7 @@ import { getLayout } from "../../components/SiteLayout";
 const Index = () => {
   const [filter, setFilter] = useState("");
   const [checked, setChecked] = useState(false);
+  const [showDeprecated, setShowDeprecated] = useState(false);
   const [pageCount, setPageCount] = useState(0);
 
   useEffect(() => {
@@ -49,18 +50,33 @@ const Index = () => {
                   {pageCount} screens
                 </small>
               </h1>
-              <div className="form-group mb-1">
-                <div className="input-group">
-                  <span className="icon icon-zoom" />
+              <div className="flex items-center gap-2">
+                <div className="form-toggle text-sm text-ui-300">
                   <input
-                    id="filter"
-                    name="filter"
-                    type="text"
-                    value={filter}
-                    placeholder="Search"
-                    className="input-sm"
-                    onChange={(event) => setFilter(event.target.value)}
+                    type="checkbox"
+                    name="notification"
+                    id="showDeprecated"
+                    onChange={(event) =>
+                      setShowDeprecated(event.target.checked)
+                    }
                   />
+                  <label htmlFor="showDeprecated">
+                    <i className="form-icon" /> Show deprecated
+                  </label>
+                </div>
+                <div className="form-group mb-1">
+                  <div className="input-group">
+                    <span className="icon icon-zoom" />
+                    <input
+                      id="filter"
+                      name="filter"
+                      type="text"
+                      value={filter}
+                      placeholder="Search"
+                      className="input-sm"
+                      onChange={(event) => setFilter(event.target.value)}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -100,68 +116,72 @@ const Index = () => {
                         })
                         .map((item) => (
                           <>
-                            <li
-                              className={`item border-ui-700 ${
-                                item.isDisabled ? "is-disabled" : ""
-                              } ${item.title ? "pointer-events-none" : ""} ${
-                                filter ? "border-b" : ""
-                              }`}
-                            >
-                              <div
-                                className={`item-body ${
-                                  item.tab ? "" : "pl-4 md:pl-8"
-                                } ${item.tab === 1 ? "pl-8 md:pl-16" : ""}  ${
-                                  item.tab === 2 ? "pl-12 md:pl-24" : ""
-                                } ${item.tab === 3 ? "pl-16 md:pl-32" : ""} ${item.tab === 4 ? "pl-20 md:pl-40" : ""}`}
+                            {(!item.deprecated || showDeprecated) && (
+                              <li
+                                className={`item border-ui-700  ${
+                                  item.isDisabled ? "is-disabled" : ""
+                                } ${item.title ? "pointer-events-none" : ""} ${
+                                  filter ? "border-b" : ""
+                                }`}
                               >
-                                <div className="item-title text-ui-300 flex gap-2">
-                                  <Link
-                                    href={`/prototype/${item.url}${
-                                      item.query ? "?" : ""
-                                    }${item.query}`}
-                                  >
-                                    <a className="flex items-center gap-2">
-                                      {item.tab === 2 && <>—</>}
-                                      {item.tab === 1 && <>&#8226;</>}
-                                      {!item.tab && (
-                                        <>
-                                          <span className="icon icon-circle-caret-right" />
-                                        </>
-                                      )}
-                                      <span>{item.label}</span>
-                                    </a>
-                                  </Link>
-                                  {item.chip && (
-                                    <span className="text-xs text-ui-300 uppercase leading-tight rounded py-1 px-1.5 bg-ui-900/75">
-                                      {item.chip}
-                                    </span>
-                                  )}
-                                  {item.new && <i className="badge" />}
+                                <div
+                                  className={`item-body ${
+                                    item.tab ? "" : "pl-4 md:pl-8"
+                                  } ${item.tab === 1 ? "pl-8 md:pl-16" : ""}  ${
+                                    item.tab === 2 ? "pl-12 md:pl-24" : ""
+                                  } ${item.tab === 3 ? "pl-16 md:pl-32" : ""} ${
+                                    item.tab === 4 ? "pl-20 md:pl-40" : ""
+                                  }`}
+                                >
+                                  <div className="item-title text-ui-300 flex gap-2">
+                                    <Link
+                                      href={`/prototype/${item.url}${
+                                        item.query ? "?" : ""
+                                      }${item.query}`}
+                                    >
+                                      <a className="flex items-center gap-2">
+                                        {item.tab === 2 && <>—</>}
+                                        {item.tab === 1 && <>&#8226;</>}
+                                        {!item.tab && (
+                                          <>
+                                            <span className="icon icon-circle-caret-right" />
+                                          </>
+                                        )}
+                                        <span>{item.label}</span>
+                                      </a>
+                                    </Link>
+                                    {item.chip && (
+                                      <span className="text-xs text-ui-300 uppercase leading-tight rounded py-1 px-1.5 bg-ui-900/75">
+                                        {item.chip}
+                                      </span>
+                                    )}
+                                    {item.new && <i className="badge" />}
+                                  </div>
                                 </div>
-                              </div>
-                              <div className="item-actions hidden xl:flex">
-                                <div className="flex gap-2">
-                                  <Link
-                                    href={`/prototype/${item.url}${
-                                      item.query ? "?" : ""
-                                    }${item.query}`}
-                                  >
-                                    <a className="button button-sm button-primary">
-                                      <span>View</span>
-                                    </a>
-                                  </Link>
-                                  <Link
-                                    href={`prototype/${item.url}?ads=true${
-                                      item.query ? "&" : ""
-                                    }${item.query}`}
-                                  >
-                                    <a className="button button-sm button-secondary">
-                                      <span>View with ads</span>
-                                    </a>
-                                  </Link>
+                                <div className="item-actions hidden xl:flex">
+                                  <div className="flex gap-2">
+                                    <Link
+                                      href={`/prototype/${item.url}${
+                                        item.query ? "?" : ""
+                                      }${item.query}`}
+                                    >
+                                      <a className="button button-sm button-primary">
+                                        <span>View</span>
+                                      </a>
+                                    </Link>
+                                    <Link
+                                      href={`prototype/${item.url}?ads=true${
+                                        item.query ? "&" : ""
+                                      }${item.query}`}
+                                    >
+                                      <a className="button button-sm button-secondary">
+                                        <span>View with ads</span>
+                                      </a>
+                                    </Link>
+                                  </div>
                                 </div>
-                              </div>
-                            </li>
+                              </li>
+                            )}
                           </>
                         ))}
                     </ul>

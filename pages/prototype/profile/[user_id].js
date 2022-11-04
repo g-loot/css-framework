@@ -79,7 +79,7 @@ export default function Home() {
                             */}
 
                         {selectedUser.bio && (
-                          <p className="text-ui-300 mt-1">
+                          <p className="text-ui-300 mt-1 text-left">
                             <ReadMore content={selectedUser.bio} max={150} />
                           </p>
                         )}

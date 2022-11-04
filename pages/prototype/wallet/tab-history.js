@@ -9,12 +9,14 @@ const TransactionHistory = [
     name: "Token purchase",
     date: "2023-02-19T06:00:00Z",
   },
+  /*
   {
     credit: true,
     value: 1000,
     name: "Tournament prize money",
     date: "2022-12-01T06:00:00Z",
   },
+  */
   {
     credit: false,
     value: 5,
@@ -26,12 +28,6 @@ const TransactionHistory = [
     value: 50,
     name: "Token purchase",
     date: "2022-10-05T06:00:00Z",
-  },
-  {
-    credit: true,
-    value: 10000,
-    name: "Tournament prize money",
-    date: "2022-07-01T06:00:00Z",
   },
 ];
 

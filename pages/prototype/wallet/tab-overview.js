@@ -10,17 +10,6 @@ import { useRouter } from "next/router";
 const WalletItems = [
   {
     id: 1,
-    name: "tokens",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-unique.png",
-    amount: "245",
-    use: "To enter rounds in the <b>Weekly Brawls</b>.",
-    get: "From <b>Missions, Daily Loot Streak</b> or buy them directly from the <b>Wallet</b>.",
-    color: "text-purple-500",
-    button: "buy",
-  },
-  {
-    id: 2,
     name: "coins",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-coin-unique.png",
@@ -30,6 +19,18 @@ const WalletItems = [
     color: "text-gold-500",
     button: "visitshop",
   },
+  {
+    id: 2,
+    name: "tokens",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-unique.png",
+    amount: "245",
+    use: "To enter rounds in the <b>Weekly Brawls</b>.",
+    get: "From <b>Missions, Daily Loot Streak</b> or buy them directly from the <b>Wallet</b>.",
+    color: "text-purple-500",
+    button: "buy",
+  },
+  /*
   {
     id: 3,
     name: "tickets",
@@ -51,6 +52,7 @@ const WalletItems = [
     color: "text-ui-300",
     button: "buy",
   },
+*/
 ];
 
 export default function TabWalletOverview() {
@@ -97,13 +99,13 @@ export default function TabWalletOverview() {
 
   return (
     <>
-      {alernativeLayout && (
+      {!alernativeLayout && (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             {WalletItems.map((item, itemIndex) => (
               <div
                 key={item.id}
-                className="surface rounded-xl flex flex-col items-stretch p-2 w-full max-w-xs lg:max-w-xl mx-auto animate-slide-in-right animate-delay"
+                className="surface rounded-xl flex flex-col items-stretch p-2 w-full max-w-xs lg:max-w-xl mx-auto animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
               >
                 <div className="bg-gradient-to-b from-ui-900/50 to-ui-900/5 rounded overflow-hidden">
@@ -124,7 +126,7 @@ export default function TabWalletOverview() {
                   </div>
                 </div>
                 <div className="text-sm leading-tight text-ui-300 mt-3 mb-6 flex-1">
-                  <div className="flex py-3 border-b border-ui-700/50 px-2 gap-2">
+                  <div className="flex py-3 border-b border-ui-700/50 px-2 gap-2 max-w-xs mx-auto">
                     <div className="w-1/4 font-bold uppercase text-ui-200">
                       Use
                     </div>
@@ -135,7 +137,7 @@ export default function TabWalletOverview() {
                       }}
                     />
                   </div>
-                  <div className="flex py-3 px-2 gap-2">
+                  <div className="flex py-3 px-2 gap-2 max-w-xs mx-auto">
                     <div className="w-1/4 font-bold uppercase text-ui-200">
                       Get
                     </div>
@@ -177,7 +179,7 @@ export default function TabWalletOverview() {
           </div>
         </>
       )}
-      {!alernativeLayout && (
+      {alernativeLayout && (
         <>
           <div className="space-y-4">
             {WalletItems.map((item, itemIndex) => (

@@ -17,6 +17,7 @@ const SubMenuItem = [
     icon: "icon-brawl",
     label: "Brawls",
   },
+  /*
   {
     url: "tournaments",
     icon: "icon-showdown",
@@ -27,6 +28,7 @@ const SubMenuItem = [
     icon: "icon-statistics",
     label: "Stats",
   },
+  */
 ];
 
 export default function PrototypeGamesNavNew({ children }) {

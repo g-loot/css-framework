@@ -75,13 +75,13 @@ export default function Home() {
                 </>
               }
             >
-              <div className="p-8">
+              <div className="p-4 md:p-8">
                 <div className="max-w-lg mx-auto">
                   <div className="grid xl:grid-cols-2 gap-16">
-                    <div className="flex flex-col gap-4 items-center">
+                    <div className="space-y-4">
                       <div className="flex justify-center items-center gap-4">
                         <div className="relative">
-                          <div className="avatar avatar-lg avatar-circle z-0">
+                          <div className="avatar avatar-xl avatar-circle z-0">
                             <div>
                               <img src={selectedUser.avatar} />
                             </div>
@@ -101,17 +101,62 @@ export default function Home() {
                             />
                           </div>
                         </div>
-                        <div className="">
-                          <div className="flex flex-col sm:flex-row gap-3 mb-3">
-                            <h2 className="text-2xl leading-none">
-                              {selectedUser.nickname}
-                            </h2>
-                          </div>
-                        </div>
                       </div>
-                      <div className="inline-flex bg-gradient-to-b from-ui-900/50 to-ui-900/10 rounded py-2 px-4 items-center justify-between gap-2">
-                        <label className="label">Country:</label>
-                        <div className="flex justify-center items-center gap-2">
+                      <div className="form-group">
+                        <label htmlFor="account-username">Username:</label>
+                        <input
+                          type="text"
+                          name="account-username"
+                          id="account-username"
+                          value={selectedUser.nickname}
+                        />
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="account-email">Email:</label>
+                        <input
+                          type="email"
+                          name="account-email"
+                          id="account-email"
+                          value={selectedUser.email}
+                        />
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="text-sm text-ui-300">
+                          <span className="label">G-Loot ID:</span>
+                          <span className="tooltip" data-tooltip="Copy">
+                            <code
+                              className="interactive text-xs"
+                              onClick={() => {
+                                uiContext.openToastr({
+                                  size: "small",
+                                  text: "G-Loot ID copied to your clipboard",
+                                  color: "green",
+                                  autoDelete: true,
+                                  autoDeleteDelay: 2500,
+                                });
+                                navigator.clipboard.writeText(
+                                  "4769554309840896"
+                                );
+                              }}
+                            >
+                              4769554309840896
+                            </code>
+                          </span>
+                        </div>
+                        <button
+                          type="button"
+                          className="button button-sm button-secondary"
+                        >
+                          <span>Change password</span>
+                        </button>
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="first-name">Your bio:</label>
+                        <TextareaExpandable text={selectedUser.bio} rows={4} />
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="account-country">Country:</label>
+                        <div className="flex justify-center items-center gap-2 border border-ui-600 rounded p-2">
                           <div className="w-6 flex justify-center">
                             <img
                               src="https://flagcdn.com/tt.svg"
@@ -132,7 +177,7 @@ export default function Home() {
                     </div>
                     <div>
                       <div className="space-y-4">
-                        <h2 className="h4">My social links</h2>
+                        <h2 className="h5">My social links</h2>
                         <div className="form-group flex items-start gap-2">
                           <label
                             htmlFor="social-twitch"
@@ -182,7 +227,7 @@ export default function Home() {
                       </div>
                       <hr className="mt-8 mb-4" />
                       <div className="space-y-4">
-                        <h2 className="h4">Game accounts</h2>
+                        <h2 className="h5">Game accounts</h2>
                         <div className="form-group flex items-start gap-2">
                           <label htmlFor="social-steam" className="flex-1 mt-3">
                             Steam:
@@ -290,63 +335,11 @@ export default function Home() {
                 </>
               }
             >
-              <div className="p-8">
+              <div className="p-4 md:p-8">
                 <div className="max-w-lg mx-auto">
-                  <div className="grid xl:grid-cols-2 gap-16">
-                    <div className="space-y-4">
-                      <h2 className="h4">G-Loot</h2>
-                      <div className="form-group">
-                        <label htmlFor="account-username">Username:</label>
-                        <input
-                          type="text"
-                          name="account-username"
-                          id="account-username"
-                          value={selectedUser.nickname}
-                        />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="account-email">Email:</label>
-                        <input
-                          type="email"
-                          name="account-email"
-                          id="account-email"
-                          value={selectedUser.email}
-                        />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <div className="text-sm text-ui-300">
-                          <span className="label">G-Loot ID:</span>
-                          <span className="tooltip" data-tooltip="Copy">
-                            <code
-                              className="interactive text-xs"
-                              onClick={() => {
-                                uiContext.openToastr({
-                                  size: "small",
-                                  text: "G-Loot ID copied to your clipboard",
-                                  color: "green",
-                                  autoDelete: true,
-                                  autoDeleteDelay: 2500,
-                                });
-                                navigator.clipboard.writeText(
-                                  "4769554309840896"
-                                );
-                              }}
-                            >
-                              4769554309840896
-                            </code>
-                          </span>
-                        </div>
-                        <button
-                          type="button"
-                          className="button button-sm button-secondary"
-                        >
-                          <span>Change password</span>
-                        </button>
-                      </div>
-                    </div>
                     <div className="space-y-4">
                       <div className="flex gap-2">
-                        <h2 className="h4">Game ID&#39;s</h2>
+                        <h2 className="h5">Game ID&#39;s</h2>
                         <button
                           className="tooltip tooltip-bottom text-ui-300 text-0"
                           data-tooltip="Your in-game nickname is necessary if you want to join G-Loot tournaments"
@@ -354,26 +347,21 @@ export default function Home() {
                           <span className="icon icon-16 icon-c-info" />
                         </button>
                       </div>
-                      <div className="form-group">
-                        <label htmlFor="game-apex">
-                          Apex Legends Nickname:
-                        </label>
-                        <input type="text" name="game-apex" id="game-apex" />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="game-pubg">
-                          PUBG BATTLEGROUNDS Nickname:
-                        </label>
-                        <input type="text" name="game-pubg" id="game-pubg" />
+                      <div className="flex flex-col md:flex-row gap-4 md:gap-16">
+                        <div className="form-group flex-1">
+                          <label htmlFor="game-apex">
+                            Apex Legends Nickname:
+                          </label>
+                          <input type="text" name="game-apex" id="game-apex" />
+                        </div>
+                        <div className="form-group flex-1">
+                          <label htmlFor="game-pubg">
+                            PUBG BATTLEGROUNDS Nickname:
+                          </label>
+                          <input type="text" name="game-pubg" id="game-pubg" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="mt-4">
-                    <div className="form-group">
-                      <label htmlFor="first-name">Your bio:</label>
-                      <TextareaExpandable text={selectedUser.bio} rows={2} />
-                    </div>
-                  </div>
                   <hr className="my-8 opacity-50" />
                   <div className="flex justify-end gap-4">
                     <button
@@ -425,7 +413,7 @@ export default function Home() {
                 </>
               }
             >
-              <div className="p-8">
+              <div className="p-4 md:p-8">
                 <div className="max-w-lg mx-auto">
                   <div className="grid xl:grid-cols-2 gap-16">
                     <div className="space-y-4">

@@ -95,6 +95,7 @@ export const FrameworkPages = {
           tab: 1,
           new: false,
           tags: "home, start, index, tournament schedule, agenda, upcoming, competition, modal, prompt",
+          deprecated: true,
         },
       ],
     },
@@ -530,6 +531,7 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open",
           tab: 0,
           new: false,
+          deprecated: true,
         },
         {
           label: "Ongoing Tournaments listing",
@@ -540,6 +542,7 @@ export const FrameworkPages = {
           tab: 0,
           tab: 1,
           new: false,
+          deprecated: true,
         },
         {
           label: "Finished tournament listing",
@@ -548,6 +551,7 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open, listing, history, past",
           tab: 0,
           new: false,
+          deprecated: true,
         },
         {
           label: "Finished tournament listing",
@@ -557,6 +561,7 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open, listing, history, past, empty state",
           tab: 1,
           new: false,
+          deprecated: true,
         },
         {
           label: "How it works",
@@ -565,16 +570,19 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open, how it works, explanation",
           tab: 0,
           new: false,
+          deprecated: true,
         },
         {
           title: true,
           label: "Tournament details",
           tab: 1,
+          deprecated: true,
         },
         {
           title: true,
           label: "Overview",
           tab: 2,
+          deprecated: true,
         },
         {
           label: "Overview",
@@ -583,6 +591,7 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, register, solo, team, party",
           tab: 3,
           new: false,
+          deprecated: true,
         },
         {
           label: "Overview (registered)",
@@ -591,6 +600,7 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, register, solo, team, party, registered",
           tab: 3,
           new: false,
+          deprecated: true,
         },
         {
           label: "Add Discord",
@@ -600,6 +610,7 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, register, solo, team, party, registered, discord, modal, prompt",
           tab: 4,
           new: false,
+          deprecated: true,
         },
         {
           label: "Leave party",
@@ -609,6 +620,7 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, register, solo, team, party, leave, quit, cancel, registered, discord, modal, prompt",
           tab: 4,
           new: false,
+          deprecated: true,
         },
         {
           label: "Participants",
@@ -617,11 +629,13 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, registered, participants, listing",
           tab: 2,
           new: false,
+          deprecated: true,
         },
         {
           title: true,
           label: "Leaderboard",
           tab: 2,
+          deprecated: true,
         },
         {
           label: "Leaderboard table",
@@ -630,6 +644,7 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, registered, participants, listing, winners, leaderboard, prize money",
           tab: 3,
           new: false,
+          deprecated: true,
         },
         {
           label: "Leaderboard brackets",
@@ -638,6 +653,7 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open, overview, registered, participants, listing, winners, leaderboard, prize money",
           tab: 3,
           new: false,
+          deprecated: true,
         },
         {
           label: "How to play",
@@ -646,6 +662,7 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open, explanation, how it works, how to play",
           tab: 2,
           new: false,
+          deprecated: true,
         },
         {
           label: "Rules",
@@ -654,6 +671,7 @@ export const FrameworkPages = {
           tags: "game, tournaments, showdown, competition, skirmish, qualifiers, open, explanation, rules, eligibility, consent, obligations, law",
           tab: 2,
           new: false,
+          deprecated: true,
         },
       ],
     },
