@@ -54,269 +54,253 @@ export default function Home() {
         <Ad width="1005" height="124" />
 
         <section>
-          <h1 className="px-2 sm:px-0 py-2 text-2xl">Profile settings</h1>
-          <div className="accordion accordion-highlighted surface sm:rounded-lg">
-            <Accordion
-              isopen={true}
-              header={
-                <>
-                  <div className="item">
-                    <div className="item-body">
-                      <div className="py-1 px-2 item-title font-headings font-bold text-xl italic">
-                        General
+          <div className="surface sm:rounded-lg p-4 sm:p-8 sm:pt-12">
+            <div className="max-w-lg mx-auto">
+              <div className="grid xl:grid-cols-2 gap-16">
+                <div className="space-y-4">
+                  <div className="flex justify-center items-center gap-4">
+                    <div className="relative">
+                      <div className="avatar avatar-xl avatar-circle z-0">
+                        <div>
+                          <img src={selectedUser.avatar} />
+                        </div>
                       </div>
-                    </div>
-                    <div className="item-actions">
-                      <div>
-                        <span className="icon icon-24 icon-arrow-sm-down" />
+                      <div className="form-group absolute z-10 bottom-0 right-0">
+                        <label
+                          htmlFor="file-button"
+                          className="button button-sm button-tertiary rounded-full"
+                        >
+                          <span className="icon icon-camera" />
+                        </label>
+                        <input
+                          type="file"
+                          name="file-button"
+                          id="file-button"
+                          aria-describedby="file_input_help"
+                        />
                       </div>
                     </div>
                   </div>
-                </>
-              }
-            >
-              <div className="p-4 md:p-8">
-                <div className="max-w-lg mx-auto">
-                  <div className="grid xl:grid-cols-2 gap-16">
-                    <div className="space-y-4">
-                      <div className="flex justify-center items-center gap-4">
-                        <div className="relative">
-                          <div className="avatar avatar-xl avatar-circle z-0">
-                            <div>
-                              <img src={selectedUser.avatar} />
-                            </div>
-                          </div>
-                          <div className="form-group absolute z-10 bottom-0 right-0">
-                            <label
-                              htmlFor="file-button"
-                              className="button button-sm button-tertiary rounded-full"
-                            >
-                              <span className="icon icon-camera" />
-                            </label>
-                            <input
-                              type="file"
-                              name="file-button"
-                              id="file-button"
-                              aria-describedby="file_input_help"
-                            />
-                          </div>
-                        </div>
+                  <div className="form-group">
+                    <label htmlFor="account-username">Username:</label>
+                    <input
+                      type="text"
+                      name="account-username"
+                      id="account-username"
+                      value={selectedUser.nickname}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="account-email">Email:</label>
+                    <input
+                      type="email"
+                      name="account-email"
+                      id="account-email"
+                      value={selectedUser.email}
+                    />
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="text-sm text-ui-300">
+                      <span className="label">G-Loot ID:</span>
+                      <span className="tooltip" data-tooltip="Copy">
+                        <code
+                          className="interactive text-xs"
+                          onClick={() => {
+                            uiContext.openToastr({
+                              size: "small",
+                              text: "G-Loot ID copied to your clipboard",
+                              color: "green",
+                              autoDelete: true,
+                              autoDeleteDelay: 2500,
+                            });
+                            navigator.clipboard.writeText("4769554309840896");
+                          }}
+                        >
+                          4769554309840896
+                        </code>
+                      </span>
+                    </div>
+                    <button
+                      type="button"
+                      className="button button-sm button-secondary"
+                    >
+                      <span>Change password</span>
+                    </button>
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="first-name">Your bio:</label>
+                    <TextareaExpandable text={selectedUser.bio} rows={4} />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="account-country">Country:</label>
+                    <div className="flex justify-center items-center gap-2 border border-ui-600 rounded p-2">
+                      <div className="w-6 flex justify-center">
+                        <img
+                          src="https://flagcdn.com/tt.svg"
+                          className="aspect-video rounded-sm max-w-[1.5rem]"
+                        />
                       </div>
-                      <div className="form-group">
-                        <label htmlFor="account-username">Username:</label>
+                      <span className="text-ui-300">Trinidad and Tobago</span>
+                      <button
+                        className="tooltip tooltip-bottom text-ui-300 text-0"
+                        data-tooltip="Contact support to change your country."
+                      >
+                        <span className="icon icon-16 icon-c-info" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="space-y-4">
+                    <h2 className="h5">My social links</h2>
+                    <div className="form-group flex items-start gap-2">
+                      <label htmlFor="social-twitch" className="flex-1 mt-3">
+                        Twitch:
+                      </label>
+                      <div className="flex-3 input-group">
+                        <span className="icon icon-twitch" />
                         <input
                           type="text"
-                          name="account-username"
-                          id="account-username"
-                          value={selectedUser.nickname}
+                          name="social-twitch"
+                          id="social-twitch"
                         />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="account-email">Email:</label>
-                        <input
-                          type="email"
-                          name="account-email"
-                          id="account-email"
-                          value={selectedUser.email}
-                        />
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <div className="text-sm text-ui-300">
-                          <span className="label">G-Loot ID:</span>
-                          <span className="tooltip" data-tooltip="Copy">
-                            <code
-                              className="interactive text-xs"
-                              onClick={() => {
-                                uiContext.openToastr({
-                                  size: "small",
-                                  text: "G-Loot ID copied to your clipboard",
-                                  color: "green",
-                                  autoDelete: true,
-                                  autoDeleteDelay: 2500,
-                                });
-                                navigator.clipboard.writeText(
-                                  "4769554309840896"
-                                );
-                              }}
-                            >
-                              4769554309840896
-                            </code>
-                          </span>
-                        </div>
-                        <button
-                          type="button"
-                          className="button button-sm button-secondary"
-                        >
-                          <span>Change password</span>
-                        </button>
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="first-name">Your bio:</label>
-                        <TextareaExpandable text={selectedUser.bio} rows={4} />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="account-country">Country:</label>
-                        <div className="flex justify-center items-center gap-2 border border-ui-600 rounded p-2">
-                          <div className="w-6 flex justify-center">
-                            <img
-                              src="https://flagcdn.com/tt.svg"
-                              className="aspect-video rounded-sm max-w-[1.5rem]"
-                            />
-                          </div>
-                          <span className="text-ui-300">
-                            Trinidad and Tobago
-                          </span>
-                          <button
-                            className="tooltip tooltip-bottom text-ui-300 text-0"
-                            data-tooltip="Contact support to change your country."
-                          >
-                            <span className="icon icon-16 icon-c-info" />
-                          </button>
-                        </div>
                       </div>
                     </div>
-                    <div>
-                      <div className="space-y-4">
-                        <h2 className="h5">My social links</h2>
-                        <div className="form-group flex items-start gap-2">
-                          <label
-                            htmlFor="social-twitch"
-                            className="flex-1 mt-3"
-                          >
-                            Twitch:
-                          </label>
-                          <div className="flex-3 input-group">
-                            <span className="icon icon-twitch" />
-                            <input
-                              type="text"
-                              name="social-twitch"
-                              id="social-twitch"
-                            />
-                          </div>
-                        </div>
-                        <div className="form-group flex items-start gap-2">
-                          <label
-                            htmlFor="social-twitter"
-                            className="flex-1 mt-3"
-                          >
-                            Twitter:
-                          </label>
-                          <div className="flex-3 input-group">
-                            <span className="icon icon-logo-twitter" />
-                            <input
-                              type="text"
-                              name="social-twitter"
-                              id="social-twitter"
-                            />
-                          </div>
-                        </div>
-                        <div className="form-group flex items-start gap-2">
-                          <label
-                            htmlFor="social-discord"
-                            className="flex-1 mt-3"
-                          >
-                            Discord:
-                          </label>
-                          <div className="flex-3">
-                            <button className="button button-primary w-full">
-                              <span className="icon icon-discord" />
-                              <span>Connect with Discord</span>
-                            </button>
-                          </div>
-                        </div>
+                    <div className="form-group flex items-start gap-2">
+                      <label htmlFor="social-twitter" className="flex-1 mt-3">
+                        Twitter:
+                      </label>
+                      <div className="flex-3 input-group">
+                        <span className="icon icon-logo-twitter" />
+                        <input
+                          type="text"
+                          name="social-twitter"
+                          id="social-twitter"
+                        />
                       </div>
-                      <hr className="mt-8 mb-4" />
-                      <div className="space-y-4">
-                        <h2 className="h5">Game accounts</h2>
-                        <div className="form-group flex items-start gap-2">
-                          <label htmlFor="social-steam" className="flex-1 mt-3">
-                            Steam:
-                          </label>
-                          <div className="flex-3">
-                            <button className="button button-primary w-full">
-                              <span className="icon icon-steam" />
-                              <span>Connect with Steam</span>
-                            </button>
-                            <p className="text-ui-300 text-sm mt-2 leading-tight">
-                              This site is not associated with Valve Corp.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="form-group flex items-start gap-2">
-                          <label htmlFor="social-steam" className="flex-1 mt-3">
-                            Riot Games:
-                          </label>
-                          <div className="flex-3">
-                            {isConnected && (
-                              <div className="flex-3 input-group">
-                                <span>
-                                  <span className="icon icon-riotgames-symbol" />
-                                </span>
-                                <input
-                                  type="text"
-                                  name="gameaccount-riot"
-                                  id="gameaccount-riot"
-                                  disabled
-                                  value="jackattack#3827"
-                                />
-                              </div>
-                            )}
-                            {!isConnected && (
-                              <button className="button button-primary w-full">
-                                <span className="icon icon-riotgames-symbol" />
-                                <span>Connect with Riot ID</span>
-                              </button>
-                            )}
-
-                            <p className="text-ui-300 text-sm mt-2 leading-tight">
-                              By connecting with Riot I acknowledge making my
-                              profile public to all users.
-                            </p>
-                          </div>
-                        </div>
-                        <div className="form-group flex items-start gap-2">
-                          <div className="flex-1 mt-3" />
-                          <div className="flex-3">
-                            <p className="text-ui-300 text-sm mt-2 leading-tight">
-                              Contact support if you need to update your game
-                              accounts.
-                            </p>
-                          </div>
-                        </div>
+                    </div>
+                    <div className="form-group flex items-start gap-2">
+                      <label htmlFor="social-discord" className="flex-1 mt-3">
+                        Discord:
+                      </label>
+                      <div className="flex-3">
+                        <button className="button button-primary w-full">
+                          <span className="icon icon-discord" />
+                          <span>Connect with Discord</span>
+                        </button>
                       </div>
                     </div>
                   </div>
-                  <hr className="my-8 opacity-50" />
-                  <div className="flex justify-end gap-4">
-                    <button
-                      type="button"
-                      className={`button button-primary ${
-                        submitting ? "is-loading" : ""
-                      }`}
-                      onClick={addToastWithDelay.bind(this, {
-                        title: "Success",
-                        icon: "f-check",
-                        color: "green",
-                        text: "Settings saved successfully.",
-                        autoDelete: true,
-                        autoDeleteDelay: 5000,
-                      })}
-                    >
-                      <span>Save changes</span>
-                    </button>
-                    <button
-                      type="button"
-                      className="button button-secondary"
-                      data-feedback-icon="success"
-                      data-feedback={buttonFeedbackMessage1}
-                      onClick={buttonFeedback1.bind(this, "Settings reset")}
-                    >
-                      <span>Reset</span>
-                    </button>
+                  <hr className="mt-8 mb-4" />
+                  <div className="space-y-4">
+                    <div className="flex gap-2">
+                      <h2 className="h5">Game accounts</h2>
+                      <button
+                        className="tooltip tooltip-bottom text-ui-300 text-0"
+                        data-tooltip="Contact support if you need to update your game accounts."
+                      >
+                        <span className="icon icon-16 icon-c-info" />
+                      </button>
+                    </div>
+                    <div className="form-group flex items-start gap-2">
+                      <label htmlFor="social-steam" className="flex-1 mt-3">
+                        Steam:
+                      </label>
+                      <div className="flex-3">
+                        <button className="button button-primary w-full">
+                          <span className="icon icon-steam" />
+                          <span>Connect with Steam</span>
+                        </button>
+                        <p className="text-ui-300 text-sm mt-2 leading-tight">
+                          This site is not associated with Valve Corp.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="form-group flex items-start gap-2">
+                      <label htmlFor="social-steam" className="flex-1 mt-3">
+                        Riot Games:
+                      </label>
+                      <div className="flex-3">
+                        {isConnected && (
+                          <div className="flex-3 input-group">
+                            <span>
+                              <span className="icon icon-riotgames-symbol" />
+                            </span>
+                            <input
+                              type="text"
+                              name="gameaccount-riot"
+                              id="gameaccount-riot"
+                              disabled
+                              value="jackattack#3827"
+                            />
+                          </div>
+                        )}
+                        {!isConnected && (
+                          <button className="button button-primary w-full">
+                            <span className="icon icon-riotgames-symbol" />
+                            <span>Connect with Riot ID</span>
+                          </button>
+                        )}
+
+                        <p className="text-ui-300 text-sm mt-2 leading-tight">
+                          By connecting with Riot I acknowledge making my
+                          profile public to all users.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="form-group flex items-center gap-2">
+                      <label htmlFor="game-apex" className="flex-1 mt-3">
+                        Apex Legends Nickname:
+                      </label>
+                      <div className="flex-3 input-group">
+                        <span className="icon icon-game-apexlegends-symbol" />
+                        <input type="text" name="game-apex" id="game-apex" />
+                      </div>
+                    </div>
+                    <div className="form-group flex items-center gap-2">
+                      <label htmlFor="game-pubg" className="flex-1 mt-3">
+                        PUBG Nickname:
+                      </label>
+                      <div className="flex-3 input-group">
+                        <span className="icon icon-game-pubg-symbol" />
+                        <input type="text" name="game-pubg" id="game-pubg" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </Accordion>
+              <hr className="my-8 opacity-50" />
+              <div className="flex justify-end gap-4">
+                <button
+                  type="button"
+                  className={`button button-primary ${
+                    submitting ? "is-loading" : ""
+                  }`}
+                  onClick={addToastWithDelay.bind(this, {
+                    title: "Success",
+                    icon: "f-check",
+                    color: "green",
+                    text: "Settings saved successfully.",
+                    autoDelete: true,
+                    autoDeleteDelay: 5000,
+                  })}
+                >
+                  <span>Save changes</span>
+                </button>
+                <button
+                  type="button"
+                  className="button button-secondary"
+                  data-feedback-icon="success"
+                  data-feedback={buttonFeedbackMessage1}
+                  onClick={buttonFeedback1.bind(this, "Settings reset")}
+                >
+                  <span>Reset</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="accordion accordion-highlighted surface sm:rounded-lg hidden">
+            {/*
             <Accordion
               header={
                 <>
@@ -337,31 +321,31 @@ export default function Home() {
             >
               <div className="p-4 md:p-8">
                 <div className="max-w-lg mx-auto">
-                    <div className="space-y-4">
-                      <div className="flex gap-2">
-                        <h2 className="h5">Game ID&#39;s</h2>
-                        <button
-                          className="tooltip tooltip-bottom text-ui-300 text-0"
-                          data-tooltip="Your in-game nickname is necessary if you want to join G-Loot tournaments"
-                        >
-                          <span className="icon icon-16 icon-c-info" />
-                        </button>
+                  <div className="space-y-4">
+                    <div className="flex gap-2">
+                      <h2 className="h5">Game ID&#39;s</h2>
+                      <button
+                        className="tooltip tooltip-bottom text-ui-300 text-0"
+                        data-tooltip="Your in-game nickname is necessary if you want to join G-Loot tournaments"
+                      >
+                        <span className="icon icon-16 icon-c-info" />
+                      </button>
+                    </div>
+                    <div className="flex flex-col md:flex-row gap-4 md:gap-16">
+                      <div className="form-group flex-1">
+                        <label htmlFor="game-apex">
+                          Apex Legends Nickname:
+                        </label>
+                        <input type="text" name="game-apex" id="game-apex" />
                       </div>
-                      <div className="flex flex-col md:flex-row gap-4 md:gap-16">
-                        <div className="form-group flex-1">
-                          <label htmlFor="game-apex">
-                            Apex Legends Nickname:
-                          </label>
-                          <input type="text" name="game-apex" id="game-apex" />
-                        </div>
-                        <div className="form-group flex-1">
-                          <label htmlFor="game-pubg">
-                            PUBG BATTLEGROUNDS Nickname:
-                          </label>
-                          <input type="text" name="game-pubg" id="game-pubg" />
-                        </div>
+                      <div className="form-group flex-1">
+                        <label htmlFor="game-pubg">
+                          PUBG BATTLEGROUNDS Nickname:
+                        </label>
+                        <input type="text" name="game-pubg" id="game-pubg" />
                       </div>
                     </div>
+                  </div>
                   <hr className="my-8 opacity-50" />
                   <div className="flex justify-end gap-4">
                     <button
@@ -393,6 +377,7 @@ export default function Home() {
                 </div>
               </div>
             </Accordion>
+                    */}
 
             {/* 
             <Accordion
