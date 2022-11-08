@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import ModalClaimLadderRewards from "../../pages/prototype/home/modal-claim-ladderrewards";
 import { UiContext } from "../../contexts/ui";
 import { VariablesContext } from "../../contexts/variables";
+import { usePrototypeData } from "../../contexts/prototype";
 
 export default function RewardLadder(props) {
   const [step, setStep] = useState(1);
@@ -10,6 +11,7 @@ export default function RewardLadder(props) {
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
   const [showWellDone, setShowWellDone] = useState(false);
+  const prototype = usePrototypeData();
 
   function openModalClaimLadderRewards() {
     uiContext.openModal(<ModalClaimLadderRewards></ModalClaimLadderRewards>);
@@ -25,7 +27,13 @@ export default function RewardLadder(props) {
   return (
     <>
       <div className="relative">
-        <div className={`absolute inset-0 z-50 backdrop-blur-sm bg-gradient-radial from-ui-900/90 via-ui-900/90 to-ui-900/60 gap-2 flex items-center justify-center overflow-hidden transition-opacity duration-500 ${props.hasReward && !variablesContext.rewardClaimed ? "" : "pointer-events-none opacity-0"}`}>
+        <div
+          className={`absolute inset-0 z-50 backdrop-blur-sm bg-gradient-radial from-ui-900/90 via-ui-900/90 to-ui-900/60 gap-2 flex items-center justify-center overflow-hidden transition-opacity duration-500 ${
+            props.hasReward && !variablesContext.rewardClaimed
+              ? ""
+              : "pointer-events-none opacity-0"
+          }`}
+        >
           {!variablesContext.rewardClaimed && (
             <>
               <div
@@ -129,12 +137,13 @@ export default function RewardLadder(props) {
           <div className="ladder-avatar py-2">
             <div>
               <div>
-                <div className="avatar avatar-circle avatar-xs">
+                <div
+                  className={`avatar avatar-circle avatar-xs ${
+                    prototype.getUserByID(1)?.isPremium ? "avatar-gold" : ""
+                  }`}
+                >
                   <div>
-                    <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
-                      alt=""
-                    />
+                    <img src={prototype.getUserByID(1)?.avatar} alt="" />
                   </div>
                   <i className="radar" />
                 </div>

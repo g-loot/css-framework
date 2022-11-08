@@ -53,7 +53,7 @@ export const dataUsers = [
   {
     id: 2,
     isYou: false,
-    isPremium: false,
+    isPremium: true,
     isOnline: false,
     nickname: "Kes2Band",
     firstname: "Kees",
@@ -301,7 +301,7 @@ export const dataUsers = [
   {
     id: 8,
     isYou: false,
-    isPremium: false,
+    isPremium: true,
     isOnline: false,
     nickname: "Pilar",
     firstname: "Steven",
@@ -409,7 +409,7 @@ export const dataUsers = [
   {
     id: 11,
     isYou: false,
-    isPremium: false,
+    isPremium: true,
     isOnline: true,
     nickname: "Jamlog",
     firstname: "Jamie",

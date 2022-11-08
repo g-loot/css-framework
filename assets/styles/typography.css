@@ -93,7 +93,7 @@ h6,
 hr,
 .separator {
   @apply
-  border-ui-600
+  border-ui-700
   mx-auto
   block
   w-full

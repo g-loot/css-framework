@@ -54,33 +54,33 @@ export default function Home() {
         <Ad width="1005" height="124" />
 
         <section>
-          <div className="surface sm:rounded-lg p-4 sm:p-8 sm:pt-12">
+          <div className="flex justify-center items-center gap-4 -mb-8 relative z-10">
+            <div className="relative">
+              <div className="avatar avatar-xl avatar-circle z-0">
+                <div>
+                  <img src={selectedUser.avatar} />
+                </div>
+              </div>
+              <div className="form-group absolute z-10 bottom-0 right-0">
+                <label
+                  htmlFor="file-button"
+                  className="button button-sm button-tertiary rounded-full"
+                >
+                  <span className="icon icon-camera" />
+                </label>
+                <input
+                  type="file"
+                  name="file-button"
+                  id="file-button"
+                  aria-describedby="file_input_help"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="surface surface-halo halo-t sm:rounded-lg p-4 pt-12 sm:p-8 sm:pt-16 relative z-0">
             <div className="max-w-lg mx-auto">
               <div className="grid xl:grid-cols-2 gap-16">
                 <div className="space-y-4">
-                  <div className="flex justify-center items-center gap-4">
-                    <div className="relative">
-                      <div className="avatar avatar-xl avatar-circle z-0">
-                        <div>
-                          <img src={selectedUser.avatar} />
-                        </div>
-                      </div>
-                      <div className="form-group absolute z-10 bottom-0 right-0">
-                        <label
-                          htmlFor="file-button"
-                          className="button button-sm button-tertiary rounded-full"
-                        >
-                          <span className="icon icon-camera" />
-                        </label>
-                        <input
-                          type="file"
-                          name="file-button"
-                          id="file-button"
-                          aria-describedby="file_input_help"
-                        />
-                      </div>
-                    </div>
-                  </div>
                   <div className="form-group">
                     <label htmlFor="account-username">Username:</label>
                     <input
@@ -150,7 +150,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div>
+                <div className="space-y-8">
                   <div className="space-y-4">
                     <h2 className="h5">My social links</h2>
                     <div className="form-group flex items-start gap-2">
@@ -191,7 +191,6 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <hr className="mt-8 mb-4" />
                   <div className="space-y-4">
                     <div className="flex gap-2">
                       <h2 className="h5">Game accounts</h2>
@@ -248,28 +247,10 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                    <div className="form-group flex items-center gap-2">
-                      <label htmlFor="game-apex" className="flex-1 mt-3">
-                        Apex Legends Nickname:
-                      </label>
-                      <div className="flex-3 input-group">
-                        <span className="icon icon-game-apexlegends-symbol" />
-                        <input type="text" name="game-apex" id="game-apex" />
-                      </div>
-                    </div>
-                    <div className="form-group flex items-center gap-2">
-                      <label htmlFor="game-pubg" className="flex-1 mt-3">
-                        PUBG Nickname:
-                      </label>
-                      <div className="flex-3 input-group">
-                        <span className="icon icon-game-pubg-symbol" />
-                        <input type="text" name="game-pubg" id="game-pubg" />
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
-              <hr className="my-8 opacity-50" />
+              <hr className="my-8" />
               <div className="flex justify-end gap-4">
                 <button
                   type="button"

@@ -34,7 +34,11 @@ export default function Home() {
                 <div className="header-content">
                   <div className="header-body">
                     <div className="flex gap-4 items-center self-center">
-                      <div className="avatar avatar-xl avatar-circle">
+                      <div className={`avatar avatar-xl avatar-circle ${
+                                selectedUser.isPremium
+                                  ? "avatar-gold"
+                                  : ""
+                              }`}>
                         <div>
                           <img src={selectedUser.avatar} alt="avatar" />
                         </div>
@@ -42,7 +46,13 @@ export default function Home() {
                       <div className="flex-1">
                         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                           <div className="flex items-baseline gap-1">
-                            <h1 className="text-3xl sm:text-4xl">
+                            <h1
+                              className={`text-3xl sm:text-4xl ${
+                                selectedUser.isPremium
+                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  : ""
+                              }`}
+                            >
                               {selectedUser.nickname}
                             </h1>
                             <img

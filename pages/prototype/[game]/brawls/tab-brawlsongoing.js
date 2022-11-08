@@ -397,6 +397,7 @@ export default function TabBrawlsOngoing() {
                     Coins
                   </div>
                 </div>
+                {/*
                 <div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1659613036/Marketing/2022_prototype/CurrencyRewards/Reward-ticket-multiple.png"
@@ -411,6 +412,7 @@ export default function TabBrawlsOngoing() {
                     Golden tickets
                   </div>
                 </div>
+            */}
               </div>
             </section>
           </>

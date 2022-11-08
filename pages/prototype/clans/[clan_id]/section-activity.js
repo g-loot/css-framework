@@ -294,13 +294,15 @@ export default function SectionClanActivity() {
                 </span>
               </h2>
               {selectedClan.isYou && (
+                <Link href={`/prototype/clans/${selectedClan.id}/applications`}>
                 <button
                   type="button"
                   className="button button-sm button-tertiary"
                 >
-                  <span className="icon icon-a-add" />
-                  <span>Add member</span>
+                  <span className="icon icon-a-time" />
+                  <span>View applicants</span>
                 </button>
+                </Link>
               )}
             </div>
             <div className="max-h-60 overflow-y-auto scrollbar-desktop">
@@ -330,7 +332,15 @@ export default function SectionClanActivity() {
                           }${prototype.getURLparams()}`}
                         >
                           <div className="item-title flex gap-2 items-center interactive">
-                            {prototype.getUserByID(user).nickname}
+                            <span
+                              className={`${
+                                prototype.getUserByID(user)?.isPremium
+                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  : ""
+                              }`}
+                            >
+                              {prototype.getUserByID(user).nickname}
+                            </span>
                             {selectedClan.admin ===
                               prototype.getUserByID(user).id && (
                               <span className="icon icon-crown text-sm" />
@@ -392,9 +402,7 @@ export default function SectionClanActivity() {
                         </div>
                       </div>
                       {selectedClan.isYou && (
-                        <div
-                          className="item-actions"
-                        >
+                        <div className="item-actions">
                           <div
                             className={`dropdown dropdown-left ${
                               userIndex + 1 ===

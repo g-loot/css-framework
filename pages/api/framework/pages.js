@@ -184,6 +184,14 @@ export const FrameworkPages = {
           new: false,
         },
         {
+          label: "Clans applications",
+          url: "clans/1/applications",
+          query: "",
+          tags: "clan, team, applicants, application, accept, decline, form, listing",
+          tab: 0,
+          new: false,
+        },
+        {
           title: true,
           label: "Clan detail (self)",
           tab: 0,

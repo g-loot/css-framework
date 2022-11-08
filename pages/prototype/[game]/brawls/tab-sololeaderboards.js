@@ -171,13 +171,32 @@ export default function TabBrawlsSoloLeaderboards() {
                         <table className="table table-compact w-full text-sm leading-tight">
                           <tbody>
                             <tr>
-                              <td className="text-left"><span className="font-bold px-4 text-ui-100">43</span><span className="text-ui-300">Kills</span></td>
+                              <td className="text-left">
+                                <span className="font-bold px-4 text-ui-100">
+                                  43
+                                </span>
+                                <span className="text-ui-300">Kills</span>
+                              </td>
                             </tr>
                             <tr>
-                              <td className="text-left"><span className="font-bold px-4 text-ui-100">3</span><span className="text-ui-300">Tiebreaker 1</span></td>
+                              <td className="text-left">
+                                <span className="font-bold px-4 text-ui-100">
+                                  3
+                                </span>
+                                <span className="text-ui-300">
+                                  Tiebreaker 1
+                                </span>
+                              </td>
                             </tr>
                             <tr>
-                              <td className="text-left"><span className="font-bold px-4 text-ui-100">3</span><span className="text-ui-300">Tiebreaker 2</span></td>
+                              <td className="text-left">
+                                <span className="font-bold px-4 text-ui-100">
+                                  3
+                                </span>
+                                <span className="text-ui-300">
+                                  Tiebreaker 2
+                                </span>
+                              </td>
                             </tr>
                           </tbody>
                         </table>
@@ -187,15 +206,34 @@ export default function TabBrawlsSoloLeaderboards() {
                           Match 2
                         </div>
                         <table className="table table-compact w-full text-sm leading-tight">
-                        <tbody>
+                          <tbody>
                             <tr>
-                              <td className="text-left"><span className="font-bold px-4 text-ui-100">33</span><span className="text-ui-300">Kills</span></td>
+                              <td className="text-left">
+                                <span className="font-bold px-4 text-ui-100">
+                                  33
+                                </span>
+                                <span className="text-ui-300">Kills</span>
+                              </td>
                             </tr>
                             <tr>
-                              <td className="text-left"><span className="font-bold px-4 text-ui-100">3</span><span className="text-ui-300">Tiebreaker 1</span></td>
+                              <td className="text-left">
+                                <span className="font-bold px-4 text-ui-100">
+                                  3
+                                </span>
+                                <span className="text-ui-300">
+                                  Tiebreaker 1
+                                </span>
+                              </td>
                             </tr>
                             <tr>
-                              <td className="text-left"><span className="font-bold px-4 text-ui-100">3</span><span className="text-ui-300">Tiebreaker 2</span></td>
+                              <td className="text-left">
+                                <span className="font-bold px-4 text-ui-100">
+                                  3
+                                </span>
+                                <span className="text-ui-300">
+                                  Tiebreaker 2
+                                </span>
+                              </td>
                             </tr>
                           </tbody>
                         </table>
@@ -207,13 +245,32 @@ export default function TabBrawlsSoloLeaderboards() {
                         <table className="table table-compact w-full text-sm leading-tight">
                           <tbody>
                             <tr>
-                              <td className="text-left"><span className="font-bold px-4 text-ui-100">21</span><span className="text-ui-300">Kills</span></td>
+                              <td className="text-left">
+                                <span className="font-bold px-4 text-ui-100">
+                                  21
+                                </span>
+                                <span className="text-ui-300">Kills</span>
+                              </td>
                             </tr>
                             <tr>
-                              <td className="text-left"><span className="font-bold px-4 text-ui-100">3</span><span className="text-ui-300">Tiebreaker 1</span></td>
+                              <td className="text-left">
+                                <span className="font-bold px-4 text-ui-100">
+                                  3
+                                </span>
+                                <span className="text-ui-300">
+                                  Tiebreaker 1
+                                </span>
+                              </td>
                             </tr>
                             <tr>
-                              <td className="text-left"><span className="font-bold px-4 text-ui-100">3</span><span className="text-ui-300">Tiebreaker 2</span></td>
+                              <td className="text-left">
+                                <span className="font-bold px-4 text-ui-100">
+                                  3
+                                </span>
+                                <span className="text-ui-300">
+                                  Tiebreaker 2
+                                </span>
+                              </td>
                             </tr>
                           </tbody>
                         </table>
@@ -241,7 +298,8 @@ export default function TabBrawlsSoloLeaderboards() {
                   <div className="mb-4 surface surface-dimmed surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
                     <h2 className="h4 mb-2">Compete in this Brawl</h2>
                     <div className="uppercase font-bold text-ui-100">
-                      Play at least <span className="text-blue-300">3 matches</span>
+                      Play at least{" "}
+                      <span className="text-blue-300">3 matches</span>
                     </div>
                     <p className="text-ui-300 my-4">
                       The total of your Brawl points from your X best matches
@@ -743,7 +801,15 @@ export default function TabBrawlsSoloLeaderboards() {
                                                 }${prototype.getURLparams()}`}
                                               >
                                                 <div className="flex gap-2 items-center interactive">
-                                                  <div className="avatar avatar-circle avatar-xs">
+                                                  <div
+                                                    className={`avatar avatar-circle avatar-xs  ${
+                                                      prototype.getUserByID(
+                                                        user.user
+                                                      )?.isPremium
+                                                        ? "avatar-gold"
+                                                        : ""
+                                                    }`}
+                                                  >
                                                     <div>
                                                       <img
                                                         src={
@@ -766,6 +832,12 @@ export default function TabBrawlsSoloLeaderboards() {
                                                           user.user
                                                         )?.isYou
                                                           ? "text-blue-300 font-bold"
+                                                          : ""
+                                                      } ${
+                                                        prototype.getUserByID(
+                                                          user.user
+                                                        )?.isPremium
+                                                          ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
                                                           : ""
                                                       }`}
                                                     >

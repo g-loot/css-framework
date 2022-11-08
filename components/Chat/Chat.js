@@ -5,6 +5,7 @@ import Tooltip from "../Tooltip/Tooltip";
 import { UiContext } from "../../contexts/ui";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const conversationFull = [
   {
@@ -28,8 +29,7 @@ const conversationFull = [
       {
         id: 1,
         type: "text",
-        content:
-          "Welcome aboard <code class='tag' href='#'>@Martin</code> 👋",
+        content: "Welcome aboard <code class='tag' href='#'>@Martin</code> 👋",
         reactions: [
           {
             emoji: "❤️",
@@ -111,7 +111,8 @@ const conversationFull = [
       {
         id: 1,
         type: "text",
-        content: "I will be available in about 5 min. <code class='tag' href='#'>@Kes2Band</code> <code class='tag is-owner' href='#'>@JackAttack123</code>",
+        content:
+          "I will be available in about 5 min. <code class='tag' href='#'>@Kes2Band</code> <code class='tag is-owner' href='#'>@JackAttack123</code>",
       },
     ],
   },
@@ -378,18 +379,31 @@ export default function Chat(props) {
                   {!message.isEvent && (
                     <>
                       {!message.isYourself && (
-                        <div className="chat-author">
-                          <div className="avatar avatar-circle avatar-sm">
-                            <div>
-                              <img
-                                src={
-                                  prototype.getUserByID(message.author)?.avatar
-                                }
-                                alt="avatar"
-                              />
+                        <Link
+                          href={`/prototype/profile/${
+                            prototype.getUserByID(message.author)?.id
+                          }`}
+                        >
+                          <div className="chat-author interactive">
+                            <div
+                              className={`avatar avatar-circle avatar-sm ${
+                                prototype.getUserByID(message.author)?.isPremium
+                                  ? "avatar-gold"
+                                  : ""
+                              }`}
+                            >
+                              <div>
+                                <img
+                                  src={
+                                    prototype.getUserByID(message.author)
+                                      ?.avatar
+                                  }
+                                  alt="avatar"
+                                />
+                              </div>
                             </div>
                           </div>
-                        </div>
+                        </Link>
                       )}
                     </>
                   )}
@@ -398,17 +412,29 @@ export default function Chat(props) {
                     {!message.isEvent && (
                       <>
                         <div className="flex items-baseline gap-1">
-                          <span className="leading-none font-bold text-sm">
-                            {message.isYourself && <>You</>}
-                            {!message.isYourself && (
-                              <>
-                                {
-                                  prototype.getUserByID(message.author)
-                                    ?.nickname
-                                }
-                              </>
-                            )}
-                          </span>
+                          <Link
+                            href={`/prototype/profile/${
+                              prototype.getUserByID(message.author)?.id
+                            }`}
+                          >
+                            <span
+                              className={`leading-none font-bold text-sm interactive ${
+                                prototype.getUserByID(message.author)?.isPremium
+                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  : ""
+                              }`}
+                            >
+                              {message.isYourself && <>You</>}
+                              {!message.isYourself && (
+                                <>
+                                  {
+                                    prototype.getUserByID(message.author)
+                                      ?.nickname
+                                  }
+                                </>
+                              )}
+                            </span>
+                          </Link>
                           {message.time && (
                             <time dateTime="2008-02-14 20:00">
                               {message.time}
