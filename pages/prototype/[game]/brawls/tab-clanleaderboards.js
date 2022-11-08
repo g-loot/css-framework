@@ -173,7 +173,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       <tr>
                         <td>
                           <Link href="/prototype/profile/2">
-                            <a className="text-xs text-ui-300 interactive">
+                            <a className={`text-xs interactive ${prototype.getUserByID(2).isPremium ? 'text-gradient bg-gradient-to-b from-premium-300 to-premium-700' : 'text-ui-300'}`}>
                               {prototype.getUserByID(2).nickname}
                             </a>
                           </Link>
@@ -187,7 +187,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       <tr>
                         <td>
                           <Link href="/prototype/profile/3">
-                            <a className="text-xs text-ui-300 interactive">
+                            <a className={`text-xs interactive ${prototype.getUserByID(3).isPremium ? 'text-gradient bg-gradient-to-b from-premium-300 to-premium-700' : 'text-ui-300'}`}>
                               {prototype.getUserByID(3).nickname}
                             </a>
                           </Link>
@@ -201,7 +201,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       <tr>
                         <td>
                           <Link href="/prototype/profile/4">
-                            <a className="text-xs text-ui-300 interactive">
+                            <a className={`text-xs interactive ${prototype.getUserByID(4).isPremium ? 'text-gradient bg-gradient-to-b from-premium-300 to-premium-700' : 'text-ui-300'}`}>
                               {prototype.getUserByID(4).nickname}
                             </a>
                           </Link>
@@ -215,7 +215,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       <tr>
                         <td>
                           <Link href="/prototype/profile/5">
-                            <a className="text-xs text-ui-300 interactive">
+                            <a className={`text-xs interactive ${prototype.getUserByID(5).isPremium ? 'text-gradient bg-gradient-to-b from-premium-300 to-premium-700' : 'text-ui-300'}`}>
                               {prototype.getUserByID(5).nickname}
                             </a>
                           </Link>
