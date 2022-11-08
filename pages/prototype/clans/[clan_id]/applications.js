@@ -63,6 +63,10 @@ export default function Home() {
     return parts.join(".");
   }
 
+  function RandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
   return (
     <>
       <PrototypeStructure title="Clan">
@@ -71,11 +75,16 @@ export default function Home() {
           <h1 className="text-3xl sm:text-4xl">Clan applications</h1>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-stretch">
             <div className="leading-none text-center surface surface-dimmed rounded py-2 sm:py-1.5 px-2 flex flex-col justify-between gap-1">
-              <div className="text-ui-300"><b className="text-ui-200">16</b>/32 slots available</div>
-                <div className="progressbar progressbar-sm w-full sm:w-36" style={{"--percent": "50"}}>
-                  <div />
-                </div>
+              <div className="text-ui-300">
+                <b className="text-ui-200">16</b>/32 slots available
               </div>
+              <div
+                className="progressbar progressbar-sm w-full sm:w-36"
+                style={{ "--percent": "50" }}
+              >
+                <div />
+              </div>
+            </div>
             <div className="form-group form-select">
               <select id="status">
                 <option selected>Any</option>
@@ -116,6 +125,39 @@ export default function Home() {
                   <th>
                     <div className="text-ui-300 flex items-center gap-1">
                       <span>Date</span>
+                      <button
+                        type="button"
+                        className="button button-sm button-ghost rounded-full"
+                      >
+                        <span className="icon icon-arrow-sm-down"></span>
+                      </button>
+                    </div>
+                  </th>
+                  <th>
+                    <div className="text-ui-300 flex justify-center items-center gap-1">
+                      <span>Country</span>
+                      <button
+                        type="button"
+                        className="button button-sm button-ghost rounded-full"
+                      >
+                        <span className="icon icon-arrow-sm-down"></span>
+                      </button>
+                    </div>
+                  </th>
+                  <th>
+                    <div className="text-ui-300 flex justify-center items-center gap-1">
+                      <span>No. of Brawls played</span>
+                      <button
+                        type="button"
+                        className="button button-sm button-ghost rounded-full"
+                      >
+                        <span className="icon icon-arrow-sm-down"></span>
+                      </button>
+                    </div>
+                  </th>
+                  <th>
+                    <div className="text-ui-300 flex justify-center items-center gap-1">
+                      <span>Avg. Brawl position</span>
                       <button
                         type="button"
                         className="button button-sm button-ghost rounded-full"
@@ -181,6 +223,35 @@ export default function Home() {
                       </td>
                       <td>
                         <div className="text-ui-300">{item.time}</div>
+                      </td>
+                      <td>
+                        <div
+                          className="text-ui-300 text-center"
+                          data-tooltip={
+                            prototype.getUserByID(item.user)?.country
+                          }
+                        >
+                          <img
+                            src={`https://flagcdn.com/${
+                              prototype.getUserByID(item.user)?.countryFlag
+                            }.svg`}
+                            className="aspect-video rounded-sm max-w-[1.5rem] mx-auto"
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          className="text-ui-300 text-center"
+                        >
+                          {prototype.getUserByID(item.user)?.stats.playedBrawls}
+                        </div>
+                      </td>
+                      <td>
+                        <div
+                          className="text-ui-300 text-center"
+                        >
+                          #{RandomNumber(10,300)}
+                        </div>
                       </td>
                       <td>
                         <div className="text-center">
