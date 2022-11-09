@@ -43,7 +43,7 @@ export default function PrototypeLeftMenuNew(props) {
     if (loading) {
       setTimeout(() => {
         setLoading(false);
-      }, 2500);
+      }, 2000);
     }
   }, [loading]);
 

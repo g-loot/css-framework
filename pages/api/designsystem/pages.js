@@ -396,6 +396,11 @@ export const DSpages = [
         tags: "brawl,information,info,leaderboard,brawl info",
         url: "brawlinfo",
       },
+      {
+        label: "Notifications",
+        tags: "notifications",
+        url: "notifications",
+      },
     ],
   },
 ];

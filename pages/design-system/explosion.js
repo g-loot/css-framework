@@ -105,10 +105,20 @@ const DSpage = () => {
     return () => clearTimeout(timer);
   }
 
-
   return (
     <>
-      <h1 className="mb-2">Explosion</h1>
+      <div className="flex justify-between items-baseline">
+        <h1 className="mb-2">Explosion</h1>
+        <a
+          href="https://res.cloudinary.com/gloot/raw/upload/v1667999159/Marketing/2022_prototype/Lottie/explosions.zip"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button button-sm button-secondary"
+        >
+          <span className="icon icon-data-download" />
+          <span>Download json files</span>
+        </a>
+      </div>
 
       {/* Explosion #1 */}
       <div className="mb-12" id="explosion-1">

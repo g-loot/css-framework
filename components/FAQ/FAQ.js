@@ -29,14 +29,16 @@ export default function FAQ(props) {
       >
         <div className="p-4 md:p-8">
           <div className="mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-8">
-            <div className="col-span-1 surface rounded-lg overflow-hidden">
+            {props.content.image && (
+              <div className="col-span-1 surface rounded-lg overflow-hidden">
               <img
                 src={props.content.image}
                 width="100%"
                 height="auto"
                 className=""
               />
-            </div>
+              </div>
+            )}
             <div className="col-span-2 md:columns-2 text-ui-300 space-y-4 leading-relaxed">
               {props.content.content?.map((content, contentIndex) => (
                 <>

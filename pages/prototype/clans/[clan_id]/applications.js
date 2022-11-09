@@ -49,6 +49,7 @@ const PlayerApplications = [
 export default function Home() {
   const router = useRouter();
   const prototype = usePrototypeData();
+  const { query } = useRouter();
   const [selectedClan, setSelectedClan] = useState(null);
 
   const { clan_id } = router.query;
@@ -67,6 +68,23 @@ export default function Home() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
+  const statusLoading = query.loading === "true" ? true : false;
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (statusLoading) {
+      setLoading(true);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 4000);
+    }
+  }, [loading]);
+
   return (
     <>
       <PrototypeStructure title="Clan">
@@ -76,11 +94,11 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-stretch">
             <div className="leading-none text-center surface surface-dimmed rounded py-2 sm:py-1.5 px-2 flex flex-col justify-between gap-1">
               <div className="text-ui-300">
-                <b className="text-ui-200">16</b>/32 slots available
+                <b className="text-ui-200">2</b>/32 slots available
               </div>
               <div
                 className="progressbar progressbar-sm w-full sm:w-36"
-                style={{ "--percent": "50" }}
+                style={{ "--percent": "95" }}
               >
                 <div />
               </div>
@@ -106,219 +124,350 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <section>
-          <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
-            <table className="table table-rounded rounded-xl w-full">
-              <thead>
-                <tr>
-                  <th>
-                    <div className="text-ui-300 flex items-center gap-1">
-                      <span>User</span>
-                      <button
-                        type="button"
-                        className="button button-sm button-ghost rounded-full"
+        {loading && (
+          <section>
+            <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
+              <table className="table table-rounded rounded-xl is-loading w-full">
+                <thead>
+                  <tr>
+                    <th>
+                      <div className="text-ui-300 flex items-center gap-1">
+                        <span>User</span>
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost rounded-full"
+                        >
+                          <span className="icon icon-arrow-sm-down"></span>
+                        </button>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="text-ui-300 flex items-center gap-1">
+                        <span>Date</span>
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost rounded-full"
+                        >
+                          <span className="icon icon-arrow-sm-down"></span>
+                        </button>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="text-ui-300 flex justify-center items-center gap-1">
+                        <span>Country</span>
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost rounded-full"
+                        >
+                          <span className="icon icon-arrow-sm-down"></span>
+                        </button>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="text-ui-300 flex justify-center items-center gap-1">
+                        <span>No. of Brawls played</span>
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost rounded-full"
+                        >
+                          <span className="icon icon-arrow-sm-down"></span>
+                        </button>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="text-ui-300 flex justify-center items-center gap-1">
+                        <span>Avg. Brawl position</span>
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost rounded-full"
+                        >
+                          <span className="icon icon-arrow-sm-down"></span>
+                        </button>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="text-ui-300 flex justify-center items-center gap-1">
+                        <span>Status</span>
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost rounded-full"
+                        >
+                          <span className="icon icon-arrow-sm-down"></span>
+                        </button>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                    <td />
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
+        {!loading && (
+          <section>
+            <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
+              <table className="table table-rounded rounded-xl w-full">
+                <thead>
+                  <tr>
+                    <th>
+                      <div className="text-ui-300 flex items-center gap-1">
+                        <span>User</span>
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost rounded-full"
+                        >
+                          <span className="icon icon-arrow-sm-down"></span>
+                        </button>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="text-ui-300 flex items-center gap-1">
+                        <span>Date</span>
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost rounded-full"
+                        >
+                          <span className="icon icon-arrow-sm-down"></span>
+                        </button>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="text-ui-300 flex justify-center items-center gap-1">
+                        <span>Country</span>
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost rounded-full"
+                        >
+                          <span className="icon icon-arrow-sm-down"></span>
+                        </button>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="text-ui-300 flex justify-center items-center gap-1">
+                        <span>No. of Brawls played</span>
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost rounded-full"
+                        >
+                          <span className="icon icon-arrow-sm-down"></span>
+                        </button>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="text-ui-300 flex justify-center items-center gap-1">
+                        <span>Avg. Brawl position</span>
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost rounded-full"
+                        >
+                          <span className="icon icon-arrow-sm-down"></span>
+                        </button>
+                      </div>
+                    </th>
+                    <th>
+                      <div className="text-ui-300 flex justify-center items-center gap-1">
+                        <span>Status</span>
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost rounded-full"
+                        >
+                          <span className="icon icon-arrow-sm-down"></span>
+                        </button>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {PlayerApplications.map((item, itemIndex) => (
+                    <>
+                      <tr
+                        key={item.id}
+                        className="animate-slide-in-bottom animate-delay"
+                        style={{
+                          "--delay": "calc(" + itemIndex + " * 0.05s)",
+                        }}
                       >
-                        <span className="icon icon-arrow-sm-down"></span>
-                      </button>
-                    </div>
-                  </th>
-                  <th>
-                    <div className="text-ui-300 flex items-center gap-1">
-                      <span>Date</span>
-                      <button
-                        type="button"
-                        className="button button-sm button-ghost rounded-full"
-                      >
-                        <span className="icon icon-arrow-sm-down"></span>
-                      </button>
-                    </div>
-                  </th>
-                  <th>
-                    <div className="text-ui-300 flex justify-center items-center gap-1">
-                      <span>Country</span>
-                      <button
-                        type="button"
-                        className="button button-sm button-ghost rounded-full"
-                      >
-                        <span className="icon icon-arrow-sm-down"></span>
-                      </button>
-                    </div>
-                  </th>
-                  <th>
-                    <div className="text-ui-300 flex justify-center items-center gap-1">
-                      <span>No. of Brawls played</span>
-                      <button
-                        type="button"
-                        className="button button-sm button-ghost rounded-full"
-                      >
-                        <span className="icon icon-arrow-sm-down"></span>
-                      </button>
-                    </div>
-                  </th>
-                  <th>
-                    <div className="text-ui-300 flex justify-center items-center gap-1">
-                      <span>Avg. Brawl position</span>
-                      <button
-                        type="button"
-                        className="button button-sm button-ghost rounded-full"
-                      >
-                        <span className="icon icon-arrow-sm-down"></span>
-                      </button>
-                    </div>
-                  </th>
-                  <th>
-                    <div className="text-ui-300 flex justify-center items-center gap-1">
-                      <span>Status</span>
-                      <button
-                        type="button"
-                        className="button button-sm button-ghost rounded-full"
-                      >
-                        <span className="icon icon-arrow-sm-down"></span>
-                      </button>
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {PlayerApplications.map((item, itemIndex) => (
-                  <>
-                    <tr
-                      key={item.id}
-                      className="animate-slide-in-bottom animate-delay"
-                      style={{
-                        "--delay": "calc(" + itemIndex + " * 0.05s)",
-                      }}
-                    >
-                      <td>
-                        <Link
-                          href={`/prototype/profile/${item.user}
+                        <td>
+                          <Link
+                            href={`/prototype/profile/${item.user}
                           `}
-                        >
-                          <div className="flex gap-3 items-center self-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
-                            <div
-                              className={`avatar avatar-xs avatar-circle ${
-                                prototype.getUserByID(item.user)?.isPremium
-                                  ? "avatar-gold"
-                                  : ""
-                              }`}
-                            >
-                              <div>
-                                <img
-                                  src={prototype.getUserByID(item.user)?.avatar}
-                                  alt="avatar"
-                                />
+                          >
+                            <button type="button" className="flex gap-3 items-center self-center interactive">
+                              <div
+                                className={`avatar avatar-xs avatar-circle ${
+                                  prototype.getUserByID(item.user)?.isPremium
+                                    ? "avatar-gold"
+                                    : ""
+                                }`}
+                              >
+                                <div>
+                                  <img
+                                    src={
+                                      prototype.getUserByID(item.user)?.avatar
+                                    }
+                                    alt="avatar"
+                                  />
+                                </div>
                               </div>
-                            </div>
-                            <div
-                              className={`${
-                                prototype.getUserByID(item.user)?.isPremium
-                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
-                                  : ""
-                              }`}
-                            >
-                              {prototype.getUserByID(item.user)?.nickname}
-                            </div>
+                              <div
+                                className={`${
+                                  prototype.getUserByID(item.user)?.isPremium
+                                    ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                    : ""
+                                }`}
+                              >
+                                {prototype.getUserByID(item.user)?.nickname}
+                              </div>
+                            </button>
+                          </Link>
+                        </td>
+                        <td>
+                          <div className="text-ui-300">{item.time}</div>
+                        </td>
+                        <td>
+                          <div
+                            className="text-ui-300 text-center"
+                            data-tooltip={
+                              prototype.getUserByID(item.user)?.country
+                            }
+                          >
+                            <img
+                              src={`https://flagcdn.com/${
+                                prototype.getUserByID(item.user)?.countryFlag
+                              }.svg`}
+                              className="aspect-video rounded-sm max-w-[1.5rem] mx-auto"
+                            />
                           </div>
-                        </Link>
-                      </td>
-                      <td>
-                        <div className="text-ui-300">{item.time}</div>
-                      </td>
-                      <td>
-                        <div
-                          className="text-ui-300 text-center"
-                          data-tooltip={
-                            prototype.getUserByID(item.user)?.country
-                          }
-                        >
-                          <img
-                            src={`https://flagcdn.com/${
-                              prototype.getUserByID(item.user)?.countryFlag
-                            }.svg`}
-                            className="aspect-video rounded-sm max-w-[1.5rem] mx-auto"
-                          />
-                        </div>
-                      </td>
-                      <td>
-                        <div
-                          className="text-ui-300 text-center"
-                        >
-                          {prototype.getUserByID(item.user)?.stats.playedBrawls}
-                        </div>
-                      </td>
-                      <td>
-                        <div
-                          className="text-ui-300 text-center"
-                        >
-                          #{RandomNumber(10,300)}
-                        </div>
-                      </td>
-                      <td>
-                        <div className="text-center">
-                          {item.status === "pending" && (
-                            <div className="flex justify-center gap-2">
-                              <button
-                                type="button"
-                                className="button button-sm button-primary"
-                              >
-                                <span>Accept</span>
-                              </button>
-                              <button
-                                type="button"
-                                className="button button-sm button-error"
-                              >
-                                <span>Decline</span>
-                              </button>
-                            </div>
-                          )}
-                          {item.status === "accepted" && (
-                            <div className="chip chip-status chip-success">
-                              <span className="icon icon-check" />
-                              <span>Accepted</span>
-                            </div>
-                          )}
-                          {item.status === "declined" && (
-                            <div className="chip chip-status chip-error">
-                              <span className="icon icon-s-ban" />
-                              <span>Declined</span>
-                            </div>
-                          )}
-                        </div>
-                      </td>
-                    </tr>
-                  </>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div className="text-center mt-4 mb-8">
-            <ul className="pagination">
-              <li>
-                <a href="#" tabIndex="-1">
-                  Previous
-                </a>
-              </li>
-              <li className="is-active">
-                <a href="#">1</a>
-              </li>
-              <li>
-                <a href="#">2</a>
-              </li>
-              <li>
-                <a href="#">3</a>
-              </li>
-              <li>
-                <span>...</span>
-              </li>
-              <li>
-                <a href="#">12</a>
-              </li>
-              <li>
-                <a href="#">Next</a>
-              </li>
-            </ul>
-          </div>
-        </section>
+                        </td>
+                        <td>
+                          <div className="text-ui-300 text-center">
+                            {
+                              prototype.getUserByID(item.user)?.stats
+                                .playedBrawls
+                            }
+                          </div>
+                        </td>
+                        <td>
+                          <div className="text-ui-300 text-center">
+                            #{RandomNumber(10, 300)}
+                          </div>
+                        </td>
+                        <td>
+                          <div className="text-center">
+                            {item.status === "pending" && (
+                              <div className="flex justify-center gap-2">
+                                <button
+                                  type="button"
+                                  className="button button-sm button-primary"
+                                >
+                                  <span>Accept</span>
+                                </button>
+                                <button
+                                  type="button"
+                                  className="button button-sm button-error"
+                                >
+                                  <span>Decline</span>
+                                </button>
+                              </div>
+                            )}
+                            {item.status === "accepted" && (
+                              <div className="chip chip-status chip-success">
+                                <span className="icon icon-check" />
+                                <span>Accepted</span>
+                              </div>
+                            )}
+                            {item.status === "declined" && (
+                              <div className="chip chip-status chip-error">
+                                <span className="icon icon-s-ban" />
+                                <span>Declined</span>
+                              </div>
+                            )}
+                          </div>
+                        </td>
+                      </tr>
+                    </>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="text-center mt-4 mb-8">
+              <ul className="pagination">
+                <li>
+                  <a href="#" tabIndex="-1">
+                    Previous
+                  </a>
+                </li>
+                <li className="is-active">
+                  <a href="#">1</a>
+                </li>
+                <li>
+                  <a href="#">2</a>
+                </li>
+                <li>
+                  <a href="#">3</a>
+                </li>
+                <li>
+                  <span>...</span>
+                </li>
+                <li>
+                  <a href="#">12</a>
+                </li>
+                <li>
+                  <a href="#">Next</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        )}
       </PrototypeStructure>
     </>
   );
