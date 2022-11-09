@@ -43,14 +43,14 @@ const Index = () => {
         </div>
         <div className="py-16">
           <div className="container max-w-md">
-            <div className="flex items-end justify-between mb-2 px-4 md:px-0">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2 mb-2 px-4 md:px-0">
               <h1 className="text-4xl">
                 Prototype{" "}
                 <small className="font-normal text-ui-300">
                   {pageCount} screens
                 </small>
               </h1>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-between md:justify-end gap-2">
                 <div className="form-toggle text-sm text-ui-300">
                   <input
                     type="checkbox"
