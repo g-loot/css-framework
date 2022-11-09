@@ -15,7 +15,7 @@ export default function SectionClanActivity() {
   const uiContext = useContext(UiContext);
   const [selectedClan, setSelectedClan] = useState(null);
   const { clan_id } = router.query;
-  const emptyState = query.emptystate === "true" ? true : false;
+  const emptyState = query.empty === "true" ? true : false;
   const modalGiftTokens = query.modalgifttokens === "true" ? true : false;
   const [selectedUser, setSelectedUser] = useState(
     prototype.getUserByID(2).nickname

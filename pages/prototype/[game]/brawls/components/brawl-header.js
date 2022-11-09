@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { usePrototypeData } from "../../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import Countdown from "../../../../../components/Countdown/Countdown";
+import Tooltip from "../../../../../components/Tooltip/Tooltip";
 
 function calculateTimeLeft() {
   const year = new Date().getFullYear();
@@ -77,7 +78,20 @@ export default function BrawlHeader() {
                   Objective
                 </h2>
               </div>
-              <div className="pl-6 text-ui-300 text-sm">Kills</div>
+              <div className="pl-6 text-ui-300 text-sm flex items-center gap-1">
+                <span>Kills</span>
+                <Tooltip
+                  tooltip={
+                    <div className="max-w-xs text-sm text-center leading-tight">
+                      The content of this tooltip can be customized in the backend.
+                    </div>
+                  }
+                >
+                  <button className="text-ui-300 text-0">
+                    <span className="icon icon-16 icon-c-info" />
+                  </button>
+                </Tooltip>
+              </div>
             </div>
             <div className="">
               <div className="flex items-center gap-1.5">
