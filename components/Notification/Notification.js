@@ -66,7 +66,7 @@ export default function Notification(props) {
           />
         </div>
         {notification.cta && (
-          <div className="md:w-20 flex flex-row md:flex-col md:justify-end gap-2 leading-none text-center min-h-[50px]">
+          <div className="w-full md:w-20 flex flex-row-reverse md:flex-col md:justify-end gap-2 leading-none text-center md:min-h-[50px]">
             {accepted === undefined ? (
               <>
                 <button

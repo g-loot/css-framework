@@ -121,7 +121,7 @@ const DSpage = () => {
                     key={notificationIndex}
                     className="flex flex-col md:flex-row md:items-center gap-2 md:gap-8"
                   >
-                    <div className="order-2 md:order-1 w-[calc(100vw-100px)] sm:w-[420px] ">
+                    <div className="order-2 md:order-1 w-full sm:w-[420px] ">
                       <Notification notification={notification} />
                     </div>
                     <p className="order-1 md:order-2 text-ui-300">
