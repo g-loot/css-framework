@@ -757,6 +757,12 @@ export default function Chat(props) {
               </div>
             </div>
             <div className={`form-group ${isDisabled ? "is-disabled" : ""}`}>
+              {/*
+              <div limitreached="0" placeholder="Enter a message..." contenteditable="true" className="editable text-sm py-2 px-4 rounded-3xl border border-ui-500 shadow-sm bg-ui-700 focus-visible:outline focus-visible:outline-1 focus-visible:outline-ui-300 focus-visible:z-20; pr-[3em] whitespace-pre-wrap w-full">
+                <br />
+              </div>
+               */}
+
               <textarea
                 ref={messageInput}
                 name="send-message"

@@ -58,6 +58,14 @@
       ;
     }
   }
+  [contenteditable='true']:empty:not(:focus):before {
+    @apply
+    content-[attr(placeholder)]
+    absolute
+    inline-block
+    text-ui-300
+    ;
+  }
 }
 
 .chat-feed {
