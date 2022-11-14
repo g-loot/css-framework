@@ -30,8 +30,9 @@ const notificationsGroups = [
         type: "clan",
         intro: "Clan",
         title: "You are getting noticed!",
-        text: "<a href='#' class='link font-bold'>Harriss</a> MayorPain the Leader of Clan <a href='#' class='link font-bold'>TeamClash</a> invited you to join their Clan, and you haven't answered yet. If you do nothing, the invitation will expire on 22.10.2022..",
+        text: "<a href='#' class='link font-bold'>Kes2Band</a> the Leader of Clan <a href='#' class='link font-bold'>BBL Esports</a> invited you to join their Clan, and you haven't answered yet. If you do nothing, the invitation will expire on 22.10.2022..",
         cta: "Invite",
+        url: "/prototype/clans/2",
         time: "1 day",
       },
       {
@@ -39,10 +40,11 @@ const notificationsGroups = [
         type: "clan",
         intro: "Clan",
         title: "Your clan is getting noticed!",
-        text: "<a href='#' class='link font-bold'>Harriss</a> wants to join your Clan <a href='#' class='link font-bold'>TeamClash</a>, and you haven't answered yet. If you do nothing, the invitation will expire on 22.10.2022..",
+        text: "<a href='#' class='link font-bold'>Mr Killa</a> wants to join your Clan <a href='#' class='link font-bold'>Raccoon 5</a>, and you haven't answered yet. If you do nothing, the invitation will expire on 22.10.2022..",
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
         cta: "Invite",
+        url: "/prototype/clans/1/applications",
         time: "2 days",
       },
       {

@@ -71,7 +71,7 @@ export default function Notification(props) {
             }}
           />
         </div>
-        {notification.cta && (
+        {notification.cta && notification.url && (
           <div className="w-full md:w-20 flex flex-row-reverse md:flex-col md:justify-end gap-2 leading-none text-center md:min-h-[50px]">
             {accepted === undefined ? (
               <>
@@ -91,7 +91,7 @@ export default function Notification(props) {
                   <span>Accept</span>
                 </button>
             */}
-                <Link href="/prototype/clans/2">
+                <Link href={notification.url}>
                   <button
                     type="button"
                     className="button button-primary button-xs md:w-full"
