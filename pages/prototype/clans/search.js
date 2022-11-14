@@ -154,7 +154,7 @@ export default function ClanSearch() {
                         </div>
                       </td>
                       <td>
-                        {clan.isJoinable && (
+                        {clan.isPublic && (
                           <div className="text-center">
                             <button
                               type="button"

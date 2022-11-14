@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 export default function Notification(props) {
@@ -9,9 +10,9 @@ export default function Notification(props) {
     console.log(read);
     setAccepted(notification.accepted);
   }, [notification]);
-  
+
   function handleRead() {
-    setRead(true)
+    setRead(true);
   }
 
   function handleAccept() {
@@ -29,8 +30,13 @@ export default function Notification(props) {
         read ? "surface-ui-700 opacity-75" : "surface-ui-600"
       }`}
     >
-      {!read && <i onClick={handleRead.bind(this)} className={`absolute top-2 right-2 badge bg-error-300`} />}
-      <div className="flex items-center justify-between p-2 pr-6 gap-2">
+      {!read && (
+        <i
+          onClick={handleRead.bind(this)}
+          className={`absolute top-[0.4rem] right-[0.4rem] badge bg-error-300`}
+        />
+      )}
+      <div className="flex items-center justify-between p-2 pr-5 gap-2">
         <div className="rounded w-7 h-7 bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
           {notification.type === "clan" && (
             <span className="icon icon-multiple-12 text-ui-300" />
@@ -69,6 +75,7 @@ export default function Notification(props) {
           <div className="w-full md:w-20 flex flex-row-reverse md:flex-col md:justify-end gap-2 leading-none text-center md:min-h-[50px]">
             {accepted === undefined ? (
               <>
+                {/*
                 <button
                   type="button"
                   onClick={handleDecline.bind(this)}
@@ -83,6 +90,15 @@ export default function Notification(props) {
                 >
                   <span>Accept</span>
                 </button>
+            */}
+                <Link href="/prototype/clans/2">
+                  <button
+                    type="button"
+                    className="button button-primary button-xs md:w-full"
+                  >
+                    <span>View</span>
+                  </button>
+                </Link>
               </>
             ) : (
               <>
@@ -105,7 +121,8 @@ export default function Notification(props) {
                       ) : (
                         <>Invitation</>
                       )}{" "}
-                      <br />accepted
+                      <br />
+                      accepted
                     </span>
                   </>
                 ) : (
@@ -127,7 +144,8 @@ export default function Notification(props) {
                       ) : (
                         <>Invitation</>
                       )}{" "}
-                      <br />declined
+                      <br />
+                      declined
                     </span>
                   </>
                 )}

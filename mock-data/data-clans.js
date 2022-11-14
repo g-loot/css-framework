@@ -2,12 +2,12 @@ export const dataClans = [
   {
     id: 1,
     isYou: true,
-    isJoinable: true,
+    isPublic: true,
     isFeatured: true,
     nickname: "Raccoon 5",
     tag: "RAC",
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Foxy.png",
-    introduction: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
+    bio: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
     lang: "English",
     games: [
       2,
@@ -31,12 +31,12 @@ export const dataClans = [
   {
     id: 2,
     isYou: false,
-    isJoinable: true,
+    isPublic: true,
     isFeatured: true,
     nickname: "PizzaYOLO",
     tag: "YOLO",
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png",
-    introduction: "Siamo un clan prevalentemente italiano che gioca a League of Legends e DOTA2. Chi parla inglese va bene, ma gran parte delle chat avverrà in italiano, quindi lo sai ;-) Siamo abbastanza bravi con 4 giocatori Ultimate in LoL, ma siamo anche amichevoli con i noob!",
+    bio: "Siamo un clan prevalentemente italiano che gioca a League of Legends e DOTA2. Chi parla inglese va bene, ma gran parte delle chat avverrà in italiano, quindi lo sai ;-) Siamo abbastanza bravi con 4 giocatori Ultimate in LoL, ma siamo anche amichevoli con i noob!",
     lang: "Italian",
     games: [
       1,
@@ -57,12 +57,12 @@ export const dataClans = [
   {
     id: 3,
     isYou: false,
-    isJoinable: false,
+    isPublic: false,
     isFeatured: false,
     nickname: "BBL Esports",
     tag: "BBL",
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Un1c0rns.png",
-    introduction: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
+    bio: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
     lang: "English",
     games: [
       2,
@@ -86,12 +86,12 @@ export const dataClans = [
   {
     id: 4,
     isYou: false,
-    isJoinable: true,
+    isPublic: true,
     isFeatured: false,
     nickname: "Gorillas Esports",
     tag: "GOR",
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_GhOOOsTS.png",
-    introduction: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
+    bio: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
     lang: "English",
     games: [
       2,
@@ -115,12 +115,12 @@ export const dataClans = [
   {
     id: 5,
     isYou: false,
-    isJoinable: false,
+    isPublic: false,
     isFeatured: false,
     nickname: "ACEND",
     tag: "AC",
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_DeerGamer.png",
-    introduction: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
+    bio: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
     lang: "English",
     games: [
       2,
@@ -144,12 +144,12 @@ export const dataClans = [
   {
     id: 6,
     isYou: false,
-    isJoinable: true,
+    isPublic: true,
     isFeatured: false,
     nickname: "Dusty Smokers",
     tag: "DST",
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png",
-    introduction: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
+    bio: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
     lang: "English",
     games: [
       2,
@@ -173,12 +173,12 @@ export const dataClans = [
   {
     id: 7,
     isYou: false,
-    isJoinable: true,
+    isPublic: true,
     isFeatured: false,
     nickname: "Valorians",
     tag: "VAL",
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png",
-    introduction: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
+    bio: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
     lang: "English",
     games: [
       2,
@@ -202,12 +202,12 @@ export const dataClans = [
   {
     id: 8,
     isYou: false,
-    isJoinable: false,
+    isPublic: false,
     isFeatured: false,
     nickname: "#1",
     tag: "ONE",
     avatar: "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_CockyStars.png",
-    introduction: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
+    bio: "We're a mostly Canadian clan playing League of Legends & DOTA2.French speakers are OK, but a lot of the chat will happen in English, so you know. And for the record, don't bother even joining if you're a noob ;-). So embrace your self for some real and seriouse competition to be player one",
     lang: "English",
     games: [
       2,

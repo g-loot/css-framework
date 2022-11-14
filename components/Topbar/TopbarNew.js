@@ -9,6 +9,8 @@ import { UiContext } from "../../contexts/ui";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 import Notification from "../Notification/Notification";
+import DailyReward from "../DailyReward/DailyReward";
+import TopBarClaim from "../TopBarClaim/TopBarClaim";
 
 const notificationsGroups = [
   {
@@ -21,7 +23,6 @@ const notificationsGroups = [
         title: "You received a gift",
         text: "<a href='#' class='link font-bold'>Harriss</a> a member of your Clan <a href='#' class='link font-bold'>TeamClash</a> is sending you <span class='whitespace-nowrap'><img src='https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png' alt='' class='w-7 h-7 -my-1 -mr-0.5 inline drop-shadow-sm' /> <span class='font-bold text-purple-500'>30 tokens</span></span> as a gift.",
         time: "2 min.",
-        cta: "Tokens",
         read: false,
       },
       {
@@ -133,7 +134,7 @@ export default function TopbarNew() {
           className={`flex lg:gap-8 mx-auto px-2  ${hasAds ? "3xl:m-0" : ""}`}
         >
           <div className="flex-1 flex items-center justify-between">
-            <div>
+            <div className="flex items-center gap-4">
               <div className="block lg:hidden">
                 <label
                   htmlFor="drawer-prototype"
@@ -142,47 +143,41 @@ export default function TopbarNew() {
                   <div className="icon icon-menu-8 text-ui-200"></div>
                 </label>
               </div>
-              <div className="hidden lg:flex">
-                <ul className="tabs tabs-secondary">
-                  <li>
-                    <Link href={`/prototype/home${prototype.getURLparams()}`}>
-                      <a
-                        className={` ${
-                          router.pathname.endsWith("prototype")
-                            ? "is-active"
-                            : ""
-                        } ${
-                          router.pathname.includes("home") ? "is-active" : ""
-                        }`}
-                      >
-                        <span className="text-sm uppercase">Home</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={`/prototype/shop${prototype.getURLparams()}`}>
-                      <a
-                        className={` ${
-                          router.pathname.includes("shop") ? "is-active" : ""
-                        }`}
-                      >
-                        <span className="text-sm uppercase">Shop</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={`/prototype/premium${prototype.getURLparams()}`}
+              <ul className="hidden lg:flex tabs tabs-secondary overflow-visible">
+                <li>
+                  <Link href={`/prototype/home${prototype.getURLparams()}`}>
+                    <a
+                      className={` ${
+                        router.pathname.endsWith("prototype") ? "is-active" : ""
+                      } ${router.pathname.includes("home") ? "is-active" : ""}`}
                     >
-                      <a
-                        className={` ${
-                          router.pathname.includes("premium") ? "is-active" : ""
-                        }`}
-                      >
-                        <span className="text-sm uppercase">Premium</span>
-                      </a>
-                    </Link>
-                  </li>
+                      <span className="text-sm uppercase">Home</span>
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`/prototype/shop${prototype.getURLparams()}`}>
+                    <a
+                      className={` ${
+                        router.pathname.includes("shop") ? "is-active" : ""
+                      }`}
+                    >
+                      <span className="text-sm uppercase">Shop</span>
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                    <a
+                      className={` ${
+                        router.pathname.includes("premium") ? "is-active" : ""
+                      }`}
+                    >
+                      <span className="text-sm uppercase">Premium</span>
+                    </a>
+                  </Link>
+                </li>
+                {/*
                   <li>
                     <Link
                       href={`/prototype/tracker${prototype.getURLparams()}`}
@@ -201,8 +196,11 @@ export default function TopbarNew() {
                       </a>
                     </Link>
                   </li>
-                </ul>
-              </div>
+                      */}
+              </ul>
+              {/*
+              <TopBarClaim />
+                    */}
             </div>
             <div className="flex justify-end items-center gap-1 sm:gap-2">
               <Tooltip
@@ -433,13 +431,13 @@ export default function TopbarNew() {
                   {isEmpty && (
                     <div className="h-72 flex items-center justify-center text-center">
                       <div>
-                      <span className="icon icon-smile text-6xl text-ui-500" />
-                          <p className="text-sm text-ui-400 mt-2">
-                            You&lsquo;re all caught up!
-                          </p>
-                          <p className="text-ui-300">
-                            Check back later for new notifications.
-                          </p>
+                        <span className="icon icon-smile text-6xl text-ui-500" />
+                        <p className="text-sm text-ui-400 mt-2">
+                          You&lsquo;re all caught up!
+                        </p>
+                        <p className="text-ui-300">
+                          Check back later for new notifications.
+                        </p>
                       </div>
                     </div>
                   )}
@@ -477,7 +475,10 @@ export default function TopbarNew() {
                                 <ul className="items-spaced space-y-2">
                                   {notificationGroup.notifications?.map(
                                     (notification, notificationIndex) => (
-                                      <Notification key={notificationIndex} notification={notification} />
+                                      <Notification
+                                        key={notificationIndex}
+                                        notification={notification}
+                                      />
                                     )
                                   )}
                                 </ul>

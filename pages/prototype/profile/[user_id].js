@@ -29,52 +29,51 @@ export default function Home() {
 
         {selectedUser && (
           <>
-            <section className="mb-4">
-              <div className="header surface sm:rounded-lg min-h-4">
-                <div className="header-content">
-                  <div className="header-body">
-                    <div className="flex gap-4 items-center self-center">
-                      <div className={`avatar avatar-xl avatar-circle ${
-                                selectedUser.isPremium
-                                  ? "avatar-gold"
-                                  : ""
-                              }`}>
-                        <div>
-                          <img src={selectedUser.avatar} alt="avatar" />
+            <section className="header surface sm:rounded-lg min-h-4 mb-4">
+              <div className="header-content">
+                <div className="header-body">
+                  <div className="flex gap-4 items-center self-center">
+                    <div
+                      className={`avatar avatar-xl avatar-circle ${
+                        selectedUser.isPremium ? "avatar-gold" : ""
+                      }`}
+                    >
+                      <div>
+                        <img src={selectedUser.avatar} alt="avatar" />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                        <div className="flex items-baseline gap-1">
+                          <h1
+                            className={`text-3xl sm:text-4xl ${
+                              selectedUser.isPremium
+                                ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                : ""
+                            }`}
+                          >
+                            {selectedUser.nickname}
+                          </h1>
+                          <img
+                            src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
+                            className="aspect-video rounded-sm max-w-[1.5rem]"
+                          />
+                        </div>
+                        <div className="block lg:hidden text-left">
+                          {selectedUser.isYou && (
+                            <Link href="settings">
+                              <a
+                                type="button"
+                                className="button button-xs button-secondary"
+                              >
+                                <span className="icon icon-cogwheel" />
+                                <span>Profile settings</span>
+                              </a>
+                            </Link>
+                          )}
                         </div>
                       </div>
-                      <div className="flex-1">
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                          <div className="flex items-baseline gap-1">
-                            <h1
-                              className={`text-3xl sm:text-4xl ${
-                                selectedUser.isPremium
-                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
-                                  : ""
-                              }`}
-                            >
-                              {selectedUser.nickname}
-                            </h1>
-                            <img
-                              src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
-                              className="aspect-video rounded-sm max-w-[1.5rem]"
-                            />
-                          </div>
-                          <div className="block lg:hidden text-left">
-                            {selectedUser.isYou && (
-                              <Link href="settings">
-                                <a
-                                  type="button"
-                                  className="button button-xs button-secondary"
-                                >
-                                  <span className="icon icon-cogwheel" />
-                                  <span>Profile settings</span>
-                                </a>
-                              </Link>
-                            )}
-                          </div>
-                        </div>
-                        {/*
+                      {/*
                         <div className="flex items-center gap-2">
                           <div className="w-6 flex justify-center">
                             <img
@@ -88,141 +87,138 @@ export default function Home() {
                         </div>
                             */}
 
-                        {selectedUser.bio && (
-                          <p className="text-ui-300 mt-1 text-left">
-                            <ReadMore content={selectedUser.bio} max={150} />
-                          </p>
-                        )}
+                      {selectedUser.bio && (
+                        <p className="text-ui-300 mt-1 text-left">
+                          <ReadMore content={selectedUser.bio} max={150} />
+                        </p>
+                      )}
 
-                        <div className="flex items-center justify-start mt-4 gap-2">
-                          <div className="flex gap-1">
-                            {selectedUser.games?.map((game, gameIndex) => (
-                              <>
-                                <div
-                                  key={game}
-                                  className="p-1 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center"
-                                >
-                                  <span
-                                    className={`icon icon-20 ${
-                                      prototype.getGameByID(game).slug ===
-                                      "apexlegends"
-                                        ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                                        : ""
-                                    } ${
-                                      prototype.getGameByID(game).slug ===
-                                      "csgo"
-                                        ? "icon-game-csgo-symbol text-game-csgo"
-                                        : ""
-                                    }  ${
-                                      prototype.getGameByID(game).slug ===
-                                      "dota2"
-                                        ? "icon-game-dota2-symbol text-game-dota2"
-                                        : ""
-                                    }  ${
-                                      prototype.getGameByID(game).slug ===
-                                      "leagueoflegends"
-                                        ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                                        : ""
-                                    }  ${
-                                      prototype.getGameByID(game).slug ===
-                                      "rocketleague"
-                                        ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                                        : ""
-                                    } ${
-                                      prototype.getGameByID(game).slug ===
-                                      "pubg"
-                                        ? "icon-game-pubg-symbol text-game-pubg"
-                                        : ""
-                                    }  ${
-                                      prototype.getGameByID(game).slug ===
-                                      "valorant"
-                                        ? "icon-game-valorant-symbol text-game-valorant"
-                                        : ""
-                                    }`}
-                                  />
-                                </div>
-                              </>
-                            ))}
-                          </div>
-                          <hr className="m-0 separator separator-vertical h-7" />
-                          <div className="flex gap-1">
-                            <a
-                              href="#"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="link p-1 text-0"
-                            >
-                              <span className="icon icon-20 text-ui-300 icon-twitch" />
-                            </a>
-                            <a
-                              href="#"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="link p-1 text-0"
-                            >
-                              <span className="icon icon-20 text-ui-300 icon-logo-twitter" />
-                            </a>
-                            <a
-                              href="#"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="link p-1 text-0"
-                            >
-                              <span className="icon icon-20 text-ui-300 icon-discord" />
-                            </a>
-                          </div>
+                      <div className="flex items-center justify-start mt-4 gap-2">
+                        <div className="flex gap-1">
+                          {selectedUser.games?.map((game, gameIndex) => (
+                            <>
+                              <div
+                                key={game}
+                                className="p-1 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center"
+                              >
+                                <span
+                                  className={`icon icon-20 ${
+                                    prototype.getGameByID(game).slug ===
+                                    "apexlegends"
+                                      ? "icon-game-apexlegends-symbol text-game-apexlegends"
+                                      : ""
+                                  } ${
+                                    prototype.getGameByID(game).slug === "csgo"
+                                      ? "icon-game-csgo-symbol text-game-csgo"
+                                      : ""
+                                  }  ${
+                                    prototype.getGameByID(game).slug === "dota2"
+                                      ? "icon-game-dota2-symbol text-game-dota2"
+                                      : ""
+                                  }  ${
+                                    prototype.getGameByID(game).slug ===
+                                    "leagueoflegends"
+                                      ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
+                                      : ""
+                                  }  ${
+                                    prototype.getGameByID(game).slug ===
+                                    "rocketleague"
+                                      ? "icon-game-rocketleague-symbol text-game-rocketleague"
+                                      : ""
+                                  } ${
+                                    prototype.getGameByID(game).slug === "pubg"
+                                      ? "icon-game-pubg-symbol text-game-pubg"
+                                      : ""
+                                  }  ${
+                                    prototype.getGameByID(game).slug ===
+                                    "valorant"
+                                      ? "icon-game-valorant-symbol text-game-valorant"
+                                      : ""
+                                  }`}
+                                />
+                              </div>
+                            </>
+                          ))}
+                        </div>
+                        <hr className="m-0 separator separator-vertical h-7" />
+                        <div className="flex gap-1">
+                          <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="link p-1 text-0"
+                          >
+                            <span className="icon icon-20 text-ui-300 icon-twitch" />
+                          </a>
+                          <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="link p-1 text-0"
+                          >
+                            <span className="icon icon-20 text-ui-300 icon-logo-twitter" />
+                          </a>
+                          <a
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="link p-1 text-0"
+                          >
+                            <span className="icon icon-20 text-ui-300 icon-discord" />
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="hidden lg:block absolute z-20 top-3 right-3">
-                  {selectedUser.isYou && (
-                    <Link href="settings">
-                      <a className="button button-sm button-tertiary">
-                        <span className="icon icon-cogwheel" />
-                        <span>Profile settings</span>
-                      </a>
-                    </Link>
-                  )}
-                </div>
-                <div className="header-meta lg:items-end p-3">
-                  {!emptyClan && (
-                    <>
-                      {selectedUser.clan && (
-                        <Link
-                          href={`/prototype/clans/${
-                            selectedUser.clan
-                          }${prototype.getURLparams()}`}
-                        >
-                          <div className="item bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg interactive w-auto">
-                            <div className="item-image">
-                              <div className="avatar avatar-sm avatar-squircle interactive">
-                                <div>
-                                  <img
-                                    src={
-                                      prototype.getClanByID(selectedUser.clan)
-                                        .avatar
-                                    }
-                                    alt="avatar"
-                                  />
-                                </div>
+              </div>
+              <div className="hidden lg:block absolute z-20 top-3 right-3">
+                {selectedUser.isYou && (
+                  <Link href="settings">
+                    <a className="button button-sm button-tertiary">
+                      <span className="icon icon-cogwheel" />
+                      <span>Profile settings</span>
+                    </a>
+                  </Link>
+                )}
+              </div>
+              <div className="header-meta lg:items-end p-3">
+                {!emptyClan && (
+                  <>
+                    {selectedUser.clan && (
+                      <Link
+                        href={`/prototype/clans/${
+                          selectedUser.clan
+                        }${prototype.getURLparams()}`}
+                      >
+                        <div className="item bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg interactive w-auto">
+                          <div className="item-image">
+                            <div className="avatar avatar-sm avatar-squircle interactive">
+                              <div>
+                                <img
+                                  src={
+                                    prototype.getClanByID(selectedUser.clan)
+                                      .avatar
+                                  }
+                                  alt="avatar"
+                                />
                               </div>
                             </div>
-                            <div className="item-body pr-2">
-                              <div className="text-sm text-ui-300 leading-none">
-                                Clan member of
-                              </div>
-                              <div className="item-title text-xl font-headings font-bold italic text-ui-100 interactive">
-                                &#91;
-                                {prototype.getClanByID(selectedUser.clan).tag}
-                                &#93;{" "}
-                                {
-                                  prototype.getClanByID(selectedUser.clan)
-                                    .nickname
-                                }
-                              </div>
-                              {/*
+                          </div>
+                          <div className="item-body pr-2">
+                            <div className="text-sm text-ui-300 leading-none">
+                              Clan member of
+                            </div>
+                            <div className="item-title text-xl font-headings font-bold italic text-ui-100 interactive">
+                              &#91;
+                              {prototype.getClanByID(selectedUser.clan).tag}
+                              &#93;{" "}
+                              {
+                                prototype.getClanByID(selectedUser.clan)
+                                  .nickname
+                              }
+                            </div>
+                            {/*
                             <div className="text-sm text-ui-300">
                               {
                                 prototype.getClanByID(selectedUser.clan).members
@@ -231,51 +227,51 @@ export default function Home() {
                               members
                             </div>
                             */}
-                            </div>
                           </div>
-                        </Link>
-                      )}
-                      {!selectedUser.isYou ? (
-                        <>
-                          {!selectedUser.clan && (
-                            <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                              <div className="text-center">
-                                {selectedUser.nickname} is not part of a clan.
-                              </div>
-                              <Link href="#">
-                                <a
-                                  type="button"
-                                  className="button button-sm button-primary w-full"
-                                >
-                                  <span>Recruit to your clan</span>
-                                </a>
-                              </Link>
+                        </div>
+                      </Link>
+                    )}
+                    {!selectedUser.isYou ? (
+                      <>
+                        {!selectedUser.clan && (
+                          <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                            <div className="text-center">
+                              {selectedUser.nickname} is not part of a clan.
                             </div>
-                          )}
-                        </>
-                      ) : (
-                        <>
-                          {!selectedUser.clan && (
-                            <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                              <div className="text-center">
-                                You are not part of a clan.
-                              </div>
-                              <Link href="/prototype/clans/search">
-                                <a
-                                  type="button"
-                                  className="button button-sm button-primary w-full"
-                                >
-                                  <span>Join a clan</span>
-                                </a>
-                              </Link>
+                            <Link href="#">
+                              <a
+                                type="button"
+                                className="button button-sm button-primary w-full"
+                              >
+                                <span>Recruit to your clan</span>
+                              </a>
+                            </Link>
+                          </div>
+                        )}
+                      </>
+                    ) : (
+                      <>
+                        {!selectedUser.clan && (
+                          <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                            <div className="text-center">
+                              You are not part of a clan.
                             </div>
-                          )}
-                        </>
-                      )}
-                    </>
-                  )}
-                </div>
-                {/*
+                            <Link href="/prototype/clans/search">
+                              <a
+                                type="button"
+                                className="button button-sm button-primary w-full"
+                              >
+                                <span>Join a clan</span>
+                              </a>
+                            </Link>
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </>
+                )}
+              </div>
+              {/*
                 <div className="header-meta">
                   <div className="flex justify-center gap-4 py-4">
                     <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
@@ -305,9 +301,8 @@ export default function Home() {
                   </div>
                 </div>
                   */}
-                <div className="header-bg">
-                  <img src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp" />
-                </div>
+              <div className="header-bg">
+                <img src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp" />
               </div>
             </section>
             {/*

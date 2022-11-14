@@ -15,7 +15,6 @@ const notificationsGroups = [
         title: "You received a gift",
         text: "<a href='#' class='link font-bold'>Harriss</a> a member of your Clan <a href='#' class='link font-bold'>TeamClash</a> is sending you <span class='whitespace-nowrap'><img src='https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png' alt='' class='w-7 h-7 -my-1 -mr-0.5 inline drop-shadow-sm' /> <span class='font-bold text-purple-500'>30 tokens</span></span> as a gift.",
         time: "2 min.",
-        cta: "Tokens",
         read: false,
       },
       {

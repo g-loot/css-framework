@@ -111,7 +111,7 @@ export default function Clan() {
                       </div>
                       <div className="flex-1 py-4">
                         <p className="text-ui-300">
-                          {clan.introduction?.substr(0, 150)}...
+                          {clan.bio?.substr(0, 150)}...
                         </p>
                       </div>
                       <div className="flex gap-4 items-center justify-between border-t border-ui-700 pt-4">
