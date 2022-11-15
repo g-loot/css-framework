@@ -32,7 +32,7 @@ const notificationsGroups = [
         title: "You are getting noticed!",
         text: "You got invited to the <a href='#' class='link font-bold'>BBL Esports</a> Clan a while ago and haven't answered yet. If you don’t take action, the invitation will expire on 22.10.2022.",
         cta: "Invite",
-        url: "/prototype/clans/2",
+        url: "/prototype/clans/3",
         time: "1 day",
       },
       {
@@ -205,9 +205,7 @@ export default function TopbarNew() {
                   </li>
                       */}
               </ul>
-              {/*
               <TopBarClaim />
-                    */}
             </div>
             <div className="flex justify-end items-center gap-1 sm:gap-2">
               <Tooltip

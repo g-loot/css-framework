@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 
 import ModalClaimDailyRewards from "../../pages/prototype/home/modal-claim-dailyrewards";
 import { UiContext } from "../../contexts/ui";

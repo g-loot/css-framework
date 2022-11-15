@@ -299,8 +299,7 @@ export default function SectionClanActivity() {
                   type="button"
                   className="button button-sm button-tertiary"
                 >
-                  <span className="icon icon-a-time after:bg-error-300 after:-top-2" data-badge="." />
-                  <span>View applicants</span>
+                  <span>Applications</span>
                 </button>
                 </Link>
               )}

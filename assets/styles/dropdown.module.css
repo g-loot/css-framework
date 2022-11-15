@@ -86,6 +86,7 @@
   }
 }
 
+/* positioning */
 
 .dropdown-end {
   .dropdown-content {
@@ -178,6 +179,7 @@
   }
 }
 
+/* dropdown content */
 
 .dropdown-content {
   @apply
@@ -231,6 +233,385 @@
         @apply
         translate-y-0
         opacity-100
+        ;
+      }
+    }
+  }
+}
+
+/* responsive positioning */
+
+@media only screen and (min-width: 640px) {
+	.dropdown {
+    &.sm\:dropdown-end {
+      .dropdown-content {
+        @apply
+        right-0
+        ;
+      }
+    }
+    
+    &.sm\:dropdown-center {
+      .dropdown-content {
+        @apply
+        left-[50%]
+        -translate-x-[50%]
+        ;
+      }
+    }
+    
+    &.sm\:dropdown-top {
+      .dropdown-content {
+        @apply
+        bottom-full
+        top-auto
+        origin-bottom
+        ;
+        .menu {
+          > li {
+            @apply
+            translate-y-4
+            ;
+          }
+        }
+      }
+    }
+    
+    &.sm\:dropdown-content.dropdown-top {
+      .menu {
+        > li {
+          @apply
+          translate-y-4
+          ;
+        }
+      }
+    }
+    
+    &.sm\:dropdown-end {
+      .dropdown-content {
+        @apply
+        right-0
+        ;
+      }
+    
+      &.dropdown-right,
+      &.dropdown-left {
+        .dropdown-content {
+          @apply
+          bottom-0
+          top-auto
+          ;
+          .menu {
+            > li {
+              @apply
+              translate-y-4
+              ;
+            }
+          }
+        }
+      }
+    }
+    
+    &.sm\:dropdown-left {
+      .dropdown-content {
+        @apply
+        top-0
+        right-full
+        bottom-auto
+        origin-right
+        ;
+      }
+    }
+    
+    &.sm\:dropdown-right {
+      .dropdown-content {
+        @apply
+        top-0
+        left-full
+        bottom-auto
+        origin-left
+        ;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+	.dropdown {
+    &.md\:dropdown-end {
+      .dropdown-content {
+        @apply
+        right-0
+        ;
+      }
+    }
+    
+    &.md\:dropdown-center {
+      .dropdown-content {
+        @apply
+        left-[50%]
+        -translate-x-[50%]
+        ;
+      }
+    }
+    
+    &.md\:dropdown-top {
+      .dropdown-content {
+        @apply
+        bottom-full
+        top-auto
+        origin-bottom
+        ;
+        .menu {
+          > li {
+            @apply
+            translate-y-4
+            ;
+          }
+        }
+      }
+    }
+    
+    &.md\:dropdown-content.dropdown-top {
+      .menu {
+        > li {
+          @apply
+          translate-y-4
+          ;
+        }
+      }
+    }
+    
+    &.md\:dropdown-end {
+      .dropdown-content {
+        @apply
+        right-0
+        ;
+      }
+    
+      &.dropdown-right,
+      &.dropdown-left {
+        .dropdown-content {
+          @apply
+          bottom-0
+          top-auto
+          ;
+          .menu {
+            > li {
+              @apply
+              translate-y-4
+              ;
+            }
+          }
+        }
+      }
+    }
+    
+    &.md\:dropdown-left {
+      .dropdown-content {
+        @apply
+        top-0
+        right-full
+        bottom-auto
+        origin-right
+        ;
+      }
+    }
+    
+    &.md\:dropdown-right {
+      .dropdown-content {
+        @apply
+        top-0
+        left-full
+        bottom-auto
+        origin-left
+        ;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+	.dropdown {
+    &.lg\:dropdown-end {
+      .dropdown-content {
+        @apply
+        right-0
+        ;
+      }
+    }
+    
+    &.lg\:dropdown-center {
+      .dropdown-content {
+        @apply
+        left-[50%]
+        -translate-x-[50%]
+        ;
+      }
+    }
+    
+    &.lg\:dropdown-top {
+      .dropdown-content {
+        @apply
+        bottom-full
+        top-auto
+        origin-bottom
+        ;
+        .menu {
+          > li {
+            @apply
+            translate-y-4
+            ;
+          }
+        }
+      }
+    }
+    
+    &.lg\:dropdown-content.dropdown-top {
+      .menu {
+        > li {
+          @apply
+          translate-y-4
+          ;
+        }
+      }
+    }
+    
+    &.lg\:dropdown-end {
+      .dropdown-content {
+        @apply
+        right-0
+        ;
+      }
+    
+      &.dropdown-right,
+      &.dropdown-left {
+        .dropdown-content {
+          @apply
+          bottom-0
+          top-auto
+          ;
+          .menu {
+            > li {
+              @apply
+              translate-y-4
+              ;
+            }
+          }
+        }
+      }
+    }
+    
+    &.lg\:dropdown-left {
+      .dropdown-content {
+        @apply
+        top-0
+        right-full
+        bottom-auto
+        origin-right
+        ;
+      }
+    }
+    
+    &.lg\:dropdown-right {
+      .dropdown-content {
+        @apply
+        top-0
+        left-full
+        bottom-auto
+        origin-left
+        ;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+	.dropdown {
+    &.xl\:dropdown-end {
+      .dropdown-content {
+        @apply
+        right-0
+        ;
+      }
+    }
+    
+    &.xl\:dropdown-center {
+      .dropdown-content {
+        @apply
+        left-[50%]
+        -translate-x-[50%]
+        ;
+      }
+    }
+    
+    &.xl\:dropdown-top {
+      .dropdown-content {
+        @apply
+        bottom-full
+        top-auto
+        origin-bottom
+        ;
+        .menu {
+          > li {
+            @apply
+            translate-y-4
+            ;
+          }
+        }
+      }
+    }
+    
+    &.xl\:dropdown-content.dropdown-top {
+      .menu {
+        > li {
+          @apply
+          translate-y-4
+          ;
+        }
+      }
+    }
+    
+    &.xl\:dropdown-end {
+      .dropdown-content {
+        @apply
+        right-0
+        ;
+      }
+    
+      &.dropdown-right,
+      &.dropdown-left {
+        .dropdown-content {
+          @apply
+          bottom-0
+          top-auto
+          ;
+          .menu {
+            > li {
+              @apply
+              translate-y-4
+              ;
+            }
+          }
+        }
+      }
+    }
+    
+    &.xl\:dropdown-left {
+      .dropdown-content {
+        @apply
+        top-0
+        right-full
+        bottom-auto
+        origin-right
+        ;
+      }
+    }
+    
+    &.xl\:dropdown-right {
+      .dropdown-content {
+        @apply
+        top-0
+        left-full
+        bottom-auto
+        origin-left
         ;
       }
     }

@@ -14,10 +14,6 @@ export default function TopBarClaim(props) {
     setActive(!isActive);
   };
 
-  useEffect(() => {
-    console.log('variables ', variablesContext.rewardClaimed);
-  }, [variablesContext]);
-
   const handleClickOutside = (e) => {
     if (uiContext.displayedModal === null) {
       if (ref.current && !ref.current.contains(e.target)) {
@@ -36,28 +32,28 @@ export default function TopBarClaim(props) {
   return (
     <div
       ref={ref}
-      className={`dropdown dropdown-center pb-0.5 ${
+      className={`dropdown lg:dropdown-center pb-0.5 ${
         isActive ? "dropdown-open" : "dropdown-closed"
       }`}
     >
       <label
         tabIndex="1"
-        className="interactive flex items-center gap-2 text-ui-300 py-3"
+        className="interactive flex items-center gap-2 text-ui-300 py-3 overflow-ellipsis"
         onClick={dropdownActive}
       >
         <span
           className={`icon icon-present ${
-            !variablesContext.rewardClaimed ? "" : "text-main"
+            !variablesContext.dailyRewardClaimed ? "text-main animate-bounce" : ""
           }`}
         />
         <span
-          className={`uppercase text-sm ${
-            !variablesContext.rewardClaimed
-              ? ""
-              : "text-gradient bg-gradient-to-tr from-main to-blue-500"
+          className={`uppercase text-sm whitespace-nowrap ${
+            !variablesContext.dailyRewardClaimed
+              ? "text-gradient bg-gradient-to-tr from-main to-blue-500"
+              : ""
           }`}
         >
-          Daily Loot Streak
+          <span className="max-sm:hidden">Daily</span> Loot Streak
         </span>
       </label>
       <div tabIndex="1" className="dropdown-content w-96 p-1">

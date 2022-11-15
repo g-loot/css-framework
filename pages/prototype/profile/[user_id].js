@@ -443,7 +443,7 @@ export default function Home() {
               style={{ "--delay": "calc(2 * 0.05s)" }}
             >
               <div className="flex-1 surface surface-halo halo-b halo-r sm:rounded-lg py-8 px-4 space-y-8">
-                <div className="flex flex-col md:flex-row items-center">
+                <div className="flex flex-col xl:flex-row items-center">
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-brawl-sm.svg"
                     width="auto"
@@ -495,7 +495,7 @@ export default function Home() {
                   </div>
                 </div>
                 <hr className="my-8 border-ui-700" />
-                <div className="flex flex-col md:flex-row items-center">
+                <div className="flex flex-col xl:flex-row items-center">
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-missions-sm.svg"
                     width="auto"
