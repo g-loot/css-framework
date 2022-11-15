@@ -161,7 +161,24 @@ export default function ClanHeader() {
             )}
           </div>
           <div className="header-meta lg:items-end p-3 animate-slide-in-bottom">
-            {!selectedClan.isYou && (
+            {selectedClan.isYou ? (
+              <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                <div className="text-center">
+                  You have <b>3</b> pending applications
+                </div>
+                <div className="flex gap-2">
+                  <Link href="/prototype/clans/1/applications">
+                    <a
+                      type="button"
+                      className="button button-sm button-primary flex-1"
+                    >
+                      <span className="icon icon-a-time" />
+                      <span>View applicants</span>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            ) : (
               <>
                 {selectedClan.isPublic ? (
                   <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
@@ -180,29 +197,48 @@ export default function ClanHeader() {
                     </div>
                   </div>
                 ) : (
-                  <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                    <div className="text-center">
-                      Congratulations, you have been invited to join this clan.
-                    </div>
-                    <div className="flex gap-2">
-                      <Link href="#">
-                        <a
-                          type="button"
-                          className="button button-sm button-primary flex-1"
-                        >
-                          <span>Accept</span>
-                        </a>
-                      </Link>
-                      <Link href="#">
-                        <a
-                          type="button"
-                          className="button button-sm button-error flex-1"
-                        >
-                          <span>Decline</span>
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
+                  <>
+                    {selectedClan.hasInvitedYou ? (
+                      <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                        <div className="text-center">
+                          Congratulations, you have been invited to join this
+                          clan.
+                        </div>
+                        <div className="flex gap-2">
+                          <Link href="#">
+                            <a
+                              type="button"
+                              className="button button-sm button-primary flex-1"
+                            >
+                              <span>Accept</span>
+                            </a>
+                          </Link>
+                          <Link href="#">
+                            <a
+                              type="button"
+                              className="button button-sm button-error flex-1"
+                            >
+                              <span>Decline</span>
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                        <div className="text-center">This Clan is private.</div>
+                        <div className="flex gap-2">
+                          <Link href="#">
+                            <a
+                              type="button"
+                              className="button button-sm button-primary flex-1"
+                            >
+                              <span>Apply to join</span>
+                            </a>
+                          </Link>
+                        </div>
+                      </div>
+                    )}
+                  </>
                 )}
               </>
             )}
