@@ -7,10 +7,10 @@ import { usePrototypeData } from "../../../../contexts/prototype";
 import { UiContext } from "../../../../contexts/ui";
 import { useRouter } from "next/router";
 import Accordion from "../../../../components/Accordion/Accordion";
-import { StatsValorantAgents } from "./data-stats-valorant";
-import { StatsValorantMaps } from "./data-stats-valorant";
-import { StatsValorantRanks } from "./data-stats-valorant";
-import { StatsValorantDemoFavoriteAgents } from "./data-stats-demo-valorant";
+import { StatsValorantAgents } from "../../../../mock-data/data-stats-valorant";
+import { StatsValorantMaps } from "../../../../mock-data/data-stats-valorant";
+import { StatsValorantRanks } from "../../../../mock-data/data-stats-valorant";
+import { StatsValorantDemoFavoriteAgents } from "../../../../mock-data/data-stats-demo-valorant";
 
 export default function Stats() {
   const router = useRouter();
@@ -313,28 +313,6 @@ export default function Stats() {
                 </tr>
               </thead>
               <tbody className="child:overflow-hidden leading-tight">
-                <tr>
-                  <td className="p-0 flex items-center gap-4 text-left">
-                    <img
-                      className="w-16 h-16 rounded-l"
-                      src="https://res.cloudinary.com/gloot/image/upload/v1668591099/Marketing/2022_VALORANT_agent_generator/images/agent-avatar-neon.webp"
-                      alt=""
-                      width="auto"
-                      height="auto"
-                    />
-                    <div>
-                      <div className="font-bold text-ui-100">Neon</div>
-                      <div className="text-ui-300">Duelist</div>
-                    </div>
-                  </td>
-                  <td>32H</td>
-                  <td>56</td>
-                  <td>73,2%</td>
-                  <td>1.49 </td>
-                  <td>185.556</td>
-                  <td>282.7 </td>
-                  <td>29.9%</td>
-                </tr>
                 {StatsValorantDemoFavoriteAgents.map((item, itemIndex) => (
                   <tr key={itemIndex}>
                     <td className="p-0 flex items-center gap-4 text-left">
@@ -346,7 +324,7 @@ export default function Stats() {
                         height="auto"
                       />
                       <div>
-                        <div className="font-bold text-ui-100">
+                        <div className="font-bold text-ui-100 capitalize">
                           {getAgentByID(item.agent).name}
                         </div>
                         <div className="text-ui-300">
@@ -365,14 +343,6 @@ export default function Stats() {
                 ))}
               </tbody>
             </table>
-
-            <ul className="tabs">
-              <li>
-                <button type="button" className="is-active">
-                  <span>This is a button</span>
-                </button>
-              </li>
-            </ul>
           </div>
         </section>
       </PrototypeStructure>
