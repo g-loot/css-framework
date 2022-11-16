@@ -587,6 +587,7 @@
   focus-visible:outline
   focus-visible:outline-1
   focus-visible:outline-main
+  gap-2
   ;
 
   &:not([class*="pt-"]) {
@@ -666,6 +667,15 @@
     -skew-x-30
     ;
   }
+}
+
+.tab.tab-secondary {
+  @apply
+  font-body
+  leading-none
+  text-sm
+  uppercase
+  ;
 }
 
 .tab:not(.tab-secondary) {

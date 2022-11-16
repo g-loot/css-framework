@@ -141,7 +141,7 @@ export default function TopbarNew() {
           className={`flex lg:gap-8 mx-auto px-2  ${hasAds ? "3xl:m-0" : ""}`}
         >
           <div className="flex-1 flex items-center justify-between">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center">
               <div className="block lg:hidden">
                 <label
                   htmlFor="drawer-prototype"
@@ -205,6 +205,7 @@ export default function TopbarNew() {
                   </li>
                       */}
               </ul>
+
               <TopBarClaim />
             </div>
             <div className="flex justify-end items-center gap-1 sm:gap-2">

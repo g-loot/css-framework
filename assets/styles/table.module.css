@@ -155,6 +155,12 @@
   relative
   pointer-events-none
   ;
+
+  img {
+    @apply
+    opacity-0
+    ;
+  }
   
   :where(tbody th,tbody td) {
     @apply

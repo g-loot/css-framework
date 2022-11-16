@@ -240,12 +240,15 @@ const DSpage = () => {
                 <button type="button" className="tab">
                   <span>Button Label</span>
                 </button>
+                <button type="button" className="tab tab-secondary">
+                  <span>Button Label</span>
+                </button>
               </div>
               <div className="flex-1">
                 <iframe
                   className="rounded"
                   width="100%"
-                  height="130"
+                  height="300"
                   src="//jsfiddle.net/augustin_hiebel/zx5b8kg1/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>

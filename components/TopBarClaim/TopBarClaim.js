@@ -32,13 +32,13 @@ export default function TopBarClaim(props) {
   return (
     <div
       ref={ref}
-      className={`dropdown lg:dropdown-center pb-0.5 ${
+      className={`dropdown lg:dropdown-center pt-0.5 ${
         isActive ? "dropdown-open" : "dropdown-closed"
       }`}
     >
       <label
         tabIndex="1"
-        className="interactive flex items-center gap-2 text-ui-300 py-3 overflow-ellipsis"
+        className="tab tab-secondary"
         onClick={dropdownActive}
       >
         <span

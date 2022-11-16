@@ -182,6 +182,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-duelist.webp'),
     },
     picturePath: getImageUrl('agent-avatar-neon.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-neon.jpg'),
   },
   {
     id: 9,

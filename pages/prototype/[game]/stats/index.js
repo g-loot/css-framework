@@ -11,17 +11,36 @@ import { StatsValorantAgents } from "../../../../mock-data/data-stats-valorant";
 import { StatsValorantMaps } from "../../../../mock-data/data-stats-valorant";
 import { StatsValorantRanks } from "../../../../mock-data/data-stats-valorant";
 import { StatsValorantDemoFavoriteAgents } from "../../../../mock-data/data-stats-demo-valorant";
+import { StatsValorantDemoGeneral } from "../../../../mock-data/data-stats-demo-valorant";
+import { StatsValorantDemoLatestMatches } from "../../../../mock-data/data-stats-demo-valorant";
+import LoadMore from "../../../../components/LoadMore/LoadMore";
 
 export default function Stats() {
   const router = useRouter();
+  const { query } = useRouter();
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
   const [selectedGame, setSelectedGame] = useState(null);
+  const [selectedGeneralStat, setSelectedGeneralStat] = useState(0);
   const { game } = router.query;
+  const variant = query.variant ? query.variant : 0;
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1200);
+    }
+  }, [loading]);
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game, prototype]);
+
+  useEffect(() => {
+    setSelectedGeneralStat(variant);
+  }, [variant]);
 
   useEffect(() => {
     if (selectedGame != null) {
@@ -40,9 +59,24 @@ export default function Stats() {
     }, 1000);
   }
 
+  const getGeneralStatsByID = (id) => {
+    return StatsValorantDemoGeneral.find((general) => {
+      return general.id === parseInt(id);
+    });
+  };
   const getAgentByID = (id) => {
     return StatsValorantAgents.find((agent) => {
       return agent.id === parseInt(id);
+    });
+  };
+  const getRankByID = (id) => {
+    return StatsValorantRanks.find((rank) => {
+      return rank.id === parseInt(id);
+    });
+  };
+  const getMapByID = (id) => {
+    return StatsValorantMaps.find((map) => {
+      return map.id === parseInt(id);
     });
   };
 
@@ -118,18 +152,35 @@ export default function Stats() {
                 <div className="text-sm uppercase text-ui-300 font-bold">
                   Top agent
                 </div>
-                <h3>Neon</h3>
+                <h3 className="capitalize">
+                  {
+                    getAgentByID(getGeneralStatsByID(selectedGeneralStat).agent)
+                      .name
+                  }
+                </h3>
                 <div className="text-sm uppercase text-ui-300 italic">
-                  Duelist
+                  {
+                    getAgentByID(getGeneralStatsByID(selectedGeneralStat).agent)
+                      .role.name
+                  }
                 </div>
               </div>
               <div className="md:text-right flex gap-2 items-center uppercase text-sm text-ui-300">
                 <div>
-                  <span>Rank</span> <b className="text-ui-100">Immortal</b>
+                  <span>Rank</span>{" "}
+                  <b className="text-ui-100">
+                    {
+                      getRankByID(getGeneralStatsByID(selectedGeneralStat).rank)
+                        .name
+                    }
+                  </b>
                 </div>
                 <img
                   className="h-16"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1668591096/Marketing/2022_VALORANT_agent_generator/images/rank-gold.webp"
+                  src={
+                    getRankByID(getGeneralStatsByID(selectedGeneralStat).rank)
+                      .picturePath
+                  }
                   height="auto"
                   width="auto"
                   alt=""
@@ -157,12 +208,15 @@ export default function Stats() {
           <div className="absolute z-0 inset-0 flex items-end md:items-center justify-center opacity-25 md:opacity-100">
             <img
               className="absolute z-0 object-cover left-[33%] md:left-auto object-center animate-slide-in-bottom"
-              src="https://res.cloudinary.com/gloot/image/upload/v1668603327/Marketing/2022_VALORANT_agent_generator/images/valorant-stats-hero-neon.jpg"
+              src={
+                getAgentByID(getGeneralStatsByID(selectedGeneralStat).agent)
+                  .backgroundPath
+              }
               alt=""
             />
           </div>
         </section>
-        <section className="-mt-12 px-4 md:px-0 mb-8">
+        <section className="-mt-12 px-4 md:px-0 mb-16">
           <div className="max-w-lg mx-auto accordion accordion-highlighted">
             <Accordion
               header={
@@ -297,9 +351,13 @@ export default function Stats() {
           </div>
         </section>
         <section className="mb-8">
-          <h2 className="h5">Most played agents</h2>
+          <h2 className="h5 mx-4 md:px-0">Most played agents</h2>
           <div className="overflow-x-auto">
-            <table className="table table-rounded w-full text-center">
+            <table
+              className={`table table-rounded w-full text-center ${
+                loading ? "is-loading" : ""
+              }`}
+            >
               <thead>
                 <tr className="text-ui-400">
                   <th className="text-left">Agent</th>
@@ -318,7 +376,7 @@ export default function Stats() {
                     <td className="p-0 flex items-center gap-4 text-left">
                       <img
                         className="w-16 h-16 rounded-l"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1668591099/Marketing/2022_VALORANT_agent_generator/images/agent-avatar-neon.webp"
+                        src={getAgentByID(item.agent).picturePath}
                         alt=""
                         width="auto"
                         height="auto"
@@ -332,17 +390,118 @@ export default function Stats() {
                         </div>
                       </div>
                     </td>
-                    <td>32H</td>
-                    <td>56</td>
-                    <td>73,2%</td>
-                    <td>1.49 </td>
-                    <td>185.556</td>
-                    <td>282.7 </td>
-                    <td>29.9%</td>
+                    <td>{item.timePlayed}</td>
+                    <td>{item.matches}</td>
+                    <td>{item.win}%</td>
+                    <td>{item.kd}</td>
+                    <td>{item.adr}</td>
+                    <td>{item.acs}</td>
+                    <td>{item.hs}%</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+            <div className="text-center">
+              <LoadMore className="button-sm button-tertiary" />
+            </div>
+          </div>
+        </section>
+        <section className="mb-8">
+          <h2 className="h5 mx-4 md:px-0">Last 20 matches</h2>
+          <div className="overflow-x-auto">
+            {StatsValorantDemoLatestMatches.map((item, itemIndex) => (
+              <>
+                <table
+                  key={itemIndex}
+                  className={`table table-rounded w-full text-center ${
+                    loading ? "is-loading" : ""
+                  }`}
+                >
+                  <thead>
+                    <tr className="text-ui-400">
+                      <th className="text-left flex gap-2 items-center">
+                        <span className="icon icon-calendar-date-2" />
+                        <span>{item.date}</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="child:overflow-hidden leading-tight">
+                    {item.matches.map((match, matchIndex) => (
+                      <tr key={matchIndex}>
+                        {match.hasWon && <i className="absolute" />}
+                        <td
+                          className={`flex gap-2 items-center text-left rounded-l ${
+                            match.hasWon
+                              ? "bg-gradient-to-r from-main/25 to-main/0"
+                              : ""
+                          }`}
+                        >
+                          <div className="avatar avatar-sm avatar-diamond">
+                            <div>
+                              <img
+                                src={
+                                  getAgentByID(
+                                    getGeneralStatsByID(selectedGeneralStat)
+                                      .agent
+                                  ).picturePath
+                                }
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <div className="font-bold text-ui-100 capitalize">
+                              {getMapByID(match.map).name}
+                            </div>
+                            <div className="text-ui-300">{match.mode}</div>
+                          </div>
+                        </td>
+                        <td className="font-headings text-2xl font-bold italic uppercase">
+                          {match.hasWon ? (
+                            <span className="text-main">Victory</span>
+                          ) : (
+                            <span className="text-ui-300">Defeat</span>
+                          )}
+                        </td>
+                        <td>
+                          <div className="text-ui-300 font-headings text-2xl font-bold italic"><span className={`${match.hasWon ? 'text-main' : 'text-error-300'}`}>{match.score.team1}</span> - <span className={`${!match.hasWon ? 'text-main' : 'text-error-300'}`}>{match.score.team2}</span></div>
+                            <div className="text-sm text-ui-400">{match.placement} place</div>
+                        </td>
+                        <td>
+                          <div className="text-ui-400 text-sm font-bold uppercase">{match.time}</div>
+                          <div>{match.duration}</div>
+                        </td>
+                        <td></td>
+                        <td>
+                          <div className="text-ui-400 text-sm font-bold uppercase">K/D/A</div>
+                          <div>{match.kda.k} - {match.kda.d} - {match.kda.a}</div>
+                        </td>
+                        <td>
+                          <div className="text-ui-400 text-sm font-bold uppercase">KD</div>
+                          <div>{match.kd}</div>
+                        </td>
+                        <td>
+                          <div className="text-ui-400 text-sm font-bold uppercase">ADR</div>
+                          <div>{match.adr}</div>
+                        </td>
+                        <td>
+                          <div className="text-ui-400 text-sm font-bold uppercase">ACS</div>
+                          <div>{match.acs}</div>
+                        </td>
+                        <td>
+                          <div className="text-ui-400 text-sm font-bold uppercase">HS%</div>
+                          <div>{match.hs}%</div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </>
+            ))}
+
+            <div className="text-center">
+              <LoadMore className="button-sm button-tertiary" />
+            </div>
           </div>
         </section>
       </PrototypeStructure>
