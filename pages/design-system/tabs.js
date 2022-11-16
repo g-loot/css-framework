@@ -155,7 +155,9 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-bronze" />
-                    <span className="font-headings font-bold text-2xl uppercase italic">Bronze</span>
+                    <span className="font-headings font-bold text-2xl uppercase italic">
+                      Bronze
+                    </span>
                   </div>
                 </div>
               </button>
@@ -165,7 +167,9 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-silver" />
-                    <span className="font-headings font-bold text-2xl uppercase italic">Silver</span>
+                    <span className="font-headings font-bold text-2xl uppercase italic">
+                      Silver
+                    </span>
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
                     <div>
@@ -181,7 +185,9 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-gold" />
-                    <span className="font-headings font-bold text-2xl uppercase italic">Gold</span>
+                    <span className="font-headings font-bold text-2xl uppercase italic">
+                      Gold
+                    </span>
                   </div>
                 </div>
               </button>
@@ -191,7 +197,9 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-platinum" />
-                    <span className="font-headings font-bold text-2xl uppercase italic">Platinum</span>
+                    <span className="font-headings font-bold text-2xl uppercase italic">
+                      Platinum
+                    </span>
                   </div>
                 </div>
               </button>
@@ -201,7 +209,9 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-diamond" />
-                    <span className="font-headings font-bold text-2xl uppercase italic">Diamond</span>
+                    <span className="font-headings font-bold text-2xl uppercase italic">
+                      Diamond
+                    </span>
                   </div>
                 </div>
               </button>
@@ -209,10 +219,39 @@ const DSpage = () => {
           </ul>
         </div>
 
-        <div className='mt-4'>
-          <iframe className="rounded" width="100%" height="300" src="//jsfiddle.net/augustin_hiebel/5m6t23cw/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094" ></iframe>
+        <div className="mt-4">
+          <iframe
+            className="rounded"
+            width="100%"
+            height="300"
+            src="//jsfiddle.net/augustin_hiebel/5m6t23cw/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+          ></iframe>
         </div>
+      </div>
 
+      {/* Tab button */}
+      <div className="mb-12" id="tab-button">
+        <h2 className="h3 mb-3">Tab button</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <button type="button" className="tab">
+                  <span>Button Label</span>
+                </button>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="130"
+                  src="//jsfiddle.net/augustin_hiebel/zx5b8kg1/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

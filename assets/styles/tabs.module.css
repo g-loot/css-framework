@@ -565,4 +565,115 @@
       }
     } 
   }
-} 
+}
+
+
+/* Tab button */
+
+.tab {
+  @apply
+  relative
+  inline-flex
+  justify-center
+  items-center
+  cursor-pointer 
+  text-ui-300
+  select-none
+  transition
+  duration-300
+  ease-in-out
+  outline-offset-[-1px]
+  focus-visible:rounded
+  focus-visible:outline
+  focus-visible:outline-1
+  focus-visible:outline-main
+  ;
+
+  &:not([class*="pt-"]) {
+    @apply
+    pt-3
+    ;
+  }
+  &:not([class*="pb-"]) {
+    @apply
+    pb-4
+    ;
+  }
+  &:not([class*="px-"]) {
+    @apply
+    px-5
+    ;
+  }
+  > span {
+    @apply
+    block
+    ;
+  }
+  > span,
+  > div {
+    @apply
+    transition
+    ease-linear
+    duration-75
+    ;
+  }
+
+  &.is-active,
+  &:active,
+  &:hover {
+    @apply
+    text-white
+    ;
+    &::after {
+      @apply
+      opacity-100
+      scale-x-100
+      -skew-x-30
+      ;
+    }
+  }
+
+  &:active {
+    > span,
+    > div {
+      @apply 
+      translate-y-0.5
+      ;
+    }
+  }
+
+  &::before,
+  &::after {
+    @apply
+    transition
+    duration-300
+    ease-[cubic-bezier(0.7,0,0.3,1)]
+    ;
+  }
+
+  &::after {
+    @apply
+    content-['']
+    absolute
+    block
+    h-1
+    w-full
+    bottom-0
+    inset-x-0
+    bg-main
+    opacity-0
+    scale-x-0
+    -skew-x-30
+    ;
+  }
+}
+
+.tab:not(.tab-secondary) {
+  @apply
+  font-bold
+  font-headings
+  tracking-wide
+  leading-[1]
+  text-lg
+  ;
+}

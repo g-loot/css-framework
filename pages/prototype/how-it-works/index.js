@@ -287,7 +287,7 @@ export default function HowItWorks() {
               {TabsItems.map((item, itemIndex) => (
                 <Link href={`?tab=${item.url}`} key={item.id}>
                   <li
-                    className={`item duration-500 p-3 ${
+                    className={`item duration-500 origin-left p-3 rounded-lg ${
                       selectedTab === item.url ? "surface surface-halo halo-r" : "opacity-50 scale-90"
                     }`}
                     style={{
