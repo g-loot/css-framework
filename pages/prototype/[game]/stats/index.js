@@ -40,7 +40,7 @@ export default function Stats() {
 
   useEffect(() => {
     setSelectedGeneralStat(variant);
-  }, [selectedGeneralStat]);
+  }, [selectedGeneralStat, variant]);
 
   useEffect(() => {
     if (selectedGame != null) {
@@ -231,8 +231,8 @@ export default function Stats() {
             <div className="max-w-lg mx-auto accordion accordion-highlighted">
               <Accordion
                 header={
-                  <div className="item h-24 surface surface-ui-700 shadow-xl sm:rounded-lg px-4">
-                    <div className="item-body leading-tight flex justify-around">
+                  <div className="item lg:h-24 surface surface-ui-700 shadow-xl sm:rounded-lg p-4">
+                    <div className="item-body leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around flex-1 gap-4">
                       <div
                         className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
                         style={{
@@ -399,7 +399,7 @@ export default function Stats() {
             <h2 className="h5 mx-4 md:mx-0">Most played agents</h2>
             <div className="overflow-x-auto scrollbar-desktop">
               <table
-                className={`table table-rounded rounded-lg w-full text-center ${
+                className={`table table-rounded rounded-lg w-full text-center min-w-lg ${
                   loading ? "is-loading" : ""
                 }`}
               >
@@ -418,20 +418,22 @@ export default function Stats() {
                 <tbody className="child:overflow-hidden leading-tight">
                   {StatsValorantDemoFavoriteAgents.map((item, itemIndex) => (
                     <tr key={itemIndex}>
-                      <td className="p-0 flex items-center gap-4 text-left">
-                        <img
-                          className="w-16 h-16 rounded-l"
-                          src={getAgentByID(item.agent).picturePath}
-                          alt=""
-                          width="auto"
-                          height="auto"
-                        />
-                        <div>
-                          <div className="font-bold text-ui-100 capitalize">
-                            {getAgentByID(item.agent).name}
-                          </div>
-                          <div className="text-ui-300">
-                            {getAgentByID(item.agent).role.name}
+                      <td className="p-0">
+                        <div className="flex items-center gap-4 text-left w-24">
+                          <img
+                            className="w-16 h-16 rounded-l"
+                            src={getAgentByID(item.agent).picturePath}
+                            alt=""
+                            width="auto"
+                            height="auto"
+                          />
+                          <div>
+                            <div className="font-bold text-ui-100 capitalize">
+                              {getAgentByID(item.agent).name}
+                            </div>
+                            <div className="text-ui-300">
+                              {getAgentByID(item.agent).role.name}
+                            </div>
                           </div>
                         </div>
                       </td>
@@ -455,12 +457,11 @@ export default function Stats() {
             <h2 className="h5 mx-4 md:mx-0">Last 20 matches</h2>
             <div className="overflow-x-auto scrollbar-desktop leading-tight">
               {StatsValorantDemoLatestMatches.map((item, itemIndex) => (
-                <div key={itemIndex}>
-                  <div className="flex items-center gap-2 mt-4 mb-2 text-ui-400 text-xs lg:text-sm uppercase font-bold">
+                <div key={itemIndex} className="mb-2">
+                  <div className="flex items-center gap-2 my-2 text-ui-400 text-xs lg:text-sm uppercase font-bold mx-4 md:mx-0">
                     <span className="icon icon-calendar-date-2" />
                     <span>{item.date}</span>
                   </div>
-
                   {item.matches.map((match, matchIndex) => (
                     <div
                       key={matchIndex}

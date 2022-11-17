@@ -1,18 +1,98 @@
 export const StatsValorantDemoGeneral = [
   {
     id: 0,
-    agent: 8,
-    rank: 3,
+    agent: 0,
+    rank: 0,
   },
   {
     id: 1,
-    agent: 4,
-    rank: 2,
+    agent: 1,
+    rank: 1,
   },
   {
     id: 2,
-    agent: 19,
+    agent: 2,
+    rank: 2,
+  },
+  {
+    id: 3,
+    agent: 3,
+    rank: 3,
+  },
+  {
+    id: 4,
+    agent: 4,
     rank: 4,
+  },
+  {
+    id: 5,
+    agent: 5,
+    rank: 5,
+  },
+  {
+    id: 6,
+    agent: 6,
+    rank: 6,
+  },
+  {
+    id: 7,
+    agent: 7,
+    rank: 7,
+  },
+  {
+    id: 8,
+    agent: 8,
+    rank: 7,
+  },
+  {
+    id: 9,
+    agent: 9,
+    rank: 7,
+  },
+  {
+    id: 10,
+    agent: 10,
+    rank: 7,
+  },
+  {
+    id: 11,
+    agent: 11,
+    rank: 7,
+  },
+  {
+    id: 12,
+    agent: 12,
+    rank: 7,
+  },
+  {
+    id: 13,
+    agent: 13,
+    rank: 7,
+  },
+  {
+    id: 14,
+    agent: 14,
+    rank: 7,
+  },
+  {
+    id: 15,
+    agent: 15,
+    rank: 7,
+  },
+  {
+    id: 16,
+    agent: 16,
+    rank: 7,
+  },
+  {
+    id: 17,
+    agent: 17,
+    rank: 7,
+  },
+  {
+    id: 18,
+    agent: 18,
+    rank: 7,
   },
 ];
 
