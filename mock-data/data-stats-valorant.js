@@ -318,13 +318,13 @@ export const StatsValorantAgents = [
     backgroundPath: getImageUrl('valorant-stats-hero-fade.jpg'),
   },
   {
-    id: 18,
+    id: 19,
     name: 'harbor',
     role: {
-      id: 2,
-      name: 'initiator',
-      color: '#E7B633',
-      picturePath: getImageUrl('role-initiator.webp'),
+      id: 0,
+      name: 'controller',
+      color: '#5A15A5',
+      picturePath: getImageUrl('role-controller.webp'),
     },
     picturePath: getImageUrl('agent-avatar-harbor.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-harbor.jpg'),

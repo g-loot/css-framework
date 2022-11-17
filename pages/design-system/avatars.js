@@ -680,9 +680,14 @@ const DSpage = () => {
                     }}
                   >
                     .&#123;xx&#x7D;:avatar-&#123;xx&#x7D;
-                  </code>.<br />
-                  &#123;xx&#x7D; can be <code className="text-xs">xs</code>, <code className="text-xs">sm</code>,{" "}
-                  <code className="text-xs">md</code>, <code className="text-xs">lg</code>, <code className="text-xs">xl</code>.
+                  </code>
+                  .<br />
+                  &#123;xx&#x7D; can be <code className="text-xs">
+                    xs
+                  </code>, <code className="text-xs">sm</code>,{" "}
+                  <code className="text-xs">md</code>,{" "}
+                  <code className="text-xs">lg</code>,{" "}
+                  <code className="text-xs">xl</code>.
                 </p>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
@@ -707,6 +712,226 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/be9tLjf4/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Avatar group */}
+      <div className="mb-12" id="avatar-group">
+        <h2 className="h3 mb-3">Avatar group</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="avatar-group -space-x-2">
+                  <div className="avatar avatar-circle avatar-tiny">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-tiny">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-tiny">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-tiny">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
+                    </div>
+                  </div>
+                </div>
+                <div className="avatar-group -space-x-3">
+                  <div className="avatar avatar-circle avatar-xs">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-xs">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-xs">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-xs">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
+                    </div>
+                  </div>
+                </div>
+                <div className="avatar-group -space-x-4">
+                  <div className="avatar avatar-circle avatar-sm">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-sm">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-sm">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-sm">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
+                    </div>
+                  </div>
+                </div>
+                <div className="avatar-group -space-x-5">
+                  <div className="avatar avatar-circle avatar-md">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-md">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-md">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-md">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/djL5vgrp/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Avatar group with counter */}
+      <div className="mb-12" id="avatar-group-with-counter">
+        <h2 className="h3 mb-3">Avatar group with counter</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="avatar-group -space-x-2">
+                  <div className="avatar avatar-circle avatar-tiny">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-tiny">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-tiny">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-tiny">
+                    <div>
+                      <span>+12</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="avatar-group -space-x-3">
+                  <div className="avatar avatar-circle avatar-xs">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-xs">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-xs">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-xs">
+                    <div>
+                      <span>+12</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="avatar-group -space-x-4">
+                  <div className="avatar avatar-circle avatar-sm">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-sm">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-sm">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-sm">
+                    <div>
+                      <span>+12</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="avatar-group -space-x-5">
+                  <div className="avatar avatar-circle avatar-md">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-md">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-md">
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-md">
+                    <div>
+                      <span>+12</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/djL5vgrp/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

@@ -3,14 +3,41 @@ import React from "react";
 import Tooltip from "../../components/Tooltip/Tooltip";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
 
+function calculateTimeLeft() {
+  const year = new Date().getFullYear();
+  const date = new Date().getTime();
+  const difference = +new Date(`${year}-10-1`) - date;
+  let timeLeft = {};
+
+  if (difference > 0) {
+    timeLeft = {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((difference / 1000 / 60) % 60),
+      seconds: Math.floor((difference / 1000) % 60),
+    };
+  }
+  return timeLeft;
+}
+
+const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
+const NOW_IN_MS = new Date().getTime();
+const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
+
 const DSpage = () => {
   return (
     <>
       <h1 className="mb-2">Brawl cards</h1>
 
+      <div className="mb-3 flex gap-2 items-baseline">
+        <h2 className="h3">Primary cards</h2>
+        <button className="chip chip-xs chip-secondary pointer-events-none uppercase">
+          <span>default</span>
+        </button>
+      </div>
       {/* Structure */}
       <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+        <h2 className="h4 mb-3">Structure</h2>
 
         <div className="">
           <div className="flex flex-col gap-4">
@@ -108,7 +135,7 @@ const DSpage = () => {
 
       {/* With additional content */}
       <div className="mb-12" id="with-additional-content">
-        <h2 className="h3 mb-3">With additional content</h2>
+        <h2 className="h4 mb-3">With additional content</h2>
 
         <div className="">
           <div className="flex flex-col gap-4">
@@ -170,16 +197,21 @@ const DSpage = () => {
                     </div>
                   </div>
                   <div className="card-meta">
-                    
                     <div className="flex justify-center">
                       <Tooltip
                         tooltip={
                           <div className="max-w-xs text-sm text-center leading-tight">
-                            Place high on the Clan leaderboard for a chance to quality for VALORANT Clash
+                            Place high on the Clan leaderboard for a chance to
+                            quality for VALORANT Clash
                           </div>
                         }
                       >
-                        <img alt="" height="300px" width="200px" src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/G-Loot_Valorant_Clash_Logo.svg" />
+                        <img
+                          alt=""
+                          height="300px"
+                          width="200px"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/G-Loot_Valorant_Clash_Logo.svg"
+                        />
                       </Tooltip>
                     </div>
                     <div className="w-60">
@@ -217,6 +249,95 @@ const DSpage = () => {
                 width="100%"
                 height="300"
                 src="//jsfiddle.net/augustin_hiebel/26fL4u9s/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mb-3 flex gap-2 items-baseline">
+        <h2 className="h3">Secondary cards</h2>
+      </div>
+      {/* Stacked */}
+      <div className="mb-12" id="secondary-stacked">
+        <h2 className="h4 mb-3">Stacked</h2>
+
+        <div className="">
+          <div className="flex flex-col gap-4">
+            <div className="flex-1 flex flex-col gap-4">
+              <div
+                className="card-brawl card-secondary card-stacked"
+              >
+                <div className="card-image">
+                  <div className="card-image-content">
+                    <div>
+                      <div className="chip chip-sliced">
+                        <span>Ongoing</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-content">
+                  <div className="card-body">
+                    <div>
+                      <h2 className="text-3xl mb-2 uppercase">
+                        Competitive Brawl
+                      </h2>
+                      <div className="flex gap-4">
+                        <div className="flex gap-1 items-center whitespace-nowrap font-headings font-bold italic">
+                          <span className="text-ui-300 uppercase">
+                            Time Left
+                          </span>
+                          <span className="icon icon-clock text-interaction-300" />
+                          <Countdown
+                            separator={"  "}
+                            hasDays={false}
+                            hasHours={true}
+                            hasMinutes={true}
+                            hasSeconds={true}
+                            targetDate={dateTimeAfterThreeDays}
+                            hasLabels={true}
+                            labelsAbbr={true}
+                            labelClassName="text-base mr-1 block"
+                            className="text-interaction-300 uppercase text-base gap-1"
+                          />
+                        </div>
+                        <div className="flex items-center whitespace-nowrap gap-2">
+                          <img
+                            className="h-6"
+                            src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
+                            width="auto"
+                            height="auto"
+                            alt=""
+                          />
+                          <span className="font-headings font-bold italic text-gold-500">
+                            10 000
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-meta">
+                    <div>sdfsdf</div>
+                    <button type="button" className="button button-sm button-primary">
+                      Go to Brawl
+                    </button>
+                  </div>
+                </div>
+                <div className="card-image-bg">
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/1ypr38wg/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
               ></iframe>
             </div>
           </div>

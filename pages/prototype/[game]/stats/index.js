@@ -231,7 +231,7 @@ export default function Stats() {
             <div className="max-w-lg mx-auto accordion accordion-highlighted">
               <Accordion
                 header={
-                  <div className="item lg:h-24 surface surface-ui-700 shadow-xl sm:rounded-lg p-4">
+                  <div className="item lg:h-24 surface surface-ui-700 shadow-xl rounded-lg p-4">
                     <div className="item-body leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around flex-1 gap-4">
                       <div
                         className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
@@ -306,90 +306,90 @@ export default function Stats() {
                   </div>
                 }
               >
-                <div className="p-8 flex flex-wrap text-center gap-4 leading-tight items-stretch justify-center">
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                <div className="p-2 md:p-8 flex flex-wrap text-center gap-2 md:gap-4 leading-tight items-stretch justify-center">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Wins
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">87</div>
+                    <div className="font-bold">87</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Kills
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">
+                    <div className="font-bold">
                       2,572
                     </div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Deaths
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">
+                    <div className="font-bold">
                       1,509
                     </div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Asists
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">335</div>
+                    <div className="font-bold">335</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Score/Round
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">
+                    <div className="font-bold">
                       239.0
                     </div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       KDA Ratio
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">87</div>
+                    <div className="font-bold">87</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Kills/Round
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">24</div>
+                    <div className="font-bold">24</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       KDA Ratio
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">24</div>
+                    <div className="font-bold">24</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Headshots
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">24</div>
+                    <div className="font-bold">24</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       First Bloods
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">24</div>
+                    <div className="font-bold">24</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Clutches
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">24</div>
+                    <div className="font-bold">24</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Flawless
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">24</div>
+                    <div className="font-bold">24</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Aces
                     </div>
-                    <div className="font-headings text-xl lg:text-3xl">24</div>
+                    <div className="font-bold">24</div>
                   </div>
                 </div>
               </Accordion>
@@ -415,7 +415,7 @@ export default function Stats() {
                     <th>HS%</th>
                   </tr>
                 </thead>
-                <tbody className="child:overflow-hidden leading-tight">
+                <tbody className="child:overflow-hidden leading-tight font-bold">
                   {StatsValorantDemoFavoriteAgents.map((item, itemIndex) => (
                     <tr key={itemIndex}>
                       <td className="p-0">
@@ -428,10 +428,10 @@ export default function Stats() {
                             height="auto"
                           />
                           <div>
-                            <div className="font-bold text-ui-100 capitalize">
+                            <div className="text-ui-100 capitalize">
                               {getAgentByID(item.agent).name}
                             </div>
-                            <div className="text-ui-300">
+                            <div className="font-normal text-ui-300 capitalize">
                               {getAgentByID(item.agent).role.name}
                             </div>
                           </div>
@@ -465,7 +465,7 @@ export default function Stats() {
                   {item.matches.map((match, matchIndex) => (
                     <div
                       key={matchIndex}
-                      className="accordion min-w-lg overflow-hidden mb-2"
+                      className="accordion min-w-lg overflow-hidden mb-2 font-bold"
                     >
                       <Accordion
                         header={
@@ -495,7 +495,7 @@ export default function Stats() {
                                 <div className="font-bold text-ui-100 capitalize">
                                   {getMapByID(match.map).name}
                                 </div>
-                                <div className="text-ui-300">{match.mode}</div>
+                                <div className="text-ui-300 font-normal">{match.mode}</div>
                               </div>
                             </div>
                             <div className="item-body flex-1 flex gap-2 items-center justify-around">
@@ -530,7 +530,7 @@ export default function Stats() {
                                     {match.score.team2}
                                   </span>
                                 </div>
-                                <div className="text-sm text-ui-400">
+                                <div className="text-sm text-ui-400 font-normal">
                                   {match.placement} place
                                 </div>
                               </div>
@@ -617,7 +617,7 @@ export default function Stats() {
                                   </div>
                                 </td>
                                 <td>
-                                  <div className="flex items-center gap-2">
+                                  <div className="flex items-center gap-2 font-normal">
                                     <span className="text-base">
                                       {item.nickname}
                                     </span>

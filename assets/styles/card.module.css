@@ -669,6 +669,113 @@
   }
 }
 
+/* card secondary */
+
+.card-brawl.card-secondary {
+  &.card-stacked {
+    @apply
+    grid-cols-1
+    w-full
+    max-w-[calc(100vh-4rem)]
+    md:max-w-[397px]
+    transition-all
+    duration-300
+    ease-[cubic-bezier(.8,0,.3,1)]
+    transform-gpu
+    ;
+    > .card-image {
+      @apply
+      md:col-span-3
+      md:aspect-[16/6]
+      ;
+    }
+
+    > .card-image,
+    > .card-content {
+      @apply
+      relative
+      z-10
+      ;
+    }
+  
+    > .card-image-bg {
+      @apply
+      absolute
+      z-0
+      right-0
+      inset-y-0
+      w-full
+      ;
+      > img {
+        @apply
+        aspect-auto
+        absolute
+        inset-0
+        object-cover
+        h-full
+        transition-all
+        duration-300
+        ease-[cubic-bezier(.8,0,.3,1)]
+        ;
+      }
+    }
+
+    > .card-content {
+      @apply
+      flex-col
+      md:flex-col
+      md:col-span-3
+      bg-gradient-to-bl
+      from-ui-800/80
+      via-ui-800/95
+      to-ui-800
+      backdrop-blur-sm
+      ;
+  
+      > .card-meta {
+        @apply
+        mt-4
+        flex
+        ;
+        &:not([class*="items-"]) {
+          @apply
+          md:items-start
+          ;
+        }
+        &:not([class*="justify-"]) {
+          @apply
+          md:justify-between
+          ;
+        }
+        &:last-child {
+          @apply
+          border-t
+          border-solid
+          pt-4
+          border-ui-600
+          ;
+        }
+      }
+    }
+  }
+
+  &:not([disabled]),
+  &:not(.is-disabled) {
+    &:hover,
+    &:focus-visible {
+      .card-image-bg {
+        > img {
+          @apply
+          scale-110
+          brightness-125
+          saturate-150
+          ;
+        }
+      }
+    }
+  }
+}
+
 
 /* loading */
 
