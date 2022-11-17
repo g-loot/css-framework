@@ -38,6 +38,11 @@ export const StatsValorantMaps = [
     name: 'split',
     picturePath: getImageUrl('map-split.webp'),
   },
+  {
+    id: 7,
+    name: 'pearl',
+    picturePath: getImageUrl('map-pearl.webp'),
+  },
 ];
 
 export const StatsValorantRanks = [
@@ -94,6 +99,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-controller.webp'),
     },
     picturePath: getImageUrl('agent-avatar-astra.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-astra.jpg'),
   },
   {
     id: 1,
@@ -105,6 +111,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-initiator.webp'),
     },
     picturePath: getImageUrl('agent-avatar-breach.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-breach.jpg'),
   },
   {
     id: 2,
@@ -116,6 +123,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-controller.webp'),
     },
     picturePath: getImageUrl('agent-avatar-brimstone.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-brimstone.jpg'),
   },
   {
     id: 3,
@@ -127,6 +135,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-sentinel.webp'),
     },
     picturePath: getImageUrl('agent-avatar-chamber.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-chamber.jpg'),
   },
   {
     id: 4,
@@ -138,6 +147,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-sentinel.webp'),
     },
     picturePath: getImageUrl('agent-avatar-cypher.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-cypher.jpg'),
   },
   {
     id: 5,
@@ -149,6 +159,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-duelist.webp'),
     },
     picturePath: getImageUrl('agent-avatar-jett.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-jett.jpg'),
   },
   {
     id: 6,
@@ -160,6 +171,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-initiator.webp'),
     },
     picturePath: getImageUrl('agent-avatar-kayo.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-kayo.jpg'),
   },
   {
     id: 7,
@@ -171,6 +183,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-sentinel.webp'),
     },
     picturePath: getImageUrl('agent-avatar-killjoy.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-killjoy.jpg'),
   },
   {
     id: 8,
@@ -194,6 +207,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-controller.webp'),
     },
     picturePath: getImageUrl('agent-avatar-omen.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-omen.jpg'),
   },
   {
     id: 10,
@@ -205,6 +219,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-duelist.webp'),
     },
     picturePath: getImageUrl('agent-avatar-phoenix.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-phoenix.jpg'),
   },
   {
     id: 11,
@@ -216,6 +231,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-duelist.webp'),
     },
     picturePath: getImageUrl('agent-avatar-raze.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-raze.jpg'),
   },
   {
     id: 12,
@@ -227,6 +243,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-duelist.webp'),
     },
     picturePath: getImageUrl('agent-avatar-reyna.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-reyna.jpg'),
   },
   {
     id: 13,
@@ -238,6 +255,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-sentinel.webp'),
     },
     picturePath: getImageUrl('agent-avatar-sage.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-sage.jpg'),
   },
   {
     id: 14,
@@ -249,6 +267,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-initiator.webp'),
     },
     picturePath: getImageUrl('agent-avatar-skye.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-skye.jpg'),
   },
   {
     id: 15,
@@ -260,6 +279,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-initiator.webp'),
     },
     picturePath: getImageUrl('agent-avatar-sova.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-sova.jpg'),
   },
   {
     id: 16,
@@ -271,6 +291,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-controller.webp'),
     },
     picturePath: getImageUrl('agent-avatar-viper.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-viper.jpg'),
   },
   {
     id: 17,
@@ -282,6 +303,7 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-duelist.webp'),
     },
     picturePath: getImageUrl('agent-avatar-yoru.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-yoru.jpg'),
   },
   {
     id: 18,
@@ -293,5 +315,18 @@ export const StatsValorantAgents = [
       picturePath: getImageUrl('role-initiator.webp'),
     },
     picturePath: getImageUrl('agent-avatar-fade.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-fade.jpg'),
+  },
+  {
+    id: 18,
+    name: 'harbor',
+    role: {
+      id: 2,
+      name: 'initiator',
+      color: '#E7B633',
+      picturePath: getImageUrl('role-initiator.webp'),
+    },
+    picturePath: getImageUrl('agent-avatar-harbor.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-harbor.jpg'),
   },
 ];

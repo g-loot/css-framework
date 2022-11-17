@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 import Notification from "../Notification/Notification";
 import DailyReward from "../DailyReward/DailyReward";
 import TopBarClaim from "../TopBarClaim/TopBarClaim";
+import ModalBuyTokens from "../../pages/prototype/wallet/modal-buytokens";
 
 const notificationsGroups = [
   {
@@ -134,6 +135,10 @@ export default function TopbarNew() {
     uiContext.openModal(<ModalDownloadStarted></ModalDownloadStarted>);
   }
 
+  function openModalBuyTokens() {
+    uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
+  }
+
   return (
     <div className="sticky top-0 z-50 bg-ui-800/50 navbar h-12 flex items-center border-b border-ui-700">
       <div className="container relative">
@@ -184,6 +189,9 @@ export default function TopbarNew() {
                     </a>
                   </Link>
                 </li>
+                <button onClick={openModalBuyTokens} type="button" className="tab tab-secondary">
+                  <span>Get tokens</span>
+                </button>
                 {/*
                   <li>
                     <Link

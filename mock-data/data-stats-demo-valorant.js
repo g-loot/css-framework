@@ -9,6 +9,11 @@ export const StatsValorantDemoGeneral = [
     agent: 4,
     rank: 2,
   },
+  {
+    id: 2,
+    agent: 19,
+    rank: 4,
+  },
 ];
 
 export const StatsValorantDemoFavoriteAgents = [
@@ -62,6 +67,228 @@ export const StatsValorantDemoLatestMatches = [
         duration: "24m 12s",
         score: {
           team1: 12,
+          team2: 10
+        },
+        kda: {
+          k: 12,
+          d: 2,
+          a: 4
+        },
+        kd: 1.11,
+        adr: 145,
+        acs: 199.2,
+        hs: 28.8,
+        leaderboard: {
+          team1: [
+            {
+              id: 0,
+              agent: 3,
+              nickname: "FriendlyFire",
+              tag: "2410",
+              rank: 6,
+              isPlus: true,
+            },
+            {
+              id: 1,
+              agent: 5,
+              nickname: "augieaugie",
+              tag: "4897",
+              rank: 5,
+              isPlus: true,
+            },
+            {
+              id: 2,
+              agent: 1,
+              nickname: "glenn",
+              tag: "2321",
+              rank: 3,
+              isPlus: false,
+            },
+            {
+              id: 3,
+              agent: 6,
+              nickname: "sooshy",
+              tag: "2321",
+              rank: 2,
+              isPlus: false,
+            },
+            {
+              id: 4,
+              agent: 7,
+              nickname: "sabsab",
+              tag: "2321",
+              rank: 1,
+              isPlus: false,
+            }
+          ],
+          team2: [
+            {
+              id: 0,
+              agent: 2,
+              nickname: "quickyKiller",
+              tag: "2413",
+              rank: 7,
+              isPlus: true,
+            },
+            {
+              id: 1,
+              agent: 5,
+              nickname: "InifintyWar",
+              tag: "1197",
+              rank: 5,
+              isPlus: true,
+            },
+            {
+              id: 2,
+              agent: 9,
+              nickname: "glenn",
+              tag: "2321",
+              rank: 3,
+              isPlus: false,
+            },
+            {
+              id: 3,
+              agent: 10,
+              nickname: "sooshy",
+              tag: "2321",
+              rank: 2,
+              isPlus: false,
+            },
+            {
+              id: 4,
+              agent: 11,
+              nickname: "sabsab",
+              tag: "2321",
+              rank: 1,
+              isPlus: false,
+            }
+          ]
+        }
+      },
+      {
+        id: 1,
+        map: 2,
+        mode: "Unrated",
+        hasWon: false,
+        placement: "2th",
+        time: "12:10 PM",
+        duration: "42m 12s",
+        score: {
+          team1: 5,
+          team2: 12
+        },
+        kda: {
+          k: 12,
+          d: 2,
+          a: 4
+        },
+        kd: 1.11,
+        adr: 145,
+        acs: 199.2,
+        hs: 28.8,
+        leaderboard: {
+          team1: [
+            {
+              id: 0,
+              agent: 3,
+              nickname: "FriendlyFire",
+              tag: "2410",
+              rank: 6,
+              isPlus: true,
+            },
+            {
+              id: 1,
+              agent: 5,
+              nickname: "augieaugie",
+              tag: "4897",
+              rank: 5,
+              isPlus: true,
+            },
+            {
+              id: 2,
+              agent: 1,
+              nickname: "glenn",
+              tag: "2321",
+              rank: 3,
+              isPlus: false,
+            },
+            {
+              id: 3,
+              agent: 6,
+              nickname: "sooshy",
+              tag: "2321",
+              rank: 2,
+              isPlus: false,
+            },
+            {
+              id: 4,
+              agent: 7,
+              nickname: "sabsab",
+              tag: "2321",
+              rank: 1,
+              isPlus: false,
+            }
+          ],
+          team2: [
+            {
+              id: 0,
+              agent: 2,
+              nickname: "quickyKiller",
+              tag: "2413",
+              rank: 7,
+              isPlus: true,
+            },
+            {
+              id: 1,
+              agent: 5,
+              nickname: "InifintyWar",
+              tag: "1197",
+              rank: 5,
+              isPlus: true,
+            },
+            {
+              id: 2,
+              agent: 9,
+              nickname: "glenn",
+              tag: "2321",
+              rank: 3,
+              isPlus: false,
+            },
+            {
+              id: 3,
+              agent: 10,
+              nickname: "sooshy",
+              tag: "2321",
+              rank: 2,
+              isPlus: false,
+            },
+            {
+              id: 4,
+              agent: 11,
+              nickname: "sabsab",
+              tag: "2321",
+              rank: 1,
+              isPlus: false,
+            }
+          ]
+        }
+      },
+    ],
+  },
+  {
+    id: 1,
+    date: "Nov 19",
+    matches: [
+      {
+        id: 0,
+        map: 1,
+        mode: "Spike Rush",
+        hasWon: true,
+        placement: "5th",
+        time: "7:02 PM",
+        duration: "12m 21s",
+        score: {
+          team1: 12,
           team2: 4
         },
         kda: {
@@ -73,7 +300,424 @@ export const StatsValorantDemoLatestMatches = [
         adr: 145,
         acs: 199.2,
         hs: 28.8,
+        leaderboard: {
+          team1: [
+            {
+              id: 0,
+              agent: 3,
+              nickname: "FriendlyFire",
+              tag: "2410",
+              rank: 6,
+              isPlus: true,
+            },
+            {
+              id: 1,
+              agent: 5,
+              nickname: "augieaugie",
+              tag: "4897",
+              rank: 5,
+              isPlus: true,
+            },
+            {
+              id: 2,
+              agent: 1,
+              nickname: "glenn",
+              tag: "2321",
+              rank: 3,
+              isPlus: false,
+            },
+            {
+              id: 3,
+              agent: 6,
+              nickname: "sooshy",
+              tag: "2321",
+              rank: 2,
+              isPlus: false,
+            },
+            {
+              id: 4,
+              agent: 7,
+              nickname: "sabsab",
+              tag: "2321",
+              rank: 1,
+              isPlus: false,
+            }
+          ],
+          team2: [
+            {
+              id: 0,
+              agent: 2,
+              nickname: "quickyKiller",
+              tag: "2413",
+              rank: 7,
+              isPlus: true,
+            },
+            {
+              id: 1,
+              agent: 5,
+              nickname: "InifintyWar",
+              tag: "1197",
+              rank: 5,
+              isPlus: true,
+            },
+            {
+              id: 2,
+              agent: 9,
+              nickname: "glenn",
+              tag: "2321",
+              rank: 3,
+              isPlus: false,
+            },
+            {
+              id: 3,
+              agent: 10,
+              nickname: "sooshy",
+              tag: "2321",
+              rank: 2,
+              isPlus: false,
+            },
+            {
+              id: 4,
+              agent: 11,
+              nickname: "sabsab",
+              tag: "2321",
+              rank: 1,
+              isPlus: false,
+            }
+          ]
+        }
       },
+    ],
+  },
+  {
+    id: 2,
+    date: "Nov 8",
+    matches: [
+      {
+        id: 0,
+        map: 5,
+        mode: "Competitive",
+        hasWon: true,
+        placement: "5th",
+        time: "08:10 PM",
+        duration: "24m 12s",
+        score: {
+          team1: 12,
+          team2: 9
+        },
+        kda: {
+          k: 12,
+          d: 2,
+          a: 4
+        },
+        kd: 1.11,
+        adr: 145,
+        acs: 199.2,
+        hs: 28.8,
+        leaderboard: {
+          team1: [
+            {
+              id: 0,
+              agent: 3,
+              nickname: "FriendlyFire",
+              tag: "2410",
+              rank: 6,
+              isPlus: true,
+            },
+            {
+              id: 1,
+              agent: 5,
+              nickname: "augieaugie",
+              tag: "4897",
+              rank: 5,
+              isPlus: true,
+            },
+            {
+              id: 2,
+              agent: 1,
+              nickname: "glenn",
+              tag: "2321",
+              rank: 3,
+              isPlus: false,
+            },
+            {
+              id: 3,
+              agent: 6,
+              nickname: "sooshy",
+              tag: "2321",
+              rank: 2,
+              isPlus: false,
+            },
+            {
+              id: 4,
+              agent: 7,
+              nickname: "sabsab",
+              tag: "2321",
+              rank: 1,
+              isPlus: false,
+            }
+          ],
+          team2: [
+            {
+              id: 0,
+              agent: 2,
+              nickname: "quickyKiller",
+              tag: "2413",
+              rank: 7,
+              isPlus: true,
+            },
+            {
+              id: 1,
+              agent: 5,
+              nickname: "InifintyWar",
+              tag: "1197",
+              rank: 5,
+              isPlus: true,
+            },
+            {
+              id: 2,
+              agent: 9,
+              nickname: "glenn",
+              tag: "2321",
+              rank: 3,
+              isPlus: false,
+            },
+            {
+              id: 3,
+              agent: 10,
+              nickname: "sooshy",
+              tag: "2321",
+              rank: 2,
+              isPlus: false,
+            },
+            {
+              id: 4,
+              agent: 11,
+              nickname: "sabsab",
+              tag: "2321",
+              rank: 1,
+              isPlus: false,
+            }
+          ]
+        }
+      },
+      {
+        id: 1,
+        map: 6,
+        mode: "Spike Rush",
+        hasWon: false,
+        placement: "5th",
+        time: "7:02 PM",
+        duration: "12m 21s",
+        score: {
+          team1: 1,
+          team2: 12
+        },
+        kda: {
+          k: 12,
+          d: 2,
+          a: 4
+        },
+        kd: 1.11,
+        adr: 145,
+        acs: 199.2,
+        hs: 28.8,
+        leaderboard: {
+          team1: [
+            {
+              id: 0,
+              agent: 3,
+              nickname: "FriendlyFire",
+              tag: "2410",
+              rank: 6,
+              isPlus: true,
+            },
+            {
+              id: 1,
+              agent: 5,
+              nickname: "augieaugie",
+              tag: "4897",
+              rank: 5,
+              isPlus: true,
+            },
+            {
+              id: 2,
+              agent: 1,
+              nickname: "glenn",
+              tag: "2321",
+              rank: 3,
+              isPlus: false,
+            },
+            {
+              id: 3,
+              agent: 6,
+              nickname: "sooshy",
+              tag: "2321",
+              rank: 2,
+              isPlus: false,
+            },
+            {
+              id: 4,
+              agent: 7,
+              nickname: "sabsab",
+              tag: "2321",
+              rank: 1,
+              isPlus: false,
+            }
+          ],
+          team2: [
+            {
+              id: 0,
+              agent: 2,
+              nickname: "quickyKiller",
+              tag: "2413",
+              rank: 7,
+              isPlus: true,
+            },
+            {
+              id: 1,
+              agent: 5,
+              nickname: "InifintyWar",
+              tag: "1197",
+              rank: 5,
+              isPlus: true,
+            },
+            {
+              id: 2,
+              agent: 9,
+              nickname: "glenn",
+              tag: "2321",
+              rank: 3,
+              isPlus: false,
+            },
+            {
+              id: 3,
+              agent: 10,
+              nickname: "sooshy",
+              tag: "2321",
+              rank: 2,
+              isPlus: false,
+            },
+            {
+              id: 4,
+              agent: 11,
+              nickname: "sabsab",
+              tag: "2321",
+              rank: 1,
+              isPlus: false,
+            }
+          ]
+        }
+      },
+      {
+        id: 2,
+        map: 7,
+        mode: "Unrated",
+        hasWon: true,
+        placement: "2th",
+        time: "12:10 PM",
+        duration: "42m 12s",
+        score: {
+          team1: 13,
+          team2: 12
+        },
+        kda: {
+          k: 12,
+          d: 2,
+          a: 4
+        },
+        kd: 1.11,
+        adr: 145,
+        acs: 199.2,
+        hs: 28.8,
+        leaderboard: {
+          team1: [
+            {
+              id: 0,
+              agent: 3,
+              nickname: "FriendlyFire",
+              tag: "2410",
+              rank: 6,
+              isPlus: true,
+            },
+            {
+              id: 1,
+              agent: 5,
+              nickname: "augieaugie",
+              tag: "4897",
+              rank: 5,
+              isPlus: true,
+            },
+            {
+              id: 2,
+              agent: 1,
+              nickname: "glenn",
+              tag: "2321",
+              rank: 3,
+              isPlus: false,
+            },
+            {
+              id: 3,
+              agent: 6,
+              nickname: "sooshy",
+              tag: "2321",
+              rank: 2,
+              isPlus: false,
+            },
+            {
+              id: 4,
+              agent: 7,
+              nickname: "sabsab",
+              tag: "2321",
+              rank: 1,
+              isPlus: false,
+            }
+          ],
+          team2: [
+            {
+              id: 0,
+              agent: 2,
+              nickname: "quickyKiller",
+              tag: "2413",
+              rank: 7,
+              isPlus: true,
+            },
+            {
+              id: 1,
+              agent: 5,
+              nickname: "InifintyWar",
+              tag: "1197",
+              rank: 5,
+              isPlus: true,
+            },
+            {
+              id: 2,
+              agent: 9,
+              nickname: "glenn",
+              tag: "2321",
+              rank: 3,
+              isPlus: false,
+            },
+            {
+              id: 3,
+              agent: 10,
+              nickname: "sooshy",
+              tag: "2321",
+              rank: 2,
+              isPlus: false,
+            },
+            {
+              id: 4,
+              agent: 11,
+              nickname: "sabsab",
+              tag: "2321",
+              rank: 1,
+              isPlus: false,
+            }
+          ]
+        }
+      },
+    
     ],
   },
 ];
