@@ -95,6 +95,71 @@
   animation-play-state: running !important;
 }
 
+/* info banner */
+
+.infobanner {
+  @apply
+  relative
+  ;
+  > .infobanner-front {
+    @apply
+    relative
+    z-0
+    ;
+  }
+  > .infobanner-back {
+    @apply
+    absolute
+    z-0
+    inset-0
+    flex
+    items-center
+    select-none
+    pointer-events-none
+    ;
+    > * {
+      @apply
+      translate-y-4
+      opacity-0
+      ;
+    }
+  }
+
+  &.is-active {
+    > .infobanner-front {
+      @apply
+      animate-[infobar-front_5s_cubic-bezier(0.3,0,0.3,1)_infinite]
+      ;
+    }
+    > .infobanner-back {
+      > * {
+        @apply
+        animate-[infobar-back_5s_cubic-bezier(0.3,0,0.3,1)_infinite]
+        ;
+      }
+    }
+  }
+}
+
+@keyframes infobar-front {
+  0%, 15%, 85%, 100% {
+    opacity: 1;
+  }
+  35%, 65% {
+    opacity: 0;
+  }
+}
+@keyframes infobar-back {
+  0%, 20%, 80%, 100% {
+    transform: translate3d(0, 1rem, 0);
+    opacity: 0;
+  }
+  40%, 60% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
 /* no anim */
 
 .noanimation {

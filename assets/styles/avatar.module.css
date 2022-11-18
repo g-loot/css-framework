@@ -35,15 +35,10 @@
       items-center
       justify-center
       ;
-      &:not(.icon) {
-        @apply
-        font-headings
-        ;
-      }
       &:not([class*="text-"]) {
         @apply
         text-ui-400
-        text-5xl
+        text-4xl
         ;
       }
     }
@@ -55,7 +50,7 @@
       flex
       items-center
       justify-center
-      text-5xl
+      text-4xl
       ;
       &::before {
         @apply
@@ -101,7 +96,7 @@
       > * {
         & {
           @apply
-          text-5xl
+          text-4xl
           ;
         }
       }
@@ -118,7 +113,7 @@
       > * {
         & {
           @apply
-          text-4xl
+          text-3xl
           ;
         }
       }
@@ -135,7 +130,7 @@
       > * {
         & {
           @apply
-          text-3xl
+          text-2xl
           ;
         }
       }
@@ -152,7 +147,7 @@
       > * {
         & {
           @apply
-          text-2xl
+          text-xl
           ;
         }
       }
@@ -169,7 +164,7 @@
       > * {
         & {
           @apply
-          text-lg
+          text-sm
           ;
         }
       }
@@ -186,7 +181,7 @@
       > * {
         & {
           @apply
-          text-base
+          text-xs
           ;
         }
       }
@@ -365,7 +360,7 @@
   mask-repeat: no-repeat;
 }
 
-:where(.avatar-circle > div, .avatar-circle > div > *) {
+:where(.avatar-circle > div, .avatar-circle > div > *, .avatar-group > .avatar > div, .avatar-group > .avatar > div > *) {
   mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSIxMDAiIGZpbGw9ImJsYWNrIi8+PC9zdmc+);
 }
 
@@ -391,62 +386,17 @@
     &,
     & > *,
     & > * > * {
-      mask-image: none;
       @apply
       rounded-full
       ;
     }
     > * {
       @apply
-      inset-0
       w-full
       h-full
-      from-ui-800/0
-      via-ui-800/0
-      to-ui-800/0
       p-0
-      outline
       ;
-      > * {
-        @apply
-        inset-0
-        w-full
-        h-full
-        bg-ui-700
-        ;
-      }
-      > span {
-        @apply
-        shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))]
-        ;
-      }
-      &:not([class*='outline-']) {
-        @apply
-        outline-ui-800
-        ;
-      }
-    }
-  }
-  > .avatar {
-    &.avatar-tiny,
-    &.avatar-xs {
-      > div {
-        &:not([class*='outline']) {
-          @apply
-          outline-4
-          ;
-        }
-      }
-    }
-    &.avatar-sm,
-    &.avatar-md {
-      > div {
-        &:not([class*='outline']) {
-          @apply
-          outline-8
-          ;
-        }
-      }
+      
     }
   }
 }
@@ -466,7 +416,7 @@
         > * {
           & {
             @apply
-            text-5xl
+            text-4xl
             ;
           }
         }
@@ -483,7 +433,7 @@
         > * {
           & {
             @apply
-            text-4xl
+            text-3xl
             ;
           }
         }
@@ -500,7 +450,7 @@
         > * {
           & {
             @apply
-            text-3xl
+            text-2xl
             ;
           }
         }
@@ -517,7 +467,7 @@
         > * {
           & {
             @apply
-            text-2xl
+            text-xl
             ;
           }
         }
@@ -534,7 +484,7 @@
         > * {
           & {
             @apply
-            text-lg
+            text-sm
             ;
           }
         }
@@ -551,7 +501,7 @@
         > * {
           & {
             @apply
-            text-base
+            text-xs
             ;
           }
         }
@@ -572,7 +522,7 @@
         > * {
           & {
             @apply
-            text-5xl
+            text-4xl
             ;
           }
         }
@@ -589,7 +539,7 @@
         > * {
           & {
             @apply
-            text-4xl
+            text-3xl
             ;
           }
         }
@@ -606,7 +556,7 @@
         > * {
           & {
             @apply
-            text-3xl
+            text-2xl
             ;
           }
         }
@@ -623,7 +573,7 @@
         > * {
           & {
             @apply
-            text-2xl
+            text-xl
             ;
           }
         }
@@ -640,7 +590,7 @@
         > * {
           & {
             @apply
-            text-lg
+            text-sm
             ;
           }
         }
@@ -657,7 +607,7 @@
         > * {
           & {
             @apply
-            text-base
+            text-xs
             ;
           }
         }
@@ -678,7 +628,7 @@
         > * {
           & {
             @apply
-            text-5xl
+            text-4xl
             ;
           }
         }
@@ -695,7 +645,7 @@
         > * {
           & {
             @apply
-            text-4xl
+            text-3xl
             ;
           }
         }
@@ -712,7 +662,7 @@
         > * {
           & {
             @apply
-            text-3xl
+            text-2xl
             ;
           }
         }
@@ -729,7 +679,7 @@
         > * {
           & {
             @apply
-            text-2xl
+            text-xl
             ;
           }
         }
@@ -746,7 +696,7 @@
         > * {
           & {
             @apply
-            text-lg
+            text-sm
             ;
           }
         }
@@ -763,7 +713,7 @@
         > * {
           & {
             @apply
-            text-base
+            text-xs
             ;
           }
         }
@@ -784,7 +734,7 @@
         > * {
           & {
             @apply
-            text-5xl
+            text-4xl
             ;
           }
         }
@@ -801,7 +751,7 @@
         > * {
           & {
             @apply
-            text-4xl
+            text-3xl
             ;
           }
         }
@@ -818,7 +768,7 @@
         > * {
           & {
             @apply
-            text-3xl
+            text-2xl
             ;
           }
         }
@@ -835,7 +785,7 @@
         > * {
           & {
             @apply
-            text-2xl
+            text-xl
             ;
           }
         }
@@ -852,7 +802,7 @@
         > * {
           & {
             @apply
-            text-lg
+            text-sm
             ;
           }
         }
@@ -869,7 +819,7 @@
         > * {
           & {
             @apply
-            text-base
+            text-xs
             ;
           }
         }

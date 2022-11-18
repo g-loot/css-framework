@@ -97,7 +97,6 @@ hr,
   mx-auto
   block
   w-full
-  h-px
   ;
 
   &.separator-gradient {
@@ -108,6 +107,12 @@ hr,
     from-ui-600/0
     via-ui-600
     to-ui-600/0
+    ;
+  }
+
+  &:not(.separator-vertical) {
+    @apply
+    h-px
     ;
   }
 

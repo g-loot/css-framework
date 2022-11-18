@@ -307,13 +307,13 @@ export default function Stats() {
                 }
               >
                 <div className="p-2 md:p-8 flex flex-wrap text-center gap-2 md:gap-4 leading-tight items-stretch justify-center">
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Wins
                     </div>
                     <div className="font-bold">87</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Kills
                     </div>
@@ -321,7 +321,7 @@ export default function Stats() {
                       2,572
                     </div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Deaths
                     </div>
@@ -329,13 +329,13 @@ export default function Stats() {
                       1,509
                     </div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Asists
                     </div>
                     <div className="font-bold">335</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Score/Round
                     </div>
@@ -343,49 +343,49 @@ export default function Stats() {
                       239.0
                     </div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       KDA Ratio
                     </div>
                     <div className="font-bold">87</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Kills/Round
                     </div>
                     <div className="font-bold">24</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       KDA Ratio
                     </div>
                     <div className="font-bold">24</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Headshots
                     </div>
                     <div className="font-bold">24</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       First Bloods
                     </div>
                     <div className="font-bold">24</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Clutches
                     </div>
                     <div className="font-bold">24</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Flawless
                     </div>
                     <div className="font-bold">24</div>
                   </div>
-                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-24">
+                  <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                     <div className="text-xs lg:text-sm uppercase text-ui-300">
                       Aces
                     </div>
@@ -395,9 +395,9 @@ export default function Stats() {
               </Accordion>
             </div>
           </section>
-          <section className="mb-8">
+          <section className="mb-4">
             <h2 className="h5 mx-4 md:mx-0">Most played agents</h2>
-            <div className="overflow-x-auto scrollbar-desktop">
+            <div className="overflow-x-auto scrollbar-desktop pb-4">
               <table
                 className={`table table-rounded rounded-lg w-full text-center min-w-lg ${
                   loading ? "is-loading" : ""
@@ -499,7 +499,7 @@ export default function Stats() {
                               </div>
                             </div>
                             <div className="item-body flex-1 flex gap-2 items-center justify-around">
-                              <div className="font-headings text-2xl font-bold italic uppercase">
+                              <div className="font-headings text-2xl font-bold italic uppercase w-12">
                                 {match.hasWon ? (
                                   <span className="text-success-300">
                                     Victory

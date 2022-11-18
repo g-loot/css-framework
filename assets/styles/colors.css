@@ -89,6 +89,93 @@ body {
   --color-game-valorant: 255 70 85;
 }
 
+body.stryda {
+  --color-main: 19 240 148;
+
+  --color-white: 255 255 255;
+  --color-black: 0 0 0;
+
+  --color-mono-100: 255 255 255;
+  --color-mono-900: 0 0 0;
+
+  --color-blue: 0 225 255;
+  
+  --color-ui-100: 249 249 251;
+  --color-ui-200: 198 198 219;
+  --color-ui-300: 149 149 185;
+  --color-ui-400: 102 102 149;
+  --color-ui-500: 56 56 112;
+  --color-ui-600: 44 44 94;
+  --color-ui-700: 33 33 74;
+  --color-ui-800: 23 23 54;
+  --color-ui-850: 18 18 44;
+  --color-ui-900: 13 13 34;
+  
+  --color-premium-300: 253 226 104;
+  --color-premium-500: 251 192 45;
+  --color-premium-700: 249 168 37;
+
+  --color-interaction-300: 86 255 185;
+  --color-interaction-500: 19 240 148;
+  --color-interaction-700: 6 201 120;
+
+  --color-blue-300: 77 180 255;
+  --color-blue-500: 4 150 255;
+  --color-blue-700: 1 67 168;
+
+  --color-purple-300: 241 173 255;
+  --color-purple-500: 210 84 254;
+  --color-purple-700: 138 37 200;
+
+  --color-teal-300: 46 255 202;
+  --color-teal-500: 20 247 190;
+  --color-teal-700: 2 201 151;
+
+  --color-attention-300: 251 140 0;
+  --color-attention-500: 245 124 0;
+  --color-attention-700: 239 108 0;
+
+  --color-success-300: 153 235 168;
+  --color-success-500: 83 221 108;
+  --color-success-700: 30 153 53;
+
+  --color-info-300: 77 180 255;
+  --color-info-500: 4 150 255;
+  --color-info-700: 1 67 168;
+
+  --color-error-300: 255 89 89;
+  --color-error-500: 255 51 51;
+  --color-error-700: 178 36 36;
+
+  --color-disabled-300: 86 90 107;
+  --color-disabled-500: 52 56 71;
+  --color-disabled-700: 39 39 57;
+
+  --color-gold-300: 254 250 68;
+  --color-gold-500: 255 226 1;
+  --color-gold-700: 255 156 4;
+
+  --color-silver-300: 212 213 215;
+  --color-silver-500: 175 177 182;
+  --color-silver-700: 97 100 107;
+
+  --color-bronze-300: 250 234 148;
+  --color-bronze-500: 242 190 81;
+  --color-bronze-700: 188 129 49;
+
+  --color-platinum-300: 236 169 250;
+  --color-platinum-500: 255 0 255;
+  --color-platinum-700: 152 0 153;
+
+  --color-game-apexlegends: 218 42 41;
+  --color-game-csgo: 249 129 0;
+  --color-game-dota2: 239 61 54;
+  --color-game-leagueoflegends: 197 149 74;
+  --color-game-pubg: 242 169 0;
+  --color-game-rocketleague: 46 113 198;
+  --color-game-valorant: 255 70 85;
+}
+
 .oldcolors {
   --color-ui-100: 243 243 246;
   --color-ui-200: 185 187 209;

@@ -256,92 +256,7 @@ const DSpage = () => {
       </div>
 
       <div className="mb-3 flex gap-2 items-baseline">
-        <h2 className="h3">Secondary cards</h2>
-      </div>
-      {/* Stacked */}
-      <div className="mb-12" id="secondary-stacked">
-        <h2 className="h4 mb-3">Stacked</h2>
-
-        <div className="">
-          <div className="flex flex-col gap-4">
-            <div className="flex-1 flex flex-col gap-4">
-              <div
-                className="card-brawl card-secondary card-stacked"
-              >
-                <div className="card-image">
-                  <div className="card-image-content">
-                    <div>
-                      <div className="chip chip-sliced">
-                        <span>Ongoing</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-content">
-                  <div className="card-body">
-                    <div>
-                      <h2 className="text-3xl mb-2 uppercase">
-                        Competitive Brawl
-                      </h2>
-                      <div className="flex gap-4">
-                        <div className="flex gap-1 items-center whitespace-nowrap font-headings font-bold italic">
-                          <span className="text-ui-300 uppercase">
-                            Time Left
-                          </span>
-                          <span className="icon icon-clock text-interaction-300" />
-                          <Countdown
-                            separator={"  "}
-                            hasDays={false}
-                            hasHours={true}
-                            hasMinutes={true}
-                            hasSeconds={true}
-                            targetDate={dateTimeAfterThreeDays}
-                            hasLabels={true}
-                            labelsAbbr={true}
-                            labelClassName="text-base mr-1 block"
-                            className="text-interaction-300 uppercase text-base gap-1"
-                          />
-                        </div>
-                        <div className="flex items-center whitespace-nowrap gap-2">
-                          <img
-                            className="h-6"
-                            src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
-                            width="auto"
-                            height="auto"
-                            alt=""
-                          />
-                          <span className="font-headings font-bold italic text-gold-500">
-                            10 000
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card-meta">
-                    <div>sdfsdf</div>
-                    <button type="button" className="button button-sm button-primary">
-                      Go to Brawl
-                    </button>
-                  </div>
-                </div>
-                <div className="card-image-bg">
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="flex-1">
-              <iframe
-                className="rounded"
-                width="100%"
-                height="300"
-                src="//jsfiddle.net/augustin_hiebel/1ypr38wg/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
-              ></iframe>
-            </div>
-          </div>
-        </div>
+        <h2 className="h3">Status</h2>
       </div>
 
       {/* Loading */}
@@ -456,6 +371,309 @@ const DSpage = () => {
                 width="100%"
                 height="300"
                 src="//jsfiddle.net/augustin_hiebel/Lq5ap92f/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mb-3 flex gap-2 items-baseline">
+        <h2 className="h3">Secondary cards</h2>
+      </div>
+
+      {/* Stacked */}
+      <div className="mb-12" id="secondary-stacked">
+        <h2 className="h4 mb-3">Stacked</h2>
+
+        <div className="">
+          <div className="flex flex-col gap-4">
+            <div className="flex-1 flex flex-wrap gap-4">
+              <div className="card-brawl card-secondary card-stacked is-active">
+                <div className="card-image">
+                  <div className="card-image-content">
+                    <div className="rounded bg-ui-800/90 backdrop-blur-sm p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
+                      <div className="ml-0 p-1 border border-ui-700 rounded-sm bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+                        <span className="icon text-xl icon-game-pubg-symbol text-game-pubg" />
+                      </div>
+                      <span>Competitive</span>
+                      <span className="text-main card-status">Partaking</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-content">
+                  <div className="card-body">
+                    <div>
+                      <h2 className="text-3xl mb-2 uppercase">
+                        Competitive Brawl
+                      </h2>
+                      <div className="flex gap-4">
+                        <div className="flex text-sm gap-1 items-center whitespace-nowrap">
+                          <span className="text-ui-300 mr-1">Time Left:</span>
+                          <span className="icon icon-clock text-interaction-300" />
+                          <Countdown
+                            separator={"  "}
+                            hasDays={false}
+                            hasHours={true}
+                            hasMinutes={true}
+                            hasSeconds={true}
+                            targetDate={dateTimeAfterThreeDays}
+                            hasLabels={true}
+                            labelsAbbr={true}
+                            labelClassName="text-base mr-1 block"
+                            className="text-interaction-300 uppercase text-sm gap-1 font-bold"
+                          />
+                        </div>
+                        <div className="flex items-center whitespace-nowrap gap-2">
+                          <img
+                            className="h-6"
+                            src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
+                            width="auto"
+                            height="auto"
+                            alt=""
+                          />
+                          <span className="font-bold text-gold-500 text-sm">
+                            10 000
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-meta">
+                    <div className="flex-1 flex items-center gap-4 leading-tight">
+                      <div className="flex-none avatar avatar-circle avatar-xs">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                        </div>
+                      </div>
+                      <div className="infobanner is-active">
+                        <div className="flex gap-2 infobanner-front">
+                          <div>
+                            <div className="uppercase text-xs text-ui-300">
+                              Points
+                            </div>
+                            <div className="text-sm font-bold">1120</div>
+                          </div>
+                          <div>
+                            <div className="uppercase text-xs text-ui-300">
+                              Position
+                            </div>
+                            <div className="text-sm font-bold">#243</div>
+                          </div>
+                        </div>
+                        <div className="infobanner-back absolute inset-0 flex items-center text-sm">
+                          <div className="animate-pulse text-ui-300">
+                            Waiting for your 3 matches...
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-end">
+                      <button
+                        type="button"
+                        className="button button-sm button-primary"
+                      >
+                        Go to Brawl
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-image-bg">
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="card-brawl card-secondary card-stacked">
+                <div className="card-image">
+                  <div className="card-image-content">
+                    <div className="rounded bg-ui-800/90 backdrop-blur-sm p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
+                      <div className="ml-0 p-1 border border-ui-700 rounded-sm bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+                        <span className="icon text-xl icon-game-pubg-symbol text-game-pubg" />
+                      </div>
+                      <span>Competitive</span>
+                      <span className="text-blue-300 card-status">Ongoing</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-content">
+                  <div className="card-body">
+                    <div>
+                      <h2 className="text-3xl mb-2 uppercase">
+                        Competitive Brawl
+                      </h2>
+                      <div className="flex gap-4">
+                        <div className="flex text-sm gap-1 items-center whitespace-nowrap">
+                          <span className="text-ui-300 mr-1">Time Left:</span>
+                          <span className="icon icon-clock text-interaction-300" />
+                          <Countdown
+                            separator={"  "}
+                            hasDays={false}
+                            hasHours={true}
+                            hasMinutes={true}
+                            hasSeconds={true}
+                            targetDate={dateTimeAfterThreeDays}
+                            hasLabels={true}
+                            labelsAbbr={true}
+                            labelClassName="text-base mr-1 block"
+                            className="text-interaction-300 uppercase text-sm gap-1 font-bold"
+                          />
+                        </div>
+                        <div className="flex items-center whitespace-nowrap gap-2">
+                          <img
+                            className="h-6"
+                            src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
+                            width="auto"
+                            height="auto"
+                            alt=""
+                          />
+                          <span className="font-bold text-gold-500 text-sm">
+                            10 000
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-meta">
+                    <div className="flex items-center gap-2">
+                      <div className="avatar-group -space-x-2">
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                          </div>
+                        </div>
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                          </div>
+                        </div>
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <span className="text-sm text-ui-300">423 players are partaking</span>
+                    </div>
+                    <button
+                      type="button"
+                      className="button button-sm button-primary"
+                    >
+                      Explore
+                    </button>
+                  </div>
+                </div>
+                <div className="card-image-bg">
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="card-brawl card-secondary">
+                <div className="card-image">
+                  <div className="card-image-content">
+                    <div className="rounded bg-ui-800/90 backdrop-blur-sm p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
+                      <div className="ml-0 p-1 border border-ui-700 rounded-sm bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+                        <span className="icon text-xl icon-game-pubg-symbol text-game-pubg" />
+                      </div>
+                      <span>Competitive</span>
+                      <span className="text-main card-status">Partaking</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-content">
+                  <div className="card-body">
+                    <div>
+                      <h2 className="text-3xl mb-2 uppercase">
+                        Competitive Brawl
+                      </h2>
+                      <div className="flex gap-4">
+                        <div className="flex text-sm gap-1 items-center whitespace-nowrap">
+                          <span className="text-ui-300 mr-1">Time Left:</span>
+                          <span className="icon icon-clock text-interaction-300" />
+                          <Countdown
+                            separator={"  "}
+                            hasDays={false}
+                            hasHours={true}
+                            hasMinutes={true}
+                            hasSeconds={true}
+                            targetDate={dateTimeAfterThreeDays}
+                            hasLabels={true}
+                            labelsAbbr={true}
+                            labelClassName="text-base mr-1 block"
+                            className="text-interaction-300 uppercase text-sm gap-1 font-bold"
+                          />
+                        </div>
+                        <div className="flex items-center whitespace-nowrap gap-2">
+                          <img
+                            className="h-6"
+                            src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
+                            width="auto"
+                            height="auto"
+                            alt=""
+                          />
+                          <span className="font-bold text-gold-500 text-sm">
+                            10 000
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-meta">
+                    <div className="flex-1 flex items-center gap-4 leading-tight">
+                      <div className="flex-none avatar avatar-circle avatar-xs">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                        </div>
+                      </div>
+                      <div className="infobanner is-active">
+                        <div className="flex gap-2 infobanner-front">
+                          <div>
+                            <div className="uppercase text-xs text-ui-300">
+                              Points
+                            </div>
+                            <div className="text-sm font-bold">1120</div>
+                          </div>
+                          <div>
+                            <div className="uppercase text-xs text-ui-300">
+                              Position
+                            </div>
+                            <div className="text-sm font-bold">#243</div>
+                          </div>
+                        </div>
+                        <div className="infobanner-back absolute inset-0 flex items-center text-sm">
+                          <div className="animate-pulse text-ui-300">
+                            Waiting for your 3 matches...
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex items-end">
+                      <button
+                        type="button"
+                        className="button button-sm button-primary"
+                      >
+                        Go to Brawl
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-image-bg">
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/1ypr38wg/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
               ></iframe>
             </div>
           </div>

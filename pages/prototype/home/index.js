@@ -77,6 +77,10 @@ export default function Home() {
       <PrototypeStructure title="Home">
         <Ad width="1005" height="300" />
 
+        <section className="surface sm:rounded-lg overflow-hidden mb-8">
+          <Carousel />
+        </section>
+
         <section className="mb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(1 * 0.05s)" }}>
           <h2 className="h6 mb-1">Your latest tracked match</h2>

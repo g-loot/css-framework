@@ -73,7 +73,7 @@ export default function HomeBrawlSolo() {
 
   return (
     <>
-      <div>
+      <div className="hidden">
         <button type="button" className="card-brawl-secondary card-stacked">
           <div className="card-image">
             <div className="card-image-content">
