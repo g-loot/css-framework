@@ -36,7 +36,6 @@ export default function Slider(props) {
     }
   }, [sliderContainer]);
 
-
   return (
     <div className="relative rounded-t-lg overflow-hidden hoverinside:opacity-100 hoverinside:translate-x-0 hoverinside:opacity-100">
       <div
@@ -70,7 +69,7 @@ export default function Slider(props) {
 
       <div
         ref={sliderWrapper}
-        className="overflow-x-auto scrollbar-hidden last:after:content-[''] last:after:w-24 last:after:block py-4"
+        className="overflow-x-auto scrollbar-hidden last:after:content-[''] last:after:w-24 last:after:block py-4 px-4 md:px-0"
       >
         <div className="flex gap-4" ref={sliderContainer}>
           {props.children}

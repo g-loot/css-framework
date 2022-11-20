@@ -677,6 +677,12 @@
   & {
     @apply
     flex-none
+    w-full
+    max-w-[calc(100vw-4rem)]
+    transition-all
+    duration-300
+    ease-[cubic-bezier(.8,0,.3,1)]
+    transform-gpu
     ;
     > .card-image,
     > .card-content {
@@ -822,13 +828,7 @@
   &:not(.card-horizontal) {
     @apply
     grid-cols-1
-    w-full
-    max-w-[calc(100vh-4rem)]
     md:max-w-[397px]
-    transition-all
-    duration-300
-    ease-[cubic-bezier(.8,0,.3,1)]
-    transform-gpu
     ;
     > .card-image {
       @apply
@@ -847,8 +847,6 @@
     @apply
     grid-cols-5
     grid-rows-none
-    w-full
-    max-w-[calc(100vh-4rem)]
     md:max-w-[809px]
     min-h-10
     ;
@@ -889,24 +887,6 @@
         left-auto
         ;
       }
-    }
-  }
-
-  &:not([disabled]),
-  &:not(.is-disabled),
-  &:not(.is-inactive) {
-    &:hover,
-    &:focus-visible {
-      /*
-      .card-image-bg {
-        > img {
-          @apply
-          brightness-125
-          saturate-150
-          ;
-        }
-      }
-      */
     }
   }
 }
@@ -917,51 +897,51 @@
 	.card-brawl.card-secondary {
     &.sm\:card-horizontal {
       @apply
-    grid-cols-5
-    grid-rows-none
-    w-full
-    max-w-[calc(100vh-4rem)]
-    md:max-w-[809px]
-    min-h-10
-    ;
-    > .card-image {
-      @apply
-      order-2
-      col-span-2
+      grid-cols-5
+      grid-rows-none
+      w-full
+      max-w-[calc(100vh-4rem)]
+      md:max-w-[809px]
+      min-h-10
       ;
-    }
-    > .card-content {
-      @apply
-      order-1
-      col-span-3
-      rounded-l-lg
-      ;
-    }
-    > .card-image-bg {
-      @apply
-      left-[50%]
-      w-auto
-      ;
-      &::before {
+      > .card-image {
         @apply
-        content-['']
-        absolute
-        z-10
-        w-1/3
-        inset-y-0
-        bg-gradient-to-r
-        from-ui-800
-        via-ui-800/75
-        to-ui-800/0
+        order-2
+        col-span-2
         ;
       }
-      > img {
+      > .card-content {
         @apply
-        z-0
-        left-auto
+        order-1
+        col-span-3
+        rounded-l-lg
         ;
       }
-    }
+      > .card-image-bg {
+        @apply
+        left-[50%]
+        w-auto
+        ;
+        &::before {
+          @apply
+          content-['']
+          absolute
+          z-10
+          w-1/3
+          inset-y-0
+          bg-gradient-to-r
+          from-ui-800
+          via-ui-800/75
+          to-ui-800/0
+          ;
+        }
+        > img {
+          @apply
+          z-0
+          left-auto
+          ;
+        }
+      }
     }
   }
 }
@@ -1021,51 +1001,51 @@
 	.card-brawl.card-secondary {
     &.lg\:card-horizontal {
       @apply
-    grid-cols-5
-    grid-rows-none
-    w-full
-    max-w-[calc(100vh-4rem)]
-    md:max-w-[809px]
-    min-h-10
-    ;
-    > .card-image {
-      @apply
-      order-2
-      col-span-2
+      grid-cols-5
+      grid-rows-none
+      w-full
+      max-w-[calc(100vh-4rem)]
+      md:max-w-[809px]
+      min-h-10
       ;
-    }
-    > .card-content {
-      @apply
-      order-1
-      col-span-3
-      rounded-l-lg
-      ;
-    }
-    > .card-image-bg {
-      @apply
-      left-[50%]
-      w-auto
-      ;
-      &::before {
+      > .card-image {
         @apply
-        content-['']
-        absolute
-        z-10
-        w-1/3
-        inset-y-0
-        bg-gradient-to-r
-        from-ui-800
-        via-ui-800/75
-        to-ui-800/0
+        order-2
+        col-span-2
         ;
       }
-      > img {
+      > .card-content {
         @apply
-        z-0
-        left-auto
+        order-1
+        col-span-3
+        rounded-l-lg
         ;
       }
-    }
+      > .card-image-bg {
+        @apply
+        left-[50%]
+        w-auto
+        ;
+        &::before {
+          @apply
+          content-['']
+          absolute
+          z-10
+          w-1/3
+          inset-y-0
+          bg-gradient-to-r
+          from-ui-800
+          via-ui-800/75
+          to-ui-800/0
+          ;
+        }
+        > img {
+          @apply
+          z-0
+          left-auto
+          ;
+        }
+      }
     }
   }
 }
@@ -1073,51 +1053,51 @@
 	.card-brawl.card-secondary {
     &.xl\:card-horizontal {
       @apply
-    grid-cols-5
-    grid-rows-none
-    w-full
-    max-w-[calc(100vh-4rem)]
-    md:max-w-[809px]
-    min-h-10
-    ;
-    > .card-image {
-      @apply
-      order-2
-      col-span-2
+      grid-cols-5
+      grid-rows-none
+      w-full
+      max-w-[calc(100vh-4rem)]
+      md:max-w-[809px]
+      min-h-10
       ;
-    }
-    > .card-content {
-      @apply
-      order-1
-      col-span-3
-      rounded-l-lg
-      ;
-    }
-    > .card-image-bg {
-      @apply
-      left-[50%]
-      w-auto
-      ;
-      &::before {
+      > .card-image {
         @apply
-        content-['']
-        absolute
-        z-10
-        w-1/3
-        inset-y-0
-        bg-gradient-to-r
-        from-ui-800
-        via-ui-800/75
-        to-ui-800/0
+        order-2
+        col-span-2
         ;
       }
-      > img {
+      > .card-content {
         @apply
-        z-0
-        left-auto
+        order-1
+        col-span-3
+        rounded-l-lg
         ;
       }
-    }
+      > .card-image-bg {
+        @apply
+        left-[50%]
+        w-auto
+        ;
+        &::before {
+          @apply
+          content-['']
+          absolute
+          z-10
+          w-1/3
+          inset-y-0
+          bg-gradient-to-r
+          from-ui-800
+          via-ui-800/75
+          to-ui-800/0
+          ;
+        }
+        > img {
+          @apply
+          z-0
+          left-auto
+          ;
+        }
+      }
     }
   }
 }

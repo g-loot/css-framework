@@ -237,27 +237,27 @@ export default function BrawlCardSecondary(props) {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="avatar-group -space-x-2">
-                  <div className="avatar avatar-circle avatar-tiny">
-                    <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                <div className="hidden sm:flex items-center gap-2">
+                  <div className="avatar-group -space-x-2">
+                    <div className="avatar avatar-circle avatar-tiny">
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="avatar avatar-circle avatar-tiny">
-                    <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                    <div className="avatar avatar-circle avatar-tiny">
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="avatar avatar-circle avatar-tiny">
-                    <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                    <div className="avatar avatar-circle avatar-tiny">
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="avatar avatar-circle avatar-tiny">
-                    <div>
-                      <span>+9</span>
+                    <div className="avatar avatar-circle avatar-tiny">
+                      <div>
+                        <span>+9</span>
+                      </div>
                     </div>
                   </div>
                 </div>
