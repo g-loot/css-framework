@@ -388,7 +388,7 @@ const DSpage = () => {
         <div className="">
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-wrap gap-4">
-              <div className="card-brawl card-secondary card-stacked is-active">
+              <div className="card-brawl card-secondary is-active">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
@@ -484,7 +484,7 @@ const DSpage = () => {
                   />
                 </div>
               </div>
-              <div className="card-brawl card-secondary card-stacked">
+              <div className="card-brawl card-secondary">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
@@ -571,7 +571,7 @@ const DSpage = () => {
                   />
                 </div>
               </div>
-              <div className="card-brawl card-secondary">
+              <div className="card-brawl card-secondary lg:card-horizontal">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
@@ -667,7 +667,7 @@ const DSpage = () => {
                   />
                 </div>
               </div>
-              <div className="card-brawl card-secondary card-stacked is-inactive">
+              <div className="card-brawl card-secondary is-inactive">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
@@ -741,7 +741,7 @@ const DSpage = () => {
                   />
                 </div>
               </div>
-              <div className="card-brawl card-secondary card-stacked">
+              <div className="card-brawl card-secondary">
                 <div className="card-overlay">
                   <div>
                     <div className="font-headings text-2xl font-bold italic text-ui-100">

@@ -3,7 +3,6 @@ import Countdown from "../Countdown/Countdown";
 import { UiContext } from "../../contexts/ui";
 import { useContext } from "react";
 import { usePrototypeData } from "../../contexts/prototype";
-import { useRouter } from "next/router";
 import ModalClaimLadderRewards from "../../pages/prototype/home/modal-claim-ladderrewards";
 import Link from "next/link";
 
@@ -14,7 +13,7 @@ const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 export default function BrawlCardSecondary(props) {
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
-  const isStacked = props.isStacked || false;
+  const isHorizontal = props.isHorizontal || false;
   const isPartaking = props.brawl.isPartaking || false;
   const brawl = props.brawl;
 
@@ -25,7 +24,7 @@ export default function BrawlCardSecondary(props) {
   return (
     <div
       className={`card-brawl card-secondary ${
-        isStacked ? "card-stacked" : ""
+        isHorizontal ? "md:card-horizontal" : ""
       } ${isPartaking && !brawl.hasClaim ? "is-active" : ""} `}
     >
       {brawl.hasClaim && (
@@ -94,7 +93,7 @@ export default function BrawlCardSecondary(props) {
       <div className="card-content">
         <div className="card-body">
           <div>
-            <h2 className="text-3xl mb-2 uppercase">Competitive Brawl</h2>
+            <h2 className="text-3xl mb-2 uppercase">{brawl.name}</h2>
             <div className="flex gap-4 items-center">
               <div className="flex items-center whitespace-nowrap gap-2">
                 <img

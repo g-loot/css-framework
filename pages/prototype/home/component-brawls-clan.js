@@ -54,7 +54,7 @@ export default function HomeBrawlClan() {
       <div className="relative">
         <Slider itemWidth={809+16} bgColor="from-ui-900/0 via-ui-900/0 to-ui-900/0">
           {ClanBrawls.map((item, itemIndex) => (
-            <BrawlCardSecondary key={item.id} brawl={item} isStacked={false} isClan={false} />
+            <BrawlCardSecondary key={item.id} brawl={item} isHorizontal={true} isClan={false} />
           ))}
         </Slider>
       </div>
