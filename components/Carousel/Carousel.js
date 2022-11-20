@@ -5,11 +5,11 @@ import DigitalClock from "./DigitalClock";
 const slides = [
   {
     subtitle: "G-Loot",
-    title: "Season 6 is here",
+    title: "Valorant Clash is here",
     description:
       "32 teams will duke it out over 3 days across 18 matches. The top teams will move on to the Grand Final. Do not miss out!",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1654158104/Marketing/2022_prototype/DummyContent/carousel-item-pubg-s6.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1668956919/Logos%20for%20tournaments/Carousel_Clash_1.jpg",
     buttonLabel: "Learn more",
     buttonURL: "#",
   },

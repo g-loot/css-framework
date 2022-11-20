@@ -83,7 +83,7 @@ export default function ModalClaimDailyRewards(props) {
               <div className="mt-12 flex justify-center">
                 <button
                   type="button"
-                  className={`button button-claim button-lg is-shining w-72 ${
+                  className={`button button-claim button-lg w-72 ${
                     submitting ? "is-loading" : ""
                   }`}
                   onClick={closeModalWithDelay}

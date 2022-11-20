@@ -1,157 +1,94 @@
-import React, { useContext, useEffect, useState } from "react";
-
-import Ad from "../../../components/Ad/Ad";
-import Carousel from "../../../components/Carousel/Carousel";
-import Countdown from "../../../components/Countdown/Countdown";
-import DailyReward from "../../../components/DailyReward/DailyReward";
-import Link from "next/link";
-import ListItemBrawl from "../../../components/ListItem/ListItemBrawl";
-import ModalBrawlHowitworksVideo from "../[game]/brawls/modal-howitworks-video";
-import ModalClaimDailyRewards from "./modal-claim-dailyrewards";
-import ModalClaimLadderRewards from "./modal-claim-dailyrewards";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import RewardLadder from "../../../components/RewardLadder/RewardLadder";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import { UiContext } from "../../../contexts/ui";
-import { VariablesContext } from "../../../contexts/variables";
-import { usePrototypeData } from "../../../contexts/prototype";
+import React from "react";
 import { useRouter } from "next/router";
+import BrawlCardSecondary from "../../../components/Brawl/BrawlCardSecondary";
+import Slider from "../../../components/Slider/Slider";
+
+const SoloBrawls = [
+  {
+    id: 0,
+    game: 2,
+    name: null,
+    gameMode: "Unrated",
+    name: "Unrated",
+    status: "ongoing",
+    isPartaking: true,
+    hasClaim: true,
+    cover:
+      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
+  },
+  {
+    id: 1,
+    game: 1,
+    name: null,
+    gameMode: "Unrated",
+    name: "Unrated",
+    status: "ongoing",
+    isPartaking: true,
+    hasClaim: false,
+    cover:
+      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
+  },
+  {
+    id: 2,
+    game: 3,
+    name: null,
+    gameMode: "Ranked trio",
+    name: "Competitive",
+    status: "ongoing",
+    isPartaking: false,
+    hasClaim: false,
+    cover:
+      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-1.webp",
+  },
+  {
+    id: 3,
+    game: 4,
+    name: null,
+    gameMode: "Ranked Arena",
+    name: "Weekly Arena Brawl",
+    status: "ongoing",
+    isPartaking: false,
+    hasClaim: false,
+    cover:
+      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-3.webp",
+  },
+  {
+    id: 4,
+    game: 1,
+    name: null,
+    gameMode: "Spike Rush",
+    name: "Spike Rush",
+    status: "ongoing",
+    isPartaking: true,
+    hasClaim: false,
+    cover:
+      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
+  },
+  {
+    id: 5,
+    game: 5,
+    name: null,
+    gameMode: "Ranked squad FPP",
+    name: "Competitive",
+    status: "ongoing",
+    isPartaking: false,
+    hasClaim: false,
+    cover:
+      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
+  },
+];
 
 export default function HomeBrawlSolo() {
-  const router = useRouter();
   const { query } = useRouter();
-  const hasAds = query.ads === "true" ? true : false;
-  const uiContext = useContext(UiContext);
-  const variablesContext = useContext(VariablesContext);
-  const prototype = usePrototypeData();
-  const modalClaimLadder = query.modalclaim === "true" ? true : false;
-  const modalClaimDaily = query.modalclaimdaily === "true" ? true : false;
-  const modalVideo = query.modalvideo === "true" ? true : false;
-  const [dailyNumber, setDailyNumber] = useState(0);
-  const [submitting, setSubmitting] = useState(false);
-
-  function openModalBrawlHowitworksVideo() {
-    uiContext.openModal(
-      <ModalBrawlHowitworksVideo></ModalBrawlHowitworksVideo>
-    );
-  }
-
-  useEffect(() => {
-    if (modalVideo) {
-      openModalBrawlHowitworksVideo();
-    }
-  }, [modalVideo]);
-
-  function openModalClaimDailyRewards() {
-    uiContext.openModal(<ModalClaimDailyRewards></ModalClaimDailyRewards>);
-  }
-
-  function openModalClaimLadderRewards() {
-    uiContext.openModal(<ModalClaimLadderRewards></ModalClaimLadderRewards>);
-  }
-
-  useEffect(() => {
-    if (modalClaimDaily) {
-      openModalClaimDailyRewards();
-    }
-  }, [modalClaimDaily]);
-
-  useEffect(() => {
-    if (modalClaimLadder) {
-      openModalClaimLadderRewards();
-    }
-  }, [modalClaimLadder]);
-
-  function addToastWithDelay(toast) {
-    setSubmitting(true);
-
-    setTimeout(() => {
-      uiContext.openToastr(toast);
-      setSubmitting(false);
-    }, 1000);
-  }
 
   return (
     <>
-      <div className="hidden">
-        <button type="button" className="card-brawl-secondary card-stacked">
-          <div className="card-image">
-            <div className="card-image-content">
-              <div>
-                <div className="chip chip-sliced">
-                  <span>Ongoing</span>
-                </div>
-              </div>
-            </div>
-            <div className="card-image-bg">
-              <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="card-content">
-            <div className="card-body">
-              <div>
-                <h2 className="text-2xl mb-2">Competitive Brawl</h2>
-                <div>
-                  <span className="icon icon-time-machine"></span>
-                  <span>
-                    Time left:{" "}
-                    <Countdown
-                      separator=":"
-                      hasDays={false}
-                      hasHours={true}
-                      hasMinutes={true}
-                      hasSeconds={true}
-                    />
-                  </span>
-                </div>
-              </div>
-              <div>
-                <label className="text-ui-300 uppercase text-sm">
-                  Game mode
-                </label>
-                <p className="text-ui-200 font-bold">Competitive</p>
-              </div>
-            </div>
-            <div className="card-meta">
-              <div>
-                <label className="text-ui-300 uppercase text-sm text-right">
-                  Rewards
-                </label>
-                <div className="md:h-8">
-                  <div className="flex gap-3 items-center">
-                    <div className="flex items-center whitespace-nowrap gap-2">
-                      <img
-                        className="h-8"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
-                        width="auto"
-                        height="auto"
-                        alt=""
-                      />
-                      <span className="font-headings font-bold text-2xl italic">
-                        10 000
-                      </span>
-                    </div>
-                    <div className="flex items-center whitespace-nowrap gap-2">
-                      <img
-                        className="h-8"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp"
-                        width="auto"
-                        height="auto"
-                        alt=""
-                      />
-                      <span className="font-headings font-bold text-2xl italic">
-                        5
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </button>
+      <div className="relative">
+        <Slider itemWidth={397+16} bgColor="from-ui-900/0 via-ui-900/0 to-ui-900/0">
+          {SoloBrawls.map((item, itemIndex) => (
+            <BrawlCardSecondary key={item.id} brawl={item} isStacked={true} isClan={false} />
+          ))}
+        </Slider>
       </div>
     </>
   );

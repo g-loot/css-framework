@@ -283,16 +283,17 @@
   
   .card-body {
     @apply
-    bg-ui-900/75
-    backdrop-blur-sm
+    bg-gradient-to-bl
+    from-ui-800/80
+    via-ui-800
+    to-ui-800
     p-2
     ;
 
     .card-title {
       @apply
-      text-xl
-      mt-1
-      mb-2
+      text-2xl
+      my-1
       ;
     }
     .card-meta {
@@ -674,6 +675,9 @@
 .card-brawl.card-secondary {
   
   & {
+    @apply
+    flex-none
+    ;
     > .card-image,
     > .card-content {
       @apply
@@ -690,7 +694,6 @@
       from-ui-800/80
       via-ui-800
       to-ui-800
-      backdrop-blur-sm
       ;
       > .card-meta {
         @apply
@@ -735,6 +738,8 @@
       right-0
       inset-y-0
       w-full
+      rounded-lg
+      overflow-hidden
       ;
       > img {
         @apply
@@ -742,13 +747,75 @@
         absolute
         inset-0
         object-cover
-        object-right-bottom
+        object-center
         h-full
         transition-all
         duration-300
         ease-[cubic-bezier(.8,0,.3,1)]
         ;
       }
+    }
+    > .card-overlay {
+      @apply
+      absolute
+      z-20
+      inset-0
+      backdrop-blur
+      rounded-lg
+      flex
+      flex-col
+      items-center
+      justify-center
+      bg-gradient-radial
+      from-ui-500
+      to-ui-800/90
+      ;
+      > div {
+        @apply
+        relative
+        z-10
+        flex
+        flex-col
+        items-center
+        justify-center
+        gap-2
+        ;
+      }
+      > img {
+        @apply
+        absolute
+        z-0
+        w-full
+        h-full
+        object-cover
+        object-center
+        ;
+      }
+      ~ * {
+        @apply
+        pointer-events-none
+        ;
+        &.card-image-bg {
+          @apply
+          mix-blend-luminosity
+          ;
+          > img {
+            @apply
+            grayscale
+            ;
+          }
+        }
+        .card-status {
+          @apply
+          text-ui-300
+          ;
+        }
+      }
+    }
+    .card-status {
+      @apply
+      text-blue-300
+      ;
     }
   }
 
@@ -771,6 +838,7 @@
       @apply
       order-1
       col-span-3
+      rounded-l-lg
       ;
     }
     > .card-image-bg {
@@ -817,11 +885,19 @@
       md:aspect-[16/6]
       ;
     }
+    > .card-content {
+      @apply
+      rounded-b-lg
+      ;
+    }
   }
+
   &:not([disabled]),
-  &:not(.is-disabled) {
+  &:not(.is-disabled),
+  &:not(.is-inactive) {
     &:hover,
     &:focus-visible {
+      /*
       .card-image-bg {
         > img {
           @apply
@@ -830,6 +906,7 @@
           ;
         }
       }
+      */
     }
   }
 }
@@ -847,6 +924,25 @@
     .card-status {
       @apply
       animate-pulse
+      text-main
+      ;
+    }
+  }
+  &.is-inactive {
+    .card-image-bg {
+      @apply
+      mix-blend-luminosity
+      ;
+      > img {
+        @apply
+        grayscale
+        opacity-50
+        ;
+      }
+    }
+    .card-status {
+      @apply
+      text-ui-300
       ;
     }
   }
@@ -876,12 +972,28 @@
       ;
     }
 
+    *[class*='bg-'],
+    .card-content {
+      @apply
+      bg-ui-800/0
+      from-ui-800/0
+      via-ui-800/0
+      to-ui-800/0
+      ;
+    }
+
+    *[class*='border-'] {
+      @apply
+      border-ui-800/0
+      ;
+    }
+
     .card-meta > div:not(:last-child) {
       @apply
       border-ui-700
       ;
     }
-
+    
     .card-title,
     .card-meta > *:not(.chip) {
       @apply
@@ -926,8 +1038,7 @@
       ;
     }
     div,
-    a,
-    button {
+    a {
     &.progressbar,
     &.chip,
     &.chip.chip-sliced:not([class*=bg-]) {
@@ -943,6 +1054,11 @@
           ;
         }
       }
+    }
+    button {
+      @apply
+      opacity-0
+      ;
     }
     .card-image-bg {
       &::before,

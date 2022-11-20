@@ -17,6 +17,8 @@ import { VariablesContext } from "../../../contexts/variables";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 import HomeBrawlSolo from "./component-brawls-solo";
+import HomeBrawlClan from "./component-brawls-clan";
+import CardMission from "../../../components/Card/CardMission";
 
 export default function Home() {
   const router = useRouter();
@@ -81,10 +83,12 @@ export default function Home() {
           <Carousel />
         </section>
 
-        <section className="mb-8 animate-slide-in-bottom animate-delay"
-          style={{ "--delay": "calc(1 * 0.05s)" }}>
-          <h2 className="h6 mb-1">Your latest tracked match</h2>
-          <div className="surface rounded-lg flex flex-col xl:flex-row xl:justify-between leading-none gap-2 xl:gap-8">
+        <section
+          className="mb-8 animate-slide-in-bottom animate-delay"
+          style={{ "--delay": "calc(1 * 0.05s)" }}
+        >
+          <h3 className="h6 mb-4 mx-4 sm:mx-0">Your latest tracked match</h3>
+          <div className="surface sm:rounded-lg flex flex-col xl:flex-row xl:justify-between leading-none gap-2 xl:gap-8">
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8 mb-2 md:mb-0 p-2">
               <div className="flex gap-2 items-center">
                 <div className="rounded bg-gradient-to-b from-ui-900/75 to-ui-900/25 p-2 flex items-center justify-center border border-ui-700">
@@ -92,7 +96,9 @@ export default function Home() {
                 </div>
                 <h6 className="">PUBG: BATTLEGROUNDS</h6>
               </div>
-              <div className="text-main font-headings text-lg uppercase italic font-bold">Victory</div>
+              <div className="text-main font-headings text-lg uppercase italic font-bold">
+                Victory
+              </div>
             </div>
             <div className="flex flex-col sm:flex-row flex-1 sm:items-end xl:items-center gap-2 p-3 border-t border-ui-700 xl:border-none">
               <div className="flex flex-1 items-stretch justify-center sm:justify-start gap-2 text-sm text-ui-300 whitespace-nowrap">
@@ -120,20 +126,166 @@ export default function Home() {
           </div>
         </section>
 
+        <h2 className="h3 mb-4 mx-4 sm:mx-0">Competitions</h2>
+
         <section
           className="mb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(2 * 0.05s)" }}
         >
-          <div className="flex gap-2 items-center justify-between mb-1">
-            <div className="flex gap-2 items-center">
-              <h2 className="h6">Brawls</h2>
-            </div>
-            <button type="button" className="button button-xs button-ghost">
-              <span>Your Brawl history</span>
-            </button>
+          <div className="flex gap-2 items-center justify-between mx-4 sm:mx-0">
+            <h3 className="h6">Brawls</h3>
+            <Link href="/prototype/valorant/brawls/">
+              <a className="link link-hover text-ui-300 text-sm">
+                View Brawl history
+              </a>
+            </Link>
           </div>
           <HomeBrawlSolo />
+        </section>
+        <section
+          className="mb-8 animate-slide-in-bottom animate-delay"
+          style={{ "--delay": "calc(2 * 0.05s)" }}
+        >
+          <div className="flex gap-2 items-center justify-between mx-4 sm:mx-0">
+            <h3 className="h6">Clan Brawls</h3>
+            <Link href="/prototype/valorant/brawls/">
+              <a className="link link-hover text-ui-300 text-sm">
+                View your Clan
+              </a>
+            </Link>
+          </div>
+          <HomeBrawlClan />
+        </section>
+        <section className="mb-8 surface sm:rounded-lg overflow-hidden hidden lg:block">
+          <div className="relative z-10 p-12 md:w-1/3">
+            <h3 className="h4">
+              Play multiple competitions
+              <br />
+              at the same time
+            </h3>
+            <p className="text-ui-300 mt-2 mb-4">
+              Brawls use a “best-of” format. You can enter as many times as you
+              want, and only your best scores count.
+            </p>
+            <button type="button" className="button button-primary">
+              <span>View Brawls</span>
+            </button>
+          </div>
+          <img
+            className="absolute inset-0 h-full w-full object-cover object-right"
+            src="https://res.cloudinary.com/gloot/image/upload/v1668955144/Marketing/2022_prototype/home-ad-multiplebrawls.jpg"
+            alt=""
+          />
+        </section>
 
+        <h2 className="h3 mb-4 mx-4 sm:mx-0">Missions</h2>
+        <section
+          className="mb-8 animate-slide-in-bottom animate-delay"
+          style={{ "--delay": "calc(2 * 0.05s)" }}
+        >
+          <div className="flex gap-2 items-center justify-between mx-4 sm:mx-0">
+            <h3 className="h6">Reward ladder</h3>
+          </div>
+          <RewardLadder hasReward={false} />
+        </section>
+
+        <section
+          className="py-8 animate-slide-in-bottom animate-delay"
+          style={{ "--delay": "calc(2 * 0.05s)" }}
+        >
+          <div className="flex items-center justify-between mb-1 mx-4 sm:mx-0">
+            <h3 className="h6">
+              Daily missions in {prototype.getGameBySlug("valorant").name}
+            </h3>
+            <div className="hidden sm:flex items-center gap-2">
+              <div
+                className="tooltip tooltip-left"
+                data-tooltip="This might take up to 15 minutes. Make sure the match you’re trying to fetch is 100% completed."
+              >
+                <button
+                  className={`button button-xs button-secondary ${
+                    submitting ? "is-loading" : ""
+                  }`}
+                  onClick={addToastWithDelay.bind(this, {
+                    icon: "f-check",
+                    color: "green",
+                    text: "Your stats have been updated.",
+                    autoDelete: true,
+                    autoDeleteDelay: 2500,
+                  })}
+                >
+                  <span className="icon icon-16 icon-refresh-02" />
+                  <span className="hidden sm:block">
+                    Request a stats update
+                  </span>
+                  <span className="block sm:hidden">Update</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          {prototype.getGameBySlug("valorant").needsSteam && (
+            <>
+              <div className="px-4 sm:px-0">
+                <div className="alert mb-4">
+                  <div>
+                    <span className="icon icon-24 icon-c-info" />
+                    <div>
+                      <div className="font-bold uppercase">
+                        New &amp; improved stats tracking:
+                      </div>
+                      <p className="max-w-[80ch] text-ui-300">
+                        This will affect the way you get progress in your Daily
+                        Missions. You will now progress in the Missions once the
+                        full match in PUBG BATTLEGROUNDS is completed, you will
+                        get your points.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex-none">
+                    <button
+                      type="button"
+                      className="button button-tertiary button-close"
+                    >
+                      <span className="icon icon-e-remove" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+
+          <div className="flex items-center justify-between mb-4 mx-4 sm:mx-0">
+            <div>
+              <div className="text-sm text-ui-300">
+                New missions in <b>4H 23M 12S</b>
+              </div>
+            </div>
+            <div className="flex items-center gap-2"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mx-4 sm:mx-0">
+            {prototype
+              .getGameBySlug("valorant")
+              ?.missions.map((mission, missionIndex) => (
+                <>
+                  {mission.ispremium && (
+                    <Tooltip
+                      placement="top"
+                      tooltip={
+                        <div className="max-w-xs text-sm text-center leading-tight">
+                          Unlock rewards as you earn XP from Missions. XP is
+                          earned across all Missions in all games on G-Loot
+                        </div>
+                      }
+                    >
+                      <CardMission mission={mission} index={missionIndex} />
+                    </Tooltip>
+                  )}
+                  {!mission.ispremium && (
+                    <CardMission mission={mission} index={missionIndex} />
+                  )}
+                </>
+              ))}
+          </div>
         </section>
       </PrototypeStructure>
     </>
