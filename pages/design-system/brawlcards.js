@@ -439,7 +439,7 @@ const DSpage = () => {
                     </div>
                   </div>
                   <div className="card-meta">
-                    <div className="flex-1 flex items-center gap-4 leading-tight">
+                    <div className="flex-1 flex items-center gap-4">
                       <div className="flex-none avatar avatar-circle avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
@@ -622,7 +622,7 @@ const DSpage = () => {
                     </div>
                   </div>
                   <div className="card-meta">
-                    <div className="flex-1 flex items-center gap-4 leading-tight">
+                    <div className="flex-1 flex items-center gap-4">
                       <div className="flex-none avatar avatar-circle avatar-xs">
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />

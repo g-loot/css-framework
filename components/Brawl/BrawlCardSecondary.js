@@ -141,7 +141,7 @@ export default function BrawlCardSecondary(props) {
           {!brawl.isClan ? (
             <>
               {brawl.isPartaking ? (
-                <div className="flex-1 flex items-center gap-4 leading-tight">
+                <div className="flex-1 flex items-center gap-4">
                   <div className="flex-none avatar avatar-circle avatar-xs">
                     <div>
                       <img
@@ -204,7 +204,7 @@ export default function BrawlCardSecondary(props) {
             </>
           ) : (
             <>
-              <div className="flex-1 flex items-center gap-4 leading-tight">
+              <div className="flex-1 flex items-center gap-4">
                 <div className="flex-none avatar avatar-squircle avatar-xs">
                   <div>
                     <img

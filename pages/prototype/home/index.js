@@ -157,7 +157,7 @@ export default function Home() {
           <HomeBrawlClan />
         </section>
         <section className="mb-8 surface sm:rounded-lg overflow-hidden hidden lg:block">
-          <div className="relative z-10 p-12 md:w-1/3">
+          <div className="relative z-10 p-12 w-1/2 xl:w-1/3">
             <h3 className="h4">
               Play multiple competitions
               <br />

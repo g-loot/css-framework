@@ -26,7 +26,6 @@ button {
   text-ui-800
   scale-100
   select-none
-  backdrop-blur
   bg-[length:500%_auto]
   focus-visible:outline
   focus-visible:outline-offset-2
@@ -289,7 +288,6 @@ button {
   &.button-ghost {
     @apply 
     bg-ui-800/0
-    backdrop-blur-none
     bg-gradient-to-r
     from-ui-800/0
     via-ui-800/0
@@ -807,7 +805,6 @@ button {
       text-center
       inset-x-full
       rounded
-      backdrop-blur-sm
       font-body
       font-normal
       text-sm

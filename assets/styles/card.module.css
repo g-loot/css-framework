@@ -683,6 +683,7 @@
     duration-300
     ease-[cubic-bezier(.8,0,.3,1)]
     transform-gpu
+    leading-tight
     ;
     > .card-image,
     > .card-content {
@@ -705,6 +706,8 @@
         @apply
         mt-4
         flex
+        justify-between
+        items-center
         ;
         &:not([class*="items-"]) {
           @apply
