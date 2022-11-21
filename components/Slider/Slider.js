@@ -39,8 +39,8 @@ export default function Slider(props) {
   return (
     <div className="relative rounded-t-lg overflow-hidden hoverinside:opacity-100 hoverinside:translate-x-0 hoverinside:opacity-100">
       <div
-        className={` absolute z-10 left-0 inset-y-0 self-stretch items-center pr-12 bg-gradient-to-r ${bgColor} p-2 hoverinside transition-all duration-300 opacity-0 -translate-x-4 ${
-          slideLeft > 0 ? "md:flex" : "md:hidden"
+        className={`hidden absolute z-10 left-0 inset-y-0 self-stretch items-center pr-12 bg-gradient-to-r ${bgColor} p-2 hoverinside transition-all duration-300 opacity-0 -translate-x-4 ${
+          slideLeft > 0 ? "md:flex" : "pointer-events-none"
         }`}
       >
         <button
@@ -52,8 +52,8 @@ export default function Slider(props) {
         </button>
       </div>
       <div
-        className={`hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center pl-12 bg-gradient-to-l ${bgColor} p-2 hoverinside transition-all duration-300 opacity-0 translate-x-4 ${
-          slideLeft ? "md:flex" : "md:hidden"
+        className={`hidden absolute z-10 right-0 inset-y-0 self-stretch items-center pl-12 bg-gradient-to-l ${bgColor} p-2 hoverinside transition-all duration-300 opacity-0 translate-x-4  ${
+          slideLeft < sliderContainerWidth ? "md:flex" : "pointer-events-none"
         }`}
       >
         <button

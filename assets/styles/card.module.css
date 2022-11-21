@@ -1112,7 +1112,7 @@
 .card-brawl {
   &.is-active {
     @apply
-    border-blue-500
+    border-main
     animate-[card-glow_2s_cubic-bezier(.4,0,.6,1)_infinite]
     ;
     .card-status {
@@ -1294,10 +1294,10 @@
 
 @keyframes card-glow {
   0%, 100% {
-    box-shadow: 0 0 0.25rem 0 rgba(var(--color-blue-500)/0%), 0 0 1rem 0 rgba(var(--color-blue-500)/0%);
+    box-shadow: 0 0 0.25rem 0 rgba(var(--color-main)/0%), 0 0 1rem 0 rgba(var(--color-main)/0%);
     
   }
   50% {
-    box-shadow: 0 0 0.25rem 0 rgba(var(--color-blue-500)/50%), 0 0 1rem 0 rgba(var(--color-blue-500)/50%);
+    box-shadow: 0 0 0.25rem 0 rgba(var(--color-main)/50%), 0 0 1rem 0 rgba(var(--color-main)/50%);
   }
 }
