@@ -39,37 +39,35 @@ export default function Slider(props) {
   return (
     <div className="relative rounded-t-lg overflow-hidden hoverinside:opacity-100 hoverinside:translate-x-0 hoverinside:opacity-100">
       <div
-        className={`hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r ${bgColor} p-2 hoverinside transition-all duration-300 opacity-0 -translate-x-4`}
+        className={` absolute z-10 left-0 inset-y-0 self-stretch items-center pr-12 bg-gradient-to-r ${bgColor} p-2 hoverinside transition-all duration-300 opacity-0 -translate-x-4 ${
+          slideLeft > 0 ? "md:flex" : "md:hidden"
+        }`}
       >
         <button
           type="button"
           onClick={moveLeft}
-          className={`button button-lg button-tertiary rounded-full  ${
-            slideLeft > 0 ? "" : "opacity-0 pointer-events-none"
-          }`}
+          className={`button button-lg button-ghost rounded-full`}
         >
-          <span className="icon icon-ctrl-left"></span>
+          <span className="text-3xl text-ui-100 icon icon-ctrl-left" />
         </button>
       </div>
       <div
-        className={`hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l ${bgColor} p-2 hoverinside transition-all duration-300 opacity-0 translate-x-4`}
+        className={`hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center pl-12 bg-gradient-to-l ${bgColor} p-2 hoverinside transition-all duration-300 opacity-0 translate-x-4 ${
+          slideLeft ? "md:flex" : "md:hidden"
+        }`}
       >
         <button
           type="button"
           onClick={moveRight}
-          className={`button button-lg button-tertiary rounded-full ${
-            slideLeft < sliderContainerWidth
-              ? ""
-              : "opacity-0 pointer-events-none"
-          }`}
+          className={`button button-lg button-ghost rounded-full`}
         >
-          <span className="icon icon-ctrl-right"></span>
+          <span className="text-3xl text-ui-100 icon icon-ctrl-right" />
         </button>
       </div>
 
       <div
         ref={sliderWrapper}
-        className="overflow-x-auto scrollbar-hidden last:after:content-[''] last:after:w-24 last:after:block py-4 px-4 md:px-0"
+        className="overflow-x-auto scrollbar-desktop last:after:content-[''] last:after:w-24 last:after:block py-4 px-4 md:px-0"
       >
         <div className="flex gap-4" ref={sliderContainer}>
           {props.children}

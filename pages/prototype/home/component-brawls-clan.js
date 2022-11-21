@@ -52,7 +52,7 @@ export default function HomeBrawlClan() {
   return (
     <>
       <div className="relative">
-        <Slider itemWidth={809+16} bgColor="from-ui-900/0 via-ui-900/0 to-ui-900/0">
+        <Slider itemWidth={809+16} bgColor="from-ui-900 via-ui-900/90 to-ui-900/0">
           {ClanBrawls.map((item, itemIndex) => (
             <BrawlCardSecondary key={item.id} brawl={item} isHorizontal={true} isClan={false} />
           ))}

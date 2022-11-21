@@ -84,7 +84,7 @@ export default function HomeBrawlSolo() {
   return (
     <>
       <div className="relative">
-        <Slider itemWidth={397+16} bgColor="from-ui-900/0 via-ui-900/0 to-ui-900/0">
+        <Slider itemWidth={397+16} bgColor="from-ui-900 via-ui-900/90 to-ui-900/0">
           {SoloBrawls.map((item, itemIndex) => (
             <BrawlCardSecondary key={item.id} brawl={item} isHorizontal={false} isClan={false} />
           ))}

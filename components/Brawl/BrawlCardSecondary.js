@@ -112,9 +112,9 @@ export default function BrawlCardSecondary(props) {
                   This competition has ended
                 </div>
               ) : (
-                <div className="flex text-sm gap-1 items-center whitespace-nowrap">
-                  <span className="text-ui-300 mr-1">Time Left:</span>
-                  <span className="icon icon-clock text-ui-300" />
+                <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">
+                  <span className="mr-1">Time Left:</span>
+                  <span className="icon icon-clock" />
                   <span>23H</span>
                   <span>19M</span>
                   <span>13S</span>
