@@ -29,6 +29,18 @@ const SoloBrawls = [
       "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
   },
   {
+    id: 4,
+    game: 1,
+    name: null,
+    gameMode: "Spike Rush",
+    name: "Spike Rush Brawl",
+    status: "ongoing",
+    isPartaking: true,
+    hasClaim: false,
+    cover:
+      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
+  },
+  {
     id: 2,
     game: 3,
     name: null,
@@ -51,18 +63,6 @@ const SoloBrawls = [
     hasClaim: false,
     cover:
       "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-3.webp",
-  },
-  {
-    id: 4,
-    game: 1,
-    name: null,
-    gameMode: "Spike Rush",
-    name: "Spike Rush Brawl",
-    status: "ongoing",
-    isPartaking: true,
-    hasClaim: false,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
   },
   {
     id: 5,

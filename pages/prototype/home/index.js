@@ -157,14 +157,14 @@ export default function Home() {
           </div>
           <HomeBrawlClan />
         </section>
-        <section className="mb-8 surface sm:rounded-lg overflow-hidden hidden lg:block">
+        <section className="my-16 surface sm:rounded-lg overflow-hidden hidden lg:block">
           <div className="relative z-10 p-12 w-1/2 xl:w-1/3">
-            <h3 className="h4">
+            <h3>
               Play multiple competitions
               <br />
               at the same time
             </h3>
-            <p className="text-ui-300 mt-2 mb-4">
+            <p className="text-lg text-ui-300 mt-2 mb-4">
               Brawls use a “best-of” format. You can enter as many times as you
               want, and only your best scores count.
             </p>

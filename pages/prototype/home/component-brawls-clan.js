@@ -6,19 +6,6 @@ import Slider from "../../../components/Slider/Slider";
 
 const ClanBrawls = [
   {
-    id: 0,
-    game: 1,
-    name: null,
-    gameMode: "Unrated",
-    name: "Unrated Brawl",
-    status: "ongoing",
-    isPartaking: true,
-    hasClaim: false,
-    isClan: true,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
-  },
-  {
     id: 1,
     game: 2,
     name: null,
@@ -30,6 +17,19 @@ const ClanBrawls = [
     isClan: true,
     cover:
       "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
+  },
+  {
+    id: 0,
+    game: 1,
+    name: null,
+    gameMode: "Unrated",
+    name: "Unrated Brawl",
+    status: "ongoing",
+    isPartaking: true,
+    hasClaim: false,
+    isClan: true,
+    cover:
+      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
   },
   {
     id: 2,

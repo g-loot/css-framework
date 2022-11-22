@@ -35,7 +35,7 @@ export default function BrawlCardSecondary(props) {
             </div>
             <button
               type="button"
-              className="button button-sm button-claim"
+              className="button button-claim is-shining"
               onClick={openModalClaimLadderRewards}
             >
               <span>Claim reward</span>
