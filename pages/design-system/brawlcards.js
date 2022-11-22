@@ -1,7 +1,8 @@
 import Countdown from "../../components/Countdown/Countdown";
-import React from "react";
+import React, { useContext } from "react";
 import Tooltip from "../../components/Tooltip/Tooltip";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
+import { UiContext } from "../../contexts/ui";
 
 function calculateTimeLeft() {
   const year = new Date().getFullYear();
@@ -25,6 +26,7 @@ const NOW_IN_MS = new Date().getTime();
 const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 
 const DSpage = () => {
+  const uiContext = useContext(UiContext);
   return (
     <>
       <h1 className="mb-2">Brawl cards</h1>
@@ -381,109 +383,13 @@ const DSpage = () => {
         <h2 className="h3">Secondary cards</h2>
       </div>
 
-      {/* Stacked */}
-      <div className="mb-12" id="secondary-stacked">
-        <h2 className="h4 mb-3">Stacked</h2>
+      {/* Secondary structure */}
+      <div className="mb-12" id="secondary-strycture">
+        <h2 className="h4 mb-3">Structure</h2>
 
         <div className="">
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-wrap gap-4">
-              <div className="card-brawl card-secondary is-active">
-                <div className="card-image">
-                  <div className="card-image-content">
-                    <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
-                      <div className="ml-0 p-1 border border-ui-700 rounded-sm bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
-                        <span className="icon text-xl icon-game-pubg-symbol text-game-pubg" />
-                      </div>
-                      <span>Competitive</span>
-                      <span className="text-main card-status">Partaking</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-content">
-                  <div className="card-body">
-                    <div>
-                      <h2 className="text-3xl mb-2 uppercase">
-                        Competitive Brawl
-                      </h2>
-                      <div className="flex gap-4 items-center">
-                        <div className="flex items-center whitespace-nowrap gap-2">
-                          <img
-                            className="h-6"
-                            src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
-                            width="auto"
-                            height="auto"
-                            alt=""
-                          />
-                          <span className="font-bold text-gold-500 text-sm">
-                            5k - 30k
-                          </span>
-                        </div>
-                        <div className="flex text-sm gap-1 items-center whitespace-nowrap">
-                          <span className="text-ui-300 mr-1">Time Left:</span>
-                          <span className="icon icon-clock text-ui-300" />
-                          <Countdown
-                            separator={"  "}
-                            hasDays={false}
-                            hasHours={true}
-                            hasMinutes={true}
-                            hasSeconds={true}
-                            targetDate={dateTimeAfterThreeDays}
-                            hasLabels={true}
-                            labelsAbbr={true}
-                            labelClassName="text-base mr-1 block"
-                            className="text-ui-300 uppercase text-sm gap-1"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card-meta">
-                    <div className="flex-1 flex items-center gap-4">
-                      <div className="flex-none avatar avatar-circle avatar-xs">
-                        <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
-                        </div>
-                      </div>
-                      <div className="infobanner is-active">
-                        <div className="flex gap-2 infobanner-front">
-                          <div>
-                            <div className="uppercase text-xs text-ui-300">
-                              Points
-                            </div>
-                            <div className="text-sm font-bold">1120</div>
-                          </div>
-                          <div>
-                            <div className="uppercase text-xs text-ui-300">
-                              Position
-                            </div>
-                            <div className="text-sm font-bold">#243</div>
-                          </div>
-                        </div>
-                        <div className="infobanner-back absolute inset-0 flex items-center text-sm">
-                          <div className="animate-pulse text-ui-300">
-                            Waiting for your 3 matches...
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex items-end">
-                      <button
-                        type="button"
-                        className="button button-sm button-primary"
-                      >
-                        Go to Brawl
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="card-image-bg">
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp"
-                    alt=""
-                  />
-                </div>
-              </div>
               <div className="card-brawl card-secondary">
                 <div className="card-image">
                   <div className="card-image-content">
@@ -515,21 +421,12 @@ const DSpage = () => {
                             5k - 30k
                           </span>
                         </div>
-                        <div className="flex text-sm gap-1 items-center whitespace-nowrap">
-                          <span className="text-ui-300 mr-1">Time Left:</span>
-                          <span className="icon icon-clock text-ui-300" />
-                          <Countdown
-                            separator={"  "}
-                            hasDays={false}
-                            hasHours={true}
-                            hasMinutes={true}
-                            hasSeconds={true}
-                            targetDate={dateTimeAfterThreeDays}
-                            hasLabels={true}
-                            labelsAbbr={true}
-                            labelClassName="text-base mr-1 block"
-                            className="text-ui-300 uppercase text-sm gap-1"
-                          />
+                        <div className="flex gap-1 items-center text-sm text-ui-300 whitespace-nowrap">
+                          <span className="mr-1">Time Left:</span>
+                          <span className="icon icon-clock" />
+                          <span>23H</span>
+                          <span>19M</span>
+                          <span>13S</span>
                         </div>
                       </div>
                     </div>
@@ -552,9 +449,10 @@ const DSpage = () => {
                             <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                           </div>
                         </div>
-                        
                       </div>
-                      <span className="text-sm text-ui-300">423 players are partaking</span>
+                      <span className="text-sm text-ui-300">
+                        423 players are partaking
+                      </span>
                     </div>
                     <button
                       type="button"
@@ -571,7 +469,47 @@ const DSpage = () => {
                   />
                 </div>
               </div>
-              <div className="card-brawl card-secondary lg:card-horizontal">
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/yLu5rfpg/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Secondary Active */}
+      <div className="mb-12" id="secondary-active">
+        <h2 className="h4 mb-3">Active</h2>
+
+        <div className="">
+          <p className="text-ui-300 mb-6">
+            You can add make a secondary <b>active</b> card by adding the following
+            class name:
+            <code
+              className="interactive text-xs"
+              onClick={() => {
+                uiContext.openToastr({
+                  size: "small",
+                  text: "class name to your clipboard",
+                  color: "green",
+                  autoDelete: true,
+                  autoDeleteDelay: 2500,
+                });
+                navigator.clipboard.writeText("is-active");
+              }}
+            >
+              .is-active
+            </code>
+            .<br />Active cards have a glow around them and their card status text color and animation is affected.
+          </p>
+          <div className="flex flex-col gap-4">
+            <div className="flex-1 flex flex-wrap gap-4">
+              <div className="card-brawl card-secondary is-active">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
@@ -579,7 +517,7 @@ const DSpage = () => {
                         <span className="icon text-xl icon-game-pubg-symbol text-game-pubg" />
                       </div>
                       <span>Competitive</span>
-                      <span className="text-main card-status">Partaking</span>
+                      <span className="card-status">Partaking</span>
                     </div>
                   </div>
                 </div>
@@ -602,21 +540,12 @@ const DSpage = () => {
                             5k - 30k
                           </span>
                         </div>
-                        <div className="flex text-sm gap-1 items-center whitespace-nowrap">
-                          <span className="text-ui-300 mr-1">Time Left:</span>
-                          <span className="icon icon-clock text-ui-300" />
-                          <Countdown
-                            separator={"  "}
-                            hasDays={false}
-                            hasHours={true}
-                            hasMinutes={true}
-                            hasSeconds={true}
-                            targetDate={dateTimeAfterThreeDays}
-                            hasLabels={true}
-                            labelsAbbr={true}
-                            labelClassName="text-base mr-1 block"
-                            className="text-ui-300 uppercase text-sm gap-1"
-                          />
+                        <div className="flex gap-1 items-center text-sm text-ui-300 whitespace-nowrap">
+                          <span className="mr-1">Time Left:</span>
+                          <span className="icon icon-clock" />
+                          <span>23H</span>
+                          <span>19M</span>
+                          <span>13S</span>
                         </div>
                       </div>
                     </div>
@@ -667,6 +596,46 @@ const DSpage = () => {
                   />
                 </div>
               </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/m1q7gLps/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Secondary inactive */}
+      <div className="mb-12" id="secondary-inactive">
+        <h2 className="h4 mb-3">Inactive</h2>
+
+        <div className="">
+          <p className="text-ui-300 mb-6">
+            You can add make a secondary <b>inactive</b> card by adding the following
+            class name:
+            <code
+              className="interactive text-xs"
+              onClick={() => {
+                uiContext.openToastr({
+                  size: "small",
+                  text: "class name to your clipboard",
+                  color: "green",
+                  autoDelete: true,
+                  autoDeleteDelay: 2500,
+                });
+                navigator.clipboard.writeText("is-inactive");
+              }}
+            >
+              .is-inactive
+            </code>
+            .<br />Inactive cards have dimmed down image and their card status text color is affected.
+          </p>
+          <div className="flex flex-col gap-4">
+            <div className="flex-1 flex flex-wrap gap-4">
               <div className="card-brawl card-secondary is-inactive">
                 <div className="card-image">
                   <div className="card-image-content">
@@ -722,9 +691,10 @@ const DSpage = () => {
                             <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                           </div>
                         </div>
-                        
                       </div>
-                      <span className="text-sm text-ui-300">423 players are partaking</span>
+                      <span className="text-sm text-ui-300">
+                        423 players are partaking
+                      </span>
                     </div>
                     <button
                       type="button"
@@ -741,17 +711,43 @@ const DSpage = () => {
                   />
                 </div>
               </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/16fa8rvj/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Secondary with overlay */}
+      <div className="mb-12" id="secondary-with-overlay">
+        <h2 className="h4 mb-3">With overlay</h2>
+
+        <div className="">
+          <div className="flex flex-col gap-4">
+            <div className="flex-1 flex flex-wrap gap-4">
               <div className="card-brawl card-secondary">
                 <div className="card-overlay">
                   <div>
                     <div className="font-headings text-2xl font-bold italic text-ui-100">
                       You won a prize!
                     </div>
-                    <button type="button" className="button button-claim is-shining">
+                    <button
+                      type="button"
+                      className="button button-claim is-shining"
+                    >
                       <span>Claim reward</span>
                     </button>
                   </div>
-                  <img src="https://res.cloudinary.com/gloot/image/upload/v1668945075/Marketing/2022_prototype/card-rewarddoverlay-bg.png" alt="" />
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1668945075/Marketing/2022_prototype/card-rewarddoverlay-bg.png"
+                    alt=""
+                  />
                 </div>
                 <div className="card-image">
                   <div className="card-image-content">
@@ -807,9 +803,10 @@ const DSpage = () => {
                             <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                           </div>
                         </div>
-                        
                       </div>
-                      <span className="text-sm text-ui-300">423 players have partaken</span>
+                      <span className="text-sm text-ui-300">
+                        423 players have partaken
+                      </span>
                     </div>
                     <button
                       type="button"
@@ -832,7 +829,250 @@ const DSpage = () => {
                 className="rounded"
                 width="100%"
                 height="300"
-                src="//jsfiddle.net/augustin_hiebel/1ypr38wg/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/d4vjskp9/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Secondary horizontal */}
+      <div className="mb-12" id="secondary-horizontal">
+        <h2 className="h4 mb-3">Horizontal</h2>
+
+        <div className="">
+          <p className="text-ui-300 mb-6">
+            You can make a secondary Brawl card horizontal by adding the
+            following class name:
+            <code
+              className="interactive text-xs"
+              onClick={() => {
+                uiContext.openToastr({
+                  size: "small",
+                  text: "class name to your clipboard",
+                  color: "green",
+                  autoDelete: true,
+                  autoDeleteDelay: 2500,
+                });
+                navigator.clipboard.writeText("card-horizontal");
+              }}
+            >
+              .card-horizontal
+            </code>
+            .
+          </p>
+          <div className="flex flex-col gap-4">
+            <div className="flex-1 flex flex-wrap gap-4">
+              <div className="card-brawl card-secondary card-horizontal">
+                <div className="card-image">
+                  <div className="card-image-content">
+                    <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
+                      <div className="ml-0 p-1 border border-ui-700 rounded-sm bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+                        <span className="icon text-xl icon-game-pubg-symbol text-game-pubg" />
+                      </div>
+                      <span>Competitive</span>
+                      <span className="card-status">Ongoing</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-content">
+                  <div className="card-body">
+                    <div>
+                      <h2 className="text-3xl mb-2 uppercase">
+                        Competitive Brawl
+                      </h2>
+                      <div className="flex gap-4 items-center">
+                        <div className="flex items-center whitespace-nowrap gap-2">
+                          <img
+                            className="h-6"
+                            src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
+                            width="auto"
+                            height="auto"
+                            alt=""
+                          />
+                          <span className="font-bold text-gold-500 text-sm">
+                            5k - 30k
+                          </span>
+                        </div>
+                        <div className="flex gap-1 items-center text-sm text-ui-300 whitespace-nowrap">
+                          <span className="mr-1">Time Left:</span>
+                          <span className="icon icon-clock" />
+                          <span>23H</span>
+                          <span>19M</span>
+                          <span>13S</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-meta">
+                    <div className="flex items-center gap-2">
+                      <div className="avatar-group -space-x-2">
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                          </div>
+                        </div>
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                          </div>
+                        </div>
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-sm text-ui-300">
+                        423 players are partaking
+                      </span>
+                    </div>
+                    <button
+                      type="button"
+                      className="button button-sm button-primary"
+                    >
+                      Explore
+                    </button>
+                  </div>
+                </div>
+                <div className="card-image-bg">
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/gyh1jv6n/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Secondary responsive horizontal */}
+      <div className="mb-12" id="secondary-responsive-horizontal">
+        <h2 className="h4 mb-3">Responsive horizontal</h2>
+
+        <div className="">
+          <p className="text-ui-300 mb-6">
+            You can make a secondary Brawl card horizontal based on the screen
+            size using the following class name:
+            <code
+              className="interactive text-xs"
+              onClick={() => {
+                uiContext.openToastr({
+                  size: "small",
+                  text: "class name to your clipboard",
+                  color: "green",
+                  autoDelete: true,
+                  autoDeleteDelay: 2500,
+                });
+                navigator.clipboard.writeText("lg:card-horizontal");
+              }}
+            >
+              .&#123;xx&#x7D;:card-horizontal
+            </code>
+            .<br />
+            &#123;xx&#x7D; can be <code className="text-xs">xs</code>,{" "}
+            <code className="text-xs">sm</code>,{" "}
+            <code className="text-xs">md</code>,{" "}
+            <code className="text-xs">lg</code>,{" "}
+            <code className="text-xs">xl</code>.
+          </p>
+          <div className="flex flex-col gap-4">
+            <div className="flex-1 flex flex-wrap gap-4">
+              <div className="card-brawl card-secondary lg:card-horizontal">
+                <div className="card-image">
+                  <div className="card-image-content">
+                    <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
+                      <div className="ml-0 p-1 border border-ui-700 rounded-sm bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+                        <span className="icon text-xl icon-game-pubg-symbol text-game-pubg" />
+                      </div>
+                      <span>Competitive</span>
+                      <span className="card-status">Ongoing</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="card-content">
+                  <div className="card-body">
+                    <div>
+                      <h2 className="text-3xl mb-2 uppercase">
+                        Competitive Brawl
+                      </h2>
+                      <div className="flex gap-4 items-center">
+                        <div className="flex items-center whitespace-nowrap gap-2">
+                          <img
+                            className="h-6"
+                            src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
+                            width="auto"
+                            height="auto"
+                            alt=""
+                          />
+                          <span className="font-bold text-gold-500 text-sm">
+                            5k - 30k
+                          </span>
+                        </div>
+                        <div className="flex gap-1 items-center text-sm text-ui-300 whitespace-nowrap">
+                          <span className="mr-1">Time Left:</span>
+                          <span className="icon icon-clock" />
+                          <span>23H</span>
+                          <span>19M</span>
+                          <span>13S</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-meta">
+                    <div className="flex items-center gap-2">
+                      <div className="avatar-group -space-x-2">
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                          </div>
+                        </div>
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                          </div>
+                        </div>
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-sm text-ui-300">
+                        423 players are partaking
+                      </span>
+                    </div>
+                    <button
+                      type="button"
+                      className="button button-sm button-primary"
+                    >
+                      Explore
+                    </button>
+                  </div>
+                </div>
+                <div className="card-image-bg">
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/6u7xhz8k/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
               ></iframe>
             </div>
           </div>

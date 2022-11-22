@@ -183,9 +183,9 @@ export default function Home() {
                 )}
               </div>
               <div className="header-meta lg:items-end p-3">
-                {!emptyClan && (
+                {!emptyClan ? (
                   <>
-                    {selectedUser.clan && (
+                    {selectedUser.clan ? (
                       <Link
                         href={`/prototype/clans/${
                           selectedUser.clan
@@ -230,214 +230,54 @@ export default function Home() {
                           </div>
                         </div>
                       </Link>
-                    )}
-                    {!selectedUser.isYou ? (
-                      <>
-                        {!selectedUser.clan && (
-                          <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                            <div className="text-center">
-                              {selectedUser.nickname} is not part of a clan.
-                            </div>
-                            <Link href="#">
-                              <a
-                                type="button"
-                                className="button button-sm button-primary w-full"
-                              >
-                                <span>Recruit to your clan</span>
-                              </a>
-                            </Link>
-                          </div>
-                        )}
-                      </>
                     ) : (
-                      <>
-                        {!selectedUser.clan && (
-                          <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                            <div className="text-center">
-                              You are not part of a clan.
-                            </div>
-                            <Link href="/prototype/clans/search">
-                              <a
-                                type="button"
-                                className="button button-sm button-primary w-full"
-                              >
-                                <span>Join a clan</span>
-                              </a>
-                            </Link>
-                          </div>
-                        )}
-                      </>
+                      <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                        <div className="text-center">
+                          {selectedUser.nickname} is not part of a clan.
+                        </div>
+                        <Link href="#">
+                          <a
+                            type="button"
+                            className="button button-sm button-primary w-full"
+                          >
+                            <span>Recruit to your clan</span>
+                          </a>
+                        </Link>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    {!selectedUser.isYou ? (
+                      <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                        <div className="text-center">
+                          {selectedUser.nickname} is not part of a clan.
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                        <div className="text-center">
+                          You are not part of a clan.
+                        </div>
+                        <Link href="/prototype/clans/search">
+                          <a
+                            type="button"
+                            className="button button-sm button-primary w-full"
+                          >
+                            <span>Join a clan</span>
+                          </a>
+                        </Link>
+                      </div>
                     )}
                   </>
                 )}
               </div>
-              {/*
-                <div className="header-meta">
-                  <div className="flex justify-center gap-4 py-4">
-                    <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
-                      <div>
-                        <div className="text-4xl font-headings mb-0.5">
-                          {selectedUser.stats.xp}
-                        </div>
-                        <div className="text-xs text-ui-300 uppercase">
-                          Total
-                          <br />
-                          XP
-                        </div>
-                      </div>
-                    </div>
-                    <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
-                      <div>
-                        <div className="text-4xl font-headings mb-0.5">
-                          {selectedUser.stats.playedBrawls}
-                        </div>
-                        <div className="text-xs text-ui-300 uppercase">
-                          Played
-                          <br />
-                          brawls
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                  */}
+
               <div className="header-bg">
                 <img src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp" />
               </div>
             </section>
-            {/*
-            <section
-              className="surface sm:rounded-lg p-2 animate-slide-in-bottom animate-delay mb-4"
-              style={{ "--delay": "calc(1 * 0.05s)" }}
-            >
-              {emptyClan && (
-                <div className="surface sm:rounded-lg">
-                  {selectedUser.isYou && (
-                    <div className="p-4 flex justify-between gap-3 items-center">
-                      <span>You are not in a clan.</span>
-                      <Link
-                        href={`/prototype/clans/search${prototype.getURLparams()}`}
-                      >
-                        <button
-                          type="button"
-                          className="button button-sm button-primary"
-                        >
-                          <span>Find a clan</span>
-                        </button>
-                      </Link>
-                    </div>
-                  )}
-                  {!selectedUser.isYou && (
-                    <div className="item">
-                      <div className="item-image text-0">
-                        <span className="icon icon-puzzled text-2xl text-ui-400" />
-                      </div>
-                      <div className="item-body">
-                        <span>
-                          {selectedUser.nickname} is not part of a clan.
-                        </span>
-                      </div>
-                      <div className="item-actions">
-                        <div>
-                          {" "}
-                          <Link href="#">
-                            <a
-                              type="button"
-                              className="button button-sm button-primary"
-                            >
-                              <span>Recruit to your clan</span>
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-              {!emptyClan && (
-                <div className="flex gap-4 items-center">
-                  {selectedUser.clan && (
-                    <>
-                      <div className="flex-none ml-2 text-sm text-ui-300 font-bold uppercase">
-                        Proud member of
-                      </div>
 
-                      <div className="item">
-                        <div className="item-image">
-                          <Link
-                            href={`/prototype/clans/${
-                              selectedUser.clan
-                            }${prototype.getURLparams()}`}
-                          >
-                            <div className="avatar avatar-sm avatar-squircle interactive">
-                              <div>
-                                <img
-                                  src={
-                                    prototype.getClanByID(selectedUser.clan)
-                                      .avatar
-                                  }
-                                  alt="avatar"
-                                />
-                              </div>
-                            </div>
-                          </Link>
-                        </div>
-                        <div className="item-body">
-                          <Link
-                            href={`/prototype/clans/${
-                              selectedUser.clan
-                            }${prototype.getURLparams()}`}
-                          >
-                            <div className="item-title text-xl font-headings font-bold italic text-ui-100 interactive">
-                              &#91;
-                              {prototype.getClanByID(selectedUser.clan).tag}
-                              &#93;{" "}
-                              {
-                                prototype.getClanByID(selectedUser.clan)
-                                  .nickname
-                              }
-                            </div>
-                          </Link>
-                          <div className="text-sm text-ui-300">
-                            {
-                              prototype.getClanByID(selectedUser.clan).members
-                                .length
-                            }{" "}
-                            members
-                          </div>
-                        </div>
-                      </div>
-                    </>
-                  )}
-                  {!selectedUser.clan && (
-                    <div className="item">
-                      <div className="item-image text-0">
-                        <span className="icon icon-puzzled text-2xl text-ui-400" />
-                      </div>
-                      <div className="item-body">
-                        <span>
-                          {selectedUser.nickname} is not part of a clan.
-                        </span>
-                      </div>
-                      <div className="item-actions">
-                        <div>
-                          {" "}
-                          <Link href="#">
-                            <a
-                              type="button"
-                              className="button button-sm button-primary"
-                            >
-                              <span>Recruit to your clan</span>
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-            </section>
-                  */}
             <section
               className="flex flex-col lg:flex-row gap-4 lg:items-stretch animate-slide-in-bottom animate-delay mb-4"
               style={{ "--delay": "calc(2 * 0.05s)" }}
@@ -638,33 +478,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-
-                {/*
-                <div className="surface sm:rounded-lg">
-                  <div className="p-2 border-b border-ui-700 flex justify-between items-start">
-                    <div>
-                      <h2 className="text-xl italic">Tournaments</h2>
-                    </div>
-                  </div>
-                  <div className="max-h-60 overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto scrollbar-desktop">
-                    <ul className="space-x-2 lg:space-x-0 lg:space-y-2 p-2 flex lg:block">
-                      {prototype.games.map((game, gameIndex) => (
-                        <>
-                          {game.tournaments?.map(
-                            (tournament, tournamentIndex) => (
-                              <ListItemTournament
-                                key={tournamentIndex}
-                                game={game}
-                                tournament={tournament}
-                              />
-                            )
-                          )}
-                        </>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                            */}
               </div>
             </section>
             {!selectedUser.stats.gamestats && (

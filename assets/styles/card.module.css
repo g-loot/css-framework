@@ -828,7 +828,7 @@
     }
   }
 
-  &:not(.card-horizontal) {
+  & {
     @apply
     grid-cols-1
     md:max-w-[397px]
@@ -864,6 +864,7 @@
       order-1
       col-span-3
       rounded-l-lg
+      rounded-r-none
       ;
     }
     > .card-image-bg {
@@ -918,6 +919,7 @@
         order-1
         col-span-3
         rounded-l-lg
+        rounded-r-none
         ;
       }
       > .card-image-bg {
@@ -970,6 +972,7 @@
         order-1
         col-span-3
         rounded-l-lg
+        rounded-r-none
         ;
       }
       > .card-image-bg {
@@ -1022,6 +1025,7 @@
         order-1
         col-span-3
         rounded-l-lg
+        rounded-r-none
         ;
       }
       > .card-image-bg {
@@ -1074,6 +1078,7 @@
         order-1
         col-span-3
         rounded-l-lg
+        rounded-r-none
         ;
       }
       > .card-image-bg {
@@ -1160,7 +1165,7 @@
     }
     background-image: linear-gradient(to right, rgba(var(--color-ui-800) / 100%) 8%, rgba(var(--color-ui-700) / 100%) 18%, rgba(var(--color-ui-800) / 100%) 33%);
 
-    :where(img, .card-decoration::before, .card-decoration::after, .chip > *, .card-bg, .card-meta > * > *) {
+    :where(img, .card-decoration::before, .card-decoration::after, .chip > *, .card-bg, .card-meta > * > *, .avatar) {
       @apply
       opacity-0
       ;
