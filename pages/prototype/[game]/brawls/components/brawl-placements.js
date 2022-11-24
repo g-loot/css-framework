@@ -52,6 +52,7 @@ export default function BrawlPlacements() {
   const variablesContext = useContext(VariablesContext);
   const modalInfoBeforeYouPlay =
     query.modalinfobeforeyouplay === "true" ? true : false;
+  const freeEntry = query.freeentry === "true" ? true : false;
   const [heightValue, setHeightValue] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const sliderWrapper = useRef(null);
@@ -182,28 +183,47 @@ export default function BrawlPlacements() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row gap-y-2 items-center justify-between px-4 pb-4">
+        <div className="flex flex-row gap-y-2 items-center justify-between px-4 pb-4">
           <div className="flex items-center gap-3">
             {variablesContext.brawlStep < 3 ? (
-              <button
-                type="button"
-                className="button button-sm button-primary button-currency button-token is-shining"
-                onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
-              >
-                <div>
-                  <span>Activate 3 matches</span>
-                </div>
-                <div>
-                  <img
-                    className="dropshadow-xs"
-                    src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                    width="34"
-                    height="34"
-                    alt="coin"
-                  />
-                  <span>2</span>
-                </div>
-              </button>
+              <>
+                {freeEntry ? (
+                  <div
+                    className="tooltip tooltip-attention tooltip-right"
+                    data-tooltip="Play entry matches and hit the leaderboard"
+                  >
+                    <button
+                      type="button"
+                      className="button button-sm button-claim is-shining"
+                      onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
+                    >
+                      <div>
+                        <span>Activate free entry</span>
+                      </div>
+                    </button>
+                  </div>
+                ) : (
+                  <button
+                    type="button"
+                    className="button button-sm button-primary button-currency button-token is-shining"
+                    onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
+                  >
+                    <div>
+                      <span>Activate 3 matches</span>
+                    </div>
+                    <div>
+                      <img
+                        className="dropshadow-xs"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
+                        width="34"
+                        height="34"
+                        alt="coin"
+                      />
+                      <span>2</span>
+                    </div>
+                  </button>
+                )}
+              </>
             ) : (
               <button
                 type="button"
@@ -225,12 +245,14 @@ export default function BrawlPlacements() {
                 </div>
               </button>
             )}
-            <a
-              onClick={openModalBuyTokens}
-              className="link text-sm text-ui-300"
-            >
-              Get more tokens
-            </a>
+            {!freeEntry && (
+              <a
+                onClick={openModalBuyTokens}
+                className="link text-sm text-ui-300"
+              >
+                Get more tokens
+              </a>
+            )}
           </div>
           {variablesContext.brawlStep >= 3 && !resultsDone && (
             <div className="animate-slide-in-bottom">

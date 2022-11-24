@@ -11,7 +11,7 @@ const SoloBrawls = [
     gameMode: "Unrated",
     name: "Unrated Brawl",
     status: "ongoing",
-    isPartaking: true,
+    isEnrolled: true,
     hasClaim: true,
     cover:
       "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
@@ -23,7 +23,7 @@ const SoloBrawls = [
     gameMode: "Unrated",
     name: "Unrated Brawl",
     status: "ongoing",
-    isPartaking: true,
+    isEnrolled: true,
     hasClaim: false,
     cover:
       "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
@@ -35,7 +35,7 @@ const SoloBrawls = [
     gameMode: "Spike Rush",
     name: "Spike Rush Brawl",
     status: "ongoing",
-    isPartaking: true,
+    isEnrolled: true,
     hasClaim: false,
     cover:
       "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
@@ -47,7 +47,7 @@ const SoloBrawls = [
     gameMode: "Ranked trio",
     name: "Competitive Brawl",
     status: "ongoing",
-    isPartaking: false,
+    isEnrolled: false,
     hasClaim: false,
     cover:
       "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-1.webp",
@@ -59,7 +59,7 @@ const SoloBrawls = [
     gameMode: "Ranked Arena",
     name: "Weekly Arena Brawl",
     status: "ongoing",
-    isPartaking: false,
+    isEnrolled: false,
     hasClaim: false,
     cover:
       "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-3.webp",
@@ -71,7 +71,7 @@ const SoloBrawls = [
     gameMode: "Ranked squad FPP",
     name: "Competitive Brawl",
     status: "ongoing",
-    isPartaking: false,
+    isEnrolled: false,
     hasClaim: false,
     cover:
       "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",

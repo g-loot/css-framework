@@ -415,6 +415,15 @@ export const FrameworkPages = {
           new: false,
         },
         {
+          label: "Ongoing Brawls listing",
+          chip: "free entry",
+          url: "valorant/brawls",
+          query: "freeentry=true",
+          tags: "game, brawls, free entry, new user",
+          tab: 1,
+          new: false,
+        },
+        {
           label: "How it works",
           url: "valorant/brawls",
           query: "tab=how-it-works",
@@ -480,6 +489,15 @@ export const FrameworkPages = {
           url: "valorant/brawls/1",
           query: "tab=solo-leaderboard&empty=true",
           tags: "game, brawls, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze, empty state",
+          tab: 2,
+          new: false,
+        },
+        {
+          label: "Solo leaderboard",
+          chip: "free entry",
+          url: "valorant/brawls/1",
+          query: "tab=solo-leaderboard&freeentry=true",
+          tags: "game, brawls, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze, free entry, new user",
           tab: 2,
           new: false,
         },
@@ -690,6 +708,19 @@ export const FrameworkPages = {
           new: false,
           deprecated: true,
         },
+      ],
+    },
+    {
+      title: "Stats",
+      pages: [
+        {
+          label: "Valorant stats",
+          url: "valorant/stats",
+          query: "",
+          tags: "game, stats, valorant",
+          new: false,
+        },
+        
       ],
     },
   ],

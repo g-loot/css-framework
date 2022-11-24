@@ -165,8 +165,7 @@ export default function Home() {
               at the same time
             </h3>
             <p className="text-lg text-ui-300 mt-2 mb-4">
-              Brawls use a “best-of” format. You can enter as many times as you
-              want, and only your best scores count.
+              Try as many Brawls as you like and play as much as you want! See you on the leaderboard! 
             </p>
           </div>
           <img

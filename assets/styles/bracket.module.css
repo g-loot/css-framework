@@ -199,6 +199,34 @@
     text-center
     ;
   }
+  &.is-active {
+    .bracket-teams {
+      > li {
+        @apply shadow-[0_0_0_1px_rgba(var(--color-error-300)/1)];
+      }
+    }
+    .bracket-meta::after {
+      @apply content-['']
+      w-2
+      h-2
+      rounded-full
+      bg-error-300/75
+      animate-[live-glow_2s_linear_infinite]
+      right-2;
+    }
+  }
+}
+
+@keyframes live-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--color-error-300) / 25%);
+  }
+  50% {
+    box-shadow: 0 0 0 0.25rem rgba(var(--color-error-300) / 35%);
+  }
+  100% {
+    box-shadow: 0 0 0 0.5rem rgba(var(--color-error-300) / 0%);
+  }
 }
 
 .bracket-round {

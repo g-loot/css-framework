@@ -101,11 +101,11 @@ const DSpage = () => {
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
-                    Bottom
+                    left
                   </div>
                   <div className="flex-1">
                     <div
-                      className="chip chip-primary tooltip tooltip-bottom"
+                      className="chip chip-primary tooltip tooltip-left"
                       data-tooltip="Lorem ipsum dolor sit amet"
                     >
                       <span>Tooltip</span>
@@ -114,11 +114,11 @@ const DSpage = () => {
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
-                    left
+                    Bottom
                   </div>
                   <div className="flex-1">
                     <div
-                      className="chip chip-primary tooltip tooltip-left"
+                      className="chip chip-primary tooltip tooltip-bottom"
                       data-tooltip="Lorem ipsum dolor sit amet"
                     >
                       <span>Tooltip</span>
@@ -254,6 +254,159 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/hx13jbLq/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Attention tooltip */}
+      <div className="mb-12" id="attention-tooltip">
+        <h2 className="h3 mb-3">Attention tooltip</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 flex justify-center">
+                <div className="flex-1 space-y-4">
+                  <div className="w-full flex gap-4 items-center">
+                    <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                      Top{" "}
+                      <div className="chip chip-xs chip-secondary pointer-events-none uppercase">
+                        <span>default</span>
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                    <div
+                        className="tooltip tooltip-attention tooltip-top"
+                        data-tooltip="Lorem ipsum dolor sit amet"
+                      >
+                        <button type="button" className="button button-main button-sm">
+                          <span>Button label</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-full flex gap-4 items-center">
+                    <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                      Right
+                    </div>
+                    <div className="flex-1">
+                      <div
+                        className="tooltip tooltip-attention tooltip-right"
+                        data-tooltip="Lorem ipsum dolor sit amet"
+                      >
+                        <button type="button" className="button button-main button-sm">
+                          <span>Button label</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-full flex gap-4 items-center">
+                    <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                      left
+                    </div>
+                    <div className="flex-1">
+                    <div
+                        className="tooltip tooltip-attention tooltip-left"
+                        data-tooltip="Lorem ipsum dolor sit amet"
+                      >
+                        <button type="button" className="button button-main button-sm">
+                          <span>Button label</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-full flex gap-4 items-center">
+                    <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                      Bottom
+                    </div>
+                    <div className="flex-1">
+                    <div
+                        className="tooltip tooltip-attention tooltip-bottom"
+                        data-tooltip="Lorem ipsum dolor sit amet"
+                      >
+                        <button type="button" className="button button-main button-sm">
+                          <span>Button label</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/c85pq6v7/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Attention responsive positioning */}
+      <div className="mb-12" id="attention-responsive-positioning">
+        <h2 className="h3 mb-3">Attention responsive positioning</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <p className="text-ui-300 mb-6">
+                  You can change the position of the tooltip based on the screen
+                  size using the following class name:
+                  <code
+                    className="interactive text-xs"
+                    onClick={() => {
+                      uiContext.openToastr({
+                        size: "small",
+                        text: "class name to your clipboard",
+                        color: "green",
+                        autoDelete: true,
+                        autoDeleteDelay: 2500,
+                      });
+                      navigator.clipboard.writeText("lg:tooltip-left");
+                    }}
+                  >
+                    .&#123;xx&#x7D;:tooltip-&#123;position&#x7D;
+                  </code>
+                  .<br />
+                  &#123;xx&#x7D; can be <code className="text-xs">
+                    xs
+                  </code>, <code className="text-xs">sm</code>,{" "}
+                  <code className="text-xs">md</code>,{" "}
+                  <code className="text-xs">lg</code>,{" "}
+                  <code className="text-xs">xl</code>.
+                </p>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
+                    In this example, the bottom tooltip will be displayed on the
+                    right above 1024px (lg).
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex gap-4 justify-center">
+                      <div
+                        className="tooltip tooltip-attention tooltip-bottom lg:tooltip-right"
+                        data-tooltip="Lorem ipsum dolor sit amet"
+                      >
+                        <button type="button" className="button button-main button-sm">
+                          <span>Button label</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/1qvt0d39/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

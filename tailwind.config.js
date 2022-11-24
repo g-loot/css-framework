@@ -250,6 +250,7 @@ module.exports = {
         "drop-in": "dropIn 1.1s both",
         "bounce-right": "bounceRight 1.1s infinite",
         "bounce-left": "bounceLeft 1.1s infinite",
+        "bounce-bottom": "bounceBottom 1.1s infinite",
         floating: "floating 6s cubic-bezier(.45,0,.4,1) infinite",
         shake: "shake 0.8s cubic-bezier(.455,.030,.515,.955) both",
       },
@@ -343,6 +344,16 @@ module.exports = {
         bounceLeft: {
           "0%, 100%": {
             transform: "translateX(25%)",
+            animationTimingFunction: "cubic-bezier(0.8,0,1,1)",
+          },
+          "50%": {
+            transform: "none",
+            animationTimingFunction: "cubic-bezier(0,0,0.2,1)",
+          },
+        },
+        bounceBottom: {
+          "0%, 100%": {
+            transform: "translateY(25%)",
             animationTimingFunction: "cubic-bezier(0.8,0,1,1)",
           },
           "50%": {

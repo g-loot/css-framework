@@ -74,16 +74,16 @@ export const PrototypeProvider = ({ children }) => {
   }
   function getURLparams(prep) {
     const hasAds = query.ads === "true" ? true : false;
-    const hasNewStructure = query.newstructure === "true" ? true : false;
+    const freeEntry = query.freeentry === "true" ? true : false;
     const Prep = prep === undefined ? "?" : prep;
-    if(hasAds && hasNewStructure) {
-      const param = "newstructure=true&ads=true";
+    if(hasAds && freeEntry) {
+      const param = "freeentry=true&ads=true";
       return(Prep+param);
-    } else if(hasAds && !hasNewStructure) {
+    } else if(hasAds && !freeEntry) {
       const param = "ads=true";
       return(Prep+param);
-    } else if(!hasAds && hasNewStructure) {
-      const param = "newstructure=true";
+    } else if(!hasAds && freeEntry) {
+      const param = "freeentry=true";
       return(Prep+param);
     } else {
       return("");

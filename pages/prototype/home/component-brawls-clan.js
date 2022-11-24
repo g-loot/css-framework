@@ -12,7 +12,7 @@ const ClanBrawls = [
     gameMode: "Unrated",
     name: "Unrated Brawl",
     status: "ongoing",
-    isPartaking: true,
+    isEnrolled: true,
     hasClaim: true,
     isClan: true,
     cover:
@@ -25,7 +25,7 @@ const ClanBrawls = [
     gameMode: "Unrated",
     name: "Unrated Brawl",
     status: "ongoing",
-    isPartaking: true,
+    isEnrolled: true,
     hasClaim: false,
     isClan: true,
     cover:
@@ -38,7 +38,7 @@ const ClanBrawls = [
     gameMode: "Ranked Arena",
     name: "Weekly Arena Brawl",
     status: "ongoing",
-    isPartaking: false,
+    isEnrolled: false,
     hasClaim: false,
     isClan: true,
     cover:

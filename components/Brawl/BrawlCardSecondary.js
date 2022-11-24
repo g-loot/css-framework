@@ -14,7 +14,7 @@ export default function BrawlCardSecondary(props) {
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
   const isHorizontal = props.isHorizontal || false;
-  const isPartaking = props.brawl.isPartaking || false;
+  const isEnrolled = props.brawl.isEnrolled || false;
   const brawl = props.brawl;
 
   function openModalClaimLadderRewards() {
@@ -25,7 +25,7 @@ export default function BrawlCardSecondary(props) {
     <div
       className={`card-brawl card-secondary ${
         isHorizontal ? "md:card-horizontal" : ""
-      } ${isPartaking && !brawl.hasClaim ? "is-active" : ""} `}
+      } ${isEnrolled && !brawl.hasClaim ? "is-active" : ""} `}
     >
       {brawl.hasClaim && (
         <div className="card-overlay">
@@ -85,7 +85,7 @@ export default function BrawlCardSecondary(props) {
             </div>
             <span>{brawl.gameMode}</span>
             <span className={`text-main card-status capitalize`}>
-              {brawl.isPartaking ? <>Partaking</> : <>{brawl.status}</>}
+              {brawl.isEnrolled ? <>Enrolled</> : <>{brawl.status}</>}
             </span>
           </div>
         </div>
@@ -140,7 +140,7 @@ export default function BrawlCardSecondary(props) {
         <div className="card-meta">
           {!brawl.isClan ? (
             <>
-              {brawl.isPartaking ? (
+              {brawl.isEnrolled ? (
                 <div className="flex-1 flex items-center gap-4">
                   <div className="flex-none avatar avatar-circle avatar-xs">
                     <div>
@@ -194,7 +194,7 @@ export default function BrawlCardSecondary(props) {
                   <span className="text-sm text-ui-300">
                     423 players{" "}
                     {brawl.status !== "finished" ? (
-                      <> are partaking</>
+                      <> are enrolled</>
                     ) : (
                       <>have partaken</>
                     )}
@@ -281,7 +281,7 @@ export default function BrawlCardSecondary(props) {
                     : "button-secondary"
                 }`}
               >
-                {brawl.isPartaking ? (
+                {brawl.isEnrolled ? (
                   <span>Go to Brawl</span>
                 ) : (
                   <span>Explore</span>

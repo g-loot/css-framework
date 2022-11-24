@@ -1,8 +1,19 @@
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
 import DigitalClock from "./DigitalClock";
 
 const slides = [
+  {
+    subtitle: "Free entry",
+    title: "Compete for free!",
+    description:
+      "Brawl is our G-Loot Special! You compete against other G-Loot players to climb the leaderboard, get on top and win crazy rewards! Interested? Entry Brawl is on us! ",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1669283599/Marketing/2022_prototype/Carousel_Free_entry_1.jpg",
+    buttonLabel: "Compete now",
+    buttonURL: "/prototype/valorant/brawls?freeentry=true",
+  },
   {
     subtitle: "G-Loot",
     title: "Valorant Clash is here",
@@ -10,16 +21,6 @@ const slides = [
       "32 teams will duke it out over 3 days across 18 matches. The top teams will move on to the Grand Final. Do not miss out!",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1668956919/Logos%20for%20tournaments/Carousel_Clash_1.jpg",
-    buttonLabel: "Learn more",
-    buttonURL: "#",
-  },
-  {
-    subtitle: "News & updates",
-    title: "New tournaments available",
-    description:
-      "There are some new tournaments for you to compete in. Check them out now!",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1654158116/Marketing/2022_prototype/DummyContent/carousel-item-gloot-newtournaments.jpg",
     buttonLabel: "Learn more",
     buttonURL: "#",
   },
@@ -182,14 +183,16 @@ export default function Carousel(props) {
                   <div>
                     <h2 className="h3 text-ui-100">{slide.title}</h2>
                     <p className="mb-5 mt-3 text-ui-200">{slide.description}</p>
-                    <button className="button button-primary">
-                      <span>{slide.buttonLabel}</span>
-                      {slide.buttonExternal && (
-                        <>
-                          <span className="icon icon-box-arrow-top-right" />
-                        </>
-                      )}
-                    </button>
+                    <Link href={slide.buttonURL}>
+                      <button type="button" className="button button-primary">
+                        <span>{slide.buttonLabel}</span>
+                        {slide.buttonExternal && (
+                          <>
+                            <span className="icon icon-box-arrow-top-right" />
+                          </>
+                        )}
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="carousel-backdrop">
@@ -207,7 +210,10 @@ export default function Carousel(props) {
                   key={item}
                   className={`${slideNumber === itemIndex ? "is-active" : ""}`}
                 >
-                  <button type="button" onClick={slideHandler.bind(this, itemIndex)}>
+                  <button
+                    type="button"
+                    onClick={slideHandler.bind(this, itemIndex)}
+                  >
                     {isOnboarding && <span>Step {itemIndex + 1}</span>}
                     {!isOnboarding && (
                       <>
@@ -229,21 +235,20 @@ export default function Carousel(props) {
           </ul>
           {isWithButtons && (
             <div className="carousel-control">
-            <button
-              className="button button-secondary"
-              onClick={prevHandler.bind(this, slideNumber, slides.length)}
-            >
-              <span className="icon icon-ctrl-left" />
-            </button>
-            <button
-              className="button button-secondary"
-              onClick={nextHandler.bind(this, slideNumber, slides.length)}
-            >
-              <span className="icon icon-ctrl-right" />
-            </button>
-          </div>
+              <button
+                className="button button-secondary"
+                onClick={prevHandler.bind(this, slideNumber, slides.length)}
+              >
+                <span className="icon icon-ctrl-left" />
+              </button>
+              <button
+                className="button button-secondary"
+                onClick={nextHandler.bind(this, slideNumber, slides.length)}
+              >
+                <span className="icon icon-ctrl-right" />
+              </button>
+            </div>
           )}
-          
         </div>
       </div>
     </>

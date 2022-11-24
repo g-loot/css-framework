@@ -42,9 +42,11 @@ export default function Brawls() {
   const [selectedGame, setSelectedGame] = useState(null);
   const { game } = router.query;
   const { tab } = router.query;
+  const { query } = useRouter();
   const defaultTab = "ongoing";
   const selectedTab = tab ? tab : defaultTab;
   const uiContext = useContext(UiContext);
+  const freeEntry = query.freeentry === "true" ? true : false;
 
   function openModalBrawlHowitworksVideo() {
     uiContext.openModal(
@@ -81,12 +83,27 @@ export default function Brawls() {
                   />
                 </div>
                 <div className="header-body">
-                  <h1 className="text-4xl mb-2 leading-none">Brawls</h1>
-                  <p className="text-ui-300 max-w-[45ch] mb-4">
-                    Use your stats to climb the Brawl leaderboard and win
-                    prizes. No waiting, no dedicated servers. Play on your own
-                    schedule!
-                  </p>
+                  {freeEntry ? (
+                    <>
+                    <h1 className="text-4xl mb-2 leading-none">Compete for free!</h1>
+                    <p className="text-ui-300 max-w-[25ch] mb-2">
+                      Use your stats to climb the Brawl leaderboard and win
+                      prizes. No waiting, no dedicated servers. Play on your own
+                      schedule! 
+                    </p>
+                    <p className="text-blue-300 max-w-[25ch] mb-4"><span className="font-bold">First time competing?</span> Your entry Brawl is on us!
+                      Simply pick any Brawl you like and claim your free Brawl!</p>
+                    </>
+                  ) : (
+                    <>
+                    <h1 className="text-4xl mb-2 leading-none">Brawls</h1>
+                    <p className="text-ui-300 max-w-[25ch] mb-4">
+                      Use your stats to climb the Brawl leaderboard and win
+                      prizes. No waiting, no dedicated servers. Play on your own
+                      schedule!
+                    </p>
+                    </>
+                  )}
                   <div className="flex flex-col md:flex-row gap-2">
                     <button
                       type="button"

@@ -54,6 +54,7 @@ export default function TabBrawlsSoloLeaderboards() {
   const { brawl_id } = router.query;
   const hasClaim = query.hasclaim === "true" ? true : false;
   const isEmpty = query.empty === "true" ? true : false;
+  const freeEntry = query.freeentry === "true" ? true : false;
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
 
@@ -287,30 +288,63 @@ export default function TabBrawlsSoloLeaderboards() {
                   </div>
                 </>
               ) : (
-                <div className="relative flex flex-col items-center">
-                  <img
-                    className="absolute z-10 -top-4 left-auto right-auto"
-                    src="https://res.cloudinary.com/gloot/image/upload/v1666949979/Marketing/2022_prototype/3Dobjects/3dobject-megaphone.png"
-                    width="136"
-                    height="auto"
-                    alt=""
-                  />
-                  <div className="mb-4 surface surface-dimmed surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
-                    <h2 className="h4 mb-2">Compete in this Brawl</h2>
-                    <div className="uppercase font-bold text-ui-100">
-                      Play at least{" "}
-                      <span className="text-blue-300">3 matches</span>
+                <>
+                  {freeEntry ? (
+                    <div className="relative flex flex-col items-center">
+                      <img
+                        className="absolute z-10 -top-4 left-auto right-auto"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1669205353/Marketing/2022_prototype/3Dobjects/3dobject-partypopper.png"
+                        width="136"
+                        height="auto"
+                        alt=""
+                      />
+                      <div className="mb-4 surface surface-dimmed surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
+                        <h2 className="h4 mb-2">First Brawl is on us</h2>
+                        <div className="uppercase font-bold text-ui-100">
+                          Play{" "}
+                          <span className="text-blue-300">
+                            x entry matches for free
+                          </span>
+                        </div>
+                        <p className="text-ui-300 my-4">
+                          After playing your free entry matches you will hit the
+                          leaderboard. Your place will depend on the total of
+                          the Brawl points from your best matches and can always
+                          be imroved.
+                        </p>
+                        <p className="text-sm text-blue-300">
+                          TIPS: Play more matches to improve your Brawl points
+                          and climb the leaderboard.
+                        </p>
+                      </div>
                     </div>
-                    <p className="text-ui-300 my-4">
-                      The total of your Brawl points from your X best matches
-                      will decide your place on a leaderboard.
-                    </p>
-                    <p className="text-ui-300 max-w-[30ch] mx-auto">
-                      You can play as many matches as you like to improve your
-                      Brawl points.
-                    </p>
-                  </div>
-                </div>
+                  ) : (
+                    <div className="relative flex flex-col items-center">
+                      <img
+                        className="absolute z-10 -top-4 left-auto right-auto"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1666949979/Marketing/2022_prototype/3Dobjects/3dobject-megaphone.png"
+                        width="136"
+                        height="auto"
+                        alt=""
+                      />
+                      <div className="mb-4 surface surface-dimmed surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
+                        <h2 className="h4 mb-2">Compete in this Brawl</h2>
+                        <div className="uppercase font-bold text-ui-100">
+                          Play at least{" "}
+                          <span className="text-blue-300">3 matches</span>
+                        </div>
+                        <p className="text-ui-300 my-4">
+                          The total of your Brawl points from your X best
+                          matches will decide your place on a leaderboard.
+                        </p>
+                        <p className="text-ui-300 max-w-[30ch] mx-auto">
+                          You can play as many matches as you like to improve
+                          your Brawl points.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </>
               )}
               {/*
               <div className="surface surface-dimmed rounded-lg p-4 text-center relative my-4 space-y-3">

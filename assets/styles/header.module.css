@@ -50,8 +50,8 @@
       z-10
       bg-gradient-to-r
       from-ui-800
-      via-ui-800/60
-      to-ui-800/10
+      via-ui-800
+      to-ui-800/30
       ;
     }
     > img {

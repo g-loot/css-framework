@@ -26,10 +26,11 @@
     absolute
     backdrop-blur-sm
     transform-gpu
-    z-50
+    z-10
     opacity-0
     font-normal
     text-sm
+    text-ui-200
   }
 
   &:not([data-tooltip]) {
@@ -37,6 +38,7 @@
       @apply
       max-w-[16rem]
       w-full
+      top-auto
       bottom-[100%]
       -translate-x-[calc(16rem/2)]
       translate-y-0.5
@@ -57,12 +59,13 @@
     &::after {
       @apply
       content-[attr(data-tooltip)]
-      text-ui-200
       font-body
       font-normal
       text-sm
       block
+      right-auto
       left-[50%]
+      top-auto
       bottom-[100%]
       py-2
       px-3
@@ -89,7 +92,9 @@
     &.tooltip-top {
       &::after {
         @apply
+        right-auto
         left-[50%]
+        top-auto
         bottom-[100%]
         translate-y-0.5
         ;
@@ -98,41 +103,6 @@
         &::after {
           @apply
           -translate-y-0.5
-          ;
-        }
-      }
-    }
-    &.tooltip-right {
-      &::after {
-        @apply
-        bottom-[50%]
-        left-[100%]
-        -translate-x-1
-        translate-y-[50%]
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          translate-x-1
-          ;
-        }
-      }
-    }
-    &.tooltip-left {
-      &::after {
-        @apply
-        bottom-[50%]
-        right-[100%]
-        left-auto
-        translate-x-1
-        translate-y-[50%]
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          -translate-x-1
           ;
         }
       }
@@ -151,6 +121,173 @@
           translate-y-1
           ;
         }
+      }
+    }
+    &.tooltip-right {
+      &::after {
+        @apply
+        top-auto
+        bottom-[50%]
+        left-[100%]
+        -translate-x-1
+        translate-y-[50%]
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          translate-x-1
+          ;
+        }
+      }
+    }
+    &.tooltip-left {
+      &::after {
+        @apply
+        top-auto
+        bottom-[50%]
+        right-[100%]
+        left-auto
+        translate-x-1
+        translate-y-[50%]
+        ;
+      }
+      &:hover {
+        &::after {
+          @apply
+          -translate-x-1
+          ;
+        }
+      }
+    }
+  }
+}
+
+/* tooltip attention */
+
+[data-tooltip] {
+  &.tooltip-attention {
+    @apply
+    outline
+    outline-offset-2
+    outline-1
+    outline-main
+    rounded
+    inline-block
+    ;
+    &::before {
+      @apply
+      content-['']
+      absolute
+      z-20
+      pointer-events-none
+      w-0
+      h-0
+      border-solid
+      ;
+    }
+    &::after {
+      @apply
+      opacity-100
+      bg-ui-600/75
+      animate-fade-in
+      text-main
+      ;
+    }
+    &.tooltip-top {
+      &::before {
+        @apply
+        border-t-8
+        border-x-8
+        border-b-0
+        border-ui-900/0
+        border-t-main
+        animate-bounce
+        translate-y-0
+        -translate-x-[50%]
+        top-auto
+        right-auto
+        left-[calc(50%-0.5rem)]
+        bottom-[calc(100%+0.5rem)]
+        ;
+      }
+      &::after {
+        @apply
+        -translate-x-[50%]
+        -translate-y-6
+        ;
+      }
+    }
+    &.tooltip-bottom {
+      &::before {
+        @apply
+        border-b-8
+        border-x-8
+        border-t-0
+        border-ui-900/0
+        border-b-main
+        animate-bounce
+        translate-y-0
+        -translate-x-[50%]
+        bottom-auto
+        right-auto
+        left-[calc(50%-0.5rem)]
+        top-[calc(100%+0.5rem)]
+        ;
+      }
+      &::after {
+        @apply
+        -translate-x-[50%]
+        translate-y-6
+        ;
+      }
+    }
+    &.tooltip-right {
+      &::before {
+        @apply
+        border-r-8
+        border-y-8
+        border-l-0
+        border-ui-900/0
+        border-r-main
+        animate-bounce-left
+        top-auto
+        right-auto
+        bottom-[calc(50%-0.5rem)]
+        left-[calc(100%+0.5rem)]
+        translate-x-0
+        translate-y-0
+        ;
+      }
+      &::after {
+        @apply
+        translate-y-[50%]
+        translate-x-6
+        ;
+      }
+    }
+    &.tooltip-left {
+      &::before {
+        @apply
+        border-l-8
+        border-y-8
+        border-r-0
+        border-ui-900/0
+        border-l-main
+        animate-bounce-right
+        top-auto
+        left-auto
+        bottom-[calc(50%-0.5rem)]
+        right-[calc(100%+0.5rem)]
+        translate-x-0
+        translate-y-0
+        ;
+      }
+      &::after {
+        @apply
+        translate-y-[50%]
+        -translate-x-6
+        ;
       }
     }
   }
@@ -227,7 +364,9 @@
     &.sm\:tooltip-top {
       &::after {
         @apply
+        right-auto
         left-[50%]
+        top-auto
         bottom-[100%]
         translate-y-0.5
         ;
@@ -243,6 +382,7 @@
     &.sm\:tooltip-right {
       &::after {
         @apply
+        top-auto
         bottom-[50%]
         left-[100%]
         -translate-x-1
@@ -260,6 +400,7 @@
     &.sm\:tooltip-left {
       &::after {
         @apply
+        top-auto
         bottom-[50%]
         right-[100%]
         left-auto
@@ -291,6 +432,106 @@
         }
       }
     }
+    &.tooltip-attention {
+      &.sm\:tooltip-top {
+        &::before {
+          @apply
+          border-t-8
+          border-x-8
+          border-b-0
+          border-ui-900/0
+          border-t-main
+          animate-bounce
+          translate-y-0
+          -translate-x-[50%]
+          top-auto
+          right-auto
+          left-[calc(50%-0.5rem)]
+          bottom-[calc(100%+0.5rem)]
+          ;
+        }
+        &::after {
+          @apply
+          -translate-x-[50%]
+          -translate-y-6
+          ;
+        }
+      }
+      &.sm\:tooltip-bottom {
+        &::before {
+          @apply
+          border-b-8
+          border-x-8
+          border-t-0
+          border-ui-900/0
+          border-b-main
+          animate-bounce
+          translate-y-0
+          -translate-x-[50%]
+          bottom-auto
+          right-auto
+          left-[calc(50%-0.5rem)]
+          top-[calc(100%+0.5rem)]
+          ;
+        }
+        &::after {
+          @apply
+          -translate-x-[50%]
+          translate-y-6
+          left-[50%]
+          ;
+        }
+      }
+      &.sm\:tooltip-right {
+        &::before {
+          @apply
+          border-r-8
+          border-y-8
+          border-l-0
+          border-ui-900/0
+          border-r-main
+          animate-bounce-left
+          top-auto
+          right-auto
+          bottom-[calc(50%-0.5rem)]
+          left-[calc(100%+0.5rem)]
+          translate-x-0
+          translate-y-0
+          ;
+        }
+        &::after {
+          @apply
+          translate-y-[50%]
+          translate-x-6
+          ;
+        }
+      }
+      &.sm\:tooltip-left {
+        &::before {
+          @apply
+          border-l-8
+          border-y-8
+          border-r-0
+          border-ui-900/0
+          border-l-main
+          animate-bounce-right
+          top-auto
+          left-auto
+          bottom-[calc(50%-0.5rem)]
+          right-[calc(100%+0.5rem)]
+          translate-x-0
+          translate-y-0
+          ;
+        }
+        &::after {
+          @apply
+          translate-y-[50%]
+          -translate-x-6
+          left-[50%]
+          ;
+        }
+      }
+    }
   }
 }
 @media only screen and (min-width: 768px) {
@@ -298,7 +539,9 @@
     &.md\:tooltip-top {
       &::after {
         @apply
+        right-auto
         left-[50%]
+        top-auto
         bottom-[100%]
         translate-y-0.5
         ;
@@ -314,6 +557,7 @@
     &.md\:tooltip-right {
       &::after {
         @apply
+        top-auto
         bottom-[50%]
         left-[100%]
         -translate-x-1
@@ -331,6 +575,7 @@
     &.md\:tooltip-left {
       &::after {
         @apply
+        top-auto
         bottom-[50%]
         right-[100%]
         left-auto
@@ -362,6 +607,104 @@
         }
       }
     }
+    &.tooltip-attention {
+      &.md\:tooltip-top {
+        &::before {
+          @apply
+          border-t-8
+          border-x-8
+          border-b-0
+          border-ui-900/0
+          border-t-main
+          animate-bounce
+          translate-y-0
+          -translate-x-[50%]
+          top-auto
+          right-auto
+          left-[calc(50%-0.5rem)]
+          bottom-[calc(100%+0.5rem)]
+          ;
+        }
+        &::after {
+          @apply
+          -translate-x-[50%]
+          -translate-y-6
+          ;
+        }
+      }
+      &.md\:tooltip-bottom {
+        &::before {
+          @apply
+          border-b-8
+          border-x-8
+          border-t-0
+          border-ui-900/0
+          border-b-main
+          animate-bounce
+          translate-y-0
+          -translate-x-[50%]
+          bottom-auto
+          right-auto
+          left-[calc(50%-0.5rem)]
+          top-[calc(100%+0.5rem)]
+          ;
+        }
+        &::after {
+          @apply
+          -translate-x-[50%]
+          translate-y-6
+          ;
+        }
+      }
+      &.md\:tooltip-right {
+        &::before {
+          @apply
+          border-r-8
+          border-y-8
+          border-l-0
+          border-ui-900/0
+          border-r-main
+          animate-bounce-left
+          top-auto
+          right-auto
+          bottom-[calc(50%-0.5rem)]
+          left-[calc(100%+0.5rem)]
+          translate-x-0
+          translate-y-0
+          ;
+        }
+        &::after {
+          @apply
+          translate-y-[50%]
+          translate-x-6
+          ;
+        }
+      }
+      &.md\:tooltip-left {
+        &::before {
+          @apply
+          border-l-8
+          border-y-8
+          border-r-0
+          border-ui-900/0
+          border-l-main
+          animate-bounce-right
+          top-auto
+          left-auto
+          bottom-[calc(50%-0.5rem)]
+          right-[calc(100%+0.5rem)]
+          translate-x-0
+          translate-y-0
+          ;
+        }
+        &::after {
+          @apply
+          translate-y-[50%]
+          -translate-x-6
+          ;
+        }
+      }
+    }
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -369,7 +712,9 @@
     &.lg\:tooltip-top {
       &::after {
         @apply
+        right-auto
         left-[50%]
+        top-auto
         bottom-[100%]
         translate-y-0.5
         ;
@@ -385,6 +730,7 @@
     &.lg\:tooltip-right {
       &::after {
         @apply
+        top-auto
         bottom-[50%]
         left-[100%]
         -translate-x-1
@@ -402,6 +748,7 @@
     &.lg\:tooltip-left {
       &::after {
         @apply
+        top-auto
         bottom-[50%]
         right-[100%]
         left-auto
@@ -433,6 +780,106 @@
         }
       }
     }
+    &.tooltip-attention {
+      &.lg\:tooltip-top {
+        &::before {
+          @apply
+          border-t-8
+          border-x-8
+          border-b-0
+          border-ui-900/0
+          border-t-main
+          animate-bounce
+          translate-y-0
+          -translate-x-[50%]
+          top-auto
+          right-auto
+          left-[calc(50%-0.5rem)]
+          bottom-[calc(100%+0.5rem)]
+          ;
+        }
+        &::after {
+          @apply
+          -translate-x-[50%]
+          -translate-y-6
+          left-[50%]
+          ;
+        }
+      }
+      &.lg\:tooltip-bottom {
+        &::before {
+          @apply
+          border-b-8
+          border-x-8
+          border-t-0
+          border-ui-900/0
+          border-b-main
+          animate-bounce
+          translate-y-0
+          -translate-x-[50%]
+          bottom-auto
+          right-auto
+          left-[calc(50%-0.5rem)]
+          top-[calc(100%+0.5rem)]
+          ;
+        }
+        &::after {
+          @apply
+          -translate-x-[50%]
+          translate-y-6
+          left-[50%]
+          ;
+        }
+      }
+      &.lg\:tooltip-right {
+        &::before {
+          @apply
+          border-r-8
+          border-y-8
+          border-l-0
+          border-ui-900/0
+          border-r-main
+          animate-bounce-left
+          top-auto
+          right-auto
+          bottom-[calc(50%-0.5rem)]
+          left-[calc(100%+0.5rem)]
+          translate-x-0
+          translate-y-0
+          ;
+        }
+        &::after {
+          @apply
+          translate-y-[50%]
+          translate-x-6
+          ;
+        }
+      }
+      &.lg\:tooltip-left {
+        &::before {
+          @apply
+          border-l-8
+          border-y-8
+          border-r-0
+          border-ui-900/0
+          border-l-main
+          animate-bounce-right
+          top-auto
+          left-auto
+          bottom-[calc(50%-0.5rem)]
+          right-[calc(100%+0.5rem)]
+          translate-x-0
+          translate-y-0
+          ;
+        }
+        &::after {
+          @apply
+          translate-y-[50%]
+          -translate-x-6
+          ;
+        }
+      }
+    }
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -440,7 +887,9 @@
     &.xl\:tooltip-top {
       &::after {
         @apply
+        right-auto
         left-[50%]
+        top-auto
         bottom-[100%]
         translate-y-0.5
         ;
@@ -456,6 +905,7 @@
     &.xl\:tooltip-right {
       &::after {
         @apply
+        top-auto
         bottom-[50%]
         left-[100%]
         -translate-x-1
@@ -473,6 +923,7 @@
     &.xl\:tooltip-left {
       &::after {
         @apply
+        top-auto
         bottom-[50%]
         right-[100%]
         left-auto
@@ -500,6 +951,104 @@
         &::after {
           @apply
           translate-y-1
+          ;
+        }
+      }
+    }
+    &.tooltip-attention {
+      &.xl\:tooltip-top {
+        &::before {
+          @apply
+          border-t-8
+          border-x-8
+          border-b-0
+          border-ui-900/0
+          border-t-main
+          animate-bounce
+          translate-y-0
+          -translate-x-[50%]
+          top-auto
+          right-auto
+          left-[calc(50%-0.5rem)]
+          bottom-[calc(100%+0.5rem)]
+          ;
+        }
+        &::after {
+          @apply
+          -translate-x-[50%]
+          -translate-y-6
+          ;
+        }
+      }
+      &.xl\:tooltip-bottom {
+        &::before {
+          @apply
+          border-b-8
+          border-x-8
+          border-t-0
+          border-ui-900/0
+          border-b-main
+          animate-bounce
+          translate-y-0
+          -translate-x-[50%]
+          bottom-auto
+          right-auto
+          left-[calc(50%-0.5rem)]
+          top-[calc(100%+0.5rem)]
+          ;
+        }
+        &::after {
+          @apply
+          -translate-x-[50%]
+          translate-y-6
+          ;
+        }
+      }
+      &.xl\:tooltip-right {
+        &::before {
+          @apply
+          border-r-8
+          border-y-8
+          border-l-0
+          border-ui-900/0
+          border-r-main
+          animate-bounce-left
+          top-auto
+          right-auto
+          bottom-[calc(50%-0.5rem)]
+          left-[calc(100%+0.5rem)]
+          translate-x-0
+          translate-y-0
+          ;
+        }
+        &::after {
+          @apply
+          translate-y-[50%]
+          translate-x-6
+          ;
+        }
+      }
+      &.xl\:tooltip-left {
+        &::before {
+          @apply
+          border-l-8
+          border-y-8
+          border-r-0
+          border-ui-900/0
+          border-l-main
+          animate-bounce-right
+          top-auto
+          left-auto
+          bottom-[calc(50%-0.5rem)]
+          right-[calc(100%+0.5rem)]
+          translate-x-0
+          translate-y-0
+          ;
+        }
+        &::after {
+          @apply
+          translate-y-[50%]
+          -translate-x-6
           ;
         }
       }
