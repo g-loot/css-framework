@@ -282,9 +282,9 @@ export default function BrawlCardSecondary(props) {
                 }`}
               >
                 {brawl.isEnrolled ? (
-                  <span>Go to Brawl</span>
+                  <span>View Brawl</span>
                 ) : (
-                  <span>Explore</span>
+                  <span>Join now</span>
                 )}
               </button>
             </Link>

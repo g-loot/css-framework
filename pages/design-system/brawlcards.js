@@ -458,7 +458,7 @@ const DSpage = () => {
                       type="button"
                       className="button button-sm button-primary"
                     >
-                      Explore
+                      Join now
                     </button>
                   </div>
                 </div>
@@ -584,7 +584,7 @@ const DSpage = () => {
                         type="button"
                         className="button button-sm button-primary"
                       >
-                        Go to Brawl
+                        View Brawl
                       </button>
                     </div>
                   </div>
@@ -700,7 +700,7 @@ const DSpage = () => {
                       type="button"
                       className="button button-sm button-primary"
                     >
-                      Explore
+                      Join now
                     </button>
                   </div>
                 </div>
@@ -812,7 +812,7 @@ const DSpage = () => {
                       type="button"
                       className="button button-sm button-primary"
                     >
-                      Explore
+                      Join now
                     </button>
                   </div>
                 </div>
@@ -931,7 +931,7 @@ const DSpage = () => {
                       type="button"
                       className="button button-sm button-primary"
                     >
-                      Explore
+                      Join now
                     </button>
                   </div>
                 </div>
@@ -1055,7 +1055,7 @@ const DSpage = () => {
                       type="button"
                       className="button button-sm button-primary"
                     >
-                      Explore
+                      Join now
                     </button>
                   </div>
                 </div>
