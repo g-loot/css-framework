@@ -41,10 +41,12 @@ export default function Clan() {
                     Work together in Clan Brawls to earn{" "}
                     <span className="text-ui-100 font-bold">extra Coins</span>.
                   </li>
-                  <li>
-                    <span className="text-ui-100 font-bold">Compete</span> in
-                    epic Showdowns with your clanmates for big rewards.
-                  </li>
+                  {/*
+                        <li>
+                          <span className="text-ui-100 font-bold">Compete</span>{" "}
+                          in epic Showdowns with your clanmates for big rewards.
+                        </li>
+  */}
                   <li>
                     Fight to take your Clan to the top of the leaderboard or
                     just{" "}

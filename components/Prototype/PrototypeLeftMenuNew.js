@@ -6,6 +6,7 @@ import Button from "../Button/Button";
 import Link from "next/link";
 import ModalFavoriteGames from "../../pages/prototype/modal-favoritegames";
 import ModalTournamentSchedule from "../../pages/prototype/modal-tournamentschedule";
+import ModalBuyTokens from "../../pages/prototype/wallet/modal-buytokens";
 import PrototypeGamesNavNew from "./PrototypeGamesNavNew";
 import { UiContext } from "../../contexts/ui";
 import { usePrototypeData } from "../../contexts/prototype";
@@ -27,6 +28,10 @@ export default function PrototypeLeftMenuNew(props) {
     uiContext.openModal(<ModalFavoriteGames></ModalFavoriteGames>);
   }
 
+  function openModalBuyTokens() {
+    uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
+  }
+
   useEffect(() => {
     if (modalFavoriteGames) {
       openModalFavoriteGames();
@@ -34,7 +39,7 @@ export default function PrototypeLeftMenuNew(props) {
   }, [modalFavoriteGames]);
 
   useEffect(() => {
-    if(statusLoading || router.pathname.includes("home")) {
+    if (statusLoading || router.pathname.includes("home")) {
       setLoading(true);
     }
   }, []);
@@ -162,9 +167,7 @@ export default function PrototypeLeftMenuNew(props) {
                   <div className="item-image">
                     <div className="avatar avatar-simple avatar-xs">
                       <div>
-                        <span>
-                          <span className="icon icon-20 icon-shop" />
-                        </span>
+                        <span className="icon icon-shop icon-16" />
                       </div>
                     </div>
                   </div>
@@ -184,9 +187,7 @@ export default function PrototypeLeftMenuNew(props) {
                   <div className="item-image">
                     <div className="avatar avatar-simple avatar-xs">
                       <div>
-                        <span>
-                          <span className="icon icon-20 icon-ic_stars_24px" />
-                        </span>
+                        <span className="icon icon-ic_stars_24px icon-16" />
                       </div>
                     </div>
                   </div>
@@ -215,6 +216,11 @@ export default function PrototypeLeftMenuNew(props) {
                 <span className="font-body tracking-normal font-normal text-sm pl-2 uppercase">
                   Select games
                 </span>
+              </button>
+            </div>
+            <div className="px-2 block lg:hidden">
+              <button onClick={openModalBuyTokens} type="button" className="button button-sm button-claim w-full">
+                <span>Get tokens</span>
               </button>
             </div>
           </div>

@@ -189,7 +189,11 @@ export default function TopbarNew() {
                     </a>
                   </Link>
                 </li>
-                <button onClick={openModalBuyTokens} type="button" className="tab tab-secondary">
+                <button
+                  onClick={openModalBuyTokens}
+                  type="button"
+                  className="tab tab-secondary"
+                >
                   <span>Get tokens</span>
                 </button>
                 {/*
@@ -236,8 +240,8 @@ export default function TopbarNew() {
                 </div>
               </Tooltip>
 
-              <div className="hidden lg:flex gap-x-3 items-center bg-ui-700 h-9 px-4 rounded-full hoverhighlight">
-                <div className="inline-flex">
+              <div className="hidden lg:flex gap-x-3 items-stretch justify-center bg-ui-700 h-9 min-w-[2.25rem] xl:px-4 rounded-full hoverhighlight">
+                <div className="inline-flex items-center">
                   <Tooltip
                     placement="bottom"
                     tooltip={
@@ -253,115 +257,116 @@ export default function TopbarNew() {
                     </Link>
                   </Tooltip>
                 </div>
-                <div className="w-px h-full bg-ui-600" />
-                <div className="inline-flex">
-                  <Tooltip
-                    tooltip={
-                      <div className="w-56 relative">
-                        <h6 className="mb-3 leading-tight">Coins</h6>
-                        <div className="absolute -top-3 -right-2">
+                <div className="hidden xl:flex items-center gap-x-3 pl-1 border-l border-ui-600">
+                  <div className="inline-flex">
+                    <Tooltip
+                      tooltip={
+                        <div className="w-56 relative">
+                          <h6 className="mb-3 leading-tight">Coins</h6>
+                          <div className="absolute -top-3 -right-2">
+                            <img
+                              src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
+                              width="50"
+                              height="50"
+                              alt="coins"
+                              className=""
+                            />
+                            <div className="lottie-blur absolute -inset-1">
+                              <Lottie
+                                animationData={LottieExplosion}
+                                loop={false}
+                                autoplay={true}
+                              />
+                            </div>
+                          </div>
+                          <ul className="leading-tight space-y-2">
+                            <li className="flex gap-2 text-sm">
+                              <div className=" w-12 font-bold uppercase">Use</div>
+                              <div className="flex-1">
+                                To purchase items in the Shop.
+                              </div>
+                            </li>
+                            <li className="flex gap-2 text-sm">
+                              <div className=" w-12 font-bold uppercase">Get</div>
+                              <div className="flex-1">
+                                From <strong>Daily Loot</strong> Streak and{" "}
+                                <strong>Weekly Brawl winnings</strong>.
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      }
+                    >
+                      <Link href={`/prototype/wallet${prototype.getURLparams()}`}>
+                        <div className="flex items-center">
                           <img
                             src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                            width="50"
-                            height="50"
+                            width="32"
+                            height="32"
                             alt="coins"
-                            className=""
                           />
-                          <div className="lottie-blur absolute -inset-1">
-                            <Lottie
-                              animationData={LottieExplosion}
-                              loop={false}
-                              autoplay={true}
-                            />
-                          </div>
+                          <span className="text-sm font-bold text-gold-500">
+                            {prototype.getUserByID(1)?.wallet.coins}
+                          </span>
                         </div>
-                        <ul className="leading-tight space-y-2">
-                          <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Use</div>
-                            <div className="flex-1">
-                              To purchase items in the Shop.
+                      </Link>
+                    </Tooltip>
+                  </div>
+                  <div className="inline-flex">
+                    <Tooltip
+                      tooltip={
+                        <div className="w-56 relative">
+                          <h6 className="mb-3 leading-tight">Token</h6>
+                          <div className="absolute -top-3 -right-2">
+                            <img
+                              src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
+                              width="50"
+                              height="50"
+                              alt="tokens"
+                              className=""
+                            />
+                            <div className="lottie-blur absolute -inset-1">
+                              <Lottie
+                                animationData={LottieExplosion}
+                                loop={false}
+                                autoplay={true}
+                              />
                             </div>
-                          </li>
-                          <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Get</div>
-                            <div className="flex-1">
-                              From <strong>Daily Loot</strong> Streak and{" "}
-                              <strong>Weekly Brawl winnings</strong>.
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    }
-                  >
-                    <Link href={`/prototype/wallet${prototype.getURLparams()}`}>
-                      <div className="flex items-center">
-                        <img
-                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                          width="32"
-                          height="32"
-                          alt="coins"
-                        />
-                        <span className="text-sm font-bold text-gold-500">
-                          {prototype.getUserByID(1)?.wallet.coins}
-                        </span>
-                      </div>
-                    </Link>
-                  </Tooltip>
-                </div>
-                <div className="inline-flex">
-                  <Tooltip
-                    tooltip={
-                      <div className="w-56 relative">
-                        <h6 className="mb-3 leading-tight">Token</h6>
-                        <div className="absolute -top-3 -right-2">
+                          </div>
+                          <ul className="leading-tight space-y-2">
+                            <li className="flex gap-2 text-sm">
+                              <div className=" w-12 font-bold uppercase">Use</div>
+                              <div className="flex-1">
+                                To enter Weekly Brawls.
+                              </div>
+                            </li>
+                            <li className="flex gap-2 text-sm">
+                              <div className=" w-12 font-bold uppercase">Get</div>
+                              <div className="flex-1">
+                                <strong>Missions, Daily Loot Streak</strong> or{" "}
+                                <strong>buy them</strong> directly from the
+                                Wallet.
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      }
+                    >
+                      <Link href={`/prototype/wallet${prototype.getURLparams()}`}>
+                        <div className="flex items-center">
                           <img
                             src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                            width="50"
-                            height="50"
+                            width="32"
+                            height="32"
                             alt="tokens"
-                            className=""
                           />
-                          <div className="lottie-blur absolute -inset-1">
-                            <Lottie
-                              animationData={LottieExplosion}
-                              loop={false}
-                              autoplay={true}
-                            />
-                          </div>
+                          <span className="text-sm font-bold text-purple-500">
+                            {prototype.getUserByID(1)?.wallet.tokens}
+                          </span>
                         </div>
-                        <ul className="leading-tight space-y-2">
-                          <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Use</div>
-                            <div className="flex-1">
-                              To enter Weekly Brawls.
-                            </div>
-                          </li>
-                          <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Get</div>
-                            <div className="flex-1">
-                              <strong>Missions, Daily Loot Streak</strong> or{" "}
-                              <strong>buy them</strong> directly from the
-                              Wallet.
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    }
-                  >
-                    <Link href={`/prototype/wallet${prototype.getURLparams()}`}>
-                      <div className="flex items-center">
-                        <img
-                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                          width="32"
-                          height="32"
-                          alt="tokens"
-                        />
-                        <span className="text-sm font-bold text-purple-500">
-                          {prototype.getUserByID(1)?.wallet.tokens}
-                        </span>
-                      </div>
-                    </Link>
-                  </Tooltip>
+                      </Link>
+                    </Tooltip>
+                  </div>
                 </div>
                 {/*
                 <div className="inline-flex">

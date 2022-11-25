@@ -290,7 +290,9 @@ const DSpage = () => {
                     <div className="header-body">
                       <h2 className="text-4xl mb-2 leading-none">Showdown</h2>
                       <p className="text-ui-300 max-w-[45ch] mb-4">
-                        Compete in esports tournaments in your favorite games! Invite your friends and compete for bragging rights, prizes, or just for fun.
+                        Compete in esports tournaments in your favorite games!
+                        Invite your friends and compete for bragging rights,
+                        prizes, or just for fun.
                       </p>
                     </div>
                   </div>
