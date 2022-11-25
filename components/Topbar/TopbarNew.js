@@ -240,7 +240,7 @@ export default function TopbarNew() {
                 </div>
               </Tooltip>
 
-              <div className="hidden lg:flex gap-x-3 items-stretch justify-center bg-ui-700 h-9 min-w-[2.25rem] xl:px-4 rounded-full hoverhighlight">
+              <div className="flex gap-x-3 items-stretch justify-center bg-ui-700 h-9 min-w-[2.25rem] xl:px-4 rounded-full hoverhighlight">
                 <div className="inline-flex items-center">
                   <Tooltip
                     placement="bottom"
