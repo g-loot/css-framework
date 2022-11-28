@@ -69,17 +69,10 @@ export default function CardClan(props) {
           </Link>
           {clan.hasInvitedYou ? (
             <div className="flex flex-col gap-2 text-center leading-tight">
-              {hasAccepted ===
-                null && (
-                  <>
+              {hasAccepted === null && (
+                <>
+                  <Link href={`/prototype/clans/${clan.id}?hasaccepted=true`}>
                     <button
-                      onClick={handleAccept.bind(this, {
-                        icon: "f-check",
-                        color: "green",
-                        text: `Your are now part of the ${clan.nickname} clan`,
-                        autoDelete: true,
-                        autoDeleteDelay: 2500,
-                      })}
                       type="button"
                       className={`button button-sm button-primary ${
                         submitting ? "is-loading" : ""
@@ -87,84 +80,78 @@ export default function CardClan(props) {
                     >
                       <span>Accept</span>
                     </button>
-                    <button
-                      onClick={handleDecline.bind(this, {
-                        icon: "f-check",
-                        color: "green",
-                        text: `Your have declined ${clan.nickname}'s invitation`,
-                        autoDelete: true,
-                        autoDeleteDelay: 2500,
-                      })}
-                      type="button"
-                      className={`button button-sm button-error ${
-                        submitting ? "is-loading" : ""
-                      }`}
-                    >
-                      <span>Decline</span>
-                    </button>
-                  </>
-                )}
-              {hasAccepted ===
-                true && (
-                  <>
-                    <span
-                      className="text-main text-xl icon animate-slide-in-bottom animate-delay icon-check"
-                      style={{
-                        "--delay": "calc(0 * 0.05s)",
-                      }}
-                    />
-                    <span
-                      className="text-main text-xs mb-1 animate-slide-in-bottom animate-delay"
-                      style={{
-                        "--delay": "calc(1 * 0.05s)",
-                      }}
-                    >
-                      Invitation
-                      <br />
-                      accepted
-                    </span>
-                  </>
-                )}
-              {hasAccepted ===
-                false && (
-                  <>
-                    <span
-                      className="text-error-500 text-xl icon animate-slide-in-bottom animate-delay icon-e-remove"
-                      style={{
-                        "--delay": "calc(0 * 0.05s)",
-                      }}
-                    />
-                    <span
-                      className="text-error-500 text-xs mb-1 animate-slide-in-bottom animate-delay"
-                      style={{
-                        "--delay": "calc(1 * 0.05s)",
-                      }}
-                    >
-                      Invitation
-                      <br />
-                      declined
-                    </span>
-                  </>
-                )}
+                  </Link>
+                  <button
+                    onClick={handleDecline.bind(this, {
+                      icon: "f-check",
+                      color: "green",
+                      text: `Your have declined ${clan.nickname}'s invitation`,
+                      autoDelete: true,
+                      autoDeleteDelay: 2500,
+                    })}
+                    type="button"
+                    className={`button button-sm button-error ${
+                      submitting ? "is-loading" : ""
+                    }`}
+                  >
+                    <span>Decline</span>
+                  </button>
+                </>
+              )}
+              {hasAccepted === true && (
+                <>
+                  <span
+                    className="text-main text-xl icon animate-slide-in-bottom animate-delay icon-check"
+                    style={{
+                      "--delay": "calc(0 * 0.05s)",
+                    }}
+                  />
+                  <span
+                    className="text-main text-xs mb-1 animate-slide-in-bottom animate-delay"
+                    style={{
+                      "--delay": "calc(1 * 0.05s)",
+                    }}
+                  >
+                    Invitation
+                    <br />
+                    accepted
+                  </span>
+                </>
+              )}
+              {hasAccepted === false && (
+                <>
+                  <span
+                    className="text-error-500 text-xl icon animate-slide-in-bottom animate-delay icon-e-remove"
+                    style={{
+                      "--delay": "calc(0 * 0.05s)",
+                    }}
+                  />
+                  <span
+                    className="text-error-500 text-xs mb-1 animate-slide-in-bottom animate-delay"
+                    style={{
+                      "--delay": "calc(1 * 0.05s)",
+                    }}
+                  >
+                    Invitation
+                    <br />
+                    declined
+                  </span>
+                </>
+              )}
             </div>
           ) : (
             <>
               {!hasJoined && (
-                <button
-                type="button"
-                onClick={addToastWithDelay.bind(this, {
-                  icon: "f-check",
-                  color: "green",
-                  text: `You are now part of the ${clan.nickname} clan.`,
-                  autoDelete: true,
-                  autoDeleteDelay: 2500,
-                })}
-                className={`button button-sm button-secondary self-start ${
-                  submitting ? "is-loading" : ""
-                }`}
-              >
-                <span>Join clan</span>
-              </button>
+                <Link href={`/prototype/clans/${clan.id}?hasaccepted=true`}>
+                  <button
+                    type="button"
+                    className={`button button-sm button-secondary self-start ${
+                      submitting ? "is-loading" : ""
+                    }`}
+                  >
+                    <span>Join clan</span>
+                  </button>
+                </Link>
               )}
             </>
           )}

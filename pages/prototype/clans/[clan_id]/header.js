@@ -1,18 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Link from "next/link";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
+import { UiContext } from "../../../../contexts/ui";
 import ReadMore from "../../../../components/ReadMore/ReadMore";
 
 export default function ClanHeader() {
   const router = useRouter();
+  const { query } = useRouter();
+  const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const [selectedClan, setSelectedClan] = useState(null);
   const { clan_id } = router.query;
+  const hasAccepted = query.hasaccepted === "true" ? true : false;
 
   useEffect(() => {
     setSelectedClan(prototype.getClanByID(clan_id));
   }, [clan_id]);
+
+  useEffect(() => {
+    if(hasAccepted && selectedClan) {
+      uiContext.openToastr({
+        size: "medium",
+        text: `You have successfully joined the clan ${selectedClan.nickname}.`,
+        color: "green",
+        autoDelete: true,
+        autoDeleteDelay: 2500,
+      })
+    }
+  }, [hasAccepted, selectedClan]);
+
+
+
+  
 
   return (
     <>
@@ -180,29 +200,18 @@ export default function ClanHeader() {
               </div>
             ) : (
               <>
-                {selectedClan.isPublic ? (
-                  <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                    <div className="text-center">
-                      This Clan is open to everyone.
+                {hasAccepted ? (
+                  <>
+                    <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                      <div className="text-center">Welcome to the {selectedClan.nickname} clan {prototype.getUserByID(1).nickname}!</div>
                     </div>
-                    <div className="flex gap-2">
-                      <Link href="#">
-                        <a
-                          type="button"
-                          className="button button-sm button-primary flex-1"
-                        >
-                          <span>Join clan</span>
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
+                  </>
                 ) : (
                   <>
-                    {selectedClan.hasInvitedYou ? (
+                    {selectedClan.isPublic ? (
                       <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
                         <div className="text-center">
-                          Congratulations, you have been invited to join this
-                          clan.
+                          This Clan is open to everyone.
                         </div>
                         <div className="flex gap-2">
                           <Link href="#">
@@ -210,33 +219,56 @@ export default function ClanHeader() {
                               type="button"
                               className="button button-sm button-primary flex-1"
                             >
-                              <span>Accept</span>
-                            </a>
-                          </Link>
-                          <Link href="#">
-                            <a
-                              type="button"
-                              className="button button-sm button-error flex-1"
-                            >
-                              <span>Decline</span>
+                              <span>Join clan</span>
                             </a>
                           </Link>
                         </div>
                       </div>
                     ) : (
-                      <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                        <div className="text-center">This Clan is private.</div>
-                        <div className="flex gap-2">
-                          <Link href="#">
-                            <a
-                              type="button"
-                              className="button button-sm button-primary flex-1"
-                            >
-                              <span>Apply to join</span>
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
+                      <>
+                        {selectedClan.hasInvitedYou ? (
+                          <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                            <div className="text-center">
+                              Congratulations, you have been invited to join
+                              this clan.
+                            </div>
+                            <div className="flex gap-2">
+                              <Link href="#">
+                                <a
+                                  type="button"
+                                  className="button button-sm button-primary flex-1"
+                                >
+                                  <span>Accept</span>
+                                </a>
+                              </Link>
+                              <Link href="#">
+                                <a
+                                  type="button"
+                                  className="button button-sm button-error flex-1"
+                                >
+                                  <span>Decline</span>
+                                </a>
+                              </Link>
+                            </div>
+                          </div>
+                        ) : (
+                          <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                            <div className="text-center">
+                              This Clan is private.
+                            </div>
+                            <div className="flex gap-2">
+                              <Link href="#">
+                                <a
+                                  type="button"
+                                  className="button button-sm button-primary flex-1"
+                                >
+                                  <span>Apply to join</span>
+                                </a>
+                              </Link>
+                            </div>
+                          </div>
+                        )}
+                      </>
                     )}
                   </>
                 )}
