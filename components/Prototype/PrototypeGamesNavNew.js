@@ -17,17 +17,19 @@ const SubMenuItem = [
     icon: "icon-brawl",
     label: "Competitions",
   },
+  {
+    onlygame: "valorant",
+    url: "stats",
+    icon: "icon-statistics",
+    label: "Stats",
+  },
   /*
   {
     url: "tournaments",
     icon: "icon-showdown",
     label: "Tournaments",
   },
-  {
-    url: "stats",
-    icon: "icon-statistics",
-    label: "Stats",
-  },
+ 
   */
 ];
 
@@ -96,25 +98,27 @@ export default function PrototypeGamesNavNew({ children }) {
                 <ul className="menu menu-secondary menu-rounded px-4 pb-4">
                   {SubMenuItem.map((subItem, subItemIndex) => (
                     <>
-                      <li key={subItem}>
-                        <Link
-                          href={`/prototype/${item.slug}/${
-                            subItem.url
-                          }${prototype.getURLparams()}`}
-                        >
-                          <a
-                            className={`${
-                              router.pathname.includes(subItem.url) &&
-                              item.slug === game
-                                ? "is-active"
-                                : ""
-                            }`}
+                      {(!subItem.onlygame || subItem.onlygame === item.slug) && (
+                        <li key={subItem}>
+                          <Link
+                            href={`/prototype/${item.slug}/${
+                              subItem.url
+                            }${prototype.getURLparams()}`}
                           >
-                            <span className={`pl-3 pr-3 icon icon-20 ${subItem.icon}`} />
-                            <span className="uppercase">{subItem.label}</span>
-                          </a>
-                        </Link>
-                      </li>
+                            <a
+                              className={`${
+                                router.pathname.includes(subItem.url) &&
+                                item.slug === game
+                                  ? "is-active"
+                                  : ""
+                              }`}
+                            >
+                              <span className={`pl-3 pr-3 icon icon-20 ${subItem.icon}`} />
+                              <span className="uppercase">{subItem.label}</span>
+                            </a>
+                          </Link>
+                        </li>
+                      )}
                     </>
                   ))}
                 </ul>

@@ -69,7 +69,7 @@ export default function Slider(props) {
         ref={sliderWrapper}
         className="relative z-0 overflow-x-auto scrollbar-desktop last:after:content-[''] last:after:w-24 last:after:block py-4 px-4 md:px-0"
       >
-        <div className="flex gap-4" ref={sliderContainer}>
+        <div className="flex gap-4 items-stretch" ref={sliderContainer}>
           {props.children}
           <div className="min-w-xs w-20"></div>
         </div>

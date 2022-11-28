@@ -173,7 +173,13 @@ export default function TabBrawlsSoloLeaderboards() {
                       <tr>
                         <td>
                           <Link href="/prototype/profile/2">
-                            <a className={`text-xs interactive ${prototype.getUserByID(2).isPremium ? 'text-gradient bg-gradient-to-b from-premium-300 to-premium-700' : 'text-ui-300'}`}>
+                            <a
+                              className={`text-xs interactive ${
+                                prototype.getUserByID(2).isPremium
+                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  : "text-ui-300"
+                              }`}
+                            >
                               {prototype.getUserByID(2).nickname}
                             </a>
                           </Link>
@@ -187,7 +193,13 @@ export default function TabBrawlsSoloLeaderboards() {
                       <tr>
                         <td>
                           <Link href="/prototype/profile/3">
-                            <a className={`text-xs interactive ${prototype.getUserByID(3).isPremium ? 'text-gradient bg-gradient-to-b from-premium-300 to-premium-700' : 'text-ui-300'}`}>
+                            <a
+                              className={`text-xs interactive ${
+                                prototype.getUserByID(3).isPremium
+                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  : "text-ui-300"
+                              }`}
+                            >
                               {prototype.getUserByID(3).nickname}
                             </a>
                           </Link>
@@ -201,7 +213,13 @@ export default function TabBrawlsSoloLeaderboards() {
                       <tr>
                         <td>
                           <Link href="/prototype/profile/4">
-                            <a className={`text-xs interactive ${prototype.getUserByID(4).isPremium ? 'text-gradient bg-gradient-to-b from-premium-300 to-premium-700' : 'text-ui-300'}`}>
+                            <a
+                              className={`text-xs interactive ${
+                                prototype.getUserByID(4).isPremium
+                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  : "text-ui-300"
+                              }`}
+                            >
                               {prototype.getUserByID(4).nickname}
                             </a>
                           </Link>
@@ -215,7 +233,13 @@ export default function TabBrawlsSoloLeaderboards() {
                       <tr>
                         <td>
                           <Link href="/prototype/profile/5">
-                            <a className={`text-xs interactive ${prototype.getUserByID(5).isPremium ? 'text-gradient bg-gradient-to-b from-premium-300 to-premium-700' : 'text-ui-300'}`}>
+                            <a
+                              className={`text-xs interactive ${
+                                prototype.getUserByID(5).isPremium
+                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  : "text-ui-300"
+                              }`}
+                            >
                               {prototype.getUserByID(5).nickname}
                             </a>
                           </Link>
@@ -665,12 +689,38 @@ export default function TabBrawlsSoloLeaderboards() {
                                     </li>
                                   </ul>
                                   <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
-                                    <Link href="/prototype/clan/0">
-                                      <a className="link link-main link-hover flex items-center gap-1 text-sm">
-                                        <span className="icon icon-multiple-12" />
-                                        <span>Go to Clan page</span>
-                                      </a>
-                                    </Link>
+                                    <div className="flex items-center gap-4">
+                                      <Link
+                                        href={`/prototype/clans/${
+                                          prototype.getClanByID(user.clan)?.id
+                                        }`}
+                                      >
+                                        <a className="link link-main link-hover flex items-center gap-1 text-sm">
+                                          <span className="icon icon-multiple-12" />
+                                          <span>Go to Clan page</span>
+                                        </a>
+                                      </Link>
+                                      <Link
+                                        href={`/prototype/clans/${
+                                          prototype.getClanByID(user.clan)?.id
+                                        }`}
+                                      >
+                                        <a className="link link-main link-hover flex items-center gap-1 text-sm">
+                                          {prototype.getClanByID(user.clan)
+                                            ?.isPublic ? (
+                                            <>
+                                              <span className="icon icon-door-3" />
+                                              <span>Join Clan</span>
+                                            </>
+                                          ) : (
+                                            <>
+                                              <span className="icon icon-single-position" />
+                                              <span>Apply to Clan</span>
+                                            </>
+                                          )}
+                                        </a>
+                                      </Link>
+                                    </div>
                                     <button
                                       type="button"
                                       className="button button-tertiary button-sm"

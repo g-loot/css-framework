@@ -52,6 +52,15 @@ export const FrameworkPages = {
           tags: "home, start, notifications, empty state, no notifications",
         },
         {
+          label: "No clan",
+          chip: "empty state",
+          url: "home",
+          query: "noclan=true",
+          tab: 1,
+          new: false,
+          tags: "home, start, notifications, empty state, no clan, not in a clan",
+        },
+        {
           label: "Content card",
           chip: "extra",
           url: "home",

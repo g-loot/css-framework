@@ -104,7 +104,7 @@ export default function BrawlCardSecondary(props) {
                   alt=""
                 />
                 <span className="font-bold text-gold-500 text-sm">
-                  5k - 30k
+                  5 000 - 30 000
                 </span>
               </div>
               {brawl.status === "finished" ? (
@@ -204,67 +204,72 @@ export default function BrawlCardSecondary(props) {
             </>
           ) : (
             <>
-              <div className="flex-1 flex items-center gap-4">
-                <div className="flex-none avatar avatar-squircle avatar-xs">
-                  <div>
-                    <img
-                      src={
-                        prototype.getClanByID(prototype.getUserByID(1).id)
-                          ?.avatar
-                      }
-                      alt="avatar"
-                    />
-                  </div>
-                </div>
-                <div className="infobanner is-active">
-                  <div className="flex gap-2 infobanner-front">
-                    <div>
-                      <div className="uppercase text-xs text-ui-300">
-                        Points
-                      </div>
-                      <div className="text-sm font-bold">1120</div>
-                    </div>
-                    <div>
-                      <div className="uppercase text-xs text-ui-300">
-                        Position
-                      </div>
-                      <div className="text-sm font-bold">#243</div>
-                    </div>
-                  </div>
-                  <div className="infobanner-back absolute inset-0 flex items-center text-sm">
-                    <div className="animate-pulse text-blue-300">
-                      Waiting for your 3 matches...
-                    </div>
-                  </div>
-                </div>
-                <div className="hidden sm:flex items-center gap-2">
-                  <div className="avatar-group -space-x-2">
-                    <div className="avatar avatar-circle avatar-tiny">
+              {brawl.isEnrolled ? (
+                <>
+                  <div className="flex-1 flex items-center gap-4">
+                    <div className="flex-none avatar avatar-squircle avatar-xs">
                       <div>
-                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                        <img
+                          src={
+                            prototype.getClanByID(prototype.getUserByID(1).id)
+                              ?.avatar
+                          }
+                          alt="avatar"
+                        />
                       </div>
                     </div>
-                    <div className="avatar avatar-circle avatar-tiny">
-                      <div>
-                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                    <div className="infobanner is-active">
+                      <div className="flex gap-2 infobanner-front">
+                        <div>
+                          <div className="uppercase text-xs text-ui-300">
+                            Points
+                          </div>
+                          <div className="text-sm font-bold">1120</div>
+                        </div>
+                        <div>
+                          <div className="uppercase text-xs text-ui-300">
+                            Position
+                          </div>
+                          <div className="text-sm font-bold">#243</div>
+                        </div>
+                      </div>
+                      <div className="infobanner-back absolute inset-0 flex items-center text-sm">
+                        <div className="animate-pulse text-blue-300">
+                          Waiting for your 3 matches...
+                        </div>
                       </div>
                     </div>
-                    <div className="avatar avatar-circle avatar-tiny">
-                      <div>
-                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
-                      </div>
-                    </div>
-                    <div className="avatar avatar-circle avatar-tiny">
-                      <div>
-                        <span>+9</span>
+                    <div className="hidden sm:flex items-center gap-2">
+                      <div className="avatar-group -space-x-2">
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                          </div>
+                        </div>
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                          </div>
+                        </div>
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          </div>
+                        </div>
+                        <div className="avatar avatar-circle avatar-tiny">
+                          <div>
+                            <span>+9</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </>
+              ) : (
+                <div></div>
+              )}
             </>
           )}
-
           <div className="flex items-end">
             <Link
               href={

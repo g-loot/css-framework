@@ -33,6 +33,7 @@ export default function Home() {
   const modalVideo = query.modalvideo === "true" ? true : false;
   const [dailyNumber, setDailyNumber] = useState(0);
   const [submitting, setSubmitting] = useState(false);
+  const hasNoClan = query.noclan === "true" ? true : false;
 
   function openModalBrawlHowitworksVideo() {
     uiContext.openModal(
@@ -152,11 +153,20 @@ export default function Home() {
         >
           <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
             <h3 className="h6">Clan Brawls</h3>
-            <Link href="/prototype/valorant/brawls/">
+            {hasNoClan ? (
+              <Link href="/prototype/clans/">
+              <a className="link link-hover text-ui-300 text-sm">
+                Discover Clans
+              </a>
+            </Link>
+            ) : (
+              <Link href="/prototype/valorant/brawls/">
               <a className="link link-hover text-ui-300 text-sm">
                 View your Clan
               </a>
             </Link>
+            )}
+            
           </div>
           <HomeBrawlClan />
         </section>
@@ -195,17 +205,17 @@ export default function Home() {
         <section className="my-16 surface sm:rounded-lg overflow-hidden hidden lg:block">
           <div className="relative z-10 p-12 w-1/2 xl:w-1/3">
             <h3>
-              Play multiple competitions
+              New fun Missions
               <br />
-              at the same time
+              every 24 hours!
             </h3>
             <p className="text-lg text-ui-300 mt-2 mb-4">
-              Try as many Brawls as you like and play as much as you want! See you on the leaderboard! 
+              Every 24 hours you get new fun Missions across the games you like! Jump in, compete, earn XP and get on top!
             </p>
           </div>
           <img
             className="absolute inset-0 h-full w-full object-cover object-right"
-            src="https://res.cloudinary.com/gloot/image/upload/v1668955144/Marketing/2022_prototype/home-ad-multiplebrawls.jpg"
+            src="https://res.cloudinary.com/gloot/image/upload/v1669640219/Marketing/2022_prototype/home-ad-newfunmissions.jpg"
             alt=""
           />
         </section>
