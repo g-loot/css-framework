@@ -81,6 +81,7 @@ export default function Home() {
             <div className="max-w-lg mx-auto">
               <div className="grid xl:grid-cols-2 gap-16">
                 <div className="space-y-4">
+                  <h2 className="h5">My details</h2>
                   <div className="form-group">
                     <label htmlFor="account-username">Username:</label>
                     <input
@@ -129,7 +130,7 @@ export default function Home() {
                   </div>
                   <div className="form-group">
                     <label htmlFor="first-name">Your bio:</label>
-                    <TextareaExpandable text={selectedUser.bio} rows={4} />
+                    <TextareaExpandable text={selectedUser.bio} rows={7} />
                   </div>
                   <div className="form-group">
                     <label htmlFor="account-country">Country:</label>
@@ -153,11 +154,9 @@ export default function Home() {
                 <div className="space-y-8">
                   <div className="space-y-4">
                     <h2 className="h5">My social links</h2>
-                    <div className="form-group flex items-start gap-2">
-                      <label htmlFor="social-twitch" className="flex-1 mt-3">
-                        Twitch:
-                      </label>
-                      <div className="flex-3 input-group">
+                    <div className="form-group">
+                      <label htmlFor="social-twitch">Twitch:</label>
+                      <div className="input-group">
                         <span className="icon icon-twitch" />
                         <input
                           type="text"
@@ -166,11 +165,9 @@ export default function Home() {
                         />
                       </div>
                     </div>
-                    <div className="form-group flex items-start gap-2">
-                      <label htmlFor="social-twitter" className="flex-1 mt-3">
-                        Twitter:
-                      </label>
-                      <div className="flex-3 input-group">
+                    <div className="form-group">
+                      <label htmlFor="social-twitter">Twitter:</label>
+                      <div className="input-group">
                         <span className="icon icon-logo-twitter" />
                         <input
                           type="text"
@@ -179,10 +176,8 @@ export default function Home() {
                         />
                       </div>
                     </div>
-                    <div className="form-group flex items-start gap-2">
-                      <label htmlFor="social-discord" className="flex-1 mt-3">
-                        Discord:
-                      </label>
+                    <div className="form-group">
+                      <label htmlFor="social-discord">Discord:</label>
                       <div className="flex-3">
                         <button className="button button-primary w-full">
                           <span className="icon icon-discord" />
@@ -201,10 +196,8 @@ export default function Home() {
                         <span className="icon icon-16 icon-c-info" />
                       </button>
                     </div>
-                    <div className="form-group flex items-start gap-2">
-                      <label htmlFor="social-steam" className="flex-1 mt-3">
-                        Steam:
-                      </label>
+                    <div className="form-group">
+                      <label htmlFor="social-steam">Steam:</label>
                       <div className="flex-3">
                         <button className="button button-primary w-full">
                           <span className="icon icon-steam" />
@@ -215,13 +208,11 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
-                    <div className="form-group flex items-start gap-2">
-                      <label htmlFor="social-steam" className="flex-1 mt-3">
-                        Riot Games:
-                      </label>
+                    <div className="form-group">
+                      <label htmlFor="social-steam">Riot Games:</label>
                       <div className="flex-3">
                         {isConnected && (
-                          <div className="flex-3 input-group">
+                          <div className="input-group">
                             <span>
                               <span className="icon icon-riotgames-symbol" />
                             </span>
@@ -313,13 +304,13 @@ export default function Home() {
                       </button>
                     </div>
                     <div className="flex flex-col md:flex-row gap-4 md:gap-16">
-                      <div className="form-group flex-1">
+                      <div className="form-group-1">
                         <label htmlFor="game-apex">
                           Apex Legends Nickname:
                         </label>
                         <input type="text" name="game-apex" id="game-apex" />
                       </div>
-                      <div className="form-group flex-1">
+                      <div className="form-group-1">
                         <label htmlFor="game-pubg">
                           PUBG BATTLEGROUNDS Nickname:
                         </label>

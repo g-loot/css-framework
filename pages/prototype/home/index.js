@@ -88,7 +88,10 @@ export default function Home() {
           className="mb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(1 * 0.05s)" }}
         >
-          <h3 className="h6 mb-4 mx-4 sm:mx-0">Your latest tracked match</h3>
+          <div className="flex flex-col sm:flex-row flex-wrap items-baseline sm:justify-between gap-2 mb-4 mx-4 sm:mx-0">
+            <h3 className="h6">Your latest tracked match</h3>
+            <span className="text-sm text-ui-300">Match ended November 6 at 3:00am</span>
+          </div>
           <div className="surface sm:rounded-lg flex flex-col xl:flex-row xl:justify-between leading-none xl:gap-8">
             <div className="flex flex-row items-center justify-center xl:justify-start gap-8 p-2">
               <div className="flex gap-2 items-center">
@@ -188,6 +191,24 @@ export default function Home() {
 
         <HomeBrawlMissions gameSlug="valorant" />
         <HomeBrawlMissions gameSlug="pubg" />
+
+        <section className="my-16 surface sm:rounded-lg overflow-hidden hidden lg:block">
+          <div className="relative z-10 p-12 w-1/2 xl:w-1/3">
+            <h3>
+              Play multiple competitions
+              <br />
+              at the same time
+            </h3>
+            <p className="text-lg text-ui-300 mt-2 mb-4">
+              Try as many Brawls as you like and play as much as you want! See you on the leaderboard! 
+            </p>
+          </div>
+          <img
+            className="absolute inset-0 h-full w-full object-cover object-right"
+            src="https://res.cloudinary.com/gloot/image/upload/v1668955144/Marketing/2022_prototype/home-ad-multiplebrawls.jpg"
+            alt=""
+          />
+        </section>
 
       </PrototypeStructure>
     </>
