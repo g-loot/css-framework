@@ -497,9 +497,9 @@ export default function Stats() {
                               </div>
                             </div>
                           </div>
-                          <div className="item-body flex-1 flex gap-2 items-center justify-around">
+                          <div className="item-body flex-0 flex gap-2 items-center justify-around w-48">
                             {match.mode === "Deathmatch" ? (
-                              <div className="w-48 font-headings text-2xl font-bold italic text-ui-200 text-center">
+                              <div className="font-headings text-2xl font-bold italic text-ui-200 text-center">
                                 {match.placement} place
                               </div>
                             ) : (
@@ -541,7 +541,8 @@ export default function Stats() {
                                 </div>
                               </>
                             )}
-
+                          </div>
+                          <div className="item-body flex-1 flex gap-2 items-center justify-around">
                             <div>
                               <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
                                 {match.time}

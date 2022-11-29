@@ -849,10 +849,19 @@ button {
       text-interaction-500
       ;
     }
-    &.button-primary {
+    &.button-primary,
+    &.button-error,
+    &.button-premium {
       &::after {
         @apply
         text-ui-800
+        ;
+      }
+    }
+    &.button-claim {
+      &::after {
+        @apply
+        text-mono-100
         ;
       }
     }
@@ -869,10 +878,19 @@ button {
       text-error-500
       ;
     }
-    &.button-primary {
+    &.button-primary,
+    &.button-error,
+    &.button-premium {
       &::after {
         @apply
         text-ui-800
+        ;
+      }
+    }
+    &.button-claim {
+      &::after {
+        @apply
+        text-mono-100
         ;
       }
     }
@@ -889,10 +907,19 @@ button {
       text-attention-500
       ;
     }
-    &.button-primary {
+    &.button-primary,
+    &.button-error,
+    &.button-premium {
       &::after {
         @apply
         text-ui-800
+        ;
+      }
+    }
+    &.button-claim {
+      &::after {
+        @apply
+        text-mono-100
         ;
       }
     }

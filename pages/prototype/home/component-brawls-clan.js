@@ -94,8 +94,37 @@ export default function HomeBrawlClan() {
   return (
     <>
       <div className="relative">
-        <Slider itemWidth={809+16} bgColor="from-ui-900 via-ui-900/90 to-ui-900/0">
-          {hasNoClan ? (
+        {hasNoClan && (
+          <div className="flex-none surface rounded-lg overflow-hidden w-full px-4 py-12 mt-4 flex items-center">
+            <div className="relative z-10 px-8 w-1/2">
+              <h3 className="mb-4">
+                Multiply your rewards
+                <br />
+                by Brawling in a Clan
+              </h3>
+              <Link href="/prototype/clans">
+                <button
+                  type="button"
+                  className="button button-primary"
+                >
+                  <span>Discover Clans</span>
+                </button>
+              </Link>
+            </div>
+            <img
+              className="absolute inset-0 h-full w-full object-cover object-right"
+              src="https://res.cloudinary.com/gloot/image/upload/v1669718553/Marketing/2022_prototype/home-brawlnoclan.jpg"
+              alt=""
+            />
+          </div>
+        )}
+        {!hasNoClan && (
+          <Slider
+            itemWidth={809 + 16}
+            bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
+          >
+            {/*
+          {hasNoClan && (
             <>
               <div className="flex-none surface rounded-lg overflow-hidden w-[36rem] flex items-center">
                 <div className="relative z-10 px-8 w-1/2">
@@ -105,7 +134,10 @@ export default function HomeBrawlClan() {
                     by Brawling in a Clan
                   </h5>
                   <Link href="/prototype/clans">
-                    <button type="button" className="button button-sm button-primary">
+                    <button
+                      type="button"
+                      className="button button-sm button-primary"
+                    >
                       <span>Discover Clans</span>
                     </button>
                   </Link>
@@ -117,19 +149,30 @@ export default function HomeBrawlClan() {
                 />
               </div>
               {ClanBrawlsNoClan.map((item, itemIndex) => (
-                <BrawlCardSecondary key={item.id} brawl={item} isHorizontal={true} isClan={false} />
+                <BrawlCardSecondary
+                  key={item.id}
+                  brawl={item}
+                  isHorizontal={true}
+                  isClan={false}
+                />
               ))}
             </>
-
-          ) : (
-            <>
-            {ClanBrawls.map((item, itemIndex) => (
-              <BrawlCardSecondary key={item.id} brawl={item} isHorizontal={true} isClan={false} />
-            ))}
-            </>
           )}
-          
-        </Slider>
+              */}
+            {!hasNoClan && (
+              <>
+                {ClanBrawls.map((item, itemIndex) => (
+                  <BrawlCardSecondary
+                    key={item.id}
+                    brawl={item}
+                    isHorizontal={true}
+                    isClan={false}
+                  />
+                ))}
+              </>
+            )}
+          </Slider>
+        )}
       </div>
     </>
   );

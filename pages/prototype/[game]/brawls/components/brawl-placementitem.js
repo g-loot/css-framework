@@ -77,7 +77,7 @@ export default function BrawlPlacementItem(props) {
         }`}
         style={props.item?.step <= 3 ? {"--delay": "calc((" + props.item?.step + ") * 0.2s)"} : {}}
       >
-        <div className={`flip-front rounded-lg surface-ui-700 shadow-lg flex items-center justify-between px-4 gap-2 w-44 h-16 transition-opacity duration-100 ${
+        <div className={`flip-front rounded-lg surface-ui-700 shadow-lg flex items-center justify-between px-2 gap-2 w-44 h-16 transition-opacity duration-100 ${
           props.item?.step > 3 && variablesContext.brawlStep + 1 < props.item?.step ? "opacity-25" : ""
         }`}>
           {(props.item?.step > 3 && variablesContext.brawlStep + 1 === props.item?.step) && (
@@ -116,7 +116,7 @@ export default function BrawlPlacementItem(props) {
               <span className="icon icon-lock text-xl text-ui-600" />
             </div>
         </div>
-        <div className={`flip-back rounded-lg shadow-lg flex items-center justify-between px-4 gap-2 w-44 h-16 overflow-hidden ${!resultsDone ? 'animate-pulse surface-ui-600 surface surface-halo' : 'surface-ui-700'}`}>
+        <div className={`flip-back rounded-lg shadow-lg flex items-center justify-between px-2 gap-2 w-44 h-16 overflow-hidden ${!resultsDone ? 'animate-pulse surface-ui-600 surface surface-halo' : 'surface-ui-700'}`}>
           <div className={`font-headings uppercase font-bold text-ui-300 text-xl italic ${resultsDone ? 'text-ui-100' : 'text-ui-300'}`}>
             Match {props.item?.step}
           </div>
