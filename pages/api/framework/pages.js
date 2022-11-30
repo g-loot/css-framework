@@ -729,6 +729,15 @@ export const FrameworkPages = {
           tags: "game, stats, valorant",
           new: false,
         },
+        {
+          label: "Valorant stats",
+          chip: "empty state",
+          url: "valorant/stats",
+          query: "empty=true",
+          tags: "game, stats, valorant",
+          new: false,
+          tab: 1,
+        },
         
       ],
     },
