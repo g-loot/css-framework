@@ -38,6 +38,7 @@ export default function BrawlCardSecondary(props) {
               className="button button-claim is-shining"
               onClick={openModalClaimLadderRewards}
             >
+              <span className="icon icon-present animate-bounce" />
               <span>Claim reward</span>
             </button>
           </div>

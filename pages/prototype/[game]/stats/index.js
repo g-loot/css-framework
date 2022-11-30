@@ -396,15 +396,15 @@ export default function Stats() {
                     <div className="flex gap-4 items-center justify-around">
                       <div className="px-4 relative">
                         <span
-                          className="absolute z-10 rounded-full w-40 h-40 origin-center mix-blend-color-lighten bg-gradient-radial transition duration-75 opacity-75 hover:opacity-100 from-blue-500/80 to-blue-500/30 shadow-[0_0_0_2rem_rgba(var(--color-blue-500)/20%)] -top-[calc((10rem/2)-1rem)] left-[calc(50%-(10rem/2))]"
+                          className="absolute z-10 rounded-full w-40 h-40 origin-center mix-blend-color-lighten bg-gradient-radial animate-pulse from-blue-500/80 to-blue-500/30 shadow-[0_0_0_2rem_rgba(var(--color-blue-500)/20%)] -top-[calc((10rem/2)-1rem)] left-[calc(50%-(10rem/2))]"
                           style={{ transform: "scale(0.2)" }}
                         />
                         <span
-                          className="absolute z-10 rounded-full w-40 h-40 origin-center mix-blend-color-lighten bg-gradient-radial transition duration-75 opacity-75 hover:opacity-100 from-attention-500/80 to-attention-500/30 shadow-[0_0_0_2rem_rgba(var(--color-attention-500)/20%)] top-1 left-[calc(50%-(10rem/2))]"
+                          className="absolute z-10 rounded-full w-40 h-40 origin-center mix-blend-color-lighten bg-gradient-radial animate-pulse from-attention-500/80 to-attention-500/30 shadow-[0_0_0_2rem_rgba(var(--color-attention-500)/20%)] top-1 left-[calc(50%-(10rem/2))]"
                           style={{ transform: "scale(0.5)" }}
                         />
                         <span
-                          className="absolute z-10 rounded-full w-40 h-40 origin-center mix-blend-color-lighten bg-gradient-radial transition duration-75 opacity-75 hover:opacity-100 from-error-500/80 to-error-500/30 shadow-[0_0_0_2rem_rgba(var(--color-error-500)/20%)] bottom-1 -left-6"
+                          className="absolute z-10 rounded-full w-40 h-40 origin-center mix-blend-color-lighten bg-gradient-radial animate-pulse from-error-500/80 to-error-500/30 shadow-[0_0_0_2rem_rgba(var(--color-error-500)/20%)] bottom-1 -left-6"
                           style={{ transform: "scale(0.2)" }}
                         />
                         <img
