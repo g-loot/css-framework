@@ -12,8 +12,6 @@
   ;
 }
 .surface {
-
-
   &.surface-highlight,
   &.surface-highlight-main {
     @apply
@@ -35,55 +33,55 @@
     drop-shadow-premium
     ;
   }
+}
 
-  &.surface-halo {
+.surface-halo {
+  @apply
+  relative
+  overflow-hidden
+  ;
+  
+  &::after {
     @apply
-    relative
-    overflow-hidden
+    absolute
+    z-0
+    content-['']
+    block
+    -bottom-16
+    bg-gradient-radial
+    from-blue-500/75
+    via-blue-700/0
+    to-purple-500/0
+    rounded-full
+    h-32
+    w-96
+    blur-lg
+    left-[calc(50%-12rem)]
+    pointer-events-none
     ;
-    
+  }
+
+  &.halo-l {
     &::after {
       @apply
-      absolute
-      z-0
-      content-['']
-      block
-      -bottom-16
-      bg-gradient-radial
-      from-blue-500/75
-      via-blue-700/0
-      to-purple-500/0
-      rounded-full
-      h-32
-      w-96
-      blur-lg
-      left-[calc(50%-12rem)]
-      pointer-events-none
+      -left-48
       ;
-    }
-
-    &.halo-l {
-      &::after {
-        @apply
-        -left-48
-        ;
-      } 
-    }
-    &.halo-r {
-      &::after {
-        @apply
-        left-auto
-        -right-48
-        ;
-      } 
-    }
-    &.halo-t {
-      &::after {
-        @apply
-        -top-12
-        ;
-      } 
-    }
+    } 
+  }
+  &.halo-r {
+    &::after {
+      @apply
+      left-auto
+      -right-48
+      ;
+    } 
+  }
+  &.halo-t {
+    &::after {
+      @apply
+      -top-12
+      ;
+    } 
   }
 }
 

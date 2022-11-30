@@ -86,6 +86,11 @@ export const StatsValorantRanks = [
     name: 'radiant',
     picturePath: getImageUrl('rank-radiant.webp'),
   },
+  {
+    id: 8,
+    name: 'acendant',
+    picturePath: getImageUrl('rank-acendant.webp'),
+  },
 ];
 
 export const StatsValorantAgents = [
@@ -328,5 +333,122 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-harbor.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-harbor.jpg'),
+  },
+];
+
+export const StatsValorantWeapons = [
+  {
+    id: 0,
+    name: 'classic',
+    type: 'sidearm',
+    picturePath: getImageUrl('weapon-classic.webp'),
+  },
+  {
+    id: 1,
+    name: 'shorty',
+    type: 'sidearm',
+    picturePath: getImageUrl('weapon-shorty.webp'),
+  },
+  {
+    id: 2,
+    name: 'frenzy',
+    type: 'sidearm',
+    picturePath: getImageUrl('weapon-frenzy.webp'),
+  },
+  {
+    id: 3,
+    name: 'ghost',
+    type: 'sidearm',
+    picturePath: getImageUrl('weapon-ghost.webp'),
+  },
+  {
+    id: 4,
+    name: 'sheriff',
+    type: 'sidearm',
+    picturePath: getImageUrl('weapon-sheriff.webp'),
+  },
+  {
+    id: 5,
+    name: 'stinger',
+    type: 'SMG',
+    picturePath: getImageUrl('weapon-stinger.webp'),
+  },
+  {
+    id: 6,
+    name: 'spectre',
+    type: 'SMG',
+    picturePath: getImageUrl('weapon-spectre.webp'),
+  },
+  {
+    id: 7,
+    name: 'bucky',
+    type: 'shotgun',
+    picturePath: getImageUrl('weapon-bucky.webp'),
+  },
+  {
+    id: 8,
+    name: 'judge',
+    type: 'shotgun',
+    picturePath: getImageUrl('weapon-judge.webp'),
+  },
+  {
+    id: 9,
+    name: 'bulldog',
+    type: 'rifle',
+    picturePath: getImageUrl('weapon-bulldog.webp'),
+  },
+  {
+    id: 10,
+    name: 'bulldog',
+    type: 'rifle',
+    picturePath: getImageUrl('weapon-bulldog.webp'),
+  },
+  {
+    id: 11,
+    name: 'guardian',
+    type: 'rifle',
+    picturePath: getImageUrl('weapon-guardian.webp'),
+  },
+  {
+    id: 12,
+    name: 'phantom',
+    type: 'rifle',
+    picturePath: getImageUrl('weapon-phantom.webp'),
+  },
+  {
+    id: 13,
+    name: 'vandal',
+    type: 'rifle',
+    picturePath: getImageUrl('weapon-vandal.webp'),
+  },
+  {
+    id: 14,
+    name: 'marshal',
+    type: 'sniper rifle',
+    picturePath: getImageUrl('weapon-marshal.webp'),
+  },
+  {
+    id: 15,
+    name: 'operator',
+    type: 'sniper rifle',
+    picturePath: getImageUrl('weapon-operator.webp'),
+  },
+  {
+    id: 16,
+    name: 'ares',
+    type: 'machine gun',
+    picturePath: getImageUrl('weapon-ares.webp'),
+  },
+  {
+    id: 17,
+    name: 'odin',
+    type: 'machine gun',
+    picturePath: getImageUrl('weapon-odin.webp'),
+  },
+  {
+    id: 18,
+    name: 'tactical knife',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-tacticalknife.webp'),
   },
 ];

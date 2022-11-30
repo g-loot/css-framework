@@ -93,7 +93,6 @@ h6,
 hr,
 .separator {
   @apply
-  border-ui-700
   mx-auto
   block
   w-full
@@ -120,13 +119,18 @@ hr,
     @apply
     w-px
     border-none
-    bg-ui-600
     ;
     &:not([class*='h-']) {
       @apply
       h-full
       ;
     }
+  }
+
+  &:not([class*='border-']) {
+    @apply
+    border-ui-600
+    ;
   }
 }
 
