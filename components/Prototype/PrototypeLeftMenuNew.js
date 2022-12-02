@@ -112,6 +112,66 @@ export default function PrototypeLeftMenuNew(props) {
         {!loading && (
           <div className="flex-1">
             <div className="">
+            <Link href={`/prototype/home${prototype.getURLparams()}`}>
+                <div
+                  className={`lg:hidden item px-6 item-interactive ${
+                    router.pathname.includes("home") ? "is-active" : ""
+                  }`}
+                >
+                  <div className="item-image">
+                    <div className="avatar avatar-simple avatar-xs">
+                      <div>
+                        <span className="icon icon-home-2 icon-16" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="item-body">
+                    <div className="item-title">
+                      <span className="text-sm uppercase">Home</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            <Link href={`/prototype/shop${prototype.getURLparams()}`}>
+                <div
+                  className={`lg:hidden item px-6 item-interactive ${
+                    router.pathname.includes("shop") ? "is-active" : ""
+                  }`}
+                >
+                  <div className="item-image">
+                    <div className="avatar avatar-simple avatar-xs">
+                      <div>
+                        <span className="icon icon-shop icon-16" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="item-body">
+                    <div className="item-title">
+                      <span className="text-sm uppercase">Shop</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                <div
+                  className={`lg:hidden item px-6 item-interactive ${
+                    router.pathname.includes("premium") ? "is-active" : ""
+                  }`}
+                >
+                  <div className="item-image">
+                    <div className="avatar avatar-simple avatar-xs">
+                      <div>
+                        <span className="icon icon-ic_stars_24px icon-16" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="item-body">
+                    <div className="item-title">
+                      <span className="text-sm uppercase">Premium</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
               <Link href={`/prototype/clans${prototype.getURLparams()}`}>
                 <button
                   type="button"
@@ -158,46 +218,7 @@ export default function PrototypeLeftMenuNew(props) {
                   </div>
                 </button>
               </Link>
-              <Link href={`/prototype/shop${prototype.getURLparams()}`}>
-                <div
-                  className={`lg:hidden item px-6 item-interactive ${
-                    router.pathname.includes("shop") ? "is-active" : ""
-                  }`}
-                >
-                  <div className="item-image">
-                    <div className="avatar avatar-simple avatar-xs">
-                      <div>
-                        <span className="icon icon-shop icon-16" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item-body">
-                    <div className="item-title">
-                      <span className="text-sm uppercase">Shop</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-              <Link href={`/prototype/premium${prototype.getURLparams()}`}>
-                <div
-                  className={`lg:hidden item px-6 item-interactive ${
-                    router.pathname.includes("premium") ? "is-active" : ""
-                  }`}
-                >
-                  <div className="item-image">
-                    <div className="avatar avatar-simple avatar-xs">
-                      <div>
-                        <span className="icon icon-ic_stars_24px icon-16" />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item-body">
-                    <div className="item-title">
-                      <span className="text-sm uppercase">Premium</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
+           
             </div>
             <PrototypeGamesNavNew />
             <div className="text-left p-2">

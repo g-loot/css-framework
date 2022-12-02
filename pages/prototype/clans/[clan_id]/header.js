@@ -4,6 +4,7 @@ import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import { UiContext } from "../../../../contexts/ui";
 import ReadMore from "../../../../components/ReadMore/ReadMore";
+import GameIcon from "../../../../components/GameIcon/GameIcon";
 
 export default function ClanHeader() {
   const router = useRouter();
@@ -81,47 +82,7 @@ export default function ClanHeader() {
                   <div className="flex items-center justify-start mt-4 gap-2">
                     <div className="flex gap-1">
                       {selectedClan.games?.map((game, gameIndex) => (
-                        <>
-                          <div
-                            key={game}
-                            className="p-1 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center"
-                          >
-                            <span
-                              className={`icon icon-20 ${
-                                prototype.getGameByID(game).slug ===
-                                "apexlegends"
-                                  ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                                  : ""
-                              } ${
-                                prototype.getGameByID(game).slug === "csgo"
-                                  ? "icon-game-csgo-symbol text-game-csgo"
-                                  : ""
-                              }  ${
-                                prototype.getGameByID(game).slug === "dota2"
-                                  ? "icon-game-dota2-symbol text-game-dota2"
-                                  : ""
-                              }  ${
-                                prototype.getGameByID(game).slug ===
-                                "leagueoflegends"
-                                  ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                                  : ""
-                              }  ${
-                                prototype.getGameByID(game).slug ===
-                                "rocketleague"
-                                  ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                                  : ""
-                              } ${
-                                prototype.getGameByID(game).slug === "pubg"
-                                  ? "icon-game-pubg-symbol text-game-pubg"
-                                  : ""
-                              }  ${
-                                prototype.getGameByID(game).slug === "valorant"
-                                  ? "icon-game-valorant-symbol text-game-valorant"
-                                  : ""
-                              }`}
-                            />
-                          </div>
-                        </>
+                        <GameIcon key={gameIndex} game={game} />
                       ))}
                     </div>
                     <hr className="m-0 separator separator-vertical h-7" />

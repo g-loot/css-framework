@@ -7,6 +7,7 @@ import ModalGiftTokens from "../modal-gift-tokens";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
+import GameIcon from "../../../../components/GameIcon/GameIcon";
 
 export default function SectionClanActivity() {
   const router = useRouter();
@@ -355,48 +356,7 @@ export default function SectionClanActivity() {
                           {prototype
                             .getUserByID(user)
                             .games.map((game, gameIndex) => (
-                              <>
-                                <div className="p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
-                                  <span
-                                    className={`icon text-xl ${
-                                      prototype.getGameByID(game).slug ===
-                                      "apexlegends"
-                                        ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                                        : ""
-                                    } ${
-                                      prototype.getGameByID(game).slug ===
-                                      "csgo"
-                                        ? "icon-game-csgo-symbol text-game-csgo"
-                                        : ""
-                                    }  ${
-                                      prototype.getGameByID(game).slug ===
-                                      "dota2"
-                                        ? "icon-game-dota2-symbol text-game-dota2"
-                                        : ""
-                                    }  ${
-                                      prototype.getGameByID(game).slug ===
-                                      "leagueoflegends"
-                                        ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                                        : ""
-                                    }  ${
-                                      prototype.getGameByID(game).slug ===
-                                      "rocketleague"
-                                        ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                                        : ""
-                                    } ${
-                                      prototype.getGameByID(game).slug ===
-                                      "pubg"
-                                        ? "icon-game-pubg-symbol text-game-pubg"
-                                        : ""
-                                    }  ${
-                                      prototype.getGameByID(game).slug ===
-                                      "valorant"
-                                        ? "icon-game-valorant-symbol text-game-valorant"
-                                        : ""
-                                    }`}
-                                  />
-                                </div>
-                              </>
+                              <GameIcon key={gameIndex} game={game} />
                             ))}
                         </div>
                       </div>

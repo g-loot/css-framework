@@ -16,13 +16,13 @@ const slides = [
   },
   {
     subtitle: "G-Loot",
-    title: "Valorant Clash is here",
+    title: "Who's your top VALORANT Agent?",
     description:
-      "32 teams will duke it out over 3 days across 18 matches. The top teams will move on to the Grand Final. Do not miss out!",
+      "Check your damage/round, K/D ratio, headshots percentage, and more, for your last 20 matches. Plus, specific stats for your most played Agents",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1668956919/Logos%20for%20tournaments/Carousel_Clash_1.jpg",
-    buttonLabel: "Learn more",
-    buttonURL: "#",
+      "https://res.cloudinary.com/gloot/image/upload/v1669901630/Marketing/2022_VALORANT_agent_generator/images/Carousel_Valorant_Stats.jpg",
+    buttonLabel: "Check it out",
+    buttonURL: "/prototype/valorant/stats",
   },
   {
     subtitle: "Shop",

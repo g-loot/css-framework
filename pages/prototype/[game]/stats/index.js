@@ -690,7 +690,7 @@ export default function Stats() {
                           <div className="space-y-4">
                             <div className="flex items-baseline gap-2 text-blue-500">
                               <span>Head</span>
-                              <span className="font-bold text-lg">20%</span>
+                              <span className="font-bold text-lg">30%</span>
                               <span>Hits</span>
                               <span className="font-bold text-lg">49.4</span>
                             </div>
@@ -702,7 +702,7 @@ export default function Stats() {
                             </div>
                             <div className="flex items-baseline gap-2 text-error-500">
                               <span>Legs</span>
-                              <span className="font-bold text-lg">30%</span>
+                              <span className="font-bold text-lg">20%</span>
                               <span>Hits</span>
                               <span className="font-bold text-lg">49.4</span>
                             </div>
@@ -714,7 +714,7 @@ export default function Stats() {
                 </div>
               </section>
               <section className="mb-4">
-                <h2 className="h5 mx-4 md:mx-0">Most played agents</h2>
+                <h2 className="h5 mx-4 md:mx-0">Most played Agents</h2>
                 <div className="overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">
                   <table
                     className={`table table-rounded rounded-lg w-full text-center min-w-lg ${
