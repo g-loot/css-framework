@@ -10,6 +10,7 @@ import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 import ReadMore from "../../../components/ReadMore/ReadMore";
 import GameIcon from "../../../components/GameIcon/GameIcon";
+import Slider from "../../../components/Slider/Slider";
 
 export default function Home() {
   const router = useRouter();
@@ -242,82 +243,86 @@ export default function Home() {
               className="flex flex-col lg:flex-row gap-4 lg:items-stretch animate-slide-in-bottom animate-delay mb-4"
               style={{ "--delay": "calc(2 * 0.05s)" }}
             >
-              <div className="flex-1 surface surface-halo halo-b halo-r sm:rounded-lg py-8 px-4 space-y-8">
-                <div className="flex flex-col xl:flex-row items-center">
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-brawl-sm.svg"
-                    width="auto"
-                    height="auto"
-                    alt=""
-                    className="drop-shadow-xl mx-8 h-24 flex-none"
-                  />
-                  <div className="flex-1 flex flex-wrap gap-2 items-stretch justify-center text-center">
-                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
-                      <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
-                        Number of Brawls played
-                      </div>
-                      <div className="text-3xl font-headings text-ui-100">
-                        22
-                      </div>
+              <div className="flex-1 flex flex-col gap-4 overflow-hidden">
+                <div className="surface sm:rounded-lg relative overflow-hidden">
+                  <Slider bgColor="from-ui-800 via-ui-800 to-ui-800/0">
+                    <div className="flex gap-4 px-4">
+                      <div className="w-20 h-20 rounded-full bg-ui-600" />
+                      <div className="w-20 h-20 rounded-full bg-ui-600" />
+                      <div className="w-20 h-20 rounded-full bg-ui-600" />
+                      <div className="w-20 h-20 rounded-full bg-ui-600" />
+                      <div className="w-20 h-20 rounded-full bg-ui-600" />
+                      <div className="w-20 h-20 rounded-full bg-ui-600" />
+                      <div className="w-20 h-20 rounded-full bg-ui-600" />
+                      <div className="w-20 h-20 rounded-full bg-ui-600" />
+                      <div className="w-20 h-20 rounded-full bg-ui-600" />
+                      <div className="w-20 h-20 rounded-full bg-ui-600" />
+                      <div className="w-20 h-20 rounded-full bg-ui-600" />
                     </div>
-                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
-                      <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
-                        Times in top 50
+                  </Slider>
+                </div>
+                <div className="flex-1 flex flex-col gap-4">
+                  <div className="surface sm:rounded-lg flex flex-col xl:flex-row items-center">
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-brawl-sm.svg"
+                      width="auto"
+                      height="auto"
+                      alt=""
+                      className="drop-shadow-xl mx-8 my-4 h-24 flex-none"
+                    />
+                    <div className="flex-1 flex flex-wrap gap-x-2 gap-y-1 items-center justify-start">
+                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
+                        <span className="text-sm text-ui-300">
+                          Number of Brawls played:
+                        </span>
+                        <span className="font-bold">22</span>
                       </div>
-                      <div className="text-3xl font-headings text-ui-100">
-                        2
+                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
+                        <span className="text-sm text-ui-300">
+                          Times in top 50:
+                        </span>
+                        <span className="font-bold">2</span>
                       </div>
-                    </div>
-                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
-                      <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
-                        Best placement
+                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
+                        <span className="text-sm text-ui-300">
+                          Best placement:
+                        </span>
+                        <span className="font-bold">1</span>
                       </div>
-                      <div className="text-3xl font-headings text-ui-100">
-                        1
+                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
+                        <span className="text-sm text-ui-300">
+                          Most matches in a Brawl:
+                        </span>
+                        <span className="font-bold">16</span>
                       </div>
-                    </div>
-                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
-                      <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
-                        Most matches in a Brawl
-                      </div>
-                      <div className="text-3xl font-headings text-ui-100">
-                        16
-                      </div>
-                    </div>
-                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
-                      <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
-                        Avg. matches / Brawl
-                      </div>
-                      <div className="text-3xl font-headings text-ui-100">
-                        13
+                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
+                        <span className="text-sm text-ui-300">
+                          Avg. matches / Brawl:
+                        </span>
+                        <span className="font-bold">9.8</span>
                       </div>
                     </div>
                   </div>
-                </div>
-                <hr className="my-8 border-ui-700" />
-                <div className="flex flex-col xl:flex-row items-center">
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-missions-sm.svg"
-                    width="auto"
-                    height="50"
-                    alt=""
-                    className="drop-shadow-xl mx-8 h-24 flex-none"
-                  />
-                  <div className="flex-1 flex flex-wrap gap-2 items-stretch justify-center text-center">
-                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
-                      <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
-                        No. of missions completed
+                  <div className="surface sm:rounded-lg flex flex-col xl:flex-row items-center">
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-missions-sm.svg"
+                      width="auto"
+                      height="50"
+                      alt=""
+                      className="drop-shadow-xl mx-8 my-4 h-24 flex-none"
+                    />
+                    <div className="flex-1 flex flex-wrap gap-x-2 gap-y-1 items-center justify-start">
+                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
+                        <span className="text-sm text-ui-300">
+                          No. of missions completed:
+                        </span>
+                        <span className="font-bold">143</span>
                       </div>
-                      <div className="text-3xl font-headings text-ui-100">
-                        143
-                      </div>
-                    </div>
-                    <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-3 w-28 flex flex-col items-center justify-end">
-                      <div className="leading-none text-xs text-ui-300 uppercase max-w-[15ch]">
-                        Missions / day avg.
-                      </div>
-                      <div className="text-3xl font-headings text-ui-100">
-                        3
+                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
+                        <span className="text-sm text-ui-300">
+                          Missions / day avg.:
+                        </span>
+                        <span className="font-bold">2.4</span>
                       </div>
                     </div>
                   </div>
@@ -534,89 +539,47 @@ export default function Home() {
                           {prototype.getGameByID(stat.game).name}
                         </div>
                       </div>
-                      {prototype.getGameByID(stat.game).slug === 'valorant' && (
+                      {prototype.getGameByID(stat.game).slug === "valorant" && (
                         <div className="item-action">
                           <Link href="/prototype/valorant/stats">
-                            <button type="button" className="button button-sm button-tertiary">
-                              <span>View all Valorant stats</span>
-                            </button>
+                            <a className="link link-hover text-ui-300 text-sm">
+                              View all Valorant stats
+                            </a>
                           </Link>
                         </div>
                       )}
                     </div>
-                    <div className="p-4">
-                      <div className="grid grid-cols-2 lg:grid-cols-4">
-                        <div className="text-center border-r border-ui-700/50">
-                          <div
-                            className="animate-slide-in-bottom animate-delay"
-                            style={{ "--delay": "calc(2 * 0.05s)" }}
-                          >
-                            <div className="icon-holder icon-holder-sm mx-auto">
-                              <span className="icon icon-mission-gamematchbattlewon" />
-                            </div>
-                            <div>
-                              <div className="leading-none text-xs text-ui-300 uppercase">
-                                WIN RATE
-                              </div>
-                              <div className="text-3xl font-headings text-ui-100">
-                                {stat.winrate}
-                              </div>
-                            </div>
-                          </div>
+                    <div className="leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around p-4">
+                      <div className="pl-4 border-l border-ui-600">
+                        <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                          Win rate
                         </div>
-                        <div className="text-center border-r border-ui-700/50">
-                          <div
-                            className="animate-slide-in-bottom animate-delay"
-                            style={{ "--delay": "calc(3 * 0.05s)" }}
-                          >
-                            <div className="icon-holder icon-holder-sm mx-auto">
-                              <span className="icon icon-mission-kill" />
-                            </div>
-                            <div>
-                              <div className="leading-none text-xs text-ui-300 uppercase">
-                                K/D ratio
-                              </div>
-                              <div className="text-3xl font-headings text-ui-100">
-                                {stat.kdratio}
-                              </div>
-                            </div>
-                          </div>
+                        <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                          {stat.winrate}
                         </div>
-                        <div className="text-center border-r border-ui-700/50">
-                          <div
-                            className="animate-slide-in-bottom animate-delay"
-                            style={{ "--delay": "calc(4 * 0.05s)" }}
-                          >
-                            <div className="icon-holder icon-holder-sm mx-auto">
-                              <span className="icon icon-mission-headshot" />
-                            </div>
-                            <div>
-                              <div className="leading-none text-xs text-ui-300 uppercase">
-                                Headshots kill avg
-                              </div>
-                              <div className="text-3xl font-headings text-ui-100">
-                                {stat.headshotkillsavg}
-                              </div>
-                            </div>
-                          </div>
+                      </div>
+                      <div className="pl-4 border-l border-ui-600">
+                        <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                          K/D ratio
                         </div>
-                        <div className="text-center">
-                          <div
-                            className="animate-slide-in-bottom animate-delay"
-                            style={{ "--delay": "calc(5 * 0.05s)" }}
-                          >
-                            <div className="icon-holder icon-holder-sm mx-auto">
-                              <span className="icon icon-mission-assist" />
-                            </div>
-                            <div>
-                              <div className="leading-none text-xs text-ui-300 uppercase">
-                                Assist avg
-                              </div>
-                              <div className="text-3xl font-headings text-ui-100">
-                                {stat.assistavg}
-                              </div>
-                            </div>
-                          </div>
+                        <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                          {stat.kdratio}
+                        </div>
+                      </div>
+                      <div className="pl-4 border-l border-ui-600">
+                        <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                          Headshots kill avg
+                        </div>
+                        <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                          {stat.headshotkillsavg}
+                        </div>
+                      </div>
+                      <div className="pl-4 border-l border-ui-600">
+                        <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                          Assist avg
+                        </div>
+                        <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                          {stat.assistavg}
                         </div>
                       </div>
                     </div>
@@ -645,57 +608,43 @@ export default function Home() {
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Assists
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">
-                                151
-                              </div>
+                              <div className="font-bold">151</div>
                             </div>
                             <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Kills
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">
-                                405
-                              </div>
+                              <div className="font-bold">405</div>
                             </div>
                             <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Deaths
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">
-                                570
-                              </div>
+                              <div className="font-bold">570</div>
                             </div>
                             <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Headshot kills
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">
-                                144
-                              </div>
+                              <div className="font-bold">144</div>
                             </div>
                             <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Wins
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">
-                                35
-                              </div>
+                              <div className="font-bold">35</div>
                             </div>
                             <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Losses
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">
-                                24
-                              </div>
+                              <div className="font-bold">24</div>
                             </div>
                             <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                               <div className="leading-none text-xs text-ui-300 uppercase">
                                 Draws
                               </div>
-                              <div className="text-3xl font-headings text-ui-100">
-                                1
-                              </div>
+                              <div className="font-bold">1</div>
                             </div>
                           </div>
                         </Accordion>

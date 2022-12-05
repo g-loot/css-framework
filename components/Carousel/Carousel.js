@@ -16,9 +16,9 @@ const slides = [
   },
   {
     subtitle: "G-Loot",
-    title: "Who's your top VALORANT Agent?",
+    title: "Who's your top VALORANT agent?",
     description:
-      "Check your damage/round, K/D ratio, headshots percentage, and more, for your last 20 matches. Plus, specific stats for your most played Agents",
+      "Check your damage/round, K/D ratio, headshots percentage, and more, for your last 20 matches. Plus, specific stats for your most played agents",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1669901630/Marketing/2022_VALORANT_agent_generator/images/Carousel_Valorant_Stats.jpg",
     buttonLabel: "Check it out",

@@ -6,7 +6,7 @@ import Slider from "../../../components/Slider/Slider";
 const SoloBrawls = [
   {
     id: 0,
-    game: 2,
+    gameID: 2,
     name: null,
     gameMode: "Unrated",
     name: "Unrated Brawl",
@@ -18,7 +18,7 @@ const SoloBrawls = [
   },
   {
     id: 1,
-    game: 1,
+    gameID: 1,
     name: null,
     gameMode: "Unrated",
     name: "Unrated Brawl",
@@ -30,7 +30,7 @@ const SoloBrawls = [
   },
   {
     id: 4,
-    game: 1,
+    gameID: 1,
     name: null,
     gameMode: "Spike Rush",
     name: "Spike Rush Brawl",
@@ -42,7 +42,7 @@ const SoloBrawls = [
   },
   {
     id: 2,
-    game: 3,
+    gameID: 3,
     name: null,
     gameMode: "Ranked trio",
     name: "Competitive Brawl",
@@ -54,7 +54,7 @@ const SoloBrawls = [
   },
   {
     id: 3,
-    game: 4,
+    gameID: 4,
     name: null,
     gameMode: "Ranked Arena",
     name: "Weekly Arena Brawl",
@@ -66,7 +66,7 @@ const SoloBrawls = [
   },
   {
     id: 5,
-    game: 5,
+    gameID: 5,
     name: null,
     gameMode: "Ranked squad FPP",
     name: "Competitive Brawl",
@@ -82,14 +82,12 @@ export default function HomeBrawlSolo() {
   const { query } = useRouter();
 
   return (
-    <>
-      <div className="relative">
-        <Slider itemWidth={397+16} bgColor="from-ui-900 via-ui-900/90 to-ui-900/0">
-          {SoloBrawls.map((item, itemIndex) => (
-            <BrawlCardSecondary key={item.id} brawl={item} isHorizontal={false} isClan={false} />
-          ))}
-        </Slider>
-      </div>
-    </>
+    <div className="relative">
+      <Slider itemWidth={397+16} bgColor="from-ui-900 via-ui-900/90 to-ui-900/0">
+        {SoloBrawls.map((item, itemIndex) => (
+          <BrawlCardSecondary key={item.id} brawl={item} isHorizontal={false} isClan={false} />
+        ))}
+      </Slider>
+    </div>
   );
 }

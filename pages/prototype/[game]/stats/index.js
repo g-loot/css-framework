@@ -714,7 +714,7 @@ export default function Stats() {
                 </div>
               </section>
               <section className="mb-4">
-                <h2 className="h5 mx-4 md:mx-0">Most played Agents</h2>
+                <h2 className="h5 mx-4 md:mx-0">Most played agents</h2>
                 <div className="overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">
                   <table
                     className={`table table-rounded rounded-lg w-full text-center min-w-lg ${

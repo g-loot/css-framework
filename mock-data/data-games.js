@@ -91,6 +91,7 @@ export const dataGames = [
             value: 5
           }
         ],
+        isEnrolled: true,
         progress: 0,
         progressClan: 0,
         soloLeaderboard: [
@@ -369,6 +370,7 @@ export const dataGames = [
             value: 5
           }
         ],
+        isEnrolled: false,
         progress: 2,
         progressClan: 1,
         soloLeaderboard: [
@@ -647,6 +649,7 @@ export const dataGames = [
             value: 5
           }
         ],
+        isEnrolled: false,
         progress: 3,
         progressClan: 0,
         soloLeaderboard: [
@@ -1367,6 +1370,7 @@ export const dataGames = [
             value: 5
           }
         ],
+        isEnrolled: false,
         progress: 0,
         progressClan: 0,
         soloLeaderboard: [
@@ -1645,6 +1649,7 @@ export const dataGames = [
             value: 5
           }
         ],
+        isEnrolled: false,
         progress: 3,
         progressClan: 0,
         soloLeaderboard: [

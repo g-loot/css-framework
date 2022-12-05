@@ -1,52 +1,21 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
-import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
 import ModalBrawlHowitworksVideo from "./modal-howitworks-video";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
-import TabBrawlsHistory from "./tab-history";
-import TabBrawlsHowItWorks from "./tab-howitworks";
-import TabBrawlsOngoing from "./tab-brawlsongoing";
-import TabBrawlsRules from "./tab-glootrules";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
-
-const TabsItems = [
-  {
-    label: "Brawls",
-    url: "ongoing",
-    component: TabBrawlsOngoing,
-  },
-  {
-    label: "How it works",
-    url: "how-it-works",
-    component: TabBrawlsHowItWorks,
-  },
-  {
-    label: "G-Loot rules",
-    url: "rules",
-    component: TabBrawlsRules,
-  },
-  {
-    label: "Your Brawl history",
-    url: "history",
-    component: TabBrawlsHistory,
-  },
-];
+import TabBrawlsOngoingNew from "./tab-brawlsongoingnew";
+import BrawlsHeader from "./brawls-header";
 
 export default function Brawls() {
   const router = useRouter();
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const { game } = router.query;
-  const { tab } = router.query;
-  const { query } = useRouter();
-  const defaultTab = "ongoing";
-  const selectedTab = tab ? tab : defaultTab;
   const uiContext = useContext(UiContext);
-  const freeEntry = query.freeentry === "true" ? true : false;
 
   function openModalBrawlHowitworksVideo() {
     uiContext.openModal(
@@ -57,14 +26,12 @@ export default function Brawls() {
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game, prototype]);
-  
+
   useEffect(() => {
-    if(selectedGame != null) {
+    if (selectedGame != null) {
       prototype.defineDefaultGameID(selectedGame.id);
     }
   }, [selectedGame]);
-
-  
 
   return (
     <>
@@ -72,91 +39,161 @@ export default function Brawls() {
         <Ad width="1005" height="300" />
         {selectedGame && (
           <>
-            <section className="header surface sm:rounded-lg mb-4">
-              <div className="header-content">
-                <div className="header-image">
+            <BrawlsHeader breadcrumb={false} />
+            <TabBrawlsOngoingNew />
+            <section className="py-4 flex flex-col xl:flex-row gap-4 items-stretch">
+              <div className="flex-1 surface sm:rounded-lg overflow-hidden relative flex flex-col p-6">
+                <div className="flex-1 relative z-10 max-w-[25ch] flex flex-col justify-start items-start">
+                  <h2 className="h5">How it works</h2>
+                  <p className="text-ui-300 mt-3 mb-5">
+                    From entering a Brawl to claiming your rewards, here is
+                    everything you need to know about our competitions.
+                  </p>
+                  <Link
+                    href={`/prototype/${selectedGame.slug}/brawls/howitworks`}
+                  >
+                    <button
+                      type="button"
+                      className="button button-sm button-secondary"
+                    >
+                      Learn more
+                    </button>
+                  </Link>
+                </div>
+                <img
+                  className="object-contain object-right absolute z-0 right-0 inset-y-0 w-full h-full"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1669988981/Marketing/2022_prototype/Brawl_how_it_works_card_right.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="flex-1 surface sm:rounded-lg overflow-hidden relative flex flex-col p-6">
+                <div className="flex-1 relative z-10 max-w-[25ch] flex flex-col justify-start items-start">
+                  <h2 className="h5">G-Loot Rules</h2>
+                  <p className="text-ui-300 mt-3 mb-5">
+                    At G-Loot we take player protection very seriously and
+                    investigate any suspicious activity.
+                  </p>
+                  <Link href={`/prototype/${selectedGame.slug}/brawls/rules`}>
+                    <button
+                      type="button"
+                      className="button button-sm button-secondary"
+                    >
+                      Learn more
+                    </button>
+                  </Link>
+                </div>
+                <img
+                  className="object-contain object-right absolute z-0 right-0 inset-y-0 w-full h-full"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1670247061/Marketing/2022_prototype/Brawl_how_it_rules_card_right.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="xl:h-64 flex-1 surface sm:rounded-lg overflow-hidden relative flex flex-col">
+                <div className="px-3 py-2 border-b border-ui-700 relative z-10 flex-none flex items-center justify-between">
+                  <div className="font-bold">Your Brawl history</div>
+                  <Link
+                    href={`/prototype/${
+                      selectedGame.slug
+                    }/brawls/history${prototype.getURLparams()}`}
+                  >
+                    <a className="link link-hover text-ui-300 text-sm">
+                      View all
+                    </a>
+                  </Link>
+                </div>
+                <div className="relative z-0 lg:max-h-150px overflow-y-auto scrollbar-desktop">
+                  <table className="table table-interactive w-full">
+                    <tbody>
+                      {selectedGame &&
+                        selectedGame.brawls.map((brawl, brawlIndex) => (
+                          <>
+                            <Link
+                              href={`/prototype/${game}/brawls/${
+                                brawl.id
+                              }${prototype.getURLparams()}`}
+                            >
+                              <tr
+                                key={brawl}
+                                className="leading-tight py-2 text-sm"
+                              >
+                                <td>
+                                  <span className="text-ui-300">
+                                    {brawl.name}
+                                  </span>
+                                </td>
+                                <td>
+                                  <div className="font-bold text-right">
+                                    #92
+                                  </div>
+                                </td>
+                                <td>
+                                  <div className="font-bold text-right">
+                                    18 kills
+                                  </div>
+                                </td>
+                              </tr>
+                            </Link>
+                          </>
+                        ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+            <section className="my-8 surface sm:rounded-lg p-8 text-center relative">
+              <img
+                className="hidden lg:block absolute pointer-events-none z-20 -top-8 right-2 rotate-[33deg]"
+                src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_2.webp"
+                width="90"
+                height="auto"
+                alt=""
+              />
+
+              <img
+                className="hidden lg:block absolute pointer-events-none z-20 -bottom-20 right-[calc(50%-28rem)] blur-sm rotate-[120deg]"
+                src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_1.webp"
+                width="189"
+                height="auto"
+                alt=""
+              />
+              <img
+                className="hidden lg:block absolute pointer-events-none z-20 -top-14 left-[calc(50%-26rem)] blur-sm -rotate-[33deg]"
+                src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_2.webp"
+                width="150"
+                height="auto"
+                alt=""
+              />
+              <img
+                className="hidden lg:block absolute pointer-events-none z-20 -bottom-14 left-2 -rotate-[143deg]"
+                src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_2.webp"
+                width="134"
+                height="auto"
+                alt=""
+              />
+              <img
+                className="hidden lg:block absolute pointer-events-none z-20 top-32 left-5 -rotate-[74deg]"
+                src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_1.webp"
+                width="49"
+                height="auto"
+                alt=""
+              />
+              <h3 className="text-2xl">
+                Last week, G-Loot Brawlers won a total of
+              </h3>
+              <div className="flex gap-8 items-start justify-center leading-tight mt-4">
+                <div>
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1657888944/Marketing/2022_prototype/Logo/samesize-brawl.svg"
-                    width="400"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-coin-small.png"
+                    width="100"
                     height="auto"
                     alt=""
                   />
-                </div>
-                <div className="header-body">
-                  {freeEntry ? (
-                    <>
-                    <h1 className="text-4xl mb-2 leading-none">Compete for free!</h1>
-                    <p className="text-ui-300 max-w-[25ch] mb-2">
-                      Use your stats to climb the Brawl leaderboard and win
-                      prizes. No waiting, no dedicated servers. Play on your own
-                      schedule! 
-                    </p>
-                    <p className="text-blue-300 max-w-[25ch] mb-4"><span className="font-bold">First time competing?</span> Your entry Brawl is on us!
-                      Simply pick any Brawl you like and claim your free Brawl!</p>
-                    </>
-                  ) : (
-                    <>
-                    <h1 className="text-4xl mb-2 leading-none">Brawls</h1>
-                    <p className="text-ui-300 max-w-[25ch] mb-4">
-                      Use your stats to climb the Brawl leaderboard and win
-                      prizes. No waiting, no dedicated servers. Play on your own
-                      schedule!
-                    </p>
-                    </>
-                  )}
-                  <div className="flex flex-col md:flex-row gap-2">
-                    <button
-                      type="button"
-                      className="button button-sm button-primary button-play"
-                      onClick={openModalBrawlHowitworksVideo}
-                    >
-                      <span className="icon icon-circle-caret-right" />
-                      <span>Learn how to Brawl</span>
-                    </button>
-                    <Link
-                      href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                    >
-                      <button
-                        type="button"
-                        className="button button-sm button-secondary"
-                      >
-                        <span className="icon icon-steam" />
-                        <span>Steam required</span>
-                      </button>
-                    </Link>
+                  <div className="font-headings font-bold text-xl lg:text-3xl text-gold-500">
+                    2 245 650
                   </div>
+                  <div className="uppercase text-lg text-gold-500">Coins</div>
                 </div>
               </div>
-              <div className="header-bg">
-                <img src={selectedGame.assets.heroBrawl} alt="Brawls" />
-              </div>
-            </section>
-            <nav>
-              <ul className="tabs border-b border-ui-700">
-                {TabsItems.map((item, itemIndex) => (
-                  <li key={item}>
-                    <Link
-                      href={`/prototype/${game}/brawls?tab=${item.url}${prototype.getURLparams("&")}`}
-                    >
-                      <a
-                        className={`${
-                          selectedTab === item.url ? "is-active" : ""
-                        }`}
-                      >
-                        <span>{item.label}</span>
-                      </a>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            <section className="py-4">
-              {TabsItems.map((item, itemIndex) => {
-                if (item.url === selectedTab) {
-                  return React.createElement(item.component, { key: itemIndex })
-                }
-              })}
             </section>
           </>
         )}
