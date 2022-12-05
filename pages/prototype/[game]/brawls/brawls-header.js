@@ -48,17 +48,10 @@ export default function BrawlsHeader(props) {
                       </a>
                     </Link>
                   </li>
-                  {/*
-                  <li>
-                    <a href="#">
-                      <span>{selectedGame.name}</span>
-                    </a>
-                  </li>
-          */}
                   <li>
                     <Link href={`/prototype/${selectedGame.slug}/brawls`}>
                       <a href="#">
-                        <span>Brawls</span>
+                        <span> {selectedGame.name} Brawls</span>
                       </a>
                     </Link>
                   </li>
