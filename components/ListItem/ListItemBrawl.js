@@ -10,9 +10,7 @@ export default function ListItemBrawl(props) {
   const prototype = usePrototypeData();
   const game = props.game;
   const brawl = props.brawl;
-  const { query } = useRouter();
   const uiContext = useContext(UiContext);
-  const hasAds = query.ads === "true" ? true : false;
 
   function openModalClaimLadderRewards() {
     uiContext.openModal(<ModalClaimLadderRewards></ModalClaimLadderRewards>);
@@ -103,7 +101,7 @@ export default function ListItemBrawl(props) {
                       <span className="text-sm text-ui-300">
                         Position:{" "}
                         <span className="font-bold">
-                          #{brawl.result.position}
+                          #{brawl.soloResults?.placement}
                         </span>
                       </span>
                     </>
@@ -114,7 +112,7 @@ export default function ListItemBrawl(props) {
                       <span className="text-sm text-ui-300">
                         Final position:{" "}
                         <span className="font-bold">
-                          #{brawl.result.position}
+                          #{brawl.soloResults?.placement}
                         </span>
                       </span>
                     </>
@@ -264,21 +262,21 @@ export default function ListItemBrawl(props) {
                       <div className="font-headings leading-none flex items-start gap-1">
                         <span className="text-xl">#</span>
                         <span className="text-4xl">
-                          {brawl.result.position}
+                          {brawl.soloResults.placement}
                         </span>
                       </div>
                       <div
                         className={`hidden leading-none text-center -space-y-1 ${
-                          brawl.result.isPositive
+                          brawl.soloResults.isPositive
                             ? "text-success-500 -mt-1"
                             : "text-error-300 -mb-1"
                         }`}
                       >
-                        {brawl.result.isPositive && (
+                        {brawl.soloResults.isPositive && (
                           <span className="icon icon-arrow-sm-up" />
                         )}
-                        <div>{brawl.result.movement}</div>
-                        {!brawl.result.isPositive && (
+                        <div>{brawl.soloResults.movement}</div>
+                        {!brawl.soloResults.isPositive && (
                           <span className="icon icon-arrow-sm-down" />
                         )}
                       </div>

@@ -108,6 +108,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -127,6 +128,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -146,6 +148,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -165,6 +168,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -180,6 +184,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -195,6 +200,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -210,6 +216,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -225,6 +232,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -242,6 +250,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -257,6 +266,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -272,6 +282,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -287,6 +298,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -302,6 +314,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -317,6 +330,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -327,6 +341,7 @@ export const dataGames = [
             clan: 6,
             rewards: null,
             stats: {
+              placement: 27,
               brawlPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -337,6 +352,7 @@ export const dataGames = [
             clan: 7,
             rewards: null,
             stats: {
+              placement: 27,
               brawlPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -344,8 +360,15 @@ export const dataGames = [
             }
           }
         ],
-        result: {
-          position: 23,
+        soloResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        clanResults: {
+          placement: 23,
+          points: 84,
           movement: 2,
           isPositive: true,
         },
@@ -387,6 +410,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -406,6 +430,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -425,6 +450,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -444,6 +470,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -459,6 +486,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -474,6 +502,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -489,6 +518,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -504,6 +534,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -521,6 +552,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -536,6 +568,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -551,6 +584,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -566,6 +600,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -581,6 +616,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -596,6 +632,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -606,6 +643,7 @@ export const dataGames = [
             clan: 6,
             rewards: null,
             stats: {
+              placement: 27,
               brawlPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -616,6 +654,7 @@ export const dataGames = [
             clan: 7,
             rewards: null,
             stats: {
+              placement: 27,
               brawlPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -623,10 +662,17 @@ export const dataGames = [
             }
           }
         ],
-        result: {
-          position: 12,
-          movement: 4,
-          isPositive: false,
+        soloResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        clanResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
         },
         topPerformers: [2,3,4],
       },
@@ -666,6 +712,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -685,6 +732,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -704,6 +752,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -723,6 +772,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -738,6 +788,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -753,6 +804,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -768,6 +820,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -783,6 +836,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -800,6 +854,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -815,6 +870,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -830,6 +886,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -845,6 +902,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -860,6 +918,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -875,6 +934,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -885,6 +945,7 @@ export const dataGames = [
             clan: 6,
             rewards: null,
             stats: {
+              placement: 27,
               brawlPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -895,6 +956,7 @@ export const dataGames = [
             clan: 7,
             rewards: null,
             stats: {
+              placement: 27,
               brawlPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -902,10 +964,17 @@ export const dataGames = [
             }
           }
         ],
-        result: {
-          position: 12,
-          movement: 4,
-          isPositive: false,
+        soloResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        clanResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
         },
         topPerformers: [2,3,4],
       }
@@ -1387,6 +1456,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1406,6 +1476,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1425,6 +1496,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1444,6 +1516,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1459,6 +1532,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1474,6 +1548,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1489,6 +1564,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1504,6 +1580,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1521,6 +1598,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1536,6 +1614,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1551,6 +1630,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1566,6 +1646,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1581,6 +1662,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1596,6 +1678,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1606,6 +1689,7 @@ export const dataGames = [
             clan: 6,
             rewards: null,
             stats: {
+              placement: 27,
               brawlPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1616,6 +1700,7 @@ export const dataGames = [
             clan: 7,
             rewards: null,
             stats: {
+              placement: 27,
               brawlPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1624,7 +1709,7 @@ export const dataGames = [
           }
         ],
         result: {
-          position: 67,
+          placement: 67,
           movement: 12,
           isPositive: true,
         },
@@ -1666,6 +1751,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1685,6 +1771,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1704,6 +1791,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1723,6 +1811,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1738,6 +1827,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1753,6 +1843,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1768,6 +1859,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1783,6 +1875,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1800,6 +1893,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1815,6 +1909,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1830,6 +1925,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1845,6 +1941,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1860,6 +1957,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1875,6 +1973,7 @@ export const dataGames = [
               }
             ],
             stats: {
+              placement: 27,
               brawlPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1885,6 +1984,7 @@ export const dataGames = [
             clan: 6,
             rewards: null,
             stats: {
+              placement: 27,
               brawlPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1895,6 +1995,7 @@ export const dataGames = [
             clan: 7,
             rewards: null,
             stats: {
+              placement: 27,
               brawlPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
@@ -1903,7 +2004,7 @@ export const dataGames = [
           }
         ],
         result: {
-          position: 4,
+          placement: 4,
           movement: 2,
           isPositive: false,
         },

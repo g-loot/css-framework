@@ -243,8 +243,19 @@ export default function Home() {
               className="flex flex-col lg:flex-row gap-4 lg:items-stretch animate-slide-in-bottom animate-delay mb-4"
               style={{ "--delay": "calc(2 * 0.05s)" }}
             >
+              
               <div className="flex-1 flex flex-col gap-4 overflow-hidden">
                 <div className="surface sm:rounded-lg relative overflow-hidden">
+                  <div className="px-3 py-2 border-b border-ui-700 relative z-10 flex-none flex items-center justify-between">
+                    <div className="font-bold">Your Brawl history</div>
+                    <Link
+                      href="#"
+                    >
+                      <a className="link link-hover text-ui-300 text-sm">
+                        View all achievements
+                      </a>
+                    </Link>
+                  </div>
                   <Slider bgColor="from-ui-800 via-ui-800 to-ui-800/0">
                     <div className="flex gap-4 px-4">
                       <div className="w-20 h-20 rounded-full bg-ui-600" />
@@ -494,45 +505,7 @@ export default function Home() {
                   >
                     <div className="item">
                       <div className="item-image">
-                        <div
-                          className={`rounded h-12 w-12 flex items-center justify-center bg-gradient-to-b from-ui-900/50 to-ui-900/0 aspect-square text-game-valorant`}
-                        >
-                          <span
-                            className={`icon text-xl ${
-                              prototype.getGameByID(stat.game).slug ===
-                              "apexlegends"
-                                ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                                : ""
-                            } ${
-                              prototype.getGameByID(stat.game).slug === "csgo"
-                                ? "icon-game-csgo-symbol text-game-csgo"
-                                : ""
-                            }  ${
-                              prototype.getGameByID(stat.game).slug === "dota2"
-                                ? "icon-game-dota2-symbol text-game-dota2"
-                                : ""
-                            }  ${
-                              prototype.getGameByID(stat.game).slug ===
-                              "leagueoflegends"
-                                ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                                : ""
-                            }  ${
-                              prototype.getGameByID(stat.game).slug ===
-                              "rocketleague"
-                                ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                                : ""
-                            } ${
-                              prototype.getGameByID(stat.game).slug === "pubg"
-                                ? "icon-game-pubg-symbol text-game-pubg"
-                                : ""
-                            }  ${
-                              prototype.getGameByID(stat.game).slug ===
-                              "valorant"
-                                ? "icon-game-valorant-symbol text-game-valorant"
-                                : ""
-                            }`}
-                          />
-                        </div>
+                        <GameIcon game={stat.game} />
                       </div>
                       <div className="item-body">
                         <div className="item-title font-headings font-bold text-xl text-ui-100 uppercase italic">

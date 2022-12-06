@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import BrawlCardSecondary from "../../../components/Brawl/BrawlCardSecondary";
 import Slider from "../../../components/Slider/Slider";
+import Link from "next/link";
 
 const SoloBrawls = [
   {
@@ -80,14 +81,45 @@ const SoloBrawls = [
 
 export default function HomeBrawlSolo() {
   const { query } = useRouter();
+  const hasNoBrawls = query.nobrawls === "true" ? true : false;
 
   return (
     <div className="relative">
-      <Slider itemWidth={397+16} bgColor="from-ui-900 via-ui-900/90 to-ui-900/0">
-        {SoloBrawls.map((item, itemIndex) => (
-          <BrawlCardSecondary key={item.id} brawl={item} isHorizontal={false} isClan={false} />
-        ))}
-      </Slider>
+      {hasNoBrawls ? (
+        <div className="flex-none surface sm:rounded-lg overflow-hidden w-full px-4 py-12 mt-4 flex items-center">
+          <div className="relative z-10 px-8 lg:w-1/2">
+            <h3 className="mb-4">
+              Compete in Brawls
+              <br />
+              and earn rewards
+            </h3>
+            <Link href="/prototype/valorant/brawls">
+              <button type="button" className="button button-primary">
+                <span>Discover Valorant Brawls</span>
+              </button>
+            </Link>
+          </div>
+          <img
+            className="absolute inset-0 h-full w-full object-cover object-right opacity-20 lg:opacity-100"
+            src="https://res.cloudinary.com/gloot/image/upload/v1670324143/Marketing/2022_prototype/home-brawlnobrawls.jpg"
+            alt=""
+          />
+        </div>
+      ) : (
+        <Slider
+          itemWidth={397 + 16}
+          bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
+        >
+          {SoloBrawls.map((item, itemIndex) => (
+            <BrawlCardSecondary
+              key={item.id}
+              brawl={item}
+              isHorizontal={false}
+              isClan={false}
+            />
+          ))}
+        </Slider>
+      )}
     </div>
   );
 }

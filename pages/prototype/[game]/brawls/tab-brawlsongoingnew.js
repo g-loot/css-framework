@@ -35,13 +35,17 @@ export default function TabBrawlsOngoingNew() {
                 bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
               >
                 {selectedGame.brawls.map((brawl, brawlIndex) => (
-                  <BrawlCardSecondary
-                    key={brawl.id}
-                    brawl={brawl}
-                    isHorizontal={false}
-                    isClan={false}
-                    gameID={selectedGame.id}
-                  />
+                  <>
+                    {brawl.status !== "finished" && (
+                      <BrawlCardSecondary
+                        key={brawl.id}
+                        brawl={brawl}
+                        isHorizontal={false}
+                        isClan={false}
+                        gameID={selectedGame.id}
+                      />
+                    )}
+                  </>
                 ))}
               </Slider>
             </div>

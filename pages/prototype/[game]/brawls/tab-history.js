@@ -45,13 +45,12 @@ export default function TabBrawlsHistory() {
       {!isEmpty && (
         <>
           <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
-            <table className="table table-rounded rounded-xl w-full">
-              <thead>
+            <table className="table table-rounded rounded-xl w-full text-center">
+              <thead className="text-ui-400">
                 <tr>
-                  <th>Name</th>
+                  <th className="text-left">Name</th>
                   <th>Position</th>
                   <th>Points</th>
-                  <th></th>
                   <th></th>
                 </tr>
               </thead>
@@ -61,30 +60,38 @@ export default function TabBrawlsHistory() {
                     <>
                       <tr
                         key={brawl}
-                        className="animate-slide-in-bottom animate-delay leading-tight"
+                        className="animate-slide-in-bottom animate-delay leading-tight text-center"
                         style={{
                           "--delay": "calc(" + brawlIndex + " * 0.05s)",
                         }}
                       >
-                        <td>{brawl.name}</td>
                         <td>
-                          <div className="font-headings font-bold">#92</div>
-                          <div className="text-ui-300 text-sm uppercase">
-                            Position
-                          </div>
+                          <Link
+                            href={`/prototype/${game}/brawls/${
+                              brawl.id
+                            }${prototype.getURLparams()}`}
+                          >
+                            <div className="text-left interactive">
+                              {brawl.name}
+                            </div>
+                          </Link>
                         </td>
                         <td>
-                          <div className="font-headings font-bold">18 kills</div>
-                          <div className="text-ui-300 text-sm uppercase">
-                            Total Brawl points
-                          </div>
+                          <span className="font-bold">
+                            #{brawl.soloResults.placement}
+                          </span>
                         </td>
                         <td>
-                          <div className="font-headings font-bold">--</div>
+                          <span className="font-bold">
+                            #{brawl.soloResults.points}
+                          </span>
                         </td>
                         <td className="text-right">
                           <Link
-                            href={`/prototype/${game}/brawls/${brawl.id}${prototype.getURLparams()}`}>
+                            href={`/prototype/${game}/brawls/${
+                              brawl.id
+                            }${prototype.getURLparams()}`}
+                          >
                             <a className="button button-sm button-secondary">
                               <span>View Brawl</span>
                             </a>
@@ -97,7 +104,6 @@ export default function TabBrawlsHistory() {
             </table>
           </div>
           <div className="text-center mt-4 mb-8">
-            
             <button type="button" className="button button-sm button-primary">
               <span>Load more</span>
             </button>

@@ -278,8 +278,8 @@ export default function BrawlCardSecondary(props) {
             <Link
               href={
                 !brawl.isClan
-                  ? "valorant/brawls/2?tab=solo-leaderboard"
-                  : "valorant/brawls/2?tab=clan-leaderboard"
+                  ? `/prototype/${prototype.getGameByID(gameID).slug}/brawls/${brawl.id}?tab=solo-leaderboard${prototype.getURLparams()}`
+                  : `/prototype/${prototype.getGameByID(gameID).slug}/brawls/${brawl.id}?tab=solo-leaderboard${prototype.getURLparams()}`
               }
             >
               <button

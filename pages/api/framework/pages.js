@@ -52,6 +52,15 @@ export const FrameworkPages = {
           tags: "home, start, notifications, empty state, no notifications",
         },
         {
+          label: "No Brawls",
+          chip: "empty state",
+          url: "home",
+          query: "nobrawls=true",
+          tab: 1,
+          new: false,
+          tags: "home, start, notifications, empty state, no brawl, not in a brawl",
+        },
+        {
           label: "No clan",
           chip: "empty state",
           url: "home",

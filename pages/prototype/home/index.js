@@ -34,6 +34,7 @@ export default function Home() {
   const [dailyNumber, setDailyNumber] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const hasNoClan = query.noclan === "true" ? true : false;
+  const hasNoBrawls = query.nobrawls === "true" ? true : false;
 
   function openModalBrawlHowitworksVideo() {
     uiContext.openModal(
@@ -139,11 +140,19 @@ export default function Home() {
         >
           <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
             <h3 className="h6">Brawls</h3>
-            <Link href="/prototype/valorant/brawls/">
-              <a className="link link-hover text-ui-300 text-sm">
-                View Brawl history
-              </a>
-            </Link>
+            {hasNoBrawls ? (
+              <Link href="/prototype/valorant/brawls/">
+                <a className="link link-hover text-ui-300 text-sm">
+                  View Valorant Brawls
+                </a>
+              </Link>
+            ) : (
+              <Link href="/prototype/valorant/brawls/">
+                <a className="link link-hover text-ui-300 text-sm">
+                  View Brawl history
+                </a>
+              </Link>
+            )}
           </div>
           <HomeBrawlSolo />
         </section>
@@ -166,7 +175,6 @@ export default function Home() {
               </a>
             </Link>
             )}
-            
           </div>
           <HomeBrawlClan />
         </section>

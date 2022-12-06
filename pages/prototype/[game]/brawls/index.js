@@ -62,7 +62,7 @@ export default function Brawls() {
                 </div>
                 <img
                   className="object-contain object-right absolute z-0 right-0 inset-y-0 w-full h-full"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1669988981/Marketing/2022_prototype/Brawl_how_it_works_card_right.jpg"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1670317438/Marketing/2022_prototype/Brawl_how_it_works_card_right.jpg"
                   alt=""
                 />
               </div>
@@ -84,7 +84,7 @@ export default function Brawls() {
                 </div>
                 <img
                   className="object-contain object-right absolute z-0 right-0 inset-y-0 w-full h-full"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1670247061/Marketing/2022_prototype/Brawl_how_it_rules_card_right.jpg"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1670317438/Marketing/2022_prototype/Brawl_how_it_rules_card_right.jpg"
                   alt=""
                 />
               </div>
@@ -123,12 +123,12 @@ export default function Brawls() {
                                 </td>
                                 <td>
                                   <div className="font-bold text-right">
-                                    #92
+                                    #{brawl.soloResults?.placement}
                                   </div>
                                 </td>
                                 <td>
                                   <div className="font-bold text-right">
-                                    18 kills
+                                  {brawl.soloResults?.points} points
                                   </div>
                                 </td>
                               </tr>
