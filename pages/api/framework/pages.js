@@ -11,16 +11,9 @@ export const FrameworkPages = {
       url: "/prototype",
     },
     {
-      label: "Brand & assets",
-      tags: "framework,about,css,gettingstarted,install,npm,package,reactjs,webpack,tailwindcss,nodejs,config",
-      url: "/brand/introduction",
-      isDisabled: true,
-    },
-    {
-      label: "About",
-      tags: "framework,about,css,gettingstarted,install,npm,package,reactjs,webpack,tailwindcss,nodejs,config",
-      url: "/about",
-      isDisabled: true,
+      label: "Comp library",
+      tags: "reactjs,react,component library,comp library,components",
+      url: "https://developers.gloot.com/component-library/?path=/story/docs-getting-started-quick-start--page",
     },
   ],
   sections: [

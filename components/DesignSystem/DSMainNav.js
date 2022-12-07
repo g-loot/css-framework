@@ -3,9 +3,7 @@ import { useRouter } from 'next/router'
 
 export default function DSMainNav(props) {
 
-
   const router = useRouter();
-
 
   const handleClick = e => {
     e.preventDefault()
