@@ -38,7 +38,7 @@ export default function BrawlsRules() {
         <Ad width="1005" height="300" />
         {selectedGame && (
           <>
-            <BrawlsHeader breadcrumb="G-Loot rules" />
+            <BrawlsHeader breadcrumbs="G-Loot rules" />
             <TabBrawlsRules />
           </>
         )}

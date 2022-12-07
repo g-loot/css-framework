@@ -26,7 +26,7 @@ export default function TabWalletVoucher() {
           </p>
           */}
           <div className="form-group my-8">
-            <label htmlFor="voucher">Voucher code:</label>
+            <label htmlFor="voucher">Voucher code</label>
             <input type="text" name="voucher" id="voucher" />
           </div>
           <button type="button" className="button button-primary w-full">

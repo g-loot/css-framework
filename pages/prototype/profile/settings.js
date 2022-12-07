@@ -83,7 +83,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <h2 className="h5">My details</h2>
                   <div className="form-group">
-                    <label htmlFor="account-username">Username:</label>
+                    <label htmlFor="account-username">Username</label>
                     <input
                       type="text"
                       name="account-username"
@@ -92,7 +92,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="account-email">Email:</label>
+                    <label htmlFor="account-email">Email</label>
                     <input
                       type="email"
                       name="account-email"
@@ -129,11 +129,11 @@ export default function Home() {
                     </button>
                   </div>
                   <div className="form-group">
-                    <label htmlFor="first-name">Your bio:</label>
+                    <label htmlFor="first-name">Your bio</label>
                     <TextareaExpandable text={selectedUser.bio} rows={7} />
                   </div>
                   <div className="form-group">
-                    <label htmlFor="account-country">Country:</label>
+                    <label htmlFor="account-country">Country</label>
                     <div className="flex justify-center items-center gap-2 border border-ui-600 rounded p-2">
                       <div className="w-6 flex justify-center">
                         <img
@@ -155,7 +155,7 @@ export default function Home() {
                   <div className="space-y-4">
                     <h2 className="h5">My social links</h2>
                     <div className="form-group">
-                      <label htmlFor="social-twitch">Twitch:</label>
+                      <label htmlFor="social-twitch">Twitch</label>
                       <div className="input-group">
                         <span className="icon icon-twitch" />
                         <input
@@ -166,7 +166,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="form-group">
-                      <label htmlFor="social-twitter">Twitter:</label>
+                      <label htmlFor="social-twitter">Twitter</label>
                       <div className="input-group">
                         <span className="icon icon-logo-twitter" />
                         <input
@@ -177,7 +177,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="form-group">
-                      <label htmlFor="social-discord">Discord:</label>
+                      <label htmlFor="social-discord">Discord</label>
                       <div className="flex-3">
                         <button className="button button-primary w-full">
                           <span className="icon icon-discord" />
@@ -197,7 +197,7 @@ export default function Home() {
                       </button>
                     </div>
                     <div className="form-group">
-                      <label htmlFor="social-steam">Steam:</label>
+                      <label htmlFor="social-steam">Steam</label>
                       <div className="flex-3">
                         <button className="button button-primary w-full">
                           <span className="icon icon-steam" />
@@ -209,7 +209,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="form-group">
-                      <label htmlFor="social-steam">Riot Games:</label>
+                      <label htmlFor="social-steam">Riot Games</label>
                       <div className="flex-3">
                         {isConnected && (
                           <div className="input-group">

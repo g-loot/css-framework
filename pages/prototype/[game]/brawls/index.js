@@ -39,7 +39,7 @@ export default function Brawls() {
         <Ad width="1005" height="300" />
         {selectedGame && (
           <>
-            <BrawlsHeader breadcrumb={false} />
+            <BrawlsHeader breadcrumbs={false} />
             <TabBrawlsOngoingNew />
             <section className="py-4 flex flex-col xl:flex-row gap-4 items-stretch">
               <div className="flex-1 surface sm:rounded-lg overflow-hidden relative flex flex-col p-6">

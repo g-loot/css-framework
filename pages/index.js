@@ -201,16 +201,17 @@ const Index = () => {
                       ></div>
                       <div className="flex-1 flex flex-col items-start justify-start p-2">
                         <div className="flex items-baseline gap-2 mb-3">
-                          <h2 className="text-2xl leading-none">Brand</h2>
+                          <h2 className="text-2xl leading-none">Component library</h2>
                         </div>
                         <div className="text-ui-300 leading-tight">
-                          G-Loot styleguide and brand assets.
+                          G-Loot react component library consuming the framework.
                         </div>
                       </div>
                       <div className="flex flex-col lg:flex-row gap-2 px-2 pb-2">
-                        <Link href="prototype">
-                          <a className="button button-sm button-ghost is-disabled">
-                            <span>View guidelines</span>
+                        <Link href="https://developers.gloot.com/component-library/?path=/story/docs-getting-started-quick-start--page">
+                          <a className="button button-sm button-primary" target="_blank">
+                            <span>View components</span>
+                            <span className="icon icon-box-arrow-top-right" />
                           </a>
                         </Link>
                       </div>

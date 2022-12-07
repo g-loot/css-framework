@@ -4,7 +4,6 @@
 
 
 .progressbar {
-
   @apply
   rounded-sm
   bg-ui-600
@@ -16,10 +15,12 @@
   &,
   > div {
     @apply
-    h-2.5
+    h-2
     ;
   }
+}
 
+.progressbar:not(.progressbar-secondary) {
   > div {
     @apply
     bg-[length:400px_auto]
@@ -31,7 +32,7 @@
     scale-x-110
     animate-[progressbar-gradient_2s_linear_infinite]
     ;
-    background-image: linear-gradient(to right, rgb(var(--color-interaction-300)) 0px, rgb(var(--color-blue-700)) 200px, rgb(var(--color-interaction-300)) 400px);
+    background-image: linear-gradient(to right, rgb(var(--color-interaction-300)) 0px, rgb(var(--color-blue-500)) 200px, rgb(var(--color-interaction-300)) 400px);
     clip-path: polygon(0% 0%, 100% 0%, calc(100% - 0.5em) 100%, 0% 100%);
     transform: translate3d(calc(-100% + (1% * var(--percent))), 0, 0);
   }
@@ -44,6 +45,53 @@
 
   100% {
     background-position: 0 0;
+  }
+}
+
+/* secondary */
+
+.progressbar.progressbar-secondary {
+  @apply
+  flex
+  items-stretch
+  ;
+  > div {
+    clip-path: none;
+    &:nth-of-type(1) {
+      @apply
+      bg-main
+      w-[calc(1%*var(--percent))]
+      ;
+    }
+    &:nth-of-type(2) {
+      @apply
+      bg-attention-700
+      w-[calc(1%*var(--progress))]
+      relative
+      ;
+      &::before {
+        @apply
+        content-['']
+        absolute
+        inset-0
+        bg-main
+        origin-left
+        animate-[progressbarsecondary-progress_4s_cubic-bezier(0.3,0,0.8,1)_both]
+        ;
+      }
+    }
+  }
+}
+
+@keyframes progressbarsecondary-progress {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
   }
 }
 

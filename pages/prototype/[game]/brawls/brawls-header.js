@@ -14,7 +14,7 @@ export default function BrawlsHeader(props) {
   const { query } = useRouter();
   const uiContext = useContext(UiContext);
   const freeEntry = query.freeentry === "true" ? true : false;
-  const breadcrumb = props.breadcrumb;
+  const breadcrumbs = props.breadcrumbs;
 
   function openModalBrawlHowitworksVideo() {
     uiContext.openModal(
@@ -36,7 +36,7 @@ export default function BrawlsHeader(props) {
     <>
       {selectedGame && (
         <section className="header surface sm:rounded-lg mb-4">
-          {breadcrumb && (
+          {breadcrumbs && (
             <div className="header-breadcrumbs">
               <nav className="breadcrumbs" aria-label="Breadcrumb">
                 <ol>
@@ -57,7 +57,7 @@ export default function BrawlsHeader(props) {
                   </li>
                   <li aria-current="page">
                     <div>
-                      <span>{breadcrumb}</span>
+                      <span>{breadcrumbs}</span>
                     </div>
                   </li>
                 </ol>

@@ -48,6 +48,7 @@ export default function Premium() {
           </section>
 
           <section className="flex flex-wrap flex-col lg:flex-row lg:items-start justify-center gap-4 md:gap-0 text-center space-y-4 md:space-y-0 mb-24">
+            {/*
             <div className="w-96 shrink-0">
               <img
                 className="mx-auto block"
@@ -60,6 +61,7 @@ export default function Premium() {
                 Get access to Premium Missions each day
               </h3>
             </div>
+            */}
             <div className="w-96 shrink-0">
               <img
                 className="mx-auto block"

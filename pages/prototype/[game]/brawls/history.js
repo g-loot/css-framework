@@ -38,7 +38,7 @@ export default function BrawlsHistory() {
         <Ad width="1005" height="300" />
         {selectedGame && (
           <>
-            <BrawlsHeader breadcrumb="History" />
+            <BrawlsHeader breadcrumbs="History" />
             <TabBrawlsHistory />
           </>
         )}

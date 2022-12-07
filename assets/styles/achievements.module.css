@@ -1,0 +1,153 @@
+/*----------------------------*/
+/* ACHIEVEMENTS */
+/*----------------------------*/
+
+.achievement {
+  @apply
+  rounded-sm
+  bg-ui-900/50 
+  flex 
+  flex-col
+  items-center 
+  justify-center 
+  relative
+  drop-shadow
+  select-none
+  aspect-square
+  w-full
+  border
+  border-ui-700
+  ;
+
+  > i {
+    &::before,
+    &::after {
+      @apply
+      content-['']
+      block
+      absolute
+      w-4
+      h-4
+      border-ui-600
+      ;
+    }
+    &:nth-of-type(1) {
+      &::before {
+        @apply
+        top-1
+        left-1
+        border-t
+        border-l
+        animate-[achievement-corner-tl_0.6s_cubic-bezier(.9,0,.5,1)_both_1.6s]
+        ;
+      }
+      &::after {
+        @apply
+        top-1
+        right-1
+        border-t
+        border-r
+        animate-[achievement-corner-tr_0.6s_cubic-bezier(.9,0,.5,1)_both_1.6s]
+        ;
+      }
+    }
+    &:nth-of-type(2) {
+      &::before {
+        @apply
+        bottom-1
+        left-1
+        border-b
+        border-l
+        animate-[achievement-corner-bl_0.6s_cubic-bezier(.9,0,.5,1)_both_1.6s]
+        ;
+      }
+      &::after {
+        @apply
+        bottom-1
+        right-1
+        border-b
+        border-r
+        animate-[achievement-corner-br_0.6s_cubic-bezier(.9,0,.5,1)_both_1.6s]
+        ;
+      }
+    }
+  }
+}
+
+@keyframes achievement-corner-tr {
+  0% {
+    opacity: 0;
+    transform: translate(0.25rem, -0.25rem)
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0)
+  }
+}
+@keyframes achievement-corner-br {
+  0% {
+    opacity: 0;
+    transform: translate(0.25rem, 0.25rem)
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0)
+  }
+}
+@keyframes achievement-corner-tl {
+  0% {
+    opacity: 0;
+    transform: translate(-0.25rem, -0.25rem)
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0)
+  }
+}
+@keyframes achievement-corner-bl {
+  0% {
+    opacity: 0;
+    transform: translate(-0.25rem, 0.25rem)
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0)
+  }
+}
+
+.achievement-level-1 > * {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(28%) saturate(359%) hue-rotate(339deg) brightness(92%) contrast(87%);
+}
+.achievement-level-2 > * {
+  filter: brightness(0) saturate(100%) invert(64%) sepia(9%) saturate(1952%) hue-rotate(351deg) brightness(89%) contrast(89%);
+}
+.achievement-level-3 > * {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(7%) saturate(203%) hue-rotate(184deg) brightness(83%) contrast(92%);
+}
+.achievement-level-4 > * {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(99%) saturate(6729%) hue-rotate(319deg) brightness(92%) contrast(89%);
+}
+.achievement-level-5 > * {
+  filter: brightness(0) saturate(100%) invert(91%) sepia(23%) saturate(6266%) hue-rotate(329deg) brightness(102%) contrast(90%);
+}
+
+[class*="achievement-level-"] {
+  @apply
+  flex
+  items-center
+  justify-center
+  relative
+  w-3/4
+  ;
+  &::before,
+  &::after {
+    filter: none;
+  }
+  &[data-tooltip] {
+    &::after {
+      @apply
+      bottom-[85%]
+      ;
+    }
+  }
+}

@@ -162,7 +162,7 @@ export const DSpages = [
       {
         label: "Empty states",
         tags: "content,empty,states,empty states",
-        url: "emptys",
+        url: "emptystates",
       },
       {
         label: "Reward ladder",
@@ -400,6 +400,11 @@ export const DSpages = [
         label: "Notifications",
         tags: "notifications",
         url: "notifications",
+      },
+      {
+        label: "Achievements",
+        tags: "achievements, badges",
+        url: "achievements",
       },
     ],
   },

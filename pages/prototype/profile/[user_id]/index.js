@@ -1,24 +1,93 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
-import Accordion from "../../../components/Accordion/Accordion";
-import Ad from "../../../components/Ad/Ad";
+import Accordion from "../../../../components/Accordion/Accordion";
+import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
-import ListItemBrawl from "../../../components/ListItem/ListItemBrawl";
-import ListItemTournament from "../../../components/ListItem/ListItemTournament";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import { usePrototypeData } from "../../../contexts/prototype";
+import ListItemBrawl from "../../../../components/ListItem/ListItemBrawl";
+import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
+import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
-import ReadMore from "../../../components/ReadMore/ReadMore";
-import GameIcon from "../../../components/GameIcon/GameIcon";
-import Slider from "../../../components/Slider/Slider";
+import GameIcon from "../../../../components/GameIcon/GameIcon";
+import Slider from "../../../../components/Slider/Slider";
+import { UiContext } from "../../../../contexts/ui";
+import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
+import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
+import ModalAchievementReceived from "../../modal-achievementreceived";
+import HomeHeader from "../header";
+
+const achievementsList = [
+  {
+    level: 1,
+    name: "Mission Expert",
+    description: "Complete the entire mission ladder in 1 day.",
+    icon: "missionladder",
+    percent: 50,
+    progress: 12,
+    from: "24",
+    to: "300 XP",
+  },
+  {
+    level: 2,
+    name: "Mission Ladder",
+    description: "Complete 30 missions",
+    icon: "mission",
+    percent: 35,
+    progress: 15,
+    from: "15",
+    to: "30 XP",
+  },
+  {
+    level: 3,
+    name: "Streak",
+    description: "Reach a 100 days streak",
+    icon: "streak",
+    percent: 80,
+    progress: 10,
+    from: "90",
+    to: "100 days",
+  },
+  {
+    level: 4,
+    name: "Solo Brawl",
+    description: "Finish #1 in the Gold League of a solo Brawl",
+    icon: "solobrawl",
+    percent: 0,
+    progress: 0,
+    from: "0",
+    to: "1",
+  },
+  {
+    level: 5,
+    name: "Clan Supporter",
+    description: "Gift 200 tokens to members of your clan",
+    icon: "clansupporter",
+    percent: 75,
+    progress: 10,
+    from: "150",
+    to: "200",
+  },
+];
 
 export default function Home() {
   const router = useRouter();
-  const { query } = useRouter();
   const prototype = usePrototypeData();
+  const uiContext = useContext(UiContext);
   const [selectedUser, setSelectedUser] = useState(null);
-  const emptyClan = query.emptyclan === "true" ? true : false;
   const { user_id } = router.query;
+  const { query } = useRouter();
+  const modalAchievement = query.modalachievement === "true" ? true : false;
+
+  useEffect(() => {
+    if (modalAchievement) {
+      openModalAchievementReceived();
+    }
+  }, [modalAchievement]);
+
+  function openModalAchievementReceived(level, name, icon) {
+    uiContext.openModal(
+      <ModalAchievementReceived level={level} name={name} icon={icon} />
+    );
+  }
 
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(user_id));
@@ -31,244 +100,66 @@ export default function Home() {
 
         {selectedUser && (
           <>
-            <section className="header surface sm:rounded-lg min-h-4 mb-4">
-              <div className="header-content">
-                <div className="header-body">
-                  <div className="flex gap-4 items-center self-center">
-                    <div
-                      className={`avatar avatar-xl avatar-circle ${
-                        selectedUser.isPremium ? "avatar-gold" : ""
-                      }`}
-                    >
-                      <div>
-                        <img src={selectedUser.avatar} alt="avatar" />
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                        <div className="flex items-baseline gap-1">
-                          <h1
-                            className={`text-3xl sm:text-4xl ${
-                              selectedUser.isPremium
-                                ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
-                                : ""
-                            }`}
-                          >
-                            {selectedUser.nickname}
-                          </h1>
-                          <img
-                            src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
-                            className="aspect-video rounded-sm max-w-[1.5rem]"
-                          />
-                        </div>
-                        <div className="block lg:hidden text-left">
-                          {selectedUser.isYou && (
-                            <Link href="settings">
-                              <a
-                                type="button"
-                                className="button button-xs button-secondary"
-                              >
-                                <span className="icon icon-cogwheel" />
-                                <span>Profile settings</span>
-                              </a>
-                            </Link>
-                          )}
-                        </div>
-                      </div>
-                      {/*
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 flex justify-center">
-                            <img
-                              src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
-                              className="aspect-video rounded-sm max-w-[1.5rem]"
-                            />
-                          </div>
-                          <span className="text-ui-300">
-                            {selectedUser.country}
-                          </span>
-                        </div>
-                            */}
-
-                      {selectedUser.bio && (
-                        <p className="text-ui-300 mt-1 text-left">
-                          <ReadMore content={selectedUser.bio} max={150} />
-                        </p>
-                      )}
-
-                      <div className="flex items-center justify-start mt-4 gap-2">
-                        <div className="flex gap-1">
-                          {selectedUser.games?.map((game, gameIndex) => (
-                            <GameIcon key={gameIndex} game={game} />
-                          ))}
-                        </div>
-                        <hr className="m-0 separator separator-vertical h-7" />
-                        <div className="flex gap-1">
-                          <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="link p-1 text-0"
-                          >
-                            <span className="icon icon-20 text-ui-300 icon-twitch" />
-                          </a>
-                          <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="link p-1 text-0"
-                          >
-                            <span className="icon icon-20 text-ui-300 icon-logo-twitter" />
-                          </a>
-                          <a
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="link p-1 text-0"
-                          >
-                            <span className="icon icon-20 text-ui-300 icon-discord" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="hidden lg:block absolute z-20 top-3 right-3">
-                {selectedUser.isYou && (
-                  <Link href="settings">
-                    <a className="button button-sm button-tertiary">
-                      <span className="icon icon-cogwheel" />
-                      <span>Profile settings</span>
-                    </a>
-                  </Link>
-                )}
-              </div>
-              <div className="header-meta lg:items-end p-3">
-                {!emptyClan ? (
-                  <>
-                    {selectedUser.clan ? (
-                      <Link
-                        href={`/prototype/clans/${
-                          selectedUser.clan
-                        }${prototype.getURLparams()}`}
-                      >
-                        <div className="item bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg interactive w-auto">
-                          <div className="item-image">
-                            <div className="avatar avatar-sm avatar-squircle interactive">
-                              <div>
-                                <img
-                                  src={
-                                    prototype.getClanByID(selectedUser.clan)
-                                      .avatar
-                                  }
-                                  alt="avatar"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div className="item-body pr-2">
-                            <div className="text-sm text-ui-300 leading-none">
-                              Clan member of
-                            </div>
-                            <div className="item-title text-xl font-headings font-bold italic text-ui-100 interactive">
-                              &#91;
-                              {prototype.getClanByID(selectedUser.clan).tag}
-                              &#93;{" "}
-                              {
-                                prototype.getClanByID(selectedUser.clan)
-                                  .nickname
-                              }
-                            </div>
-                            {/*
-                            <div className="text-sm text-ui-300">
-                              {
-                                prototype.getClanByID(selectedUser.clan).members
-                                  .length
-                              }{" "}
-                              members
-                            </div>
-                            */}
-                          </div>
-                        </div>
-                      </Link>
-                    ) : (
-                      <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                        <div className="text-center">
-                          {selectedUser.nickname} is not part of a clan.
-                        </div>
-                        <Link href="#">
-                          <a
-                            type="button"
-                            className="button button-sm button-primary w-full"
-                          >
-                            <span>Recruit to your clan</span>
-                          </a>
-                        </Link>
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    {!selectedUser.isYou ? (
-                      <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                        <div className="text-center">
-                          {selectedUser.nickname} is not part of a clan.
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                        <div className="text-center">
-                          You are not part of a clan.
-                        </div>
-                        <Link href="/prototype/clans/search">
-                          <a
-                            type="button"
-                            className="button button-sm button-primary w-full"
-                          >
-                            <span>Join a clan</span>
-                          </a>
-                        </Link>
-                      </div>
-                    )}
-                  </>
-                )}
-              </div>
-
-              <div className="header-bg">
-                <img src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp" />
-              </div>
-            </section>
+            <HomeHeader />
 
             <section
-              className="flex flex-col lg:flex-row gap-4 lg:items-stretch animate-slide-in-bottom animate-delay mb-4"
+              className="flex flex-col lg:flex-row gap-4 lg:items-stretch animate-slide-in-bottomNO animate-delay mb-4"
               style={{ "--delay": "calc(2 * 0.05s)" }}
             >
-              
               <div className="flex-1 flex flex-col gap-4 overflow-hidden">
                 <div className="surface sm:rounded-lg relative overflow-hidden">
                   <div className="px-3 py-2 border-b border-ui-700 relative z-10 flex-none flex items-center justify-between">
-                    <div className="font-bold">Your Brawl history</div>
-                    <Link
-                      href="#"
-                    >
+                    <div className="font-bold">
+                      {selectedUser.isYou ? (
+                        <>Your achievements</>
+                      ) : (
+                        <>{selectedUser.nickname}&#39;s achievements </>
+                      )}
+                    </div>
+                    <Link href={`${selectedUser.id}/achievements`}>
                       <a className="link link-hover text-ui-300 text-sm">
                         View all achievements
                       </a>
                     </Link>
                   </div>
                   <Slider bgColor="from-ui-800 via-ui-800 to-ui-800/0">
-                    <div className="flex gap-4 px-4">
-                      <div className="w-20 h-20 rounded-full bg-ui-600" />
-                      <div className="w-20 h-20 rounded-full bg-ui-600" />
-                      <div className="w-20 h-20 rounded-full bg-ui-600" />
-                      <div className="w-20 h-20 rounded-full bg-ui-600" />
-                      <div className="w-20 h-20 rounded-full bg-ui-600" />
-                      <div className="w-20 h-20 rounded-full bg-ui-600" />
-                      <div className="w-20 h-20 rounded-full bg-ui-600" />
-                      <div className="w-20 h-20 rounded-full bg-ui-600" />
-                      <div className="w-20 h-20 rounded-full bg-ui-600" />
-                      <div className="w-20 h-20 rounded-full bg-ui-600" />
-                      <div className="w-20 h-20 rounded-full bg-ui-600" />
+                    <div className="flex gap-6 py-2 px-6">
+                      {achievementsList.map((item, itemIndex) => (
+                        <div
+                          key={itemIndex}
+                          className="animate-slide-in-right animate-delay"
+                          style={{
+                            "--delay": "calc(" + itemIndex + " * 0.05s)",
+                          }}
+                        >
+                          <div
+                            className="w-32 h-32 achievement cursor-pointer"
+                            onClick={openModalAchievementReceived.bind(
+                              this,
+                              item.level,
+                              item.name,
+                              item.icon
+                            )}
+                          >
+                            <i />
+                            <i />
+                            <div
+                              className={`achievement-level-${item.level}`}
+                              data-tooltip={item.name}
+                            >
+                              <AchievementFrame
+                                url={`https://res.cloudinary.com/gloot/image/upload/v1670405826/Marketing/2022_prototype/Achievements/achievement-frame-lvl${item.level}-animated.svg`}
+                              />
+                              <AchievementIcon
+                                url={`https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-${item.icon}.svg`}
+                              />
+                            </div>
+                            <span className="text-xs text-ui-300 uppercase">
+                              Level {item.level}
+                            </span>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </Slider>
                 </div>

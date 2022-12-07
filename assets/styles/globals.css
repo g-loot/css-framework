@@ -51,5 +51,7 @@
 @import "./toast.module.css";
 @import "./tooltip.module.css";
 
+@import "./achievements.module.css";
+
 
 @import "tailwindcss/utilities";

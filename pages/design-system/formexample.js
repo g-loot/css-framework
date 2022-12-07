@@ -33,7 +33,7 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="form-group form-select">
-                <label htmlFor="gender">Gender:</label>
+                <label htmlFor="gender">Gender</label>
                 <select id="gender">
                   <option disabled selected>Choose an option</option>
                   <option>Male</option>
@@ -82,21 +82,21 @@ const DSpage = () => {
                 Social
               </h2>
               <div className='form-group flex items-center gap-2'>
-                <label htmlFor="social-twitter" className='flex-1'>Twitter:</label>
+                <label htmlFor="social-twitter" className='flex-1'>Twitter</label>
                 <div className="flex-3 input-group">
                   <span className="icon icon-logo-twitter" />
                   <input type="text" name="social-twitter" id="social-twitter" />
                 </div>
               </div>
               <div className='form-group flex items-center gap-2'>
-                <label htmlFor="social-twitch" className='flex-1'>Twitch:</label>
+                <label htmlFor="social-twitch" className='flex-1'>Twitch</label>
                 <div className="flex-3 input-group">
                   <span className="icon icon-twitch" />
                   <input type="text" name="social-twitch" id="social-twitch" />
                 </div>
               </div>
               <div className='form-group flex items-center gap-2'>
-                <label htmlFor="social-discord" className='flex-1'>Discord:</label>
+                <label htmlFor="social-discord" className='flex-1'>Discord</label>
                 <div className="flex-3 input-group">
                   <span className="icon icon-discord" />
                   <button className='button button-sm button-ghost'>
@@ -106,7 +106,7 @@ const DSpage = () => {
                 </div>
               </div>
               <div className='form-group flex items-center gap-2'>
-                <label htmlFor="social-steam" className='flex-1 -mt-4'>Steam:</label>
+                <label htmlFor="social-steam" className='flex-1 -mt-4'>Steam</label>
                 <div className="flex-3">
                   <div className='input-group'>
                     <span className="icon icon-steam" />

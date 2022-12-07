@@ -41,7 +41,7 @@ export default function BrawlsHowItWorks() {
         <Ad width="1005" height="300" />
         {selectedGame && (
           <>
-            <BrawlsHeader breadcrumb="How it works" />
+            <BrawlsHeader breadcrumbs="How it works" />
             <TabBrawlsHowItWorks />
           </>
         )}

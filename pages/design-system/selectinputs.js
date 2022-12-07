@@ -24,7 +24,7 @@ const DSpage = () => {
               <div className='w-full flex gap-4 items-center'>
                 <div className='flex-1 space-y-4'>
                   <div className="form-group form-select">
-                    <label htmlFor="favorite-game">Favorite game:</label>
+                    <label htmlFor="favorite-game">Favorite game</label>
                     <select id="favorite-game">
                       <option disabled selected>Choose an option</option>
                       <option>PUBG: BATTLEGROUNDS</option>
@@ -58,7 +58,7 @@ const DSpage = () => {
               <div className='w-full flex gap-4 items-center'>
                 <div className='flex-1 space-y-4'>
                   <div className="form-group form-select">
-                    <label htmlFor="favorite-games">Favorite games:</label>
+                    <label htmlFor="favorite-games">Favorite games</label>
                     <select multiple id="favorite-games">
                       <option disabled>Choose an option</option>
                       <option>PUBG: BATTLEGROUNDS</option>
@@ -93,7 +93,7 @@ const DSpage = () => {
               <div className='w-full flex gap-4 items-center'>
                 <div className='flex-1 space-y-4'>
                   <div className="form-group form-select" data-error="Please choose an option.">
-                    <label htmlFor="favorite-agent">Favorite agent:</label>
+                    <label htmlFor="favorite-agent">Favorite agent</label>
                     <select id="favorite-agent">
                       <option disabled selected>Choose an option</option>
                       <option>Astra</option>
@@ -118,7 +118,7 @@ const DSpage = () => {
                     </select>
                   </div>
                   <div className="form-group form-select" data-success="Good choice.">
-                    <label htmlFor="favorite-role">Favorite role:</label>
+                    <label htmlFor="favorite-role">Favorite role</label>
                     <select id="favorite-role">
                       <option disabled selected>Choose an option</option>
                       <option>Controller</option>
@@ -128,7 +128,7 @@ const DSpage = () => {
                     </select>
                   </div>
                   <div className="form-group form-select" data-attention="Are you sure?">
-                    <label htmlFor="favorite-map">Favorite map:</label>
+                    <label htmlFor="favorite-map">Favorite map</label>
                     <select id="favorite-map">
                       <option disabled selected>Choose an option</option>
                       <option>Ascent</option>
@@ -171,7 +171,7 @@ const DSpage = () => {
               <div className='w-full flex gap-4 items-center'>
                 <div className='flex-1 space-y-4'>
                   <div className="form-group form-select is-loading">
-                    <label htmlFor="favorite-weapon">Favorite weapon:</label>
+                    <label htmlFor="favorite-weapon">Favorite weapon</label>
                     <select id="favorite-weapon">
                       <option>Choose an option</option>
                       <option>Knife</option>
@@ -181,7 +181,7 @@ const DSpage = () => {
                     </select>
                   </div>
                   <div className="form-group form-select is-loading">
-                    <label htmlFor="favorite-weapons">Favorite weapons:</label>
+                    <label htmlFor="favorite-weapons">Favorite weapons</label>
                     <select id="favorite-weapons" multiple>
                       <option>Choose an option</option>
                       <option>Knife</option>
@@ -207,7 +207,7 @@ const DSpage = () => {
               <div className='w-full flex gap-4 items-center'>
                 <div className='flex-1 space-y-4'>
                   <div className="form-group form-select is-disabled">
-                    <label htmlFor="favorite-weapon2">Favorite weapon:</label>
+                    <label htmlFor="favorite-weapon2">Favorite weapon</label>
                     <select id="favorite-weapon2">
                       <option>Choose an option</option>
                       <option>Knife</option>
@@ -217,7 +217,7 @@ const DSpage = () => {
                     </select>
                   </div>
                   <div className="form-group form-select is-disabled">
-                    <label htmlFor="favorite-weapons2">Favorite weapons:</label>
+                    <label htmlFor="favorite-weapons2">Favorite weapons</label>
                     <select id="favorite-weapons2" multiple>
                       <option>Choose an option</option>
                       <option>Knife</option>

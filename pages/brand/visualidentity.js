@@ -13,15 +13,12 @@ const BrandPage = () => (
               Our visual identity
             </h1>
           </div>
-
           <div className="absolute z-10 hidden lg:block bottom-8 -left-24 scale-110">
             <video autoPlay playsInline loop preload width="700" height="auto">
               <source type="video/webm" src="https://res.cloudinary.com/gloot/video/upload/v1649858076/Marketing/202109_gloot2/GMSD_Trophy_Tilted_360_Rotaion_Loop_0001.webm" />
             </video>
           </div>
-
-          <div className='absolute bottom-0 right-0 z-0 rounded-full bg-gradient-to-r from-main via-blue-700 to-main/0 w-32 h-32 scale-y-75 blur-xl transform-gpu -rotate-45 -translate-x-28 -translate-y-24'></div>
-
+          <div className='absolute bottom-0 right-0 z-0 rounded-full bg-gradient-to-r from-main via-blue-700 to-main/0 w-32 h-32 scale-y-75 blur-xl transform-gpu -rotate-45 -translate-x-28 -translate-y-24' />
         </div>
         <div className='flex-1 leading-loose text-ui-300 space-y-4'>
           <p>

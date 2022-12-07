@@ -140,13 +140,7 @@ export default function Home() {
         >
           <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
             <h3 className="h6">Brawls</h3>
-            {hasNoBrawls ? (
-              <Link href="/prototype/valorant/brawls/">
-                <a className="link link-hover text-ui-300 text-sm">
-                  View Valorant Brawls
-                </a>
-              </Link>
-            ) : (
+            {!hasNoBrawls && (
               <Link href="/prototype/valorant/brawls/">
                 <a className="link link-hover text-ui-300 text-sm">
                   View Brawl history

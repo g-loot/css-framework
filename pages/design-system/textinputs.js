@@ -109,7 +109,7 @@ const DSpage = () => {
                 <div className="w-full flex gap-4 items-center">
                   <div className="flex-1 space-y-4">
                     <div className="form-group">
-                      <label htmlFor="first-name">Your message:</label>
+                      <label htmlFor="first-name">Your message</label>
                       <TextareaExpandable />
                     </div>
                     <div className="form-group">
@@ -375,7 +375,7 @@ const DSpage = () => {
                       </div>
                     </div>
                     <div className="form-group is-loading">
-                      <label htmlFor="message">Your message:</label>
+                      <label htmlFor="message">Your message</label>
                       <div className="input-group">
                         <span className="icon icon-right icon-flag-points-31" />
                         <TextareaExpandable />

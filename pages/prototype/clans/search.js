@@ -35,7 +35,7 @@ export default function ClanSearch() {
           <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-4 xl:gap-8">
             <div className="flex-2 flex items-center gap-4 xl:gap-8">
               <div className="flex-1 form-group form-select">
-                <label htmlFor="game">Playing:</label>
+                <label htmlFor="game">Playing</label>
                 <select id="game">
                   <option selected>Any game</option>
                   {prototype.games.map((game, gameIndex) => (
@@ -44,7 +44,7 @@ export default function ClanSearch() {
                 </select>
               </div>
               <div className="flex-1 form-group form-select">
-                <label htmlFor="lang">Speaking:</label>
+                <label htmlFor="lang">Speaking</label>
                 <select id="lang">
                   <option selected>Any language</option>
                   <option>Arabic</option>
