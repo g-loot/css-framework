@@ -165,68 +165,92 @@ export default function Home() {
                 </div>
                 <div className="flex-1 flex flex-col gap-4">
                   <div className="surface sm:rounded-lg flex flex-col xl:flex-row items-center">
-                    <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-brawl-sm.svg"
-                      width="auto"
-                      height="auto"
-                      alt=""
-                      className="drop-shadow-xl mx-8 my-4 h-24 flex-none"
-                    />
-                    <div className="flex-1 flex flex-wrap gap-x-2 gap-y-1 items-center justify-start">
-                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
-                        <span className="text-sm text-ui-300">
-                          Number of Brawls played:
-                        </span>
-                        <span className="font-bold">22</span>
+                    <Slider
+                      itemWidth={200 + 16}
+                      bgColor="from-ui-800 via-ui-800 to-ui-800/0"
+                    >
+                      <div className="flex items-center gap-6 px-6 whitespace-nowrap">
+                        <img
+                          src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-brawl-sm.svg"
+                          width="auto"
+                          height="auto"
+                          alt=""
+                          className="drop-shadow-xl w-32 flex-none"
+                        />
+                        <div className="pl-4 border-l border-ui-600">
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            Number of Brawls played:
+                          </div>
+                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            22
+                          </div>
+                        </div>
+                        <div className="pl-4 border-l border-ui-600">
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            Times in top 50:
+                          </div>
+                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            2
+                          </div>
+                        </div>
+                        <div className="pl-4 border-l border-ui-600">
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            Best placement:
+                          </div>
+                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            1
+                          </div>
+                        </div>
+                        <div className="pl-4 border-l border-ui-600">
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            Most matches in a Brawl:
+                          </div>
+                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            16
+                          </div>
+                        </div>
+                        <div className="pl-4 border-l border-ui-600">
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            Avg. matches / Brawl:
+                          </div>
+                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            9.8
+                          </div>
+                        </div>
                       </div>
-                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
-                        <span className="text-sm text-ui-300">
-                          Times in top 50:
-                        </span>
-                        <span className="font-bold">2</span>
-                      </div>
-                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
-                        <span className="text-sm text-ui-300">
-                          Best placement:
-                        </span>
-                        <span className="font-bold">1</span>
-                      </div>
-                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
-                        <span className="text-sm text-ui-300">
-                          Most matches in a Brawl:
-                        </span>
-                        <span className="font-bold">16</span>
-                      </div>
-                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
-                        <span className="text-sm text-ui-300">
-                          Avg. matches / Brawl:
-                        </span>
-                        <span className="font-bold">9.8</span>
-                      </div>
-                    </div>
+                    </Slider>
                   </div>
                   <div className="surface sm:rounded-lg flex flex-col xl:flex-row items-center">
-                    <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-missions-sm.svg"
-                      width="auto"
-                      height="50"
-                      alt=""
-                      className="drop-shadow-xl mx-8 my-4 h-24 flex-none"
-                    />
-                    <div className="flex-1 flex flex-wrap gap-x-2 gap-y-1 items-center justify-start">
-                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
-                        <span className="text-sm text-ui-300">
-                          No. of missions completed:
-                        </span>
-                        <span className="font-bold">143</span>
+                    <Slider
+                      itemWidth={200 + 16}
+                      bgColor="from-ui-800 via-ui-800 to-ui-800/0"
+                    >
+                      <div className="flex items-center gap-6 px-6 whitespace-nowrap">
+                        <img
+                          src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-missions-sm.svg"
+                          width="auto"
+                          height="auto"
+                          alt=""
+                          className="drop-shadow-xl w-32 flex-none"
+                        />
+                        <div className="pl-4 border-l border-ui-600">
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            No. of missions completed:
+                          </div>
+                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            143
+                          </div>
+                        </div>
+                        <div className="pl-4 border-l border-ui-600">
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            Missions / day avg.:
+                          </div>
+                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            2.3
+                          </div>
+                        </div>
                       </div>
-                      <div className="rounded bg-gradient-to-b from-ui-900/0 to-ui-900/0 p-2 leading-none flex gap-2 items-baseline">
-                        <span className="text-sm text-ui-300">
-                          Missions / day avg.:
-                        </span>
-                        <span className="font-bold">2.4</span>
-                      </div>
-                    </div>
+                    </Slider>
                   </div>
                 </div>
               </div>

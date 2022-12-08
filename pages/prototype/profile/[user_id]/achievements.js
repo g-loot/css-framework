@@ -90,7 +90,7 @@ export default function Achievements() {
           <>
             <HomeHeader breadcrumbs="Achievements" />
 
-            <section className="space-y-4">
+            <section className="grid lg:grid-cols-2 gap-4">
               {achievementsList.map((item, itemIndex) => (
                 <div
                   key={itemIndex}

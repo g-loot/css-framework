@@ -18,6 +18,17 @@ const notificationsGroups = [
     name: "Clan",
     notifications: [
       {
+        description: "Achievement unlocked",
+        type: "achievement",
+        intro: "Achivement",
+        title: "You unlocked an achievement!",
+        text: "Congratulations on unlocking the <a href='#' class='link font-bold'>Mission achievement Level 1</a>!",
+        cta: "View",
+        url: "/prototype/profile/1/achievements",
+        time: "2 min.",
+        read: false,
+      },
+      {
         description: "Token recieved",
         type: "clan",
         intro: "Clan",
