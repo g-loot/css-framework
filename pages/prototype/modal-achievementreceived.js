@@ -66,7 +66,7 @@ export default function ModalAchievementReceived(props) {
                       </div>
                     </div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-2 relative z-10">
                     <p>{description}</p>
                     <div className="flex items-center gap-4 leading-none font-bold pb-2">
                       <div

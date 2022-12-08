@@ -67,7 +67,7 @@
     }
     &:nth-of-type(2) {
       @apply
-      bg-attention-700
+      bg-error-700
       w-[calc(1%*var(--progress))]
       relative
       flex
@@ -92,14 +92,20 @@
       }
       &::after {
         @apply
-        w-4
-        h-4
-        -right-2
-        rounded-full
+        w-2
+        h-2
+        -right-1
         bg-main/50
-        animate-[progressbarsecondary-explosion_0.75s_cubic-bezier(0,0.5,0.15,1)_forwards_4s]
+        bg-gradient-radial
+        from-main
+        to-main/0
+        animate-[progressbarsecondary-explosion_0.75s_cubic-bezier(0,.85,.15,1)_forwards_4s]
         scale-0
+        rotate-45
+        transform-gpu
+        origin-center
         ;
+        /*clip-path: polygon(50% 0%, 61% 38%, 100% 50%, 61% 61%, 50% 100%, 38% 61%, 0% 50%, 38% 38%);*/
       }
     }
   }
@@ -119,12 +125,12 @@
     opacity: 0;
   }
   1% {
-    opacity: 0.44;
-    transform: scale(0);
+    opacity: 1;
+    transform: rotate(-135deg) scale(0);
   }
   100% {
     opacity: 0;
-    transform: scale(4);
+    transform: rotate(45deg) scale(4);
   }
 }
 

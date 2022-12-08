@@ -20,7 +20,7 @@ export default function Reward(props) {
             height="auto"
             alt=""
           />
-          <span className={props.textClassNames}>
+          <span className={`text-gold-500 ${props.textClassNames}`}>
             {numberWithSpaces(props.reward.value)}
           </span>
         </div>
@@ -34,7 +34,7 @@ export default function Reward(props) {
             height="auto"
             alt=""
           />
-          <span className={props.textClassNames}>
+          <span className={`text-purple-500 ${props.textClassNames}`}>
             {numberWithSpaces(props.reward.value)}
           </span>
         </div>
@@ -48,7 +48,7 @@ export default function Reward(props) {
             height="auto"
             alt=""
           />
-          <span className={props.textClassNames}>
+          <span className={`${props.textClassNames}`}>
             {numberWithSpaces(props.reward.value)}
           </span>
         </div>

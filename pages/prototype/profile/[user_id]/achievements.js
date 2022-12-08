@@ -70,6 +70,13 @@ export default function Achievements() {
   const uiContext = useContext(UiContext);
   const [selectedUser, setSelectedUser] = useState(null);
   const { user_id } = router.query;
+  const modalAchievement = query.modalachievement === "true" ? true : false;
+
+  useEffect(() => {
+    if (modalAchievement) {
+      openModalAchievementReceived();
+    }
+  }, [modalAchievement]);
 
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(user_id));

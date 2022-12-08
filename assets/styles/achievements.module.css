@@ -116,6 +116,9 @@
   }
 }
 
+.achievement-level-0 > * {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(43%) saturate(1205%) hue-rotate(206deg) brightness(91%) contrast(92%);
+}
 .achievement-level-1 > * {
   filter: brightness(0) saturate(100%) invert(53%) sepia(28%) saturate(359%) hue-rotate(339deg) brightness(92%) contrast(87%);
 }

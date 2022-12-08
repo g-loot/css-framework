@@ -10,6 +10,8 @@ import Tooltip from "../../../../components/Tooltip/Tooltip";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
+import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
+import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
 
 const Groups = [
   "A",
@@ -744,7 +746,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                   }}
                                 >
                                   <div
-                                    className={`surface rounded-lg w-1/3 h-[58px] flex items-stretch overflow-hidden ${
+                                    className={`surface rounded-lg w-1/4 h-[58px] flex items-stretch overflow-hidden ${
                                       prototype.getUserByID(user.user)?.isYou
                                         ? ""
                                         : ""
@@ -902,67 +904,76 @@ export default function TabBrawlsSoloLeaderboards() {
                                               </Link>
                                             </div>
                                             <div className="item-body flex justify-around items-center">
+                                              <Tooltip
+                                                placement="left"
+                                                tooltip={
+                                                  <div className="max-w-xs text-sm text-center leading-tight">
+                                                    Mission LVL 1
+                                                  </div>
+                                                }
+                                              >
+                                                <div className="w-12 achievement-level-1">
+                                                  <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1670405826/Marketing/2022_prototype/Achievements/achievement-frame-lvl1-animated.svg" />
+                                                  <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-mission.svg" />
+                                                </div>
+                                              </Tooltip>
                                               <span className="font-bold text-ui-300 leading-none">
                                                 {user.stats.brawlPoints}
                                               </span>
-                                              {
-                                                prototype.getUserByID(user.user)
-                                                  ?.clan
-                                              }
-                                              <Link
-                                                href={`/prototype/clans/${
-                                                  prototype.getUserByID(
-                                                    user.user
-                                                  ).clan
-                                                }${prototype.getURLparams()}`}
-                                              >
-                                                <a>
-                                                  <Tooltip
-                                                    placement="left"
-                                                    tooltip={
-                                                      <div className="max-w-xs text-sm text-center leading-tight">
-                                                        {
-                                                          prototype.getClanByID(
-                                                            prototype.getUserByID(
-                                                              user.user
-                                                            )?.clan
-                                                          )?.nickname
-                                                        }
-                                                      </div>
-                                                    }
-                                                  >
-                                                    <div
-                                                      className={`avatar avatar-squircle avatar-xs interactive ${
-                                                        !prototype.getUserByID(
-                                                          user.user
-                                                        ).clan
-                                                          ? "opacity-0"
-                                                          : ""
-                                                      }`}
-                                                    >
-                                                      <div>
-                                                        <img
-                                                          src={
+                                              {prototype.getUserByID(user.user)
+                                                ?.clan ? (
+                                                <Link
+                                                  href={`/prototype/clans/${
+                                                    prototype.getUserByID(
+                                                      user.user
+                                                    ).clan
+                                                  }${prototype.getURLparams()}`}
+                                                >
+                                                  <a>
+                                                    <Tooltip
+                                                      placement="left"
+                                                      tooltip={
+                                                        <div className="max-w-xs text-sm text-center leading-tight">
+                                                          {
                                                             prototype.getClanByID(
                                                               prototype.getUserByID(
                                                                 user.user
                                                               )?.clan
-                                                            )?.avatar
+                                                            )?.nickname
                                                           }
-                                                        />
+                                                        </div>
+                                                      }
+                                                    >
+                                                      <div
+                                                        className={`avatar avatar-squircle avatar-xs interactive ${
+                                                          !prototype.getUserByID(
+                                                            user.user
+                                                          ).clan
+                                                            ? "opacity-0"
+                                                            : ""
+                                                        }`}
+                                                      >
+                                                        <div>
+                                                          <img
+                                                            src={
+                                                              prototype.getClanByID(
+                                                                prototype.getUserByID(
+                                                                  user.user
+                                                                )?.clan
+                                                              )?.avatar
+                                                            }
+                                                          />
+                                                        </div>
                                                       </div>
-                                                    </div>
-                                                  </Tooltip>
-                                                </a>
-                                              </Link>
+                                                    </Tooltip>
+                                                  </a>
+                                                </Link>
+                                              ) : (
+                                                <div
+                                                  className={`avatar avatar-squircle avatar-xs interactive opacity-0`}
+                                                />
+                                              )}
                                             </div>
-                                            {/*
-                                            <div className="item-actions flex items-center gap-2">
-                                              <div>
-                                                <span className="icon icon-24 icon-arrow-sm-down" />
-                                              </div>
-                                            </div>
-                                                        */}
                                           </div>
                                         </>
                                       }

@@ -134,6 +134,13 @@ export const FrameworkPages = {
           new: false,
         },
         {
+          label: "Achievements",
+          url: "profile/1/achievements",
+          query: "",
+          tags: "profile, view, user, achievements, badges, level",
+          tab: 2,
+        },
+        {
           title: true,
           label: "Profile (others)",
           tab: 0,

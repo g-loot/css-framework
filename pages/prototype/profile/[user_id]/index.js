@@ -66,6 +66,36 @@ const achievementsList = [
     from: "150",
     to: "200",
   },
+  {
+    level: 0,
+    name: "",
+    description: "",
+    icon: "",
+    percent: 75,
+    progress: 10,
+    from: "150",
+    to: "200",
+  },
+  {
+    level: 0,
+    name: "",
+    description: "",
+    icon: "",
+    percent: 75,
+    progress: 10,
+    from: "150",
+    to: "200",
+  },
+  {
+    level: 0,
+    name: "",
+    description: "",
+    icon: "",
+    percent: 75,
+    progress: 10,
+    from: "150",
+    to: "200",
+  },
 ];
 
 export default function Home() {
@@ -122,7 +152,7 @@ export default function Home() {
                       </a>
                     </Link>
                   </div>
-                  <Slider bgColor="from-ui-800 via-ui-800 to-ui-800/0">
+                  <Slider itemWidth={138+16+16} bgColor="from-ui-800 via-ui-800 to-ui-800/0">
                     <div className="flex gap-6 py-2 px-6">
                       {achievementsList.map((item, itemIndex) => (
                         <div
@@ -133,7 +163,7 @@ export default function Home() {
                           }}
                         >
                           <div
-                            className="w-32 h-32 achievement cursor-pointer"
+                            className={`w-32 h-32 achievement ${item.level > 0 ? 'cursor-pointer' : 'pointer-events-none'}`}
                             onClick={openModalAchievementReceived.bind(
                               this,
                               item.level,
@@ -150,13 +180,17 @@ export default function Home() {
                               <AchievementFrame
                                 url={`https://res.cloudinary.com/gloot/image/upload/v1670405826/Marketing/2022_prototype/Achievements/achievement-frame-lvl${item.level}-animated.svg`}
                               />
-                              <AchievementIcon
-                                url={`https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-${item.icon}.svg`}
-                              />
+                              {item.level > 0 && (
+                                <AchievementIcon
+                                  url={`https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-${item.icon}.svg`}
+                                />
+                              )}
                             </div>
-                            <span className="text-xs text-ui-300 uppercase">
-                              Level {item.level}
-                            </span>
+                            {item.level > 0 && (
+                              <span className="text-xs text-ui-300 uppercase">
+                                Level {item.level}
+                              </span>
+                            )}
                           </div>
                         </div>
                       ))}
