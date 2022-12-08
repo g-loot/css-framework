@@ -141,6 +141,14 @@ export const FrameworkPages = {
           tab: 2,
         },
         {
+          label: "Achievement unlocked",
+          chip: "modal",
+          url: "profile/1/achievements?modalachievement=true",
+          query: "",
+          tags: "profile, view, user, achievements, badges, level, achievement unlocked, claim",
+          tab: 3,
+        },
+        {
           title: true,
           label: "Profile (others)",
           tab: 0,
