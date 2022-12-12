@@ -319,7 +319,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
             </li>
-            <li className={`is-locked ${step === 8 ? `is-active` : ""}`}>
+            <li className={`is-lockedNO ${step === 8 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
                   <span>8</span>
@@ -346,7 +346,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
             </li>
-            <li className={`is-locked ${step === 9 ? `is-active` : ""}`}>
+            <li className={`is-lockedNO ${step === 9 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
                   <span>9</span>
@@ -373,7 +373,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
             </li>
-            <li className={`is-locked ${step === 10 ? `is-active` : ""}`}>
+            <li className={`is-lockedNO ${step === 10 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
                   <span>10</span>

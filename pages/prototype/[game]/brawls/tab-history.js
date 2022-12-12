@@ -78,12 +78,12 @@ export default function TabBrawlsHistory() {
                         </td>
                         <td>
                           <span className="font-bold">
-                            #{brawl.soloResults.placement}
+                            #{brawl.soloResults?.placement}
                           </span>
                         </td>
                         <td>
                           <span className="font-bold">
-                            #{brawl.soloResults.points}
+                            #{brawl.soloResults?.points}
                           </span>
                         </td>
                         <td className="text-right">

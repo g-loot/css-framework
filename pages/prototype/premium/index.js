@@ -47,9 +47,9 @@ export default function Premium() {
             </div>
           </section>
 
-          <section className="flex flex-wrap flex-col lg:flex-row lg:items-start justify-center gap-4 md:gap-0 text-center space-y-4 md:space-y-0 mb-24">
+          <section className="grid md:grid-cols-2 justify-center mb-24 max-w-lg mx-auto text-center">
             {/*
-            <div className="w-96 shrink-0">
+            <div>
               <img
                 className="mx-auto block"
                 src="https://res.cloudinary.com/gloot/image/upload/v1665059216/Marketing/2022_prototype/Illustrations/picture_premium_missions.webp"
@@ -62,7 +62,7 @@ export default function Premium() {
               </h3>
             </div>
             */}
-            <div className="w-96 shrink-0">
+            <div>
               <img
                 className="mx-auto block"
                 src="https://res.cloudinary.com/gloot/image/upload/v1665053771/Marketing/2022_prototype/Illustrations/picture_premium_rewards.webp"
@@ -74,7 +74,7 @@ export default function Premium() {
                 Earn mission rewards faster
               </h3>
             </div>
-            <div className="w-96 shrink-0">
+            <div>
               <img
                 className="mx-auto block"
                 src="https://res.cloudinary.com/gloot/image/upload/v1665053771/Marketing/2022_prototype/Illustrations/picture_premium_extra_tokens.webp"
@@ -86,7 +86,7 @@ export default function Premium() {
                 Get free extra tokens for each token purchase
               </h3>
             </div>
-            <div className="w-96 shrink-0">
+            <div>
               <img
                 className="mx-auto block"
                 src="https://res.cloudinary.com/gloot/image/upload/v1665053771/Marketing/2022_prototype/Illustrations/picture_premium_no_ads.webp"
@@ -98,7 +98,7 @@ export default function Premium() {
                 Get Premium content features
               </h3>
             </div>
-            <div className="w-96 shrink-0">
+            <div>
               <img
                 className="mx-auto block"
                 src="https://res.cloudinary.com/gloot/image/upload/v1665053771/Marketing/2022_prototype/Illustrations/picture_premium_discord.webp"
@@ -112,7 +112,7 @@ export default function Premium() {
             </div>
           </section>
 
-          <section className="relative z-10 pt-12 md:pt-20 mb-40 container max-w-lg mx-auto ">
+          <section className="relative z-10 pt-12 md:pt-20 mb-40 container max-w-lg mx-auto">
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-0 -right-14 rotate-[33deg]"
               src="https://res.cloudinary.com/gloot/image/upload/v1657703095/Marketing/2022_prototype/3D_object_crowngold.webp"
@@ -171,6 +171,7 @@ export default function Premium() {
                         and prize money.
                       </span>
                     </li>
+                    {/*
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
@@ -178,6 +179,7 @@ export default function Premium() {
                         faster.
                       </span>
                     </li>
+                    */}
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
@@ -226,6 +228,7 @@ export default function Premium() {
                         and prize money.
                       </span>
                     </li>
+                    {/*
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
                       <span className="text-ui-200">
@@ -233,6 +236,7 @@ export default function Premium() {
                         faster.
                       </span>
                     </li>
+                  */}
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
                       <span className="text-ui-200">

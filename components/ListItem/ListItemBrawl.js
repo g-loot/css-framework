@@ -262,21 +262,21 @@ export default function ListItemBrawl(props) {
                       <div className="font-headings leading-none flex items-start gap-1">
                         <span className="text-xl">#</span>
                         <span className="text-4xl">
-                          {brawl.soloResults.placement}
+                          {brawl.soloResults?.placement}
                         </span>
                       </div>
                       <div
                         className={`hidden leading-none text-center -space-y-1 ${
-                          brawl.soloResults.isPositive
+                          brawl.soloResults?.isPositive
                             ? "text-success-500 -mt-1"
                             : "text-error-300 -mb-1"
                         }`}
                       >
-                        {brawl.soloResults.isPositive && (
+                        {brawl.soloResults?.isPositive && (
                           <span className="icon icon-arrow-sm-up" />
                         )}
-                        <div>{brawl.soloResults.movement}</div>
-                        {!brawl.soloResults.isPositive && (
+                        <div>{brawl.soloResults?.movement}</div>
+                        {!brawl.soloResults?.isPositive && (
                           <span className="icon icon-arrow-sm-down" />
                         )}
                       </div>

@@ -61,7 +61,7 @@ const DSpage = () => {
           </div>
 
           {/* default: secondary */}
-          <div className="">
+          <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
             <h3 className="h4 mb-6 lg:mb-10">Secondary</h3>
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
@@ -152,7 +152,7 @@ const DSpage = () => {
                   className="rounded"
                   width="100%"
                   height="300"
-                  src="//jsfiddle.net/augustin_hiebel/b5c3fad8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                  src="//jsfiddle.net/augustin_hiebel/6d1zj9xb/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>
@@ -528,6 +528,21 @@ const DSpage = () => {
                   <div className="chip chip-reward chip-xp chip-inverted">
                     <span className="icon icon-xp-symbol-outline" />
                     <span>500</span>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Inverted
+                  </div>
+                  <div className="flex gap-2">
+                    <div className="chip chip-reward chip-xp">
+                      <span className="icon icon-xp-symbol-outline" />
+                      <span>500</span>
+                    </div>
+                    <div className="chip chip-reward chip-xp chip-inverted">
+                      <span className="icon icon-xp-symbol-outline" />
+                      <span>500</span>
+                    </div>
                   </div>
                 </div>
               </div>

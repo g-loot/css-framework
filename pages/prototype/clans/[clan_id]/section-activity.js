@@ -182,7 +182,7 @@ export default function SectionClanActivity() {
                         </div>
                         <div className="flex items-center gap-2 leading-none">
                           <div className="text-5xl font-headings italic">
-                            {brawl.soloResults.placement}
+                            {brawl.soloResults?.placement}
                           </div>
                           <div
                             className={`text-center -space-y-1 ${
