@@ -103,6 +103,22 @@ body.stryda {
     border-radius: 100rem;
   }
 
+  [class*='rounded']:not(.rounded-full),
+  .card-mission,
+  .card-brawl,
+  .button:not(.button-close):not(.rounded-full),
+  .carousel .carousel-list > li > a, 
+  .carousel .carousel-list > li > button,
+  .card-brawl.card-secondary > .card-image-bg,
+  .card-brawl.card-secondary > .card-overlay,
+  .alert {
+    border-radius: 0 !important;
+  }
+
+  .rounded-full {
+    border-radius: 1000rem !important;
+  }
+
   h1,
   h2,
   h3,

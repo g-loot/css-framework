@@ -91,9 +91,10 @@ const ClanBrawlsNoClan = [
 export default function HomeBrawlClan() {
   const { query } = useRouter();
   const hasNoClan = query.noclan === "true" ? true : false;
+  const hasNoBrawls = query.nobrawls === "true" ? true : false;
   return (
     <div className="relative">
-      {hasNoClan ? (
+      {hasNoClan && (
         <div className="flex-none surface sm:rounded-lg overflow-hidden w-full px-4 py-12 mt-4 flex items-center">
           <div className="relative z-10 px-8 lg:w-1/2">
             <h3 className="mb-4">
@@ -113,20 +114,42 @@ export default function HomeBrawlClan() {
             alt=""
           />
         </div>
-      ) : (
+      )}
+      {hasNoBrawls && (
+        <div className="flex-none surface sm:rounded-lg overflow-hidden w-full px-4 py-12 mt-4 flex items-center">
+        <div className="relative z-10 px-8 lg:w-1/2">
+          <h3 className="mb-4">
+            Brawl in Clans and 
+            <br />
+            get stronger together!
+          </h3>
+          <Link href="/prototype/valorant/brawls">
+            <button type="button" className="button button-primary">
+              <span>Discover Valorant Brawls</span>
+            </button>
+          </Link>
+        </div>
+        <img
+          className="absolute inset-0 h-full w-full object-cover object-right opacity-20 lg:opacity-100"
+          src="https://res.cloudinary.com/gloot/image/upload/v1670945610/Marketing/2022_prototype/home-brawlnoclanbrawls_1.jpg"
+          alt=""
+        />
+      </div>
+      )}
+      {!hasNoClan && !hasNoBrawls && (
         <Slider
-          itemWidth={809 + 16}
-          bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
-        >
-          {ClanBrawls.map((item, itemIndex) => (
-            <BrawlCardSecondary
-              key={item.id}
-              brawl={item}
-              isHorizontal={true}
-              isClan={false}
-            />
-          ))}
-        </Slider>
+        itemWidth={809 + 16}
+        bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
+      >
+        {ClanBrawls.map((item, itemIndex) => (
+          <BrawlCardSecondary
+            key={item.id}
+            brawl={item}
+            isHorizontal={true}
+            isClan={false}
+          />
+        ))}
+      </Slider>
       )}
     </div>
   );
