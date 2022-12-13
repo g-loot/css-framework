@@ -9,7 +9,7 @@ import { UiContext } from "../../contexts/ui";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 import Notification from "../Notification/Notification";
-import DailyReward from "../DailyReward/DailyReward";
+import { VariablesContext } from "../../contexts/variables";
 import TopBarClaim from "../TopBarClaim/TopBarClaim";
 import ModalBuyTokens from "../../pages/prototype/wallet/modal-buytokens";
 
@@ -131,6 +131,7 @@ export default function TopbarNew() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
+  const variablesContext = useContext(VariablesContext);
   const hasAds = query.ads === "true" ? true : false;
   const isEmpty = query.empty === "true" ? true : false;
   const modalDownloadStarted =
@@ -141,6 +142,31 @@ export default function TopbarNew() {
       openModalDownloadStarted();
     }
   }, [modalDownloadStarted]);
+
+  /*
+
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => {
+      e.preventDefault();
+      if ((e.metaKey || e.ctrlKey) && e.code === "KeyC") {
+        console.log("KeyC", variablesContext.newBrand);
+        if(!variablesContext.newBrand) {
+          variablesContext.brandOn();
+        } else {
+          variablesContext.brandOff();
+        }
+      }
+    });
+  });
+  */
+
+  function brandToggle() {
+    if(!variablesContext.newBrand) {
+      variablesContext.brandOn();
+    } else {
+      variablesContext.brandOff();
+    }
+  }
 
   function openModalDownloadStarted() {
     uiContext.openModal(<ModalDownloadStarted></ModalDownloadStarted>);
@@ -292,13 +318,17 @@ export default function TopbarNew() {
                           </div>
                           <ul className="leading-tight space-y-2">
                             <li className="flex gap-2 text-sm">
-                              <div className=" w-12 font-bold uppercase">Use</div>
+                              <div className=" w-12 font-bold uppercase">
+                                Use
+                              </div>
                               <div className="flex-1">
                                 To purchase items in the Shop.
                               </div>
                             </li>
                             <li className="flex gap-2 text-sm">
-                              <div className=" w-12 font-bold uppercase">Get</div>
+                              <div className=" w-12 font-bold uppercase">
+                                Get
+                              </div>
                               <div className="flex-1">
                                 From <strong>Daily Loot</strong> Streak and{" "}
                                 <strong>Weekly Brawl winnings</strong>.
@@ -308,7 +338,9 @@ export default function TopbarNew() {
                         </div>
                       }
                     >
-                      <Link href={`/prototype/wallet${prototype.getURLparams()}`}>
+                      <Link
+                        href={`/prototype/wallet${prototype.getURLparams()}`}
+                      >
                         <div className="flex items-center">
                           <img
                             src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
@@ -346,13 +378,17 @@ export default function TopbarNew() {
                           </div>
                           <ul className="leading-tight space-y-2">
                             <li className="flex gap-2 text-sm">
-                              <div className=" w-12 font-bold uppercase">Use</div>
+                              <div className=" w-12 font-bold uppercase">
+                                Use
+                              </div>
                               <div className="flex-1">
                                 To enter Weekly Brawls.
                               </div>
                             </li>
                             <li className="flex gap-2 text-sm">
-                              <div className=" w-12 font-bold uppercase">Get</div>
+                              <div className=" w-12 font-bold uppercase">
+                                Get
+                              </div>
                               <div className="flex-1">
                                 <strong>Missions, Daily Loot Streak</strong> or{" "}
                                 <strong>buy them</strong> directly from the
@@ -363,7 +399,9 @@ export default function TopbarNew() {
                         </div>
                       }
                     >
-                      <Link href={`/prototype/wallet${prototype.getURLparams()}`}>
+                      <Link
+                        href={`/prototype/wallet${prototype.getURLparams()}`}
+                      >
                         <div className="flex items-center">
                           <img
                             src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
@@ -649,6 +687,27 @@ export default function TopbarNew() {
                       >
                         <span className="icon icon-data-download" />
                         <span>Download tracker</span>
+                      </a>
+                    </li>
+                    <li className="separator"></li>
+                    <li>
+                      <a
+                        tabIndex="1"
+                        onClick={brandToggle}
+                        href="#"
+                        rel="noopener noreferrer"
+                        className="relative"
+                      >
+                        <span className="relative z-10 icon icon-fireworks" />
+                        <span className="relative z-10">
+                          New Brand
+                        </span>
+                        <div className="absolute z-0 right-0 pointer-events-none">
+                          <div className="form-toggle form-end">
+                            <input type="checkbox" name="newBrandToggle" id="newBrandToggle" checked={variablesContext.newBrand} />
+                            <label htmlFor="newBrandToggle" />
+                          </div>
+                        </div>
                       </a>
                     </li>
                     <li className="separator"></li>

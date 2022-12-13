@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useState } from 'react';
 
 export const UiContext = React.createContext({
   displayedModal: null,
@@ -87,6 +87,7 @@ const UiContextProvider = (props) => {
       type: 'CLEAR',
     });
   };
+
 
   const uiContext = {
     displayedModal: uiState.displayedModal,

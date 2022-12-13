@@ -8,6 +8,8 @@ import Topbar from "../Topbar/Topbar";
 import TopbarNew from "../Topbar/TopbarNew";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
+import { VariablesContext } from "../../contexts/variables";
+import React, { useContext } from "react";
 
 export default function PrototypeStructure({ children, title }) {
   const prototype = usePrototypeData();
@@ -18,6 +20,7 @@ export default function PrototypeStructure({ children, title }) {
     query.newstructure === "true" || query.newstructure === undefined
       ? true
       : false;
+  const variables = useContext(VariablesContext);
   return (
     <>
       {!isNewStructure && (
@@ -151,6 +154,9 @@ export default function PrototypeStructure({ children, title }) {
               <aside className="w-72 bg-ui-800 border-r border-ui-700 flex flex-col shadow-2xl">
                 <div className="h-12 flex items-center justify-between border-b border-ui-700 pl-7 pr-2 sticky z-10 top-0 bg-ui-800/95 backdrop-blur">
                   <Link href={`/prototype/home${prototype.getURLparams()}`}>
+                    {variables.newBrand ? (
+                      <>New brand name</>
+                    ) : (
                     <a className="flex items-center gap-2 interactive">
                       <img
                         width="110"
@@ -159,6 +165,7 @@ export default function PrototypeStructure({ children, title }) {
                         alt="G-Loot logo"
                       />
                     </a>
+                    )}
                   </Link>
                   <div className="block md:hidden">
                     <label

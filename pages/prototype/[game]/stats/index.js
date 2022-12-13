@@ -1186,7 +1186,7 @@ export default function Stats() {
                   >
                     <tbody className="child:overflow-hidden leading-tight font-bold">
                       <tr>
-                        <td className="surface-halo halo-l overflow-hidden">
+                        <td className="w-76 surface-halo halo-l overflow-hidden">
                           <div className="flex items-center gap-4 text-left relative">
                             <img
                               className="absolute z-0 -inset-y-4 -left-5 h-[calc(100%+2rem)] object-cover"
@@ -1227,18 +1227,25 @@ export default function Stats() {
                             </div>
                           </div>
                         </td>
-                        <td>
+                        <td className="w-52">
                           <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
                             Kills
                           </div>
                           <div>372</div>
                         </td>
-                        <td>
+                        <td className="w-52">
                           <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
                             Deaths
                           </div>
                           <div>41</div>
                         </td>
+                        <td className="w-52">
+                          <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                            Longest kill distance
+                          </div>
+                          <div>46M</div>
+                        </td>
+                        {/*
                         <td>
                           <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
                             Headshots %
@@ -1257,12 +1264,8 @@ export default function Stats() {
                           </div>
                           <div>0.65</div>
                         </td>
-                        <td>
-                          <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
-                            Longest kill distance
-                          </div>
-                          <div>46M</div>
-                        </td>
+                        
+                              */}
                       </tr>
                     </tbody>
                   </table>
@@ -1273,27 +1276,32 @@ export default function Stats() {
                   >
                     <thead>
                       <tr className="text-ui-400">
-                        <th className="text-left">Weapon</th>
-                        <th>Kills</th>
-                        <th>Deaths</th>
+                        <th className="w-76 text-left">Weapon</th>
+                        <th className="w-52">Kills</th>
+                        <th className="w-52">Deaths</th>
+                        <th className="w-52">Longest kill distance</th>
+                        {/*
                         <th>Headshots %</th>
                         <th>Damage/round</th>
                         <th>Kills/round</th>
-                        <th>Longest kill distance</th>
+                        
+                  */}
                       </tr>
                     </thead>
                     <tbody className="child:overflow-hidden leading-tight font-bold">
                       {StatsValorantDemoWeapons.map((item, itemIndex) => (
                         <tr key={itemIndex}>
-                          <td>
-                            <div className="flex items-center gap-4 text-left w-32">
-                              <img
-                                className="drop-shadow-lg"
-                                src={getWeaponByID(item.weapon).picturePath}
-                                alt=""
-                                width="75"
-                                height="auto"
-                              />
+                          <td className="w-76">
+                            <div className="flex items-center gap-4 text-left">
+                              <div className="w-52">
+                                <img
+                                  className="drop-shadow-lg mx-auto"
+                                  src={getWeaponByID(item.weapon).picturePath}
+                                  alt=""
+                                  width="75"
+                                  height="auto"
+                                />
+                              </div>
                               <div>
                                 <div className="text-ui-100 capitalize">
                                   {getWeaponByID(item.weapon).name}
@@ -1304,12 +1312,15 @@ export default function Stats() {
                               </div>
                             </div>
                           </td>
-                          <td>{item.kills}</td>
-                          <td>{item.deaths}</td>
+                          <td className="w-52">{item.kills}</td>
+                          <td className="w-52">{item.deaths}</td>
+                          <td className="w-52">{item.killdistance}M</td>
+                          {/*
                           <td>{item.headshots}%</td>
                           <td>{item.damageround}</td>
                           <td>{item.killsround}</td>
-                          <td>{item.killdistance}M</td>
+                          
+                      */}
                         </tr>
                       ))}
                     </tbody>

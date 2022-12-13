@@ -1,15 +1,16 @@
 import "../assets/styles/globals.css";
 import "aos/dist/aos.css";
 
+import React from "react";
 import App from "next/app";
 import ModalToastProvider from "../components/ModalToastProvider";
 import { PrototypeProvider } from "../contexts/prototype";
-import React from "react";
 import SiteLayout from "../components/SiteLayout";
 import UiContextProvider from "../contexts/ui.js";
 import VariablesContextProvider from "../contexts/variables";
 
 class MyApp extends App {
+
   render() {
     const { Component, pageProps, router } = this.props;
 

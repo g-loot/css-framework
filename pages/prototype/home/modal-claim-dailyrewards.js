@@ -11,7 +11,6 @@ export default function ModalClaimDailyRewards(props) {
   const [submitting, setSubmitting] = useState(false);
   function closeModalWithDelay() {
     setSubmitting(true);
-
     setTimeout(() => {
       uiContext.openToastr({
         size: "medium",

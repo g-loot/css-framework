@@ -8,7 +8,6 @@
 @import "./general";
 @import "./scrollbar";
 @import "./typography";
-@import "./variables";
 
 @import "./button.module.css";
 @import "./icons.module.css";
@@ -52,6 +51,8 @@
 @import "./tooltip.module.css";
 
 @import "./achievements.module.css";
+
+@import "./stryda.css";
 
 
 @import "tailwindcss/utilities";
