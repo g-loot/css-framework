@@ -10,39 +10,39 @@ import ModalBuyTokens from "../../../wallet/modal-buytokens";
 const enrollSteps = [
   {
     step: 1,
-    kills: 21,
+    kills: 121,
   },
   {
     step: 2,
-    kills: 33,
+    kills: 433,
   },
   {
     step: 3,
-    kills: 4,
+    kills: 24,
   },
   {
     step: 4,
-    kills: 21,
+    kills: 621,
   },
   {
     step: 5,
-    kills: 11,
+    kills: 111,
   },
   {
     step: 6,
-    kills: 9,
+    kills: 91,
   },
   {
     step: 7,
-    kills: 43,
+    kills: 443,
   },
   {
     step: 8,
-    kills: 4,
+    kills: 234,
   },
   {
     step: 9,
-    kills: 17,
+    kills: 117,
   },
 ];
 

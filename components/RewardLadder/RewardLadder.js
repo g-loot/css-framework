@@ -163,7 +163,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-body">
                   <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
                     <span>500</span>
-                    <span className="icon icon-xp-symbol-outline" />
+                    <span className="icon icon-xp-symbol" />
                   </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
@@ -187,7 +187,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-body">
                   <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
                     <span>500</span>
-                    <span className="icon icon-xp-symbol-outline" />
+                    <span className="icon icon-xp-symbol" />
                   </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
@@ -211,7 +211,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-body">
                   <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
                     <span>800</span>
-                    <span className="icon icon-xp-symbol-outline" />
+                    <span className="icon icon-xp-symbol" />
                   </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-coin-small.png"
@@ -235,7 +235,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-body">
                   <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
                     <span>1100</span>
-                    <span className="icon icon-xp-symbol-outline" />
+                    <span className="icon icon-xp-symbol" />
                   </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
@@ -259,7 +259,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-body">
                   <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
                     <span>1400</span>
-                    <span className="icon icon-xp-symbol-outline" />
+                    <span className="icon icon-xp-symbol" />
                   </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
@@ -283,7 +283,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-body">
                   <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
                     <span>1700</span>
-                    <span className="icon icon-xp-symbol-outline" />
+                    <span className="icon icon-xp-symbol" />
                   </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-coin-small.png"
@@ -307,7 +307,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-body">
                   <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
                     <span>2000</span>
-                    <span className="icon icon-xp-symbol-outline" />
+                    <span className="icon icon-xp-symbol" />
                   </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-extrasmall.png"
@@ -331,7 +331,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-body">
                   <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
                     <span>2000</span>
-                    <span className="icon icon-xp-symbol-outline" />
+                    <span className="icon icon-xp-symbol" />
                   </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-mixed-extrasmall.png"
@@ -358,7 +358,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-body">
                   <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
                     <span>2000</span>
-                    <span className="icon icon-xp-symbol-outline" />
+                    <span className="icon icon-xp-symbol" />
                   </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-mixed-extrasmall.png"
@@ -385,7 +385,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-body">
                   <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
                     <span>2000</span>
-                    <span className="icon icon-xp-symbol-outline" />
+                    <span className="icon icon-xp-symbol" />
                   </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-mixed-small.png"

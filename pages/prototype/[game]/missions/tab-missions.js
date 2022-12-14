@@ -42,15 +42,19 @@ export default function TabMissionsMissions() {
             style={{ "--delay": "calc(1 * 0.05s)" }}
           >
             <div className="flex items-center justify-between mb-2 px-4 sm:px-0">
-              <div>
-                <h2 className="text-2xl flex-none">Weekly Mission Rewards</h2>
-              </div>
+              <h2 className="h5 flex-none">Weekly Mission Rewards</h2>
               <div className="hidden sm:flex items-center gap-2">
                 <div className="chip chip-sm chip-secondary">
                   <span className="icon icon-time-machine" />
                   <span>
                     Resets in{" "}
-                    <Countdown className="ml-0.5" separator=":" hasHours={true} hasMinutes={true} hasSeconds={true} />
+                    <Countdown
+                      className="ml-0.5"
+                      separator=":"
+                      hasHours={true}
+                      hasMinutes={true}
+                      hasSeconds={true}
+                    />
                   </span>
                 </div>
                 <Tooltip
@@ -66,6 +70,16 @@ export default function TabMissionsMissions() {
                   </button>
                 </Tooltip>
               </div>
+            </div>
+            <div className="mb-2 mx-4 sm:mx-0">
+              <p>
+                Subscribe to{" "}
+                <Link href="/prototype/premium">
+                  <a className="font-bold text-premium-500 link">Premium</a>
+                </Link>{" "}
+                to earn an additional 50% XP on each completed Reward Ladder
+                stage.
+              </p>
             </div>
             {selectedGame.needsSteam && (
               <>
@@ -122,21 +136,52 @@ export default function TabMissionsMissions() {
             className="py-8 animate-slide-in-bottom animate-delay"
             style={{ "--delay": "calc(2 * 0.05s)" }}
           >
-            <div className="flex items-center justify-between mb-2 px-4 sm:px-0">
-              <div>
-                <h2 className="text-2xl">
-                  Daily missions in {selectedGame.name}
-                </h2>
-              </div>
+            <div className="flex items-center justify-between mb-2 mx-4 sm:mx-0">
+              <h3 className="h5">Daily missions in {selectedGame.name}</h3>
               <div className="hidden sm:flex items-center gap-2">
-                <div className="chip chip-sm chip-secondary">
-                  <span className="icon icon-time-machine" />
-                  <span>
-                    Resets in{" "}
-                    <Countdown className="ml-0.5" separator=":" hasHours={true} hasMinutes={true} hasSeconds={true} />
-                  </span>
+                <div
+                  className="tooltip tooltip-left"
+                  data-tooltip="This might take up to 15 minutes. Make sure the match you’re trying to fetch is 100% completed."
+                >
+                  <button
+                    className={`button button-xs button-secondary ${
+                      submitting ? "is-loading" : ""
+                    }`}
+                    onClick={addToastWithDelay.bind(this, {
+                      icon: "f-check",
+                      color: "green",
+                      text: "Your stats have been updated.",
+                      autoDelete: true,
+                      autoDeleteDelay: 2500,
+                    })}
+                  >
+                    <span className="icon icon-16 icon-refresh-02" />
+                    <span className="hidden sm:block">
+                      Request a stats update
+                    </span>
+                    <span className="block sm:hidden">Update</span>
+                  </button>
                 </div>
               </div>
+            </div>
+
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-1 mx-4 sm:mx-0 text-sm text-ui-300">
+              <div>
+                New missions in <b>4H 23M 12S</b>
+              </div>
+              <div className="md:text-right">
+                Your latest match ended <b>Dec 13 / 8:12 PM</b>
+              </div>
+            </div>
+
+            <div className="mb-4 mx-4 sm:mx-0">
+              <p>
+                Get{" "}
+                <Link href="/prototype/premium">
+                  <a className="font-bold text-premium-500 link">Premium</a>
+                </Link>{" "}
+                and earn +50% of XP on all missions.
+              </p>
             </div>
             {selectedGame.needsSteam && (
               <>
@@ -169,59 +214,9 @@ export default function TabMissionsMissions() {
               </>
             )}
 
-            <div className="flex items-center justify-between mb-4 px-4 sm:px-0">
-              <div>
-                <div className="text-sm text-ui-300">
-                  Your latest match ended <b>May 19 / 11:05 PM</b>
-                </div>
-                <div className="text-xs text-ui-300">Last check was TBA</div>
-              </div>
-              <div className="flex items-center gap-2">
-                <div
-                  className="tooltip tooltip-left"
-                  data-tooltip="This might take up to 15 minutes. Make sure the match you’re trying to fetch is 100% completed."
-                >
-                  <button
-                    className={`button button-sm button-primary ${
-                      submitting ? "is-loading" : ""
-                    }`}
-                    onClick={addToastWithDelay.bind(this, {
-                      icon: "f-check",
-                      color: "green",
-                      text: "Your stats have been updated.",
-                      autoDelete: true,
-                      autoDeleteDelay: 2500,
-                    })}
-                  >
-                    <span className="icon icon-16 icon-refresh-02" />
-                    <span className="hidden sm:block">
-                      Request a stats update
-                    </span>
-                    <span className="block sm:hidden">Update</span>
-                  </button>
-                </div>
-              </div>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-4 sm:px-0">
               {selectedGame?.missions.map((mission, missionIndex) => (
-                <>
-                  {mission.ispremium && (
-                    <Tooltip
-                      placement="top"
-                      tooltip={
-                        <div className="max-w-xs text-sm text-center leading-tight">
-                          Unlock rewards as you earn XP from Missions. XP is
-                          earned across all Missions in all games on G-Loot
-                        </div>
-                      }
-                    >
-                      <CardMission mission={mission} index={missionIndex} />
-                    </Tooltip>
-                  )}
-                  {!mission.ispremium && (
-                    <CardMission mission={mission} index={missionIndex} />
-                  )}
-                </>
+                <CardMission key={missionIndex} mission={mission} index={missionIndex} />
               ))}
             </div>
           </section>
@@ -249,9 +244,7 @@ export default function TabMissionsMissions() {
                 Increase your amount of daily missions and XP you can earn each
                 day with a{" "}
                 <Link href={`/prototype/premium${prototype.getURLparams()}`}>
-                  <a className="link">
-                    Premium subscription
-                  </a>
+                  <a className="link">Premium subscription</a>
                 </Link>
                 .
               </p>

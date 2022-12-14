@@ -8,6 +8,7 @@ import { VariablesContext } from "../../../contexts/variables";
 import { usePrototypeData } from "../../../contexts/prototype";
 import Tooltip from "../../../components/Tooltip/Tooltip";
 import CardMission from "../../../components/Card/CardMission";
+import Link from "next/link";
 
 export default function HomeBrawlMissions(props) {
   const { query } = useRouter();
@@ -30,7 +31,7 @@ export default function HomeBrawlMissions(props) {
       className="py-8 animate-slide-in-bottom animate-delay"
       style={{ "--delay": "calc(2 * 0.05s)" }}
     >
-      <div className="flex items-center justify-between mb-1 mx-4 sm:mx-0">
+      <div className="flex items-center justify-between mb-2 mx-4 sm:mx-0">
         <h3 className="h6">
           Daily missions in {prototype.getGameBySlug(props.gameSlug)?.name}
         </h3>
@@ -59,14 +60,19 @@ export default function HomeBrawlMissions(props) {
         </div>
       </div>
 
-      <div className="flex items-center justify-between mb-4 mx-4 sm:mx-0">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-1 mx-4 sm:mx-0 text-sm text-ui-300">
         <div>
-          <div className="text-sm text-ui-300">
-            New missions in <b>4H 23M 12S</b>
-          </div>
+          New missions in <b>4H 23M 12S</b>
         </div>
-        <div className="flex items-center gap-2"></div>
+        <div className="md:text-right">Your latest match ended <b>Dec 13 / 8:12 PM</b></div>
       </div>
+
+      <div className="mb-4 mx-4 sm:mx-0">
+        <p>
+          Get <Link href='/prototype/premium'><a className="font-bold text-premium-500 link">Premium</a></Link> and earn +50% of XP on all missions.
+        </p>
+      </div>
+
       {prototype.getGameBySlug(props.gameSlug)?.needsSteam && (
         <>
           <div className="px-4 sm:px-0">
@@ -101,24 +107,7 @@ export default function HomeBrawlMissions(props) {
         {prototype
           .getGameBySlug(props.gameSlug)
           ?.missions.map((mission, missionIndex) => (
-            <>
-              {mission.ispremium && (
-                <Tooltip
-                  placement="top"
-                  tooltip={
-                    <div className="max-w-xs text-sm text-center leading-tight">
-                      Unlock rewards as you earn XP from Missions. XP is earned
-                      across all Missions in all games on G-Loot
-                    </div>
-                  }
-                >
-                  <CardMission mission={mission} index={missionIndex} />
-                </Tooltip>
-              )}
-              {!mission.ispremium && (
-                <CardMission mission={mission} index={missionIndex} />
-              )}
-            </>
+            <CardMission key={missionIndex} mission={mission} index={missionIndex} />
           ))}
       </div>
     </section>

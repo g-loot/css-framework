@@ -12,7 +12,7 @@
 .card-tournament {
   @apply
   transform-gpu
-  overflow-hidden
+  /*overflow-hidden*/
   relative
   focus-visible:outline
   focus-visible:outline-offset-2
@@ -21,7 +21,7 @@
   ;
   &:not([class*='rounded']) {
     @apply
-    rounded-xl
+    rounded-lg
     ;
   }
 
@@ -110,19 +110,12 @@
   @apply
   w-full
   relative
-  overflow-hidden
   flex
   flex-col
   items-stretch
   justify-between
   transform-gpu
   ;
-  
-  &:not([class*='rounded']) {
-    @apply
-    rounded-xl
-    ;
-  }
   .card-decoration {
     @apply
     z-20
@@ -137,6 +130,12 @@
     items-start
     space-y-3
     ;
+    .progressbar {
+      @apply
+      relative
+      -z-10
+      ;
+    }
   }
   .card-title {
     @apply
@@ -159,7 +158,7 @@
       content-['']
       absolute
       z-10
-      -inset-px
+      inset-0
       ;
     }
   }
@@ -279,7 +278,6 @@
   @apply
   aspect-video
   ;
-
   
   .card-body {
     @apply
@@ -288,12 +286,13 @@
     via-ui-800
     to-ui-800
     p-2
+    rounded-b-[calc(0.5rem-1px)]
     ;
 
     .card-title {
       @apply
       text-2xl
-      my-1
+      mt-1
       ;
     }
     .card-meta {
@@ -338,7 +337,7 @@
       flex
       flex-1
       items-center
-      -inset-px
+      inset-0
       ;
       > img {
         @apply
@@ -448,6 +447,9 @@
 }
 
 .card-bg {
+  @apply
+  overflow-hidden
+  ;
   &,
   > * {
     @apply
@@ -455,8 +457,9 @@
     z-0
     bg-cover
     bg-center
-    -inset-px
+    inset-0
     bg-no-repeat
+    rounded-lg
     ;
   }
 }
@@ -841,7 +844,7 @@
     }
     > .card-content {
       @apply
-      rounded-b-lg
+      rounded-b-[calc(0.5rem-1px)]
       ;
     }
   }

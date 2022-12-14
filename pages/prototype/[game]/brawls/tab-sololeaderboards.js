@@ -329,7 +329,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         height="auto"
                         alt=""
                       />
-                      <div className="mb-4 surface surface-dimmed surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
+                      <div className="w-full mb-4 surface surface-dimmed surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
                         <h2 className="h4 mb-2">Compete in this Brawl</h2>
                         <div className="uppercase font-bold text-ui-100">
                           Play at least{" "}
@@ -342,6 +342,17 @@ export default function TabBrawlsSoloLeaderboards() {
                         <p className="text-ui-300 max-w-[30ch] mx-auto">
                           You can play as many matches as you like to improve
                           your Brawl points.
+                        </p>
+                      </div>
+                      <div className="w-full mb-4 surface surface-dimmed rounded-lg p-4 text-center relative z-0">
+                        <div>
+                          <span className="icon icon-xp-symbol-outline text-[6rem] -my-4 text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
+                        </div>
+                        <p className="text-ui-300 max-w-[30ch] mx-auto mb-4">
+                          Earn 50 XP for each registered game.
+                        </p>
+                        <p className="text-ui-300 max-w-[30ch] mx-auto">
+                          With a <Link href='/prototoype/premium'><a className="text-premium-500 font-bold underline">Premium subscription</a></Link>, you will earn an additional 50% XPs on each registered game. Subscribe to earn an additional 50% XP, unlocking rewards faster!
                         </p>
                       </div>
                     </div>

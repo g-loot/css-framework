@@ -92,7 +92,9 @@ export default function Home() {
         >
           <div className="flex flex-col sm:flex-row flex-wrap items-baseline sm:justify-between gap-2 mb-4 mx-4 sm:mx-0">
             <h3 className="h6">Your latest tracked match</h3>
-            <span className="text-sm text-ui-300">Match ended November 6 at 3:00am</span>
+            <span className="text-sm text-ui-300">
+              Match ended November 6 at 3:00am
+            </span>
           </div>
           <div className="surface sm:rounded-lg flex flex-col xl:flex-row xl:justify-between leading-none xl:gap-8">
             <div className="flex flex-row items-center justify-center xl:justify-start gap-8 p-2">
@@ -102,9 +104,7 @@ export default function Home() {
                 </div>
                 <h6>PUBG: BATTLEGROUNDS</h6>
               </div>
-              <div className="h6 uppercase text-main">
-                Victory
-              </div>
+              <div className="h6 uppercase text-main">Victory</div>
             </div>
             <div className="flex flex-col sm:flex-row flex-1 items-center gap-2 p-3 border-t border-ui-700 xl:border-none">
               <div className="flex flex-1 items-stretch justify-center sm:justify-start gap-2 text-sm text-ui-300 whitespace-nowrap">
@@ -158,16 +158,16 @@ export default function Home() {
             <h3 className="h6">Clan Brawls</h3>
             {hasNoClan ? (
               <Link href="/prototype/clans/">
-              <a className="link link-hover text-ui-300 text-sm">
-                Discover Clans
-              </a>
-            </Link>
+                <a className="link link-hover text-ui-300 text-sm">
+                  Discover Clans
+                </a>
+              </Link>
             ) : (
               <Link href="/prototype/valorant/brawls/">
-              <a className="link link-hover text-ui-300 text-sm">
-                View your Clan
-              </a>
-            </Link>
+                <a className="link link-hover text-ui-300 text-sm">
+                  View your Clan
+                </a>
+              </Link>
             )}
           </div>
           <HomeBrawlClan />
@@ -180,7 +180,8 @@ export default function Home() {
               at the same time
             </h3>
             <p className="text-lg text-ui-300 mt-2 mb-4">
-              Try as many Brawls as you like and play as much as you want! See you on the leaderboard! 
+              Try as many Brawls as you like and play as much as you want! See
+              you on the leaderboard!
             </p>
           </div>
           <img
@@ -191,6 +192,15 @@ export default function Home() {
         </section>
 
         <h2 className="h3 mb-4 mx-4 sm:mx-0">Missions</h2>
+        <div className="mb-4 mx-4 sm:mx-0">
+          <p>
+            Subscribe{" "}
+            <Link href="/prototype/premium">
+              <a className="font-bold text-premium-500 link">Premium</a>
+            </Link>{" "}
+            to earn an additional 50% XP on each completed Reward Ladder stage.
+          </p>
+        </div>
         <section
           className="mb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(2 * 0.05s)" }}
@@ -212,7 +222,8 @@ export default function Home() {
               every 24 hours!
             </h3>
             <p className="text-lg text-ui-300 mt-2 mb-4">
-              Every 24 hours you get new fun Missions across the games you like! Jump in, compete, earn XP and get on top!
+              Every 24 hours you get new fun Missions across the games you like!
+              Jump in, compete, earn XP and get on top!
             </p>
           </div>
           <img
@@ -221,7 +232,6 @@ export default function Home() {
             alt=""
           />
         </section>
-
       </PrototypeStructure>
     </>
   );

@@ -120,7 +120,7 @@ export default function Premium() {
               height="auto"
               alt=""
             />
-            
+
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -bottom-20 -right-32 blur-sm rotate-[120deg]"
               src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_1.webp"
@@ -153,7 +153,9 @@ export default function Premium() {
             <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-stretch gap-16 px-4 md:px-0">
               <div className="max-w-sm hidden flex-1 lg:flex flex-col bg-ui-800 rounded-xl p-2">
                 <div className="text-center pt-2 text-premium-500 ">
-                  <span className="font-headings text-xl uppercase font-bold">Free</span>
+                  <span className="font-headings text-xl uppercase font-bold">
+                    Free
+                  </span>
                 </div>
                 <div className="flex-1 flex-col rounded-lg p-4 lg:p-8">
                   <ul className="flex-1 space-y-8 my-8 leading-snug text-left">
@@ -171,15 +173,13 @@ export default function Premium() {
                         and prize money.
                       </span>
                     </li>
-                    {/*
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
-                        Access 3 extra missions every day to unlock rewards
-                        faster.
+                        Unlock rewards faster by earning an additional 50% XP on
+                        each completed mission and played brawl.
                       </span>
                     </li>
-                    */}
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
@@ -210,7 +210,9 @@ export default function Premium() {
               <div className="max-w-sm flex-1 flex flex-col bg-gradient-to-r from-premium-300 to-premium-700 rounded-xl p-2">
                 <div className="flex items-center gap-4 pb-1.5 text-ui-800 pl-7">
                   <span className="icon icon-ic_stars_24px text-2xl" />
-                  <span className="font-headings text-xl uppercase font-bold">Premium</span>
+                  <span className="font-headings text-xl uppercase font-bold">
+                    Premium
+                  </span>
                 </div>
                 <div className="flex-1 flex-col surface rounded-lg p-4 lg:p-8">
                   <ul className="flex-1 space-y-8 my-8 leading-snug text-left">
@@ -228,15 +230,13 @@ export default function Premium() {
                         and prize money.
                       </span>
                     </li>
-                    {/*
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
                       <span className="text-ui-200">
-                        Access 3 extra missions every day to unlock rewards
-                        faster.
+                        Unlock rewards faster by earning an additional 50% XP on
+                        each completed mission and played brawl.
                       </span>
                     </li>
-                  */}
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
                       <span className="text-ui-200">
