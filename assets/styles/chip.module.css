@@ -528,6 +528,7 @@
       @apply
       pr-0.5
       py-0
+      gap-1
       ;
       > .icon {
         @apply
@@ -536,7 +537,7 @@
       }
       > span:not(.icon) {
         @apply
-        text-sm
+        text-base
         ;
       }
     }
@@ -552,7 +553,7 @@
       &.chip-sm {
         > .icon {
           @apply
-          text-2xl
+          text-3xl
           -my-0.5
           ;
         }
@@ -705,6 +706,30 @@
             to-ui-800
             ;
           }
+        }
+      }
+    }
+    &.chip-ghost {
+      @apply
+      bg-ui-800/0
+      shadow-[inset_0_0_0_0_rgba(var(--color-ui-700,0))]
+      ;
+    }
+    &.chip-xs {
+      > span:not(.icon) {
+        @apply
+        font-body
+        font-bold
+        tracking-normal
+        text-base
+        ;
+      }
+      &.chip-reward.chip-xp {
+        > .icon {
+          @apply
+          text-[1.85rem]
+          -my-0.5
+          ;
         }
       }
     }

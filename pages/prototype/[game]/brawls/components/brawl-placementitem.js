@@ -171,7 +171,7 @@ export default function BrawlPlacementItem(props) {
                     <span>pts</span>
                   </div>
                   <div
-                    className="flex items-center gap-1 italic font-bold font-headings text-ui-300 animate-slide-in-right animate-delay"
+                    className="flex items-center gap-1 italic font-bold font-headings text-premium-500 animate-slide-in-right animate-delay"
                     style={{ "--delay": "calc(2 * 0.05s)" }}
                   >
                     <span className="text-right">+25</span>

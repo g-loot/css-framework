@@ -73,11 +73,10 @@ export default function TabMissionsMissions() {
             </div>
             <div className="mb-2 mx-4 sm:mx-0">
               <p>
-                Subscribe to{" "}
                 <Link href="/prototype/premium">
                   <a className="font-bold text-premium-500 link">Premium</a>
                 </Link>{" "}
-                to earn an additional 50% XP on each completed Reward Ladder
+                users earn an additional 50% XP on each completed Reward Ladder
                 stage.
               </p>
             </div>
@@ -216,7 +215,11 @@ export default function TabMissionsMissions() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-4 sm:px-0">
               {selectedGame?.missions.map((mission, missionIndex) => (
-                <CardMission key={missionIndex} mission={mission} index={missionIndex} />
+                <CardMission
+                  key={missionIndex}
+                  mission={mission}
+                  index={missionIndex}
+                />
               ))}
             </div>
           </section>

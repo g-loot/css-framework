@@ -194,11 +194,11 @@ export default function Home() {
         <h2 className="h3 mb-4 mx-4 sm:mx-0">Missions</h2>
         <div className="mb-4 mx-4 sm:mx-0">
           <p>
-            Subscribe{" "}
+            
             <Link href="/prototype/premium">
               <a className="font-bold text-premium-500 link">Premium</a>
             </Link>{" "}
-            to earn an additional 50% XP on each completed Reward Ladder stage.
+            users earn an additional 50% XP on each completed Reward Ladder stage.
           </p>
         </div>
         <section

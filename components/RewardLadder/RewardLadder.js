@@ -7,7 +7,7 @@ import { usePrototypeData } from "../../contexts/prototype";
 
 export default function RewardLadder(props) {
   const [step, setStep] = useState(1);
-  const maxStep = 10;
+  const maxStep = 11;
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
   const [showWellDone, setShowWellDone] = useState(false);
@@ -137,6 +137,10 @@ export default function RewardLadder(props) {
           <div className="ladder-avatar py-2">
             <div>
               <div>
+                <div className="chip chip-reward chip-xp chip-inverted chip-sm">
+                  <span>850</span>
+                  <span className="icon icon-xp-symbol" />
+                </div>
                 <div
                   className={`avatar avatar-circle avatar-xs ${
                     prototype.getUserByID(1)?.isPremium ? "avatar-gold" : ""
@@ -155,16 +159,18 @@ export default function RewardLadder(props) {
               <div className="ladder-info">
                 <div>
                   <span>1</span>
-                  <span>0/200 XP</span>
+                </div>
+              </div>
+              {/*
+              <div className="ladder-milestone">
+                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                  <span>200</span>
+                  <span className="icon icon-xp-symbol" />
                 </div>
               </div>
               <div className="ladder-content">
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
-                  <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
-                    <span>500</span>
-                    <span className="icon icon-xp-symbol" />
-                  </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
                     width="100%"
@@ -174,21 +180,23 @@ export default function RewardLadder(props) {
                   <span>1 token</span>
                 </div>
               </div>
+                */}
             </li>
             <li className={`${step === 2 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>2</span>
-                  <span>0/200XP</span>
+                  <span>1</span>
+                </div>
+              </div>
+              <div className="ladder-milestone">
+                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                  <span>200</span>
+                  <span className="icon icon-xp-symbol" />
                 </div>
               </div>
               <div className="ladder-content">
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
-                  <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
-                    <span>500</span>
-                    <span className="icon icon-xp-symbol" />
-                  </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
                     width="100%"
@@ -202,41 +210,18 @@ export default function RewardLadder(props) {
             <li className={`${step === 3 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>3</span>
-                  <span>0/200XP</span>
+                  <span>2</span>
+                </div>
+              </div>
+              <div className="ladder-milestone">
+                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                  <span>500</span>
+                  <span className="icon icon-xp-symbol" />
                 </div>
               </div>
               <div className="ladder-content">
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
-                  <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
-                    <span>800</span>
-                    <span className="icon icon-xp-symbol" />
-                  </div>
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-coin-small.png"
-                    width="100%"
-                    height="auto"
-                    alt="Reward"
-                  />
-                  <span>50 coins</span>
-                </div>
-              </div>
-            </li>
-            <li className={`${step === 4 ? `is-active` : ""}`}>
-              <div className="ladder-info">
-                <div>
-                  <span>4</span>
-                  <span>0/200XP</span>
-                </div>
-              </div>
-              <div className="ladder-content">
-                <div className="ladder-decoration"></div>
-                <div className="ladder-body">
-                  <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
-                    <span>1100</span>
-                    <span className="icon icon-xp-symbol" />
-                  </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
                     width="100%"
@@ -247,20 +232,46 @@ export default function RewardLadder(props) {
                 </div>
               </div>
             </li>
-            <li className={`${step === 5 ? `is-active` : ""}`}>
+            <li className={`${step === 4 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>5</span>
-                  <span>0/200XP</span>
+                  <span>3</span>
+                </div>
+              </div>
+              <div className="ladder-milestone">
+                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                  <span>800</span>
+                  <span className="icon icon-xp-symbol" />
                 </div>
               </div>
               <div className="ladder-content">
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
-                  <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
-                    <span>1400</span>
-                    <span className="icon icon-xp-symbol" />
-                  </div>
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-coin-small.png"
+                    width="100%"
+                    height="auto"
+                    alt="Reward"
+                  />
+                  <span>50 coins</span>
+                </div>
+              </div>
+            </li>
+            <li className={`${step === 5 ? `is-active` : ""}`}>
+              <div className="ladder-info">
+                <div>
+                  <span>4</span>
+                </div>
+              </div>
+              <div className="ladder-milestone">
+                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                  <span>1100</span>
+                  <span className="icon icon-xp-symbol" />
+                </div>
+              </div>
+              <div className="ladder-content">
+                <div className="ladder-decoration"></div>
+                <div className="ladder-body">
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
                     width="100%"
@@ -274,17 +285,43 @@ export default function RewardLadder(props) {
             <li className={`${step === 6 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>6</span>
-                  <span>0/200XP</span>
+                  <span>5</span>
+                </div>
+              </div>
+              <div className="ladder-milestone">
+                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                  <span>1400</span>
+                  <span className="icon icon-xp-symbol" />
                 </div>
               </div>
               <div className="ladder-content">
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
-                  <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
-                    <span>1700</span>
-                    <span className="icon icon-xp-symbol" />
-                  </div>
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
+                    width="100%"
+                    height="auto"
+                    alt="Reward"
+                  />
+                  <span>1 token</span>
+                </div>
+              </div>
+            </li>
+            <li className={`${step === 7 ? `is-active` : ""}`}>
+              <div className="ladder-info">
+                <div>
+                  <span>6</span>
+                </div>
+              </div>
+              <div className="ladder-milestone">
+                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                  <span>1700</span>
+                  <span className="icon icon-xp-symbol" />
+                </div>
+              </div>
+              <div className="ladder-content">
+                <div className="ladder-decoration"></div>
+                <div className="ladder-body">
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-coin-small.png"
                     width="100%"
@@ -295,20 +332,21 @@ export default function RewardLadder(props) {
                 </div>
               </div>
             </li>
-            <li className={`${step === 7 ? `is-active` : ""}`}>
+            <li className={`${step === 8 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
                   <span>7</span>
-                  <span>0/200XP</span>
+                </div>
+              </div>
+              <div className="ladder-milestone">
+                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                  <span>2000</span>
+                  <span className="icon icon-xp-symbol" />
                 </div>
               </div>
               <div className="ladder-content">
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
-                  <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
-                    <span>2000</span>
-                    <span className="icon icon-xp-symbol" />
-                  </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-extrasmall.png"
                     width="100%"
@@ -319,47 +357,21 @@ export default function RewardLadder(props) {
                 </div>
               </div>
             </li>
-            <li className={`is-lockedNO ${step === 8 ? `is-active` : ""}`}>
-              <div className="ladder-info">
-                <div>
-                  <span>8</span>
-                  <span>0/200XP</span>
-                </div>
-              </div>
-              <div className="ladder-content">
-                <div className="ladder-decoration"></div>
-                <div className="ladder-body">
-                  <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
-                    <span>2000</span>
-                    <span className="icon icon-xp-symbol" />
-                  </div>
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-mixed-extrasmall.png"
-                    width="100%"
-                    height="auto"
-                    alt="Reward"
-                  />
-                  <span>
-                    250 coins
-                    <br />2 tokens
-                  </span>
-                </div>
-              </div>
-            </li>
             <li className={`is-lockedNO ${step === 9 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>9</span>
-                  <span>0/200XP</span>
+                  <span>8</span>
+                </div>
+              </div>
+              <div className="ladder-milestone">
+                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                  <span>2300</span>
+                  <span className="icon icon-xp-symbol" />
                 </div>
               </div>
               <div className="ladder-content">
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
-                  <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
-                    <span>2000</span>
-                    <span className="icon icon-xp-symbol" />
-                  </div>
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-mixed-extrasmall.png"
                     width="100%"
@@ -376,17 +388,46 @@ export default function RewardLadder(props) {
             <li className={`is-lockedNO ${step === 10 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>10</span>
-                  <span>0/200XP</span>
+                  <span>9</span>
+                </div>
+              </div>
+              <div className="ladder-milestone">
+                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                  <span>2800</span>
+                  <span className="icon icon-xp-symbol" />
                 </div>
               </div>
               <div className="ladder-content">
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
-                  <div className="chip chip-xs chip-reward chip-xp chip-inverted chip-sm">
-                    <span>2000</span>
-                    <span className="icon icon-xp-symbol" />
-                  </div>
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-mixed-extrasmall.png"
+                    width="100%"
+                    height="auto"
+                    alt="Reward"
+                  />
+                  <span>
+                    250 coins
+                    <br />2 tokens
+                  </span>
+                </div>
+              </div>
+            </li>
+            <li className={`is-lockedNO ${step === 11 ? `is-active` : ""}`}>
+              <div className="ladder-info">
+                <div>
+                  <span>10</span>
+                </div>
+              </div>
+              <div className="ladder-milestone">
+                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                  <span>3100</span>
+                  <span className="icon icon-xp-symbol" />
+                </div>
+              </div>
+              <div className="ladder-content">
+                <div className="ladder-decoration"></div>
+                <div className="ladder-body">
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-mixed-small.png"
                     width="100%"

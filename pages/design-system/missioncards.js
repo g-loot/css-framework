@@ -15,7 +15,7 @@ const DSpage = () => {
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
-            <div className="flex-1 flex justify-start items-start">
+            <div className="flex-1 flex flex-col gap-4 justify-start items-start">
               <div className="card-mission">
                 <div className="card-decoration"></div>
                 <div className="card-body">
@@ -44,19 +44,44 @@ const DSpage = () => {
                         </div>
                       }
                     >
-                      <div className="rounded-full border border-premium-300 bg-gradient-to-br from-premium-700 via-premium-700 to-premium-300 flex items-center leading-none">
-                        <div className="rounded-full bg-ui-800 flex items-center gap-1 text-premium-500 px-2 py-0.5 border border-premium-300">
-                          <span className="font-headings text-lg font-bold">
-                            100
-                          </span>
-                          <span className="icon icon-xp-symbol text-3xl -my-4" />
+                      <div className="flex gap-1 items-center">
+                        <div className="chip chip-reward chip-xp chip-inverted chip-sm">
+                          <span>100</span>
+                          <span className="icon icon-xp-symbol" />
                         </div>
-                        <div className="flex items-center gap-1 text-ui-800 pl-1 pr-2">
-                          <span className="icon icon-lock" />
-                          <span className="font-bold">+50%XP</span>
+                        <div className="chip chip-reward chip-xp chip-ghost chip-xs">
+                          <span>+50</span>
+                          <span className="icon icon-xp-symbol" />
+                          <span>if Premium</span>
                         </div>
                       </div>
                     </Tooltip>
+                    <div>50/100 kills</div>
+                  </div>
+                  <div
+                    className="progressbar progressbar-sm"
+                    style={{ "--percent": "75" }}
+                  >
+                    <div />
+                  </div>
+                </div>
+                <div className="card-bg">
+                  <span
+                    style={{
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="card-mission">
+                <div className="card-decoration"></div>
+                <div className="card-body">
+                  <div className="card-title">Get 22 kills</div>
+                  <div className="card-meta">
+                    <div className="chip chip-reward chip-xp chip-inverted chip-sm">
+                      <span>150</span>
+                      <span className="icon icon-xp-symbol" />
+                    </div>
                     <div>50/100 kills</div>
                   </div>
                   <div

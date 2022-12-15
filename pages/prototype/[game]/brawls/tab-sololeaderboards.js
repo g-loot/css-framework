@@ -56,6 +56,7 @@ export default function TabBrawlsSoloLeaderboards() {
   const { brawl_id } = router.query;
   const hasClaim = query.hasclaim === "true" ? true : false;
   const isEmpty = query.empty === "true" ? true : false;
+  const isPremium = query.premium === "true" ? true : false;
   const freeEntry = query.freeentry === "true" ? true : false;
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
@@ -280,7 +281,7 @@ export default function TabBrawlsSoloLeaderboards() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center mb-4">
                     <button
                       type="button"
                       className="button button-ghost is-active mx-auto"
@@ -344,60 +345,32 @@ export default function TabBrawlsSoloLeaderboards() {
                           your Brawl points.
                         </p>
                       </div>
-                      <div className="w-full mb-4 surface surface-dimmed rounded-lg p-4 text-center relative z-0">
-                        <div>
-                          <span className="icon icon-xp-symbol-outline text-[6rem] -my-4 text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
-                        </div>
-                        <p className="text-ui-300 max-w-[30ch] mx-auto mb-4">
-                          Earn 50 XP for each registered game.
-                        </p>
-                        <p className="text-ui-300 max-w-[30ch] mx-auto">
-                          With a <Link href='/prototoype/premium'><a className="text-premium-500 font-bold underline">Premium subscription</a></Link>, you will earn an additional 50% XPs on each registered game. Subscribe to earn an additional 50% XP, unlocking rewards faster!
-                        </p>
-                      </div>
                     </div>
                   )}
                 </>
               )}
-              {/*
-              <div className="surface surface-dimmed rounded-lg p-4 text-center relative my-4 space-y-3">
-                <h3 className="text-2xl">
-                  Compete in
-                  <br />
-                  this Brawl
-                </h3>
-                <p>
-                  Play at least <span className="text-main">X matches</span>
-                </p>
-                <p className="text-sm text-ui-300">
-                  The total of your Brawl points from your X best matches will
-                  decide your place on a leaderboard.
-                </p>
-                <button
-                  type="button"
-                  className="button button-sm button-primary button-currency button-token"
-                >
+              {!isPremium && (
+                <div className="w-full mb-4 surface surface-dimmed rounded-lg p-4 text-center relative z-0">
                   <div>
-                    <span>Activate 1 match</span>
+                    <span className="icon icon-xp-symbol-outline text-[6rem] -mt-4 -mb-6 text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
                   </div>
-                  <div>
-                    <img
-                      className="dropshadow-xs"
-                      src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                      width="34"
-                      height="34"
-                      alt="coin"
-                    />
-                    <span>1</span>
-                  </div>
-                </button>
-                <p className="text-xs text-ui-300">
-                  You can play as many matches as you like to improve your Brawl
-                  points.
-                </p>
-          </div>*/}
+                  <p className="text-ui-300 max-w-[30ch] mx-auto mb-4">
+                    Earn 50 XP for each registered game.
+                  </p>
+                  <p className="text-ui-300 max-w-[30ch] mx-auto">
+                    <Link href="/prototoype/premium">
+                      <a className="text-premium-500 font-bold underline">
+                        Premium
+                      </a>
+                    </Link>{" "}
+                    users earn an additional 50% XPs on each registered game.
+                    Subscribe now to earn an additional 50% XP and unlock
+                    rewards faster!
+                  </p>
+                </div>
+              )}
             </div>
-            {isEmpty && (
+            {isEmpty ? (
               <div className="col-span-1 lg:col-span-3 px-4 py-8 text-center">
                 <div className="max-w-sm mx-auto">
                   <img
@@ -418,8 +391,7 @@ export default function TabBrawlsSoloLeaderboards() {
                   </div>
                 </div>
               </div>
-            )}
-            {!isEmpty && (
+            ) : (
               <div className="col-span-1 lg:col-span-3">
                 <div className="sm:rounded-lg">
                   <div className="relative z-10 flex items-center justify-end gap-2 px-4">

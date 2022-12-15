@@ -17,6 +17,7 @@
   @apply
   overflow-hidden
   py-4
+  -ml-[calc(-3.5rem_+_13px)]
   ;
   > div {
     @apply
@@ -31,7 +32,24 @@
       @apply
       flex
       justify-center
+      items-center
+      relative
       ;
+      > .chip {
+        @apply
+        absolute
+        z-0
+        left-[calc(50%+(2.25rem/3))]
+        rounded-l-none
+        pl-1
+        ;
+      }
+      > .avatar {
+        @apply
+        relative
+        z-10
+        ;
+      }
     }
   }
 }
@@ -43,6 +61,7 @@
   gap-4
   transform-gpu
   px-0.5
+  -ml-[calc(-3.5rem+13px)]
   ;
 
   > li {
@@ -146,15 +165,27 @@
       }
     }
 
+    > .ladder-milestone {
+      .chip {
+        @apply
+        pointer-events-none
+        ;
+        > * {
+          @apply
+          text-ui-500
+          ;
+        }
+      }
+    }
+
     > .ladder-content {
       @apply
       flex-1
       relative
       z-10
-      bg-gradient-to-b
-      from-ui-900
-      to-ui-800
-      shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))]
+      bg-ui-800
+      border
+      border-ui-700
       rounded-lg
       overflow-hidden
       flex
@@ -163,8 +194,7 @@
       transition-all
       duration-1000
       ease-[cubic-bezier(0.9,0,0.1,1)]
-      opacity-50
-      scale-90
+      opacity-80
       origin-bottom
       ;
 
@@ -227,10 +257,8 @@
       }
       > .ladder-content {
         @apply
-        shadow-main
         via-ui-800
         to-ui-700
-        scale-100
         translate-y-0
         ;
       }
@@ -250,6 +278,18 @@
                 translate-y-12
                 ;
               }
+            }
+          }
+        }
+        > .ladder-milestone {
+          .chip {
+            @apply
+            pointer-events-none
+            ;
+            > * {
+              @apply
+              text-ui-300
+              ;
             }
           }
         }

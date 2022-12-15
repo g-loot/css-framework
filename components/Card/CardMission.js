@@ -32,14 +32,12 @@ export default function CardMission(props) {
           <div className="card-title">{mission.name}</div>
           <div className="card-meta">
             {isPremium ? (
-              <div className="rounded-full border border-premium-300 bg-gradient-to-br from-premium-700 via-premium-700 to-premium-300 flex items-center leading-none">
-                <div className="rounded-full flex items-center gap-1 text-ui-800 px-2 py-0.5 border border-premium-300">
-                  <span className="font-headings text-lg font-bold">100</span>
-                  <span className="icon icon-xp-symbol text-3xl -my-4" />
-                </div>
+              <div className="chip chip-reward chip-xp chip-inverted chip-sm">
+                <span>150</span>
+                <span className="icon icon-xp-symbol" />
               </div>
             ): (
-            <Tooltip
+              <Tooltip
               tooltip={
                 <div className="w-56 flex gap-4 text-sm">
                   <div className="relative -mt-3">
@@ -54,20 +52,23 @@ export default function CardMission(props) {
                   </div>
                   <div className="flex-1">
                     Subscribe to Premium to earn an additional{" "}
-                    <span className="font-bold text-premium-700">50% XP</span>{" "}
+                    <span className="font-bold text-premium-700">
+                      50% XP
+                    </span>{" "}
                     on each completed mission.
                   </div>
                 </div>
               }
             >
-              <div className="rounded-full border border-premium-300 bg-gradient-to-br from-premium-700 via-premium-700 to-premium-300 flex items-center leading-none">
-                <div className="rounded-full bg-ui-800 flex items-center gap-1 text-premium-500 px-2 py-0.5 border border-premium-300">
-                  <span className="font-headings text-lg font-bold">100</span>
-                  <span className="icon icon-xp-symbol text-3xl -my-4" />
+              <div className="flex gap-1 items-center">
+                <div className="chip chip-reward chip-xp chip-inverted chip-sm">
+                  <span>100</span>
+                  <span className="icon icon-xp-symbol" />
                 </div>
-                <div className="flex items-center gap-1 text-ui-800 pl-1 pr-2">
-                  <span className="icon icon-lock" />
-                  <span className="font-bold">+50%XP</span>
+                <div className="chip chip-reward chip-xp chip-ghost chip-xs">
+                  <span>+50</span>
+                  <span className="icon icon-xp-symbol" />
+                  <span>if Premium</span>
                 </div>
               </div>
             </Tooltip>

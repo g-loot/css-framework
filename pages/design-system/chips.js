@@ -675,22 +675,29 @@ const DSpage = () => {
                     Small
                   </div>
                   <div className="chip chip-reward chip-ticket chip-inverted chip-sm">
+                    <span>2</span>
                     <span className="icon icon-ticket" />
-                    <span>1 ticket</span>
                   </div>
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight"></div>
                   <div className="chip chip-reward chip-xp chip-inverted chip-sm">
-                    <span className="icon icon-xp-symbol-outline" />
-                    <span>500 XP</span>
+                    <span>500</span>
+                    <span className="icon icon-xp-symbol" />
                   </div>
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight"></div>
                   <div className="chip chip-reward chip-token chip-inverted chip-sm">
+                    <span>500</span>
                     <span className="icon icon-token" />
-                    <span>500 tokens</span>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight"></div>
+                  <div className="chip chip-reward chip-xp chip-ghost chip-sm">
+                    <span>+100 premium</span>
+                    <span className="icon icon-xp-symbol" />
                   </div>
                 </div>
               </div>
