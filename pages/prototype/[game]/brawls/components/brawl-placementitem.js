@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { useRouter } from "next/router";
 import Lottie from "lottie-react";
 import LottieExplosion1 from "../../../../../assets/animations/explosion-4.json";
 import LottieExplosion2 from "../../../../../assets/animations/explosion-2.json";
@@ -6,10 +7,11 @@ import { VariablesContext } from "../../../../../contexts/variables";
 
 export default function BrawlPlacementItem(props) {
   const variablesContext = useContext(VariablesContext);
-
+  const { query } = useRouter();
   const [StartAnim, setStartAnim] = useState(false);
   const [resultsDone, setResultsDone] = useState(false);
   const [shining, setShining] = useState(false);
+  const isPremium = query.premium === "true" ? true : false;
 
   useEffect(() => {
     setStartAnim(true);
@@ -171,7 +173,7 @@ export default function BrawlPlacementItem(props) {
                     <span>pts</span>
                   </div>
                   <div
-                    className="flex items-center gap-1 italic font-bold font-headings text-premium-500 animate-slide-in-right animate-delay"
+                    className={`flex items-center gap-1 italic font-bold font-headings ${isPremium ? 'text-premium-500' : ''} animate-slide-in-right animate-delay`}
                     style={{ "--delay": "calc(2 * 0.05s)" }}
                   >
                     <span className="text-right">+25</span>

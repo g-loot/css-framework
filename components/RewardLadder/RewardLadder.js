@@ -4,6 +4,7 @@ import ModalClaimLadderRewards from "../../pages/prototype/home/modal-claim-ladd
 import { UiContext } from "../../contexts/ui";
 import { VariablesContext } from "../../contexts/variables";
 import { usePrototypeData } from "../../contexts/prototype";
+import { useRouter } from "next/router";
 
 export default function RewardLadder(props) {
   const [step, setStep] = useState(1);
@@ -12,6 +13,8 @@ export default function RewardLadder(props) {
   const variablesContext = useContext(VariablesContext);
   const [showWellDone, setShowWellDone] = useState(false);
   const prototype = usePrototypeData();
+  const { query } = useRouter();
+  const isPremium = query.premium === "true" ? true : false;
 
   function openModalClaimLadderRewards() {
     uiContext.openModal(<ModalClaimLadderRewards></ModalClaimLadderRewards>);
@@ -137,13 +140,13 @@ export default function RewardLadder(props) {
           <div className="ladder-avatar py-2">
             <div>
               <div>
-                <div className="chip chip-reward chip-xp chip-inverted chip-sm">
+                <div className={`chip chip-reward chip-xp chip-sm ${isPremium ? 'chip-inverted' : ''}`}>
                   <span>850</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
                 <div
                   className={`avatar avatar-circle avatar-xs ${
-                    prototype.getUserByID(1)?.isPremium ? "avatar-gold" : ""
+                    isPremium ? "avatar-gold" : ""
                   }`}
                 >
                   <div>

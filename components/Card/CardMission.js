@@ -38,6 +38,7 @@ export default function CardMission(props) {
               </div>
             ): (
               <Tooltip
+              position="top"
               tooltip={
                 <div className="w-56 flex gap-4 text-sm">
                   <div className="relative -mt-3">
@@ -61,7 +62,7 @@ export default function CardMission(props) {
               }
             >
               <div className="flex gap-1 items-center">
-                <div className="chip chip-reward chip-xp chip-inverted chip-sm">
+                <div className="chip chip-reward chip-xp chip-sm">
                   <span>100</span>
                   <span className="icon icon-xp-symbol" />
                 </div>

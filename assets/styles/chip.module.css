@@ -544,6 +544,13 @@
     
 
     &.chip-xp {
+      &:not(.chip-ghost):not(.chip-inverted) {
+        > * {
+          @apply
+          text-ui-200
+          ;
+        }
+      }
       > .icon {
         @apply
         text-3xl

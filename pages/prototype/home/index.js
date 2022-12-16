@@ -35,6 +35,7 @@ export default function Home() {
   const [submitting, setSubmitting] = useState(false);
   const hasNoClan = query.noclan === "true" ? true : false;
   const hasNoBrawls = query.nobrawls === "true" ? true : false;
+  const isPremium = query.premium === "true" ? true : false;
 
   function openModalBrawlHowitworksVideo() {
     uiContext.openModal(
@@ -192,15 +193,17 @@ export default function Home() {
         </section>
 
         <h2 className="h3 mb-4 mx-4 sm:mx-0">Missions</h2>
-        <div className="mb-4 mx-4 sm:mx-0">
-          <p>
-            
-            <Link href="/prototype/premium">
-              <a className="font-bold text-premium-500 link">Premium</a>
-            </Link>{" "}
-            users earn an additional 50% XP on each completed Reward Ladder stage.
-          </p>
-        </div>
+        {!isPremium && (
+          <div className="mb-4 mx-4 sm:mx-0">
+            <p>
+              <Link href="/prototype/premium">
+                <a className="font-bold text-premium-500 link">Premium</a>
+              </Link>{" "}
+              users earn an additional 50% XP on each completed Reward Ladder
+              stage.
+            </p>
+          </div>
+        )}
         <section
           className="mb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(2 * 0.05s)" }}

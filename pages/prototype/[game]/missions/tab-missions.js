@@ -17,6 +17,7 @@ export default function TabMissionsMissions() {
   const uiContext = useContext(UiContext);
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
+  const isPremium = query.premium === "true" ? true : false;
   const { game } = router.query;
   const [submitting, setSubmitting] = useState(false);
 
@@ -71,15 +72,17 @@ export default function TabMissionsMissions() {
                 </Tooltip>
               </div>
             </div>
-            <div className="mb-2 mx-4 sm:mx-0">
-              <p>
-                <Link href="/prototype/premium">
-                  <a className="font-bold text-premium-500 link">Premium</a>
-                </Link>{" "}
-                users earn an additional 50% XP on each completed Reward Ladder
-                stage.
-              </p>
-            </div>
+            {!isPremium && (
+              <div className="mb-2 mx-4 sm:mx-0">
+                <p>
+                  <Link href="/prototype/premium">
+                    <a className="font-bold text-premium-500 link">Premium</a>
+                  </Link>{" "}
+                  users earn an additional 50% XP on each completed Reward
+                  Ladder stage.
+                </p>
+              </div>
+            )}
             {selectedGame.needsSteam && (
               <>
                 <div className="px-4 sm:px-0">
@@ -173,15 +176,17 @@ export default function TabMissionsMissions() {
               </div>
             </div>
 
-            <div className="mb-4 mx-4 sm:mx-0">
-              <p>
-                Get{" "}
-                <Link href="/prototype/premium">
-                  <a className="font-bold text-premium-500 link">Premium</a>
-                </Link>{" "}
-                and earn +50% of XP on all missions.
-              </p>
-            </div>
+            {!isPremium && (
+              <div className="mb-4 mx-4 sm:mx-0">
+                <p>
+                  Get{" "}
+                  <Link href="/prototype/premium">
+                    <a className="font-bold text-premium-500 link">Premium</a>
+                  </Link>{" "}
+                  and earn +50% of XP on all missions.
+                </p>
+              </div>
+            )}
             {selectedGame.needsSteam && (
               <>
                 <div className="px-4 sm:px-0">

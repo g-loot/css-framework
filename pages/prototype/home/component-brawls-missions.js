@@ -14,7 +14,7 @@ export default function HomeBrawlMissions(props) {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
-
+  const isPremium = query.premium === "true" ? true : false;
   const [submitting, setSubmitting] = useState(false);
 
   function addToastWithDelay(toast) {
@@ -64,14 +64,22 @@ export default function HomeBrawlMissions(props) {
         <div>
           New missions in <b>4H 23M 12S</b>
         </div>
-        <div className="md:text-right">Your latest match ended <b>Dec 13 / 8:12 PM</b></div>
+        <div className="md:text-right">
+          Your latest match ended <b>Dec 13 / 8:12 PM</b>
+        </div>
       </div>
 
-      <div className="mb-4 mx-4 sm:mx-0">
-        <p>
-          Get <Link href='/prototype/premium'><a className="font-bold text-premium-500 link">Premium</a></Link> and earn +50% of XP on all missions.
-        </p>
-      </div>
+      {!isPremium && (
+        <div className="mb-4 mx-4 sm:mx-0">
+          <p>
+            Get{" "}
+            <Link href="/prototype/premium">
+              <a className="font-bold text-premium-500 link">Premium</a>
+            </Link>{" "}
+            and earn +50% of XP on all missions.
+          </p>
+        </div>
+      )}
 
       {prototype.getGameBySlug(props.gameSlug)?.needsSteam && (
         <>
@@ -107,7 +115,11 @@ export default function HomeBrawlMissions(props) {
         {prototype
           .getGameBySlug(props.gameSlug)
           ?.missions.map((mission, missionIndex) => (
-            <CardMission key={missionIndex} mission={mission} index={missionIndex} />
+            <CardMission
+              key={missionIndex}
+              mission={mission}
+              index={missionIndex}
+            />
           ))}
       </div>
     </section>

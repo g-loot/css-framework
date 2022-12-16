@@ -363,9 +363,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         Premium
                       </a>
                     </Link>{" "}
-                    users earn an additional 50% XPs on each registered game.
-                    Subscribe now to earn an additional 50% XP and unlock
-                    rewards faster!
+                    users earn an additional 50% XP.
                   </p>
                 </div>
               )}
