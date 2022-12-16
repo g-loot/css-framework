@@ -38,7 +38,7 @@ export default function CardMission(props) {
               </div>
             ): (
               <Tooltip
-              position="top"
+              placement="top"
               tooltip={
                 <div className="w-56 flex gap-4 text-sm">
                   <div className="relative -mt-3">
