@@ -141,7 +141,7 @@ export default function RewardLadder(props) {
             <div>
               <div>
                 <div className={`chip chip-reward chip-xp chip-sm ${isPremium ? 'chip-inverted' : ''}`}>
-                  <span>850</span>
+                  <span>550</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
                 <div

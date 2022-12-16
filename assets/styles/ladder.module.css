@@ -173,6 +173,8 @@
         > * {
           @apply
           text-ui-500
+          transition-colors
+          duration-100
           ;
         }
       }
@@ -255,6 +257,15 @@
           }
         }
       }
+      > .ladder-milestone {
+        .chip {
+          > * {
+            @apply
+            text-ui-300
+            ;
+          }
+        }
+      }
       > .ladder-content {
         @apply
         via-ui-800
@@ -281,18 +292,6 @@
             }
           }
         }
-        > .ladder-milestone {
-          .chip {
-            @apply
-            pointer-events-none
-            ;
-            > * {
-              @apply
-              text-ui-300
-              ;
-            }
-          }
-        }
         .ladder-content {
           @apply
           opacity-100
@@ -304,7 +303,30 @@
           }
         }
       }
+      & + li {
+        > .ladder-milestone {
+          .chip {
+            > * {
+              @apply
+              text-ui-300
+              ;
+            }
+          }
+        }
+        ~ li {
+          > .ladder-milestone {
+            .chip {
+              > * {
+                @apply
+                text-ui-300/0
+                ;
+              }
+            }
+          }
+        }
+      }
       & ~ li {
+        
         > .ladder-info > div > span:nth-child(1) {
           @apply
           text-ui-300
