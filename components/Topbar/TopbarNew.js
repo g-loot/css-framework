@@ -691,27 +691,6 @@ export default function TopbarNew() {
                     </li>
                     <li className="separator"></li>
                     <li>
-                      <a
-                        tabIndex="1"
-                        onClick={brandToggle}
-                        href="#"
-                        rel="noopener noreferrer"
-                        className="relative"
-                      >
-                        <span className="relative z-10 icon icon-fireworks" />
-                        <span className="relative z-10">
-                          New Brand
-                        </span>
-                        <div className="absolute z-0 right-0 pointer-events-none">
-                          <div className="form-toggle form-end">
-                            <input type="checkbox" name="newBrandToggle" id="newBrandToggle" checked={variablesContext.newBrand} />
-                            <label htmlFor="newBrandToggle" />
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li className="separator"></li>
-                    <li>
                       <Link href={`/`}>
                         <a tabIndex="1">
                           <span className="icon icon-leave" />

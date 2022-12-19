@@ -82,37 +82,3 @@
   font-style: normal;
   font-display: swap;
 }
-
-@font-face {
-  font-family: "vanguardcf";
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1670858650/Marketing/fonts/vanguardcf-medium-webfont.woff2') format('woff2'),
-    url('https://res.cloudinary.com/gloot/raw/upload/v1670858650/Marketing/fonts/vanguardcf-medium-webfont.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "vanguardcf";
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1670858649/Marketing/fonts/vanguardcf-bold-webfont.woff2') format('woff2'),
-    url('https://res.cloudinary.com/gloot/raw/upload/v1670858649/Marketing/fonts/vanguardcf-bold-webfont.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "barlow";
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1670857402/Marketing/fonts/barlow-regular-webfont.woff2') format('woff2'),
-    url('https://res.cloudinary.com/gloot/raw/upload/v1670857402/Marketing/fonts/barlow-regular-webfont.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "barlow";
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1670857402/Marketing/fonts/barlow-bold-webfont.woff2') format('woff2'),
-    url('https://res.cloudinary.com/gloot/raw/upload/v1670857402/Marketing/fonts/barlow-bold-webfont.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
