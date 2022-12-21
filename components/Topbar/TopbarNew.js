@@ -268,7 +268,7 @@ export default function TopbarNew() {
               >
                 <div className="rounded-full bg-ui-700 interactive">
                   <Link
-                    href={`/prototype/clans/search${prototype.getURLparams()}`}
+                    href={`/prototype/search${prototype.getURLparams()}`}
                   >
                     <a className="button button-sm button-ghost rounded-full">
                       <span className="icon icon-zoom text-ui-200" />

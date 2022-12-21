@@ -255,6 +255,32 @@ export default function TabBrawlsSoloLeaderboards() {
                 </div>
               </div>
             </div>
+            <div className="w-full mb-4 surface surface-dimmed rounded-lg p-4 text-center relative z-0">
+                <div>
+                  <span className="icon icon-xp-symbol-outline text-[6rem] -mt-4 -mb-6 text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
+                </div>
+                {!isPremium ? (
+                  <>
+                    <p className="text-ui-300 max-w-[30ch] mx-auto mb-4">
+                      Earn 50 XP for each registered game.
+                    </p>
+                    <p className="text-ui-300 max-w-[30ch] mx-auto">
+                      <Link href="/prototoype/premium">
+                        <a className="text-premium-500 font-bold underline">
+                          Premium
+                        </a>
+                      </Link>{" "}
+                      users earn an additional 50% XP.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-ui-300 max-w-[30ch] mx-auto mb-4">
+                      Earn 150 XP for each registered game.
+                    </p>
+                  </>
+                )}
+              </div>
             {/*
               <div className="surface surface-dimmed rounded-lg p-4 text-center relative my-4 space-y-3">
                 <h3 className="text-2xl">

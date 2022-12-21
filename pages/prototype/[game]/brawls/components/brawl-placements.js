@@ -6,6 +6,8 @@ import { useRouter } from "next/router";
 import ModalInfoBeforeYouPlay from "../modal-info-beforeyouplay";
 import BrawlPlacementItem from "./brawl-placementitem";
 import ModalBuyTokens from "../../../wallet/modal-buytokens";
+import ModalBuyPremium from "../../../premium/modal-buypremium";
+import Link from "next/link";
 
 const enrollSteps = [
   {
@@ -61,11 +63,15 @@ export default function BrawlPlacements() {
   const [sliderContainerWidth, setSliderContainerWidth] = useState(192);
   const [sliderItemWidth, setSliderItemWidth] = useState(192);
   const [resultsDone, setResultsDone] = useState(false);
+  const isPremium = query.premium === "true" ? true : false;
 
   function openModalInfoBeforeYouPlay(number) {
     uiContext.openModal(
       <ModalInfoBeforeYouPlay incrementNumber={number}></ModalInfoBeforeYouPlay>
     );
+  }
+  function openModalBuyPremium() {
+    uiContext.openModal(<ModalBuyPremium></ModalBuyPremium>);
   }
 
   useEffect(() => {
@@ -252,6 +258,13 @@ export default function BrawlPlacements() {
               >
                 Get more tokens
               </a>
+            )}
+            {!isPremium && (
+              <Link href="/prototype/premium">
+                <a className="link text-sm text-premium-500">
+                  Get more XP with Premium
+                </a>
+              </Link>
             )}
           </div>
           {variablesContext.brawlStep >= 3 && !resultsDone && (

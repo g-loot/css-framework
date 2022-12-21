@@ -1,10 +1,23 @@
+import { useContext, useEffect, useState } from "react";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
+import { UiContext } from "../../../contexts/ui";
+import ModalBuyPremium from "./modal-buypremium";
 
 export default function Premium() {
-  const router = useRouter();
-  const { data, loading } = useFetch("/api/brawls", { delay: 1000 });
+  const { query } = useRouter();
+  const modalBuyPremium = query.modalpremium === "true" ? true : false;
+  const uiContext = useContext(UiContext);
+  useEffect(() => {
+    if (modalBuyPremium) {
+      openModalFavoriteGames();
+    }
+  }, [modalBuyPremium]);
+
+  function openModalBuyPremium() {
+    uiContext.openModal(<ModalBuyPremium></ModalBuyPremium>);
+  }
 
   return (
     <>
@@ -31,6 +44,7 @@ export default function Premium() {
             <div className="flex flex-col items-center justify-center text-center mb-12">
               <button
                 type="button"
+                onClick={openModalBuyPremium}
                 className="button button-lg button-premium is-shining"
               >
                 <span>View premium plans</span>
@@ -176,6 +190,12 @@ export default function Premium() {
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
+                        Get free extra tokens for each token purchase.
+                      </span>
+                    </li>
+                    <li className="flex gap-4 items-start">
+                      <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
+                      <span className="text-ui-400">
                         Unlock rewards faster by earning an additional 50% XP on
                         each completed mission and played brawl.
                       </span>
@@ -202,8 +222,8 @@ export default function Premium() {
                       </span>
                     </li>
                   </ul>
-                  <div className="button button-tertiary w-full pointer-events-none">
-                    <span className="text-xl italic">Free Plan</span>
+                  <div className="button button-tertiary button-lg w-full pointer-events-none">
+                    <span>Current Plan</span>
                   </div>
                 </div>
               </div>
@@ -228,6 +248,12 @@ export default function Premium() {
                       <span className="text-ui-200">
                         Compete in missions, brawls and tournaments with rewards
                         and prize money.
+                      </span>
+                    </li>
+                    <li className="flex gap-4 items-start">
+                      <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
+                      <span className="text-ui-200">
+                        Get free extra tokens for each token purchase.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
@@ -260,14 +286,13 @@ export default function Premium() {
                     </li>
                   </ul>
 
-                  <a
-                    href="https://gloot.com/features/premium"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="button button-premium is-shining w-full"
+                  <button
+                    onClick={openModalBuyPremium}
+                    type="button"
+                    className="button button-premium is-shining button-lg w-full"
                   >
-                    <span className="text-xl italic">View Premium Plans</span>
-                  </a>
+                    <span>View Premium Plans</span>
+                  </button>
                 </div>
               </div>
             </div>

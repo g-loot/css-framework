@@ -43,61 +43,59 @@ export default function Home() {
   }, [game]);
 
   return (
-    <>
-      <PrototypeStructure title="Wallet">
-        <Ad width="1005" height="300" />
+    <PrototypeStructure title="Wallet">
+      <Ad width="1005" height="300" />
 
-        <section className="mb-4">
-          <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8 lg:min-h-[250px] lg:flex items-center">
-            <div className="relative z-10">
-              <h1 className="text-3xl sm:text-4xl">Wallet</h1>
-              <p className="text-ui-300 max-w-[70ch] mt-4">
-                Get to know the different currencies and rewards by clicking on
-                the icons and keep track of your earnings from Missions, Weekly
-                Brawls and Monthly Tournaments.
-              </p>
-            </div>
-            <div
-              className="absolute hidden md:block z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-              style={{ "--delay": "calc(1 * 0.05s)" }}
-            >
-              <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
-              <img
-                className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                src="https://res.cloudinary.com/gloot/image/upload/v1659462918/Marketing/2022_prototype/Wallet_bg.webp"
-              />
-            </div>
+      <section className="mb-4">
+        <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8 lg:min-h-[250px] lg:flex items-center">
+          <div className="relative z-10">
+            <h1 className="text-3xl sm:text-4xl">Wallet</h1>
+            <p className="text-ui-300 max-w-[70ch] mt-4">
+              Get to know the different currencies and rewards by clicking on
+              the icons and keep track of your earnings from Missions, Weekly
+              Brawls and Monthly Tournaments.
+            </p>
           </div>
-        </section>
+          <div
+            className="absolute hidden md:block z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
+            style={{ "--delay": "calc(1 * 0.05s)" }}
+          >
+            <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
+            <img
+              className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
+              src="https://res.cloudinary.com/gloot/image/upload/v1659462918/Marketing/2022_prototype/Wallet_bg.webp"
+            />
+          </div>
+        </div>
+      </section>
 
-        <nav>
-          <ul className="tabs border-b border-ui-700">
-            {TabsItems.map((item, itemIndex) => (
-              <li key={item}>
-                <Link
-                  href={`/prototype/wallet/?tab=${
-                    item.url
-                  }${prototype.getURLparams("&")}`}
+      <nav>
+        <ul className="tabs border-b border-ui-700">
+          {TabsItems.map((item, itemIndex) => (
+            <li key={item}>
+              <Link
+                href={`/prototype/wallet/?tab=${
+                  item.url
+                }${prototype.getURLparams("&")}`}
+              >
+                <a
+                  className={`${selectedTab === item.url ? "is-active" : ""}`}
                 >
-                  <a
-                    className={`${selectedTab === item.url ? "is-active" : ""}`}
-                  >
-                    <span>{item.label}</span>
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+                  <span>{item.label}</span>
+                </a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
-        <section className="py-4">
-          {TabsItems.map((item, itemIndex) => {
-            if (item.url === selectedTab) {
-              return React.createElement(item.component, { key: itemIndex });
-            }
-          })}
-        </section>
-      </PrototypeStructure>
-    </>
+      <section className="py-4">
+        {TabsItems.map((item, itemIndex) => {
+          if (item.url === selectedTab) {
+            return React.createElement(item.component, { key: itemIndex });
+          }
+        })}
+      </section>
+    </PrototypeStructure>
   );
 }
