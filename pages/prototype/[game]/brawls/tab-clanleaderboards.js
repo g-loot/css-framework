@@ -49,6 +49,7 @@ export default function TabBrawlsSoloLeaderboards() {
   const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
   const { brawl_id } = router.query;
+  const isPremium = query.premium === "true" ? true : false;
 
   useEffect(() => {
     setSelectedBrawl(prototype.getBrawlByID(game, brawl_id));
@@ -65,6 +66,7 @@ export default function TabBrawlsSoloLeaderboards() {
   const [isLoadingGroup, setIsLoadingGroup] = useState(false);
   const [selectedRank, setSelectedRank] = useState(2);
   const [selectedGroup, setSelectedGroup] = useState(6);
+  
 
   useEffect(() => {
     if (sliderRankItem.current) {
