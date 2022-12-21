@@ -17,6 +17,7 @@ import { StatsValorantDemoLatestMatches } from "../../../../mock-data/data-stats
 import { StatsValorantDemoWeapons } from "../../../../mock-data/data-stats-demo-valorant";
 import { StatsValorantDemoMaps } from "../../../../mock-data/data-stats-demo-valorant";
 import LoadMore from "../../../../components/LoadMore/LoadMore";
+import Tooltip from "../../../../components/Tooltip/Tooltip";
 
 export default function Stats() {
   const router = useRouter();
@@ -932,6 +933,7 @@ export default function Stats() {
                                     Team 1
                                   </td>
                                   <td></td>
+                                  <td></td>
                                   <td>Rank</td>
                                   <td>ACS</td>
                                   <td>K</td>
@@ -982,6 +984,16 @@ export default function Stats() {
                                             #{item.tag}
                                           </div>
                                         </div>
+                                      </td>
+                                      <td className="w-13">
+                                        {item.inParty && (
+                                          <div
+                                          data-tooltip={`In a party with {user name}`}
+                                          className="tooltip-left"
+                                        >
+                                          <span className={`icon icon-multiple-1`} />
+                                        </div>
+                                        )}
                                       </td>
                                       <td className="w-13">
                                         <div
@@ -1095,6 +1107,16 @@ export default function Stats() {
                                             #{item.tag}
                                           </div>
                                         </div>
+                                      </td>
+                                      <td className="w-13">
+                                        {item.inParty && (
+                                          <div
+                                          data-tooltip={`In a party with {user name}`}
+                                          className="tooltip-left"
+                                        >
+                                          <span className={`icon icon-multiple-1`} />
+                                        </div>
+                                        )}
                                       </td>
                                       <td className="w-13">
                                         <div

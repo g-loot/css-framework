@@ -5,6 +5,7 @@ import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 import ReadMore from "../../../components/ReadMore/ReadMore";
 import GameIcon from "../../../components/GameIcon/GameIcon";
+import Tooltip from "../../../components/Tooltip/Tooltip";
 
 export default function HomeHeader(props) {
   const router = useRouter();
@@ -64,49 +65,71 @@ export default function HomeHeader(props) {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                    <div className="flex items-baseline gap-1">
-                      <h1
-                        className={`text-3xl sm:text-4xl ${
-                          selectedUser.isPremium
-                            ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
-                            : ""
-                        }`}
-                      >
-                        {selectedUser.nickname}
-                      </h1>
-                      <img
-                        src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
-                        className="aspect-video rounded-sm max-w-[1.5rem]"
-                      />
-                    </div>
-                    <div className="block lg:hidden text-left">
-                      {selectedUser.isYou && (
-                        <Link href="settings">
-                          <a
-                            type="button"
-                            className="button button-xs button-secondary"
+                  {selectedUser.isPremium ? (
+                    <Tooltip tooltip={<span className="text-sm">Premium user</span>}>
+                      <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                        <div className="flex items-baseline gap-1">
+                          <h1
+                            className={`text-3xl sm:text-4xl ${
+                              selectedUser.isPremium
+                                ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                : ""
+                            }`}
                           >
-                            <span className="icon icon-cogwheel" />
-                            <span>Profile settings</span>
-                          </a>
-                        </Link>
-                      )}
-                    </div>
-                  </div>
-                  {/*
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 flex justify-center">
-                            <img
-                              src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
-                              className="aspect-video rounded-sm max-w-[1.5rem]"
-                            />
-                          </div>
-                          <span className="text-ui-300">
-                            {selectedUser.country}
-                          </span>
+                            {selectedUser.nickname}
+                          </h1>
+                          <img
+                            src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
+                            className="aspect-video rounded-sm max-w-[1.5rem]"
+                          />
                         </div>
-                            */}
+                        <div className="block lg:hidden text-left">
+                          {selectedUser.isYou && (
+                            <Link href="settings">
+                              <a
+                                type="button"
+                                className="button button-xs button-secondary"
+                              >
+                                <span className="icon icon-cogwheel" />
+                                <span>Profile settings</span>
+                              </a>
+                            </Link>
+                          )}
+                        </div>
+                      </div>
+                    </Tooltip>
+                  ) : (
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                      <div className="flex items-baseline gap-1">
+                        <h1
+                          className={`text-3xl sm:text-4xl ${
+                            selectedUser.isPremium
+                              ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                              : ""
+                          }`}
+                        >
+                          {selectedUser.nickname}
+                        </h1>
+                        <img
+                          src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
+                          className="aspect-video rounded-sm max-w-[1.5rem]"
+                        />
+                      </div>
+                      <div className="block lg:hidden text-left">
+                        {selectedUser.isYou && (
+                          <Link href="settings">
+                            <a
+                              type="button"
+                              className="button button-xs button-secondary"
+                            >
+                              <span className="icon icon-cogwheel" />
+                              <span>Profile settings</span>
+                            </a>
+                          </Link>
+                        )}
+                      </div>
+                    </div>
+                  )}
 
                   {selectedUser.bio && (
                     <p className="text-ui-300 mt-1 text-left">

@@ -54,7 +54,7 @@ export default function TabSearchClan() {
               </select>
             </div>
           </div>
-          <div className="form-group pb-1 flex items-center gap-2">
+          <div className="flex-1 form-group pb-1 flex items-center gap-2">
             <div className="form-toggle">
               <input type="checkbox" name="joinableOnly" id="joinableOnly" />
               <label htmlFor="joinableOnly">Joinable only</label>

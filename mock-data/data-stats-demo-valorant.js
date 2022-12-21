@@ -186,6 +186,7 @@ export const StatsValorantDemoLatestMatches = [
               tag: "2410",
               rank: 6,
               isPlus: true,
+              inParty: 2,
             },
             {
               id: 1,
@@ -194,6 +195,7 @@ export const StatsValorantDemoLatestMatches = [
               tag: "4897",
               rank: 5,
               isPlus: true,
+              inParty: 2,
             },
             {
               id: 2,
@@ -210,6 +212,7 @@ export const StatsValorantDemoLatestMatches = [
               tag: "2321",
               rank: 2,
               isPlus: false,
+              inParty: 4,
             },
             {
               id: 4,
@@ -218,6 +221,7 @@ export const StatsValorantDemoLatestMatches = [
               tag: "2321",
               rank: 1,
               isPlus: false,
+              inParty: 4,
             }
           ],
           team2: [
@@ -228,6 +232,7 @@ export const StatsValorantDemoLatestMatches = [
               tag: "2413",
               rank: 7,
               isPlus: true,
+              inParty: 4,
             },
             {
               id: 1,
@@ -236,6 +241,7 @@ export const StatsValorantDemoLatestMatches = [
               tag: "1197",
               rank: 5,
               isPlus: true,
+              inParty: 4,
             },
             {
               id: 2,
@@ -294,6 +300,7 @@ export const StatsValorantDemoLatestMatches = [
               tag: "2410",
               rank: 6,
               isPlus: true,
+              inParty: 2,
             },
             {
               id: 1,
@@ -302,6 +309,7 @@ export const StatsValorantDemoLatestMatches = [
               tag: "4897",
               rank: 5,
               isPlus: true,
+              inParty: 2,
             },
             {
               id: 2,

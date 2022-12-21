@@ -54,7 +54,7 @@ export default function TabSearchPlayer() {
               </select>
             </div>
           </div>
-          <div className="form-group pb-1 flex items-center gap-2">
+          <div className="flex-1 form-group pb-1 flex items-center gap-2">
             <div className="form-toggle">
               <input type="checkbox" name="joinableOnly" id="joinableOnly" />
               <label htmlFor="joinableOnly">Open for recuitment only</label>
@@ -113,17 +113,31 @@ export default function TabSearchPlayer() {
                   >
                     <td>
                       <Link
-                        href={`/prototype/user/${
+                        href={`/prototype/profile/${
                           item.id
                         }${prototype.getURLparams()}`}
                       >
                         <div className="flex gap-3 items-center self-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
-                          <div className="avatar avatar-xs avatar-circle">
+                          <div
+                            className={`avatar avatar-xs avatar-circle ${
+                              item.isPremium
+                                ? "avatar-gold"
+                                : ""
+                            }`}
+                          >
                             <div>
                               <img src={item.avatar} alt="avatar" />
                             </div>
                           </div>
-                          <div className="">{item.nickname}</div>
+                          <div
+                            className={`${
+                              item.isPremium
+                                ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                : ""
+                            }`}
+                          >
+                            {item.nickname}
+                          </div>
                         </div>
                       </Link>
                     </td>
