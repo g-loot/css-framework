@@ -37,6 +37,8 @@ export default function Search() {
   const defaultTab = "players";
   const selectedTab = tab ? tab : defaultTab;
   const [filter, setFilter] = useState("");
+  const modalRecruitPlayer = query.modalrecruit === "true" ? true : false;
+  const modalJoinClan = query.modaljoin === "true" ? true : false;
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
@@ -97,7 +99,7 @@ export default function Search() {
       </nav>
 
       <section className="py-4">
-        {filter ? (
+        {filter || modalRecruitPlayer || modalJoinClan ? (
           <>
             {TabsItems.map((item, itemIndex) => {
               if (item.url === selectedTab) {
