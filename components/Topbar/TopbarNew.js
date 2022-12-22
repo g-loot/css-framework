@@ -262,7 +262,7 @@ export default function TopbarNew() {
                 placement="bottom"
                 tooltip={
                   <div className="relative text-sm">
-                    <span>Search clans</span>
+                    <span>Search</span>
                   </div>
                 }
               >

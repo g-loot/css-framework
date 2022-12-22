@@ -1,15 +1,34 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
+import ModalJoinClan from "./modal-joinclan";
 
 export default function TabSearchClan() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
-  const modalCreate = query.modalcreate === "true" ? true : false;
+  const modalJoinClan = query.modaljoin === "true" ? true : false;
+  const joined = query.joined || null;
   const uiContext = useContext(UiContext);
+  const [itemJoined, setItemJoined] = useState(null);
+
+  function openModalJoinClan(clanID) {
+    uiContext.openModal(
+      <ModalJoinClan clanID={clanID}></ModalJoinClan>
+    );
+  }
+
+  useEffect(() => {
+    if (modalJoinClan) {
+      openModalJoinClan(3);
+    }
+  }, [modalJoinClan]);
+
+  useEffect(() => {
+    setItemJoined(parseInt(query.joined));
+  }, [joined]);
 
   return (
     <>
@@ -65,7 +84,7 @@ export default function TabSearchClan() {
       </section>
       <section>
         <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
-          <table className="table table-rounded rounded-xl w-full">
+          <table className="table table-rounded rounded-lg w-full">
             <thead>
               <tr>
                 <th>
@@ -136,8 +155,11 @@ export default function TabSearchClan() {
                       {clan.isPublic && (
                         <div className="text-center">
                           <button
+                            onClick={openModalJoinClan.bind(this, clan.id)}
                             type="button"
-                            className="button button-sm button-tertiary rounded-full"
+                            className={`button button-sm button-tertiary rounded-full ${itemJoined} ${
+                              itemJoined === clan.id ? "is-disabled" : ""
+                            }`}
                           >
                             <span className="icon icon-b-add"></span>
                           </button>
@@ -151,7 +173,10 @@ export default function TabSearchClan() {
                       <div className="flex justify-end gap-1">
                         {clan.games?.map((game, gameIndex) => (
                           <>
-                            <div key={gameIndex} className="p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+                            <div
+                              key={gameIndex}
+                              className="p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center"
+                            >
                               <span
                                 className={`icon text-xl ${
                                   prototype.getGameByID(game).slug ===

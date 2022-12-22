@@ -1,15 +1,34 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
+import ModalRecruitPlayer from "./modal-recruitplayer";
 
 export default function TabSearchPlayer() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
-  const modalCreate = query.modalcreate === "true" ? true : false;
+  const modalRecruitPlayer = query.modalrecruit === "true" ? true : false;
+  const invited = query.invited || null;
   const uiContext = useContext(UiContext);
+  const [itemInvited, setItemInvited] = useState(null);
+
+  function openModalRecruitPlayer(userID) {
+    uiContext.openModal(
+      <ModalRecruitPlayer userID={userID}></ModalRecruitPlayer>
+    );
+  }
+
+  useEffect(() => {
+    if (modalRecruitPlayer) {
+      openModalRecruitPlayer(3);
+    }
+  }, [modalRecruitPlayer]);
+
+  useEffect(() => {
+    setItemInvited(parseInt(query.invited));
+  }, [invited]);
 
   return (
     <>
@@ -65,7 +84,7 @@ export default function TabSearchPlayer() {
       </section>
       <section>
         <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
-          <table className="table table-rounded rounded-xl w-full">
+          <table className="table table-rounded rounded-lg w-full">
             <thead>
               <tr>
                 <th>
@@ -120,9 +139,7 @@ export default function TabSearchPlayer() {
                         <div className="flex gap-3 items-center self-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
                           <div
                             className={`avatar avatar-xs avatar-circle ${
-                              item.isPremium
-                                ? "avatar-gold"
-                                : ""
+                              item.isPremium ? "avatar-gold" : ""
                             }`}
                           >
                             <div>
@@ -152,8 +169,11 @@ export default function TabSearchPlayer() {
                       {!item.clan && (
                         <div className="text-center">
                           <button
+                            onClick={openModalRecruitPlayer.bind(this, item.id)}
                             type="button"
-                            className="button button-sm button-tertiary rounded-full"
+                            className={`button button-sm button-tertiary rounded-full ${itemInvited} ${
+                              itemInvited === item.id ? "is-disabled" : ""
+                            }`}
                           >
                             <span className="icon icon-a-add"></span>
                           </button>
