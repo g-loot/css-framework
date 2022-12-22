@@ -18,6 +18,15 @@ const notificationsGroups = [
     name: "Clan",
     notifications: [
       {
+        description: "Clan",
+        type: "clan",
+        intro: "Clan",
+        title: "You have been kicked out",
+        text: "You have been kicked out from the <a href='#' class='link font-bold'>BBL Esports</a> Clan.",
+        url: "/prototype/clans/3",
+        time: "1 min.",
+      },
+      {
         description: "Achievement unlocked",
         type: "achievement",
         intro: "Achivement",
