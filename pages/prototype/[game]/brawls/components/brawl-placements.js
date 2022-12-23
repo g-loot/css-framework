@@ -259,7 +259,7 @@ export default function BrawlPlacements() {
                 Get more tokens
               </a>
             )}
-            {!isPremium && (
+            {!isPremium && !freeEntry && (
               <Link href="/prototype/premium">
                 <a className="link text-sm text-premium-500">
                   Get more XP with Premium
