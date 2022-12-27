@@ -16,19 +16,19 @@ const MissionsHowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "Make sure you have the G-Loot Tracker installed and running on your PC. In some games you also need to add your game account in your <a href='#' class='link link-main'>G-Loot settings</a>.",
+        text: "Make sure you have the Stryda Tracker installed and running on your PC. In some games you also need to add your game account in your <a href='#' class='link link-main'>Stryda settings</a>.",
       },
       {
         type: "p",
-        text: "See if everything is working by running the G-Loot Tracker on your PC and starting your game.",
+        text: "See if everything is working by running the Stryda Tracker on your PC and starting your game.",
       },
       {
         type: "p",
-        text: "The G-Loot icon should appear in your game with a green dot. This means everything is up and running to track your progress.",
+        text: "The Stryda icon should appear in your game with a green dot. This means everything is up and running to track your progress.",
       },
       {
         type: "p",
-        text: "<a href='#' class='link link-main'>Download G-Loot tracker</a>",
+        text: "<a href='#' class='link link-main'>Download Stryda tracker</a>",
       },
     ],
   },
@@ -53,7 +53,7 @@ const MissionsHowitworksTabs = [
         type: "ul",
         text: [
           "Earn Tokens by completing Missions and unlocking Mission Rewards.",
-          "Buy Tokens in the G-Loot wallet.",
+          "Buy Tokens in the Stryda wallet.",
           "Claim free Tokens in your Daily Loot Streak.",
         ],
       },
@@ -173,11 +173,11 @@ const MissionsHowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "If G-Loot or the game goes into maintenance, all stats stops being recorded. If you have started a Brawl match, you will get your Tokens back.",
+        text: "If Stryda or the game goes into maintenance, all stats stops being recorded. If you have started a Brawl match, you will get your Tokens back.",
       },
       {
         type: "p",
-        text: "Once the maintenance is over, the Brawl will continue. If there is a bigger issue or if the maintenance lasts for several days, G-Loot will decide if the Brawl will continue. If the Brawl is canceled, you will get your Tokens back",
+        text: "Once the maintenance is over, the Brawl will continue. If there is a bigger issue or if the maintenance lasts for several days, Stryda will decide if the Brawl will continue. If the Brawl is canceled, you will get your Tokens back",
       },
     ],
   },
@@ -193,7 +193,7 @@ const MissionsHowitworksTabs = [
       {
         type: "ul",
         text: [
-          "Make sure the G-Loot overlay is running and the icon is green. Or that you have added your correct game account in your Profile settings.",
+          "Make sure the Stryda overlay is running and the icon is green. Or that you have added your correct game account in your Profile settings.",
           "Make sure you’re playing in the correct game mode as shown on the Brawl page.",
           "Wait a little while. Stats can take some time to be updated.",
           "Check out the help page for more tips.",
@@ -236,10 +236,10 @@ export default function TabBrawlsHowItWorks() {
             alt=""
           />
           <div className="col-span-2 px-4 sm:px-0">
-            <h2 className="text-2xl leading-none mb-4">What is a Brawl?</h2>
+            <h2 className="h4 mb-4">What is a Brawl?</h2>
             <div className="columns-2 space-y-4 gap-8">
               <p className="text-ui-300 leading-relaxed">
-                In Brawls you compete against other G-Loot players and/or Clans
+                In Brawls you compete against other Stryda players and/or Clans
                 to climb a leaderboard.
               </p>
               <ul className="list-inside list-disc space-y-4 text-ui-300 leading-relaxed">
@@ -251,7 +251,7 @@ export default function TabBrawlsHowItWorks() {
                   You earn Brawl points based on the objective, e.g. kills,
                   goals or score from the game.
                 </li>
-                <li>You need the G-Loot Tracker running while you play.</li>
+                <li>You need the Stryda Tracker running while you play.</li>
                 <li>
                   Brawls use a “best-of” format. You can enter as many times as
                   you want, and only your best scores count.
@@ -270,7 +270,7 @@ export default function TabBrawlsHowItWorks() {
         style={{ "--delay": "calc(2 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
-          <h2 className="text-2xl leading-none mb-4">How the Brawl works</h2>
+          <h2 className="h4 mb-4">How the Brawl works</h2>
         </div>
         <div className="surface sm:rounded-lg overflow-hidden max-w-sm mx-auto mb-4 relative">
           <div className="absolute inset-0 flex items-center justify-center bg-ui-900/50">
@@ -295,7 +295,7 @@ export default function TabBrawlsHowItWorks() {
               <a href="#">
                 <i>1</i>
                 <div className="text-sm text-ui-300">
-                  Have the G-Loot Tracker installed and running
+                  Have the Stryda Tracker installed and running
                 </div>
                 <span />
               </a>
@@ -304,7 +304,7 @@ export default function TabBrawlsHowItWorks() {
               <a href="#">
                 <i>2</i>
                 <div className="text-sm text-ui-300">
-                  In some games you need to add your game account in your G-Loot
+                  In some games you need to add your game account in your Stryda
                   settings
                 </div>
                 <span />
@@ -364,7 +364,7 @@ export default function TabBrawlsHowItWorks() {
         style={{ "--delay": "calc(3 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
-          <h2 className="text-2xl leading-none mb-6">
+          <h2 className="h4 mb-6">
             Learn everything about the Brawls
           </h2>
         </div>

@@ -35,10 +35,10 @@ export default function ValorantClashTabItem(props) {
           >
             <div className={`relative z-10 rounded-[calc(1rem-0.125rem)] bg-gradient-to-b w-full flex items-center justify-center text-center px-4 py-8 ${(props.itemDisabled != undefined && props.itemDisabled === true) ? "from-ui-900 to-ui-900" : "from-ui-900 to-ui-800"}`}>
               <div
-                className={`font-headings leading-none tracking-wide select-none ${(props.itemDisabled != undefined && props.itemDisabled === true) ? "opacity-50" : ""}`}
+                className={`leading-none tracking-wide select-none ${(props.itemDisabled != undefined && props.itemDisabled === true) ? "opacity-50" : ""}`}
               >
                 <div
-                  className={`text-2xl italic text-ui-300 origin-bottom hoverinside duration-500 transition ease-[cubic-bezier(0.8,0,0.2,1)] ${
+                  className={`text-2xl text-ui-300 origin-bottom hoverinside duration-500 transition ease-[cubic-bezier(0.8,0,0.2,1)] ${
                     props.selectedTab === props.itemURL
                       ? ""
                       : "opacity-40 scale-75"
@@ -47,7 +47,7 @@ export default function ValorantClashTabItem(props) {
                   {props.itemSublabel}
                 </div>
                 <div
-                  className={`text-4xl font-bold italic text-ui-100 origin-top hoverinside duration-700 transition-delay transition ease-[cubic-bezier(0.8,0,0.2,1)] ${
+                  className={`text-4xl text-ui-100 origin-top hoverinside duration-700 transition-delay transition ease-[cubic-bezier(0.8,0,0.2,1)] ${
                     props.selectedTab === props.itemURL
                       ? ""
                       : "opacity-40 scale-75"

@@ -5,9 +5,9 @@
 /*----------------------------*/
 
 @font-face {
-  font-family: 'glooticons';
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1663917684/GNOG%20assets/Fonts/Icons/backup/glooticons.woff2') format('woff2'), 
-  url('https://res.cloudinary.com/gloot/raw/upload/v1663917684/GNOG%20assets/Fonts/Icons/backup/glooticons.woff') format('woff');
+  font-family: 'icons';
+  src: url('https://res.cloudinary.com/gloot/raw/upload/v1671440778/Stryda/icons/icons.woff2') format('woff2'), 
+  url('https://res.cloudinary.com/gloot/raw/upload/v1671440778/Stryda/icons/icons.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -1751,11 +1751,11 @@
   content: "\eba4";
 }
 
-.icon-gloot-symbol::before {
+.icon-stryda-symbol::before {
   content: "\eba6";
 }
 
-.icon-gloot-logo::before {
+.icon-stryda-logo::before {
   content: "\eba7";
 }
 

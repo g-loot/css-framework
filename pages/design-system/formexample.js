@@ -48,7 +48,7 @@ const DSpage = () => {
               </div>
               <div className='rounded border border-ui-600 p-4 text-center text-sm text-ui-300'>
                 <span>G-LOOT ID:</span>
-                <code className='font-bold font-body'>4769554309840896</code>
+                <code className='font-body'>4769554309840896</code>
               </div>
               <div className='form-group'>
                 <label htmlFor="avatar">Avatar</label>
@@ -124,7 +124,7 @@ const DSpage = () => {
                 Data Privacy
               </h2>
               <p className='text-sm text-ui-200'>
-                To make G-Loot better we collect information from you as visitor with help from cookies. We also conduct relevant marketing of G-Loot&lsquo;s services within Meta, Google, Adroll, Snapchat and Bing&lsquo;s network. Read more in our <a href="#" target="_blank">Privacy Policy</a>. <br/>
+                To make Stryda better we collect information from you as visitor with help from cookies. We also conduct relevant marketing of Stryda&lsquo;s services within Meta, Google, Adroll, Snapchat and Bing&lsquo;s network. Read more in our <a href="#" target="_blank">Privacy Policy</a>. <br/>
                 Here you can consent to share your data with the following partners:
               </p>
               <div className='form-group'>

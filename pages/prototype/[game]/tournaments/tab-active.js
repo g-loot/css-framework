@@ -106,7 +106,7 @@ export default function TabTournamentsActive() {
                                   {tournament.details.entryFee !== "free" && (
                                     <>
                                     {tournament.details.entryFee.map((reward, rewardIndex) =>
-                                      <Reward key={rewardIndex} reward={reward} gap="gap-1" imageClassNames="h-4" textClassNames="text-ui-200 font-bold" />
+                                      <Reward key={rewardIndex} reward={reward} gap="gap-1" iconClassNames="text-lg" textClassNames="text-ui-200" />
                                     )}
                                     </>
                                   )}
@@ -116,7 +116,7 @@ export default function TabTournamentsActive() {
                                 <label>Prize Pool</label>
                                 <div className="flex items-center gap-2">
                                   {tournament.rewards.map((reward, rewardIndex) =>
-                                    <Reward key={rewardIndex} reward={reward} gap="gap-1" imageClassNames="h-4" textClassNames="text-ui-200 font-bold" />
+                                    <Reward key={rewardIndex} reward={reward} gap="gap-1" iconClassNames="text-lg" textClassNames="text-ui-200" />
                                   )}
                                 </div>
                               </div>
@@ -214,7 +214,7 @@ export default function TabTournamentsActive() {
                 Featured <span className="text-main">stream</span>
               </h2>
               <p className="text-lg mt-4 mb-6 max-w-sm">
-                Watch the latest highlights and content from the official <span className="whitespace-nowrap">G-Loot</span> stream. Featuring events, tournaments, and more from all our supported games!
+                Watch the latest highlights and content from the official <span className="whitespace-nowrap">Stryda</span> stream. Featuring events, tournaments, and more from all our supported games!
               </p>
               <a href="https://www.twitch.tv/glootvalorant" target="_blank" rel="noopener noreferrer" className="button button-primary">
                 <span>Watch now</span>

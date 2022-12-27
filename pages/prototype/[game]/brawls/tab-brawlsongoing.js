@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
-import Reward from "../../../../components/Reward/Reward";
 import Tooltip from "../../../../components/Tooltip/Tooltip";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -70,7 +69,7 @@ export default function TabBrawlsOngoing() {
                                         </div>
                                       </div>
                                       <span
-                                        className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${
+                                        className={`uppercase text-lg pr-1.5 ${
                                           brawl.progress <= 0
                                             ? "text-ui-400"
                                             : "text-ui-200"
@@ -121,7 +120,7 @@ export default function TabBrawlsOngoing() {
                                           </div>
                                         )}
                                         <span
-                                          className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${
+                                          className={`uppercase text-lg pr-1.5 ${
                                             brawl.progress <= 0
                                               ? "text-ui-400"
                                               : "text-ui-200"
@@ -153,7 +152,7 @@ export default function TabBrawlsOngoing() {
                                           </div>
                                         )}
                                         <span
-                                          className={`font-headings uppercase font-bold text-lg italic pr-1.5 ${
+                                          className={`uppercase text-lg pr-1.5 ${
                                             brawl.progressClan <= 0
                                               ? "text-ui-400"
                                               : "text-ui-200"
@@ -208,7 +207,7 @@ export default function TabBrawlsOngoing() {
                               {brawl.progress > 0 && brawl.progress < 3 && (
                                 <>
                                   <div className="flex gap-1.5 items-baseline">
-                                    <div className="font-headings font-bold text-3xl italic text-main">
+                                    <div className="text-3xl text-main">
                                       {brawl.progress}/3
                                     </div>
                                     <div className="text-ui-300 text-sm">
@@ -230,14 +229,8 @@ export default function TabBrawlsOngoing() {
                                   <div className="md:h-8">
                                     <div className="flex gap-3 items-center">
                                       <div className="flex items-center whitespace-nowrap gap-2">
-                                        <img
-                                          className="h-8"
-                                          src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
-                                          width="auto"
-                                          height="auto"
-                                          alt=""
-                                        />
-                                        <span className="font-headings font-bold text-2xl italic">
+                                        <span className="icon icon-coin" />
+                                        <span className="text-2xl">
                                           10 000
                                         </span>
                                       </div>
@@ -249,7 +242,7 @@ export default function TabBrawlsOngoing() {
                                           height="auto"
                                           alt=""
                                         />
-                                        <span className="font-headings font-bold text-2xl italic">
+                                        <span className="text-2xl">
                                           5
                                         </span>
                                       </div>
@@ -298,7 +291,7 @@ export default function TabBrawlsOngoing() {
                                             />
                                           </div>
                                         </div>
-                                        <span className="text-md uppercase font-bold text-ui-300">
+                                        <span className="text-md uppercase text-ui-300">
                                           Solo
                                         </span>
                                       </div>
@@ -308,7 +301,7 @@ export default function TabBrawlsOngoing() {
                                           <div className="text-xs uppercase text-ui-300">
                                             points
                                           </div>
-                                          <div className="font-headings font-bold text-2xl text-blue-300">
+                                          <div className="text-2xl text-blue-300">
                                             67
                                           </div>
                                         </div>
@@ -316,7 +309,7 @@ export default function TabBrawlsOngoing() {
                                           <div className="text-xs uppercase text-ui-300">
                                             position
                                           </div>
-                                          <div className="font-headings font-bold text-2xl text-blue-300">
+                                          <div className="text-2xl text-blue-300">
                                             #5
                                           </div>
                                         </div>
@@ -337,7 +330,7 @@ export default function TabBrawlsOngoing() {
                                             />
                                           </div>
                                         </div>
-                                        <span className="text-md uppercase font-bold text-ui-300">
+                                        <span className="text-md uppercase text-ui-300">
                                           Clan
                                         </span>
                                       </div>
@@ -347,7 +340,7 @@ export default function TabBrawlsOngoing() {
                                           <div className="text-xs uppercase text-ui-300">
                                             points
                                           </div>
-                                          <div className="font-headings font-bold text-2xl text-blue-300">
+                                          <div className="text-2xl text-blue-300">
                                             112
                                           </div>
                                         </div>
@@ -355,7 +348,7 @@ export default function TabBrawlsOngoing() {
                                           <div className="text-xs uppercase text-ui-300">
                                             position
                                           </div>
-                                          <div className="font-headings font-bold text-2xl text-blue-300">
+                                          <div className="text-2xl text-blue-300">
                                             #545
                                           </div>
                                         </div>
@@ -380,20 +373,20 @@ export default function TabBrawlsOngoing() {
               }}
             >
               <h3 className="text-2xl">
-                Last week, G-Loot Brawlers won a total of
+                Last week, Stryda Brawlers won a total of
               </h3>
               <div className="flex gap-8 items-start justify-center leading-tight mt-4">
                 <div>
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-coin-small.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671799703/Stryda/currencies/Reward-centered-coin-small.png"
                     width="140"
                     height="auto"
                     alt=""
                   />
-                  <div className="text-4xl font-headings text-gold-500">
+                  <div className="text-4xl text-gold-500">
                     2245650
                   </div>
-                  <div className="font-headings font-bold uppercase text-lg text-gold-500">
+                  <div className="uppercase text-lg text-gold-500">
                     Coins
                   </div>
                 </div>
@@ -405,10 +398,10 @@ export default function TabBrawlsOngoing() {
                     height="auto"
                     alt=""
                   />
-                  <div className="text-4xl font-headings text-bronze-500">
+                  <div className="text-4xl text-bronze-500">
                     123
                   </div>
-                  <div className="font-headings font-bold uppercase text-lg text-bronze-500">
+                  <div className="uppercase text-lg text-bronze-500">
                     Golden tickets
                   </div>
                 </div>

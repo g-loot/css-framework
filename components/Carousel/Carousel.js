@@ -8,14 +8,14 @@ const slides = [
     subtitle: "Free entry",
     title: "Compete for free!",
     description:
-      "Brawl is our G-Loot Special! You compete against other G-Loot players to climb the leaderboard, get on top and win crazy rewards! Interested? Entry Brawl is on us! ",
+      "Brawl is our Stryda Special! You compete against other Stryda players to climb the leaderboard, get on top and win crazy rewards! Interested? Entry Brawl is on us! ",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1669283599/Marketing/2022_prototype/Carousel_Free_entry_1.jpg",
     buttonLabel: "Compete now",
     buttonURL: "/prototype/valorant/brawls?freeentry=true",
   },
   {
-    subtitle: "G-Loot",
+    subtitle: "Stryda",
     title: "Who's your top VALORANT agent?",
     description:
       "Check your damage/round, K/D ratio, headshots percentage, and more, for your last 20 matches. Plus, specific stats for your most played agents",
@@ -224,7 +224,7 @@ export default function Carousel(props) {
                     <i>
                       <span
                         style={{
-                          transform: `translateY(${percent}%) skewY(-30deg)`,
+                          transform: `translateY(${percent}%)`,
                         }}
                       />
                     </i>

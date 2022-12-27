@@ -93,7 +93,7 @@ const achievementsList = [
   },
   {
     level: 4,
-    name: "Loyal G-Looter",
+    name: "Loyal Strydaer",
     description: "Has been on the platform for more than 300 days",
     icon: "loyal",
     percent: 76,

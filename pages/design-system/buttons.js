@@ -502,6 +502,64 @@ const DSpage = () => {
             </div>
           </div>
 
+          {/* variant:sucess */}
+          <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
+            <h3 className="h4 mb-6 lg:mb-10">Success</h3>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Text only
+                  </div>
+                  <div className="flex-1">
+                    <Button label="Button Label" variant="success"></Button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Icon + text
+                  </div>
+                  <div className="flex-1">
+                    <Button
+                      label="Button Label"
+                      variant="success"
+                      icon="icon-heart"
+                    ></Button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Text + icon
+                  </div>
+                  <div className="flex-1">
+                    <Button
+                      label="Button Label"
+                      variant="success"
+                      icon="icon-heart"
+                      iconDirection="right"
+                    ></Button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Icon only
+                  </div>
+                  <div className="flex-1">
+                    <Button variant="success" icon="icon-heart"></Button>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/wj6bdfxy/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
           {/* variant:claim */}
           <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
             <h3 className="h4 mb-6 lg:mb-10">Claim</h3>
@@ -1113,13 +1171,7 @@ const DSpage = () => {
                         <span>Purchase</span>
                       </div>
                       <div>
-                        <img
-                          className="dropshadow-xs"
-                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                          width="34"
-                          height="34"
-                          alt="coin"
-                        />
+                        <span className="icon icon-coin"></span>
                         <span>2,000</span>
                       </div>
                     </button>
@@ -1242,13 +1294,7 @@ const DSpage = () => {
                         <span>Purchase</span>
                       </div>
                       <div>
-                        <img
-                          className="dropshadow-xs"
-                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                          width="34"
-                          height="34"
-                          alt="coin"
-                        />
+                        <span className="icon icon-coin"></span>
                         <span>2,000</span>
                       </div>
                     </button>
@@ -1332,13 +1378,7 @@ const DSpage = () => {
                         <span>Purchase</span>
                       </div>
                       <div>
-                        <img
-                          className="dropshadow-xs"
-                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                          width="34"
-                          height="34"
-                          alt="coin"
-                        />
+                        <span className="icon icon-coin"></span>
                         <span>2,000</span>
                       </div>
                     </button>
@@ -1467,13 +1507,7 @@ const DSpage = () => {
                         <span>Purchase</span>
                       </div>
                       <div>
-                        <img
-                          className="dropshadow-xs"
-                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                          width="34"
-                          height="34"
-                          alt="coin"
-                        />
+                        <span className="icon icon-coin"></span>
                         <span>2,000</span>
                       </div>
                     </button>

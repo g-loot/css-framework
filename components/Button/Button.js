@@ -11,6 +11,7 @@ export default function Button(props) {
     "button-ghost": props.variant === 'ghost',
     "button-premium": props.variant === 'premium',
     "button-error": props.variant === 'error',
+    "button-success": props.variant === 'success',
     "button-claim": props.variant === 'claim',
     "button-play": props.variant === 'play',
     "rounded-full": !props.label,
@@ -47,7 +48,7 @@ export default function Button(props) {
             <span>{label}</span>
           </div>
           <div>
-            <img className="dropshadow-xs" src={`${props.currency === 'coin' ? 'https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png': ''} ${props.currency === 'token' ? 'https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png': ''} ${props.currency === 'ticket' ? 'https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tiket.png': ''}`} width="34" height="34" alt={props.currency} />
+            <span className={`icon ${props.currency === 'coin' ? 'icon-coin text-gold-500' : ''} ${props.currency === 'token' ? 'icon-token text-purple-500' : ''} ${props.currency === 'ticket' ? 'icon-ticket text-ui-100' : ''}`} />
             <span>{props.amount}</span>
           </div>
         </button>

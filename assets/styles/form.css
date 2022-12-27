@@ -327,9 +327,7 @@ label.button {
     + label {
       &::before {
         @apply
-        bg-gradient-to-b
-        from-interaction-700
-        to-interaction-300
+        bg-main
         shadow-[0_0_0_2px_rgb(var(--color-interaction-300))]
         ;
       }
@@ -402,9 +400,7 @@ label.button {
           @apply
           scale-0
           opacity-0
-          bg-gradient-to-b
-          from-ui-300
-          to-ui-400
+          bg-ui-300
           ;
         }
       }
@@ -711,9 +707,7 @@ label.button {
           content-['']
           duration-700
           rounded-full
-          bg-gradient-radial-to-b
-          from-interaction-300
-          to-interaction-700
+          bg-main
           shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
           border-2
           border-ui-800

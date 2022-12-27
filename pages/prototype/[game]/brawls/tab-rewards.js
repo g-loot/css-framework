@@ -160,9 +160,9 @@ export default function TabBrawlsRewards() {
       >
         <div className="flex items-stretch gap-8 mb-8">
           <div className="flex-1 surface sm:rounded-lg p-4">
-            <h2 className="text-3xl mb-4 px-4">
+            <h2 className="h4 mb-4 px-4">
               Solo{" "}
-              <small className="text-ui-300 font-normal">
+              <small className="text-ui-300">
                 reward distribution
               </small>
             </h2>
@@ -190,7 +190,7 @@ export default function TabBrawlsRewards() {
                     "--delay": "calc(" + rewardIndex + " * 0.05s)",
                   }}
                 >
-                  <span className="font-headings font-bold text-lg">
+                  <span className="text-lg">
                     {reward.name}
                   </span>
                   <div className="flex items-center justify-center gap-4">
@@ -200,8 +200,8 @@ export default function TabBrawlsRewards() {
                           key={rewardIndex}
                           reward={reward}
                           gap="gap-2"
-                          imageClassNames="h-6"
-                          textClassNames="font-headings font-bold text-lg italic"
+                          iconClassNames="text-lg"
+                          textClassNames="text-lg"
                         />
                       </>
                     ))}
@@ -212,9 +212,9 @@ export default function TabBrawlsRewards() {
           </div>
           {!noClan && (
             <div className="flex-1 surface sm:rounded-lg p-4">
-              <h2 className="text-3xl mb-4 px-4">
+              <h2 className="h4 mb-4 px-4">
                 Clan{" "}
-                <small className="text-ui-300 font-normal">
+                <small className="text-ui-300">
                   reward distribution
                 </small>
               </h2>
@@ -253,7 +253,7 @@ export default function TabBrawlsRewards() {
                       "--delay": "calc(" + rewardIndex + " * 0.05s)",
                     }}
                   >
-                    <span className="font-headings font-bold text-lg">
+                    <span className="text-lg">
                       {reward.name}
                     </span>
                     <div className="flex items-center justify-center gap-4">
@@ -263,8 +263,8 @@ export default function TabBrawlsRewards() {
                             key={rewardIndex}
                             reward={reward}
                             gap="gap-2"
-                            imageClassNames="h-6"
-                            textClassNames="font-headings font-bold text-lg italic"
+                            iconClassNames="text-lg"
+                            textClassNames="text-lg"
                           />
                         </>
                       ))}
@@ -294,7 +294,7 @@ export default function TabBrawlsRewards() {
             </div>
             <div className="flex-1 flex flex-col items-stretch justify-start text-ui-300 space-y-2 leading-relaxed mt-4 py-4">
               <p>
-                Use Coins to buy gift cards in the G-Loot shop. Get gift cards
+                Use Coins to buy gift cards in the Stryda shop. Get gift cards
                 for clothes, games, and more.
               </p>
               <p>
@@ -305,6 +305,7 @@ export default function TabBrawlsRewards() {
           </div>
           {!noShowdown && (
             <>
+            {/*
               <div
                 className="flex-1 surface sm:rounded-lg p-4 relative flex flex-col items-stretch animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc(3 * 0.05s)" }}
@@ -327,6 +328,8 @@ export default function TabBrawlsRewards() {
                   </p>
                 </div>
               </div>
+          */}
+          {/*
               <div
                 className="flex-1 surface sm:rounded-lg p-4 relative flex flex-col items-stretch animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc(4 * 0.05s)" }}
@@ -349,13 +352,14 @@ export default function TabBrawlsRewards() {
                   </p>
                   <p>
                     Create your own party with your teammates or join solo, and
-                    we will match you with other G-Loot players to form a party.
+                    we will match you with other Stryda players to form a party.
                   </p>
                   <p>
                     If you want to join the Showdown, you need to earn a Ticket.
                   </p>
                 </div>
               </div>
+        */}
             </>
           )}
         </div>

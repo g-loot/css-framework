@@ -259,7 +259,7 @@ export default function ListItemBrawl(props) {
                   <div className="flex-1 flex gap-3 items-end">
                   {brawl.result && (
                     <div className="flex items-center gap-3">
-                      <div className="font-headings leading-none flex items-start gap-1">
+                      <div className="leading-none flex items-start gap-1">
                         <span className="text-xl">#</span>
                         <span className="text-4xl">
                           {brawl.soloResults?.placement}
@@ -292,7 +292,7 @@ export default function ListItemBrawl(props) {
                           <>
                             {reward.type === "money" && (
                               <div className="flex items-center gap-2">
-                                <span className="font-headings font-bold text-lg italic">
+                                <span className="text-lg">
                                   $ {numberWithSpaces(reward.value)}
                                 </span>
                               </div>
@@ -306,7 +306,7 @@ export default function ListItemBrawl(props) {
                                   height="auto"
                                   alt=""
                                 />
-                                <span className="font-headings font-bold text-lg italic">
+                                <span className="text-lg">
                                   {numberWithSpaces(reward.value)}
                                 </span>
                               </div>
@@ -320,7 +320,7 @@ export default function ListItemBrawl(props) {
                                   height="auto"
                                   alt=""
                                 />
-                                <span className="font-headings font-bold text-lg italic">
+                                <span className="text-lg">
                                   {numberWithSpaces(reward.value)}
                                 </span>
                               </div>
@@ -334,7 +334,7 @@ export default function ListItemBrawl(props) {
                                   height="auto"
                                   alt=""
                                 />
-                                <span className="font-headings font-bold text-lg italic">
+                                <span className="text-lg">
                                   {numberWithSpaces(reward.value)}
                                 </span>
                               </div>

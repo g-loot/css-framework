@@ -12,7 +12,7 @@ const DSpage = () => {
     <>
       <div className="flex items-end justify-between mb-2">
         <h1 className="mb-6">
-          Icons <small className="text-ui-300 font-normal">references</small>
+          Icons <small className="text-ui-300">references</small>
         </h1>
         <div className="form-group mb-1">
           <div className="input-group">

@@ -19,7 +19,7 @@ const DSpage = () => {
                     src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Showdown-sameheight.svg"
                     width="auto"
                     height="auto"
-                    alt="G-Loot Showdown"
+                    alt="Stryda Showdown"
                   />
                   <div className="chip chip-secondary chip-xs">
                     <span>Valorant europe</span>
@@ -29,7 +29,7 @@ const DSpage = () => {
                   <div className="chip chip-sm chip-sliced">
                     <span>Open</span>
                   </div>
-                  <div className="card-title">G-Loot Monthly Showdown</div>
+                  <div className="card-title">Stryda Monthly Showdown</div>
                   <div className="flex gap-2 text-sm text-ui-300 items-center">
                     <span className="icon icon-calendar-date-2" />
                     <span>Aug 11 • 01:00 AM</span>
@@ -46,7 +46,7 @@ const DSpage = () => {
                     </div>
                     <div>
                       <label>Prize Pool</label>
-                      <div className="font-bold text-gradient bg-gradient-to-b from-premium-700 via-premium-300 to-premium-700">
+                      <div className="text-gradient bg-gradient-to-b from-premium-700 via-premium-300 to-premium-700">
                         $50 000
                       </div>
                     </div>
@@ -92,7 +92,7 @@ const DSpage = () => {
                     src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Skirmish-sameheight.svg"
                     width="auto"
                     height="auto"
-                    alt="G-Loot Skirmish"
+                    alt="Stryda Skirmish"
                   />
                   <div className="chip chip-secondary chip-xs">
                     <span>Global</span>
@@ -102,7 +102,7 @@ const DSpage = () => {
                   <div className="chip chip-sm chip-sliced chip-blue">
                     <span>Ongoing</span>
                   </div>
-                  <div className="card-title">G-Loot Skirmish Tournament</div>
+                  <div className="card-title">Stryda Skirmish Tournament</div>
                   <div className="flex gap-2 text-sm text-ui-300 items-center">
                     <span className="icon icon-calendar-date-2" />
                     <span>Aug 11 • 01:00 AM</span>
@@ -163,7 +163,7 @@ const DSpage = () => {
                     src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
                     width="auto"
                     height="auto"
-                    alt="G-Loot Open"
+                    alt="Stryda Open"
                   />
                   <div className="chip chip-secondary chip-xs">
                     <span>Global</span>
@@ -173,7 +173,7 @@ const DSpage = () => {
                   <div className="chip chip-sm chip-sliced chip-gray">
                     <span>Finished</span>
                   </div>
-                  <div className="card-title">G-Loot Open Tournament</div>
+                  <div className="card-title">Stryda Open Tournament</div>
                   <div className="flex gap-2 text-sm text-ui-300 items-center">
                     <span className="icon icon-calendar-date-2" />
                     <span>Aug 11 • 01:00 AM</span>
@@ -234,7 +234,7 @@ const DSpage = () => {
                     src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
                     width="auto"
                     height="auto"
-                    alt="G-Loot Showdown"
+                    alt="Stryda Showdown"
                   />
                   <div className="chip chip-secondary chip-xs">
                     <span>Global</span>
@@ -244,7 +244,7 @@ const DSpage = () => {
                   <div className="chip chip-sm chip-sliced chip-gray">
                     <span>Finished</span>
                   </div>
-                  <div className="card-title">G-Loot Open Tournament</div>
+                  <div className="card-title">Stryda Open Tournament</div>
                   <div className="flex gap-2 text-sm text-ui-300 items-center">
                     <span className="icon icon-calendar-date-2" />
                     <span>Aug 11 • 01:00 AM</span>

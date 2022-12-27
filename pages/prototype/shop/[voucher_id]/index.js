@@ -35,7 +35,7 @@ export default function Home() {
               <div className="header surface sm:rounded-lg">
                 <div className="header-content">
                   <div className="header-body">
-                    <h1 className="text-3xl sm:text-4xl">
+                    <h1>
                       {selectedVoucher.name}
                     </h1>
                     <p className="text-ui-300 max-w-[70ch] mt-4">
@@ -53,7 +53,7 @@ export default function Home() {
                 <div>
                   <span className="icon icon-24 icon-c-info" />
                   <div>
-                    <div className="font-bold uppercase">
+                    <div className="uppercase">
                       {selectedVoucher.alert.title}
                     </div>
                     <p className="max-w-[80ch]">
@@ -113,7 +113,7 @@ export default function Home() {
                             <h3 className="uppercase text-3xl leading-none">
                               Gift card {giftcard.amount}
                             </h3>
-                            <div className="mb-3 text-ui-300 font-headings italic uppercase font-bold text-xl">
+                            <div className="mb-3 text-ui-300 uppercase text-xl">
                               {selectedVoucher.name}
                             </div>
                           </div>
@@ -130,13 +130,7 @@ export default function Home() {
                                       <span>Purchase</span>
                                     </div>
                                     <div>
-                                      <img
-                                        className="dropshadow-xs"
-                                        src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                                        width="34"
-                                        height="34"
-                                        alt="coin"
-                                      />
+                                      <span className='icon icon-coin' />
                                       <span>
                                         {numberWithSpaces(giftcard.price)}
                                       </span>
@@ -157,13 +151,7 @@ export default function Home() {
                                         <span>Purchase</span>
                                       </div>
                                       <div>
-                                        <img
-                                          className="dropshadow-xs"
-                                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                                          width="34"
-                                          height="34"
-                                          alt="coin"
-                                        />
+                                        <span className='icon icon-coin' />
                                         <span>
                                           {numberWithSpaces(giftcard.price)}
                                         </span>

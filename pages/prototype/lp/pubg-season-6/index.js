@@ -62,15 +62,15 @@ const PrototypePage = () => {
       >
         <div className="container mx-auto max-w-xl flex flex-col relative pb-8">
           <img
-            src="https://res.cloudinary.com/gloot/image/upload/v1655362920/Marketing/2022_PUBG_season_6/G-Loot_S6_logo.png"
+            src="https://res.cloudinary.com/gloot/image/upload/v1655362920/Marketing/2022_PUBG_season_6/Stryda_S6_logo.png"
             className="block 2xl:hidden mx-auto"
             width={200}
             height={200}
-            alt="PUBG G-Loot Season 6"
+            alt="PUBG Stryda Season 6"
           />
 
           <h1 className="text-center block mx-auto my-8 text-6xl uppercase">
-            <span className="text-main">G-Loot</span> PUBG Season 6
+            <span className="text-main">Stryda</span> PUBG Season 6
           </h1>
 
           <div className="relative z-10 max-w-[100vw] px-2 lg:px-0">
@@ -90,11 +90,11 @@ const PrototypePage = () => {
             alt="Julie"
           />
           <img
-            src="https://res.cloudinary.com/gloot/image/upload/v1655362920/Marketing/2022_PUBG_season_6/G-Loot_S6_logo.png"
+            src="https://res.cloudinary.com/gloot/image/upload/v1655362920/Marketing/2022_PUBG_season_6/Stryda_S6_logo.png"
             className="absolute z-20 pointer-events-none hidden 2xl:block bottom-12 left-[calc(100%-212px)]"
             width={212}
             height={212}
-            alt="PUBG G-Loot Season 6"
+            alt="PUBG Stryda Season 6"
           />
         </div>
         <video
@@ -172,7 +172,7 @@ const PrototypePage = () => {
                 Loading === true ? "opacity-0NO" : ""
               }`}
             >
-              <div className="text-sm text-ui-300 text-center mb-2 lg:mb-3 py-2 font-bold leading-none border-b border-ui-700">
+              <div className="text-sm text-ui-300 text-center mb-2 lg:mb-3 py-2 leading-none border-b border-ui-700">
                 Leaderboard
               </div>
 
@@ -240,7 +240,7 @@ const PrototypePage = () => {
                             <>
                               <div className="item py-1">
                                 <div className="item-body">
-                                  <div className="p-1 item-title font-headings font-bold text-lg italic">
+                                  <div className="p-1 item-title text-lg">
                                     {round.name}
                                   </div>
                                 </div>
@@ -258,7 +258,7 @@ const PrototypePage = () => {
                               <>
                                 <div className="item py-1">
                                   <div className="item-body pl-4">
-                                    <div className="item-title font-headings font-bold">
+                                    <div className="item-title font-bold">
                                       {group.name}
                                     </div>
                                     <div className="text-xs text-ui-300 flex items-center gap-1">
@@ -352,7 +352,7 @@ const PrototypePage = () => {
                   Loading === true ? "block" : "hidden"
                 }`}
               >
-                <div className="loader-gloot loader-xl">
+                <div className="loader-stryda loader-xl">
                   <div>
                     <i />
                     <i />
@@ -368,7 +368,7 @@ const PrototypePage = () => {
 
               <div className={`${Loading === true ? "opacity-0" : ""}`}>
                 <ul ref={screenshotRef} className="space-y-2 lg:space-y-3">
-                  <li className="item text-sm text-ui-300 text-center font-bold leading-none">
+                  <li className="item text-sm text-ui-300 text-center leading-none">
                     <div className="item-image w-16 hidden md:block">#</div>
                     <div className="item-image w-20 text-left">Party</div>
                     <div className="item-body flex-2 lg:flex-3"></div>
@@ -410,27 +410,27 @@ const PrototypePage = () => {
                         </div>
                       </div>
                       <div className="item-body flex-2 lg:flex-3 text-left">
-                        <div className="item-title font-headings font-bold italic text-xl text-ui-100">
+                        <div className="item-title text-xl text-ui-100">
                           {item.name}
                         </div>
                       </div>
                       <div className="item-body">
-                        <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings font-bold">
+                        <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-bold">
                           {item.total_kills}
                         </span>
                       </div>
                       <div className="item-body">
-                        <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings font-bold">
+                        <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-bold">
                           {item.kill_points}
                         </span>
                       </div>
                       <div className="item-body">
-                        <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings font-bold">
+                        <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-bold">
                           {item.placement_points}
                         </span>
                       </div>
                       <div className="item-body">
-                        <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings font-bold">
+                        <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-bold">
                           {item.total_score}
                         </span>
                       </div>
@@ -463,7 +463,7 @@ const PrototypePage = () => {
                   Loading === true ? "flex" : "hidden"
                 }`}
               >
-                <div className="loader-gloot loader-xl">
+                <div className="loader-stryda loader-xl">
                   <div>
                     <i />
                     <i />
@@ -483,7 +483,7 @@ const PrototypePage = () => {
               >
                 <span className="icon icon-game-pubg-symbol text-6xl text-ui-400 mt-4" />
                 <div className="mt-2 mb-6">
-                  <p className="text-lg text-ui-300 font-headings font-bold leading-tight">
+                  <p className="text-lg text-ui-300 leading-tight">
                     This part of the tournament has not started yet. Come back
                     later.
                   </p>

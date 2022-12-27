@@ -59,15 +59,14 @@
     font-bold
     text-ui-100
     text-lg
-    font-headings
-    tracking-wide
+    uppercase
     ;
   }
   
   .toast-text {
     &:not(:last-child) {
       @apply
-      mb-2
+      mb-3
       ;
     }
   }

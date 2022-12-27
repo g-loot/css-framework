@@ -60,7 +60,7 @@ const DSpage = () => {
                     </svg>
                   </div>
                   <div className="gauge-content">
-                    <div className='text-2xl font-headings font-bold'>
+                    <div className='text-2xl font-bold'>
                       {random1}%
                     </div>
                     <div className='text-xs text-ui-300 uppercase'>
@@ -76,7 +76,7 @@ const DSpage = () => {
                     </svg>
                   </div>
                   <div className="gauge-content">
-                    <div className='text-2xl font-headings font-bold'>
+                    <div className='text-2xl font-bold'>
                       {random2}%
                     </div>
                     <div className='text-xs text-ui-300 uppercase'>
@@ -120,7 +120,7 @@ const DSpage = () => {
                     </svg>
                   </div>
                   <div className="gauge-content">
-                    <div className='text-xl font-headings font-bold'>
+                    <div className='text-xl font-bold'>
                       {random1}%
                     </div>
                   </div>
@@ -133,7 +133,7 @@ const DSpage = () => {
                     </svg>
                   </div>
                   <div className="gauge-content">
-                    <div className='text-xl font-headings font-bold'>
+                    <div className='text-xl font-bold'>
                       {random2}%
                     </div>
                   </div>

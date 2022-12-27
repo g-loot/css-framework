@@ -65,7 +65,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="header-body">
-                  <h1 className="text-4xl mb-2 leading-none">
+                  <h1 className="h3 mb-2">
                     {selectedGame.name} tournaments
                   </h1>
                   <p className="text-ui-300 max-w-[45ch] mb-4">

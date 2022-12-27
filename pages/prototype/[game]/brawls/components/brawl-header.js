@@ -48,11 +48,11 @@ export default function BrawlHeader() {
                   ""
                 )} icon-game-${game.replace(/#|_/g, "")}-symbol`}
               />
-              <h1 className="text-2xl leading-none">
+              <h1 className="h4">
                 {prototype.getBrawlByID(game, brawl_id)?.name}
               </h1>
             </div>
-            <div className="flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap font-headings font-bold italic">
+            <div className="flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
               <span className="text-ui-300 uppercase">Time Left</span>
               <span className="icon icon-clock text-interaction-300" />
               <Countdown

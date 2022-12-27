@@ -100,7 +100,7 @@ const DSpage = () => {
                               height="auto"
                               alt=""
                             />
-                            <span className="font-headings font-bold text-2xl italic">
+                            <span className="text-2xl">
                               10 000
                             </span>
                           </div>
@@ -112,7 +112,7 @@ const DSpage = () => {
                               height="auto"
                               alt=""
                             />
-                            <span className="font-headings font-bold text-2xl italic">
+                            <span className="text-2xl">
                               5
                             </span>
                           </div>
@@ -189,7 +189,7 @@ const DSpage = () => {
                     </div>
                     <div>
                       <div className="flex gap-1.5 items-baseline">
-                        <div className="font-headings font-bold text-3xl italic text-main">
+                        <div className="text-3xl text-main">
                           2/3
                         </div>
                         <div className="text-ui-300 text-sm">
@@ -212,7 +212,7 @@ const DSpage = () => {
                           alt=""
                           height="300px"
                           width="200px"
-                          src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/G-Loot_Valorant_Clash_Logo.svg"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/Stryda_Valorant_Clash_Logo.svg"
                         />
                       </Tooltip>
                     </div>
@@ -330,7 +330,7 @@ const DSpage = () => {
                   <div className="card-meta">
                     <div>
                       <div className="flex gap-1.5 items-baseline">
-                        <div className="font-headings font-bold text-3xl italic text-main">
+                        <div className="text-3xl text-main">
                           2/3
                         </div>
                         <div className="text-ui-300 text-sm">
@@ -405,7 +405,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="text-3xl mb-2 uppercase">
+                      <h2 className="h4 mb-2">
                         Competitive Brawl
                       </h2>
                       <div className="flex gap-4 items-center">
@@ -417,7 +417,7 @@ const DSpage = () => {
                             height="auto"
                             alt=""
                           />
-                          <span className="font-bold text-gold-500 text-sm">
+                          <span className="text-gold-500 text-sm">
                             5k - 30k
                           </span>
                         </div>
@@ -524,7 +524,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="text-3xl mb-2 uppercase">
+                      <h2 className="h4 mb-2">
                         Competitive Brawl
                       </h2>
                       <div className="flex gap-4 items-center">
@@ -536,7 +536,7 @@ const DSpage = () => {
                             height="auto"
                             alt=""
                           />
-                          <span className="font-bold text-gold-500 text-sm">
+                          <span className="text-gold-500 text-sm">
                             5k - 30k
                           </span>
                         </div>
@@ -651,7 +651,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="text-3xl mb-2 uppercase">
+                      <h2 className="h4 mb-2">
                         Competitive Brawl
                       </h2>
                       <div className="flex gap-4 items-center">
@@ -663,7 +663,7 @@ const DSpage = () => {
                             height="auto"
                             alt=""
                           />
-                          <span className="font-bold text-gold-500 text-sm">
+                          <span className="text-gold-500 text-sm">
                             5k - 30k
                           </span>
                         </div>
@@ -734,7 +734,7 @@ const DSpage = () => {
               <div className="card-brawl card-secondary">
                 <div className="card-overlay">
                   <div>
-                    <div className="font-headings text-2xl font-bold italic text-ui-100">
+                    <div className="text-2xl text-ui-100">
                       You won a prize!
                     </div>
                     <button
@@ -763,7 +763,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="text-3xl mb-2 uppercase">
+                      <h2 className="h4 mb-2">
                         Competitive Brawl
                       </h2>
                       <div className="flex gap-4 items-center">
@@ -778,7 +778,7 @@ const DSpage = () => {
                             height="auto"
                             alt=""
                           />
-                          <span className="font-bold text-gold-500 text-sm">
+                          <span className="text-gold-500 text-sm">
                             10 000
                           </span>
                         </div>
@@ -878,7 +878,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="text-3xl mb-2 uppercase">
+                      <h2 className="h4 mb-2">
                         Competitive Brawl
                       </h2>
                       <div className="flex gap-4 items-center">
@@ -890,7 +890,7 @@ const DSpage = () => {
                             height="auto"
                             alt=""
                           />
-                          <span className="font-bold text-gold-500 text-sm">
+                          <span className="text-gold-500 text-sm">
                             5k - 30k
                           </span>
                         </div>
@@ -1002,7 +1002,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="text-3xl mb-2 uppercase">
+                      <h2 className="h4 mb-2">
                         Competitive Brawl
                       </h2>
                       <div className="flex gap-4 items-center">
@@ -1014,7 +1014,7 @@ const DSpage = () => {
                             height="auto"
                             alt=""
                           />
-                          <span className="font-bold text-gold-500 text-sm">
+                          <span className="text-gold-500 text-sm">
                             5k - 30k
                           </span>
                         </div>

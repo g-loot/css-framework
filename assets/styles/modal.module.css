@@ -76,7 +76,7 @@
   &:not([class*='surface']) {
     @apply
     bg-ui-800
-    border
+    border-t
     border-ui-700
     ;
   }
@@ -179,8 +179,7 @@
 
       .modal-title {
         @apply
-        font-headings
-        italic
+        leading-none
         text-3xl
         lg:text-4xl
         my-2

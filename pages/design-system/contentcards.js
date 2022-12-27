@@ -190,7 +190,7 @@ const DSpage = () => {
                 <div className="card-body text-ui-700">
                   <h3 className="card-title text-2xl text-ui-700">Premium</h3>
                   <p>
-                    Join G-Loot Premium to unlock the full gaming experience.
+                    Join Stryda Premium to unlock the full gaming experience.
                   </p>
                   <div className="card-actions justify-end">
                     <button type="button" className="button button-tertiary">

@@ -39,7 +39,7 @@
         @apply
         absolute
         z-0
-        left-[calc(50%+(2.25rem/3))]
+        left-[calc(50%+(2.25rem/4))]
         rounded-l-none
         pl-1
         ;
@@ -102,10 +102,8 @@
             text-sm
             font-bold
             text-ui-100/0
-            bg-gradient-to-b
-            from-interaction-300
-            to-interaction-700
-            shadow-[0_0_0_3px_rgb(var(--color-ui-800)),_0_0_0_5px_rgb(var(--color-interaction-500))]
+            bg-main
+            shadow-[0_0_0_3px_rgb(var(--color-ui-800)),_0_0_0_5px_rgb(var(--color-main))]
             transition-all
             ease-in-out
             duration-1000
@@ -156,7 +154,7 @@
         left-[50%]
         w-[calc(100%+1rem)]
         top-[calc(50%-1.5px)]
-        bg-interaction-500
+        bg-main
         -translate-x-1
         transition-colors
         duration-200
@@ -247,7 +245,7 @@
       > .ladder-info {
         > div {
           @apply
-          shadow-[0_0_0_0_rgb(var(--color-ui-800)),_0_0_0_2px_rgb(var(--color-interaction-500))]
+          shadow-[0_0_0_0_rgb(var(--color-ui-800)),_0_0_0_2px_rgb(var(--color-main))]
           ;
           > span:nth-child(1) {
             @apply

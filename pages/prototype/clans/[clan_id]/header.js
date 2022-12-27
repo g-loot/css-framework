@@ -50,7 +50,7 @@ export default function ClanHeader() {
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                     <div className="flex items-baseline gap-1">
-                      <h1 className={`text-3xl sm:text-4xl`}>
+                      <h1>
                         &#91;
                         {selectedClan.tag}
                         &#93; {selectedClan.nickname}
@@ -197,7 +197,7 @@ export default function ClanHeader() {
                               <Link href="#">
                                 <a
                                   type="button"
-                                  className="button button-sm button-primary flex-1"
+                                  className="button button-sm button-success flex-1"
                                 >
                                   <span>Accept</span>
                                 </a>

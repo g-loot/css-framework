@@ -20,7 +20,7 @@ const DSpage = () => {
   return (
     <>
       <h1 className="mb-6">
-        Colors <small className="text-ui-300 font-normal">introduction</small>
+        Colors <small className="text-ui-300">introduction</small>
       </h1>
       <div className="format mb-8" id="using-colors">
         <h2 id="using-colors">Using colors</h2>

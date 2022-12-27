@@ -64,7 +64,7 @@ export default function Notification(props) {
       </div>
       <div className="flex flex-col md:flex-row items-stretch px-2 pb-2 gap-4">
         <div className="flex-1">
-          <h6 className="font-body uppercase text-sm font-bold not-italic leading-none mt-1 mb-2">
+          <h6 className="font-body uppercase text-sm not-italic leading-none mt-1 mb-2">
             {notification.title}
           </h6>
           <p

@@ -9,7 +9,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 h1,
 h2,
 h3,
@@ -23,11 +22,41 @@ h6,
 .h5,
 .h6 {
   @apply
-  font-headings
-  tracking-wide
   leading-none
+  ;
+}
+
+h1,
+.h1 {
+  @apply
+  font-headings
   text-ui-100
   font-bold
+  uppercase
+  ;
+  > small {
+    @apply
+    text-[50%]
+    font-body
+    font-normal
+    ;
+  } 
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @apply
+  font-body
+  uppercase
+  font-normal
   ;
 }
 
@@ -35,58 +64,48 @@ h1,
 .h1 {
   @apply
   text-5xl
-  md:text-6xl
-  italic
+  md:text-7xl
   ;
 }
 
 h2,
 .h2 {
   @apply
-  text-4xl
-  md:text-5xl
-  italic
+  text-3xl
+  md:text-4xl
+  tracking-wide
+  text-ui-100
   ;
 }
 
 h3,
 .h3 {
   @apply
-  text-3xl
-  md:text-4xl
-  italic
+  text-2xl
+  md:text-3xl
   ;
 }
 
 h4,
 .h4 {
   @apply
-  text-2xl
-  md:text-3xl
-  italic
+  text-xl
+  md:text-2xl
   ;
 }
 
 h5,
 .h5 {
   @apply
-  text-xl
-  md:text-2xl
-  italic
+  text-lg
+  md:text-xl
   ;
 }
 
 h6,
 .h6 {
   @apply
-  text-xl
-  italic
-  ;
-}
-
-.font-headings {
-  @apply
-  tracking-wide
+  text-lg
   ;
 }
 
@@ -165,9 +184,7 @@ ul, ol {
         w-4
         h-4
         rounded-full
-        bg-gradient-to-b
-        from-interaction-300
-        to-interaction-700
+        bg-main
         shadow-[0_0_0_1px_rgb(var(--color-interaction-300)),_inset_0_0_0_4px_rgb(var(--color-ui-800))]
         -left-8
         top-1
@@ -212,9 +229,7 @@ ul, ol {
       > li {
         &::before {
           @apply
-          bg-gradient-to-b
-          from-premium-300
-          to-premium-700
+          bg-premium-500
           shadow-[0_0_0_1px_rgb(var(--color-premium-300)),_inset_0_0_0_4px_rgb(var(--color-ui-800))]
           ;
         }
@@ -224,9 +239,7 @@ ul, ol {
       > li {
         &::before {
           @apply
-          bg-gradient-to-b
-          from-blue-300
-          to-blue-700
+          bg-blue-500
           shadow-[0_0_0_1px_rgb(var(--color-blue-300)),_inset_0_0_0_4px_rgb(var(--color-ui-800))]
           ;
         }
@@ -236,9 +249,7 @@ ul, ol {
       > li {
         &::before {
           @apply
-          bg-gradient-to-b
-          from-purple-300
-          to-purple-700
+          bg-purple-500
           shadow-[0_0_0_1px_rgb(var(--color-purple-300)),_inset_0_0_0_4px_rgb(var(--color-ui-800))]
           ;
         }
@@ -337,8 +348,6 @@ ul, ol {
         text-2xl
         text-ui-300
         font-headings
-        italic
-        tracking-wider
         leading-tight
         ;
       }

@@ -59,7 +59,7 @@ const DSpage = () => {
                     <span className='icon icon-mission-headshot'/>
                   </div>
                   <div>
-                    <div className="text-3xl font-headings font-bold">25</div>
+                    <div className="text-3xl font-bold">25</div>
                     <div className="leading-none text-sm text-ui-300 uppercase">headshots</div>
                   </div>
                 </div>
@@ -68,7 +68,7 @@ const DSpage = () => {
                     <span className='icon icon-mission-kill'/>
                   </div>
                   <div>
-                    <div className="text-3xl font-headings font-bold">42</div>
+                    <div className="text-3xl font-bold">42</div>
                     <div className="leading-none text-sm text-ui-300 uppercase">kills</div>
                   </div>
                 </div>
@@ -103,7 +103,7 @@ const DSpage = () => {
                     <span className='icon icon-mission-headshot'/>
                   </div>
                   <div>
-                    <div className="text-2xl font-headings font-bold">25</div>
+                    <div className="text-2xl font-bold">25</div>
                     <div className="leading-none text-xs text-ui-300 uppercase">headshots</div>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ const DSpage = () => {
                     <span className='icon icon-mission-kill'/>
                   </div>
                   <div>
-                    <div className="text-2xl font-headings font-bold">42</div>
+                    <div className="text-2xl font-bold">42</div>
                     <div className="leading-none text-xs text-ui-300 uppercase">kills</div>
                   </div>
                 </div>

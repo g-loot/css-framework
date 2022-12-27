@@ -90,7 +90,7 @@ export default function TabBrawlsHistory() {
                                   key={rewardIndex}
                                   reward={reward}
                                   gap="gap-1"
-                                  imageClassNames="h-4"
+                                  iconClassNames="text-base"
                                   textClassNames="text-ui-300 text-sm"
                                 />
                               ))}

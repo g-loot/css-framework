@@ -74,7 +74,7 @@ export default function HomeBrawlMissions(props) {
           <p>
             Get{" "}
             <Link href="/prototype/premium">
-              <a className="font-bold text-premium-500 link">Premium</a>
+              <a className="text-premium-500 link">Premium</a>
             </Link>{" "}
             and earn +50% of XP on all missions.
           </p>
@@ -88,7 +88,7 @@ export default function HomeBrawlMissions(props) {
               <div>
                 <span className="icon icon-24 icon-c-info" />
                 <div>
-                  <div className="font-bold uppercase">
+                  <div className="uppercase">
                     New &amp; improved stats tracking:
                   </div>
                   <p className="max-w-[80ch] text-ui-300">

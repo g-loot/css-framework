@@ -27,10 +27,10 @@ export default function TopbarFramework(props) {
                 <img
                   width="123"
                   height="64"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
-                  alt="G-Loot logo"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1671262915/Stryda/logos/stryda-logo-main.svg"
+                  alt="Stryda logo"
                 />
-                <span className="font-headings font-bold italic text-ui-300 text-xl leading-none pb-1">Design System</span>
+                <span className="text-ui-300 leading-none pb-1.5">Design System</span>
               </a>
               
             </Link>

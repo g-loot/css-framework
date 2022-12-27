@@ -142,7 +142,7 @@ export default function TabTournamentsOverview() {
               <div className="flex flex-row lg:flex-col items-center justify-center gap-4">
                 <hr className="separator block lg:hidden flex-1" />
                 <hr className="separator separator-vertical hidden lg:block flex-1" />
-                <span className="font-bold uppercase">or</span>
+                <span className="uppercase">or</span>
                 <hr className="separator block lg:hidden flex-1" />
                 <hr className="separator separator-vertical hidden lg:block flex-1" />
               </div>
@@ -188,7 +188,7 @@ export default function TabTournamentsOverview() {
                       <a href="#">
                         <i>1</i>
                         <div>
-                          <div className="font-headings text-ui-300 font-bold mb-1">
+                          <div className="text-ui-300 mb-1">
                             Scheduled
                           </div>
                           <div className="text-sm text-ui-400">
@@ -208,7 +208,7 @@ export default function TabTournamentsOverview() {
                       <a href="#">
                         <i>2</i>
                         <div>
-                          <div className="font-headings text-ui-100 font-bold mb-1">
+                          <div className="text-ui-100 mb-1">
                             Registration open
                           </div>
                           <div className="text-sm text-ui-300">
@@ -223,7 +223,7 @@ export default function TabTournamentsOverview() {
                       <a href="#">
                         <i>3</i>
                         <div>
-                          <div className="font-headings text-ui-300 font-bold mb-1">
+                          <div className="text-ui-300 mb-1">
                             Registration closed
                           </div>
                           <div className="text-sm text-ui-400">
@@ -243,12 +243,12 @@ export default function TabTournamentsOverview() {
                       <a href="#">
                         <i>4</i>
                         <div>
-                          <div className="font-headings text-ui-300 font-bold mb-1">
+                          <div className="text-ui-300 mb-1">
                             Tournament starts
                           </div>
                           <div className="text-sm text-ui-400">
                             Open the game and join the server with match info
-                            provided from G-Loot
+                            provided from Stryda
                           </div>
                         </div>
                         <span />
@@ -258,7 +258,7 @@ export default function TabTournamentsOverview() {
                       <a href="#">
                         <i>5</i>
                         <div>
-                          <div className="font-headings text-ui-300 font-bold mb-1">
+                          <div className="text-ui-300 mb-1">
                             Tournament finished
                           </div>
                           <div className="text-sm text-ui-400">
@@ -311,7 +311,7 @@ export default function TabTournamentsOverview() {
                                   <Reward
                                     key={rewardIndex}
                                     reward={reward}
-                                    imageClassNames="h-8"
+                                    iconClassNames=""
                                     textClassNames=""
                                   />
                                 </div>
@@ -409,7 +409,7 @@ export default function TabTournamentsOverview() {
                       height="auto"
                       alt=""
                     />
-                    <span className="font-headings font-bold text-2xl text-gold-500">
+                    <span className="text-2xl text-gold-500">
                       30000
                     </span>
                   </div>
@@ -425,7 +425,7 @@ export default function TabTournamentsOverview() {
                           "--delay": "calc(" + rewardIndex + " * 0.05s)",
                         }}
                       >
-                        <span className="font-headings text-lg">
+                        <span className="text-lg">
                           {reward.level}
                         </span>
                         <div className="flex items-center justify-center gap-4">
@@ -435,8 +435,8 @@ export default function TabTournamentsOverview() {
                                 key={rewardIndex}
                                 reward={reward}
                                 gap="gap-2"
-                                imageClassNames="h-6"
-                                textClassNames="font-headings font-bold"
+                                iconClassNames=""
+                                textClassNames=""
                               />
                             </>
                           ))}
@@ -464,7 +464,7 @@ export default function TabTournamentsOverview() {
                     <h3 className="h6">Join the community</h3>
                     <p className="text-ui-300 mt-2 mb-3">
                       Join our Discord community and add your Discord Username
-                      in your G-Loot profile to get important updates about your
+                      in your Stryda profile to get important updates about your
                       tournaments and parties!
                     </p>
                     <a

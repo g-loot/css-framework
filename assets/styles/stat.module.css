@@ -97,7 +97,7 @@
 }
 .stat-value {
   @apply
-  font-headings
+  font-bold
   text-5xl
   text-ui-100
   leading-none

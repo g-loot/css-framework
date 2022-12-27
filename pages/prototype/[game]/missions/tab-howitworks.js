@@ -9,7 +9,7 @@ const MissionsHowitworksTabs = [
       "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-cpu.webp",
     paragraphs: [
       {
-        text: "To complete Missions and earn rewards, you need to connect your Steam account to G-Loot. Go to your profile to connect Steam. Make sure you have the G-Loot Tracker installed and running on your PC. The application is lightweight and should not affect your gameplay. The Tracker is partly an anti-cheat to help us keep G-Loot free from users abusing the platform. Download G-Loot Tracker.",
+        text: "To complete Missions and earn rewards, you need to connect your Steam account to Stryda. Go to your profile to connect Steam. Make sure you have the Stryda Tracker installed and running on your PC. The application is lightweight and should not affect your gameplay. The Tracker is partly an anti-cheat to help us keep Stryda free from users abusing the platform. Download Stryda Tracker.",
       },
     ],
   },
@@ -19,7 +19,7 @@ const MissionsHowitworksTabs = [
       "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
     paragraphs: [
       {
-        text: "When you launch your game, G-Loot Tracker will launch the Overlay. The Overlay is where you can see your Mission progress and the best scores from your Brawl rounds.",
+        text: "When you launch your game, Stryda Tracker will launch the Overlay. The Overlay is where you can see your Mission progress and the best scores from your Brawl rounds.",
       },
     ],
   },
@@ -29,7 +29,7 @@ const MissionsHowitworksTabs = [
       "https://res.cloudinary.com/gloot/image/upload/v1660131014/Marketing/2022_prototype/missions-howitworks-missions.webp",
     paragraphs: [
       {
-        text: "To start competing in Missions, you need to connect your Steam account and run the G-Loot Tracker while you play. When your match has finished within the game, we will fetch the stats from that game and update your Mission progress. Sometimes it can take a while to get the stats from the latest match. Please, contact support if you are having trouble getting the stats for the past x hours. You can complete a set number of Missions each day, and new ones appear every 24 hours.",
+        text: "To start competing in Missions, you need to connect your Steam account and run the Stryda Tracker while you play. When your match has finished within the game, we will fetch the stats from that game and update your Mission progress. Sometimes it can take a while to get the stats from the latest match. Please, contact support if you are having trouble getting the stats for the past x hours. You can complete a set number of Missions each day, and new ones appear every 24 hours.",
       },
     ],
   },
@@ -52,7 +52,7 @@ const MissionsHowitworksTabs = [
         text: "You will earn XP from each Daily Mission The XP you earn will be added to the Mission Rewards.",
       },
       {
-        text: "For each milestone you reach in the Mission rewards, you will unlock a reward. XP is accumulated from all games you play on G-Loot. That means you can get XP from any game that is supported by G-Loot. Your XP will reset after a week and can not be transferred to the next week. XP is accumulated from all games you play on G-Loot. That means you can get XP from any game that is supported by G-Loot.",
+        text: "For each milestone you reach in the Mission rewards, you will unlock a reward. XP is accumulated from all games you play on Stryda. That means you can get XP from any game that is supported by Stryda. Your XP will reset after a week and can not be transferred to the next week. XP is accumulated from all games you play on Stryda. That means you can get XP from any game that is supported by Stryda.",
       },
       {
         text: "Your XP will reset after a week and can not be transfered to the next week.",
@@ -113,12 +113,12 @@ export default function TabMissionsHowItWorks() {
               alt=""
             />
             <div className="px-4 sm:px-0">
-              <h2 className="text-2xl leading-none mb-4">What are Missions?</h2>
+              <h2 className="h4 mb-4">What are Missions?</h2>
               <p className="text-ui-300 leading-relaxed">
                 Daily missions are daily objectives that resets every 24 hours.
                 By completing Missions you will earn XP. The XP from all your
                 Missions goes into the Weekly Mission Rewards. You can complete
-                Daily Missions across the different games on G-Loot.
+                Daily Missions across the different games on Stryda.
               </p>
             </div>
           </div>
@@ -131,7 +131,7 @@ export default function TabMissionsHowItWorks() {
               alt=""
             />
             <div className="px-4 sm:px-0">
-              <h2 className="text-2xl leading-none mb-4">
+              <h2 className="h4 mb-4">
                 What are Mission Rewards?
               </h2>
               <p className="text-ui-300 leading-relaxed">
@@ -149,7 +149,7 @@ export default function TabMissionsHowItWorks() {
         style={{ "--delay": "calc(2 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
-          <h2 className="text-2xl leading-none mb-4">
+          <h2 className="h4 mb-4">
             How Missions and Missions Rewards work
           </h2>
         </div>
@@ -159,7 +159,7 @@ export default function TabMissionsHowItWorks() {
               <a href="#">
                 <i>1</i>
                 <div className="text-sm text-ui-300">
-                  Connect your Steam account to G-Loot.
+                  Connect your Steam account to Stryda.
                 </div>
                 <span />
               </a>
@@ -168,7 +168,7 @@ export default function TabMissionsHowItWorks() {
               <a href="#">
                 <i>2</i>
                 <div className="text-sm text-ui-300">
-                  Have the G-Loot tracker installed and running.
+                  Have the Stryda tracker installed and running.
                 </div>
                 <span />
               </a>
@@ -224,7 +224,7 @@ export default function TabMissionsHowItWorks() {
         style={{ "--delay": "calc(3 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
-          <h2 className="text-2xl leading-none mb-6">
+          <h2 className="h4 mb-6">
             Step by step - How to complete Missions and earn Rewards
           </h2>
         </div>
@@ -237,7 +237,7 @@ export default function TabMissionsHowItWorks() {
                   <>
                     <div className="item">
                       <div className="item-body">
-                        <div className="p-2 item-title font-headings font-bold text-lg italic">
+                        <div className="p-2 item-title text-lg">
                           {tab.title}
                         </div>
                       </div>
@@ -272,7 +272,7 @@ export default function TabMissionsHowItWorks() {
                       {tab.hasButtonReward && (
                         <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                           <a className="button button-premium is-shining">
-                            <span>Join G-Loot Premium</span>
+                            <span>Join Stryda Premium</span>
                           </a>
                         </Link>
                       )}

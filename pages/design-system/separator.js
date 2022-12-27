@@ -52,7 +52,7 @@ const DSpage = () => {
           </div>
           <div className="flex items-center justify-center gap-4 my-8">
             <hr className="separator flex-1" />
-            <span className="font-bold uppercase">or</span>
+            <span className="uppercase">or</span>
             <hr className="separator flex-1" />
           </div>
           <div className="text-ui-400 text-center text-sm leading-tight mt-24">
@@ -60,7 +60,7 @@ const DSpage = () => {
           </div>
           <div className="flex flex-col items-center justify-center gap-4 my-8 h-56">
             <hr className="separator separator-vertical flex-1" />
-            <span className="font-bold uppercase">or</span>
+            <span className="uppercase">or</span>
             <hr className="separator separator-vertical flex-1" />
           </div>
         </div>

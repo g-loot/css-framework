@@ -24,7 +24,7 @@ const DSpage = () => {
                     Earn extra XP to reach your Rewards milestones faster.
                   </li>
                   <li>
-                    Enjoy the G-Loot experience without ads.
+                    Enjoy the Stryda experience without ads.
                   </li>
                 </ul>
               </div>
@@ -61,7 +61,7 @@ const DSpage = () => {
                     Earn extra XP to reach your Rewards milestones faster.
                   </li>
                   <li>
-                    Enjoy the G-Loot experience without ads.
+                    Enjoy the Stryda experience without ads.
                   </li>
                 </ul>
               </div>
@@ -89,7 +89,7 @@ const DSpage = () => {
                     Earn extra XP to reach your Rewards milestones faster.
                   </li>
                   <li>
-                    Enjoy the G-Loot experience without ads.
+                    Enjoy the Stryda experience without ads.
                   </li>
                 </ul>
               </div>
@@ -117,7 +117,7 @@ const DSpage = () => {
                     Earn extra XP to reach your Rewards milestones faster.
                   </li>
                   <li>
-                    Enjoy the G-Loot experience without ads.
+                    Enjoy the Stryda experience without ads.
                   </li>
                 </ul>
               </div>

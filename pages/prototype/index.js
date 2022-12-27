@@ -37,16 +37,12 @@ const Index = () => {
       <DSHead title="Welcome" />
       <TopbarFramework />
       <div className="relative">
-        <div className="fixed z-0 inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute z-0 rounded-full bg-gradient-to-r from-main via-blue-700 to-main/0 w-96 h-60 scale-y-75 blur-3xl transform-gpu -rotate-45 -bottom-40 -left-24 "></div>
-          <div className="absolute z-0 rounded-full bg-gradient-to-r from-main via-blue-700 to-main/0 w-96 h-96 scale-y-75 blur-3xl transform-gpu -top-40 -right-48 rotate-180 "></div>
-        </div>
         <div className="py-16">
           <div className="container max-w-md">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-2 mb-2 px-4 md:px-0">
-              <h1 className="text-4xl">
+              <h1 className="">
                 Prototype{" "}
-                <small className="font-normal text-ui-300">
+                <small className="font-normal text-ui-300 text-base">
                   {pageCount} screens
                 </small>
               </h1>
@@ -97,7 +93,7 @@ const Index = () => {
                   >
                     <div className={`item ${filter ? "hidden" : ""}`}>
                       <div className="item-body py-0.5 px-4">
-                        <div className="item-title font-headings font-bold text-xl italic text-ui-100">
+                        <div className="item-title text-xl text-ui-100">
                           {section.title}
                         </div>
                       </div>

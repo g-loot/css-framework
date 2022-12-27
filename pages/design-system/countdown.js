@@ -131,7 +131,7 @@ const DSpage = () => {
                   className="text-5xl font-headings"
                   targetDate={dateTimeAfterThreeDays}
                 />
-                <small className="text-ui-300 font-headings italic font-bold text-xl">
+                <small className="text-ui-300 text-xl">
                   hours
                 </small>
                 <Countdown
@@ -142,7 +142,7 @@ const DSpage = () => {
                   className="text-5xl font-headings"
                   targetDate={dateTimeAfterThreeDays}
                 />
-                <small className="text-ui-300 font-headings italic font-bold text-xl">
+                <small className="text-ui-300 text-xl">
                   minutes
                 </small>
 
@@ -154,7 +154,7 @@ const DSpage = () => {
                   className="text-5xl font-headings"
                   targetDate={dateTimeAfterThreeDays}
                 />
-                <small className="text-ui-300 font-headings italic font-bold text-xl">
+                <small className="text-ui-300 text-xl">
                   seconds
                 </small>
               </div>

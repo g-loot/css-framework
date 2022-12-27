@@ -191,7 +191,7 @@ export default async function handler(req, res) {
           id: '787864400',
           maintenance: false,
           metaDescription:
-            'G-Loot is an esports platform. Play APEX Legend for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.',
+            'Stryda is an esports platform. Play APEX Legend for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.',
           name: 'Apex Legends',
           overwolfGameId: '21566',
           shortName: 'Apex Legends',
@@ -257,7 +257,7 @@ export default async function handler(req, res) {
           id: '1892449706',
           maintenance: false,
           metaDescription:
-            'G-Loot is an esports platform. Play Valorant for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.',
+            'Stryda is an esports platform. Play Valorant for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.',
           name: 'Valorant',
           overwolfGameId: '21640',
           shortName: 'Valorant',
@@ -291,7 +291,7 @@ export default async function handler(req, res) {
           id: '2619660763',
           maintenance: false,
           metaDescription:
-            'G-Loot is an esports platform. Play Counter-Strike: Global Offensive for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.',
+            'Stryda is an esports platform. Play Counter-Strike: Global Offensive for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.',
           name: 'Counter-Strike: Global Offensive',
           overwolfGameId: '7764',
           shortName: 'CS:GO',
@@ -325,7 +325,7 @@ export default async function handler(req, res) {
           id: '1440666116',
           maintenance: false,
           metaDescription:
-            'G-Loot is an esports platform. Play DOTA 2 for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.',
+            'Stryda is an esports platform. Play DOTA 2 for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.',
           name: 'DOTA2',
           overwolfGameId: '7314',
           shortName: 'DOTA2',
@@ -360,7 +360,7 @@ export default async function handler(req, res) {
           id: '3434118582',
           maintenance: false,
           metaDescription:
-            'G-Loot is an esports platform. Play League of Legends for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.',
+            'Stryda is an esports platform. Play League of Legends for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.',
           name: 'League of Legends',
           overwolfGameId: '5426',
           shortName: 'LoL',
@@ -395,7 +395,7 @@ export default async function handler(req, res) {
           id: '1719436358',
           maintenance: false,
           metaDescription:
-            'G-Loot is an esports platform. Play Rocket League for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.',
+            'Stryda is an esports platform. Play Rocket League for fun and glory. No queue time. No subscription. Play free or compete for prize pool. Start the fun now.',
           name: 'Rocket League',
           overwolfGameId: '10798',
           shortName: 'Rocket League',

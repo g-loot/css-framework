@@ -167,8 +167,8 @@ ul.item-actions-hidden > .item,
     &:not([class*=surface]){
       @apply
       bg-ui-800
-      border
-      border-ui-700
+      border-t
+      border-t-ui-700
       ;
     }
 

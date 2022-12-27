@@ -75,9 +75,9 @@ const DSpage = () => {
                       />
                     </div>
                     <div className="header-body">
-                      <h2 className="text-4xl mb-2 leading-none">Missions</h2>
+                      <h2 className="h3 mb-2">Missions</h2>
                       <p className="text-ui-300 max-w-[70ch] mb-4">
-                        Play G-Loot Missions in-game, gather XP, and earn
+                        Play Stryda Missions in-game, gather XP, and earn
                         Mission Rewards. You can complete the Daily Missions in
                         any game.
                       </p>
@@ -92,11 +92,11 @@ const DSpage = () => {
                   <div className="header-meta">
                     <div className="w-full flex flex-col justify-center items-center gap-2 xl:pl-0 py-4">
                       <div className="flex items-end gap-4 leading-tight">
-                        <div className="text-xl xl:text-4xl font-headings font-bold italic text-main">
+                        <div className="text-xl xl:text-4xl text-main">
                           2/3
                         </div>
                         <div className="xl:mb-2">
-                          <div className="text-xl font-headings font-bold italic text-ui-200 uppercase">
+                          <div className="text-xl text-ui-200 uppercase">
                             Daily missions completed
                           </div>
                         </div>
@@ -188,7 +188,7 @@ const DSpage = () => {
                       />
                     </div>
                     <div className="header-body">
-                      <h2 className="text-4xl mb-2 leading-none">Brawls</h2>
+                      <h2 className="h3 mb-2">Brawls</h2>
                       <p className="text-ui-300 max-w-[45ch] mb-4">
                         Use your stats to climb the Brawl leaderboard and win
                         prizes. No waiting, no dedicated servers. Play on your
@@ -197,7 +197,7 @@ const DSpage = () => {
                       <div className="flex flex-col md:flex-row gap-2">
                         <button
                           type="button"
-                          className="button button-sm button-primary button-play"
+                          className="button button-primary button-play"
                         >
                           <span className="icon icon-circle-caret-right" />
                           <span>Learn how to Brawl</span>
@@ -205,7 +205,7 @@ const DSpage = () => {
 
                         <button
                           type="button"
-                          className="button button-sm button-secondary"
+                          className="button button-secondary"
                         >
                           <span className="icon icon-steam" />
                           <span>Steam required</span>
@@ -215,12 +215,12 @@ const DSpage = () => {
                   </div>
                   <div className="header-meta justify-start pr-0">
                     <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                      <span className="font-headings font-bold italic text-ui-100 uppercase">
+                      <span className="text-ui-100 uppercase">
                         Time Left:
                       </span>
                       <span className="icon icon-clock text-main" />
                       <Countdown
-                        additionalClassNames="flex items-baseline gap-0.5 font-headings font-bold italic uppercase text-main"
+                        additionalClassNames="flex items-baseline gap-0.5 uppercase text-main"
                         hasDays={true}
                         hasLabels={true}
                         hasSeconds={false}
@@ -288,7 +288,7 @@ const DSpage = () => {
                       />
                     </div>
                     <div className="header-body">
-                      <h2 className="text-4xl mb-2 leading-none">Showdown</h2>
+                      <h2 className="h3 mb-2">Showdown</h2>
                       <p className="text-ui-300 max-w-[45ch] mb-4">
                         Compete in esports tournaments in your favorite games!
                         Invite your friends and compete for bragging rights,
@@ -301,12 +301,12 @@ const DSpage = () => {
                   </div>
                   <div className="header-meta justify-start pr-0">
                     <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                      <span className="font-headings font-bold italic text-ui-100 uppercase">
+                      <span className="text-ui-100 uppercase">
                         Time Left:
                       </span>
                       <span className="icon icon-clock text-main" />
                       <Countdown
-                        additionalClassNames="flex items-baseline gap-0.5 font-headings font-bold italic uppercase text-main"
+                        additionalClassNames="flex items-baseline gap-0.5 uppercase text-main"
                         hasDays={true}
                         hasLabels={true}
                         hasSeconds={false}
@@ -475,7 +475,7 @@ const DSpage = () => {
                     <div className="flex justify-center gap-4 py-4">
                       <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
                         <div>
-                          <div className="text-4xl font-headings mb-0.5">
+                          <div className="text-4xl mb-0.5">
                             10000
                           </div>
                           <div className="text-xs text-ui-300 uppercase">
@@ -487,7 +487,7 @@ const DSpage = () => {
                       </div>
                       <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
                         <div>
-                          <div className="text-4xl font-headings mb-0.5">
+                          <div className="text-4xl mb-0.5">
                             143
                           </div>
                           <div className="text-xs text-ui-300 uppercase">
@@ -499,7 +499,7 @@ const DSpage = () => {
                       </div>
                       <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
                         <div>
-                          <div className="text-4xl font-headings mb-0.5">
+                          <div className="text-4xl mb-0.5">
                             12
                           </div>
                           <div className="text-xs text-ui-300 uppercase">

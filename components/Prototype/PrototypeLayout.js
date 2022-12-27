@@ -5,7 +5,7 @@ const PrototypeLayout = ({ children }) => {
   
   return (
     <>
-      <PrototypeHead title="G-Loot" />
+      <PrototypeHead title="Stryda" />
       <div>{children}</div>
     </>
   );

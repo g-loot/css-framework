@@ -25,7 +25,7 @@ const DSpage = () => {
                           </div>
                         </div>
                         <div className="item-body">
-                          <div className="p-2 item-title font-headings font-bold text-lg italic">
+                          <div className="p-2 item-title text-lg">
                             Brawl details / how to play
                           </div>
                         </div>
@@ -41,7 +41,7 @@ const DSpage = () => {
                   <div className="">
                     <ul className="gap-2 p-2 grid grid-cols-3 grid-rows-2">
                       <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                        <h4 className="font-headings font-bold text-base uppercase text-ui-200 mb-1">
+                        <h4 className="text-base uppercase text-ui-200 mb-1">
                           Objective
                         </h4>
                         <p className="text-sm text-ui-300 leading-relaxed">
@@ -51,7 +51,7 @@ const DSpage = () => {
                         </p>
                       </li>
                       <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                        <h4 className="font-headings font-bold text-base uppercase text-ui-200 mb-1">
+                        <h4 className="text-base uppercase text-ui-200 mb-1">
                           Game mode
                         </h4>
                         <p className="text-sm text-ui-300 leading-relaxed">
@@ -59,7 +59,7 @@ const DSpage = () => {
                         </p>
                       </li>
                       <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                        <h4 className="font-headings font-bold text-base uppercase text-ui-200 mb-1">
+                        <h4 className="text-base uppercase text-ui-200 mb-1">
                           Brawl points
                         </h4>
                         <p className="text-sm text-ui-300 leading-relaxed">
@@ -70,7 +70,7 @@ const DSpage = () => {
                         </p>
                       </li>
                       <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                        <h4 className="font-headings font-bold text-base uppercase text-ui-200 mb-1">
+                        <h4 className="text-base uppercase text-ui-200 mb-1">
                           Tiebreaker
                         </h4>
                         <p className="text-sm text-ui-300 leading-relaxed">
@@ -78,7 +78,7 @@ const DSpage = () => {
                         </p>
                       </li>
                       <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                        <h4 className="font-headings font-bold text-base uppercase text-ui-200 mb-1">
+                        <h4 className="text-base uppercase text-ui-200 mb-1">
                           Brawl type
                         </h4>
                         <p className="text-sm text-ui-300 leading-relaxed">
@@ -89,7 +89,7 @@ const DSpage = () => {
                         </p>
                       </li>
                       <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                        <h4 className="font-headings font-bold text-base uppercase text-ui-200 mb-1">
+                        <h4 className="text-base uppercase text-ui-200 mb-1">
                           Brawl size
                         </h4>
                         <p className="text-sm text-ui-300 leading-relaxed">
@@ -100,7 +100,7 @@ const DSpage = () => {
                       </li>
                     </ul>
                     <div className="border-t border-ui-700 py-2 flex gap-2 items-center justify-center">
-                      <h4 className="font-headings font-bold text-base uppercase text-ui-200">
+                      <h4 className="text-base uppercase text-ui-200">
                         Brawl ID
                       </h4>
                       <button
@@ -138,7 +138,7 @@ const DSpage = () => {
                     className="animate-slide-in-bottom animate-delay"
                     style={{ "--delay": "calc( 1 * 0.05s)" }}
                   >
-                    <h4 className="font-headings font-bold text-base uppercase text-ui-400 mb-1">
+                    <h4 className="text-base uppercase text-ui-400 mb-1">
                       Objective
                     </h4>
                     <p className="text-sm text-ui-200 leading-tight">
@@ -151,7 +151,7 @@ const DSpage = () => {
                     className="animate-slide-in-bottom animate-delay"
                     style={{ "--delay": "calc( 2 * 0.05s)" }}
                   >
-                    <h4 className="font-headings font-bold text-base uppercase text-ui-400 mb-1">
+                    <h4 className="text-base uppercase text-ui-400 mb-1">
                       Tiebreaker
                     </h4>
                     <p className="text-sm text-ui-200 leading-tight">
@@ -164,7 +164,7 @@ const DSpage = () => {
                     className="animate-slide-in-bottom animate-delay"
                     style={{ "--delay": "calc( 3 * 0.05s)" }}
                   >
-                    <h4 className="font-headings font-bold text-base uppercase text-ui-400 mb-1">
+                    <h4 className="text-base uppercase text-ui-400 mb-1">
                       Game modes
                     </h4>
                     <p className="text-sm text-ui-200 leading-tight">
@@ -177,7 +177,7 @@ const DSpage = () => {
                     className="animate-slide-in-bottom animate-delay"
                     style={{ "--delay": "calc( 4 * 0.05s)" }}
                   >
-                    <h4 className="font-headings font-bold text-base uppercase text-ui-400 mb-1">
+                    <h4 className="text-base uppercase text-ui-400 mb-1">
                       Brawl points
                     </h4>
                     <p className="text-sm text-ui-200 leading-tight">
@@ -190,7 +190,7 @@ const DSpage = () => {
                     className="animate-slide-in-bottom animate-delay"
                     style={{ "--delay": "calc( 5 * 0.05s)" }}
                   >
-                    <h4 className="font-headings font-bold text-base uppercase text-ui-400 mb-1">
+                    <h4 className="text-base uppercase text-ui-400 mb-1">
                       Brawl ID
                     </h4>
                     <button
@@ -226,7 +226,7 @@ const DSpage = () => {
                   className="flex-1 p-3 rounded bg-gradient-to-b from-ui-900 to-ui-800 animate-slide-in-bottom animate-delay"
                   style={{ "--delay": "calc( 1 * 0.05s)" }}
                 >
-                  <h4 className="font-headings font-bold text-base uppercase text-ui-400 mb-1">
+                  <h4 className="text-base uppercase text-ui-400 mb-1">
                     Objective
                   </h4>
                   <p className="text-sm text-ui-200 leading-tight">
@@ -237,7 +237,7 @@ const DSpage = () => {
                   className="flex-1 p-3 rounded bg-gradient-to-b from-ui-900 to-ui-800 animate-slide-in-bottom animate-delay"
                   style={{ "--delay": "calc( 2 * 0.05s)" }}
                 >
-                  <h4 className="font-headings font-bold text-base uppercase text-ui-400 mb-1">
+                  <h4 className="text-base uppercase text-ui-400 mb-1">
                     Tiebreaker
                   </h4>
                   <p className="text-sm text-ui-200 leading-tight">
@@ -248,7 +248,7 @@ const DSpage = () => {
                   className="flex-1 p-3 rounded bg-gradient-to-b from-ui-900 to-ui-800 animate-slide-in-bottom animate-delay"
                   style={{ "--delay": "calc( 3 * 0.05s)" }}
                 >
-                  <h4 className="font-headings font-bold text-base uppercase text-ui-400 mb-1">
+                  <h4 className="text-base uppercase text-ui-400 mb-1">
                     Game modes
                   </h4>
                   <p className="text-sm text-ui-200 leading-tight">
@@ -259,7 +259,7 @@ const DSpage = () => {
                   className="flex-1 p-3 rounded bg-gradient-to-b from-ui-900 to-ui-800 animate-slide-in-bottom animate-delay"
                   style={{ "--delay": "calc( 4 * 0.05s)" }}
                 >
-                  <h4 className="font-headings font-bold text-base uppercase text-ui-400 mb-1">
+                  <h4 className="text-base uppercase text-ui-400 mb-1">
                     Brawl points
                   </h4>
                   <p className="text-sm text-ui-200 leading-tight">
@@ -270,7 +270,7 @@ const DSpage = () => {
                   className="flex-1 p-3 rounded bg-gradient-to-b from-ui-900 to-ui-800 animate-slide-in-bottom animate-delay"
                   style={{ "--delay": "calc( 5 * 0.05s)" }}
                 >
-                  <h4 className="font-headings font-bold text-base uppercase text-ui-400 mb-1">
+                  <h4 className="text-base uppercase text-ui-400 mb-1">
                     Brawl ID
                   </h4>
                   <button

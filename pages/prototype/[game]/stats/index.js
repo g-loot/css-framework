@@ -17,7 +17,6 @@ import { StatsValorantDemoLatestMatches } from "../../../../mock-data/data-stats
 import { StatsValorantDemoWeapons } from "../../../../mock-data/data-stats-demo-valorant";
 import { StatsValorantDemoMaps } from "../../../../mock-data/data-stats-demo-valorant";
 import LoadMore from "../../../../components/LoadMore/LoadMore";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
 
 export default function Stats() {
   const router = useRouter();
@@ -116,7 +115,7 @@ export default function Stats() {
                         <span className="icon text-3xl icon-game-valorant-symbol text-game-valorant" />
                       </div>
                       <div>
-                        <h1 className="uppercase text-4xl">Valorant stats</h1>
+                        <h1 className="uppercase text-6xl">Valorant stats</h1>
                         <div className="text-sm text-ui-300"></div>
                       </div>
                     </div>
@@ -153,10 +152,10 @@ export default function Stats() {
                               "--delay": "calc(1 * 0.05s)",
                             }}
                           >
-                            <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Damage/round
                             </div>
-                            <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            <div className="text-blue-300 text-xl lg:text-3xl">
                               --
                             </div>
                           </div>
@@ -166,10 +165,10 @@ export default function Stats() {
                               "--delay": "calc(2 * 0.05s)",
                             }}
                           >
-                            <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               K/D ratio
                             </div>
-                            <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            <div className="text-blue-300 text-xl lg:text-3xl">
                               --
                             </div>
                           </div>
@@ -179,10 +178,10 @@ export default function Stats() {
                               "--delay": "calc(3 * 0.05s)",
                             }}
                           >
-                            <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Headshots %
                             </div>
-                            <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            <div className="text-blue-300 text-xl lg:text-3xl">
                               --
                             </div>
                           </div>
@@ -192,10 +191,10 @@ export default function Stats() {
                               "--delay": "calc(4 * 0.05s)",
                             }}
                           >
-                            <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Win %
                             </div>
-                            <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            <div className="text-blue-300 text-xl lg:text-3xl">
                               --
                             </div>
                           </div>
@@ -210,7 +209,7 @@ export default function Stats() {
                   >
                     <div className="flex flex-col lg:flex-row lg:items-stretch gap-4 p-4 ">
                       <div className="flex-3">
-                        <div className="text-ui-400 font-bold mb-4">
+                        <div className="text-ui-400 mb-4">
                           Stats overview
                         </div>
                         <div className="flex flex-wrap text-center gap-2 md:gap-4 leading-tight items-stretch justify-between">
@@ -296,7 +295,7 @@ export default function Stats() {
                       </div>
                       <hr className="separator separator-vertical h-auto bg-ui-700" />
                       <div className="flex-2">
-                        <div className="text-ui-400 font-bold mb-4">
+                        <div className="text-ui-400 mb-4">
                           Last 20 matches hit accuracy
                         </div>
                         <div className="flex gap-4 items-center justify-around">
@@ -315,7 +314,7 @@ export default function Stats() {
                             />
                             <img
                               className="relative z-0"
-                              src="https://res.cloudinary.com/gloot/image/upload/v1669812503/Marketing/2022_VALORANT_agent_generator/images/hitmap.svg"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1671446426/Stryda/stats/valorant/hitmap.svg"
                               width="125"
                               height="264"
                               alt=""
@@ -324,21 +323,21 @@ export default function Stats() {
                           <div className="space-y-4">
                             <div className="flex items-baseline gap-2 text-blue-500">
                               <span>Head</span>
-                              <span className="font-bold text-lg">--</span>
+                              <span className="text-lg">--</span>
                               <span>Hits</span>
-                              <span className="font-bold text-lg">--</span>
+                              <span className="text-lg">--</span>
                             </div>
                             <div className="flex items-baseline gap-2 text-attention-500">
                               <span>Body</span>
-                              <span className="font-bold text-lg">--</span>
+                              <span className="text-lg">--</span>
                               <span>Hits</span>
-                              <span className="font-bold text-lg">--</span>
+                              <span className="text-lg">--</span>
                             </div>
                             <div className="flex items-baseline gap-2 text-error-500">
                               <span>Legs</span>
-                              <span className="font-bold text-lg">--</span>
+                              <span className="text-lg">--</span>
                               <span>Hits</span>
-                              <span className="font-bold text-lg">--</span>
+                              <span className="text-lg">--</span>
                             </div>
                           </div>
                         </div>
@@ -384,7 +383,7 @@ export default function Stats() {
                         <span className="icon text-3xl icon-game-valorant-symbol text-game-valorant" />
                       </div>
                       <div>
-                        <h1 className="uppercase text-4xl">Valorant stats</h1>
+                        <h1 className="uppercase text-6xl">Valorant stats</h1>
                         <div className="text-sm text-ui-300">
                           Last updated on 11 NOV 2022, 16:38 PM
                         </div>
@@ -416,11 +415,11 @@ export default function Stats() {
                         </div>
                         <div className="text-ui-300 uppercase text-xs lg:text-sm">
                           <span className="">Match played:</span>{" "}
-                          <b className="font-bold text-ui-200">1000</b>
+                          <b className="text-ui-200">1000</b>
                         </div>
                         <div className="text-ui-300 uppercase text-xs lg:text-sm">
                           <span className="">Play time:</span>{" "}
-                          <b className="font-bold text-ui-200">1439H</b>
+                          <b className="text-ui-200">1439H</b>
                         </div>
                       </div>
                     </div>
@@ -444,13 +443,13 @@ export default function Stats() {
                       </button>
                     </div>
                     <div className="md:text-right leading-none mb-2">
-                      <div className="text-sm uppercase text-ui-300 font-bold">
+                      <div className="text-sm uppercase text-ui-300">
                         Top agent
                       </div>
                       <h3 className="capitalize">
                         {getAgentByID(selectedStat.agent).name}
                       </h3>
-                      <div className="text-sm uppercase text-ui-300 italic">
+                      <div className="text-sm uppercase text-ui-300">
                         {getAgentByID(selectedStat.agent).role.name}
                       </div>
                     </div>
@@ -508,10 +507,10 @@ export default function Stats() {
                               "--delay": "calc(1 * 0.05s)",
                             }}
                           >
-                            <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Damage/round
                             </div>
-                            <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               180.0
                             </div>
                             <div className="text-xs lg:text-sm text-ui-300">
@@ -524,10 +523,10 @@ export default function Stats() {
                               "--delay": "calc(2 * 0.05s)",
                             }}
                           >
-                            <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               K/D ratio
                             </div>
-                            <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               1.49
                             </div>
                             <div className="text-xs lg:text-sm text-ui-300">
@@ -540,10 +539,10 @@ export default function Stats() {
                               "--delay": "calc(3 * 0.05s)",
                             }}
                           >
-                            <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Headshots %
                             </div>
-                            <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               27.9%
                             </div>
                             <div className="text-xs lg:text-sm text-ui-300">
@@ -556,10 +555,10 @@ export default function Stats() {
                               "--delay": "calc(4 * 0.05s)",
                             }}
                           >
-                            <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                            <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Win %
                             </div>
-                            <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               71.9%
                             </div>
                             <div className="text-xs lg:text-sm text-ui-300">
@@ -577,7 +576,7 @@ export default function Stats() {
                   >
                     <div className="flex flex-col lg:flex-row lg:items-stretch gap-4 p-4 ">
                       <div className="flex-3">
-                        <div className="text-ui-400 font-bold mb-4">
+                        <div className="text-ui-400 mb-4">
                           Stats overview
                         </div>
                         <div className="flex flex-wrap text-center gap-2 md:gap-4 leading-tight items-stretch justify-between">
@@ -663,7 +662,7 @@ export default function Stats() {
                       </div>
                       <hr className="separator separator-vertical h-auto bg-ui-700" />
                       <div className="flex-2">
-                        <div className="text-ui-400 font-bold mb-4">
+                        <div className="text-ui-400 mb-4">
                           Last 20 matches hit accuracy
                         </div>
                         <div className="flex gap-4 items-center justify-around">
@@ -682,7 +681,7 @@ export default function Stats() {
                             />
                             <img
                               className="relative z-0"
-                              src="https://res.cloudinary.com/gloot/image/upload/v1669812503/Marketing/2022_VALORANT_agent_generator/images/hitmap.svg"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1671446426/Stryda/stats/valorant/hitmap.svg"
                               width="125"
                               height="264"
                               alt=""
@@ -691,21 +690,21 @@ export default function Stats() {
                           <div className="space-y-4">
                             <div className="flex items-baseline gap-2 text-blue-500">
                               <span>Head</span>
-                              <span className="font-bold text-lg">30%</span>
+                              <span className="text-lg">30%</span>
                               <span>Hits</span>
-                              <span className="font-bold text-lg">49.4</span>
+                              <span className="text-lg">49.4</span>
                             </div>
                             <div className="flex items-baseline gap-2 text-attention-500">
                               <span>Body</span>
-                              <span className="font-bold text-lg">50%</span>
+                              <span className="text-lg">50%</span>
                               <span>Hits</span>
-                              <span className="font-bold text-lg">49.4</span>
+                              <span className="text-lg">49.4</span>
                             </div>
                             <div className="flex items-baseline gap-2 text-error-500">
                               <span>Legs</span>
-                              <span className="font-bold text-lg">20%</span>
+                              <span className="text-lg">20%</span>
                               <span>Hits</span>
-                              <span className="font-bold text-lg">49.4</span>
+                              <span className="text-lg">49.4</span>
                             </div>
                           </div>
                         </div>
@@ -734,7 +733,7 @@ export default function Stats() {
                         <th>HS%</th>
                       </tr>
                     </thead>
-                    <tbody className="child:overflow-hidden leading-tight font-bold">
+                    <tbody className="child:overflow-hidden leading-tight">
                       {StatsValorantDemoFavoriteAgents.map(
                         (item, itemIndex) => (
                           <tr key={itemIndex}>
@@ -779,21 +778,21 @@ export default function Stats() {
                 <div className="overflow-x-auto scrollbar-desktop leading-tight pb-4">
                   {StatsValorantDemoLatestMatches.map((item, itemIndex) => (
                     <div key={itemIndex} className="mb-2">
-                      <div className="flex items-center gap-2 my-2 text-ui-400 text-xs lg:text-sm uppercase font-bold mx-4 md:mx-0">
+                      <div className="flex items-center gap-2 my-2 text-ui-400 text-xs lg:text-sm uppercase mx-4 md:mx-0">
                         <span className="icon icon-calendar-date-2" />
                         <span>{item.date}</span>
                       </div>
                       {item.matches.map((match, matchIndex) => (
                         <div
                           key={matchIndex}
-                          className="accordion min-w-lg overflow-hidden mb-2 font-bold"
+                          className="accordion min-w-lg overflow-hidden mb-2"
                         >
                           <Accordion
                             header={
                               <div
                                 className={`item surface sm:rounded-lg text-center ${
                                   match.hasWon
-                                    ? "bg-gradient-to-r from-success-300/25 via-success-300/0 to-success-300/0"
+                                    ? "surface-halo halo-l"
                                     : ""
                                 }`}
                               >
@@ -815,7 +814,7 @@ export default function Stats() {
                                 </div>
                                 <div className="item-body w-36 flex-none text-left">
                                   <div>
-                                    <div className="font-bold text-ui-100 capitalize">
+                                    <div className="text-ui-100 capitalize">
                                       {
                                         getAgentByID(
                                           getGeneralStatsByID(
@@ -832,14 +831,14 @@ export default function Stats() {
                                 </div>
                                 <div className="item-body flex-0 flex gap-2 items-center justify-around w-48">
                                   {match.mode === "Deathmatch" ? (
-                                    <div className="font-headings text-2xl font-bold italic text-ui-300 text-center">
+                                    <div className="text-2xl text-ui-300 text-center">
                                       {match.placement} place
                                     </div>
                                   ) : (
                                     <>
-                                      <div className="font-headings text-2xl font-bold italic uppercase w-20 text-center">
+                                      <div className="text-2xl uppercase w-20 text-center">
                                         {match.hasWon ? (
-                                          <span className="text-success-300">
+                                          <span className="text-main">
                                             Victory
                                           </span>
                                         ) : (
@@ -849,7 +848,7 @@ export default function Stats() {
                                         )}
                                       </div>
                                       <div className="w-16">
-                                        <div className="text-ui-300 font-headings text-2xl font-bold italic">
+                                        <div className="text-ui-300 text-xl">
                                           <span
                                             className={`${
                                               match.hasWon
@@ -879,13 +878,13 @@ export default function Stats() {
                                 </div>
                                 <div className="item-body flex-1 flex gap-2 items-center justify-around">
                                   <div>
-                                    <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                                    <div className="text-ui-400 text-xs lg:text-sm uppercase">
                                       {match.time}
                                     </div>
                                     <div>{match.duration}</div>
                                   </div>
                                   <div>
-                                    <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                                    <div className="text-ui-400 text-xs lg:text-sm uppercase">
                                       K/D/A
                                     </div>
                                     <div>
@@ -894,25 +893,25 @@ export default function Stats() {
                                     </div>
                                   </div>
                                   <div>
-                                    <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                                    <div className="text-ui-400 text-xs lg:text-sm uppercase">
                                       KD
                                     </div>
                                     <div>{match.kd}</div>
                                   </div>
                                   <div>
-                                    <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                                    <div className="text-ui-400 text-xs lg:text-sm uppercase">
                                       ADR
                                     </div>
                                     <div>{match.adr}</div>
                                   </div>
                                   <div>
-                                    <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                                    <div className="text-ui-400 text-xs lg:text-sm uppercase">
                                       ACS
                                     </div>
                                     <div>{match.acs}</div>
                                   </div>
                                   <div>
-                                    <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                                    <div className="text-ui-400 text-xs lg:text-sm uppercase">
                                       HS%
                                     </div>
                                     <div>{match.hs}%</div>
@@ -929,10 +928,9 @@ export default function Stats() {
                             <table className="table table-compact w-full text-center text-xs lg:text-sm">
                               <tbody>
                                 <tr className="bg-success-300/20 uppercase">
-                                  <td className="font-bold text-success-300 text-left">
+                                  <td className="text-success-300 text-left">
                                     Team 1
                                   </td>
-                                  <td></td>
                                   <td></td>
                                   <td>Rank</td>
                                   <td>ACS</td>
@@ -973,7 +971,7 @@ export default function Stats() {
                                         <div
                                           className={`flex items-center gap-2 ${
                                             itemIndex === 3
-                                              ? "font-bold text-blue-300"
+                                              ? "text-blue-300"
                                               : "font-normal"
                                           }`}
                                         >
@@ -984,16 +982,6 @@ export default function Stats() {
                                             #{item.tag}
                                           </div>
                                         </div>
-                                      </td>
-                                      <td className="w-13">
-                                        {item.inParty && (
-                                          <div
-                                          data-tooltip={`In a party with {user name}`}
-                                          className="tooltip-left"
-                                        >
-                                          <span className={`icon icon-multiple-1`} />
-                                        </div>
-                                        )}
                                       </td>
                                       <td className="w-13">
                                         <div
@@ -1064,7 +1052,7 @@ export default function Stats() {
                                   )
                                 )}
                                 <tr className="bg-error-300/20 uppercase">
-                                  <td className="font-bold text-error-300 text-left">
+                                  <td className="text-error-300 text-left">
                                     Team 2
                                   </td>
                                   <td></td>
@@ -1107,16 +1095,6 @@ export default function Stats() {
                                             #{item.tag}
                                           </div>
                                         </div>
-                                      </td>
-                                      <td className="w-13">
-                                        {item.inParty && (
-                                          <div
-                                          data-tooltip={`In a party with {user name}`}
-                                          className="tooltip-left"
-                                        >
-                                          <span className={`icon icon-multiple-1`} />
-                                        </div>
-                                        )}
                                       </td>
                                       <td className="w-13">
                                         <div
@@ -1206,20 +1184,20 @@ export default function Stats() {
                       loading ? "is-loading" : ""
                     }`}
                   >
-                    <tbody className="child:overflow-hidden leading-tight font-bold">
+                    <tbody className="child:overflow-hidden leading-tight">
                       <tr>
                         <td className="w-76 surface-halo halo-l overflow-hidden">
                           <div className="flex items-center gap-4 text-left relative">
                             <img
                               className="absolute z-0 -inset-y-4 -left-5 h-[calc(100%+2rem)] object-cover"
-                              src="https://res.cloudinary.com/gloot/image/upload/v1669815719/Marketing/2022_VALORANT_agent_generator/images/map-overlay-left.svg"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
                               alt=""
                               width="auto"
                               height="auto"
                             />
                             <img
                               className="absolute z-0 -inset-y-4 right-0 h-[calc(100%+2rem)] object-cover -scale-y-100 -scale-x-100"
-                              src="https://res.cloudinary.com/gloot/image/upload/v1669815719/Marketing/2022_VALORANT_agent_generator/images/map-overlay-left.svg"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
                               alt=""
                               width="auto"
                               height="auto"
@@ -1240,7 +1218,7 @@ export default function Stats() {
                               <div className="text-ui-100 uppercae">
                                 Top weapon
                               </div>
-                              <div className="font-headings text-2xl font-bold italic uppercase text-blue-300">
+                              <div className="text-2xl uppercase text-blue-300">
                                 {getWeaponByID(selectedStat.topweapon).name}
                               </div>
                               <div className="font-normal text-ui-300 capitalize">
@@ -1250,38 +1228,38 @@ export default function Stats() {
                           </div>
                         </td>
                         <td className="w-52">
-                          <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                          <div className="text-ui-400 text-xs lg:text-sm uppercase">
                             Kills
                           </div>
                           <div>372</div>
                         </td>
                         <td className="w-52">
-                          <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                          <div className="text-ui-400 text-xs lg:text-sm uppercase">
                             Deaths
                           </div>
                           <div>41</div>
                         </td>
                         <td className="w-52">
-                          <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                          <div className="text-ui-400 text-xs lg:text-sm uppercase">
                             Longest kill distance
                           </div>
                           <div>46M</div>
                         </td>
                         {/*
                         <td>
-                          <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                          <div className="text-ui-400 text-xs lg:text-sm uppercase">
                             Headshots %
                           </div>
                           <div>43.4%</div>
                         </td>
                         <td>
-                          <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                          <div className="text-ui-400 text-xs lg:text-sm uppercase">
                             Damage/round
                           </div>
                           <div>76.9</div>
                         </td>
                         <td>
-                          <div className="text-ui-400 text-xs lg:text-sm font-bold uppercase">
+                          <div className="text-ui-400 text-xs lg:text-sm uppercase">
                             Kills/round
                           </div>
                           <div>0.65</div>
@@ -1310,7 +1288,7 @@ export default function Stats() {
                   */}
                       </tr>
                     </thead>
-                    <tbody className="child:overflow-hidden leading-tight font-bold">
+                    <tbody className="child:overflow-hidden leading-tight">
                       {StatsValorantDemoWeapons.map((item, itemIndex) => (
                         <tr key={itemIndex}>
                           <td className="w-76">
@@ -1373,7 +1351,7 @@ export default function Stats() {
                         <th>ACS</th>
                       </tr>
                     </thead>
-                    <tbody className="child:overflow-hidden leading-tight font-bold">
+                    <tbody className="child:overflow-hidden leading-tight">
                       {StatsValorantDemoMaps.map((item, itemIndex) => (
                         <tr key={itemIndex}>
                           <td className="text-left capitalize">
@@ -1384,14 +1362,14 @@ export default function Stats() {
                             <span className="absolute z-10 inset-y-0 right-0 w-12 bg-gradient-to-l from-ui-800 to-ui-800/0" />
                             <img
                               className="absolute z-20 inset-y-0 -left-8 h-full object-cover"
-                              src="https://res.cloudinary.com/gloot/image/upload/v1669815719/Marketing/2022_VALORANT_agent_generator/images/map-overlay-left.svg"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
                               alt=""
                               width="auto"
                               height="auto"
                             />
                             <img
                               className="absolute z-20 inset-y-0 -right-8 h-full object-cover -scale-y-100 -scale-x-100"
-                              src="https://res.cloudinary.com/gloot/image/upload/v1669815719/Marketing/2022_VALORANT_agent_generator/images/map-overlay-left.svg"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
                               alt=""
                               width="auto"
                               height="auto"

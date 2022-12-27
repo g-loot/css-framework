@@ -104,7 +104,7 @@ export default function PrototypeLeftMenu(props) {
       </div>
       <div className="rounded-xl overflow-hidden relative">
         <div className="flex flex-col xl:flex-row w-full px-4 py-8 xl:items-center xl:justify-between relative z-20">
-          <div className="font-headings font-bold italic text-xl leading-tight color-dark-300 mb-4 xl:mb-0">
+          <div className="text-xl leading-tight color-dark-300 mb-4 xl:mb-0">
             Tournament<br />
             Schedule 
           </div>

@@ -9,6 +9,7 @@ function withOpacityValue(variable) {
 
 module.exports = {
   mode: "jit",
+  darkMode: 'class',
   content: [
     "./pages/*.{js,ts,jsx,tsx,json}",
     "./pages/**/*.{js,ts,jsx,tsx,json}",
@@ -60,8 +61,8 @@ module.exports = {
       lg: "1.125rem",
       xl: "1.25rem",
       "2xl": "1.5rem",
-      "3xl": "1.875rem",
-      "4xl": "2.25rem",
+      "3xl": "1.75rem",
+      "4xl": "2rem",
       "5xl": "3rem",
       "6xl": "3.75rem",
       "7xl": "4.5rem",
@@ -80,9 +81,20 @@ module.exports = {
       "gray-light": "#d3dce6",
     },
     fontFamily: {
-      headings: ["Podium Sharp", "sans-serif"],
-      body: ["Roboto Condensed", "sans-serif"],
-      icon: ["glooticons", "serif"],
+      headings: ["Stryda", "sans-serif"],
+      body: ["Barlow", "sans-serif"],
+      icon: ["icons", "serif"],
+    },
+    borderRadius: {
+      'none': '0',
+      'sm': '0.25rem',
+      DEFAULT: '0.25rem',
+      'md': '0.25rem',
+      'lg': '0.25rem',
+      'xl': '0.25rem',
+      '2xl': '0.25rem',
+      '3xl': '0.25rem',
+      'full': '9999px',
     },
     extend: {
       colors: {
@@ -459,10 +471,10 @@ module.exports = {
       },
       dropShadow: {
         main: [
-          "0px 0px 10px rgba(19, 240, 148, 0.075)",
-          "0px 0px 3px rgba(19, 240, 148, 0.1)",
-          "0px 0px 1.3px rgba(19, 240, 148, 0.15)",
-          "0px 0px 0.5px rgba(19, 240, 148, 0.3)",
+          "0px 0px 10px rgba(243, 195, 81, 0.075)",
+          "0px 0px 3px rgba(243, 195, 81, 0.1)",
+          "0px 0px 1.3px rgba(243, 195, 81, 0.15)",
+          "0px 0px 0.5px rgba(243, 195, 81, 0.3)",
         ],
         blue: [
           "0px 0px 10px rgba(77 180 255, 0.125)",
@@ -477,10 +489,10 @@ module.exports = {
           "0px 0px 0.5px rgba(251 192 45, 0.6)",
         ],
         "main-lg": [
-          "0px 0px 3px rgba(19, 240, 148, 0.25)",
-          "0px 0px 6px rgba(19, 240, 148, 0.5)",
-          "0px 0px 16px rgba(19, 240, 148, 0.75)",
-          "0px 0px 32px rgba(19, 240, 148, 1)",
+          "0px 0px 3px rgba(243, 195, 81, 0.25)",
+          "0px 0px 6px rgba(243, 195, 81, 0.5)",
+          "0px 0px 16px rgba(243, 195, 81, 0.75)",
+          "0px 0px 32px rgba(243, 195, 81, 1)",
         ],
       },
     },

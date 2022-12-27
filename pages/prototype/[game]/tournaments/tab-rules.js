@@ -10,7 +10,7 @@ const Rules = [
     content: [
       {
         type: "p",
-        text: "In special cases G-Loot, League Operations, and Tournament Operators reserve the right to override. remove, and/or add any rule stated below to guarantee fair play.",
+        text: "In special cases Stryda, League Operations, and Tournament Operators reserve the right to override. remove, and/or add any rule stated below to guarantee fair play.",
       },
     ],
   },
@@ -58,9 +58,9 @@ const Rules = [
           {
             type: "ul",
             text: [
-              "Each player is only allowed to have one (1) G-Loot account.",
-              "Players are only allowed to use their own G-Loot account.",
-              "Players are required to reach out via our <a className='link link-main' href='#' target='_blank'>help.gloot.com</a> if they face issues with their one (1) G-Loot account.",
+              "Each player is only allowed to have one (1) Stryda account.",
+              "Players are only allowed to use their own Stryda account.",
+              "Players are required to reach out via our <a className='link link-main' href='#' target='_blank'>help.gloot.com</a> if they face issues with their one (1) Stryda account.",
             ],
           },
         ],
@@ -72,9 +72,9 @@ const Rules = [
           {
             type: "ul",
             text: [
-              "The player must have an active and eligible account in PUBG, This means that the user can't have an account with game bans or G-Loot bans as of the tournament.",
+              "The player must have an active and eligible account in PUBG, This means that the user can't have an account with game bans or Stryda bans as of the tournament.",
               "A player is only allowed to use their Game accounts. Said game account must have been created by the player and have only been used by the user. Bought, traded, or sold accounts are strictly forbidden.",
-              "Players must have entered a complete and correct nickname on their game account and their G-Loot Profile before the tournament starts. Failure to do so will result in disqualification.",
+              "Players must have entered a complete and correct nickname on their game account and their Stryda Profile before the tournament starts. Failure to do so will result in disqualification.",
               "PC Only (Steam)",
             ],
           },
@@ -221,7 +221,7 @@ const Rules = [
         content: [
           {
             type: "p",
-            text: "Team/Party names and logos are subject to approval by the G-Loot and must adhere to the game’s code of conduct. For example, Team/Party names and logos cannot:",
+            text: "Team/Party names and logos are subject to approval by the Stryda and must adhere to the game’s code of conduct. For example, Team/Party names and logos cannot:",
           },
           {
             type: "ul",
@@ -313,7 +313,7 @@ const Rules = [
         content: [
           {
             type: "p",
-            text: "All players must have the replay function enabled in-game when you compete in any PUBG tournament at G-Loot. All replays and screenshots from the matches need to be saved for 14 days from the date the tournament ended. The admin team has the right to request the replay or screenshot at any time within these 14 days.",
+            text: "All players must have the replay function enabled in-game when you compete in any PUBG tournament at Stryda. All replays and screenshots from the matches need to be saved for 14 days from the date the tournament ended. The admin team has the right to request the replay or screenshot at any time within these 14 days.",
           },
           {
             type: "p",
@@ -330,7 +330,7 @@ const Rules = [
       {
         type: "ul",
         text: [
-          "It is very important to follow the timeline for each tournament during an event hosted by G-Loot. All information for each tournament is subject to change so it’s every player’s responsibility to update himself on gloot.com and G-loot Discord server before and during the tournament/round/match or game starts regarding any changes..",
+          "It is very important to follow the timeline for each tournament during an event hosted by Stryda. All information for each tournament is subject to change so it’s every player’s responsibility to update himself on gloot.com and G-loot Discord server before and during the tournament/round/match or game starts regarding any changes..",
           "If a party is missing from the lobby when it is time to start the game it will be started without them if the Tournament Operator does not say otherwise.",
           "All matches will be played back to back so the party and players have to join the new game lobby as soon as possible.",
           "It is the responsibility of each party captain to read discord for important messages regarding the lobby they are assigned to at all times, especially in the early part of each new game if a server restart needs to be done.",
@@ -345,7 +345,7 @@ const Rules = [
       {
         type: "ul",
         text: [
-          "If you decide to stream the match the minimum delay recommended is 10 minutes and have G-Loot in the title of the stream.",
+          "If you decide to stream the match the minimum delay recommended is 10 minutes and have Stryda in the title of the stream.",
           "If you stream, never show the server information on the stream. This may result in your party being disqualified.",
         ],
       },
@@ -375,7 +375,7 @@ export default function TabTournamentsRules() {
                       {!rule.sections?.length && (
                         <li key={ruleIndex}>
                           <a href={`#${rule.slug}`}>
-                            <span className="font-headings font-bold text-base uppercase">
+                            <span className="text-base uppercase">
                               {rule.title}
                             </span>
                           </a>
@@ -388,7 +388,7 @@ export default function TabTournamentsRules() {
                               <>
                                 <div className="item">
                                   <div className="item-body">
-                                    <div className="item-title font-headings font-bold uppercase">
+                                    <div className="item-title uppercase">
                                       {rule.title}
                                     </div>
                                   </div>

@@ -96,10 +96,6 @@ const Index = () => {
           className="drawer-toggle"
         />
         <div className="drawer-content" ref={myRef}>
-          <div className="fixed z-0 inset-0 pointer-events-none overflow-hidden">
-            <div className="absolute z-0 rounded-full bg-gradient-to-r from-main via-blue-700 to-main/0 w-96 h-60 scale-y-75 blur-3xl transform-gpu -rotate-45 -bottom-40 -left-24 "></div>
-            <div className="absolute z-0 rounded-full bg-gradient-to-r from-main via-blue-700 to-main/0 w-96 h-96 scale-y-75 blur-3xl transform-gpu -top-40 -right-48 rotate-180 "></div>
-          </div>
           <div className="">
             <TopbarFramework />
           </div>
@@ -108,14 +104,16 @@ const Index = () => {
               <div className="grid grid-cols-12 gap-6 items-stretch">
                 <div className="col-span-12 lg:col-span-12 flex flex-col">
                   <div className="flex-1 lg:border-l border-ui-700 lg:pl-8 mb-12">
-                    <h1 className="mb-8 leading-none mt-0">
-                      <small className="text-ui-200 text-3xl font-normal">
+                    <div>
+                      <div className="h4 text-ui-300">
                         Welcome to the
-                      </small>
-                      <div>G-Loot design system</div>
-                    </h1>
+                      </div>
+                      <h1 className="mb-8 lg:text-8xl mt-0">
+                        <div>Stryda design system</div>
+                      </h1>
+                    </div>
                     <p className="text-ui-300 leading-relaxed max-w-md">
-                      The G-Loot design system is a collection of reusable
+                      The Stryda design system is a collection of reusable
                       components, guided by a style guide, founded on a design
                       strategy. Here you will find all relevant resources needed
                       to build any number of applications or pages. The design
@@ -136,7 +134,7 @@ const Index = () => {
                       ></div>
                       <div className="flex-1 flex flex-col items-start justify-start p-2">
                         <div className="flex items-baseline gap-2 mb-3">
-                          <h2 className="text-2xl leading-none">
+                          <h2 className="h4">
                             CSS Framework
                           </h2>
                         </div>
@@ -169,7 +167,7 @@ const Index = () => {
                       ></div>
                       <div className="flex-1 flex flex-col items-start justify-start p-2">
                         <div className="flex items-baseline gap-2 mb-3">
-                          <h2 className="text-2xl leading-none">Prototype</h2>
+                          <h2 className="h4">Prototype</h2>
                         </div>
                         <div className="text-ui-300 leading-tight">
                           Functional prototype for testing purposes.
@@ -200,10 +198,10 @@ const Index = () => {
                       ></div>
                       <div className="flex-1 flex flex-col items-start justify-start p-2">
                         <div className="flex items-baseline gap-2 mb-3">
-                          <h2 className="text-2xl leading-none">Component library</h2>
+                          <h2 className="h4">Component library</h2>
                         </div>
                         <div className="text-ui-300 leading-tight">
-                          G-Loot react component library consuming the framework.
+                          Stryda react component library consuming the framework.
                         </div>
                       </div>
                       <div className="flex flex-col lg:flex-row gap-2 px-2 pb-2">
@@ -222,7 +220,7 @@ const Index = () => {
                   <div className="absolute inset-0 p-4 overflow-y-auto scrollbar-desktop">
                     <div className="hidden lg:block space-y-6">
                       <div>
-                        <div className="px-2 mb-2 uppercase font-headings font-bold text-ui-200">
+                        <div className="px-2 mb-2 uppercase text-ui-200">
                           Latest components:
                         </div>
                         <ul className="menu menu-secondary menu-rounded">
@@ -242,7 +240,7 @@ const Index = () => {
                         </ul>
                       </div>
                       <div>
-                        <div className="px-2 mb-2 uppercase font-headings font-bold text-ui-200">
+                        <div className="px-2 mb-2 uppercase text-ui-200">
                           Latest pages:
                         </div>
                         <ul className="menu menu-secondary menu-rounded">

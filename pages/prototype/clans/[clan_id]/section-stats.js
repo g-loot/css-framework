@@ -50,31 +50,31 @@ export default function SectionClanStats() {
                 <div className="leading-none text-xs text-ui-300 uppercase">
                   Number of Brawls played
                 </div>
-                <div className="text-3xl font-headings font-bold">22</div>
+                <div className="text-3xl font-bold">22</div>
               </div>
               <div className="w-32 flex flex-col items-center justify-end rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                 <div className="leading-none text-xs text-ui-300 uppercase">
                   Times in top 50
                 </div>
-                <div className="text-3xl font-headings font-bold">2</div>
+                <div className="text-3xl font-bold">2</div>
               </div>
               <div className="w-32 flex flex-col items-center justify-end rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                 <div className="leading-none text-xs text-ui-300 uppercase">
                   Best placement
                 </div>
-                <div className="text-3xl font-headings font-bold">1</div>
+                <div className="text-3xl font-bold">1</div>
               </div>
               <div className="w-32 flex flex-col items-center justify-end rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                 <div className="leading-none text-xs text-ui-300 uppercase">
                   Most matches in a Brawl
                 </div>
-                <div className="text-3xl font-headings font-bold">84</div>
+                <div className="text-3xl font-bold">84</div>
               </div>
               <div className="w-32 flex flex-col items-center justify-end rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                 <div className="leading-none text-xs text-ui-300 uppercase">
                   Avg. matches/Brawl
                 </div>
-                <div className="text-3xl font-headings font-bold">54</div>
+                <div className="text-3xl font-bold">54</div>
               </div>
             </div>
           </div>
@@ -102,37 +102,37 @@ export default function SectionClanStats() {
                 <div className="leading-none text-xs text-ui-300 uppercase">
                   Best Showdown placement
                 </div>
-                <div className="text-3xl font-headings font-bold">6</div>
+                <div className="text-3xl font-bold">6</div>
               </div>
               <div className="w-32 flex flex-col items-center justify-end rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                 <div className="leading-none text-xs text-ui-300 uppercase">
                   Played Showdowns
                 </div>
-                <div className="text-3xl font-headings font-bold">3</div>
+                <div className="text-3xl font-bold">3</div>
               </div>
               <div className="w-32 flex flex-col items-center justify-end rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                 <div className="leading-none text-xs text-ui-300 uppercase">
                   Avg. Showdown placement
                 </div>
-                <div className="text-3xl font-headings font-bold">11</div>
+                <div className="text-3xl font-bold">11</div>
               </div>
               <div className="w-32 flex flex-col items-center justify-end rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                 <div className="leading-none text-xs text-ui-300 uppercase">
                   Tournaments played
                 </div>
-                <div className="text-3xl font-headings font-bold">5</div>
+                <div className="text-3xl font-bold">5</div>
               </div>
               <div className="w-32 flex flex-col items-center justify-end rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                 <div className="leading-none text-xs text-ui-300 uppercase">
                   Top 3 placement
                 </div>
-                <div className="text-3xl font-headings font-bold">4</div>
+                <div className="text-3xl font-bold">4</div>
               </div>
               <div className="w-32 flex flex-col items-center justify-end rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
                 <div className="leading-none text-xs text-ui-300 uppercase">
                   Avg. tournaments placement
                 </div>
-                <div className="text-3xl font-headings font-bold">14</div>
+                <div className="text-3xl font-bold">14</div>
               </div>
             </div>
           </div>

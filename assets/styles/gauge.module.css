@@ -7,22 +7,6 @@
   relative
   shrink-0
   ;
-  &::before {
-    @apply
-    content-['']
-    w-8
-    h-8
-    block
-    rounded-full
-    blur
-    absolute
-    top-0
-    left-[calc(50%-1rem)]
-    bg-gradient-radial-spotlight
-    from-blue-500/25
-    to-blue-700/0
-    ;
-  }
 }
 
 .gauge {

@@ -349,7 +349,6 @@
             bg-interaction-500
             origin-top
             -translate-y-full
-            -skew-y-30
             opacity-0
             ;
           }

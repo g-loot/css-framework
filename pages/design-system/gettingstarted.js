@@ -6,7 +6,7 @@ const DSpage = () => (
   
   <div className='max-w-sm mx-auto space-y-8 text-ui-100 leading-tight mb-6'>
   <h1 className='leading-none'>
-    Getting started<br /><small className='text-ui-300 font-normal'>with webpack</small>
+    Getting started<br /><small className='text-ui-300'>with webpack</small>
   </h1>
   <ul className='space-y-8'>
     <li className='max-w-sm mx-auto space-y-4 text-ui-200 pb-8 border-b border-ui-800'>
@@ -91,7 +91,7 @@ const DSpage = () => (
 
     <h2 className='h3'>Example repository <a className="text-2xl opacity-20 hover:opacity-60" href="#example-repository">#</a></h2>
     <p className='text-ui-200 leading-tight my-4'>
-      Check this example setup of the G-Loot Framework and Tailwind CSS on React (webpack).
+      Check this example setup of the Stryda Framework and Tailwind CSS on React (webpack).
     </p>
     <div className='max-w-[150px]'>
       <a href='https://stackblitz.com/edit/gloot-framework?file=tailwind.config.js' target='_blank' rel='noreferrer' className='inline-block rounded-2xl surface transition-all duration-200 hover:opacity-50'>

@@ -49,7 +49,7 @@ export default function Search() {
       <Ad width="1005" height="300" />
 
       <section className="mb-2 px-4 md:px-1">
-        <h1 className="text-3xl sm:text-4xl">
+        <h1>
           Search {filter && <>results for &#34;{filter}&#34;</>}
         </h1>
         <div className="form-group mt-4">

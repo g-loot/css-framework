@@ -392,7 +392,7 @@ const DSpage = () => {
                 <li className='is-active'>
                   <div>
                     <i>1</i>
-                    <div className='text-sm'>First you need to subscribe to G-Loot.</div>
+                    <div className='text-sm'>First you need to subscribe to Stryda.</div>
                     <span/>
                   </div>
                 </li>
@@ -439,7 +439,7 @@ const DSpage = () => {
                 <li className='is-active'>
                   <div>
                     <i>1</i>
-                    <div>First you need to subscribe to G-Loot.</div>
+                    <div>First you need to subscribe to Stryda.</div>
                     <span/>
                   </div>
                 </li>
@@ -463,7 +463,7 @@ const DSpage = () => {
                 <li className='is-active'>
                   <div>
                     <i>1</i>
-                    <div>First you need to subscribe to G-Loot.</div>
+                    <div>First you need to subscribe to Stryda.</div>
                     <span/>
                   </div>
                 </li>
@@ -487,7 +487,7 @@ const DSpage = () => {
                 <li className='is-active'>
                   <div>
                     <i>1</i>
-                    <div>First you need to subscribe to G-Loot.</div>
+                    <div>First you need to subscribe to Stryda.</div>
                     <span/>
                   </div>
                 </li>
@@ -511,7 +511,7 @@ const DSpage = () => {
                 <li className='is-active'>
                   <div>
                     <i>1</i>
-                    <div>First you need to subscribe to G-Loot.</div>
+                    <div>First you need to subscribe to Stryda.</div>
                     <span/>
                   </div>
                 </li>

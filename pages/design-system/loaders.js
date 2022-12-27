@@ -71,9 +71,9 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* G-Loot loader */}
+      {/* Stryda loader */}
       <div className="mb-12" id="gloot-loader">
-        <h2 className="h3 mb-3">G-Loot loader</h2>
+        <h2 className="h3 mb-3">Stryda loader</h2>
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -84,7 +84,7 @@ const DSpage = () => {
                     Extra large
                   </div>
                   <div className="flex-1 flex flex-wrap gap-2">
-                    <div role="status" className="loader-gloot loader-xl">
+                    <div role="status" className="loader-stryda loader-xl">
                       <div>
                         <i/>
                         <i/>
@@ -104,7 +104,7 @@ const DSpage = () => {
                     Large
                   </div>
                   <div className="flex-1 flex flex-wrap gap-2">
-                    <div role="status" className="loader-gloot loader-lg">
+                    <div role="status" className="loader-stryda loader-lg">
                       <div>
                         <i/>
                         <i/>
@@ -127,7 +127,7 @@ const DSpage = () => {
                     </button>
                   </div>
                   <div className="flex-1 flex flex-wrap gap-2">
-                    <div role="status" className="loader-gloot">
+                    <div role="status" className="loader-stryda">
                       <div>
                         <i/>
                         <i/>
@@ -147,7 +147,7 @@ const DSpage = () => {
                     Small
                   </div>
                   <div className="flex-1 flex flex-wrap gap-2">
-                    <div role="status" className="loader-gloot loader-sm">
+                    <div role="status" className="loader-stryda loader-sm">
                       <div>
                         <i/>
                         <i/>
@@ -167,7 +167,7 @@ const DSpage = () => {
                     Extra small
                   </div>
                   <div className="flex-1 flex flex-wrap gap-2">
-                    <div role="status" className="loader-gloot loader-xs">
+                    <div role="status" className="loader-stryda loader-xs">
                       <div>
                         <i/>
                         <i/>
@@ -279,7 +279,7 @@ const DSpage = () => {
                       src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
                       width="auto"
                       height="auto"
-                      alt="G-Loot Showdown"
+                      alt="Stryda Showdown"
                     />
                     <div className="chip chip-secondary chip-sm">
                       <span>Global</span>
@@ -289,7 +289,7 @@ const DSpage = () => {
                     <div className="chip chip-sliced chip-gray">
                       <span>Finished</span>
                     </div>
-                    <div className="card-title">G-Loot Open Tournament</div>
+                    <div className="card-title">Stryda Open Tournament</div>
                     <div className="card-meta">
                       <div>
                         <label>Entry</label>

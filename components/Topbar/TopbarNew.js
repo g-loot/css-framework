@@ -42,7 +42,7 @@ const notificationsGroups = [
         type: "clan",
         intro: "Clan",
         title: "You received a gift!",
-        text: "Your Clanmate <a href='#' class='link font-bold'>Harriss</a> has sent you <span class='whitespace-nowrap'><img src='https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png' alt='' class='w-7 h-7 -my-1 -mr-0.5 inline drop-shadow-sm' /> <span class='font-bold text-purple-500'>30 tokens</span></span> as a gift.",
+        text: "Your Clanmate <a href='#' class='link font-bold'>Harriss</a> has sent you <span class='whitespace-nowrap text-purple-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as a gift.",
         time: "2 min.",
         read: false,
       },
@@ -78,7 +78,7 @@ const notificationsGroups = [
         type: "brawl",
         intro: "Brawl",
         title: "You've been refunded",
-        text: "You’ve been refunded <span class='whitespace-nowrap'><img src='https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png' alt='' class='w-7 h-7 -my-1 -mr-0.5 inline drop-shadow-sm' /> <span class='font-bold text-purple-500'>30 tokens</span></span> as game.name went into maintenance and your open activations were canceled.",
+        text: "You’ve been refunded <span class='whitespace-nowrap text-purple-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as game.name went into maintenance and your open activations were canceled.",
         time: "4 days",
       },
       {
@@ -86,7 +86,7 @@ const notificationsGroups = [
         type: "brawl",
         intro: "Brawl",
         title: "You've been refunded",
-        text: "You’ve been refunded <span class='whitespace-nowrap'><img src='https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png' alt='' class='w-7 h-7 -my-1 -mr-0.5 inline drop-shadow-sm' /> <span class='font-bold text-purple-500'>30 tokens</span></span> as the brawl.name Brawl has ended and your open activations were canceled.",
+        text: "You’ve been refunded <span class='whitespace-nowrap text-purple-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as the brawl.name Brawl has ended and your open activations were canceled.",
         time: "5 days",
         read: true,
         accepted: true,
@@ -96,7 +96,7 @@ const notificationsGroups = [
         type: "brawl",
         intro: "Brawl",
         title: "You won a prize!",
-        text: "You finished <b class='text-ui-100'>#X</b> in the <a href='#' class='link font-bold'>brawl.name</a> Brawl and you won <span class='whitespace-nowrap'><img src='https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png' alt='' class='w-7 h-7 -my-1 -mr-0.5 inline drop-shadow-sm' /> <span class='font-bold text-gold-500'>1000 coins</span></span>! Congrats!",
+        text: "You finished <b class='text-ui-100'>#X</b> in the <a href='#' class='link font-bold'>brawl.name</a> Brawl and you won <span class='whitespace-nowrap text-gold-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>1000 coins</span></span>! Congrats!",
         time: "5 days",
         read: true,
         accepted: true,
@@ -116,7 +116,7 @@ const notificationsGroups = [
         type: "brawl",
         intro: "Brawl",
         title: "Your clan won a prize!",
-        text: "Your Clan finished <b class='text-ui-100'>#X</b> in the brawl.name Brawl so you’re granted <span class='whitespace-nowrap'><img src='https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png' alt='' class='w-7 h-7 -my-1 -mr-0.5 inline drop-shadow-sm' /> <span class='font-bold text-gold-500'>1000 coins</span></span>! Congrats!",
+        text: "Your Clan finished <b class='text-ui-100'>#X</b> in the brawl.name Brawl so you’re granted <span class='whitespace-nowrap text-gold-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>1000 coins</span></span>! Congrats!",
         time: "5 days",
         read: true,
         accepted: true,
@@ -279,15 +279,15 @@ export default function TopbarNew() {
                   <Link
                     href={`/prototype/search${prototype.getURLparams()}`}
                   >
-                    <a className="button button-sm button-ghost rounded-full">
+                    <a className="button button-ghost rounded-full">
                       <span className="icon icon-zoom text-ui-200" />
                     </a>
                   </Link>
                 </div>
               </Tooltip>
 
-              <div className="flex gap-x-3 items-stretch justify-center bg-ui-700 h-9 min-w-[2.25rem] xl:px-4 rounded-full hoverhighlight">
-                <div className="inline-flex items-center">
+              <div className="flex gap-x-3 items-stretch justify-center bg-ui-700 h-8 min-w-[2.25rem] xl:px-3 rounded-full hoverhighlight">
+                <div className="inline-flex xl:hidden items-center">
                   <Tooltip
                     placement="bottom"
                     tooltip={
@@ -303,20 +303,14 @@ export default function TopbarNew() {
                     </Link>
                   </Tooltip>
                 </div>
-                <div className="hidden xl:flex items-center gap-x-3 pl-1 border-l border-ui-600">
+                <div className="hidden xl:flex items-center gap-x-3">
                   <div className="inline-flex">
                     <Tooltip
                       tooltip={
                         <div className="w-56 relative">
-                          <h6 className="mb-3 leading-tight">Coins</h6>
-                          <div className="absolute -top-3 -right-2">
-                            <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                              width="50"
-                              height="50"
-                              alt="coins"
-                              className=""
-                            />
+                          <h6 className="mb-3 text-ui-100">Coins</h6>
+                          <div className="absolute -top-3 -right-2 p-2">
+                            <span className="icon icon-coin text-2xl text-gold-500" />
                             <div className="lottie-blur absolute -inset-1">
                               <Lottie
                                 animationData={LottieExplosion}
@@ -327,7 +321,7 @@ export default function TopbarNew() {
                           </div>
                           <ul className="leading-tight space-y-2">
                             <li className="flex gap-2 text-sm">
-                              <div className=" w-12 font-bold uppercase">
+                              <div className=" w-12 uppercase">
                                 Use
                               </div>
                               <div className="flex-1">
@@ -335,7 +329,7 @@ export default function TopbarNew() {
                               </div>
                             </li>
                             <li className="flex gap-2 text-sm">
-                              <div className=" w-12 font-bold uppercase">
+                              <div className=" w-12 uppercase">
                                 Get
                               </div>
                               <div className="flex-1">
@@ -350,14 +344,9 @@ export default function TopbarNew() {
                       <Link
                         href={`/prototype/wallet${prototype.getURLparams()}`}
                       >
-                        <div className="flex items-center">
-                          <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_coin.png"
-                            width="32"
-                            height="32"
-                            alt="coins"
-                          />
-                          <span className="text-sm font-bold text-gold-500">
+                        <div className="flex items-center gap-1 text-gold-500">
+                          <span className="icon icon-coin" />
+                          <span className="text-sm font-bold">
                             {prototype.getUserByID(1)?.wallet.coins}
                           </span>
                         </div>
@@ -368,15 +357,9 @@ export default function TopbarNew() {
                     <Tooltip
                       tooltip={
                         <div className="w-56 relative">
-                          <h6 className="mb-3 leading-tight">Token</h6>
-                          <div className="absolute -top-3 -right-2">
-                            <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                              width="50"
-                              height="50"
-                              alt="tokens"
-                              className=""
-                            />
+                          <h6 className="mb-3 text-ui-100">Token</h6>
+                          <div className="absolute -top-3 -right-2 p-2">
+                          <span className="icon icon-token text-2xl text-purple-500" />
                             <div className="lottie-blur absolute -inset-1">
                               <Lottie
                                 animationData={LottieExplosion}
@@ -387,7 +370,7 @@ export default function TopbarNew() {
                           </div>
                           <ul className="leading-tight space-y-2">
                             <li className="flex gap-2 text-sm">
-                              <div className=" w-12 font-bold uppercase">
+                              <div className=" w-12 uppercase">
                                 Use
                               </div>
                               <div className="flex-1">
@@ -395,7 +378,7 @@ export default function TopbarNew() {
                               </div>
                             </li>
                             <li className="flex gap-2 text-sm">
-                              <div className=" w-12 font-bold uppercase">
+                              <div className=" w-12 uppercase">
                                 Get
                               </div>
                               <div className="flex-1">
@@ -411,14 +394,9 @@ export default function TopbarNew() {
                       <Link
                         href={`/prototype/wallet${prototype.getURLparams()}`}
                       >
-                        <div className="flex items-center">
-                          <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                            width="32"
-                            height="32"
-                            alt="tokens"
-                          />
-                          <span className="text-sm font-bold text-purple-500">
+                        <div className="flex items-center gap-1 text-purple-500">
+                        <span className="icon icon-token" />
+                          <span className="text-sm font-bold">
                             {prototype.getUserByID(1)?.wallet.tokens}
                           </span>
                         </div>
@@ -431,7 +409,7 @@ export default function TopbarNew() {
                   <Tooltip
                     tooltip={
                       <div className="w-56 relative">
-                        <h6 className="mb-3 leading-tight">Tickets</h6>
+                        <h6 className="mb-3 text-ui-100">Tickets</h6>
                         <div className="absolute -top-3 -right-2">
                           <img
                             src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
@@ -450,13 +428,13 @@ export default function TopbarNew() {
                         </div>
                         <ul className="leading-tight space-y-2">
                           <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Use</div>
+                            <div className=" w-12 uppercase">Use</div>
                             <div className="flex-1">
                               To enter <strong>Monthly Tournaments</strong>.
                             </div>
                           </li>
                           <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Get</div>
+                            <div className=" w-12 uppercase">Get</div>
                             <div className="flex-1">
                               From <strong>Weekly Brawls</strong> winnings.
                             </div>
@@ -473,7 +451,7 @@ export default function TopbarNew() {
                           height="32"
                           alt="tickets"
                         />
-                        <span className="text-sm font-bold ml-1 text-bronze-500">
+                        <span className="text-sm ml-1 text-bronze-500">
                           {prototype.getUserByID(1)?.wallet.tickets}
                         </span>
                       </div>
@@ -490,7 +468,7 @@ export default function TopbarNew() {
                 >
                   <button
                     type="button"
-                    className="button button-sm button-ghost rounded-full"
+                    className="button button-ghost rounded-full"
                   >
                     <span
                       data-badge={!isEmpty ? "12" : ""}
@@ -539,16 +517,18 @@ export default function TopbarNew() {
                           <span>Mark all as read</span>
                         </button>
                       </div>
-                      <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 pb-2 space-y-4">
+                      <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 pb-2 space-y-2">
                         {notificationsGroups.map(
                           (notificationGroup, notificationGroupIndex) => (
                             <>
                               <div key={notificationGroupIndex}>
+                                {/*
                                 {notificationsGroups.length > 1 && (
                                   <h5 className="px-2 font-body uppercase text-ui-300 text-sm font-normal not-italic mb-2">
                                     {notificationGroup.name}
                                   </h5>
                                 )}
+                                */}
                                 <ul className="items-spaced space-y-2">
                                   {notificationGroup.notifications?.map(
                                     (notification, notificationIndex) => (
@@ -588,7 +568,7 @@ export default function TopbarNew() {
                                       <div className="text-ui-300 text-sm leading-tight">
                                         {notification.intro}
                                       </div>
-                                      <div className="item-title font-headings font-bold text-ui-100 text-lg italic my-1">
+                                      <div className="item-title text-ui-100 text-lg my-1">
                                         {notification.title}
                                       </div>
                                       <div className="text-ui-300 text-sm leading-tight">
@@ -683,7 +663,7 @@ export default function TopbarNew() {
                       >
                         <a tabIndex="1">
                           <span className="icon icon-file-article" />
-                          <span>How G-Loot works</span>
+                          <span>How Stryda works</span>
                         </a>
                       </Link>
                     </li>

@@ -8,24 +8,28 @@ import { useRouter } from "next/router";
 
 const Offers = [
   {
-    monthsAmount: 12,
-    amount: "429.00kr",
-    previousAmount: "1068.00kr",
-    onlyPerMonth:  "35.75kr",
-    save: "60%",
+    tokenNumber: 60,
+    amount: "17€",
+    previousAmount: "34€",
+    save: "50%",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1661243759/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-small.png",
     special: "bestvalue",
   },
   {
-    monthsAmount: 3,
-    amount: "199.00kr",
-    previousAmount: "267.00kr",
-    onlyPerMonth:  "66.33kr",
-    save: "26%",
+    tokenNumber: 10,
+    amount: "4.30€",
+    previousAmount: "5.70€",
+    save: "24%",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1661243759/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-medium.png",
     special: "mostpopular",
   },
   {
-    monthsAmount: 1,
-    amount: "89.00kr",
+    tokenNumber: 3,
+    amount: "1.70€",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1661243759/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-large.png",
   },
 ];
 
@@ -77,7 +81,7 @@ export default function ModalBuyPremium(props) {
           </button>
           <div className="modal-content">
             <div className="modal-body text-center">
-              <h2 className="modal-title mb-2">Choose your Premium plan</h2>
+              <h2 className="modal-title">Choose your Premium plan</h2>
               <div className="overflow-x-auto scrollbar-desktop">
                 <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto">
                   {Offers.map((item, itemIndex) => (
@@ -105,7 +109,14 @@ export default function ModalBuyPremium(props) {
                       </div>
                       <div className="bg-ui-800 rounded-lg px-3 pb-3 flex-1 flex flex-col">
                         <div className="flex-1">
-                          <h2 className="mt-6 mb-4 h3">{item.monthsAmount} month{item.monthsAmount > 1 && (<>s</>)}</h2>
+                          <img
+                            className="w-auto h-52 mx-auto -mt-2 -mb-4 drop-shadow-2xl"
+                            src={item.image}
+                            width="auto"
+                            height="auto"
+                            alt="tokens"
+                          />
+                          <h2 className="mb-4 h3">{item.tokenNumber} tokens</h2>
                           {item.previousAmount && (
                             <>
                               <div className="flex gap-2 text-3xl text-center justify-center font-headings">
@@ -116,12 +127,7 @@ export default function ModalBuyPremium(props) {
                                   {item.amount}
                                 </span>
                               </div>
-                              <div className="text-sm text-ui-300 uppercase">
-                                {item.onlyPerMonth && (
-                                  <>Only {item.onlyPerMonth} per month</>
-                                )}
-                              </div>
-                              <div className="h5">
+                              <div className="text-sm uppercase text-ui-200 font-bold">
                                 Save {item.save}
                               </div>
                             </>
@@ -145,11 +151,8 @@ export default function ModalBuyPremium(props) {
                             onClick={closeModalWithDelay}
                             disabled={selectedGamesCount === 0}
                           >
-                            <span>Choose Plan</span>
+                            <span>Buy</span>
                           </button>
-                          <div className="text-sm uppercase mt-2">
-                            Renews every 90 days
-                          </div>
                         </div>
                       </div>
                     </div>

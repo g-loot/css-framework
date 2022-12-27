@@ -13,13 +13,7 @@ export default function Reward(props) {
     <>
       {props.reward.type === "coin" && (
         <div className={`flex items-center whitespace-nowrap ${props.gap ? props.gap : "gap-2"}`}>
-          <img
-            className={props.imageClassNames}
-            src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
-            width="auto"
-            height="auto"
-            alt=""
-          />
+          <span className={`icon icon-coin text-gold-500 ${props.iconClassNames}`} />
           <span className={`text-gold-500 ${props.textClassNames}`}>
             {numberWithSpaces(props.reward.value)}
           </span>
@@ -27,13 +21,7 @@ export default function Reward(props) {
       )}
       {props.reward.type === "token" && (
         <div className={`flex items-center whitespace-nowrap ${props.gap ? props.gap : "gap-2"}`}>
-          <img
-            className={props.imageClassNames}
-            src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
-            width="auto"
-            height="auto"
-            alt=""
-          />
+          <span className={`icon icon-token text-purple-500 ${props.iconClassNames}`} />
           <span className={`text-purple-500 ${props.textClassNames}`}>
             {numberWithSpaces(props.reward.value)}
           </span>
@@ -41,13 +29,7 @@ export default function Reward(props) {
       )}
       {props.reward.type === "ticket" && (
         <div className={`flex items-center whitespace-nowrap ${props.gap ? props.gap : "gap-2"}`}>
-          <img
-            className={props.imageClassNames}
-            src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}
-            width="auto"
-            height="auto"
-            alt=""
-          />
+          <span className={`icon icon-ticket ${props.iconClassNames}`} />
           <span className={`${props.textClassNames}`}>
             {numberWithSpaces(props.reward.value)}
           </span>

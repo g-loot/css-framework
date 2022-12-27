@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import ModalInfoBeforeYouPlay from "../modal-info-beforeyouplay";
 import BrawlPlacementItem from "./brawl-placementitem";
 import ModalBuyTokens from "../../../wallet/modal-buytokens";
-import ModalBuyPremium from "../../../premium/modal-buypremium";
 import Link from "next/link";
 
 const enrollSteps = [
@@ -69,9 +68,6 @@ export default function BrawlPlacements() {
     uiContext.openModal(
       <ModalInfoBeforeYouPlay incrementNumber={number}></ModalInfoBeforeYouPlay>
     );
-  }
-  function openModalBuyPremium() {
-    uiContext.openModal(<ModalBuyPremium></ModalBuyPremium>);
   }
 
   useEffect(() => {
@@ -200,7 +196,7 @@ export default function BrawlPlacements() {
                   >
                     <button
                       type="button"
-                      className="button button-sm button-claim is-shining"
+                      className="button button-claim is-shining"
                       onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
                     >
                       <div>
@@ -211,20 +207,14 @@ export default function BrawlPlacements() {
                 ) : (
                   <button
                     type="button"
-                    className="button button-sm button-primary button-currency button-token is-shining"
+                    className="button button-primary button-currency button-token is-shining"
                     onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
                   >
                     <div>
                       <span>Activate 3 matches</span>
                     </div>
                     <div>
-                      <img
-                        className="dropshadow-xs"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                        width="34"
-                        height="34"
-                        alt="coin"
-                      />
+                      <span className="icon icon-token " />
                       <span>2</span>
                     </div>
                   </button>
@@ -233,20 +223,14 @@ export default function BrawlPlacements() {
             ) : (
               <button
                 type="button"
-                className="button button-sm button-primary button-currency button-token hidden"
+                className="button button-primary button-currency button-token hidden"
                 onClick={incrementBrawlStep.bind(this, 1)}
               >
                 <div>
                   <span>Activate 1 match</span>
                 </div>
                 <div>
-                  <img
-                    className="dropshadow-xs"
-                    src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                    width="34"
-                    height="34"
-                    alt="coin"
-                  />
+                  <span className="icon icon-token " />
                   <span>1</span>
                 </div>
               </button>

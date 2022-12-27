@@ -15,13 +15,13 @@ export default function BrandTopBar({children, data}) {
             </div>
             <Link href='../'>
               <a className='block interactive'>
-                <img width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg" alt="G-Loot logo" />
+                <img width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1671262915/Stryda/logos/stryda-logo-main.svg" alt="Stryda logo" />
               </a>
             </Link>
           </div>
           <div className='w-1/2 md:w-9/12 xl:w-10/12 flex items-center justify-end'>
             <div className='flex gap-2 items-center justify-end'>
-              <div className='font-headings font-bold italic text-lg leading-none text-ui-300'>
+              <div className='text-lg leading-none text-ui-300'>
                 BRAND
               </div>
             </div>

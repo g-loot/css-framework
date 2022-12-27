@@ -45,7 +45,7 @@ export default function ListItemTournament(props) {
                           height="auto"
                           alt=""
                         />
-                        <span className="font-headings font-bold text-lg italic">
+                        <span className="text-lg">
                           {reward.value}
                         </span>
                       </div>

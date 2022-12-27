@@ -15,7 +15,7 @@ export default function Home() {
           <div className="header surface sm:rounded-lg">
             <div className="header-content">
               <div className="header-body">
-                <h1 className="text-3xl sm:text-4xl">Shop</h1>
+                <h1>Shop</h1>
                 <p className="text-ui-300 max-w-[70ch] mt-4">
                   Turn your hard work and successes into rewards you can enjoy!
                   Will you invest in some new gaming gear or just treat yourself
@@ -95,52 +95,49 @@ export default function Home() {
           <div className="relative">
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -top-20 -right-4 rotate-[33deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-token-side_1.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-rotation1.png"
               width="160"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-32 right-32 rotate-[67deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-token-side_2.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-rotation2.png"
               width="75"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -bottom-20 right-0 blur-sm rotate-[120deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-token-side_1.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-rotation1.png"
               width="210"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -top-14 left-32 blur-sm -rotate-[33deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-token-side_2.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-rotation2.png"
               width="168"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -bottom-14 left-20 -rotate-[143deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-token-side_2.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-rotation2.png"
               width="144"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-16 left-16 -rotate-[74deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-token-side_1.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-rotation1.png"
               width="49"
               height="auto"
               alt=""
             />
 
             <div
-              className="relative z-10 surface rounded-lg p-8 text-center flex flex-col items-center justify-center bg-cover bg-center"
-              style={{
-                backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1657120628/Marketing/2022_prototype/shop_token_bg.webp)`,
-              }}
+              className="relative z-10 surface surface-dimmed rounded-lg p-8 text-center flex flex-col items-center justify-center"
             >
               <h2 className="text-4xl">
                 Need a token <span className="text-main">refill</span>?

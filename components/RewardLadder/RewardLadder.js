@@ -175,7 +175,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671799726/Stryda/currencies/Reward-centered-coin-unique.png"
                     width="100%"
                     height="auto"
                     alt="Reward"
@@ -201,7 +201,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671799726/Stryda/currencies/Reward-centered-coin-unique.png"
                     width="100%"
                     height="auto"
                     alt="Reward"
@@ -226,7 +226,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671799726/Stryda/currencies/Reward-centered-coin-unique.png"
                     width="100%"
                     height="auto"
                     alt="Reward"
@@ -251,7 +251,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-coin-small.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671799703/Stryda/currencies/Reward-centered-coin-small.png"
                     width="100%"
                     height="auto"
                     alt="Reward"
@@ -276,7 +276,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671799726/Stryda/currencies/Reward-centered-coin-unique.png"
                     width="100%"
                     height="auto"
                     alt="Reward"
@@ -301,7 +301,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-unique.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671799726/Stryda/currencies/Reward-centered-coin-unique.png"
                     width="100%"
                     height="auto"
                     alt="Reward"
@@ -326,7 +326,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-coin-small.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671799703/Stryda/currencies/Reward-centered-coin-small.png"
                     width="100%"
                     height="auto"
                     alt="Reward"
@@ -351,7 +351,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-token-extrasmall.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671799703/Stryda/currencies/Reward-centered-token-extrasmall.png"
                     width="100%"
                     height="auto"
                     alt="Reward"
@@ -376,7 +376,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-mixed-extrasmall.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
                     width="100%"
                     height="auto"
                     alt="Reward"
@@ -404,7 +404,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-mixed-extrasmall.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
                     width="100%"
                     height="auto"
                     alt="Reward"
@@ -432,7 +432,7 @@ export default function RewardLadder(props) {
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1653391336/Marketing/2022_prototype/CurrencyRewards/Reward-mixed-small.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-medium.png"
                     width="100%"
                     height="auto"
                     alt="Reward"

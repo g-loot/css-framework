@@ -21,12 +21,12 @@ export default function Footer(props) {
             <img
               width={148}
               height={40}
-              src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
+              src="https://res.cloudinary.com/gloot/image/upload/v1671262915/Stryda/logos/stryda-logo-main.svg"
               alt="Gloot logo"
             />
 
             <p className="my-8 text-sm leading-relaxed">
-              © G-Loot Global Esports AB. <br />
+              © Stryda Global Esports AB. <br />
               <span className="flex items-center">
                 <span className="text-ui-300">
                   All rights reserved. Made in Stockholm, Sweden
@@ -56,7 +56,7 @@ export default function Footer(props) {
 
           <ul className="grid auto-cols-max gap-16 md:grid-flow-col">
             <li>
-              <strong className="flex mb-4 font-headings font-bold italic text-xl items-center">
+              <strong className="flex mb-4 items-center h5">
                 <span className="block flex-shrink-0 mr-2 w-1 h-6 bg-main" />
                 <span>Company</span>
               </strong>
@@ -96,7 +96,7 @@ export default function Footer(props) {
             </li>
 
             <li>
-              <strong className="flex mb-4 font-headings font-bold italic text-xl items-center">
+              <strong className="flex mb-4 items-center h5">
                 <span className="block flex-shrink-0 mr-2 w-1 h-6 bg-main" />
                 <span>Further information</span>
               </strong>
@@ -155,7 +155,7 @@ export default function Footer(props) {
               </ul>
             </li>
             <li>
-              <strong className="flex mb-4 font-headings font-bold italic text-xl items-center">
+              <strong className="flex mb-4 items-center h5">
                 <span className="block flex-shrink-0 mr-2 w-1 h-6 bg-main" />
                 <span>Social</span>
               </strong>

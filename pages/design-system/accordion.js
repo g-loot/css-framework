@@ -30,7 +30,7 @@ const DSpage = () => {
                           </div>
                         </div>
                         <div className="item-body">
-                          <div className="item-title font-headings font-bold text-xl italic">
+                          <div className="item-title text-xl">
                             Valorant
                           </div>
                         </div>
@@ -84,7 +84,7 @@ const DSpage = () => {
                           </div>
                         </div>
                         <div className="item-body">
-                          <div className="item-title font-headings font-bold text-xl italic">
+                          <div className="item-title text-xl">
                             PUBG: BATTLEGROUNDS
                           </div>
                         </div>
@@ -138,7 +138,7 @@ const DSpage = () => {
                           </div>
                         </div>
                         <div className="item-body">
-                          <div className="item-title font-headings font-bold text-xl italic">
+                          <div className="item-title text-xl">
                             Rocket League
                           </div>
                         </div>
@@ -206,7 +206,7 @@ const DSpage = () => {
                     <>
                       <div className="item">
                         <div className="item-body">
-                          <div className="p-2 item-title font-headings font-bold text-lg italic">
+                          <div className="p-2 item-title text-lg">
                             Before entering a Brawl
                           </div>
                         </div>
@@ -230,12 +230,12 @@ const DSpage = () => {
                     </div>
                     <div className="text-ui-300 space-y-4">
                       <p>
-                        Make sure you have the G-Loot Tracker installed and
+                        Make sure you have the Stryda Tracker installed and
                         running on your PC. See if everthing is working by
-                        running the G-Loot app on your PC, then start your game.
+                        running the Stryda app on your PC, then start your game.
                       </p>
                       <p>
-                        The G-Loot icon should appear in your game with a green
+                        The Stryda icon should appear in your game with a green
                         dot. This means everything is up and running to track
                         your Mission progress.
                       </p>
@@ -247,7 +247,7 @@ const DSpage = () => {
                     <>
                       <div className="item">
                         <div className="item-body">
-                          <div className="p-2 item-title font-headings font-bold text-lg italic">
+                          <div className="p-2 item-title text-lg">
                             Play your first matches to join the leaderboard
                           </div>
                         </div>
@@ -281,7 +281,7 @@ const DSpage = () => {
                     <>
                       <div className="item">
                         <div className="item-body">
-                          <div className="p-2 item-title font-headings font-bold text-lg italic">
+                          <div className="p-2 item-title text-lg">
                             Pay tokens to activate Brawl matches
                           </div>
                         </div>

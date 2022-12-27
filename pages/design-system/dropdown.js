@@ -473,7 +473,7 @@ const DSpage = () => {
       <div className="mb-12" id="open-force">
         <h2 className="h3 mb-3">
           Open (forced){" "}
-          <small className="text-ui-300 font-normal">javascript</small>
+          <small className="text-ui-300">javascript</small>
         </h2>
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -573,7 +573,7 @@ const DSpage = () => {
                   href="#"
                   className="text-0 rounded-full bg-ui-800 border border-ui-600 p-1 block"
                 >
-                  <span className="icon icon-gloot-symbol text-main text-2xl" />
+                  <span className="icon icon-stryda-symbol text-main text-2xl" />
                 </a>
                 <div className="dropdown dropdown-end">
                   <div
@@ -618,7 +618,7 @@ const DSpage = () => {
                       <li>
                         <a tabIndex="1">
                           <span className="icon icon-file-article" />
-                          <span>How G-Loot works</span>
+                          <span>How Stryda works</span>
                         </a>
                       </li>
                       <li>

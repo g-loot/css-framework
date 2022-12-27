@@ -418,7 +418,7 @@ export default function Chat(props) {
                             }`}
                           >
                             <span
-                              className={`leading-none font-bold text-sm interactive ${
+                              className={`leading-none text-sm interactive ${
                                 prototype.getUserByID(message.author)?.isPremium
                                   ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
                                   : ""

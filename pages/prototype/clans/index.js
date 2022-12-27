@@ -73,7 +73,7 @@ export default function Clan() {
           className="mb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(2 * 0.05s)" }}
         >
-          <h2 className="px-4 md:px-0 text-2xl font-normal text-ui-300">
+          <h2 className="px-4 md:px-0 h5">
             Clan(s) you have been invited to:
           </h2>
           <div className="relative">
@@ -92,7 +92,7 @@ export default function Clan() {
           className="mb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(2 * 0.05s)" }}
         >
-          <h2 className="px-4 md:px-0 text-2xl font-normal text-ui-300">
+          <h2 className="px-4 md:px-0 h5">
             Clans you might like to join:
           </h2>
           <Slider itemWidth={480+16} bgColor="from-ui-900 via-ui-900/90 to-ui-900/0">
@@ -109,7 +109,7 @@ export default function Clan() {
           className=" animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(2 * 0.05s)" }}
         >
-          <h2 className="px-4 sm:px-0 pb-4 text-2xl font-normal text-ui-300">
+          <h2 className="px-4 sm:px-0 pb-4 h5">
             Didn&#39;t find what you were looking for?
           </h2>
           <div className="grid gap-4 md:grid-cols-2">
@@ -170,7 +170,7 @@ export default function Clan() {
                   >
                     <span>Create clan</span>
                   </button>
-                  <span className="font-bold leading-tight hidden">
+                  <span className="leading-tight hidden">
                     Reach XP XXX to unlock Clan creation
                   </span>
                 </div>

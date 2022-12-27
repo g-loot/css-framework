@@ -66,7 +66,7 @@ const HowToPlay = [
     steps: [
       {
         description:
-          "Make sure you are ready and in the Discord server before your match starts. Don't forget to [add your Discord ID to your G-Loot account] so we can contact you with important updates about the Tournaments.",
+          "Make sure you are ready and in the Discord server before your match starts. Don't forget to [add your Discord ID to your Stryda account] so we can contact you with important updates about the Tournaments.",
         discord: true,
       },
       {
@@ -75,7 +75,7 @@ const HowToPlay = [
       },
       {
         description:
-          "After the match, return to G-Loot to see your score.",
+          "After the match, return to Stryda to see your score.",
       }
     ],
   },
@@ -147,7 +147,7 @@ export default function TabTournamentsHowToPlay() {
                           <div className="surface rounded-lg py-2 px-4 inline-flex items-center gap-4 mt-4">
                             <span className="flex-none icon icon-discord text-4xl" />
                             <div>
-                              <div><b>G-Loot Discord</b></div>
+                              <div><b>Stryda Discord</b></div>
                               <div><a className="link" href="https://discord.gg/gloot" target="_blank" rel="noopener noreferrer">https://discord.gg/gloot</a></div>
                             </div>
                           </div>

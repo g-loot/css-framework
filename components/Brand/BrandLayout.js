@@ -49,10 +49,10 @@ const BrandLayout = ({ children }) => {
                       className=""
                       width="123"
                       height="64"
-                      src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
-                      alt="G-Loot logo"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1671262915/Stryda/logos/stryda-logo-main.svg"
+                      alt="Stryda logo"
                     />
-                    <div className="font-headings font-bold text-xl uppercase not-italic leading-none text-ui-300 pb-1">
+                    <div className="text-xl uppercase not-italic leading-none text-ui-300 pb-1">
                       Brand
                     </div>
                   </a>
@@ -86,7 +86,7 @@ const BrandLayout = ({ children }) => {
                     {/*
                     <span className={`icon icon-16 icon-${item.icon}`}/>
                   */}
-                    <span className="font-headings font-bold uppercase text-ui-100">
+                    <span className="uppercase text-ui-100">
                       {item.label}
                     </span>
                   </button>

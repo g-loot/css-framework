@@ -20,7 +20,7 @@ const DSpage = () => {
   return (
     <>
       <h1 className="mb-6">
-        Colors <small className="text-ui-300 font-normal">references</small>
+        Colors <small className="text-ui-300">references</small>
       </h1>
       {DScolors.colors.map((item, indexItem) => (
         <div className="mb-8" key={item}>

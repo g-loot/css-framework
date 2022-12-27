@@ -36,7 +36,7 @@ const DSpage = () => {
 
   const slidesOnboarding = [
     {
-      title: "Create a G-Loot account",
+      title: "Create a Stryda account",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo diam quis ante mollis, ac elementum dolor elementum. ",
       image:
@@ -293,7 +293,7 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <h2 className="h3 mb-3">
                   Carousel step{" "}
-                  <small className="text-ui-300 font-normal">onboarding</small>
+                  <small className="text-ui-300">onboarding</small>
                 </h2>
 
                 <div className="surface rounded-xl overflow-hidden carousel carousel-step">

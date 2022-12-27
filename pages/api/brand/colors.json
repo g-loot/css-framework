@@ -299,25 +299,6 @@
       ]
     },
     {
-      "title": "Decorative / gradient",
-      "title_short": "decorative",
-      "colors": [{
-          "name": "Teal blue",
-          "value": "bg-gradient-to-r from-teal-500 to-blue-500",
-          "number": "300",
-          "data": "decorative.gradient.teal-blue",
-          "hex": "#F3F3F6"
-        },
-        {
-          "name": "Purple blue",
-          "value": "bg-gradient-to-r from-purple-700 to-info-500",
-          "number": "500",
-          "data": "decorative.gradient.purple-info",
-          "hex": "#F3F3F6"
-        }
-      ]
-    },
-    {
       "title": "System",
       "title_short": "system",
       "colors": [{

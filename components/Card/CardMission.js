@@ -53,7 +53,7 @@ export default function CardMission(props) {
                   </div>
                   <div className="flex-1">
                     Subscribe to Premium to earn an additional{" "}
-                    <span className="font-bold text-premium-700">
+                    <span className="text-premium-700">
                       50% XP
                     </span>{" "}
                     on each completed mission.

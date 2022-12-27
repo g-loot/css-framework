@@ -645,12 +645,12 @@ const DSpage = () => {
                     }`}
                   >
                     <div className="flip-front rounded-lg flex items-center justify-center bg-ui-400">
-                      <span className="text-4xl font-headings font-bold">
+                      <span className="text-4xl font-bold">
                         A
                       </span>
                     </div>
                     <div className="flip-back rounded-lg flex items-center justify-center bg-main">
-                      <span className="text-4xl font-headings font-bold text-ui-800">
+                      <span className="text-4xl text-ui-800">
                         B
                       </span>
                     </div>
@@ -736,12 +736,12 @@ const DSpage = () => {
                     }`}
                   >
                     <div className="flip-front rounded-lg flex items-center justify-center bg-ui-400">
-                      <span className="text-4xl font-headings font-bold">
+                      <span className="text-4xl font-bold">
                         A
                       </span>
                     </div>
                     <div className="flip-back rounded-lg flex items-center justify-center bg-main">
-                      <span className="text-4xl font-headings font-bold text-ui-800">
+                      <span className="text-4xl text-ui-800">
                         B
                       </span>
                     </div>

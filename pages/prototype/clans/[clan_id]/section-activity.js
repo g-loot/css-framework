@@ -129,7 +129,7 @@ export default function SectionClanActivity() {
                               <>
                                 {reward.type === "money" && (
                                   <div className="flex items-center gap-2">
-                                    <span className="font-headings font-bold text-lg italic">
+                                    <span className="text-lg">
                                       $ {numberWithSpaces(reward.value)}
                                     </span>
                                   </div>
@@ -143,7 +143,7 @@ export default function SectionClanActivity() {
                                       height="auto"
                                       alt=""
                                     />
-                                    <span className="font-headings font-bold text-lg italic">
+                                    <span className="text-lg">
                                       {numberWithSpaces(reward.value)}
                                     </span>
                                   </div>
@@ -157,7 +157,7 @@ export default function SectionClanActivity() {
                                       height="auto"
                                       alt=""
                                     />
-                                    <span className="font-headings font-bold text-lg italic">
+                                    <span className="text-lg">
                                       {numberWithSpaces(reward.value)}
                                     </span>
                                   </div>
@@ -171,7 +171,7 @@ export default function SectionClanActivity() {
                                       height="auto"
                                       alt=""
                                     />
-                                    <span className="font-headings font-bold text-lg italic">
+                                    <span className="text-lg">
                                       {numberWithSpaces(reward.value)}
                                     </span>
                                   </div>
@@ -181,7 +181,7 @@ export default function SectionClanActivity() {
                           </div>
                         </div>
                         <div className="flex items-center gap-2 leading-none">
-                          <div className="text-5xl font-headings italic">
+                          <div className="text-5xl">
                             {brawl.soloResults?.placement}
                           </div>
                           <div
@@ -288,7 +288,7 @@ export default function SectionClanActivity() {
 
           <div className="surface sm:rounded-lg">
             <div className="p-1 border-b border-ui-700 flex gap-2 justify-between">
-              <h2 className="p-2 text-xl italic">
+              <h2 className="p-2 text-xl">
                 Members{" "}
                 <span className="font-body font-normal not-italic text-ui-300 text-sm tracking-normal">
                   {selectedClan.members.length} / 30

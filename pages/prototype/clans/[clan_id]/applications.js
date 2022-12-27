@@ -91,7 +91,7 @@ export default function Home() {
       <PrototypeStructure title="Clan">
         <Ad width="1005" height="300" />
         <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-end px-4 sm:px-0 mb-0.5">
-          <h1 className="text-3xl sm:text-4xl">Clan applications</h1>
+          <h1>Clan applications</h1>
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 items-stretch">
             <div className="leading-none text-center surface surface-dimmed rounded py-2 sm:py-1.5 px-2 flex flex-col justify-between gap-1">
               <div className="text-ui-300">
@@ -369,7 +369,7 @@ export default function Home() {
                                   <div className="flex justify-center gap-2">
                                     <button
                                       type="button"
-                                      className="button button-sm button-primary"
+                                      className="button button-sm button-success"
                                     >
                                       <span>Accept</span>
                                     </button>

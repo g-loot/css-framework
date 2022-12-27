@@ -104,7 +104,7 @@ export default function Home() {
                   />
                   {prototype.getBrawlByID(game, brawl_id).sponsor && (
                     <>
-                      <p className="font-headings font-bold italic text-xl mb-2">
+                      <p className="text-xl mb-2">
                         Sponsored by
                       </p>
                       <img
@@ -116,7 +116,7 @@ export default function Home() {
                   )}
                 </div>
                 <div className="header-body">
-                  <h1 className="text-4xl mb-2 leading-none">
+                  <h1 className="h3 mb-2">
                     {prototype.getBrawlByID(game, brawl_id).name}
                   </h1>
                   <p className="text-ui-300 max-w-[45ch] mb-4">
@@ -127,7 +127,7 @@ export default function Home() {
                   <div className="flex flex-col md:flex-row gap-2">
                     <button
                       type="button"
-                      className="button button-sm button-primary button-play"
+                      className="button button-primary button-play"
                       onClick={openModalBrawlHowitworksVideo}
                     >
                       <span className="icon icon-circle-caret-right" />
@@ -138,7 +138,7 @@ export default function Home() {
                     >
                       <button
                         type="button"
-                        className="button button-sm button-secondary"
+                        className="button button-secondary"
                       >
                         <span className="icon icon-steam" />
                         <span>Steam required</span>
@@ -149,12 +149,12 @@ export default function Home() {
               </div>
               <div className="header-meta justify-start pr-0">
                 <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                  <span className="font-headings font-bold italic text-ui-100 uppercase">
+                  <span className="text-ui-100 uppercase">
                     Time Left:
                   </span>
                   <span className="icon icon-clock text-main" />
                   <Countdown
-                    additionalClassNames="flex items-baseline gap-0.5 font-headings font-bold italic uppercase text-main"
+                    additionalClassNames="flex items-baseline gap-0.5 uppercase text-main"
                     hasDays={true}
                     hasLabels={true}
                     hasSeconds={false}

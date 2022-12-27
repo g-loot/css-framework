@@ -9,7 +9,7 @@ export default function ValorantClashCTA(props) {
         <div className="relative z-10 container max-w-lg mx-auto text-center">
           <img
             className="mx-auto"
-            src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/G-Loot_Valorant_Clash_Logo.svg"
+            src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/Stryda_Valorant_Clash_Logo.svg"
             width="600"
             height="auto"
             alt=""

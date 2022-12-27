@@ -56,11 +56,11 @@ export default function Missions() {
                   />
                 </div>
                 <div className="header-body">
-                  <h1 className="text-4xl mb-2 leading-none">
+                  <h1 className="h3 mb-2">
                     {selectedGame.name} Missions
                   </h1>
                   <p className="text-ui-300 max-w-[70ch] mb-4">
-                    Play G-Loot Missions in-game, gather XP, and earn Mission
+                    Play Stryda Missions in-game, gather XP, and earn Mission
                     Rewards. You can complete the Daily Missions in any game.
                   </p>
                   <button
@@ -74,11 +74,11 @@ export default function Missions() {
               <div className="header-meta">
                 <div className="w-full flex flex-col justify-center items-center gap-2 xl:pl-0 py-4">
                   <div className="flex items-end gap-4 leading-tight">
-                    <div className="text-xl xl:text-4xl font-headings font-bold italic text-main">
+                    <div className="text-xl xl:text-4xl text-main">
                       2/3
                     </div>
                     <div className="xl:mb-2">
-                      <div className="text-xl font-headings font-bold italic text-ui-200 uppercase">
+                      <div className="text-xl text-ui-200 uppercase">
                         Daily missions completed
                       </div>
                     </div>

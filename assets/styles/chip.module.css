@@ -12,7 +12,6 @@
   gap-2
   justify-center
   items-center
-  font-body
   transition
   duration-200
   ease-in-out
@@ -125,31 +124,25 @@
 
   &.chip-sliced {
     @apply
-    rounded-tl
-    rounded-bl
-    pr-1
     py-1
     ;
     clip-path: polygon(0 0, 100%0, calc(100% - 0.5em) 100%, 0 100%);
     > *:not(.avatar):not(.button):not(.icon) {
       @apply
       text-lg
-      font-headings
-      font-bold
-      italic
       uppercase
       ;
       &:first-child {
         &:not([class*="ml-"]) {
           @apply
-          ml-2
+          ml-1
           ;
         }
       }
       &:last-child {
         &:not([class*="mr-"]) {
           @apply
-          mr-2
+          mr-1
           ;
         }
       }
@@ -157,13 +150,13 @@
 
     &:not([class*=bg-]){
       @apply
-      bg-interaction-300
+      bg-main
       ;
     }
 
     &.chip-blue {
       @apply
-      bg-interaction-300
+      bg-blue-500
       ;
     }
     &.chip-blue {
@@ -184,12 +177,12 @@
     @apply
     text-xs
     min-h-[1.65rem]
-    gap-1.5
+    gap-1
     ;
     &.chip-sliced {
       @apply
-      pl-1
-      pr-2
+      pl-0.5
+      pr-1
       ;
       > *:not(.avatar):not(.button):not(.icon) {
         @apply
@@ -209,14 +202,14 @@
       &:first-child {
         &:not([class*="ml-"]) {
           @apply
-          ml-2
+          ml-1.5
           ;
         }
       }
       &:last-child {
         &:not([class*="mr-"]) {
           @apply
-          mr-2
+          mr-1.5
           ;
         }
       }
@@ -481,8 +474,6 @@
 
     > span:not(.icon) {
       @apply
-      font-headings
-      font-bold
       uppercase
       text-lg
       ;
@@ -725,9 +716,6 @@
     &.chip-xs {
       > span:not(.icon) {
         @apply
-        font-body
-        font-bold
-        tracking-normal
         text-base
         ;
       }

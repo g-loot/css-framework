@@ -8,12 +8,12 @@ const BrandPage = () => (
       <div className='flex gap-8'>
         <div className='flex-1 max-w-xs'>
           <div>
-            <span className='text-main text-xl font-headings font-bold uppercase'>G-Loot</span>
+            <span className='text-main text-xl uppercase'>Stryda</span>
             <h1 className='leading-none text-6xl uppercase'>
               Logotype
             </h1>
             <div className='h-px w-full bg-gradient-to-r from-main via-blue-700 to-blue-700/0 mt-6 mb-4'></div>
-            <p className='text-xl font-headings font-bold italic text-ui-300 leading-loose'>
+            <p className='text-xl text-ui-300 leading-loose'>
               Our logo is the touchstone of our brand and one of our most valuable assets and should be handled with care.
             </p>
           </div>
@@ -28,7 +28,7 @@ const BrandPage = () => (
               </h2>
             </div>
             <p className='text-ui-300 leading-loose'>
-              The preferred way to use the G-Loot logo is over a dark background. There are two versions of the G-Loot logo; a stacked and horizontal logotype. Consider space and composition for when to use which version. To ensure prominence and legibility of the logo, allow a minimum clear space around the logotype. Keep the logotype clear of messy backgrounds and other graphic elements, text or other logos. The logo is not to be altered in any shape or form, nor is it allowed to adjust its color.
+              The preferred way to use the Stryda logo is over a dark background. There are two versions of the Stryda logo; a stacked and horizontal logotype. Consider space and composition for when to use which version. To ensure prominence and legibility of the logo, allow a minimum clear space around the logotype. Keep the logotype clear of messy backgrounds and other graphic elements, text or other logos. The logo is not to be altered in any shape or form, nor is it allowed to adjust its color.
             </p>
           </div>
         </div>

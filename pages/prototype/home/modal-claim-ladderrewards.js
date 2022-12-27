@@ -47,16 +47,16 @@ export default function ModalClaimLadderRewards(props) {
                   <img
                     className="mx-auto animate-drop-in animate-delay"
                     style={{ "--delay": "calc( 1 * 0.1s)" }}
-                    src="https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-coin-small.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671799703/Stryda/currencies/Reward-centered-coin-small.png"
                     width="140"
                     height="auto"
                     alt=""
                   />
                   <div className="flex gap-2 items-baseline justify-center">
-                    <div className="text-4xl font-headings text-gold-500">
+                    <div className="text-4xl text-gold-500">
                       5
                     </div>
-                    <div className="font-headings font-bold uppercase text-lg text-gold-500">
+                    <div className="uppercase text-lg text-gold-500">
                       Coins
                     </div>
                   </div>
@@ -65,16 +65,16 @@ export default function ModalClaimLadderRewards(props) {
                   <img
                     className="mx-auto animate-drop-in animate-delay"
                     style={{ "--delay": "calc( 2 * 0.1s)" }}
-                    src="https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-extrasmall.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1671799704/Stryda/currencies/Reward-centered-token-unique.png"
                     width="140"
                     height="auto"
                     alt=""
                   />
                   <div className="flex gap-2 items-baseline justify-center">
-                    <div className="text-4xl font-headings text-purple-500">
+                    <div className="text-4xl text-purple-500">
                       1
                     </div>
-                    <div className="font-headings font-bold uppercase text-lg text-purple-500">
+                    <div className="uppercase text-lg text-purple-500">
                       Token
                     </div>
                   </div>

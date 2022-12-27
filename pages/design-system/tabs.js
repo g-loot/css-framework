@@ -155,7 +155,7 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-bronze" />
-                    <span className="font-headings font-bold text-2xl uppercase italic">
+                    <span className="h4">
                       Bronze
                     </span>
                   </div>
@@ -167,7 +167,7 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-silver" />
-                    <span className="font-headings font-bold text-2xl uppercase italic">
+                    <span className="h4">
                       Silver
                     </span>
                   </div>
@@ -185,7 +185,7 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-gold" />
-                    <span className="font-headings font-bold text-2xl uppercase italic">
+                    <span className="h4">
                       Gold
                     </span>
                   </div>
@@ -197,7 +197,7 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-platinum" />
-                    <span className="font-headings font-bold text-2xl uppercase italic">
+                    <span className="h4">
                       Platinum
                     </span>
                   </div>
@@ -209,7 +209,7 @@ const DSpage = () => {
                 <div>
                   <div>
                     <span className="icon text-4xl icon-rank-diamond" />
-                    <span className="font-headings font-bold text-2xl uppercase italic">
+                    <span className="h4">
                       Diamond
                     </span>
                   </div>

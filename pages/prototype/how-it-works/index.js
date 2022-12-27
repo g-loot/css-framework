@@ -19,7 +19,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "To start competing in Missions, all you need to do is run the G-Loot PC app while you play.  Each time you successfully complete a Mission, you earn XP, which you use to claim Mission Rewards. You can complete a set number of Missions each day, and new ones appear every 24 hours. Keep an eye on the PC app and gloot.com to see your progress and check out what’s new.",
+        text: "To start competing in Missions, all you need to do is run the Stryda PC app while you play.  Each time you successfully complete a Mission, you earn XP, which you use to claim Mission Rewards. You can complete a set number of Missions each day, and new ones appear every 24 hours. Keep an eye on the PC app and gloot.com to see your progress and check out what’s new.",
       },
     ],
   },
@@ -51,11 +51,11 @@ const TabsItems = [
     content: [
       {
         type: "p",
-        text: "Brawls are weekly competitions where you compete against other G-Loot players in a leaderboard to earn bigger rewards.",
+        text: "Brawls are weekly competitions where you compete against other Stryda players in a leaderboard to earn bigger rewards.",
       },
       {
         type: "p",
-        text: "Like Missions, Brawls are based on your game stats (such as kills or damage.) You don’t play directly against other competitors; you just need the G-Loot PC app running while you play.",
+        text: "Like Missions, Brawls are based on your game stats (such as kills or damage.) You don’t play directly against other competitors; you just need the Stryda PC app running while you play.",
       },
       {
         type: "p",
@@ -70,21 +70,21 @@ const TabsItems = [
   {
     id: 4,
     subtitle: "Premium",
-    title: "Get more out of G-Loot",
+    title: "Get more out of Stryda",
     url: "premium",
     icon: "icon-fireworks",
     img: "https://res.cloudinary.com/gloot/image/upload/v1665067148/Marketing/2022_prototype/Illustrations/picture_premium_missions.webp",
     content: [
       {
         type: "p",
-        text: "Get more out of G-Loot by subscribing to G-Loot Premium.",
+        text: "Get more out of Stryda by subscribing to Stryda Premium.",
       },
       {
         type: "ul",
         text: [
           "Get access to exclusive Premium Missions.",
           "Earn extra XP to reach your Rewards milestones faster.",
-          "Enjoy the G-Loot experience without ads.",
+          "Enjoy the Stryda experience without ads.",
         ],
       },
       {
@@ -107,7 +107,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "Turn your gaming time into cool prizes. Earn Coins when you play your games with G-Loot, and s pend them in the shop.",
+        text: "Turn your gaming time into cool prizes. Earn Coins when you play your games with Stryda, and s pend them in the shop.",
       },
       {
         type: "h4",
@@ -137,7 +137,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "Visit the <a href='/prototype/shop' class='link link-main font-bold'>G-Loot shop</a>.",
+        text: "Visit the <a href='/prototype/shop' class='link link-main font-bold'>Stryda shop</a>.",
       },
     ],
   },
@@ -178,7 +178,7 @@ const TabsItems = [
     content: [
       {
         type: "p",
-        text: "The G-Loot PC app is at the heart of the G-Loot experience. It’s what lets you track your stats while you play and take part in Missions, Brawls, and other competitions. When you run G-Loot and start playing a supported game, the app starts “listening” for certain game events such as kills or headshots.",
+        text: "The Stryda PC app is at the heart of the Stryda experience. It’s what lets you track your stats while you play and take part in Missions, Brawls, and other competitions. When you run Stryda and start playing a supported game, the app starts “listening” for certain game events such as kills or headshots.",
       },
       {
         type: "p",
@@ -186,7 +186,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "That’s it. Because all G-Loot is doing is listening for your game events, it can be very lightweight and doesn’t affect your game performance.",
+        text: "That’s it. Because all Stryda is doing is listening for your game events, it can be very lightweight and doesn’t affect your game performance.",
       },
     ],
   },
@@ -195,20 +195,20 @@ const TabsItems = [
 
 const HowItWorksFAQs = [
   {
-    title: "Is G-Loot available on Mac/mobile/console?",
+    title: "Is Stryda available on Mac/mobile/console?",
     content: [
       {
         type: "p",
-        text: "Right now, G-Loot is only available on PC. We’re researching how we can bring G-Loot to more devices in the future, but there’s no timeline for this yet..",
+        text: "Right now, Stryda is only available on PC. We’re researching how we can bring Stryda to more devices in the future, but there’s no timeline for this yet..",
       },
       {
         type: "p",
-        text: "<a href='#' class='link link-main font-bold'>Check out the system requirements for G-Loot.</a>",
+        text: "<a href='#' class='link link-main font-bold'>Check out the system requirements for Stryda.</a>",
       },
     ],
   },
   {
-    title: "I’m not a high-level player. Can I still use G-Loot?",
+    title: "I’m not a high-level player. Can I still use Stryda?",
     content: [
       {
         type: "p",
@@ -217,16 +217,16 @@ const HowItWorksFAQs = [
     ],
   },
   {
-    title: "Does G-Loot cost money to use?",
+    title: "Does Stryda cost money to use?",
     content: [
       {
         type: "p",
-        text: "It’s completely up to you. You can enter Missions, Brawls, and Tournaments using only virtual currencies that you earn on G-Loot. If you want to, you can purchase extra Tokens. You can also become a G-Loot Premium subscriber and get access to extra Missions and other perks.",
+        text: "It’s completely up to you. You can enter Missions, Brawls, and Tournaments using only virtual currencies that you earn on Stryda. If you want to, you can purchase extra Tokens. You can also become a Stryda Premium subscriber and get access to extra Missions and other perks.",
       },
     ],
   },
   {
-    title: "Is G-Loot legal and safe?",
+    title: "Is Stryda legal and safe?",
     content: [
       {
         type: "p",
@@ -261,10 +261,10 @@ export default function HowItWorks() {
           <div className="header surface rounded-lg">
             <div className="header-content">
               <div className="header-body">
-                <h1 className="text-4xl mb-4 leading-none">How G-Loot works</h1>
+                <h1 className="mb-4">How Stryda works</h1>
                 <p className="text-ui-300 max-w-[70ch] mb-2">
-                  G-Loot is an esports platform for PC where you can track your
-                  gaming stats, play G-Loot Missions in your favorite games, and
+                  Stryda is an esports platform for PC where you can track your
+                  gaming stats, play Stryda Missions in your favorite games, and
                   compete in competitions and tournaments.
                 </p>
                 <p className="text-ui-300 max-w-[70ch]">
@@ -303,7 +303,7 @@ export default function HowItWorks() {
                     <div className="item-actions">
                       <div>
                         <span className={`icon text-3xl transition-all duration-500 ease-in-out ${item.icon} ${
-                      selectedTab === item.url ? "text-gradient bg-gradient-to-b from-blue-300 to-main" : "text-ui-400 scale-75"
+                      selectedTab === item.url ? "text-main" : "text-ui-400 scale-75"
                     }`} />
                       </div>
                     </div>

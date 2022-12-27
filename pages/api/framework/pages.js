@@ -202,6 +202,14 @@ export const FrameworkPages = {
           new: false,
         },
         {
+          label: "Clans search",
+          url: "clans/search",
+          query: "",
+          tags: "clan, team, search, form, find",
+          tab: 0,
+          new: false,
+        },
+        {
           label: "Clans applications",
           url: "clans/1/applications",
           query: "",
@@ -458,7 +466,7 @@ export const FrameworkPages = {
           new: false,
         },
         {
-          label: "G-Loot rules",
+          label: "Stryda rules",
           url: "valorant/brawls",
           query: "tab=rules",
           tags: "game, brawls, rules, explanation, cheating, accounts, player protection",
@@ -744,44 +752,6 @@ export const FrameworkPages = {
           url: "valorant/stats",
           query: "empty=true",
           tags: "game, stats, valorant",
-          new: false,
-          tab: 1,
-        },
-        
-      ],
-    },
-    {
-      title: "Search",
-      pages: [
-        {
-          label: "Player search",
-          url: "search",
-          query: "",
-          tags: "search, directory, list, players, users",
-          new: false,
-        },
-        {
-          label: "Clan search",
-          url: "search",
-          query: "tab=clans",
-          tags: "search, directory, list, clans",
-          new: false,
-        },
-        {
-          label: "Recruit player",
-          chip: "modal",
-          url: "search",
-          query: "modalrecruit=true",
-          tags: "search, directory, list, players, users, recruit",
-          new: false,
-          tab: 1,
-        },
-        {
-          label: "Join clan",
-          chip: "modal",
-          url: "search",
-          query: "tab=clans&modaljoin=true",
-          tags: "search, directory, list, players, users, join clan",
           new: false,
           tab: 1,
         },

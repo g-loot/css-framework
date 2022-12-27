@@ -33,7 +33,7 @@ export default function BrawlCardSecondary(props) {
       {brawl.hasClaim && (
         <div className="card-overlay">
           <div>
-            <div className="font-headings text-2xl font-bold italic text-ui-100">
+            <div className="text-2xl text-ui-100">
               You won a prize!
             </div>
             <button
@@ -97,17 +97,11 @@ export default function BrawlCardSecondary(props) {
       <div className="card-content">
         <div className="card-body">
           <div>
-            <h2 className="text-3xl mb-2 uppercase">{brawl.name}</h2>
+            <h2 className="h4 mb-2">{brawl.name}</h2>
             <div className="flex gap-4 items-center">
               <div className="flex items-center whitespace-nowrap gap-2">
-                <img
-                  className="h-5"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp"
-                  width="auto"
-                  height="auto"
-                  alt=""
-                />
-                <span className="font-bold text-gold-500 text-sm">
+                <span className="icon icon-coin text-gold-500" />
+                <span className="text-gold-500 text-sm">
                   5 000 - 30 000
                 </span>
               </div>
@@ -160,13 +154,13 @@ export default function BrawlCardSecondary(props) {
                         <div className="uppercase text-xs text-ui-300">
                           Points
                         </div>
-                        <div className="text-sm font-bold">1120</div>
+                        <div className="text-sm">1120</div>
                       </div>
                       <div>
                         <div className="uppercase text-xs text-ui-300">
                           Position
                         </div>
-                        <div className="text-sm font-bold">#243</div>
+                        <div className="text-sm">#243</div>
                       </div>
                     </div>
                     <div className="infobanner-back absolute inset-0 flex items-center text-sm">
@@ -228,13 +222,13 @@ export default function BrawlCardSecondary(props) {
                           <div className="uppercase text-xs text-ui-300">
                             Points
                           </div>
-                          <div className="text-sm font-bold">1120</div>
+                          <div className="text-sm">1120</div>
                         </div>
                         <div>
                           <div className="uppercase text-xs text-ui-300">
                             Position
                           </div>
-                          <div className="text-sm font-bold">#243</div>
+                          <div className="text-sm">#243</div>
                         </div>
                       </div>
                       <div className="infobanner-back absolute inset-0 flex items-center text-sm">

@@ -20,12 +20,12 @@ export default function TabBrawlsRules() {
           />
           </div>
           <div className="flex-1">
-            <h2 className="text-3xl leading-none mb-4">G-Loot rules</h2>
+            <h2 className="text-3xl leading-none mb-4">Stryda rules</h2>
             <p className="text-ui-300 leading-relaxed">
-              G-Loot wants esports to be safe and fun for everyone, so we take
+              Stryda wants esports to be safe and fun for everyone, so we take
               player protection very seriously and investigate any suspicious
               activity. Make sure you read the rules before your first Brawl, so
-              you know what you can and cannot do while playing on G-Loot! Here
+              you know what you can and cannot do while playing on Stryda! Here
               are some of our most important rules:
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function TabBrawlsRules() {
             <h3 className="text-2xl my-4 leading-tight">On game account</h3>
             <p className="text-ui-300">
               Use one game account only. Playing from multiple game accounts
-              while participating in G-Loot competitions is considered in-game
+              while participating in Stryda competitions is considered in-game
               smurfing.
             </p>
           </div>
@@ -63,9 +63,9 @@ export default function TabBrawlsRules() {
               No game account sharing
             </h3>
             <p className="text-ui-300">
-              Do not share your game account or your G-Loot account with anyone
+              Do not share your game account or your Stryda account with anyone
               (for example: you cannot use the same Valorant account on two
-              G-Loot accounts). Do not sell or buy game- or G-Loot accounts.
+              Stryda accounts). Do not sell or buy game- or Stryda accounts.
             </p>
           </div>
           <div className="col-span-4 md:col-span-2 xl:col-span-1">
@@ -76,10 +76,10 @@ export default function TabBrawlsRules() {
               height="auto"
               alt=""
             />
-            <h3 className="text-2xl my-4 leading-tight">One G-Loot account</h3>
+            <h3 className="text-2xl my-4 leading-tight">One Stryda account</h3>
             <p className="text-ui-300">
-              You may only have one G-Loot account. Do not create additional
-              G-Loot accounts for any reason.
+              You may only have one Stryda account. Do not create additional
+              Stryda accounts for any reason.
             </p>
           </div>
           <div className="col-span-4 md:col-span-2 xl:col-span-1">
@@ -112,7 +112,7 @@ export default function TabBrawlsRules() {
                 height="auto"
               />
               <span className="text-xs text-ui-300 leading-tight">
-                Brawls protected by G-Loot Player Protection
+                Brawls protected by Stryda Player Protection
               </span>
             </div>
             <div className="flex-1 border-l border-ui-700 pl-8">

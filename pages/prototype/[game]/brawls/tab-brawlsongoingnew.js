@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import Countdown from "../../../../components/Countdown/Countdown";
-import Link from "next/link";
-import Reward from "../../../../components/Reward/Reward";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import BrawlCardSecondary from "../../../../components/Brawl/BrawlCardSecondary";

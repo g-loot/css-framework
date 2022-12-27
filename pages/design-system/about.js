@@ -8,16 +8,16 @@ const DSpage = () => (
     <div className='max-w-md mx-auto aspect-landscape bg-cover bg-center rounded-lg mb-12 border border-ui-700' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289722/Marketing/2022_prototype/cover-designsystem.jpg)`}}></div>
     <div className='max-w-sm mx-auto space-y-4 text-ui-100 leading-none mb-6'>
       <h1 className='leading-none h2'>
-        G-Loot CSS Framework <small className='text-ui-300 font-normal'>introduction</small>
+        Stryda CSS Framework <small className='text-ui-300'>introduction</small>
       </h1>
     </div>
     
     <div className='max-w-sm mx-auto space-y-4 text-ui-200'>
       <p>
-        The G-Loot CSS Framework is a centralized front-end design system that allows any developer to quickly build pages that are in line with the G-Loot brand and its user interface system.
+        The Stryda CSS Framework is a centralized front-end design system that allows any developer to quickly build pages that are in line with the Stryda brand and its user interface system.
       </p>
       <p>
-        Based on the utility-first framework <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, the G-Loot CSS Framework provides pre-defined components listed on this website as well as highly composable, low-level utility classes to build complex user interfaces with speed in mind.
+        Based on the utility-first framework <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, the Stryda CSS Framework provides pre-defined components listed on this website as well as highly composable, low-level utility classes to build complex user interfaces with speed in mind.
       </p>
     </div>
 
@@ -28,7 +28,7 @@ const DSpage = () => (
         The styled-component way
       </h2>
       <p>
-        The current way of designing for the web at G-Loot is not optimal since it forces each component to embed its own styling. This opens the door to numerous inconsistencies and duplicated code.
+        The current way of designing for the web at Stryda is not optimal since it forces each component to embed its own styling. This opens the door to numerous inconsistencies and duplicated code.
       </p>
       <p>
         The use of the Styled System library, that is suppose to enable flexibility when creating layouts is very limited and non-intuitive.
@@ -40,10 +40,10 @@ const DSpage = () => (
         The class(y) way
       </h2>
       <p>
-        By creating a G-Loot CSS Framework we are able to centralise all the design system in one place, making sure everything is built in a visually consistent and smart way.
+        By creating a Stryda CSS Framework we are able to centralise all the design system in one place, making sure everything is built in a visually consistent and smart way.
       </p>
       <p className='pb-5'>
-        And since the G-Loot CSS Framework is based on <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, it allows the use of its utility-first class names anywhere. That way new pages and components can be built effortlessly.
+        And since the Stryda CSS Framework is based on <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, it allows the use of its utility-first class names anywhere. That way new pages and components can be built effortlessly.
       </p>
     </div>
     */}
@@ -53,7 +53,7 @@ const DSpage = () => (
         Benefits
       </h3>
       <p className='border-b border-ui-700 pb-5'>
-        <strong className='font-headings font-bold text-xl text-main'>
+        <strong className='text-xl text-main'>
           Smart design
         </strong>
         <br />
@@ -62,34 +62,34 @@ const DSpage = () => (
         </span>
       </p>
       <p className='border-b border-ui-700 pb-5'>
-        <strong className='font-headings font-bold text-xl text-main'>
+        <strong className='text-xl text-main'>
           One place of truth
         </strong>
         <br />
         <span>
-          Since the styling is defined outside of the React components, the appearance and feeling of any element can be explored and tested freely. It also makes the G-Loot CSS Framework the one place of truth between UX/UI and devs.
+          Since the styling is defined outside of the React components, the appearance and feeling of any element can be explored and tested freely. It also makes the Stryda CSS Framework the one place of truth between UX/UI and devs.
         </span>
       </p>
       <p className='border-b border-ui-700 pb-5'>
-        <strong className='font-headings font-bold text-xl text-main'>
+        <strong className='text-xl text-main'>
           Technology agnostic
         </strong>
         <br />
         <span>
-          As it is independent from the front-end technology (ReactJS), the G-Loot CSS Framework is instantly compatible with any other front-end language (VueJS, SvelteJS PHP, plain HTML, emails, etc.) making the building of ad-hoc tools and interfaces a piece of cake.
+          As it is independent from the front-end technology (ReactJS), the Stryda CSS Framework is instantly compatible with any other front-end language (VueJS, SvelteJS PHP, plain HTML, emails, etc.) making the building of ad-hoc tools and interfaces a piece of cake.
         </span>
       </p>
       <p className='border-b border-ui-700 pb-5'>
-        <strong className='font-headings font-bold text-xl text-main'>
+        <strong className='text-xl text-main'>
           Flexible and quick
         </strong>
         <br />
         <span>
-          Because it is based on the CSS Framework <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, the whole product can use its numerous utility-first class names to build layouts and one-offs with ease and speed while still remaining consistent with the G-Loot brand.
+          Because it is based on the CSS Framework <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, the whole product can use its numerous utility-first class names to build layouts and one-offs with ease and speed while still remaining consistent with the Stryda brand.
         </span>
       </p>
       <p className='pb-5'>
-        <strong className='font-headings font-bold text-xl text-main'>
+        <strong className='text-xl text-main'>
           Faster render
         </strong>
         <br />
@@ -103,7 +103,7 @@ const DSpage = () => (
       </h3>
      
       <p className='pb-5'>
-        <strong className='font-headings font-bold text-xl text-error-300'>
+        <strong className='text-xl text-error-300'>
           Work
         </strong>
         <br />

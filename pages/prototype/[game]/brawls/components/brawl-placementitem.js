@@ -107,13 +107,7 @@ export default function BrawlPlacementItem(props) {
                       <span>Activate</span>
                     </div>
                     <div>
-                      <img
-                        className="dropshadow-xs"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                        width="34"
-                        height="34"
-                        alt="coin"
-                      />
+                      <span className="icon icon-token " />
                       <span>1</span>
                     </div>
                   </button>
@@ -126,7 +120,7 @@ export default function BrawlPlacementItem(props) {
               </div>
             )}
             <div
-              className={`font-headings uppercase font-bold text-ui-300 text-xl italic ${
+              className={`h5 text-ui-300 ${
                 props.item?.step > 3 &&
                 variablesContext.brawlStep + 1 === props.item?.step
                   ? "opacity-0"
@@ -136,7 +130,7 @@ export default function BrawlPlacementItem(props) {
               Match {props.item?.step}
             </div>
             <div
-              className={`w-12 h-12 rounded-full bg-gradient-to-b from-interaction-300 to-blue-500 flex items-center justify-center ${
+              className={`w-12 h-12 rounded-full bg-main flex items-center justify-center ${
                 props.item?.step > 3 &&
                 variablesContext.brawlStep + 1 === props.item?.step
                   ? "opacity-0"
@@ -154,7 +148,7 @@ export default function BrawlPlacementItem(props) {
             }`}
           >
             <div
-              className={`font-headings uppercase font-bold text-ui-300 text-xl italic ${
+              className={`h6 text-ui-300 ${
                 resultsDone ? "text-ui-100" : "text-ui-300"
               }`}
             >
@@ -164,7 +158,7 @@ export default function BrawlPlacementItem(props) {
               {resultsDone && (
                 <>
                   <div
-                    className="flex items-center gap-1 italic font-bold font-headings text-blue-300 animate-slide-in-right animate-delay"
+                    className="flex items-center gap-1 text-main animate-slide-in-right animate-delay"
                     style={{ "--delay": "calc(0 * 0.05s)" }}
                   >
                     <span className="text-xl text-right">
@@ -173,7 +167,7 @@ export default function BrawlPlacementItem(props) {
                     <span>pts</span>
                   </div>
                   <div
-                    className={`flex items-center gap-1 italic font-bold font-headings ${isPremium ? 'text-premium-500' : ''} animate-slide-in-right animate-delay`}
+                    className={`flex items-center gap-1 ${isPremium ? 'text-premium-500' : ''} animate-slide-in-right animate-delay`}
                     style={{ "--delay": "calc(2 * 0.05s)" }}
                   >
                     <span className="text-right">+25</span>
@@ -182,7 +176,7 @@ export default function BrawlPlacementItem(props) {
                 </>
               )}
               {!resultsDone && (
-                <div className="flex items-center gap-1 italic font-bold font-headings text-blue-300">
+                <div className="flex items-center gap-1 text-main">
                   <span className="text-3xl">--</span>
                 </div>
               )}

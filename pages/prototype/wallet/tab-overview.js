@@ -11,8 +11,8 @@ const WalletItems = [
   {
     id: 1,
     name: "coins",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-coin-unique.png",
+    icon: "icon-coin",
+    image: "https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-face.png",
     amount: "50000",
     use: "To purchase items in the <b>Shop</b>.",
     get: "From <b>Daily Loot Streak</b> and <b>Weekly Brawls</b>.",
@@ -22,8 +22,8 @@ const WalletItems = [
   {
     id: 2,
     name: "tokens",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-unique.png",
+    icon: "icon-token",
+    image: "https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-face.png",
     amount: "245",
     use: "To enter rounds in the <b>Weekly Brawls</b>.",
     get: "From <b>Missions, Daily Loot Streak</b> or buy them directly from the <b>Wallet</b>.",
@@ -66,11 +66,11 @@ export default function TabWalletOverview() {
 
   useEffect(() => {
     handleResize();
-    
-    window.addEventListener('resize', handleResize);
-  
+
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -86,16 +86,15 @@ export default function TabWalletOverview() {
 
   function handleResize() {
     if (window.innerWidth < 720) {
-        setIsMobile(true);
+      setIsMobile(true);
     } else {
-        setIsMobile(false)
+      setIsMobile(false);
     }
   }
-  
+
   useEffect(() => {
-    window.addEventListener("resize", handleResize)
+    window.addEventListener("resize", handleResize);
   }, []);
-  
 
   return (
     <>
@@ -109,17 +108,13 @@ export default function TabWalletOverview() {
                 style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
               >
                 <div className="bg-gradient-to-b from-ui-900/50 to-ui-900/5 rounded overflow-hidden">
-                  <div className="flex gap-2 items-center justify-center">
-                    <img
-                      className={`${
-                        item.name === "tickets" ? "-mx-4" : "-mx-8"
-                      }`}
-                      src={item.image}
-                      width="140"
-                      height="auto"
-                      alt={item.name}
-                    />
-                    <div className={`font-headings font-bold ${item.color}`}>
+                  <div className={`flex gap-2 items-center justify-center my-8 ${item.color}`}>
+                    {item.image ? (
+                      <img src={item.image} alt="" className="h-20 w-20" />
+                    ) : (
+                    <span className={`icon text-5xl ${item.icon}`} />
+                    )}
+                    <div>
                       <span className="text-3xl">{item.amount}</span>{" "}
                       <span className="text-lg">{item.name}</span>
                     </div>
@@ -127,7 +122,7 @@ export default function TabWalletOverview() {
                 </div>
                 <div className="text-sm leading-tight text-ui-300 mt-3 mb-6 flex-1">
                   <div className="flex py-3 border-b border-ui-700/50 px-2 gap-2 max-w-xs mx-auto">
-                    <div className="w-1/4 font-bold uppercase text-ui-200">
+                    <div className="w-1/4 uppercase text-ui-200">
                       Use
                     </div>
                     <div
@@ -138,7 +133,7 @@ export default function TabWalletOverview() {
                     />
                   </div>
                   <div className="flex py-3 px-2 gap-2 max-w-xs mx-auto">
-                    <div className="w-1/4 font-bold uppercase text-ui-200">
+                    <div className="w-1/4 uppercase text-ui-200">
                       Get
                     </div>
                     <div
@@ -161,9 +156,7 @@ export default function TabWalletOverview() {
                       </button>
                     )}
                     {item.button === "visitshop" && (
-                      <Link
-                        href={`/prototype/shop${prototype.getURLparams()}`}
-                      >
+                      <Link href={`/prototype/shop${prototype.getURLparams()}`}>
                         <button
                           type="button"
                           className="button button-secondary w-full"
@@ -197,17 +190,9 @@ export default function TabWalletOverview() {
                         <div className="flex gap-8 items-center justify-between">
                           <div className="flex gap-2 items-center justify-start lg:w-96">
                             <div className="w-28 flex justify-center">
-                              <img
-                                className={`-my-5 w-30 ${
-                                  item.name === "tickets" ? "" : ""
-                                }`}
-                                src={item.image}
-                                width="120"
-                                height="auto"
-                                alt={item.name}
-                              />
+                              <span className={`icon ${item.icon}`} />
                             </div>
-                            <div className={`font-headings ${item.color}`}>
+                            <div className={`${item.color}`}>
                               <span className="text-3xl">{item.amount}</span>
                               {"  "}
                               <span className="text-lg">{item.name}</span>
@@ -250,7 +235,7 @@ export default function TabWalletOverview() {
                       <div className="flex gap-2 items-start justify-start lg:w-96">
                         <div className="hidden md:block w-28" />
                         <div className="flex gap-4">
-                          <div className="font-bold uppercase">Use</div>
+                          <div className="uppercase">Use</div>
                           <div
                             className="text-ui-300"
                             dangerouslySetInnerHTML={{
@@ -261,7 +246,7 @@ export default function TabWalletOverview() {
                       </div>
                       <div className="flex gap-2 items-start justify-start lg:w-96">
                         <div className="hidden md:block w-28" />
-                        <div className="font-bold uppercase">Get</div>
+                        <div className="uppercase">Get</div>
                         <div
                           className="text-ui-300"
                           dangerouslySetInnerHTML={{

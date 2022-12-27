@@ -15,7 +15,7 @@ const DSpage = () => {
               <div className="navbar bg-ui-900/95 rounded-lg shadow-lg">
                 <div className="navbar-content container">
                   <a className="button button-ghost text-xl">
-                    <span>G-Loot</span>
+                    <span>Stryda</span>
                   </a>
                 </div>
               </div>
@@ -40,7 +40,7 @@ const DSpage = () => {
               <div className="navbar bg-ui-900/95 rounded-lg shadow-lg">
                 <div className="navbar-content container">
                   <a className="button button-ghost text-xl">
-                    <span>G-Loot</span>
+                    <span>Stryda</span>
                   </a>
                   <a className="button button-ghost text-xl">
                     <span className="icon icon-dots" />
@@ -74,7 +74,7 @@ const DSpage = () => {
                   </div>
                   <div className="flex-1">
                     <a className="button button-ghost text-xl">
-                      <span>G-Loot</span>
+                      <span>Stryda</span>
                     </a>
                   </div>
                   <div className="flex-none">
@@ -106,7 +106,7 @@ const DSpage = () => {
                 <div className="navbar-content container">
                   <div className="flex-1">
                     <a className="button button-ghost text-xl">
-                      <span>G-Loot</span>
+                      <span>Stryda</span>
                     </a>
                   </div>
                   <div className="flex-none">
@@ -169,7 +169,7 @@ const DSpage = () => {
                 <div className="navbar-content container">
                   <div className="flex-1">
                     <a className="button button-ghost text-xl">
-                      <span>G-Loot</span>
+                      <span>Stryda</span>
                     </a>
                   </div>
                   <div className='flex-none form-group"'>

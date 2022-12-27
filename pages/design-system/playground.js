@@ -59,7 +59,7 @@ const DSpage = () => {
                 Match points in best 5 matches
               </div>
               <ul className="child:border-b child:border-ui-700/50 text-ui-300 child:flex child:justify-between last:child:border-none text-sm child:child:py-2">
-                <li className="font-bold uppercase text-ui-400">
+                <li className="uppercase text-ui-400">
                   <span>Player</span>
                   <span>Brawl points</span>
                 </li>
@@ -90,10 +90,10 @@ const DSpage = () => {
                 <div className="uppercase text-ui-300 text-sm text-center">
                   Tiebreaker points
                 </div>
-                <div className="font-headings font-bold text-ui-100 italic text-lg">
+                <div className="text-ui-100 text-lg">
                   95 kills
                 </div>
-                <div className="font-headings font-bold text-ui-100 italic text-lg">
+                <div className="text-ui-100 text-lg">
                   78 headshots
                 </div>
               </div>
@@ -101,7 +101,7 @@ const DSpage = () => {
                 <div className="uppercase text-ui-300 text-sm text-center">
                   Active Brawl players
                 </div>
-                <div className="font-headings font-bold text-ui-100 italic text-lg">
+                <div className="text-ui-100 text-lg">
                   13
                 </div>
               </div>

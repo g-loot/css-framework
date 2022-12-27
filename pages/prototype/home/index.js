@@ -92,7 +92,7 @@ export default function Home() {
           style={{ "--delay": "calc(1 * 0.05s)" }}
         >
           <div className="flex flex-col sm:flex-row flex-wrap items-baseline sm:justify-between gap-2 mb-4 mx-4 sm:mx-0">
-            <h3 className="h5">Your latest tracked match</h3>
+            <h3 className="h6">Your latest tracked match</h3>
             <span className="text-sm text-ui-300">
               Match ended November 6 at 3:00am
             </span>
@@ -140,7 +140,7 @@ export default function Home() {
           style={{ "--delay": "calc(2 * 0.05s)" }}
         >
           <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
-            <h3 className="h5">Brawls</h3>
+            <h3 className="h6">Brawls</h3>
             {!hasNoBrawls && (
               <Link href="/prototype/valorant/brawls/">
                 <a className="link link-hover text-ui-300 text-sm">
@@ -156,7 +156,7 @@ export default function Home() {
           style={{ "--delay": "calc(2 * 0.05s)" }}
         >
           <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
-            <h3 className="h5">Clan Brawls</h3>
+            <h3 className="h6">Clan Brawls</h3>
             {hasNoClan ? (
               <Link href="/prototype/clans/">
                 <a className="link link-hover text-ui-300 text-sm">
@@ -186,7 +186,7 @@ export default function Home() {
             </p>
           </div>
           <img
-            className="absolute inset-0 h-full w-full object-cover object-right"
+            className="hidden absolute inset-0 h-full w-full object-cover object-right"
             src="https://res.cloudinary.com/gloot/image/upload/v1668955144/Marketing/2022_prototype/home-ad-multiplebrawls.jpg"
             alt=""
           />
@@ -197,7 +197,7 @@ export default function Home() {
           <div className="mb-4 mx-4 sm:mx-0">
             <p>
               <Link href="/prototype/premium">
-                <a className="font-bold text-premium-500 link">Premium</a>
+                <a className="text-premium-500 link">Premium</a>
               </Link>{" "}
               users earn an additional 50% XP on each completed Reward Ladder
               stage.
@@ -209,7 +209,7 @@ export default function Home() {
           style={{ "--delay": "calc(2 * 0.05s)" }}
         >
           <div className="flex gap-2 items-center justify-between mx-4 sm:mx-0">
-            <h3 className="h5">Reward ladder</h3>
+            <h3 className="h6">Reward ladder</h3>
           </div>
           <RewardLadder hasReward={false} />
         </section>
@@ -230,7 +230,7 @@ export default function Home() {
             </p>
           </div>
           <img
-            className="absolute inset-0 h-full w-full object-cover object-right"
+            className="hidden absolute inset-0 h-full w-full object-cover object-right"
             src="https://res.cloudinary.com/gloot/image/upload/v1669640219/Marketing/2022_prototype/home-ad-newfunmissions.jpg"
             alt=""
           />

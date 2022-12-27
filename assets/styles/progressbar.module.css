@@ -23,28 +23,14 @@
 .progressbar:not(.progressbar-secondary) {
   > div {
     @apply
-    bg-[length:400px_auto]
     bg-main
-    bg-repeat
     transition-all
     duration-1000
     ease-[cubic-bezier(0.9,0,0.1,1)]
     scale-x-110
-    animate-[progressbar-gradient_2s_linear_infinite]
+    rounded-full
     ;
-    background-image: linear-gradient(to right, rgb(var(--color-interaction-300)) 0px, rgb(var(--color-blue-500)) 200px, rgb(var(--color-interaction-300)) 400px);
-    clip-path: polygon(0% 0%, 100% 0%, calc(100% - 0.5em) 100%, 0% 100%);
     transform: translate3d(calc(-100% + (1% * var(--percent))), 0, 0);
-  }
-}
-
-@keyframes progressbar-gradient {
-  0% {
-    background-position: 400px 0;
-  }
-
-  100% {
-    background-position: 0 0;
   }
 }
 
@@ -187,32 +173,13 @@
     ;
   }
 
-  &::before {
-    @apply
-    content-['']
-    absolute
-    z-10
-    w-24
-    h-24
-    -bottom-12
-    rounded-full
-    bg-gradient-radial
-    from-blue-500/75
-    via-blue-300/50
-    to-blue-500/0
-    blur-lg
-    left-[calc(50%-3rem)];
-  }
-
   &::after {
     @apply
     content-['']
     absolute
     z-20
     inset-2.5
-    bg-gradient-to-b
-    from-ui-800
-    to-ui-700
+    bg-ui-800
     rounded-full
     ;
   }
@@ -241,7 +208,7 @@
       ;
       transform-box: fill-box;
       transform-origin: center center;
-      stroke-width: 24;
+      stroke-width: 5;
       stroke-dasharray: 120;
       stroke-dashoffset: calc((1px * var(--percent)) - 100px);
     }

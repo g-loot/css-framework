@@ -212,42 +212,42 @@ export default function Home() {
                           className="drop-shadow-xl w-32 flex-none"
                         />
                         <div className="pl-4 border-l border-ui-600">
-                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                          <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                             Number of Brawls played:
                           </div>
-                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                          <div className="text-ui-100 text-xl lg:text-3xl">
                             22
                           </div>
                         </div>
                         <div className="pl-4 border-l border-ui-600">
-                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                          <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                             Times in top 50:
                           </div>
-                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                          <div className="text-ui-100 text-xl lg:text-3xl">
                             2
                           </div>
                         </div>
                         <div className="pl-4 border-l border-ui-600">
-                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                          <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                             Best placement:
                           </div>
-                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                          <div className="text-ui-100 text-xl lg:text-3xl">
                             1
                           </div>
                         </div>
                         <div className="pl-4 border-l border-ui-600">
-                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                          <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                             Most matches in a Brawl:
                           </div>
-                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                          <div className="text-ui-100 text-xl lg:text-3xl">
                             16
                           </div>
                         </div>
                         <div className="pl-4 border-l border-ui-600">
-                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                          <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                             Avg. matches / Brawl:
                           </div>
-                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                          <div className="text-ui-100 text-xl lg:text-3xl">
                             9.8
                           </div>
                         </div>
@@ -268,18 +268,18 @@ export default function Home() {
                           className="drop-shadow-xl w-32 flex-none"
                         />
                         <div className="pl-4 border-l border-ui-600">
-                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                          <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                             No. of missions completed:
                           </div>
-                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                          <div className="text-ui-100 text-xl lg:text-3xl">
                             143
                           </div>
                         </div>
                         <div className="pl-4 border-l border-ui-600">
-                          <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                          <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                             Missions / day avg.:
                           </div>
-                          <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                          <div className="text-ui-100 text-xl lg:text-3xl">
                             2.3
                           </div>
                         </div>
@@ -322,7 +322,7 @@ export default function Home() {
                   <div className="surface sm:rounded-lg">
                     {selectedUser.clan && (
                       <div className="p-2">
-                        <div className="text-sm text-ui-300 font-bold mb-2 uppercase">
+                        <div className="text-sm text-ui-300 mb-2 uppercase">
                           Proud member of
                         </div>
                         <Link
@@ -343,7 +343,7 @@ export default function Home() {
                               </div>
                             </div>
                             <div>
-                              <div className="text-xl font-headings font-bold italic text-ui-100">
+                              <div className="text-xl text-ui-100">
                                 &#91;
                                 {prototype.getClanByID(selectedUser.clan).tag}
                                 &#93;{" "}
@@ -379,7 +379,7 @@ export default function Home() {
                 <div className="flex-1 flex flex-col surface sm:rounded-lg">
                   <div className="p-2 border-b border-ui-700 flex justify-between items-start">
                     <div>
-                      <h2 className="text-xl italic">Weekly Brawls</h2>
+                      <h2 className="text-xl">Weekly Brawls</h2>
                       <span className="text-sm text-ui-300">
                         Showing your latest Solo Brawls
                       </span>
@@ -421,7 +421,7 @@ export default function Home() {
                         <p className=" text-ui-300">
                           Run the{" "}
                           <a href="#" className="link link-main">
-                            G-Loot app
+                            Stryda app
                           </a>{" "}
                           while you play to track your stat
                         </p>
@@ -457,7 +457,7 @@ export default function Home() {
                         <GameIcon game={stat.game} />
                       </div>
                       <div className="item-body">
-                        <div className="item-title font-headings font-bold text-xl text-ui-100 uppercase italic">
+                        <div className="item-title text-xl text-ui-100 uppercase">
                           {prototype.getGameByID(stat.game).name}
                         </div>
                       </div>
@@ -473,34 +473,34 @@ export default function Home() {
                     </div>
                     <div className="leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around p-4">
                       <div className="pl-4 border-l border-ui-600">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                        <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                           Win rate
                         </div>
-                        <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                        <div className="text-ui-100 text-xl lg:text-3xl">
                           {stat.winrate}
                         </div>
                       </div>
                       <div className="pl-4 border-l border-ui-600">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                        <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                           K/D ratio
                         </div>
-                        <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                        <div className="text-ui-100 text-xl lg:text-3xl">
                           {stat.kdratio}
                         </div>
                       </div>
                       <div className="pl-4 border-l border-ui-600">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                        <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                           Headshots kill avg
                         </div>
-                        <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                        <div className="text-ui-100 text-xl lg:text-3xl">
                           {stat.headshotkillsavg}
                         </div>
                       </div>
                       <div className="pl-4 border-l border-ui-600">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase font-bold">
+                        <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                           Assist avg
                         </div>
-                        <div className="font-headings text-blue-300 font-bold text-xl lg:text-3xl">
+                        <div className="text-ui-100 text-xl lg:text-3xl">
                           {stat.assistavg}
                         </div>
                       </div>
@@ -512,7 +512,7 @@ export default function Home() {
                             <>
                               <div className="item">
                                 <div className="item-body">
-                                  <div className="p-2 item-title font-headings font-bold text-lg italic">
+                                  <div className="p-2 item-title text-lg">
                                     All stats (total)
                                   </div>
                                 </div>

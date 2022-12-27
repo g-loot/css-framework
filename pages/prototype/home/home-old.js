@@ -78,7 +78,7 @@ export default function Home() {
             <div>
               <h2 className="text-2xl mb-1">Weekly Mission Rewards</h2>
               <p className="text-sm text-ui-300 leading-none">
-                XP is accumulated from all missions in all games on G-Loot
+                XP is accumulated from all missions in all games on Stryda
               </p>
             </div>
             <div className="hidden sm:flex items-center gap-2">
@@ -100,7 +100,7 @@ export default function Home() {
                 tooltip={
                   <div className="max-w-xs text-sm text-center leading-tight">
                     Unlock rewards as you earn XP from Missions. XP is earned
-                    across all Missions in all games on G-Loot
+                    across all Missions in all games on Stryda
                   </div>
                 }
               >
@@ -194,7 +194,7 @@ export default function Home() {
                   <div className="max-w-xs">
                     <p className="text-sm leading-tight mb-2">
                       Unlock rewards as you earn XP from Missions. XP is earned
-                      across all Missions in all games on G-Loot
+                      across all Missions in all games on Stryda
                     </p>
                     <div className="chip chip-sm chip-secondary">
                       <span className="icon icon-time-machine" />
@@ -231,7 +231,7 @@ export default function Home() {
                 tooltip={
                   <div className="max-w-xs">
                     <p className="text-sm leading-tight mb-2">
-                      In Solo Brawls, you compete against other G-Loot players
+                      In Solo Brawls, you compete against other Stryda players
                       to climb a leaderboard. Here you will find your ongoing
                       and finished Brawls you have competed in.
                     </p>
@@ -258,7 +258,6 @@ export default function Home() {
                   height="auto"
                   alt="Clan"
                 />
-                <div className="absolute z-0 rounded-full bg-gradient-to-r from-main via-blue-700 to-main/0 w-10 h-10 blur-lg transform-gpu"></div>
               </div>
               <h3 className="text-xl max-w-[30ch] mt-8 relative z-10">
                 You can earn more rewards when playing Brawls with a Clan!
@@ -289,7 +288,7 @@ export default function Home() {
                 tooltip={
                   <div className="max-w-xs">
                     <p className="text-sm leading-tight mb-2">
-                      In Clan Brawls, you compete against other G-Loot Clans to
+                      In Clan Brawls, you compete against other Stryda Clans to
                       climb a leaderboard. Here you will find your ongoing and
                       finished Brawls your Clan have competed in.
                     </p>
@@ -342,25 +341,25 @@ export default function Home() {
             <div className="relative z-10 flex-1 flex justify-center items-center">
               <div className="w-full rounded-xl grid grid-cols-4 gap-2 leading-none mb-4 py-4">
                 <div className="flex-1 sm:rounded-lg bg-gradient-to-b from-ui-900/75 to-ui-800/75 backdrop-blur-sm text-center xl:aspect-square flex flex-col gap-1 justify-center px-2 py-4">
-                  <div className="text-2xl xl:text-3xl font-headings text-ui-100">
+                  <div className="text-2xl xl:text-3xl text-ui-100">
                     11
                   </div>
                   <div className="text-xs text-ui-300 h-5">Assists</div>
                 </div>
                 <div className="flex-1 rounded-lg bg-gradient-to-b from-ui-900/75 to-ui-800/75 backdrop-blur-sm text-center xl:aspect-square flex flex-col gap-1 justify-center px-2 py-4">
-                  <div className="text-2xl xl:text-3xl font-headings text-ui-100">
+                  <div className="text-2xl xl:text-3xl text-ui-100">
                     53
                   </div>
                   <div className="text-xs text-ui-300 h-5">Kills</div>
                 </div>
                 <div className="flex-1 rounded-lg bg-gradient-to-b from-ui-900/75 to-ui-800/75 backdrop-blur-sm text-center xl:aspect-square flex flex-col gap-1 justify-center px-2 py-4">
-                  <div className="text-2xl xl:text-3xl font-headings text-ui-100">
+                  <div className="text-2xl xl:text-3xl text-ui-100">
                     23
                   </div>
                   <div className="text-xs text-ui-300 h-5">Deaths</div>
                 </div>
                 <div className="flex-1 rounded-lg bg-gradient-to-b from-ui-900/75 to-ui-800/75 backdrop-blur-sm text-center xl:aspect-square flex flex-col gap-1 justify-center px-2 py-4">
-                  <div className="text-2xl xl:text-3xl font-headings text-ui-100">
+                  <div className="text-2xl xl:text-3xl text-ui-100">
                     38
                   </div>
                   <div className="text-xs text-ui-300 h-5">

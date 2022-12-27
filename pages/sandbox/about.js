@@ -4,13 +4,13 @@ const SBpage = () => (
   <div>
     <div className="max-w-sm mx-auto space-y-4 text-ui-100 leading-none mb-6">
       <h1 className="leading-none h2">
-        CSS Framework <small className="text-ui-300 font-normal">sandbox</small>
+        CSS Framework <small className="text-ui-300">sandbox</small>
       </h1>
     </div>
 
     <div className="max-w-sm mx-auto space-y-4 text-ui-200">
       <p>
-        Welcome to the G-Loot CSS Framework sandbox. This is the place for you
+        Welcome to the Stryda CSS Framework sandbox. This is the place for you
         to explore new designs and layouts using the framework.
       </p>
     </div>
@@ -18,7 +18,7 @@ const SBpage = () => (
     <div className="max-w-sm mx-auto space-y-4 text-ui-200">
       <h3 className="h3 my-6">Infos</h3>
       <div className="border-b border-ui-700 pb-5">
-        <h4 className="font-headings font-bold text-xl text-main mb-4">
+        <h4 className="text-xl text-main mb-4">
           Creating a new page
         </h4>
         <ol className="pl-4 list-outside list-disc space-y-4">
@@ -61,7 +61,7 @@ const SBpage = () => (
         </div>
       </div>
       <div className="border-b border-ui-700 pb-5">
-        <h4 className="font-headings font-bold text-xl text-main mb-4">
+        <h4 className="text-xl text-main mb-4">
           Adding the page in the menu
         </h4>
         <ol className="pl-4 list-outside list-disc space-y-4">

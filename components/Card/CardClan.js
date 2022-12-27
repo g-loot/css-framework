@@ -75,7 +75,7 @@ export default function CardClan(props) {
                   <Link href={`/prototype/clans/${clan.id}?hasaccepted=true`}>
                     <button
                       type="button"
-                      className={`button button-sm button-primary ${
+                      className={`button button-sm button-success ${
                         submitting ? "is-loading" : ""
                       }`}
                     >

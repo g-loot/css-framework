@@ -76,7 +76,7 @@ export default function BrawlsHeader(props) {
             <div className="header-body">
               {freeEntry ? (
                 <>
-                  <h1 className="text-4xl mb-2 leading-none">
+                  <h1 className="h3 mb-2">
                     Compete for free!
                   </h1>
                   <p className="text-ui-300 max-w-[25ch] mb-2">
@@ -92,7 +92,7 @@ export default function BrawlsHeader(props) {
                 </>
               ) : (
                 <>
-                  <h1 className="text-4xl mb-2 leading-none">Brawls</h1>
+                  <h1 className="h3 mb-2">Brawls</h1>
                   <p className="text-ui-300 max-w-[25ch] mb-4">
                     Use your stats to climb the Brawl leaderboard and win
                     prizes. No waiting, no dedicated servers. Play on your own
@@ -103,7 +103,7 @@ export default function BrawlsHeader(props) {
               <div className="flex flex-col md:flex-row gap-2">
                 <button
                   type="button"
-                  className="button button-sm button-primary button-play"
+                  className="button button-primary button-play"
                   onClick={openModalBrawlHowitworksVideo}
                 >
                   <span className="icon icon-circle-caret-right" />
@@ -114,7 +114,7 @@ export default function BrawlsHeader(props) {
                 >
                   <button
                     type="button"
-                    className="button button-sm button-secondary"
+                    className="button button-secondary"
                   >
                     <span className="icon icon-steam" />
                     <span>Steam required</span>

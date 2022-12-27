@@ -47,7 +47,7 @@ export default function ModalAchievementReceived(props) {
                 Achievement unlocked
               </h2>
               <div className="animate-slide-in-bottom space-y-4 my-4 w-4/5 mx-auto">
-                <div className="surface surface-halo halo-b rounded-xl mx-auto p-2">
+                <div className="surface surface-halo rounded-xl mx-auto p-2">
                   <div className="w-full achievement">
                     <i />
                     <i />
@@ -68,7 +68,7 @@ export default function ModalAchievementReceived(props) {
                   </div>
                   <div className="space-y-2 relative z-10">
                     <p>{description}</p>
-                    <div className="flex items-center gap-4 leading-none font-bold pb-2">
+                    <div className="flex items-center gap-4 leading-none pb-2">
                       <div
                         className="progressbar progressbar-secondary w-full"
                         style={{

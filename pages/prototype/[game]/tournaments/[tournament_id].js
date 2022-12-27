@@ -100,7 +100,7 @@ export default function Home() {
                   />
                   {prototype.getTournamentByID(game, tournament_id).sponsor && (
                     <>
-                      <p className="font-headings font-bold italic text-xl mb-2">
+                      <p className="text-xl mb-2">
                         Sponsored by
                       </p>
                       <img
@@ -115,7 +115,7 @@ export default function Home() {
                   )}
                 </div>
                 <div className="header-body">
-                  <h1 className="text-4xl mb-2 leading-none">
+                  <h1 className="h3 mb-2">
                     {prototype.getTournamentByID(game, tournament_id).name}
                   </h1>
 
@@ -124,7 +124,7 @@ export default function Home() {
                       Hosted by:{" "}
                       <b>
                         {prototype.getTournamentByID(game, tournament_id)
-                          .host === undefined && <>G-Loot</>}
+                          .host === undefined && <>Stryda</>}
                       </b>
                       <b>
                         {prototype.getTournamentByID(game, tournament_id)
@@ -152,8 +152,8 @@ export default function Home() {
                                 key={rewardIndex}
                                 reward={reward}
                                 gap="gap-1.5"
-                                imageClassNames="h-6"
-                                textClassNames="text-ui-200 font-bold"
+                                iconClassNames=""
+                                textClassNames="text-ui-200"
                               />
                             ))}
                         </>
@@ -182,12 +182,12 @@ export default function Home() {
               </div>
               <div className="header-meta justify-start pr-0">
                 <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                  <span className="font-headings font-bold italic text-ui-100 uppercase">
+                  <span className="text-ui-100 uppercase">
                     Time Left:
                   </span>
                   <span className="icon icon-clock text-main" />
                   <Countdown
-                    additionalClassNames="flex items-baseline gap-0.5 font-headings font-bold italic uppercase text-main"
+                    additionalClassNames="flex items-baseline gap-0.5 uppercase text-main"
                     hasDays={true}
                     hasLabels={true}
                     hasSeconds={false}
@@ -198,14 +198,14 @@ export default function Home() {
                 {/* {prototype.getTournamentByID(game, tournament_id).status !==
                   "finished" && (
                   <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                    <span className="font-headings font-bold italic text-ui-100 uppercase">
+                    <span className="text-ui-100 uppercase">
                       {prototype.getTournamentByID(game, tournament_id)
                         .status === "registration" ||
                         (prototype.getTournamentByID(game, tournament_id)
                           .status === "scheduled" && <>Starts in</>)}
                     </span>
                     <span className="icon icon-clock text-main" />
-                    <span className="font-headings font-bold italic uppercase text-main">
+                    <span className="uppercase text-main">
                       {moment(
                         prototype.getTournamentByID(game, tournament_id).details
                           .date,

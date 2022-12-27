@@ -28,19 +28,18 @@
   &:not([class*='surface']) {
     @apply
     bg-ui-800
-    border
-    border-ui-700
     ;
   }
 }
 
 .card {
-
   .card-image {
     @apply
     flex
     items-center
     justify-center
+    rounded-t
+    overflow-hidden
     ;
   }
   
@@ -59,6 +58,12 @@
   .card-title {
     @apply
     leading-none
+    ;
+    &:not([class*='text-ui']):not([class*='text-main']) {
+      @apply
+      text-ui-100
+      ;
+    }
   }
 
   .card-actions {
@@ -139,11 +144,9 @@
   }
   .card-title {
     @apply
-    font-headings
-    italic
     leading-none
-    font-bold
     text-ui-100
+    uppercase
     ;
   }
   .card-meta {
@@ -238,7 +241,6 @@
       @apply
       p-0
       m-0
-      font-bold
       text-sm
       text-ui-200
       ;
@@ -281,12 +283,9 @@
   
   .card-body {
     @apply
-    bg-gradient-to-bl
-    from-ui-800/80
-    via-ui-800
-    to-ui-800
+    bg-ui-800
     p-2
-    rounded-b-[calc(0.5rem-1px)]
+    rounded-b
     ;
 
     .card-title {
@@ -596,7 +595,7 @@
     flex-col
     md:flex-row
     p-4
-    border-t
+    border
     border-ui-700
     md:border-none
     ;
@@ -644,7 +643,7 @@
       auto-rows-auto
       justify-center
       md:justify-end
-      border-t
+      border
       border-ui-700
       md:border-none
       mt-4
@@ -700,10 +699,7 @@
       flex-col
       md:flex-col
       md:col-span-3
-      bg-gradient-to-bl
-      from-ui-800/80
-      via-ui-800
-      to-ui-800
+      bg-ui-800
       ;
       > .card-meta {
         @apply
@@ -724,8 +720,7 @@
         }
         &:last-child {
           @apply
-          border-t
-          border-solid
+          border
           pt-4
           border-ui-700
           ;
@@ -750,7 +745,7 @@
       right-0
       inset-y-0
       w-full
-      rounded-lg
+      rounded
       overflow-hidden
       ;
       > img {
@@ -778,9 +773,7 @@
       flex-col
       items-center
       justify-center
-      bg-gradient-radial
-      from-ui-500
-      to-ui-800/90
+      bg-ui-800/90
       ;
       > div {
         @apply
@@ -844,7 +837,7 @@
     }
     > .card-content {
       @apply
-      rounded-b-[calc(0.5rem-1px)]
+      rounded-b
       ;
     }
   }
@@ -1119,10 +1112,17 @@
 .card-tournament,
 .card-brawl {
   &.is-active {
-    @apply
-    border-main
-    animate-[card-glow_2s_cubic-bezier(.4,0,.6,1)_infinite]
-    ;
+    &::after {
+      @apply
+      content-['']
+      absolute
+      z-50
+      inset-0
+      rounded
+      pointer-events-none
+      animate-[card-glow_2s_cubic-bezier(.4,0,.6,1)_infinite]
+      ;
+    }
     .card-status {
       @apply
       animate-pulse
@@ -1152,8 +1152,8 @@
     @apply
     relative
     pointer-events-none
-    border
-    border-ui-700
+    border-t
+    border-t-ui-700
     bg-ui-800
     bg-[length:800px_100%]
     bg-[-200%_center]
@@ -1302,10 +1302,10 @@
 
 @keyframes card-glow {
   0%, 100% {
-    box-shadow: 0 0 0.25rem 0 rgba(var(--color-main)/0%), 0 0 1rem 0 rgba(var(--color-main)/0%);
+    box-shadow: inset 0 0 0 1px rgba(var(--color-main)/0%);
     
   }
   50% {
-    box-shadow: 0 0 0.25rem 0 rgba(var(--color-main)/50%), 0 0 1rem 0 rgba(var(--color-main)/50%);
+    box-shadow: inset 0 0 0 1px rgba(var(--color-main)/100%);
   }
 }

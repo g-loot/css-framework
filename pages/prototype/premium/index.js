@@ -37,7 +37,7 @@ export default function Premium() {
             </div>
 
             <div className="flex flex-col items-center justify-center text-center mb-12 px-4 sm:px-0">
-              <h2 className="font-headings font-bold italic text-3xl md:text-4xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[30ch]">
+              <h2 className="font-headings italic text-3xl md:text-4xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[30ch]">
                 Join G-Loot Premium to unlock the full G-Loot gaming experience
               </h2>
             </div>
@@ -71,7 +71,7 @@ export default function Premium() {
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
                 Get access to Premium Missions each day
               </h3>
             </div>
@@ -84,7 +84,7 @@ export default function Premium() {
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
                 Earn mission rewards faster
               </h3>
             </div>
@@ -96,7 +96,7 @@ export default function Premium() {
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
                 Get free extra tokens for each token purchase
               </h3>
             </div>
@@ -108,7 +108,7 @@ export default function Premium() {
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
                 Get Premium content features
               </h3>
             </div>
@@ -120,7 +120,7 @@ export default function Premium() {
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings font-bold italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
                 Remove ads on the platform
               </h3>
             </div>
@@ -137,28 +137,28 @@ export default function Premium() {
 
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -bottom-20 -right-32 blur-sm rotate-[120deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_1.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation1.png"
               width="210"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -top-14 left-8 blur-sm -rotate-[33deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_2.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation2.png"
               width="168"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -bottom-14 -left-12 -rotate-[143deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_2.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation2.png"
               width="144"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-32 -left-5 -rotate-[74deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657118756/Marketing/2022_prototype/CurrencyRewards/Reward-coin-side_1.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation1.png"
               width="49"
               height="auto"
               alt=""

@@ -33,7 +33,7 @@ export default function ModalDownloadStarted(props) {
           </button>
           <div className="modal-content">
             <div className="modal-body">
-              <span className="icon icon-gloot-symbol text-main text-7xl mx-auto animate-slide-in-top my-4" />
+              <span className="icon icon-stryda-symbol text-main text-7xl mx-auto animate-slide-in-top my-4" />
               <div className="flex gap-4 items-center justify-center">
                 <span className="icon icon-data-download text-4xl text-ui-200" />
                 <h2 className="modal-title">

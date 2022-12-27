@@ -87,7 +87,7 @@ export default function ModalBuyTokens(props) {
                   src="https://res.cloudinary.com/gloot/image/upload/v1636112328/GNOG%20assets/Premium/gloot-premium-horizontal.png"
                   width="240"
                   height="auto"
-                  alt="G-Loot Premium"
+                  alt="Stryda Premium"
                 />
                 <div className="leading-tight text-left py-2">
                   Premium subscribers get up to 10 free extra tokens every time
@@ -108,7 +108,7 @@ export default function ModalBuyTokens(props) {
                   {Offers.map((item, itemIndex) => (
                     <div
                       key={itemIndex}
-                      className={`rounded-xl flex-1 max-w-[350px] flex flex-col animate-fade-in animate-delay p-1 ${
+                      className={`rounded-xl flex-1 md:max-w-[350px] flex flex-col animate-fade-in animate-delay p-1 ${
                         item.special === "bestvalue"
                           ? "surface surface-ui-700"
                           : ""
@@ -140,7 +140,7 @@ export default function ModalBuyTokens(props) {
                           <h2 className="mb-4 h3">{item.tokenNumber} tokens</h2>
                           {item.previousAmount && (
                             <>
-                              <div className="flex gap-2 text-3xl text-center justify-center font-headings">
+                              <div className="flex gap-2 text-3xl text-center justify-center">
                                 <span className="line-through text-ui-300">
                                   {item.previousAmount}
                                 </span>
@@ -155,7 +155,7 @@ export default function ModalBuyTokens(props) {
                           )}
                           {!item.previousAmount && (
                             <>
-                              <div className="flex gap-2 text-3xl text-center justify-center font-headings">
+                              <div className="flex gap-2 text-3xl text-center justify-center">
                                 <span className="text-ui-200">
                                   {item.amount}
                                 </span>

@@ -151,8 +151,8 @@ export default function PrototypeStructure({ children, title }) {
                 htmlFor="drawer-prototype"
                 className="drawer-overlay"
               ></label>
-              <aside className="w-72 bg-ui-800 border-r border-ui-700 flex flex-col shadow-2xl">
-                <div className="h-12 flex items-center justify-between border-b border-ui-700 pl-7 pr-2 sticky z-10 top-0 bg-ui-800/95 backdrop-blur">
+              <aside className="w-72 bg-ui-850 border-r border-ui-700 flex flex-col shadow-2xl">
+                <div className="h-12 flex items-center justify-between border-b border-ui-700 pl-7 pr-2 sticky z-10 top-0 bg-ui-850 backdrop-blur">
                   <Link href={`/prototype/home${prototype.getURLparams()}`}>
                     {variables.newBrand ? (
                       <>New brand name</>
@@ -161,8 +161,8 @@ export default function PrototypeStructure({ children, title }) {
                       <img
                         width="110"
                         height="auto"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
-                        alt="G-Loot logo"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1671262915/Stryda/logos/stryda-logo-main.svg"
+                        alt="Stryda logo"
                       />
                     </a>
                     )}

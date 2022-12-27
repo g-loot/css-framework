@@ -48,21 +48,21 @@ const TopBarMarketing = ({ props }) => {
   
   return (
     <>
-      <header className="fixed w-full top-0 z-50 bg-ui-900/95 backdrop-blur font-headings font-bold">
+      <header className="fixed w-full top-0 z-50 bg-ui-900/95 backdrop-blur font-bold">
         <div className="px-2 md:px-8 xl:px-0 container max-w-[1280px] mx-auto flex relative text-mono-100 items-stretch justify-between">
           <div className="flex flex-wrap xl:flex-nowrap items-center">
             <Link href="/">
               <a
                 className="lg:mr-8 cursor-pointer hover:opacity-70 transition-all duration-500"
-                aria-label="G-Loot home">
+                aria-label="Stryda home">
                 <img
                   width={123}
                   height={64}
-                  src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1671262915/Stryda/logos/stryda-logo-main.svg"
                   alt="Gloot logo"
                   className="py-3"
                 />
-                <span className="hidden">G-Loot home</span>
+                <span className="hidden">Stryda home</span>
               </a>
             </Link>
             <nav
@@ -76,7 +76,7 @@ const TopBarMarketing = ({ props }) => {
                 className="absolute top-0 right-0 my-6 mx-6 text-[2.25rem] lg:hidden">
                 ✕
               </button>
-              <ul className='flex flex-col space-y-6 w-2/3 font-bold font-headings font-bold text-base lg:flex-row lg:my-2 lg:space-y-0 lg:w-full lg:font-bold lg:gap-8'>
+              <ul className='flex flex-col space-y-6 w-2/3 text-base lg:flex-row lg:my-2 lg:space-y-0 lg:w-full lg:lg:gap-8'>
                 {navLinks.map(([key, href, label, classnames], idx) => (
                   <li
                     key={idx}

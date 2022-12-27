@@ -102,14 +102,14 @@ export default function Home() {
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="text-sm text-ui-300">
-                      <span className="label">G-Loot ID:</span>
+                      <span className="label">Stryda ID:</span>
                       <span className="tooltip" data-tooltip="Copy">
                         <code
                           className="interactive text-xs"
                           onClick={() => {
                             uiContext.openToastr({
                               size: "small",
-                              text: "G-Loot ID copied to your clipboard",
+                              text: "Stryda ID copied to your clipboard",
                               color: "green",
                               autoDelete: true,
                               autoDeleteDelay: 2500,
@@ -278,8 +278,8 @@ export default function Home() {
                 <>
                   <div className="item">
                     <div className="item-body">
-                      <div className="py-1 px-2 item-title font-headings font-bold text-xl italic">
-                        G-Loot &amp; game accounts
+                      <div className="py-1 px-2 item-title text-xl">
+                        Stryda &amp; game accounts
                       </div>
                     </div>
                     <div className="item-actions">
@@ -298,7 +298,7 @@ export default function Home() {
                       <h2 className="h5">Game ID&#39;s</h2>
                       <button
                         className="tooltip tooltip-bottom text-ui-300 text-0"
-                        data-tooltip="Your in-game nickname is necessary if you want to join G-Loot tournaments"
+                        data-tooltip="Your in-game nickname is necessary if you want to join Stryda tournaments"
                       >
                         <span className="icon icon-16 icon-c-info" />
                       </button>
@@ -357,7 +357,7 @@ export default function Home() {
                 <>
                   <div className="item">
                     <div className="item-body">
-                      <div className="py-1 px-2 item-title font-headings font-bold text-xl italic">
+                      <div className="py-1 px-2 item-title text-xl">
                         Data Privacy
                       </div>
                     </div>
@@ -375,9 +375,9 @@ export default function Home() {
                   <div className="grid xl:grid-cols-2 gap-16">
                     <div className="space-y-4">
                       <p className="leading-relaxed">
-                        To make G-Loot better we collect information from you as
+                        To make Stryda better we collect information from you as
                         visitor with help from cookies. We also conduct relevant
-                        marketing of G-Loot&lsquo;s services within Meta,
+                        marketing of Stryda&lsquo;s services within Meta,
                         Google, Adroll, Snapchat and Bing&lsquo;s network. Read
                         more in our{" "}
                         <a href="#" className="link" target="_blank">

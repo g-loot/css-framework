@@ -101,10 +101,10 @@ export default function TabBrawlsYourBrawlMatches() {
                 <h3 className="text-xl not-italic text-ui-200 uppercase">
                   Your Brawl points
                 </h3>
-                <div className="text-blue-300 text-8xl font-headings mt-4 mb-2">
+                <div className="text-blue-300 text-8xl mt-4 mb-2">
                   0
                 </div>
-                <div className="text-blue-300 text-xl font-headings font-bold uppercase">
+                <div className="text-blue-300 text-xl uppercase">
                   kills
                 </div>
               </div>
@@ -268,13 +268,7 @@ export default function TabBrawlsYourBrawlMatches() {
                                 <span>Activate</span>
                               </div>
                               <div>
-                                <img
-                                  className="dropshadow-xs"
-                                  src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                                  width="34"
-                                  height="34"
-                                  alt="token"
-                                />
+                                <span className="icon icon-token " />
                                 <span>1</span>
                               </div>
                             </button>
@@ -289,7 +283,7 @@ export default function TabBrawlsYourBrawlMatches() {
             <div className="my-8 max-w-md mx-auto text-center">
               <div className="flex items-center justify-center gap-4 mb-8">
                 <hr className="separator flex-1" />
-                <span className="font-bold uppercase">or</span>
+                <span className="uppercase">or</span>
                 <hr className="separator flex-1" />
               </div>
               <button
@@ -303,13 +297,7 @@ export default function TabBrawlsYourBrawlMatches() {
                   <span>Activate all 3 matches</span>
                 </div>
                 <div>
-                  <img
-                    className="dropshadow-xs"
-                    src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_token.png"
-                    width="34"
-                    height="34"
-                    alt="token"
-                  />
+                  <span className="icon icon-token " />
                   <span>2</span>
                 </div>
               </button>
@@ -329,7 +317,7 @@ export default function TabBrawlsYourBrawlMatches() {
               <div className="bg-gradient-to-r from-interaction-300 to-blue-300 rounded-lg mt-8 p-4 flex gap-2 justify-center items-center max-w-sm mx-auto text-ui-800">
                 <span className="icon icon-handheld-console-2 text-xl" />
                 <span>Launch your game and play in game mode:</span>
-                <span className="rounded bg-ui-900/90 px-2 py-1 font-bold text-blue-300">
+                <span className="rounded bg-ui-900/90 px-2 py-1 text-blue-300">
                   competitive
                 </span>
               </div>
@@ -348,7 +336,7 @@ export default function TabBrawlsYourBrawlMatches() {
             </h2>
             <div className="mx-auto gap-4 flex items-stretch justify-center mb-8">
               <div className="flex-1 surface surface-dimmed rounded-lg px-4 pt-4 flex flex-col items-center justify-center max-w-xs">
-                <div className="text-5xl font-headings font-bold text-blue-300 mb-1">
+                <div className="text-5xl text-blue-300 mb-1">
                   2235
                 </div>
                 <div className="leading-none text-sm text-ui-300 uppercase flex-1">
@@ -356,7 +344,7 @@ export default function TabBrawlsYourBrawlMatches() {
                 </div>
               </div>
               <div className="flex-1 surface surface-dimmed rounded-lg px-4 pt-4 flex flex-col items-center justify-center max-w-xs">
-                <div className="text-5xl font-headings font-bold text-blue-300 mb-1">
+                <div className="text-5xl text-blue-300 mb-1">
                   14
                 </div>
                 <div className="leading-none text-sm text-ui-300 uppercase flex-1">
@@ -364,7 +352,7 @@ export default function TabBrawlsYourBrawlMatches() {
                 </div>
               </div>
               <div className="flex-1 surface surface-dimmed rounded-lg p-4 flex flex-col items-center justify-center max-w-xs">
-                <div className="text-5xl font-headings font-bold text-blue-300 mb-1">
+                <div className="text-5xl text-blue-300 mb-1">
                   53
                 </div>
                 <div className="leading-none text-sm text-ui-300 uppercase flex-1">
@@ -382,7 +370,7 @@ export default function TabBrawlsYourBrawlMatches() {
               <span className="mb-4">
                 Brawl protected by
                 <br />
-                G-Loot Player Protection
+                Stryda Player Protection
               </span>
             </div>
           </div>

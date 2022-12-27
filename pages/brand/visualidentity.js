@@ -8,7 +8,7 @@ const BrandPage = () => (
       <div className='flex gap-8 flex-col lg:flex-row items-stretch justify-start'>
         <div className='flex-1 lg:border-r border-ui-400/25 pr-8 space-y-2 lg:pt-2 relative'>
           <div className='lg:text-right'>
-            <span className='text-ui-300 text-lg font-headings font-bold uppercase'>G-Loot Styleguide</span>
+            <span className='text-ui-300 text-lg uppercase'>Stryda Styleguide</span>
             <h1 className='leading-none'>
               Our visual identity
             </h1>
@@ -18,11 +18,10 @@ const BrandPage = () => (
               <source type="video/webm" src="https://res.cloudinary.com/gloot/video/upload/v1649858076/Marketing/202109_gloot2/GMSD_Trophy_Tilted_360_Rotaion_Loop_0001.webm" />
             </video>
           </div>
-          <div className='absolute bottom-0 right-0 z-0 rounded-full bg-gradient-to-r from-main via-blue-700 to-main/0 w-32 h-32 scale-y-75 blur-xl transform-gpu -rotate-45 -translate-x-28 -translate-y-24' />
         </div>
         <div className='flex-1 leading-loose text-ui-300 space-y-4'>
           <p>
-            The visual identity of G-Loot is tailored to represent the excitement of competitive gaming. With an audience that demands crisp and clean visuals, clear and direct communication and immersive experiences, we have crafted a visual identity that caters to avid enthusiasts and esport professionals alike.
+            The visual identity of Stryda is tailored to represent the excitement of competitive gaming. With an audience that demands crisp and clean visuals, clear and direct communication and immersive experiences, we have crafted a visual identity that caters to avid enthusiasts and esport professionals alike.
           </p>
           <p>
             We are designing to be as relevant towards the competition format, as we are for the player, with visuals that stand out and are designed with care in each customer touch point, for each product offering and positioning.

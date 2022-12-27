@@ -9,7 +9,7 @@ const MissionsHowitworksTabs = [
       "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-cpu.webp",
     paragraphs: [
       {
-        text: "You can join lots of different types of tournaments on G-Loot. Tournaments can have different rewards, entry fees.",
+        text: "You can join lots of different types of tournaments on Stryda. Tournaments can have different rewards, entry fees.",
       },
       {
         text: "Make sure to read the tournament rules and additional information before registering.",
@@ -53,7 +53,7 @@ const MissionsHowitworksTabs = [
         text: "You will be matched up with other solo players. When we have found a full party for you, your party will be registered.",
       },
       {
-        text: "<b class='text-main'>Discord</b>: Join the G-Loot Discord server to talk to other players in your party.",
+        text: "<b class='text-main'>Discord</b>: Join the Stryda Discord server to talk to other players in your party.",
       },
       {
         text: "Hover over the Discord icon next to the player’s name to see their Discord username.",
@@ -66,13 +66,13 @@ const MissionsHowitworksTabs = [
       "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
     paragraphs: [
       {
-        text: "Log on to the G-Loot website before the tournament is due to start!",
+        text: "Log on to the Stryda website before the tournament is due to start!",
       },
       {
         text: "You will see a drop down with your match connection information.",
       },
       {
-        text: "<a href='https://help.gloot.com/kb/en/article/how-do-i-join-a-match' target='_blank' class='link link-main'>How do I join a match on G-Loot</a>",
+        text: "<a href='https://help.gloot.com/kb/en/article/how-do-i-join-a-match' target='_blank' class='link link-main'>How do I join a match on Stryda</a>",
       },
     ],
   },
@@ -82,7 +82,7 @@ const MissionsHowitworksTabs = [
       "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
     paragraphs: [
       {
-        text: "Join the G-Loot Discord server to get up-to-date information about your tournament.",
+        text: "Join the Stryda Discord server to get up-to-date information about your tournament.",
       },
       {
         text: "In the Discord server, you’ll find channels for specific games.",
@@ -149,7 +149,7 @@ const MissionsHowitworksTabs = [
         text: "If you have further questions or need help, you can contact our support team.",
       },
       {
-        text: "Alternatively, join the G-Loot Discord to speak directly with the tournament operators.",
+        text: "Alternatively, join the Stryda Discord to speak directly with the tournament operators.",
       },
     ],
   },
@@ -166,7 +166,7 @@ export default function TabTournamentsHowItWorks() {
         style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
-          <h2 className="text-2xl leading-none mb-4">How Tournaments work</h2>
+          <h2 className="h4 mb-4">How Tournaments work</h2>
         </div>
         <div className="overflow-x-auto scrollbar-desktop py-4">
           <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px]">
@@ -219,7 +219,7 @@ export default function TabTournamentsHowItWorks() {
         style={{ "--delay": "calc(2 * 0.05s)" }}
       >
         <div className="px-4 sm:px-0">
-          <h2 className="text-2xl leading-none mb-6">
+          <h2 className="h4 mb-6">
             Step by step - How to complete Missions and earn Rewards
           </h2>
         </div>
@@ -232,7 +232,7 @@ export default function TabTournamentsHowItWorks() {
                   <>
                     <div className="item">
                       <div className="item-body">
-                        <div className="p-2 item-title font-headings font-bold text-lg italic">
+                        <div className="p-2 item-title text-lg">
                           {tab.title}
                         </div>
                       </div>
@@ -267,7 +267,7 @@ export default function TabTournamentsHowItWorks() {
                       {tab.hasButtonReward && (
                         <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                           <a className="button button-premium is-shining">
-                            <span>Join G-Loot Premium</span>
+                            <span>Join Stryda Premium</span>
                           </a>
                         </Link>
                       )}

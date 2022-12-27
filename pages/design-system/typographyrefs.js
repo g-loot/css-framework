@@ -8,7 +8,7 @@ const DSpage = () => {
   return (
     <>
       <h1 className="mb-6">
-        Typography <small className="text-ui-300 font-normal">references</small>
+        Typography <small className="text-ui-300">references</small>
       </h1>
 
       <div className="surface rounded-lg p-4">
@@ -16,17 +16,17 @@ const DSpage = () => {
           <h2 className="h3 mb-10">Fonts</h2>
           <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between space-y-4 xl:space-y-0">
             <div className="flex-1 flex justify-center gap-4 items-stretch">
-              <div className="h-36 w-36 rounded-xl bg-ui-600 border border-ui-500 flex items-center justify-center">
-                <span className="font-headings font-bold text-7xl">
-                  <span className="italic">A</span>
+              <div className="h-36 w-36 rounded-xl bg-ui-600 border border-ui-500 flex gap-2 items-center justify-center">
+                <span className="font-headings text-7xl">
+                  <span className="">A</span>
                   <span className="text-5xl">a</span>
                 </span>
               </div>
               <div className="w-60 flex flex-col items-between justify-around">
-                <div className="font-headings font-bold uppercase text-ui-100">
-                  Podium Sharp
+                <div className="uppercase text-ui-100">
+                  Dama Gothic
                 </div>
-                <div className="text-xs md:text-sm font-headings font-bold text-ui-300 mt-4">
+                <div className="font-headings text-ui-300 mt-4">
                   <span className="uppercase">abcdefghijklmnopqrstuvwxyz</span>
                   <br />
                   <span>abcdefghijklmnopqrstuvwxyz</span>
@@ -64,14 +64,14 @@ const DSpage = () => {
             </div>
             <div className="flex-1 flex justify-center gap-4 items-stretch">
               <div className="h-36 w-36 rounded-xl bg-ui-600 border border-ui-500 flex items-center justify-center">
-                <span className="font-body text-7xl italic">
+                <span className="font-body text-7xl">
                   <span className="italic">A</span>
                   <span className="text-5xl">a</span>
                 </span>
               </div>
               <div className="w-60 flex flex-col items-between justify-around">
-                <div className="font-body font-bold uppercase text-ui-100">
-                  Roboto Condensed
+                <div className="font-body uppercase text-ui-100">
+                  Barlow
                 </div>
                 <div className="text-xs md:text-sm font-body text-ui-300 mt-4">
                   <span className="uppercase">abcdefghijklmnopqrstuvwxyz</span>
@@ -146,11 +146,11 @@ const DSpage = () => {
                             autoDeleteDelay: 2500,
                           });
                           navigator.clipboard.writeText(
-                            "font-headings font-bold text-5xl italic"
+                            "text-5xl"
                           );
                         }}
                       >
-                        font-headings font-bold text-5xl italic
+                        text-5xl
                       </a>
                     </span>
                     <span>or</span>
@@ -175,11 +175,11 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="hidden lg:block py-2 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4">
-                font-family: Podium Sharp;
+                font-family: Dama Gothic;
                 <br />
                 font-size: 60px;
                 <br />
-                font-style: italic;
+                font-style:;
                 <br />
                 font-weight: 700;
                 <br />
@@ -218,11 +218,11 @@ const DSpage = () => {
                             autoDeleteDelay: 2500,
                           });
                           navigator.clipboard.writeText(
-                            "font-headings font-bold text-4xl italic"
+                            "text-4xl"
                           );
                         }}
                       >
-                        font-headings font-bold text-4xl italic
+                        text-4xl
                       </a>
                     </span>
                     <span>or</span>
@@ -247,11 +247,11 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="hidden lg:block py-2 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4">
-                font-family: Podium Sharp;
+                font-family: Barlow;
                 <br />
                 font-size: 48px;
                 <br />
-                font-style: italic;
+                font-style:;
                 <br />
                 font-weight: 700;
                 <br />
@@ -290,11 +290,11 @@ const DSpage = () => {
                             autoDeleteDelay: 2500,
                           });
                           navigator.clipboard.writeText(
-                            "font-headings font-bold text-3xl italic"
+                            "text-3xl"
                           );
                         }}
                       >
-                        font-headings font-bold text-3xl italic
+                        text-3xl
                       </a>
                     </span>
                     <span>or</span>
@@ -319,11 +319,11 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="hidden lg:block py-2 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4">
-                font-family: Podium Sharp;
+                font-family: Barlow;
                 <br />
                 font-size: 36px;
                 <br />
-                font-style: italic;
+                font-style:;
                 <br />
                 font-weight: 700;
                 <br />
@@ -362,11 +362,11 @@ const DSpage = () => {
                             autoDeleteDelay: 2500,
                           });
                           navigator.clipboard.writeText(
-                            "font-headings font-bold text-3xl italic"
+                            "text-3xl"
                           );
                         }}
                       >
-                        font-headings font-bold text-3xl italic
+                        text-3xl
                       </a>
                     </span>
                     <span>or</span>
@@ -391,11 +391,11 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="hidden lg:block py-2 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4">
-                font-family: Podium Sharp;
+                font-family: Barlow;
                 <br />
                 font-size: 30px;
                 <br />
-                font-style: italic;
+                font-style:;
                 <br />
                 font-weight: 700;
                 <br />
@@ -434,11 +434,11 @@ const DSpage = () => {
                             autoDeleteDelay: 2500,
                           });
                           navigator.clipboard.writeText(
-                            "font-headings font-bold text-2xl italic"
+                            "text-2xl"
                           );
                         }}
                       >
-                        font-headings font-bold text-2xl italic
+                        text-2xl
                       </a>
                     </span>
                     <span>or</span>
@@ -463,11 +463,11 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="hidden lg:block py-2 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4">
-                font-family: Podium Sharp;
+                font-family: Barlow;
                 <br />
                 font-size: 24px;
                 <br />
-                font-style: italic;
+                font-style:;
                 <br />
                 font-weight: 700;
                 <br />
@@ -508,11 +508,11 @@ const DSpage = () => {
                             autoDeleteDelay: 2500,
                           });
                           navigator.clipboard.writeText(
-                            "font-bold text-2xl uppercase"
+                            "text-2xl uppercase"
                           );
                         }}
                       >
-                        font-bold text-xl uppercase
+                        text-xl uppercase
                       </a>
                     </span>
                     <span>or</span>

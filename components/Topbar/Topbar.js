@@ -113,13 +113,13 @@ export default function Topbar() {
             </div>
             <Link href="/">
               <a className="flex items-center gap-2 interactive">
-                <span className="block md:hidden icon icon-gloot-symbol text-main text-3xl" />
+                <span className="block md:hidden icon icon-stryda-symbol text-main text-3xl" />
                 <img
                   className="hidden md:block"
                   width="123"
                   height="64"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1636647109/glootcom/v2-202111/gloot_logo.svg"
-                  alt="G-Loot logo"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1671262915/Stryda/logos/stryda-logo-main.svg"
+                  alt="Stryda logo"
                 />
               </a>
             </Link>
@@ -129,10 +129,10 @@ export default function Topbar() {
                   <h6 className="mb-3 leading-tight">
                     Welcome to the
                     <br />
-                    G-Loot Beta
+                    Stryda Beta
                   </h6>
                   <div className="absolute -top-2 -right-2 p-2">
-                    <span className="icon icon-gloot-symbol text-3xl text-main" />
+                    <span className="icon icon-stryda-symbol text-3xl text-main" />
                     <div className="lottie-blur absolute -inset-1">
                       <Lottie
                         animationData={LottieExplosion}
@@ -153,7 +153,7 @@ export default function Topbar() {
                 </div>
               }
             >
-              <span className="hidden md:block px-2 py-0.5 rounded bg-ui-900/90 text-main font-headings font-bold uppercase italic tracking-wider">
+              <span className="hidden md:block px-2 py-0.5 rounded bg-ui-900/90 text-main uppercase tracking-wider">
                 Beta
               </span>
             </Tooltip>
@@ -184,13 +184,13 @@ export default function Topbar() {
                         </div>
                         <ul className="leading-tight space-y-2">
                           <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Use</div>
+                            <div className=" w-12 uppercase">Use</div>
                             <div className="flex-1">
                               To purchase items in the Shop.
                             </div>
                           </li>
                           <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Get</div>
+                            <div className=" w-12 uppercase">Get</div>
                             <div className="flex-1">
                               From <strong>Daily Loot</strong> Streak and{" "}
                               <strong>Weekly Brawl winnings</strong>.
@@ -207,7 +207,7 @@ export default function Topbar() {
                         height="32"
                         alt="coins"
                       />
-                      <span className="text-sm font-bold text-gold-500">
+                      <span className="text-sm text-gold-500">
                         {prototype.getUserByID(1)?.wallet.coins}
                       </span>
                     </div>
@@ -236,13 +236,13 @@ export default function Topbar() {
                         </div>
                         <ul className="leading-tight space-y-2">
                           <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Use</div>
+                            <div className=" w-12 uppercase">Use</div>
                             <div className="flex-1">
                               To enter Weekly Brawls.
                             </div>
                           </li>
                           <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Get</div>
+                            <div className=" w-12 uppercase">Get</div>
                             <div className="flex-1">
                               <strong>Missions, Daily Loot Streak</strong> or{" "}
                               <strong>buy them</strong> directly from the
@@ -260,7 +260,7 @@ export default function Topbar() {
                         height="32"
                         alt="tokens"
                       />
-                      <span className="text-sm font-bold text-purple-500">
+                      <span className="text-sm text-purple-500">
                         {prototype.getUserByID(1)?.wallet.tokens}
                       </span>
                     </div>
@@ -289,13 +289,13 @@ export default function Topbar() {
                         </div>
                         <ul className="leading-tight space-y-2">
                           <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Use</div>
+                            <div className=" w-12 uppercase">Use</div>
                             <div className="flex-1">
                               To enter <strong>Monthly Tournaments</strong>.
                             </div>
                           </li>
                           <li className="flex gap-2 text-sm">
-                            <div className=" w-12 font-bold uppercase">Get</div>
+                            <div className=" w-12 uppercase">Get</div>
                             <div className="flex-1">
                               From <strong>Weekly Brawls</strong> winnings.
                             </div>
@@ -311,7 +311,7 @@ export default function Topbar() {
                         height="32"
                         alt="tickets"
                       />
-                      <span className="text-sm font-bold ml-1 text-bronze-500">
+                      <span className="text-sm ml-1 text-bronze-500">
                         {prototype.getUserByID(1)?.wallet.tickets}
                       </span>
                     </div>
@@ -407,7 +407,7 @@ export default function Topbar() {
                         >
                           <a tabIndex="1">
                             <span className="icon icon-file-article" />
-                            <span>How G-Loot works</span>
+                            <span>How Stryda works</span>
                           </a>
                         </Link>
                       </li>
@@ -493,7 +493,7 @@ export default function Topbar() {
                                         <div className="text-ui-300 text-sm leading-tight">
                                           {notification.intro}
                                         </div>
-                                        <div className="item-title font-headings font-bold text-ui-100 text-lg italic my-1">
+                                        <div className="item-title text-ui-100 text-lg my-1">
                                           {notification.title}
                                         </div>
                                         <div className="text-ui-300 text-sm leading-tight">

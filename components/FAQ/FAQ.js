@@ -14,7 +14,7 @@ export default function FAQ(props) {
           <>
             <div className="item">
               <div className="item-body">
-                <div className="p-2 item-title font-headings font-bold text-lg italic">
+                <div className="p-2 item-title text-lg">
                   {props.content.title}
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default function FAQ(props) {
               {props.content.hasButtonReward && (
                 <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                   <a className="button button-premium is-shining">
-                    <span>Join G-Loot Premium</span>
+                    <span>Join Stryda Premium</span>
                   </a>
                 </Link>
               )}

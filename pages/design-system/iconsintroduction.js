@@ -9,7 +9,7 @@ const DSpage = () => {
   return (
     <>
       <h1 className="mb-6">
-        Icons <small className="text-ui-300 font-normal">introduction</small>
+        Icons <small className="text-ui-300">introduction</small>
       </h1>
       <div className="format mb-8" id="using-icons">
         <h2 id="using-icons">Using icons</h2>

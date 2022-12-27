@@ -15,16 +15,16 @@ const DSpage = () => {
           <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between space-y-4 xl:space-y-0">
             <div className="flex-1 flex justify-center gap-4 items-stretch">
               <div className="h-36 w-36 rounded-xl bg-ui-600 border border-ui-500 flex items-center justify-center">
-                <span className="font-headings font-bold text-7xl">
+                <span className="text-7xl">
                   <span className="italic">A</span>
                   <span className="text-5xl">a</span>
                 </span>
               </div>
               <div className="w-60 flex flex-col items-between justify-around">
-                <div className="font-headings font-bold uppercase text-ui-100">
+                <div className="uppercase text-ui-100">
                   Podium Sharp
                 </div>
-                <div className="text-xs md:text-sm font-headings font-bold text-ui-300 mt-4">
+                <div className="text-xs md:text-sm text-ui-300 mt-4">
                   <span className="uppercase">abcdefghijklmnopqrstuvwxyz</span>
                   <br />
                   <span>abcdefghijklmnopqrstuvwxyz</span>
@@ -53,13 +53,13 @@ const DSpage = () => {
             </div>
             <div className="flex-1 flex justify-center gap-4 items-stretch">
               <div className="h-36 w-36 rounded-xl bg-ui-600 border border-ui-500 flex items-center justify-center">
-                <span className="font-body text-7xl italic">
+                <span className="font-body text-7xl">
                   <span className="italic">A</span>
                   <span className="text-5xl">a</span>
                 </span>
               </div>
               <div className="w-60 flex flex-col items-between justify-around">
-                <div className="font-body font-bold uppercase text-ui-100">
+                <div className="font-body uppercase text-ui-100">
                   Roboto Condensed
                 </div>
                 <div className="text-xs md:text-sm font-body text-ui-300 mt-4">
@@ -122,10 +122,10 @@ const DSpage = () => {
                         className="link"
                         onClick={() => {
                           uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
-                          navigator.clipboard.writeText("font-headings font-bold text-5xl italic");
+                          navigator.clipboard.writeText("text-5xl");
                         }}
                       >
-                        font-headings font-bold text-5xl italic
+                        text-5xl
                       </a>
                     </span>
                     <span>or</span>
@@ -148,7 +148,7 @@ const DSpage = () => {
                 <br />
                 font-size: 60px;
                 <br />
-                font-style: italic;
+                font-style:;
                 <br />
                 font-weight: 700;
                 <br />
@@ -180,10 +180,10 @@ const DSpage = () => {
                         className="link"
                         onClick={() => {
                           uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
-                          navigator.clipboard.writeText("font-headings font-bold text-4xl italic");
+                          navigator.clipboard.writeText("text-4xl");
                         }}
                       >
-                        font-headings font-bold text-4xl italic
+                        text-4xl
                       </a>
                     </span>
                     <span>or</span>
@@ -206,7 +206,7 @@ const DSpage = () => {
                 <br />
                 font-size: 48px;
                 <br />
-                font-style: italic;
+                font-style:;
                 <br />
                 font-weight: 700;
                 <br />
@@ -238,10 +238,10 @@ const DSpage = () => {
                         className="link"
                         onClick={() => {
                           uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
-                          navigator.clipboard.writeText("font-headings font-bold text-3xl italic");
+                          navigator.clipboard.writeText("text-3xl");
                         }}
                       >
-                        font-headings font-bold text-3xl italic
+                        text-3xl
                       </a>
                     </span>
                     <span>or</span>
@@ -264,7 +264,7 @@ const DSpage = () => {
                 <br />
                 font-size: 36px;
                 <br />
-                font-style: italic;
+                font-style:;
                 <br />
                 font-weight: 700;
                 <br />
@@ -296,10 +296,10 @@ const DSpage = () => {
                         className="link"
                         onClick={() => {
                           uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
-                          navigator.clipboard.writeText("font-headings font-bold text-3xl italic");
+                          navigator.clipboard.writeText("text-3xl");
                         }}
                       >
-                        font-headings font-bold text-3xl italic
+                        text-3xl
                       </a>
                     </span>
                     <span>or</span>
@@ -322,7 +322,7 @@ const DSpage = () => {
                 <br />
                 font-size: 30px;
                 <br />
-                font-style: italic;
+                font-style:;
                 <br />
                 font-weight: 700;
                 <br />
@@ -354,10 +354,10 @@ const DSpage = () => {
                         className="link"
                         onClick={() => {
                           uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
-                          navigator.clipboard.writeText("font-headings font-bold text-2xl italic");
+                          navigator.clipboard.writeText("text-2xl");
                         }}
                       >
-                        font-headings font-bold text-2xl italic
+                        text-2xl
                       </a>
                     </span>
                     <span>or</span>
@@ -380,7 +380,7 @@ const DSpage = () => {
                 <br />
                 font-size: 24px;
                 <br />
-                font-style: italic;
+                font-style:;
                 <br />
                 font-weight: 700;
                 <br />
@@ -414,10 +414,10 @@ const DSpage = () => {
                         className="link"
                         onClick={() => {
                           uiContext.openToastr({size: "medium", text: "Class name copied to your clipboard", color: "green", autoDelete: true, autoDeleteDelay: 2500});
-                          navigator.clipboard.writeText("font-bold text-2xl uppercase");
+                          navigator.clipboard.writeText("text-2xl uppercase");
                         }}
                       >
-                        font-bold text-xl uppercase
+                        text-xl uppercase
                       </a>
                     </span>
                     <span>or</span>

@@ -87,7 +87,7 @@ const PrototypePage = () => {
           <div>
             <img
               className="w-72 md:w-[450px] md:h-[320px] mx-auto md:mx-0"
-              src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/G-Loot_Valorant_Clash_Logo.svg"
+              src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/Stryda_Valorant_Clash_Logo.svg"
               width="auto"
               height="auto"
               alt=""
@@ -126,12 +126,12 @@ const PrototypePage = () => {
                 </span>
               </div>
             </div>
-            <h2 className="font-headings text-2xl font-normal mb-3">
+            <h2 className="text-2xl font-normal mb-3">
               OCTOBER 3 - NOVEMBER 27
             </h2>
             <p className="text-mono-100 opacity-75 max-w-xs text-lg mx-auto lg:mx-0">
               We are teaming up with Riot Games to bring you our first Premier
-              VALORANT tournament for all players in the EMEA region: G-Loot
+              VALORANT tournament for all players in the EMEA region: Stryda
               VALORANT Clash.
             </p>
           </div>

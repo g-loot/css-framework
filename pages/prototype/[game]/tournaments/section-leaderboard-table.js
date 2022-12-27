@@ -347,7 +347,7 @@ export default function SectionTournamentsLeaderboardTable() {
                     Loading === true ? "opacity-0NO" : ""
                   }`}
                 >
-                  <div className="text-sm text-ui-300 text-center mb-2 lg:mb-3 py-2 font-bold leading-none border-b border-ui-700">
+                  <div className="text-sm text-ui-300 text-center mb-2 lg:mb-3 py-2 leading-none border-b border-ui-700">
                     Leaderboard
                   </div>
 
@@ -417,7 +417,7 @@ export default function SectionTournamentsLeaderboardTable() {
                                 <>
                                   <div className="item py-1">
                                     <div className="item-body">
-                                      <div className="p-1 item-title font-headings font-bold text-lg italic">
+                                      <div className="p-1 item-title text-lg">
                                         {round.name}
                                       </div>
                                     </div>
@@ -435,7 +435,7 @@ export default function SectionTournamentsLeaderboardTable() {
                                   <>
                                     <div className="item py-1">
                                       <div className="item-body pl-4">
-                                        <div className="item-title font-headings font-bold">
+                                        <div className="item-title font-bold">
                                           {group.name}
                                         </div>
                                         <div className="text-xs text-ui-300 flex items-center gap-1">
@@ -529,7 +529,7 @@ export default function SectionTournamentsLeaderboardTable() {
                       Loading === true ? "block" : "hidden"
                     }`}
                   >
-                    <div className="loader-gloot loader-xl">
+                    <div className="loader-stryda loader-xl">
                       <div>
                         <i />
                         <i />
@@ -545,7 +545,7 @@ export default function SectionTournamentsLeaderboardTable() {
 
                   <div className={`${Loading === true ? "opacity-0" : ""}`}>
                     <ul ref={screenshotRef} className="space-y-2 lg:space-y-3">
-                      <li className="item text-sm uppercase  whitespace-nowrap text-ui-300 text-center font-bold leading-none">
+                      <li className="item text-sm uppercase  whitespace-nowrap text-ui-300 text-center leading-none">
                         <div className="item-image w-16 hidden md:block">#</div>
                         <div className="item-image w-20 text-left">Party</div>
                         <div className="item-body flex-2 lg:flex-3"></div>
@@ -584,7 +584,7 @@ export default function SectionTournamentsLeaderboardTable() {
                         >
                           <div className="item-image w-16 hidden relative md:flex items-center justify-center">
                             <span
-                              className={`font-headings font-bold text-2xl  ${
+                              className={`text-2xl  ${
                                 userIndex === 0 ? "text-gold-500" : ""
                               }${userIndex === 1 ? "text-silver-500" : ""} ${
                                 userIndex === 2 ? "text-bronze-500" : ""
@@ -632,28 +632,28 @@ export default function SectionTournamentsLeaderboardTable() {
                                 prototype.getUserByID(user).id
                               }${prototype.getURLparams()}`}
                             >
-                              <div className="item-title font-headings font-bold italic text-xl text-ui-100 interactive">
+                              <div className="item-title text-xl text-ui-100 interactive">
                                 {prototype.getUserByID(user).nickname}
                               </div>
                             </Link>
                           </div>
                           <div className="item-body">
-                            <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings font-bold">
+                            <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-bold">
                               {randomNumberInRange(10, 200)}
                             </span>
                           </div>
                           <div className="item-body">
-                            <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings font-bold">
+                            <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-bold">
                               {randomNumberInRange(10, 200)}
                             </span>
                           </div>
                           <div className="item-body">
-                            <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings font-bold">
+                            <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-bold">
                               {randomNumberInRange(10, 200)}
                             </span>
                           </div>
                           <div className="item-body">
-                            <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-headings font-bold">
+                            <span className="bg-gradient-to-b from-ui-900/50 to-ui-900/0 rounded-full px-3 py-1 text-ui-300 font-bold">
                               {randomNumberInRange(10, 200)}
                             </span>
                           </div>
@@ -688,7 +688,7 @@ export default function SectionTournamentsLeaderboardTable() {
                       Loading === true ? "flex" : "hidden"
                     }`}
                   >
-                    <div className="loader-gloot loader-xl">
+                    <div className="loader-stryda loader-xl">
                       <div>
                         <i />
                         <i />
@@ -708,7 +708,7 @@ export default function SectionTournamentsLeaderboardTable() {
                   >
                     <span className="icon icon-game-pubg-symbol text-6xl text-ui-400 mt-4" />
                     <div className="mt-2 mb-6">
-                      <p className="text-lg text-ui-300 font-headings font-bold leading-tight">
+                      <p className="text-lg text-ui-300 leading-tight">
                         This part of the tournament has not started yet. Come
                         back later.
                       </p>

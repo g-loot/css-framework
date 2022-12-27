@@ -83,7 +83,7 @@ export default function TabWalletHistory() {
                     >
                       <td>
                         <div
-                          className={`ml-1 rounded w-24 text-center p-1 bg-gradient-to-b from-ui-900/50 to-ui-900/10 font-headings font-bold text-lg ${
+                          className={`ml-1 rounded w-24 text-center p-1 bg-gradient-to-b from-ui-900/50 to-ui-900/10 text-lg ${
                             transaction.credit === true
                               ? "text-main"
                               : "text-error-500"

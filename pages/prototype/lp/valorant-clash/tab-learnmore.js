@@ -25,7 +25,7 @@ export default function ValorantClashTabLearnMore() {
             data-aos="fade-up"
           >
             <h2 className="text-center text-ui-100 max-w-md mx-auto">
-              <span className="text-main">G-Loot</span> VALORANT Clash for the
+              <span className="text-main">Stryda</span> VALORANT Clash for the
               VALORANT Champions Tour 2022 Off-season!
             </h2>
             <div className="max-w-[60ch] mx-auto space-y-8">
@@ -41,15 +41,15 @@ export default function ValorantClashTabLearnMore() {
                 The event will take place in <b className="text-ui-200">three stages</b>, which will
                 include
                 <b className="text-ui-200">Qualifiers</b>,{' '}
-                <b className="text-ui-200">G-Loot Showdown</b>, and the{' '}
+                <b className="text-ui-200">Stryda Showdown</b>, and the{' '}
                 <b className="text-ui-200">Grand Finals</b>, and will run from October 21 to
-                November 27. The G-Loot Showdown on <b className="text-ui-200">October 28-30</b> and
+                November 27. The Stryda Showdown on <b className="text-ui-200">October 28-30</b> and
                 the Grand Finals on <b className="text-ui-200">November 25-27</b> will be broadcast
                 live from <b className="text-ui-200">Stockholm</b> with a team of professional
                 casters and analysts.
               </p>
             </div>
-            <a href="https://res.cloudinary.com/gloot/raw/upload/v1664272203/Marketing/2022_Valorant_clash/G-Loot_VALROANT_CLASH_Presskit.zip" target="_blank" rel="noopener noreferrer" className="button button-lg button-secondary">
+            <a href="https://res.cloudinary.com/gloot/raw/upload/v1664272203/Marketing/2022_Valorant_clash/Stryda_VALROANT_CLASH_Presskit.zip" target="_blank" rel="noopener noreferrer" className="button button-lg button-secondary">
               <span className="icon icon-data-download" />
               <span>Download presskit</span>
             </a>
@@ -74,21 +74,21 @@ export default function ValorantClashTabLearnMore() {
             <div className="flex flex-col lg:flex-row gap-4 items-stretch justify-center whitespace-nowrap px-4 lg:px-0">
               <div className="p-4 transition-delay !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000" data-aos="fade-up" style={{ "--delay": "calc(1 * 0.1s)" }}>
                 <h3 className="text-ui-200">Qualifiers</h3>
-                <p className="font-headings uppercase tracking-wider text-xl text-ui-300">
+                <p className="uppercase tracking-wider text-xl text-ui-300">
                   October
                 </p>
               </div>
               <span className="bg-ui-100 opacity-25 h-px w-full lg:w-px lg:h-auto" data-aos="flip-up" />
               <div className="p-4 transition-delay !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000" data-aos="fade-up" style={{ "--delay": "calc(2 * 0.1s)" }}>
                 <h3 className="text-ui-100">Showdown</h3>
-                <p className="font-headings uppercase tracking-wider text-xl text-ui-300">
+                <p className="uppercase tracking-wider text-xl text-ui-300">
                   October 28-30
                 </p>
               </div>
               <span className="bg-ui-100 opacity-25 h-px w-full lg:w-px lg:h-auto" data-aos="flip-up" />
               <div className="p-4 transition-delay !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000" data-aos="fade-up" style={{ "--delay": "calc(3 * 0.1s)" }}>
                 <h3 className="text-main">Grand Final</h3>
-                <p className="font-headings uppercase tracking-wider text-xl text-ui-300">
+                <p className="uppercase tracking-wider text-xl text-ui-300">
                   November 25-27
                 </p>
               </div>
@@ -114,7 +114,7 @@ export default function ValorantClashTabLearnMore() {
             <p className="text-lg text-ui-300 leading-loose">
               There will be three separate qualifiers: <b className="text-ui-200">EU West</b>, <b className="text-ui-200">EU East</b>, and
               <b className="text-ui-200">Türkiye</b> &amp; <b className="text-ui-200">MENA</b>. Besides the qualifiers, the top teams from the
-              <b className="text-ui-200">G-Loot Brawl</b> will also get a chance. Qualified teams and Brawl
+              <b className="text-ui-200">Stryda Brawl</b> will also get a chance. Qualified teams and Brawl
               teams will face off in the <b className="text-ui-200">Monthly Showdown</b> that will take place
               in October.
             </p>

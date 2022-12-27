@@ -10,19 +10,6 @@
   transform-gpu
   ;
 
-  &:not(.menu-secondary) {
-    :where(li) {
-      > * {
-        &:not([class*='icon']) {
-          @apply
-          font-headings
-          tracking-wide
-          ;
-        }
-      }
-    }
-  }
-
   &.menu-rounded {
     :where(a, button, div) {
       @apply
@@ -174,14 +161,6 @@
       @apply
       pointer-events-none
       text-ui-500
-      ;
-    }
-  }
-
-  &:not(.menu-secondary) {
-    :where(a, button, div) {
-      @apply
-      font-bold
       ;
     }
   }

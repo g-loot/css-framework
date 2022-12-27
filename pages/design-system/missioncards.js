@@ -36,7 +36,7 @@ const DSpage = () => {
                           </div>
                           <div className="flex-1">
                             Subscribe to Premium to earn an additional{" "}
-                            <span className="font-bold text-premium-700">
+                            <span className="text-premium-700">
                               50% XP
                             </span>{" "}
                             on each completed mission.
@@ -125,7 +125,7 @@ const DSpage = () => {
                     src="https://res.cloudinary.com/gloot/image/upload/v1653293407/Marketing/2022_prototype/Premium_logo.png"
                     width="auto"
                     height="auto"
-                    alt="G-Loot Premium"
+                    alt="Stryda Premium"
                   />
                 </div>
                 <div className="card-body">
@@ -178,7 +178,7 @@ const DSpage = () => {
                     src="https://res.cloudinary.com/gloot/image/upload/v1653293407/Marketing/2022_prototype/Premium_logo.png"
                     width="auto"
                     height="auto"
-                    alt="G-Loot Premium"
+                    alt="Stryda Premium"
                   />
                 </div>
                 <div className="card-body">
