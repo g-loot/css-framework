@@ -143,7 +143,7 @@ export default function Brawls() {
             <section className="my-8 surface sm:rounded-lg p-8 text-center relative">
               <img
                 className="hidden lg:block absolute pointer-events-none z-20 -top-8 right-2 rotate-[33deg]"
-                src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation2.png"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
                 width="90"
                 height="auto"
                 alt=""
@@ -151,28 +151,28 @@ export default function Brawls() {
 
               <img
                 className="hidden lg:block absolute pointer-events-none z-20 -bottom-20 right-[calc(50%-28rem)] blur-sm rotate-[120deg]"
-                src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation1.png"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_2.png"
                 width="189"
                 height="auto"
                 alt=""
               />
               <img
                 className="hidden lg:block absolute pointer-events-none z-20 -top-14 left-[calc(50%-26rem)] blur-sm -rotate-[33deg]"
-                src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation2.png"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
                 width="150"
                 height="auto"
                 alt=""
               />
               <img
                 className="hidden lg:block absolute pointer-events-none z-20 -bottom-14 left-2 -rotate-[143deg]"
-                src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation2.png"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
                 width="134"
                 height="auto"
                 alt=""
               />
               <img
                 className="hidden lg:block absolute pointer-events-none z-20 top-32 left-5 -rotate-[74deg]"
-                src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation1.png"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_2.png"
                 width="49"
                 height="auto"
                 alt=""
@@ -183,7 +183,7 @@ export default function Brawls() {
               <div className="flex gap-8 items-start justify-center leading-tight mt-4">
                 <div>
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1671799703/Stryda/currencies/Reward-centered-coin-small.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                     width="100"
                     height="auto"
                     alt=""

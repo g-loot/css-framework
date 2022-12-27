@@ -137,28 +137,28 @@ export default function Premium() {
 
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -bottom-20 -right-32 blur-sm rotate-[120deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation1.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_2.png"
               width="210"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -top-14 left-8 blur-sm -rotate-[33deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation2.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
               width="168"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -bottom-14 -left-12 -rotate-[143deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation2.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
               width="144"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-32 -left-5 -rotate-[74deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-rotation1.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_2.png"
               width="49"
               height="auto"
               alt=""

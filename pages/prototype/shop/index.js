@@ -1,10 +1,17 @@
+import { useContext } from "react";
 import Ad from "../../../components/Ad/Ad";
 import Link from "next/link";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "../../../contexts/prototype";
+import { UiContext } from "../../../contexts/ui";
+import ModalBuyTokens from "../wallet/modal-buytokens";
 
 export default function Home() {
   const prototype = usePrototypeData();
+  const uiContext = useContext(UiContext);
+  function openModalBuyTokens() {
+    uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
+  }
 
   return (
     <>
@@ -95,42 +102,42 @@ export default function Home() {
           <div className="relative">
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -top-20 -right-4 rotate-[33deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-rotation1.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-token-side_1.png"
               width="160"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-32 right-32 rotate-[67deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-rotation2.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-token-side_2.png"
               width="75"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -bottom-20 right-0 blur-sm rotate-[120deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-rotation1.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-token-side_1.png"
               width="210"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -top-14 left-32 blur-sm -rotate-[33deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-rotation2.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-token-side_2.png"
               width="168"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -bottom-14 left-20 -rotate-[143deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-rotation2.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-token-side_2.png"
               width="144"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-16 left-16 -rotate-[74deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-rotation1.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-token-side_1.png"
               width="49"
               height="auto"
               alt=""
@@ -146,7 +153,7 @@ export default function Home() {
                 Purchase tokens to enter brawls and keep on climbing the
                 leaderboards.
               </p>
-              <button type="button" className="button button-primary">
+              <button onClick={openModalBuyTokens} type="button" className="button button-primary">
                 <span>Buy tokens</span>
               </button>
             </div>

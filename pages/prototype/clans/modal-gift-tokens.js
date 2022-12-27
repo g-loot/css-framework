@@ -31,7 +31,7 @@ export default function ModalGiftTokens(props) {
         <div className="modal-content">
           <div className="modal-body">
             <h2 className="modal-title">Gift tokens</h2>
-            <img className="mx-auto -mt-4 -mb-6" src="https://res.cloudinary.com/gloot/image/upload/v1661243759/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-medium.png" width="175" height="175" alt="" />
+            <img className="mx-auto -mt-4 -mb-6" src="https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-medium.png" width="175" height="175" alt="" />
             <p>
               You currently have: <span className="text-ui-100"><span className="text-2xl">{prototype.getUserByID(1)?.wallet.tokens}</span> <span className="text-xl">tokens</span></span>
             </p>

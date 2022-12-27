@@ -1,5 +1,5 @@
 function getImageUrl(fileName) {
-  return `https://res.cloudinary.com/gloot/image/upload/v1668591099/Marketing/2022_VALORANT_agent_generator/images/${fileName}`;
+  return `https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/${fileName}`;
 }
 
 export const StatsValorantMaps = [

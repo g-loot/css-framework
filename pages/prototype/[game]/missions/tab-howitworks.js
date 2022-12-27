@@ -70,25 +70,12 @@ const MissionsHowitworksTabs = [
     ],
   },
   {
-    title: "Premium Missions",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-premiummissions.webp",
-    paragraphs: [
-      {
-        text: "By getting a Premium subscription you will increase your daily amount of Missions and unlock the Premium Missions.",
-      },
-      {
-        text: "You will then be able to earn more XP towards your Mission Rewards. If you are not a Premium subscriber, you will still progress in the Premium Missions but cannot earn XP from completing them. That means if you change your mind about Premium, you will unlock the XP right away.",
-      },
-    ],
-  },
-  {
     title: "Premium Rewards",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-premiumrewards.webp",
     paragraphs: [
       {
-        text: "Become a Premium member to increase the number of rewards you can earn during the week.",
+        text: "Become a Premium member to earn additional XPs for each completed mission.",
       },
     ],
     hasButtonReward: true,

@@ -299,7 +299,7 @@ const DSpage = () => {
                     <div className="">
                       <img
                         className="mx-auto"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1671799703/Stryda/currencies/Reward-centered-coin-small.png"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                         width="140"
                         height="auto"
                         alt=""

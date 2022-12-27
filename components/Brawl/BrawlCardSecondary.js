@@ -164,7 +164,7 @@ export default function BrawlCardSecondary(props) {
                       </div>
                     </div>
                     <div className="infobanner-back absolute inset-0 flex items-center text-sm">
-                      <div className="animate-pulse text-blue-300">
+                      <div className="animate-pulse text-main">
                         Waiting for your 3 matches...
                       </div>
                     </div>
@@ -232,7 +232,7 @@ export default function BrawlCardSecondary(props) {
                         </div>
                       </div>
                       <div className="infobanner-back absolute inset-0 flex items-center text-sm">
-                        <div className="animate-pulse text-blue-300">
+                        <div className="animate-pulse text-main">
                           Waiting for your 3 matches...
                         </div>
                       </div>

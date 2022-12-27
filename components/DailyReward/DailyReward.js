@@ -15,7 +15,7 @@ const DailyRewards = [
     name: "Day 2",
     reward: "",
     rewardImage:
-      "https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-face.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png",
   },
   {
     name: "Day 3",
@@ -27,13 +27,13 @@ const DailyRewards = [
     name: "Day 4",
     reward: "",
     rewardImage:
-      "https://res.cloudinary.com/gloot/image/upload/v1671799703/Stryda/currencies/Reward-centered-coin-small.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png",
   },
   {
     name: "Day 5",
     reward: "",
     rewardImage:
-      "https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-face.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png",
   },
   {
     name: "Day 6",
@@ -45,7 +45,7 @@ const DailyRewards = [
     name: "Day 7",
     reward: "",
     rewardImage:
-      "https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-face.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png",
   },
 ];
 

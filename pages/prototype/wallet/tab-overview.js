@@ -12,7 +12,7 @@ const WalletItems = [
     id: 1,
     name: "coins",
     icon: "icon-coin",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-coin-face.png",
+    image: "https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png",
     amount: "50000",
     use: "To purchase items in the <b>Shop</b>.",
     get: "From <b>Daily Loot Streak</b> and <b>Weekly Brawls</b>.",
@@ -23,11 +23,11 @@ const WalletItems = [
     id: 2,
     name: "tokens",
     icon: "icon-token",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1671720890/Stryda/currencies/currency-3D-token-face.png",
+    image: "https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-unique.png",
     amount: "245",
     use: "To enter rounds in the <b>Weekly Brawls</b>.",
     get: "From <b>Missions, Daily Loot Streak</b> or buy them directly from the <b>Wallet</b>.",
-    color: "text-purple-500",
+    color: "text-gold-500",
     button: "buy",
   },
   /*
@@ -108,9 +108,9 @@ export default function TabWalletOverview() {
                 style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
               >
                 <div className="bg-gradient-to-b from-ui-900/50 to-ui-900/5 rounded overflow-hidden">
-                  <div className={`flex gap-2 items-center justify-center my-8 ${item.color}`}>
+                  <div className={`flex items-center justify-center my-8 ${item.color}`}>
                     {item.image ? (
-                      <img src={item.image} alt="" className="h-20 w-20" />
+                      <img src={item.image} alt="" className="h-32 w-32" />
                     ) : (
                     <span className={`icon text-5xl ${item.icon}`} />
                     )}

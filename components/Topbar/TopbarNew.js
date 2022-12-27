@@ -42,7 +42,7 @@ const notificationsGroups = [
         type: "clan",
         intro: "Clan",
         title: "You received a gift!",
-        text: "Your Clanmate <a href='#' class='link font-bold'>Harriss</a> has sent you <span class='whitespace-nowrap text-purple-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as a gift.",
+        text: "Your Clanmate <a href='#' class='link font-bold'>Harriss</a> has sent you <span class='whitespace-nowrap text-gold-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as a gift.",
         time: "2 min.",
         read: false,
       },
@@ -78,7 +78,7 @@ const notificationsGroups = [
         type: "brawl",
         intro: "Brawl",
         title: "You've been refunded",
-        text: "You’ve been refunded <span class='whitespace-nowrap text-purple-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as game.name went into maintenance and your open activations were canceled.",
+        text: "You’ve been refunded <span class='whitespace-nowrap text-gold-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as game.name went into maintenance and your open activations were canceled.",
         time: "4 days",
       },
       {
@@ -86,7 +86,7 @@ const notificationsGroups = [
         type: "brawl",
         intro: "Brawl",
         title: "You've been refunded",
-        text: "You’ve been refunded <span class='whitespace-nowrap text-purple-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as the brawl.name Brawl has ended and your open activations were canceled.",
+        text: "You’ve been refunded <span class='whitespace-nowrap text-gold-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as the brawl.name Brawl has ended and your open activations were canceled.",
         time: "5 days",
         read: true,
         accepted: true,
@@ -170,7 +170,7 @@ export default function TopbarNew() {
   */
 
   function brandToggle() {
-    if(!variablesContext.newBrand) {
+    if (!variablesContext.newBrand) {
       variablesContext.brandOn();
     } else {
       variablesContext.brandOff();
@@ -276,9 +276,7 @@ export default function TopbarNew() {
                 }
               >
                 <div className="rounded-full bg-ui-700 interactive">
-                  <Link
-                    href={`/prototype/search${prototype.getURLparams()}`}
-                  >
+                  <Link href={`/prototype/search${prototype.getURLparams()}`}>
                     <a className="button button-ghost rounded-full">
                       <span className="icon icon-zoom text-ui-200" />
                     </a>
@@ -309,8 +307,12 @@ export default function TopbarNew() {
                       tooltip={
                         <div className="w-56 relative">
                           <h6 className="mb-3 text-ui-100">Coins</h6>
-                          <div className="absolute -top-3 -right-2 p-2">
-                            <span className="icon icon-coin text-2xl text-gold-500" />
+                          <div className="absolute -top-6 -right-6 p-2">
+                            <img
+                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              className="w-14 h-14"
+                              alt=""
+                            />
                             <div className="lottie-blur absolute -inset-1">
                               <Lottie
                                 animationData={LottieExplosion}
@@ -321,17 +323,13 @@ export default function TopbarNew() {
                           </div>
                           <ul className="leading-tight space-y-2">
                             <li className="flex gap-2 text-sm">
-                              <div className=" w-12 uppercase">
-                                Use
-                              </div>
+                              <div className=" w-12 uppercase">Use</div>
                               <div className="flex-1">
                                 To purchase items in the Shop.
                               </div>
                             </li>
                             <li className="flex gap-2 text-sm">
-                              <div className=" w-12 uppercase">
-                                Get
-                              </div>
+                              <div className=" w-12 uppercase">Get</div>
                               <div className="flex-1">
                                 From <strong>Daily Loot</strong> Streak and{" "}
                                 <strong>Weekly Brawl winnings</strong>.
@@ -345,8 +343,8 @@ export default function TopbarNew() {
                         href={`/prototype/wallet${prototype.getURLparams()}`}
                       >
                         <div className="flex items-center gap-1 text-gold-500">
-                          <span className="icon icon-coin" />
-                          <span className="text-sm font-bold">
+                          <span className="icon icon-20 icon-coin" />
+                          <span className="">
                             {prototype.getUserByID(1)?.wallet.coins}
                           </span>
                         </div>
@@ -358,8 +356,12 @@ export default function TopbarNew() {
                       tooltip={
                         <div className="w-56 relative">
                           <h6 className="mb-3 text-ui-100">Token</h6>
-                          <div className="absolute -top-3 -right-2 p-2">
-                          <span className="icon icon-token text-2xl text-purple-500" />
+                          <div className="absolute -top-6 -right-6 p-2">
+                            <img
+                              src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-unique.png"
+                              className="w-14 h-14"
+                              alt=""
+                            />
                             <div className="lottie-blur absolute -inset-1">
                               <Lottie
                                 animationData={LottieExplosion}
@@ -370,17 +372,13 @@ export default function TopbarNew() {
                           </div>
                           <ul className="leading-tight space-y-2">
                             <li className="flex gap-2 text-sm">
-                              <div className=" w-12 uppercase">
-                                Use
-                              </div>
+                              <div className=" w-12 uppercase">Use</div>
                               <div className="flex-1">
                                 To enter Weekly Brawls.
                               </div>
                             </li>
                             <li className="flex gap-2 text-sm">
-                              <div className=" w-12 uppercase">
-                                Get
-                              </div>
+                              <div className=" w-12 uppercase">Get</div>
                               <div className="flex-1">
                                 <strong>Missions, Daily Loot Streak</strong> or{" "}
                                 <strong>buy them</strong> directly from the
@@ -394,9 +392,9 @@ export default function TopbarNew() {
                       <Link
                         href={`/prototype/wallet${prototype.getURLparams()}`}
                       >
-                        <div className="flex items-center gap-1 text-purple-500">
-                        <span className="icon icon-token" />
-                          <span className="text-sm font-bold">
+                        <div className="flex items-center gap-1 text-gold-500">
+                          <span className="icon icon-20 icon-token" />
+                          <span className="">
                             {prototype.getUserByID(1)?.wallet.tokens}
                           </span>
                         </div>

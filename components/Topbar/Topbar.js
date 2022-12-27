@@ -118,7 +118,7 @@ export default function Topbar() {
                   className="hidden md:block"
                   width="123"
                   height="64"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1671262915/Stryda/logos/stryda-logo-main.svg"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
                   alt="Stryda logo"
                 />
               </a>

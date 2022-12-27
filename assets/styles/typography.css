@@ -30,7 +30,7 @@ h1,
 .h1 {
   @apply
   font-headings
-  text-ui-100
+  text-mono-100
   font-bold
   uppercase
   ;

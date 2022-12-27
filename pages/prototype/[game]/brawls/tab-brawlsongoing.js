@@ -378,7 +378,7 @@ export default function TabBrawlsOngoing() {
               <div className="flex gap-8 items-start justify-center leading-tight mt-4">
                 <div>
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1671799703/Stryda/currencies/Reward-centered-coin-small.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                     width="140"
                     height="auto"
                     alt=""

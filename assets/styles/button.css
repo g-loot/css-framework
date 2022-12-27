@@ -463,6 +463,11 @@ button {
         items-center
         gap-1
         ;
+        .icon {
+          @apply
+          text-xl
+          ;
+        }
       }
     }
     img {
@@ -494,7 +499,7 @@ button {
       > div:last-child {
         span {
           @apply
-          text-premium-500
+          text-gold-500
           ;
         }
       }
@@ -503,7 +508,7 @@ button {
       > div:last-child {
         span {
           @apply
-          text-purple-500
+          text-gold-500
           ;
         }
       }
@@ -512,7 +517,7 @@ button {
       > div:last-child {
         span {
           @apply
-          text-premium-700
+          text-gold-500
           ;
         }
       }
@@ -521,16 +526,37 @@ button {
       @apply
       h-9
       ;
+      > div:last-child {
+        .icon {
+          @apply
+          text-2xl
+          ;
+        }
+      }
     }
     &.button-sm {
       @apply
       h-[26px]
       ;
+      > div:last-child {
+        .icon {
+          @apply
+          text-lg
+          ;
+        }
+      }
     }
     &.button-xs {
       @apply
       h-[20px]
       ;
+      > div:last-child {
+        .icon {
+          @apply
+          text-base
+          ;
+        }
+      }
     }
   }
 

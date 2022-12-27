@@ -13,7 +13,7 @@ const Offers = [
     previousAmount: "34€",
     save: "50%",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1661243759/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-small.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1672160318/Stryda/currencies/Reward-centered-token-small.png",
     special: "bestvalue",
   },
   {
@@ -22,14 +22,14 @@ const Offers = [
     previousAmount: "5.70€",
     save: "24%",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1661243759/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-medium.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-medium.png",
     special: "mostpopular",
   },
   {
     tokenNumber: 3,
     amount: "1.70€",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1661243759/Marketing/2022_prototype/CurrencyRewards/Reward-centered-token-large.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1672159333/Stryda/currencies/Reward-centered-token-large.png",
   },
 ];
 
