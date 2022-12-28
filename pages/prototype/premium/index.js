@@ -27,38 +27,34 @@ export default function Premium() {
           style={{ "--delay": "calc(2 * 0.05s)" }}
         >
           <section>
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col lg:flex-row gap-10 items-start justify-center my-12">
               <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1636112328/GNOG%20assets/Premium/gloot-premium-horizontal.png"
-                width="500"
+                src={`https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg?${Date.now()}`}
+                width="275"
                 height="auto"
-                alt="G-Loot Premium"
+                alt="Stryda Premium"
               />
-            </div>
-
-            <div className="flex flex-col items-center justify-center text-center mb-12 px-4 sm:px-0">
-              <h2 className="font-headings italic text-3xl md:text-4xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[30ch]">
-                Join G-Loot Premium to unlock the full G-Loot gaming experience
-              </h2>
-            </div>
-            <div className="flex flex-col items-center justify-center text-center mb-12">
-              <button
-                type="button"
-                onClick={openModalBuyPremium}
-                className="button button-lg button-premium is-shining"
-              >
-                <span>View premium plans</span>
-              </button>
-              <div className="flex flex-col items-center justify-center text-center mt-2">
+              <div className="lg:border-l lg:border-ui-500 lg:pl-10">
+                <h2 className="h1 max-w-[20ch] mx-auto lg:text-8xl">
+                  Make your GG&#39;s more rewarding
+                </h2>
+                <button
+                  type="button"
+                  onClick={openModalBuyPremium}
+                  className="button button-lg button-premium is-shining my-4"
+                >
+                  <span>View premium plans</span>
+                </button>
                 <p className="text-sm text-ui-300">
-                  Cancel anytime.{" "}
-                  <a className="underline cursor-pointer">
-                    Terms and conditions
-                  </a>{" "}
-                  apply.
-                </p>
+                    Cancel anytime.{" "}
+                    <a className="underline cursor-pointer">
+                      Terms and conditions
+                    </a>{" "}
+                    apply.
+                  </p>
               </div>
             </div>
+
           </section>
 
           <section className="grid md:grid-cols-2 justify-center mb-24 max-w-lg mx-auto text-center">
@@ -71,7 +67,7 @@ export default function Premium() {
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+              <h3 className="h5 text-ui-100 max-w-[30ch] mx-auto">
                 Get access to Premium Missions each day
               </h3>
             </div>
@@ -79,48 +75,48 @@ export default function Premium() {
             <div>
               <img
                 className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1665053771/Marketing/2022_prototype/Illustrations/picture_premium_rewards.webp"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672238945/Stryda/illustrations/picture_premium_rewards.png"
                 width="400"
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+              <h3 className="h5 text-ui-100 max-w-[30ch] mx-auto">
                 Earn mission rewards faster
               </h3>
             </div>
             <div>
               <img
                 className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1665053771/Marketing/2022_prototype/Illustrations/picture_premium_extra_tokens.webp"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672238945/Stryda/illustrations/picture_premium_extra_tokens.png"
                 width="400"
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+              <h3 className="h5 text-ui-100 max-w-[30ch] mx-auto">
                 Get free extra tokens for each token purchase
               </h3>
             </div>
             <div>
               <img
                 className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1665053771/Marketing/2022_prototype/Illustrations/picture_premium_no_ads.webp"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672238945/Stryda/illustrations/picture_premium_no_ads.png"
                 width="400"
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+              <h3 className="h5 text-ui-100 max-w-[30ch] mx-auto">
                 Get Premium content features
               </h3>
             </div>
             <div>
               <img
                 className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1665053771/Marketing/2022_prototype/Illustrations/picture_premium_discord.webp"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672238945/Stryda/illustrations/picture_premium_discord.png"
                 width="400"
                 height="auto"
                 alt=""
               />
-              <h3 className="font-headings italic text-2xl text-gradient bg-gradient-to-b from-gold-300 to-gold-700 max-w-[20ch] mx-auto">
+              <h3 className="h5 text-ui-100 max-w-[30ch] mx-auto">
                 Remove ads on the platform
               </h3>
             </div>
@@ -167,7 +163,7 @@ export default function Premium() {
             <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-stretch gap-16 px-4 md:px-0">
               <div className="max-w-sm hidden flex-1 lg:flex flex-col bg-ui-800 rounded-xl p-2">
                 <div className="text-center pt-2 text-premium-500 ">
-                  <span className="font-headings text-xl uppercase font-bold">
+                  <span className="h4">
                     Free
                   </span>
                 </div>
@@ -211,14 +207,14 @@ export default function Premium() {
                       <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
                         Access an exclusive Discord channel, chat directly with
-                        G-Loot devs, and try out new features before they are
+                        Stryda devs, and try out new features before they are
                         released.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
-                        Enjoy an ad-free experience on G-Loot.
+                        Enjoy an ad-free experience on Stryda.
                       </span>
                     </li>
                   </ul>
@@ -228,9 +224,9 @@ export default function Premium() {
                 </div>
               </div>
               <div className="max-w-sm flex-1 flex flex-col bg-gradient-to-r from-premium-300 to-premium-700 rounded-xl p-2">
-                <div className="flex items-center gap-4 pb-1.5 text-ui-800 pl-7">
+                <div className="flex items-center gap-4 pb-2 text-ui-800 pl-7">
                   <span className="icon icon-ic_stars_24px text-2xl" />
-                  <span className="font-headings text-xl uppercase font-bold">
+                  <span className="h4 text-ui-800">
                     Premium
                   </span>
                 </div>
@@ -274,14 +270,14 @@ export default function Premium() {
                       <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Access an exclusive Discord channel, chat directly with
-                        G-Loot devs, and try out new features before they are
+                        Stryda devs, and try out new features before they are
                         released.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
                       <span className="text-ui-200">
-                        Enjoy an ad-free experience on G-Loot.
+                        Enjoy an ad-free experience on Stryda.
                       </span>
                     </li>
                   </ul>

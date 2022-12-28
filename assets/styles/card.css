@@ -290,7 +290,7 @@
 
     .card-title {
       @apply
-      text-2xl
+      text-xl
       mt-1
       ;
     }
@@ -767,7 +767,7 @@
       absolute
       z-20
       inset-0
-      backdrop-blur
+      backdrop-blur-sm
       rounded-lg
       flex
       flex-col

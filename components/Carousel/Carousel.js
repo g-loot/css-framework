@@ -10,7 +10,7 @@ const slides = [
     description:
       "Brawl is our Stryda Special! You compete against other Stryda players to climb the leaderboard, get on top and win crazy rewards! Interested? Entry Brawl is on us! ",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1669283599/Marketing/2022_prototype/Carousel_Free_entry_1.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1672222065/Stryda/illustrations/Carousel_Free_entry_1.jpg",
     buttonLabel: "Compete now",
     buttonURL: "/prototype/valorant/brawls?freeentry=true",
   },
@@ -20,7 +20,7 @@ const slides = [
     description:
       "Check your damage/round, K/D ratio, headshots percentage, and more, for your last 20 matches. Plus, specific stats for your most played agents",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1669901630/Marketing/2022_VALORANT_agent_generator/images/Carousel_Valorant_Stats.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1672237441/Stryda/illustrations/Carousel_Valorant_Stats.jpg",
     buttonLabel: "Check it out",
     buttonURL: "/prototype/valorant/stats",
   },
@@ -41,7 +41,7 @@ const slides = [
     description:
       "This week you can get 2x the usual rewards by competing on Brawls.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1662645308/Marketing/2022_prototype/Illustrations/token_coin_piles.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1672238164/Stryda/illustrations/Carousel_Valorant_Brawl.jpg",
     buttonLabel: "Learn more",
     buttonURL: "#",
   },

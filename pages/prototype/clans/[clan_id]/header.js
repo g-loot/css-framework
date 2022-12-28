@@ -237,7 +237,7 @@ export default function ClanHeader() {
             )}
           </div>
           <div className="header-bg">
-            <img src="https://res.cloudinary.com/gloot/image/upload/v1659442345/Marketing/2022_prototype/Clan_bg.webp" />
+            <img src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png" />
           </div>
         </section>
       )}

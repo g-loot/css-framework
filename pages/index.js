@@ -103,12 +103,12 @@ const Index = () => {
             <div className="container mx-auto">
               <div className="grid grid-cols-12 gap-6 items-stretch">
                 <div className="col-span-12 lg:col-span-12 flex flex-col">
-                  <div className="flex-1 lg:border-l border-ui-700 lg:pl-8 mb-12">
+                  <div className="flex-1 lg:border-l border-ui-500 lg:pl-8 mb-12">
                     <div>
                       <div className="h4 text-ui-300">
                         Welcome to the
                       </div>
-                      <h1 className="mb-8 lg:text-8xl mt-0">
+                      <h1 className="mb-8 lg:text-8xl mt-2">
                         <div>Stryda design system</div>
                       </h1>
                     </div>

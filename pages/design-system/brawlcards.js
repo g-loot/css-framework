@@ -745,7 +745,7 @@ const DSpage = () => {
                     </button>
                   </div>
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1668945075/Marketing/2022_prototype/card-rewarddoverlay-bg.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672221451/Stryda/illustrations/card-rewarddoverlay-bg.png"
                     alt=""
                   />
                 </div>

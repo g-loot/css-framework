@@ -65,6 +65,7 @@ h1,
   @apply
   text-5xl
   md:text-7xl
+  leading-[0.8]
   ;
 }
 
@@ -83,6 +84,7 @@ h3,
   @apply
   text-2xl
   md:text-3xl
+  text-ui-100
   ;
 }
 
@@ -91,6 +93,7 @@ h4,
   @apply
   text-xl
   md:text-2xl
+  text-ui-100
   ;
 }
 

@@ -6,7 +6,7 @@ export const dataVouchers = [
       "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_riot.webp",
     name: "Riot Games",
     description:
-      "What if playing games could give you new games? When you buy a Steam gift card through G-Loot, that’s exactly what happens. Choose from thousands of games, software, and even hardware from Steam.",
+      "What if playing games could give you new games? When you buy a Steam gift card through Stryda, that’s exactly what happens. Choose from thousands of games, software, and even hardware from Steam.",
     sections: [
       {
         id: 1,
@@ -194,7 +194,7 @@ export const dataVouchers = [
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_steam.webp",
     name: "Steam",
-    description: "What if playing games could give you new games? When you buy a Steam gift card through G-Loot, that’s exactly what happens. Choose from thousands of games, software, and even hardware from Steam.",
+    description: "What if playing games could give you new games? When you buy a Steam gift card through Stryda, that’s exactly what happens. Choose from thousands of games, software, and even hardware from Steam.",
     sections: [
       {
         id: 1,

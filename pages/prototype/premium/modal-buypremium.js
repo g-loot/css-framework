@@ -93,7 +93,7 @@ export default function ModalBuyPremium(props) {
                           : ""
                       } ${
                         item.special === "mostpopular"
-                          ? "border border-ui-700 bg-gradient-to-b from-blue-300 to-blue-500/25"
+                          ? "border border-ui-700 bg-main"
                           : ""
                       } ${!item.special ? "surface" : ""}`}
                       style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
@@ -119,11 +119,11 @@ export default function ModalBuyPremium(props) {
                           <h2 className="mb-4 h3">{item.tokenNumber} tokens</h2>
                           {item.previousAmount && (
                             <>
-                              <div className="flex gap-2 text-3xl text-center justify-center font-headings">
+                              <div className="flex gap-2 text-3xl text-center justify-center">
                                 <span className="line-through text-ui-300">
                                   {item.previousAmount}
                                 </span>
-                                <span className="text-blue-500">
+                                <span className="text-main">
                                   {item.amount}
                                 </span>
                               </div>
@@ -134,7 +134,7 @@ export default function ModalBuyPremium(props) {
                           )}
                           {!item.previousAmount && (
                             <>
-                              <div className="flex gap-2 text-3xl text-center justify-center font-headings">
+                              <div className="flex gap-2 text-3xl text-center justify-center">
                                 <span className="text-ui-200">
                                   {item.amount}
                                 </span>

@@ -86,7 +86,7 @@
         relative
         z-10
         rounded-full
-        bg-ui-700
+        bg-ui-900
         p-1
         inline-flex
         items-center
@@ -100,10 +100,9 @@
             min-w-[1.3rem]
             rounded-full
             text-sm
-            font-bold
             text-ui-100/0
             bg-main
-            shadow-[0_0_0_3px_rgb(var(--color-ui-800)),_0_0_0_5px_rgb(var(--color-main))]
+            shadow-[0_0_0_3px_rgb(var(--color-ui-900)),_0_0_0_6px_rgb(var(--color-main))]
             transition-all
             ease-in-out
             duration-1000
@@ -244,13 +243,9 @@
     &.is-active {
       > .ladder-info {
         > div {
-          @apply
-          shadow-[0_0_0_0_rgb(var(--color-ui-800)),_0_0_0_2px_rgb(var(--color-main))]
-          ;
           > span:nth-child(1) {
             @apply
             text-ui-800
-            shadow-[0_0_0_2px_rgb(var(--color-ui-600)),_0_0_0_3px_rgb(var(--color-ui-600))]
             ;
           }
         }
@@ -276,7 +271,7 @@
         > .ladder-info {
           &::after {
             @apply
-            bg-ui-700
+            bg-ui-500
             ;
           }
           > div {
@@ -324,14 +319,11 @@
         }
       }
       & ~ li {
-        
         > .ladder-info > div > span:nth-child(1) {
           @apply
-          text-ui-300
-          bg-gradient-to-b
-          from-ui-700
-          to-ui-500
-          shadow-[0_0_0_3px_rgb(var(--color-ui-800)),_0_0_0_5px_rgb(var(--color-ui-600))]
+          text-ui-200
+          bg-ui-900
+          shadow-[0_0_0_3px_rgb(var(--color-ui-900)),_0_0_0_6px_rgb(var(--color-ui-500))]
           ;
         }
         

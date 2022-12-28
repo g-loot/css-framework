@@ -3,14 +3,6 @@
 /*----------------------------*/
 
 @font-face {
-  font-family: "glooticons";
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1654609433/GNOG%20assets/Fonts/Icons/glooticons.woff2') format('woff2'),
-    url('https://res.cloudinary.com/gloot/raw/upload/v1654609433/GNOG%20assets/Fonts/Icons/glooticons.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
   font-family: "Stryda";
   src: url('https://res.cloudinary.com/gloot/raw/upload/v1671201526/Stryda/fonts/stryda-heavy.woff2') format('woff2'),
     url('https://res.cloudinary.com/gloot/raw/upload/v1671201526/Stryda/fonts/stryda-heavy.woff') format('woff');
@@ -18,19 +10,18 @@
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
   font-family: "Barlow";
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1671460402/Stryda/fonts/barlow-medium.woff2') format('woff2'),
-    url('https://res.cloudinary.com/gloot/raw/upload/v1671460402/Stryda/fonts/barlow-medium.woff') format('woff');
+  src: url('https://res.cloudinary.com/gloot/raw/upload/v1672214112/Stryda/fonts/barlow-medium.woff2') format('woff2'),
+    url('https://res.cloudinary.com/gloot/raw/upload/v1672214112/Stryda/fonts/barlow-medium.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Barlow";
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1671460402/Stryda/fonts/barlow-bold.woff2') format('woff2'),
-    url('https://res.cloudinary.com/gloot/raw/upload/v1671460402/Stryda/fonts/barlow-bold.woff') format('woff');
+  src: url('https://res.cloudinary.com/gloot/raw/upload/v1672214112/Stryda/fonts/barlow-semibold.woff2') format('woff2'),
+    url('https://res.cloudinary.com/gloot/raw/upload/v1672214112/Stryda/fonts/barlow-semibold.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;

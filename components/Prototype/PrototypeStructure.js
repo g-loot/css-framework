@@ -84,13 +84,13 @@ export default function PrototypeStructure({ children, title }) {
       {isNewStructure && (
         <>
           <PrototypeHead title={title} />
-          <div className="drawer drawer-mobile">
+          <div className="drawer drawer-mobile drawer-main">
             <input
               id="drawer-prototype"
               type="checkbox"
               className="drawer-toggle"
             />
-            <div className="drawer-content">
+            <div className="drawer-content scrollbar-desktop scrollbar-secondary">
               <TopbarNew />
               <div className="container relative">
                 <div

@@ -8,70 +8,70 @@
           "value": "bg-ui-100",
           "number": "100",
           "data": "",
-          "hex": "#F9F9FB"
+          "hex": "#E1E2E7"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-200",
           "number": "200",
           "data": "",
-          "hex": "#C6C6DB"
+          "hex": "#A5A7B5"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-300",
           "number": "300",
           "data": "",
-          "hex": "#9595B9"
+          "hex": "#818495"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-400",
           "number": "400",
           "data": "",
-          "hex": "#666695"
+          "hex": "#535669"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-500",
           "number": "500",
           "data": "",
-          "hex": "#383870"
+          "hex": "#26293D"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-600",
           "number": "600",
           "data": "",
-          "hex": "#2C2C5E"
+          "hex": "#1E2135"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-700",
           "number": "700",
           "data": "",
-          "hex": "#21214A"
+          "hex": "#171A2D"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-800",
           "number": "800",
           "data": "",
-          "hex": "#171736"
+          "hex": "#101323"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-850",
           "number": "850",
           "data": "",
-          "hex": "#12122C"
+          "hex": "#0A0C19"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-900",
           "number": "900",
           "data": "",
-          "hex": "#0D0D22"
+          "hex": "#05070F"
         }
       ]
     },
@@ -104,7 +104,7 @@
         "value": "bg-main",
         "number": "500",
         "data": "brand.main",
-        "hex": "#13F094"
+        "hex": "#F3C351"
       }]
     },
     {
@@ -117,21 +117,21 @@
           "value": "bg-premium-300",
           "number": "300",
           "data": "brand.premium.light",
-          "hex": "#FDE268"
+          "hex": "#FED574"
         },
         {
           "name": "Premium Medium",
           "value": "bg-premium-500",
           "number": "500",
           "data": "brand.premium.medium",
-          "hex": "#FBC02D"
+          "hex": "#F3C351"
         },
         {
           "name": "Premium Dark",
           "value": "bg-premium-700",
           "number": "700",
           "data": "brand.premium.dark",
-          "hex": "#F9A825"
+          "hex": "#CCA23D"
         }
       ]
     },
@@ -144,21 +144,21 @@
           "value": "bg-interaction-300",
           "number": "300",
           "data": "brand.interaction.light",
-          "hex": "#56FFB9"
+          "hex": "#FED574"
         },
         {
           "name": "Interaction Medium",
           "value": "bg-interaction-500",
           "number": "500",
           "data": "brand.interaction.medium",
-          "hex": "#14EF94"
+          "hex": "#F3C351"
         },
         {
           "name": "Interaction Dark",
           "value": "bg-interaction-700",
           "number": "700",
           "data": "brand.interaction.dark",
-          "hex": "#06C977"
+          "hex": "#CCA23D"
         }
       ]
     },
@@ -241,21 +241,21 @@
           "value": "bg-gold-300",
           "number": "300",
           "data": "reward.gold.light",
-          "hex": "#FEFA43"
+          "hex": "#FED574"
         },
         {
           "name": "Gold Main",
           "value": "bg-gold-500",
           "number": "500",
           "data": "reward.gold.main",
-          "hex": "#FFE200"
+          "hex": "#F3C351"
         },
         {
           "name": "Gold Dark",
           "value": "bg-gold-700",
           "number": "700",
           "data": "reward.gold.dark",
-          "hex": "#FF9C03"
+          "hex": "#CCA23D"
         },
         {
           "name": "Silver Light",

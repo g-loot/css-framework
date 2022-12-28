@@ -244,7 +244,7 @@ export default function TabMissionsMissions() {
               />
               <h4 className="text-3xl">
                 <span>Join</span>{" "}
-                <span className="text-gradient bg-gradient-to-b from-gold-300 to-gold-700">
+                <span className="text-main">
                   Stryda Premium
                 </span>
               </h4>

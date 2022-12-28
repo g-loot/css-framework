@@ -19,7 +19,7 @@ select[multiple] {
   }
   &::-webkit-scrollbar-thumb {
     @apply
-    bg-ui-500
+    bg-ui-400
     transition-all
     duration-200
     rounded
@@ -28,7 +28,7 @@ select[multiple] {
   }
   &::-webkit-scrollbar-thumb:hover {
     @apply
-    bg-ui-400
+    bg-ui-300
     cursor-pointer
     ;
   }
@@ -66,12 +66,12 @@ select[multiple] {
 .scrollbar-secondary {
   &::-webkit-scrollbar-thumb {
     @apply
-    bg-ui-500
+    bg-ui-400
     ;
   }
   &::-webkit-scrollbar-thumb:hover {
     @apply
-    bg-ui-400
+    bg-ui-300
     ;
   }
 }
@@ -101,7 +101,7 @@ select[multiple] {
     }
     &::-webkit-scrollbar-thumb {
       @apply
-      bg-ui-500
+      bg-ui-400
       transition-all
       duration-200
       rounded
@@ -110,7 +110,7 @@ select[multiple] {
     }
     &::-webkit-scrollbar-thumb:hover {
       @apply
-      bg-ui-400
+      bg-ui-300
       cursor-pointer
       ;
     }
@@ -145,7 +145,7 @@ body.scrollbar-desktop {
     }
     ::-webkit-scrollbar-thumb {
       @apply
-      bg-ui-500
+      bg-ui-400
       transition-all
       duration-200
       rounded
@@ -154,7 +154,7 @@ body.scrollbar-desktop {
     }
     ::-webkit-scrollbar-thumb:hover {
       @apply
-      bg-ui-400
+      bg-ui-300
       cursor-pointer
       ;
     }

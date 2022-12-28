@@ -158,7 +158,7 @@ export default function TabBrawlsRewards() {
         className="pb-8 animate-slide-in-bottomNO animate-delay"
         style={{ "--delay": "calc(1 * 0.05s)" }}
       >
-        <div className="flex items-stretch gap-8 mb-8">
+        <div className="flex flex-col md:flex-row items-stretch gap-8 mb-8">
           <div className="flex-1 surface sm:rounded-lg p-4">
             <h2 className="h4 mb-4 px-4">
               Solo{" "}

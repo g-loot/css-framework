@@ -244,16 +244,18 @@ export default function BrawlPlacements() {
               </a>
             )}
             {!isPremium && !freeEntry && (
-              <Link href="/prototype/premium">
-                <a className="link text-sm text-premium-500">
-                  Get more XP with Premium
-                </a>
-              </Link>
+              <div className="hidden lg:block">
+                <Link href="/prototype/premium">
+                  <a className="link text-sm text-premium-500">
+                    Get more XP with Premium
+                  </a>
+                </Link>
+              </div>
             )}
           </div>
           {variablesContext.brawlStep >= 3 && !resultsDone && (
             <div className="animate-slide-in-bottom">
-              <div className="text-center text-blue-300 text-sm animate-pulse">
+              <div className="text-center text-main text-sm animate-pulse">
                 {variablesContext.brawlStep <= 3 ? (
                   <>
                     Waiting for <b className="text-lg">3</b> match results

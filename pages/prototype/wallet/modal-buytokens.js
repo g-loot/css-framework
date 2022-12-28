@@ -58,7 +58,13 @@ export default function ModalBuyTokens(props) {
     setSubmitting(true);
 
     setTimeout(() => {
-      uiContext.openToastr({size: "", text: "Tokens bought successfully", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+      uiContext.openToastr({
+        size: "",
+        text: "Tokens bought successfully",
+        color: "green",
+        autoDelete: true,
+        autoDeleteDelay: 2500,
+      });
       uiContext.closeModal();
       setSubmitting(false);
     }, 1000);
@@ -82,10 +88,10 @@ export default function ModalBuyTokens(props) {
           <div className="modal-content">
             <div className="modal-body text-center">
               <h2 className="modal-title">Get more tokens</h2>
-              <div className="surface surface-highlight-premium rounded-lg overflow-hidden flex flex-col md:flex-row items-center md:gap-4 px-4 mt-2 mb-4">
+              <div className="surface surface-highlight-premium rounded-lg overflow-hidden flex flex-col md:flex-row items-center gap-4 md:gap-8 p-4 mb-4">
                 <img
-                  src="https://res.cloudinary.com/gloot/image/upload/v1636112328/GNOG%20assets/Premium/gloot-premium-horizontal.png"
-                  width="240"
+                  src={`https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white.svg`}
+                  width="210"
                   height="auto"
                   alt="Stryda Premium"
                 />
@@ -96,7 +102,7 @@ export default function ModalBuyTokens(props) {
                 <div />
                 <div className="py-4">
                   <Link href={`/prototype/premium${prototype.getURLparams()}`}>
-                    <a className="button button-premium is-shining whitespace-nowrap">
+                    <a className="button button-premium whitespace-nowrap">
                       <span>Subscribe now</span>
                     </a>
                   </Link>
@@ -144,9 +150,7 @@ export default function ModalBuyTokens(props) {
                                 <span className="line-through text-ui-300">
                                   {item.previousAmount}
                                 </span>
-                                <span className="text-blue-500">
-                                  {item.amount}
-                                </span>
+                                <span className="text-main">{item.amount}</span>
                               </div>
                               <div className="text-sm uppercase text-ui-200 font-bold">
                                 Save {item.save}

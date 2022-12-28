@@ -164,11 +164,15 @@ ul.item-actions-hidden > .item,
 
 .items-spaced {
   > .item {
+    @apply
+    border-b-0
+    border-x-0
+    border-t
+    border-t-ui-700
+    ;
     &:not([class*=surface]){
       @apply
       bg-ui-800
-      border-t
-      border-t-ui-700
       ;
     }
 

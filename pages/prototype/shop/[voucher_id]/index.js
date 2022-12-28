@@ -44,7 +44,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="header-bg">
-                  <img src="https://res.cloudinary.com/gloot/image/upload/v1659462292/Marketing/2022_prototype/Shop_bg.webp" />
+                  <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
                 </div>
               </div>
             </section>

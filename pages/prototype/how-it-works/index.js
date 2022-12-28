@@ -192,7 +192,6 @@ const TabsItems = [
   },
 ];
 
-
 const HowItWorksFAQs = [
   {
     title: "Is Stryda available on Mac/mobile/console?",
@@ -274,7 +273,7 @@ export default function HowItWorks() {
               </div>
             </div>
             <div className="header-bg">
-              <img src="https://res.cloudinary.com/gloot/image/upload/v1667994151/Marketing/2022_prototype/HowItWorks_bg.jpg" />
+              <img src="https://res.cloudinary.com/gloot/image/upload/v1672245449/Stryda/illustrations/HowItWorks_bg.png" />
             </div>
           </div>
         </section>
@@ -288,7 +287,9 @@ export default function HowItWorks() {
                 <Link href={`?tab=${item.url}`} key={item.id}>
                   <li
                     className={`item duration-500 origin-left p-3 rounded-lg ${
-                      selectedTab === item.url ? "surface surface-halo halo-r" : "opacity-50 scale-90"
+                      selectedTab === item.url
+                        ? "surface surface-halo halo-r"
+                        : "opacity-50 scale-90"
                     }`}
                     style={{
                       "--delay": "calc(" + itemIndex + " * 0.05s)",
@@ -298,13 +299,25 @@ export default function HowItWorks() {
                       <div className="text-ui-300 text-xs uppercase">
                         {item.subtitle}
                       </div>
-                      <div className="text-ui-100 item-title">{item.title}</div>
+                      <div
+                        className={`item-title transition-color duration-500 ease-in-out ${
+                          selectedTab === item.url ? "text-main hover:text-main" : "text-ui-100"
+                        }`}
+                      >
+                        {item.title}
+                      </div>
                     </div>
                     <div className="item-actions">
                       <div>
-                        <span className={`icon text-3xl transition-all duration-500 ease-in-out ${item.icon} ${
-                      selectedTab === item.url ? "text-main" : "text-ui-400 scale-75"
-                    }`} />
+                        <span
+                          className={`icon text-3xl transition-all duration-500 ease-in-out ${
+                            item.icon
+                          } ${
+                            selectedTab === item.url
+                              ? "text-main"
+                              : "text-ui-400 scale-75"
+                          }`}
+                        />
                       </div>
                     </div>
                   </li>
@@ -316,13 +329,26 @@ export default function HowItWorks() {
             {TabsItems.map((item, itemIndex) => {
               if (item.url === selectedTab) {
                 return (
-                  <div key={item.id} className="flex flex-col xl:flex-row xl:items-center gap-4 lg:gap-8">
-                    <div className="flex-1 animate-slide-in-left animate-delay"
-                    style={{ "--delay": "calc(2 * 0.05s)" }}>
-                      <img src={item.img} alt="" width="100%" height="auto" className="w-1/2 lg:w-full mx-auto" />
+                  <div
+                    key={item.id}
+                    className="flex flex-col xl:flex-row xl:items-center gap-4 lg:gap-8"
+                  >
+                    <div
+                      className="flex-1 animate-slide-in-left animate-delay"
+                      style={{ "--delay": "calc(2 * 0.05s)" }}
+                    >
+                      <img
+                        src={item.img}
+                        alt=""
+                        width="100%"
+                        height="auto"
+                        className="w-1/2 lg:w-full mx-auto"
+                      />
                     </div>
-                    <div className="flex-1 animate-slide-in-left animate-delay space-y-8"
-                    style={{ "--delay": "calc(1 * 0.05s)" }}>
+                    <div
+                      className="flex-1 animate-slide-in-left animate-delay space-y-8"
+                      style={{ "--delay": "calc(1 * 0.05s)" }}
+                    >
                       <h2 className="h3">{item.subtitle}</h2>
                       {item.content.map((content, contentIndex) => (
                         <div key={contentIndex}>
@@ -358,20 +384,18 @@ export default function HowItWorks() {
           </div>
         </section>
         <section
-        className="py-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc(2 * 0.05s)" }}
-      >
-        <div className="px-4 sm:px-0">
-          <h2 className="h3 mb-6 text-center">
-            FAQ
-          </h2>
-        </div>
-        <div className="accordion accordion-highlighted surface sm:rounded-lg">
-          {HowItWorksFAQs.map((tab, tabIndex) => (
-            <FAQ key={tabIndex} content={tab} />
-          ))}
-        </div>
-      </section>
+          className="py-12 animate-slide-in-bottom animate-delay"
+          style={{ "--delay": "calc(2 * 0.05s)" }}
+        >
+          <div className="px-4 sm:px-0">
+            <h2 className="h3 mb-6 text-center">FAQ</h2>
+          </div>
+          <div className="accordion accordion-highlighted surface sm:rounded-lg">
+            {HowItWorksFAQs.map((tab, tabIndex) => (
+              <FAQ key={tabIndex} content={tab} />
+            ))}
+          </div>
+        </section>
       </PrototypeStructure>
     </>
   );

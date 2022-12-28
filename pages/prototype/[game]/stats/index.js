@@ -155,7 +155,7 @@ export default function Stats() {
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Damage/round
                             </div>
-                            <div className="text-blue-300 text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               --
                             </div>
                           </div>
@@ -168,7 +168,7 @@ export default function Stats() {
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               K/D ratio
                             </div>
-                            <div className="text-blue-300 text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               --
                             </div>
                           </div>
@@ -181,7 +181,7 @@ export default function Stats() {
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Headshots %
                             </div>
-                            <div className="text-blue-300 text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               --
                             </div>
                           </div>
@@ -194,7 +194,7 @@ export default function Stats() {
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Win %
                             </div>
-                            <div className="text-blue-300 text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               --
                             </div>
                           </div>
@@ -971,7 +971,7 @@ export default function Stats() {
                                         <div
                                           className={`flex items-center gap-2 ${
                                             itemIndex === 3
-                                              ? "text-blue-300"
+                                              ? "text-main"
                                               : "font-normal"
                                           }`}
                                         >
@@ -1218,7 +1218,7 @@ export default function Stats() {
                               <div className="text-ui-100 uppercae">
                                 Top weapon
                               </div>
-                              <div className="text-2xl uppercase text-blue-300">
+                              <div className="text-2xl uppercase text-main">
                                 {getWeaponByID(selectedStat.topweapon).name}
                               </div>
                               <div className="font-normal text-ui-300 capitalize">

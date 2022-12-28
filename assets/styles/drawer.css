@@ -228,3 +228,49 @@
     }
   }
 }
+
+.drawer-main {
+  .drawer-content {
+    @apply
+    lg:mr-3
+    lg:my-3
+    relative
+    ;
+    &::-webkit-scrollbar {
+      z-index: 100;
+    }
+    &::before {
+      @apply
+      lg:content-['']
+      pointer-events-none
+      fixed
+      z-[60]
+      inset-0
+      inset-y-0
+      right-0
+      left-0
+      lg:left-[calc(18rem-0.75rem)]
+      rounded-[1rem]
+      shadow-[inset_0_0_0_0.75rem_rgb(var(--color-ui-800)),_inset_0_0_0_calc(0.75rem+1px)_rgb(var(--color-ui-500)),_0_0_0_0.75rem_rgb(var(--color-ui-800))]
+      ;
+    }
+  }
+  .drawer-side {
+    > aside {
+      @apply
+      lg:pt-3
+      ;
+    }
+    > *,
+    .bg-ui-850 {
+      @apply
+      bg-ui-800
+      ;
+    }
+    > .border-r {
+      @apply
+      border-none
+      ;
+    }
+  }
+}
