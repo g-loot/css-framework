@@ -581,8 +581,8 @@ button {
         content-['']
         absolute
         inset-auto
-        h-6
-        w-6
+        h-4
+        w-4
         block
         border-2
         border-ui-900

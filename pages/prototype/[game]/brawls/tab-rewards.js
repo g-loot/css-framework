@@ -281,10 +281,10 @@ export default function TabBrawlsRewards() {
             className="flex-1 surface sm:rounded-lg p-4 relative flex flex-col items-stretch animate-slide-in-bottom animate-delay"
             style={{ "--delay": "calc(2 * 0.05s)" }}
           >
-            <div className="absolute -top-6 -left-4 -rotate-12 pointer-events-none">
+            <div className="absolute -top-2 left-2 pointer-events-none">
               <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1658472557/Marketing/2022_prototype/Reward-decoration-coin.webp"
-                width="140"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-extrasmall.png"
+                width="90"
                 height="auto"
                 alt=""
               />

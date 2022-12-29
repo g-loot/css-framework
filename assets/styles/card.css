@@ -293,6 +293,12 @@
       text-xl
       mt-1
       ;
+
+      + .card-meta {
+        @apply
+        mt-2.5
+        ;
+      }
     }
     .card-meta {
       @apply
@@ -316,10 +322,7 @@
   .card-bg {
     &::before {
       @apply
-      bg-gradient-to-b
-      from-ui-900/0
-      via-ui-900/25
-      to-ui-900/50
+      hidden
       ;
     }
   }
@@ -441,6 +444,38 @@
         @apply
         bg-ui-800/75
       }
+    }
+  }
+
+  &.card-secondary {
+    @apply
+    aspect-landscape
+    flex
+    flex-row
+    items-stretch
+    ;
+    .card-bg {
+      @apply
+      relative
+      flex-1
+      order-1
+      aspect-card
+      ;
+      &,
+      > * {
+        @apply
+        rounded-r-none
+        ;
+      }
+    }
+    .card-body {
+      @apply
+      flex-3
+      order-2
+      justify-end
+      items-stretch
+      p-4
+      ;
     }
   }
 }

@@ -408,7 +408,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     @apply
-    bg-gradient-radial-spotlight
     relative
     ;
     &::after {
@@ -418,71 +417,47 @@
       inset-2
       rounded-full
       blur-sm
-      bg-gradient-radial
       opacity-10
       ;
     }
   }
   .icon-rank-bronze {
-    @apply
-    from-bronze-300
-    via-bronze-500
-    to-bronze-700
-    ;
+    &,
     &::after {
       @apply
-      from-bronze-300
-      to-bronze-700
+      bg-bronze-500
       ;
     }  
   }
   .icon-rank-silver {
-    @apply
-    from-silver-300
-    via-silver-500
-    to-silver-700
-    ;
+    &,
     &::after {
       @apply
-      from-silver-300
-      to-silver-700
+      bg-silver-500
       ;
     }  
   }
   .icon-rank-gold {
-    @apply
-    from-gold-300
-    via-gold-500
-    to-gold-700
-    ;
+    &,
     &::after {
       @apply
-      from-gold-300
-      to-gold-700
+      bg-gold-500
       ;
     }  
   }
   .icon-rank-platinum {
-    @apply
-    from-purple-300
-    to-purple-500
-    ;
+    &,
     &::after {
       @apply
-      from-purple-300
-      to-purple-700
+      bg-purple-500
       ;
     }  
   }
   .icon-rank-diamond {
-    @apply
-    from-interaction-300
-    to-blue-500
-    ;
+    &,
     &::after {
       @apply
-      from-interaction-300
-      to-blue-500
+      bg-blue-500
       ;
     }  
   }
@@ -493,9 +468,7 @@
       &::before,
       &::after {
         @apply
-        bg-gradient-radial
-        from-bronze-300
-        to-bronze-700
+        bg-bronze-500
         ;
       }
     } 
@@ -507,9 +480,7 @@
       &::before,
       &::after {
         @apply
-        bg-gradient-radial
-        from-silver-300
-        to-silver-700
+        bg-silver-500
         ;
       }
     } 
@@ -521,9 +492,7 @@
       &::before,
       &::after {
         @apply
-        bg-gradient-radial
-        from-gold-300
-        to-gold-700
+        bg-gold-500
         ;
       }
     } 
@@ -535,9 +504,7 @@
       &::before,
       &::after {
         @apply
-        bg-gradient-radial
-        from-purple-300
-        to-purple-700
+        bg-purple-500
         ;
       }
     } 
@@ -549,9 +516,7 @@
       &::before,
       &::after {
         @apply
-        bg-gradient-radial
-        from-interaction-300
-        to-blue-500
+        bg-blue-500
         ;
       }
     } 
@@ -671,6 +636,5 @@
 .tab:not(.tab-secondary) {
   @apply
   leading-none
-  text-lg
   ;
 }

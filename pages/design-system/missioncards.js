@@ -264,6 +264,113 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Secondary */}
+      <div className="mb-12" id="secondary">
+        <h2 className="h3 mb-3">Secondary</h2>
+
+        <div className="">
+          <div className="flex flex-col lg:flex-row gap-4">
+            <div className="flex-1 flex flex-col gap-4 justify-start items-start">
+              <div className="card-mission card-secondary">
+                <div className="card-decoration"></div>
+                <div className="card-body">
+                  <div className="card-title">Get 15 kills with the Operator</div>
+                  <div className="card-meta">
+                    <Tooltip
+                      tooltip={
+                        <div className="w-56 flex gap-4 text-sm">
+                          <div className="relative -mt-3">
+                            <span className="icon icon-xp-symbol-outline text-6xl text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
+                            <div className="lottie-blur absolute -inset-1">
+                              <Lottie
+                                animationData={LottieExplosion}
+                                loop={false}
+                                autoplay={true}
+                              />
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            Subscribe to Premium to earn an additional{" "}
+                            <span className="text-premium-700">
+                              50% XP
+                            </span>{" "}
+                            on each completed mission.
+                          </div>
+                        </div>
+                      }
+                    >
+                      <div className="flex gap-1 items-center">
+                        <div className="chip chip-reward chip-xp chip-xs">
+                          <span>100</span>
+                          <span className="icon icon-xp-symbol" />
+                        </div>
+                        <div className="chip chip-reward chip-xp chip-ghost chip-xs">
+                          <span>+50</span>
+                          <span className="icon icon-xp-symbol" />
+                          <span>if Premium</span>
+                        </div>
+                      </div>
+                    </Tooltip>
+                  </div>
+                  <div>
+                    <div className="text-sm text-ui-300">50/100 kills</div>
+                    <div
+                      className="progressbar progressbar-sm"
+                      style={{ "--percent": "75" }}
+                    >
+                      <div />
+                    </div>
+                  </div>
+                </div>
+                <div className="card-bg">
+                  <span
+                    style={{
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="card-mission card-secondary">
+                <div className="card-decoration"></div>
+                <div className="card-body">
+                  <div className="card-title">Get 22 kills</div>
+                  <div className="card-meta">
+                    <div className="chip chip-reward chip-xp chip-inverted chip-xs">
+                      <span>150</span>
+                      <span className="icon icon-xp-symbol" />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-ui-300">50/100 kills</div>
+                    <div
+                      className="progressbar progressbar-sm"
+                      style={{ "--percent": "75" }}
+                    >
+                      <div />
+                    </div>
+                  </div>
+                </div>
+                <div className="card-bg">
+                  <span
+                    style={{
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/16r43ftn/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Loading */}
       <div className="mb-12" id="status-loading">
         <h2 className="h3 mb-3">Loading</h2>

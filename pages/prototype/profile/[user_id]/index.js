@@ -205,11 +205,11 @@ export default function Home() {
                     >
                       <div className="flex items-center gap-6 px-6 whitespace-nowrap">
                         <img
-                          src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-brawl-sm.svg"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1672302411/Stryda/logos/stryda-logo-brawls.svg"
                           width="auto"
                           height="auto"
                           alt=""
-                          className="drop-shadow-xl w-32 flex-none"
+                          className="drop-shadow-xl h-14 flex-none"
                         />
                         <div className="pl-4 border-l border-ui-600">
                           <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
@@ -261,11 +261,11 @@ export default function Home() {
                     >
                       <div className="flex items-center gap-6 px-6 whitespace-nowrap">
                         <img
-                          src="https://res.cloudinary.com/gloot/image/upload/v1667460211/Marketing/2022_prototype/Logo/samesize-missions-sm.svg"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1672302411/Stryda/logos/stryda-logo-missions.svg"
                           width="auto"
                           height="auto"
                           alt=""
-                          className="drop-shadow-xl w-32 flex-none"
+                          className="drop-shadow-xl h-14 flex-none"
                         />
                         <div className="pl-4 border-l border-ui-600">
                           <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
@@ -471,7 +471,7 @@ export default function Home() {
                         </div>
                       )}
                     </div>
-                    <div className="leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around p-4">
+                    <div className="leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around p-4 gap-4">
                       <div className="pl-4 border-l border-ui-600">
                         <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                           Win rate

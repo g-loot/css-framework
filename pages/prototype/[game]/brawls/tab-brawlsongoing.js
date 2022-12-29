@@ -377,14 +377,15 @@ export default function TabBrawlsOngoing() {
               </h3>
               <div className="flex gap-8 items-start justify-center leading-tight mt-4">
                 <div>
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
-                    width="140"
+                <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-large.png"
+                    width="250"
                     height="auto"
+                    className="-mt-6 -mb-8"
                     alt=""
                   />
-                  <div className="text-4xl text-gold-500">
-                    2245650
+                  <div className="text-2xl lg:text-5xl text-gold-500">
+                    2 245 650
                   </div>
                   <div className="uppercase text-lg text-gold-500">
                     Coins

@@ -84,7 +84,7 @@ export default function PrototypeStructure({ children, title }) {
       {isNewStructure && (
         <>
           <PrototypeHead title={title} />
-          <div className="drawer drawer-mobile drawer-main">
+          <div className="drawer drawer-mobile drawer-framed">
             <input
               id="drawer-prototype"
               type="checkbox"

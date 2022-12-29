@@ -5,6 +5,7 @@ import { UiContext } from "../../../contexts/ui";
 import { VariablesContext } from "../../../contexts/variables";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
+import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
 
 const Offers = [
   {
@@ -89,12 +90,7 @@ export default function ModalBuyTokens(props) {
             <div className="modal-body text-center">
               <h2 className="modal-title">Get more tokens</h2>
               <div className="surface surface-highlight-premium rounded-lg overflow-hidden flex flex-col md:flex-row items-center gap-4 md:gap-8 p-4 mb-4">
-                <img
-                  src={`https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white.svg`}
-                  width="210"
-                  height="auto"
-                  alt="Stryda Premium"
-                />
+                <PremiumLogo src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg" width="210" height="auto" />
                 <div className="leading-tight text-left py-2">
                   Premium subscribers get up to 10 free extra tokens every time
                   they make a token bundle purchase.

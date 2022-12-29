@@ -296,16 +296,16 @@ export default function TabBrawlsSoloLeaderboards() {
                     <div className="relative flex flex-col items-center">
                       <img
                         className="absolute z-10 -top-4 left-auto right-auto"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1669205353/Marketing/2022_prototype/3Dobjects/3dobject-partypopper.png"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672305058/Stryda/3dobjects/3dobject-partypopper.png"
                         width="136"
                         height="auto"
                         alt=""
                       />
-                      <div className="mb-4 surface surface-dimmed surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
+                      <div className="mb-4 surface surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
                         <h2 className="h4 mb-2">First Brawl is on us</h2>
                         <div className="uppercase  text-ui-100">
                           Play{" "}
-                          <span className="text-blue-300">
+                          <span className="text-main">
                             x entry matches for free
                           </span>
                         </div>
@@ -315,7 +315,7 @@ export default function TabBrawlsSoloLeaderboards() {
                           the Brawl points from your best matches and can always
                           be imroved.
                         </p>
-                        <p className="text-sm text-blue-300">
+                        <p className="text-sm text-main">
                           TIPS: Play more matches to improve your Brawl points
                           and climb the leaderboard.
                         </p>
@@ -325,12 +325,12 @@ export default function TabBrawlsSoloLeaderboards() {
                     <div className="relative flex flex-col items-center">
                       <img
                         className="absolute z-10 -top-4 left-auto right-auto"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1666949979/Marketing/2022_prototype/3Dobjects/3dobject-megaphone.png"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672305058/Stryda/3dobjects/3dobject-megaphone.png"
                         width="136"
                         height="auto"
                         alt=""
                       />
-                      <div className="w-full mb-4 surface surface-dimmed surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
+                      <div className="w-full mb-4 surface surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
                         <h2 className="h4 mb-2">Compete in this Brawl</h2>
                         <div className="uppercase  text-ui-100">
                           Play at least{" "}
@@ -350,7 +350,7 @@ export default function TabBrawlsSoloLeaderboards() {
                 </>
               )}
               {!isPremium && (
-                <div className="w-full mb-4 surface surface-dimmed rounded-lg p-4 text-center relative z-0">
+                <div className="w-full mb-4 surface rounded-lg p-4 text-center relative z-0">
                   <div>
                     <span className="icon icon-xp-symbol-outline text-[6rem] -mt-4 -mb-6 text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
                   </div>

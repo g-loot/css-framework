@@ -70,7 +70,7 @@ const DSpage = () => {
                   <div className="header-content">
                     <div className="header-image">
                       <img
-                        src="https://res.cloudinary.com/gloot/image/upload/v1657888944/Marketing/2022_prototype/Logo/samesize-missions.svg"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672302411/Stryda/logos/stryda-logo-missions.svg"
                         alt=""
                       />
                     </div>
@@ -183,7 +183,7 @@ const DSpage = () => {
                   <div className="header-content">
                     <div className="header-image">
                       <img
-                        src="https://res.cloudinary.com/gloot/image/upload/v1657888944/Marketing/2022_prototype/Logo/samesize-brawl.svg"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672302411/Stryda/logos/stryda-logo-brawls.svg"
                         alt=""
                       />
                     </div>

@@ -175,6 +175,11 @@
     rounded
     inline-block
     ;
+    &:has(.button) {
+      @apply
+      rounded-full
+      ;
+    }
     &::before {
       @apply
       content-['']

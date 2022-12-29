@@ -4,6 +4,7 @@ import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
 import { UiContext } from "../../../contexts/ui";
 import ModalBuyPremium from "./modal-buypremium";
+import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
 
 export default function Premium() {
   const { query } = useRouter();
@@ -28,12 +29,7 @@ export default function Premium() {
         >
           <section>
             <div className="flex flex-col lg:flex-row gap-10 items-start justify-center my-12">
-              <img
-                src={`https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg?${Date.now()}`}
-                width="275"
-                height="auto"
-                alt="Stryda Premium"
-              />
+              <PremiumLogo src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg" width="275" height="auto" />
               <div className="lg:border-l lg:border-ui-500 lg:pl-10">
                 <h2 className="h1 max-w-[20ch] mx-auto lg:text-8xl">
                   Make your GG&#39;s more rewarding
@@ -125,7 +121,7 @@ export default function Premium() {
           <section className="relative z-10 pt-12 md:pt-20 mb-40 container max-w-lg mx-auto">
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-0 -right-14 rotate-[33deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657703095/Marketing/2022_prototype/3D_object_crowngold.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
               width="200"
               height="auto"
               alt=""
