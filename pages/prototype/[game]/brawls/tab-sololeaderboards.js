@@ -1136,6 +1136,7 @@ export default function TabBrawlsSoloLeaderboards() {
                 className="button button-claim is-shining"
                 onClick={openModalClaimLadderRewards}
               >
+                <span className="icon icon-present animate-bounce" />
                 <span>Claim rewards</span>
               </button>
             </div>

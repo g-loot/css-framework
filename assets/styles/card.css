@@ -32,6 +32,66 @@
   }
 }
 
+
+.card-brawl,
+.card-mission {
+  > .card-overlay {
+    @apply
+    absolute
+    z-20
+    inset-0
+    backdrop-blur-sm
+    rounded-lg
+    flex
+    flex-col
+    items-center
+    justify-center
+    bg-ui-800/90
+    ;
+    > div {
+      @apply
+      relative
+      z-10
+      flex
+      flex-col
+      items-center
+      justify-center
+      gap-2
+      ;
+    }
+    > img {
+      @apply
+      absolute
+      z-0
+      w-full
+      h-full
+      object-cover
+      object-center
+      ;
+    }
+    ~ * {
+      @apply
+      pointer-events-none
+      ;
+      &.card-image-bg {
+        @apply
+        mix-blend-luminosity
+        ;
+        > img {
+          @apply
+          grayscale
+          ;
+        }
+      }
+      .card-status {
+        @apply
+        text-ui-300
+        ;
+      }
+    }
+  }
+}
+
 .card {
   .card-image {
     @apply
@@ -446,19 +506,90 @@
       }
     }
   }
+}
 
-  &.card-secondary {
+/* card mission secondary */
+
+.card-mission.card-secondary {
+  @apply
+  aspect-[7/3.5]
+  flex
+  flex-row
+  items-stretch
+  overflow-hidden
+  ;
+
+  &,
+  &::before,
+  &::after {
     @apply
-    aspect-landscape
-    flex
-    flex-row
-    items-stretch
+    rounded
     ;
-    .card-bg {
+  }
+  .card-overlay {
+    @apply
+    rounded
+    bg-ui-900/80
+    backdrop-blur-0
+    ;
+  }
+  .card-decoration {
+    @apply
+    absolute
+    inset-0
+    flex
+    items-start
+    justify-between
+    p-2
+    ;
+  }
+  .card-bg,
+  .card-bg > * {
+    @apply
+    rounded
+    ;
+  }
+  &::before,
+  &::after {
+    @apply
+    content-['']
+    absolute
+    inset-0
+    pointer-events-none
+    z-50
+    ;
+  }
+  &::before {
+    @apply
+    shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))]
+    ;
+  }
+  .card-bg {
+    @apply
+    relative
+    order-1
+    flex-2
+    ;
+  }
+  .card-body {
+    @apply
+    flex-3
+    order-2
+    justify-end
+    items-stretch
+    p-4
+    space-y-2
+    rounded-r
+    ;
+    .card-meta {
       @apply
-      relative
-      flex-1
-      order-1
+      border-y
+      border-ui-700
+      py-1
+      ;
+    }
+    + .card-bg {
+      @apply
       aspect-card
       ;
       &,
@@ -468,14 +599,85 @@
         ;
       }
     }
+  }
+}
+
+.revealer {
+  .revealer-back {
+    .card-bg {
+      > span {
+        @apply
+        scale-150
+        origin-right
+        transition-all
+        duration-[.9s]
+        ease-in-out
+        ;
+      }
+    }
     .card-body {
-      @apply
-      flex-3
-      order-2
-      justify-end
-      items-stretch
-      p-4
-      ;
+      > * {
+        @apply
+        translate-y-6
+        opacity-0
+        transition-all
+        duration-500
+        ease-[cubic-bezier(.8,0,.2,.8)]
+        ;
+        &:nth-child(1) {
+          @apply
+          delay-[0.5s]
+          ;
+        }
+        &:nth-child(2) {
+          @apply
+          delay-[0.6s]
+          ;
+        }
+        &:nth-child(3) {
+          @apply
+          delay-[0.7s]
+          ;
+        }
+        &:nth-child(4) {
+          @apply
+          delay-[0.8s]
+          ;
+        }
+        &:nth-child(5) {
+          @apply
+          delay-[0.9s]
+          ;
+        }
+      }
+    }
+  }
+  &.is-active {
+    .revealer-front {
+      .card-overlay {
+        > * {
+          @apply
+          opacity-0
+          ;
+        }
+      }
+    }
+    .revealer-back {
+      .card-bg {
+        > span {
+          @apply
+          scale-100
+          ;
+        }
+      }
+      .card-body {
+        > * {
+          @apply
+          translate-y-0
+          opacity-100
+          ;
+        }
+      }
     }
   }
 }
@@ -710,7 +912,6 @@
 /* card brawl secondary */
 
 .card-brawl.card-secondary {
-  
   & {
     @apply
     flex-none
@@ -795,61 +996,6 @@
         duration-300
         ease-[cubic-bezier(.8,0,.3,1)]
         ;
-      }
-    }
-    > .card-overlay {
-      @apply
-      absolute
-      z-20
-      inset-0
-      backdrop-blur-sm
-      rounded-lg
-      flex
-      flex-col
-      items-center
-      justify-center
-      bg-ui-800/90
-      ;
-      > div {
-        @apply
-        relative
-        z-10
-        flex
-        flex-col
-        items-center
-        justify-center
-        gap-2
-        ;
-      }
-      > img {
-        @apply
-        absolute
-        z-0
-        w-full
-        h-full
-        object-cover
-        object-center
-        ;
-      }
-      ~ * {
-        @apply
-        pointer-events-none
-        ;
-        &.card-image-bg {
-          @apply
-          mix-blend-luminosity
-          ;
-          > img {
-            @apply
-            grayscale
-            ;
-          }
-        }
-        .card-status {
-          @apply
-          text-ui-300
-          ;
-        }
       }
     }
     .card-status {
@@ -1166,6 +1312,22 @@
     }
   }
   &.is-inactive {
+    .card-title {
+      @apply
+      text-ui-300
+      ;
+    }
+    .card-bg {
+      @apply
+      mix-blend-luminosity
+      ;
+      > span {
+        @apply
+        grayscale
+        opacity-50
+        ;
+      }
+    }
     .card-image-bg {
       @apply
       mix-blend-luminosity

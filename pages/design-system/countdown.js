@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 import Countdown from "../../components/Countdown/Countdown";
-import CountdownTimer from "../../components/Countdown/CountdownTimer";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
 
 function calculateTimeLeft() {

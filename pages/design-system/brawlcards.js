@@ -741,7 +741,8 @@ const DSpage = () => {
                       type="button"
                       className="button button-claim is-shining"
                     >
-                      <span>Claim reward</span>
+                      <span className="icon icon-present animate-bounce" />
+                      <span>Claim rewards</span>
                     </button>
                   </div>
                   <img

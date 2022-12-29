@@ -23,9 +23,10 @@ export const dataGames = [
       {
         name: "Get 22 kills",
         label: "kills",
-        current: 11,
+        current: 22,
         target: 22,
         ispremium: false,
+        isvisible: true,
         xp: 55,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_1.webp",
@@ -33,9 +34,10 @@ export const dataGames = [
       {
         name: "Get 3 double kills",
         label: "double kills",
-        current: 0,
+        current: 1,
         target: 3,
         ispremium: false,
+        isvisible: true,
         xp: 55,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_2.webp",
@@ -43,9 +45,10 @@ export const dataGames = [
       {
         name: "Get 6 assists",
         label: "assists",
-        current: 6,
+        current: 0,
         target: 6,
         ispremium: false,
+        isvisible: true,
         xp: 55,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_3.webp",
@@ -56,6 +59,7 @@ export const dataGames = [
         current: 5,
         target: 5,
         ispremium: true,
+        isvisible: true,
         xp: 55,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_4.webp",
@@ -63,9 +67,10 @@ export const dataGames = [
       {
         name: "Win 6 rounds",
         label: "rounds",
-        current: 2,
+        current: 0,
         target: 6,
         ispremium: true,
+        isvisible: false,
         xp: 55,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
@@ -73,9 +78,10 @@ export const dataGames = [
       {
         name: "Get 15 kills",
         label: "kills",
-        current: 11,
+        current: 0,
         target: 15,
         ispremium: true,
+        isvisible: false,
         xp: 55,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_6.webp",
@@ -1276,9 +1282,10 @@ export const dataGames = [
       {
         name: "Get 22 kills",
         label: "kills",
-        current: 11,
+        current: 22,
         target: 22,
         ispremium: false,
+        isvisible: true,
         xp: 55,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-pubg_1.webp",
@@ -1286,9 +1293,10 @@ export const dataGames = [
       {
         name: "Get 3 double kills",
         label: "double kills",
-        current: 0,
+        current: 3,
         target: 3,
         ispremium: false,
+        isvisible: true,
         xp: 55,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-pubg_2.webp",
@@ -1299,6 +1307,7 @@ export const dataGames = [
         current: 6,
         target: 6,
         ispremium: false,
+        isvisible: true,
         xp: 55,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-pubg_3.webp",
@@ -1309,6 +1318,7 @@ export const dataGames = [
         current: 5,
         target: 5,
         ispremium: true,
+        isvisible: true,
         xp: 55,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-pubg_4.webp",
@@ -1319,6 +1329,7 @@ export const dataGames = [
         current: 2,
         target: 6,
         ispremium: true,
+        isvisible: true,
         xp: 55,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-pubg_5.webp",
@@ -1326,9 +1337,10 @@ export const dataGames = [
       {
         name: "Get 15 kills",
         label: "kills",
-        current: 11,
+        current: 0,
         target: 15,
         ispremium: true,
+        isvisible: false,
         xp: 55,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-pubg_6.webp",

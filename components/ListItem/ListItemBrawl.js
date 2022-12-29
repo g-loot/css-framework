@@ -46,7 +46,8 @@ export default function ListItemBrawl(props) {
                       className="button button-claim"
                       onClick={openModalClaimLadderRewards}
                     >
-                      <span>Claim reward</span>
+                      <span className="icon icon-present animate-bounce" />
+                      <span>Claim rewards</span>
                     </button>
                   </div>
                   <div className="absolute z-50 top-2 right-2 p-1 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
@@ -213,7 +214,8 @@ export default function ListItemBrawl(props) {
                       className="button button-claim"
                       onClick={openModalClaimLadderRewards}
                     >
-                      <span>Claim reward</span>
+                      <span className="icon icon-present animate-bounce" />
+                      <span>Claim rewards</span>
                     </button>
                   </div>
                   <div className="absolute z-50 top-2 right-2 p-1 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">

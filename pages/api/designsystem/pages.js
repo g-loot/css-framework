@@ -273,7 +273,7 @@ export const DSpages = [
       },
       {
         label: "Countdown",
-        tags: "stats,numbers,time,countdown,date,graphs,charts",
+        tags: "stats,numbers,time,countdown,date,graphs,charts,timer",
         url: "countdown",
       },
       {

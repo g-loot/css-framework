@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
-import CardMission from "../../../../components/Card/CardMission";
 import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
 import RewardLadder from "../../../../components/RewardLadder/RewardLadder";
@@ -9,6 +8,7 @@ import Tooltip from "../../../../components/Tooltip/Tooltip";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
+import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
 
 export default function TabMissionsMissions() {
   const router = useRouter();
@@ -220,7 +220,7 @@ export default function TabMissionsMissions() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-4 sm:px-0">
               {selectedGame?.missions.map((mission, missionIndex) => (
-                <CardMission
+                <CardMissionSecondary
                   key={missionIndex}
                   mission={mission}
                   index={missionIndex}

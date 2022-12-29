@@ -164,7 +164,7 @@ export default function BrawlCardSecondary(props) {
                       </div>
                     </div>
                     <div className="infobanner-back absolute inset-0 flex items-center text-sm">
-                      <div className="animate-pulse text-main">
+                      <div className="animate-pulse text-ui-100">
                         Waiting for your 3 matches...
                       </div>
                     </div>
@@ -232,7 +232,7 @@ export default function BrawlCardSecondary(props) {
                         </div>
                       </div>
                       <div className="infobanner-back absolute inset-0 flex items-center text-sm">
-                        <div className="animate-pulse text-main">
+                        <div className="animate-pulse text-ui-100">
                           Waiting for your 3 matches...
                         </div>
                       </div>
@@ -280,7 +280,7 @@ export default function BrawlCardSecondary(props) {
                 type="button"
                 className={`button button-sm ${
                   brawl.status != "finished"
-                    ? "button-primary"
+                    ? "button-secondary"
                     : "button-secondary"
                 }`}
               >

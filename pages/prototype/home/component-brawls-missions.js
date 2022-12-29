@@ -7,8 +7,8 @@ import { UiContext } from "../../../contexts/ui";
 import { VariablesContext } from "../../../contexts/variables";
 import { usePrototypeData } from "../../../contexts/prototype";
 import Tooltip from "../../../components/Tooltip/Tooltip";
-import CardMission from "../../../components/Card/CardMission";
 import Link from "next/link";
+import CardMissionSecondary from "../../../components/Card/CardMissionSecondary";
 
 export default function HomeBrawlMissions(props) {
   const { query } = useRouter();
@@ -111,11 +111,11 @@ export default function HomeBrawlMissions(props) {
           </div>
         </>
       )}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mx-4 sm:mx-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0">
         {prototype
           .getGameBySlug(props.gameSlug)
           ?.missions.map((mission, missionIndex) => (
-            <CardMission
+            <CardMissionSecondary
               key={missionIndex}
               mission={mission}
               index={missionIndex}

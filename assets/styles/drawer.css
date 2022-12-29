@@ -233,7 +233,7 @@
   .drawer-content {
     @apply
     lg:mr-[calc(0.75rem+1px)]
-    lg:my-3
+    lg:my-[calc(0.75rem+1px)]
     relative
     ;
     &::-webkit-scrollbar {
@@ -251,7 +251,7 @@
       left-0
       lg:left-[calc(18rem-0.75rem)]
       rounded-l-[2rem]
-      rounded-r-[1rem]
+      rounded-r-[calc(1rem+1px)]
       shadow-[inset_0_0_0_0.75rem_rgb(var(--color-ui-800)),_inset_0_0_0_calc(0.75rem+1px)_rgb(var(--color-ui-500)),_0_0_0_0.75rem_rgb(var(--color-ui-800))]
       ;
     }

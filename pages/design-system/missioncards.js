@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
 import Tooltip from "../../components/Tooltip/Tooltip";
 import Lottie from "lottie-react";
 import LottieExplosion from "../../assets/animations/explosion-1.json";
+import GameIcon from "../../components/GameIcon/GameIcon";
 
 const DSpage = () => {
+  const [StartAnim1, setStartAnim1] = useState(false);
+  function handleStartAnim1() {
+    setStartAnim1(!StartAnim1);
+  }
   return (
     <>
       <h1 className="mb-2">Mission cards</h1>
@@ -36,10 +41,8 @@ const DSpage = () => {
                           </div>
                           <div className="flex-1">
                             Subscribe to Premium to earn an additional{" "}
-                            <span className="text-premium-700">
-                              50% XP
-                            </span>{" "}
-                            on each completed mission.
+                            <span className="text-premium-700">50% XP</span> on
+                            each completed mission.
                           </div>
                         </div>
                       }
@@ -274,7 +277,9 @@ const DSpage = () => {
               <div className="card-mission card-secondary">
                 <div className="card-decoration"></div>
                 <div className="card-body">
-                  <div className="card-title">Get 15 kills with the Operator</div>
+                  <div className="card-title">
+                    Get 15 kills with the Operator
+                  </div>
                   <div className="card-meta">
                     <Tooltip
                       tooltip={
@@ -291,10 +296,8 @@ const DSpage = () => {
                           </div>
                           <div className="flex-1">
                             Subscribe to Premium to earn an additional{" "}
-                            <span className="text-premium-700">
-                              50% XP
-                            </span>{" "}
-                            on each completed mission.
+                            <span className="text-premium-700">50% XP</span> on
+                            each completed mission.
                           </div>
                         </div>
                       }
@@ -331,7 +334,9 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="card-mission card-secondary">
-                <div className="card-decoration"></div>
+                <div className="card-decoration">
+                  <GameIcon size="text-base" />
+                </div>
                 <div className="card-body">
                   <div className="card-title">Get 22 kills</div>
                   <div className="card-meta">
@@ -356,6 +361,62 @@ const DSpage = () => {
                       backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
                     }}
                   />
+                </div>
+              </div>
+
+              <div
+                className={`revealer ${StartAnim1 === true ? "is-active" : ""}`}
+              >
+                <div className="revealer-front">
+                  <div className="card-mission card-secondary">
+                    <div className="card-overlay">
+                      <button
+                        className="button button-secondary mx-auto"
+                        onClick={handleStartAnim1.bind(this)}
+                      >
+                        <span>Get new mission</span>
+                      </button>
+                    </div>
+                    <div className="card-bg">
+                      <span
+                        style={{
+                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="revealer-back">
+                  <div className="card-mission card-secondary">
+                    <div className="card-decoration">
+                      <GameIcon size="text-base" />
+                    </div>
+                    <div className="card-body">
+                      <div className="card-title">Get 22 kills</div>
+                      <div className="card-meta">
+                        <div className="chip chip-reward chip-xp chip-inverted chip-xs">
+                          <span>150</span>
+                          <span className="icon icon-xp-symbol" />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="text-sm text-ui-300">50/100 kills</div>
+                        <div
+                          className="progressbar progressbar-sm"
+                          style={{ "--percent": "75" }}
+                        >
+                          <div />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="card-bg">
+                      <span
+                        style={{
+                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
+                        }}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

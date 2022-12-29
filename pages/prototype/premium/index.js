@@ -23,14 +23,15 @@ export default function Premium() {
   return (
     <>
       <PrototypeStructure title="Premium">
-        <div
-          className="animate-slide-in-bottom animate-delay"
-          style={{ "--delay": "calc(2 * 0.05s)" }}
-        >
+        <div>
           <section>
-            <div className="flex flex-col lg:flex-row gap-10 items-start justify-center my-12">
-              <PremiumLogo src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg" width="275" height="auto" />
-              <div className="lg:border-l lg:border-ui-500 lg:pl-10">
+            <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start justify-center my-12">
+              <PremiumLogo
+                src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                width="275"
+                height="auto"
+              />
+              <div className="lg:border-l lg:border-ui-500 lg:pl-10 text-center lg:text-left">
                 <h2 className="h1 max-w-[20ch] mx-auto lg:text-8xl">
                   Make your GG&#39;s more rewarding
                 </h2>
@@ -42,15 +43,14 @@ export default function Premium() {
                   <span>View premium plans</span>
                 </button>
                 <p className="text-sm text-ui-300">
-                    Cancel anytime.{" "}
-                    <a className="underline cursor-pointer">
-                      Terms and conditions
-                    </a>{" "}
-                    apply.
-                  </p>
+                  Cancel anytime.{" "}
+                  <a className="underline cursor-pointer">
+                    Terms and conditions
+                  </a>{" "}
+                  apply.
+                </p>
               </div>
             </div>
-
           </section>
 
           <section className="grid md:grid-cols-2 justify-center mb-24 max-w-lg mx-auto text-center">
@@ -159,9 +159,7 @@ export default function Premium() {
             <div className="relative z-10 flex flex-col lg:flex-row items-center lg:items-stretch gap-16 px-4 md:px-0">
               <div className="max-w-sm hidden flex-1 lg:flex flex-col bg-ui-800 rounded-xl p-2">
                 <div className="text-center pt-2 text-premium-500 ">
-                  <span className="h4">
-                    Free
-                  </span>
+                  <span className="h4">Free</span>
                 </div>
                 <div className="flex-1 flex-col rounded-lg p-4 lg:p-8">
                   <ul className="flex-1 space-y-8 my-8 leading-snug text-left">
@@ -222,9 +220,7 @@ export default function Premium() {
               <div className="max-w-sm flex-1 flex flex-col bg-gradient-to-r from-premium-300 to-premium-700 rounded-xl p-2">
                 <div className="flex items-center gap-4 pb-2 text-ui-800 pl-7">
                   <span className="icon icon-ic_stars_24px text-2xl" />
-                  <span className="h4 text-ui-800">
-                    Premium
-                  </span>
+                  <span className="h4 text-ui-800">Premium</span>
                 </div>
                 <div className="flex-1 flex-col surface rounded-lg p-4 lg:p-8">
                   <ul className="flex-1 space-y-8 my-8 leading-snug text-left">

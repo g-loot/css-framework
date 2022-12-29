@@ -72,7 +72,8 @@ export default function DailyReward(props) {
             className="button button-claim is-shining"
             onClick={openModalClaimDailyRewards}
           >
-            <span>Claim reward</span>
+            
+            <span>Claim rewards</span>
           </button>
         </div>
 

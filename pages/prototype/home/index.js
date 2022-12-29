@@ -115,7 +115,7 @@ export default function Home() {
                 <span className="bg-ui-900/50 rounded p-2">4 headshots</span>
               </div>
               <button
-                className={`button button-sm button-primary ${
+                className={`button button-sm button-secondary ${
                   submitting ? "is-loading" : ""
                 }`}
                 onClick={addToastWithDelay.bind(this, {

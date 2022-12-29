@@ -31,7 +31,7 @@ export default function RewardLadder(props) {
     <>
       <div className="relative">
         <div
-          className={`absolute inset-0 z-50 backdrop-blur-sm bg-gradient-radial from-ui-900/90 via-ui-900/90 to-ui-900/60 gap-2 flex items-center justify-center overflow-hidden transition-opacity duration-500 ${
+          className={`absolute inset-0 z-50 backdrop-blur-sm bg-ui-900/80 gap-2 flex items-center justify-center overflow-hidden transition-opacity duration-500 ${
             props.hasReward && !variablesContext.rewardClaimed
               ? ""
               : "pointer-events-none opacity-0"
@@ -49,39 +49,9 @@ export default function RewardLadder(props) {
                   className="button button-claim is-shining"
                   onClick={openModalClaimLadderRewards}
                 >
+                  <span className="icon icon-present animate-bounce" />
                   <span>Claim rewards</span>
                 </button>
-              </div>
-              <div className="absolute z-0 inset-0 pointer-events-none">
-                <img
-                  className="absolute top-6 left-[calc(50%-300px)] -rotate-[33deg]"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-gift-1.webp"
-                  width="100"
-                  height="auto"
-                  alt=""
-                />
-                <img
-                  className="absolute bottom-10 left-[calc(50%-200px)] -rotate-[120deg]"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-gift-2.webp"
-                  width="60"
-                  height="auto"
-                  alt=""
-                />
-                <img
-                  className="absolute bottom-18 right-[calc(50%-250px)] rotate-[45deg]"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-gift-1.webp"
-                  width="50"
-                  height="auto"
-                  alt=""
-                />
-                <img
-                  className="absolute top-12 right-[calc(50%-350px)] rotate-[33deg]"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-gift-2.webp"
-                  width="110"
-                  height="auto"
-                  alt=""
-                />
-                <div className="absolute z-0 rounded-full bg-gradient-to-b from-main/25 via-blue-700/75 to-main/0 w-32 h-24 blur-xl transform-gpu left-[calc(50%-4rem)] top-[calc(50%+1.5rem)]" />
               </div>
             </>
           )}

@@ -21,7 +21,7 @@ const Countdown = (props) => {
   const hasLabels = props.hasLabels !== undefined ? props.hasLabels : false;
   const labelsAbbr = props.labelsAbbr !== undefined ? props.labelsAbbr : false;
   const className = props.className !== undefined ? props.className : "";
-  const labelClassName = props.labelClassName !== undefined ? props.className : "";
+  const labelClassName = props.labelClassName !== undefined ? props.labelClassName : "";
   const separator = props.separator !== undefined ? props.separator : "";
   const targetDate =
     props.targetDate !== undefined ? props.targetDate : dateTimeAfterThreeDays;

@@ -86,7 +86,7 @@ export default function Home() {
                     <Link
                       href={`/prototype/shop/${voucher.id}${prototype.getURLparams()}`}
                     >
-                      <a type="button" className="button button-primary w-full">
+                      <a type="button" className="button button-secondary w-full">
                         <span>View gift cards</span>
                       </a>
                     </Link>

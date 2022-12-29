@@ -7,6 +7,7 @@ function PremiumLogo(props) {
       width={props.width}
       height={props.height}
       alt="Stryda Premium"
+      className={props.className}
     />
   );
 }
