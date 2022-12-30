@@ -41,7 +41,7 @@ export default function ClanHeader() {
         <section className="header surface sm:rounded-lg min-h-4 mb-4">
           <div className="header-content">
             <div className="header-body">
-              <div className="flex gap-4 items-center self-center">
+              <div className="flex flex-col md:flex-row gap-4 md:items-center self-center">
                 <div className="avatar avatar-xl avatar-squircle">
                   <div>
                     <img src={selectedClan.avatar} alt="avatar" />

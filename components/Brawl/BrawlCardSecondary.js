@@ -16,7 +16,8 @@ export default function BrawlCardSecondary(props) {
   const isHorizontal = props.isHorizontal || false;
   const isEnrolled = props.brawl.isEnrolled || false;
   const brawl = props.brawl;
-  const gameID = props.gameID || brawl.gameID;
+  const game_slug = props.game_slug || "valorant";
+  const isDemo = props.isDemo || false;
 
   function openModalClaimLadderRewards() {
     uiContext.openModal(<ModalClaimLadderRewards></ModalClaimLadderRewards>);
@@ -57,31 +58,31 @@ export default function BrawlCardSecondary(props) {
             <div className="ml-0 p-1 border border-ui-700 rounded-sm bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
               <span
                 className={`icon text-xl ${
-                  prototype.getGameByID(gameID).slug === "apexlegends"
+                  prototype.getGameBySlug(game_slug).slug === "apexlegends"
                     ? "icon-game-apexlegends-symbol text-game-apexlegends"
                     : ""
                 } ${
-                  prototype.getGameByID(gameID).slug === "csgo"
+                  prototype.getGameBySlug(game_slug).slug === "csgo"
                     ? "icon-game-csgo-symbol text-game-csgo"
                     : ""
                 }  ${
-                  prototype.getGameByID(gameID).slug === "dota2"
+                  prototype.getGameBySlug(game_slug).slug === "dota2"
                     ? "icon-game-dota2-symbol text-game-dota2"
                     : ""
                 }  ${
-                  prototype.getGameByID(gameID).slug === "leagueoflegends"
+                  prototype.getGameBySlug(game_slug).slug === "leagueoflegends"
                     ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
                     : ""
                 }  ${
-                  prototype.getGameByID(gameID).slug === "rocketleague"
+                  prototype.getGameBySlug(game_slug).slug === "rocketleague"
                     ? "icon-game-rocketleague-symbol text-game-rocketleague"
                     : ""
                 } ${
-                  prototype.getGameByID(gameID).slug === "pubg"
+                  prototype.getGameBySlug(game_slug).slug === "pubg"
                     ? "icon-game-pubg-symbol text-game-pubg"
                     : ""
                 }  ${
-                  prototype.getGameByID(gameID).slug === "valorant"
+                  prototype.getGameBySlug(game_slug).slug === "valorant"
                     ? "icon-game-valorant-symbol text-game-valorant"
                     : ""
                 }`}
@@ -271,9 +272,9 @@ export default function BrawlCardSecondary(props) {
           <div className="flex items-end">
             <Link
               href={
-                !brawl.isClan
-                  ? `/prototype/${prototype.getGameByID(gameID).slug}/brawls/${brawl.id}?tab=solo-leaderboard${prototype.getURLparams()}`
-                  : `/prototype/${prototype.getGameByID(gameID).slug}/brawls/${brawl.id}?tab=solo-leaderboard${prototype.getURLparams()}`
+                !isDemo
+                  ? `/prototype/${prototype.getGameBySlug(game_slug).slug}/brawls/${brawl.id}?tab=solo-leaderboard${prototype.getURLparams()}`
+                  : `/prototype/valorant/brawls/1?tab=solo-leaderboard${prototype.getURLparams()}`
               }
             >
               <button

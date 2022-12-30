@@ -44,7 +44,7 @@ export default function Home() {
               <>
                 <li
                   key={voucher.id}
-                  className="surface rounded-2xl w-3/4 sm:w-2/3 md:w-auto p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
+                  className="surface rounded-2xl w-full sm:w-2/3 md:w-auto p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
                   style={{ "--delay": `calc( ${voucherIndex} * 0.05s)` }}
                 >
                   <div className="flex-1 flex flex-col items-center gap-2">

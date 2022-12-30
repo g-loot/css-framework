@@ -259,7 +259,7 @@
   .drawer-side {
     > aside {
       @apply
-      lg:pt-3
+      lg:pt-[calc(0.75rem+1px)]
       ;
     }
     > *,

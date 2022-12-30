@@ -154,7 +154,7 @@ export default function BrawlPlacementItem(props) {
             >
               Match {props.item?.step}
             </div>
-            <div className="pl-2 border-l border-ui-600 flex flex-col items-center gap-1 justify-end leading-none">
+            <div className="pl-2 border-l border-ui-600 flex flex-col items-end gap-1 justify-end leading-none">
               {resultsDone && (
                 <>
                   <div
@@ -170,7 +170,7 @@ export default function BrawlPlacementItem(props) {
                     className={`flex items-center gap-1 ${isPremium ? 'text-premium-500' : ''} animate-slide-in-right animate-delay`}
                     style={{ "--delay": "calc(2 * 0.05s)" }}
                   >
-                    <span className="text-right">+25</span>
+                    <span className="text-right">+300</span>
                     <span>XP</span>
                   </div>
                 </>

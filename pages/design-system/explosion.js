@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosion1 from "../../assets/animations/explosion-1.json";
+import LottieExplosion1 from "../../assets/animations/explosion_stryda_1.json";
 import LottieExplosion10 from "../../assets/animations/explosion-10.json";
 import LottieExplosion11 from "../../assets/animations/explosion-11.json";
 import LottieExplosion2 from "../../assets/animations/explosion-2.json";

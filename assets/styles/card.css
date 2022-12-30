@@ -832,9 +832,6 @@
     flex-col
     md:flex-row
     p-4
-    border
-    border-ui-700
-    md:border-none
     ;
 
     &:not([class*="items-"]) {
@@ -880,11 +877,10 @@
       auto-rows-auto
       justify-center
       md:justify-end
-      border
-      border-ui-700
-      md:border-none
       mt-4
       pt-4
+      border-t
+      border-ui-700
       md:mt-0
       md:pt-0
       ;
@@ -903,6 +899,15 @@
       > *:first-child:last-child {
         @apply
         row-span-2
+        ;
+      }
+    }
+  }
+  &:not(.card-secondary) {
+    .card-content {
+      > .card-meta {
+        @apply
+        md:border-t-0
         ;
       }
     }
@@ -956,8 +961,8 @@
         }
         &:last-child {
           @apply
-          border
           pt-4
+          border-t
           border-ui-700
           ;
         }

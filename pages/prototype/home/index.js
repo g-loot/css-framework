@@ -2,36 +2,25 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../components/Ad/Ad";
 import Carousel from "../../../components/Carousel/Carousel";
-import Countdown from "../../../components/Countdown/Countdown";
-import DailyReward from "../../../components/DailyReward/DailyReward";
 import Link from "next/link";
-import ListItemBrawl from "../../../components/ListItem/ListItemBrawl";
 import ModalBrawlHowitworksVideo from "../[game]/brawls/modal-howitworks-video";
 import ModalClaimDailyRewards from "./modal-claim-dailyrewards";
 import ModalClaimLadderRewards from "./modal-claim-dailyrewards";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import RewardLadder from "../../../components/RewardLadder/RewardLadder";
-import Tooltip from "../../../components/Tooltip/Tooltip";
 import { UiContext } from "../../../contexts/ui";
-import { VariablesContext } from "../../../contexts/variables";
-import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 import HomeBrawlSolo from "./component-brawls-solo";
 import HomeBrawlClan from "./component-brawls-clan";
-import CardMission from "../../../components/Card/CardMission";
 import HomeBrawlMissions from "./component-brawls-missions";
+import ComponentRewardLadder from "../[game]/missions/component-rewardladder";
 
 export default function Home() {
-  const router = useRouter();
   const { query } = useRouter();
-  const hasAds = query.ads === "true" ? true : false;
   const uiContext = useContext(UiContext);
-  const variablesContext = useContext(VariablesContext);
-  const prototype = usePrototypeData();
   const modalClaimLadder = query.modalclaim === "true" ? true : false;
   const modalClaimDaily = query.modalclaimdaily === "true" ? true : false;
   const modalVideo = query.modalvideo === "true" ? true : false;
-  const [dailyNumber, setDailyNumber] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const hasNoClan = query.noclan === "true" ? true : false;
   const hasNoBrawls = query.nobrawls === "true" ? true : false;
@@ -193,27 +182,9 @@ export default function Home() {
         </section>
 
         <h2 className="h3 mb-4 mx-4 sm:mx-0">Missions</h2>
-        {!isPremium && (
-          <div className="mb-4 mx-4 sm:mx-0">
-            <p>
-              <Link href="/prototype/premium">
-                <a className="text-premium-500 link">Premium</a>
-              </Link>{" "}
-              users earn an additional 50% XP on each completed Reward Ladder
-              stage.
-            </p>
-          </div>
-        )}
-        <section
-          className="mb-8 animate-slide-in-bottom animate-delay"
-          style={{ "--delay": "calc(2 * 0.05s)" }}
-        >
-          <div className="flex gap-2 items-center justify-between mx-4 sm:mx-0">
-            <h3 className="h6">Reward ladder</h3>
-          </div>
-          <RewardLadder hasReward={false} />
-        </section>
 
+        <ComponentRewardLadder />
+        
         <HomeBrawlMissions gameSlug="valorant" />
         <HomeBrawlMissions gameSlug="pubg" />
 

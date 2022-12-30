@@ -69,17 +69,20 @@ export default function HomeBrawlMissions(props) {
         </div>
       </div>
 
-      {!isPremium && (
-        <div className="mb-4 mx-4 sm:mx-0">
-          <p>
-            Get{" "}
-            <Link href="/prototype/premium">
-              <a className="text-premium-500 link">Premium</a>
-            </Link>{" "}
-            and earn +50% of XP on all missions.
-          </p>
-        </div>
-      )}
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
+        <p>
+          {!isPremium && (
+            <>
+              Get{" "}
+              <Link href="/prototype/premium">
+                <a className="text-premium-500 link">Premium</a>
+              </Link>{" "}
+              and earn +50% of XP on all missions
+            </>
+          )}
+        </p>
+        <p className="md:text-right">You have completed 1 out of 6 missions</p>
+      </div>
 
       {prototype.getGameBySlug(props.gameSlug)?.needsSteam && (
         <>

@@ -3,11 +3,12 @@ import { useRouter } from "next/router";
 import BrawlCardSecondary from "../../../components/Brawl/BrawlCardSecondary";
 import Slider from "../../../components/Slider/Slider";
 import Link from "next/link";
+import { usePrototypeData } from "../../../contexts/prototype";
 
 const SoloBrawls = [
   {
     id: 0,
-    gameID: 2,
+    game_slug: "pubg",
     name: null,
     gameMode: "Unrated",
     name: "Unrated Brawl",
@@ -19,7 +20,7 @@ const SoloBrawls = [
   },
   {
     id: 1,
-    gameID: 1,
+    game_slug: "valorant",
     name: null,
     gameMode: "Unrated",
     name: "Unrated Brawl",
@@ -31,7 +32,7 @@ const SoloBrawls = [
   },
   {
     id: 4,
-    gameID: 1,
+    game_slug: "valorant",
     name: null,
     gameMode: "Spike Rush",
     name: "Spike Rush Brawl",
@@ -43,7 +44,7 @@ const SoloBrawls = [
   },
   {
     id: 2,
-    gameID: 3,
+    game_slug: "apexlegends",
     name: null,
     gameMode: "Ranked trio",
     name: "Competitive Brawl",
@@ -55,7 +56,7 @@ const SoloBrawls = [
   },
   {
     id: 3,
-    gameID: 4,
+    game_slug: "apexlegends",
     name: null,
     gameMode: "Ranked Arena",
     name: "Weekly Arena Brawl",
@@ -67,7 +68,7 @@ const SoloBrawls = [
   },
   {
     id: 5,
-    gameID: 5,
+    game_slug: "pubg",
     name: null,
     gameMode: "Ranked squad FPP",
     name: "Competitive Brawl",
@@ -78,10 +79,17 @@ const SoloBrawls = [
       "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
   },
 ];
+const SoloBrawlsNO = [
+  { game_slug: "valorant", brawl_id: 1 },
+  { game_slug: "pubg", brawl_id: 1 },
+  { game_slug: "valorant", brawl_id: 2 },
+  { game_slug: "pubg", brawl_id: 2 },
+];
 
 export default function HomeBrawlSolo() {
   const { query } = useRouter();
   const hasNoBrawls = query.nobrawls === "true" ? true : false;
+  const prototype = usePrototypeData();
 
   return (
     <div className="relative">
@@ -113,9 +121,14 @@ export default function HomeBrawlSolo() {
           {SoloBrawls.map((item, itemIndex) => (
             <BrawlCardSecondary
               key={item.id}
+              /*
+              brawl={prototype.getBrawlByID(item.game_slug, item.brawl_id)}
+              */
               brawl={item}
+              game_slug={item.game_slug}
               isHorizontal={false}
               isClan={false}
+              isDemo={true}
             />
           ))}
         </Slider>

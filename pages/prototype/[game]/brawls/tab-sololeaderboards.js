@@ -144,9 +144,7 @@ export default function TabBrawlsSoloLeaderboards() {
                     </div>
                     <div className="flex items-center justify-around gap-4 text-center leading-none">
                       <div>
-                        <div className="text-3xl  text-ui-100 mb-2">
-                          125
-                        </div>
+                        <div className="text-3xl  text-ui-100 mb-2">125</div>
                         <div className="text-sm uppercase text-ui-300">
                           Total Brawl
                           <br />
@@ -154,9 +152,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         </div>
                       </div>
                       <div>
-                        <div className="text-3xl  text-ui-100 mb-2">
-                          #5
-                        </div>
+                        <div className="text-3xl  text-ui-100 mb-2">#5</div>
                         <div className="text-sm uppercase text-ui-300">
                           Current Brawl
                           <br />
@@ -176,17 +172,13 @@ export default function TabBrawlsSoloLeaderboards() {
                           <tbody>
                             <tr>
                               <td className="text-left">
-                                <span className="px-4 text-ui-100">
-                                  43
-                                </span>
+                                <span className="px-4 text-ui-100">43</span>
                                 <span className="text-ui-300">Kills</span>
                               </td>
                             </tr>
                             <tr>
                               <td className="text-left">
-                                <span className="px-4 text-ui-100">
-                                  3
-                                </span>
+                                <span className="px-4 text-ui-100">3</span>
                                 <span className="text-ui-300">
                                   Tiebreaker 1
                                 </span>
@@ -194,9 +186,7 @@ export default function TabBrawlsSoloLeaderboards() {
                             </tr>
                             <tr>
                               <td className="text-left">
-                                <span className="px-4 text-ui-100">
-                                  3
-                                </span>
+                                <span className="px-4 text-ui-100">3</span>
                                 <span className="text-ui-300">
                                   Tiebreaker 2
                                 </span>
@@ -213,17 +203,13 @@ export default function TabBrawlsSoloLeaderboards() {
                           <tbody>
                             <tr>
                               <td className="text-left">
-                                <span className="px-4 text-ui-100">
-                                  33
-                                </span>
+                                <span className="px-4 text-ui-100">33</span>
                                 <span className="text-ui-300">Kills</span>
                               </td>
                             </tr>
                             <tr>
                               <td className="text-left">
-                                <span className="px-4 text-ui-100">
-                                  3
-                                </span>
+                                <span className="px-4 text-ui-100">3</span>
                                 <span className="text-ui-300">
                                   Tiebreaker 1
                                 </span>
@@ -231,9 +217,7 @@ export default function TabBrawlsSoloLeaderboards() {
                             </tr>
                             <tr>
                               <td className="text-left">
-                                <span className="px-4 text-ui-100">
-                                  3
-                                </span>
+                                <span className="px-4 text-ui-100">3</span>
                                 <span className="text-ui-300">
                                   Tiebreaker 2
                                 </span>
@@ -250,17 +234,13 @@ export default function TabBrawlsSoloLeaderboards() {
                           <tbody>
                             <tr>
                               <td className="text-left">
-                                <span className="px-4 text-ui-100">
-                                  21
-                                </span>
+                                <span className="px-4 text-ui-100">21</span>
                                 <span className="text-ui-300">Kills</span>
                               </td>
                             </tr>
                             <tr>
                               <td className="text-left">
-                                <span className="px-4 text-ui-100">
-                                  3
-                                </span>
+                                <span className="px-4 text-ui-100">3</span>
                                 <span className="text-ui-300">
                                   Tiebreaker 1
                                 </span>
@@ -268,9 +248,7 @@ export default function TabBrawlsSoloLeaderboards() {
                             </tr>
                             <tr>
                               <td className="text-left">
-                                <span className="px-4 text-ui-100">
-                                  3
-                                </span>
+                                <span className="px-4 text-ui-100">3</span>
                                 <span className="text-ui-300">
                                   Tiebreaker 2
                                 </span>
@@ -355,13 +333,11 @@ export default function TabBrawlsSoloLeaderboards() {
                     <span className="icon icon-xp-symbol-outline text-[6rem] -mt-4 -mb-6 text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
                   </div>
                   <p className="text-ui-300 max-w-[30ch] mx-auto mb-4">
-                    Earn 50 XP for each registered game.
+                    Earn 300 XP for each registered game.
                   </p>
                   <p className="text-ui-300 max-w-[30ch] mx-auto">
                     <Link href="/prototoype/premium">
-                      <a className="text-premium-500  underline">
-                        Premium
-                      </a>
+                      <a className="text-premium-500  underline">Premium</a>
                     </Link>{" "}
                     users earn an additional 50% XP.
                   </p>
@@ -465,9 +441,7 @@ export default function TabBrawlsSoloLeaderboards() {
                           <div>
                             <div>
                               <span className="icon text-4xl icon-rank-bronze" />
-                              <span className="h4">
-                                Bronze
-                              </span>
+                              <span className="h4">Bronze</span>
                             </div>
                           </div>
                         </a>
@@ -480,9 +454,7 @@ export default function TabBrawlsSoloLeaderboards() {
                           <div>
                             <div>
                               <span className="icon text-4xl icon-rank-silver" />
-                              <span className="h4">
-                                Silver
-                              </span>
+                              <span className="h4">Silver</span>
                             </div>
                             <div className="avatar avatar-circle avatar-xs">
                               <div>
@@ -501,9 +473,7 @@ export default function TabBrawlsSoloLeaderboards() {
                           <div>
                             <div>
                               <span className="icon text-4xl icon-rank-gold" />
-                              <span className="h4">
-                                Gold
-                              </span>
+                              <span className="h4">Gold</span>
                             </div>
                           </div>
                         </a>
@@ -516,9 +486,7 @@ export default function TabBrawlsSoloLeaderboards() {
                           <div>
                             <div>
                               <span className="icon text-4xl icon-rank-platinum" />
-                              <span className="h4">
-                                Platinum
-                              </span>
+                              <span className="h4">Platinum</span>
                             </div>
                           </div>
                         </a>
@@ -531,9 +499,7 @@ export default function TabBrawlsSoloLeaderboards() {
                           <div>
                             <div>
                               <span className="icon text-4xl icon-rank-diamond" />
-                              <span className="h4">
-                                Diamond
-                              </span>
+                              <span className="h4">Diamond</span>
                             </div>
                           </div>
                         </a>

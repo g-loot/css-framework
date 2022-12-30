@@ -177,10 +177,10 @@ export default function Home() {
 
             <nav>
               <ul className="tabs border-b border-ui-700">
-                {prototype.getBrawlByID(game, brawl_id).clan && (
+                {prototype.getBrawlByID(game, brawl_id).clan ? (
                   <>
                     {TabsItems.map((item, itemIndex) => (
-                      <li key={item}>
+                      <li key={itemIndex}>
                         <Link
                           href={`/prototype/${game}/brawls/${brawl_id}?tab=${
                             item.url
@@ -197,11 +197,10 @@ export default function Home() {
                       </li>
                     ))}
                   </>
-                )}
-                {!prototype.getBrawlByID(game, brawl_id).clan && (
+                ) : (
                   <>
                     {TabsItemsNoClan.map((item, itemIndex) => (
-                      <li key={item}>
+                      <li key={itemIndex}>
                         <Link
                           href={`/prototype/${game}/brawls/${brawl_id}?tab=${
                             item.url

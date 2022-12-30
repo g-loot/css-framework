@@ -147,6 +147,7 @@ export default function HomeBrawlClan() {
             brawl={item}
             isHorizontal={true}
             isClan={false}
+            isDemo={true}
           />
         ))}
       </Slider>

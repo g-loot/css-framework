@@ -144,12 +144,12 @@ const Index = () => {
                       </div>
                       <div className="flex flex-col lg:flex-row gap-2 px-2 pb-2">
                         <Link href="design-system/about">
-                          <a className="button button-sm button-primary">
+                          <a className="button button-primary">
                             <span>Read the docs</span>
                           </a>
                         </Link>
                         <Link href="design-system/gettingstarted">
-                          <a className="button button-sm button-secondary">
+                          <a className="button button-secondary">
                             <span>Get started</span>
                           </a>
                         </Link>
@@ -175,12 +175,12 @@ const Index = () => {
                       </div>
                       <div className="flex flex-col lg:flex-row gap-2 px-2 pb-2">
                         <Link href="prototype/home">
-                          <a className="button button-sm button-primary">
+                          <a className="button button-primary">
                             <span>View prototype</span>
                           </a>
                         </Link>
                         <Link href="prototype">
-                          <a className="button button-sm button-secondary">
+                          <a className="button button-secondary">
                             <span>Page listing</span>
                           </a>
                         </Link>
@@ -206,7 +206,7 @@ const Index = () => {
                       </div>
                       <div className="flex flex-col lg:flex-row gap-2 px-2 pb-2">
                         <Link href="https://developers.gloot.com/component-library/?path=/story/docs-getting-started-quick-start--page">
-                          <a className="button button-sm button-primary" target="_blank">
+                          <a className="button button-primary" target="_blank">
                             <span>View components</span>
                             <span className="icon icon-box-arrow-top-right" />
                           </a>

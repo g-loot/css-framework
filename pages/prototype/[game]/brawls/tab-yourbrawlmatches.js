@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 
 import HowToBrawl from "../../../../components/HowTo/HowToBrawl";
 import Lottie from "lottie-react";
-import LottieExplosion1 from "../../../../assets/animations/explosion-1.json";
+import LottieExplosion1 from "../../../../assets/animations/explosion_stryda_1.json";
 import ModalContainer from "../../../../components/Modal/ModalContainer";
 import ModalInfoBeforeYouPlay from "./modal-info-beforeyouplay";
 import { UiContext } from "../../../../contexts/ui";

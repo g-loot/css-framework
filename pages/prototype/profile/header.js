@@ -53,7 +53,7 @@ export default function HomeHeader(props) {
           )}
           <div className="header-content">
             <div className="header-body">
-              <div className="flex gap-4 items-center self-center">
+              <div className="flex flex-col md:flex-row gap-4 md:items-center self-center">
                 <div
                   className={`avatar avatar-xl avatar-circle ${
                     selectedUser.isPremium ? "avatar-gold" : ""
@@ -94,20 +94,6 @@ export default function HomeHeader(props) {
                       )}
                     </div>
                   </div>
-                  {/*
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 flex justify-center">
-                            <img
-                              src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
-                              className="aspect-video rounded-sm max-w-[1.5rem]"
-                            />
-                          </div>
-                          <span className="text-ui-300">
-                            {selectedUser.country}
-                          </span>
-                        </div>
-                            */}
-
                   {selectedUser.bio && (
                     <p className="text-ui-300 mt-1 text-left">
                       <ReadMore content={selectedUser.bio} max={150} />
