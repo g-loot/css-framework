@@ -513,7 +513,8 @@
 
 .card-mission.card-secondary {
   @apply
-  aspect-[7/3.5]
+  aspect-[7/4]
+  md:aspect-[7/3.5]
   flex
   flex-row
   items-stretch

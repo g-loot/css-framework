@@ -22,7 +22,7 @@ h6,
 .h5,
 .h6 {
   @apply
-  leading-none
+  leading-[1.1]
   ;
 }
 

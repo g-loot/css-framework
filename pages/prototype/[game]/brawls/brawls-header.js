@@ -82,7 +82,7 @@ export default function BrawlsHeader(props) {
                     prizes. No waiting, no dedicated servers. Play on your own
                     schedule!
                   </p>
-                  <p className="text-blue-300 max-w-[25ch] mb-4">
+                  <p className="text-main max-w-[25ch] mb-4">
                     <span className="font-bold">First time competing?</span>{" "}
                     Your entry Brawl is on us! Simply pick any Brawl you like
                     and claim your free Brawl!

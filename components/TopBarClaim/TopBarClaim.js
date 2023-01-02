@@ -71,24 +71,29 @@ export default function TopBarClaim(props) {
       >
         <span
           className={`icon icon-present ${
-            !variablesContext.dailyRewardClaimed ? "text-main animate-bounce" : ""
+            !variablesContext.dailyRewardClaimed
+              ? "text-main animate-bounce"
+              : ""
           }`}
         />
         <div
           className={`relative uppercase text-sm whitespace-nowrap ${
-            !variablesContext.dailyRewardClaimed
-              ? "text-main"
-              : ""
+            !variablesContext.dailyRewardClaimed ? "text-main" : ""
           }`}
         >
-          <span className="relative z-10"><span className="max-sm:hidden">Daily</span> Loot Streak</span>
+          <span className="relative z-10">
+            <span className="max-sm:hidden">Daily Loot</span> Streak
+          </span>
           {StartAnim1 && !variablesContext.dailyRewardClaimed && (
             <div className="absolute z-0 -inset-x-2 -top-0.5 bottom-0.5 flex items-center justify-center lottie-blur">
-              <Lottie animationData={LottieExplosion} loop={false} autoplay={true} />
+              <Lottie
+                animationData={LottieExplosion}
+                loop={false}
+                autoplay={true}
+              />
             </div>
           )}
         </div>
-       
       </label>
       <div tabIndex="1" className="dropdown-content w-96 p-1">
         <DailyReward />

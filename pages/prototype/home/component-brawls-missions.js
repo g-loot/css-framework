@@ -119,6 +119,7 @@ export default function HomeBrawlMissions(props) {
           .getGameBySlug(props.gameSlug)
           ?.missions.map((mission, missionIndex) => (
             <CardMissionSecondary
+              gameSlug={props.gameSlug}
               key={missionIndex}
               mission={mission}
               index={missionIndex}

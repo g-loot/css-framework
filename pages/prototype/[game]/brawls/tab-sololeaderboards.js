@@ -523,7 +523,7 @@ export default function TabBrawlsSoloLeaderboards() {
                         >
                           <span
                             className={`${
-                              selectedGroup === 6 ? "text-blue-300" : ""
+                              selectedGroup === 6 ? "text-main" : ""
                             }`}
                           >
                             G
@@ -574,7 +574,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                         <span
                                           className={`icon icon-profile-2 ${
                                             selectedGroup === groupIndex
-                                              ? "text-blue-300"
+                                              ? "text-main"
                                               : ""
                                           }`}
                                         />
@@ -582,7 +582,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                       <span
                                         className={`${
                                           selectedGroup === groupIndex
-                                            ? "text-blue-300"
+                                            ? "text-main"
                                             : ""
                                         }`}
                                       >
@@ -814,7 +814,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                                         prototype.getUserByID(
                                                           user.user
                                                         )?.isYou
-                                                          ? "text-blue-300 font-bold"
+                                                          ? "text-main font-bold"
                                                           : ""
                                                       } ${
                                                         prototype.getUserByID(

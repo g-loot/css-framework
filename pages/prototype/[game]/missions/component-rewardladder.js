@@ -72,8 +72,7 @@ export default function ComponentRewardLadder() {
             <Link href="/prototype/premium">
               <a className="text-premium-500 link">Premium</a>
             </Link>{" "}
-            users earn an additional 50% XP on each completed Reward Ladder
-            stage.
+            users earn an additional 50% XP for each completed Mission and Brawl round.
           </p>
         </div>
       )}

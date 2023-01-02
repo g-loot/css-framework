@@ -12,14 +12,14 @@ export default function BrandHead(props) {
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Stryda CSS Framework" />
       <meta property="og:description" content="Documentation for the Stryda CSS framework." />
-      <meta property="og:image" content="https://res.cloudinary.com/gloot/image/upload/v1655133846/Marketing/2022_prototype/Stryda_framework_ogpreview.jpg" />
+      <meta property="og:image" content="https://res.cloudinary.com/gloot/image/upload/v1672669464/Stryda/framework/Stryda_framework_ogpreview.jpg" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content="netlify.io" />
       <meta property="twitter:url" content="https://stryda.netlify.app" />
       <meta name="twitter:title" content="Stryda CSS Framework" />
       <meta name="twitter:description" content="Documentation for the Stryda CSS framework." />
-      <meta name="twitter:image" content="https://res.cloudinary.com/gloot/image/upload/v1655133846/Marketing/2022_prototype/Stryda_framework_ogpreview.jpg" />
+      <meta name="twitter:image" content="https://res.cloudinary.com/gloot/image/upload/v1672669464/Stryda/framework/Stryda_framework_ogpreview.jpg" />
     </Head>
   );
 }

@@ -175,8 +175,8 @@ export default function Home() {
             </p>
           </div>
           <img
-            className="hidden absolute inset-0 h-full w-full object-cover object-right"
-            src="https://res.cloudinary.com/gloot/image/upload/v1668955144/Marketing/2022_prototype/home-ad-multiplebrawls.jpg"
+            className="absolute inset-0 h-full w-full object-cover object-left opacity-50 xl:opacity-100"
+            src="https://res.cloudinary.com/gloot/image/upload/v1672675509/Stryda/illustrations/home-ad-multiplebrawls.jpg"
             alt=""
           />
         </section>
@@ -184,7 +184,6 @@ export default function Home() {
         <h2 className="h3 mb-4 mx-4 sm:mx-0">Missions</h2>
 
         <ComponentRewardLadder />
-        
         <HomeBrawlMissions gameSlug="valorant" />
         <HomeBrawlMissions gameSlug="pubg" />
 
@@ -201,8 +200,8 @@ export default function Home() {
             </p>
           </div>
           <img
-            className="hidden absolute inset-0 h-full w-full object-cover object-right"
-            src="https://res.cloudinary.com/gloot/image/upload/v1669640219/Marketing/2022_prototype/home-ad-newfunmissions.jpg"
+            className="absolute inset-0 h-full w-full object-cover object-right"
+            src="https://res.cloudinary.com/gloot/image/upload/v1672676888/Stryda/illustrations/home-ad-newfunmissions.jpg"
             alt=""
           />
         </section>

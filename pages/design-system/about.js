@@ -5,7 +5,7 @@ import { getLayout } from '../../components/DesignSystem/DSLayout'
 const DSpage = () => (
   <div>
 
-    <div className='max-w-md mx-auto aspect-landscape bg-cover bg-center rounded-lg mb-12 border border-ui-700' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289722/Marketing/2022_prototype/cover-designsystem.jpg)`}}></div>
+    <div className='max-w-md mx-auto aspect-landscape bg-cover bg-center rounded-lg mb-12 border border-ui-700' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668756/Stryda/framework/cover-designsystem.jpg)`}}></div>
     <div className='max-w-sm mx-auto space-y-4 text-ui-100 leading-none mb-6'>
       <h1 className='leading-none h2'>
         Stryda CSS Framework <small className='text-ui-300'>introduction</small>

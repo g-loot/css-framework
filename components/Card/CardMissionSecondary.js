@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Lottie from "lottie-react";
 import LottieExplosion from "../../assets/animations/explosion-1.json";
 import Tooltip from "../Tooltip/Tooltip";
@@ -17,14 +17,25 @@ export default function CardMissionSecondary(props) {
   const index = props.index;
   const { query } = useRouter();
   const isPremium = query.premium === "true" ? true : false;
+  const modalClaimMission = query.modalclaimmission === "true" ? true : false;
+  const gameSlug = props.gameSlug || "valorant";
+  const [hasClaimed, setHasClaimed] = useState(mission.hasClaimed);
+
+  useEffect(() => {
+    if (modalClaimMission) {
+      openModalClaimMission();
+    }
+  }, [modalClaimMission]);
 
   const [MissionRetrieved, setMissionRetrieved] = useState(false);
+
   function handleGetMission() {
     setMissionRetrieved(!MissionRetrieved);
     variablesContext.incrementAvailableMissions(1);
   }
 
   function openModalClaimMission() {
+    setHasClaimed(true);
     uiContext.openModal(<ModalClaimMission></ModalClaimMission>);
   }
 
@@ -73,7 +84,7 @@ export default function CardMissionSecondary(props) {
             <div className="card-bg">
               <span
                 style={{
-                  backgroundImage: "url(" + mission.image + ")",
+                  backgroundImage: "url(https://res.cloudinary.com/gloot/image/upload/v1672672455/Stryda/demo/mission-back-" + gameSlug + ".jpg)",
                 }}
               />
             </div>
@@ -85,7 +96,7 @@ export default function CardMissionSecondary(props) {
               mission.target === mission.current ? "is-inactive" : ""
             }`}
           >
-            {mission.hasClaim && (
+            {!hasClaimed && mission.target === mission.current && (
               <div className="card-overlay">
                 <div>
                   <div className="text-2xl text-ui-100">You won a prize!</div>
@@ -169,7 +180,7 @@ export default function CardMissionSecondary(props) {
                     tooltip={
                       <div className="w-56 flex gap-4 text-sm">
                         <div className="relative -mt-3">
-                          <span className="icon icon-xp-symbol-outline text-6xl text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
+                          <span className="icon icon-crown text-6xl text-premium-500" />
                           <div className="lottie-blur absolute -inset-1">
                             <Lottie
                               animationData={LottieExplosion}
@@ -180,7 +191,7 @@ export default function CardMissionSecondary(props) {
                         </div>
                         <div className="flex-1">
                           Subscribe to Premium to earn an additional{" "}
-                          <span className="text-premium-700">50% XP</span> on
+                          <span className="text-premium-500">50% XP</span> on
                           each completed mission.
                         </div>
                       </div>
@@ -188,12 +199,12 @@ export default function CardMissionSecondary(props) {
                   >
                     <div className="flex gap-1 items-center">
                       <div className="chip chip-reward chip-xp chip-sm">
-                        <span>100</span>
+                        <span>{mission.xp}</span>
                         <span className="icon icon-xp-symbol" />
                       </div>
                       <div className="chip chip-reward chip-xp chip-ghost chip-xs">
                         <span className="icon icon-crown text-sm" />
-                        <span>+50</span>
+                        <span>+{mission.xp / 2}</span>
                         <span className="icon icon-xp-symbol" />
                       </div>
                     </div>

@@ -9,6 +9,7 @@ import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import TabBrawlsOngoingNew from "./tab-brawlsongoingnew";
 import BrawlsHeader from "./brawls-header";
+import AnimatedNumber from "../../../../components/AnimatedNumber/AnimatedNumber";
 
 export default function Brawls() {
   const router = useRouter();
@@ -190,7 +191,7 @@ export default function Brawls() {
                     alt=""
                   />
                   <div className="text-2xl lg:text-5xl text-gold-500">
-                    2 245 650
+                    <AnimatedNumber number={21425235} />
                   </div>
                   <div className="uppercase text-lg text-gold-500">Coins</div>
                 </div>

@@ -15,17 +15,8 @@ import ModalBuyTokens from "../../pages/prototype/wallet/modal-buytokens";
 
 const notificationsGroups = [
   {
-    name: "Clan",
+    name: "Achievements",
     notifications: [
-      {
-        description: "Clan",
-        type: "clan",
-        intro: "Clan",
-        title: "You have been kicked out",
-        text: "You have been kicked out from the <a href='#' class='link font-bold'>BBL Esports</a> Clan.",
-        url: "/prototype/clans/3",
-        time: "1 min.",
-      },
       {
         description: "Achievement unlocked",
         type: "achievement",
@@ -36,6 +27,57 @@ const notificationsGroups = [
         url: "/prototype/profile/1/achievements?modalachievement=true",
         time: "2 min.",
         read: false,
+      },
+    ],
+  },
+  {
+    name: "Clan",
+    notifications: [
+      {
+        description: "Clan kickout out",
+        type: "clan",
+        intro: "Clan",
+        title: "You have been kicked out",
+        text: "You have been removed from the <a href='#' class='link font-bold'>BBL Esports</a> Clan. Find a new clan!",
+        cta: "View",
+        url: "/prototype/clans/",
+        time: "1 min.",
+      },
+      {
+        description: "Application declined",
+        type: "clan",
+        intro: "Clan",
+        title: "Your application was declined",
+        text: "Your application to the <a href='#' class='link font-bold'>BBL Esports</a> clan was denied.",
+        time: "1 min.",
+      },
+      {
+        description: "Application accepted",
+        type: "clan",
+        intro: "Clan",
+        title: "Your application was accepted",
+        text: "Your application to the <a href='#' class='link font-bold'>BBL Esports</a> has been accepted. Welcome to the clan!",
+        cta: "View",
+        url: "/prototype/clans/1",
+        time: "1 min.",
+      },
+      {
+        description: "Invitation declined",
+        type: "clan",
+        intro: "Clan",
+        title: "Invitation declined",
+        text: "<a href='#' class='link font-bold'>Harriss</a> has declined your invitation.",
+        time: "1 min.",
+      },
+      {
+        description: "Invitation accepted",
+        type: "clan",
+        intro: "Clan",
+        title: "Invitation accepted",
+        text: "<a href='#' class='link font-bold'>Harriss</a> has accepted and joined your clan.",
+        cta: "View",
+        url: "/prototype/clans/1",
+        time: "1 min.",
       },
       {
         description: "Token recieved",
@@ -267,6 +309,60 @@ export default function TopbarNew() {
               <TopBarClaim />
             </div>
             <div className="flex justify-end items-center gap-1 sm:gap-2">
+              <div className="dropdown dropdown-center md:dropdown-end">
+                <div
+                  tabIndex="1"
+                  className="flex items-center rounded-full bg-ui-700 interactive"
+                >
+                  <button
+                    type="button"
+                    className="w-8 button button-ghost rounded-full"
+                  >
+                      <div className="pointer-events-none absolute inset-0 !m-0 rounded-full">
+                        <i className="absolute inset-0 rounded-full border-t-4 border-t-main/0 border-l border-l-main/40 animate-rotate" style={{ animationDuration: '4s' }} />
+                      </div>
+                      <span className="icon icon-xp-symbol scale-150 text-ui-200" />
+                  </button>
+                </div>
+
+                <div
+                  tabIndex="1"
+                  className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[300px] overflow-hidden rounded-xl shadow-xl"
+                >
+                  <div className="max-h-[300px] overflow-y-auto scrollbar-desktop p-3">
+                    <ul className="rounded-lg divide-y divide-ui-600 text-left text-sm">
+                      <li
+                        className="flex gap-2 py-1 items-center"
+                      >
+                        <span className="icon icon-lightning text-main icon-20" />
+                        <span className="flex-1">Premium Boost</span>
+                        <span className="font-bold text-main text-base text-right">
+                          +50%
+                        </span>
+                      </li>
+                      <li
+                        className="flex gap-2 py-1 items-center"
+                      >
+                        <span className="icon icon-lightning text-main icon-20" />
+                        <span className="flex-1">Clan Boost</span>
+                        <span className="font-bold text-main text-base text-right">
+                          +10%
+                        </span>
+                      </li>
+                      <li
+                        className="flex gap-2 py-1 items-center"
+                      >
+                        <span className="icon icon-lightning text-main icon-20" />
+                        <span className="flex-1">New user Boost (2 days left)</span>
+                        <span className="font-bold text-main text-base text-right">
+                          +5%
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
               <Tooltip
                 placement="bottom"
                 tooltip={

@@ -5,6 +5,8 @@ import Link from "next/link";
 import Tooltip from "../../../../components/Tooltip/Tooltip";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
+import AnimatedNumber from "../../../../components/AnimatedNumber/AnimatedNumber";
+import { Spring } from "react-spring";
 
 export default function TabBrawlsOngoing() {
   const router = useRouter();
@@ -230,9 +232,7 @@ export default function TabBrawlsOngoing() {
                                     <div className="flex gap-3 items-center">
                                       <div className="flex items-center whitespace-nowrap gap-2">
                                         <span className="icon icon-coin" />
-                                        <span className="text-2xl">
-                                          10 000
-                                        </span>
+                                        <span className="text-2xl">10 000</span>
                                       </div>
                                       <div className="flex items-center whitespace-nowrap gap-2">
                                         <img
@@ -242,9 +242,7 @@ export default function TabBrawlsOngoing() {
                                           height="auto"
                                           alt=""
                                         />
-                                        <span className="text-2xl">
-                                          5
-                                        </span>
+                                        <span className="text-2xl">5</span>
                                       </div>
                                     </div>
                                   </div>
@@ -377,7 +375,7 @@ export default function TabBrawlsOngoing() {
               </h3>
               <div className="flex gap-8 items-start justify-center leading-tight mt-4">
                 <div>
-                <img
+                  <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-large.png"
                     width="250"
                     height="auto"
@@ -385,11 +383,9 @@ export default function TabBrawlsOngoing() {
                     alt=""
                   />
                   <div className="text-2xl lg:text-5xl text-gold-500">
-                    2 245 650
+                    <AnimatedNumber number={21425235} />
                   </div>
-                  <div className="uppercase text-lg text-gold-500">
-                    Coins
-                  </div>
+                  <div className="uppercase text-lg text-gold-500">Coins</div>
                 </div>
                 {/*
                 <div>

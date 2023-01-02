@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion-11.json";
+import LottieExplosion from "../../../assets/animations/explosion-5.json";
 import { UiContext } from "../../../contexts/ui.js";
 import { VariablesContext } from "../../../contexts/variables";
+import AnimatedNumber from "../../../components/AnimatedNumber/AnimatedNumber";
 
 export default function ModalClaimMission(props) {
   const uiContext = useContext(UiContext);
@@ -42,21 +43,79 @@ export default function ModalClaimMission(props) {
               <h2 className="modal-title animate-slide-in-top">
                 Congratulations
               </h2>
-              <div className="flex gap-8 items-start justify-center leading-tight mt-4">
-                <div>
-                  <span className="icon icon-xp-symbol text-9xl text-gold-500 animate-slide-in-bottom" />
-                  <div className="flex gap-2 items-baseline justify-center">
-                    <div className="text-4xl text-gold-500">
-                      100
-                    </div>
-                    <div className="uppercase text-lg text-gold-500">
-                      XP
-                    </div>
+              <ul className="rounded-lg divide-y divide-ui-700 mt-4 text-left">
+                <li
+                  className="flex gap-2 py-1 items-center animate-slide-in-bottom animate-delay"
+                  style={{ "--delay": "calc( 2 * 0.15s)" }}
+                >
+                  <span className="icon icon-check text-main icon-20" />
+                  <span className="flex-1">Mission completed</span>
+                  <span className="font-bold text-main text-lg text-right">
+                    500 XP
+                  </span>
+                </li>
+                <li
+                  className="flex gap-2 py-1 items-center animate-slide-in-bottom animate-delay"
+                  style={{ "--delay": "calc( 3 * 0.15s)" }}
+                >
+                  <span className="icon icon-lightning text-main icon-20" />
+                  <span className="flex-1">Premium Boost</span>
+                  <span className="font-bold text-main text-lg text-right">
+                    +50%
+                  </span>
+                </li>
+                <li
+                  className="flex gap-2 py-1 items-center animate-slide-in-bottom animate-delay"
+                  style={{ "--delay": "calc( 4 * 0.15s)" }}
+                >
+                  <span className="icon icon-lightning text-main icon-20" />
+                  <span className="flex-1">Clan Boost</span>
+                  <span className="font-bold text-main text-lg text-right">
+                    +10%
+                  </span>
+                </li>
+                <li
+                  className="flex gap-2 py-1 items-center animate-slide-in-bottom animate-delay"
+                  style={{ "--delay": "calc( 5 * 0.15s)" }}
+                >
+                  <span className="icon icon-lightning text-main icon-20" />
+                  <span className="flex-1">New user Boost</span>
+                  <span className="font-bold text-main text-lg text-right">
+                    +5%
+                  </span>
+                </li>
+              </ul>
+              <div
+                className=" animate-slide-in-bottom animate-delay"
+                style={{ "--delay": "calc( 6 * 0.15s)" }}
+              >
+                <div className="flex gap-4 justify-center items-center mx-auto">
+                  <div className="text-5xl text-gold-500 w-20 text-right">
+                    <AnimatedNumber number={165} />
+                  </div>
+                  <span className="icon icon-xp-symbol-outline text-8xl text-gold-500" />
+                </div>
+                <div className="mt-1 flex items-center gap-4 leading-none">
+                  <div
+                    className="progressbar progressbar-secondary w-full"
+                    style={{
+                      "--percent": 1200,
+                      "--progress": 1365,
+                    }}
+                  >
+                    <div />
+                    <div />
+                  </div>
+                  <div className="flex-none mb-0.5 w-24 text-ui-300 text-sm text-right">
+                    <span>
+                      Total XP: <AnimatedNumber number={1365} />
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="mt-12 flex justify-center">
+            {/*
+            <div className="mt-6 flex justify-center">
               <button
                 type="button"
                 className={`button button-claim button-lg w-72 ${
@@ -67,6 +126,7 @@ export default function ModalClaimMission(props) {
                 <span>Claim rewards</span>
               </button>
             </div>
+              */}
           </div>
         </div>
       </div>

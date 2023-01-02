@@ -81,6 +81,15 @@ export const FrameworkPages = {
           tags: "home, start, index, claim, rewards, daily missions, modal, prompt",
         },
         {
+          label: "Claim mission rewards",
+          chip: "modal",
+          url: "home",
+          query: "modalclaimmission=true",
+          tab: 1,
+          new: false,
+          tags: "home, start, index, claim, rewards, daily missions, modal, prompt",
+        },
+        {
           label: "Edit favorite games",
           chip: "modal",
           url: "home",

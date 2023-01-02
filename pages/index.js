@@ -127,9 +127,9 @@ const Index = () => {
                       style={{ "--delay": "calc(1 * 0.05s)" }}
                     >
                       <div
-                        className="flex-none aspect-landscape bg-cover bg-center rounded"
+                        className="flex-none aspect-landscape bg-cover bg-center rounded border border-ui-700"
                         style={{
-                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289722/Marketing/2022_prototype/cover-designsystem.webp)`,
+                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668756/Stryda/framework/cover-designsystem.jpg)`,
                         }}
                       ></div>
                       <div className="flex-1 flex flex-col items-start justify-start p-2">
@@ -160,9 +160,9 @@ const Index = () => {
                       style={{ "--delay": "calc(2 * 0.05s)" }}
                     >
                       <div
-                        className="flex-none aspect-landscape bg-cover bg-center rounded"
+                        className="flex-none aspect-landscape bg-cover bg-center rounded border border-ui-700"
                         style={{
-                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289722/Marketing/2022_prototype/cover-prototype.webp)`,
+                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668756/Stryda/framework/cover-prototype.jpg)`,
                         }}
                       ></div>
                       <div className="flex-1 flex flex-col items-start justify-start p-2">
@@ -191,9 +191,9 @@ const Index = () => {
                       style={{ "--delay": "calc(3 * 0.05s)" }}
                     >
                       <div
-                        className="flex-none aspect-landscape bg-cover bg-center rounded"
+                        className="flex-none aspect-landscape bg-cover bg-center rounded border border-ui-700"
                         style={{
-                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1670433486/Marketing/2022_prototype/cover-componentlibrary.jpg)`,
+                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668756/Stryda/framework/cover-componentlibrary.jpg)`,
                         }}
                       ></div>
                       <div className="flex-1 flex flex-col items-start justify-start p-2">
