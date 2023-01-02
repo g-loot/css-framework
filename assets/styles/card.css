@@ -47,6 +47,7 @@
     items-center
     justify-center
     bg-ui-800/90
+    shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))]
     ;
     > div {
       @apply
@@ -531,6 +532,7 @@
     rounded
     bg-ui-900/80
     backdrop-blur-0
+    z-50
     ;
   }
   .card-decoration {
@@ -581,6 +583,11 @@
     space-y-2
     rounded-r
     ;
+    .card-category {
+      @apply
+      flex-1
+      ;
+    }
     .card-meta {
       @apply
       border-y
@@ -598,6 +605,14 @@
         rounded-r-none
         ;
       }
+    }
+  }
+  &.is-inactive {
+    .card-overlay {
+      @apply
+      bg-ui-800/90
+      backdrop-blur-sm
+      ;
     }
   }
 }
@@ -1321,6 +1336,11 @@
       @apply
       text-ui-300
       ;
+    }
+    .card-category {
+      > * {
+        filter: brightness(0) saturate(100%) invert(34%) sepia(12%) saturate(680%) hue-rotate(194deg) brightness(92%) contrast(90%);
+      }
     }
     .card-bg {
       @apply

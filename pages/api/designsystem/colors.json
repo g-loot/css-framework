@@ -172,63 +172,63 @@
           "value": "bg-blue-300",
           "number": "300",
           "data": "decorative.blue.light",
-          "hex": "#4CB5FF"
+          "hex": "#6999FF"
         },
         {
           "name": "Blue Medium",
           "value": "bg-blue-500",
           "number": "500",
           "data": "decorative.blue.medium",
-          "hex": "#0297FE"
+          "hex": "#5082F2"
         },
         {
           "name": "Blue Dark",
           "value": "bg-blue-700",
           "number": "700",
           "data": "decorative.blue.dark",
-          "hex": "#0243A8"
+          "hex": "#376CDD"
         },
         {
           "name": "Purple Light",
           "value": "bg-purple-300",
           "number": "300",
           "data": "decorative.purple.light",
-          "hex": "#F1ADFF"
+          "hex": "#B897E9"
         },
         {
           "name": "Purple Medium",
           "value": "bg-purple-500",
           "number": "500",
           "data": "decorative.purple.medium",
-          "hex": "#D254FE"
+          "hex": "#A582D8"
         },
         {
           "name": "Purple Dark",
           "value": "bg-purple-700",
           "number": "700",
           "data": "decorative.purple.dark",
-          "hex": "#8A24C8"
+          "hex": "#8E69C3"
         },
         {
           "name": "Teal Light",
           "value": "bg-teal-300",
           "number": "300",
           "data": "decorative.teal.light",
-          "hex": "#2EFFCA"
+          "hex": "#69F3BE"
         },
         {
           "name": "Teal Medium",
           "value": "bg-teal-500",
           "number": "500",
           "data": "decorative.teal.medium",
-          "hex": "#11F7BD"
+          "hex": "#4EDDA6"
         },
         {
           "name": "Teal Dark",
           "value": "bg-teal-700",
           "number": "700",
           "data": "decorative.teal.dark",
-          "hex": "#05C996"
+          "hex": "#37CC93"
         }
       ]
     },
@@ -262,7 +262,7 @@
           "value": "bg-silver-300",
           "number": "300",
           "data": "reward.silver.light",
-          "hex": "#D4D5D7"
+          "hex": "#BCBFC4"
         },
         {
           "name": "Silver Main",
@@ -276,47 +276,28 @@
           "value": "bg-silver-700",
           "number": "700",
           "data": "reward.silver.dark",
-          "hex": "#686982"
+          "hex": "#8E9196"
         },
         {
           "name": "Bronze Light",
           "value": "bg-bronze-300",
           "number": "300",
           "data": "reward.bronze.light",
-          "hex": "#FAEA94"
+          "hex": "#B39582"
         },
         {
           "name": "Bronze Main",
           "value": "bg-bronze-500",
           "number": "500",
           "data": "reward.bronze.main",
-          "hex": "#F2BE51"
+          "hex": "#9C7E6C"
         },
         {
           "name": "Bronze Dark",
           "value": "bg-bronze-700",
           "number": "700",
           "data": "reward.bronze.dark",
-          "hex": "#BC8131"
-        }
-      ]
-    },
-    {
-      "title": "Decorative / gradient",
-      "title_short": "decorative",
-      "colors": [{
-          "name": "Teal blue",
-          "value": "bg-gradient-to-r from-teal-500 to-blue-500",
-          "number": "300",
-          "data": "decorative.gradient.teal-blue",
-          "hex": ""
-        },
-        {
-          "name": "Purple blue",
-          "value": "bg-gradient-to-r from-purple-700 to-blue-500",
-          "number": "500",
-          "data": "decorative.gradient.purple-blue",
-          "hex": ""
+          "hex": "#846655"
         }
       ]
     },

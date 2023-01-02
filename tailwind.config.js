@@ -263,6 +263,7 @@ module.exports = {
         "bounce-right": "bounceRight 1.1s infinite",
         "bounce-left": "bounceLeft 1.1s infinite",
         "bounce-bottom": "bounceBottom 1.1s infinite",
+        "rotate": "rotate 12s linear infinite",
         floating: "floating 6s cubic-bezier(.45,0,.4,1) infinite",
         shake: "shake 0.8s cubic-bezier(.455,.030,.515,.955) both",
       },
@@ -438,6 +439,14 @@ module.exports = {
           },
           "40%,50%": {
             transform: "translateY(-7%)",
+          },
+        },
+        rotate: {
+          "0": {
+            transform: "rotate(0)",
+          },
+          "100%": {
+            transform: "rotate(-360deg)",
           },
         },
         shake: {

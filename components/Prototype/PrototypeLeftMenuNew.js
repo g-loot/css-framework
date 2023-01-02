@@ -161,7 +161,7 @@ export default function PrototypeLeftMenuNew(props) {
                   <div className="item-image">
                     <div className="avatar avatar-simple avatar-xs">
                       <div>
-                        <span className="icon icon-ic_stars_24px icon-16" />
+                        <span className="icon icon-crown icon-16" />
                       </div>
                     </div>
                   </div>

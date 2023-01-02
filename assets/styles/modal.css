@@ -182,6 +182,7 @@
         leading-none
         text-3xl
         lg:text-4xl
+        px-8
         my-2
         ;
       }

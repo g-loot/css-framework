@@ -21,7 +21,7 @@ export default function CardMission(props) {
       <div
         key={mission}
         className={`card-mission surface mx-auto animate-slide-in-right animate-delay ${
-          mission.ispremium === true ? "card-lockedNO" : ""
+          mission.isPremium === true ? "card-lockedNO" : ""
         }`}
         style={{
           "--delay": "calc((" + index + " + 5) * 0.05s)",

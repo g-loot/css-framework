@@ -468,9 +468,14 @@
     shadow-[inset_0_0_0_1px_rgb(var(--color-ui-500))]
     ;
 
-    > .icon {
+    > .icon:not([class*='text-']) {
       @apply
       text-xl
+      ;
+    }
+
+    > .icon {
+      @apply
       my-1
       ;
     }
@@ -545,7 +550,7 @@
           ;
         }
       }
-      > .icon {
+      > .icon[class*=xp-symbol] {
         @apply
         text-3xl
         -my-1
@@ -723,7 +728,7 @@
         ;
       }
       &.chip-reward.chip-xp {
-        > .icon {
+        > .icon[class*=xp-symbol] {
           @apply
           text-[1.85rem]
           -my-0.5

@@ -6,9 +6,12 @@ import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 import { VariablesContext } from "../../contexts/variables";
 import Countdown from "../Countdown/Countdown";
+import ModalClaimMission from "../../pages/prototype/home/modal-claim-mission";
+import { UiContext } from "../../contexts/ui";
 
 export default function CardMissionSecondary(props) {
   const prototype = usePrototypeData();
+  const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
   const mission = props.mission;
   const index = props.index;
@@ -21,6 +24,10 @@ export default function CardMissionSecondary(props) {
     variablesContext.incrementAvailableMissions(1);
   }
 
+  function openModalClaimMission() {
+    uiContext.openModal(<ModalClaimMission></ModalClaimMission>);
+  }
+
   function calculatePercent(current, max) {
     return (100 * max) / current;
   }
@@ -28,7 +35,7 @@ export default function CardMissionSecondary(props) {
   return (
     <>
       <div
-        className={`revealer ${mission.isvisible === true ? "is-active" : ""} ${
+        className={`revealer ${mission.isVisible === true ? "is-active" : ""} ${
           MissionRetrieved === true ? "is-active" : ""
         }`}
         key={mission}
@@ -78,8 +85,77 @@ export default function CardMissionSecondary(props) {
               mission.target === mission.current ? "is-inactive" : ""
             }`}
           >
+            {mission.hasClaim && (
+              <div className="card-overlay">
+                <div>
+                  <div className="text-2xl text-ui-100">You won a prize!</div>
+                  <button
+                    type="button"
+                    className="button button-claim is-shining"
+                    onClick={openModalClaimMission}
+                  >
+                    <span className="icon icon-present animate-bounce" />
+                    <span>Claim reward</span>
+                  </button>
+                </div>
+                <img
+                  src="https://res.cloudinary.com/gloot/image/upload/v1672221451/Stryda/illustrations/card-rewarddoverlay-bg.png"
+                  alt=""
+                />
+              </div>
+            )}
             <div className="card-decoration"></div>
             <div className="card-body">
+              <div className="card-category">
+                {mission.category === 1 && (
+                  <div className="flex items-center text-sm text-bronze-500 gap-1">
+                    <img
+                      className="animate-rotate"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672650689/Stryda/logos/mission-category-1.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                    />
+                    <span>common</span>
+                  </div>
+                )}
+                {mission.category === 2 && (
+                  <div className="flex items-center text-sm text-gold-500 gap-1">
+                    <img
+                      className="animate-rotate"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672650689/Stryda/logos/mission-category-2.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                    />
+                    <span>rare</span>
+                  </div>
+                )}
+                {mission.category === 3 && (
+                  <div className="flex items-center text-sm text-purple-500 gap-1">
+                    <img
+                      className="animate-rotate"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672650689/Stryda/logos/mission-category-3.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                    />
+                    <span>epic</span>
+                  </div>
+                )}
+                {mission.category === 4 && (
+                  <div className="flex items-center text-sm text-teal-500 gap-1">
+                    <img
+                      className="animate-rotate"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672650689/Stryda/logos/mission-category-4.svg"
+                      width="20"
+                      height="20"
+                      alt=""
+                    />
+                    <span>legendary</span>
+                  </div>
+                )}
+              </div>
               <div className="card-title">{mission.name}</div>
               <div className="card-meta">
                 {isPremium ? (
@@ -116,9 +192,9 @@ export default function CardMissionSecondary(props) {
                         <span className="icon icon-xp-symbol" />
                       </div>
                       <div className="chip chip-reward chip-xp chip-ghost chip-xs">
+                        <span className="icon icon-crown text-sm" />
                         <span>+50</span>
                         <span className="icon icon-xp-symbol" />
-                        <span>if Premium</span>
                       </div>
                     </div>
                   </Tooltip>

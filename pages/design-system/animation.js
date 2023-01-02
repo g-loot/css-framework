@@ -284,6 +284,31 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Rotate */}
+      <div className="mb-12" id="rotate">
+        <h2 className="h3 mb-3">Rotate</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center flex items-center justify-center">
+                <div className="animate-rotate">
+                  <img src="https://res.cloudinary.com/gloot/image/upload/v1672652127/Stryda/logos/mission-category-2.svg" alt="" width="42" height="42" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/fnvdj6cz/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Slide in bottom */}
       <div className="mb-12" id="slide-in-bottom">
         <h2 className="h3 mb-3">Slide in bottom</h2>
