@@ -8,6 +8,7 @@ import AnimatedNumber from "../../../components/AnimatedNumber/AnimatedNumber";
 
 export default function ModalClaimMission(props) {
   const uiContext = useContext(UiContext);
+  const mission = props.mission;
   const variablesContext = useContext(VariablesContext);
   const [submitting, setSubmitting] = useState(false);
   function closeModalWithDelay() {
@@ -51,7 +52,7 @@ export default function ModalClaimMission(props) {
                   <span className="icon icon-check text-main icon-20" />
                   <span className="flex-1">Mission completed</span>
                   <span className="font-bold text-main text-lg text-right">
-                    500 XP
+                    {mission.xp} XP
                   </span>
                 </li>
                 <li
@@ -91,7 +92,7 @@ export default function ModalClaimMission(props) {
               >
                 <div className="flex gap-4 justify-center items-center mx-auto">
                   <div className="text-5xl text-gold-500 w-20 text-right">
-                    <AnimatedNumber number={165} />
+                    <AnimatedNumber number={mission.xp * 1.65} />
                   </div>
                   <span className="icon icon-xp-symbol-outline text-8xl text-gold-500" />
                 </div>
@@ -100,7 +101,7 @@ export default function ModalClaimMission(props) {
                     className="progressbar progressbar-secondary w-full"
                     style={{
                       "--percent": 1200,
-                      "--progress": 1365,
+                      "--progress": 1200 + mission.xp * 1.65,
                     }}
                   >
                     <div />
@@ -108,7 +109,7 @@ export default function ModalClaimMission(props) {
                   </div>
                   <div className="flex-none mb-0.5 w-24 text-ui-300 text-sm text-right">
                     <span>
-                      Total XP: <AnimatedNumber number={1365} />
+                      Total XP: <AnimatedNumber number={1200 + mission.xp * 1.65} />
                     </span>
                   </div>
                 </div>

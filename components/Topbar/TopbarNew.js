@@ -329,8 +329,8 @@ export default function TopbarNew() {
                   tabIndex="1"
                   className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[300px] overflow-hidden rounded-xl shadow-xl"
                 >
-                  <div className="max-h-[300px] overflow-y-auto scrollbar-desktop p-3">
-                    <ul className="rounded-lg divide-y divide-ui-600 text-left text-sm">
+                  <div className="p-3">
+                    <ul className="menu rounded-lg divide-y divide-ui-600 text-left text-sm">
                       <li
                         className="flex gap-2 py-1 items-center"
                       >

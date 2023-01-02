@@ -36,7 +36,7 @@ export default function CardMissionSecondary(props) {
 
   function openModalClaimMission() {
     setHasClaimed(true);
-    uiContext.openModal(<ModalClaimMission></ModalClaimMission>);
+    uiContext.openModal(<ModalClaimMission mission={mission}></ModalClaimMission>);
   }
 
   function calculatePercent(current, max) {

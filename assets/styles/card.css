@@ -118,7 +118,7 @@
 
   .card-title {
     @apply
-    leading-none
+    leading-[1.1]
     ;
     &:not([class*='text-ui']):not([class*='text-main']) {
       @apply
@@ -205,7 +205,7 @@
   }
   .card-title {
     @apply
-    leading-none
+    leading-[1.1]
     text-ui-100
     uppercase
     ;
