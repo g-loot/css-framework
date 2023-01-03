@@ -178,7 +178,7 @@ export default function CardMissionSecondary(props) {
                   <Tooltip
                     placement="top"
                     tooltip={
-                      <ul className="w-56 rounded-lg text-left">
+                      <ul className="w-56 rounded-lg text-left text-sm">
                         <li className="flex gap-2 py-0.5 items-center">
                           <span className="icon icon-check text-main text-xs" />
                           <span className="flex-1">Mission completed</span>
@@ -191,20 +191,6 @@ export default function CardMissionSecondary(props) {
                           <span className="flex-1">Premium boost</span>
                           <span className="font-bold text-main text-right">
                             +50%
-                          </span>
-                        </li>
-                        <li className="flex gap-2 py-0.5 items-center">
-                          <span className="icon icon-e-add text-main text-xs" />
-                          <span className="flex-1">Clan boost</span>
-                          <span className="font-bold text-main text-right">
-                            +10%
-                          </span>
-                        </li>
-                        <li className="flex gap-2 py-0.5 items-center">
-                          <span className="icon icon-e-add text-main text-xs" />
-                          <span className="flex-1">New user boost</span>
-                          <span className="font-bold text-main text-right">
-                            +5%
                           </span>
                         </li>
                       </ul>
