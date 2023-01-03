@@ -582,7 +582,7 @@ button {
         opacity-100
         rounded-full
         mx-auto
-        left-[calc(50%-0.75rem)]
+        left-[calc(50%-0.5rem)]
         animate-[button-loader-rotate_1s_linear_infinite]
         bg-none
         ;

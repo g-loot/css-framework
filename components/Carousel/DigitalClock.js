@@ -50,7 +50,6 @@ function DigitalClock({ mode, pause, standby }) {
 
         // Set up the interval.
         useEffect(() => {
-            console.log(mode)
             // setDisplay(prevDisplay => {
             //     console.log('prevDisplay', prevDisplay)
             //     return `${prevDisplay}`

@@ -68,14 +68,22 @@ export default function BrawlPlacementItem(props) {
     }
   }
 
+  const premiumTooltip = <ul className="rounded-lg text-left text-sm text-ui-300"><li className="flex gap-2 py-0.5 items-center"><span className="icon icon-check text-main text-xs" /><span className="flex-1">Brawl round</span><span className="font-bold text-main text-right">300 XP</span></li><li className="flex gap-2 py-0.5 items-center"><span className="icon icon-e-add text-main text-xs" /><span className="flex-1">Premium</span><span className="font-bold text-main text-right">+50%</span></li></ul>;
+
   return (
     <>
-      <div
+      <Tooltip
         className="perspective shrink-0 ml-4 my-4 last:mr-20 animate-slide-in-right animate-delay"
+        tooltip={
+          variablesContext.brawlStep >= props.item?.step && isPremium && resultsDone
+            ? premiumTooltip
+            : undefined
+        }
         style={{
           "--delay": "calc((" + props.item?.step + ") * 0.05s)",
         }}
       >
+        
         <div
           className={`w-44 h-16 flip flip-vertical animate-delay ${
             variablesContext.brawlStep >= props.item?.step ? "animate-flip" : ""
@@ -141,6 +149,7 @@ export default function BrawlPlacementItem(props) {
               <span className="icon icon-lock text-xl text-ui-600" />
             </div>
           </div>
+
           <div
             className={`flip-back rounded-lg shadow-lg flex items-center justify-between px-2 gap-2 w-44 h-16 overflow-hidden ${
               !resultsDone
@@ -179,7 +188,7 @@ export default function BrawlPlacementItem(props) {
                           <ul className="rounded-lg text-left text-sm text-ui-300">
                             <li className="flex gap-2 py-0.5 items-center">
                               <span className="icon icon-check text-main text-xs" />
-                              <span className="flex-1">Match</span>
+                              <span className="flex-1">Brawl round</span>
                               <span className="font-bold text-main text-right">
                                 300 XP
                               </span>
@@ -221,7 +230,7 @@ export default function BrawlPlacementItem(props) {
             </div>
           </div>
         </div>
-      </div>
+      </Tooltip>
       {props.item?.step === 3 && (
         <div className="ml-4 my-4 flex items-center">
           <div className="w-9 h-9 rounded-full border border-ui-500 flex items-center justify-center">

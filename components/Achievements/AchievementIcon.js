@@ -1,7 +1,6 @@
 import React from "react";
 
 function AchievementIcon(props) {
-  console.log(props.url);
   return (
     <img
       src={`${props.url}?${Date.now()}`}

@@ -7,7 +7,6 @@ export default function Notification(props) {
   const [accepted, setAccepted] = useState(undefined);
 
   useEffect(() => {
-    console.log(read);
     setAccepted(notification.accepted);
   }, [notification]);
 

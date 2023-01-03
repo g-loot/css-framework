@@ -47,7 +47,6 @@ export default function ModalBuyPremium(props) {
   const [disabled, setDisable] = useState(false);
 
   const handlechange = (event) => {
-    console.log(event.target.checked);
     if (event.target.checked) {
       setSelectedGamesCount(selectedGamesCount + 1);
     } else {

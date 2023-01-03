@@ -20,10 +20,10 @@ const Tooltip = (props) => {
 
   return (
     <>
-      <div ref={setTriggerRef} className="inline-block cursor-pointer">
+      <div ref={setTriggerRef} className={`inline-block ${props.tooltip ? 'cursor-pointer' : ''} ${props.className}`}>
         {props.children}
       </div>
-      {visible &&
+      {visible && props.tooltip &&
         ReactDOM.createPortal(
           <div
             ref={setTooltipRef}

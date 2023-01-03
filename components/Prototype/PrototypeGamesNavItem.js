@@ -24,7 +24,6 @@ export default function PrototypeGamesNavItem(props) {
   const handleToggle = (e) => {
     e.preventDefault();
     prototype.defineDefaultGameID(props.gameID);
-    console.log(props.gameID);
     setActive(!isActive);
     router.push(
       `/prototype/${props.gameSlug}/missions/${prototype.getURLparams()}`

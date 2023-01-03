@@ -326,14 +326,18 @@ export default function TabBrawlsSoloLeaderboards() {
                 </div>
 
                 {isPremium ? (
+                  <>
                   <p className="text-ui-300 max-w-[30ch] mx-auto">
-                    As a <b className="text-ui-100">Premium user</b>, you earn <b className="text-ui-100">450 XP</b> for each registered
-                    game.
+                    As a <b className="text-ui-100">Premium user</b>, you earn <b className="text-ui-100">450 XP</b> for each registered Brawl match.
                   </p>
+                  <p className="text-ui-300 max-w-[30ch] mx-auto">
+                    You will get the XP for your placement matches when you reach the leaderboard.
+                  </p>
+                  </>
                 ) : (
                   <>
                     <p className="text-ui-300 max-w-[30ch] mx-auto mb-4">
-                      Earn 300 XP for each registered game.
+                      Earn 300 XP for each registered Brawl match, you will get the XP for your placement matches when you reach the leaderboard.
                     </p>
                     <p className="text-ui-300 max-w-[30ch] mx-auto">
                       <Link href="/prototoype/premium">
