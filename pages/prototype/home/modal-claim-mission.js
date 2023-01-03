@@ -10,7 +10,7 @@ export default function ModalClaimMission(props) {
   const uiContext = useContext(UiContext);
   const mission = props.mission;
   const variablesContext = useContext(VariablesContext);
-  const xp = mission.xp !== undefined ? mission.xp : 50;
+  const xp = 50; //mission.xp !== undefined ? mission.xp : 50;
   const [submitting, setSubmitting] = useState(false);
   function closeModalWithDelay() {
     setSubmitting(true);
