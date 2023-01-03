@@ -176,7 +176,7 @@ export default function BrawlPlacementItem(props) {
                       <span>XP</span>
                       <Tooltip
                         tooltip={
-                          <ul className="rounded-lg text-left text-ui-300">
+                          <ul className="rounded-lg text-left text-sm text-ui-300">
                             <li className="flex gap-2 py-0.5 items-center">
                               <span className="icon icon-check text-main text-xs" />
                               <span className="flex-1">Match</span>
