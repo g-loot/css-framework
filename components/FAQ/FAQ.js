@@ -14,7 +14,7 @@ export default function FAQ(props) {
           <>
             <div className="item">
               <div className="item-body">
-                <div className="p-2 item-title text-lg">
+                <div className="p-2 item-title whitespace-wrap text-lg">
                   {props.content.title}
                 </div>
               </div>

@@ -11,7 +11,7 @@
   gap-2
   p-2
   ;
-  &:not([class*='w-auto']) {
+  &:not([class*='w-']) {
     @apply
     w-full
     ;
@@ -32,11 +32,13 @@
     ;
   }
   .item-title {
-    @apply
-    whitespace-nowrap
-    overflow-hidden
-    overflow-ellipsis
-    ;
+    &:not(class*='whitespace-') {
+      @apply
+      whitespace-nowrap
+      overflow-hidden
+      overflow-ellipsis
+      ;
+    }
   }
   &:not(:last-child) {
     @apply

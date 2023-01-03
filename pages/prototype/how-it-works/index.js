@@ -11,7 +11,7 @@ const TabsItems = [
     title: "Compete & earn XP",
     url: "missions",
     icon: "icon-missions",
-    img: "https://res.cloudinary.com/gloot/image/upload/v1662645307/Marketing/2022_prototype/Illustrations/missions_cards.webp",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1672727103/Stryda/illustrations/missions_cards.png",
     content: [
       {
         type: "p",
@@ -29,7 +29,7 @@ const TabsItems = [
     title: "Reach milestione & unlock rewards",
     url: "missions-rewards",
     icon: "icon-military-medal",
-    img: "https://res.cloudinary.com/gloot/image/upload/v1662645308/Marketing/2022_prototype/Illustrations/token_coin_piles.webp",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1672730191/Stryda/illustrations/coins_tokens.png",
     content: [
       {
         type: "p",
@@ -47,7 +47,7 @@ const TabsItems = [
     title: "Use stats to climb the leaderboard",
     url: "brawl",
     icon: "icon-brawl",
-    img: "https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/brawl_leaderboard.webp",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1672730609/Stryda/illustrations/brawl_leaderboard.png",
     content: [
       {
         type: "p",
@@ -82,7 +82,7 @@ const TabsItems = [
       {
         type: "ul",
         text: [
-          "Get access to exclusive Premium Missions.",
+          "Get free extra tokens for each token purchase.",
           "Earn extra XP to reach your Rewards milestones faster.",
           "Enjoy the Stryda experience without ads.",
         ],
@@ -282,14 +282,14 @@ export default function HowItWorks() {
           style={{ "--delay": "calc(1 * 0.05s)" }}
         >
           <div className="lg:w-1/3 xl:w-1/4 space-y-4 flex flex-col">
-            <ul className="items-spaced item-interactive gap-1 px-2 lg:px-0 flex flex-row lg:flex-col overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto scrollbar-desktop">
+            <ul className="items-spaced item-interactive gap-4 lg:gap-1 px-2 lg:px-0 flex flex-row lg:flex-col overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto scrollbar-desktop">
               {TabsItems.map((item, itemIndex) => (
                 <Link href={`?tab=${item.url}`} key={item.id}>
                   <li
-                    className={`item duration-500 origin-left p-3 rounded-lg ${
+                    className={`item duration-500 origin-left p-3 rounded-lg shrink-0 w-[calc(100vw-100px)] lg:w-full ${
                       selectedTab === item.url
                         ? "surface surface-halo halo-r"
-                        : "opacity-50 scale-90"
+                        : "opacity-50 lg:scale-90"
                     }`}
                     style={{
                       "--delay": "calc(" + itemIndex + " * 0.05s)",
