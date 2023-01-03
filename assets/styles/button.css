@@ -36,6 +36,7 @@ button {
   uppercase
   transform-gpu
   ;
+  outline-radius: 100%;
 
   &:not([disabled]),
   &:not(.is-disabled) {
@@ -137,6 +138,7 @@ button {
         shadow-[inset_0_0_0_1px_rgb(var(--color-ui-100))]
         ;
       }
+      &:focus-visible,
       &:active {
         @apply
         text-ui-100
@@ -161,6 +163,7 @@ button {
         text-ui-200
         ;
       }
+      &:focus-visible,
       &:active {
         @apply
         outline-ui-400
@@ -184,6 +187,7 @@ button {
         text-ui-200
         shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/0%)]
       }
+      &:focus-visible,
       &:active {
         @apply
         outline-ui-400
@@ -205,6 +209,7 @@ button {
         bg-error-300
         ;
       }
+      &:focus-visible,
       &:active {
         @apply
         outline-error-300
@@ -225,6 +230,7 @@ button {
         bg-success-300
         ;
       }
+      &:focus-visible,
       &:active {
         @apply
         outline-success-300

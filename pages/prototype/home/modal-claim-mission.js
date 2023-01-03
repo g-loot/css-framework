@@ -47,7 +47,7 @@ export default function ModalClaimMission(props) {
               </h2>
               <ul className="rounded-lg divide-y divide-ui-700 mt-4 text-left">
                 <li
-                  className="flex gap-2 py-1 items-center animate-slide-in-bottom animate-delay"
+                  className="flex gap-3 py-1 items-center animate-slide-in-bottom animate-delay"
                   style={{ "--delay": "calc( 2 * 0.15s)" }}
                 >
                   <span className="icon icon-check text-main icon-20" />
@@ -57,31 +57,31 @@ export default function ModalClaimMission(props) {
                   </span>
                 </li>
                 <li
-                  className="flex gap-2 py-1 items-center animate-slide-in-bottom animate-delay"
+                  className="flex gap-3 py-1 items-center animate-slide-in-bottom animate-delay"
                   style={{ "--delay": "calc( 3 * 0.15s)" }}
                 >
-                  <span className="icon icon-lightning text-main icon-20" />
-                  <span className="flex-1">Premium Boost</span>
+                  <span className="icon icon-e-add text-main icon-20" />
+                  <span className="flex-1">Premium boost</span>
                   <span className="font-bold text-main text-lg text-right">
                     +50%
                   </span>
                 </li>
                 <li
-                  className="flex gap-2 py-1 items-center animate-slide-in-bottom animate-delay"
+                  className="flex gap-3 py-1 items-center animate-slide-in-bottom animate-delay"
                   style={{ "--delay": "calc( 4 * 0.15s)" }}
                 >
-                  <span className="icon icon-lightning text-main icon-20" />
-                  <span className="flex-1">Clan Boost</span>
+                  <span className="icon icon-e-add text-main icon-20" />
+                  <span className="flex-1">Clan boost</span>
                   <span className="font-bold text-main text-lg text-right">
                     +10%
                   </span>
                 </li>
                 <li
-                  className="flex gap-2 py-1 items-center animate-slide-in-bottom animate-delay"
+                  className="flex gap-3 py-1 items-center animate-slide-in-bottom animate-delay"
                   style={{ "--delay": "calc( 5 * 0.15s)" }}
                 >
-                  <span className="icon icon-lightning text-main icon-20" />
-                  <span className="flex-1">New user Boost</span>
+                  <span className="icon icon-e-add text-main icon-20" />
+                  <span className="flex-1">New user boost</span>
                   <span className="font-bold text-main text-lg text-right">
                     +5%
                   </span>

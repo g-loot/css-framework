@@ -259,14 +259,6 @@ export default function TabBrawlsSoloLeaderboards() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex justify-center mb-4">
-                    <button
-                      type="button"
-                      className="button button-ghost is-active mx-auto"
-                    >
-                      <span>My position</span>
-                    </button>
-                  </div>
                 </>
               ) : (
                 <>
@@ -327,22 +319,39 @@ export default function TabBrawlsSoloLeaderboards() {
                   )}
                 </>
               )}
-              {!isPremium && (
-                <div className="w-full mb-4 surface rounded-lg p-4 text-center relative z-0">
-                  <div>
-                    <span className="icon icon-xp-symbol-outline text-[6rem] -mt-4 -mb-6 text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
-                  </div>
-                  <p className="text-ui-300 max-w-[30ch] mx-auto mb-4">
-                    Earn 300 XP for each registered game.
-                  </p>
-                  <p className="text-ui-300 max-w-[30ch] mx-auto">
-                    <Link href="/prototoype/premium">
-                      <a className="text-premium-500  underline">Premium</a>
-                    </Link>{" "}
-                    users earn an additional 50% XP.
-                  </p>
+
+              <div className="w-full mb-4 surface rounded-lg p-4 text-center relative z-0">
+                <div>
+                  <span className="icon icon-xp-symbol-outline text-[6rem] -mt-4 -mb-6 text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
                 </div>
-              )}
+
+                {isPremium ? (
+                  <p className="text-ui-300 max-w-[30ch] mx-auto">
+                    As a <b className="text-ui-100">Premium user</b>, you earn <b className="text-ui-100">450 XP</b> for each registered
+                    game.
+                  </p>
+                ) : (
+                  <>
+                    <p className="text-ui-300 max-w-[30ch] mx-auto mb-4">
+                      Earn 300 XP for each registered game.
+                    </p>
+                    <p className="text-ui-300 max-w-[30ch] mx-auto">
+                      <Link href="/prototoype/premium">
+                        <a className="text-premium-500  underline">Premium</a>
+                      </Link>{" "}
+                      users earn an additional 50% XP.
+                    </p>
+                  </>
+                )}
+              </div>
+              <div className="flex justify-center mb-4">
+                <button
+                  type="button"
+                  className="button button-ghost is-active mx-auto"
+                >
+                  <span>My position</span>
+                </button>
+              </div>
             </div>
             {isEmpty ? (
               <div className="col-span-1 lg:col-span-3 px-4 py-8 text-center">

@@ -209,9 +209,7 @@ export default function Stats() {
                   >
                     <div className="flex flex-col lg:flex-row lg:items-stretch gap-4 p-4 ">
                       <div className="flex-3">
-                        <div className="text-ui-400 mb-4">
-                          Stats overview
-                        </div>
+                        <div className="text-ui-400 mb-4">Stats overview</div>
                         <div className="flex flex-wrap text-center gap-2 md:gap-4 leading-tight items-stretch justify-between">
                           <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                             <div className="text-xs lg:text-sm uppercase text-ui-300">
@@ -409,15 +407,14 @@ export default function Stats() {
                           {prototype.getUserByID(1)?.nickname}
                         </div>
                         <div>
-                          riotname<span className="text-sm text-ui-300">#8492</span>
+                          riotname
+                          <span className="text-sm text-ui-300">#8492</span>
                         </div>
                         <div className="text-ui-300 uppercase text-xs lg:text-sm">
-                          <span className="">Match played:</span>{" "}
-                          <b className="text-ui-200">1000</b>
+                          Match played: <b>1000</b>
                         </div>
                         <div className="text-ui-300 uppercase text-xs lg:text-sm">
-                          <span className="">Play time:</span>{" "}
-                          <b className="text-ui-200">1439H</b>
+                          Play time: <b>1439H</b>
                         </div>
                       </div>
                     </div>
@@ -574,9 +571,7 @@ export default function Stats() {
                   >
                     <div className="flex flex-col lg:flex-row lg:items-stretch gap-4 p-4 ">
                       <div className="flex-3">
-                        <div className="text-ui-400 mb-4">
-                          Stats overview
-                        </div>
+                        <div className="text-ui-400 mb-4">Stats overview</div>
                         <div className="flex flex-wrap text-center gap-2 md:gap-4 leading-tight items-stretch justify-between">
                           <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
                             <div className="text-xs lg:text-sm uppercase text-ui-300">
@@ -789,9 +784,7 @@ export default function Stats() {
                             header={
                               <div
                                 className={`item surface sm:rounded-lg text-center ${
-                                  match.hasWon
-                                    ? "surface-halo halo-l"
-                                    : ""
+                                  match.hasWon ? "surface-halo halo-l" : ""
                                 }`}
                               >
                                 <div className="item-image">

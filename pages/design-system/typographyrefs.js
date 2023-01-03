@@ -24,7 +24,7 @@ const DSpage = () => {
               </div>
               <div className="w-60 flex flex-col items-between justify-around">
                 <div className="uppercase text-ui-100">
-                  Dama Gothic
+                  Rama Gothic
                 </div>
                 <div className="font-headings text-ui-300 mt-4">
                   <span className="uppercase">abcdefghijklmnopqrstuvwxyz</span>
@@ -175,7 +175,7 @@ const DSpage = () => {
                 </div>
               </div>
               <div className="hidden lg:block py-2 w-80 text-xs text-ui-400 border-l border-ui-700 pl-4">
-                font-family: Dama Gothic;
+                font-family: Rama Gothic;
                 <br />
                 font-size: 60px;
                 <br />

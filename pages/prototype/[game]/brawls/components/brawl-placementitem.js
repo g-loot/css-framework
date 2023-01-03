@@ -4,6 +4,7 @@ import Lottie from "lottie-react";
 import LottieExplosion1 from "../../../../../assets/animations/explosion-4.json";
 import LottieExplosion2 from "../../../../../assets/animations/explosion-2.json";
 import { VariablesContext } from "../../../../../contexts/variables";
+import Tooltip from "../../../../../components/Tooltip/Tooltip";
 
 export default function BrawlPlacementItem(props) {
   const variablesContext = useContext(VariablesContext);
@@ -99,7 +100,7 @@ export default function BrawlPlacementItem(props) {
                   <button
                     type="button"
                     className={`button button-sm button-primary button-currency button-token w-full animate-slide-in-bottom ${
-                      shining ? "is-shining" : "pointer-events-none"
+                      shining ? "is-shining" : ""
                     }`}
                     onClick={incrementBrawlStep.bind(this, 1)}
                   >
@@ -166,13 +167,50 @@ export default function BrawlPlacementItem(props) {
                     </span>
                     <span>pts</span>
                   </div>
-                  <div
-                    className={`flex items-center gap-1 ${isPremium ? 'text-premium-500' : ''} animate-slide-in-right animate-delay`}
-                    style={{ "--delay": "calc(2 * 0.05s)" }}
-                  >
-                    <span className="text-right">+300</span>
-                    <span>XP</span>
-                  </div>
+                  {isPremium ? (
+                    <div
+                      className={`flex text-sm items-center gap-1 text-ui-100 animate-slide-in-right animate-delay`}
+                      style={{ "--delay": "calc(2 * 0.05s)" }}
+                    >
+                      <span className="text-right">+450</span>
+                      <span>XP</span>
+                      <Tooltip
+                        tooltip={
+                          <ul className="rounded-lg text-left text-ui-300">
+                            <li className="flex gap-2 py-0.5 items-center">
+                              <span className="icon icon-check text-main text-xs" />
+                              <span className="flex-1">Match</span>
+                              <span className="font-bold text-main text-right">
+                                300 XP
+                              </span>
+                            </li>
+                            <li className="flex gap-2 py-0.5 items-center">
+                              <span className="icon icon-e-add text-main text-xs" />
+                              <span className="flex-1">Premium</span>
+                              <span className="font-bold text-main text-right">
+                                +50%
+                              </span>
+                            </li>
+                          </ul>
+                        }
+                      >
+                        <button
+                          type="button"
+                          className="button button-xs button-ghost rounded-full -mx-1.5"
+                        >
+                          <span className="icon icon-c-info" />
+                        </button>
+                      </Tooltip>
+                    </div>
+                  ) : (
+                    <div
+                      className={`flex text-sm items-center gap-1 animate-slide-in-right animate-delay`}
+                      style={{ "--delay": "calc(2 * 0.05s)" }}
+                    >
+                      <span className="text-right">+300</span>
+                      <span>XP</span>
+                    </div>
+                  )}
                 </>
               )}
               {!resultsDone && (

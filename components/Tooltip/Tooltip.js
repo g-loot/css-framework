@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import * as ReactDOM from "react-dom";
 import { usePopperTooltip } from "react-popper-tooltip";
 
 const Tooltip = (props) => {
@@ -23,22 +23,26 @@ const Tooltip = (props) => {
       <div ref={setTriggerRef} className="inline-block cursor-pointer">
         {props.children}
       </div>
-      {visible && (
-        <div
-          ref={setTooltipRef}
-          {...getTooltipProps({ className: "tooltip-container" })}
-        >
+      {visible &&
+        ReactDOM.createPortal(
           <div
-            className={`tooltip-lg ${
-              placement === "bottom" ? "tooltip-bottom" : ""
-            } ${placement === "top" ? "tooltip-top" : ""} ${placement === "left" ? "tooltip-left" : ""}  ${
-              visible ? "is-active" : ""
-            }`}
+            ref={setTooltipRef}
+            {...getTooltipProps({ className: "tooltip-container" })}
           >
-            {props.tooltip}
-          </div>
-        </div>
-      )}
+            <div
+              className={`tooltip-lg ${
+                placement === "bottom" ? "tooltip-bottom" : ""
+              } ${placement === "top" ? "tooltip-top" : ""} ${
+                placement === "left" ? "tooltip-left" : ""
+              } ${placement === "right" ? "tooltip-right" : ""}  ${
+                visible ? "is-active" : ""
+              }`}
+            >
+              {props.tooltip}
+            </div>
+          </div>,
+          document.body,
+        )}
     </>
   );
 };

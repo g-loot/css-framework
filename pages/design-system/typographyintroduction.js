@@ -12,7 +12,7 @@ const DSpage = () => {
       </h1>
       <div className="format mb-8" id="font-family">
         <h2 id="using-icons">Font family</h2>
-        <p>The default font is Barlow while all headings are using Dama Gothic. You can specify which font to use on any element using the following class names:</p>
+        <p>The default font is Barlow while all headings are using Rama Gothic. You can specify which font to use on any element using the following class names:</p>
         <div className="surface rounded-lg overflow-x-auto mb-10">
           <table className="table w-full">
             <tbody>

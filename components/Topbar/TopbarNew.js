@@ -336,14 +336,14 @@ export default function TopbarNew() {
                     <ul className="menu rounded-lg divide-y divide-ui-600 text-left text-sm">
                       <li className="flex gap-2 py-1 items-center">
                         <span className="icon icon-lightning text-main icon-20" />
-                        <span className="flex-1">Premium Boost</span>
+                        <span className="flex-1">Premium boost</span>
                         <span className="font-bold text-main text-base text-right">
                           +50%
                         </span>
                       </li>
                       <li className="flex gap-2 py-1 items-center">
                         <span className="icon icon-lightning text-main icon-20" />
-                        <span className="flex-1">Clan Boost</span>
+                        <span className="flex-1">Clan boost</span>
                         <span className="font-bold text-main text-base text-right">
                           +10%
                         </span>
@@ -351,7 +351,7 @@ export default function TopbarNew() {
                       <li className="flex gap-2 py-1 items-center">
                         <span className="icon icon-lightning text-main icon-20" />
                         <span className="flex-1">
-                          New user Boost (2 days left)
+                          New user boost (2 days left)
                         </span>
                         <span className="font-bold text-main text-base text-right">
                           +5%

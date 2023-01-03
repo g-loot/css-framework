@@ -18,7 +18,7 @@ export default function CardMissionSecondary(props) {
   const { query } = useRouter();
   const isPremium = query.premium === "true" ? true : false;
   const modalClaimMission = query.modalclaimmission === "true" ? true : false;
-  const gameSlug = props.gameSlug || "valorant";
+  const gameSlug = props.gameSlug || "valorant";
   const [hasClaimed, setHasClaimed] = useState(mission.hasClaimed);
 
   useEffect(() => {
@@ -36,7 +36,9 @@ export default function CardMissionSecondary(props) {
 
   function openModalClaimMission() {
     setHasClaimed(true);
-    uiContext.openModal(<ModalClaimMission mission={mission}></ModalClaimMission>);
+    uiContext.openModal(
+      <ModalClaimMission mission={mission}></ModalClaimMission>
+    );
   }
 
   function calculatePercent(current, max) {
@@ -84,7 +86,10 @@ export default function CardMissionSecondary(props) {
             <div className="card-bg">
               <span
                 style={{
-                  backgroundImage: "url(https://res.cloudinary.com/gloot/image/upload/v1672672455/Stryda/demo/mission-back-" + gameSlug + ".jpg)",
+                  backgroundImage:
+                    "url(https://res.cloudinary.com/gloot/image/upload/v1672672455/Stryda/demo/mission-back-" +
+                    gameSlug +
+                    ".jpg)",
                 }}
               />
             </div>
@@ -170,10 +175,46 @@ export default function CardMissionSecondary(props) {
               <div className="card-title">{mission.name}</div>
               <div className="card-meta">
                 {isPremium ? (
-                  <div className="chip chip-reward chip-xp chip-inverted chip-sm">
-                    <span>150</span>
-                    <span className="icon icon-xp-symbol" />
-                  </div>
+                  <Tooltip
+                    placement="top"
+                    tooltip={
+                      <ul className="w-56 rounded-lg text-left">
+                        <li className="flex gap-2 py-0.5 items-center">
+                          <span className="icon icon-check text-main text-xs" />
+                          <span className="flex-1">Mission completed</span>
+                          <span className="font-bold text-main text-right">
+                            {mission.xp} XP
+                          </span>
+                        </li>
+                        <li className="flex gap-2 py-0.5 items-center">
+                          <span className="icon icon-e-add text-main text-xs" />
+                          <span className="flex-1">Premium boost</span>
+                          <span className="font-bold text-main text-right">
+                            +50%
+                          </span>
+                        </li>
+                        <li className="flex gap-2 py-0.5 items-center">
+                          <span className="icon icon-e-add text-main text-xs" />
+                          <span className="flex-1">Clan boost</span>
+                          <span className="font-bold text-main text-right">
+                            +10%
+                          </span>
+                        </li>
+                        <li className="flex gap-2 py-0.5 items-center">
+                          <span className="icon icon-e-add text-main text-xs" />
+                          <span className="flex-1">New user boost</span>
+                          <span className="font-bold text-main text-right">
+                            +5%
+                          </span>
+                        </li>
+                      </ul>
+                    }
+                  >
+                    <div className="chip chip-reward chip-xp chip-inverted chip-sm">
+                      <span>{Math.round(mission.xp * 1.65)}</span>
+                      <span className="icon icon-xp-symbol" />
+                    </div>
+                  </Tooltip>
                 ) : (
                   <Tooltip
                     placement="top"

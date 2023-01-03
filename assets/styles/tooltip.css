@@ -2,7 +2,6 @@
 /* TOOLTIP */
 /*----------------------------*/
 
-
 :where(.tooltip, [data-tooltip]) {
   @apply
   relative
@@ -339,6 +338,26 @@
       animate-[tooltip-top_200ms_ease-in-out_forwards];
     }
   }
+  &.tooltip-right {
+    @apply
+    -translate-x-1
+    opacity-0
+    ;
+    &.is-active {
+      @apply
+      animate-[tooltip-right_200ms_ease-in-out_forwards];
+    }
+  }
+  &.tooltip-left {
+    @apply
+    translate-x-1
+    opacity-0
+    ;
+    &.is-active {
+      @apply
+      animate-[tooltip-left_200ms_ease-in-out_forwards];
+    }
+  }
 }
 @keyframes tooltip-bottom {
   from {
@@ -357,6 +376,26 @@
   }
   to {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tooltip-right {
+  from {
+    transform: translateX(-0.25rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes tooltip-left {
+  from {
+    transform: translateX(0.25rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
     opacity: 1;
   }
 }
