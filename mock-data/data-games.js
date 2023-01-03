@@ -1969,21 +1969,27 @@ export const dataGames = [
     missions: [
       {
         name: "Get 22 kills",
+        category: 1,
         label: "kills",
         current: 11,
         target: 22,
         isPremium: false,
-        xp: 55,
+        xp: 50,
+        isVisible: false,
+        hasClaimed: false,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-apexlegends_1.webp",
       },
       {
         name: "Get 22 kills",
+        category: 1,
         label: "kills",
         current: 11,
         target: 22,
         isPremium: true,
-        xp: 55,
+        isVisible: false,
+        hasClaimed: false,
+        xp: 50,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-apexlegends_2.webp",
       },
@@ -2011,21 +2017,27 @@ export const dataGames = [
     missions: [
       {
         name: "Get 22 kills",
+        category: 1,
         label: "kills",
         current: 11,
         target: 22,
         isPremium: false,
-        xp: 55,
+        xp: 50,
+        isVisible: false,
+        hasClaimed: false,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_1.webp",
       },
       {
         name: "Get 22 kills",
+        category: 1,
         label: "kills",
         current: 11,
         target: 22,
         isPremium: true,
-        xp: 55,
+        xp: 50,
+        isVisible: false,
+        hasClaimed: false,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_2.webp",
       },
@@ -2053,21 +2065,29 @@ export const dataGames = [
     missions: [
       {
         name: "Get 22 kills",
+        category: 1,
+        category: 1,
         label: "kills",
         current: 11,
         target: 22,
         isPremium: false,
-        xp: 55,
+        xp: 50,
+        isVisible: false,
+        hasClaimed: false,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-dota2_1.webp",
       },
       {
         name: "Get 22 kills",
+        category: 1,
+        category: 1,
         label: "kills",
         current: 11,
         target: 22,
         isPremium: true,
-        xp: 55,
+        xp: 50,
+        isVisible: false,
+        hasClaimed: false,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-dota2_2.webp",
       },
@@ -2095,21 +2115,29 @@ export const dataGames = [
     missions: [
       {
         name: "Get 22 kills",
+        category: 1,
+        category: 1,
         label: "kills",
         current: 11,
         target: 22,
         isPremium: false,
-        xp: 55,
+        xp: 50,
+        isVisible: false,
+        hasClaimed: false,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-leagueoflegends_1.webp",
       },
       {
         name: "Get 22 kills",
+        category: 1,
+        category: 1,
         label: "kills",
         current: 11,
         target: 22,
         isPremium: true,
-        xp: 55,
+        xp: 50,
+        isVisible: false,
+        hasClaimed: false,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-leagueoflegends_2.webp",
       },
@@ -2137,21 +2165,27 @@ export const dataGames = [
     missions: [
       {
         name: "Get 22 kills",
+        category: 1,
         label: "kills",
         current: 11,
         target: 22,
         isPremium: false,
-        xp: 55,
+        xp: 50,
+        isVisible: false,
+        hasClaimed: false,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_1.webp",
       },
       {
         name: "Get 22 kills",
+        category: 1,
         label: "kills",
         current: 11,
         target: 22,
         isPremium: true,
-        xp: 55,
+        xp: 50,
+        isVisible: false,
+        hasClaimed: false,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_2.webp",
       },
