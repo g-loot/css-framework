@@ -174,7 +174,7 @@ export default function Carousel(props) {
                 className={`carousel-slide ${
                   slideNumber === slideIndex ? "is-active" : ""
                 }`}
-                key={slide}
+                key={slideIndex}
               >
                 <div className="carousel-image">
                   <span style={{ backgroundImage: `url(${slide.image})` }} />
@@ -207,7 +207,7 @@ export default function Carousel(props) {
             {slides.map((item, itemIndex) => (
               <>
                 <li
-                  key={item}
+                  key={itemIndex}
                   className={`${slideNumber === itemIndex ? "is-active" : ""}`}
                 >
                   <button

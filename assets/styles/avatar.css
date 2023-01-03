@@ -157,8 +157,8 @@
     --inner-padding-one: 0.2rem;
     --inner-padding-two: 0.2rem/2;
     @apply
-    h-8
-    w-8
+    h-9
+    w-9
     ;
     > div {
       > * {

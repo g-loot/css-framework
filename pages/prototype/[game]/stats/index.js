@@ -405,13 +405,11 @@ export default function Stats() {
                         </div>
                       </div>
                       <div className="leading-tight">
-                        <div className="flex gap-2 items-center">
-                          <div className="h5">
-                            {prototype.getUserByID(1)?.nickname}
-                          </div>
-                          <div className="rounded bg-gradient-to-b from-ui-100/20 to-ui-100/5 text-xs lg:text-sm uppercase p-1">
-                            #8961
-                          </div>
+                        <div className="h5">
+                          {prototype.getUserByID(1)?.nickname}
+                        </div>
+                        <div>
+                          riotname<span className="text-sm text-ui-300">#8492</span>
                         </div>
                         <div className="text-ui-300 uppercase text-xs lg:text-sm">
                           <span className="">Match played:</span>{" "}

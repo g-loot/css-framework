@@ -316,12 +316,15 @@ export default function TopbarNew() {
                 >
                   <button
                     type="button"
-                    className="w-8 button button-ghost rounded-full"
+                    className="w-9 button button-ghost rounded-full"
                   >
-                      <div className="pointer-events-none absolute inset-0 !m-0 rounded-full">
-                        <i className="absolute inset-0 rounded-full border-t-4 border-t-main/0 border-l border-l-main/40 animate-rotate" style={{ animationDuration: '4s' }} />
-                      </div>
-                      <span className="icon icon-xp-symbol scale-150 text-ui-200" />
+                    <div className="pointer-events-none absolute inset-0 !m-0 rounded-full">
+                      <i
+                        className="absolute inset-0 rounded-full border-t-2 border-t-main/0 border-l border-l-main/40 animate-rotate"
+                        style={{ animationDuration: "4s" }}
+                      />
+                    </div>
+                    <span className="icon icon-xp-symbol scale-150 text-ui-200" />
                   </button>
                 </div>
 
@@ -331,29 +334,25 @@ export default function TopbarNew() {
                 >
                   <div className="p-3">
                     <ul className="menu rounded-lg divide-y divide-ui-600 text-left text-sm">
-                      <li
-                        className="flex gap-2 py-1 items-center"
-                      >
+                      <li className="flex gap-2 py-1 items-center">
                         <span className="icon icon-lightning text-main icon-20" />
                         <span className="flex-1">Premium Boost</span>
                         <span className="font-bold text-main text-base text-right">
                           +50%
                         </span>
                       </li>
-                      <li
-                        className="flex gap-2 py-1 items-center"
-                      >
+                      <li className="flex gap-2 py-1 items-center">
                         <span className="icon icon-lightning text-main icon-20" />
                         <span className="flex-1">Clan Boost</span>
                         <span className="font-bold text-main text-base text-right">
                           +10%
                         </span>
                       </li>
-                      <li
-                        className="flex gap-2 py-1 items-center"
-                      >
+                      <li className="flex gap-2 py-1 items-center">
                         <span className="icon icon-lightning text-main icon-20" />
-                        <span className="flex-1">New user Boost (2 days left)</span>
+                        <span className="flex-1">
+                          New user Boost (2 days left)
+                        </span>
                         <span className="font-bold text-main text-base text-right">
                           +5%
                         </span>
@@ -380,7 +379,7 @@ export default function TopbarNew() {
                 </div>
               </Tooltip>
 
-              <div className="flex gap-x-3 items-stretch justify-center bg-ui-700 h-8 min-w-[2.25rem] xl:px-3 rounded-full hoverhighlight">
+              <div className="flex gap-x-3 items-stretch justify-center bg-ui-700 min-w-[2.25rem] h-9 xl:px-3 rounded-full">
                 <div className="inline-flex xl:hidden items-center">
                   <Tooltip
                     placement="bottom"
@@ -397,7 +396,7 @@ export default function TopbarNew() {
                     </Link>
                   </Tooltip>
                 </div>
-                <div className="hidden xl:flex items-center gap-x-3">
+                <div className="hidden xl:flex items-center gap-x-3 hoverhighlight">
                   <div className="inline-flex">
                     <Tooltip
                       tooltip={

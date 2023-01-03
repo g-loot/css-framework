@@ -10,7 +10,7 @@ export default function ModalClaimMission(props) {
   const uiContext = useContext(UiContext);
   const mission = props.mission;
   const variablesContext = useContext(VariablesContext);
-  const xp = mission.xp !== undefined ? mission.xp : 60;
+  const xp = mission.xp !== undefined ? mission.xp : 50;
   const [submitting, setSubmitting] = useState(false);
   function closeModalWithDelay() {
     setSubmitting(true);
@@ -53,7 +53,7 @@ export default function ModalClaimMission(props) {
                   <span className="icon icon-check text-main icon-20" />
                   <span className="flex-1">Mission completed</span>
                   <span className="font-bold text-main text-lg text-right">
-                    {mission.xp} XP
+                    {xp} XP
                   </span>
                 </li>
                 <li
