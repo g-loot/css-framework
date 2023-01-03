@@ -69,7 +69,7 @@ export default function ComponentRewardLadder() {
       {isPremium ? (
         <div className="mb-2 mx-4 sm:mx-0">
           <p className="text-sm text-ui-300">
-            As a <b className="text-ui-100">Premium user</b>, you currently earn an additional <b className="text-ui-100">50% XP</b> for each completed Mission and Brawl round.
+            As a <b className="text-ui-100">Premium user</b>, you currently earn an additional <b className="text-ui-100">50% XP</b> for each completed Mission and registered Brawl match.
           </p>
         </div>
       ) : (
@@ -78,7 +78,7 @@ export default function ComponentRewardLadder() {
             <Link href="/prototype/premium">
               <a className="text-premium-500 link">Premium</a>
             </Link>{" "}
-            users earn an additional 50% XP for each completed Mission and Brawl round.
+            users earn an additional 50% XP for each completed Mission and registered Brawl match.
           </p>
         </div>
       )}
