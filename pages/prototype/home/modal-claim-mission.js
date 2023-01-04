@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion-5.json";
+import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
 import { UiContext } from "../../../contexts/ui.js";
 import { VariablesContext } from "../../../contexts/variables";
 import AnimatedNumber from "../../../components/AnimatedNumber/AnimatedNumber";

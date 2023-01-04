@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import Lottie from "lottie-react";
 import LottieExplosion1 from "../../../../../assets/animations/explosion-4.json";
-import LottieExplosion2 from "../../../../../assets/animations/explosion-2.json";
+import LottieExplosion2 from "../../../../../assets/animations/explosion_stryda_1.json";
 import { VariablesContext } from "../../../../../contexts/variables";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 
@@ -75,7 +75,7 @@ export default function BrawlPlacementItem(props) {
       <Tooltip
         className="perspective shrink-0 ml-4 my-4 last:mr-20 animate-slide-in-right animate-delay"
         tooltip={
-          variablesContext.brawlStep >= props.item?.step && isPremium && resultsDone
+          variablesContext.brawlStep >= props.item?.step && resultsDone
             ? premiumTooltip
             : undefined
         }
@@ -125,7 +125,7 @@ export default function BrawlPlacementItem(props) {
             {variablesContext.brawlStep >= props.item?.step && (
               <div className="absolute z-10 inset-x-0 top-0 bottom-1 flex items-center justify-center lottie-blur">
                 <Lottie animationData={LottieExplosion1} loop={false} />
-                <Lottie animationData={LottieExplosion2} loop={false} />
+                <Lottie animationData={LottieExplosion2} loop={false} className="-mr-5" />
               </div>
             )}
             <div
