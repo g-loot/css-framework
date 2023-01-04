@@ -388,7 +388,7 @@ export default function Chat(props) {
                             <div
                               className={`avatar avatar-circle avatar-sm ${
                                 prototype.getUserByID(message.author)?.isPremium
-                                  ? "avatar-gold"
+                                  ? "avatar-premium"
                                   : ""
                               }`}
                             >
@@ -420,7 +420,7 @@ export default function Chat(props) {
                             <span
                               className={`leading-none text-sm interactive ${
                                 prototype.getUserByID(message.author)?.isPremium
-                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  ? "text-premium-500"
                                   : ""
                               }`}
                             >

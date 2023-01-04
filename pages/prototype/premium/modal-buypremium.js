@@ -93,14 +93,14 @@ export default function ModalBuyPremium(props) {
                         : ""
                     } ${
                       item.special === "mostpopular"
-                        ? "border border-ui-700 bg-main"
+                        ? "border border-ui-700 bg-premium-500"
                         : ""
                     } ${!item.special ? "surface" : ""}`}
                     style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                   >
                     <div className="px-2 pb-3 pt-2 text-center font-bold">
                       {item.special === "bestvalue" && (
-                        <span className="text-gold-500">Best value</span>
+                        <span className="text-premium-500">Best value</span>
                       )}
                       {item.special === "mostpopular" && (
                         <span className="text-ui-800">Most popular</span>
@@ -123,7 +123,7 @@ export default function ModalBuyPremium(props) {
                               <span className="line-through text-ui-300">
                                 {item.previousAmount}
                               </span>
-                              <span className="text-main">
+                              <span className="text-premium-500">
                                 {item.amount}
                               </span>
                             </div>
@@ -145,7 +145,7 @@ export default function ModalBuyPremium(props) {
 
                       <div className="border-t border-ui-700 mt-3 pt-3">
                         <button
-                          className={`button button-primary w-full ${
+                          className={`button button-premium w-full ${
                             submitting ? "is-loading" : ""
                           }`}
                           onClick={closeModalWithDelay}

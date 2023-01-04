@@ -1,10 +1,12 @@
 import React, { useContext, useState } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
+import LottieExplosion from "../../../assets/animations/explosion_stryda_2.json";
 import { UiContext } from "../../../contexts/ui.js";
 import { VariablesContext } from "../../../contexts/variables";
 import AnimatedNumber from "../../../components/AnimatedNumber/AnimatedNumber";
+import { useRouter } from "next/router";
+import XPBoostList from "../../../components/XPBoostList/XPBoostList";
 
 export default function ModalClaimMission(props) {
   const uiContext = useContext(UiContext);
@@ -12,6 +14,17 @@ export default function ModalClaimMission(props) {
   const variablesContext = useContext(VariablesContext);
   const xp = 50; //mission.xp !== undefined ? mission.xp : 50;
   const [submitting, setSubmitting] = useState(false);
+  const { query } = useRouter();
+  const isPremium = query.premium === "true" ? true : false;
+
+  function percent() {
+    if (isPremium) {
+      return 1.65;
+    } else {
+      return 1.15;
+    }
+  }
+
   function closeModalWithDelay() {
     setSubmitting(true);
 
@@ -42,58 +55,17 @@ export default function ModalClaimMission(props) {
           </button>
           <div className="modal-content">
             <div className="modal-body text-center">
-              <h2 className="modal-title animate-slide-in-top">
+              <h2 className="modal-title animate-slide-in-top mb-6">
                 Congratulations
               </h2>
-              <ul className="rounded-lg divide-y divide-ui-700 mt-4 text-left">
-                <li
-                  className="flex gap-3 py-1 items-center animate-slide-in-bottom animate-delay"
-                  style={{ "--delay": "calc( 2 * 0.15s)" }}
-                >
-                  <span className="icon icon-check text-main icon-20" />
-                  <span className="flex-1">Mission completed</span>
-                  <span className="font-bold text-main text-lg text-right">
-                    {xp} XP
-                  </span>
-                </li>
-                <li
-                  className="flex gap-3 py-1 items-center animate-slide-in-bottom animate-delay"
-                  style={{ "--delay": "calc( 3 * 0.15s)" }}
-                >
-                  <span className="icon icon-e-add text-main icon-20" />
-                  <span className="flex-1">Premium boost</span>
-                  <span className="font-bold text-main text-lg text-right">
-                    +50%
-                  </span>
-                </li>
-                <li
-                  className="flex gap-3 py-1 items-center animate-slide-in-bottom animate-delay"
-                  style={{ "--delay": "calc( 4 * 0.15s)" }}
-                >
-                  <span className="icon icon-e-add text-main icon-20" />
-                  <span className="flex-1">Clan boost</span>
-                  <span className="font-bold text-main text-lg text-right">
-                    +10%
-                  </span>
-                </li>
-                <li
-                  className="flex gap-3 py-1 items-center animate-slide-in-bottom animate-delay"
-                  style={{ "--delay": "calc( 5 * 0.15s)" }}
-                >
-                  <span className="icon icon-e-add text-main icon-20" />
-                  <span className="flex-1">New user boost</span>
-                  <span className="font-bold text-main text-lg text-right">
-                    +5%
-                  </span>
-                </li>
-              </ul>
+              <XPBoostList isAnimated={true} />
               <div
                 className=" animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc( 6 * 0.15s)" }}
               >
                 <div className="flex gap-4 justify-center items-center mx-auto">
                   <div className="text-5xl text-gold-500 w-20 text-right">
-                    <AnimatedNumber number={xp * 1.65} />
+                    <AnimatedNumber number={xp * percent()} />
                   </div>
                   <span className="icon icon-xp-symbol-outline text-8xl text-gold-500" />
                 </div>
@@ -102,7 +74,7 @@ export default function ModalClaimMission(props) {
                     className="progressbar progressbar-secondary w-full"
                     style={{
                       "--percent": 1200,
-                      "--progress": 1200 + xp * 1.65,
+                      "--progress": 1200 + xp * percent(),
                     }}
                   >
                     <div />
@@ -110,7 +82,7 @@ export default function ModalClaimMission(props) {
                   </div>
                   <div className="flex-none mb-0.5 w-24 text-ui-300 text-sm text-right">
                     <span>
-                      Total XP: <AnimatedNumber number={1200 + xp * 1.65} />
+                      Total XP: <AnimatedNumber number={1200 + xp * percent()} />
                     </span>
                   </div>
                 </div>

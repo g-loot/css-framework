@@ -304,7 +304,7 @@ export default function Home() {
                                     className={`avatar avatar-xs avatar-circle ${
                                       prototype.getUserByID(item.user)
                                         ?.isPremium
-                                        ? "avatar-gold"
+                                        ? "avatar-premium"
                                         : ""
                                     }`}
                                   >
@@ -322,7 +322,7 @@ export default function Home() {
                                     className={`${
                                       prototype.getUserByID(item.user)
                                         ?.isPremium
-                                        ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                        ? "text-premium-500"
                                         : ""
                                     }`}
                                   >

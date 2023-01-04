@@ -53,9 +53,8 @@ button {
     ;
   }
 
-  &:not(.button-secondary):not(.button-tertiary):not(.button-ghost):not(.button-error):not(.button-success),
+  &:not(.button-secondary):not(.button-tertiary):not(.button-ghost):not(.button-error):not(.button-success):not(.button-premium),
   &.button-primary,
-  &.button-premium,
   &.button-claim {
     @apply
     bg-interaction-500
@@ -234,6 +233,27 @@ button {
       &:active {
         @apply
         outline-success-300
+        ;
+      }
+    }
+  }
+  &.button-premium {
+    @apply 
+    bg-premium-500
+    ;
+
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        bg-premium-300
+        ;
+      }
+      &:focus-visible,
+      &:active {
+        @apply
+        outline-premium-300
         ;
       }
     }

@@ -181,9 +181,8 @@ export default function Home() {
           />
         </section>
 
-        <h2 className="h3 mb-4 mx-4 sm:mx-0">Missions</h2>
-
         <ComponentRewardLadder />
+        <h2 className="h3 mt-8 mx-4 sm:mx-0">Missions</h2>
         <HomeBrawlMissions gameSlug="valorant" />
         <HomeBrawlMissions gameSlug="pubg" />
 

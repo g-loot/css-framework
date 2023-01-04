@@ -462,7 +462,7 @@
   &.chip-reward {
     @apply 
     bg-ui-700
-    text-premium-500
+    text-gold-500
     py-0
     pr-1
     shadow-[inset_0_0_0_1px_rgb(var(--color-ui-500))]
@@ -493,7 +493,7 @@
       &:focus-visible {
         @apply
         bg-ui-600
-        text-premium-300
+        text-gold-300
         ;
       }
     }
@@ -501,22 +501,22 @@
     &.chip-inverted {
       @apply 
       bg-gradient-to-b
-      from-premium-700
-      via-premium-300
-      to-premium-500
+      from-gold-700
+      via-gold-300
+      to-gold-500
       text-ui-800
-      shadow-[inset_0_0_0_1px_rgb(var(--color-premium-300))]
+      shadow-[inset_0_0_0_1px_rgb(var(--color-gold-300))]
       ;
 
       > * {
-        text-shadow: 0 1px 0.25px rgb(var(--color-premium-300));
+        text-shadow: 0 1px 0.25px rgb(var(--color-gold-300));
       }
       &:not([disabled]),
       &:not(.is-disabled) {
         &:hover,
         &:focus-visible {
           @apply
-          bg-premium-300
+          bg-gold-300
           text-ui-900
           ;
         }
@@ -543,13 +543,6 @@
     
 
     &.chip-xp {
-      &:not(.chip-ghost):not(.chip-inverted) {
-        > * {
-          @apply
-          text-ui-200
-          ;
-        }
-      }
       > .icon[class*=xp-symbol] {
         @apply
         text-3xl
@@ -686,7 +679,7 @@
     &.chip-neutral {
       &:not(.chip-inverted){
         @apply 
-        text-ui-300
+        text-ui-200
         ;
       }
       &.chip-inverted {

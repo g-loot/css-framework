@@ -30,7 +30,7 @@ const DSpage = () => {
                       tooltip={
                         <div className="w-56 flex gap-4 text-sm">
                           <div className="relative -mt-3">
-                            <span className="icon icon-xp-symbol-outline text-6xl text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
+                            <span className="icon icon-xp-symbol-outline text-6xl text-premium-500" />
                             <div className="lottie-blur absolute -inset-1">
                               <Lottie
                                 animationData={LottieExplosion}
@@ -285,7 +285,7 @@ const DSpage = () => {
                       tooltip={
                         <div className="w-56 flex gap-4 text-sm">
                           <div className="relative -mt-3">
-                            <span className="icon icon-xp-symbol-outline text-6xl text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
+                            <span className="icon icon-xp-symbol-outline text-6xl text-premium-500" />
                             <div className="lottie-blur absolute -inset-1">
                               <Lottie
                                 animationData={LottieExplosion}

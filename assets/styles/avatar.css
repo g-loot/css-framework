@@ -211,6 +211,13 @@
     to-bronze-300
     ;
   }
+  &.avatar-premium > div {
+    @apply
+    from-premium-300
+    via-premium-700
+    to-premium-300
+    ;
+  }
 
   /* rank */
 

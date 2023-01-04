@@ -175,7 +175,7 @@ export default function TabBrawlsSoloLeaderboards() {
                             <a
                               className={`text-xs interactive ${
                                 prototype.getUserByID(2).isPremium
-                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  ? "text-premium-500"
                                   : "text-ui-300"
                               }`}
                             >
@@ -195,7 +195,7 @@ export default function TabBrawlsSoloLeaderboards() {
                             <a
                               className={`text-xs interactive ${
                                 prototype.getUserByID(3).isPremium
-                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  ? "text-premium-500"
                                   : "text-ui-300"
                               }`}
                             >
@@ -215,7 +215,7 @@ export default function TabBrawlsSoloLeaderboards() {
                             <a
                               className={`text-xs interactive ${
                                 prototype.getUserByID(4).isPremium
-                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  ? "text-premium-500"
                                   : "text-ui-300"
                               }`}
                             >
@@ -235,7 +235,7 @@ export default function TabBrawlsSoloLeaderboards() {
                             <a
                               className={`text-xs interactive ${
                                 prototype.getUserByID(5).isPremium
-                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  ? "text-premium-500"
                                   : "text-ui-300"
                               }`}
                             >

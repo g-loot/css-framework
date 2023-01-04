@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion-1.json";
+import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
 import Tooltip from "../Tooltip/Tooltip";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -8,6 +8,7 @@ import { VariablesContext } from "../../contexts/variables";
 import Countdown from "../Countdown/Countdown";
 import ModalClaimMission from "../../pages/prototype/home/modal-claim-mission";
 import { UiContext } from "../../contexts/ui";
+import XPBoostList from "../XPBoostList/XPBoostList";
 
 export default function CardMissionSecondary(props) {
   const prototype = usePrototypeData();
@@ -177,24 +178,7 @@ export default function CardMissionSecondary(props) {
                 {isPremium ? (
                   <Tooltip
                     placement="top"
-                    tooltip={
-                      <ul className="w-56 rounded-lg text-left text-sm">
-                        <li className="flex gap-2 py-0.5 items-center">
-                          <span className="icon icon-check text-main text-xs" />
-                          <span className="flex-1">Mission completed</span>
-                          <span className="font-bold text-main text-right">
-                            {mission.xp} XP
-                          </span>
-                        </li>
-                        <li className="flex gap-2 py-0.5 items-center">
-                          <span className="icon icon-e-add text-main text-xs" />
-                          <span className="flex-1">Premium boost</span>
-                          <span className="font-bold text-main text-right">
-                            +50%
-                          </span>
-                        </li>
-                      </ul>
-                    }
+                    tooltip={<XPBoostList size="sm" xp={mission.xp} />}
                   >
                     <div className="chip chip-reward chip-xp chip-inverted chip-sm">
                       <span>{Math.round(mission.xp * 1.65)}</span>
@@ -202,40 +186,52 @@ export default function CardMissionSecondary(props) {
                     </div>
                   </Tooltip>
                 ) : (
-                  <Tooltip
-                    placement="top"
-                    tooltip={
-                      <div className="w-56 flex gap-4 text-sm">
-                        <div className="relative -mt-3">
-                          <span className="icon icon-crown text-6xl text-premium-500" />
-                          <div className="lottie-blur absolute -inset-1">
-                            <Lottie
-                              animationData={LottieExplosion}
-                              loop={false}
-                              autoplay={true}
-                            />
-                          </div>
-                        </div>
-                        <div className="flex-1">
-                          Subscribe to Premium to earn an additional{" "}
-                          <span className="text-premium-500">50% XP</span> on
-                          each completed mission.
-                        </div>
-                      </div>
-                    }
-                  >
-                    <div className="flex gap-1 items-center">
+                  <div className="flex gap-1 items-center">
+                    { mission.target === mission.current ? (
+                      <Tooltip
+                      placement="top"
+                      tooltip={<XPBoostList size="sm" xp={mission.xp} />}
+                    >
                       <div className="chip chip-reward chip-xp chip-sm">
                         <span>{mission.xp}</span>
                         <span className="icon icon-xp-symbol" />
                       </div>
-                      <div className="chip chip-reward chip-xp chip-ghost chip-xs">
-                        <span className="icon icon-crown text-sm" />
-                        <span>+{mission.xp / 2}</span>
+                    </Tooltip>
+                    ) : (
+                      <div className="chip chip-reward chip-xp chip-sm chip-neutral">
+                        <span>{mission.xp}</span>
                         <span className="icon icon-xp-symbol" />
                       </div>
-                    </div>
-                  </Tooltip>
+                    )}
+                    <Tooltip
+                      placement="top"
+                      tooltip={
+                        <div className="w-56 flex gap-4 text-sm">
+                          <div className="relative -mt-3">
+                            <span className="icon icon-crown text-6xl text-premium-500" />
+                            <div className="lottie-blur absolute -inset-1">
+                              <Lottie
+                                animationData={LottieExplosion}
+                                loop={false}
+                                autoplay={true}
+                              />
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            Subscribe to Premium to earn an additional{" "}
+                            <span className="text-premium-500">50% XP</span> on
+                            each completed mission.
+                          </div>
+                        </div>
+                      }
+                    >
+                      <div className="chip chip-reward chip-xp chip-ghost chip-xs">
+                        <span className="text-premium-500 icon icon-crown text-sm" />
+                        <span className="text-premium-500 ">+{mission.xp / 2}</span>
+                        <span className="text-premium-500 icon icon-xp-symbol" />
+                      </div>
+                    </Tooltip>
+                  </div>
                 )}
               </div>
               <div>

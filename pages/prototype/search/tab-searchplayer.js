@@ -377,7 +377,7 @@ export default function TabSearchPlayer() {
                         <div className="flex gap-3 items-center self-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
                           <div
                             className={`avatar avatar-xs avatar-circle ${
-                              item.isPremium ? "avatar-gold" : ""
+                              item.isPremium ? "avatar-premium" : ""
                             }`}
                           >
                             <div>
@@ -387,7 +387,7 @@ export default function TabSearchPlayer() {
                           <div
                             className={`${
                               item.isPremium
-                                ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                ? "text-premium-500"
                                 : ""
                             }`}
                           >

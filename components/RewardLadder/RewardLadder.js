@@ -116,7 +116,7 @@ export default function RewardLadder(props) {
                 </div>
                 <div
                   className={`avatar avatar-circle avatar-xs ${
-                    isPremium ? "avatar-gold" : ""
+                    isPremium ? "avatar-premium" : ""
                   }`}
                 >
                   <div>

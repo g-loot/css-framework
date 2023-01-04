@@ -46,13 +46,12 @@
       opacity-100
       outline-none
       ;
-      .menu {
-        > li {
-          @apply
-          translate-y-0
-          opacity-100
-          ;
-        }
+      .menu > li,
+      > * {
+        @apply
+        translate-y-0
+        opacity-100
+        ;
       }
     }
   }
@@ -112,23 +111,21 @@
     top-auto
     origin-bottom
     ;
-    .menu {
-      > li {
-        @apply
-        translate-y-4
-        ;
-      }
+    .menu > li,
+    > * {
+      @apply
+      translate-y-4
+      ;
     }
   }
 }
 
 .dropdown-content.dropdown-top {
-  .menu {
-    > li {
-      @apply
-      translate-y-4
-      ;
-    }
+  .menu > li,
+  > * {
+    @apply
+    translate-y-4
+    ;
   }
 }
 
@@ -146,12 +143,11 @@
       bottom-0
       top-auto
       ;
-      .menu {
-        > li {
-          @apply
-          translate-y-4
-          ;
-        }
+      .menu > li,
+      > * {
+        @apply
+        translate-y-4
+        ;
       }
     }
   }
@@ -210,14 +206,14 @@
     bg-ui-600
     ;
   }
-  .menu {
-    > li {
-      @apply
-      -translate-y-4
-      opacity-0
-      delay-200
-      ;
-    }
+  .menu > li,
+  > * {
+    @apply
+    transition-all
+    -translate-y-4
+    opacity-0
+    delay-200
+    ;
   }
   &.dropdown-open {
     @apply
@@ -228,13 +224,12 @@
     opacity-100
     outline-none
     ;
-    .menu {
-      > li {
-        @apply
-        translate-y-0
-        opacity-100
-        ;
-      }
+    .menu > li,
+    > * {
+      @apply
+      translate-y-0
+      opacity-100
+      ;
     }
   }
 }
@@ -267,23 +262,21 @@
         top-auto
         origin-bottom
         ;
-        .menu {
-          > li {
-            @apply
-            translate-y-4
-            ;
-          }
+        .menu > li,
+        > * {
+          @apply
+          translate-y-4
+          ;
         }
       }
     }
     
     &.sm\:dropdown-content.dropdown-top {
-      .menu {
-        > li {
-          @apply
-          translate-y-4
-          ;
-        }
+      .menu > li,
+      > * {
+        @apply
+        translate-y-4
+        ;
       }
     }
     
@@ -301,12 +294,11 @@
           bottom-0
           top-auto
           ;
-          .menu {
-            > li {
-              @apply
-              translate-y-4
-              ;
-            }
+          .menu > li,
+          > * {
+            @apply
+            translate-y-4
+            ;
           }
         }
       }
@@ -361,23 +353,21 @@
         top-auto
         origin-bottom
         ;
-        .menu {
-          > li {
-            @apply
-            translate-y-4
-            ;
-          }
+        .menu > li,
+        > * {
+          @apply
+          translate-y-4
+          ;
         }
       }
     }
     
     &.md\:dropdown-content.dropdown-top {
-      .menu {
-        > li {
-          @apply
-          translate-y-4
-          ;
-        }
+      .menu > li,
+      > * {
+        @apply
+        translate-y-4
+        ;
       }
     }
     
@@ -395,12 +385,11 @@
           bottom-0
           top-auto
           ;
-          .menu {
-            > li {
-              @apply
-              translate-y-4
-              ;
-            }
+          .menu > li,
+          > * {
+            @apply
+            translate-y-4
+            ;
           }
         }
       }
@@ -455,23 +444,21 @@
         top-auto
         origin-bottom
         ;
-        .menu {
-          > li {
-            @apply
-            translate-y-4
-            ;
-          }
+        .menu > li,
+        > * {
+          @apply
+          translate-y-4
+          ;
         }
       }
     }
     
     &.lg\:dropdown-content.dropdown-top {
-      .menu {
-        > li {
-          @apply
-          translate-y-4
-          ;
-        }
+      .menu > li,
+      > * {
+        @apply
+        translate-y-4
+        ;
       }
     }
     
@@ -489,12 +476,11 @@
           bottom-0
           top-auto
           ;
-          .menu {
-            > li {
-              @apply
-              translate-y-4
-              ;
-            }
+          .menu > li,
+          > * {
+            @apply
+            translate-y-4
+            ;
           }
         }
       }
@@ -549,23 +535,21 @@
         top-auto
         origin-bottom
         ;
-        .menu {
-          > li {
-            @apply
-            translate-y-4
-            ;
-          }
+        .menu > li,
+        > * {
+          @apply
+          translate-y-4
+          ;
         }
       }
     }
     
     &.xl\:dropdown-content.dropdown-top {
-      .menu {
-        > li {
-          @apply
-          translate-y-4
-          ;
-        }
+      .menu > li,
+      > * {
+        @apply
+        translate-y-4
+        ;
       }
     }
     
@@ -583,12 +567,11 @@
           bottom-0
           top-auto
           ;
-          .menu {
-            > li {
-              @apply
-              translate-y-4
-              ;
-            }
+          .menu > li,
+          > * {
+            @apply
+            translate-y-4
+            ;
           }
         }
       }

@@ -4,8 +4,8 @@ import Lottie from "lottie-react";
 import LottieExplosion1 from "../../assets/animations/explosion_stryda_1.json";
 import LottieExplosion10 from "../../assets/animations/explosion-10.json";
 import LottieExplosion11 from "../../assets/animations/explosion-11.json";
-import LottieExplosion2 from "../../assets/animations/explosion-2.json";
-import LottieExplosion3 from "../../assets/animations/explosion-3.json";
+import LottieExplosion2 from "../../assets/animations/explosion_stryda_2.json";
+import LottieExplosion3 from "../../assets/animations/explosion_stryda_3.json";
 import LottieExplosion4 from "../../assets/animations/explosion-4.json";
 import LottieExplosion5 from "../../assets/animations/explosion-5.json";
 import LottieExplosion6 from "../../assets/animations/explosion-6.json";
@@ -31,21 +31,21 @@ const DSpage = () => {
     setStartAnim1(true);
     const timer = setTimeout(() => {
       setStartAnim1(false);
-    }, 1000);
+    }, 4000);
     return () => clearTimeout(timer);
   }
   function handleStartAnim2() {
     setStartAnim2(true);
     const timer = setTimeout(() => {
       setStartAnim2(false);
-    }, 1000);
+    }, 4000);
     return () => clearTimeout(timer);
   }
   function handleStartAnim3() {
     setStartAnim3(true);
     const timer = setTimeout(() => {
       setStartAnim3(false);
-    }, 1000);
+    }, 4000);
     return () => clearTimeout(timer);
   }
   function handleStartAnim4() {

@@ -391,7 +391,7 @@ export default function Stats() {
                       <div
                         className={`avatar avatar-sm avatar-circle ${
                           prototype.getUserByID(1)?.avatar.isPremium
-                            ? "avatar-gold"
+                            ? "avatar-premium"
                             : ""
                         }`}
                       >

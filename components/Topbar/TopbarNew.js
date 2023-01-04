@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 
 import Link from "next/link";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion-1.json";
+import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
 import ModalDownloadStarted from "../../pages/prototype/modal-downloadstarted";
 import Tooltip from "../Tooltip/Tooltip";
 import { UiContext } from "../../contexts/ui";
@@ -12,6 +12,7 @@ import Notification from "../Notification/Notification";
 import { VariablesContext } from "../../contexts/variables";
 import TopBarClaim from "../TopBarClaim/TopBarClaim";
 import ModalBuyTokens from "../../pages/prototype/wallet/modal-buytokens";
+import Countdown from "../Countdown/Countdown";
 
 const notificationsGroups = [
   {
@@ -187,6 +188,7 @@ export default function TopbarNew() {
   const isEmpty = query.empty === "true" ? true : false;
   const modalDownloadStarted =
     query.modaldownloadstarted === "true" ? true : false;
+  const isPremium = query.premium === "true" ? true : false;
 
   useEffect(() => {
     if (modalDownloadStarted) {
@@ -316,15 +318,17 @@ export default function TopbarNew() {
                 >
                   <button
                     type="button"
-                    className="w-9 button button-ghost rounded-full"
+                    className="w-[34px] button button-ghost rounded-full"
                   >
-                    <div className="pointer-events-none absolute inset-0 !m-0 rounded-full">
+                    <div className="pointer-events-none absolute -inset-1 !m-0 rounded-full">
                       <i
                         className="absolute inset-0 rounded-full border-t-2 border-t-main/0 border-l border-l-main/40 animate-rotate"
                         style={{ animationDuration: "4s" }}
                       />
                     </div>
-                    <span className="icon icon-xp-symbol scale-150 text-ui-200" />
+                    <span className="text-sm font-bold text-ui-200 pl-px">
+                      {isPremium ? <>55%</> : <>15%</>}
+                    </span>
                   </button>
                 </div>
 
@@ -332,33 +336,49 @@ export default function TopbarNew() {
                   tabIndex="1"
                   className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[300px] overflow-hidden rounded-xl shadow-xl"
                 >
-                  <div className="p-3">
-                    <ul className="menu rounded-lg divide-y divide-ui-600 text-left text-sm">
+                  <ul className="rounded-lg text-left text-sm p-2 leading-none">
+                    {isPremium ? (
                       <li className="flex gap-2 py-1 items-center">
-                        <span className="icon icon-lightning text-main icon-20" />
-                        <span className="flex-1">Premium boost</span>
-                        <span className="font-bold text-main text-base text-right">
-                          +50%
-                        </span>
+                        <div className="icon-20 icon icon-lightning text-premium-500" />
+                        <div className="flex-1">Premium boost</div>
+                        <div className="text-right text-premium-500">+50%</div>
                       </li>
-                      <li className="flex gap-2 py-1 items-center">
-                        <span className="icon icon-lightning text-main icon-20" />
-                        <span className="flex-1">Clan boost</span>
-                        <span className="font-bold text-main text-base text-right">
-                          +10%
-                        </span>
+                    ) : (
+                      <li className="flex gap-2 py-1 items-center text-ui-400">
+                        <div className="icon-20 icon icon-lightning" />
+                        <div className="flex-1 line-through">Premium boost</div>
+                        <div className="text-right line-through">+50%</div>
                       </li>
-                      <li className="flex gap-2 py-1 items-center">
-                        <span className="icon icon-lightning text-main icon-20" />
-                        <span className="flex-1">
-                          New user boost (2 days left)
-                        </span>
-                        <span className="font-bold text-main text-base text-right">
-                          +5%
-                        </span>
-                      </li>
-                    </ul>
-                  </div>
+                    )}
+                    <li className="flex gap-2 py-1 items-center">
+                      <div className="icon-20 icon icon-lightning text-main" />
+                      <div className="flex-1">Clan boost</div>
+                      <div className="text-right line-through text-main">
+                        +10%
+                      </div>
+                    </li>
+                    <li className="separator bg-ui-600" />
+                    <li className="flex gap-2 py-1 items-center">
+                      <div className="icon-20 icon icon-lightning text-main" />
+                      <div className="flex-1 flex-col">
+                        <div>New user boost</div>
+                        <div>
+                          <Countdown
+                            separator={":"}
+                            hasDays={true}
+                            hasHours={true}
+                            hasMinutes={true}
+                            hasSeconds={true}
+                            hasLabels={false}
+                            labelsAbbr={false}
+                            labelClassName=""
+                            className="text-xs text-main"
+                          />
+                        </div>
+                      </div>
+                      <div className="text-right text-main">+5%</div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 

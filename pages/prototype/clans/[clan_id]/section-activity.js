@@ -335,7 +335,7 @@ export default function SectionClanActivity() {
                             <span
                               className={`${
                                 prototype.getUserByID(user)?.isPremium
-                                  ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                  ? "text-premium-500"
                                   : ""
                               }`}
                             >

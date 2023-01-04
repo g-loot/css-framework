@@ -322,7 +322,7 @@ export default function TabBrawlsSoloLeaderboards() {
 
               <div className="w-full mb-4 surface rounded-lg p-4 text-center relative z-0">
                 <div>
-                  <span className="icon icon-xp-symbol-outline text-[6rem] -mt-4 -mb-6 text-gradient bg-gradient-to-b from-premium-300 to-premium-700" />
+                  <span className="icon icon-xp-symbol-outline text-[6rem] -mt-4 -mb-6 text-main" />
                 </div>
 
                 {isPremium ? (
@@ -802,7 +802,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                                       prototype.getUserByID(
                                                         user.user
                                                       )?.isPremium
-                                                        ? "avatar-gold"
+                                                        ? "avatar-premium"
                                                         : ""
                                                     }`}
                                                   >
@@ -833,7 +833,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                                         prototype.getUserByID(
                                                           user.user
                                                         )?.isPremium
-                                                          ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                                                          ? "text-premium-500"
                                                           : ""
                                                       }`}
                                                     >

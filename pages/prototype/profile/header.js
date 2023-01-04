@@ -56,7 +56,7 @@ export default function HomeHeader(props) {
               <div className="flex flex-col md:flex-row gap-4 md:items-center self-center">
                 <div
                   className={`avatar avatar-xl avatar-circle ${
-                    selectedUser.isPremium ? "avatar-gold" : ""
+                    selectedUser.isPremium ? "avatar-premium" : ""
                   }`}
                 >
                   <div>
@@ -69,7 +69,7 @@ export default function HomeHeader(props) {
                       <h1
                         className={`${
                           selectedUser.isPremium
-                            ? "text-gradient bg-gradient-to-b from-premium-300 to-premium-700"
+                            ? "text-premium-500"
                             : ""
                         }`}
                       >

@@ -5,6 +5,7 @@ import LottieExplosion1 from "../../../../../assets/animations/explosion-4.json"
 import LottieExplosion2 from "../../../../../assets/animations/explosion_stryda_1.json";
 import { VariablesContext } from "../../../../../contexts/variables";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
+import XPBoostList from "../../../../../components/XPBoostList/XPBoostList";
 
 export default function BrawlPlacementItem(props) {
   const variablesContext = useContext(VariablesContext);
@@ -68,22 +69,19 @@ export default function BrawlPlacementItem(props) {
     }
   }
 
-  const premiumTooltip = <ul className="rounded-lg text-left text-sm text-ui-300"><li className="flex gap-2 py-0.5 items-center"><span className="icon icon-check text-main text-xs" /><span className="flex-1">Brawl match</span><span className="font-bold text-main text-right">300 XP</span></li><li className="flex gap-2 py-0.5 items-center"><span className="icon icon-e-add text-main text-xs" /><span className="flex-1">Premium</span><span className="font-bold text-main text-right">+50%</span></li></ul>;
-
   return (
     <>
       <Tooltip
         className="perspective shrink-0 ml-4 my-4 last:mr-20 animate-slide-in-right animate-delay"
         tooltip={
-          variablesContext.brawlStep >= props.item?.step && resultsDone
-            ? premiumTooltip
-            : undefined
+          variablesContext.brawlStep >= props.item?.step ? (
+            <XPBoostList size="sm" xp={300} type="Brawl match" />
+          ) : undefined
         }
         style={{
           "--delay": "calc((" + props.item?.step + ") * 0.05s)",
         }}
       >
-        
         <div
           className={`w-44 h-16 flip flip-vertical animate-delay ${
             variablesContext.brawlStep >= props.item?.step ? "animate-flip" : ""
@@ -125,7 +123,11 @@ export default function BrawlPlacementItem(props) {
             {variablesContext.brawlStep >= props.item?.step && (
               <div className="absolute z-10 inset-x-0 top-0 bottom-1 flex items-center justify-center lottie-blur">
                 <Lottie animationData={LottieExplosion1} loop={false} />
-                <Lottie animationData={LottieExplosion2} loop={false} className="-mr-5" />
+                <Lottie
+                  animationData={LottieExplosion2}
+                  loop={false}
+                  className="-mr-5"
+                />
               </div>
             )}
             <div
@@ -176,50 +178,21 @@ export default function BrawlPlacementItem(props) {
                     </span>
                     <span>pts</span>
                   </div>
-                  {isPremium ? (
-                    <div
-                      className={`flex text-sm items-center gap-1 text-ui-100 animate-slide-in-right animate-delay`}
-                      style={{ "--delay": "calc(2 * 0.05s)" }}
+                  <div
+                    className={`flex text-sm items-center gap-1 ${isPremium ? 'text-ui-100' : 'text-ui-300'} animate-slide-in-right animate-delay`}
+                    style={{ "--delay": "calc(2 * 0.05s)" }}
+                  >
+                    <span className="text-right">
+                      {isPremium ? <>450</> : <>300</>}
+                    </span>
+                    <span>XP</span>
+                    <button
+                      type="button"
+                      className="button button-xs button-ghost rounded-full -mx-1.5"
                     >
-                      <span className="text-right">+450</span>
-                      <span>XP</span>
-                      <Tooltip
-                        tooltip={
-                          <ul className="rounded-lg text-left text-sm text-ui-300">
-                            <li className="flex gap-2 py-0.5 items-center">
-                              <span className="icon icon-check text-main text-xs" />
-                              <span className="flex-1">Brawl match</span>
-                              <span className="font-bold text-main text-right">
-                                300 XP
-                              </span>
-                            </li>
-                            <li className="flex gap-2 py-0.5 items-center">
-                              <span className="icon icon-e-add text-main text-xs" />
-                              <span className="flex-1">Premium</span>
-                              <span className="font-bold text-main text-right">
-                                +50%
-                              </span>
-                            </li>
-                          </ul>
-                        }
-                      >
-                        <button
-                          type="button"
-                          className="button button-xs button-ghost rounded-full -mx-1.5"
-                        >
-                          <span className="icon icon-c-info" />
-                        </button>
-                      </Tooltip>
-                    </div>
-                  ) : (
-                    <div
-                      className={`flex text-sm items-center gap-1 animate-slide-in-right animate-delay`}
-                      style={{ "--delay": "calc(2 * 0.05s)" }}
-                    >
-                      <span className="text-right">+300</span>
-                      <span>XP</span>
-                    </div>
-                  )}
+                      <span className="icon icon-c-info" />
+                    </button>
+                  </div>
                 </>
               )}
               {!resultsDone && (

@@ -28,16 +28,6 @@
     ;
   }
 
-  :where(li).separator {
-    @apply
-    bg-ui-700
-    h-px
-    w-full
-    my-2
-    select-none
-    ;
-  }
-
   :where(a, button, div) {
     @apply
     relative
@@ -212,6 +202,21 @@
         ;
       }
     }
+  }
+}
+
+li.separator {
+  @apply
+  block
+  h-px
+  w-full
+  my-2
+  select-none
+  ;
+  &:not([class*='bg-']) {
+    @apply
+    bg-ui-700
+    ;
   }
 }
 
