@@ -49,17 +49,17 @@ body {
   --color-blue-500: 80 130 242;
   --color-blue-700: 55 108 221;
 
-  --color-purple-300: 184 151 233;
-  --color-purple-500: 165 130 216;
-  --color-purple-700: 142 105 195;
+  --color-purple-300: 176 126 255;
+  --color-purple-500: 163 114 255;
+  --color-purple-700: 130 82 209;
 
   --color-teal-300: 105 243 190;
   --color-teal-500: 78 221 166;
   --color-teal-700: 55 204 147;
 
-  --color-attention-300: 255 154 59;
-  --color-attention-500: 245 124 1;
-  --color-attention-700: 221 108 0;
+  --color-attention-300: 255 136 97;
+  --color-attention-500: 243 120 81;
+  --color-attention-700: 209 92 53;
 
   --color-success-300: 105 255 137;
   --color-success-500: 81 243 126;

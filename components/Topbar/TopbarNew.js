@@ -353,7 +353,7 @@ export default function TopbarNew() {
                     <li className="flex gap-2 py-1 items-center">
                       <div className="icon-20 icon icon-lightning text-main" />
                       <div className="flex-1">Clan boost</div>
-                      <div className="text-right line-through text-main">
+                      <div className="text-right text-main">
                         +10%
                       </div>
                     </li>

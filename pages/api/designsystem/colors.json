@@ -117,21 +117,21 @@
           "value": "bg-premium-300",
           "number": "300",
           "data": "brand.premium.light",
-          "hex": "#FED574"
+          "hex": "#B07EFF"
         },
         {
           "name": "Premium Medium",
           "value": "bg-premium-500",
           "number": "500",
           "data": "brand.premium.medium",
-          "hex": "#F3C351"
+          "hex": "#A372FF"
         },
         {
           "name": "Premium Dark",
           "value": "bg-premium-700",
           "number": "700",
           "data": "brand.premium.dark",
-          "hex": "#CCA23D"
+          "hex": "#8252D1"
         }
       ]
     },
@@ -193,21 +193,21 @@
           "value": "bg-purple-300",
           "number": "300",
           "data": "decorative.purple.light",
-          "hex": "#B897E9"
+          "hex": "#B07EFF"
         },
         {
           "name": "Purple Medium",
           "value": "bg-purple-500",
           "number": "500",
           "data": "decorative.purple.medium",
-          "hex": "#A582D8"
+          "hex": "#A372FF"
         },
         {
           "name": "Purple Dark",
           "value": "bg-purple-700",
           "number": "700",
           "data": "decorative.purple.dark",
-          "hex": "#8E69C3"
+          "hex": "#8252D1"
         },
         {
           "name": "Teal Light",
@@ -305,26 +305,48 @@
       "cols": 3,
       "title": "System",
       "title_short": "system",
-      "colors": [{
+      "colors": [
+        {
+          "name": "Error Light",
+          "value": "bg-error-300",
+          "number": "300",
+          "data": "system.error.light",
+          "hex": "#FF5958"
+        },
+        {
+          "name": "Error Main",
+          "value": "bg-error-500",
+          "number": "500",
+          "data": "system.error.main",
+          "hex": "#FF3333"
+        },
+        {
+          "name": "Error Dark",
+          "value": "bg-error-700",
+          "number": "700",
+          "data": "system.error.dark",
+          "hex": "#B32424"
+        },
+        {
           "name": "Attention Light",
           "value": "bg-attention-300",
           "number": "300",
           "data": "system.attention.light",
-          "hex": "#FB8C00"
+          "hex": "#FF8861"
         },
         {
           "name": "Attention Main",
           "value": "bg-attention-500",
           "number": "500",
           "data": "system.attention.main",
-          "hex": "#F57C01"
+          "hex": "#F37851"
         },
         {
           "name": "Attention Dark",
           "value": "bg-attention-700",
           "number": "700",
           "data": "system.attention.dark",
-          "hex": "#EF6C00"
+          "hex": "#D15C35"
         },
         {
           "name": "Success Light",
@@ -367,27 +389,6 @@
           "number": "700",
           "data": "system.info.dark",
           "hex": "#0243A8"
-        },
-        {
-          "name": "Error Light",
-          "value": "bg-error-300",
-          "number": "300",
-          "data": "system.error.light",
-          "hex": "#FF5958"
-        },
-        {
-          "name": "Error Main",
-          "value": "bg-error-500",
-          "number": "500",
-          "data": "system.error.main",
-          "hex": "#FF3333"
-        },
-        {
-          "name": "Error Dark",
-          "value": "bg-error-700",
-          "number": "700",
-          "data": "system.error.dark",
-          "hex": "#B32424"
         },
         {
           "name": "Disabled Light",
