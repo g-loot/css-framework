@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import Lottie from "lottie-react";
-import LottieExplosion1 from "../../../../../assets/animations/explosion-4.json";
+import LottieExplosion1 from "../../../../../assets/animations/explosion_stryda_4.json";
 import LottieExplosion2 from "../../../../../assets/animations/explosion_stryda_1.json";
 import { VariablesContext } from "../../../../../contexts/variables";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
@@ -19,7 +19,7 @@ export default function BrawlPlacementItem(props) {
     setStartAnim(true);
     const timer = setTimeout(() => {
       handleStartAnim();
-    }, 2000);
+    }, 2300);
     return () => clearTimeout(timer);
   }, []);
 

@@ -3,7 +3,7 @@ import DailyReward from "../DailyReward/DailyReward";
 import { VariablesContext } from "../../contexts/variables";
 import { UiContext } from "../../contexts/ui";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion-4.json";
+import LottieExplosion from "../../assets/animations/explosion_stryda_4.json";
 
 export default function TopBarClaim(props) {
   const uiContext = useContext(UiContext);
@@ -29,14 +29,14 @@ export default function TopBarClaim(props) {
     setStartAnim1(true);
     const timer = setTimeout(() => {
       setStartAnim1(false);
-    }, 1000);
+    }, 2300);
     return () => clearTimeout(timer);
   }
 
   useEffect(() => {
     const interval = setInterval(() => {
       handleStartAnim1();
-    }, 5000);
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
@@ -84,16 +84,16 @@ export default function TopBarClaim(props) {
           <span className="relative z-10">
             <span className="max-sm:hidden">Daily Loot</span> Streak
           </span>
-          {StartAnim1 && !variablesContext.dailyRewardClaimed && (
-            <div className="absolute z-0 -inset-x-2 -top-0.5 bottom-0.5 flex items-center justify-center lottie-blur">
-              <Lottie
-                animationData={LottieExplosion}
-                loop={false}
-                autoplay={true}
-              />
-            </div>
-          )}
         </div>
+        {StartAnim1 && !variablesContext.dailyRewardClaimed && (
+          <div className="absolute z-0 -top-0.5 bottom-0.5 flex items-center justify-center lottie-blur">
+            <Lottie
+              animationData={LottieExplosion}
+              loop={false}
+              autoplay={true}
+            />
+          </div>
+        )}
       </label>
       <div tabIndex="1" className="dropdown-content w-96 p-1">
         <DailyReward />
