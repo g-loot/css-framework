@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion_stryda_2.json";
+import LottieExplosion from "../../../assets/animations/explosion_stryda_3.json";
 import { UiContext } from "../../../contexts/ui.js";
 import { VariablesContext } from "../../../contexts/variables";
 import AnimatedNumber from "../../../components/AnimatedNumber/AnimatedNumber";
@@ -58,7 +58,7 @@ export default function ModalClaimMission(props) {
               <h2 className="modal-title animate-slide-in-top mb-6">
                 Congratulations
               </h2>
-              <XPBoostList isAnimated={true} />
+              <XPBoostList isCompleted={false} isAnimated={true} />
               <div
                 className=" animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc( 6 * 0.15s)" }}
@@ -104,7 +104,7 @@ export default function ModalClaimMission(props) {
           </div>
         </div>
       </div>
-      <div className="fixed inset-0 z-0 flex items-center justify-center">
+      <div className="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
         <div className="lottie-blur h-[75vh] w-[75vh] flex items-center justify-center">
           <Lottie
             animationData={LottieExplosion}

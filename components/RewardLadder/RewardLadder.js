@@ -110,8 +110,8 @@ export default function RewardLadder(props) {
           <div className="ladder-avatar py-2">
             <div>
               <div>
-                <div className={`chip chip-reward chip-xp chip-sm ${isPremium ? 'chip-inverted' : ''}`}>
-                  <span>550</span>
+                <div className={`chip chip-sm ${isPremium ? 'chip-premium chip-inverted' : 'chip-xp'}`}>
+                  <span className="pl-2">550</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
                 <div

@@ -492,10 +492,10 @@ module.exports = {
           "0px 0px 0.5px rgba(77 180 255, 0.6)",
         ],
         premium: [
-          "0px 0px 10px rgba(251 192 45, 0.125)",
-          "0px 0px 3px rgba(251 192 45, 0.2)",
-          "0px 0px 1.3px rgba(251 192 45, 0.3)",
-          "0px 0px 0.5px rgba(251 192 45, 0.6)",
+          "0px 0px 3px rgba(163 114 255, 0.25)",
+          "0px 0px 6px rgba(163 114 255, 0.5)",
+          "0px 0px 16px rgba(163 114 255, 0.75)",
+          "0px 0px 32px rgba(163 114 255, 1)",
         ],
         "main-lg": [
           "0px 0px 3px rgba(243, 195, 81, 0.25)",

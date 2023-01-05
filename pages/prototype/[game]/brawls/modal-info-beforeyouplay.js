@@ -53,7 +53,7 @@ export default function ModalInfoBeforeYouPlay(props) {
           <div className="modal-content">
             <div className="modal-body">
               <h2 className="modal-title">Before you play</h2>
-              <div className="alert alert-sm alert-orange mt-2 mb-3">
+              <div className="alert alert-sm alert-attention mt-2 mb-3">
                 <div>
                   <span className="icon icon-24 icon-c-info"></span>
                   <span>Tracker required.</span>

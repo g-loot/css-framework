@@ -178,9 +178,9 @@ export default function CardMissionSecondary(props) {
                 {isPremium ? (
                   <Tooltip
                     placement="top"
-                    tooltip={<XPBoostList size="sm" xp={mission.xp} />}
+                    tooltip={<XPBoostList isCompleted={mission.target === mission.current ? true : false} size="sm" xp={mission.xp} />}
                   >
-                    <div className="chip chip-reward chip-xp chip-inverted chip-sm">
+                    <div className={`chip chip-sm ${mission.target === mission.current ? 'chip-xp chip-inverted' : 'chip-secondary'}`}>
                       <span>{Math.round(mission.xp * 1.65)}</span>
                       <span className="icon icon-xp-symbol" />
                     </div>
@@ -190,15 +190,15 @@ export default function CardMissionSecondary(props) {
                     { mission.target === mission.current ? (
                       <Tooltip
                       placement="top"
-                      tooltip={<XPBoostList size="sm" xp={mission.xp} />}
+                      tooltip={<XPBoostList isCompleted={mission.target === mission.current ? true : false} size="sm" xp={mission.xp} />}
                     >
-                      <div className="chip chip-reward chip-xp chip-sm">
+                      <button type="button" className="chip chip-xp chip-sm">
                         <span>{mission.xp}</span>
                         <span className="icon icon-xp-symbol" />
-                      </div>
+                      </button>
                     </Tooltip>
                     ) : (
-                      <div className="chip chip-reward chip-xp chip-sm chip-neutral">
+                      <div className="chip chip-secondary chip-sm">
                         <span>{mission.xp}</span>
                         <span className="icon icon-xp-symbol" />
                       </div>
@@ -209,7 +209,7 @@ export default function CardMissionSecondary(props) {
                         <div className="w-56 flex gap-4 text-sm">
                           <div className="relative -mt-3">
                             <span className="icon icon-crown text-6xl text-premium-500" />
-                            <div className="lottie-blur absolute -inset-1">
+                            <div className="lottie-premium absolute -inset-1">
                               <Lottie
                                 animationData={LottieExplosion}
                                 loop={false}
@@ -225,11 +225,10 @@ export default function CardMissionSecondary(props) {
                         </div>
                       }
                     >
-                      <div className="chip chip-reward chip-xp chip-ghost chip-xs">
-                        <span className="text-premium-500 icon icon-crown text-sm" />
+                      <button type="button" className="chip chip-xp chip-ghost chip-sm">
                         <span className="text-premium-500 ">+{mission.xp / 2}</span>
-                        <span className="text-premium-500 icon icon-xp-symbol" />
-                      </div>
+                        <span className="text-premium-500 icon icon-crown text-sm" />
+                      </button>
                     </Tooltip>
                   </div>
                 )}

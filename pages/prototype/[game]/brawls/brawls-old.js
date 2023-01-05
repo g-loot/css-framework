@@ -90,7 +90,7 @@ export default function Brawls() {
                       schedule! 
                     </p>
                     <p className="text-blue-300 max-w-[25ch] mb-4"><span className="font-bold">First time competing?</span> Your entry Brawl is on us!
-                      Simply pick any Brawl you like and claim your free Brawl!</p>
+                      Simply pick any Competitive Brawl you like and claim your free Brawl!</p>
                     </>
                   ) : (
                     <>

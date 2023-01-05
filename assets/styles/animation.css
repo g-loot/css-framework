@@ -87,6 +87,11 @@
   drop-shadow-main-lg
   ;
 }
+.lottie-premium {
+  @apply
+  drop-shadow-premium
+  ;
+}
 
 .animate-paused {
   animation-play-state: paused;

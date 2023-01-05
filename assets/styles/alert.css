@@ -54,10 +54,10 @@
     }
   }
 
-  &.alert-green, 
-  &.alert-blue, 
-  &.alert-orange, 
-  &.alert-red {
+  &.alert-success, 
+  &.alert-info, 
+  &.alert-attention, 
+  &.alert-error {
     @apply
     border-0
     ;
@@ -73,26 +73,26 @@
     }
   }
 
-  &.alert-green {
+  &.alert-success {
     @apply
-    bg-interaction-500
+    bg-success-500
     ;
   }
-  &.alert-blue {
+  &.alert-info {
     @apply
-    bg-blue-500
-    ;
-    
-  }
-  &.alert-orange {
-    @apply
-    bg-attention-300
+    bg-info-500
     ;
     
   }
-  &.alert-red {
+  &.alert-attention {
     @apply
-    bg-error-300
+    bg-attention-500
+    ;
+    
+  }
+  &.alert-error {
+    @apply
+    bg-error-500
     ;
   }
 }

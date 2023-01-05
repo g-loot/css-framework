@@ -163,7 +163,7 @@ const DSpage = () => {
             <h3 className="h4 mb-6 lg:mb-10">Green</h3>
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4 flex justify-center">
-                <div className="alert alert-green">
+                <div className="alert alert-success">
                   <div>
                     <span className="icon icon-24 icon-f-check" />
                     <span>Your token purchase has been confirmed.</span>
@@ -184,7 +184,7 @@ const DSpage = () => {
             <h3 className="h4 mb-6 lg:mb-10">Blue</h3>
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4 flex justify-center">
-                <div className="alert alert-blue">
+                <div className="alert alert-info">
                   <div>
                     <span className="icon icon-24 icon-c-info" />
                     <span>3 new tournaments available.</span>
@@ -205,7 +205,7 @@ const DSpage = () => {
             <h3 className="h4 mb-6 lg:mb-10">Orange</h3>
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4 flex justify-center">
-                <div className="alert alert-orange">
+                <div className="alert alert-attention">
                   <div>
                     <span className="icon icon-24 icon-warning-sign" />
                     <span>Warning. Tournament enrolment invalid.</span>
@@ -226,7 +226,7 @@ const DSpage = () => {
             <h3 className="h4 mb-6 lg:mb-10">Red</h3>
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4 flex justify-center">
-                <div className="alert alert-red">
+                <div className="alert alert-error">
                   <div>
                     <span className="icon icon-24 icon-skull-2" />
                     <span>

@@ -9,17 +9,13 @@
   leading-none
   border-0
   inline-flex
-  gap-2
   justify-center
   items-center
   transition
   duration-200
   ease-in-out
   text-center
-  text-ui-800
   scale-100
-  min-h-[2rem]
-  text-sm
   bg-[length:300%_auto]
   focus-visible:outline
   focus-visible:outline-offset-2
@@ -27,36 +23,12 @@
   focus-visible:outline-main
   select-none
   transform-gpu
+  text-ui-300
   ;
 
-  &:not([class*=bg-], .chip-transparent){
-    @apply
-    bg-main
-    ;
-  }
+  
 
-  > * {
-    @apply
-    py-0
-    ;
-  }
-
-  > *:not(.avatar):not(.button):not(.icon) {
-    &:first-child {
-      &:not([class*="ml-"]) {
-        @apply
-        ml-3
-        ;
-      }
-    }
-    &:last-child {
-      &:not([class*="mr-"]) {
-        @apply
-        mr-3
-        ;
-      }
-    }
-  }
+  /*
 
   > .avatar {
     &:first-child {
@@ -94,31 +66,19 @@
     &:first-child {
       &:not([class*="ml-"]) {
         @apply
-        ml-2
+        ml-1.5
         ;
       }
     }
     &:last-child {
       &:not([class*="mr-"]) {
         @apply
-        mr-2
+        mr-1.5
         ;
       }
     }
   }
-
-  /* with close button */
-
-  > .button.button-close {
-    @apply
-    w-6
-    h-6
-    bg-interaction-700
-    from-interaction-700
-    to-interaction-700
-    ;
-  }
-
+  */
 
   /* sliced */
 
@@ -129,6 +89,13 @@
     pr-2
     rounded-l
     ;
+    &,
+    &.chip-premium,
+    &.chip-primary {
+      @apply
+      text-ui-800
+      ;
+    }
     clip-path: polygon(0 0, 100%0, calc(100% - 0.5em) 100%, 0 100%);
     > *:not(.avatar):not(.button):not(.icon) {
       @apply
@@ -174,7 +141,178 @@
     }
   }
 
-  /* size */
+  /* Size */
+
+  & {
+    @apply
+    min-h-[32px]
+    gap-2
+    px-1.5
+    text-sm
+    ;
+    > * {
+      @apply
+      py-0
+      ;
+      &.icon {
+        @apply
+        text-xl
+        ;
+        &[class*='xp-symbol'] {
+          @apply
+          text-3xl
+          -my-1
+          ;
+        }
+      }
+    }
+    > .button-close,
+    > .avatar {
+      &:first-child {
+        @apply
+        -ml-1
+        ;
+      }
+      &:last-child {
+        @apply
+        -mr-1
+        ;
+      }
+    }
+    > *:not(.button-close):not(.avatar) {
+      &:first-child {
+        @apply
+        ml-2
+        ;
+      }
+      &:last-child {
+        @apply
+        mr-2
+        ;
+      }
+    }
+    > .avatar,
+    > .button.button-close {
+      @apply
+      w-7
+      h-7
+      ;
+    }
+  }
+  &.chip-sm {
+    @apply
+    min-h-[28px]
+    gap-1.5
+    px-1
+    text-sm
+    ;
+    > * {
+      @apply
+      py-0
+      ;
+      &.icon {
+        @apply
+        text-lg
+        ;
+        &[class*='xp-symbol'] {
+          @apply
+          text-2xl
+          -my-0.5
+          ;
+        }
+      }
+    }
+    > .button-close,
+    > .avatar {
+      &:first-child {
+        @apply
+        -ml-0.5
+        ;
+      }
+      &:last-child {
+        @apply
+        -mr-0.5
+        ;
+      }
+    }
+    > *:not(.button-close):not(.avatar) {
+      &:first-child {
+        @apply
+        ml-1
+        ;
+      }
+      &:last-child {
+        @apply
+        mr-1
+        ;
+      }
+    }
+    > .avatar,
+    > .button.button-close {
+      @apply
+      w-6
+      h-6
+      ;
+    }
+  }
+  &.chip-xs {
+    @apply
+    min-h-[24px]
+    gap-1
+    px-1
+    text-xs
+    ;
+    > * {
+      @apply
+      py-0
+      ;
+      &.icon {
+        @apply
+        text-base
+        ;
+        &[class*='xp-symbol'] {
+          @apply
+          text-xl
+          -my-0.5
+          ;
+        }
+      }
+    }
+    > .button-close,
+    > .avatar {
+      &:first-child {
+        @apply
+        -ml-0.5
+        ;
+      }
+      &:last-child {
+        @apply
+        -mr-0.5
+        ;
+      }
+    }
+    > *:not(.button-close):not(.avatar) {
+      &:first-child {
+        @apply
+        ml-1
+        ;
+      }
+      &:last-child {
+        @apply
+        mr-1
+        ;
+      }
+    }
+    > .avatar,
+    > .button.button-close {
+      @apply
+      w-5
+      h-5
+      ;
+    }
+  }
+
+  /*
 
   &.chip-sm {
     @apply
@@ -267,6 +405,10 @@
       }
     }
   }
+
+ 
+
+
   &.chip-xs {
     @apply
     text-[0.7rem]
@@ -347,6 +489,8 @@
       }
     }
   }
+
+   */
   
   &:not([class*='rounded'], [class*='sliced']) {
     @apply
@@ -354,13 +498,6 @@
     ;
   }
 
-  &:not([class*='sliced'], [class*='px-']) {
-    > *:not(.icon) {
-      @apply
-      tracking-wide
-      ;
-    }
-  }
 
   &:is(button, a) {
     &:not([disabled]),
@@ -379,6 +516,42 @@
           scale-95
           ;
         }
+      }
+    }
+  }
+
+  /* Colors */
+
+  > .button.button-close {
+    @apply
+    text-ui-300
+    !bg-ui-800/0
+    p-0
+    ;
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      @apply
+      active:!outline-offset-0
+      active:!outline-ui-300
+      ;
+    }
+  }
+
+  &.chip-primary {
+    @apply
+    text-ui-800
+    ;
+    > .button.button-close {
+      @apply
+      text-ui-900
+      !bg-ui-800/0
+      ;
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        @apply
+        active:!outline-offset-0
+        active:!outline-ui-900
+        ;
       }
     }
   }
@@ -409,8 +582,8 @@
 
   &.chip-secondary {
     @apply 
+    text-ui-200
     bg-ui-700
-    text-ui-300
     shadow-[0_0_0_1px_rgb(var(--color-ui-500))]
     ;
     &:is(button, a) {
@@ -419,8 +592,8 @@
         &:hover,
         &:focus-visible {
           @apply
+          text-ui-100
           bg-ui-600
-          text-ui-200
           shadow-[0_0_0_1px_rgb(var(--color-ui-400))];
         }
       }
@@ -430,27 +603,169 @@
   /* Premium */
 
   &.chip-premium {
-    @apply 
-    bg-gradient-to-b
-    from-premium-700
-    via-premium-300
-    to-premium-500
-    text-ui-800
-    shadow-[inset_0_0_0_1px_rgb(var(--color-premium-300))]
+    @apply
+    text-premium-500
+    bg-ui-700
+    shadow-[0_0_0_1px_rgb(var(--color-ui-500))]
     ;
-    > * {
-      text-shadow: 0 1px 0.25px rgb(var(--color-premium-300));
+
+    &.chip-inverted {
+      @apply 
+      bg-gradient-to-b
+      from-premium-700
+      via-premium-300
+      to-premium-500
+      text-ui-800
+      shadow-[inset_0_0_0_1px_rgb(var(--color-premium-300))]
+      ;
+      > * {
+        text-shadow: 0 1px 0.25px rgb(var(--color-premium-300));
+      }
+      &:is(button, a) {
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          &:hover,
+          &:focus-visible {
+            @apply
+            from-premium-300
+            via-premium-300
+            to-premium-300
+            text-ui-900
+            ;
+          }
+        }
+      }
     }
+  }
+
+  /* XP */
+
+  &.chip-xp {
+    @apply
+    text-interaction-500
+    bg-ui-700
+    shadow-[0_0_0_1px_rgb(var(--color-ui-500))]
+    ;
+
+    &.chip-inverted {
+      @apply 
+      bg-gradient-to-b
+      from-interaction-700
+      via-interaction-300
+      to-interaction-500
+      text-ui-800
+      shadow-[inset_0_0_0_1px_rgb(var(--color-interaction-300))]
+      ;
+      > * {
+        text-shadow: 0 1px 0.25px rgb(var(--color-interaction-300));
+      }
+      &:is(button, a) {
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          &:hover,
+          &:focus-visible {
+            @apply
+            from-interaction-300
+            via-interaction-300
+            to-interaction-300
+            text-ui-900
+            ;
+          }
+        }
+      }
+    }
+  }
+
+  /* Token */
+
+  &.chip-token {
+    @apply
+    text-interaction-500
+    bg-ui-700
+    shadow-[0_0_0_1px_rgb(var(--color-ui-500))]
+    ;
+
+    &.chip-inverted {
+      @apply 
+      bg-gradient-to-b
+      from-interaction-700
+      via-interaction-300
+      to-interaction-500
+      text-ui-800
+      shadow-[inset_0_0_0_1px_rgb(var(--color-interaction-300))]
+      ;
+      > * {
+        text-shadow: 0 1px 0.25px rgb(var(--color-interaction-300));
+      }
+      &:is(button, a) {
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          &:hover,
+          &:focus-visible {
+            @apply
+            from-interaction-300
+            via-interaction-300
+            to-interaction-300
+            text-ui-900
+            ;
+          }
+        }
+      }
+    }
+  }
+
+  /* Ticket */
+
+  &.chip-ticket {
+    @apply
+    text-bronze-500
+    bg-ui-700
+    shadow-[0_0_0_1px_rgb(var(--color-ui-500))]
+    ;
+
+    &.chip-inverted {
+      @apply 
+      bg-gradient-to-b
+      from-bronze-700
+      via-bronze-300
+      to-bronze-500
+      text-ui-800
+      shadow-[inset_0_0_0_1px_rgb(var(--color-bronze-300))]
+      ;
+      > * {
+        text-shadow: 0 1px 0.25px rgb(var(--color-bronze-300));
+      }
+      &:is(button, a) {
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          &:hover,
+          &:focus-visible {
+            @apply
+            from-bronze-300
+            via-bronze-300
+            to-bronze-300
+            text-ui-900
+            ;
+          }
+        }
+      }
+    }
+  }
+
+  /* Ghost */
+
+  &.chip-ghost {
+    @apply
+    bg-ui-800/0
+    shadow-[inset_0_0_0_0_rgba(var(--color-ui-700,0))]
+    ;
     &:is(button, a) {
       &:not([disabled]),
       &:not(.is-disabled) {
         &:hover,
         &:focus-visible {
           @apply
-          from-premium-300
-          via-premium-300
-          to-premium-300
-          text-ui-900
+          bg-ui-700
           ;
         }
       }
@@ -459,10 +774,9 @@
 
   /* Reward */
 
+  /*
   &.chip-reward {
     @apply 
-    bg-ui-700
-    text-gold-500
     py-0
     pr-1
     shadow-[inset_0_0_0_1px_rgb(var(--color-ui-500))]
@@ -478,7 +792,14 @@
       @apply
       my-1
       ;
+      &[class*='xp-symbol'] {
+        @apply
+        text-3xl
+        -my-1
+        ;
+      }
     }
+
 
     > span:not(.icon) {
       @apply
@@ -497,14 +818,77 @@
         ;
       }
     }
+    
+  }
+  
 
+  &.chip-inverted {
+    @apply 
+    bg-gradient-to-b
+    from-gold-700
+    via-gold-300
+    to-gold-500
+    text-ui-800
+    shadow-[inset_0_0_0_1px_rgb(var(--color-gold-300))]
+    ;
+
+    > * {
+      text-shadow: 0 1px 0.25px rgb(var(--color-gold-300));
+    }
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        @apply
+        bg-gold-300
+        text-ui-900
+        ;
+      }
+    }
+  }
+ 
+
+  &.chip-silver {
+    &:not(.chip-inverted){
+      @apply 
+      text-silver-300
+      ;
+    }
+    &.chip-inverted {
+      @apply 
+      bg-gradient-to-b
+      from-silver-700
+      via-silver-300
+      to-silver-500
+      shadow-[inset_0_0_0_1px_rgb(var(--color-silver-300))]
+      ;
+
+      > * {
+        text-shadow: 0 1px 0.25px rgb(var(--color-silver-300));
+      }
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          bg-silver-300
+          ;
+        }
+      }
+    }
+  }
+  &.chip-gold {
+    &:not(.chip-inverted){
+      @apply 
+      text-gold-300
+      ;
+    }
     &.chip-inverted {
       @apply 
       bg-gradient-to-b
       from-gold-700
       via-gold-300
       to-gold-500
-      text-ui-800
       shadow-[inset_0_0_0_1px_rgb(var(--color-gold-300))]
       ;
 
@@ -517,13 +901,47 @@
         &:focus-visible {
           @apply
           bg-gold-300
-          text-ui-900
           ;
         }
       }
     }
+  }
+  &.chip-neutral {
+    &:not(.chip-inverted){
+      @apply 
+      text-ui-200
+      ;
+    }
+    &.chip-inverted {
+      @apply 
+      bg-gradient-to-b
+      from-ui-900
+      to-ui-700
+      shadow-[inset_0_0_0_1px_rgba(var(--color-ui-600)/100%)]
+      ;
 
-    &.chip-sm {
+      > * {
+        @apply
+        text-ui-300
+        ;
+        text-shadow: 0 1px 0.25px rgb(var(--color-ui-700));
+      }
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          from-ui-700
+          to-ui-800
+          ;
+        }
+      }
+    }
+  }
+   */
+
+  /*
+  &.chip-sm {
       @apply
       pr-0.5
       py-0
@@ -533,6 +951,12 @@
         @apply
         text-[16px]
         ;
+        &[class*=xp-symbol] {
+          @apply
+          text-3xl
+          -my-1
+          ;
+        }
       }
       > span:not(.icon) {
         @apply
@@ -540,207 +964,20 @@
         ;
       }
     }
-    
-
-    &.chip-xp {
-      > .icon[class*=xp-symbol] {
-        @apply
-        text-3xl
-        -my-1
-        ;
-      }
-      &.chip-sm {
-        > .icon {
-          @apply
-          text-3xl
-          -my-0.5
-          ;
-        }
-      }
-    }
-
-    &.chip-token {
-      &:not(.chip-inverted){
-        @apply 
-        text-purple-500
-        ;
-      }
-      &.chip-inverted {
-        @apply 
-        bg-gradient-to-b
-        from-purple-700
-        via-purple-300
-        to-purple-500
-        shadow-[inset_0_0_0_1px_rgb(var(--color-purple-300))]
-        ;
-  
-        > * {
-          text-shadow: 0 1px 0.25px rgb(var(--color-purple-300));
-        }
-        &:not([disabled]),
-        &:not(.is-disabled) {
-          &:hover,
-          &:focus-visible {
-            @apply
-            bg-purple-300
-            ;
-          }
-        }
-      }
-    }
-    &.chip-ticket,
-    &.chip-bronze {
-      &:not(.chip-inverted){
-        @apply 
-        text-bronze-500
-        ;
-      }
-      &.chip-inverted {
-        @apply 
-        bg-gradient-to-b
-        from-bronze-700
-        via-bronze-300
-        to-bronze-500
-        shadow-[inset_0_0_0_1px_rgb(var(--color-bronze-300))]
-        ;
-  
-        > * {
-          text-shadow: 0 1px 0.25px rgb(var(--color-bronze-300));
-        }
-        &:not([disabled]),
-        &:not(.is-disabled) {
-          &:hover,
-          &:focus-visible {
-            @apply
-            bg-bronze-300
-            ;
-          }
-        }
-      }
-    }
-    &.chip-silver {
-      &:not(.chip-inverted){
-        @apply 
-        text-silver-300
-        ;
-      }
-      &.chip-inverted {
-        @apply 
-        bg-gradient-to-b
-        from-silver-700
-        via-silver-300
-        to-silver-500
-        shadow-[inset_0_0_0_1px_rgb(var(--color-silver-300))]
-        ;
-  
-        > * {
-          text-shadow: 0 1px 0.25px rgb(var(--color-silver-300));
-        }
-        &:not([disabled]),
-        &:not(.is-disabled) {
-          &:hover,
-          &:focus-visible {
-            @apply
-            bg-silver-300
-            ;
-          }
-        }
-      }
-    }
-    &.chip-gold {
-      &:not(.chip-inverted){
-        @apply 
-        text-gold-300
-        ;
-      }
-      &.chip-inverted {
-        @apply 
-        bg-gradient-to-b
-        from-gold-700
-        via-gold-300
-        to-gold-500
-        shadow-[inset_0_0_0_1px_rgb(var(--color-gold-300))]
-        ;
-  
-        > * {
-          text-shadow: 0 1px 0.25px rgb(var(--color-gold-300));
-        }
-        &:not([disabled]),
-        &:not(.is-disabled) {
-          &:hover,
-          &:focus-visible {
-            @apply
-            bg-gold-300
-            ;
-          }
-        }
-      }
-    }
-    &.chip-neutral {
-      &:not(.chip-inverted){
-        @apply 
-        text-ui-200
-        ;
-      }
-      &.chip-inverted {
-        @apply 
-        bg-gradient-to-b
-        from-ui-900
-        to-ui-700
-        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-600)/100%)]
-        ;
-  
-        > * {
-          @apply
-          text-ui-300
-          ;
-          text-shadow: 0 1px 0.25px rgb(var(--color-ui-700));
-        }
-        &:not([disabled]),
-        &:not(.is-disabled) {
-          &:hover,
-          &:focus-visible {
-            @apply
-            from-ui-700
-            to-ui-800
-            ;
-          }
-        }
-      }
-    }
-    &.chip-ghost {
-      @apply
-      bg-ui-800/0
-      shadow-[inset_0_0_0_0_rgba(var(--color-ui-700,0))]
-      ;
-    }
     &.chip-xs {
       > span:not(.icon) {
         @apply
         text-sm
         ;
       }
-      &.chip-reward.chip-xp {
-        > .icon[class*=xp-symbol] {
-          @apply
-          text-[1.85rem]
-          -my-0.5
-          ;
-        }
+      .icon[class*=xp-symbol] {
+        @apply
+        text-[1.85rem]
+        -my-0.5
+        ;
       }
     }
-  }
-
-  &.chip-secondary {
-    > .button-close {
-      @apply
-      bg-ui-500
-      from-ui-500
-      to-ui-500
-      text-ui-300
-      ;
-    }
-  }
+    */
 
   /* status */
 

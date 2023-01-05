@@ -8,6 +8,7 @@ export default function XPBoostList(props) {
   const xp = props.xp || 50;
   const size = props.size || "md";
   const type = props.type || "Mission completed";
+  const isCompleted = props.isCompleted || true;
 
   return (
     <ul className={`rounded-lg text-left ${size === "sm" ? 'text-sm' : ''}`}>
@@ -17,9 +18,9 @@ export default function XPBoostList(props) {
         }`}
         style={{ "--delay": "calc( 2 * 0.15s)" }}
       >
-        <span className="icon icon-check text-main" />
+        <span className={`icon icon-check text-main`} />
         <span className="flex-1">{type}</span>
-        <span className="text-main text-right">{xp} XP</span>
+        <span className={`text-right ${isCompleted ? 'text-main' : 'text-ui-400'}`}>{xp} XP</span>
       </li>
       {isPremium ? (
         <li
@@ -28,9 +29,9 @@ export default function XPBoostList(props) {
           }`}
           style={{ "--delay": "calc( 3 * 0.15s)" }}
         >
-          <span className="icon icon-e-add text-main" />
+          <span className={`icon ${isCompleted ? 'text-main icon-e-add' : 'text-ui-400 icon-e-remove'}`} />
           <span className="flex-1">Premium boost</span>
-          <span className="text-main text-right">+50%</span>
+          <span className={`text-right ${isCompleted ? 'text-main' : 'text-ui-400'}`}>+{Math.round(xp * 0.5)}</span>
         </li>
       ) : (
         <li
@@ -42,7 +43,7 @@ export default function XPBoostList(props) {
           <span className="icon icon-e-remove text-ui-400" />
           <span className="flex-1 text-ui-400 line-through">Premium boost</span>
           <span className="text-ui-400 line-through text-right">
-            +50%
+            +{Math.round(xp * 0.1)}
           </span>
         </li>
       )}
@@ -52,9 +53,9 @@ export default function XPBoostList(props) {
         }`}
         style={{ "--delay": "calc( 4 * 0.15s)" }}
       >
-        <span className="icon icon-e-add text-main" />
+        <span className={`icon ${isCompleted ? 'text-main icon-e-add' : 'text-ui-400 icon-e-remove'}`} />
         <span className="flex-1">Clan boost</span>
-        <span className="text-main text-right">+10%</span>
+        <span className={`text-right ${isCompleted ? 'text-main' : 'text-ui-400'}`}>+{Math.round(xp * 0.1)}</span>
       </li>
       <li
         className={`flex gap-3 py-1 items-center ${
@@ -62,9 +63,9 @@ export default function XPBoostList(props) {
         }`}
         style={{ "--delay": "calc( 5 * 0.15s)" }}
       >
-        <span className="icon icon-e-add text-main" />
+        <span className={`icon ${isCompleted ? 'text-main icon-e-add' : 'text-ui-400 icon-e-remove'}`} />
         <span className="flex-1">New user boost</span>
-        <span className="text-main text-right">+5%</span>
+        <span className={`text-right ${isCompleted ? 'text-main' : 'text-ui-400'}`}>+{Math.round(xp * 0.05)}</span>
       </li>
     </ul>
   );

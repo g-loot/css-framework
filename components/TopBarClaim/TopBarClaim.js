@@ -29,7 +29,7 @@ export default function TopBarClaim(props) {
     setStartAnim1(true);
     const timer = setTimeout(() => {
       setStartAnim1(false);
-    }, 2300);
+    }, 2500);
     return () => clearTimeout(timer);
   }
 

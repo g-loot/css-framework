@@ -326,9 +326,17 @@ export default function TopbarNew() {
                         style={{ animationDuration: "4s" }}
                       />
                     </div>
-                    <span className="text-sm font-bold text-ui-200 pl-px">
-                      {isPremium ? <>55%</> : <>15%</>}
-                    </span>
+                    <div className="text-sm font-bold text-ui-200 text-center pl-px">
+                      <div className="infobanner is-active">
+                        <div className="infobanner-front">
+                          {isPremium ? <>55%</> : <>15%</>}
+                        </div>
+                        <div className="infobanner-back">
+                          <span className="icon icon-lightning text-main mx-auto" />
+                        </div>
+                      </div>
+                      
+                    </div>
                   </button>
                 </div>
 

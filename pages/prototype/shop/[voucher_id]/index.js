@@ -49,7 +49,7 @@ export default function Home() {
               </div>
             </section>
             {selectedVoucher.alert && (
-              <div className="alert mx-4 sm:mx-0 rounded-lg alert-orange mb-4 animate-fade-in">
+              <div className="alert mx-4 sm:mx-0 rounded-lg alert-attention mb-4 animate-fade-in">
                 <div>
                   <span className="icon icon-24 icon-c-info" />
                   <div>

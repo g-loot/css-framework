@@ -85,7 +85,7 @@ export default function ComponentRewardLadder() {
       {selectedGame?.needsSteam && (
         <>
           <div className="px-4 sm:px-0">
-            <div className="alert alert-blue mb-4">
+            <div className="alert alert-info mb-4">
               <div>
                 <svg
                   width="120"

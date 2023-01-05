@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import Lottie from "lottie-react";
-import LottieExplosion1 from "../../../../../assets/animations/explosion_stryda_4.json";
+import LottieExplosion1 from "../../../../../assets/animations/explosion_stryda_9.json";
 import LottieExplosion2 from "../../../../../assets/animations/explosion_stryda_1.json";
 import { VariablesContext } from "../../../../../contexts/variables";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
@@ -75,7 +75,12 @@ export default function BrawlPlacementItem(props) {
         className="perspective shrink-0 ml-4 my-4 last:mr-20 animate-slide-in-right animate-delay"
         tooltip={
           variablesContext.brawlStep >= props.item?.step ? (
-            <XPBoostList size="sm" xp={300} type="Brawl match" />
+            <XPBoostList
+              isCompleted={false}
+              size="sm"
+              xp={300}
+              type="Brawl match"
+            />
           ) : undefined
         }
         style={{
@@ -121,7 +126,7 @@ export default function BrawlPlacementItem(props) {
                 </div>
               )}
             {variablesContext.brawlStep >= props.item?.step && (
-              <div className="absolute z-10 inset-x-0 top-0 bottom-1 flex items-center justify-center lottie-blur">
+              <div className="absolute z-10 inset-0 pl-2 flex items-center justify-center lottie-blur">
                 <Lottie animationData={LottieExplosion1} loop={false} />
                 <Lottie
                   animationData={LottieExplosion2}
@@ -131,7 +136,7 @@ export default function BrawlPlacementItem(props) {
               </div>
             )}
             <div
-              className={`h5 text-ui-300 ${
+              className={`uppercase text-ui-300 whitespace-nowrap ${
                 props.item?.step > 3 &&
                 variablesContext.brawlStep + 1 === props.item?.step
                   ? "opacity-0"
@@ -140,6 +145,63 @@ export default function BrawlPlacementItem(props) {
             >
               Match {props.item?.step}
             </div>
+            <div
+              className={`${
+                props.item?.step > 3 &&
+                variablesContext.brawlStep + 1 === props.item?.step
+                  ? "opacity-0"
+                  : ""
+              }`}
+            >
+              {isPremium ? (
+                <Tooltip
+                  placement="top"
+                  tooltip={
+                    <XPBoostList isCompleted={false} size="sm" xp={300} />
+                  }
+                >
+                  <div className="chip chip-sm chip-xp chip-inverted">
+                    <span>{Math.round(300 * 1.65)}</span>
+                    <span className="icon icon-xp-symbol" />
+                  </div>
+                </Tooltip>
+              ) : (
+                <div className="flex flex-col items-end -space-y-1">
+                  <div className="chip chip-sm chip-secondary chip-ghost">
+                    <span>{300}</span>
+                    <span className="icon icon-xp-symbol" />
+                  </div>
+                  <Tooltip
+                    placement="top"
+                    tooltip={
+                      <div className="w-56 flex gap-4 text-sm">
+                        <div className="relative -mt-3">
+                          <span className="icon icon-crown text-6xl text-premium-500" />
+                          <div className="lottie-premium absolute -inset-1">
+                            <Lottie
+                              animationData={LottieExplosion2}
+                              loop={false}
+                              autoplay={true}
+                            />
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          Subscribe to Premium to earn an additional{" "}
+                          <span className="text-premium-500">50% XP</span> on
+                          each completed mission.
+                        </div>
+                      </div>
+                    }
+                  >
+                    <button type="button" className="chip chip-sm chip-premium chip-ghost">
+                      <span>+{300 / 2}</span>
+                      <span className="icon icon-crown" />
+                    </button>
+                  </Tooltip>
+                </div>
+              )}
+            </div>
+            {/*
             <div
               className={`w-12 h-12 rounded-full bg-main flex items-center justify-center ${
                 props.item?.step > 3 &&
@@ -150,27 +212,28 @@ export default function BrawlPlacementItem(props) {
             >
               <span className="icon icon-lock text-xl text-ui-600" />
             </div>
+            */}
           </div>
 
           <div
-            className={`flip-back rounded-lg shadow-lg flex items-center justify-between px-2 gap-2 w-44 h-16 overflow-hidden ${
+            className={`flip-back rounded-lg shadow-lg flex items-center justify-between pl-2 gap-2 w-44 h-16 overflow-hidden ${
               !resultsDone
                 ? "animate-pulse surface-ui-600 surface surface-halo"
                 : "surface-ui-700"
             }`}
           >
             <div
-              className={`h6 text-ui-300 ${
+              className={`uppercase text-ui-300 whitespace-nowrap ${
                 resultsDone ? "text-ui-100" : "text-ui-300"
               }`}
             >
               Match {props.item?.step}
             </div>
-            <div className="pl-2 border-l border-ui-600 flex flex-col items-end gap-1 justify-end leading-none">
+            <div className="flex flex-col items-end justify-end leading-none">
               {resultsDone && (
                 <>
                   <div
-                    className="flex items-center gap-1 text-main animate-slide-in-right animate-delay"
+                    className="flex items-center gap-1 text-main animate-slide-in-right animate-delay mr-2"
                     style={{ "--delay": "calc(0 * 0.05s)" }}
                   >
                     <span className="text-xl text-right">
@@ -179,26 +242,73 @@ export default function BrawlPlacementItem(props) {
                     <span>pts</span>
                   </div>
                   <div
-                    className={`flex text-sm items-center gap-1 ${isPremium ? 'text-ui-100' : 'text-ui-300'} animate-slide-in-right animate-delay`}
+                    className={`flex text-sm items-center gap-1 ${
+                      isPremium ? "text-ui-100" : "text-ui-300"
+                    } animate-slide-in-right animate-delay`}
                     style={{ "--delay": "calc(2 * 0.05s)" }}
                   >
-                    <span className="text-right">
-                      {isPremium ? <>450</> : <>300</>}
-                    </span>
-                    <span>XP</span>
-                    <button
-                      type="button"
-                      className="button button-xs button-ghost rounded-full -mx-1.5"
-                    >
-                      <span className="icon icon-c-info" />
-                    </button>
+                    <div className="chip chip-sm chip-ghost">
+                      <span>
+                        {isPremium
+                          ? Math.round(300 * 1.65)
+                          : Math.round(300 * 1)}
+                      </span>
+                      <span className="icon icon-xp-symbol" />
+                      <span className="icon icon-c-info text-xs" />
+                    </div>
                   </div>
                 </>
               )}
               {!resultsDone && (
-                <div className="flex items-center gap-1 text-main">
-                  <span className="text-3xl">--</span>
-                </div>
+                <>
+                  {isPremium ? (
+                    <Tooltip
+                      placement="top"
+                      tooltip={
+                        <XPBoostList isCompleted={false} size="sm" xp={300} />
+                      }
+                    >
+                      <div className="chip chip-sm chip-xp chip-inverted">
+                        <span>{Math.round(300 * 1.65)}</span>
+                        <span className="icon icon-xp-symbol" />
+                      </div>
+                    </Tooltip>
+                  ) : (
+                    <div className="flex flex-col items-end -space-y-1">
+                      <div className="chip chip-sm chip-ghost">
+                        <span>{300}</span>
+                        <span className="icon icon-xp-symbol" />
+                      </div>
+                      <Tooltip
+                        placement="top"
+                        tooltip={
+                          <div className="w-56 flex gap-4 text-sm">
+                            <div className="relative -mt-3">
+                              <span className="icon icon-crown text-6xl text-premium-500" />
+                              <div className="lottie-premium absolute -inset-1">
+                                <Lottie
+                                  animationData={LottieExplosion2}
+                                  loop={false}
+                                  autoplay={true}
+                                />
+                              </div>
+                            </div>
+                            <div className="flex-1">
+                              Subscribe to Premium to earn an additional{" "}
+                              <span className="text-premium-500">50% XP</span>{" "}
+                              on each completed mission.
+                            </div>
+                          </div>
+                        }
+                      >
+                        <button type="button" className="chip chip-sm chip-premium chip-ghost">
+                          <span>+{300 / 2}</span>
+                          <span className="icon icon-crown" />
+                        </button>
+                      </Tooltip>
+                    </div>
+                  )}
+                </>
               )}
             </div>
           </div>

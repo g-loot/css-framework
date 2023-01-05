@@ -146,6 +146,173 @@ const DSpage = () => {
                     </button>
                   </div>
                 </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Inverted
+                  </div>
+                  <div className="flex-1">
+                    <button type="button" className="chip chip-premium chip-inverted">
+                      <span>Label</span>
+                      <span className="icon icon-circle-caret-right" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/6d1zj9xb/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          {/* default: XP */}
+          <div className="">
+            <h3 className="h4 mb-6 lg:mb-10">XP</h3>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Normal
+                  </div>
+                  <div className="flex-1">
+                    <button type="button" className="chip chip-xp">
+                      <span>Label</span>
+                    <span className="icon icon-xp-symbol"></span>
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Inverted
+                  </div>
+                  <div className="flex-1">
+                    <button type="button" className="chip chip-xp chip-inverted">
+                      <span>Label</span>
+                    <span className="icon icon-xp-symbol"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/6d1zj9xb/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          {/* default: Token */}
+          <div className="">
+            <h3 className="h4 mb-6 lg:mb-10">Token</h3>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Normal
+                  </div>
+                  <div className="flex-1">
+                    <button type="button" className="chip chip-token">
+                      <span>Label</span>
+                    <span className="icon icon-token"></span>
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Inverted
+                  </div>
+                  <div className="flex-1">
+                    <button type="button" className="chip chip-token chip-inverted">
+                      <span>Label</span>
+                    <span className="icon icon-token"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/6d1zj9xb/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          {/* default: Ticket */}
+          <div className="">
+            <h3 className="h4 mb-6 lg:mb-10">Ticket</h3>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Normal
+                  </div>
+                  <div className="flex-1">
+                    <button type="button" className="chip chip-ticket">
+                      <span>Label</span>
+                    <span className="icon icon-ticket"></span>
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Inverted
+                  </div>
+                  <div className="flex-1">
+                    <button type="button" className="chip chip-ticket chip-inverted">
+                      <span>Label</span>
+                    <span className="icon icon-ticket"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/6d1zj9xb/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          {/* default: Ghost */}
+          <div className="">
+            <h3 className="h4 mb-6 lg:mb-10">Ghost</h3>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Normal
+                  </div>
+                  <div className="flex-1">
+                    <button type="button" className="chip chip-ghost">
+                      <span>Label</span>
+                    <span className="icon icon-ticket"></span>
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Inverted
+                  </div>
+                  <div className="flex-1">
+                    <button type="button" className="chip chip-ghost chip-inverted">
+                      <span>Label</span>
+                    <span className="icon icon-ticket"></span>
+                    </button>
+                  </div>
+                </div>
               </div>
               <div className="flex-1">
                 <iframe
@@ -283,9 +450,9 @@ const DSpage = () => {
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
-              <div className="flex-1 space-y-4">
-                <div className="w-full flex gap-4 items-center">
-                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+              <div className="flex-1 space-y-8">
+                <div className="w-full flex gap-4 items-start">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight pt-2">
                     Medium{" "}
                     <button
                       type="button"
@@ -294,7 +461,7 @@ const DSpage = () => {
                       <span>default</span>
                     </button>
                   </div>
-                  <div className="flex-1 flex items-center gap-2">
+                  <div className="flex-1 flex flex-col items-start justify-start gap-2">
                     <div className="chip chip-primary">
                       <span>Label</span>
                     </div>
@@ -316,11 +483,11 @@ const DSpage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-full flex gap-4 items-center">
-                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                <div className="w-full flex gap-4 items-start">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight pt-2">
                     Small
                   </div>
-                  <div className="flex-1 flex items-center gap-2">
+                  <div className="flex-1 flex flex-col items-start justify-start gap-2">
                     <div className="chip chip-sm chip-primary">
                       <span>Label</span>
                     </div>
@@ -342,11 +509,11 @@ const DSpage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-full flex gap-4 items-center">
-                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                <div className="w-full flex gap-4 items-start">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight pt-2">
                     Extra small
                   </div>
-                  <div className="flex-1 flex items-center gap-2">
+                  <div className="flex-1 flex flex-col items-start justify-start gap-2">
                     <div className="chip chip-xs chip-primary">
                       <span>Label</span>
                     </div>
@@ -516,7 +683,7 @@ const DSpage = () => {
                       <span>default</span>
                     </button>
                   </div>
-                  <div className="chip chip-reward chip-xp">
+                  <div className="chip chip-xp">
                     <span className="icon icon-xp-symbol-outline" />
                     <span>500</span>
                   </div>
@@ -525,24 +692,9 @@ const DSpage = () => {
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Inverted
                   </div>
-                  <div className="chip chip-reward chip-xp chip-inverted">
+                  <div className="chip chip-xp chip-inverted">
                     <span className="icon icon-xp-symbol-outline" />
                     <span>500</span>
-                  </div>
-                </div>
-                <div className="w-full flex gap-4 items-center">
-                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
-                    Inverted
-                  </div>
-                  <div className="flex gap-2">
-                    <div className="chip chip-reward chip-xp">
-                      <span className="icon icon-xp-symbol-outline" />
-                      <span>500</span>
-                    </div>
-                    <div className="chip chip-reward chip-xp chip-inverted">
-                      <span className="icon icon-xp-symbol-outline" />
-                      <span>500</span>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -572,7 +724,7 @@ const DSpage = () => {
                       <span>default</span>
                     </button>
                   </div>
-                  <div className="chip chip-reward chip-token">
+                  <div className="chip chip-token">
                     <span className="icon icon-token" />
                     <span>10</span>
                   </div>
@@ -581,7 +733,7 @@ const DSpage = () => {
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Inverted
                   </div>
-                  <div className="chip chip-reward chip-token chip-inverted">
+                  <div className="chip chip-token chip-inverted">
                     <span className="icon icon-token" />
                     <span>10</span>
                   </div>
@@ -613,19 +765,60 @@ const DSpage = () => {
                       <span>default</span>
                     </button>
                   </div>
-                  <div className="chip chip-reward chip-ticket">
+                  <button type="button" className="chip chip-ticket">
                     <span className="icon icon-ticket" />
                     <span>1</span>
-                  </div>
+                  </button>
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Inverted
                   </div>
-                  <div className="chip chip-reward chip-ticket chip-inverted">
+                  <button type="button" className="chip chip-ticket chip-inverted">
                     <span className="icon icon-ticket" />
                     <span>1</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/my610f4g/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          {/* Reward: premium */}
+          <div className="">
+            <h3 className="h4 mb-6 lg:mb-10">Premium</h3>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Normal{" "}
+                    <button
+                      type="button"
+                      className="chip chip-xs chip-secondary pointer-events-none uppercase"
+                    >
+                      <span>default</span>
+                    </button>
                   </div>
+                  <button type="button" className="chip chip-premium">
+                    <span className="icon icon-ticket" />
+                    <span>1</span>
+                  </button>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Inverted
+                  </div>
+                  <button type="button" className="chip chip-premium chip-inverted">
+                    <span className="icon icon-ticket" />
+                    <span>1</span>
+                  </button>
                 </div>
               </div>
               <div className="flex-1">
@@ -648,10 +841,10 @@ const DSpage = () => {
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Normal
                   </div>
-                  <div className="chip chip-reward chip-xp chip-neutral">
+                  <button type="button" className="chip chip-neutral">
                     <span className="icon icon-xp-symbol-outline" />
                     <span>500</span>
-                  </div>
+                  </button>
                 </div>
               </div>
               <div className="flex-1">
@@ -674,31 +867,31 @@ const DSpage = () => {
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Small
                   </div>
-                  <div className="chip chip-reward chip-ticket chip-inverted chip-sm">
+                  <button type="button" className="chip chip-ticket chip-inverted chip-sm">
                     <span>2</span>
                     <span className="icon icon-ticket" />
-                  </div>
+                  </button>
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight"></div>
-                  <div className="chip chip-reward chip-xp chip-inverted chip-sm">
+                  <button type="button" className="chip chip-xp chip-inverted chip-sm">
                     <span>500</span>
                     <span className="icon icon-xp-symbol" />
-                  </div>
+                  </button>
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight"></div>
-                  <div className="chip chip-reward chip-token chip-inverted chip-sm">
+                  <button type="button" className="chip chip-token chip-inverted chip-sm">
                     <span>500</span>
                     <span className="icon icon-token" />
-                  </div>
+                  </button>
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight"></div>
-                  <div className="chip chip-reward chip-xp chip-ghost chip-sm">
+                  <button type="button" className="chip chip-xp chip-ghost chip-sm">
                     <span>+100 premium</span>
                     <span className="icon icon-xp-symbol" />
-                  </div>
+                  </button>
                 </div>
               </div>
               <div className="flex-1">

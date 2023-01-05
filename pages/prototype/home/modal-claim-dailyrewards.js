@@ -94,7 +94,7 @@ export default function ModalClaimDailyRewards(props) {
           </div>
         </div>
       </div>
-      <div className="fixed inset-0 z-0 flex items-center justify-center">
+      <div className="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
         <div className="lottie-blur h-[75vh] w-[75vh] flex items-center justify-center">
           <Lottie
             animationData={LottieExplosion}
