@@ -157,10 +157,10 @@ export default function BrawlPlacementItem(props) {
                 <Tooltip
                   placement="top"
                   tooltip={
-                    <XPBoostList isCompleted={false} size="sm" xp={300} />
+                    undefined
                   }
                 >
-                  <div className="chip chip-sm chip-xp chip-inverted">
+                  <div className="chip chip-sm chip-secondary chip-ghost">
                     <span>{Math.round(300 * 1.65)}</span>
                     <span className="icon icon-xp-symbol" />
                   </div>
@@ -268,7 +268,7 @@ export default function BrawlPlacementItem(props) {
                         <XPBoostList isCompleted={false} size="sm" xp={300} />
                       }
                     >
-                      <div className="chip chip-sm chip-xp chip-inverted">
+                      <div className="chip chip-sm chip-xp chip-ghost">
                         <span>{Math.round(300 * 1.65)}</span>
                         <span className="icon icon-xp-symbol" />
                       </div>
