@@ -23,7 +23,7 @@ const DSpage = () => {
                   <input type="text" name="user-name" id="user-name" />
                 </div>
                 <div className="flex-1 form-group">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="password">Password</label>
                   <div className='input-group'>
                     <button className='button button-sm button-ghost'>
                       <span>Change</span>

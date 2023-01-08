@@ -126,12 +126,11 @@ export default function BrawlPlacementItem(props) {
                 </div>
               )}
             {variablesContext.brawlStep >= props.item?.step && (
-              <div className="absolute z-10 inset-0 pl-2 flex items-center justify-center lottie-blur">
-                <Lottie animationData={LottieExplosion1} loop={false} />
+              <div className="absolute z-10 inset-0 pl-2 flex items-center justify-end lottie-blur">
                 <Lottie
                   animationData={LottieExplosion2}
                   loop={false}
-                  className="-mr-5"
+                  className="h-16 w-16 mr-2"
                 />
               </div>
             )}

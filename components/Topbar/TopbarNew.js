@@ -329,7 +329,7 @@ export default function TopbarNew() {
                     <div className="text-sm font-bold text-ui-200 text-center pl-px">
                       <div className="infobanner is-active">
                         <div className="infobanner-front">
-                          {isPremium ? <>55%</> : <>15%</>}
+                          {isPremium ? <>65%</> : <>15%</>}
                         </div>
                         <div className="infobanner-back">
                           <span className="icon icon-lightning text-main mx-auto" />

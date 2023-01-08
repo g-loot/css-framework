@@ -25,9 +25,7 @@
   transform-gpu
   text-ui-300
   ;
-
   
-
   /*
 
   > .avatar {
@@ -502,21 +500,11 @@
   &:is(button, a) {
     &:not([disabled]),
     &:not(.is-disabled) {
-      &:hover,
-      &:focus-visible {
-        @apply 
-        bg-right
-        ;
-      }
-      &:active {
-        &:hover,
-        &:focus {
-          @apply
-          opacity-75
-          scale-95
-          ;
-        }
-      }
+      @apply
+      active:outline
+      active:outline-offset-2
+      active:outline-1
+      ;
     }
   }
 
@@ -560,19 +548,18 @@
 
   &.chip-primary {
     @apply 
-    bg-gradient-to-r
-    from-main
-    via-main
-    to-interaction-300
-    shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
+    bg-interaction-500
     ;
     &:is(button, a) {
       &:not([disabled]),
       &:not(.is-disabled) {
+        @apply
+        active:outline-main
+        ;
         &:hover,
         &:focus-visible {
           @apply
-          shadow-[inset_0_0_0_1px_rgba(255,255,255,1)];
+          bg-interaction-300
         }
       }
     }
@@ -584,17 +571,20 @@
     @apply 
     text-ui-200
     bg-ui-700
-    shadow-[0_0_0_1px_rgb(var(--color-ui-500))]
+    shadow-[inset_0_0_0_1px_rgb(var(--color-ui-500))]
     ;
     &:is(button, a) {
       &:not([disabled]),
       &:not(.is-disabled) {
+        @apply
+        active:outline-ui-400
+        ;
         &:hover,
         &:focus-visible {
           @apply
           text-ui-100
           bg-ui-600
-          shadow-[0_0_0_1px_rgb(var(--color-ui-400))];
+          shadow-[inset_0_0_0_1px_rgb(var(--color-ui-400))];
         }
       }
     }
@@ -606,7 +596,6 @@
     @apply
     text-premium-500
     bg-ui-700
-    shadow-[0_0_0_1px_rgb(var(--color-ui-500))]
     ;
 
     &.chip-inverted {
@@ -616,7 +605,6 @@
       via-premium-300
       to-premium-500
       text-ui-800
-      shadow-[inset_0_0_0_1px_rgb(var(--color-premium-300))]
       ;
       > * {
         text-shadow: 0 1px 0.25px rgb(var(--color-premium-300));

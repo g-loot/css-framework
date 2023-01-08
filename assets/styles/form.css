@@ -51,6 +51,25 @@
   }
 }
 
+/* Autocomplete */
+
+input:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  @apply
+  text-ui-100
+  bg-main
+  ;
+  -webkit-text-fill-color: var(--color-ui-100);
+  -webkit-box-shadow: 0 0 0 1000px var(--color-main) inset !important;
+}
+
 /*----------------------------*/
 /* TEXT INPUTS */
 /*----------------------------*/

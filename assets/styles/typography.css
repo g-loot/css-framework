@@ -449,3 +449,99 @@ ul, ol {
     }
   }
 }
+
+.animate-stripe {
+  @apply
+  relative
+  ;
+  > * {
+    @apply
+    relative
+    inline-block
+    opacity-0
+    transform-gpu
+    ;
+    /*animate-[stripe-text_1s_ease_1_forwards]*/
+    animation: stripe-text 0.9s cubic-bezier(1, .2, .2, 1) 1 forwards 0.6s;
+    &::after {
+      @apply
+      content-['']
+      bg-ui-900
+      absolute
+      inset-0
+      block
+      w-full
+      h-full
+      scale-x-0
+      -translate-x-3
+      origin-left
+      transform-gpu
+      ;
+      /*animate-[stripe-cache_1s_ease_1_forwards]*/
+      animation: stripe-cache 0.9s cubic-bezier(1, .2, .2, 1) 1 forwards 0.6s;
+    }
+    &:nth-child(1) {
+      &,
+      &::after {
+        animation-delay: .1s;
+      }
+    }
+    &:nth-child(2) {
+      &,
+      &::after {
+        animation-delay: .2s;
+      }
+    }
+    &:nth-child(3) {
+      &,
+      &::after {
+        animation-delay: .3s;
+      }
+    }
+    &:nth-child(4) {
+      &,
+      &::after {
+        animation-delay: .4s;
+      }
+    }
+    &:nth-child(5) {
+      &,
+      &::after {
+        animation-delay: .5s;
+      }
+    }
+  }
+}
+
+
+@keyframes stripe-cache {
+  0% {
+    transform-origin: 0 center;
+    transform: translateX(0.75rem) scaleX(0);
+  }
+  50% {
+    transform-origin: 0 center;
+    transform: translateX(0) scaleX(1);
+  }
+  51% {
+    transform-origin: 100% center;
+  }
+  100% {
+    transform-origin: 100% center;
+    transform: scaleX(0);
+  }
+}
+@keyframes stripe-text {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 0;
+  }
+  51% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 1;
+  }
+}
