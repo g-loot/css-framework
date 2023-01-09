@@ -71,7 +71,7 @@
     flex-col
     items-stretch
     justify-items-stretch
-    w-28
+    w-40
     text-center
     gap-2
     ;
@@ -206,7 +206,7 @@
 
       > .ladder-body {
         @apply
-        p-2
+        pb-2
         text-ui-200
         text-sm
         flex-1

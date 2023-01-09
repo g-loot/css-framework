@@ -136,7 +136,7 @@ export default function RewardLadder(props) {
               </div>
               {/*
               <div className="ladder-milestone">
-                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                <div className="chip chip-ghost">
                   <span>200</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
@@ -162,7 +162,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
               <div className="ladder-milestone">
-                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                <div className="chip chip-ghost">
                   <span>200</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
@@ -187,7 +187,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
               <div className="ladder-milestone">
-                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                <div className="chip chip-ghost">
                   <span>500</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
@@ -212,7 +212,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
               <div className="ladder-milestone">
-                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                <div className="chip chip-ghost">
                   <span>800</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
@@ -237,7 +237,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
               <div className="ladder-milestone">
-                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                <div className="chip chip-ghost">
                   <span>1100</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
@@ -262,7 +262,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
               <div className="ladder-milestone">
-                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                <div className="chip chip-ghost">
                   <span>1400</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
@@ -287,7 +287,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
               <div className="ladder-milestone">
-                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                <div className="chip chip-ghost">
                   <span>1700</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
@@ -312,7 +312,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
               <div className="ladder-milestone">
-                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                <div className="chip chip-ghost">
                   <span>2000</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
@@ -337,7 +337,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
               <div className="ladder-milestone">
-                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                <div className="chip chip-ghost">
                   <span>2300</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
@@ -365,7 +365,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
               <div className="ladder-milestone">
-                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                <div className="chip chip-ghost">
                   <span>2800</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
@@ -393,7 +393,7 @@ export default function RewardLadder(props) {
                 </div>
               </div>
               <div className="ladder-milestone">
-                <div className="chip chip-xs chip-reward chip-xp chip-ghost chip-sm">
+                <div className="chip chip-ghost">
                   <span>3100</span>
                   <span className="icon icon-xp-symbol" />
                 </div>

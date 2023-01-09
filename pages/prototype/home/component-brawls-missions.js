@@ -84,6 +84,7 @@ export default function HomeBrawlMissions(props) {
         <p className="md:text-right">You have completed 1 out of 6 missions</p>
       </div>
 
+{/*
       {prototype.getGameBySlug(props.gameSlug)?.needsSteam && (
         <>
           <div className="px-4 sm:px-0">
@@ -114,6 +115,7 @@ export default function HomeBrawlMissions(props) {
           </div>
         </>
       )}
+      */}
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0">
         {prototype
           .getGameBySlug(props.gameSlug)

@@ -30,6 +30,7 @@ export default function ModalClaimLadderRewards(props) {
     <>
       <div className="relative z-10 max-w-sm w-full">
         <div className="modal surface-transparent w-full">
+          {/*
           <button
             type="button"
             className="button button-secondary button-close"
@@ -37,6 +38,7 @@ export default function ModalClaimLadderRewards(props) {
           >
             <span className="icon icon-e-remove" />
           </button>
+          */}
           <div className="modal-content">
             <div className="modal-body text-center">
               <h2 className="modal-title animate-slide-in-top">

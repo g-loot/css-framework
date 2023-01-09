@@ -117,22 +117,22 @@
 }
 
 .achievement-level-0 > * {
-  filter: brightness(0) saturate(100%) invert(16%) sepia(43%) saturate(1205%) hue-rotate(206deg) brightness(91%) contrast(92%);
+  filter: brightness(0) saturate(100%) invert(14%) sepia(20%) saturate(985%) hue-rotate(194deg) brightness(91%) contrast(92%);
 }
 .achievement-level-1 > * {
-  filter: brightness(0) saturate(100%) invert(53%) sepia(28%) saturate(359%) hue-rotate(339deg) brightness(92%) contrast(87%);
+  filter: brightness(0) saturate(100%) invert(53%) sepia(17%) saturate(565%) hue-rotate(339deg) brightness(94%) contrast(92%);
 }
 .achievement-level-2 > * {
   filter: brightness(0) saturate(100%) invert(64%) sepia(9%) saturate(1952%) hue-rotate(351deg) brightness(89%) contrast(89%);
 }
 .achievement-level-3 > * {
-  filter: brightness(0) saturate(100%) invert(87%) sepia(7%) saturate(203%) hue-rotate(184deg) brightness(83%) contrast(92%);
+  filter: brightness(0) saturate(100%) invert(80%) sepia(10%) saturate(107%) hue-rotate(178deg) brightness(96%) contrast(86%);
 }
 .achievement-level-4 > * {
-  filter: brightness(0) saturate(100%) invert(95%) sepia(99%) saturate(6729%) hue-rotate(319deg) brightness(92%) contrast(89%);
+  filter: brightness(0) saturate(100%) invert(69%) sepia(42%) saturate(649%) hue-rotate(4deg) brightness(89%) contrast(83%);
 }
 .achievement-level-5 > * {
-  filter: brightness(0) saturate(100%) invert(91%) sepia(23%) saturate(6266%) hue-rotate(329deg) brightness(102%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(83%) sepia(100%) saturate(4522%) hue-rotate(317deg) brightness(100%) contrast(91%);
 }
 
 [class*="achievement-level-"] {

@@ -117,7 +117,6 @@
       &,
       > * {
         @apply
-        text-mono-100
         z-20
         ;
       }
@@ -128,6 +127,25 @@
         scale-y-100
         translate-y-0
         duration-75
+        ;
+      }
+    }
+
+    &:hover,
+    &:focus-visible {
+      &,
+      > * {
+        @apply
+        text-mono-100
+        ;
+      }
+    }
+
+    &.is-active {
+      &,
+      > * {
+        @apply
+        text-main
         ;
       }
     }

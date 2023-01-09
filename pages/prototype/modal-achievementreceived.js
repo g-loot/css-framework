@@ -2,6 +2,11 @@ import React, { useContext, useState } from "react";
 
 import Lottie from "lottie-react";
 import LottieExplosion from "../../assets/animations/explosion-7.json";
+import LottieExplosionLvl1 from "../../assets/animations/explosion_stryda_5.json";
+import LottieExplosionLvl2 from "../../assets/animations/explosion_stryda_6.json";
+import LottieExplosionLvl3 from "../../assets/animations/explosion_stryda_7.json";
+import LottieExplosionLvl4 from "../../assets/animations/explosion_stryda_8.json";
+import LottieExplosionLvl5 from "../../assets/animations/explosion_stryda_9.json";
 import { UiContext } from "../../contexts/ui.js";
 import { VariablesContext } from "../../contexts/variables";
 import AchievementFrame from "../../components/Achievements/AchievementFrame";
@@ -20,6 +25,20 @@ export default function ModalAchievementReceived(props) {
   const progress = props.progress || 12;
   const from = props.from || "24";
   const to = props.to || "300 XP";
+
+  function LottieExplosion(level) {
+    if(level === 1) {
+      return LottieExplosionLvl1;
+    } else if(level === 2) {
+      return LottieExplosionLvl2;
+    } else if(level === 3) {
+      return LottieExplosionLvl3;
+    } else if(level === 4) {
+      return LottieExplosionLvl4;
+    } else if(level === 5) {
+      return LottieExplosionLvl5;
+    } 
+  }
 
   function closeModalWithDelay() {
     setSubmitting(true);
@@ -102,7 +121,7 @@ export default function ModalAchievementReceived(props) {
       <div className="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
         <div className="lottie-blur h-[75vh] w-[75vh] flex items-center justify-center">
           <Lottie
-            animationData={LottieExplosion}
+            animationData={LottieExplosion(level)}
             loop={false}
             autoplay={true}
           />

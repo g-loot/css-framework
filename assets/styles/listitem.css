@@ -53,7 +53,8 @@
   }
 }
 
-:where(.item-interactive > .item, .item.item-interactive ) {
+.item-interactive > .item
+.item.item-interactive {
   @apply
   transition
   duration-100
@@ -62,7 +63,7 @@
   .item-title {
     &:not([class*="text-"]) {
       @apply
-      text-ui-300
+      hidden
       transition
       duration-300
       ;
@@ -80,16 +81,21 @@
       }
     }
   }
+  &:not(.is-active) {
+    &:not([class*="text-"]) {
+      @apply
+      text-ui-300
+      ;
+    }
+  }
   &.is-active {
     @apply
     bg-ui-700
     ;
     .item-title {
-      &:not([class*="text-"]) {
-        @apply
-        text-ui-100
-        ;
-      }
+      @apply
+      text-main
+      ;
       &:not([class*="font-regular"]) {
         @apply
         font-bold

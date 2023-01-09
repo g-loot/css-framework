@@ -38,7 +38,6 @@
         @apply
         max-h-[50%]
         max-w-[120px]
-        drop-shadow-lg
         transition-all
         duration-500
         ease-in-out

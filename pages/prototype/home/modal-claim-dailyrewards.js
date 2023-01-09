@@ -29,6 +29,7 @@ export default function ModalClaimDailyRewards(props) {
     <>
       <div className="relative z-10 max-w-sm w-full">
         <div className="modal surface-transparent w-full">
+          {/*
           <button
             type="button"
             className="button button-secondary button-close"
@@ -36,6 +37,7 @@ export default function ModalClaimDailyRewards(props) {
           >
             <span className="icon icon-e-remove" />
           </button>
+          */}
           <div className="modal-content">
             <div className="modal-body text-center">
               <h2 className="modal-title animate-slide-in-top">
@@ -52,12 +54,8 @@ export default function ModalClaimDailyRewards(props) {
                     alt=""
                   />
                   <div className="flex gap-2 items-baseline justify-center">
-                    <div className="text-4xl text-gold-500">
-                      5
-                    </div>
-                    <div className="uppercase text-lg text-gold-500">
-                      Coins
-                    </div>
+                    <div className="text-4xl text-gold-500">5</div>
+                    <div className="uppercase text-lg text-gold-500">Coins</div>
                   </div>
                 </div>
                 <div>
@@ -70,12 +68,8 @@ export default function ModalClaimDailyRewards(props) {
                     alt=""
                   />
                   <div className="flex gap-2 items-baseline justify-center">
-                    <div className="text-4xl text-gold-500">
-                      1
-                    </div>
-                    <div className="uppercase text-lg text-gold-500">
-                      Token
-                    </div>
+                    <div className="text-4xl text-gold-500">1</div>
+                    <div className="uppercase text-lg text-gold-500">Token</div>
                   </div>
                 </div>
               </div>

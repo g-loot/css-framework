@@ -7,11 +7,11 @@ import LottieExplosion11 from "../../assets/animations/explosion-11.json";
 import LottieExplosion2 from "../../assets/animations/explosion_stryda_2.json";
 import LottieExplosion3 from "../../assets/animations/explosion_stryda_3.json";
 import LottieExplosion4 from "../../assets/animations/explosion_stryda_4.json";
-import LottieExplosion5 from "../../assets/animations/explosion-5.json";
-import LottieExplosion6 from "../../assets/animations/explosion-6.json";
-import LottieExplosion7 from "../../assets/animations/explosion-7.json";
-import LottieExplosion8 from "../../assets/animations/explosion-8.json";
-import LottieExplosion9 from "../../assets/animations/explosion-9.json";
+import LottieExplosion5 from "../../assets/animations/explosion_stryda_5.json";
+import LottieExplosion6 from "../../assets/animations/explosion_stryda_6.json";
+import LottieExplosion7 from "../../assets/animations/explosion_stryda_7.json";
+import LottieExplosion8 from "../../assets/animations/explosion_stryda_8.json";
+import LottieExplosion9 from "../../assets/animations/explosion_stryda_9.json";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
 
 const DSpage = () => {
@@ -31,28 +31,28 @@ const DSpage = () => {
     setStartAnim1(true);
     const timer = setTimeout(() => {
       setStartAnim1(false);
-    }, 4000);
+    }, 833);
     return () => clearTimeout(timer);
   }
   function handleStartAnim2() {
     setStartAnim2(true);
     const timer = setTimeout(() => {
       setStartAnim2(false);
-    }, 4000);
+    }, 1333);
     return () => clearTimeout(timer);
   }
   function handleStartAnim3() {
     setStartAnim3(true);
     const timer = setTimeout(() => {
       setStartAnim3(false);
-    }, 4000);
+    }, 1333);
     return () => clearTimeout(timer);
   }
   function handleStartAnim4() {
     setStartAnim4(true);
     const timer = setTimeout(() => {
       setStartAnim4(false);
-    }, 4000);
+    }, 2500);
     return () => clearTimeout(timer);
   }
   function handleStartAnim5() {
