@@ -17,6 +17,8 @@ const DSpage = () => {
   const [StartAnim12, setStartAnim12] = useState(false);
   const [StartAnim13, setStartAnim13] = useState(false);
   const [StartAnim14, setStartAnim14] = useState(false);
+  const [StartAnim15, setStartAnim15] = useState(false);
+  const [StartAnim16, setStartAnim16] = useState(false);
 
   function handleStartAnim1() {
     setStartAnim1(true);
@@ -103,6 +105,20 @@ const DSpage = () => {
   }
   function handleStartAnim14() {
     setStartAnim14(!StartAnim14);
+  }
+  function handleStartAnim15() {
+    setStartAnim15(true);
+    const timer = setTimeout(() => {
+      setStartAnim15(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }
+  function handleStartAnim16() {
+    setStartAnim16(true);
+    const timer = setTimeout(() => {
+      setStartAnim16(false);
+    }, 1000);
+    return () => clearTimeout(timer);
   }
 
   return (
@@ -582,6 +598,94 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/agnpfj9x/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scale in horizontal */}
+      <div className="mb-12" id="scale-in-horizontal">
+        <h2 className="h3 mb-3">Scale in horizontal</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div
+                  className={`w-24 h-24 bg-ui-400 mx-auto flex items-center justify-center ${
+                    StartAnim15 === true ? "animate-scale-in-x-right" : ""
+                  }`}
+                >
+                </div>
+                <code>.animate-scale-in-x-right</code>
+                <div
+                  className={`w-24 h-24 bg-ui-400 mx-auto flex items-center justify-center ${
+                    StartAnim15 === true ? "animate-scale-in-x-left" : ""
+                  }`}
+                >
+                </div>
+                <code>.animate-scale-in-x-left</code>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim15.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/jsp34f5n/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Scale out horizontal */}
+      <div className="mb-12" id="scale-out-horizontal">
+        <h2 className="h3 mb-3">Scale out horizontal</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div
+                  className={`w-24 h-24 bg-ui-400 mx-auto flex items-center justify-center ${
+                    StartAnim16 === true ? "animate-scale-out-x-right" : ""
+                  }`}
+                >
+                </div>
+                <code>.animate-scale-out-x-right</code>
+                <div
+                  className={`w-24 h-24 bg-ui-400 mx-auto flex items-center justify-center ${
+                    StartAnim16 === true ? "animate-scale-out-x-left" : ""
+                  }`}
+                >
+                </div>
+                <code>.animate-scale-out-x-left</code>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim16.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/jsp34f5n/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

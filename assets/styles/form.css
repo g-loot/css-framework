@@ -1115,7 +1115,7 @@ label.button {
     &::after,
     .form-info {
       @apply
-      text-interaction-500
+      text-success-500
       ;
     }
     &::after {
@@ -1125,7 +1125,7 @@ label.button {
     }
     &.is-loading::before {
       @apply
-      border-l-interaction-700
+      border-l-success-700
       ;
     }
     .input-group {
@@ -1133,7 +1133,7 @@ label.button {
       > div {
         &:not(.icon) {
           @apply
-          border-interaction-700
+          border-success-700
           ;
         }
       }
@@ -1141,32 +1141,32 @@ label.button {
     .input-number {
       > button {
         @apply
-        border-interaction-700
+        border-success-700
         ;
       }
     }
     &:not([data-success=false]) {
       :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text, select) {
         @apply
-        border-interaction-700
-        focus-visible:outline-interaction-500
+        border-success-700
+        focus-visible:outline-success-500
         ;
       }
       :where(.icon, .form-radio, .form-toggle, .form-checkbox) {
         @apply
-        text-interaction-500
+        text-success-500
         ;
         input {
           &:checked + label::before {
             @apply
-            bg-interaction-500
-            from-interaction-700
-            to-interaction-300
+            bg-success-500
+            from-success-700
+            to-success-300
             ;
           }
           & + label::before {
             @apply
-            shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
+            shadow-[0_0_0_2px_rgb(var(--color-success-500))]
           }
         }
       }

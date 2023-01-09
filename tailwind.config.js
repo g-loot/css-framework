@@ -9,7 +9,7 @@ function withOpacityValue(variable) {
 
 module.exports = {
   mode: "jit",
-  darkMode: 'class',
+  darkMode: "class",
   content: [
     "./pages/*.{js,ts,jsx,tsx,json}",
     "./pages/**/*.{js,ts,jsx,tsx,json}",
@@ -86,15 +86,15 @@ module.exports = {
       icon: ["icons", "serif"],
     },
     borderRadius: {
-      'none': '0',
-      'sm': '0.25rem',
-      DEFAULT: '0.25rem',
-      'md': '0.25rem',
-      'lg': '0.25rem',
-      'xl': '0.25rem',
-      '2xl': '0.25rem',
-      '3xl': '0.25rem',
-      'full': '9999px',
+      none: "0",
+      sm: "0.25rem",
+      DEFAULT: "0.25rem",
+      md: "0.25rem",
+      lg: "0.25rem",
+      xl: "0.25rem",
+      "2xl": "0.25rem",
+      "3xl": "0.25rem",
+      full: "9999px",
     },
     extend: {
       colors: {
@@ -263,9 +263,13 @@ module.exports = {
         "bounce-right": "bounceRight 1.1s infinite",
         "bounce-left": "bounceLeft 1.1s infinite",
         "bounce-bottom": "bounceBottom 1.1s infinite",
-        "rotate": "rotate 12s linear infinite",
+        rotate: "rotate 12s linear infinite",
         floating: "floating 6s cubic-bezier(.45,0,.4,1) infinite",
         shake: "shake 0.8s cubic-bezier(.455,.030,.515,.955) both",
+        "scale-in-x-left": "scaleInXLeft 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "scale-out-x-left": "scaleOutXLeft 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "scale-in-x-right": "scaleInXRight 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "scale-out-x-right": "scaleOutXRight 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
       },
       keyframes: {
         slideInLeft: {
@@ -442,7 +446,7 @@ module.exports = {
           },
         },
         rotate: {
-          "0": {
+          0: {
             transform: "rotate(0)",
           },
           "100%": {
@@ -466,6 +470,46 @@ module.exports = {
             transform: "translateX(-8px)",
           },
         },
+        scaleInXLeft: {
+          "0%": {
+            transform: "scaleX(0)",
+            transformOrigin: "0% 0%",
+          },
+          "100%": {
+            transform: "scaleX(1)",
+            transformOrigin: "0% 0%",
+          }
+        },
+        scaleOutXLeft: {
+          "0%": {
+            transform: "scaleX(1)",
+            transformOrigin: "0% 0%",
+          },
+          "100%": {
+            transform: "scaleX(0)",
+            transformOrigin: "0% 0%",
+          }
+        },
+        scaleInXRight: {
+          "0%": {
+            transform: "scaleX(0)",
+            transformOrigin: "100% 100%",
+          },
+          "100%": {
+            transform: "scaleX(1)",
+            transformOrigin: "100% 100%",
+          }
+        },
+        scaleOutXRight: {
+          "0%": {
+            transform: "scaleX(1)",
+            transformOrigin: "100% 100%",
+          },
+          "100%": {
+            transform: "scaleX(0)",
+            transformOrigin: "100% 100%",
+          }
+        }
       },
       boxShadow: {
         main: ["0px 0px 0px 2px rgba(19, 240, 148, 1)"],
@@ -506,94 +550,6 @@ module.exports = {
       },
     },
   },
-  safelist: [
-    "bg-ui-100",
-    "bg-ui-200",
-    "bg-ui-300",
-    "bg-ui-400",
-    "bg-ui-500",
-    "bg-ui-600",
-    "bg-ui-700",
-    "bg-ui-800",
-    "bg-ui-850",
-    "bg-ui-900",
-    "bg-mono-100",
-    "bg-mono-900",
-    "bg-main",
-    "bg-premium-300",
-    "bg-premium-500",
-    "bg-premium-700",
-    "bg-interaction-300",
-    "bg-interaction-500",
-    "bg-interaction-700",
-    "bg-blue-300",
-    "bg-blue-500",
-    "bg-blue-700",
-    "bg-purple-300",
-    "bg-purple-500",
-    "bg-purple-700",
-    "bg-teal-300",
-    "bg-teal-500",
-    "bg-teal-700",
-    "bg-gradient-to-r",
-    "from-teal-500",
-    "to-blue-500",
-    "from-purple-700",
-    "from-purple-500",
-    "bg-attention-300",
-    "bg-attention-500",
-    "bg-attention-700",
-    "bg-success-300",
-    "bg-success-500",
-    "bg-success-700",
-    "bg-info-300",
-    "bg-info-500",
-    "to-info-500",
-    "bg-info-700",
-    "bg-error-300",
-    "bg-error-500",
-    "bg-error-700",
-    "bg-disabled-300",
-    "bg-disabled-500",
-    "bg-disabled-700",
-    "bg-gold-300",
-    "bg-gold-500",
-    "bg-gold-700",
-    "bg-silver-300",
-    "bg-silver-500",
-    "bg-silver-700",
-    "bg-bronze-300",
-    "bg-bronze-500",
-    "bg-bronze-700",
-    "bg-game-apexlegends",
-    "bg-game-csgo",
-    "bg-game-dota2",
-    "bg-game-leagueoflegends",
-    "bg-game-pubg",
-    "bg-game-rocketleague",
-    "bg-game-valorant",
-    "fom-game-apexlegends",
-    "fom-game-csgo",
-    "fom-game-dota2",
-    "fom-game-leagueoflegends",
-    "fom-game-pubg",
-    "fom-game-rocketleague",
-    "fom-game-valorant",
-    "to-game-apexlegends",
-    "to-game-csgo",
-    "to-game-dota2",
-    "to-game-leagueoflegends",
-    "to-game-pubg",
-    "to-game-rocketleague",
-    "to-game-valorant",
-    "text-game-apexlegends",
-    "text-game-csgo",
-    "text-game-dota2",
-    "text-game-leagueoflegends",
-    "text-game-pubg",
-    "text-game-rocketleague",
-    "text-game-valorant",
-  ],
   plugins: [
     function ({ addVariant }) {
       addVariant("child", "& > *");

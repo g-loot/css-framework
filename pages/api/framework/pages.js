@@ -18,6 +18,29 @@ export const FrameworkPages = {
   ],
   sections: [
     {
+      title: "Authentication",
+      pages: [
+        {
+          label: "Login",
+          url: "auth/login",
+          query: "",
+          tags: "auth,oauth,authentication,login,sign in",
+        },
+        {
+          label: "Sign up",
+          url: "auth/signup",
+          query: "",
+          tags: "auth,oauth,authentication,sign up,register",
+        },
+        {
+          label: "Login",
+          url: "auth/recoverpassword",
+          query: "",
+          tags: "auth,oauth,authentication,forgotten password,password,recover password,recovery",
+        },
+      ],
+    },
+    {
       title: "Home",
       pages: [
         {
