@@ -322,20 +322,19 @@ export default function TopbarNew() {
                   >
                     <div className="pointer-events-none absolute -inset-1 !m-0 rounded-full">
                       <i
-                        className="absolute inset-0 rounded-full border-t-2 border-t-main/0 border-l border-l-main/40 animate-rotate"
+                        className="absolute inset-px rounded-full border border-main/40 animate-pulse"
                         style={{ animationDuration: "4s" }}
                       />
                     </div>
                     <div className="text-sm font-bold text-ui-200 text-center pl-px">
                       <div className="infobanner is-active">
                         <div className="infobanner-front">
-                          {isPremium ? <>65%</> : <>15%</>}
+                          <span className="font-bold text-xs">{isPremium ? <>+165%</> : <>+15%</>}</span>
                         </div>
                         <div className="infobanner-back">
                           <span className="icon icon-lightning text-main mx-auto" />
                         </div>
                       </div>
-                      
                     </div>
                   </button>
                 </div>
@@ -344,6 +343,9 @@ export default function TopbarNew() {
                   tabIndex="1"
                   className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[300px] overflow-hidden rounded-xl shadow-xl"
                 >
+                  <h5 className="mx-2 mt-2">
+                    XP Boosts
+                  </h5>
                   <ul className="rounded-lg text-left text-sm p-2 leading-none">
                     {isPremium ? (
                       <li className="flex gap-2 py-1 items-center">
@@ -454,7 +456,7 @@ export default function TopbarNew() {
                             <li className="flex gap-2 text-sm">
                               <div className=" w-12 uppercase">Get</div>
                               <div className="flex-1">
-                                From <strong>Daily Loot</strong> Streak and{" "}
+                                From <strong>Daily Login</strong> Streak and{" "}
                                 <strong>Weekly Brawl winnings</strong>.
                               </div>
                             </li>
@@ -503,7 +505,7 @@ export default function TopbarNew() {
                             <li className="flex gap-2 text-sm">
                               <div className=" w-12 uppercase">Get</div>
                               <div className="flex-1">
-                                <strong>Missions, Daily Loot Streak</strong> or{" "}
+                                <strong>Missions, Daily Login Streak</strong> or{" "}
                                 <strong>buy them</strong> directly from the
                                 Wallet.
                               </div>

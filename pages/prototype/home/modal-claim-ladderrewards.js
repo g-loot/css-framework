@@ -46,39 +46,50 @@ export default function ModalClaimLadderRewards(props) {
               </h2>
               <div className="flex gap-8 items-start justify-center leading-tight mt-4">
                 <div>
-                  <img
-                    className="mx-auto animate-drop-in animate-delay"
-                    style={{ "--delay": "calc( 1 * 0.1s)" }}
-                    src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
-                    width="140"
-                    height="auto"
-                    alt=""
-                  />
+                  <div className="relative">
+                    <div className="lottie-blur absolute inset-0 flex items-center justify-center">
+                      <Lottie
+                        animationData={LottieExplosion}
+                        loop={false}
+                        autoplay={true}
+                      />
+                    </div>
+                    <img
+                      className="mx-auto animate-fire-in animate-delay"
+                      style={{ "--delay": "calc( 1 * 0.2s)" }}
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
+                      width="180"
+                      height="auto"
+                      alt=""
+                    />
+                  </div>
+
                   <div className="flex gap-2 items-baseline justify-center">
-                    <div className="text-4xl text-gold-500">
-                      5
-                    </div>
-                    <div className="uppercase text-lg text-gold-500">
-                      Coins
-                    </div>
+                    <div className="text-4xl text-gold-500">5</div>
+                    <div className="uppercase text-lg text-gold-500">Coins</div>
                   </div>
                 </div>
                 <div>
-                  <img
-                    className="mx-auto animate-drop-in animate-delay"
-                    style={{ "--delay": "calc( 2 * 0.1s)" }}
-                    src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-unique.png"
-                    width="140"
-                    height="auto"
-                    alt=""
-                  />
+                  <div className="relative">
+                    <div className="lottie-blur absolute inset-0 flex items-center justify-center">
+                      <Lottie
+                        animationData={LottieExplosion}
+                        loop={false}
+                        autoplay={true}
+                      />
+                    </div>
+                    <img
+                      className="mx-auto animate-fire-in animate-delay"
+                      style={{ "--delay": "calc( 2 * 0.2s)" }}
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-unique.png"
+                      width="180"
+                      height="auto"
+                      alt=""
+                    />
+                  </div>
                   <div className="flex gap-2 items-baseline justify-center">
-                    <div className="text-4xl text-gold-500">
-                      1
-                    </div>
-                    <div className="uppercase text-lg text-gold-500">
-                      Token
-                    </div>
+                    <div className="text-4xl text-gold-500">1</div>
+                    <div className="uppercase text-lg text-gold-500">Token</div>
                   </div>
                 </div>
               </div>
@@ -97,6 +108,7 @@ export default function ModalClaimLadderRewards(props) {
           </div>
         </div>
       </div>
+      {/*
       <div className="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
         <div className="lottie-blur h-[75vh] w-[75vh] flex items-center justify-center">
           <Lottie
@@ -106,6 +118,7 @@ export default function ModalClaimLadderRewards(props) {
           />
         </div>
       </div>
+      */}
     </>
   );
 }

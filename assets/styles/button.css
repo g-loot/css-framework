@@ -733,7 +733,7 @@ button {
       inset-0
       bg-[length:200%_auto]
       animate-[button-shining-rays_2s_linear_infinite]
-      bg-[linear-gradient(45deg,#fff0_45%,#fffc_50%,#fff0_55%,#fff0)]
+      bg-[linear-gradient(45deg,#fff0_45%,#fffc_46%,#fffc_54%,#fff0_55%,#fff0)]
       ;
     }
 

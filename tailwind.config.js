@@ -270,6 +270,8 @@ module.exports = {
         "scale-out-x-left": "scaleOutXLeft 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
         "scale-in-x-right": "scaleInXRight 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
         "scale-out-x-right": "scaleOutXRight 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "fire-in": "fireIn 0.88s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "fire-out": "fireOut 0.44s cubic-bezier(0.7, 0, 0.1, 1) both",
       },
       keyframes: {
         slideInLeft: {
@@ -509,7 +511,31 @@ module.exports = {
             transform: "scaleX(0)",
             transformOrigin: "100% 100%",
           }
-        }
+        },
+        fireIn: {
+          "0%": {
+            opacity: "0",
+            transform: "scale(2)",
+            filter: "brightness(1000%)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1)",
+            filter: "brightness(100%)",
+          },
+        },
+        fireOut: {
+          "0%": {
+            opacity: "1",
+            transform: "scale(1)",
+            filter: "brightness(100%)",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "scale(2)",
+            filter: "brightness(1000%)",
+          },
+        },
       },
       boxShadow: {
         main: ["0px 0px 0px 2px rgba(19, 240, 148, 1)"],

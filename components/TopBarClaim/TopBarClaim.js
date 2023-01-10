@@ -66,7 +66,7 @@ export default function TopBarClaim(props) {
     >
       <label
         tabIndex="1"
-        className="tab tab-secondary"
+        className="tab tab-secondary is-shining"
         onClick={dropdownActive}
       >
         <span
@@ -82,9 +82,10 @@ export default function TopBarClaim(props) {
           }`}
         >
           <span className="relative z-10">
-            <span className="max-sm:hidden">Daily Loot</span> Streak
+            <span className="max-sm:hidden">Daily Login</span> Streak
           </span>
         </div>
+        {/*
         {StartAnim1 && !variablesContext.dailyRewardClaimed && (
           <div className="absolute z-0 -top-0.5 bottom-0.5 flex items-center justify-center lottie-blur">
             <Lottie
@@ -94,6 +95,7 @@ export default function TopBarClaim(props) {
             />
           </div>
         )}
+        */}
       </label>
       <div tabIndex="1" className="dropdown-content w-96 p-1">
         <DailyReward />

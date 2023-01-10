@@ -19,6 +19,8 @@ const DSpage = () => {
   const [StartAnim14, setStartAnim14] = useState(false);
   const [StartAnim15, setStartAnim15] = useState(false);
   const [StartAnim16, setStartAnim16] = useState(false);
+  const [StartAnim17, setStartAnim17] = useState(false);
+  const [StartAnim18, setStartAnim18] = useState(false);
 
   function handleStartAnim1() {
     setStartAnim1(true);
@@ -117,6 +119,20 @@ const DSpage = () => {
     setStartAnim16(true);
     const timer = setTimeout(() => {
       setStartAnim16(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }
+  function handleStartAnim17() {
+    setStartAnim17(true);
+    const timer = setTimeout(() => {
+      setStartAnim17(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }
+  function handleStartAnim18() {
+    setStartAnim18(true);
+    const timer = setTimeout(() => {
+      setStartAnim18(false);
     }, 1000);
     return () => clearTimeout(timer);
   }
@@ -721,6 +737,77 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/3Ljhykp8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      {/* Fire in */}
+      <div className="mb-12" id="fire-in">
+        <h2 className="h3 mb-3">Fire in</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div
+                  className={`w-24 h-24 rounded-full bg-ui-400 mx-auto ${
+                    StartAnim17 === true ? "animate-fire-in" : ""
+                  }`}
+                ></div>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim17.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/jsp34f5n/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Fire out */}
+      <div className="mb-12" id="fire-out">
+        <h2 className="h3 mb-3">Fire out</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div
+                  className={`w-24 h-24 rounded-full bg-ui-400 mx-auto ${
+                    StartAnim18 === true ? "animate-fire-out" : ""
+                  }`}
+                ></div>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim18.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/agnpfj9x/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

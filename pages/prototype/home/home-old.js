@@ -125,7 +125,7 @@ export default function Home() {
               <div className="relative z-30 mb-2">
                 <div className="flex items-baseline gap-2 mb-1">
                   <h2 className="text-2xl">
-                    <span>Daily Loot Streak</span>
+                    <span>Daily Login Streak</span>
                   </h2>
                   <button
                     type="button"

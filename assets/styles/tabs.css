@@ -86,7 +86,7 @@
       &:active,
       &:hover {
         @apply
-        text-white
+        text-main
         ;
         &::after {
           @apply
@@ -579,7 +579,7 @@
   &:active,
   &:hover {
     @apply
-    text-white
+    text-main
     ;
     &::after {
       @apply
@@ -637,4 +637,44 @@
   @apply
   leading-none
   ;
+}
+
+/* Shining */
+
+.tab,
+.tabs > li {
+
+  &.is-shining {
+    @apply
+    relative
+    overflow-hidden
+    ;
+
+    &::before {
+      @apply
+      content-['']
+      absolute
+      inset-0
+      bg-[length:200%_auto]
+      animate-[tab-shining-rays_5s_linear_infinite]
+      bg-[linear-gradient(45deg,_#fff0_45%,_#fffc_46%,_#fffc_55%,_#fff0_56%,_#fff0_70%,_#fffd_71%,_#fffd_80%,_#fff0_81%)]
+      bg-no-repeat
+      ;
+    }
+
+    &::before {
+      animation-delay: 300ms;
+    }
+  }
+}
+
+@keyframes tab-shining-rays {
+  0%, 25% {
+    background-position: -200%;
+    opacity: .5;
+  }
+  50%, 100% {
+    background-position: 200%;
+    opacity: .25;
+  }
 }

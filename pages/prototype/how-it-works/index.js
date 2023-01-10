@@ -115,7 +115,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "Tokens are how you pay to enter your scores in the Weekly Brawl. Tokens can be earned through Mission Rewards, Daily Loot Streaks, or bought from the shop.",
+        text: "Tokens are how you pay to enter your scores in the Weekly Brawl. Tokens can be earned through Mission Rewards, Daily Login Streaks, or bought from the shop.",
       },
     ],
   },
@@ -133,7 +133,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "Earn Coins in Brawls and the Daily Loot Streak, and spend them in the shop. Give yourself extra motivation while you game by setting your eyes on a prize and working towards buying it.",
+        text: "Earn Coins in Brawls and the Daily Login Streak, and spend them in the shop. Give yourself extra motivation while you game by setting your eyes on a prize and working towards buying it.",
       },
       {
         type: "p",

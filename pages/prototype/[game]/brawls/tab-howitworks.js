@@ -54,7 +54,7 @@ const MissionsHowitworksTabs = [
         text: [
           "Earn Tokens by completing Missions and unlocking Mission Rewards.",
           "Buy Tokens in the Stryda wallet.",
-          "Claim free Tokens in your Daily Loot Streak.",
+          "Claim free Tokens in your Daily Login Streak.",
         ],
       },
     ],

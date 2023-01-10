@@ -192,7 +192,7 @@ export default function Topbar() {
                           <li className="flex gap-2 text-sm">
                             <div className=" w-12 uppercase">Get</div>
                             <div className="flex-1">
-                              From <strong>Daily Loot</strong> Streak and{" "}
+                              From <strong>Daily Login</strong> Streak and{" "}
                               <strong>Weekly Brawl winnings</strong>.
                             </div>
                           </li>
@@ -244,7 +244,7 @@ export default function Topbar() {
                           <li className="flex gap-2 text-sm">
                             <div className=" w-12 uppercase">Get</div>
                             <div className="flex-1">
-                              <strong>Missions, Daily Loot Streak</strong> or{" "}
+                              <strong>Missions, Daily Login Streak</strong> or{" "}
                               <strong>buy them</strong> directly from the
                               Wallet.
                             </div>

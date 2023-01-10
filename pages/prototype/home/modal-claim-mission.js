@@ -57,22 +57,25 @@ export default function ModalClaimMission(props) {
                 className=" animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc( 6 * 0.15s)" }}
               >
-                <div className="flex gap-2 justify-center items-center mx-auto">
-                  <div className="text-2xl text-gold-500 w-20 text-right">
-                    <AnimatedNumber number={xp * percent()} />
+                
+                <div className="mt-1 flex items-end gap-4 leading-none">
+                  <div className="flex-1">
+                  <div className="flex gap-2 justify-center items-center mx-auto">
+                    <div className="text-2xl text-gold-500 w-20 text-right">
+                      <AnimatedNumber number={xp * percent()} />
+                    </div>
+                    <span className="icon icon-xp-symbol text-5xl text-gold-500" />
                   </div>
-                  <span className="icon icon-xp-symbol text-5xl text-gold-500" />
-                </div>
-                <div className="mt-1 flex items-center gap-4 leading-none">
-                  <div
-                    className="progressbar progressbar-secondary w-full"
-                    style={{
-                      "--percent": 1200,
-                      "--progress": 1200 + xp * percent(),
-                    }}
-                  >
-                    <div />
-                    <div />
+                    <div
+                      className="progressbar progressbar-secondary w-full"
+                      style={{
+                        "--percent": 1200,
+                        "--progress": 1200 + xp * percent(),
+                      }}
+                    >
+                      <div />
+                      <div />
+                    </div>
                   </div>
                   <div className="flex-none w-24 text-ui-300 text-sm text-right">
                     <span>

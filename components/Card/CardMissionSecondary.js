@@ -77,7 +77,7 @@ export default function CardMissionSecondary(props) {
                     hasDays={false}
                     hasHours={true}
                     hasMinutes={true}
-                    hasSeconds={true}
+                    hasSeconds={false}
                     labelClassName="text-base mr-2"
                     className="text-4xl"
                   />
