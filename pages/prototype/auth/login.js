@@ -54,13 +54,12 @@ export default function Login() {
       <PrototypeAuth title="Login">
         <div className="p-4 w-full max-w-xs">
           <img
-            className="mb-6"
+            className="mb-10 mx-auto"
             width="175"
             height="auto"
             src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
             alt="Stryda logo"
           />
-          <h2 className="mb-6">Welcome back!</h2>
           <div className="form-group mb-3" data-success={isEmail(emailStr)}>
             <label htmlFor="email">Email address</label>
             <input
@@ -97,9 +96,8 @@ export default function Login() {
               <span>Sign in</span>
             </button>
           </Link>
-          <p className="text-sm mb-8">
-            By clicking SIGN IN, you certify that you are at least 16 years old,
-            and you have read and agree to the{" "}
+          <p className="text-sm text-center mb-8">
+            By clicking SIGN IN, you certify that you have read and agree to the{" "}
             <a href="#" className="link">
               Terms & Conditions
             </a>{" "}
@@ -108,28 +106,17 @@ export default function Login() {
               Privacy Policy
             </a>
           </p>
-          <p className="text-sm mb-4">
+          <p className="text-sm text-center mb-4">
             <Link href="/prototype/auth/recoverpassword">
               <a className="link link-main">Forgotten your password?</a>
             </Link>
           </p>
-          <p className="text-sm mb-8">
+          <p className="text-sm text-center mb-8">
             <Link href="/prototype/auth/signup">
               <a className="link link-main">
                 Don&#39;t have an account? Create one
               </a>
             </Link>
-          </p>
-          <p className="text-ui-300 text-xs">
-            This site is protected by reCAPTCHA and the Google{" "}
-            <a href="#" className="link">
-              Privacy Policy
-            </a>{" "}
-            and{" "}
-            <a href="#" className="link">
-              Terms of Service
-            </a>{" "}
-            apply.
           </p>
         </div>
       </PrototypeAuth>

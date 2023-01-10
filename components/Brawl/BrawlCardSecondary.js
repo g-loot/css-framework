@@ -34,9 +34,6 @@ export default function BrawlCardSecondary(props) {
       {brawl.hasClaim && (
         <div className="card-overlay">
           <div>
-            <div className="text-2xl text-ui-100">
-              You won a prize!
-            </div>
             <button
               type="button"
               className="button button-claim is-shining"
@@ -46,10 +43,6 @@ export default function BrawlCardSecondary(props) {
               <span>Claim reward</span>
             </button>
           </div>
-          <img
-            src="https://res.cloudinary.com/gloot/image/upload/v1672221451/Stryda/illustrations/card-rewarddoverlay-bg.png"
-            alt=""
-          />
         </div>
       )}
       <div className="card-image">

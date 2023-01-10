@@ -54,16 +54,18 @@ export default function Login() {
       <PrototypeAuth title="Login">
         <div className="p-4 w-full max-w-xs">
           <img
-            className="mb-6"
+            className="mb-10 mx-auto"
             width="175"
             height="auto"
             src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
             alt="Stryda logo"
           />
+          {/*
           <h2 className="mb-6">Welcome</h2>
           <p className="mb-6">
             You are only a few clicks from a whole new esports experience!
           </p>
+  */}
           <div className="form-group mb-3" data-success={isEmail(emailStr)}>
             <label htmlFor="email">Email address</label>
             <input
@@ -176,7 +178,7 @@ export default function Login() {
               <span>Create free account</span>
             </button>
           </Link>
-          <p className="text-sm mb-8">
+          <p className="text-sm mb-8 text-center">
             By clicking CREATE FREE ACCOUNT, you certify that you are at least
             16 years old, and you have read and agree to the{" "}
             <a href="#" className="link">
@@ -187,25 +189,10 @@ export default function Login() {
               Privacy Policy
             </a>
           </p>
-          <p className="text-sm mb-8">
-            Our Player Protection team is dedicated to creating a safe esports
-            experience for our players. Your data and privacy is protected.
-          </p>
-          <p className="text-sm mb-8">
+          <p className="text-sm mb-8 text-center">
             <Link href="/prototype/auth/login">
               <a className="link link-main">Already have an account? Log in</a>
             </Link>
-          </p>
-          <p className="text-ui-300 text-xs">
-            This site is protected by reCAPTCHA and the Google{" "}
-            <a href="#" className="link">
-              Privacy Policy
-            </a>{" "}
-            and{" "}
-            <a href="#" className="link">
-              Terms of Service
-            </a>{" "}
-            apply.
           </p>
         </div>
       </PrototypeAuth>

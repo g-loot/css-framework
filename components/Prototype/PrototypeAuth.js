@@ -36,10 +36,6 @@ export default function PrototypeAuth({ children, title }) {
                   <br />
                   <span className="text-9xl">Esports</span>
                 </h1>
-                <p className="text-ui-900 text-lg">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt.
-                </p>
               </div>
             </div>
           </div>

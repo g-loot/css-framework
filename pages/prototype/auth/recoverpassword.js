@@ -17,14 +17,13 @@ export default function Login() {
       <PrototypeAuth title="Login">
         <div className="p-4 w-full max-w-xs">
           <img
-            className="mb-6"
+            className="mb-10 mx-auto"
             width="175"
             height="auto"
             src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
             alt="Stryda logo"
           />
-          <h2 className="mb-6">Password recovery</h2>
-          <div className="form-group mb-3" data-success={isEmail(emailStr)}>
+          <div className="form-group mb-8" data-success={isEmail(emailStr)}>
             <label htmlFor="email">Email address</label>
             <input
               type="email"
@@ -43,7 +42,7 @@ export default function Login() {
               <span>Send recovery email</span>
             </button>
           </Link>
-          <p className="text-sm mb-4">
+          <p className="text-sm text-center mb-4">
             <Link href="/prototype/auth/login">
               <a href="#" className="link link-main">
                 Go back
