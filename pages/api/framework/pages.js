@@ -33,7 +33,7 @@ export const FrameworkPages = {
           tags: "auth,oauth,authentication,sign up,register",
         },
         {
-          label: "Login",
+          label: "Recover password",
           url: "auth/recoverpassword",
           query: "",
           tags: "auth,oauth,authentication,forgotten password,password,recover password,recovery",

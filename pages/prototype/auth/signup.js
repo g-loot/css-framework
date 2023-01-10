@@ -78,7 +78,7 @@ export default function Login() {
             />
           </div>
           <div className="form-group mb-8" data-success={checkAll(passwordStr)}>
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">Choose password</label>
             <div className="input-group">
               <button
                 onClick={togglePassword}

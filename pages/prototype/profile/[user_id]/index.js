@@ -141,9 +141,9 @@ export default function Home() {
                   <div className="px-3 py-2 border-b border-ui-700 relative z-10 flex-none flex items-center justify-between">
                     <div className="font-bold">
                       {selectedUser.isYou ? (
-                        <>Your achievements</>
+                        <>10 achievements</>
                       ) : (
-                        <>{selectedUser.nickname}&#39;s achievements </>
+                        <>10 achievements </>
                       )}
                     </div>
                     <Link href={`${selectedUser.id}/achievements`}>
@@ -213,7 +213,7 @@ export default function Home() {
                         />
                         <div className="pl-4 border-l border-ui-600">
                           <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                            Number of Brawls played:
+                            Number of Brawls played
                           </div>
                           <div className="text-ui-100 text-xl lg:text-3xl">
                             22
@@ -221,7 +221,7 @@ export default function Home() {
                         </div>
                         <div className="pl-4 border-l border-ui-600">
                           <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                            Times in top 50:
+                            Times in top 50
                           </div>
                           <div className="text-ui-100 text-xl lg:text-3xl">
                             2
@@ -229,7 +229,7 @@ export default function Home() {
                         </div>
                         <div className="pl-4 border-l border-ui-600">
                           <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                            Best placement:
+                            Best placement
                           </div>
                           <div className="text-ui-100 text-xl lg:text-3xl">
                             1
@@ -237,7 +237,7 @@ export default function Home() {
                         </div>
                         <div className="pl-4 border-l border-ui-600">
                           <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                            Most matches in a Brawl:
+                            Most matches in a Brawl
                           </div>
                           <div className="text-ui-100 text-xl lg:text-3xl">
                             16
@@ -245,7 +245,7 @@ export default function Home() {
                         </div>
                         <div className="pl-4 border-l border-ui-600">
                           <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                            Avg. matches / Brawl:
+                            Avg. matches / Brawl
                           </div>
                           <div className="text-ui-100 text-xl lg:text-3xl">
                             9.8
@@ -269,7 +269,7 @@ export default function Home() {
                         />
                         <div className="pl-4 border-l border-ui-600">
                           <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                            No. of missions completed:
+                            No. of missions completed
                           </div>
                           <div className="text-ui-100 text-xl lg:text-3xl">
                             143
@@ -277,7 +277,7 @@ export default function Home() {
                         </div>
                         <div className="pl-4 border-l border-ui-600">
                           <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                            Missions / day avg.:
+                            Missions / day avg.
                           </div>
                           <div className="text-ui-100 text-xl lg:text-3xl">
                             2.3
@@ -490,7 +490,7 @@ export default function Home() {
                       </div>
                       <div className="pl-4 border-l border-ui-600">
                         <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                          Headshots kill avg
+                          Headshots kill avg.
                         </div>
                         <div className="text-ui-100 text-xl lg:text-3xl">
                           {stat.headshotkillsavg}
@@ -498,7 +498,7 @@ export default function Home() {
                       </div>
                       <div className="pl-4 border-l border-ui-600">
                         <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                          Assist avg
+                          Assist avg.
                         </div>
                         <div className="text-ui-100 text-xl lg:text-3xl">
                           {stat.assistavg}
