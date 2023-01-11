@@ -93,7 +93,7 @@ export default function BrawlCardSecondary(props) {
           <div>
             <h2 className="h4 mb-2">{brawl.name}</h2>
             <div className="flex gap-4 items-center">
-              <div className="flex items-center whitespace-nowrap gap-2">
+              <div className="flex items-center whitespace-nowrap gap-1">
                 <span className="icon icon-coin text-gold-500" />
                 <span className="text-gold-500 text-sm">
                   5 000 - 30 000

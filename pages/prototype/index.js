@@ -46,7 +46,7 @@ const Index = () => {
                   {pageCount} screens
                 </small>
               </h1>
-              <div className="flex items-center justify-between md:justify-end gap-2">
+              <div className="flex flex-col items-center justify-between md:justify-end gap-2">
                 <div className="form-toggle text-sm text-ui-300">
                   <input
                     type="checkbox"

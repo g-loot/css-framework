@@ -63,18 +63,17 @@ export default function Login() {
           <div className="flex gap-2 mb-8">
             <div
               className="form-group"
-              data-success={isExactLength(yearStr, 4)}
+              data-success={isMaxLength(dayStr, 2, 31)}
             >
-              <label htmlFor="year">Year</label>
+              <label htmlFor="year">Day</label>
               <input
                 type="number"
                 name="year"
                 id="year"
                 min={1}
-                autoFocus
                 className="input-number"
-                placeholder="YYYY"
-                onChange={(event) => setYearStr(event.target.value)}
+                placeholder="DD"
+                onChange={(event) => setDayStr(event.target.value)}
               />
             </div>
             <div
@@ -94,17 +93,18 @@ export default function Login() {
             </div>
             <div
               className="form-group"
-              data-success={isMaxLength(dayStr, 2, 31)}
+              data-success={isExactLength(yearStr, 4)}
             >
-              <label htmlFor="year">Day</label>
+              <label htmlFor="year">Year</label>
               <input
                 type="number"
                 name="year"
                 id="year"
                 min={1}
+                autoFocus
                 className="input-number"
-                placeholder="DD"
-                onChange={(event) => setDayStr(event.target.value)}
+                placeholder="YYYY"
+                onChange={(event) => setYearStr(event.target.value)}
               />
             </div>
           </div>

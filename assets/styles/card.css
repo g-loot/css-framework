@@ -591,8 +591,6 @@
     }
     .card-meta {
       @apply
-      border-y
-      border-ui-700
       py-1
       ;
     }

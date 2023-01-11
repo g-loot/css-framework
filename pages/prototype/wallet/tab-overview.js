@@ -12,7 +12,12 @@ const WalletItems = [
     id: 1,
     name: "coins",
     icon: "icon-coin",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-coin-face.png",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-coin-face.png",
+    video: {
+      webm: "https://res.cloudinary.com/gloot/video/upload/v1673450628/Stryda/currencies/Coin_Rotation_No_Background_512x512.webm",
+      mp4: "https://res.cloudinary.com/gloot/video/upload/v1673450637/Stryda/currencies/Coin_Rotation_With_Background_512x512.mp4",
+    },
     amount: "50000",
     use: "To purchase items in the <b>Shop</b>.",
     get: "From <b>Daily Login Streak</b> and <b>Weekly Brawls</b>.",
@@ -23,7 +28,12 @@ const WalletItems = [
     id: 2,
     name: "tokens",
     icon: "icon-token",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-token-face.png",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-token-face.png",
+    video: {
+      webm: "https://res.cloudinary.com/gloot/video/upload/v1673450641/Stryda/currencies/Token_Rotation_No_Background_512x512.webm",
+      mp4: "https://res.cloudinary.com/gloot/video/upload/v1673450637/Stryda/currencies/Token_Rotation_With_Background_512x512.mp4",
+    },
     amount: "245",
     use: "To enter rounds in the <b>Weekly Brawls</b>.",
     get: "From <b>Missions, Daily Login Streak</b> or buy them directly from the <b>Wallet</b>.",
@@ -107,24 +117,33 @@ export default function TabWalletOverview() {
                 className="surface rounded-xl flex flex-col items-stretch p-2 w-full max-w-xs lg:max-w-xl mx-auto animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
               >
-                <div className="bg-gradient-to-b from-ui-900/50 to-ui-900/5 rounded overflow-hidden">
-                  <div className={`flex items-center justify-center my-8 ${item.color}`}>
-                    {item.image ? (
-                      <img src={item.image} alt="" className="h-32 w-32" />
-                    ) : (
-                    <span className={`icon text-5xl ${item.icon}`} />
-                    )}
-                    <div>
-                      <span className="text-3xl">{item.amount}</span>{" "}
-                      <span className="text-lg">{item.name}</span>
-                    </div>
+                <div
+                  className={`flex items-center justify-center my-8 ${item.color}`}
+                >
+                  {item.video ? (
+                    <video
+                      autoPlay
+                      playsinline
+                      muted
+                      loop
+                      preload
+                      className="w-32 h-32 mr-4"
+                    >
+                      <source src={item.video.webm} type="video/webm" />
+                      <source src={item.video.mp4} type="video/mp4" />
+                      <img src={item.image} />
+                    </video>
+                  ) : (
+                    <img src={item.image} alt="" className="h-32 w-32" />
+                  )}
+                  <div>
+                    <span className="text-3xl">{item.amount}</span>{" "}
+                    <span className="text-lg">{item.name}</span>
                   </div>
                 </div>
                 <div className="text-sm leading-tight text-ui-300 mt-3 mb-6 flex-1">
                   <div className="flex py-3 border-b border-ui-700/50 px-2 gap-2 max-w-xs mx-auto">
-                    <div className="w-1/4 uppercase text-ui-200">
-                      Use
-                    </div>
+                    <div className="w-1/4 uppercase text-ui-200">Use</div>
                     <div
                       className="flex-1 text-ui-300"
                       dangerouslySetInnerHTML={{
@@ -133,9 +152,7 @@ export default function TabWalletOverview() {
                     />
                   </div>
                   <div className="flex py-3 px-2 gap-2 max-w-xs mx-auto">
-                    <div className="w-1/4 uppercase text-ui-200">
-                      Get
-                    </div>
+                    <div className="w-1/4 uppercase text-ui-200">Get</div>
                     <div
                       className="flex-1 text-ui-300"
                       dangerouslySetInnerHTML={{

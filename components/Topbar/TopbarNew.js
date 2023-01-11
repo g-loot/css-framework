@@ -434,7 +434,7 @@ export default function TopbarNew() {
                           <h6 className="mb-3 text-ui-100">Coins</h6>
                           <div className="absolute -top-6 -right-6 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-coin-face.png"
                               className="w-14 h-14"
                               alt=""
                             />
@@ -483,11 +483,11 @@ export default function TopbarNew() {
                           <h6 className="mb-3 text-ui-100">Token</h6>
                           <div className="absolute -top-6 -right-6 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-token-face.png"
                               className="w-14 h-14"
                               alt=""
                             />
-                            <div className="lottie-blur absolute -inset-1">
+                            <div className="lottie-blur absolute grid place-items-center -inset-1">
                               <Lottie
                                 animationData={LottieExplosion}
                                 loop={false}
