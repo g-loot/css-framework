@@ -359,11 +359,13 @@ export const DSpages = [
         tags: "effects,explosion,lottie,animations,after effects,motion design",
         url: "explosion",
       },
+      /*
       {
         label: "Glow",
         tags: "effects,halo,glows,blur,gradient",
         url: "glow",
       },
+      */
     ],
   },
   {

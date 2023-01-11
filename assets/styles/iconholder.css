@@ -17,31 +17,11 @@
   from-ui-900/50
   to-ui-800
   ;
-  &::before {
-    @apply
-    content-['']
-    w-8
-    h-8
-    block
-    rounded-full
-    blur
-    absolute
-    top-0
-    left-[calc(50%-1rem)]
-    bg-gradient-radial-spotlight
-    from-blue-500/25
-    to-blue-700/0
-    ;
-  }
   > .icon {
     @apply
     text-7xl
-    bg-gradient-radial-spotlight
-    from-blue-300
-    to-ui-500
+    text-ui-400
     ;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -50,14 +30,6 @@
   h-20
   w-20
   ;
-  &::before {
-    @apply
-    content-['']
-    w-6
-    h-6
-    left-[calc(50%-0.75rem)]
-    ;
-  }
   > .icon {
     @apply
     text-5xl

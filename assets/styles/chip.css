@@ -82,10 +82,10 @@
 
   &.chip-sliced {
     @apply
-    py-1
+    py-0.5
     pl-1
     pr-2
-    rounded-l
+    rounded-l-[2px]
     ;
     &,
     &.chip-premium,
@@ -118,7 +118,7 @@
 
     &:not([class*=bg-]){
       @apply
-      bg-main
+      bg-ui-100
       ;
     }
 
@@ -127,9 +127,9 @@
       bg-blue-500
       ;
     }
-    &.chip-blue {
+    &.chip-premium {
       @apply
-      bg-blue-500
+      bg-premium-500
       ;
     }
     &.chip-gray {

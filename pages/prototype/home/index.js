@@ -86,7 +86,7 @@ export default function Home() {
               Match ended November 6 at 3:00am
             </span>
           </div>
-          <div className="surface sm:rounded-lg flex flex-col xl:flex-row xl:justify-between leading-none xl:gap-8">
+          <div className="surface surface-dimmed sm:rounded-lg flex flex-col xl:flex-row xl:justify-between leading-none xl:gap-8">
             <div className="flex flex-row items-center justify-center xl:justify-start gap-8 p-2">
               <div className="flex gap-2 items-center">
                 <div className="rounded bg-gradient-to-b from-ui-900/75 to-ui-900/25 p-2 flex items-center justify-center border border-ui-700">

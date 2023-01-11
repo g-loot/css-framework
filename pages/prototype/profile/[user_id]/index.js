@@ -152,7 +152,10 @@ export default function Home() {
                       </a>
                     </Link>
                   </div>
-                  <Slider itemWidth={138+16+16} bgColor="from-ui-800 via-ui-800 to-ui-800/0">
+                  <Slider
+                    itemWidth={138 + 16 + 16}
+                    bgColor="from-ui-800 via-ui-800 to-ui-800/0"
+                  >
                     <div className="flex gap-6 py-2 px-6">
                       {achievementsList.map((item, itemIndex) => (
                         <div
@@ -163,7 +166,11 @@ export default function Home() {
                           }}
                         >
                           <div
-                            className={`w-32 h-32 achievement ${item.level > 0 ? 'cursor-pointer' : 'pointer-events-none'}`}
+                            className={`w-32 h-32 achievement ${
+                              item.level > 0
+                                ? "cursor-pointer"
+                                : "pointer-events-none"
+                            }`}
                             onClick={openModalAchievementReceived.bind(
                               this,
                               item.level,
@@ -461,6 +468,7 @@ export default function Home() {
                           {prototype.getGameByID(stat.game).name}
                         </div>
                       </div>
+                      {/*
                       {prototype.getGameByID(stat.game).slug === "valorant" && (
                         <div className="item-action">
                           <Link href="/prototype/valorant/stats">
@@ -470,6 +478,7 @@ export default function Home() {
                           </Link>
                         </div>
                       )}
+                      */}
                     </div>
                     <div className="leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around p-4 gap-4">
                       <div className="pl-4 border-l border-ui-600">
@@ -505,73 +514,92 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <div className="border-t border-ui-700">
-                      <div className="accordion rounded-none">
-                        <Accordion
-                          header={
-                            <>
-                              <div className="item">
-                                <div className="item-body">
-                                  <div className="p-2 item-title text-lg">
-                                    All stats (total)
-                                  </div>
-                                </div>
-                                <div className="item-actions">
-                                  <div>
-                                    <span className="icon icon-24 icon-arrow-sm-down" />
-                                  </div>
-                                </div>
+                    {prototype.getGameByID(stat.game).slug === "valorant" ? (
+                      <div className="border-t border-ui-700">
+                        <Link href="/prototype/valorant/stats">
+                          <div className="item item-interactive">
+                            <div className="item-body">
+                              <div className="p-2 item-title">
+                                All stats (total)
                               </div>
-                            </>
-                          }
-                        >
-                          <div className="grid grid-cols-3 lg:grid-cols-4 items-center gap-2 text-center p-2">
-                            <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                              <div className="leading-none text-xs text-ui-300 uppercase">
-                                Assists
-                              </div>
-                              <div className="font-bold">151</div>
                             </div>
-                            <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                              <div className="leading-none text-xs text-ui-300 uppercase">
-                                Kills
+                            <div className="item-actions">
+                              <div>
+                                <span className="icon icon-24 icon-arrow-sm-right" />
                               </div>
-                              <div className="font-bold">405</div>
-                            </div>
-                            <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                              <div className="leading-none text-xs text-ui-300 uppercase">
-                                Deaths
-                              </div>
-                              <div className="font-bold">570</div>
-                            </div>
-                            <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                              <div className="leading-none text-xs text-ui-300 uppercase">
-                                Headshot kills
-                              </div>
-                              <div className="font-bold">144</div>
-                            </div>
-                            <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                              <div className="leading-none text-xs text-ui-300 uppercase">
-                                Wins
-                              </div>
-                              <div className="font-bold">35</div>
-                            </div>
-                            <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                              <div className="leading-none text-xs text-ui-300 uppercase">
-                                Losses
-                              </div>
-                              <div className="font-bold">24</div>
-                            </div>
-                            <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                              <div className="leading-none text-xs text-ui-300 uppercase">
-                                Draws
-                              </div>
-                              <div className="font-bold">1</div>
                             </div>
                           </div>
-                        </Accordion>
+                        </Link>
                       </div>
-                    </div>
+                    ) : (
+                      <div className="border-t border-ui-700">
+                        <div className="accordion rounded-none">
+                          <Accordion
+                            header={
+                              <>
+                                <div className="item">
+                                  <div className="item-body">
+                                    <div className="p-2 item-title">
+                                      All stats (total)
+                                    </div>
+                                  </div>
+                                  <div className="item-actions">
+                                    <div>
+                                      <span className="icon icon-24 icon-arrow-sm-down" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </>
+                            }
+                          >
+                            <div className="grid grid-cols-3 lg:grid-cols-4 items-center gap-2 text-center p-2">
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Assists
+                                </div>
+                                <div className="font-bold">151</div>
+                              </div>
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Kills
+                                </div>
+                                <div className="font-bold">405</div>
+                              </div>
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Deaths
+                                </div>
+                                <div className="font-bold">570</div>
+                              </div>
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Headshot kills
+                                </div>
+                                <div className="font-bold">144</div>
+                              </div>
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Wins
+                                </div>
+                                <div className="font-bold">35</div>
+                              </div>
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Losses
+                                </div>
+                                <div className="font-bold">24</div>
+                              </div>
+                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
+                                <div className="leading-none text-xs text-ui-300 uppercase">
+                                  Draws
+                                </div>
+                                <div className="font-bold">1</div>
+                              </div>
+                            </div>
+                          </Accordion>
+                        </div>
+                      </div>
+                    )}
                   </section>
                 ))}
               </>

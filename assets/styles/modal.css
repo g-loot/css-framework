@@ -182,7 +182,7 @@
         leading-none
         text-3xl
         lg:text-4xl
-        px-8
+        pr-8
         my-2
         ;
       }
@@ -235,7 +235,6 @@
   ;
 }
 
-
 .modal {
   &.modal-center {
     .modal-content,
@@ -248,6 +247,11 @@
     .modal-action {
       @apply
       lg:justify-center
+      ;
+    }
+    .modal-title {
+      @apply
+      px-8
       ;
     }
   }

@@ -57,7 +57,7 @@ export default function ModalClaimLadderRewards(props) {
                     <img
                       className="mx-auto animate-fire-in animate-delay"
                       style={{ "--delay": "calc( 1 * 0.2s)" }}
-                      src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-medium.png"
                       width="180"
                       height="auto"
                       alt=""
@@ -65,7 +65,7 @@ export default function ModalClaimLadderRewards(props) {
                   </div>
 
                   <div className="flex gap-2 items-baseline justify-center">
-                    <div className="text-4xl text-gold-500">5</div>
+                    <div className="text-4xl text-gold-500">15</div>
                     <div className="uppercase text-lg text-gold-500">Coins</div>
                   </div>
                 </div>
@@ -81,15 +81,15 @@ export default function ModalClaimLadderRewards(props) {
                     <img
                       className="mx-auto animate-fire-in animate-delay"
                       style={{ "--delay": "calc( 2 * 0.2s)" }}
-                      src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-unique.png"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-small.png"
                       width="180"
                       height="auto"
                       alt=""
                     />
                   </div>
                   <div className="flex gap-2 items-baseline justify-center">
-                    <div className="text-4xl text-gold-500">1</div>
-                    <div className="uppercase text-lg text-gold-500">Token</div>
+                    <div className="text-4xl text-gold-500">3</div>
+                    <div className="uppercase text-lg text-gold-500">Tokens</div>
                   </div>
                 </div>
               </div>

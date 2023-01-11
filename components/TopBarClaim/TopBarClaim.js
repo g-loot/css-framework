@@ -66,7 +66,9 @@ export default function TopBarClaim(props) {
     >
       <label
         tabIndex="1"
-        className="tab tab-secondary is-shining"
+        className={`tab tab-secondary ${
+          !variablesContext.dailyRewardClaimed ? "is-shining" : ""
+        }`}
         onClick={dropdownActive}
       >
         <span

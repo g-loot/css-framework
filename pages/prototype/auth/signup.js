@@ -52,7 +52,7 @@ export default function Login() {
   return (
     <>
       <PrototypeAuth title="Login">
-        <div className="p-4 w-full max-w-xs">
+        <div className="p-4 w-full max-w-xs text-center">
           <img
             className="mb-10 mx-auto"
             width="175"
@@ -169,7 +169,7 @@ export default function Login() {
               />
             </li>
           </ul>
-          <Link href="/prototype/home">
+          <Link href="/prototype/auth/nickname">
             <button
               type="button"
               className="button button-primary w-full mb-6"
@@ -178,7 +178,7 @@ export default function Login() {
               <span>Create free account</span>
             </button>
           </Link>
-          <p className="text-sm mb-8 text-center">
+          <p className="text-sm mb-8">
             By clicking CREATE FREE ACCOUNT, you certify that you are at least
             16 years old, and you have read and agree to the{" "}
             <a href="#" className="link">
@@ -189,7 +189,7 @@ export default function Login() {
               Privacy Policy
             </a>
           </p>
-          <p className="text-sm mb-8 text-center">
+          <p className="text-sm mb-8">
             <Link href="/prototype/auth/login">
               <a className="link link-main">Already have an account? Log in</a>
             </Link>

@@ -38,6 +38,30 @@ export const FrameworkPages = {
           query: "",
           tags: "auth,oauth,authentication,forgotten password,password,recover password,recovery",
         },
+        {
+          label: "Choose a nickname",
+          url: "auth/nickname",
+          query: "",
+          tags: "auth,oauth,authentication,nickname,username",
+        },
+        {
+          label: "Verify your age",
+          url: "auth/age",
+          query: "",
+          tags: "auth,oauth,authentication,age verification,verification,date",
+        },
+        {
+          label: "Confirm location",
+          url: "auth/location",
+          query: "",
+          tags: "auth,oauth,authentication,location",
+        },
+        {
+          label: "Verify your email location",
+          url: "auth/emailverification",
+          query: "",
+          tags: "auth,oauth,authentication,email verification,verification",
+        },
       ],
     },
     {

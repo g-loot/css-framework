@@ -48,11 +48,11 @@ const DSpage = () => {
                       }
                     >
                       <div className="flex gap-1 items-center">
-                        <div className="chip chip-reward chip-xp chip-inverted chip-sm">
+                        <div className="chip chip-xp chip-inverted chip-sm">
                           <span>100</span>
                           <span className="icon icon-xp-symbol" />
                         </div>
-                        <div className="chip chip-reward chip-xp chip-ghost chip-xs">
+                        <div className="chip chip-xp chip-ghost chip-sm">
                           <span>+50</span>
                           <span className="icon icon-xp-symbol" />
                           <span>if Premium</span>
@@ -81,7 +81,7 @@ const DSpage = () => {
                 <div className="card-body">
                   <div className="card-title">Get 22 kills</div>
                   <div className="card-meta">
-                    <div className="chip chip-reward chip-xp chip-inverted chip-sm">
+                    <div className="chip chip-xp chip-inverted chip-sm">
                       <span>150</span>
                       <span className="icon icon-xp-symbol" />
                     </div>
@@ -303,11 +303,11 @@ const DSpage = () => {
                       }
                     >
                       <div className="flex gap-1 items-center">
-                        <div className="chip chip-reward chip-xp chip-xs">
+                        <div className="chip chip-xp chip-sm">
                           <span>100</span>
                           <span className="icon icon-xp-symbol" />
                         </div>
-                        <div className="chip chip-reward chip-xp chip-ghost chip-xs">
+                        <div className="chip chip-ghost chip-sm">
                           <span>+50</span>
                           <span className="icon icon-xp-symbol" />
                           <span>if Premium</span>
@@ -340,7 +340,7 @@ const DSpage = () => {
                 <div className="card-body">
                   <div className="card-title">Get 22 kills</div>
                   <div className="card-meta">
-                    <div className="chip chip-reward chip-xp chip-inverted chip-xs">
+                    <div className="chip chip-xp chip-inverted chip-sm">
                       <span>150</span>
                       <span className="icon icon-xp-symbol" />
                     </div>
@@ -394,7 +394,7 @@ const DSpage = () => {
                     <div className="card-body">
                       <div className="card-title">Get 22 kills</div>
                       <div className="card-meta">
-                        <div className="chip chip-reward chip-xp chip-inverted chip-xs">
+                        <div className="chip chip-xp chip-inverted chip-sm">
                           <span>150</span>
                           <span className="icon icon-xp-symbol" />
                         </div>

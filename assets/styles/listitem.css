@@ -53,7 +53,7 @@
   }
 }
 
-.item-interactive > .item
+.item-interactive > .item,
 .item.item-interactive {
   @apply
   transition
@@ -63,7 +63,6 @@
   .item-title {
     &:not([class*="text-"]) {
       @apply
-      hidden
       transition
       duration-300
       ;
@@ -105,7 +104,7 @@
   }
   &:active {
     @apply
-    bg-ui-700/30
+    bg-ui-700/0
     ;
   }
 }

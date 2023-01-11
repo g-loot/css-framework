@@ -604,6 +604,7 @@
         @apply
         relative
         z-10
+        bg-ui-800
         ;
       }
       > div {
@@ -625,7 +626,6 @@
       }
     }
   }
-
 
   &,
   &.step-primary {

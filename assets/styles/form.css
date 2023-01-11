@@ -81,6 +81,12 @@ select:-webkit-autofill:focus {
     ;
   }
 
+  &:not([class*='text-']) {
+    @apply
+    text-left
+    ;
+  }
+
   :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text, .form-select > select) {
     @apply
     w-full
@@ -935,6 +941,24 @@ label.button {
 /* NUMBER */
 /*----------------------------*/
 
+input.input-number,
+.input-number > input {
+  @apply
+  flex-1
+  relative
+  z-0
+  w-full
+  rounded
+  pr-10
+  ;
+  -moz-appearance: textfield;
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+} 
+
 .input-number {
   @apply
   relative
@@ -946,23 +970,6 @@ label.button {
     @apply
     box-border
     ;
-  }
-
-  :where(input) {
-    @apply
-    flex-1
-    relative
-    z-0
-    w-full
-    rounded
-    pr-10
-    ;
-    -moz-appearance: textfield;
-    &::-webkit-inner-spin-button,
-    &::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
   }
 
   :where(button) {
@@ -1450,6 +1457,10 @@ input[type=range].form-range {
     cursor-pointer
     hover:bg-ui-600
     hover:border-ui-400
+    active:outline
+    active:outline-offset-2
+    active:outline-1
+    outline-ui-400
     ;
 
     > div {

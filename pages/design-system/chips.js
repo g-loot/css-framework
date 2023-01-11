@@ -597,13 +597,7 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
-                    Green{" "}
-                    <button
-                      type="button"
-                      className="chip chip-xs chip-secondary pointer-events-none uppercase"
-                    >
-                      <span>default</span>
-                    </button>
+                    Default
                   </div>
                   <div className="flex-1">
                     <div className="chip chip-sliced">

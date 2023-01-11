@@ -93,7 +93,7 @@ module.exports = {
       lg: "0.25rem",
       xl: "0.25rem",
       "2xl": "0.25rem",
-      "3xl": "0.25rem",
+      "3xl": "3rem",
       full: "9999px",
     },
     extend: {

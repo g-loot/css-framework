@@ -11,7 +11,7 @@
   outline-offset-2
   focus-visible:outline
   focus-visible:outline-main
-  transition-all
+  transition-[color,background,transform,opacity]
   duration-200
   ease-in-out
   ;
@@ -35,6 +35,7 @@
     @apply
     no-underline
     hover:underline
+    active:no-underline
     ;
   }
 }
@@ -80,7 +81,10 @@
 
 .interactive {
   @apply
-  active:scale-[0.99]
+  active:outline
+  active:outline-offset-2
+  active:outline-1
+  outline-ui-400
   ;
 }
 

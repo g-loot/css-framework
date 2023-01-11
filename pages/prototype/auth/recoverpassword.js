@@ -14,7 +14,7 @@ export default function Login() {
 
   return (
     <>
-      <PrototypeAuth title="Login">
+      <PrototypeAuth title="Recover password">
         <div className="p-4 w-full max-w-xs">
           <img
             className="mb-10 mx-auto"
