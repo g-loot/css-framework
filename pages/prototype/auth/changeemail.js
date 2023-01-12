@@ -61,7 +61,7 @@ export default function Login() {
             alt="Stryda logo"
           />
           <h1 className="h3 mb-8">Change email</h1>
-          <div className="form-group mb-3" data-success={isEmail(emailStr)}>
+          <div className="form-group mb-8" data-success={isEmail(emailStr)}>
             <label htmlFor="email">Email address</label>
             <input
               type="email"
@@ -75,7 +75,7 @@ export default function Login() {
           <Link href="/prototype/auth/emailverification">
             <button
               type="button"
-              className="button button-primary w-full mb-6"
+              className="button button-primary w-full mb-8"
               disabled={!checkAll(passwordStr)}
             >
               <span>Continue</span>

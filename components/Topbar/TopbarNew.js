@@ -332,7 +332,7 @@ export default function TopbarNew() {
                           <span className="font-bold text-xs">{isPremium ? <>+165%</> : <>+15%</>}</span>
                         </div>
                         <div className="infobanner-back">
-                          <span className="icon icon-lightning text-main mx-auto" />
+                          <span className="icon icon-xp-symbol text-3xl text-main mx-auto" />
                         </div>
                       </div>
                     </div>
@@ -349,19 +349,19 @@ export default function TopbarNew() {
                   <ul className="rounded-lg text-left text-sm p-2 leading-none">
                     {isPremium ? (
                       <li className="flex gap-2 py-1 items-center">
-                        <div className="icon-20 icon icon-lightning text-premium-500" />
+                        <div className="icon icon-e-add text-premium-500" />
                         <div className="flex-1">Premium boost</div>
                         <div className="text-right text-premium-500">+50%</div>
                       </li>
                     ) : (
                       <li className="flex gap-2 py-1 items-center text-ui-400">
-                        <div className="icon-20 icon icon-lightning" />
+                        <div className="icon icon-e-remove" />
                         <div className="flex-1 line-through">Premium boost</div>
                         <div className="text-right line-through">+50%</div>
                       </li>
                     )}
                     <li className="flex gap-2 py-1 items-center">
-                      <div className="icon-20 icon icon-lightning text-main" />
+                      <div className="icon icon-e-add text-main" />
                       <div className="flex-1">Clan boost</div>
                       <div className="text-right text-main">
                         +10%
@@ -369,7 +369,7 @@ export default function TopbarNew() {
                     </li>
                     <li className="separator bg-ui-600" />
                     <li className="flex gap-2 py-1 items-center">
-                      <div className="icon-20 icon icon-lightning text-main" />
+                      <div className="icon icon-e-add text-main" />
                       <div className="flex-1 flex-col">
                         <div>New user boost</div>
                         <div>

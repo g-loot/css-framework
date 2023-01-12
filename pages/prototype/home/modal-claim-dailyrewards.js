@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import Lottie from "lottie-react";
 import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
@@ -9,6 +9,8 @@ export default function ModalClaimDailyRewards(props) {
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
   const [submitting, setSubmitting] = useState(false);
+  
+  const [anim1, setAnim1] = useState(false);
   function closeModalWithDelay() {
     setSubmitting(true);
     setTimeout(() => {
@@ -24,6 +26,14 @@ export default function ModalClaimDailyRewards(props) {
       uiContext.closeModal();
     }, 1000);
   }
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnim1(true);
+    }, 400);
+  }, []);
+
+
 
   return (
     <>
@@ -71,11 +81,13 @@ export default function ModalClaimDailyRewards(props) {
                 <div>
                   <div className="relative">
                     <div className="lottie-blur absolute inset-0 flex items-center justify-center">
-                      <Lottie
-                        animationData={LottieExplosion}
-                        loop={false}
-                        autoplay={true}
-                      />
+                      {anim1 && (
+                        <Lottie
+                          animationData={LottieExplosion}
+                          loop={false}
+                          autoplay={true}
+                        />
+                      )}
                     </div>
                     <img
                       className="mx-auto animate-fire-in animate-delay"

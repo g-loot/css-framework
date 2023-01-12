@@ -46,10 +46,10 @@ export default function Login() {
           />
           <h1 className="h3 mb-8">Verify your email</h1>
           <p className="mb-8">
-            A verification link was just sent to: joppe@gmail.com
+            A verification link was just sent to: <span className="text-ui-100 text-bold">joppe@gmail.com</span>
           </p>
           <p className="mb-8">
-            Please click the link to continue with the registration process.
+            Click the link in the email to complete the registration process.
           </p>
           <p className="text-sm text-ui-300 mb-4">
             Haven&#39;t received the email?{" "}
