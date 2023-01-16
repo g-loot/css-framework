@@ -287,7 +287,7 @@ export default function ListItemBrawl(props) {
                   <div className="flex items-end justify-between">
                     <div>
                       <div className="text-sm text-ui-300">
-                        Top spot reward:
+                        Top spot reward
                       </div>
                       <div className="flex gap-4 items-center">
                         {brawl.rewards?.map((reward, rewardIndex) => (

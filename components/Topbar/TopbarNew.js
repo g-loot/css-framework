@@ -432,7 +432,7 @@ export default function TopbarNew() {
                       tooltip={
                         <div className="w-56 relative">
                           <h6 className="mb-3 text-ui-100">Coins</h6>
-                          <div className="absolute -top-6 -right-6 p-2">
+                          <div className="absolute -top-5 -right-5 p-2">
                             <img
                               src="https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-coin-face.png"
                               className="w-14 h-14"
@@ -481,7 +481,7 @@ export default function TopbarNew() {
                       tooltip={
                         <div className="w-56 relative">
                           <h6 className="mb-3 text-ui-100">Token</h6>
-                          <div className="absolute -top-6 -right-6 p-2">
+                          <div className="absolute -top-5 -right-5 p-2">
                             <img
                               src="https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-token-face.png"
                               className="w-14 h-14"

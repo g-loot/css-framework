@@ -250,9 +250,9 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* Rank */}
-      <div className="mb-12" id="rank">
-        <h2 className="h3 mb-3">Rank</h2>
+      {/* Border color */}
+      <div className="mb-12" id="border-color">
+        <h2 className="h3 mb-3">Border color</h2>
 
         <div className="surface rounded-lg p-4">
           <div className="">

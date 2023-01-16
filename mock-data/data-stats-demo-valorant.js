@@ -968,12 +968,32 @@ export const StatsValorantDemoWeapons = [
     killsround: 71,
     killdistance: 43,
   },
+  {
+    id: 3,
+    weapon: 19,
+    kills: 253,
+    deaths: 232,
+    headshots: 85,
+    damageround: 39,
+    killsround: 71,
+    killdistance: 43,
+  },
+  {
+    id: 4,
+    weapon: 20,
+    kills: 250,
+    deaths: 230,
+    headshots: 85,
+    damageround: 39,
+    killsround: 71,
+    killdistance: 43,
+  },
 ];
 
 export const StatsValorantDemoMaps = [
   {
     id: 0,
-    map: 0,
+    map: 8,
     winpercent: 45.4,
     wins: 67,
     losses: 32,
@@ -994,6 +1014,16 @@ export const StatsValorantDemoMaps = [
   {
     id: 2,
     map: 2,
+    winpercent: 39.4,
+    wins: 45,
+    losses: 38,
+    kd: 1.43,
+    adr: 185.4,
+    acs: 283.1,
+  },
+  {
+    id: 3,
+    map: 7,
     winpercent: 39.4,
     wins: 45,
     losses: 38,

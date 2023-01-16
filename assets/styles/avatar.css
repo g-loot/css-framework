@@ -232,7 +232,7 @@
     right-0.5
     h-7
     w-7
-    bg-main
+    bg-success-500
     ;
 
     &.disabled {

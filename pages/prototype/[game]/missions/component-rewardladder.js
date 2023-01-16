@@ -129,7 +129,7 @@ export default function ComponentRewardLadder() {
       )}
       <RewardLadder hasReward={selectedGame?.hasReward} />
       <div className="text-center text-sm text-ui-300 mt-4">
-        XP is accumulated from all missions in all games on Stryda.
+        XP is accumulated from missions in all games and from registered Brawl matches.
       </div>
     </>
   );

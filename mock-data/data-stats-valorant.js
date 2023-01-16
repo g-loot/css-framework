@@ -43,6 +43,11 @@ export const StatsValorantMaps = [
     name: 'pearl',
     picturePath: getImageUrl('map-pearl.webp'),
   },
+  {
+    id: 8,
+    name: 'lotus',
+    picturePath: getImageUrl('map-lotus.jpg'),
+  },
 ];
 
 export const StatsValorantRanks = [
@@ -450,5 +455,17 @@ export const StatsValorantWeapons = [
     name: 'tactical knife',
     type: 'melee',
     picturePath: getImageUrl('weapon-tacticalknife.webp'),
+  },
+  {
+    id: 19,
+    name: 'golden gun',
+    type: 'sidearm',
+    picturePath: getImageUrl('weapon-goldengun.png'),
+  },
+  {
+    id: 20,
+    name: 'overdrive',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-overdrive.png'),
   },
 ];
