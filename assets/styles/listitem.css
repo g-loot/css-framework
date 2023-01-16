@@ -40,7 +40,7 @@
       ;
     }
   }
-  &:not(:last-child) {
+  &:not(:last-child):not([class*='border']) {
     @apply
     border-b
     border-ui-700

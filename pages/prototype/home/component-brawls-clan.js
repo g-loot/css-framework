@@ -110,7 +110,7 @@ export default function HomeBrawlClan() {
           </div>
           <img
             className="absolute inset-0 h-full w-full object-cover object-right opacity-20 lg:opacity-100"
-            src="https://res.cloudinary.com/gloot/image/upload/v1670324146/Marketing/2022_prototype/home-brawlnoclan.jpg"
+            src="https://res.cloudinary.com/gloot/image/upload/v1673862556/Stryda/illustrations/home-brawlnoclan.jpg"
             alt=""
           />
         </div>
@@ -131,7 +131,7 @@ export default function HomeBrawlClan() {
         </div>
         <img
           className="absolute inset-0 h-full w-full object-cover object-right opacity-20 lg:opacity-100"
-          src="https://res.cloudinary.com/gloot/image/upload/v1670945610/Marketing/2022_prototype/home-brawlnoclanbrawls_1.jpg"
+          src="https://res.cloudinary.com/gloot/image/upload/v1673862556/Stryda/illustrations/home-brawlnoclan.jpg"
           alt=""
         />
       </div>

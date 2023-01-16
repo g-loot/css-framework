@@ -43,7 +43,7 @@ export default function XPBoostList(props) {
           <span className="icon icon-e-remove text-ui-400" />
           <span className="flex-1 text-ui-400 line-through">Premium boost</span>
           <span className="text-ui-400 line-through text-right">
-            +{Math.round(xp * 0.1)}
+            +{Math.round(xp * 0.5)}
           </span>
         </li>
       )}

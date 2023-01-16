@@ -109,7 +109,7 @@ export default function HomeBrawlSolo() {
           </div>
           <img
             className="absolute inset-0 h-full w-full object-cover object-right opacity-20 lg:opacity-100"
-            src="https://res.cloudinary.com/gloot/image/upload/v1670324143/Marketing/2022_prototype/home-brawlnobrawls.jpg"
+            src="https://res.cloudinary.com/gloot/image/upload/v1673862737/Stryda/illustrations/home-brawlnobrawls.jpg"
             alt=""
           />
         </div>

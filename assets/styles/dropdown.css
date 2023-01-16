@@ -33,6 +33,12 @@
     z-50
     origin-top
     ;
+    .menu > li,
+    > * {
+      @apply
+      transform-gpu
+      ;
+    }
   }
 
   &.dropdown-open,

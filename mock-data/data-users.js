@@ -42,7 +42,7 @@ export const dataUsers = [
     },
     wallet: {
       coins: 50000,
-      tokens: 245,
+      tokens: 18,
       tickets: 3
     },
     games: [

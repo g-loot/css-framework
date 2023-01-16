@@ -149,9 +149,6 @@ export default function Home() {
               </div>
               <div className="header-meta justify-start pr-0">
                 <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                  <span className="text-ui-100 uppercase">
-                    Time Left:
-                  </span>
                   <span className="icon icon-clock text-main" />
                   <Countdown
                     additionalClassNames="flex items-baseline gap-0.5 uppercase text-main"

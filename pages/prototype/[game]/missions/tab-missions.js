@@ -159,7 +159,7 @@ export default function TabMissionsMissions() {
               />
               <h4 className="text-3xl">
                 <span>Join</span>{" "}
-                <span className="text-main">Stryda Premium</span>
+                <span className="text-premium-500">Stryda Premium</span>
               </h4>
               <p className="max-w-[50ch] text-sm text-ui-300 mx-auto mt-2 mb-5">
                 Increase your amount of daily missions and XP you can earn each

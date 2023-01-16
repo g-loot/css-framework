@@ -164,12 +164,19 @@
   }
 
   :where(li).is-disabled {
+    &,
     a,
     button {
       @apply
       pointer-events-none
-      text-ui-500
       ;
+      &,
+      & * {
+        @apply
+        text-ui-300
+        opacity-50
+        ;
+      }
     }
   }
 

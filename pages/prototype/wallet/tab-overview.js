@@ -15,7 +15,7 @@ const WalletItems = [
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-coin-face.png",
     video: {
-      webm: "https://res.cloudinary.com/gloot/video/upload/v1673450628/Stryda/currencies/Coin_Rotation_No_Background_512x512.webm",
+      webm: "https://res.cloudinary.com/gloot/video/upload/v1673450637/Stryda/currencies/Coin_Rotation_With_Background_512x512.webm",
       mp4: "https://res.cloudinary.com/gloot/video/upload/v1673450637/Stryda/currencies/Coin_Rotation_With_Background_512x512.mp4",
     },
     amount: "50000",
@@ -31,8 +31,8 @@ const WalletItems = [
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-token-face.png",
     video: {
-      webm: "https://res.cloudinary.com/gloot/video/upload/v1673450641/Stryda/currencies/Token_Rotation_No_Background_512x512.webm",
-      mp4: "https://res.cloudinary.com/gloot/video/upload/v1673450637/Stryda/currencies/Token_Rotation_With_Background_512x512.mp4",
+      webm: "https://res.cloudinary.com/gloot/video/upload/v1673450628/Stryda/currencies/Token_Rotation_No_Background_512x512.webm",
+      mp4: "https://res.cloudinary.com/gloot/video/upload/v1673450628/Stryda/currencies/Token_Rotation_With_Background_512x512.mp4",
     },
     amount: "245",
     use: "To enter rounds in the <b>Weekly Brawls</b>.",
