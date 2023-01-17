@@ -60,7 +60,7 @@ export default function HomeBrawlMissions(props) {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-1 mx-4 sm:mx-0 text-sm text-ui-300">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
         <div>
           New missions in <b>4H 23M 12S</b>
         </div>
@@ -68,6 +68,8 @@ export default function HomeBrawlMissions(props) {
           Your latest match ended <b>Dec 13 / 8:12 PM</b>
         </div>
       </div>
+
+      {/*
 
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
         <p>
@@ -83,6 +85,7 @@ export default function HomeBrawlMissions(props) {
         </p>
         <p className="md:text-right">You have completed 1 out of 6 missions</p>
       </div>
+      */}
 
 {/*
       {prototype.getGameBySlug(props.gameSlug)?.needsSteam && (

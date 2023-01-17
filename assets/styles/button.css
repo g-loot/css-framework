@@ -146,6 +146,14 @@ button {
         ;
       }
     }
+
+    &.button-currency {
+      > div:nth-of-type(2) {
+        @apply
+        shadow-[inset_0_0_0_1px_rgb(var(--color-ui-400))]
+        ;
+      }
+    }
   }
   &.button-tertiary {
     @apply 
@@ -442,7 +450,7 @@ button {
 
   &.button-currency {
     @apply
-    p-px
+    p-0.5
     justify-items-stretch
     h-[36px]
     gap-0
@@ -457,14 +465,14 @@ button {
       relative
       ;
 
-      &:first-child {
+      &:nth-of-type(1) {
         @apply
         flex-1
         px-3
         ;
       }
 
-      &:last-child {
+      &:nth-of-type(2) {
         @apply
         bg-ui-800
         px-2
@@ -1428,5 +1436,17 @@ button {
         ;
       }
     }
+  }
+}
+
+
+/* button-group */
+
+.button-group {
+  > .button-currency:not(:last-child) {
+    
+    & + {
+      
+    } 
   }
 }

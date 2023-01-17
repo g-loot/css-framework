@@ -175,10 +175,10 @@ export default function CardMissionSecondary(props) {
                     placement="top"
                     tooltip={<XPBoostList isCompleted={mission.target === mission.current ? true : false} size="sm" xp={mission.xp} />}
                   >
-                    <div className={`chip chip-sm ${mission.target === mission.current ? 'chip-xp chip-inverted' : 'chip-secondary'}`}>
+                    <button type="button" className={`chip chip-sm ${mission.target === mission.current ? 'chip-xp chip-inverted' : 'chip-secondary'}`}>
                       <span>{Math.round(mission.xp * 1.65)}</span>
                       <span className="icon icon-xp-symbol" />
-                    </div>
+                    </button>
                   </Tooltip>
                 ) : (
                   <div className="flex gap-1 items-center">
@@ -187,13 +187,13 @@ export default function CardMissionSecondary(props) {
                       placement="top"
                       tooltip={<XPBoostList isCompleted={mission.target === mission.current ? true : false} size="sm" xp={mission.xp} />}
                     >
-                      <button type="button" className="chip chip-xp chip-sm">
+                      <button type="button" className={`chip chip-sm chip-xp`}>
                         <span>{mission.xp}</span>
                         <span className="icon icon-xp-symbol" />
                       </button>
                     </Tooltip>
                     ) : (
-                      <div className="chip chip-secondary chip-sm">
+                      <div className="chip chip-ghost chip-sm">
                         <span>{mission.xp}</span>
                         <span className="icon icon-xp-symbol" />
                       </div>
@@ -220,9 +220,9 @@ export default function CardMissionSecondary(props) {
                         </div>
                       }
                     >
-                      <button type="button" className="chip chip-xp chip-ghost chip-sm">
-                        <span className="text-premium-500 ">+{mission.xp / 2}</span>
-                        <span className="text-premium-500 icon icon-crown text-sm" />
+                      <button type="button" className="chip chip-premium chip-sm">
+                        <span>+{mission.xp / 2}</span>
+                        <span className="icon icon-crown text-sm" />
                       </button>
                     </Tooltip>
                   </div>

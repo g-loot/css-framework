@@ -37,7 +37,7 @@ export default function ComponentRewardLadder() {
   return (
     <>
       <div className="flex items-center justify-between mb-2 px-4 sm:px-0">
-        <h2 className="h5 flex-none">Reward Ladder</h2>
+        <h2 className="h3 flex-none">Reward Ladder</h2>
         <div className="hidden sm:flex items-center gap-2">
           <div className="chip chip-sm chip-secondary">
             <span className="icon icon-time-machine" />
@@ -66,6 +66,7 @@ export default function ComponentRewardLadder() {
           </Tooltip>
         </div>
       </div>
+      {/*
       {isPremium ? (
         <div className="mb-2 mx-4 sm:mx-0">
           <p className="text-sm text-ui-300">
@@ -82,6 +83,7 @@ export default function ComponentRewardLadder() {
           </p>
         </div>
       )}
+      */}
       {selectedGame?.needsSteam && (
         <>
           <div className="px-4 sm:px-0">
@@ -127,10 +129,14 @@ export default function ComponentRewardLadder() {
           </div>
         </>
       )}
-      <RewardLadder hasReward={selectedGame?.hasReward} />
+      <div className="mb-8">
+        <RewardLadder hasReward={selectedGame?.hasReward} />
+      </div>
+      {/*
       <div className="text-center text-sm text-ui-300 mt-4">
         XP is accumulated from missions in all games and from registered Brawl matches.
       </div>
+      */}
     </>
   );
 }

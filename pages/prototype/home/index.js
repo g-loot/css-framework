@@ -76,6 +76,8 @@ export default function Home() {
           <Carousel />
         </section>
 
+        {/*
+
         <section
           className="mb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(1 * 0.05s)" }}
@@ -122,6 +124,10 @@ export default function Home() {
           </div>
         </section>
 
+        */}
+
+        <ComponentRewardLadder />
+
         <h2 className="h3 mb-4 mx-4 sm:mx-0">Competitions</h2>
 
         <section
@@ -165,30 +171,6 @@ export default function Home() {
         <section className="my-16 surface sm:rounded-lg overflow-hidden hidden lg:block">
           <div className="relative z-10 p-12 w-1/2 xl:w-1/3">
             <h3>
-              Play multiple competitions
-              <br />
-              at the same time
-            </h3>
-            <p className="text-lg text-ui-300 mt-2 mb-4">
-              Try as many Brawls as you like and play as much as you want! See
-              you on the leaderboard!
-            </p>
-          </div>
-          <img
-            className="absolute inset-0 h-full w-full object-cover object-left opacity-50 xl:opacity-100"
-            src="https://res.cloudinary.com/gloot/image/upload/v1672675509/Stryda/illustrations/home-ad-multiplebrawls.jpg"
-            alt=""
-          />
-        </section>
-
-        <ComponentRewardLadder />
-        <h2 className="h3 mt-8 mx-4 sm:mx-0">Missions</h2>
-        <HomeBrawlMissions gameSlug="valorant" />
-        <HomeBrawlMissions gameSlug="pubg" />
-
-        <section className="my-16 surface sm:rounded-lg overflow-hidden hidden lg:block">
-          <div className="relative z-10 p-12 w-1/2 xl:w-1/3">
-            <h3>
               New fun Missions
               <br />
               every 24 hours!
@@ -204,6 +186,31 @@ export default function Home() {
             alt=""
           />
         </section>
+        {/*
+        <section className="my-16 surface sm:rounded-lg overflow-hidden hidden lg:block">
+          <div className="relative z-10 p-12 w-1/2 xl:w-1/3">
+            <h3>
+              Play multiple competitions
+              <br />
+              at the same time
+            </h3>
+            <p className="text-lg text-ui-300 mt-2 mb-4">
+              Try as many Brawls as you like and play as much as you want! See
+              you on the leaderboard!
+            </p>
+          </div>
+          <img
+            className="absolute inset-0 h-full w-full object-cover object-left opacity-50 xl:opacity-100"
+            src="https://res.cloudinary.com/gloot/image/upload/v1672675509/Stryda/illustrations/home-ad-multiplebrawls.jpg"
+            alt=""
+          />
+        </section>
+        */}
+
+        
+        <h2 className="h3 mt-8 mx-4 sm:mx-0">Missions</h2>
+        <HomeBrawlMissions gameSlug="valorant" />
+        <HomeBrawlMissions gameSlug="pubg" />
       </PrototypeStructure>
     </>
   );

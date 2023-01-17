@@ -39,18 +39,24 @@ export default function TabMissionsMissions() {
     <>
       {selectedGame && (
         <>
-          <section
-            className="py-8 animate-slide-in-bottom animate-delay"
-            style={{ "--delay": "calc(1 * 0.05s)" }}
-          >
-            <ComponentRewardLadder />
-          </section>
+
+          {/*
+            <section
+              className="py-8 animate-slide-in-bottom animate-delay"
+              style={{ "--delay": "calc(1 * 0.05s)" }}
+            >
+              <ComponentRewardLadder />
+            </section>
+          */}
           <section
             className="py-8 animate-slide-in-bottom animate-delay"
             style={{ "--delay": "calc(2 * 0.05s)" }}
           >
+             {/*
             <div className="flex items-center justify-between mb-2 mx-4 sm:mx-0">
+             
               <h3 className="h5">Daily missions in {selectedGame.name}</h3>
+        
               <div className="hidden sm:flex items-center gap-2">
                 <div
                   className="tooltip tooltip-left"
@@ -77,15 +83,36 @@ export default function TabMissionsMissions() {
                 </div>
               </div>
             </div>
+            */}
 
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-1 mx-4 sm:mx-0 text-sm text-ui-300">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
               <div>
                 New missions in <b>4H 23M 12S</b>
               </div>
-              <div className="md:text-right">
-                Your latest match ended <b>Dec 13 / 8:12 PM</b>
+              <div className="md:text-right flex items-center gap-2">
+                <div>Your latest match ended <b>Dec 13 / 8:12 PM</b></div>
+                <button
+                    className={`button button-xs button-secondary ${
+                      submitting ? "is-loading" : ""
+                    }`}
+                    onClick={addToastWithDelay.bind(this, {
+                      icon: "f-check",
+                      color: "green",
+                      text: "Your stats have been updated.",
+                      autoDelete: true,
+                      autoDeleteDelay: 2500,
+                    })}
+                  >
+                    <span className="icon icon-16 icon-refresh-02" />
+                    <span className="hidden sm:block">
+                      Request a stats update
+                    </span>
+                    <span className="block sm:hidden">Update</span>
+                  </button>
               </div>
             </div>
+
+            {/*
 
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
               <p>
@@ -101,6 +128,8 @@ export default function TabMissionsMissions() {
               </p>
               <p className="md:text-right">You have completed 1 out of 6 missions</p>
             </div>
+
+            */}
 
             {selectedGame.needsSteam && (
               <>

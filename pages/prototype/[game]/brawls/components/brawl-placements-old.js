@@ -7,6 +7,8 @@ import ModalInfoBeforeYouPlay from "../modal-info-beforeyouplay";
 import BrawlPlacementItem from "./brawl-placementitem";
 import ModalBuyTokens from "../../../wallet/modal-buytokens";
 import Link from "next/link";
+import MatchToggle from "../../../../../components/MatchToggle/MatchToggle";
+import { usePrototypeData } from "../../../../../contexts/prototype";
 
 const enrollSteps = [
   {
@@ -48,6 +50,7 @@ const enrollSteps = [
 ];
 
 export default function BrawlPlacements() {
+  const prototype = usePrototypeData();
   const { query } = useRouter();
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
@@ -185,74 +188,30 @@ export default function BrawlPlacements() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row gap-y-2 items-center justify-between px-4 pb-4">
-          <div className="flex items-center gap-3">
-            {variablesContext.brawlStep < 3 ? (
-              <>
-                {freeEntry ? (
-                  <div
-                    className="tooltip tooltip-attention tooltip-right"
-                    data-tooltip="Play entry matches and hit the leaderboard"
-                  >
-                    <button
-                      type="button"
-                      className="button button-claim is-shining"
-                      onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
-                    >
-                      <div>
-                        <span>Activate free entry</span>
-                      </div>
-                    </button>
-                  </div>
-                ) : (
-                  <button
-                    type="button"
-                    className="button button-primary button-currency button-token is-shining"
-                    onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
-                  >
-                    <div>
-                      <span>Activate 3 matches</span>
-                    </div>
-                    <div>
-                      <span className="icon icon-token " />
-                      <span>2</span>
-                    </div>
-                  </button>
-                )}
-              </>
-            ) : (
-              <button
-                type="button"
-                className="button button-primary button-currency button-token hidden"
-                onClick={incrementBrawlStep.bind(this, 1)}
-              >
-                <div>
-                  <span>Activate 1 match</span>
-                </div>
-                <div>
-                  <span className="icon icon-token " />
-                  <span>1</span>
-                </div>
-              </button>
-            )}
-            {!freeEntry && (
+        <div className="flex px-4 pb-4 text-sm">
+          <div>
+            <p>
+              You have{" "}
+              <span className="whitespace-nowrap text-gold-500">
+                <span className="translate-y-1 icon icon-token text-lg"></span>{" "}
+                <span className="font-bold">{prototype.getUserByID(1)?.wallet.tokens} tokens</span>
+              </span>{" "}
+              available.{" "}
               <a
                 onClick={openModalBuyTokens}
                 className="link text-sm text-ui-300"
               >
                 Get more tokens
               </a>
-            )}
-            {!isPremium && !freeEntry && (
-              <div className="hidden lg:block">
-                <Link href="/prototype/premium">
-                  <a className="link text-sm text-premium-500">
-                    Get more XP with Premium
-                  </a>
-                </Link>
-              </div>
-            )}
+            </p>
           </div>
+        </div>
+        <div className="flex flex-col md:flex-row gap-y-2 items-center justify-between px-4 pb-4">
+        {freeEntry ? (
+              <MatchToggle isFreeEntry={freeEntry} />
+            ) : (
+              <MatchToggle />
+            )}
           {variablesContext.brawlStep >= 3 && !resultsDone && (
             <div className="animate-slide-in-bottom">
               <div className="text-center text-main text-sm animate-pulse">
@@ -268,35 +227,35 @@ export default function BrawlPlacements() {
               </div>
             </div>
           )}
-          <div className="flex gap-3">
-            {variablesContext.brawlStep >= 3 && (
-              <>
-                <button
-                  type="button"
-                  className={`button button-sm button-secondary ${
-                    submitting ? "is-loading" : ""
-                  }`}
-                  onClick={addToastWithDelay.bind(this, {
-                    size: "small",
-                    icon: "f-check",
-                    color: "green",
-                    text: "Your stats have been updated.",
-                    autoDelete: true,
-                    autoDeleteDelay: 2500,
-                  })}
-                >
-                  <span className="icon icon-refresh-01" />
-                  <span>Request status update</span>
-                </button>
-                <button
-                  type="button"
-                  className="button button-sm button-ghost rounded-full"
-                >
-                  <span className="icon icon-c-info" />
-                </button>
-              </>
-            )}
-          </div>
+          
+          {variablesContext.brawlStep >= 3 && (
+            <div className="flex gap-3">
+              <button
+                type="button"
+                className={`button button-sm button-secondary ${
+                  submitting ? "is-loading" : ""
+                }`}
+                onClick={addToastWithDelay.bind(this, {
+                  size: "small",
+                  icon: "f-check",
+                  color: "green",
+                  text: "Your stats have been updated.",
+                  autoDelete: true,
+                  autoDeleteDelay: 2500,
+                })}
+              >
+                <span className="icon icon-refresh-01" />
+                <span>Request status update</span>
+              </button>
+              <button
+                type="button"
+                className="button button-sm button-ghost rounded-full"
+              >
+                <span className="icon icon-c-info" />
+              </button>
+              </div>
+          )}
+         
         </div>
       </section>
     </>

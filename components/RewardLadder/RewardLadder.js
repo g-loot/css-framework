@@ -104,13 +104,17 @@ export default function RewardLadder(props) {
         </div>
 
         <div
-          className="ladder-container scrollbar-desktop"
+          className="ladder-container scrollbar-hidden"
           style={{ "--max": maxStep, "--step": step }}
         >
           <div className="ladder-avatar py-2">
             <div>
               <div>
-                <div className={`chip chip-sm ${isPremium ? 'chip-premium chip-inverted' : 'chip-xp'}`}>
+                <div
+                  className={`chip chip-sm ${
+                    isPremium ? "chip-premium chip-inverted" : "chip-xp"
+                  }`}
+                >
                   <span className="pl-2">550</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
@@ -127,14 +131,14 @@ export default function RewardLadder(props) {
               </div>
             </div>
           </div>
-          <ul className="ladder">
+          <ul className="ladder ladder-sm">
             <li className={`${step === 1 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
                   <span>1</span>
                 </div>
               </div>
-              {/*
+
               <div className="ladder-milestone">
                 <div className="chip chip-ghost">
                   <span>200</span>
@@ -153,7 +157,6 @@ export default function RewardLadder(props) {
                   <span>1 token</span>
                 </div>
               </div>
-                */}
             </li>
             <li className={`${step === 2 ? `is-active` : ""}`}>
               <div className="ladder-info">
@@ -171,12 +174,12 @@ export default function RewardLadder(props) {
                 <div className="ladder-decoration"></div>
                 <div className="ladder-body">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-unique.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-coin-unique.png"
                     width="100%"
                     height="auto"
                     alt="Reward"
                   />
-                  <span>1 token</span>
+                  <span>1 coin</span>
                 </div>
               </div>
             </li>

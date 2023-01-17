@@ -110,10 +110,7 @@ export default function BrawlPlacementItem(props) {
                 <div className="absolute z-20 inset-0 p-4 flex items-center justify-center overflow-hidden rounded-lg">
                   <button
                     type="button"
-                    className={`button button-sm button-primary button-currency button-token w-full animate-slide-in-bottom ${
-                      shining ? "is-shining" : ""
-                    }`}
-                    onClick={incrementBrawlStep.bind(this, 1)}
+                    className={`button button-sm button-secondary button-currency button-token w-full animate-slide-in-bottom`}
                   >
                     <div>
                       <span>Activate</span>

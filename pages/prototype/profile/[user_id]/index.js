@@ -212,7 +212,7 @@ export default function Home() {
                     >
                       <div className="flex items-center gap-6 px-6 whitespace-nowrap">
                         <img
-                          src="https://res.cloudinary.com/gloot/image/upload/v1672302411/Stryda/logos/stryda-logo-brawls.svg"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1673941215/Stryda/logos/stryda-logo-brawls-simple.svg"
                           width="auto"
                           height="auto"
                           alt=""
@@ -268,7 +268,7 @@ export default function Home() {
                     >
                       <div className="flex items-center gap-6 px-6 whitespace-nowrap">
                         <img
-                          src="https://res.cloudinary.com/gloot/image/upload/v1672302411/Stryda/logos/stryda-logo-missions.svg"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1673941215/Stryda/logos/stryda-logo-missions-simple.svg"
                           width="auto"
                           height="auto"
                           alt=""

@@ -53,9 +53,9 @@ export default function BrawlHeader() {
               </h1>
             </div>
             <div className="flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-              <span className="icon icon-clock text-interaction-300" />
+              <span className="icon icon-clock" />
               <Countdown
-                separator={""}
+                separator={"  "}
                 hasDays={false}
                 hasHours={true}
                 hasMinutes={true}
@@ -63,8 +63,8 @@ export default function BrawlHeader() {
                 targetDate={dateTimeAfterThreeDays}
                 hasLabels={true}
                 labelsAbbr={true}
-                labelClassName="text-base block"
-                className="text-interaction-300 uppercase text-base gap-1"
+                labelClassName="text-base block mr-1"
+                className="text-base"
               />
             </div>
           </div>

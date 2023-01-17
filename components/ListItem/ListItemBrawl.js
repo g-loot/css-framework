@@ -259,101 +259,74 @@ export default function ListItemBrawl(props) {
                 <h6 className="text-xl">{brawl.name}</h6>
                 <div className="flex gap-2 items-end">
                   <div className="flex-1 flex gap-3 items-end">
-                  {brawl.result && (
-                    <div className="flex items-center gap-3">
-                      <div className="leading-none flex items-start gap-1">
-                        <span className="text-xl">#</span>
-                        <span className="text-4xl">
-                          {brawl.soloResults?.placement}
-                        </span>
-                      </div>
-                      <div
-                        className={`hidden leading-none text-center -space-y-1 ${
-                          brawl.soloResults?.isPositive
-                            ? "text-success-500 -mt-1"
-                            : "text-error-300 -mb-1"
-                        }`}
-                      >
-                        {brawl.soloResults?.isPositive && (
-                          <span className="icon icon-arrow-sm-up" />
-                        )}
-                        <div>{brawl.soloResults?.movement}</div>
-                        {!brawl.soloResults?.isPositive && (
-                          <span className="icon icon-arrow-sm-down" />
-                        )}
-                      </div>
-                    </div>
-                  )}
-                  <div className="flex items-end justify-between">
-                    <div>
-                      <div className="text-sm text-ui-300">
-                        Top spot reward
-                      </div>
-                      <div className="flex gap-4 items-center">
-                        {brawl.rewards?.map((reward, rewardIndex) => (
-                          <>
-                            {reward.type === "money" && (
-                              <div className="flex items-center gap-2">
-                                <span className="text-lg">
-                                  $ {numberWithSpaces(reward.value)}
-                                </span>
-                              </div>
-                            )}
-                            {reward.type === "coin" && (
-                              <div className="flex items-center gap-2">
-                                <img
-                                  className="h-6"
-                                  src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
-                                  width="auto"
-                                  height="auto"
-                                  alt=""
-                                />
-                                <span className="text-lg">
-                                  {numberWithSpaces(reward.value)}
-                                </span>
-                              </div>
-                            )}
-                            {reward.type === "token" && (
-                              <div className="flex items-center gap-2">
-                                <img
-                                  className="h-6"
-                                  src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
-                                  width="auto"
-                                  height="auto"
-                                  alt=""
-                                />
-                                <span className="text-lg">
-                                  {numberWithSpaces(reward.value)}
-                                </span>
-                              </div>
-                            )}
-                            {reward.type === "ticket" && (
-                              <div className="flex items-center gap-2">
-                                <img
-                                  className="h-6"
-                                  src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}
-                                  width="auto"
-                                  height="auto"
-                                  alt=""
-                                />
-                                <span className="text-lg">
-                                  {numberWithSpaces(reward.value)}
-                                </span>
-                              </div>
-                            )}
-                          </>
-                        ))}
+                    
+                    <div className="flex items-end justify-between">
+                      <div>
+                        <div className="text-sm text-ui-300">
+                          Top spot reward
+                        </div>
+                        <div className="flex gap-4 items-center">
+                          {brawl.rewards?.map((reward, rewardIndex) => (
+                            <>
+                              {reward.type === "coin" && (
+                                <div className="flex items-center text-gold-500 gap-2">
+                                  <span className="icon text-lg icon-coin" />
+                                  <span>{numberWithSpaces(reward.value)}</span>
+                                </div>
+                              )}
+                              {reward.type === "token" && (
+                                <div className="flex items-center text-gold-500 gap-2">
+                                  <span className="icon text-lg icon-token" />
+                                  <span>{numberWithSpaces(reward.value)}</span>
+                                </div>
+                              )}
+                            </>
+                          ))}
+                        </div>
                       </div>
                     </div>
+                    {brawl.result && (
+                      <div className="flex items-center gap-3">
+                        <div className="leading-none flex items-baseline gap-1">
+                          <span>#</span>
+                          <span className="text-xl">
+                            42
+                          </span>
+                        </div>
+                        <div
+                          className={`hidden leading-none text-center -space-y-1 ${
+                            brawl.soloResults?.isPositive
+                              ? "text-success-500 -mt-1"
+                              : "text-error-300 -mb-1"
+                          }`}
+                        >
+                          {brawl.soloResults?.isPositive && (
+                            <span className="icon icon-arrow-sm-up" />
+                          )}
+                          <div>{brawl.soloResults?.movement}</div>
+                          {!brawl.soloResults?.isPositive && (
+                            <span className="icon icon-arrow-sm-down" />
+                          )}
+                        </div>
+                      </div>
+                    )}
                   </div>
+                  <div className="chip chip-xs chip-secondary">
+                    <span className="icon icon-time-machine text-sm" />
+                    <span>
+                      <Countdown
+                        separator={"  "}
+                        hasDays={false}
+                        hasHours={true}
+                        hasMinutes={true}
+                        hasSeconds={true}
+                        hasLabels={true}
+                        labelsAbbr={true}
+                        labelClassName="text-sm mr-1"
+                        className="text-sm"
+                      />
+                    </span>
                   </div>
-                  <div className="chip chip-sm chip-secondary">
-                      <span className="icon icon-time-machine" />
-                      <span>
-                        Time left:{" "}
-                        <Countdown additionalClassName="ml-1" separator=":" />
-                      </span>
-                    </div>
                 </div>
 
                 {/*
