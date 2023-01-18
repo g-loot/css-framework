@@ -219,7 +219,7 @@ export default function Premium() {
               </div>
               <div className="max-w-sm flex-1 flex flex-col bg-premium-500 rounded-xl p-2">
                 <div className="flex items-center gap-4 pb-2 text-ui-800 pl-7">
-                  <span className="icon icon-ic_stars_24px text-2xl" />
+                  <span className="icon icon-crown text-2xl" />
                   <span className="h4 text-ui-800">Premium</span>
                 </div>
                 <div className="flex-1 flex-col surface rounded-lg p-4 lg:p-8">

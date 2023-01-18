@@ -14,7 +14,7 @@ import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import BrawlHeader from "./components/brawl-header";
-import BrawlPlacements from "./components/brawl-placements-old";
+import BrawlPlacements from "./components/brawl-placements";
 
 
 const TabsItems = [

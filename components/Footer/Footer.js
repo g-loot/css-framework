@@ -13,7 +13,9 @@ export default function Footer(props) {
 
   return (
     <footer
-      className={`relative z-50 bg-ui-800 border-t border-ui-700 py-12 ${props.className ? props.className : ""}`}
+      className={`relative z-50 bg-ui-800 border-t border-ui-700 py-12 ${
+        props.className ? props.className : ""
+      }`}
     >
       <div>
         <div className="container mx-auto md:gap-12 px-4 2xl:px-0 md:flex justify-between">
@@ -27,18 +29,8 @@ export default function Footer(props) {
 
             <p className="my-8 text-sm leading-relaxed">
               © Stryda Global Esports AB. <br />
-              <span className="flex items-center">
-                <span className="text-ui-300">
-                  All rights reserved. Made in Stockholm, Sweden
-                </span>
-                <img
-                  loading="lazy"
-                  className="ml-2 rounded-sm"
-                  alt="Swedish flag"
-                  src="https://gloot.com/icons/sweden.svg"
-                  width="16"
-                  height="12"
-                />
+              <span className="text-ui-300">
+                All rights reserved. Made in Stockholm, Sweden
               </span>
             </p>
 

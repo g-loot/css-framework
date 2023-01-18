@@ -14,6 +14,7 @@ import HomeBrawlSolo from "./component-brawls-solo";
 import HomeBrawlClan from "./component-brawls-clan";
 import HomeBrawlMissions from "./component-brawls-missions";
 import ComponentRewardLadder from "../[game]/missions/component-rewardladder";
+import { usePrototypeData } from "../../../contexts/prototype";
 
 export default function Home() {
   const { query } = useRouter();
@@ -25,6 +26,7 @@ export default function Home() {
   const hasNoClan = query.noclan === "true" ? true : false;
   const hasNoBrawls = query.nobrawls === "true" ? true : false;
   const isPremium = query.premium === "true" ? true : false;
+  const prototype = usePrototypeData();
 
   function openModalBrawlHowitworksVideo() {
     uiContext.openModal(
@@ -169,6 +171,32 @@ export default function Home() {
           <HomeBrawlClan />
         </section>
         <section className="my-16 surface sm:rounded-lg overflow-hidden hidden lg:block">
+          <div className="relative z-10 px-4 py-20 md:w-1/2 mx-auto text-center">
+            <h3 className="h1">
+              Make your gg&#39;s more
+              <br />
+              rewarding with <span className="text-premium-500">Premium</span>
+            </h3>
+            <p className="text-lg text-ui-100 mt-4 mb-5">
+              Get a 50% XP boost on all completed missions &amp; Brawls matches, remove ads and much more.
+            </p>
+            <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+              <button
+                type="button"
+                className="button button-lg button-premium is-shining"
+              >
+                <span>View premium plans</span>
+              </button>
+            </Link>
+          </div>
+          <img
+            className="absolute inset-0 h-full w-full object-cover object-right opacity-50"
+            src="https://res.cloudinary.com/gloot/image/upload/v1674045863/Stryda/illustrations/home-premium.jpg"
+            alt=""
+          />
+        </section>
+        {/*
+        <section className="my-16 surface sm:rounded-lg overflow-hidden hidden lg:block">
           <div className="relative z-10 p-12 w-1/2 xl:w-1/3">
             <h3>
               New fun Missions
@@ -186,6 +214,7 @@ export default function Home() {
             alt=""
           />
         </section>
+        */}
         {/*
         <section className="my-16 surface sm:rounded-lg overflow-hidden hidden lg:block">
           <div className="relative z-10 p-12 w-1/2 xl:w-1/3">
@@ -207,7 +236,6 @@ export default function Home() {
         </section>
         */}
 
-        
         <h2 className="h3 mt-8 mx-4 sm:mx-0">Missions</h2>
         <HomeBrawlMissions gameSlug="valorant" />
         <HomeBrawlMissions gameSlug="pubg" />

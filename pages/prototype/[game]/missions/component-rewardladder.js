@@ -9,6 +9,7 @@ import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
+import Slider from "../../../../components/Slider/Slider";
 
 export default function ComponentRewardLadder() {
   const router = useRouter();
@@ -129,8 +130,10 @@ export default function ComponentRewardLadder() {
           </div>
         </>
       )}
-      <div className="mb-8">
-        <RewardLadder hasReward={selectedGame?.hasReward} />
+      <div className="mb-4">
+        <Slider itemWidth={480+16} bgColor="from-ui-900 via-ui-900/90 to-ui-900/0">
+          <RewardLadder hasReward={selectedGame?.hasReward} />
+        </Slider>
       </div>
       {/*
       <div className="text-center text-sm text-ui-300 mt-4">

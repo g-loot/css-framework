@@ -38,6 +38,12 @@ export default function Home() {
           </div>
         </section>
         <section className="px-4 md:px-0 mb-4">
+          <h2 className="px-2 sm:px-0 py-2 text-2xl">Picture frames</h2>
+          <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4">
+           
+          </ul>
+        </section>
+        <section className="px-4 md:px-0 mb-4">
           <h2 className="px-2 sm:px-0 py-2 text-2xl">Gift cards</h2>
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4">
             {prototype.vouchers.map((voucher, voucherIndex) => (
@@ -160,11 +166,11 @@ export default function Home() {
           </div>
         </section>
         <section className="px-4 md:px-0 my-8">
-          <p className="p-2 text-ui-300 text-sm">
+          <p className="p-2 text-ui-300 text-sm text-center">
             Don&#39;t see anything that suits you? Don&#39;t worry, this is just
             the start! More items should be coming to our shop soon.
             <br />
-            By making a purchase you agree to our Terms and Conditions.
+            By making a purchase you agree to our <a href="#" className="link">Terms and Conditions</a>.
           </p>
         </section>
       </PrototypeStructure>
