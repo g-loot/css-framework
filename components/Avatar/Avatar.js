@@ -5,13 +5,24 @@ import React, {
   useRef,
   useState,
 } from "react";
-
+import { useRouter } from "next/router";
 import { usePrototypeData } from "../../contexts/prototype";
 
 export default function Avatar(props) {
   const prototype = usePrototypeData();
+  const { query } = useRouter();
   const userId = props.id || 1;
   const size = props.size || 'avatar-xs';
+  const [avatarFrame, setAvatarFrame] = useState(false);
+  const hasAvatarFrame = query.avatarframe || false;
+
+  useEffect(() => {
+    if (hasAvatarFrame) {
+      setAvatarFrame(prototype.getShopitemByID(1, hasAvatarFrame));
+    } else {
+      setAvatarFrame(prototype.getShopitemByID(1, 1));
+    }
+  }, [hasAvatarFrame]);
 
   return (
     <>
@@ -20,15 +31,15 @@ export default function Avatar(props) {
           prototype.getUserByID(userId)?.isPremium ? "avatar-premium" : ""
         }`}
       >
-      
-        {prototype.getUserByID(userId)?.avatarFrame && (
+        {prototype.getUserByID(userId)?.avatarFrame && !hasAvatarFrame && (
           <img src={prototype.getShopitemByID(1, prototype.getUserByID(userId).avatarFrame).image} alt="" />
         )}
+        {hasAvatarFrame && hasAvatarFrame != 0 && <img src={avatarFrame.image} alt="" />}
         
         <div>
           <img src={prototype.getUserByID(userId)?.avatar} />
         </div>
-        {size === 'avatar-xs' && prototype.getUserByID(userId)?.isYou && <i className="radar" />}
+        {size === 'avatar-xs' && prototype.getUserByID(userId)?.isYou && !hasAvatarFrame && <i className="radar" />}
         {prototype.getUserByID(userId).isOnline && <i />}
       </div>
     </>

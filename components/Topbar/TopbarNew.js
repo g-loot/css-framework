@@ -13,6 +13,7 @@ import { VariablesContext } from "../../contexts/variables";
 import TopBarClaim from "../TopBarClaim/TopBarClaim";
 import ModalBuyTokens from "../../pages/prototype/wallet/modal-buytokens";
 import Countdown from "../Countdown/Countdown";
+import Avatar from "../Avatar/Avatar";
 
 const notificationsGroups = [
   {
@@ -727,14 +728,7 @@ export default function TopbarNew() {
                   tabIndex="1"
                   className="flex items-center rounded-full bg-ui-700 interactive"
                 >
-                  <div className="avatar avatar-simple avatar-circle avatar-xs">
-                    <div>
-                      <img
-                        src={prototype.getUserByID(1)?.avatar}
-                        alt="avatar"
-                      />
-                    </div>
-                  </div>
+                  <Avatar id={1} />
                   <span className="icon icon-arrow-sm-down mx-2" />
                 </div>
 

@@ -5,6 +5,7 @@ import { UiContext } from "../../contexts/ui";
 import { VariablesContext } from "../../contexts/variables";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
+import Avatar from "../Avatar/Avatar";
 
 export default function RewardLadder(props) {
   const [step, setStep] = useState(1);
@@ -118,16 +119,7 @@ export default function RewardLadder(props) {
                   <span className="pl-2">550</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
-                <div
-                  className={`avatar avatar-circle avatar-xs ${
-                    isPremium ? "avatar-premium" : ""
-                  }`}
-                >
-                  <div>
-                    <img src={prototype.getUserByID(1)?.avatar} alt="" />
-                  </div>
-                  <i className="radar" />
-                </div>
+                <Avatar id={1} />
               </div>
             </div>
           </div>

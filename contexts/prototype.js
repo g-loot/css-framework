@@ -89,6 +89,7 @@ export const PrototypeProvider = ({ children }) => {
   function getURLparams(prep) {
     const hasAds = query.ads === "true" ? true : false;
     const freeEntry = query.freeentry === "true" ? true : false;
+    const avatarFrame = Math.round(query.avatarframe) || false;
     const Prep = prep === undefined ? "?" : prep;
     if(hasAds && freeEntry) {
       const param = "freeentry=true&ads=true";
@@ -99,7 +100,10 @@ export const PrototypeProvider = ({ children }) => {
     } else if(!hasAds && freeEntry) {
       const param = "freeentry=true";
       return(Prep+param);
-    } else {
+    } else if(avatarFrame) {
+      const param = `avatarframe=${avatarFrame}`;
+      return(Prep+param);
+    }else {
       return("");
     }
   }
