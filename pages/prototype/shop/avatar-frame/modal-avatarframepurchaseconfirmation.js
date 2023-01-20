@@ -56,7 +56,7 @@ export default function ModalAvatarFramePurchaseConfirmation(props) {
                 }`}
               >
                 <div>
-                  <span>Confirm &amp; pay</span>
+                  <span>Confirm</span>
                 </div>
                 <div>
                   <span className="icon icon-coin" />

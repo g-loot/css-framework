@@ -80,20 +80,22 @@ export default function ProfileHeader(props) {
             <div className="header-body">
               <div className="flex flex-col md:flex-row gap-4 md:items-center self-center">
                 {selectedUser.isYou ? (
-                  <div className="relative">
-                    <div
-                      className={`avatar avatar-xl avatar-circle ${
-                        selectedUser.isPremium ? "avatar-premium" : ""
-                      }`}
-                    >
-                      {avatarFrame && <img src={avatarFrame.image} alt="" />}
-                      <div>
-                        <img src={selectedUser.avatar} alt="avatar" />
+                  <div className="flex">
+                    <div className="relative">
+                      <div
+                        className={`avatar avatar-xl avatar-circle ${
+                          selectedUser.isPremium ? "avatar-premium" : ""
+                        }`}
+                      >
+                        {avatarFrame && <img src={avatarFrame.image} alt="" />}
+                        <div>
+                          <img src={selectedUser.avatar} alt="avatar" />
+                        </div>
                       </div>
+                      <button onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)} type="button" className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0">
+                        <span className="icon icon-pen-2" />
+                      </button>
                     </div>
-                    <button onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)} type="button" className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0">
-                      <span className="icon icon-pen-2" />
-                    </button>
                   </div>
                 ) : (
                   <Avatar size="avatar-xl" id={selectedUser.id} />

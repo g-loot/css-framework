@@ -146,7 +146,7 @@ export default function ModalAvatarEdit(props) {
                 </Slider>
               </div>
               <div className="bg-ui-600 rounded mt-8 flex flex-col lg:flex-row items-center">
-                <div className="relative z-10 px-4 py-8 text-left order-2 md:order-1">
+                <div className="relative z-10 px-4 py-8 order-2 md:order-1 text-center md:text-left">
                   <h3>Looking for more?</h3>
                   <p className="text-base leading-tight text-ui-300 mt-2 mb-4 max-w-[30ch] ">
                     Head to the{" "}
@@ -161,7 +161,7 @@ export default function ModalAvatarEdit(props) {
                   </p>
                 </div>
                 <img
-                  className="md:order-2 md:w-1/2 mx-8"
+                  className="md:order-2 md:w-1/2 px-8 mt-8 md:mt-0"
                   src="https://res.cloudinary.com/gloot/image/upload/v1674215034/Stryda/illustrations/shop_avatarframes.png"
                   alt=""
                 />

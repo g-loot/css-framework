@@ -43,7 +43,7 @@ export default function Home() {
             className="surface sm:rounded-lg overflow-hidden flex flex-col lg:flex-row items-center animate-slide-in-right animate-delay"
             style={{ "--delay": `calc( 0 * 0.05s)` }}
           >
-            <div className="relative z-10 p-12 md:w-1/2 order-2 md:order-1">
+            <div className="relative z-10 p-8 md:p-12 md:w-1/2 order-2 md:order-1 text-center md:text-left">
               <h3>Get a new look</h3>
               <p className="text-lg text-ui-300 mt-2 mb-4 max-w-[30ch]">
                 Add beautiful frames around your avatar and stand out from the
@@ -57,9 +57,9 @@ export default function Home() {
                 </button>
               </Link>
             </div>
-            <img className="md:order-2 md:w-1/2 mx-8" src="https://res.cloudinary.com/gloot/image/upload/v1674215034/Stryda/illustrations/shop_avatarframes.png" alt="" />
+            <img className="relative z-10 md:order-2 md:w-1/2 px-8 mt-8 md:mt-0" src="https://res.cloudinary.com/gloot/image/upload/v1674215034/Stryda/illustrations/shop_avatarframes.png" alt="" />
             <img
-              className="absolute inset-0 h-full w-full object-cover object-right opacity-10"
+              className="absolute z-0 inset-0 h-full w-full object-cover object-right opacity-10"
               src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
               alt=""
             />
