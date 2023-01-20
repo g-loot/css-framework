@@ -7,6 +7,7 @@ import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import { UiContext } from "../../../../contexts/ui";
 import ModalAvatarFramePurchaseConfirmation from "./modal-avatarframepurchaseconfirmation";
+import ModalAvatarFramePurchaseCompleted from "./modal-avatarframepurchasecompleted";
 
 export default function Home() {
   const router = useRouter();
@@ -16,16 +17,26 @@ export default function Home() {
   const [selectedShopsection, setSelectedShopsection] = useState(1);
   const hasAds = query.ads === "true" ? true : false;
   const modalItemPurchaseConfirmation =
-    query.modalItemPurchaseConfirmation === "true" ? true : false;
+    query.modalpurchaseconfirmation === "true" ? true : false;
+  const modalItemPurchaseCompleted =
+    query.modalpurchasecomplited === "true" ? true : false;
 
   useEffect(() => {
     if (modalItemPurchaseConfirmation) {
       openModalItemPurchaseConfirmation();
     }
   }, [modalItemPurchaseConfirmation]);
+  useEffect(() => {
+    if (modalItemPurchaseCompleted) {
+      openmodalItemPurchaseCompleted();
+    }
+  }, [modalItemPurchaseCompleted]);
 
   function openModalItemPurchaseConfirmation(id) {
     uiContext.openModal(<ModalAvatarFramePurchaseConfirmation id={id} />);
+  }
+  function openmodalItemPurchaseCompleted(id) {
+    uiContext.openModal(<ModalAvatarFramePurchaseCompleted id={id} />);
   }
 
   useEffect(() => {
@@ -74,7 +85,10 @@ export default function Home() {
             <div className="header-content">
               <div className="header-body">
                 <h1>Avatar frames</h1>
-                <p className="text-ui-300 max-w-[70ch] mt-4">Add beautiful frames around your avatar and stand out from the crowd.</p>
+                <p className="text-ui-300 max-w-[70ch] mt-4">
+                  Add beautiful frames around your avatar and stand out from the
+                  crowd.
+                </p>
               </div>
             </div>
             <div className="header-bg">
