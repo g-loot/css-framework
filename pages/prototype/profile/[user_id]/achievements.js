@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
 import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
 import ModalAchievementReceived from "../../modal-achievementreceived";
-import HomeHeader from "../header";
+import ProfileHeader from "../header";
 
 const achievementsList = [
   {
@@ -146,7 +146,7 @@ export default function Achievements() {
 
         {selectedUser && (
           <>
-            <HomeHeader breadcrumbs="Achievements" />
+            <ProfileHeader breadcrumbs="Achievements" />
 
             <section className="grid lg:grid-cols-2 gap-4">
               {achievementsList.map((item, itemIndex) => (

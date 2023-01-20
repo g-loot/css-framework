@@ -13,7 +13,7 @@ import { UiContext } from "../../../../contexts/ui";
 import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
 import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
 import ModalAchievementReceived from "../../modal-achievementreceived";
-import HomeHeader from "../header";
+import ProfileHeader from "../header";
 
 const achievementsList = [
   {
@@ -106,18 +106,20 @@ export default function Home() {
   const { user_id } = router.query;
   const { query } = useRouter();
   const modalAchievement = query.modalachievement === "true" ? true : false;
-
+  
   useEffect(() => {
     if (modalAchievement) {
       openModalAchievementReceived();
     }
   }, [modalAchievement]);
-
+  
   function openModalAchievementReceived(level, name, icon) {
     uiContext.openModal(
       <ModalAchievementReceived level={level} name={name} icon={icon} />
     );
   }
+
+  
 
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(user_id));
@@ -130,7 +132,7 @@ export default function Home() {
 
         {selectedUser && (
           <>
-            <HomeHeader />
+            <ProfileHeader />
 
             <section
               className="flex flex-col lg:flex-row gap-4 lg:items-stretch animate-slide-in-bottomNO animate-delay mb-4"

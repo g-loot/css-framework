@@ -337,7 +337,7 @@ export default function TabBrawlsSoloLeaderboards() {
                     {selectedBrawl &&
                       selectedBrawl.clanLeaderboard.map((user, userIndex) => (
                         <>
-                          <div className="item rounded-lg h-[58px]">
+                          <div className="item rounded-lg h-[58px]" key={userIndex}>
                             <div className="item-image">
                               <div className="avatar avatar-squircle avatar-xs">
                                 <div />

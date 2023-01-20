@@ -8,6 +8,7 @@ import { dataClans } from '../mock-data/data-clans';
 import { dataGames } from '../mock-data/data-games';
 import { dataUsers } from '../mock-data/data-users';
 import { dataVouchers } from '../mock-data/data-vouchers';
+import { dataShopitems } from '../mock-data/data-shopitems';
 import { useRouter } from "next/router";
 
 export const PrototypeContext = createContext(
@@ -21,6 +22,7 @@ export const PrototypeProvider = ({ children }) => {
   const games = dataGames;
   const users = dataUsers;
   const vouchers = dataVouchers;
+  const shopitems = dataShopitems;
   const [defaultGameID, setDefaultGameID] = useState(1);
   
   const getGameByID = (id) => {
@@ -72,6 +74,18 @@ export const PrototypeProvider = ({ children }) => {
       return voucher.id === parseInt(id);
     })
   }
+  const getShopsectionByID = (id) => {
+    return shopitems.find(shopsection => {
+      return shopsection.id === parseInt(id);
+    })
+  }
+  const getShopitemByID = (id, itemId) => {
+    const selectedShopsection = getShopsectionByID(id);
+    const selectedItem = selectedShopsection.items.find(item => {
+      return item.id === parseInt(itemId);
+    });
+    return selectedItem;
+  }
   function getURLparams(prep) {
     const hasAds = query.ads === "true" ? true : false;
     const freeEntry = query.freeentry === "true" ? true : false;
@@ -109,6 +123,8 @@ export const PrototypeProvider = ({ children }) => {
         getClanByID,
         getUserClan,
         getVoucherByID,
+        getShopsectionByID,
+        getShopitemByID,
         getURLparams,
         defineDefaultGameID,
       }}

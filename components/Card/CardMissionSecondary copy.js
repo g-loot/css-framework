@@ -99,10 +99,9 @@ export default function CardMissionSecondary(props) {
         <div className="revealer-back">
           <div
             className={`card-mission card-secondary ${
-              mission.target === mission.current && hasClaimed ? "is-inactive" : ""
+              mission.target === mission.current ? "is-inactive" : ""
             }`}
           >
-            {/*
             {!hasClaimed && mission.target === mission.current && (
               <div className="card-overlay">
                 <div>
@@ -117,7 +116,6 @@ export default function CardMissionSecondary(props) {
                 </div>
               </div>
             )}
-            */}
             <div className="card-decoration"></div>
             <div className="card-body">
               <div className="card-category">
@@ -172,132 +170,80 @@ export default function CardMissionSecondary(props) {
               </div>
               <div className="card-title">{mission.name}</div>
               <div className="card-meta">
-                {!hasClaimed && mission.target === mission.current ? (
-                  <div>
-                    <button
-                      type="button"
-                      className="button button-claim is-shining mt-2 mb-3"
-                      onClick={openModalClaimMission}
-                    >
-                      <span className="icon icon-present animate-bounce" />
-                      <span>Claim reward</span>
+                {isPremium ? (
+                  <Tooltip
+                    placement="top"
+                    tooltip={<XPBoostList isCompleted={mission.target === mission.current ? true : false} size="sm" xp={mission.xp} />}
+                  >
+                    <button type="button" className={`chip chip-sm ${mission.target === mission.current ? 'chip-xp chip-inverted' : 'chip-secondary'}`}>
+                      <span>{Math.round(mission.xp * 1.65)}</span>
+                      <span className="icon icon-xp-symbol" />
                     </button>
-                  </div>
+                  </Tooltip>
                 ) : (
-                  <>
-                    {isPremium ? (
+                  <div className="flex gap-1 items-center">
+                    { mission.target === mission.current ? (
                       <Tooltip
-                        placement="top"
-                        tooltip={
-                          <XPBoostList
-                            isCompleted={
-                              mission.target === mission.current ? true : false
-                            }
-                            size="sm"
-                            xp={mission.xp}
-                          />
-                        }
-                      >
-                        <button
-                          type="button"
-                          className={`chip chip-sm ${
-                            mission.target === mission.current
-                              ? "chip-xp chip-inverted"
-                              : "chip-secondary"
-                          }`}
-                        >
-                          <span>{Math.round(mission.xp * 1.65)}</span>
-                          <span className="icon icon-xp-symbol" />
-                        </button>
-                      </Tooltip>
+                      placement="top"
+                      tooltip={<XPBoostList isCompleted={mission.target === mission.current ? true : false} size="sm" xp={mission.xp} />}
+                    >
+                      <button type="button" className={`chip chip-sm chip-xp`}>
+                        <span>{mission.xp}</span>
+                        <span className="icon icon-xp-symbol" />
+                      </button>
+                    </Tooltip>
                     ) : (
-                      <div className="flex gap-1 items-center">
-                        {mission.target === mission.current ? (
-                          <Tooltip
-                            placement="top"
-                            tooltip={
-                              <XPBoostList
-                                isCompleted={
-                                  mission.target === mission.current
-                                    ? true
-                                    : false
-                                }
-                                size="sm"
-                                xp={mission.xp}
-                              />
-                            }
-                          >
-                            <button
-                              type="button"
-                              className={`chip chip-sm chip-xp`}
-                            >
-                              <span>{mission.xp}</span>
-                              <span className="icon icon-xp-symbol" />
-                            </button>
-                          </Tooltip>
-                        ) : (
-                          <div className="chip chip-ghost chip-sm">
-                            <span>{mission.xp}</span>
-                            <span className="icon icon-xp-symbol" />
-                          </div>
-                        )}
-                        <Tooltip
-                          placement="top"
-                          tooltip={
-                            <div className="w-56 flex gap-4 text-sm">
-                              <div className="relative -mt-3">
-                                <span className="icon icon-crown text-6xl text-premium-500" />
-                                <div className="lottie-premium absolute -inset-1">
-                                  <Lottie
-                                    animationData={LottieExplosion}
-                                    loop={false}
-                                    autoplay={true}
-                                  />
-                                </div>
-                              </div>
-                              <div className="flex-1">
-                                Subscribe to Premium to earn an additional{" "}
-                                <span className="text-premium-500">50% XP</span>{" "}
-                                on each completed mission.
-                              </div>
-                            </div>
-                          }
-                        >
-                          <button
-                            type="button"
-                            className="chip chip-premium chip-sm"
-                          >
-                            <span>+{mission.xp / 2}</span>
-                            <span className="icon icon-crown text-sm" />
-                          </button>
-                        </Tooltip>
+                      <div className="chip chip-ghost chip-sm">
+                        <span>{mission.xp}</span>
+                        <span className="icon icon-xp-symbol" />
                       </div>
                     )}
-                  </>
+                    <Tooltip
+                      placement="top"
+                      tooltip={
+                        <div className="w-56 flex gap-4 text-sm">
+                          <div className="relative -mt-3">
+                            <span className="icon icon-crown text-6xl text-premium-500" />
+                            <div className="lottie-premium absolute -inset-1">
+                              <Lottie
+                                animationData={LottieExplosion}
+                                loop={false}
+                                autoplay={true}
+                              />
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            Subscribe to Premium to earn an additional{" "}
+                            <span className="text-premium-500">50% XP</span> on
+                            each completed mission.
+                          </div>
+                        </div>
+                      }
+                    >
+                      <button type="button" className="chip chip-premium chip-sm">
+                        <span>+{mission.xp / 2}</span>
+                        <span className="icon icon-crown text-sm" />
+                      </button>
+                    </Tooltip>
+                  </div>
                 )}
               </div>
-              {!hasClaimed && mission.target === mission.current ? (
-                <></>
-              ) : (
-                <div>
-                  <div className={`${mission.target === mission.current && hasClaimed ? 'opacity-0' : ''}`}>
-                    <div className="text-sm text-ui-300">
-                      {mission.current}/{mission.target}
-                    </div>
-                    <div
-                      className="progressbar progressbar-sm"
-                      style={{
-                        "--percent": calculatePercent(
-                          mission.target,
-                          mission.current
-                        ),
-                      }}
-                    >
-                      <div />
-                    </div>
-                  </div>
+              <div>
+                <div className="text-sm text-ui-300">
+                  {mission.current}/{mission.target}
                 </div>
-              )}
+                <div
+                  className="progressbar progressbar-sm"
+                  style={{
+                    "--percent": calculatePercent(
+                      mission.target,
+                      mission.current
+                    ),
+                  }}
+                >
+                  <div />
+                </div>
+              </div>
             </div>
             <div className="card-bg">
               <span

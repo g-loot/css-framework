@@ -12,6 +12,7 @@ import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
 import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
+import Avatar from "../../../../components/Avatar/Avatar";
 
 const Groups = [
   "A",
@@ -575,6 +576,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                   <>
                                     <button
                                       type="button"
+                                      key={groupIndex}
                                       ref={sliderGroupItem}
                                       onClick={loadGroup.bind(this, groupIndex)}
                                       className={`chip chip-secondary rounded shrink-0 w-10 ${
@@ -797,30 +799,7 @@ export default function TabBrawlsSoloLeaderboards() {
                                                 }${prototype.getURLparams()}`}
                                               >
                                                 <div className="flex gap-2 items-center interactive">
-                                                  <div
-                                                    className={`avatar avatar-circle avatar-xs  ${
-                                                      prototype.getUserByID(
-                                                        user.user
-                                                      )?.isPremium
-                                                        ? "avatar-premium"
-                                                        : ""
-                                                    }`}
-                                                  >
-                                                    <div>
-                                                      <img
-                                                        src={
-                                                          prototype.getUserByID(
-                                                            user.user
-                                                          )?.avatar
-                                                        }
-                                                      />
-                                                    </div>
-                                                    {prototype.getUserByID(
-                                                      user.user
-                                                    )?.isYou && (
-                                                      <i className="radar" />
-                                                    )}
-                                                  </div>
+                                                  <Avatar id={user.user} />
                                                   <div className="item-title">
                                                     <span
                                                       className={`${

@@ -37,27 +37,13 @@ export default function ComponentRewardLadder() {
 
   return (
     <>
-      <div className="flex items-center justify-between mb-2 px-4 sm:px-0">
-        <h2 className="h3 flex-none">Reward Ladder</h2>
-        <div className="hidden sm:flex items-center gap-2">
-          <div className="chip chip-sm chip-secondary">
-            <span className="icon icon-time-machine" />
-            <span>
-              Resets in{" "}
-              <Countdown
-                className="ml-0.5"
-                separator=":"
-                hasHours={true}
-                hasMinutes={true}
-                hasSeconds={true}
-              />
-            </span>
-          </div>
+      <div className="flex items-baseline justify-between mb-2 px-4 sm:px-0">
+        <div className="flex gap-2 items-baseline">
+          <h2 className="h3 flex-none">Reward Ladder</h2>
           <Tooltip
             tooltip={
               <div className="max-w-xs text-sm text-center leading-tight">
-                Unlock rewards as you earn XP from Missions. XP is earned across
-                all Missions in all games on Stryda
+                Unlock rewards as you earn XP from completed missions and registered Brawl matches.
               </div>
             }
           >
@@ -65,6 +51,18 @@ export default function ComponentRewardLadder() {
               <span className="icon icon-16 icon-c-info" />
             </button>
           </Tooltip>
+        </div>
+        <div className="text-sm text-ui-300">
+          <span>
+              Resets in{" "}
+              <Countdown
+                separator=":"
+                hasHours={true}
+                hasMinutes={true}
+                hasSeconds={true}
+              />
+            </span>
+          
         </div>
       </div>
       {/*

@@ -19,7 +19,7 @@ import BrawlPlacements from "./components/brawl-placements";
 
 const TabsItems = [
   {
-    label: "Solo Leaderboards",
+    label: "Solo Leaderboard",
     url: "solo-leaderboard",
     component: TabBrawlsSoloLeaderboards,
   },
@@ -41,7 +41,7 @@ const TabsItems = [
 ];
 const TabsItemsNoClan = [
   {
-    label: "Solo Leaderboards",
+    label: "Solo Leaderboard",
     url: "solo-leaderboard",
     component: TabBrawlsSoloLeaderboards,
   },

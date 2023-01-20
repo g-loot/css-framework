@@ -1,23 +1,48 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 import Link from "next/link";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 import ReadMore from "../../../components/ReadMore/ReadMore";
 import GameIcon from "../../../components/GameIcon/GameIcon";
+import Avatar from "../../../components/Avatar/Avatar";
+import ModalAvatarEdit from "./[user_id]/modal-avataredit";
+import { UiContext } from "../../../contexts/ui";
 
-export default function HomeHeader(props) {
+export default function ProfileHeader(props) {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const [selectedUser, setSelectedUser] = useState(null);
   const emptyClan = query.emptyclan === "true" ? true : false;
+  const uiContext = useContext(UiContext);
   const { user_id } = router.query;
+  const hasAvatarFrame = query.avatarframe || false;
   const breadcrumbs = props.breadcrumbs;
+  const [avatarFrame, setAvatarFrame] = useState(false);
+  const modalAvatarEdit = query.modalavataredit === "true" ? true : false;
+
+  useEffect(() => {
+    if (hasAvatarFrame) {
+      setAvatarFrame(prototype.getShopitemByID(1, hasAvatarFrame));
+    }
+  }, []);
 
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(user_id));
   }, [user_id]);
+
+  useEffect(() => {
+    if (modalAvatarEdit) {
+      openModalAvatarEdit(1);
+    }
+  }, [modalAvatarEdit]);
+
+  function openModalAvatarEdit(id) {
+    uiContext.openModal(
+      <ModalAvatarEdit id={id} />
+    );
+  }
 
   return (
     <>
@@ -54,23 +79,32 @@ export default function HomeHeader(props) {
           <div className="header-content">
             <div className="header-body">
               <div className="flex flex-col md:flex-row gap-4 md:items-center self-center">
-                <div
-                  className={`avatar avatar-xl avatar-circle ${
-                    selectedUser.isPremium ? "avatar-premium" : ""
-                  }`}
-                >
-                  <div>
-                    <img src={selectedUser.avatar} alt="avatar" />
+                {selectedUser.isYou ? (
+                  <div className="relative">
+                    <div
+                      className={`avatar avatar-xl avatar-circle ${
+                        selectedUser.isPremium ? "avatar-premium" : ""
+                      }`}
+                    >
+                      {avatarFrame && <img src={avatarFrame.image} alt="" />}
+                      <div>
+                        <img src={selectedUser.avatar} alt="avatar" />
+                      </div>
+                    </div>
+                    <button onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)} type="button" className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0">
+                      <span className="icon icon-pen-2" />
+                    </button>
                   </div>
-                </div>
+                ) : (
+                  <Avatar size="avatar-xl" id={selectedUser.id} />
+                )}
+
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                     <div className="flex items-baseline gap-1">
                       <h1
                         className={`${
-                          selectedUser.isPremium
-                            ? "text-premium-500"
-                            : ""
+                          selectedUser.isPremium ? "text-premium-500" : ""
                         }`}
                       >
                         {selectedUser.nickname}

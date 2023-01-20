@@ -521,7 +521,7 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* simple */}
+      {/* Simple */}
       <div className="mb-12" id="simple">
         <h2 className="h3 mb-3">Simple</h2>
 
@@ -667,6 +667,61 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/y1wjg3p6/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* With frame */}
+      <div className="mb-12" id="with-frame">
+        <h2 className="h3 mb-3">With frame</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                  
+                <div className="flex flex-wrap gap-4 justify-start items-center">
+                  <div className="avatar avatar-circle">
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674054397/Stryda/shop/avatarframes/avatarFrame_1.png" alt="" />
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-md">
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674054397/Stryda/shop/avatarframes/avatarFrame_2.png" alt="" />
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-sm">
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674054397/Stryda/shop/avatarframes/avatarFrame_3.png" alt="" />
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-xs">
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674054397/Stryda/shop/avatarframes/avatarFrame_4.png" alt="" />
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-tiny">
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674054397/Stryda/shop/avatarframes/avatarFrame_2.png" alt="" />
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/tL4bxyzf/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

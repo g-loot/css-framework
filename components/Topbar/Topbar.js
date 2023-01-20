@@ -8,6 +8,7 @@ import Tooltip from "../Tooltip/Tooltip";
 import { UiContext } from "../../contexts/ui";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
+import Avatar from "../Avatar/Avatar";
 
 const notificationsGroups = [
   {
@@ -354,15 +355,8 @@ export default function Topbar() {
                     tabIndex="1"
                     className="flex items-center rounded-full border border-ui-700 bg-ui-800 interactive"
                   >
-                    <div className="avatar avatar-circle avatar-xs">
-                      <div>
-                        <img
-                          src={prototype.getUserByID(1)?.avatar}
-                          alt="avatar"
-                        />
-                      </div>
-                    </div>
-                    <span className="icon icon-arrow-sm-down mx-2" />
+                    <Avatar id={1} />
+                    
                   </div>
 
                   <div

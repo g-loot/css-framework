@@ -12,6 +12,15 @@
   w-24
   ;
 
+  > img {
+    @apply
+    absolute
+    z-20
+    scale-125
+    select-none
+    ;
+  }
+
   > div {
     @apply
     absolute

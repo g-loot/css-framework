@@ -18,7 +18,7 @@ export default function Home() {
       <PrototypeStructure title="Shop">
         <Ad width="1005" height="300" />
 
-        <section className="mb-4">
+        <section className="mb-8">
           <div className="header surface sm:rounded-lg">
             <div className="header-content">
               <div className="header-body">
@@ -37,13 +37,35 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="px-4 md:px-0 mb-4">
-          <h2 className="px-2 sm:px-0 py-2 text-2xl">Picture frames</h2>
-          <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4">
-           
-          </ul>
+        <section className="px-4 md:px-0 mb-8">
+          <h2 className="px-2 sm:px-0 py-2 text-2xl">Avatar frames</h2>
+          <div
+            className="surface sm:rounded-lg overflow-hidden flex flex-col lg:flex-row items-center animate-slide-in-right animate-delay"
+            style={{ "--delay": `calc( 0 * 0.05s)` }}
+          >
+            <div className="relative z-10 p-12 md:w-1/2 order-2 md:order-1">
+              <h3>Get a new look</h3>
+              <p className="text-lg text-ui-300 mt-2 mb-4 max-w-[30ch]">
+                Add beautiful frames around your avatar and stand out from the
+                crowd.
+              </p>
+              <Link
+                href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
+              >
+                <button type="button" className="button button-primary">
+                  <span>See frames</span>
+                </button>
+              </Link>
+            </div>
+            <img className="md:order-2 md:w-1/2 mx-8" src="https://res.cloudinary.com/gloot/image/upload/v1674215034/Stryda/illustrations/shop_avatarframes.png" alt="" />
+            <img
+              className="absolute inset-0 h-full w-full object-cover object-right opacity-10"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
+              alt=""
+            />
+          </div>
         </section>
-        <section className="px-4 md:px-0 mb-4">
+        <section className="px-4 md:px-0 mb-8">
           <h2 className="px-2 sm:px-0 py-2 text-2xl">Gift cards</h2>
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4">
             {prototype.vouchers.map((voucher, voucherIndex) => (
@@ -90,9 +112,14 @@ export default function Home() {
                   </div>
                   <div className="border-t border-ui-700 pt-4">
                     <Link
-                      href={`/prototype/shop/${voucher.id}${prototype.getURLparams()}`}
+                      href={`/prototype/shop/${
+                        voucher.id
+                      }${prototype.getURLparams()}`}
                     >
-                      <a type="button" className="button button-secondary w-full">
+                      <a
+                        type="button"
+                        className="button button-secondary w-full"
+                      >
                         <span>View gift cards</span>
                       </a>
                     </Link>
@@ -149,9 +176,7 @@ export default function Home() {
               alt=""
             />
 
-            <div
-              className="relative z-10 surface surface-dimmed rounded-lg p-8 text-center flex flex-col items-center justify-center"
-            >
+            <div className="relative z-10 surface surface-dimmed rounded-lg p-8 text-center flex flex-col items-center justify-center">
               <h2 className="text-4xl">
                 Need a token <span className="text-main">refill</span>?
               </h2>
@@ -159,7 +184,11 @@ export default function Home() {
                 Purchase tokens to enter brawls and keep on climbing the
                 leaderboards.
               </p>
-              <button onClick={openModalBuyTokens} type="button" className="button button-primary">
+              <button
+                onClick={openModalBuyTokens}
+                type="button"
+                className="button button-primary"
+              >
                 <span>Buy tokens</span>
               </button>
             </div>
@@ -170,7 +199,11 @@ export default function Home() {
             Don&#39;t see anything that suits you? Don&#39;t worry, this is just
             the start! More items should be coming to our shop soon.
             <br />
-            By making a purchase you agree to our <a href="#" className="link">Terms and Conditions</a>.
+            By making a purchase you agree to our{" "}
+            <a href="#" className="link">
+              Terms and Conditions
+            </a>
+            .
           </p>
         </section>
       </PrototypeStructure>

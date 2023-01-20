@@ -33,11 +33,35 @@ export default function Home() {
           <>
             <section className="mb-4">
               <div className="header surface sm:rounded-lg">
+                <div className="header-breadcrumbs">
+                  <nav className="breadcrumbs" aria-label="Breadcrumb">
+                    <ol>
+                      <li>
+                        <Link href={`/prototype/home`}>
+                          <a href="#">
+                            <span className="icon icon-20 icon-home-2" />
+                            <span>Home</span>
+                          </a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={`/prototype/shop`}>
+                          <a href="#">
+                            <span>Shop</span>
+                          </a>
+                        </Link>
+                      </li>
+                      <li aria-current="page">
+                        <div>
+                          <span>Avatar frames</span>
+                        </div>
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
                 <div className="header-content">
                   <div className="header-body">
-                    <h1>
-                      {selectedVoucher.name}
-                    </h1>
+                    <h1>{selectedVoucher.name}</h1>
                     <p className="text-ui-300 max-w-[70ch] mt-4">
                       {selectedVoucher.description}
                     </p>
@@ -130,7 +154,7 @@ export default function Home() {
                                       <span>Purchase</span>
                                     </div>
                                     <div>
-                                      <span className='icon icon-coin' />
+                                      <span className="icon icon-coin" />
                                       <span>
                                         {numberWithSpaces(giftcard.price)}
                                       </span>
@@ -151,7 +175,7 @@ export default function Home() {
                                         <span>Purchase</span>
                                       </div>
                                       <div>
-                                        <span className='icon icon-coin' />
+                                        <span className="icon icon-coin" />
                                         <span>
                                           {numberWithSpaces(giftcard.price)}
                                         </span>

@@ -6,7 +6,7 @@
 .progressbar {
   @apply
   rounded-sm
-  bg-ui-600
+  bg-ui-500
   overflow-hidden
   w-full
   transform-gpu

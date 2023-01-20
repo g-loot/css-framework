@@ -8,6 +8,7 @@ import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import GameIcon from "../../../../components/GameIcon/GameIcon";
+import Avatar from "../../../../components/Avatar/Avatar";
 
 export default function SectionClanActivity() {
   const router = useRouter();
@@ -317,12 +318,7 @@ export default function SectionClanActivity() {
                             prototype.getUserByID(user).id
                           }${prototype.getURLparams()}`}
                         >
-                          <div className="avatar avatar-square avatar-simple avatar-xs interactive">
-                            <div>
-                              <img src={prototype.getUserByID(user).avatar} />
-                            </div>
-                            {prototype.getUserByID(user).isOnline && <i />}
-                          </div>
+                          <Avatar id={user} />
                         </Link>
                       </div>
                       <div className="item-body">

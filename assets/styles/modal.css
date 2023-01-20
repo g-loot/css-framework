@@ -159,6 +159,7 @@
     items-stretch
     text-center
     lg:text-left
+    max-w-[100%]
     ;
 
     &:not([class*="p-"]) {
