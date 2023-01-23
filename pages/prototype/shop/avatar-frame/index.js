@@ -19,7 +19,7 @@ export default function Home() {
   const modalItemPurchaseConfirmation =
     query.modalpurchaseconfirmation === "true" ? true : false;
   const modalItemPurchaseCompleted =
-    query.modalpurchasecomplited === "true" ? true : false;
+    query.modalpurchasecompleted === "true" ? true : false;
 
   useEffect(() => {
     if (modalItemPurchaseConfirmation) {

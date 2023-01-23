@@ -31,10 +31,10 @@ export default function Avatar(props) {
           prototype.getUserByID(userId)?.isPremium ? "avatar-premium" : ""
         }`}
       >
-        {prototype.getUserByID(userId)?.avatarFrame && !hasAvatarFrame && (
+        {!prototype.getUserByID(userId).isYou && prototype.getUserByID(userId)?.avatarFrame && (
           <img src={prototype.getShopitemByID(1, prototype.getUserByID(userId).avatarFrame).image} alt="" />
         )}
-        {hasAvatarFrame && hasAvatarFrame != 0 && <img src={avatarFrame.image} alt="" />}
+        {prototype.getUserByID(userId).isYou && hasAvatarFrame && <img src={avatarFrame.image} alt="" />}
         
         <div>
           <img src={prototype.getUserByID(userId)?.avatar} />
