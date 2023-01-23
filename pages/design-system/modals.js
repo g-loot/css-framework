@@ -305,10 +305,10 @@ const DSpage = () => {
                         alt=""
                       />
                       <div className="flex gap-2 items-baseline justify-center">
-                        <div className="text-4xl text-gold-500">
+                        <div className="text-4xl text-currency-1-500">
                           5
                         </div>
-                        <div className="uppercase text-lg text-gold-500">
+                        <div className="uppercase text-lg text-currency-1-500">
                           Coins
                         </div>
                       </div>
@@ -322,10 +322,10 @@ const DSpage = () => {
                         alt=""
                       />
                       <div className="flex gap-2 items-baseline justify-center">
-                        <div className="text-4xl text-purple-500">
+                        <div className="text-4xl text-currency-2-500">
                           1
                         </div>
-                        <div className="uppercase text-lg text-purple-500">
+                        <div className="uppercase text-lg text-currency-2-500">
                           Token
                         </div>
                       </div>

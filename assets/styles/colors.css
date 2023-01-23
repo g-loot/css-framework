@@ -93,6 +93,18 @@ body {
   --color-platinum-500: 255 0 255;
   --color-platinum-700: 152 0 153;
 
+  --color-currency-1-300: 235 211 152;
+  --color-currency-1-500: 220 197 139;
+  --color-currency-1-700: 187 164 107;
+
+  --color-currency-2-300: 139 189 224;
+  --color-currency-2-500: 123 172 206;
+  --color-currency-2-700: 94 142 176;
+
+  --color-currency-3-300: 242 143 166;
+  --color-currency-3-500: 227 130 152;
+  --color-currency-3-700: 194 99 120;
+
   --color-game-apexlegends: 218 42 41;
   --color-game-csgo: 249 129 0;
   --color-game-dota2: 239 61 54;

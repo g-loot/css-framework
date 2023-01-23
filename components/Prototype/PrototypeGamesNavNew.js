@@ -15,7 +15,7 @@ const SubMenuItem = [
   {
     url: "brawls",
     icon: "icon-brawl",
-    label: "Competitions",
+    label: "ladders",
   },
   {
     onlygame: "valorant",

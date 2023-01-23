@@ -191,6 +191,21 @@ module.exports = {
           500: withOpacityValue("--color-bronze-500"),
           700: withOpacityValue("--color-bronze-700"),
         },
+        "currency-1": {
+          300: withOpacityValue("--color-currency-1-300"),
+          500: withOpacityValue("--color-currency-1-500"),
+          700: withOpacityValue("--color-currency-1-700"),
+        },
+        "currency-2": {
+          300: withOpacityValue("--color-currency-2-300"),
+          500: withOpacityValue("--color-currency-2-500"),
+          700: withOpacityValue("--color-currency-2-700"),
+        },
+        "currency-3": {
+          300: withOpacityValue("--color-currency-3-300"),
+          500: withOpacityValue("--color-currency-3-500"),
+          700: withOpacityValue("--color-currency-3-700"),
+        },
       },
       spacing: {
         "8xl": "96rem",

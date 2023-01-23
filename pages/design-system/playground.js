@@ -54,7 +54,7 @@ const DSpage = () => {
               <div className="item w-44">
                 <div className="item-body flex justify-between">
                   <div className="item-title">3 matches</div>
-                  <div className="flex gap-2 items-center text-gold-500">
+                  <div className="flex gap-2 items-center text-currency-2-500">
                     <span className="icon icon-20 icon-token" />
                     <span>2</span>
                   </div>
@@ -69,7 +69,7 @@ const DSpage = () => {
                 <li>
                   <a tabIndex="1" className="flex justify-between">
                     <span>1 match</span>
-                    <span className="w-12 flex gap-2 items-center text-gold-500 pr-1">
+                    <span className="w-12 flex gap-2 items-center text-currency-2-500 pr-1">
                       <span className="icon icon-20 icon-token" />
                       <span>1</span>
                     </span>
@@ -78,7 +78,7 @@ const DSpage = () => {
                 <li>
                   <a tabIndex="1" className="is-active flex justify-between">
                     <span>3 matches</span>
-                    <span className="w-12 flex gap-2 items-center text-gold-500 pr-1">
+                    <span className="w-12 flex gap-2 items-center text-currency-2-500 pr-1">
                       <span className="icon icon-20 icon-token" />
                       <span>2</span>
                     </span>
@@ -87,7 +87,7 @@ const DSpage = () => {
                 <li>
                   <a tabIndex="1" className="flex justify-between">
                     <span>7 matches</span>
-                    <span className="w-12 flex gap-2 items-center text-gold-500 pr-1">
+                    <span className="w-12 flex gap-2 items-center text-currency-2-500 pr-1">
                       <span className="icon icon-20 icon-token" />
                       <span>5</span>
                     </span>

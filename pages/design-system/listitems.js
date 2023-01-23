@@ -247,16 +247,18 @@ const DSpage = () => {
                               width="34"
                               height="auto"
                             />
-                            <span className="text-sm text-gold-500">16350</span>
+                            <span className="text-sm text-currency-1-500">16350</span>
                           </div>
+                          {/*
                           <div className="flex items-center gap-1">
                             <img
                               src="https://res.cloudinary.com/gloot/image/upload/v1654152412/Marketing/2022_prototype/CurrencyRewards/Reward-centered-ticket-unique.png"
                               width="34"
                               height="auto"
                             />
-                            <span className="text-sm text-bronze-500">1</span>
+                            <span className="text-sm text-currency-3-500">1</span>
                           </div>
+  */}
                         </div>
                       </div>
                     </div>
@@ -351,16 +353,9 @@ const DSpage = () => {
                               width="34"
                               height="auto"
                             />
-                            <span className="text-sm text-gold-500">10600</span>
+                            <span className="text-sm text-currency-1-500">10600</span>
                           </div>
-                          <div className="flex items-center gap-1">
-                            <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1654152412/Marketing/2022_prototype/CurrencyRewards/Reward-centered-ticket-unique.png"
-                              width="34"
-                              height="auto"
-                            />
-                            <span className="text-sm text-bronze-500">1</span>
-                          </div>
+                          
                         </div>
                       </div>
                     </div>
@@ -403,16 +398,9 @@ const DSpage = () => {
                               width="34"
                               height="auto"
                             />
-                            <span className="text-sm text-gold-500">8150</span>
+                            <span className="text-sm text-currency-1-500">8150</span>
                           </div>
-                          <div className="flex items-center gap-1">
-                            <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1654152412/Marketing/2022_prototype/CurrencyRewards/Reward-centered-ticket-unique.png"
-                              width="34"
-                              height="auto"
-                            />
-                            <span className="text-sm text-bronze-500">1</span>
-                          </div>
+                          
                         </div>
                       </div>
                     </div>

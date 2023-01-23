@@ -190,10 +190,10 @@ export default function Brawls() {
                     className="-mt-6 -mb-8"
                     alt=""
                   />
-                  <div className="text-2xl lg:text-5xl text-gold-500">
+                  <div className="text-2xl lg:text-5xl text-currency-1-500">
                     <AnimatedNumber number={21425235} />
                   </div>
-                  <div className="uppercase text-lg text-gold-500">Coins</div>
+                  <div className="uppercase text-lg text-currency-1-500">Coins</div>
                 </div>
               </div>
             </section>

@@ -164,6 +164,76 @@
     },
     {
       "cols": 3,
+      "title": "Brand / currencies",
+      "title_short": "Brand",
+      "title_data": "brand.currencies",
+      "colors": [{
+          "name": "Currency #1 Light",
+          "value": "bg-currency-1-300",
+          "number": "300",
+          "data": "brand.currency-1.light",
+          "hex": "#EBD398"
+        },
+        {
+          "name": "Currency #1 Medium",
+          "value": "bg-currency-1-500",
+          "number": "500",
+          "data": "brand.currency-1.medium",
+          "hex": "#DCC58B"
+        },
+        {
+          "name": "Currency #1 Dark",
+          "value": "bg-currency-1-700",
+          "number": "700",
+          "data": "brand.currency-1.dark",
+          "hex": "#BBA46B"
+        },
+        {
+          "name": "Currency #2 Light",
+          "value": "bg-currency-2-300",
+          "number": "300",
+          "data": "brand.currency-2.light",
+          "hex": "#8BBDE0"
+        },
+        {
+          "name": "Currency #2 Medium",
+          "value": "bg-currency-2-500",
+          "number": "500",
+          "data": "brand.currency-2.medium",
+          "hex": "#7BACCE"
+        },
+        {
+          "name": "Currency #2 Dark",
+          "value": "bg-currency-2-700",
+          "number": "700",
+          "data": "brand.currency-2.dark",
+          "hex": "#5E8EB0"
+        },
+        {
+          "name": "Currency #3 Light",
+          "value": "bg-currency-3-300",
+          "number": "300",
+          "data": "brand.currency-3.light",
+          "hex": "#F28FA6"
+        },
+        {
+          "name": "Currency #3 Medium",
+          "value": "bg-currency-3-500",
+          "number": "500",
+          "data": "brand.currency-3.medium",
+          "hex": "#E38298"
+        },
+        {
+          "name": "Currency #3 Dark",
+          "value": "bg-currency-3-700",
+          "number": "700",
+          "data": "brand.currency-3.dark",
+          "hex": "#C26378"
+        }
+      ]
+    },
+    {
+      "cols": 3,
       "title": "Decorative",
       "title_short": "Decorative",
       "title_data": "decorative",

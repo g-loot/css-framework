@@ -188,9 +188,9 @@ const DSpage = () => {
                       />
                     </div>
                     <div className="header-body">
-                      <h2 className="h3 mb-2">Brawls</h2>
+                      <h2 className="h3 mb-2">Ladders</h2>
                       <p className="text-ui-300 max-w-[45ch] mb-4">
-                        Use your stats to climb the Brawl leaderboard and win
+                        Use your stats to climb the ladders and win
                         prizes. No waiting, no dedicated servers. Play on your
                         own schedule!
                       </p>

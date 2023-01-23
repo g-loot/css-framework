@@ -86,7 +86,7 @@ const notificationsGroups = [
         type: "clan",
         intro: "Clan",
         title: "You received a gift!",
-        text: "Your Clanmate <a href='#' class='link font-bold'>Harriss</a> has sent you <span class='whitespace-nowrap text-gold-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as a gift.",
+        text: "Your Clanmate <a href='#' class='link font-bold'>Harriss</a> has sent you <span class='whitespace-nowrap text-currency-2-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as a gift.",
         time: "2 min.",
         read: false,
       },
@@ -122,7 +122,7 @@ const notificationsGroups = [
         type: "brawl",
         intro: "Brawl",
         title: "You've been refunded",
-        text: "You’ve been refunded <span class='whitespace-nowrap text-gold-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as game.name went into maintenance and your open activations were canceled.",
+        text: "You’ve been refunded <span class='whitespace-nowrap text-currency-2-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as game.name went into maintenance and your open activations were canceled.",
         time: "4 days",
       },
       {
@@ -130,7 +130,7 @@ const notificationsGroups = [
         type: "brawl",
         intro: "Brawl",
         title: "You've been refunded",
-        text: "You’ve been refunded <span class='whitespace-nowrap text-gold-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as the brawl.name Brawl has ended and your open activations were canceled.",
+        text: "You’ve been refunded <span class='whitespace-nowrap text-currency-2-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as the brawl.name Brawl has ended and your open activations were canceled.",
         time: "5 days",
         read: true,
         accepted: true,
@@ -140,7 +140,7 @@ const notificationsGroups = [
         type: "brawl",
         intro: "Brawl",
         title: "You won a prize!",
-        text: "You finished <b class='text-ui-100'>#X</b> in the <a href='#' class='link font-bold'>brawl.name</a> Brawl and you won <span class='whitespace-nowrap text-gold-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>1000 coins</span></span>! Congrats!",
+        text: "You finished <b class='text-ui-100'>#X</b> in the <a href='#' class='link font-bold'>brawl.name</a> Brawl and you won <span class='whitespace-nowrap text-currency-1-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>1000 coins</span></span>! Congrats!",
         time: "5 days",
         read: true,
         accepted: true,
@@ -160,7 +160,7 @@ const notificationsGroups = [
         type: "brawl",
         intro: "Brawl",
         title: "Your clan won a prize!",
-        text: "Your Clan finished <b class='text-ui-100'>#X</b> in the brawl.name Brawl so you’re granted <span class='whitespace-nowrap text-gold-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>1000 coins</span></span>! Congrats!",
+        text: "Your Clan finished <b class='text-ui-100'>#X</b> in the brawl.name Brawl so you’re granted <span class='whitespace-nowrap text-currency-1-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>1000 coins</span></span>! Congrats!",
         time: "5 days",
         read: true,
         accepted: true,
@@ -468,7 +468,7 @@ export default function TopbarNew() {
                       <Link
                         href={`/prototype/wallet${prototype.getURLparams()}`}
                       >
-                        <div className="flex items-center gap-1 text-gold-500">
+                        <div className="flex items-center gap-1 text-currency-1-500">
                           <span className="icon icon-20 icon-coin" />
                           <span className="">
                             {prototype.getUserByID(1)?.wallet.coins}
@@ -518,7 +518,7 @@ export default function TopbarNew() {
                       <Link
                         href={`/prototype/wallet${prototype.getURLparams()}`}
                       >
-                        <div className="flex items-center gap-1 text-gold-500">
+                        <div className="flex items-center gap-1 text-currency-2-500">
                           <span className="icon icon-20 icon-token" />
                           <span className="">
                             {prototype.getUserByID(1)?.wallet.tokens}

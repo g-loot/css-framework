@@ -115,14 +115,14 @@ export default function ModalBuyTokens(props) {
                           : ""
                       } ${
                         item.special === "mostpopular"
-                          ? "border border-ui-700 bg-gold-500"
+                          ? "border border-ui-700 bg-main"
                           : ""
                       } ${!item.special ? "surface" : ""}`}
                       style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                     >
                       <div className="px-2 pb-3 pt-2 text-center font-bold">
                         {item.special === "bestvalue" && (
-                          <span className="text-gold-500">Best value</span>
+                          <span className="text-main">Best value</span>
                         )}
                         {item.special === "mostpopular" && (
                           <span className="text-ui-800">Most popular</span>

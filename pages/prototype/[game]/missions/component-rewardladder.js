@@ -39,7 +39,7 @@ export default function ComponentRewardLadder() {
     <>
       <div className="flex items-baseline justify-between mb-2 px-4 sm:px-0">
         <div className="flex gap-2 items-baseline">
-          <h2 className="h3 flex-none">Reward Ladder</h2>
+          <h2 className="h3 flex-none">Battle pass</h2>
           <Tooltip
             tooltip={
               <div className="max-w-xs text-sm text-center leading-tight">

@@ -21,7 +21,7 @@ const WalletItems = [
     amount: "50000",
     use: "To purchase items in the <b>Shop</b>.",
     get: "From <b>Daily Login Streak</b> and <b>Weekly Brawls</b>.",
-    color: "text-gold-500",
+    color: "text-currency-1-500",
     button: "visitshop",
   },
   {
@@ -37,7 +37,7 @@ const WalletItems = [
     amount: "245",
     use: "To enter rounds in the <b>Weekly Brawls</b>.",
     get: "From <b>Missions, Daily Login Streak</b> or buy them directly from the <b>Wallet</b>.",
-    color: "text-gold-500",
+    color: "text-currency-2-500",
     button: "buy",
   },
   /*

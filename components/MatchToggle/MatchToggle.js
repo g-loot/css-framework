@@ -117,7 +117,7 @@ export default function MatchToggle(props) {
                       </>
                     )}
                   </span>
-                  <span className="w-12 flex gap-2 items-center text-gold-500 pr-1">
+                  <span className="w-12 flex gap-2 items-center text-currency-2-500 pr-1">
                     <span className="icon icon-20 icon-token" />
                     <span>{item.cost}</span>
                   </span>
@@ -180,7 +180,7 @@ export default function MatchToggle(props) {
                         </>
                       )}
                     </span>
-                    <span className="w-12 flex gap-2 items-center text-gold-500 pr-1">
+                    <span className="w-12 flex gap-2 items-center text-currency-2-500 pr-1">
                       <span className="icon icon-20 icon-token" />
                       <span>{item.cost}</span>
                     </span>

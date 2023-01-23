@@ -53,7 +53,7 @@ export default function Home() {
                 href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
               >
                 <button type="button" className="button button-primary">
-                  <span>See frames</span>
+                  <span>View avatar frames</span>
                 </button>
               </Link>
             </div>

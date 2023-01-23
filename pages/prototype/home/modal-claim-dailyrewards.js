@@ -74,8 +74,8 @@ export default function ModalClaimDailyRewards(props) {
                   </div>
 
                   <div className="flex gap-2 items-baseline justify-center">
-                    <div className="text-4xl text-gold-500">5</div>
-                    <div className="uppercase text-lg text-gold-500">Coins</div>
+                    <div className="text-4xl text-currency-1-500">5</div>
+                    <div className="uppercase text-lg text-currency-1-500">Coins</div>
                   </div>
                 </div>
                 <div>
@@ -99,8 +99,8 @@ export default function ModalClaimDailyRewards(props) {
                     />
                   </div>
                   <div className="flex gap-2 items-baseline justify-center">
-                    <div className="text-4xl text-gold-500">6</div>
-                    <div className="uppercase text-lg text-gold-500">
+                    <div className="text-4xl text-currency-2-500">6</div>
+                    <div className="uppercase text-lg text-currency-2-500">
                       Tokens
                     </div>
                   </div>

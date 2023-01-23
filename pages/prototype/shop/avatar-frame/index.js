@@ -123,48 +123,54 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="border-t border-ui-700 pt-4">
-                    {item.price && (
+                    {!item.isOwned ? (
                       <>
-                        {prototype.getUserProfile().wallet.coins >=
-                          item.price && (
-                          <button
-                            type="button"
-                            onClick={openModalItemPurchaseConfirmation.bind(
-                              this,
-                              item.id
+                        {item.price && (
+                          <>
+                            {1000 >= item.price && (
+                              <button
+                                type="button"
+                                onClick={openModalItemPurchaseConfirmation.bind(
+                                  this,
+                                  item.id
+                                )}
+                                className="button button-primary button-currency button-coin w-full"
+                              >
+                                <div>
+                                  <span>Purchase</span>
+                                </div>
+                                <div>
+                                  <span className="icon icon-coin" />
+                                  <span>{numberWithSpaces(item.price)}</span>
+                                </div>
+                              </button>
                             )}
-                            className="button button-primary button-currency button-coin w-full"
-                          >
-                            <div>
-                              <span>Purchase</span>
-                            </div>
-                            <div>
-                              <span className="icon icon-coin" />
-                              <span>{numberWithSpaces(item.price)}</span>
-                            </div>
-                          </button>
-                        )}
-                        {prototype.getUserProfile().wallet.coins <
-                          item.price && (
-                          <div
-                            className="tooltip"
-                            data-tooltip="Not enough funds"
-                          >
-                            <button
-                              type="button"
-                              className="button button-primary button-currency button-coin w-full is-disabled"
-                            >
-                              <div>
-                                <span>Purchase</span>
+                            {1000 < item.price && (
+                              <div
+                                className="tooltip"
+                                data-tooltip="Not enough funds"
+                              >
+                                <button
+                                  type="button"
+                                  className="button button-primary button-currency button-coin w-full is-disabled"
+                                >
+                                  <div>
+                                    <span>Purchase</span>
+                                  </div>
+                                  <div>
+                                    <span className="icon icon-coin" />
+                                    <span>{numberWithSpaces(item.price)}</span>
+                                  </div>
+                                </button>
                               </div>
-                              <div>
-                                <span className="icon icon-coin" />
-                                <span>{numberWithSpaces(item.price)}</span>
-                              </div>
-                            </button>
-                          </div>
+                            )}
+                          </>
                         )}
                       </>
+                    ) : (
+                      <div className="h-9 text-ui-300 uppercase grid place-content-center">
+                        <span>Owned</span>
+                      </div>
                     )}
                     {!item.price && (
                       <button

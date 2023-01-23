@@ -269,13 +269,13 @@ export default function ListItemBrawl(props) {
                           {brawl.rewards?.map((reward, rewardIndex) => (
                             <>
                               {reward.type === "coin" && (
-                                <div className="flex items-center text-gold-500 gap-2">
+                                <div className="flex items-center text-currency-1-500 gap-2">
                                   <span className="icon text-lg icon-coin" />
                                   <span>{numberWithSpaces(reward.value)}</span>
                                 </div>
                               )}
                               {reward.type === "token" && (
-                                <div className="flex items-center text-gold-500 gap-2">
+                                <div className="flex items-center text-currency-2-500 gap-2">
                                   <span className="icon text-lg icon-token" />
                                   <span>{numberWithSpaces(reward.value)}</span>
                                 </div>

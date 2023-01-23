@@ -16,12 +16,13 @@ export const dataShopitems = [
         id: 2,
         name: "Dungeon Chain",
         price: 150,
+        isOwned: true,
         image:
       "https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Dungeon_Chain.svg",
       },
       {
         id: 3,
-        name: "Valorant",
+        name: "Spike",
         price: 200,
         image:
       "https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Valorant.svg",
@@ -44,6 +45,7 @@ export const dataShopitems = [
         id: 6,
         name: "Flower Love",
         price: 550,
+        isOwned: true,
         image:
       "https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Flower_Love.svg",
       },

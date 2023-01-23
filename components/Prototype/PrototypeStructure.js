@@ -161,7 +161,7 @@ export default function PrototypeStructure({ children, title }) {
                       <img
                         width="110"
                         height="auto"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-white.svg"
                         alt="Stryda logo"
                       />
                     </a>

@@ -130,18 +130,18 @@ export default function Home() {
 
         <ComponentRewardLadder />
 
-        <h2 className="h3 mb-4 mx-4 sm:mx-0">Competitions</h2>
+        <h2 className="h3 mb-4 mx-4 sm:mx-0">Ladders</h2>
 
         <section
           className="mb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(2 * 0.05s)" }}
         >
           <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
-            <h3 className="h6">Brawls</h3>
+            <h3 className="h6">Solo</h3>
             {!hasNoBrawls && (
               <Link href="/prototype/valorant/brawls/">
                 <a className="link link-hover text-ui-300 text-sm">
-                  View Brawl history
+                  View Ladder history
                 </a>
               </Link>
             )}
@@ -153,7 +153,7 @@ export default function Home() {
           style={{ "--delay": "calc(2 * 0.05s)" }}
         >
           <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
-            <h3 className="h6">Clan Brawls</h3>
+            <h3 className="h6">Clan</h3>
             {hasNoClan ? (
               <Link href="/prototype/clans/">
                 <a className="link link-hover text-ui-300 text-sm">

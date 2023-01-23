@@ -119,7 +119,7 @@ export default function Topbar() {
                   className="hidden md:block"
                   width="123"
                   height="64"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-white.svg"
                   alt="Stryda logo"
                 />
               </a>
@@ -208,7 +208,7 @@ export default function Topbar() {
                         height="32"
                         alt="coins"
                       />
-                      <span className="text-sm text-gold-500">
+                      <span className="text-sm text-currency-1-500">
                         {prototype.getUserByID(1)?.wallet.coins}
                       </span>
                     </div>

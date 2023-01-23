@@ -409,7 +409,7 @@ export default function TabTournamentsOverview() {
                       height="auto"
                       alt=""
                     />
-                    <span className="text-2xl text-gold-500">
+                    <span className="text-2xl text-currency-1-500">
                       30000
                     </span>
                   </div>

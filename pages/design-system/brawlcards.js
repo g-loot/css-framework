@@ -536,7 +536,7 @@ const DSpage = () => {
                             height="auto"
                             alt=""
                           />
-                          <span className="text-gold-500 text-sm">
+                          <span className="text-currency-1-500 text-sm">
                             5k - 30k
                           </span>
                         </div>
@@ -779,7 +779,7 @@ const DSpage = () => {
                             height="auto"
                             alt=""
                           />
-                          <span className="text-gold-500 text-sm">
+                          <span className="text-currency-1-500 text-sm">
                             10 000
                           </span>
                         </div>
@@ -1015,7 +1015,7 @@ const DSpage = () => {
                             height="auto"
                             alt=""
                           />
-                          <span className="text-gold-500 text-sm">
+                          <span className="text-currency-1-500 text-sm">
                             5k - 30k
                           </span>
                         </div>

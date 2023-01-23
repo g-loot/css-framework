@@ -11,10 +11,6 @@ const rewardDistribSolo = [
         type: "coin",
         value: 150000,
       },
-      {
-        type: "ticket",
-        value: 5,
-      },
     ],
   },
   {
@@ -23,10 +19,6 @@ const rewardDistribSolo = [
       {
         type: "coin",
         value: 90000,
-      },
-      {
-        type: "ticket",
-        value: 3,
       },
     ],
   },
@@ -37,10 +29,6 @@ const rewardDistribSolo = [
         type: "coin",
         value: 90000,
       },
-      {
-        type: "ticket",
-        value: 2,
-      },
     ],
   },
   {
@@ -50,10 +38,6 @@ const rewardDistribSolo = [
         type: "coin",
         value: 90000,
       },
-      {
-        type: "ticket",
-        value: 1,
-      },
     ],
   },
   {
@@ -62,10 +46,6 @@ const rewardDistribSolo = [
       {
         type: "coin",
         value: 90000,
-      },
-      {
-        type: "ticket",
-        value: 1,
       },
     ],
   },
@@ -78,10 +58,6 @@ const rewardDistribClan = [
         type: "coin",
         value: 150000,
       },
-      {
-        type: "ticket",
-        value: 1,
-      },
     ],
   },
   {
@@ -90,10 +66,6 @@ const rewardDistribClan = [
       {
         type: "coin",
         value: 125000,
-      },
-      {
-        type: "ticket",
-        value: 1,
       },
     ],
   },
@@ -104,10 +76,6 @@ const rewardDistribClan = [
         type: "coin",
         value: 100000,
       },
-      {
-        type: "ticket",
-        value: 1,
-      },
     ],
   },
   {
@@ -117,18 +85,14 @@ const rewardDistribClan = [
         type: "coin",
         value: 90000,
       },
-      {
-        type: "ticket",
-        value: 1,
-      },
     ],
   },
   {
     name: "151-300",
     rewards: [
       {
-        type: "ticket",
-        value: 1,
+        type: "coin",
+        value: 7000,
       },
     ],
   },
