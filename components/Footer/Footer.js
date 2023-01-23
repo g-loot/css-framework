@@ -54,9 +54,9 @@ export default function Footer(props) {
               </strong>
 
               <ul className="text-sm">
-                <li>
+                <li className="p-2">
                   <a
-                    className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
+                    className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://gloot.com/company"
@@ -64,9 +64,9 @@ export default function Footer(props) {
                     About
                   </a>
                 </li>
-                <li>
+                <li className="p-2">
                   <a
-                    className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
+                    className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://investor.gloot.com/"
@@ -74,9 +74,9 @@ export default function Footer(props) {
                     Investor
                   </a>
                 </li>
-                <li>
+                <li className="p-2">
                   <a
-                    className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
+                    className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://career.gloot.com/"
@@ -94,9 +94,9 @@ export default function Footer(props) {
               </strong>
 
               <ul className="text-sm">
-                <li>
+                <li className="p-2">
                   <a
-                    className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
+                    className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://gloot.com/terms-conditions"
@@ -104,9 +104,9 @@ export default function Footer(props) {
                     Terms of service
                   </a>
                 </li>
-                <li>
+                <li className="p-2">
                   <a
-                    className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
+                    className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://gloot.com/privacy-policy"
@@ -114,9 +114,9 @@ export default function Footer(props) {
                     Privacy policy
                   </a>
                 </li>
-                <li>
+                <li className="p-2">
                   <a
-                    className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
+                    className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://gloot.com/developer-terms"
@@ -124,9 +124,9 @@ export default function Footer(props) {
                     Developer terms
                   </a>
                 </li>
-                <li>
+                <li className="p-2">
                   <a
-                    className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
+                    className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://help.gloot.com/hc/en-us"
@@ -134,9 +134,9 @@ export default function Footer(props) {
                     Support & FAQ
                   </a>
                 </li>
-                <li>
+                <li className="p-2">
                   <a
-                    className="text-ui-300 hover:text-interaction-500 transition duration-200 p-2 inline-block"
+                    className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://gloot.com/how-it-works"
@@ -151,8 +151,8 @@ export default function Footer(props) {
                 <span className="block flex-shrink-0 mr-2 w-1 h-6 bg-main" />
                 <span>Social</span>
               </strong>
-              <ul className="">
-                <li>
+              <ul className="text-sm">
+                <li className="p-2">
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block"
                     target="_blank"
@@ -162,7 +162,7 @@ export default function Footer(props) {
                     <span className="icon icon-discord icon-24" />
                   </a>
                 </li>
-                <li>
+                <li className="p-2">
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block"
                     target="_blank"
@@ -172,7 +172,7 @@ export default function Footer(props) {
                     <span className="icon icon-logo-youtube icon-24" />
                   </a>
                 </li>
-                <li>
+                <li className="p-2">
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block"
                     target="_blank"
@@ -182,7 +182,7 @@ export default function Footer(props) {
                     <span className="icon icon-logo-twitter icon-24" />
                   </a>
                 </li>
-                <li>
+                <li className="p-2">
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block"
                     target="_blank"
@@ -192,7 +192,7 @@ export default function Footer(props) {
                     <span className="icon icon-logo-facebook icon-24" />
                   </a>
                 </li>
-                <li>
+                <li className="p-2">
                   <a
                     className="text-ui-300 hover:text-interaction-500 transition duration-200 px-2 py-1 inline-block"
                     target="_blank"
