@@ -90,7 +90,7 @@ export default function ModalClaimLadderRewards(props) {
                     <img
                       className="mx-auto animate-fire-in animate-delay"
                       style={{ "--delay": "calc( 2 * 0.2s)" }}
-                      src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-small.png"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1674486539/Stryda/currencies/Reward-centered-token-large.png"
                       width="180"
                       height="auto"
                       alt=""

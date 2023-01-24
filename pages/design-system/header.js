@@ -89,7 +89,7 @@ const DSpage = () => {
                       </button>
                     </div>
                   </div>
-                  <div className="header-meta">
+                  <div className="header-meta ">
                     <div className="w-full flex flex-col justify-center items-center gap-2 xl:pl-0 py-4">
                       <div className="flex items-end gap-4 leading-tight">
                         <div className="text-xl xl:text-4xl text-main">
@@ -183,7 +183,7 @@ const DSpage = () => {
                   <div className="header-content">
                     <div className="header-image">
                       <img
-                        src="https://res.cloudinary.com/gloot/image/upload/v1672302411/Stryda/logos/stryda-logo-brawls.svg"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1674492306/Stryda/logos/stryda-logo-ladders.svg"
                         alt=""
                       />
                     </div>

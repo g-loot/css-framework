@@ -76,7 +76,7 @@ export default function Brawls() {
               <div className="header-content">
                 <div className="header-image">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1672302411/Stryda/logos/stryda-logo-brawls.svg"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672302411/Stryda/logos/stryda-logo-ladders.svg"
                     alt=""
                   />
                 </div>

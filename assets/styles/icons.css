@@ -2198,3 +2198,7 @@
 .icon-game-pubg-symbol::before {
   content: "\ea01";
 }
+
+.icon-powertoken::before {
+  content: "\ec24";
+}

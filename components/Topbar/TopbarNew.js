@@ -432,10 +432,10 @@ export default function TopbarNew() {
                     <Tooltip
                       tooltip={
                         <div className="w-56 relative">
-                          <h6 className="mb-3 text-ui-100">Coins</h6>
-                          <div className="absolute -top-5 -right-5 p-2">
+                          <h6 className="my-4 text-ui-100">Coins</h6>
+                          <div className="absolute -top-8 -right-5 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-coin-face.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1674481707/Stryda/currencies/Reward-coin-face.png"
                               className="w-14 h-14"
                               alt=""
                             />
@@ -447,7 +447,7 @@ export default function TopbarNew() {
                               />
                             </div>
                           </div>
-                          <ul className="leading-tight space-y-2">
+                          <ul className="leading-tight space-y-2 mt-2">
                             <li className="flex gap-2 text-sm">
                               <div className=" w-12 uppercase">Use</div>
                               <div className="flex-1">
@@ -481,10 +481,10 @@ export default function TopbarNew() {
                     <Tooltip
                       tooltip={
                         <div className="w-56 relative">
-                          <h6 className="mb-3 text-ui-100">Token</h6>
-                          <div className="absolute -top-5 -right-5 p-2">
+                          <h6 className="my-4 text-ui-100">Token</h6>
+                          <div className="absolute -top-8 -right-5 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-token-face.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1674481707/Stryda/currencies/Reward-token-face.png"
                               className="w-14 h-14"
                               alt=""
                             />
@@ -496,7 +496,7 @@ export default function TopbarNew() {
                               />
                             </div>
                           </div>
-                          <ul className="leading-tight space-y-2">
+                          <ul className="leading-tight space-y-2 mt-2">
                             <li className="flex gap-2 text-sm">
                               <div className=" w-12 uppercase">Use</div>
                               <div className="flex-1">
@@ -522,6 +522,55 @@ export default function TopbarNew() {
                           <span className="icon icon-20 icon-token" />
                           <span className="">
                             {prototype.getUserByID(1)?.wallet.tokens}
+                          </span>
+                        </div>
+                      </Link>
+                    </Tooltip>
+                  </div>
+                  <div className="inline-flex">
+                    <Tooltip
+                      tooltip={
+                        <div className="w-56 relative">
+                          <h6 className="my-4 text-ui-100">Power token</h6>
+                          <div className="absolute -top-8 -right-5 p-2">
+                            <img
+                              src="https://res.cloudinary.com/gloot/image/upload/v1674563059/Stryda/currencies/Reward-powertoken-face.png"
+                              className="w-14 h-14"
+                              alt=""
+                            />
+                            <div className="lottie-blur absolute grid place-items-center -inset-1">
+                              <Lottie
+                                animationData={LottieExplosion}
+                                loop={false}
+                                autoplay={true}
+                              />
+                            </div>
+                          </div>
+                          <ul className="leading-tight space-y-2 mt-2">
+                            <li className="flex gap-2 text-sm">
+                              <div className=" w-12 uppercase">Use</div>
+                              <div className="flex-1">
+                                To enter Power Plays.
+                              </div>
+                            </li>
+                            <li className="flex gap-2 text-sm">
+                              <div className=" w-12 uppercase">Get</div>
+                              <div className="flex-1">
+                                <strong>Buy them</strong> directly from the
+                                Wallet.
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      }
+                    >
+                      <Link
+                        href={`/prototype/wallet${prototype.getURLparams()}`}
+                      >
+                        <div className="flex items-center gap-1 text-currency-3-500">
+                          <span className="icon icon-20 icon-powertoken" />
+                          <span className="">
+                            {prototype.getUserByID(1)?.wallet.powertokens}
                           </span>
                         </div>
                       </Link>

@@ -13,32 +13,39 @@ const WalletItems = [
     name: "coins",
     icon: "icon-coin",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-coin-face.png",
-    video: {
-      webm: "https://res.cloudinary.com/gloot/video/upload/v1673450637/Stryda/currencies/Coin_Rotation_With_Background_512x512.webm",
-      mp4: "https://res.cloudinary.com/gloot/video/upload/v1673450637/Stryda/currencies/Coin_Rotation_With_Background_512x512.mp4",
-    },
-    amount: "50000",
+      "https://res.cloudinary.com/gloot/image/upload/v1674563059/Stryda/currencies/Reward-coin-face.png",
+    amount: "1328",
     use: "To purchase items in the <b>Shop</b>.",
     get: "From <b>Daily Login Streak</b> and <b>Weekly Brawls</b>.",
     color: "text-currency-1-500",
     button: "visitshop",
+    buttonLabel: "Visit shot",
   },
   {
     id: 2,
     name: "tokens",
     icon: "icon-token",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1673279976/Stryda/currencies/Reward-token-face.png",
-    video: {
-      webm: "https://res.cloudinary.com/gloot/video/upload/v1673450628/Stryda/currencies/Token_Rotation_No_Background_512x512.webm",
-      mp4: "https://res.cloudinary.com/gloot/video/upload/v1673450628/Stryda/currencies/Token_Rotation_With_Background_512x512.mp4",
-    },
-    amount: "245",
-    use: "To enter rounds in the <b>Weekly Brawls</b>.",
+      "https://res.cloudinary.com/gloot/image/upload/v1674563059/Stryda/currencies/Reward-token-face.png",
+    amount: "37",
+    use: "To enter rounds in the <b>Ladders</b>.",
     get: "From <b>Missions, Daily Login Streak</b> or buy them directly from the <b>Wallet</b>.",
     color: "text-currency-2-500",
     button: "buy",
+    buttonLabel: "Buy tokens",
+  },
+  {
+    id: 3,
+    name: "power tokens",
+    icon: "icon-powertoken",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1674563059/Stryda/currencies/Reward-powertoken-face.png",
+    amount: "15",
+    use: "To enter rounds in the <b>Power Plays</b>.",
+    get: "Buy them directly from the <b>Wallet</b>.",
+    color: "text-currency-3-500",
+    button: "buy",
+    buttonLabel: "Buy power tokens",
   },
   /*
   {
@@ -225,7 +232,7 @@ export default function TabWalletOverview() {
                                       className="button button-primary w-full"
                                       onClick={openModalBuyTokens}
                                     >
-                                      <span>Buy tokens</span>
+                                      <span>{item.buttonLabel}</span>
                                     </button>
                                   )}
                                   {item.button === "visitshop" && (
@@ -236,7 +243,7 @@ export default function TabWalletOverview() {
                                         type="button"
                                         className="button button-secondary w-full"
                                       >
-                                        <span>Visit shop</span>
+                                        <span>{item.buttonLabel}</span>
                                       </button>
                                     </Link>
                                   )}
@@ -280,7 +287,7 @@ export default function TabWalletOverview() {
                                 className="button button-primary w-full"
                                 onClick={openModalBuyTokens}
                               >
-                                <span>Buy tokens</span>
+                                <span>{item.buttonLabel}</span>
                               </button>
                             )}
                             {item.button === "visitshop" && (
@@ -291,7 +298,7 @@ export default function TabWalletOverview() {
                                   type="button"
                                   className="button button-secondary w-full"
                                 >
-                                  <span>Visit shop</span>
+                                  <span>{item.buttonLabel}</span>
                                 </button>
                               </Link>
                             )}

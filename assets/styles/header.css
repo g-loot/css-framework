@@ -135,9 +135,11 @@
         ;
       }
       :where(p, ul, li) {
-        @apply
-        max-w-[70ch]
-        ;
+        &:not([class*='max-w']) {
+          @apply
+          max-w-[50ch]
+          ;
+        }
       }
     }
   }

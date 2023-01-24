@@ -77,12 +77,12 @@ export default function BrawlsHeader(props) {
                   <h1 className="h3 mb-2">
                     Compete for free!
                   </h1>
-                  <p className="text-ui-300 max-w-[15ch] mb-2">
+                  <p className="text-ui-300 mb-2">
                     Use your stats to climb the ladders and win
                     prizes. No waiting, no dedicated servers. Play on your own
                     schedule!
                   </p>
-                  <p className="text-main max-w-[15ch] mb-4">
+                  <p className="text-main mb-4">
                     <span className="font-bold">First time competing?</span>{" "}
                     Your entry ladder is on us! Simply pick any ladder you like
                     and claim your free ladder!
@@ -90,7 +90,7 @@ export default function BrawlsHeader(props) {
                 </>
               ) : (
                 <>
-                  <p className="text-ui-300 max-w-[15ch] mb-4">
+                  <p className="text-ui-300 mb-4">
                     Use your stats to climb the ladders and win
                     prizes. No waiting, no dedicated servers. Play on your own
                     schedule!

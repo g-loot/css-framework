@@ -144,7 +144,7 @@ export default function Home() {
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-32 right-32 rotate-[67deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-token-side_2.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-powertoken-side_2.png"
               width="75"
               height="auto"
               alt=""
@@ -158,7 +158,7 @@ export default function Home() {
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -top-14 left-32 blur-sm -rotate-[33deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-token-side_2.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-powertoken-side_2.png"
               width="168"
               height="auto"
               alt=""
@@ -172,7 +172,7 @@ export default function Home() {
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-16 left-16 -rotate-[74deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-token-side_1.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-powertoken-side_1.png"
               width="49"
               height="auto"
               alt=""

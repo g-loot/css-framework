@@ -41,8 +41,9 @@ export const dataUsers = [
       ]
     },
     wallet: {
-      coins: 50000,
-      tokens: 18,
+      coins: 1328,
+      tokens: 37,
+      powertokens: 15,
       tickets: 3
     },
     games: [
@@ -95,6 +96,7 @@ export const dataUsers = [
     wallet: {
       coins: 50000,
       tokens: 245,
+      powertokens: 15,
       tickets: 3
     },
     games: [
@@ -132,6 +134,7 @@ export const dataUsers = [
     wallet: {
       coins: 50000,
       tokens: 245,
+      powertokens: 15,
       tickets: 3
     },
     games: [
@@ -176,6 +179,7 @@ export const dataUsers = [
     wallet: {
       coins: 50000,
       tokens: 245,
+      powertokens: 15,
       tickets: 3
     },
     games: [
@@ -226,6 +230,7 @@ export const dataUsers = [
     wallet: {
       coins: 532,
       tokens: 759,
+      powertokens: 15,
       tickets: 3
     },
     games: [
@@ -262,6 +267,7 @@ export const dataUsers = [
     wallet: {
       coins: 50000,
       tokens: 245,
+      powertokens: 15,
       tickets: 3
     },
     games: [
@@ -296,6 +302,7 @@ export const dataUsers = [
     wallet: {
       coins: 50000,
       tokens: 245,
+      powertokens: 15,
       tickets: 3
     },
     games: [
@@ -329,6 +336,7 @@ export const dataUsers = [
     wallet: {
       coins: 50000,
       tokens: 245,
+      powertokens: 15,
       tickets: 3
     },
     games: [
@@ -364,6 +372,7 @@ export const dataUsers = [
     wallet: {
       coins: 50000,
       tokens: 245,
+      powertokens: 15,
       tickets: 3
     },
     games: [
@@ -401,6 +410,7 @@ export const dataUsers = [
     wallet: {
       coins: 50000,
       tokens: 245,
+      powertokens: 15,
       tickets: 3
     },
     games: [
@@ -439,6 +449,7 @@ export const dataUsers = [
     wallet: {
       coins: 50000,
       tokens: 245,
+      powertokens: 15,
       tickets: 3
     },
     games: [

@@ -214,7 +214,7 @@ export default function Home() {
                     >
                       <div className="flex items-center gap-6 px-6 whitespace-nowrap">
                         <img
-                          src="https://res.cloudinary.com/gloot/image/upload/v1673941215/Stryda/logos/stryda-logo-brawls-simple.svg"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1673941215/Stryda/logos/stryda-logo-ladders-simple.svg"
                           width="auto"
                           height="auto"
                           alt=""

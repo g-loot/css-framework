@@ -222,7 +222,7 @@ const DSpage = () => {
                   <div className="flex flex-col md:flex-row items-center gap-8 p-8">
                     <div className="flex-none grow-0">
                       <img
-                        src="https://res.cloudinary.com/gloot/image/upload/v1672328330/Stryda/logos/stryda-logo-brawls.svg"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672328330/Stryda/logos/stryda-logo-ladders.svg"
                         width="auto"
                         height="110"
                         className="mx-auto"

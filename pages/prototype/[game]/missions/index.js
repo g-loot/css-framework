@@ -59,7 +59,7 @@ export default function Missions() {
                   <h1 className="h3 mb-2">
                     {selectedGame.name} Missions
                   </h1>
-                  <p className="text-ui-300 max-w-[70ch] mb-4">
+                  <p className="text-ui-300 mb-4">
                     Play Stryda Missions in-game, gather XP, and earn Mission
                     Rewards. You can complete the Daily Missions in any game.
                   </p>
@@ -71,6 +71,7 @@ export default function Missions() {
                   </button>
                 </div>
               </div>
+              {/*
               <div className="header-meta">
                 <div className="w-full flex flex-col justify-center items-center gap-2 xl:pl-0 py-4">
                   <div className="flex items-end gap-4 leading-tight">
@@ -111,6 +112,7 @@ export default function Missions() {
                   </p>
                 </div>
               </div>
+        */}
               <div className="header-bg">
                 <img src={selectedGame.assets.heroMission} />
               </div>
