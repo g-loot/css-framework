@@ -435,7 +435,7 @@ export default function TopbarNew() {
                           <h6 className="my-4 text-ui-100">Coins</h6>
                           <div className="absolute -top-8 -right-5 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1674481707/Stryda/currencies/Reward-coin-face.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1674571131/Stryda/currencies/Reward-coin-face.png"
                               className="w-14 h-14"
                               alt=""
                             />
@@ -484,7 +484,7 @@ export default function TopbarNew() {
                           <h6 className="my-4 text-ui-100">Token</h6>
                           <div className="absolute -top-8 -right-5 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1674481707/Stryda/currencies/Reward-token-face.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1674571131/Stryda/currencies/Reward-token-face.png"
                               className="w-14 h-14"
                               alt=""
                             />
@@ -534,7 +534,7 @@ export default function TopbarNew() {
                           <h6 className="my-4 text-ui-100">Power token</h6>
                           <div className="absolute -top-8 -right-5 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1674563059/Stryda/currencies/Reward-powertoken-face.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1674571131/Stryda/currencies/Reward-powertoken-face.png"
                               className="w-14 h-14"
                               alt=""
                             />

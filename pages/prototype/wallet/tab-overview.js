@@ -13,7 +13,7 @@ const WalletItems = [
     name: "coins",
     icon: "icon-coin",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674563059/Stryda/currencies/Reward-coin-face.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1674571131/Stryda/currencies/Reward-coin-face.png",
     amount: "1328",
     use: "To purchase items in the <b>Shop</b>.",
     get: "From <b>Daily Login Streak</b> and <b>Weekly Brawls</b>.",
@@ -26,7 +26,7 @@ const WalletItems = [
     name: "tokens",
     icon: "icon-token",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674563059/Stryda/currencies/Reward-token-face.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1674571131/Stryda/currencies/Reward-token-face.png",
     amount: "37",
     use: "To enter rounds in the <b>Ladders</b>.",
     get: "From <b>Missions, Daily Login Streak</b> or buy them directly from the <b>Wallet</b>.",
@@ -39,7 +39,7 @@ const WalletItems = [
     name: "power tokens",
     icon: "icon-powertoken",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674563059/Stryda/currencies/Reward-powertoken-face.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1674571131/Stryda/currencies/Reward-powertoken-face.png",
     amount: "15",
     use: "To enter rounds in the <b>Power Plays</b>.",
     get: "Buy them directly from the <b>Wallet</b>.",
