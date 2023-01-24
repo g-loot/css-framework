@@ -57,7 +57,7 @@ export default function Login() {
             className="mb-10 mx-auto"
             width="175"
             height="auto"
-            src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-white.svg"
+            src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
             alt="Stryda logo"
           />
           <h1 className="h3 mb-8">Change email</h1>
