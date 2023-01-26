@@ -4,7 +4,6 @@ import Accordion from "../../../components/Accordion/Accordion";
 import FAQ from "../../../components/FAQ/FAQ";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import ModalContainer from "../../../components/Modal/ModalContainer";
 import { UiContext } from "../../../contexts/ui";
 import { useRouter } from "next/router";
 

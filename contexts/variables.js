@@ -21,7 +21,7 @@ const defaultVariablesState = {
   newBrand: false,
 };
 const variablesReducer = (state, action) => {
-  if (action.type === "INCREMENT_BRAWLSTEP") {
+  if (action.type === "INCREMENT_LADDERSTEP") {
     let ladderStep = state.ladderStep;
     if (action.payload.incrementValue) {
       ladderStep = ladderStep + action.payload.incrementValue;
@@ -87,7 +87,7 @@ const VariablesContextProvider = (props) => {
 
   const incrementLadderStep = (incrementValue) => {
     dispatchVariablesAction({
-      type: "INCREMENT_BRAWLSTEP",
+      type: "INCREMENT_LADDERSTEP",
       payload: {
         incrementValue,
       },
