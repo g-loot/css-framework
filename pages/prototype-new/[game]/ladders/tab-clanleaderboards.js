@@ -171,7 +171,7 @@ export default function TabLaddersSoloLeaderboards() {
                       </tr>
                       <tr>
                         <td>
-                          <Link href="/prototype-new/profile/2">
+                          <Link href="/prototype/profile/2">
                             <a
                               className={`text-xs interactive ${
                                 prototype.getUserByID(2).isPremium
@@ -191,7 +191,7 @@ export default function TabLaddersSoloLeaderboards() {
                       </tr>
                       <tr>
                         <td>
-                          <Link href="/prototype-new/profile/3">
+                          <Link href="/prototype/profile/3">
                             <a
                               className={`text-xs interactive ${
                                 prototype.getUserByID(3).isPremium
@@ -211,7 +211,7 @@ export default function TabLaddersSoloLeaderboards() {
                       </tr>
                       <tr>
                         <td>
-                          <Link href="/prototype-new/profile/4">
+                          <Link href="/prototype/profile/4">
                             <a
                               className={`text-xs interactive ${
                                 prototype.getUserByID(4).isPremium
@@ -231,7 +231,7 @@ export default function TabLaddersSoloLeaderboards() {
                       </tr>
                       <tr>
                         <td>
-                          <Link href="/prototype-new/profile/5">
+                          <Link href="/prototype/profile/5">
                             <a
                               className={`text-xs interactive ${
                                 prototype.getUserByID(5).isPremium
@@ -450,7 +450,7 @@ export default function TabLaddersSoloLeaderboards() {
                                     <div className="item h-[56px]">
                                       <div className="item-body">
                                         <Link
-                                          href={`/prototype-new/clans/${
+                                          href={`/prototype/clans/${
                                             user.clan
                                           }${prototype.getURLparams()}`}
                                         >
@@ -547,7 +547,7 @@ export default function TabLaddersSoloLeaderboards() {
                                       </h5>
                                       <ul className="text-sm space-y-1">
                                         <li className="border-t border-ui-700">
-                                          <Link href="/prototype-new/profile/2">
+                                          <Link href="/prototype/profile/2">
                                             <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
                                               <span className="text-ui-300">
                                                 &#91;
@@ -569,7 +569,7 @@ export default function TabLaddersSoloLeaderboards() {
                                           </Link>
                                         </li>
                                         <li className="border-t border-ui-700">
-                                          <Link href="/prototype-new/profile/3">
+                                          <Link href="/prototype/profile/3">
                                             <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
                                               <span className="text-ui-300">
                                                 &#91;
@@ -591,7 +591,7 @@ export default function TabLaddersSoloLeaderboards() {
                                           </Link>
                                         </li>
                                         <li className="border-t border-ui-700">
-                                          <Link href="/prototype-new/profile/4">
+                                          <Link href="/prototype/profile/4">
                                             <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
                                               <span className="text-ui-300">
                                                 &#91;
@@ -613,7 +613,7 @@ export default function TabLaddersSoloLeaderboards() {
                                           </Link>
                                         </li>
                                         <li className="border-t border-ui-700">
-                                          <Link href="/prototype-new/profile/5">
+                                          <Link href="/prototype/profile/5">
                                             <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
                                               <span className="text-ui-300">
                                                 &#91;
@@ -635,7 +635,7 @@ export default function TabLaddersSoloLeaderboards() {
                                           </Link>
                                         </li>
                                         <li className="border-t border-ui-700">
-                                          <Link href="/prototype-new/profile/6">
+                                          <Link href="/prototype/profile/6">
                                             <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
                                               <span className="text-ui-300">
                                                 &#91;
@@ -684,7 +684,7 @@ export default function TabLaddersSoloLeaderboards() {
                                   <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
                                     <div className="flex items-center gap-4">
                                       <Link
-                                        href={`/prototype-new/clans/${
+                                        href={`/prototype/clans/${
                                           prototype.getClanByID(user.clan)?.id
                                         }`}
                                       >
@@ -694,7 +694,7 @@ export default function TabLaddersSoloLeaderboards() {
                                         </a>
                                       </Link>
                                       <Link
-                                        href={`/prototype-new/clans/${
+                                        href={`/prototype/clans/${
                                           prototype.getClanByID(user.clan)?.id
                                         }`}
                                       >

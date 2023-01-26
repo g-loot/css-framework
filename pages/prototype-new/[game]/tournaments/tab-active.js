@@ -30,7 +30,7 @@ export default function TabTournamentsActive() {
                 {selectedGame.tournaments?.map((tournament, tournamentIndex) => (
                   <Link
                     key={tournament.id}
-                    href={`/prototype-new/${selectedGame.slug}/tournaments/${
+                    href={`/prototype/${selectedGame.slug}/tournaments/${
                       tournament.id
                     }${prototype.getURLparams()}`}
                   >

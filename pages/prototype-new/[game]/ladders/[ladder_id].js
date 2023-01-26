@@ -4,7 +4,7 @@ import Ad from "../../../../components/Ad/Ad";
 import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import PrototypeStructure from "../../../../components/PrototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import TabLaddersClanLeaderboard from "./tab-clanleaderboards";
 import TabLaddersHowItWorks from "./tab-howitworks";
 import TabLaddersRewards from "./tab-rewards";
@@ -133,7 +133,7 @@ export default function Home() {
                       <span>Learn how to Ladder</span>
                     </button>
                     <Link
-                      href={`/prototype-new/profile/settings${prototype.getURLparams()}`}
+                      href={`/prototype/profile/settings${prototype.getURLparams()}`}
                     >
                       <button
                         type="button"
@@ -178,7 +178,7 @@ export default function Home() {
                     {TabsItems.map((item, itemIndex) => (
                       <li key={itemIndex}>
                         <Link
-                          href={`/prototype-new/${game}/ladders/${ladder_id}?tab=${
+                          href={`/prototype/${game}/ladders/${ladder_id}?tab=${
                             item.url
                           }${prototype.getURLparams("&")}`}
                         >
@@ -198,7 +198,7 @@ export default function Home() {
                     {TabsItemsNoClan.map((item, itemIndex) => (
                       <li key={itemIndex}>
                         <Link
-                          href={`/prototype-new/${game}/ladders/${ladder_id}?tab=${
+                          href={`/prototype/${game}/ladders/${ladder_id}?tab=${
                             item.url
                           }${prototype.getURLparams("&")}`}
                         >

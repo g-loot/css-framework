@@ -41,7 +41,7 @@ export default function LaddersHeader(props) {
               <nav className="breadcrumbs" aria-label="Breadcrumb">
                 <ol>
                   <li>
-                    <Link href={`/prototype-new/home`}>
+                    <Link href={`/prototype/home`}>
                       <a href="#">
                         <span className="icon icon-20 icon-home-2" />
                         <span>Home</span>
@@ -49,7 +49,7 @@ export default function LaddersHeader(props) {
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/prototype-new/${selectedGame.slug}/ladders`}>
+                    <Link href={`/prototype/${selectedGame.slug}/ladders`}>
                       <a href="#">
                         <span> {selectedGame.name} Ladders</span>
                       </a>
@@ -108,7 +108,7 @@ export default function LaddersHeader(props) {
                   <span>Learn how to Ladder</span>
                 </button>
                 <Link
-                  href={`/prototype-new/profile/settings${prototype.getURLparams()}`}
+                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
                 >
                   <button
                     type="button"

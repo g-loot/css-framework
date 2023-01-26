@@ -612,7 +612,7 @@ export default function SectionTournamentsLeaderboardTable() {
                           </div>
                           <div className="item-image w-20">
                             <Link
-                              href={`/prototype-new/profile/${
+                              href={`/prototype/profile/${
                                 prototype.getUserByID(user).id
                               }${prototype.getURLparams()}`}
                             >
@@ -628,7 +628,7 @@ export default function SectionTournamentsLeaderboardTable() {
                           </div>
                           <div className="item-body flex-2 lg:flex-3 text-left">
                             <Link
-                              href={`/prototype-new/profile/${
+                              href={`/prototype/profile/${
                                 prototype.getUserByID(user).id
                               }${prototype.getURLparams()}`}
                             >

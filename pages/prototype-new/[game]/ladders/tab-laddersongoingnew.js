@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
 import Slider from "../../../../components/Slider/Slider";
 
-export default function TabLaddersOngoing() {
+export default function TabLaddersOngoingNew() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();

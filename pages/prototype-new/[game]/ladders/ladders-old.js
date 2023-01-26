@@ -4,7 +4,7 @@ import Ad from "../../../../components/Ad/Ad";
 import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import PrototypeStructure from "../../../../components/PrototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import TabLaddersHistory from "./tab-history";
 import TabLaddersHowItWorks from "./tab-howitworks";
 import TabLaddersOngoing from "./tab-laddersongoing";
@@ -112,7 +112,7 @@ export default function Ladders() {
                       <span>Learn how to Ladder</span>
                     </button>
                     <Link
-                      href={`/prototype-new/profile/settings${prototype.getURLparams()}`}
+                      href={`/prototype/profile/settings${prototype.getURLparams()}`}
                     >
                       <button
                         type="button"
@@ -134,7 +134,7 @@ export default function Ladders() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype-new/${game}/ladders?tab=${item.url}${prototype.getURLparams("&")}`}
+                      href={`/prototype/${game}/ladders?tab=${item.url}${prototype.getURLparams("&")}`}
                     >
                       <a
                         className={`${

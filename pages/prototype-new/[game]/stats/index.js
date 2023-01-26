@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../../components/PrototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { UiContext } from "../../../../contexts/ui";
 import { useRouter } from "next/router";
@@ -155,7 +155,7 @@ export default function Stats() {
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Damage/round
                             </div>
-                            <div className="text-ui-100 text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               --
                             </div>
                           </div>
@@ -168,7 +168,7 @@ export default function Stats() {
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               K/D ratio
                             </div>
-                            <div className="text-ui-100 text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               --
                             </div>
                           </div>
@@ -181,7 +181,7 @@ export default function Stats() {
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Headshots %
                             </div>
-                            <div className="text-ui-100 text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               --
                             </div>
                           </div>
@@ -194,7 +194,7 @@ export default function Stats() {
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Win %
                             </div>
-                            <div className="text-ui-100 text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               --
                             </div>
                           </div>
@@ -505,7 +505,7 @@ export default function Stats() {
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Damage/round
                             </div>
-                            <div className="text-ui-100 text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               180.0
                             </div>
                             <div className="text-xs lg:text-sm text-ui-300">
@@ -521,7 +521,7 @@ export default function Stats() {
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               K/D ratio
                             </div>
-                            <div className="text-ui-100 text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               1.49
                             </div>
                             <div className="text-xs lg:text-sm text-ui-300">
@@ -537,7 +537,7 @@ export default function Stats() {
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Headshots %
                             </div>
-                            <div className="text-ui-100 text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               27.9%
                             </div>
                             <div className="text-xs lg:text-sm text-ui-300">
@@ -553,7 +553,7 @@ export default function Stats() {
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
                               Win %
                             </div>
-                            <div className="text-ui-100 text-xl lg:text-3xl">
+                            <div className="text-main text-xl lg:text-3xl">
                               71.9%
                             </div>
                             <div className="text-xs lg:text-sm text-ui-300">
@@ -829,7 +829,7 @@ export default function Stats() {
                                     <>
                                       <div className="text-2xl uppercase w-20 text-center">
                                         {match.hasWon ? (
-                                          <span className="text-success-500">
+                                          <span className="text-main">
                                             Victory
                                           </span>
                                         ) : (
