@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Ad from "../../../../components/Ad/Ad";
-import Countdown from "../../../../components/Countdown/Countdown";
+import Ad from "../../../components/Ad/Ad";
+import Countdown from "../../../components/Countdown/Countdown";
 import Link from "next/link";
-import RewardLadder from "../../../../components/RewardLadder/RewardLadder";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import RewardLadder from "../../../components/RewardLadder/RewardLadder";
+import Tooltip from "../../../components/Tooltip/Tooltip";
+import { UiContext } from "../../../contexts/ui";
+import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
-import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
-import Slider from "../../../../components/Slider/Slider";
+import CardMissionSecondary from "../../../components/Card/CardMissionSecondary";
+import Slider from "../../../components/Slider/Slider";
 
 export default function ComponentRewardLadder() {
   const router = useRouter();
