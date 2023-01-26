@@ -36,12 +36,12 @@ const slides = [
     buttonURL: "#",
   },
   {
-    subtitle: "Rewards",
-    title: "Earn more on this week's Ladders",
+    subtitle: "Power Play",
+    title: "Earn more on this week's Power Play Ladders",
     description:
       "This week you can get 2x the usual rewards by competing on Ladders.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672238164/Stryda/illustrations/Carousel_Valorant_Ladder.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1674728003/Stryda/illustrations/Carousel_Power_Play.jpg",
     buttonLabel: "Learn more",
     buttonURL: "#",
   },

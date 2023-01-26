@@ -152,7 +152,7 @@ export default function CarouselNew(props) {
 
   return (
     <>
-      <div className="carousel-new">
+      <div className="carousel-secondary">
         <div
           className="carousel-slides"
           onMouseEnter={() => {
