@@ -13,7 +13,7 @@ import { useRouter } from "next/router";
 import HomeLaddersSolo from "./component-ladders-solo";
 import HomeLaddersClan from "./component-ladders-clan";
 import HomeLadderMissions from "./component-ladders-missions";
-import ComponentRewardLadder from "../[game]/missions/component-rewardladder";
+import ComponentRewardLadder from "../missions/component-rewardladder";
 import { usePrototypeData } from "../../../contexts/prototype";
 import CarouselNew from "../../../components/Carousel/CarouselNew";
 

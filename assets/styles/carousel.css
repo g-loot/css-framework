@@ -513,9 +513,17 @@
 
       .carousel-image {
         @apply
-       
+        
         flex-4
-        absolute z-0 bg-ui-850 -inset-x-12 xl:-inset-x-24 bottom-0 -inset-y-4 border-b border-ui-700
+        absolute
+        z-0
+        bg-ui-850
+        -inset-x-12
+        xl:-inset-x-24
+        bottom-0
+        -inset-y-4
+        opacity-20
+        lg:opacity-100
         ;
         > * {
           @apply
@@ -562,6 +570,8 @@
         flex-col
         items-start
         justify-center
+        px-4
+        md:px-0
         ;
 
         h1,
@@ -613,8 +623,11 @@
     shrink-0
     overflow-hidden
     absolute
-    right-0
-    inset-y-0
+    w-full
+    bottom-0
+    sm:w-auto
+    sm:right-0
+    sm:inset-y-0
     ;
   }
 
@@ -635,7 +648,7 @@
     flex-1
     overflow-x-scroll
     flex
-    flex-col
+    sm:flex-col
     items-center
     justify-center
     gap-4
@@ -702,11 +715,11 @@
       > button {
         @apply
         flex-1
-        p-1
+        p-1.5
         leading-tight
         relative
         cursor-pointer
-        rounded
+        rounded-full
         bg-ui-600
         text-ui-200
         gap-0
