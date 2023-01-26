@@ -852,8 +852,8 @@ export default function TabLaddersSoloLeaderboards() {
                                                 }
                                               >
                                                 <div className="w-12 achievement-level-1">
-                                                  <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1670405826/Marketing/2022_prototype/Achievements/achievement-frame-lvl1-animated.svg" />
-                                                  <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-mission.svg" />
+                                                  <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl1-animated.svg" />
+                                                  <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
                                                 </div>
                                               </Tooltip>
                                               <span className="text-ui-300 leading-none">

@@ -132,7 +132,13 @@ export default function ModalBuyTokens(props) {
               </div>
 
               <div className="overflow-x-auto scrollbar-desktop">
-                <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto mb-4">
+                <div className="my-4">
+                  <h2 className="h3">Tokens</h2>
+                  <p className="m-0 leading-tight">
+                    Use regular tokens to enter weekly Ladders. One token = one registered match.
+                  </p>
+                </div>
+                <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto mb-8">
                   {TokensLItems.map((item, itemIndex) => (
                     <div
                       key={itemIndex}
@@ -204,6 +210,12 @@ export default function ModalBuyTokens(props) {
                       </div>
                     </div>
                   ))}
+                </div>
+                <div className="my-4">
+                  <h2 className="h3">Power Tokens</h2>
+                  <p className="m-0 leading-tight">
+                    Use power tokens to enter Power Play ladders and earn bigger rewards. One token = one registered match.
+                  </p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto">
                   {PowerTokensLItems.map((item, itemIndex) => (

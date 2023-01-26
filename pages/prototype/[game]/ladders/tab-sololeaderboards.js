@@ -294,14 +294,7 @@ export default function TabLaddersSoloLeaderboards() {
                     </div>
                   ) : (
                     <div className="relative flex flex-col items-center">
-                      <img
-                        className="absolute z-10 -top-4 left-auto right-auto"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1672305058/Stryda/3dobjects/3dobject-megaphone.png"
-                        width="136"
-                        height="auto"
-                        alt=""
-                      />
-                      <div className="w-full mb-4 surface surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
+                      <div className="w-full mb-4 surface surface-halo halo-t rounded-lg p-4 text-center relative z-0">
                         <h2 className="h4 mb-2">Compete in this Ladder</h2>
                         <div className="uppercase  text-ui-100">
                           Play at least{" "}
@@ -852,8 +845,8 @@ export default function TabLaddersSoloLeaderboards() {
                                                 }
                                               >
                                                 <div className="w-12 achievement-level-1">
-                                                  <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1670405826/Marketing/2022_prototype/Achievements/achievement-frame-lvl1-animated.svg" />
-                                                  <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-mission.svg" />
+                                                  <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl1-animated.svg" />
+                                                  <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
                                                 </div>
                                               </Tooltip>
                                               <span className="text-ui-300 leading-none">

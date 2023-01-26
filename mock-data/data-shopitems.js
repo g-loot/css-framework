@@ -72,10 +72,38 @@ export const dataShopitems = [
       },
       {
         id: 10,
-        name: "Stryda",
+        name: "Stryda Metal",
         price: 25,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1674214222/Stryda/shop/avatarframes/Stryda.svg",
+          "https://res.cloudinary.com/gloot/image/upload/v1674214222/Stryda/shop/avatarframes/Stryda_Metal.svg",
+      },
+      {
+        id: 11,
+        name: "Stryda Bronze",
+        price: 50,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1674214222/Stryda/shop/avatarframes/Stryda_Bronze.svg",
+      },
+      {
+        id: 12,
+        name: "Stryda Silver",
+        price: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1674214222/Stryda/shop/avatarframes/Stryda_Silver.svg",
+      },
+      {
+        id: 13,
+        name: "Stryda Gold",
+        price: 200,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1674214222/Stryda/shop/avatarframes/Stryda_Gold.svg",
+      },
+      {
+        id: 14,
+        name: "Stryda Crystal",
+        price: 400,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1674214222/Stryda/shop/avatarframes/Stryda_Crystal.svg",
       },
       {
         id: 101,

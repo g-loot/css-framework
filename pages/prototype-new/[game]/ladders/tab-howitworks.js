@@ -12,7 +12,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Before entering a Ladder",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1662645651/Marketing/2022_prototype/Illustrations/ladder_logo.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/stryda_ladders.jpg",
     content: [
       {
         type: "p",
@@ -35,7 +35,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Pay tokens to activate Ladder matches",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1662645308/Marketing/2022_prototype/Illustrations/token.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674744257/Stryda/illustrations/double_tokens.jpg",
     content: [
       {
         type: "p",
@@ -62,7 +62,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Playing your matches & climbing the leaderboard",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/leaderboard_details.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674744427/Stryda/illustrations/leaderboard_details.jpg",
     content: [
       {
         type: "p",
@@ -81,7 +81,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Ladder levels & groups",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1662645307/Marketing/2022_prototype/Illustrations/ranks_levels.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/brawl-rank_levels.jpg",
     content: [
       {
         type: "h3",
@@ -108,7 +108,7 @@ const MissionsHowitworksTabs = [
   {
     title: "If there is a tie",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1662645308/Marketing/2022_prototype/Illustrations/tiebreaker.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737017/Stryda/illustrations/tiebreaker.jpg",
     content: [
       {
         type: "p",
@@ -123,7 +123,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Playing with your clan",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/clans.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/clans.jpg",
     content: [
       {
         type: "p",
@@ -146,7 +146,7 @@ const MissionsHowitworksTabs = [
   {
     title: "If you leave your clan in the middle of a Ladder",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1662645389/Marketing/2022_prototype/Illustrations/picture_gamer_2.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer.jpg",
     content: [
       {
         type: "p",
@@ -169,7 +169,7 @@ const MissionsHowitworksTabs = [
   {
     title: "If a game goes into maintenance",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/maintenance.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/maintenance.jpg",
     content: [
       {
         type: "p",
@@ -184,7 +184,7 @@ const MissionsHowitworksTabs = [
   {
     title: "If I'm having a problem with the Ladder",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/error.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737014/Stryda/illustrations/error.jpg",
     content: [
       {
         type: "p",
@@ -230,7 +230,7 @@ export default function TabLaddersHowItWorks() {
         <div className="grid gap-8 grid-cols-1 xl:grid-cols-3 items-center">
           <img
             className="col-span-1 rounded-lg"
-            src="https://res.cloudinary.com/gloot/image/upload/v1658478391/Marketing/2022_prototype/ladders-howitworks-intro.webp"
+            src="https://res.cloudinary.com/gloot/image/upload/v1674745238/Stryda/illustrations/ladder_leaderboard.jpg"
             width="100%"
             height="auto"
             alt=""

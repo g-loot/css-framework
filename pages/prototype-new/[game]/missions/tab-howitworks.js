@@ -6,7 +6,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Before you can do Missions & earn Mission Rewards",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-cpu.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737014/Stryda/illustrations/cpu_install.jpg",
     paragraphs: [
       {
         text: "To complete Missions and earn rewards, you need to connect your Steam account to Stryda. Go to your profile to connect Steam. Make sure you have the Stryda Tracker installed and running on your PC. The application is lightweight and should not affect your gameplay. The Tracker is partly an anti-cheat to help us keep Stryda free from users abusing the platform. Download Stryda Tracker.",
@@ -16,7 +16,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Launch the game",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
     paragraphs: [
       {
         text: "When you launch your game, Stryda Tracker will launch the Overlay. The Overlay is where you can see your Mission progress and the best scores from your Ladder rounds.",
@@ -26,7 +26,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Daily Missions & how they are tracked",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1660131014/Marketing/2022_prototype/missions-howitworks-missions.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/missions_cards.jpg",
     paragraphs: [
       {
         text: "To start competing in Missions, you need to connect your Steam account and run the Stryda Tracker while you play. When your match has finished within the game, we will fetch the stats from that game and update your Mission progress. Sometimes it can take a while to get the stats from the latest match. Please, contact support if you are having trouble getting the stats for the past x hours. You can complete a set number of Missions each day, and new ones appear every 24 hours.",
@@ -36,7 +36,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Play in the right mode",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-gamemode.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/gamemode.jpg",
     paragraphs: [
       {
         text: "Some Missions must be played in certain game modes. Make sure to check before you play.",
@@ -46,7 +46,7 @@ const MissionsHowitworksTabs = [
   {
     title: "How XP works",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-xp.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737017/Stryda/illustrations/XP.jpg",
     paragraphs: [
       {
         text: "You will earn XP from each Daily Mission The XP you earn will be added to the Mission Rewards.",
@@ -62,7 +62,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Mission Rewards",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-rewards.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/coins_tokens_xp.jpg",
     paragraphs: [
       {
         text: "Mission Rewards are how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Mission Rewards, you unlock another reward. Mission Rewards reset each week so you`ll always have something new to work towards.",
@@ -72,7 +72,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Premium Rewards",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-premiumrewards.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674741728/Stryda/illustrations/premium_xp.jpg",
     paragraphs: [
       {
         text: "Become a Premium member to earn additional XPs for each completed mission.",
@@ -94,7 +94,7 @@ export default function TabMissionsHowItWorks() {
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
             <img
               className="rounded-lg"
-              src="https://res.cloudinary.com/gloot/image/upload/v1660131014/Marketing/2022_prototype/missions-howitworks-missions.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/missions_cards.jpg"
               width="100%"
               height="auto"
               alt=""
@@ -112,7 +112,7 @@ export default function TabMissionsHowItWorks() {
           <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
             <img
               className="rounded-lg"
-              src="https://res.cloudinary.com/gloot/image/upload/v1660131014/Marketing/2022_prototype/missions-howitworks-rewards.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/coins_tokens_xp.jpg"
               width="100%"
               height="auto"
               alt=""

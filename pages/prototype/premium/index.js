@@ -170,41 +170,39 @@ export default function Premium() {
                 <div className="flex-1 flex-col rounded-lg p-4 lg:p-8">
                   <ul className="flex-1 space-y-8 my-8 leading-snug text-left">
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Track your stats across all supported games and build
                         your player identity.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
-                        Compete in missions, ladders and tournaments with rewards
-                        and prize money.
+                        Compete in missions and ladders with rewards.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
+                      <span className="icon text-2xl icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
                         Get free extra tokens for each token purchase.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
+                      <span className="icon text-2xl icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
                         Unlock rewards faster by earning an additional 50% XP on
                         each completed mission and played ladder.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
+                      <span className="icon text-2xl icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
-                        Create a Discord profile to describe who you are as a
-                        gamer and find a team.
+                        Create a Discord profile to describe who you are as a gamer and find a clan.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
+                      <span className="icon text-2xl icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
                         Access an exclusive Discord channel, chat directly with
                         Stryda devs, and try out new features before they are
@@ -212,7 +210,7 @@ export default function Premium() {
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
+                      <span className="icon text-2xl icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
                         Enjoy an ad-free experience on Stryda.
                       </span>
@@ -225,47 +223,45 @@ export default function Premium() {
               </div>
               <div className="max-w-sm flex-1 flex flex-col bg-premium-500 rounded-xl p-2">
                 <div className="flex items-center gap-4 pb-2 text-ui-800 pl-7">
-                  <span className="icon icon-crown text-2xl" />
+                  <span className="icon icon-crown text-3xl" />
                   <span className="h4 text-ui-800">Premium</span>
                 </div>
                 <div className="flex-1 flex-col surface rounded-lg p-4 lg:p-8">
                   <ul className="flex-1 space-y-8 my-8 leading-snug text-left">
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Track your stats across all supported games and build
                         your player identity.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
-                        Compete in missions, ladders and tournaments with rewards
-                        and prize money.
+                        Compete in missions and ladders with rewards.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Get free extra tokens for each token purchase.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Unlock rewards faster by earning an additional 50% XP on
                         each completed mission and played ladder.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
-                        Create a Discord profile to describe who you are as a
-                        gamer and find a team.
+                        Create a Discord profile to describe who you are as a gamer and find a clan.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Access an exclusive Discord channel, chat directly with
                         Stryda devs, and try out new features before they are
@@ -273,7 +269,7 @@ export default function Premium() {
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
+                      <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Enjoy an ad-free experience on Stryda.
                       </span>

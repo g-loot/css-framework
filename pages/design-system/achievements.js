@@ -24,8 +24,8 @@ const DSpage = () => {
             <i />
             <i />
             <div className="achievement-level-1">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1670405826/Marketing/2022_prototype/Achievements/achievement-frame-lvl1-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-mission.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl1-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
             </div>
             <span></span>
           </div>
@@ -33,32 +33,32 @@ const DSpage = () => {
             <i />
             <i />
             <div className="achievement-level-2">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1670405826/Marketing/2022_prototype/Achievements/achievement-frame-lvl2-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-missionladder.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl2-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-missionladder.svg" />
             </div>
           </div>
           <div className="w-32 h-32 achievement">
             <i />
             <i />
             <div className="achievement-level-3">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1670405826/Marketing/2022_prototype/Achievements/achievement-frame-lvl3-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-streak.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl3-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-streak.svg" />
             </div>
           </div>
           <div className="w-32 h-32 achievement">
             <i />
             <i />
             <div className="achievement-level-4">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1670405826/Marketing/2022_prototype/Achievements/achievement-frame-lvl4-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-sololadder.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl4-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-sololadder.svg" />
             </div>
           </div>
           <div className="w-32 h-32 achievement">
             <i />
             <i />
             <div className="achievement-level-5">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1670405826/Marketing/2022_prototype/Achievements/achievement-frame-lvl5-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-clansupporter.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl5-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-clansupporter.svg" />
             </div>
           </div>
         </div>
