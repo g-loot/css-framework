@@ -4,7 +4,7 @@ import Accordion from "../../../components/Accordion/Accordion";
 import HowToLadder from "../../../components/HowTo/HowToLadder";
 import { VariablesContext } from "../../../contexts/variables";
 import Link from "next/link";
-import ModalClaimLadderRewards from "../../home/modal-claim-dailyrewards";
+import ModalClaimDailyRewards from "../home/modal-claim-dailyrewards";
 import Reward from "../../../components/Reward/Reward";
 import Tooltip from "../../../components/Tooltip/Tooltip";
 import { UiContext } from "../../../contexts/ui";

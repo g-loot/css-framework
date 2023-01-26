@@ -3,7 +3,6 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import HowToLadder from "../../../components/HowTo/HowToLadder";
 import Lottie from "lottie-react";
 import LottieExplosion1 from "../../../assets/animations/explosion_stryda_1.json";
-import ModalContainer from "../../../components/Modal/ModalContainer";
 import ModalInfoBeforeYouPlay from "./modal-info-beforeyouplay";
 import { UiContext } from "../../../contexts/ui";
 import { VariablesContext } from "../../../contexts/variables";
