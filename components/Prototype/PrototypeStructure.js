@@ -5,7 +5,7 @@ import PrototypeHead from "./PrototypeHead";
 import PrototypeLeftMenu from "./PrototypeLeftMenu";
 import PrototypeLeftMenuNew from "./PrototypeLeftMenuNew";
 import Topbar from "../Topbar/Topbar";
-import TopbarNew from "../Topbar/TopbarNew";
+import TopbarNew from "../Topbar/Topbar";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 import { VariablesContext } from "../../contexts/variables";
@@ -103,7 +103,7 @@ export default function PrototypeStructure({ children, title }) {
                       <div className="fixed bottom-8 right-8 z-50">
                         <div className="min-h-[300px] w-64 surface surface-ui-700 rounded-xl shadow-xl overflow-hidden">
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/brawl_leaderboard.webp"
+                            src="https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/ladder_leaderboard.webp"
                             alt=""
                             className="object-cover aspect-video"
                           />
@@ -117,10 +117,10 @@ export default function PrototypeStructure({ children, title }) {
                             <h6 className="leading-none">Buy more Tokens</h6>
                             <p className="text-sm mt-2">
                               Uh oh. Out of Tokens? Do not worry you do not have
-                              to give up on the Weekly Brawl. You can buy more
+                              to give up on the Weekly Ladder. You can buy more
                               Tokens whenever you need them. Visit your Wallet
                               page to take advantage of special bundle deals.
-                              Happy Brawling!
+                              Happy Laddering!
                             </p>
                             <button
                               type="button"

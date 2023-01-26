@@ -40,8 +40,8 @@ export default function Notification(props) {
           {notification.type === "clan" && (
             <span className="icon icon-multiple-12 text-ui-300" />
           )}
-          {notification.type === "brawl" && (
-            <span className="icon icon-brawl text-ui-300" />
+          {notification.type === "ladder" && (
+            <span className="icon icon-ladder text-ui-300" />
           )}
           {notification.type === "achievement" && (
             <span className="icon icon-fireworks text-ui-300" />

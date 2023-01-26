@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <>
-      <PrototypeStructure title="Brawls">
+      <PrototypeStructure title="Ladders">
         <Ad width="1005" height="300" />
 
         {selectedGame && (

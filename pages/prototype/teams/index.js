@@ -94,7 +94,7 @@ const Teams = [
 export default function Home() {
   const router = useRouter();
   const prototype = usePrototypeData();
-  const { data, loading } = useFetch("/api/brawls", { delay: 1000 });
+  const { data, loading } = useFetch("/api/ladders", { delay: 1000 });
 
   
   return (

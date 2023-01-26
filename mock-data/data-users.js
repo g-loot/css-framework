@@ -21,7 +21,7 @@ export const dataUsers = [
     },
     stats: {
       xp: 10000,
-      playedBrawls: 143,
+      playedLadders: 143,
       playedTournaments: 12,
       gamestats: [
         {
@@ -74,7 +74,7 @@ export const dataUsers = [
     },
     stats: {
       xp: 234,
-      playedBrawls: 34,
+      playedLadders: 34,
       playedTournaments: 0,
       gamestats: [
         {
@@ -128,7 +128,7 @@ export const dataUsers = [
     },
     stats: {
       xp: 9275,
-      playedBrawls: 243,
+      playedLadders: 243,
       playedTournaments: 22
     },
     wallet: {
@@ -164,7 +164,7 @@ export const dataUsers = [
     },
     stats: {
       xp: 18970,
-      playedBrawls: 143,
+      playedLadders: 143,
       playedTournaments: 12,
       gamestats: [
         {
@@ -208,7 +208,7 @@ export const dataUsers = [
     },
     stats: {
       xp: 874,
-      playedBrawls: 3,
+      playedLadders: 3,
       playedTournaments: 0,
       gamestats: [
         {
@@ -261,7 +261,7 @@ export const dataUsers = [
     },
     stats: {
       xp: 239,
-      playedBrawls: 74,
+      playedLadders: 74,
       playedTournaments: 2
     },
     wallet: {
@@ -296,7 +296,7 @@ export const dataUsers = [
     },
     stats: {
       xp: 198,
-      playedBrawls: 15,
+      playedLadders: 15,
       playedTournaments: 0
     },
     wallet: {
@@ -330,7 +330,7 @@ export const dataUsers = [
     },
     stats: {
       xp: 244,
-      playedBrawls: 54,
+      playedLadders: 54,
       playedTournaments: 23
     },
     wallet: {
@@ -366,7 +366,7 @@ export const dataUsers = [
     },
     stats: {
       xp: 10000,
-      playedBrawls: 54,
+      playedLadders: 54,
       playedTournaments: 23
     },
     wallet: {
@@ -404,7 +404,7 @@ export const dataUsers = [
     },
     stats: {
       xp: 297,
-      playedBrawls: 2,
+      playedLadders: 2,
       playedTournaments: 0
     },
     wallet: {
@@ -443,7 +443,7 @@ export const dataUsers = [
     },
     stats: {
       xp: 297,
-      playedBrawls: 2,
+      playedLadders: 2,
       playedTournaments: 0
     },
     wallet: {

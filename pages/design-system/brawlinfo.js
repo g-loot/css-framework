@@ -5,10 +5,10 @@ import { getLayout } from "../../components/DesignSystem/DSLayout";
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">Brawl info</h1>
+      <h1 className="mb-2">Ladder info</h1>
 
-      {/* Brawl info 3 */}
-      <div className="mb-12" id="brawl-info-3">
+      {/* Ladder info 3 */}
+      <div className="mb-12" id="ladder-info-3">
         <div className="pt-4">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -26,7 +26,7 @@ const DSpage = () => {
                         </div>
                         <div className="item-body">
                           <div className="p-2 item-title text-lg">
-                            Brawl details / how to play
+                            Ladder details / how to play
                           </div>
                         </div>
                         <div className="item-actions">
@@ -60,13 +60,13 @@ const DSpage = () => {
                       </li>
                       <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
                         <h4 className="text-base uppercase text-ui-200 mb-1">
-                          Brawl points
+                          Ladder points
                         </h4>
                         <p className="text-sm text-ui-300 leading-relaxed">
-                          Your total Brawl points are based on your combined
-                          [number] best Solo matches. Clan Brawl points are
+                          Your total Ladder points are based on your combined
+                          [number] best Solo matches. Clan Ladder points are
                           based on your Clan&#39;s players with the highest
-                          Brawl points from their matches.
+                          Ladder points from their matches.
                         </p>
                       </li>
                       <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
@@ -79,18 +79,18 @@ const DSpage = () => {
                       </li>
                       <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
                         <h4 className="text-base uppercase text-ui-200 mb-1">
-                          Brawl type
+                          Ladder type
                         </h4>
                         <p className="text-sm text-ui-300 leading-relaxed">
                           Solo and Clan. Your matches count toward both the Solo
                           and Clan leaderboards. At least x members of the Clan
-                          must compete in the Brawl for your Clan to appear on
+                          must compete in the Ladder for your Clan to appear on
                           the leaderboard.
                         </p>
                       </li>
                       <li className="p-3 rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
                         <h4 className="text-base uppercase text-ui-200 mb-1">
-                          Brawl size
+                          Ladder size
                         </h4>
                         <p className="text-sm text-ui-300 leading-relaxed">
                           Infinite. Each group has their own leaderboard which
@@ -101,7 +101,7 @@ const DSpage = () => {
                     </ul>
                     <div className="border-t border-ui-700 py-2 flex gap-2 items-center justify-center">
                       <h4 className="text-base uppercase text-ui-200">
-                        Brawl ID
+                        Ladder ID
                       </h4>
                       <button
                         type="button"
@@ -127,8 +127,8 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* Brawl info 1 */}
-      <div className="mb-12" id="brawl-info-1">
+      {/* Ladder info 1 */}
+      <div className="mb-12" id="ladder-info-1">
         <div className="pt-4">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -178,7 +178,7 @@ const DSpage = () => {
                     style={{ "--delay": "calc( 4 * 0.05s)" }}
                   >
                     <h4 className="text-base uppercase text-ui-400 mb-1">
-                      Brawl points
+                      Ladder points
                     </h4>
                     <p className="text-sm text-ui-200 leading-tight">
                       Best 3 matches
@@ -191,7 +191,7 @@ const DSpage = () => {
                     style={{ "--delay": "calc( 5 * 0.05s)" }}
                   >
                     <h4 className="text-base uppercase text-ui-400 mb-1">
-                      Brawl ID
+                      Ladder ID
                     </h4>
                     <button
                       type="button"
@@ -216,8 +216,8 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* Brawl info 2 */}
-      <div className="mb-12" id="brawl-info-2">
+      {/* Ladder info 2 */}
+      <div className="mb-12" id="ladder-info-2">
         <div className="pt-4">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -260,7 +260,7 @@ const DSpage = () => {
                   style={{ "--delay": "calc( 4 * 0.05s)" }}
                 >
                   <h4 className="text-base uppercase text-ui-400 mb-1">
-                    Brawl points
+                    Ladder points
                   </h4>
                   <p className="text-sm text-ui-200 leading-tight">
                     Best 3 matches
@@ -271,7 +271,7 @@ const DSpage = () => {
                   style={{ "--delay": "calc( 5 * 0.05s)" }}
                 >
                   <h4 className="text-base uppercase text-ui-400 mb-1">
-                    Brawl ID
+                    Ladder ID
                   </h4>
                   <button
                     type="button"

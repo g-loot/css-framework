@@ -28,11 +28,11 @@
           "name": "coin"
         },
         {
-          "tags": "brand,gloot,token,reward,brawl,ladder",
+          "tags": "brand,gloot,token,reward,ladder,ladder",
           "name": "token"
         },
         {
-          "tags": "brand,gloot,token,power,reward,brawl,ladder",
+          "tags": "brand,gloot,token,power,reward,ladder,ladder",
           "name": "powertoken"
         },
         {
@@ -48,8 +48,8 @@
           "name": "missions"
         },
         {
-          "tags": "brand,gloot,brawl,ladder,leaderboard",
-          "name": "brawl"
+          "tags": "brand,gloot,ladder,ladder,leaderboard",
+          "name": "ladder"
         },
         {
           "tags": "brand,gloot,tournament,showdown",

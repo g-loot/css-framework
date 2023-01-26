@@ -9,8 +9,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h1,
-.h1,
 h2,
 .h2,
 h3,
@@ -63,8 +61,8 @@ h6,
 h1,
 .h1 {
   @apply
-  text-5xl
-  md:text-7xl
+  text-7xl
+  md:text-8xl
   leading-[0.8]
   ;
 }

@@ -23,7 +23,8 @@ export default function Button(props) {
     "button-currency": props.currency,
     "button-coin": props.currency === 'coin',
     "button-token": props.currency === 'token',
-    "button-ticket": props.currency === 'ticket'
+    "button-ticket": props.currency === 'ticket',
+    "button-powertoken": props.currency === 'powertoken'
   });
 
   const icon = props.icon && (
@@ -48,7 +49,7 @@ export default function Button(props) {
             <span>{label}</span>
           </div>
           <div>
-            <span className={`icon ${props.currency === 'coin' ? 'icon-coin text-gold-500' : ''} ${props.currency === 'token' ? 'icon-token text-purple-500' : ''} ${props.currency === 'ticket' ? 'icon-ticket text-ui-100' : ''}`} />
+            <span className={`icon ${props.currency === 'coin' ? 'icon-coin text-currency-1-500' : ''} ${props.currency === 'token' ? 'icon-token text-currency-2-500' : ''} ${props.currency === 'ticket' ? 'icon-ticket text-currency-3-500' : ''} ${props.currency === 'powertoken' ? 'icon-powertoken text-currency-3-500' : ''}`} />
             <span>{props.amount}</span>
           </div>
         </button>

@@ -29,15 +29,15 @@ const lastestComponents = [
 const lastestPages = [
   {
     label: "Solo leaderboard",
-    url: "/prototype/valorant/brawls/0?tab=solo-leaderboard",
+    url: "/prototype/valorant/ladders/0?tab=solo-leaderboard",
   },
   {
-    label: "Your Brawl matches",
-    url: "/prototype/valorant/brawls/0",
+    label: "Your Ladder matches",
+    url: "/prototype/valorant/ladders/0",
   },
   {
-    label: "Ongoing brawls",
-    url: "/prototype/valorant/brawls",
+    label: "Ongoing ladders",
+    url: "/prototype/valorant/ladders",
   },
   {
     label: "Missions",

@@ -63,12 +63,12 @@ const DSpage = () => {
       buttonURL: "#",
     },
     {
-      title: "Play in a Brawl",
+      title: "Play in a Ladder",
       description:
         "Aenean at libero ligula. Sed gravida dapibus lectus nec finibus. Morbi egestas vitae tellus eget egestas.",
       image:
         "https://res.cloudinary.com/gloot/image/upload/v1654611769/Marketing/2022_prototype/DummyContent/carouselonboarding-item-step4.jpg",
-      buttonLabel: "Browse Brawls",
+      buttonLabel: "Browse Ladders",
       buttonURL: "#",
     },
   ];

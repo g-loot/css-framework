@@ -21,6 +21,8 @@ export default function Home() {
   const modalItemPurchaseCompleted =
     query.modalpurchasecompleted === "true" ? true : false;
 
+    
+
   useEffect(() => {
     if (modalItemPurchaseConfirmation) {
       openModalItemPurchaseConfirmation();
@@ -99,7 +101,7 @@ export default function Home() {
 
         <section className="mb-4 lg:mb-8">
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4 mt-3">
-            {selectedShopsection.items?.map((item, itemIndex) => (
+            {selectedShopsection.items?.sort((itemA, itemB) => itemA.price - itemB.price).map((item, itemIndex) => (
               <>
                 <li
                   key={item.id}
@@ -127,7 +129,7 @@ export default function Home() {
                       <>
                         {item.price && (
                           <>
-                            {1000 >= item.price && (
+                            {90000 >= item.price && (
                               <button
                                 type="button"
                                 onClick={openModalItemPurchaseConfirmation.bind(
@@ -145,7 +147,7 @@ export default function Home() {
                                 </div>
                               </button>
                             )}
-                            {1000 < item.price && (
+                            {90000 < item.price && (
                               <div
                                 className="tooltip"
                                 data-tooltip="Not enough funds"

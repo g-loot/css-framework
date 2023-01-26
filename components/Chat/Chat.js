@@ -98,7 +98,7 @@ const conversationFull = [
         id: 1,
         type: "text",
         content:
-          "Nice to meet you guys, thank you for having me. Who is up for a quick valorant brawl game? <code class='tag' href='#'>@Kes2Band</code>, <code class='tag' href='#'>@Nomadiction</code>, <code class='tag is-owner' href='#'>@JackAttack123</code>?",
+          "Nice to meet you guys, thank you for having me. Who is up for a quick valorant ladder game? <code class='tag' href='#'>@Kes2Band</code>, <code class='tag' href='#'>@Nomadiction</code>, <code class='tag is-owner' href='#'>@JackAttack123</code>?",
       },
     ],
   },

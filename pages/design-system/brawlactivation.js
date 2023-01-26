@@ -8,7 +8,7 @@ const DSpage = () => {
   return(
   <>
     <h1 className='mb-2'>
-      Brawl activation
+      Ladder activation
     </h1>
 
 

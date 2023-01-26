@@ -45,12 +45,12 @@ export const PrototypeProvider = ({ children }) => {
       return game.slug === slug;
     })
   }
-  const getBrawlByID = (slug, id) => {
+  const getLadderByID = (slug, id) => {
     const selectedGame = getGameBySlug(slug);
-    const selectedBrawl = selectedGame.brawls.find(brawl => {
-      return brawl.id === parseInt(id);
+    const selectedLadder = selectedGame.ladders.find(ladder => {
+      return ladder.id === parseInt(id);
     });
-    return selectedBrawl;
+    return selectedLadder;
   }
   const getTournamentByID = (slug, id) => {
     const selectedGame = getGameBySlug(slug);
@@ -122,7 +122,7 @@ export const PrototypeProvider = ({ children }) => {
         getGameBySlug,
         getUserByID,
         getUserProfile,
-        getBrawlByID,
+        getLadderByID,
         getTournamentByID,
         getClanByID,
         getUserClan,

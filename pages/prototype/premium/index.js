@@ -53,68 +53,74 @@ export default function Premium() {
             </div>
           </section>
 
-          <section className="grid md:grid-cols-2 justify-center mb-24 max-w-lg mx-auto text-center">
-            {/*
-            <div>
+          <section className="grid md:grid-cols-2 lg:grid-cols-4 justify-center mb-24 max-w-lg mx-auto text-center leading-none">
+            <div
+              className="animate-slide-in-bottom animate-delay"
+              style={{
+                "--delay": "calc(0 * 0.05s)",
+              }}
+            >
               <img
                 className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1665059216/Marketing/2022_prototype/Illustrations/picture_premium_missions.webp"
-                width="400"
+                src="https://res.cloudinary.com/gloot/image/upload/v1674657217/Stryda/illustrations/picture_premium_xp_boost.png"
+                width="300"
                 height="auto"
                 alt=""
               />
-              <h3 className="h5 text-ui-100 max-w-[30ch] mx-auto">
-                Get access to Premium Missions each day
-              </h3>
+              <p className="text-ui-100 max-w-[20ch] mx-auto">
+                Get a 50% XP boost
+              </p>
             </div>
-            */}
-            <div>
+            <div
+              className="animate-slide-in-bottom animate-delay"
+              style={{
+                "--delay": "calc(1 * 0.05s)",
+              }}
+            >
               <img
                 className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1672238945/Stryda/illustrations/picture_premium_rewards.png"
-                width="400"
+                src="https://res.cloudinary.com/gloot/image/upload/v1674657217/Stryda/illustrations/picture_premium_rewards.png"
+                width="300"
                 height="auto"
                 alt=""
               />
-              <h3 className="h5 text-ui-100 max-w-[30ch] mx-auto">
+              <p className="text-ui-100 max-w-[20ch] mx-auto">
                 Earn mission rewards faster
-              </h3>
+              </p>
             </div>
-            <div>
+            <div
+              className="animate-slide-in-bottom animate-delay"
+              style={{
+                "--delay": "calc(2 * 0.05s)",
+              }}
+            >
               <img
                 className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1672238945/Stryda/illustrations/picture_premium_extra_tokens.png"
-                width="400"
+                src="https://res.cloudinary.com/gloot/image/upload/v1674657217/Stryda/illustrations/picture_premium_extra_tokens.png"
+                width="300"
                 height="auto"
                 alt=""
               />
-              <h3 className="h5 text-ui-100 max-w-[30ch] mx-auto">
+              <p className="text-ui-100 max-w-[20ch] mx-auto">
                 Get free extra tokens for each token purchase
-              </h3>
+              </p>
             </div>
-            <div>
+            <div
+              className="animate-slide-in-bottom animate-delay"
+              style={{
+                "--delay": "calc(3 * 0.05s)",
+              }}
+            >
               <img
                 className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1672238945/Stryda/illustrations/picture_premium_no_ads.png"
-                width="400"
+                src="https://res.cloudinary.com/gloot/image/upload/v1674657217/Stryda/illustrations/picture_premium_no_ads.png"
+                width="300"
                 height="auto"
                 alt=""
               />
-              <h3 className="h5 text-ui-100 max-w-[30ch] mx-auto">
-                Get Premium content features
-              </h3>
-            </div>
-            <div>
-              <img
-                className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1672238945/Stryda/illustrations/picture_premium_discord.png"
-                width="400"
-                height="auto"
-                alt=""
-              />
-              <h3 className="h5 text-ui-100 max-w-[30ch] mx-auto">
+              <p className="text-ui-100 max-w-[20ch] mx-auto">
                 Remove ads on the platform
-              </h3>
+              </p>
             </div>
           </section>
 
@@ -122,22 +128,22 @@ export default function Premium() {
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-0 -right-14 rotate-[33deg]"
               src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
-              width="200"
+              width="190"
               height="auto"
               alt=""
             />
 
             <img
-              className="hidden lg:block absolute pointer-events-none z-20 -bottom-20 -right-32 blur-sm rotate-[120deg]"
+              className="hidden lg:block absolute pointer-events-none z-20 -bottom-32 -right-8 blur-sm rotate-[120deg]"
               src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_2.png"
-              width="210"
+              width="179"
               height="auto"
               alt=""
             />
             <img
-              className="hidden lg:block absolute pointer-events-none z-20 -top-14 left-8 blur-sm -rotate-[33deg]"
+              className="hidden lg:block absolute pointer-events-none z-20 -top-14 left-8 blur-sm -rotate-[33deg] opacity-50"
               src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
-              width="168"
+              width="140"
               height="auto"
               alt=""
             />
@@ -173,7 +179,7 @@ export default function Premium() {
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
                       <span className="text-ui-200">
-                        Compete in missions, brawls and tournaments with rewards
+                        Compete in missions, ladders and tournaments with rewards
                         and prize money.
                       </span>
                     </li>
@@ -187,7 +193,7 @@ export default function Premium() {
                       <span className="icon text-2xl mt-1 icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
                         Unlock rewards faster by earning an additional 50% XP on
-                        each completed mission and played brawl.
+                        each completed mission and played ladder.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
@@ -234,7 +240,7 @@ export default function Premium() {
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
                       <span className="text-ui-200">
-                        Compete in missions, brawls and tournaments with rewards
+                        Compete in missions, ladders and tournaments with rewards
                         and prize money.
                       </span>
                     </li>
@@ -248,7 +254,7 @@ export default function Premium() {
                       <span className="icon text-2xl mt-1 icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Unlock rewards faster by earning an additional 50% XP on
-                        each completed mission and played brawl.
+                        each completed mission and played ladder.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">

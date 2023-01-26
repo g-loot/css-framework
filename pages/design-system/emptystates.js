@@ -12,15 +12,15 @@ const DSpage = () => {
 
         <div className="surface rounded-lg px-4 py-8 text-center">
           <div className="max-w-xs mx-auto">
-            <span className="icon icon-brawl text-6xl text-ui-500" />
+            <span className="icon icon-ladder text-6xl text-ui-500" />
             <div className="mt-2 mb-6">
-              <p className="text-sm text-ui-400">You have no active Brawl</p>
+              <p className="text-sm text-ui-400">You have no active Ladder</p>
               <p className="text-lg text-ui-300">
-                Click the button to browse available Brawls
+                Click the button to browse available Ladders
               </p>
             </div>
             <button type="button" className="button button-primary">
-              <span>Browse Brawls</span>
+              <span>Browse Ladders</span>
             </button>
           </div>
         </div>

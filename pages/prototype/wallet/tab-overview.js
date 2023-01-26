@@ -13,10 +13,10 @@ const WalletItems = [
     name: "coins",
     icon: "icon-coin",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674571131/Stryda/currencies/Reward-coin-face.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-coin-face.png",
     amount: "1328",
     use: "To purchase items in the <b>Shop</b>.",
-    get: "From <b>Daily Login Streak</b> and <b>Weekly Brawls</b>.",
+    get: "From <b>Daily Login Streak</b> and <b>Weekly Ladders</b>.",
     color: "text-currency-1-500",
     button: "visitshop",
     buttonLabel: "Visit shot",
@@ -26,7 +26,7 @@ const WalletItems = [
     name: "tokens",
     icon: "icon-token",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674571131/Stryda/currencies/Reward-token-face.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-token-face.png",
     amount: "37",
     use: "To enter rounds in the <b>Ladders</b>.",
     get: "From <b>Missions, Daily Login Streak</b> or buy them directly from the <b>Wallet</b>.",
@@ -39,7 +39,7 @@ const WalletItems = [
     name: "power tokens",
     icon: "icon-powertoken",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674571131/Stryda/currencies/Reward-powertoken-face.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-powertoken-face.png",
     amount: "15",
     use: "To enter rounds in the <b>Power Plays</b>.",
     get: "Buy them directly from the <b>Wallet</b>.",
@@ -55,7 +55,7 @@ const WalletItems = [
       "https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-ticket-unique.png",
     amount: "2",
     use: "To enter <b>Monthly Tournaments</b>.",
-    get: "From <b>Weekly Brawls</b>.",
+    get: "From <b>Weekly Ladders</b>.",
     color: "text-bronze-500",
   },
   {
@@ -117,7 +117,7 @@ export default function TabWalletOverview() {
     <>
       {!alernativeLayout && (
         <>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4">
             {WalletItems.map((item, itemIndex) => (
               <div
                 key={item.id}
@@ -125,7 +125,7 @@ export default function TabWalletOverview() {
                 style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
               >
                 <div
-                  className={`flex items-center justify-center my-8 ${item.color}`}
+                  className={`flex items-center justify-center my-8 leading-none ${item.color}`}
                 >
                   {item.video ? (
                     <video

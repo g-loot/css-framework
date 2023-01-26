@@ -33,9 +33,9 @@ export default function Missions() {
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game, prototype]);
-  
+
   useEffect(() => {
-    if(selectedGame != null) {
+    if (selectedGame != null) {
       prototype.defineDefaultGameID(selectedGame.id);
     }
   }, [selectedGame]);
@@ -51,24 +51,24 @@ export default function Missions() {
               <div className="header-content">
                 <div className="header-image">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1672302411/Stryda/logos/stryda-logo-missions.svg"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1674657396/Stryda/logos/stryda-logo-missions.svg"
                     alt="Missions"
                   />
                 </div>
                 <div className="header-body">
-                  <h1 className="h3 mb-2">
-                    {selectedGame.name} Missions
-                  </h1>
                   <p className="text-ui-300 mb-4">
-                    Play Stryda Missions in-game, gather XP, and earn Mission
-                    Rewards. You can complete the Daily Missions in any game.
+                    Play Stryda Missions in {selectedGame.name}, gather XP, and
+                    earn Mission Rewards. You can complete the Daily Missions in
+                    any game.
                   </p>
-                  <button
-                    type="button"
-                    className="button button-sm button-secondary"
-                  >
-                    <span>Tracker required</span>
-                  </button>
+                  {selectedGame.needsSteam && (
+                    <button
+                      type="button"
+                      className="button button-sm button-secondary"
+                    >
+                      <span>Tracker required</span>
+                    </button>
+                  )}
                 </div>
               </div>
               {/*
@@ -122,7 +122,9 @@ export default function Missions() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={itemIndex}>
                     <Link
-                      href={`/prototype/${game}/missions?tab=${item.url}${prototype.getURLparams("&")}`}
+                      href={`/prototype/${game}/missions?tab=${
+                        item.url
+                      }${prototype.getURLparams("&")}`}
                     >
                       <a
                         className={`${
@@ -140,7 +142,9 @@ export default function Missions() {
             <section className="py-4">
               {TabsItems.map((item, itemIndex) => {
                 if (item.url === selectedTab) {
-                  return React.createElement(item.component, { key: itemIndex })
+                  return React.createElement(item.component, {
+                    key: itemIndex,
+                  });
                 }
               })}
             </section>

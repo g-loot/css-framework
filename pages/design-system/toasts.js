@@ -143,7 +143,7 @@ const DSpage = () => {
                   <span className="icon icon-c-info" />
                   <div>
                     <div className="toast-text">
-                      Brawl URL copied to you clipboard.
+                      Ladder URL copied to you clipboard.
                     </div>
                   </div>
                   <button
@@ -343,7 +343,7 @@ const DSpage = () => {
                   <div>
                     <div className="toast-title">Error</div>
                     <div className="toast-text">
-                    We were unable to retrieve your Brawl result.
+                    We were unable to retrieve your Ladder result.
                     </div>
                   </div>
                   <button

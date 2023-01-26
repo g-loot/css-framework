@@ -453,3 +453,397 @@
     }
   }
 }
+
+
+
+
+
+
+
+
+.carousel-new {
+  @apply
+  block
+  lg:flex
+  lg:flex-row
+  lg:items-stretch
+  transform-gpu
+  ;
+
+  .carousel-slides {
+    @apply
+    h-[420px]
+    lg:h-[26rem]
+    self-center
+    ;
+  }
+
+  .carousel-list {
+    @apply
+    h-auto
+    lg:h-[26rem]
+    ;
+  }
+
+  .carousel-slides {
+    @apply
+    relative
+    z-0
+    flex-1
+    lg:flex-7
+    flex
+    items-stretch
+    ;
+
+    .carousel-slide {
+      @apply
+      inset-0
+      absolute
+      flex
+      flex-col
+      lg:flex-row
+      items-stretch
+      transition-all
+      duration-1000
+      ease-[cubic-bezier(0.9,0,0.1,1)]
+      pointer-events-none
+      -translate-y-0
+      opacity-0
+      ;
+
+      .carousel-image {
+        @apply
+       
+        flex-4
+        absolute z-0 bg-ui-850 -inset-x-12 xl:-inset-x-24 bottom-0 -inset-y-4 border-b border-ui-700
+        ;
+        > * {
+          @apply
+          absolute
+          inset-0
+          bg-cover
+          bg-center
+          transition-all
+          duration-[1.4s]
+          ease-[cubic-bezier(0.7,0,0.3,1)]
+          opacity-0
+          lg:-translate-y-4
+          lg:origin-bottom
+          ;
+          
+        }
+        
+      }
+      .carousel-backdrop {
+        @apply
+        absolute
+        z-0
+        -inset-80
+        blur-sm
+        opacity-0
+        grayscale-0
+        hidden
+        ;
+        > * {
+          @apply
+          absolute
+          inset-0
+          bg-cover
+          bg-center
+          ;
+        }
+      }
+      .carousel-body {
+        @apply
+        relative
+        z-20
+        flex-5
+        flex
+        flex-col
+        items-start
+        justify-center
+        ;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .h1,
+        .h2,
+        .h3,
+        .h4 {
+          @apply
+          leading-none	
+          ;
+        }
+
+        > * {
+          @apply
+          lg:max-w-[50ch]
+          ;
+        }
+      }
+
+      &.is-active {
+        @apply
+        pointer-events-auto
+        translate-y-0
+        opacity-100
+        ;
+        .carousel-image {
+          > * {
+            @apply
+            opacity-100
+            scale-100
+            lg:translate-y-0
+            ;
+          }
+        }
+      }
+    }
+  } 
+  
+  .carousel-nav {
+    @apply
+    flex
+    flex-col
+    items-center
+    justify-center
+    flex-2
+    shrink-0
+    overflow-hidden
+    absolute
+    right-0
+    inset-y-0
+    ;
+  }
+
+  .carousel-control {
+    @apply
+    hidden
+    justify-end
+    gap-2
+    py-2
+    px-2
+    ;
+  }
+
+  .carousel-list {
+    @apply
+    relative
+    z-10
+    flex-1
+    overflow-x-scroll
+    flex
+    flex-col
+    items-center
+    justify-center
+    gap-4
+    px-4
+    py-4
+    ;
+
+    -webkit-overflow-scrolling: touch;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none !important;
+      width: 0 !important;
+      height: 0 !important;
+    }
+
+    &:hover {
+      a,
+      button {
+        @apply
+        opacity-50
+        ;
+        &:hover {
+          @apply
+          opacity-100
+          ;
+        }
+      }
+    }
+
+    > li {
+      @apply
+      w-1/2
+      flex
+      flex-col
+      items-stretch
+      animate-[carousel-list-slidein_1.5s_cubic-bezier(0.9,0,0.1,1)_forwards]
+      translate-y-0
+      opacity-0
+      ;
+
+      &:nth-child(1) {
+        --delay: 1;
+      }
+      &:nth-child(2) {
+        --delay: 2;
+      }
+      &:nth-child(3) {
+        --delay: 4;
+      }
+      &:nth-child(4) {
+        --delay: 6;
+      }
+      &:nth-child(5) {
+        --delay: 8;
+      }
+      &:nth-child(6) {
+        --delay: 10;
+      }
+      animation-delay: calc(var(--delay, 1) * 0.05s);
+      
+      > a,
+      > button {
+        @apply
+        flex-1
+        p-1
+        leading-tight
+        relative
+        cursor-pointer
+        rounded
+        bg-ui-600
+        text-ui-200
+        gap-0
+        transition-all
+        duration-1000
+        ease-[cubic-bezier(0.9,0,0.1,1)]
+        origin-right
+        select-none
+        flex
+        flex-col
+        items-start
+        justify-center
+        whitespace-nowrap
+        overflow-hidden
+        transform-gpu
+        outline-offset-2
+        focus-visible:outline
+        focus-visible:outline-offset-2
+        focus-visible:outline-1
+        focus-visible:outline-main
+        ;
+
+        &.item {
+          @apply
+          flex
+          flex-row
+          items-center
+          gap-2
+          ;
+        }
+
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          &:active {
+            &:hover,
+            &:focus {
+              @apply
+              opacity-80
+              ;
+            }
+          }
+        }
+
+        > * {
+          @apply
+          hidden
+        }
+
+        > div {
+          @apply
+          text-sm
+          ;
+        }
+        > span {
+          @apply
+          text-xs
+          text-ui-300
+          ;
+        }
+
+        > i {
+          @apply
+          absolute
+          overflow-hidden
+          inset-y-0
+          right-0
+          w-1.5
+          bg-ui-500/50
+          transition
+          duration-[1.25s]
+          ease-[cubic-bezier(0.8,0,0.2,1)]
+          ;
+
+          > span {
+            @apply
+            content-['']
+            absolute
+            inset-0
+            w-1.5
+            bg-interaction-500
+            origin-top
+            -translate-y-full
+            opacity-0
+            ;
+          }
+        }
+
+        &:hover,
+        &.is-active {
+          &::after {
+            @apply
+            opacity-100
+            scale-y-100
+            duration-75
+            ;
+          }
+        }
+
+        > * {
+          @apply
+          relative
+          z-20
+          ;
+        }
+        > span,
+        > div {
+          &:not(.item-actions) {
+            @apply
+            text-ellipsis
+            overflow-hidden
+            whitespace-nowrap
+            w-full
+            ;
+          }
+        }
+      }
+      
+      &.is-active {
+        a,
+        button {
+          @apply
+          opacity-100
+          translate-x-0
+          bg-main
+          ;
+          > i {
+            @apply
+            bg-ui-500
+            ;
+            > span {
+              @apply
+              opacity-100
+              ;
+            }
+          }
+        }
+      }
+    }
+  }
+}

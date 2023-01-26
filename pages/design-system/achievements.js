@@ -50,7 +50,7 @@ const DSpage = () => {
             <i />
             <div className="achievement-level-4">
               <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1670405826/Marketing/2022_prototype/Achievements/achievement-frame-lvl4-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-solobrawl.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1670332387/Marketing/2022_prototype/Achievements/achivement-icon-sololadder.svg" />
             </div>
           </div>
           <div className="w-32 h-32 achievement">

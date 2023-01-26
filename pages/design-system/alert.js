@@ -230,7 +230,7 @@ const DSpage = () => {
                   <div>
                     <span className="icon icon-24 icon-skull-2" />
                     <span>
-                      Error! We were unable to retrieve your Brawl result.
+                      Error! We were unable to retrieve your Ladder result.
                     </span>
                   </div>
                 </div>

@@ -7,7 +7,7 @@ import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
 
-const Offers = [
+const TokensLItems = [
   {
     tokenNumber: 60,
     amount: "17€",
@@ -15,7 +15,6 @@ const Offers = [
     save: "50%",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1672159333/Stryda/currencies/Reward-centered-token-large.png",
-    special: "bestvalue",
   },
   {
     tokenNumber: 10,
@@ -24,15 +23,43 @@ const Offers = [
     save: "24%",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-medium.png",
-    special: "mostpopular",
   },
   {
     tokenNumber: 3,
     amount: "1.70€",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672160318/Stryda/currencies/Reward-centered-token-small.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-small.png",
   },
 ];
+const PowerTokensLItems = [
+  {
+    tokenNumber: 60,
+    amount: "51€",
+    previousAmount: "102€",
+    save: "50%",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1672159333/Stryda/currencies/Reward-centered-powertoken-large.png",
+  },
+  {
+    tokenNumber: 10,
+    amount: "12.9€",
+    previousAmount: "17€",
+    save: "24%",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-powertoken-medium.png",
+  },
+  {
+    tokenNumber: 3,
+    amount: "5.10€",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-powertoken-small.png",
+  },
+];
+
+/*
+special: "bestvalue",
+special: "mostpopular",
+*/
 
 export default function ModalBuyTokens(props) {
   const { query } = useRouter();
@@ -105,8 +132,8 @@ export default function ModalBuyTokens(props) {
               </div>
 
               <div className="overflow-x-auto scrollbar-desktop">
-                <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto">
-                  {Offers.map((item, itemIndex) => (
+                <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto mb-4">
+                  {TokensLItems.map((item, itemIndex) => (
                     <div
                       key={itemIndex}
                       className={`rounded-xl flex-1 md:max-w-[350px] flex flex-col animate-fade-in animate-delay p-1 ${
@@ -120,7 +147,7 @@ export default function ModalBuyTokens(props) {
                       } ${!item.special ? "surface" : ""}`}
                       style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                     >
-                      <div className="px-2 pb-3 pt-2 text-center font-bold">
+                      <div className="px-2 pb-2 text-sm text-center font-bold">
                         {item.special === "bestvalue" && (
                           <span className="text-main">Best value</span>
                         )}
@@ -132,16 +159,16 @@ export default function ModalBuyTokens(props) {
                       <div className="bg-ui-800 rounded-lg px-3 pb-3 flex-1 flex flex-col">
                         <div className="flex-1">
                           <img
-                            className="w-auto h-52 mx-auto -mt-2 -mb-4 drop-shadow-2xl"
+                            className="w-auto h-36 mx-auto -mt-10 -mb-4"
                             src={item.image}
                             width="auto"
                             height="auto"
-                            alt="tokens"
+                            alt=""
                           />
-                          <h2 className="mb-4 h3">{item.tokenNumber} tokens</h2>
+                          <h2 className="h5">{item.tokenNumber} tokens</h2>
                           {item.previousAmount && (
                             <>
-                              <div className="flex gap-2 text-3xl text-center justify-center">
+                              <div className="flex gap-2 text-lg my-1 text-center justify-center">
                                 <span className="line-through text-ui-300">
                                   {item.previousAmount}
                                 </span>
@@ -154,7 +181,7 @@ export default function ModalBuyTokens(props) {
                           )}
                           {!item.previousAmount && (
                             <>
-                              <div className="flex gap-2 text-3xl text-center justify-center">
+                              <div className="flex gap-2 text-lg my-1 text-center justify-center">
                                 <span className="text-ui-200">
                                   {item.amount}
                                 </span>
@@ -163,9 +190,82 @@ export default function ModalBuyTokens(props) {
                           )}
                         </div>
 
-                        <div className="border-t border-ui-700 mt-3 pt-3">
+                        <div className="border-t border-ui-700 mt-4 pt-4">
                           <button
-                            className={`button button-primary w-full ${
+                            className={`button button-secondary w-full ${
+                              submitting ? "is-loading" : ""
+                            }`}
+                            onClick={closeModalWithDelay}
+                            disabled={selectedGamesCount === 0}
+                          >
+                            <span>Buy</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto">
+                  {PowerTokensLItems.map((item, itemIndex) => (
+                    <div
+                      key={itemIndex}
+                      className={`rounded-xl flex-1 md:max-w-[350px] flex flex-col animate-fade-in animate-delay p-1 ${
+                        item.special === "bestvalue"
+                          ? "surface surface-ui-700"
+                          : ""
+                      } ${
+                        item.special === "mostpopular"
+                          ? "border border-ui-700 bg-main"
+                          : ""
+                      } ${!item.special ? "surface" : ""}`}
+                      style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
+                    >
+                      <div className="px-2 pb-2 text-sm text-center font-bold">
+                        {item.special === "bestvalue" && (
+                          <span className="text-main">Best value</span>
+                        )}
+                        {item.special === "mostpopular" && (
+                          <span className="text-ui-800">Most popular</span>
+                        )}
+                        {!item.special && <span className="opacity-0">—</span>}
+                      </div>
+                      <div className="bg-ui-800 rounded-lg px-3 pb-3 flex-1 flex flex-col">
+                        <div className="flex-1">
+                          <img
+                            className="w-auto h-36 mx-auto -mt-10 -mb-4"
+                            src={item.image}
+                            width="auto"
+                            height="auto"
+                            alt=""
+                          />
+                          <h2 className="h5">{item.tokenNumber} power tokens</h2>
+                          {item.previousAmount && (
+                            <>
+                              <div className="flex gap-2 text-lg my-1 text-center justify-center">
+                                <span className="line-through text-ui-300">
+                                  {item.previousAmount}
+                                </span>
+                                <span className="text-main">{item.amount}</span>
+                              </div>
+                              <div className="text-sm uppercase text-ui-200 font-bold">
+                                Save {item.save}
+                              </div>
+                            </>
+                          )}
+                          {!item.previousAmount && (
+                            <>
+                              <div className="flex gap-2 text-lg my-1 text-center justify-center">
+                                <span className="text-ui-200">
+                                  {item.amount}
+                                </span>
+                              </div>
+                            </>
+                          )}
+                        </div>
+
+                        <div className="border-t border-ui-700 mt-4 pt-4">
+                          <button
+                            className={`button button-secondary w-full ${
                               submitting ? "is-loading" : ""
                             }`}
                             onClick={closeModalWithDelay}

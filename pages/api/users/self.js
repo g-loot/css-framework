@@ -421,7 +421,7 @@ export default async function handler(req, res) {
       getStarted: {
         hasClaimed: true,
         hasInstalledClient: true,
-        hasPlayedBrawl: true,
+        hasPlayedLadder: true,
         hasPlayedMission: true,
       },
       legal: {

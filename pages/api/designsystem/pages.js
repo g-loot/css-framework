@@ -344,9 +344,9 @@ export const DSpages = [
         url: "contentcards",
       },
       {
-        label: "Brawl cards",
-        tags: "brawl,listing,card,display,leaderboard,solo,clan,brawl cards",
-        url: "brawlcards",
+        label: "Ladder cards",
+        tags: "ladder,listing,card,display,leaderboard,solo,clan,ladder cards",
+        url: "laddercards",
       },
     ],
   },
@@ -394,9 +394,9 @@ export const DSpages = [
         url: "footer",
       },
       {
-        label: "Brawl info",
-        tags: "brawl,information,info,leaderboard,brawl info",
-        url: "brawlinfo",
+        label: "Ladder info",
+        tags: "ladder,information,info,leaderboard,ladder info",
+        url: "ladderinfo",
       },
       {
         label: "Notifications",

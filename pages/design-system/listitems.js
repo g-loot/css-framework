@@ -441,7 +441,7 @@ const DSpage = () => {
                 <ul className="item-actions-dimmed">
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #1</div>
+                      <div className="item-title">Ladder #1</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -476,7 +476,7 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #2</div>
+                      <div className="item-title">Ladder #2</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -511,7 +511,7 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #3</div>
+                      <div className="item-title">Ladder #3</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -546,7 +546,7 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #4</div>
+                      <div className="item-title">Ladder #4</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -581,7 +581,7 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #5</div>
+                      <div className="item-title">Ladder #5</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -616,7 +616,7 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #6</div>
+                      <div className="item-title">Ladder #6</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -651,7 +651,7 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #7</div>
+                      <div className="item-title">Ladder #7</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -710,7 +710,7 @@ const DSpage = () => {
                 <ul className="item-actions-hidden">
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #1</div>
+                      <div className="item-title">Ladder #1</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -745,7 +745,7 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #2</div>
+                      <div className="item-title">Ladder #2</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -780,7 +780,7 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #3</div>
+                      <div className="item-title">Ladder #3</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -815,7 +815,7 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #4</div>
+                      <div className="item-title">Ladder #4</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -850,7 +850,7 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #5</div>
+                      <div className="item-title">Ladder #5</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -885,7 +885,7 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #6</div>
+                      <div className="item-title">Ladder #6</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -920,7 +920,7 @@ const DSpage = () => {
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #7</div>
+                      <div className="item-title">Ladder #7</div>
                     </div>
                     <div className="item-actions">
                       <div>
@@ -979,37 +979,37 @@ const DSpage = () => {
                 <ul className="item-interactive">
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #1</div>
+                      <div className="item-title">Ladder #1</div>
                     </div>
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #2</div>
+                      <div className="item-title">Ladder #2</div>
                     </div>
                   </li>
                   <li className="item is-active">
                     <div className="item-body">
-                      <div className="item-title">Brawl #3</div>
+                      <div className="item-title">Ladder #3</div>
                     </div>
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #4</div>
+                      <div className="item-title">Ladder #4</div>
                     </div>
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #5</div>
+                      <div className="item-title">Ladder #5</div>
                     </div>
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #6</div>
+                      <div className="item-title">Ladder #6</div>
                     </div>
                   </li>
                   <li className="item">
                     <div className="item-body">
-                      <div className="item-title">Brawl #7</div>
+                      <div className="item-title">Ladder #7</div>
                     </div>
                   </li>
                 </ul>

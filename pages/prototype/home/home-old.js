@@ -5,8 +5,8 @@ import Carousel from "../../../components/Carousel/Carousel";
 import Countdown from "../../../components/Countdown/Countdown";
 import DailyReward from "../../../components/DailyReward/DailyReward";
 import Link from "next/link";
-import ListItemBrawl from "../../../components/ListItem/ListItemBrawl";
-import ModalBrawlHowitworksVideo from "../[game]/brawls/modal-howitworks-video";
+import ListItemLadder from "../../../components/ListItem/ListItemLadder";
+import ModalLadderHowitworksVideo from "../[game]/ladders/modal-howitworks-video";
 import ModalClaimDailyRewards from "./modal-claim-dailyrewards";
 import ModalClaimLadderRewards from "./modal-claim-dailyrewards";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
@@ -29,15 +29,15 @@ export default function Home() {
   const modalVideo = query.modalvideo === "true" ? true : false;
   const [dailyNumber, setDailyNumber] = useState(0);
 
-  function openModalBrawlHowitworksVideo() {
+  function openModalLadderHowitworksVideo() {
     uiContext.openModal(
-      <ModalBrawlHowitworksVideo></ModalBrawlHowitworksVideo>
+      <ModalLadderHowitworksVideo></ModalLadderHowitworksVideo>
     );
   }
 
   useEffect(() => {
     if (modalVideo) {
-      openModalBrawlHowitworksVideo();
+      openModalLadderHowitworksVideo();
     }
   }, [modalVideo]);
 
@@ -158,10 +158,10 @@ export default function Home() {
               <button
                 type="button"
                 className="button button-secondary button-sm button-play"
-                onClick={openModalBrawlHowitworksVideo}
+                onClick={openModalLadderHowitworksVideo}
               >
                 <span className="icon icon-circle-caret-right" />
-                <span>How to brawl</span>
+                <span>How to ladder</span>
               </button>
               <h3 className="text-xl mt-6">
                 Install the <span className="text-main">tracker</span> to
@@ -220,9 +220,9 @@ export default function Home() {
             <div className="p-2 border-b border-ui-700 relative z-10 flex-none flex items-start justify-between">
               <div className="flex justify-between items-start">
                 <div>
-                  <h2 className="text-2xl">Clan Brawls</h2>
+                  <h2 className="text-2xl">Clan Ladders</h2>
                   <span className="text-sm text-ui-300">
-                    Showing your Clans latest Brawls
+                    Showing your Clans latest Ladders
                   </span>
                 </div>
               </div>
@@ -231,12 +231,12 @@ export default function Home() {
                 tooltip={
                   <div className="max-w-xs">
                     <p className="text-sm leading-tight mb-2">
-                      In Solo Brawls, you compete against other Stryda players
+                      In Solo Ladders, you compete against other Stryda players
                       to climb a leaderboard. Here you will find your ongoing
-                      and finished Brawls you have competed in.
+                      and finished Ladders you have competed in.
                     </p>
                     <p className="text-sm leading-tight mb-2">
-                      After a Brawl has finished, you can claim your reward
+                      After a Ladder has finished, you can claim your reward
                       here. It might take a few hours until the rewards are
                       available to be claimed. Please get in touch with support
                       if you have not received your reward after one day.
@@ -260,7 +260,7 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-xl max-w-[30ch] mt-8 relative z-10">
-                You can earn more rewards when playing Brawls with a Clan!
+                You can earn more rewards when playing Ladders with a Clan!
               </h3>
             </div>
             <div className="flex-none relative z-30 flex flex-col items-center justify-center mb-4">
@@ -277,9 +277,9 @@ export default function Home() {
             <div className="p-2 border-b border-ui-700 relative z-10 flex-none flex items-start justify-between">
               <div className="flex justify-between items-start">
                 <div>
-                  <h2 className="text-2xl">Solo Brawls</h2>
+                  <h2 className="text-2xl">Solo Ladders</h2>
                   <span className="text-sm text-ui-300">
-                    Showing your latest Solo Brawls
+                    Showing your latest Solo Ladders
                   </span>
                 </div>
               </div>
@@ -288,12 +288,12 @@ export default function Home() {
                 tooltip={
                   <div className="max-w-xs">
                     <p className="text-sm leading-tight mb-2">
-                      In Clan Brawls, you compete against other Stryda Clans to
+                      In Clan Ladders, you compete against other Stryda Clans to
                       climb a leaderboard. Here you will find your ongoing and
-                      finished Brawls your Clan have competed in.
+                      finished Ladders your Clan have competed in.
                     </p>
                     <p className="text-sm leading-tight mb-2">
-                      After a Brawl has finished, you can claim your reward
+                      After a Ladder has finished, you can claim your reward
                       here. It might take a few hours until the rewards are
                       available to be claimed. Please get in touch with support
                       if you have not received your reward after one day.
@@ -310,11 +310,11 @@ export default function Home() {
               <ul className="space-x-2 lg:space-x-0 lg:space-y-2 p-2 flex lg:block">
                 {prototype.games.map((game, gameIndex) => (
                   <>
-                    {game.brawls?.map((brawl, brawlIndex) => (
-                      <ListItemBrawl
-                        key={brawlIndex}
+                    {game.ladders?.map((ladder, ladderIndex) => (
+                      <ListItemLadder
+                        key={ladderIndex}
                         game={game}
-                        brawl={brawl}
+                        ladder={ladder}
                       />
                     ))}
                   </>

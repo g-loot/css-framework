@@ -15,7 +15,7 @@ const MissionsHowitworksTabs = [
         text: "Make sure to read the tournament rules and additional information before registering.",
       },
       {
-        text: "<b class='text-main'>Showdown</b>: Monthly tournaments with a prize pool and your honor on the line! To compete, you need a Ticket from a tournament or Brawl.",
+        text: "<b class='text-main'>Showdown</b>: Monthly tournaments with a prize pool and your honor on the line! To compete, you need a Ticket from a tournament or Ladder.",
       },
       {
         text: "<b class='text-main'>Skirmish</b>: Tournaments for seasoned players and novices alike. Some offer rewards such as Tickets.",

@@ -3,16 +3,16 @@ import React, { useContext, useEffect, useState } from "react";
 import Ad from "../../../components/Ad/Ad";
 import Carousel from "../../../components/Carousel/Carousel";
 import Link from "next/link";
-import ModalBrawlHowitworksVideo from "../[game]/brawls/modal-howitworks-video";
+import ModalLadderHowitworksVideo from "../[game]/ladders/modal-howitworks-video";
 import ModalClaimDailyRewards from "./modal-claim-dailyrewards";
 import ModalClaimLadderRewards from "./modal-claim-dailyrewards";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import RewardLadder from "../../../components/RewardLadder/RewardLadder";
 import { UiContext } from "../../../contexts/ui";
 import { useRouter } from "next/router";
-import HomeBrawlSolo from "./component-brawls-solo";
-import HomeBrawlClan from "./component-brawls-clan";
-import HomeBrawlMissions from "./component-brawls-missions";
+import HomeLaddersSolo from "./component-ladders-solo";
+import HomeLaddersClan from "./component-ladders-clan";
+import HomeLadderMissions from "./component-ladders-missions";
 import ComponentRewardLadder from "../[game]/missions/component-rewardladder";
 import { usePrototypeData } from "../../../contexts/prototype";
 
@@ -24,19 +24,19 @@ export default function Home() {
   const modalVideo = query.modalvideo === "true" ? true : false;
   const [submitting, setSubmitting] = useState(false);
   const hasNoClan = query.noclan === "true" ? true : false;
-  const hasNoBrawls = query.nobrawls === "true" ? true : false;
+  const hasNoLadders = query.noladders === "true" ? true : false;
   const isPremium = query.premium === "true" ? true : false;
   const prototype = usePrototypeData();
 
-  function openModalBrawlHowitworksVideo() {
+  function openModalLadderHowitworksVideo() {
     uiContext.openModal(
-      <ModalBrawlHowitworksVideo></ModalBrawlHowitworksVideo>
+      <ModalLadderHowitworksVideo></ModalLadderHowitworksVideo>
     );
   }
 
   useEffect(() => {
     if (modalVideo) {
-      openModalBrawlHowitworksVideo();
+      openModalLadderHowitworksVideo();
     }
   }, [modalVideo]);
 
@@ -138,15 +138,15 @@ export default function Home() {
         >
           <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
             <h3 className="h6">Solo</h3>
-            {!hasNoBrawls && (
-              <Link href="/prototype/valorant/brawls/">
+            {!hasNoLadders && (
+              <Link href="/prototype/valorant/ladders/">
                 <a className="link link-hover text-ui-300 text-sm">
                   View Ladder history
                 </a>
               </Link>
             )}
           </div>
-          <HomeBrawlSolo />
+          <HomeLaddersSolo />
         </section>
         <section
           className="mb-8 animate-slide-in-bottom animate-delay"
@@ -161,14 +161,14 @@ export default function Home() {
                 </a>
               </Link>
             ) : (
-              <Link href="/prototype/valorant/brawls/">
+              <Link href="/prototype/valorant/ladders/">
                 <a className="link link-hover text-ui-300 text-sm">
                   View your Clan
                 </a>
               </Link>
             )}
           </div>
-          <HomeBrawlClan />
+          <HomeLaddersClan />
         </section>
         <section className="my-16 surface sm:rounded-lg overflow-hidden hidden lg:block">
           <div className="relative z-10 px-4 py-20 md:w-1/2 mx-auto text-center">
@@ -178,7 +178,7 @@ export default function Home() {
               rewarding with <span className="text-premium-500">Premium</span>
             </h3>
             <p className="text-lg text-ui-100 mt-4 mb-5">
-              Get a 50% XP boost on all completed missions &amp; Brawls matches, remove ads and much more.
+              Get a 50% XP boost on all completed missions &amp; Ladders matches, remove ads and much more.
             </p>
             <Link href={`/prototype/premium${prototype.getURLparams()}`}>
               <button
@@ -224,21 +224,21 @@ export default function Home() {
               at the same time
             </h3>
             <p className="text-lg text-ui-300 mt-2 mb-4">
-              Try as many Brawls as you like and play as much as you want! See
+              Try as many Ladders as you like and play as much as you want! See
               you on the leaderboard!
             </p>
           </div>
           <img
             className="absolute inset-0 h-full w-full object-cover object-left opacity-50 xl:opacity-100"
-            src="https://res.cloudinary.com/gloot/image/upload/v1672675509/Stryda/illustrations/home-ad-multiplebrawls.jpg"
+            src="https://res.cloudinary.com/gloot/image/upload/v1672675509/Stryda/illustrations/home-ad-multipleladders.jpg"
             alt=""
           />
         </section>
         */}
 
         <h2 className="h3 mt-8 mx-4 sm:mx-0">Missions</h2>
-        <HomeBrawlMissions gameSlug="valorant" />
-        <HomeBrawlMissions gameSlug="pubg" />
+        <HomeLadderMissions gameSlug="valorant" />
+        <HomeLadderMissions gameSlug="pubg" />
       </PrototypeStructure>
     </>
   );

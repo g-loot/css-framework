@@ -28,7 +28,7 @@
           "name": "coin"
         },
         {
-          "tags": "brand,gloot,token,reward,brawl",
+          "tags": "brand,gloot,token,reward,ladder",
           "name": "token"
         },
         {
@@ -44,8 +44,8 @@
           "name": "missions"
         },
         {
-          "tags": "brand,gloot,brawl,leaderboard",
-          "name": "brawl"
+          "tags": "brand,gloot,ladder,leaderboard",
+          "name": "ladder"
         },
         {
           "tags": "brand,gloot,tournament,showdown",
@@ -122,23 +122,23 @@
       "name": "Ranks",
       "icons": [
         {
-          "tags": "rank,tiers,brawls,clans,leaderboard,competition,token,bronze",
+          "tags": "rank,tiers,ladders,clans,leaderboard,competition,token,bronze",
           "name": "rank-bronze"
         },
         {
-          "tags": "rank,tiers,brawls,clans,leaderboard,competition,token,silver",
+          "tags": "rank,tiers,ladders,clans,leaderboard,competition,token,silver",
           "name": "rank-silver"
         },
         {
-          "tags": "rank,tiers,brawls,clans,leaderboard,competition,token,gold",
+          "tags": "rank,tiers,ladders,clans,leaderboard,competition,token,gold",
           "name": "rank-gold"
         },
         {
-          "tags": "rank,tiers,brawls,clans,leaderboard,competition,token,platinum",
+          "tags": "rank,tiers,ladders,clans,leaderboard,competition,token,platinum",
           "name": "rank-platinum"
         },
         {
-          "tags": "rank,tiers,brawls,clans,leaderboard,competition,token,diamond",
+          "tags": "rank,tiers,ladders,clans,leaderboard,competition,token,diamond",
           "name": "rank-diamond"
         }
       ]

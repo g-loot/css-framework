@@ -19,7 +19,7 @@ const MissionsHowitworksTabs = [
       "https://res.cloudinary.com/gloot/image/upload/v1657714133/Marketing/2022_prototype/missions-howitworks-launchgame.webp",
     paragraphs: [
       {
-        text: "When you launch your game, Stryda Tracker will launch the Overlay. The Overlay is where you can see your Mission progress and the best scores from your Brawl rounds.",
+        text: "When you launch your game, Stryda Tracker will launch the Overlay. The Overlay is where you can see your Mission progress and the best scores from your Ladder rounds.",
       },
     ],
   },

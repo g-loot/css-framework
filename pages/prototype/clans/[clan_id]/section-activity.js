@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
-import ListItemBrawl from "../../../../components/ListItem/ListItemBrawl";
+import ListItemLadder from "../../../../components/ListItem/ListItemLadder";
 import ModalGiftTokens from "../modal-gift-tokens";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
@@ -54,12 +54,12 @@ export default function SectionClanActivity() {
               <ul className="space-x-2 xl:space-x-0 xl:space-y-2 flex xl:flex-col">
                 {prototype.games.map((game, gameIndex) => (
                   <>
-                    {game.brawls?.map((brawl, brawlIndex) => (
+                    {game.ladders?.map((ladder, ladderIndex) => (
                       <>
-                        {brawl.status === "ongoing" && (
-                          <ListItemBrawl
-                            key={brawlIndex}
-                            brawl={brawl}
+                        {ladder.status === "ongoing" && (
+                          <ListItemLadder
+                            key={ladderIndex}
+                            ladder={ladder}
                             game={game}
                             variant={2}
                           />
@@ -69,11 +69,11 @@ export default function SectionClanActivity() {
                   </>
                 ))}
                 {/*
-              {brawlsResults.map((brawl, brawlIndex) => (
+              {laddersResults.map((ladder, ladderIndex) => (
                 <>
-                  <li key={brawl} className="surface rounded">
+                  <li key={ladder} className="surface rounded">
                     <div className="bg-ui-700 border-b border-ui-700 p-2 flex gap-2 justify-between">
-                      <h6>{brawl.name}</h6>
+                      <h6>{ladder.name}</h6>
                       <div className="chip chip-sm chip-secondary">
                         <span className="icon icon-time-machine" />
                         <span>
@@ -87,34 +87,34 @@ export default function SectionClanActivity() {
                         <div className="p-2 rounded border border-ui-700 bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
                           <span
                             className={`icon text-4xl ${
-                              prototype.getGameByID(brawl.game).slug ===
+                              prototype.getGameByID(ladder.game).slug ===
                               "apexlegends"
                                 ? "icon-game-apexlegends-symbol text-game-apexlegends"
                                 : ""
                             } ${
-                              prototype.getGameByID(brawl.game).slug === "csgo"
+                              prototype.getGameByID(ladder.game).slug === "csgo"
                                 ? "icon-game-csgo-symbol text-game-csgo"
                                 : ""
                             }  ${
-                              prototype.getGameByID(brawl.game).slug === "dota2"
+                              prototype.getGameByID(ladder.game).slug === "dota2"
                                 ? "icon-game-dota2-symbol text-game-dota2"
                                 : ""
                             }  ${
-                              prototype.getGameByID(brawl.game).slug ===
+                              prototype.getGameByID(ladder.game).slug ===
                               "leagueoflegends"
                                 ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
                                 : ""
                             }  ${
-                              prototype.getGameByID(brawl.game).slug ===
+                              prototype.getGameByID(ladder.game).slug ===
                               "rocketleague"
                                 ? "icon-game-rocketleague-symbol text-game-rocketleague"
                                 : ""
                             } ${
-                              prototype.getGameByID(brawl.game).slug === "pubg"
+                              prototype.getGameByID(ladder.game).slug === "pubg"
                                 ? "icon-game-pubg-symbol text-game-pubg"
                                 : ""
                             }  ${
-                              prototype.getGameByID(brawl.game).slug ===
+                              prototype.getGameByID(ladder.game).slug ===
                               "valorant"
                                 ? "icon-game-valorant-symbol text-game-valorant"
                                 : ""
@@ -126,7 +126,7 @@ export default function SectionClanActivity() {
                             Top spot reward
                           </div>
                           <div className="flex gap-4 items-center">
-                            {brawl.rewards.map((reward, rewardIndex) => (
+                            {ladder.rewards.map((reward, rewardIndex) => (
                               <>
                                 {reward.type === "money" && (
                                   <div className="flex items-center gap-2">
@@ -183,20 +183,20 @@ export default function SectionClanActivity() {
                         </div>
                         <div className="flex items-center gap-2 leading-none">
                           <div className="text-5xl">
-                            {brawl.soloResults?.placement}
+                            {ladder.soloResults?.placement}
                           </div>
                           <div
                             className={`text-center -space-y-1 ${
-                              brawl.result.isPositive
+                              ladder.result.isPositive
                                 ? "text-success-500"
                                 : "text-attention-500"
                             }`}
                           >
-                            {brawl.result.isPositive && (
+                            {ladder.result.isPositive && (
                               <span className="icon icon-arrow-sm-up" />
                             )}
-                            <div>{brawl.result.movement}</div>
-                            {!brawl.result.isPositive && (
+                            <div>{ladder.result.movement}</div>
+                            {!ladder.result.isPositive && (
                               <span className="icon icon-arrow-sm-down" />
                             )}
                           </div>
@@ -209,7 +209,7 @@ export default function SectionClanActivity() {
                       </div>
                       <div className="relative p-2 overflow-x-auto scrollbar-desktop">
                         <div className="flex items-center gap-4 whitespace-nowrap leading-tight">
-                          {brawl.topPerformers.map((user, userIndex) => (
+                          {ladder.topPerformers.map((user, userIndex) => (
                             <Link
                               key={userIndex}
                               href={`/prototype/profile/${
@@ -252,23 +252,23 @@ export default function SectionClanActivity() {
           {emptyState && (
             <div className="surface sm:rounded-lg px-4 py-8 text-center">
               <div className="max-w-xs mx-auto leading-tight">
-                <span className="icon icon-brawl text-6xl text-ui-500" />
+                <span className="icon icon-ladder text-6xl text-ui-500" />
                 {selectedClan.isYou && (
                   <>
                     <div className="mt-2">
                       <p className="text-sm text-ui-400 mb-2">
-                        {selectedClan.nickname} has no ongoing Brawls
+                        {selectedClan.nickname} has no ongoing Ladders
                       </p>
                       <p className="text-lg text-ui-300">
-                        Find a Brawl with the{" "}
+                        Find a Ladder with the{" "}
                         <span className="icon icon-multiple-12" /> icon and
                         compete with your Clan!
                       </p>
                     </div>
                     {/*
-                      <Link href={`/prototype/valorant/brawls${prototype.getURLparams()}`}>
+                      <Link href={`/prototype/valorant/ladders${prototype.getURLparams()}`}>
                         <a className="button button-primary">
-                          <span>Browse Brawls</span>
+                          <span>Browse Ladders</span>
                         </a>
                       </Link>
                     */}
@@ -278,7 +278,7 @@ export default function SectionClanActivity() {
                   <>
                     <div className="mt-2">
                       <p className="text-lg text-ui-300">
-                        {selectedClan.nickname} has no ongoing Brawls
+                        {selectedClan.nickname} has no ongoing Ladders
                       </p>
                     </div>
                   </>

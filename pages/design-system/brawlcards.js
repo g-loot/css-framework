@@ -29,7 +29,7 @@ const DSpage = () => {
   const uiContext = useContext(UiContext);
   return (
     <>
-      <h1 className="mb-2">Brawl cards</h1>
+      <h1 className="mb-2">Ladder cards</h1>
 
       <div className="mb-3 flex gap-2 items-baseline">
         <h2 className="h3">Primary cards</h2>
@@ -44,7 +44,7 @@ const DSpage = () => {
         <div className="">
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-col gap-4">
-              <button type="button" className="card-brawl">
+              <button type="button" className="card-ladder">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div>
@@ -63,7 +63,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="text-2xl mb-2">Competitive Brawl</h2>
+                      <h2 className="text-2xl mb-2">Competitive Ladder</h2>
                       <div className="chip chip-sm chip-secondary">
                         <span className="icon icon-time-machine"></span>
                         <span>
@@ -142,7 +142,7 @@ const DSpage = () => {
         <div className="">
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-col gap-4">
-              <button type="button" className="card-brawl">
+              <button type="button" className="card-ladder">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div>
@@ -172,7 +172,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="text-2xl mb-2">Competitive Brawl</h2>
+                      <h2 className="text-2xl mb-2">Competitive Ladder</h2>
                       <div className="chip chip-sm chip-secondary">
                         <span className="icon icon-time-machine"></span>
                         <span>
@@ -193,7 +193,7 @@ const DSpage = () => {
                           2/3
                         </div>
                         <div className="text-ui-300 text-sm">
-                          matches played to get your total Brawl points
+                          matches played to get your total Ladder points
                         </div>
                       </div>
                     </div>
@@ -268,7 +268,7 @@ const DSpage = () => {
         <div className="">
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-col gap-4">
-              <div className="card-brawl is-loading">
+              <div className="card-ladder is-loading">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div>
@@ -298,7 +298,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="text-2xl mb-2">Competitive Brawl</h2>
+                      <h2 className="text-2xl mb-2">Competitive Ladder</h2>
                       <div className="chip chip-sm chip-secondary">
                         <span className="icon icon-time-machine"></span>
                         <span>
@@ -315,7 +315,7 @@ const DSpage = () => {
                       <Tooltip
                         tooltip={
                           <div className="max-w-xs text-sm text-center leading-tight">
-                            Solo &amp; Clan Brawl
+                            Solo &amp; Clan Ladder
                           </div>
                         }
                       >
@@ -334,7 +334,7 @@ const DSpage = () => {
                           2/3
                         </div>
                         <div className="text-ui-300 text-sm">
-                          matches played to get your total Brawl points
+                          matches played to get your total Ladder points
                         </div>
                       </div>
                     </div>
@@ -390,7 +390,7 @@ const DSpage = () => {
         <div className="">
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-wrap gap-4">
-              <div className="card-brawl card-secondary">
+              <div className="card-ladder card-secondary">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
@@ -406,7 +406,7 @@ const DSpage = () => {
                   <div className="card-body">
                     <div>
                       <h2 className="h4 mb-2">
-                        Competitive Brawl
+                        Competitive Ladder
                       </h2>
                       <div className="flex gap-4 items-center">
                         <div className="flex items-center whitespace-nowrap gap-2">
@@ -509,7 +509,7 @@ const DSpage = () => {
           </p>
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-wrap gap-4">
-              <div className="card-brawl card-secondary is-active">
+              <div className="card-ladder card-secondary is-active">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
@@ -525,7 +525,7 @@ const DSpage = () => {
                   <div className="card-body">
                     <div>
                       <h2 className="h4 mb-2">
-                        Competitive Brawl
+                        Competitive Ladder
                       </h2>
                       <div className="flex gap-4 items-center">
                         <div className="flex items-center whitespace-nowrap gap-2">
@@ -584,7 +584,7 @@ const DSpage = () => {
                         type="button"
                         className="button button-sm button-primary"
                       >
-                        View Brawl
+                        View Ladder
                       </button>
                     </div>
                   </div>
@@ -636,7 +636,7 @@ const DSpage = () => {
           </p>
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-wrap gap-4">
-              <div className="card-brawl card-secondary is-inactive">
+              <div className="card-ladder card-secondary is-inactive">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
@@ -652,7 +652,7 @@ const DSpage = () => {
                   <div className="card-body">
                     <div>
                       <h2 className="h4 mb-2">
-                        Competitive Brawl
+                        Competitive Ladder
                       </h2>
                       <div className="flex gap-4 items-center">
                         <div className="flex items-center whitespace-nowrap gap-2">
@@ -731,7 +731,7 @@ const DSpage = () => {
         <div className="">
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-wrap gap-4">
-              <div className="card-brawl card-secondary">
+              <div className="card-ladder card-secondary">
                 <div className="card-overlay">
                   <div>
                     <div className="text-2xl text-ui-100">
@@ -765,7 +765,7 @@ const DSpage = () => {
                   <div className="card-body">
                     <div>
                       <h2 className="h4 mb-2">
-                        Competitive Brawl
+                        Competitive Ladder
                       </h2>
                       <div className="flex gap-4 items-center">
                         <div className="text-sm text-ui-300">
@@ -843,7 +843,7 @@ const DSpage = () => {
 
         <div className="">
           <p className="text-ui-300 mb-6">
-            You can make a secondary Brawl card horizontal by adding the
+            You can make a secondary Ladder card horizontal by adding the
             following class name:
             <code
               className="interactive text-xs"
@@ -864,7 +864,7 @@ const DSpage = () => {
           </p>
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-wrap gap-4">
-              <div className="card-brawl card-secondary card-horizontal">
+              <div className="card-ladder card-secondary card-horizontal">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
@@ -880,7 +880,7 @@ const DSpage = () => {
                   <div className="card-body">
                     <div>
                       <h2 className="h4 mb-2">
-                        Competitive Brawl
+                        Competitive Ladder
                       </h2>
                       <div className="flex gap-4 items-center">
                         <div className="flex items-center whitespace-nowrap gap-2">
@@ -962,7 +962,7 @@ const DSpage = () => {
 
         <div className="">
           <p className="text-ui-300 mb-6">
-            You can make a secondary Brawl card horizontal based on the screen
+            You can make a secondary Ladder card horizontal based on the screen
             size using the following class name:
             <code
               className="interactive text-xs"
@@ -988,7 +988,7 @@ const DSpage = () => {
           </p>
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-wrap gap-4">
-              <div className="card-brawl card-secondary lg:card-horizontal">
+              <div className="card-ladder card-secondary lg:card-horizontal">
                 <div className="card-image">
                   <div className="card-image-content">
                     <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
@@ -1004,7 +1004,7 @@ const DSpage = () => {
                   <div className="card-body">
                     <div>
                       <h2 className="h4 mb-2">
-                        Competitive Brawl
+                        Competitive Ladder
                       </h2>
                       <div className="flex gap-4 items-center">
                         <div className="flex items-center whitespace-nowrap gap-2">

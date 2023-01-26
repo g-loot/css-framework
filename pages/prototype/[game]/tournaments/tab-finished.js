@@ -6,7 +6,7 @@ import moment from "moment";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
-export default function TabBrawlsHistory() {
+export default function TabLaddersHistory() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
@@ -28,7 +28,7 @@ export default function TabBrawlsHistory() {
               <span className="icon icon-smile text-6xl text-ui-500" />
               <div className="mt-2 mb-6">
                 <p className="text-sm text-ui-400">
-                  You have not taken part in any Brawls yet.
+                  You have not taken part in any Ladders yet.
                 </p>
                 <p className="text-lg text-ui-300">
                   Play tournaments and competitions to see the history of your

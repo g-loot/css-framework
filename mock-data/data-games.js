@@ -13,8 +13,8 @@ export const dataGames = [
       cover:
         "https://res.cloudinary.com/gloot/image/upload/v1644677000/Marketing/202109_gloot2/Game_cover_Valorant.jpg",
       heroMission:
-        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-1.webp",
-      heroBrawl:
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp",
+      heroLadder:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
       heroTournament:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
@@ -99,12 +99,12 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1672672256/Stryda/demo/mission-valorant_6.jpg",
       },
     ],
-    brawls: [
+    ladders: [
       {
         id: 1,
         solo: true,
         clan: false,
-        name: "Unrated Brawl",
+        name: "Unrated Ladder",
         cover:
           "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp",
         status: "ongoing",
@@ -130,7 +130,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 123,
+              ladderPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -146,7 +146,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 115,
+              ladderPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -162,7 +162,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 113,
+              ladderPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -178,7 +178,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 108,
+              ladderPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -194,7 +194,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 98,
+              ladderPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -210,7 +210,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 97,
+              ladderPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -226,7 +226,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 78,
+              ladderPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -242,7 +242,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 77,
+              ladderPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -255,7 +255,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 123,
+              ladderPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -271,7 +271,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 115,
+              ladderPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -287,7 +287,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 113,
+              ladderPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -303,7 +303,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 108,
+              ladderPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -319,7 +319,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 98,
+              ladderPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -335,7 +335,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 97,
+              ladderPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -346,7 +346,7 @@ export const dataGames = [
             rewards: null,
             stats: {
               placement: 27,
-              brawlPoints: 78,
+              ladderPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -357,7 +357,7 @@ export const dataGames = [
             rewards: null,
             stats: {
               placement: 27,
-              brawlPoints: 77,
+              ladderPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -382,7 +382,7 @@ export const dataGames = [
         id: 2,
         solo: true,
         clan: true,
-        name: "Brawl - the Winter edition",
+        name: "Ladder - the Winter edition",
         cover:
           "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
         status: "ongoing",
@@ -409,7 +409,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 123,
+              ladderPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -425,7 +425,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 115,
+              ladderPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -441,7 +441,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 113,
+              ladderPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -457,7 +457,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 108,
+              ladderPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -473,7 +473,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 98,
+              ladderPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -489,7 +489,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 97,
+              ladderPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -505,7 +505,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 78,
+              ladderPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -521,7 +521,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 77,
+              ladderPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -539,7 +539,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 123,
+              ladderPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -555,7 +555,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 115,
+              ladderPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -571,7 +571,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 113,
+              ladderPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -587,7 +587,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 108,
+              ladderPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -603,7 +603,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 98,
+              ladderPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -619,7 +619,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 97,
+              ladderPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -630,7 +630,7 @@ export const dataGames = [
             rewards: null,
             stats: {
               placement: 27,
-              brawlPoints: 78,
+              ladderPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -641,7 +641,7 @@ export const dataGames = [
             rewards: null,
             stats: {
               placement: 27,
-              brawlPoints: 77,
+              ladderPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -666,7 +666,7 @@ export const dataGames = [
         id: 3,
         solo: true,
         clan: true,
-        name: "Competitive Brawl",
+        name: "Competitive Ladder",
         cover:
           "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-6.webp",
         status: "finished",
@@ -693,7 +693,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 123,
+              ladderPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -713,7 +713,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 115,
+              ladderPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -733,7 +733,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 113,
+              ladderPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -753,7 +753,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 108,
+              ladderPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -769,7 +769,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 98,
+              ladderPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -785,7 +785,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 97,
+              ladderPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -801,7 +801,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 78,
+              ladderPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -817,7 +817,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 77,
+              ladderPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -835,7 +835,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 123,
+              ladderPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -851,7 +851,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 115,
+              ladderPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -867,7 +867,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 113,
+              ladderPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -883,7 +883,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 108,
+              ladderPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -899,7 +899,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 98,
+              ladderPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -915,7 +915,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 97,
+              ladderPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -926,7 +926,7 @@ export const dataGames = [
             rewards: null,
             stats: {
               placement: 27,
-              brawlPoints: 78,
+              ladderPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -937,7 +937,7 @@ export const dataGames = [
             rewards: null,
             stats: {
               placement: 27,
-              brawlPoints: 77,
+              ladderPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1285,7 +1285,7 @@ export const dataGames = [
         "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_PUBG_Battlegrounds.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
-      heroBrawl:
+      heroLadder:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-2.webp",
       heroTournament:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-3.webp",
@@ -1370,12 +1370,12 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1672672870/Stryda/demo/mission-pubg_6.jpg",
       },
     ],
-    brawls: [
+    ladders: [
       {
         id: 1,
         solo: true,
         clan: true,
-        name: "Competitive Brawl",
+        name: "Competitive Ladder",
         cover:
           "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-4.webp",
         status: "ongoing",
@@ -1401,7 +1401,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 123,
+              ladderPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1417,7 +1417,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 115,
+              ladderPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1433,7 +1433,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 113,
+              ladderPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1449,7 +1449,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 108,
+              ladderPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1465,7 +1465,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 98,
+              ladderPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1481,7 +1481,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 97,
+              ladderPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1497,7 +1497,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 78,
+              ladderPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1513,7 +1513,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 77,
+              ladderPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1526,7 +1526,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 123,
+              ladderPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1537,7 +1537,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 115,
+              ladderPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1548,7 +1548,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 113,
+              ladderPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1559,7 +1559,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 108,
+              ladderPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1570,7 +1570,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 98,
+              ladderPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1581,7 +1581,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 97,
+              ladderPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1592,7 +1592,7 @@ export const dataGames = [
             rewards: null,
             stats: {
               placement: 27,
-              brawlPoints: 78,
+              ladderPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1603,7 +1603,7 @@ export const dataGames = [
             rewards: null,
             stats: {
               placement: 27,
-              brawlPoints: 77,
+              ladderPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1621,7 +1621,7 @@ export const dataGames = [
         id: 2,
         solo: true,
         clan: false,
-        name: "Brawl - the Winter edition",
+        name: "Ladder - the Winter edition",
         cover:
           "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-5.webp",
         status: "ongoing",
@@ -1648,7 +1648,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 123,
+              ladderPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1664,7 +1664,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 115,
+              ladderPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1680,7 +1680,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 113,
+              ladderPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1696,7 +1696,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 108,
+              ladderPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1712,7 +1712,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 98,
+              ladderPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1728,7 +1728,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 97,
+              ladderPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1744,7 +1744,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 78,
+              ladderPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1760,7 +1760,7 @@ export const dataGames = [
             ],
             stats: {
               placement: 27,
-              brawlPoints: 77,
+              ladderPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1773,7 +1773,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 123,
+              ladderPoints: 123,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1784,7 +1784,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 115,
+              ladderPoints: 115,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1795,7 +1795,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 113,
+              ladderPoints: 113,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1806,7 +1806,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 108,
+              ladderPoints: 108,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1817,7 +1817,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 98,
+              ladderPoints: 98,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1828,7 +1828,7 @@ export const dataGames = [
             rewards: [],
             stats: {
               placement: 27,
-              brawlPoints: 97,
+              ladderPoints: 97,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1839,7 +1839,7 @@ export const dataGames = [
             rewards: null,
             stats: {
               placement: 27,
-              brawlPoints: 78,
+              ladderPoints: 78,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1850,7 +1850,7 @@ export const dataGames = [
             rewards: null,
             stats: {
               placement: 27,
-              brawlPoints: 77,
+              ladderPoints: 77,
               matchPlayed: 11,
               tiebreakerPoints: 1402,
               gameScore: 143,
@@ -1961,7 +1961,7 @@ export const dataGames = [
         "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Apex_Legends.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-1.webp",
-      heroBrawl:
+      heroLadder:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-2.webp",
       heroTournament:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-3.webp",
@@ -2009,7 +2009,7 @@ export const dataGames = [
         "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_CSGO.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-1.webp",
-      heroBrawl:
+      heroLadder:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-2.webp",
       heroTournament:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-3.webp",
@@ -2057,7 +2057,7 @@ export const dataGames = [
         "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Dota_2.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-dota2-1.webp",
-      heroBrawl:
+      heroLadder:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-dota2-2.webp",
       heroTournament:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-dota2-3.webp",
@@ -2107,7 +2107,7 @@ export const dataGames = [
         "https://res.cloudinary.com/gloot/image/upload/v1645621586/Marketing/202109_gloot2/Game_cover_League_of_Legends.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-1.webp",
-      heroBrawl:
+      heroLadder:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-2.webp",
       heroTournament:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-3.webp",
@@ -2157,7 +2157,7 @@ export const dataGames = [
         "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Rocket_League.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-1.webp",
-      heroBrawl:
+      heroLadder:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-2.webp",
       heroTournament:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-3.webp",

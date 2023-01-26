@@ -52,8 +52,8 @@ const DSpage = () => {
                     </li>
                     <li>
                       <a tabIndex={1}>
-                        <span className="icon icon-16 icon-brawl" />
-                        <span>Brawls</span>
+                        <span className="icon icon-16 icon-ladder" />
+                        <span>Ladders</span>
                       </a>
                     </li>
                     <li>
@@ -106,8 +106,8 @@ const DSpage = () => {
                     </li>
                     <li>
                       <a tabIndex={1}>
-                        <span className="icon icon-16 icon-brawl" />
-                        <span>Brawls</span>
+                        <span className="icon icon-16 icon-ladder" />
+                        <span>Ladders</span>
                       </a>
                     </li>
                     <li>
@@ -160,8 +160,8 @@ const DSpage = () => {
                     </li>
                     <li>
                       <a tabIndex={1}>
-                        <span className="icon icon-16 icon-brawl" />
-                        <span>Brawls</span>
+                        <span className="icon icon-16 icon-ladder" />
+                        <span>Ladders</span>
                       </a>
                     </li>
                     <li>
@@ -207,7 +207,7 @@ const DSpage = () => {
                       <div className="item">
                         <div className="item-body">
                           <div className="p-2 item-title text-lg">
-                            Before entering a Brawl
+                            Before entering a Ladder
                           </div>
                         </div>
                         <div className="item-actions">
@@ -263,12 +263,12 @@ const DSpage = () => {
                   <div className="p-8 text-ui-300 space-y-4">
                     <p>
                       To join the leaderboard, you need to complete a certain
-                      number of matches depending on the rules of the Brawl you
+                      number of matches depending on the rules of the Ladder you
                       want to compete in.
                     </p>
                     <p>
                       When you have played the minimum amount of matches, your
-                      Brawl points will be added to the leaderboard.
+                      Ladder points will be added to the leaderboard.
                     </p>
                     <p>
                       You can always play more matches as long as you have
@@ -282,7 +282,7 @@ const DSpage = () => {
                       <div className="item">
                         <div className="item-body">
                           <div className="p-2 item-title text-lg">
-                            Pay tokens to activate Brawl matches
+                            Pay tokens to activate Ladder matches
                           </div>
                         </div>
                         <div className="item-actions">
@@ -313,12 +313,12 @@ const DSpage = () => {
                       </video>
                     </div>
                     <div className="text-ui-300 space-y-4">
-                      <p>To play in the Brawl you need Tokens.</p>
+                      <p>To play in the Ladder you need Tokens.</p>
                       <p>
                         Each match costs a certain number of Tokens. When you
-                        have spent a Token and activated a Brawl match, your
+                        have spent a Token and activated a Ladder match, your
                         next game match in the correct game mode will count
-                        towards the Brawl.
+                        towards the Ladder.
                       </p>
                     </div>
                   </div>

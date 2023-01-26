@@ -24,7 +24,7 @@ const DSpage = () => {
                 <div className='stat'>
                   <div className='stat-body'>
                     <div className='stat-label'>
-                      Total Brawl Played
+                      Total Ladder Played
                     </div>
                     <div className='stat-value'>
                       89,400

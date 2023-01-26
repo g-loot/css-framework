@@ -18,7 +18,7 @@ const DSpage = () => {
                   <ul className="tabs border-b border-ui-700">
                     <li>
                       <button className="is-active">
-                        <span>Brawls</span>
+                        <span>Ladders</span>
                       </button>
                     </li>
                     <li>
@@ -33,7 +33,7 @@ const DSpage = () => {
                     </li>
                     <li>
                       <button>
-                        <span>Brawl history</span>
+                        <span>Ladder history</span>
                       </button>
                     </li>
                   </ul>
@@ -64,7 +64,7 @@ const DSpage = () => {
                   <ul className="tabs tabs-secondary border-b border-ui-700">
                     <li>
                       <button type="button" className="is-active">
-                        <span>Brawls</span>
+                        <span>Ladders</span>
                       </button>
                     </li>
                     <li>
@@ -79,7 +79,7 @@ const DSpage = () => {
                     </li>
                     <li>
                       <button>
-                        <span>Brawl history</span>
+                        <span>Ladder history</span>
                       </button>
                     </li>
                   </ul>
@@ -110,7 +110,7 @@ const DSpage = () => {
                   <ul className="tabs">
                     <li>
                       <button className="is-active">
-                        <span data-badge="4">Brawls</span>
+                        <span data-badge="4">Ladders</span>
                       </button>
                     </li>
                     <li>
@@ -125,7 +125,7 @@ const DSpage = () => {
                     </li>
                     <li>
                       <button>
-                        <span data-badge="1">Brawl history</span>
+                        <span data-badge="1">Ladder history</span>
                       </button>
                     </li>
                   </ul>

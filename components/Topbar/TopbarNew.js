@@ -3,7 +3,7 @@ import { useContext, useEffect } from "react";
 import Link from "next/link";
 import Lottie from "lottie-react";
 import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
-import ModalDownloadStarted from "../../pages/prototype/modal-downloadstarted";
+import ModalDownloadStarted from "../../pages/prototype-new/modal-downloadstarted";
 import Tooltip from "../Tooltip/Tooltip";
 import { UiContext } from "../../contexts/ui";
 import { usePrototypeData } from "../../contexts/prototype";
@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import Notification from "../Notification/Notification";
 import { VariablesContext } from "../../contexts/variables";
 import TopBarClaim from "../TopBarClaim/TopBarClaim";
-import ModalBuyTokens from "../../pages/prototype/wallet/modal-buytokens";
+import ModalBuyTokens from "../../pages/prototype-new/wallet/modal-buytokens";
 import Countdown from "../Countdown/Countdown";
 import Avatar from "../Avatar/Avatar";
 
@@ -26,7 +26,7 @@ const notificationsGroups = [
         title: "You unlocked an achievement!",
         text: "Congratulations on unlocking the <a href='#' class='link font-bold'>Mission achievement Level 1</a>!",
         cta: "View",
-        url: "/prototype/profile/1/achievements?modalachievement=true",
+        url: "/prototype-new/profile/1/achievements?modalachievement=true",
         time: "2 min.",
         read: false,
       },
@@ -42,7 +42,7 @@ const notificationsGroups = [
         title: "You have been kicked out",
         text: "You have been removed from the <a href='#' class='link font-bold'>BBL Esports</a> Clan. Find a new clan!",
         cta: "View",
-        url: "/prototype/clans/",
+        url: "/prototype-new/clans/",
         time: "1 min.",
       },
       {
@@ -60,7 +60,7 @@ const notificationsGroups = [
         title: "Your application was accepted",
         text: "Your application to the <a href='#' class='link font-bold'>BBL Esports</a> has been accepted. Welcome to the clan!",
         cta: "View",
-        url: "/prototype/clans/1",
+        url: "/prototype-new/clans/1",
         time: "1 min.",
       },
       {
@@ -78,7 +78,7 @@ const notificationsGroups = [
         title: "Invitation accepted",
         text: "<a href='#' class='link font-bold'>Harriss</a> has accepted and joined your clan.",
         cta: "View",
-        url: "/prototype/clans/1",
+        url: "/prototype-new/clans/1",
         time: "1 min.",
       },
       {
@@ -97,7 +97,7 @@ const notificationsGroups = [
         title: "You are getting noticed!",
         text: "You got invited to the <a href='#' class='link font-bold'>BBL Esports</a> Clan a while ago and haven't answered yet. If you don’t take action, the invitation will expire on 22.10.2022.",
         cta: "Invite",
-        url: "/prototype/clans/3",
+        url: "/prototype-new/clans/3",
         time: "1 day",
       },
       {
@@ -109,67 +109,67 @@ const notificationsGroups = [
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
         cta: "Invite",
-        url: "/prototype/clans/1/applications",
+        url: "/prototype-new/clans/1/applications",
         time: "2 days",
       },
     ],
   },
   {
-    name: "Brawl",
+    name: "Ladder",
     notifications: [
       {
         description: "Maintenance issue",
-        type: "brawl",
-        intro: "Brawl",
+        type: "ladder",
+        intro: "Ladder",
         title: "You've been refunded",
         text: "You’ve been refunded <span class='whitespace-nowrap text-currency-2-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as game.name went into maintenance and your open activations were canceled.",
         time: "4 days",
       },
       {
-        description: "Brawl has ended, tokens refunded",
-        type: "brawl",
-        intro: "Brawl",
+        description: "Ladder has ended, tokens refunded",
+        type: "ladder",
+        intro: "Ladder",
         title: "You've been refunded",
-        text: "You’ve been refunded <span class='whitespace-nowrap text-currency-2-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as the brawl.name Brawl has ended and your open activations were canceled.",
+        text: "You’ve been refunded <span class='whitespace-nowrap text-currency-2-500'><span class='translate-y-0.5 icon icon-token'></span> <span class='font-bold'>30 tokens</span></span> as the ladder.name Ladder has ended and your open activations were canceled.",
         time: "5 days",
         read: true,
         accepted: true,
       },
       {
-        description: "Brawl has ended, won a prize",
-        type: "brawl",
-        intro: "Brawl",
+        description: "Ladder has ended, won a prize",
+        type: "ladder",
+        intro: "Ladder",
         title: "You won a prize!",
-        text: "You finished <b class='text-ui-100'>#X</b> in the <a href='#' class='link font-bold'>brawl.name</a> Brawl and you won <span class='whitespace-nowrap text-currency-1-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>1000 coins</span></span>! Congrats!",
+        text: "You finished <b class='text-ui-100'>#X</b> in the <a href='#' class='link font-bold'>ladder.name</a> Ladder and you won <span class='whitespace-nowrap text-currency-1-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>1000 coins</span></span>! Congrats!",
         time: "5 days",
         read: true,
         accepted: true,
       },
       {
-        description: "Brawl has ended",
-        type: "brawl",
-        intro: "Brawl",
-        title: "The Brawl.name has ended",
+        description: "Ladder has ended",
+        type: "ladder",
+        intro: "Ladder",
+        title: "The Ladder.name has ended",
         text: "You finished <b class='text-ui-100'>#X</b>. Already looking forward to your epic comeback! ",
         time: "5 days",
         read: true,
         accepted: true,
       },
       {
-        description: "Clan brawl has ended, won a prize",
-        type: "brawl",
-        intro: "Brawl",
+        description: "Clan ladder has ended, won a prize",
+        type: "ladder",
+        intro: "Ladder",
         title: "Your clan won a prize!",
-        text: "Your Clan finished <b class='text-ui-100'>#X</b> in the brawl.name Brawl so you’re granted <span class='whitespace-nowrap text-currency-1-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>1000 coins</span></span>! Congrats!",
+        text: "Your Clan finished <b class='text-ui-100'>#X</b> in the ladder.name Ladder so you’re granted <span class='whitespace-nowrap text-currency-1-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>1000 coins</span></span>! Congrats!",
         time: "5 days",
         read: true,
         accepted: true,
       },
       {
-        description: "Clan brawl has ended",
-        type: "brawl",
-        intro: "Brawl",
-        title: "The Brawl.name has ended",
+        description: "Clan ladder has ended",
+        type: "ladder",
+        intro: "Ladder",
+        title: "The Ladder.name has ended",
         text: "Your clan finished <b class='text-ui-100'>#X</b>! Good luck next time!",
         time: "5 days",
         read: true,
@@ -197,31 +197,6 @@ export default function TopbarNew() {
     }
   }, [modalDownloadStarted]);
 
-  /*
-
-  useEffect(() => {
-    document.addEventListener("keydown", (e) => {
-      e.preventDefault();
-      if ((e.metaKey || e.ctrlKey) && e.code === "KeyC") {
-        console.log("KeyC", variablesContext.newBrand);
-        if(!variablesContext.newBrand) {
-          variablesContext.brandOn();
-        } else {
-          variablesContext.brandOff();
-        }
-      }
-    });
-  });
-  */
-
-  function brandToggle() {
-    if (!variablesContext.newBrand) {
-      variablesContext.brandOn();
-    } else {
-      variablesContext.brandOff();
-    }
-  }
-
   function openModalDownloadStarted() {
     uiContext.openModal(<ModalDownloadStarted></ModalDownloadStarted>);
   }
@@ -231,87 +206,152 @@ export default function TopbarNew() {
   }
 
   return (
-    <div className="sticky top-0 z-50 bg-ui-850/90 navbar h-12 flex items-center border-b border-ui-700">
-      <div className="container relative">
-        <div
-          className={`flex lg:gap-8 mx-auto px-2  ${hasAds ? "3xl:m-0" : ""}`}
-        >
-          <div className="flex-1 flex items-center justify-between">
-            <div className="flex items-center">
-              <div className="block lg:hidden">
-                <label
-                  htmlFor="drawer-prototype"
-                  className="drawer-button button button-sm button-tertiary rounded-full"
-                >
-                  <div className="icon icon-menu-8 text-ui-200"></div>
-                </label>
-              </div>
-              <ul className="hidden lg:flex tabs tabs-secondary overflow-visible">
-                <li>
-                  <Link href={`/prototype/home${prototype.getURLparams()}`}>
-                    <a
-                      className={` ${
-                        router.pathname.endsWith("prototype") ? "is-active" : ""
-                      } ${router.pathname.includes("home") ? "is-active" : ""}`}
-                    >
-                      <span className="text-sm uppercase">Home</span>
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/prototype/shop${prototype.getURLparams()}`}>
-                    <a
-                      className={` ${
-                        router.pathname.includes("shop") ? "is-active" : ""
-                      }`}
-                    >
-                      <span className="text-sm uppercase">Shop</span>
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
-                    <a
-                      className={` ${
-                        router.pathname.includes("premium") ? "is-active" : ""
-                      }`}
-                    >
-                      <span className="text-sm uppercase">Premium</span>
-                    </a>
-                  </Link>
-                </li>
-                <button
-                  onClick={openModalBuyTokens}
-                  type="button"
-                  className="tab tab-secondary"
-                >
-                  <span>Get tokens</span>
-                </button>
-                {/*
+    <div className="sticky top-0 z-50 bg-ui-900/0 navbar h-12 hidden">
+      <div className="flex flex-1 justify-center">
+              <ul className="menu menu-horizontal ml-4">
                   <li>
-                    <Link
-                      href={`/prototype/tracker${prototype.getURLparams()}`}
-                    >
+                    <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
                       <a
                         className={` ${
-                          router.pathname.includes("tracker") ? "is-active" : ""
-                        }`}
+                          router.pathname.endsWith("prototype") ? "is-active" : ""
+                        } ${router.pathname.includes("home") ? "is-active" : ""}`}
                       >
-                        <div className="flex gap-2 items-center">
-                          <span className="icon icon-data-download" />
-                          <span className="text-sm uppercase">
-                            Download tracker
-                          </span>
-                        </div>
+                        <span>Home</span>
                       </a>
                     </Link>
                   </li>
-                      */}
-              </ul>
-
-              <TopBarClaim />
+                  <li>
+                    <Link href={`/prototype-new/missions${prototype.getURLparams()}`}>
+                      <a
+                        className={` ${
+                          router.pathname.includes("shop") ? "is-active" : ""
+                        }`}
+                      >
+                        <span>Missions</span>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/prototype-new/ladders${prototype.getURLparams()}`}>
+                      <a
+                        className={` ${
+                          router.pathname.includes("shop") ? "is-active" : ""
+                        }`}
+                      >
+                        <span>Ladders</span>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/prototype-new/shop${prototype.getURLparams()}`}>
+                      <a
+                        className={` ${
+                          router.pathname.includes("shop") ? "is-active" : ""
+                        }`}
+                      >
+                        <span>Shop</span>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={`/prototype-new/premium${prototype.getURLparams()}`}
+                    >
+                      <a
+                        className={` ${
+                          router.pathname.includes("premium") ? "is-active" : ""
+                        }`}
+                      >
+                        <span>Premium</span>
+                      </a>
+                    </Link>
+                  </li>
+                </ul>
             </div>
-            <div className="flex justify-end items-center gap-1 sm:gap-2">
+      <div className="relative w-full max-w-3xl md:px-8 hidden">
+        <div
+          className={`flex lg:gap-8 mx-auto px-2 ${hasAds ? "3xl:m-0" : ""}`}
+        >
+          <div className="flex-1 flex items-center justify-between">
+            <div className="flex items-center">
+              <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
+                <a className="flex items-center gap-2 interactive">
+                  <img
+                    width="110"
+                    height="auto"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
+                    alt="Stryda logo"
+                  />
+                </a>
+              </Link>
+
+              
+
+              
+            </div>
+
+            <div className="flex flex-1 justify-center">
+              <ul className="menu menu-horizontal ml-4">
+                  <li>
+                    <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
+                      <a
+                        className={` ${
+                          router.pathname.endsWith("prototype") ? "is-active" : ""
+                        } ${router.pathname.includes("home") ? "is-active" : ""}`}
+                      >
+                        <span>Home</span>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/prototype-new/missions${prototype.getURLparams()}`}>
+                      <a
+                        className={` ${
+                          router.pathname.includes("shop") ? "is-active" : ""
+                        }`}
+                      >
+                        <span>Missions</span>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/prototype-new/ladders${prototype.getURLparams()}`}>
+                      <a
+                        className={` ${
+                          router.pathname.includes("shop") ? "is-active" : ""
+                        }`}
+                      >
+                        <span>Ladders</span>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/prototype-new/shop${prototype.getURLparams()}`}>
+                      <a
+                        className={` ${
+                          router.pathname.includes("shop") ? "is-active" : ""
+                        }`}
+                      >
+                        <span>Shop</span>
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={`/prototype-new/premium${prototype.getURLparams()}`}
+                    >
+                      <a
+                        className={` ${
+                          router.pathname.includes("premium") ? "is-active" : ""
+                        }`}
+                      >
+                        <span>Premium</span>
+                      </a>
+                    </Link>
+                  </li>
+                </ul>
+            </div>
+            <div className="flex justify-end items-center gap-1 sm:gap-2 hidden">
               <div className="dropdown dropdown-center md:dropdown-end">
                 <div
                   tabIndex="1"
@@ -330,7 +370,9 @@ export default function TopbarNew() {
                     <div className="text-sm font-bold text-ui-200 text-center pl-px">
                       <div className="infobanner is-active">
                         <div className="infobanner-front">
-                          <span className="font-bold text-xs">{isPremium ? <>+165%</> : <>+15%</>}</span>
+                          <span className="font-bold text-xs">
+                            {isPremium ? <>+165%</> : <>+15%</>}
+                          </span>
                         </div>
                         <div className="infobanner-back">
                           <span className="icon icon-xp-symbol text-3xl text-main mx-auto" />
@@ -344,9 +386,7 @@ export default function TopbarNew() {
                   tabIndex="1"
                   className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[300px] overflow-hidden rounded-xl shadow-xl"
                 >
-                  <h5 className="mx-2 mt-2">
-                    XP Boosts
-                  </h5>
+                  <h5 className="mx-2 mt-2">XP Boosts</h5>
                   <ul className="rounded-lg text-left text-sm p-2 leading-none">
                     {isPremium ? (
                       <li className="flex gap-2 py-1 items-center">
@@ -364,9 +404,7 @@ export default function TopbarNew() {
                     <li className="flex gap-2 py-1 items-center">
                       <div className="icon icon-e-add text-main" />
                       <div className="flex-1">Clan boost</div>
-                      <div className="text-right text-main">
-                        +10%
-                      </div>
+                      <div className="text-right text-main">+10%</div>
                     </li>
                     <li className="separator bg-ui-600" />
                     <li className="flex gap-2 py-1 items-center">
@@ -402,7 +440,9 @@ export default function TopbarNew() {
                 }
               >
                 <div className="rounded-full bg-ui-700 interactive">
-                  <Link href={`/prototype/search${prototype.getURLparams()}`}>
+                  <Link
+                    href={`/prototype-new/search${prototype.getURLparams()}`}
+                  >
                     <a className="button button-ghost rounded-full">
                       <span className="icon icon-zoom text-ui-200" />
                     </a>
@@ -420,7 +460,9 @@ export default function TopbarNew() {
                       </div>
                     }
                   >
-                    <Link href={`/prototype/wallet${prototype.getURLparams()}`}>
+                    <Link
+                      href={`/prototype-new/wallet${prototype.getURLparams()}`}
+                    >
                       <div className="flex items-center">
                         <span className="icon icon-wallet-43" />
                       </div>
@@ -435,7 +477,7 @@ export default function TopbarNew() {
                           <h6 className="my-4 text-ui-100">Coins</h6>
                           <div className="absolute -top-8 -right-5 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1674571131/Stryda/currencies/Reward-coin-face.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-coin-face.png"
                               className="w-14 h-14"
                               alt=""
                             />
@@ -458,7 +500,7 @@ export default function TopbarNew() {
                               <div className=" w-12 uppercase">Get</div>
                               <div className="flex-1">
                                 From <strong>Daily Login</strong> Streak and{" "}
-                                <strong>Weekly Brawl winnings</strong>.
+                                <strong>Weekly Ladder winnings</strong>.
                               </div>
                             </li>
                           </ul>
@@ -466,7 +508,7 @@ export default function TopbarNew() {
                       }
                     >
                       <Link
-                        href={`/prototype/wallet${prototype.getURLparams()}`}
+                        href={`/prototype-new/wallet${prototype.getURLparams()}`}
                       >
                         <div className="flex items-center gap-1 text-currency-1-500">
                           <span className="icon icon-20 icon-coin" />
@@ -484,7 +526,7 @@ export default function TopbarNew() {
                           <h6 className="my-4 text-ui-100">Token</h6>
                           <div className="absolute -top-8 -right-5 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1674571131/Stryda/currencies/Reward-token-face.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-token-face.png"
                               className="w-14 h-14"
                               alt=""
                             />
@@ -500,7 +542,7 @@ export default function TopbarNew() {
                             <li className="flex gap-2 text-sm">
                               <div className=" w-12 uppercase">Use</div>
                               <div className="flex-1">
-                                To enter Weekly Brawls.
+                                To enter Weekly Ladders.
                               </div>
                             </li>
                             <li className="flex gap-2 text-sm">
@@ -516,7 +558,7 @@ export default function TopbarNew() {
                       }
                     >
                       <Link
-                        href={`/prototype/wallet${prototype.getURLparams()}`}
+                        href={`/prototype-new/wallet${prototype.getURLparams()}`}
                       >
                         <div className="flex items-center gap-1 text-currency-2-500">
                           <span className="icon icon-20 icon-token" />
@@ -534,7 +576,7 @@ export default function TopbarNew() {
                           <h6 className="my-4 text-ui-100">Power token</h6>
                           <div className="absolute -top-8 -right-5 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1674571131/Stryda/currencies/Reward-powertoken-face.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-powertoken-face.png"
                               className="w-14 h-14"
                               alt=""
                             />
@@ -565,7 +607,7 @@ export default function TopbarNew() {
                       }
                     >
                       <Link
-                        href={`/prototype/wallet${prototype.getURLparams()}`}
+                        href={`/prototype-new/wallet${prototype.getURLparams()}`}
                       >
                         <div className="flex items-center gap-1 text-currency-3-500">
                           <span className="icon icon-20 icon-powertoken" />
@@ -609,14 +651,14 @@ export default function TopbarNew() {
                           <li className="flex gap-2 text-sm">
                             <div className=" w-12 uppercase">Get</div>
                             <div className="flex-1">
-                              From <strong>Weekly Brawls</strong> winnings.
+                              From <strong>Weekly Ladders</strong> winnings.
                             </div>
                           </li>
                         </ul>
                       </div>
                     }
                   >
-                    <Link href={`/prototype/wallet${prototype.getURLparams()}`}>
+                    <Link href={`/prototype-new/wallet${prototype.getURLparams()}`}>
                       <div className="flex items-center">
                         <img
                           src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
@@ -676,7 +718,7 @@ export default function TopbarNew() {
                           <select id="favorite-game" className="input-sm">
                             <option selected>Show all categories</option>
                             <option>Clans</option>
-                            <option>Brawls</option>
+                            <option>Ladders</option>
                             <option>Missions</option>
                             <option>Wallet</option>
                           </select>
@@ -723,7 +765,7 @@ export default function TopbarNew() {
                               (notification, notificationIndex) => (
                                 <Link
                                   key={notificationIndex}
-                                  href={`/prototype/wallet${prototype.getURLparams()}`}
+                                  href={`/prototype-new/wallet${prototype.getURLparams()}`}
                                 >
                                   <li
                                     className={`item rounded-xl item-interactive relative surface surface-ui-600 hover:opacity-50 ${
@@ -788,7 +830,7 @@ export default function TopbarNew() {
                   <ul className="menu menu-rounded menu-secondary">
                     <li>
                       <Link
-                        href={`/prototype/profile/1${
+                        href={`/prototype-new/profile/1${
                           hasAds ? "&ads=true" : ""
                         }`}
                       >
@@ -800,7 +842,7 @@ export default function TopbarNew() {
                     </li>
                     <li>
                       <Link
-                        href={`/prototype/wallet${prototype.getURLparams()}`}
+                        href={`/prototype-new/wallet${prototype.getURLparams()}`}
                       >
                         <a tabIndex="1">
                           <span className="icon icon-wallet-43" />
@@ -811,7 +853,7 @@ export default function TopbarNew() {
                     <li className="separator"></li>
                     <li>
                       <Link
-                        href={`/prototype/profile/settings${
+                        href={`/prototype-new/profile/settings${
                           hasAds ? "&ads=true" : ""
                         }`}
                       >
@@ -823,7 +865,7 @@ export default function TopbarNew() {
                     </li>
                     <li>
                       <Link
-                        href={`/prototype/how-it-works${
+                        href={`/prototype-new/how-it-works${
                           hasAds ? "&ads=true" : ""
                         }`}
                       >

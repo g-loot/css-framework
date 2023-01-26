@@ -7,7 +7,7 @@
 
 
 .card, 
-.card-brawl, 
+.card-ladder, 
 .card-mission, 
 .card-tournament {
   @apply
@@ -33,7 +33,7 @@
 }
 
 
-.card-brawl,
+.card-ladder,
 .card-mission {
   > .card-overlay {
     @apply
@@ -746,9 +746,9 @@
   }
 }
 
-/* card-brawl */
+/* card-ladder */
 
-.card-brawl {
+.card-ladder {
   @apply
   grid
   grid-cols-3
@@ -928,9 +928,9 @@
   }
 }
 
-/* card brawl secondary */
+/* card ladder secondary */
 
-.card-brawl.card-secondary {
+.card-ladder.card-secondary {
   & {
     @apply
     flex-none
@@ -1091,10 +1091,10 @@
   }
 }
 
-/* responsive card brawl secondary stacked  */
+/* responsive card ladder secondary stacked  */
 
 @media only screen and (min-width: 640px) {
-	.card-brawl.card-secondary {
+	.card-ladder.card-secondary {
     &.sm\:card-horizontal {
       @apply
       grid-cols-5
@@ -1147,7 +1147,7 @@
   }
 }
 @media only screen and (min-width: 768px) {
-	.card-brawl.card-secondary {
+	.card-ladder.card-secondary {
     &.md\:card-horizontal {
       @apply
       grid-cols-5
@@ -1200,7 +1200,7 @@
   }
 }
 @media only screen and (min-width: 1024px) {
-	.card-brawl.card-secondary {
+	.card-ladder.card-secondary {
     &.lg\:card-horizontal {
       @apply
       grid-cols-5
@@ -1253,7 +1253,7 @@
   }
 }
 @media only screen and (min-width: 1280px) {
-	.card-brawl.card-secondary {
+	.card-ladder.card-secondary {
     &.xl\:card-horizontal {
       @apply
       grid-cols-5
@@ -1310,7 +1310,7 @@
 
 .card-mission,
 .card-tournament,
-.card-brawl {
+.card-ladder {
   &.is-active {
     &::after {
       @apply
@@ -1491,7 +1491,7 @@
         ;
       }
     }
-    .card-brawl.card-secondary {
+    .card-ladder.card-secondary {
       > div {
         @apply
         bg-none

@@ -533,6 +533,7 @@ button {
         }
       }
     }
+    &.button-powertoken,
     &.button-ticket {
       > div:last-child {
         span {

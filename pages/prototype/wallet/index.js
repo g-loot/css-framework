@@ -54,7 +54,7 @@ export default function Home() {
               <p className="text-ui-300 max-w-[70ch] mt-4">
                 Get to know the different currencies and rewards by clicking on
                 the icons and keep track of your earnings from Missions, Weekly
-                Brawls and Monthly Tournaments.
+                Ladders and Monthly Tournaments.
               </p>
             </div>
             <div

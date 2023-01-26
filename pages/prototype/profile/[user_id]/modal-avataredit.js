@@ -117,7 +117,8 @@ export default function ModalAvatarEdit(props) {
                         </div>
                       </div>
                     </label>
-                    {selectedShopsection.items?.map((item, itemIndex) => (
+                    {selectedShopsection.items?.sort((itemA, itemB) => itemA.price - itemB.price).map((item, itemIndex) => (
+                      <>{item.isOwned || item.id === id && (
                       <label className="form-checkbox form-image" key={item.id}>
                         <input
                           type="radio"
@@ -126,7 +127,7 @@ export default function ModalAvatarEdit(props) {
                           onChange={handlechange}
                           defaultChecked={item.id === id}
                         />
-                        <span className="sr-only">Valorant</span>
+                        <span className="sr-only">{item.name}</span>
                         <div className="w-32 h-32 rounded-md flex items-center justify-center p-4 text-center">
                           <div>
                             <div className="avatar avatar-circle avatar-sm my-3 mx-auto">
@@ -141,6 +142,7 @@ export default function ModalAvatarEdit(props) {
                           </div>
                         </div>
                       </label>
+                      )}</>
                     ))}
                   </div>
                 </Slider>

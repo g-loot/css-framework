@@ -197,12 +197,12 @@ export default function Home() {
                       No applicants to show.
                     </p>
                     <p className="text-lg text-ui-300">
-                      Brawl more to promote your clan.
+                      Ladder more to promote your clan.
                     </p>
                   </div>
-                  <Link href="/prototype/valorant/brawls">
+                  <Link href="/prototype/valorant/ladders">
                     <a className="button button-main">
-                      <span>Browse Brawls</span>
+                      <span>Browse Ladders</span>
                     </a>
                   </Link>
                 </div>
@@ -248,7 +248,7 @@ export default function Home() {
                         </th>
                         <th>
                           <div className="text-ui-300 flex justify-center items-center gap-1">
-                            <span>No. of Brawls played</span>
+                            <span>No. of Ladders played</span>
                             <button
                               type="button"
                               className="button button-sm button-ghost rounded-full"
@@ -259,7 +259,7 @@ export default function Home() {
                         </th>
                         <th>
                           <div className="text-ui-300 flex justify-center items-center gap-1">
-                            <span>Avg. Brawl position</span>
+                            <span>Avg. Ladder position</span>
                             <button
                               type="button"
                               className="button button-sm button-ghost rounded-full"
@@ -354,7 +354,7 @@ export default function Home() {
                               <div className="text-ui-300 text-center">
                                 {
                                   prototype.getUserByID(item.user)?.stats
-                                    .playedBrawls
+                                    .playedLadders
                                 }
                               </div>
                             </td>

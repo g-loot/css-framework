@@ -29,7 +29,7 @@ const TabsItems = [
     title: "Reach milestione & unlock rewards",
     url: "missions-rewards",
     icon: "icon-military-medal",
-    img: "https://res.cloudinary.com/gloot/image/upload/v1672730191/Stryda/illustrations/coins_tokens.png",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1674654910/Stryda/illustrations/coins_tokens.png",
     content: [
       {
         type: "p",
@@ -43,27 +43,27 @@ const TabsItems = [
   },
   {
     id: 3,
-    subtitle: "Brawl",
+    subtitle: "Ladder",
     title: "Use stats to climb the leaderboard",
-    url: "brawl",
-    icon: "icon-brawl",
-    img: "https://res.cloudinary.com/gloot/image/upload/v1672730609/Stryda/illustrations/brawl_leaderboard.png",
+    url: "ladder",
+    icon: "icon-ladder",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1672730609/Stryda/illustrations/ladder_leaderboard.png",
     content: [
       {
         type: "p",
-        text: "Brawls are weekly competitions where you compete against other Stryda players in a leaderboard to earn bigger rewards.",
+        text: "Ladders are weekly competitions where you compete against other Stryda players in a leaderboard to earn bigger rewards.",
       },
       {
         type: "p",
-        text: "Like Missions, Brawls are based on your game stats (such as kills or damage.) You don’t play directly against other competitors; you just need the Stryda PC app running while you play.",
+        text: "Like Missions, Ladders are based on your game stats (such as kills or damage.) You don’t play directly against other competitors; you just need the Stryda PC app running while you play.",
       },
       {
         type: "p",
-        text: "Brawls use a “best-of” format. You can enter as many times as you want, and only your best scores count. That means if you lose your cool in a match and don’t perform as well as you’d like, you can try again, and your lower score won’t matter.",
+        text: "Ladders use a “best-of” format. You can enter as many times as you want, and only your best scores count. That means if you lose your cool in a match and don’t perform as well as you’d like, you can try again, and your lower score won’t matter.",
       },
       {
         type: "p",
-        text: "For each entry to a Brawl, you pay 1 Token. Your score from the next game round you play will go towards your Brawl total.",
+        text: "For each entry to a Ladder, you pay 1 Token. Your score from the next game round you play will go towards your Ladder total.",
       },
     ],
   },
@@ -73,7 +73,7 @@ const TabsItems = [
     title: "Get more out of Stryda",
     url: "premium",
     icon: "icon-fireworks",
-    img: "https://res.cloudinary.com/gloot/image/upload/v1665067148/Marketing/2022_prototype/Illustrations/picture_premium_missions.webp",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1674654906/Stryda/illustrations/premium.png",
     content: [
       {
         type: "p",
@@ -99,7 +99,7 @@ const TabsItems = [
     title: "Turn your gaming into cool prizes",
     url: "coins-tokens",
     icon: "icon-coin",
-    img: "https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/coins_tokens.webp",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1674654905/Stryda/illustrations/coins_tokens.png",
     content: [
       {
         type: "h4",
@@ -115,7 +115,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "Tokens are how you pay to enter your scores in the Weekly Brawl. Tokens can be earned through Mission Rewards, Daily Login Streaks, or bought from the shop.",
+        text: "Tokens are how you pay to enter your scores in the Weekly Ladder. Tokens can be earned through Mission Rewards, Daily Login Streaks, or bought from the shop.",
       },
     ],
   },
@@ -125,7 +125,7 @@ const TabsItems = [
     title: "Spend your currency into prizes",
     url: "shop",
     icon: "icon-shop",
-    img: "https://res.cloudinary.com/gloot/image/upload/v1662645308/Marketing/2022_prototype/Illustrations/shop_vouchers.webp",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1674656221/Stryda/illustrations/shop_vouchers.png",
     content: [
       {
         type: "p",
@@ -133,7 +133,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "Earn Coins in Brawls and the Daily Login Streak, and spend them in the shop. Give yourself extra motivation while you game by setting your eyes on a prize and working towards buying it.",
+        text: "Earn Coins in Ladders and the Daily Login Streak, and spend them in the shop. Give yourself extra motivation while you game by setting your eyes on a prize and working towards buying it.",
       },
       {
         type: "p",
@@ -147,7 +147,7 @@ const TabsItems = [
     title: "Be stronger with clans",
     url: "clans",
     icon: "icon-multiple-11",
-    img: "https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/clans.webp",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1674654905/Stryda/illustrations/clans.png",
     content: [
       {
         type: "p",
@@ -157,7 +157,7 @@ const TabsItems = [
         type: "ul",
         text: [
           "You can be a member of only one Clan",
-          "The best brawl score of each member adds up to the Clan",
+          "The best ladder score of each member adds up to the Clan",
           "No need to play all the games the Clan plays, one is enough.",
           "Look after top notch players, invite them to your Clan and rock the stage!",
         ],
@@ -174,11 +174,11 @@ const TabsItems = [
     title: "Play games & track your stats",
     url: "pcapp",
     icon: "icon-statistics",
-    img: "https://res.cloudinary.com/gloot/image/upload/v1662645307/Marketing/2022_prototype/Illustrations/overlay_ingame.webp",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1674654906/Stryda/illustrations/overlay_stryda.png",
     content: [
       {
         type: "p",
-        text: "The Stryda PC app is at the heart of the Stryda experience. It’s what lets you track your stats while you play and take part in Missions, Brawls, and other competitions. When you run Stryda and start playing a supported game, the app starts “listening” for certain game events such as kills or headshots.",
+        text: "The Stryda PC app is at the heart of the Stryda experience. It’s what lets you track your stats while you play and take part in Missions, Ladders, and other competitions. When you run Stryda and start playing a supported game, the app starts “listening” for certain game events such as kills or headshots.",
       },
       {
         type: "p",
@@ -220,7 +220,7 @@ const HowItWorksFAQs = [
     content: [
       {
         type: "p",
-        text: "It’s completely up to you. You can enter Missions, Brawls, and Tournaments using only virtual currencies that you earn on Stryda. If you want to, you can purchase extra Tokens. You can also become a Stryda Premium subscriber and get access to extra Missions and other perks.",
+        text: "It’s completely up to you. You can enter Missions, Ladders, and Tournaments using only virtual currencies that you earn on Stryda. If you want to, you can purchase extra Tokens. You can also become a Stryda Premium subscriber and get access to extra Missions and other perks.",
       },
     ],
   },

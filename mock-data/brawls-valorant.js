@@ -1,13 +1,13 @@
-const valorantBrawls = {
+const valorantLadders = {
   content: [
     {
       id: '1c4910f9-bcc6-4e93-afd6-b4af9a754711',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #205',
+        name: 'Weekly Ladder #205',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Brawl rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -53,7 +53,7 @@ const valorantBrawls = {
       refresh: false,
       placement: false,
       leaderboardCap: null,
-      group: 'brawl',
+      group: 'ladder',
       reward: {
         id: '7Al0m9T5XA1oeRMuhvecSz',
         closed: false,
@@ -67,7 +67,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -732,10 +732,10 @@ const valorantBrawls = {
       id: 'bd4eb5ee-e571-4d8e-be12-d3494c20ab6a',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #205',
+        name: 'Weekly Ladder #205',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Brawl rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -781,7 +781,7 @@ const valorantBrawls = {
       refresh: false,
       placement: false,
       leaderboardCap: null,
-      group: 'brawl',
+      group: 'ladder',
       reward: {
         id: '7Al0m9T5XA1oeRMuhvecSz',
         closed: false,
@@ -795,7 +795,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -1460,10 +1460,10 @@ const valorantBrawls = {
       id: '40bc0f42-88ea-4b10-9f7e-606413934835',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #206',
+        name: 'Weekly Ladder #206',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Brawl rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -1509,7 +1509,7 @@ const valorantBrawls = {
       refresh: false,
       placement: false,
       leaderboardCap: null,
-      group: 'brawl',
+      group: 'ladder',
       reward: {
         id: '7Al0m9T5XA1oeRMuhvecSz',
         closed: false,
@@ -1523,7 +1523,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -2188,10 +2188,10 @@ const valorantBrawls = {
       id: 'ea50c320-7afa-42bc-b0eb-5224e683d558',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #206',
+        name: 'Weekly Ladder #206',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Brawl rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -2237,7 +2237,7 @@ const valorantBrawls = {
       refresh: false,
       placement: false,
       leaderboardCap: null,
-      group: 'brawl',
+      group: 'ladder',
       reward: {
         id: '7Al0m9T5XA1oeRMuhvecSz',
         closed: false,
@@ -2251,7 +2251,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -2916,10 +2916,10 @@ const valorantBrawls = {
       id: '5da23963-b590-48b7-93ad-7e8a01880643',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #207',
+        name: 'Weekly Ladder #207',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Brawl rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -2965,7 +2965,7 @@ const valorantBrawls = {
       refresh: false,
       placement: false,
       leaderboardCap: null,
-      group: 'brawl',
+      group: 'ladder',
       reward: {
         id: '7Al0m9T5XA1oeRMuhvecSz',
         closed: false,
@@ -2979,7 +2979,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -3644,10 +3644,10 @@ const valorantBrawls = {
       id: 'd2a177cb-8c5f-46c7-8473-14fd93cd78b3',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #207',
+        name: 'Weekly Ladder #207',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Brawl rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -3693,7 +3693,7 @@ const valorantBrawls = {
       refresh: false,
       placement: false,
       leaderboardCap: null,
-      group: 'brawl',
+      group: 'ladder',
       reward: {
         id: '7Al0m9T5XA1oeRMuhvecSz',
         closed: false,
@@ -3707,7 +3707,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -4372,10 +4372,10 @@ const valorantBrawls = {
       id: 'dfe88d0c-7470-478c-a6c7-11a0117501d5',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #209',
+        name: 'Weekly Ladder #209',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Brawl rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -4421,7 +4421,7 @@ const valorantBrawls = {
       refresh: false,
       placement: false,
       leaderboardCap: null,
-      group: 'brawl',
+      group: 'ladder',
       reward: {
         id: '7Al0m9T5XA1oeRMuhvecSz',
         closed: false,
@@ -4435,7 +4435,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -5100,10 +5100,10 @@ const valorantBrawls = {
       id: 'e5785bcf-b4be-4195-bbe9-de1c231186fa',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #209',
+        name: 'Weekly Ladder #209',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Brawl rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -5149,7 +5149,7 @@ const valorantBrawls = {
       refresh: false,
       placement: false,
       leaderboardCap: null,
-      group: 'brawl',
+      group: 'ladder',
       reward: {
         id: '7Al0m9T5XA1oeRMuhvecSz',
         closed: false,
@@ -5163,7 +5163,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -5828,10 +5828,10 @@ const valorantBrawls = {
       id: 'e7d5a561-5bc6-4378-a431-e75df764d474',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #209',
+        name: 'Weekly Ladder #209',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Brawl rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -5877,7 +5877,7 @@ const valorantBrawls = {
       refresh: false,
       placement: false,
       leaderboardCap: null,
-      group: 'brawl',
+      group: 'ladder',
       reward: {
         id: '7Al0m9T5XA1oeRMuhvecSz',
         closed: false,
@@ -5891,7 +5891,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -6556,10 +6556,10 @@ const valorantBrawls = {
       id: '4a6f332f-974a-44c2-be4c-4462f161c3c4',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #210',
+        name: 'Weekly Ladder #210',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Brawl rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -6605,7 +6605,7 @@ const valorantBrawls = {
       refresh: false,
       placement: false,
       leaderboardCap: null,
-      group: 'brawl',
+      group: 'ladder',
       reward: {
         id: '7Al0m9T5XA1oeRMuhvecSz',
         closed: false,
@@ -6619,7 +6619,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -7284,9 +7284,9 @@ const valorantBrawls = {
       id: 'd1244d54-e25a-4e92-b0c9-6c08dbf65ce3',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #210',
+        name: 'Weekly Ladder #210',
         objective: 'this is an objective',
-        description: 'This is a placement brawl. Play 3 rounds and progress to the brawl and win fett med para',
+        description: 'This is a placement ladder. Play 3 rounds and progress to the ladder and win fett med para',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -7346,7 +7346,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -8011,9 +8011,9 @@ const valorantBrawls = {
       id: 'ac8a66ea-bacb-464a-8c62-8412011b7364',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #210',
+        name: 'Weekly Ladder #210',
         objective: 'this is an objective',
-        description: 'This is a placement brawl. Play 3 rounds and progress to the brawl and win fett med para',
+        description: 'This is a placement ladder. Play 3 rounds and progress to the ladder and win fett med para',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -8073,7 +8073,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -8738,10 +8738,10 @@ const valorantBrawls = {
       id: 'ff6e2be5-2134-4ffd-83bf-4c12e9d00e89',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #210',
+        name: 'Weekly Ladder #210',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Brawl rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -8787,7 +8787,7 @@ const valorantBrawls = {
       refresh: false,
       placement: false,
       leaderboardCap: null,
-      group: 'brawl',
+      group: 'ladder',
       reward: {
         id: '7Al0m9T5XA1oeRMuhvecSz',
         closed: false,
@@ -8801,7 +8801,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -9466,10 +9466,10 @@ const valorantBrawls = {
       id: '9895aeab-39ae-4f2b-99bc-74d234ec0d3d',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #211',
+        name: 'Weekly Ladder #211',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Brawl rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -9515,7 +9515,7 @@ const valorantBrawls = {
       refresh: false,
       placement: false,
       leaderboardCap: null,
-      group: 'brawl',
+      group: 'ladder',
       reward: {
         id: '7Al0m9T5XA1oeRMuhvecSz',
         closed: false,
@@ -9529,7 +9529,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -10194,9 +10194,9 @@ const valorantBrawls = {
       id: 'a427c5c5-8ff7-43a8-a1de-dbbab927128f',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #217',
+        name: 'Weekly Ladder #217',
         objective: 'this is an objective',
-        description: 'This is a brawl. Japp people in your game and win fett med para',
+        description: 'This is a ladder. Japp people in your game and win fett med para',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -10259,7 +10259,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -10924,9 +10924,9 @@ const valorantBrawls = {
       id: 'f6afcf09-b569-4e21-ab98-a1c25d74b951',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #217',
+        name: 'Weekly Ladder #217',
         objective: 'this is an objective',
-        description: 'This is a placement brawl. Play 3 rounds and progress to the brawl and win fett med para',
+        description: 'This is a placement ladder. Play 3 rounds and progress to the ladder and win fett med para',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -10986,7 +10986,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -11651,9 +11651,9 @@ const valorantBrawls = {
       id: '17a56de8-72a7-461c-89ec-bff7a98217cc',
       gameId: '1892449706',
       details: {
-        name: 'Weekly Brawl #217',
+        name: 'Weekly Ladder #217',
         objective: 'this is an objective',
-        description: 'This is a brawl. Japp people in your game and win fett med para',
+        description: 'This is a ladder. Japp people in your game and win fett med para',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -11713,7 +11713,7 @@ const valorantBrawls = {
               timeout: 604800,
               gameId: '535353',
               itemInfo: {
-                name: 'Brawl',
+                name: 'Ladder',
                 description: null,
                 image: null,
                 url: null,
@@ -12402,4 +12402,4 @@ const valorantBrawls = {
   empty: false,
 };
 
-export default valorantBrawls;
+export default valorantLadders;

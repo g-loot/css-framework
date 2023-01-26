@@ -28,7 +28,7 @@ export default function Home() {
                   Will you invest in some new gaming gear or just treat yourself
                   to something you&#39;ve had your eye on? Earn more coins to
                   spend in the shop by finishing Missions or competing in
-                  Brawls.
+                  Ladders.
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function Home() {
                 Need a token <span className="text-main">refill</span>?
               </h2>
               <p className="text-lg mt-4 mb-6 max-w-[25ch]">
-                Purchase tokens to enter brawls and keep on climbing the
+                Purchase tokens to enter ladders and keep on climbing the
                 leaderboards.
               </p>
               <button

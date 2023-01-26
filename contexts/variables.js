@@ -1,12 +1,12 @@
 import React, { useReducer } from "react";
 
 export const VariablesContext = React.createContext({
-  brawlStep: 0,
+  ladderStep: 0,
   availableMissions: 0,
   rewardClaimed: false,
   dailyRewardClaimed: false,
   newBrand: false,
-  incrementBrawlStep: function () {},
+  incrementLadderStep: function () {},
   claimReward: function () {},
   unclaimReward: function () {},
   claimDailyReward: function () {},
@@ -14,7 +14,7 @@ export const VariablesContext = React.createContext({
 });
 
 const defaultVariablesState = {
-  brawlStep: 0,
+  ladderStep: 0,
   availableMissions: 0,
   rewardClaimed: false,
   dailyRewardClaimed: false,
@@ -22,15 +22,15 @@ const defaultVariablesState = {
 };
 const variablesReducer = (state, action) => {
   if (action.type === "INCREMENT_BRAWLSTEP") {
-    let brawlStep = state.brawlStep;
+    let ladderStep = state.ladderStep;
     if (action.payload.incrementValue) {
-      brawlStep = brawlStep + action.payload.incrementValue;
+      ladderStep = ladderStep + action.payload.incrementValue;
     } else {
-      brawlStep = brawlStep + 1;
+      ladderStep = ladderStep + 1;
     }
     return {
       ...state,
-      brawlStep,
+      ladderStep,
     };
   }
   if (action.type === "INCREMENT_AVAILABLEMISSIONS") {
@@ -85,7 +85,7 @@ const VariablesContextProvider = (props) => {
     defaultVariablesState
   );
 
-  const incrementBrawlStep = (incrementValue) => {
+  const incrementLadderStep = (incrementValue) => {
     dispatchVariablesAction({
       type: "INCREMENT_BRAWLSTEP",
       payload: {
@@ -135,12 +135,12 @@ const VariablesContextProvider = (props) => {
   };
 
   const variablesContext = {
-    brawlStep: variablesState.brawlStep,
+    ladderStep: variablesState.ladderStep,
     availableMissions: variablesState.availableMissions,
     rewardClaimed: variablesState.rewardClaimed,
     dailyRewardClaimed: variablesState.dailyRewardClaimed,
     newBrand: variablesState.newBrand,
-    incrementBrawlStep,
+    incrementLadderStep,
     incrementAvailableMissions,
     claimReward,
     unclaimReward,

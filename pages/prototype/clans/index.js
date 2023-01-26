@@ -40,7 +40,7 @@ export default function Clan() {
                 </h2>
                 <ul className="leading-relaxed text-ui-300 mt-4 list-disc ml-4">
                   <li>
-                    Work together in Clan Brawls to earn{" "}
+                    Work together in Clan Ladders to earn{" "}
                     <span className="text-ui-100 font-bold">extra Coins</span>.
                   </li>
                   {/*

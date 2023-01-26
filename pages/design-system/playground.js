@@ -102,7 +102,7 @@ const DSpage = () => {
           <div className="surface rounded-lg mb-4">
             <div className="item">
               <div className="item-body">
-                <div className="item-title">Brawl #1</div>
+                <div className="item-title">Ladder #1</div>
               </div>
               <div className="item-actions">
                 <div>
@@ -161,7 +161,7 @@ const DSpage = () => {
               <ul className="child:border-b child:border-ui-700/50 text-ui-300 child:flex child:justify-between last:child:border-none text-sm child:child:py-2">
                 <li className="uppercase text-ui-400">
                   <span>Player</span>
-                  <span>Brawl points</span>
+                  <span>Ladder points</span>
                 </li>
                 <li>
                   <span>jamlog</span>
@@ -195,7 +195,7 @@ const DSpage = () => {
               </div>
               <div className="flex-1 flex flex-col items-center justify-center rounded-lg p-4 bg-gradient-to-b from-ui-900/50 to-ui-900/25">
                 <div className="uppercase text-ui-300 text-sm text-center">
-                  Active Brawl players
+                  Active Ladder players
                 </div>
                 <div className="text-ui-100 text-lg">13</div>
               </div>

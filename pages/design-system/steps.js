@@ -399,7 +399,7 @@ const DSpage = () => {
                 <li>
                   <div>
                     <i>2</i>
-                    <div className='text-sm'>Then you have to win a ticket by playing missions and competing in Brawls.</div>
+                    <div className='text-sm'>Then you have to win a ticket by playing missions and competing in Ladders.</div>
                     <span/>
                   </div>
                 </li>
@@ -446,7 +446,7 @@ const DSpage = () => {
                 <li>
                   <div>
                     <i>2</i>
-                    <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
+                    <div>Then you have to win a ticket by playing missions and competing in Ladders.</div>
                     <span/>
                   </div>
                 </li>
@@ -470,7 +470,7 @@ const DSpage = () => {
                 <li>
                   <div>
                     <i>2</i>
-                    <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
+                    <div>Then you have to win a ticket by playing missions and competing in Ladders.</div>
                     <span/>
                   </div>
                 </li>
@@ -494,7 +494,7 @@ const DSpage = () => {
                 <li>
                   <div>
                     <i>2</i>
-                    <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
+                    <div>Then you have to win a ticket by playing missions and competing in Ladders.</div>
                     <span/>
                   </div>
                 </li>
@@ -518,7 +518,7 @@ const DSpage = () => {
                 <li>
                   <div>
                     <i>2</i>
-                    <div>Then you have to win a ticket by playing missions and competing in Brawls.</div>
+                    <div>Then you have to win a ticket by playing missions and competing in Ladders.</div>
                     <span/>
                   </div>
                 </li>

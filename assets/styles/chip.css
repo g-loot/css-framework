@@ -571,20 +571,51 @@
     @apply 
     text-ui-200
     bg-ui-700
-    shadow-[inset_0_0_0_1px_rgb(var(--color-ui-500))]
     ;
-    &:is(button, a) {
-      &:not([disabled]),
-      &:not(.is-disabled) {
-        @apply
-        active:outline-ui-400
-        ;
-        &:hover,
-        &:focus-visible {
+
+    &:not(.chip-inverted) {
+      @apply
+      shadow-[inset_0_0_0_1px_rgb(var(--color-ui-500))]
+      ;
+      &:is(button, a) {
+        &:not([disabled]),
+        &:not(.is-disabled) {
           @apply
-          text-ui-100
-          bg-ui-600
-          shadow-[inset_0_0_0_1px_rgb(var(--color-ui-400))];
+          active:outline-ui-400
+          focus-visible:outline-ui-400
+          ;
+          &:hover,
+          &:focus-visible {
+            @apply
+            text-ui-100
+            bg-ui-600
+            shadow-[inset_0_0_0_1px_rgb(var(--color-ui-400))];
+          }
+        }
+      }
+    }
+
+    &.chip-inverted {
+      @apply 
+      bg-ui-100
+      text-ui-800
+      ;
+      &:is(button, a) {
+        &:not([disabled]),
+        &:not(.is-disabled) {
+          @apply
+          active:outline-ui-400
+          focus-visible:outline-ui-400
+          ;
+          &:hover,
+          &:focus-visible {
+            @apply
+            from-ui-400
+            via-ui-400
+            to-ui-400
+            text-ui-900
+            ;
+          }
         }
       }
     }

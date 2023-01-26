@@ -13,6 +13,7 @@ export default function Avatar(props) {
   const { query } = useRouter();
   const userId = props.id || 1;
   const size = props.size || 'avatar-xs';
+  const className = props.className || '';
   const [avatarFrame, setAvatarFrame] = useState(false);
   const hasAvatarFrame = query.avatarframe || false;
 
@@ -29,7 +30,7 @@ export default function Avatar(props) {
       <div
         className={`avatar avatar-circle ${size}  ${
           prototype.getUserByID(userId)?.isPremium ? "avatar-premium" : ""
-        }`}
+        } ${className}`}
       >
         {!prototype.getUserByID(userId).isYou && prototype.getUserByID(userId)?.avatarFrame && (
           <img src={prototype.getShopitemByID(1, prototype.getUserByID(userId).avatarFrame).image} alt="" />

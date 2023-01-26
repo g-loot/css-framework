@@ -70,12 +70,11 @@ const DSpage = () => {
                   <div className="header-content">
                     <div className="header-image">
                       <img
-                        src="https://res.cloudinary.com/gloot/image/upload/v1672302411/Stryda/logos/stryda-logo-missions.svg"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1674657396/Stryda/logos/stryda-logo-missions.svg"
                         alt=""
                       />
                     </div>
                     <div className="header-body">
-                      <h2 className="h3 mb-2">Missions</h2>
                       <p className="text-ui-300 max-w-[70ch] mb-4">
                         Play Stryda Missions in-game, gather XP, and earn
                         Mission Rewards. You can complete the Daily Missions in
@@ -200,7 +199,7 @@ const DSpage = () => {
                           className="button button-primary button-play"
                         >
                           <span className="icon icon-circle-caret-right" />
-                          <span>Learn how to Brawl</span>
+                          <span>Learn how to Ladder</span>
                         </button>
 
                         <button
@@ -351,7 +350,7 @@ const DSpage = () => {
                       </h2>
                       <ul className="leading-relaxed text-ui-300 mt-4 list-disc ml-4">
                         <li>
-                          Work together in Clan Brawls to earn{" "}
+                          Work together in Clan Ladders to earn{" "}
                           <span className="text-ui-100 font-bold">
                             extra Coins
                           </span>
@@ -493,7 +492,7 @@ const DSpage = () => {
                           <div className="text-xs text-ui-300 uppercase">
                             Played
                             <br />
-                            brawls
+                            ladders
                           </div>
                         </div>
                       </div>

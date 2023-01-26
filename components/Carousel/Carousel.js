@@ -8,11 +8,11 @@ const slides = [
     subtitle: "Free entry",
     title: "Compete for free!",
     description:
-      "Brawl is our Stryda Special! You compete against other Stryda players to climb the leaderboard, get on top and win crazy rewards! Interested? Entry Brawl is on us! ",
+      "Ladder is our Stryda Special! You compete against other Stryda players to climb the leaderboard, get on top and win crazy rewards! Interested? Entry Ladder is on us! ",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1672222065/Stryda/illustrations/Carousel_Free_entry_1.jpg",
     buttonLabel: "Compete now",
-    buttonURL: "/prototype/valorant/brawls?freeentry=true",
+    buttonURL: "/prototype/valorant/ladders?freeentry=true",
   },
   {
     subtitle: "Stryda",
@@ -37,11 +37,11 @@ const slides = [
   },
   {
     subtitle: "Rewards",
-    title: "Earn more on this week's Brawls",
+    title: "Earn more on this week's Ladders",
     description:
-      "This week you can get 2x the usual rewards by competing on Brawls.",
+      "This week you can get 2x the usual rewards by competing on Ladders.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672238164/Stryda/illustrations/Carousel_Valorant_Brawl.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1672238164/Stryda/illustrations/Carousel_Valorant_Ladder.jpg",
     buttonLabel: "Learn more",
     buttonURL: "#",
   },

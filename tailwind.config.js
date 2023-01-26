@@ -50,7 +50,8 @@ module.exports = {
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-      "2xl": "1576px",
+      "2xl": "1620px",
+      "3xl": "1920px",
     },
     fontSize: {
       0: "0rem",
@@ -66,7 +67,7 @@ module.exports = {
       "5xl": "3rem",
       "6xl": "3.75rem",
       "7xl": "4.5rem",
-      "8xl": "6rem",
+      "8xl": "5.5rem",
       "9xl": "8rem",
     },
     colors: {

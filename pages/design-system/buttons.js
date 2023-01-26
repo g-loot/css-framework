@@ -712,13 +712,13 @@ const DSpage = () => {
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
-                    Ticket
+                    Power token
                   </div>
                   <div className="flex-1 flex flex-wrap gap-2">
                     <Button
                       label="Purchase"
                       variant="primary"
-                      currency="ticket"
+                      currency="powertoken"
                       amount="2"
                     ></Button>
                   </div>
@@ -752,7 +752,7 @@ const DSpage = () => {
                     <Button
                       label="Purchase"
                       variant="secondary"
-                      currency="ticket"
+                      currency="powertoken"
                       amount="2"
                     ></Button>
                   </div>
@@ -786,7 +786,7 @@ const DSpage = () => {
                     <Button
                       label="Purchase"
                       variant="tertiary"
-                      currency="ticket"
+                      currency="powertoken"
                       amount="2"
                     ></Button>
                   </div>
@@ -820,7 +820,7 @@ const DSpage = () => {
                     <Button
                       label="Purchase"
                       variant="premium"
-                      currency="ticket"
+                      currency="powertoken"
                       amount="2"
                     ></Button>
                   </div>

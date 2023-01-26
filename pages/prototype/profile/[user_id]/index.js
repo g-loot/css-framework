@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import Accordion from "../../../../components/Accordion/Accordion";
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
-import ListItemBrawl from "../../../../components/ListItem/ListItemBrawl";
+import ListItemLadder from "../../../../components/ListItem/ListItemLadder";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -48,9 +48,9 @@ const achievementsList = [
   },
   {
     level: 4,
-    name: "Solo Brawl",
-    description: "Finish #1 in the Gold League of a solo Brawl",
-    icon: "solobrawl",
+    name: "Solo Ladder",
+    description: "Finish #1 in the Gold League of a solo Ladder",
+    icon: "sololadder",
     percent: 0,
     progress: 0,
     from: "0",
@@ -222,7 +222,7 @@ export default function Home() {
                         />
                         <div className="pl-4 border-l border-ui-600">
                           <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                            Number of Brawls played
+                            Number of Ladders played
                           </div>
                           <div className="text-ui-100 text-xl lg:text-3xl">
                             22
@@ -246,7 +246,7 @@ export default function Home() {
                         </div>
                         <div className="pl-4 border-l border-ui-600">
                           <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                            Most matches in a Brawl
+                            Most matches in a Ladder
                           </div>
                           <div className="text-ui-100 text-xl lg:text-3xl">
                             16
@@ -254,7 +254,7 @@ export default function Home() {
                         </div>
                         <div className="pl-4 border-l border-ui-600">
                           <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                            Avg. matches / Brawl
+                            Avg. matches / Ladder
                           </div>
                           <div className="text-ui-100 text-xl lg:text-3xl">
                             9.8
@@ -388,9 +388,9 @@ export default function Home() {
                 <div className="flex-1 flex flex-col surface sm:rounded-lg">
                   <div className="p-2 border-b border-ui-700 flex justify-between items-start">
                     <div>
-                      <h2 className="text-xl">Weekly Brawls</h2>
+                      <h2 className="text-xl">Weekly Ladders</h2>
                       <span className="text-sm text-ui-300">
-                        Showing your latest Solo Brawls
+                        Showing your latest Solo Ladders
                       </span>
                     </div>
                   </div>
@@ -399,11 +399,11 @@ export default function Home() {
                       <ul className="space-x-2 lg:space-x-0 lg:space-y-2 p-2 flex lg:block">
                         {prototype.games.map((game, gameIndex) => (
                           <>
-                            {game.brawls?.map((brawl, brawlIndex) => (
-                              <ListItemBrawl
-                                key={brawlIndex}
+                            {game.ladders?.map((ladder, ladderIndex) => (
+                              <ListItemLadder
+                                key={ladderIndex}
                                 game={game}
-                                brawl={brawl}
+                                ladder={ladder}
                               />
                             ))}
                           </>

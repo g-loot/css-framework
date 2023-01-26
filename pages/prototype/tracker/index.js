@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 export default function Tracker() {
   const router = useRouter();
-  const { data, loading } = useFetch("/api/brawls", { delay: 1000 });
+  const { data, loading } = useFetch("/api/ladders", { delay: 1000 });
 
   return (
     <>

@@ -22,7 +22,7 @@ const DSpage = () => {
                   </li>
                   <li>
                     <button className="is-active">
-                      <span>Brawls</span>
+                      <span>Ladders</span>
                     </button>
                   </li>
                   <li>
@@ -66,7 +66,7 @@ const DSpage = () => {
                   </li>
                   <li>
                     <button className="is-active">
-                      <span>Brawls</span>
+                      <span>Ladders</span>
                     </button>
                   </li>
                   <li>
@@ -111,8 +111,8 @@ const DSpage = () => {
                   </li>
                   <li>
                     <button>
-                      <span className="icon icon-brawl" />
-                      <span>Brawls</span>
+                      <span className="icon icon-ladder" />
+                      <span>Ladders</span>
                     </button>
                   </li>
                   <li>
@@ -169,7 +169,7 @@ const DSpage = () => {
                   </li>
                   <li>
                     <button>
-                      <span>Brawls</span>
+                      <span>Ladders</span>
                     </button>
                   </li>
                   <li>
@@ -223,7 +223,7 @@ const DSpage = () => {
                   </li>
                   <li>
                     <button>
-                      <span>Brawls</span>
+                      <span>Ladders</span>
                     </button>
                   </li>
                   <li>
@@ -276,7 +276,7 @@ const DSpage = () => {
                   </li>
                   <li>
                     <button>
-                      <span>Brawls</span>
+                      <span>Ladders</span>
                     </button>
                   </li>
                   <li>
@@ -332,7 +332,7 @@ const DSpage = () => {
                   </li>
                   <li>
                     <button>
-                      <span>Brawls</span>
+                      <span>Ladders</span>
                     </button>
                   </li>
                   <li>
@@ -492,8 +492,8 @@ const DSpage = () => {
                   </li>
                   <li>
                     <button>
-                      <span className="icon icon-brawl" />
-                      <span>Brawls</span>
+                      <span className="icon icon-ladder" />
+                      <span>Ladders</span>
                     </button>
                   </li>
                   <li>
