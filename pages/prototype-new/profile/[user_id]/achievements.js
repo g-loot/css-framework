@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import { UiContext } from "../../../../contexts/ui";
-import PrototypeStructure from "../../../../components/PrototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../../components/prototypeNew/PrototypeStructure";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import AchievementFrame from "../../../../components/Achievements/AchievementFrame";

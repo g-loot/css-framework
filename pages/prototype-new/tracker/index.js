@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PrototypeStructure from "../../../components/PrototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../components/prototypeNew/PrototypeStructure";
 import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
 

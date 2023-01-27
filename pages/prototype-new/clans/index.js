@@ -3,7 +3,7 @@ import React, { useContext, useEffect } from "react";
 import Ad from "../../../components/Ad/Ad";
 import Link from "next/link";
 import ModalClanCreate from "./modal-clan-create";
-import PrototypeStructure from "../../../components/PrototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../components/prototypeNew/PrototypeStructure";
 import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";

@@ -9,7 +9,7 @@ import ListItemLadder from "../../../components/ListItem/ListItemLadder";
 import ModalLadderHowitworksVideo from "../[game]/ladders/modal-howitworks-video";
 import ModalClaimDailyRewards from "./modal-claim-dailyrewards";
 import ModalClaimLadderRewards from "./modal-claim-dailyrewards";
-import PrototypeStructure from "../../../components/PrototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../components/prototypeNew/PrototypeStructure";
 import RewardLadder from "../../../components/RewardLadder/RewardLadder";
 import Tooltip from "../../../components/Tooltip/Tooltip";
 import { UiContext } from "../../../contexts/ui";

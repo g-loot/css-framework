@@ -1,4 +1,4 @@
-import PrototypeStructure from "../../../components/PrototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../components/prototypeNew/PrototypeStructure";
 import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
 import Link from "next/link";
