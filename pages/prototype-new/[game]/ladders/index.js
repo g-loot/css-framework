@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import PrototypeStructure from "../../../../components/prototype-new/PrototypeStructure";
+import PrototypeStructure from "../../../../components/prototypeNew/PrototypeStructure";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
