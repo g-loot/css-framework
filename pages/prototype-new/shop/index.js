@@ -37,38 +37,68 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="px-4 md:px-0 mb-8">
-          <h2 className="px-2 sm:px-0 py-2 text-2xl">Avatar frames</h2>
-          <div
-            className="surface sm:rounded-lg overflow-hidden flex flex-col lg:flex-row items-center animate-slide-in-right animate-delay"
-            style={{ "--delay": `calc( 0 * 0.05s)` }}
-          >
-            <div className="relative z-10 p-8 md:p-12 md:max-w-[50ch] order-2 md:order-1 text-center md:text-left">
-              <h3>Get a new look</h3>
-              <p className="text-lg text-ui-300 mt-2 mb-4 ">
-                Add beautiful frames around your avatar and stand out from the
-                crowd.
-              </p>
-              <Link
-                href={`/prototype-new/shop/avatar-frame${prototype.getURLparams()}`}
-              >
-                <button type="button" className="button button-primary">
-                  <span>View avatar frames</span>
+        <section className="px-4 md:px-0 mb-8 grid md:grid-cols-2 items-stretch gap-8 md:gap-4">
+          <div className="flex flex-col">
+            <h2 className="px-2 sm:px-0 py-2 h6">Avatar frames</h2>
+            <div
+              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center lg:justify-end animate-slide-in-right animate-delay"
+              style={{ "--delay": `calc( 0 * 0.05s)` }}
+            >
+              <div className="flex-3 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 xl:order-1 text-center md:text-left">
+                <h3>Get a new look</h3>
+                <p className="text-ui-300 mt-2 mb-4 md:max-w-[40ch]">
+                  Add beautiful frames around your avatar and stand out from the
+                  crowd.
+                </p>
+                <Link
+                  href={`/prototype-new/shop/avatar-frame${prototype.getURLparams()}`}
+                >
+                  <button type="button" className="button button-primary">
+                    <span>View avatar frames</span>
+                  </button>
+                </Link>
+              </div>
+              <div className="relative z-10 xl:order-2 flex-2 px-8 mt-8 md:mt-0 grid place-items-center">
+                <img
+                  className="object-contain"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1674739870/Stryda/illustrations/shop_avatarframes.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <h2 className="px-2 sm:px-0 py-2 h6">Tokens</h2>
+            <div
+              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center animate-slide-in-right animate-delay"
+              style={{ "--delay": `calc( 0 * 0.05s)` }}
+            >
+              <div className="flex-3 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 xl:order-1 text-center md:text-left">
+                <h3>Need a token refill?</h3>
+                <p className="text-ui-300 mt-2 mb-4 md:max-w-[40ch]">
+                  Purchase tokens to enter ladders and keep on climbing the
+                  leaderboards.
+                </p>
+                <button
+                  onClick={openModalBuyTokens}
+                  type="button"
+                  className="button button-primary"
+                >
+                  <span>Buy tokens</span>
                 </button>
-              </Link>
+              </div>
+              <div className="relative z-10 xl:order-2 flex-2 px-8 mt-8 md:mt-0 grid place-items-center">
+                <img
+                  className="object-contain"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1674739870/Stryda/illustrations/shop_tokens.png"
+                  alt=""
+                />
+              </div>
             </div>
-            <div className="relative z-10 md:order-2 flex-1 px-8 mt-8 md:mt-0 grid place-items-center">
-            <img className="object-contain" src="https://res.cloudinary.com/gloot/image/upload/v1674215034/Stryda/illustrations/shop_avatarframes.png" alt="" />
-            </div>
-            <img
-              className="absolute z-0 inset-0 h-full w-full object-cover object-right opacity-10"
-              src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
-              alt=""
-            />
           </div>
         </section>
         <section className="px-4 md:px-0 mb-8">
-          <h2 className="px-2 sm:px-0 py-2 text-2xl">Gift cards</h2>
+          <h2 className="px-2 sm:px-0 py-2 h6">Gift cards</h2>
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4">
             {prototype.vouchers.map((voucher, voucherIndex) => (
               <>
@@ -132,8 +162,10 @@ export default function Home() {
           </ul>
         </section>
 
+        {/*
+
         <section className="px-4 md:px-0 mb-4">
-          <h2 className="px-2 sm:px-0 py-2 text-2xl">Tokens</h2>
+          <h2 className="px-2 sm:px-0 py-2 h6">Tokens</h2>
           <div className="relative">
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -top-20 -right-4 rotate-[33deg]"
@@ -196,8 +228,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+                    */}
+
         <section className="px-4 md:px-0 my-8">
-          <p className="p-2 text-ui-300 text-sm text-center">
+          <p className="text-ui-300 text-sm text-center md:text-left">
             Don&#39;t see anything that suits you? Don&#39;t worry, this is just
             the start! More items should be coming to our shop soon.
             <br />

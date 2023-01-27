@@ -47,14 +47,14 @@ export const PrototypeProvider = ({ children }) => {
   }
   const getLadderByID = (slug, id) => {
     const selectedGame = getGameBySlug(slug);
-    const selectedLadder = selectedGame.ladders.find(ladder => {
+    const selectedLadder = selectedGame?.ladders?.find(ladder => {
       return ladder.id === parseInt(id);
     });
     return selectedLadder;
   }
   const getTournamentByID = (slug, id) => {
     const selectedGame = getGameBySlug(slug);
-    const selectedTournament = selectedGame.tournaments.find(tournament => {
+    const selectedTournament = selectedGame.tournaments?.find(tournament => {
       return tournament.id === parseInt(id);
     });
     return selectedTournament;

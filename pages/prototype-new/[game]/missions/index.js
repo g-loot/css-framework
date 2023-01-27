@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "../../../../components/prototype-new/PrototypeStructure";
 import TabMissionsHowItWorks from "./tab-howitworks";
 import TabMissionsMissions from "./tab-missions";
 import { usePrototypeData } from "../../../../contexts/prototype";
@@ -122,7 +122,7 @@ export default function Missions() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={itemIndex}>
                     <Link
-                      href={`/prototype/${game}/missions?tab=${
+                      href={`/prototype-new/${game}/missions?tab=${
                         item.url
                       }${prototype.getURLparams("&")}`}
                     >

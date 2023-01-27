@@ -178,7 +178,7 @@ export default function Login() {
               <span>Create free account</span>
             </button>
           </Link>
-          <p className="text-sm mb-8">
+          <p className="text-sm mb-6">
             By clicking CREATE FREE ACCOUNT, you certify that you are at least
             16 years old, and you have read and agree to the{" "}
             <a href="#" className="link">
@@ -189,7 +189,7 @@ export default function Login() {
               Privacy Policy
             </a>
           </p>
-          <p className="text-sm mb-8">
+          <p className="text-sm mb-6">
             <Link href="/prototype/auth/login">
               <a className="link link-main">Already have an account? Log in</a>
             </Link>

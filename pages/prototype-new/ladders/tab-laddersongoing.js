@@ -67,7 +67,7 @@ export default function TabLaddersOngoing() {
                 From entering a Ladder to claiming your rewards, here is
                 everything you need to know about our competitions.
               </p>
-              <Link href={`/prototype/ladders/howitworks`}>
+              <Link href={`/prototype-new/ladders/howitworks`}>
                 <button
                   type="button"
                   className="button button-sm button-secondary"
@@ -89,7 +89,7 @@ export default function TabLaddersOngoing() {
                 At Stryda we take player protection very seriously and
                 investigate any suspicious activity.
               </p>
-              <Link href={`/prototype/ladders/rules`}>
+              <Link href={`/prototype-new/ladders/rules`}>
                 <button
                   type="button"
                   className="button button-sm button-secondary"
@@ -108,7 +108,7 @@ export default function TabLaddersOngoing() {
             <div className="px-3 py-2 border-b border-ui-700 relative z-10 flex-none flex items-center justify-between">
               <div className="font-bold">Your Ladder history</div>
               <Link
-                href={`/prototype/ladders/history${prototype.getURLparams()}`}
+                href={`/prototype-new/ladders/history${prototype.getURLparams()}`}
               >
                 <a className="link link-hover text-ui-300 text-sm">View all</a>
               </Link>
@@ -121,7 +121,7 @@ export default function TabLaddersOngoing() {
                       {game.ladders?.map((ladder, ladderIndex) => (
                         <>
                           <Link
-                            href={`/prototype/${game}/ladders/${
+                            href={`/prototype-new/${game}/ladders/${
                               ladder.id
                             }${prototype.getURLparams()}`}
                           >

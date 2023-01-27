@@ -156,14 +156,14 @@ export default function LadderPlacementItem(props) {
                     undefined
                   }
                 >
-                  <div className="chip chip-sm chip-secondary chip-ghost">
+                  <div className="chip chip-sm chip-ghost">
                     <span>{Math.round(300 * 1.65)}</span>
                     <span className="icon icon-xp-symbol" />
                   </div>
                 </Tooltip>
               ) : (
                 <div className="flex flex-col items-end -space-y-1">
-                  <div className="chip chip-sm chip-secondary chip-ghost">
+                  <div className="chip chip-sm chip-ghost">
                     <span>{300}</span>
                     <span className="icon icon-xp-symbol" />
                   </div>

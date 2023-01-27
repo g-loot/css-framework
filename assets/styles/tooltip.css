@@ -305,7 +305,8 @@
   rounded
   backdrop-blur-sm
   transform-gpu
-  p-3
+  p-2
+  leading-none
   transition-all
   duration-200
   ease-in-out
@@ -359,6 +360,7 @@
     }
   }
 }
+
 @keyframes tooltip-bottom {
   from {
     transform: translateY(-0.25rem);

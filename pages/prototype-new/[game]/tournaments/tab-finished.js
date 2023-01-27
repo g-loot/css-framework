@@ -35,7 +35,7 @@ export default function TabLaddersHistory() {
                   earnings.
                 </p>
               </div>
-              <Link href="/prototype/valorant/tournaments">
+              <Link href="/prototype-new/valorant/tournaments">
                 <a className="button button-main">
                   <span>Browse Tournaments</span>
                 </a>
@@ -98,7 +98,7 @@ export default function TabLaddersHistory() {
                           </td>
                           <td className="text-right">
                             <Link
-                              href={`/prototype/${game}/tournaments/${
+                              href={`/prototype-new/${game}/tournaments/${
                                 tournament.id
                               }${prototype.getURLparams()}`}
                             >

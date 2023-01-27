@@ -23,12 +23,13 @@ const SoloLadders = [
     game_slug: "valorant",
     name: null,
     gameMode: "Unrated",
-    name: "Unrated Ladder",
+    name: "Power Play",
     status: "ongoing",
     isEnrolled: true,
     hasClaim: false,
+    isPowerPlay: true,
     cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1674814563/Stryda/demo/ladder_powerplay_valorant_1.jpg",
   },
   {
     id: 4,
@@ -78,12 +79,6 @@ const SoloLadders = [
     cover:
       "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
   },
-];
-const SoloLaddersNO = [
-  { game_slug: "valorant", ladder_id: 1 },
-  { game_slug: "pubg", ladder_id: 1 },
-  { game_slug: "valorant", ladder_id: 2 },
-  { game_slug: "pubg", ladder_id: 2 },
 ];
 
 export default function HomeLaddersSolo() {

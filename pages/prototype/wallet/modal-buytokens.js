@@ -114,9 +114,12 @@ export default function ModalBuyTokens(props) {
           </button>
           <div className="modal-content">
             <div className="modal-body text-center">
-              <h2 className="modal-title">Get more tokens</h2>
-              <div className="surface surface-highlight-premium rounded-lg overflow-hidden flex flex-col md:flex-row items-center gap-4 md:gap-8 p-4 mb-4">
-                <PremiumLogo src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg" width="210" height="auto" />
+              <div className="surface surface-highlight-premium rounded-lg overflow-hidden flex flex-col md:flex-row items-center gap-4 md:gap-8 p-4 mt-8 mb-4">
+                <PremiumLogo
+                  src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                  width="210"
+                  height="auto"
+                />
                 <div className="leading-tight text-left py-2">
                   Premium subscribers get up to 10 free extra tokens every time
                   they make a token bundle purchase.
@@ -135,7 +138,8 @@ export default function ModalBuyTokens(props) {
                 <div className="my-4">
                   <h2 className="h3">Tokens</h2>
                   <p className="m-0 leading-tight">
-                    Use regular tokens to enter weekly Ladders. One token = one registered match.
+                    Use Tokens to compete in all Ladders, except Power Play
+                    Ladders.
                   </p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto mb-8">
@@ -214,7 +218,8 @@ export default function ModalBuyTokens(props) {
                 <div className="my-4">
                   <h2 className="h3">Power Tokens</h2>
                   <p className="m-0 leading-tight">
-                    Use power tokens to enter Power Play ladders and earn bigger rewards. One token = one registered match.
+                    Use Power tokens exclusively to compete in Power Play
+                    Ladders, where the winner takes it all.
                   </p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto">
@@ -250,7 +255,9 @@ export default function ModalBuyTokens(props) {
                             height="auto"
                             alt=""
                           />
-                          <h2 className="h5">{item.tokenNumber} power tokens</h2>
+                          <h2 className="h5">
+                            {item.tokenNumber} power tokens
+                          </h2>
                           {item.previousAmount && (
                             <>
                               <div className="flex gap-2 text-lg my-1 text-center justify-center">

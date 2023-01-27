@@ -794,7 +794,7 @@ export default function TabLaddersSoloLeaderboards() {
                                           <div className="item h-[56px]">
                                             <div className="flex-1">
                                               <Link
-                                                href={`/prototype/profile/${
+                                                href={`/prototype-new/profile/${
                                                   user.user
                                                 }${prototype.getURLparams()}`}
                                               >
@@ -862,7 +862,7 @@ export default function TabLaddersSoloLeaderboards() {
                                               {prototype.getUserByID(user.user)
                                                 ?.clan ? (
                                                 <Link
-                                                  href={`/prototype/clans/${
+                                                  href={`/prototype-new/clans/${
                                                     prototype.getUserByID(
                                                       user.user
                                                     ).clan
@@ -993,13 +993,13 @@ export default function TabLaddersSoloLeaderboards() {
                                           </li>
                                         </ul>
                                         <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
-                                          <Link href="/prototype/profile/1">
+                                          <Link href="/prototype-new/profile/1">
                                             <a className="link link-main link-hover flex items-center gap-1 text-sm">
                                               <span className="icon icon-profile-2" />
                                               <span>Go to Player profile</span>
                                             </a>
                                           </Link>
-                                          <Link href="/prototype/profile/1">
+                                          <Link href="/prototype-new/profile/1">
                                             <a className="link link-main link-hover flex items-center gap-1 text-sm">
                                               <span className="icon icon-multiple-12" />
                                               <span>Go to Clan page</span>

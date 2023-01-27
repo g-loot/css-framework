@@ -5,6 +5,7 @@ import { usePopperTooltip } from "react-popper-tooltip";
 const Tooltip = (props) => {
   const tooltipPosition =
     props.placement !== undefined ? props.placement : "auto";
+  const className = props.className || "";
 
   const {
     getArrowProps,
@@ -20,14 +21,22 @@ const Tooltip = (props) => {
 
   return (
     <>
-      <div ref={setTriggerRef} className={`inline-block ${props.tooltip ? 'cursor-pointer' : ''} ${props.className}`}>
+      <div
+        ref={setTriggerRef}
+        className={`inline-block ${props.tooltip ? "cursor-pointer" : ""} ${
+          props.className
+        }`}
+      >
         {props.children}
       </div>
-      {visible && props.tooltip &&
+      {visible &&
+        props.tooltip &&
         ReactDOM.createPortal(
           <div
             ref={setTooltipRef}
-            {...getTooltipProps({ className: "tooltip-container" })}
+            {...getTooltipProps({
+              className: `tooltip-container ${className}`,
+            })}
           >
             <div
               className={`tooltip-lg ${
@@ -41,7 +50,7 @@ const Tooltip = (props) => {
               {props.tooltip}
             </div>
           </div>,
-          document.body,
+          document.body
         )}
     </>
   );

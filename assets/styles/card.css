@@ -1002,6 +1002,7 @@
       w-full
       rounded
       overflow-hidden
+      md:aspect-[16/6]
       ;
       > img {
         @apply
@@ -1010,7 +1011,6 @@
         inset-0
         object-cover
         object-center
-        h-full
         transition-all
         duration-300
         ease-[cubic-bezier(.8,0,.3,1)]

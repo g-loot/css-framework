@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 
 import { UiContext } from "../../../../../contexts/ui";
 import { VariablesContext } from "../../../../../contexts/variables";
+import { usePrototypeData } from "../../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import ModalInfoBeforeYouPlay from "../modal-info-beforeyouplay";
 import LadderPlacementItem from "./ladder-placementitem";
@@ -63,6 +64,15 @@ export default function LadderPlacements() {
   const [sliderItemWidth, setSliderItemWidth] = useState(192);
   const [resultsDone, setResultsDone] = useState(false);
   const isPremium = query.premium === "true" ? true : false;
+  const prototype = usePrototypeData();
+  const [selectedLadder, setSelectedLadder] = useState(undefined);
+  const router = useRouter();
+  const { game } = router.query;
+  const { ladder_id } = router.query;
+
+  useEffect(() => {
+    setSelectedLadder(prototype.getLadderByID(prototype.getGameBySlug(game), ladder_id));
+  }, [game, prototype, ladder_id]);
 
   function openModalInfoBeforeYouPlay(number) {
     uiContext.openModal(
@@ -207,14 +217,14 @@ export default function LadderPlacements() {
                 ) : (
                   <button
                     type="button"
-                    className="button button-primary button-currency button-token is-shining"
+                    className={`button button-primary button-currency is-shining ${selectedLadder?.isPowerPlay ? 'button-token' : 'button-powertoken'}`}
                     onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
                   >
                     <div>
                       <span>Activate 3 matches</span>
                     </div>
                     <div>
-                      <span className="icon icon-token " />
+                      <span className={`icon ${selectedLadder?.isPowerPlay ? 'icon-token' : 'icon-powertoken'} `} />
                       <span>2</span>
                     </div>
                   </button>

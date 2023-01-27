@@ -66,17 +66,18 @@ export default function PrototypeStructure({ children, title }) {
             )}
 
             <div className="flex items-stretch h-screen">
-              <div className="relative w-16 space-y-4 hidden bg-ui-800 md:flex flex-col after:content-[''] after:w-px after:absolute after:inset-y-0 after:bg-ui-700 after:right-0 after:z-0">
+              <div className="relative w-16 hidden bg-ui-800 md:flex flex-col after:content-[''] after:w-px after:absolute after:inset-y-0 after:bg-ui-700 after:right-0 after:z-0">
+                <i className="absolute z-40 lg:w-12 xl:w-24 h-screen left-0 translate-x-16 inset-y-0 from-ui-900 to-ui-900/0 bg-gradient-to-r" />
                 <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
                   <div className="relative z-10 grid place-content-center aspect-square border-b border-ui-700 text-0 cursor-pointer after:transition-colors after:duration-200 after:content-[''] after:absolute after:inset-0 after:bg-ui-850/0 hover:after:bg-ui-850 active:after:bg-ui-850">
                     <span className="icon relative z-10 icon-stryda-symbol text-main text-3xl" />
                   </div>
                 </Link>
-                <div className="relative z-10 flex-1 flex flex-col items-center justify-center -space-y-px">
+                <div className="relative z-50 flex-1 flex flex-col items-center justify-center -space-y-px">
                   <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
                     <button
                       type="button"
-                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-left before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
+                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-right before:duration-500 before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
                         router.pathname.endsWith("prototype") ||
                         router.pathname.includes("home")
                           ? "text-main"
@@ -92,7 +93,7 @@ export default function PrototypeStructure({ children, title }) {
                   >
                     <button
                       type="button"
-                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-left before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
+                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-right before:duration-500 before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
                         router.pathname.includes("missions")
                           ? "text-main"
                           : "before:opacity-0 before:-translate-x-0 before:scale-x-0"
@@ -107,7 +108,7 @@ export default function PrototypeStructure({ children, title }) {
                   >
                     <button
                       type="button"
-                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-left before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
+                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-right before:duration-500 before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
                         router.pathname.includes("ladders")
                           ? "text-main"
                           : "before:opacity-0 before:-translate-x-0 before:scale-x-0"
@@ -122,7 +123,7 @@ export default function PrototypeStructure({ children, title }) {
                   >
                     <button
                       type="button"
-                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-left before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
+                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-right before:duration-500 before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
                         router.pathname.includes("stats")
                           ? "text-main"
                           : "before:opacity-0 before:-translate-x-0 before:scale-x-0"
@@ -135,7 +136,7 @@ export default function PrototypeStructure({ children, title }) {
                   <Link href={`/prototype-new/shop${prototype.getURLparams()}`}>
                     <button
                       type="button"
-                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-left before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
+                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-right before:duration-500 before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
                         router.pathname.includes("shop")
                           ? "text-main"
                           : "before:opacity-0 before:-translate-x-0 before:scale-x-0"
@@ -159,7 +160,9 @@ export default function PrototypeStructure({ children, title }) {
                 </div>
                 <Footer className="child:max-w-3xl child hidden" />
               </div>
-              <div className="w-60 space-y-4 hidden lg:block bg-ui-800 border-l border-ui-700">
+              <div className="w-60 hidden lg:block bg-ui-800 border-l border-ui-700">
+                <i className="absolute z-40 lg:w-12 xl:w-24 h-screen right-0 -translate-x-60 inset-y-0 from-ui-900 to-ui-900/0 bg-gradient-to-l" />
+
                 <PrototypeSideRight />
 
                 {hasAds && (

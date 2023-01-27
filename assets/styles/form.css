@@ -103,7 +103,7 @@ select:-webkit-autofill:focus {
 
     &.input-sm {
       @apply
-      p-[0.4375rem]
+      h-9
       text-sm
       ;
     }

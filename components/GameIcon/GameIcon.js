@@ -7,10 +7,11 @@ import Tooltip from "../Tooltip/Tooltip";
 export default function GameIcon(props) {
   const prototype = usePrototypeData();
   const iconSize = props.size || "text-xl";
+  const className = props.className || "className";
   const game = props.game || 1;
 
   return (
-    <div className="cursor-pointer p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+    <div className={`cursor-pointer p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center ${className}`}>
       <span
         className={`icon ${iconSize} ${
           prototype.getGameByID(game).slug ===

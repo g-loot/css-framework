@@ -17,7 +17,7 @@ export default function LadderCardSecondary(props) {
   const isEnrolled = props.ladder.isEnrolled || false;
   const ladder = props.ladder;
   const game_slug = props.game_slug || "valorant";
-  const isDemo = props.isDemo || false;
+  const isDemo = props.isDemo || false;
 
   function openModalClaimLadderRewards() {
     uiContext.openModal(<ModalClaimLadderRewards></ModalClaimLadderRewards>);
@@ -96,7 +96,11 @@ export default function LadderCardSecondary(props) {
               <div className="flex items-center whitespace-nowrap gap-1">
                 <span className="icon icon-coin text-currency-1-500" />
                 <span className="text-currency-1-500 text-sm">
-                  5 000 - 30 000
+                  {ladder.isPowerPlay ? (
+                    <>50 000 - 5 000 000</>
+                  ) : (
+                    <>5 000 - 30 000</>
+                  )}
                 </span>
               </div>
               {ladder.status === "finished" ? (
@@ -266,24 +270,30 @@ export default function LadderCardSecondary(props) {
             <Link
               href={
                 !isDemo
-                  ? `/prototype/${prototype.getGameBySlug(game_slug).slug}/ladders/${ladder.id}${prototype.getURLparams()}`
-                  : `/prototype/valorant/ladders/1${prototype.getURLparams()}`
+                  ? `/prototype/${
+                      prototype.getGameBySlug(game_slug).slug
+                    }/ladders/${ladder.id}${prototype.getURLparams()}`
+                  : `/prototype/valorant/ladders/${
+                      ladder.isPowerPlay ? "1" : "2"
+                    }${prototype.getURLparams()}`
               }
             >
-              <button
-                type="button"
-                className={`button button-sm ${
-                  ladder.status != "finished"
-                    ? "button-secondary"
-                    : "button-secondary"
-                }`}
-              >
-                {ladder.isEnrolled || ladder.status === "finished" ? (
-                  <span>View Ladder</span>
-                ) : (
-                  <span>Join now</span>
-                )}
-              </button>
+              <a>
+                <button
+                  type="button"
+                  className={`button button-sm ${
+                    ladder.status != "finished"
+                      ? "button-secondary"
+                      : "button-secondary"
+                  }`}
+                >
+                  {ladder.isEnrolled || ladder.status === "finished" ? (
+                    <span>View Ladder</span>
+                  ) : (
+                    <span>View Ladder</span>
+                  )}
+                </button>
+              </a>
             </Link>
           </div>
         </div>

@@ -104,16 +104,17 @@ export const dataGames = [
         id: 1,
         solo: true,
         clan: false,
-        name: "Unrated Ladder",
+        name: "Power Play",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1674822962/Stryda/demo/PowerPlay_Valorant1.jpg",
         status: "ongoing",
         gameMode: "Competitive",
         sponsor: false,
+        isPowerPlay: true,
         rewards: [
           {
             type: "coin",
-            value: 10000,
+            value: 300000000,
           },
         ],
         isEnrolled: true,

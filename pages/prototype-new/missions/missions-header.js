@@ -32,13 +32,14 @@ export default function MissionsHeader(props) {
           <span className="absolute inset-0 bg-cover animate-fade-in" style={{backgroundImage: 'url(https://res.cloudinary.com/gloot/image/upload/v1674691791/Stryda/demo/ladders_header_1.jpg)'}}/>
         </div>
         <div className="relative z-10 pt-32 pb-4 flex items-end">
-          <img
+          {/*<img
             src="https://res.cloudinary.com/gloot/image/upload/v1674654182/Stryda/logos/stryda-logo-missions-simple.svg"
             height="auto"
             width="auto"
             alt="Missions"
             className="mb-1 h-20"
-          />
+  />*/}
+  <h1>Missions</h1>
         </div>
       </div>
     </>

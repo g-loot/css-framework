@@ -46,7 +46,7 @@ export default function ModalInfoBeforeYouPlay(props) {
             <span
               style={{
                 backgroundImage:
-                  "url(https://res.cloudinary.com/gloot/image/upload/v1674676505/Stryda/illustrations/modal-ladder-info.jpg)",
+                  "url(https://res.cloudinary.com/gloot/image/upload/v1674676505/Stryda/illustrations/modal-brawl-info.jpg)",
               }}
             />
           </div>

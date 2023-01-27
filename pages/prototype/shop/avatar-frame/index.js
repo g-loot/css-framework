@@ -101,7 +101,7 @@ export default function Home() {
 
         <section className="mb-4 lg:mb-8">
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4 mt-3">
-            {selectedShopsection.items?.sort((itemA, itemB) => itemA.price - itemB.price).map((item, itemIndex) => (
+            {selectedShopsection.items?.sort((itemA, itemB) => itemB.price - itemA.price).map((item, itemIndex) => (
               <>
                 <li
                   key={item.id}

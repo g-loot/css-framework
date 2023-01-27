@@ -257,7 +257,7 @@ export default function TabMissionsHowItWorks() {
                         />
                       ))}
                       {tab.hasButtonReward && (
-                        <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                        <Link href={`/prototype-new/premium${prototype.getURLparams()}`}>
                           <a className="button button-premium is-shining">
                             <span>Join Stryda Premium</span>
                           </a>

@@ -96,7 +96,7 @@ export default function Login() {
               <span>Sign in</span>
             </button>
           </Link>
-          <p className="text-sm mb-8">
+          <p className="text-sm mb-6">
             By clicking SIGN IN, you certify that you have read and agree to the{" "}
             <a href="#" className="link">
               Terms & Conditions
@@ -111,7 +111,7 @@ export default function Login() {
               <a className="link link-main">Forgotten your password?</a>
             </Link>
           </p>
-          <p className="text-sm mb-8">
+          <p className="text-sm mb-6">
             <Link href="/prototype/auth/signup">
               <a className="link link-main">
                 Don&#39;t have an account? Create one

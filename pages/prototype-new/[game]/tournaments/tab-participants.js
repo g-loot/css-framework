@@ -99,7 +99,7 @@ export default function TabTournamentsOverview() {
                       .members?.map((user, userIndex) => (
                         <Link
                           key={user}
-                          href={`/prototype/profile/${
+                          href={`/prototype-new/profile/${
                             prototype.getUserByID(user).id
                           }${prototype.getURLparams()}`}
                         >

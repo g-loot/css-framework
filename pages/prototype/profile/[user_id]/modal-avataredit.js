@@ -117,7 +117,7 @@ export default function ModalAvatarEdit(props) {
                         </div>
                       </div>
                     </label>
-                    {selectedShopsection.items?.sort((itemA, itemB) => itemA.price - itemB.price).map((item, itemIndex) => (
+                    {selectedShopsection.items?.sort((itemA, itemB) => itemB.price - itemA.price).map((item, itemIndex) => (
                       <>{item.isOwned || item.id === id && (
                       <label className="form-checkbox form-image" key={item.id}>
                         <input

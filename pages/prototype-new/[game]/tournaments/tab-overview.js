@@ -73,7 +73,7 @@ export default function TabTournamentsOverview() {
                 {prototype.getClanByID(1).members?.map((user, userIndex) => (
                   <Link
                     key={user}
-                    href={`/prototype/profile/${
+                    href={`/prototype-new/profile/${
                       prototype.getUserByID(user).id
                     }${prototype.getURLparams()}`}
                   >

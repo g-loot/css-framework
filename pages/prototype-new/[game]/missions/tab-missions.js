@@ -119,7 +119,7 @@ export default function TabMissionsMissions() {
                 {!isPremium && (
                   <>
                     Get{" "}
-                    <Link href="/prototype/premium">
+                    <Link href="/prototype-new/premium">
                       <a className="text-premium-500 link">Premium</a>
                     </Link>{" "}
                     and earn +50% of XP on all missions
@@ -193,13 +193,13 @@ export default function TabMissionsMissions() {
               <p className="max-w-[50ch] text-sm text-ui-300 mx-auto mt-2 mb-5">
                 Increase your amount of daily missions and XP you can earn each
                 day with a{" "}
-                <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                <Link href={`/prototype-new/premium${prototype.getURLparams()}`}>
                   <a className="link">Premium subscription</a>
                 </Link>
                 .
               </p>
               <div className="mx-auto">
-                <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                <Link href={`/prototype-new/premium${prototype.getURLparams()}`}>
                   <a className="button button-premium is-shining">
                     <span>Join Premium</span>
                   </a>

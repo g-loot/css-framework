@@ -458,7 +458,7 @@ const DSpage = () => {
                       type="button"
                       className="button button-sm button-primary"
                     >
-                      Join now
+                      View Ladder
                     </button>
                   </div>
                 </div>
@@ -700,7 +700,7 @@ const DSpage = () => {
                       type="button"
                       className="button button-sm button-primary"
                     >
-                      Join now
+                      View Ladder
                     </button>
                   </div>
                 </div>
@@ -813,7 +813,7 @@ const DSpage = () => {
                       type="button"
                       className="button button-sm button-primary"
                     >
-                      Join now
+                      View Ladder
                     </button>
                   </div>
                 </div>
@@ -932,7 +932,7 @@ const DSpage = () => {
                       type="button"
                       className="button button-sm button-primary"
                     >
-                      Join now
+                      View Ladder
                     </button>
                   </div>
                 </div>
@@ -1056,7 +1056,7 @@ const DSpage = () => {
                       type="button"
                       className="button button-sm button-primary"
                     >
-                      Join now
+                      View Ladder
                     </button>
                   </div>
                 </div>

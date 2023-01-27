@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import Lottie from "lottie-react";
+import { usePrototypeData } from "../../../../../contexts/prototype";
 import LottieExplosion1 from "../../../../../assets/animations/explosion_stryda_9.json";
 import LottieExplosion2 from "../../../../../assets/animations/explosion_stryda_1.json";
 import { VariablesContext } from "../../../../../contexts/variables";
@@ -10,10 +11,19 @@ import XPBoostList from "../../../../../components/XPBoostList/XPBoostList";
 export default function LadderPlacementItem(props) {
   const variablesContext = useContext(VariablesContext);
   const { query } = useRouter();
+  const prototype = usePrototypeData();
   const [StartAnim, setStartAnim] = useState(false);
   const [resultsDone, setResultsDone] = useState(false);
   const [shining, setShining] = useState(false);
   const isPremium = query.premium === "true" ? true : false;
+  const [selectedLadder, setSelectedLadder] = useState(undefined);
+  const router = useRouter();
+  const { game } = router.query;
+  const { ladder_id } = router.query;
+
+  useEffect(() => {
+    setSelectedLadder(prototype.getLadderByID(prototype.getGameBySlug(game), ladder_id));
+  }, [game, prototype, ladder_id]);
 
   useEffect(() => {
     setStartAnim(true);
@@ -110,13 +120,13 @@ export default function LadderPlacementItem(props) {
                 <div className="absolute z-20 inset-0 p-4 flex items-center justify-center overflow-hidden rounded-lg">
                   <button
                     type="button"
-                    className={`button button-sm button-secondary button-currency button-token w-full animate-slide-in-bottom`}
+                    className={`button button-sm button-secondary button-currency w-full animate-slide-in-bottom ${selectedLadder?.isPowerPlay ? 'button-powertoken' : 'button-token'}`}
                   >
                     <div>
                       <span>Activate</span>
                     </div>
                     <div>
-                      <span className="icon icon-token " />
+                      <span className={`icon ${selectedLadder?.isPowerPlay ? 'icon-powertoken' : 'icon-token'}`} />
                       <span>1</span>
                     </div>
                   </button>
@@ -156,14 +166,14 @@ export default function LadderPlacementItem(props) {
                     undefined
                   }
                 >
-                  <div className="chip chip-sm chip-secondary chip-ghost">
+                  <div className="chip chip-sm chip-ghost">
                     <span>{Math.round(300 * 1.65)}</span>
                     <span className="icon icon-xp-symbol" />
                   </div>
                 </Tooltip>
               ) : (
                 <div className="flex flex-col items-end -space-y-1">
-                  <div className="chip chip-sm chip-secondary chip-ghost">
+                  <div className="chip chip-sm chip-ghost">
                     <span>{300}</span>
                     <span className="icon icon-xp-symbol" />
                   </div>

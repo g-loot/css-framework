@@ -3,6 +3,7 @@ import { usePrototypeData } from "../../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import Countdown from "../../../../../components/Countdown/Countdown";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
+import GameIcon from "../../../../../components/GameIcon/GameIcon";
 
 function calculateTimeLeft() {
   const year = new Date().getFullYear();
@@ -39,6 +40,76 @@ export default function LadderHeader() {
   return (
     <>
       {selectedGame && (
+        <>
+          <section className="sm:rouned flex flex-col md:flex-row gap-4 items-center mb-4">
+            {prototype.getLadderByID(game, ladder_id)?.isPowerPlay && (
+              <div className="relative">
+                <GameIcon game={selectedGame.id} className="absolute top-1 left-1" />
+                <img
+                  src={prototype.getLadderByID(game, ladder_id)?.cover}
+                  className="aspect-[16/6] rounded w-96"
+                  alt=""
+                />
+              </div>
+            )}
+            <div className="flex-1 space-y-4">
+              <h1 className="h4">
+                {prototype.getLadderByID(game, ladder_id)?.name}
+              </h1>
+              <ul className="flex flex-col gap-1 justify-between leading-tight">
+                <li className="flex gap-2 items-center">
+                  <Tooltip
+                    className="tooltip-sm"
+                    tooltip={<span className="text-sm">Objective</span>}
+                  >
+                    <button className="text-ui-300 text-0">
+                      <span className="icon icon-20 icon-archery-target" />
+                    </button>
+                  </Tooltip>
+
+                  <p className="text-sm">
+                    Kills{" "}
+                    <Tooltip
+                      tooltip={
+                        <div className="max-w-xs text-sm text-center leading-tight">
+                          The content of this tooltip can be customized in the
+                          backend.
+                        </div>
+                      }
+                    >
+                      <button className="text-ui-300 text-0">
+                        <span className="icon text-sm icon-c-info" />
+                      </button>
+                    </Tooltip>
+                  </p>
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Tooltip
+                    className="tooltip-sm"
+                    tooltip={<span className="text-sm">Game mode</span>}
+                  >
+                    <button className="text-ui-300 text-0">
+                      <span className="icon icon-20 icon-handheld-console-2" />
+                    </button>
+                  </Tooltip>
+
+                  <p className="text-sm">Competitive 2v2 & 3v3 (Ranked only)</p>
+                </li>
+                <li className="flex gap-2 items-center">
+                  <Tooltip
+                    className="tooltip-sm"
+                    tooltip={<span className="text-sm">Tiebreaker</span>}
+                  >
+                    <button className="text-ui-300 text-0">
+                      <span className="icon icon-20 icon-lightning" />
+                    </button>
+                  </Tooltip>
+                  <p className="text-sm">Headshots from your 3 best matches decide a tie</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+          {/*
         <section className="surface surface-dimmed sm:rounded-lg mb-4 p-4">
           <div className="flex flex-col md:flex-row gap-1 justify-between items-center">
             <div className="flex gap-3 items-center">
@@ -116,6 +187,8 @@ export default function LadderHeader() {
             </div>
           </div>
         </section>
+                */}
+        </>
       )}
     </>
   );

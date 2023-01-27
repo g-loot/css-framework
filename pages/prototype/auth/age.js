@@ -67,6 +67,7 @@ export default function Login() {
             >
               <label htmlFor="year">Day</label>
               <input
+                autoFocus
                 type="number"
                 name="year"
                 id="year"
@@ -101,7 +102,6 @@ export default function Login() {
                 name="year"
                 id="year"
                 min={1}
-                autoFocus
                 className="input-number"
                 placeholder="YYYY"
                 onChange={(event) => setYearStr(event.target.value)}
