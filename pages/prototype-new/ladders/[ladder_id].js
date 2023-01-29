@@ -4,7 +4,7 @@ import Ad from "../../../components/Ad/Ad";
 import Countdown from "../../../components/Countdown/Countdown";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import PrototypeStructure from "../../../components/prototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../components/PrototypeNew/PrototypeStructure";
 import TabLaddersClanLeaderboard from "./tab-clanleaderboards";
 import TabLaddersHowItWorks from "./tab-howitworks";
 import TabLaddersRewards from "./tab-rewards";

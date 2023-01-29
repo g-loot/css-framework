@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Ad from "../../../../components/Ad/Ad";
 import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
-import PrototypeStructure from "../../../../components/prototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../../components/PrototypeNew/PrototypeStructure";
 import TabTournamentsActive from "../tournaments/tab-active";
 import TabTournamentsFinished from "../tournaments/tab-finished";
 import TabTournamentsHowItWorks from "../tournaments/tab-howitworks";

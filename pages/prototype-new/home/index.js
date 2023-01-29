@@ -6,7 +6,7 @@ import Link from "next/link";
 import ModalLadderHowitworksVideo from "../[game]/ladders/modal-howitworks-video";
 import ModalClaimDailyRewards from "./modal-claim-dailyrewards";
 import ModalClaimLadderRewards from "./modal-claim-dailyrewards";
-import PrototypeStructure from "../../../components/prototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../components/PrototypeNew/PrototypeStructure";
 import RewardLadder from "../../../components/RewardLadder/RewardLadder";
 import { UiContext } from "../../../contexts/ui";
 import { useRouter } from "next/router";

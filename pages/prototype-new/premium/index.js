@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import PrototypeStructure from "../../../components/prototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../components/PrototypeNew/PrototypeStructure";
 import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
 import { UiContext } from "../../../contexts/ui";

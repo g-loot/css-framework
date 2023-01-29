@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from "react";
 
 import Accordion from "../../../components/Accordion/Accordion";
 import Ad from "../../../components/Ad/Ad";
-import PrototypeStructure from "../../../components/prototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../components/PrototypeNew/PrototypeStructure";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { UiContext } from "../../../contexts/ui";
 import { useRouter } from "next/router";

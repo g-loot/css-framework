@@ -4,7 +4,7 @@ import Accordion from "../../../../components/Accordion/Accordion";
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
 import ListItemLadder from "../../../../components/ListItem/ListItemLadder";
-import PrototypeStructure from "../../../../components/prototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../../components/PrototypeNew/PrototypeStructure";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import GameIcon from "../../../../components/GameIcon/GameIcon";

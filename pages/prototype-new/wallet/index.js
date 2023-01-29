@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Ad from "../../../components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../components/prototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../components/PrototypeNew/PrototypeStructure";
 import TabWalletHistory from "./tab-history";
 import TabWalletOverview from "./tab-overview";
 import TabWalletVoucher from "./tab-vouchers";

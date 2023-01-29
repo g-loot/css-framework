@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import PrototypeStructure from "../../../../components/prototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../../components/PrototypeNew/PrototypeStructure";
 import TabLaddersRules from "./tab-glootrules";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";

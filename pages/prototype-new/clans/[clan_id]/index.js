@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Ad from "../../../../components/Ad/Ad";
 import Chat from "../../../../components/Chat/Chat";
 import Link from "next/link";
-import PrototypeStructure from "../../../../components/prototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../../components/PrototypeNew/PrototypeStructure";
 import SectionClanActivity from "./section-activity";
 import TabClanActivity from "./tab-activity";
 import TabClanChat from "./tab-chat";

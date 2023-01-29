@@ -1,5 +1,5 @@
 import Ad from "../../../components/Ad/Ad";
-import PrototypeStructure from "../../../components/prototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../components/PrototypeNew/PrototypeStructure";
 import useFetch from "../../../hooks/use-fetch";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
