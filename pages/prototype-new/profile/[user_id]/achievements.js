@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
 import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
 import ModalAchievementReceived from "../../modal-achievementreceived";
-import ProfileHeader from "../header";
+import ProfileHeader from "../profile-header";
 
 const achievementsList = [
   {
