@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import { UiContext } from "../../../../contexts/ui";
 import ModalAvatarFramePurchaseConfirmation from "./modal-avatarframepurchaseconfirmation";
 import ModalAvatarFramePurchaseCompleted from "./modal-avatarframepurchasecompleted";
+import ShopHeader from "../shop-header";
 
 export default function Home() {
   const router = useRouter();
@@ -56,7 +57,9 @@ export default function Home() {
       <PrototypeStructure title="Shop">
         <Ad width="1005" height="300" />
 
-        <section className="mb-4">
+        <ShopHeader />
+
+        <section className="mb-4 hidden">
           <div className="header surface sm:rounded-lg">
             <div className="header-breadcrumbs">
               <nav className="breadcrumbs" aria-label="Breadcrumb">
@@ -87,7 +90,7 @@ export default function Home() {
             <div className="header-content">
               <div className="header-body">
                 <h1>Avatar frames</h1>
-                <p className="text-ui-300 max-w-[70ch] mt-4">
+                <p className="max-w-[70ch] mt-2">
                   Add beautiful frames around your avatar and stand out from the
                   crowd.
                 </p>
@@ -99,7 +102,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mb-4 lg:mb-8">
+        <section className="mt-8 mb-4 lg:mb-8">
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4 mt-3">
             {selectedShopsection.items?.sort((itemA, itemB) => itemB.price - itemA.price).map((item, itemIndex) => (
               <>

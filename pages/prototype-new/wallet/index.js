@@ -51,7 +51,7 @@ export default function Home() {
           <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8 lg:min-h-[250px] lg:flex items-center">
             <div className="relative z-10">
               <h1>Wallet</h1>
-              <p className="text-ui-300 max-w-[70ch] mt-4">
+              <p className="max-w-[70ch] mt-2">
                 Get to know the different currencies and rewards by clicking on
                 the icons and keep track of your earnings from Missions, Weekly
                 Ladders and Monthly Tournaments.

@@ -6,12 +6,12 @@ import PrototypeStructure from "../../../components/prototypeNew/PrototypeStruct
 import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
-import TabMissionsMissions from "./tab-missions";
-import MissionsHeader from "./missions-header";
+import StatsHeader from "./stats-header";
 import FilterGame from "../../../components/FilterGame/FilterGame";
+import TabStatsStats from "./tab-stats";
 
 
-export default function Ladders() {
+export default function Stats() {
   const router = useRouter();
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
@@ -32,9 +32,9 @@ export default function Ladders() {
     <>
       <PrototypeStructure title="Missions">
         <Ad width="1005" height="300" />
-        <MissionsHeader breadcrumbs="Missions" />
+        <StatsHeader breadcrumbs="Stats" />
         <FilterGame />
-        <TabMissionsMissions />
+        <TabStatsStats />
       </PrototypeStructure>
     </>
   );

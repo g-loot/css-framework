@@ -470,6 +470,21 @@
   transform-gpu
   ;
 
+  &::before {
+    @apply
+    content-['']
+    absolute
+    z-50
+    -inset-x-12
+    xl:-inset-x-24
+    bottom-0
+    -inset-y-4
+    border-b
+    border-ui-700
+    pointer-events-none
+    ;
+  }
+
   .carousel-slides {
     @apply
     h-[420px]
@@ -507,17 +522,15 @@
       duration-1000
       ease-[cubic-bezier(0.9,0,0.1,1)]
       pointer-events-none
-      -translate-y-0
       opacity-0
       ;
 
       .carousel-image {
         @apply
-        
         flex-4
         absolute
         z-0
-        bg-ui-850
+        bg-ui-800
         -inset-x-12
         xl:-inset-x-24
         bottom-0
@@ -535,8 +548,6 @@
           duration-[1.4s]
           ease-[cubic-bezier(0.7,0,0.3,1)]
           opacity-0
-          lg:-translate-y-4
-          lg:origin-bottom
           ;
           
         }
@@ -572,6 +583,7 @@
         justify-center
         px-4
         md:px-0
+        opacity-0
         ;
 
         h1,
@@ -597,15 +609,17 @@
       &.is-active {
         @apply
         pointer-events-auto
-        translate-y-0
         opacity-100
         ;
+        .carousel-body {
+          @apply
+          animate-slide-in-left
+          ;
+        }
         .carousel-image {
           > * {
             @apply
             opacity-100
-            scale-100
-            lg:translate-y-0
             ;
           }
         }

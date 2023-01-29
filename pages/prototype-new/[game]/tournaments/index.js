@@ -75,7 +75,7 @@ export default function Home() {
                   </p>
                   {selectedGame.needsSteam && (
                     <Link
-                      href={`/prototype-new/profile/settings${prototype.getURLparams()}`}
+                      href={`/prototype/profile/settings${prototype.getURLparams()}`}
                     >
                       <button
                         type="button"
@@ -101,7 +101,7 @@ export default function Home() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype-new/${game}/tournaments?tab=${item.url}${prototype.getURLparams("&")}`}
+                      href={`/prototype/${game}/tournaments?tab=${item.url}${prototype.getURLparams("&")}`}
                     >
                       <a
                         className={`${

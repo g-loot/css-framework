@@ -114,16 +114,19 @@ export default function ModalBuyTokens(props) {
           </button>
           <div className="modal-content">
             <div className="modal-body text-center">
-              <h2 className="modal-title">Get more tokens</h2>
-              <div className="surface surface-highlight-premium rounded-lg overflow-hidden flex flex-col md:flex-row items-center gap-4 md:gap-8 p-4 mb-4">
-                <PremiumLogo src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg" width="210" height="auto" />
+              <div className="surface surface-highlight-premium rounded-lg overflow-hidden flex flex-col md:flex-row items-center gap-4 md:gap-8 p-4 mt-8 mb-4">
+                <PremiumLogo
+                  src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                  width="210"
+                  height="auto"
+                />
                 <div className="leading-tight text-left py-2">
                   Premium subscribers get up to 10 free extra tokens every time
                   they make a token bundle purchase.
                 </div>
                 <div />
                 <div className="py-4">
-                  <Link href={`/prototype-new/premium${prototype.getURLparams()}`}>
+                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                     <a className="button button-premium whitespace-nowrap">
                       <span>Subscribe now</span>
                     </a>
@@ -132,7 +135,14 @@ export default function ModalBuyTokens(props) {
               </div>
 
               <div className="overflow-x-auto scrollbar-desktop">
-                <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto mb-4">
+                <div className="my-4">
+                  <h2 className="h3">Tokens</h2>
+                  <p className="m-0 leading-tight">
+                    Use Tokens to compete in all Ladders, except Power Play
+                    Ladders.
+                  </p>
+                </div>
+                <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto mb-8">
                   {TokensLItems.map((item, itemIndex) => (
                     <div
                       key={itemIndex}
@@ -191,19 +201,27 @@ export default function ModalBuyTokens(props) {
                         </div>
 
                         <div className="border-t border-ui-700 mt-4 pt-4">
-                          <button
-                            className={`button button-secondary w-full ${
+                        <button
+                            className={`button button-secondary button-currency button-coin w-full ${
                               submitting ? "is-loading" : ""
                             }`}
                             onClick={closeModalWithDelay}
                             disabled={selectedGamesCount === 0}
                           >
-                            <span>Buy</span>
+                            <div><span>Buy</span></div>
+                            <div><span>{item.amount}</span></div>
                           </button>
                         </div>
                       </div>
                     </div>
                   ))}
+                </div>
+                <div className="my-4">
+                  <h2 className="h3">Power Tokens</h2>
+                  <p className="m-0 leading-tight">
+                    Use Power tokens exclusively to compete in Power Play
+                    Ladders, where the winner takes it all.
+                  </p>
                 </div>
                 <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto">
                   {PowerTokensLItems.map((item, itemIndex) => (
@@ -238,7 +256,9 @@ export default function ModalBuyTokens(props) {
                             height="auto"
                             alt=""
                           />
-                          <h2 className="h5">{item.tokenNumber} power tokens</h2>
+                          <h2 className="h5">
+                            {item.tokenNumber} power tokens
+                          </h2>
                           {item.previousAmount && (
                             <>
                               <div className="flex gap-2 text-lg my-1 text-center justify-center">
@@ -265,13 +285,14 @@ export default function ModalBuyTokens(props) {
 
                         <div className="border-t border-ui-700 mt-4 pt-4">
                           <button
-                            className={`button button-secondary w-full ${
+                            className={`button button-secondary button-currency button-coin w-full ${
                               submitting ? "is-loading" : ""
                             }`}
                             onClick={closeModalWithDelay}
                             disabled={selectedGamesCount === 0}
                           >
-                            <span>Buy</span>
+                            <div><span>Buy</span></div>
+                            <div><span>{item.amount}</span></div>
                           </button>
                         </div>
                       </div>

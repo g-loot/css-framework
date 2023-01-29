@@ -5,7 +5,7 @@ import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 
-export default function MissionsHeader(props) {
+export default function StatsHeader(props) {
   const router = useRouter();
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
@@ -38,7 +38,7 @@ export default function MissionsHeader(props) {
           />
         </div>
         <div className="relative z-10 pt-32 pb-4">
-          <h1 className="animate-slide-in-left">Missions</h1>
+          <h1 className="animate-slide-in-left">Stats</h1>
           <p className="max-w-[70ch] mt-2">
             Play Stryda Missions gather XP, and earn Mission Rewards.
           </p>

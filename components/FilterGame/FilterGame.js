@@ -14,7 +14,7 @@ export default function FilterGame(props) {
   }
 
   return (
-    <div className="flex gap-4">
+    <section className="flex gap-4 my-8">
       {prototype.games.map((game, gameIndex) => (
         <>
           {" "}
@@ -37,6 +37,6 @@ export default function FilterGame(props) {
       >
         <span className="icon icon-options" />
       </button>
-    </div>
+    </section>
   );
 }

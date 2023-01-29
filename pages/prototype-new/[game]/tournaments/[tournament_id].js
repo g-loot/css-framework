@@ -226,7 +226,7 @@ export default function Home() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype-new/${game}/tournaments/${tournament_id}?tab=${item.url}${prototype.getURLparams("&")}`}
+                      href={`/prototype/${game}/tournaments/${tournament_id}?tab=${item.url}${prototype.getURLparams("&")}`}
                     >
                       <a
                         className={`${

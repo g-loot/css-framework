@@ -13,6 +13,39 @@ import React, { useContext } from "react";
 import Avatar from "../Avatar/Avatar";
 import PrototypeSideRight from "./PrototypeSideRight";
 
+const manNavLinks = [
+  {
+    url: "home",
+    slug: "home",
+    label: "Home",
+    icon: "icon-home-2",
+  },
+  {
+    url: "missions",
+    slug: "missions",
+    label: "Missions",
+    icon: "icon-crosshair",
+  },
+  {
+    url: "ladders",
+    slug: "ladders",
+    label: "Ladders",
+    icon: "icon-podium",
+  },
+  {
+    url: "stats",
+    slug: "stats",
+    label: "Stats",
+    icon: "icon-statistics",
+  },
+  {
+    url: "shop",
+    slug: "shop",
+    label: "Shop",
+    icon: "icon-shop",
+  },
+];
+
 export default function PrototypeStructure({ children, title }) {
   const prototype = usePrototypeData();
   const { query } = useRouter();
@@ -67,86 +100,60 @@ export default function PrototypeStructure({ children, title }) {
 
             <div className="flex items-stretch h-screen">
               <div className="relative w-16 hidden bg-ui-800 md:flex flex-col after:content-[''] after:w-px after:absolute after:inset-y-0 after:bg-ui-700 after:right-0 after:z-0">
-                <i className="absolute z-40 lg:w-12 xl:w-24 h-screen left-0 translate-x-16 inset-y-0 from-ui-900 to-ui-900/0 bg-gradient-to-r" />
+                <i className="absolute z-40 lg:w-12 xl:w-24 h-screen left-0 translate-x-16 inset-y-0 from-ui-900/50 to-ui-900/0 bg-gradient-to-r" />
                 <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
-                  <div className="relative z-10 grid place-content-center aspect-square border-b border-ui-700 text-0 cursor-pointer after:transition-colors after:duration-200 after:content-[''] after:absolute after:inset-0 after:bg-ui-850/0 hover:after:bg-ui-850 active:after:bg-ui-850">
-                    <span className="icon relative z-10 icon-stryda-symbol text-main text-3xl" />
+                  <div className="relative z-10 grid place-content-center aspect-square border-b border-ui-700 text-0 cursor-pointer after:transition-colors after:duration-200 after:content-[''] after:absolute after:inset-0 after:bg-ui-850/0 hover:after:bg-ui-850 active:after:bg-ui-850 hover:child:rotate-180">
+                    <span className="icon relative z-10 icon-stryda-symbol text-main text-3xl transition-transform duration-500 ease-[cubic-bezier(.7,0,.3,1)]" />
                   </div>
                 </Link>
-                <div className="relative z-50 flex-1 flex flex-col items-center justify-center -space-y-px">
-                  <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
-                    <button
-                      type="button"
-                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-right before:duration-500 before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
-                        router.pathname.endsWith("prototype") ||
-                        router.pathname.includes("home")
-                          ? "text-main"
-                          : "before:opacity-0 before:-translate-x-0 before:scale-x-0"
-                      }`}
-                      data-tooltip="Home"
+                <ul className="relative z-50 flex-1 flex flex-col items-center justify-center px-1.5 space-y-1.5">
+                  {manNavLinks.map((item, itemIndex) => (
+                    <>
+                      <li className="w-full aspect-square flex items-center justify-center">
+                        <Link
+                          href={`/prototype-new/${
+                            item.url
+                          }${prototype.getURLparams()}`}
+                        >
+                          <button
+                            type="button"
+                            className={`flex-1 relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-t before:from-ui-850 before:to-ui-850 before:border before:border-ui-700 before:origin-right before:duration-200 before:transition-all before:ease-in-out before:rounded hover:before:opacity-100 hover:before:scale-100 hover:before:scale-x-100 tooltip tooltip-right ${
+                              router.pathname.includes(item.url)
+                                ? "text-main"
+                                : "before:opacity-0 before:scale-90 before:scale-x-0"
+                            }`}
+                            data-tooltip={item.label}
+                          >
+                            <span
+                              className={`icon text-2xl relative z-10 ${item.icon}`}
+                            />
+                          </button>
+                        </Link>
+                      </li>
+                      {/*
+                    <Link
+                      href={`/prototype-new/${
+                        item.url
+                      }${prototype.getURLparams()}`}
                     >
-                      <span className="icon text-2xl relative z-10 icon-home-2" />
-                    </button>
-                  </Link>
-                  <Link
-                    href={`/prototype-new/missions${prototype.getURLparams()}`}
-                  >
-                    <button
-                      type="button"
-                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-right before:duration-500 before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
-                        router.pathname.includes("missions")
-                          ? "text-main"
-                          : "before:opacity-0 before:-translate-x-0 before:scale-x-0"
-                      }`}
-                      data-tooltip="Missions"
-                    >
-                      <span className="icon text-2xl relative z-10 icon-crosshair" />
-                    </button>
-                  </Link>
-                  <Link
-                    href={`/prototype-new/ladders${prototype.getURLparams()}`}
-                  >
-                    <button
-                      type="button"
-                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-right before:duration-500 before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
-                        router.pathname.includes("ladders")
-                          ? "text-main"
-                          : "before:opacity-0 before:-translate-x-0 before:scale-x-0"
-                      }`}
-                      data-tooltip="Ladders"
-                    >
-                      <span className="icon text-2xl relative z-10 icon-podium" />
-                    </button>
-                  </Link>
-                  <Link
-                    href={`/prototype-new/valorant/stats${prototype.getURLparams()}`}
-                  >
-                    <button
-                      type="button"
-                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-right before:duration-500 before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
-                        router.pathname.includes("stats")
-                          ? "text-main"
-                          : "before:opacity-0 before:-translate-x-0 before:scale-x-0"
-                      }`}
-                      data-tooltip="Stats"
-                    >
-                      <span className="icon text-2xl relative z-10 icon-statistics" />
-                    </button>
-                  </Link>
-                  <Link href={`/prototype-new/shop${prototype.getURLparams()}`}>
-                    <button
-                      type="button"
-                      className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-right before:duration-500 before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
-                        router.pathname.includes("shop")
-                          ? "text-main"
-                          : "before:opacity-0 before:-translate-x-0 before:scale-x-0"
-                      }`}
-                      data-tooltip="Shop"
-                    >
-                      <span className="icon text-2xl relative z-10 icon-shop" />
-                    </button>
-                  </Link>
-                </div>
+                      <button
+                        type="button"
+                        className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-right before:duration-500 before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
+                          router.pathname.includes(item.url)
+                            ? "text-main"
+                            : "before:opacity-0 before:-translate-x-0 before:scale-x-0"
+                        }`}
+                        data-tooltip={item.label}
+                      >
+                        <span
+                          className={`icon text-2xl relative z-10 ${item.icon}`}
+                        />
+                      </button>
+                    </Link>
+                      */}
+                    </>
+                  ))}
+                </ul>
                 <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
                   <div className="relative z-10 grid place-content-center aspect-square border-t border-ui-700 text-0 cursor-pointer after:transition-colors after:duration-200 after:content-[''] after:absolute after:inset-0 after:bg-ui-850/0 hover:after:bg-ui-850 active:after:bg-ui-850">
                     <span className="icon relative z-10 icon-c-question text-ui-300 text-3xl" />
@@ -161,7 +168,7 @@ export default function PrototypeStructure({ children, title }) {
                 <Footer className="child:max-w-3xl child hidden" />
               </div>
               <div className="w-60 hidden lg:block bg-ui-800 border-l border-ui-700">
-                <i className="absolute z-40 lg:w-12 xl:w-24 h-screen right-0 -translate-x-60 inset-y-0 from-ui-900 to-ui-900/0 bg-gradient-to-l" />
+                <i className="absolute z-40 lg:w-12 xl:w-24 h-screen right-0 -translate-x-60 inset-y-0 from-ui-900/50 to-ui-900/0 bg-gradient-to-l" />
 
                 <PrototypeSideRight />
 

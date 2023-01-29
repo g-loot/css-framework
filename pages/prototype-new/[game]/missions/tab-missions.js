@@ -10,6 +10,7 @@ import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
 import ComponentRewardLadder from "./component-rewardladder";
+import PremiumLogo from "../../../../components/PremiumLogo/PremiumLogo";
 
 export default function TabMissionsMissions() {
   const router = useRouter();
@@ -39,7 +40,6 @@ export default function TabMissionsMissions() {
     <>
       {selectedGame && (
         <>
-
           {/*
             <section
               className="py-8 animate-slide-in-bottom animate-delay"
@@ -52,7 +52,7 @@ export default function TabMissionsMissions() {
             className="py-8 animate-slide-in-bottom animate-delay"
             style={{ "--delay": "calc(2 * 0.05s)" }}
           >
-             {/*
+            {/*
             <div className="flex items-center justify-between mb-2 mx-4 sm:mx-0">
              
               <h3 className="h5">Daily missions in {selectedGame.name}</h3>
@@ -90,25 +90,27 @@ export default function TabMissionsMissions() {
                 New missions in <b>4H 23M 12S</b>
               </div>
               <div className="md:text-right flex items-center gap-2">
-                <div>Your latest match ended <b>Dec 13 / 8:12 PM</b></div>
+                <div>
+                  Your latest match ended <b>Dec 13 / 8:12 PM</b>
+                </div>
                 <button
-                    className={`button button-xs button-secondary ${
-                      submitting ? "is-loading" : ""
-                    }`}
-                    onClick={addToastWithDelay.bind(this, {
-                      icon: "f-check",
-                      color: "green",
-                      text: "Your stats have been updated.",
-                      autoDelete: true,
-                      autoDeleteDelay: 2500,
-                    })}
-                  >
-                    <span className="icon icon-16 icon-refresh-02" />
-                    <span className="hidden sm:block">
-                      Request a stats update
-                    </span>
-                    <span className="block sm:hidden">Update</span>
-                  </button>
+                  className={`button button-xs button-secondary ${
+                    submitting ? "is-loading" : ""
+                  }`}
+                  onClick={addToastWithDelay.bind(this, {
+                    icon: "f-check",
+                    color: "green",
+                    text: "Your stats have been updated.",
+                    autoDelete: true,
+                    autoDeleteDelay: 2500,
+                  })}
+                >
+                  <span className="icon icon-16 icon-refresh-02" />
+                  <span className="hidden sm:block">
+                    Request a stats update
+                  </span>
+                  <span className="block sm:hidden">Update</span>
+                </button>
               </div>
             </div>
 
@@ -119,7 +121,7 @@ export default function TabMissionsMissions() {
                 {!isPremium && (
                   <>
                     Get{" "}
-                    <Link href="/prototype-new/premium">
+                    <Link href="/prototype/premium">
                       <a className="text-premium-500 link">Premium</a>
                     </Link>{" "}
                     and earn +50% of XP on all missions
@@ -174,36 +176,36 @@ export default function TabMissionsMissions() {
           </section>
           <section className="py-8 grid grid-cols-1 xl:grid-cols-3 gap-y-4 xl:gap-x-4 items-stretch">
             <div
-              className={`relative z-10 surface surface-dimmed p-8 flex flex-col justify-center sm:rounded-lg text-center ${
+              className={`relative z-10 surface surface-dimmed p-8 flex flex-col gap-8 md:flex-row justify-center sm:rounded-lg text-center md:text-left ${
                 hasAds ? "col-span-1" : "col-span-3"
               }`}
             >
-              <img
-                className="hidden lg:block absolute animate-fade-in animate-delay z-20 pointer-events-none -top-2 right-2 rotate-[33deg]"
-                src="https://res.cloudinary.com/gloot/image/upload/v1657625027/Marketing/2022_prototype/3D_object_crowngold.webp"
-                width="100"
+              <PremiumLogo
+                src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                width="210"
                 height="auto"
-                alt=""
-                style={{ "--delay": "calc(2 * 0.05s)" }}
+                className="mx-auto md:mx-0"
               />
-              <h4 className="text-3xl">
-                <span>Join</span>{" "}
-                <span className="text-premium-500">Stryda Premium</span>
-              </h4>
-              <p className="max-w-[50ch] text-sm text-ui-300 mx-auto mt-2 mb-5">
-                Increase your amount of daily missions and XP you can earn each
-                day with a{" "}
-                <Link href={`/prototype-new/premium${prototype.getURLparams()}`}>
-                  <a className="link">Premium subscription</a>
-                </Link>
-                .
-              </p>
-              <div className="mx-auto">
-                <Link href={`/prototype-new/premium${prototype.getURLparams()}`}>
-                  <a className="button button-premium is-shining">
-                    <span>Join Premium</span>
-                  </a>
-                </Link>
+              <div className="md:border-l md:border-ui-700 pl-0 md:pl-8">
+                <h4 className="text-3xl">
+                  <span>Join</span>{" "}
+                  <span className="text-premium-500">Stryda Premium</span>
+                </h4>
+                <p className="max-w-[50ch] text-sm text-ui-300 mx-auto mt-2 mb-5">
+                  Increase your amount of XP you can earn each
+                  day with a{" "}
+                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                    <a className="link">Premium subscription</a>
+                  </Link>
+                  .
+                </p>
+                <div className="mx-auto mt-2">
+                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                    <a className="button button-premium is-shining">
+                      <span>Join Premium</span>
+                    </a>
+                  </Link>
+                </div>
               </div>
             </div>
             <div

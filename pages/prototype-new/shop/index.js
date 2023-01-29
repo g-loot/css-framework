@@ -5,6 +5,7 @@ import PrototypeStructure from "../../../components/prototypeNew/PrototypeStruct
 import { usePrototypeData } from "../../../contexts/prototype";
 import { UiContext } from "../../../contexts/ui";
 import ModalBuyTokens from "../wallet/modal-buytokens";
+import ShopHeader from "./shop-header";
 
 export default function Home() {
   const prototype = usePrototypeData();
@@ -18,12 +19,14 @@ export default function Home() {
       <PrototypeStructure title="Shop">
         <Ad width="1005" height="300" />
 
-        <section className="mb-8">
+        <ShopHeader />
+
+        <section className="mb-8 hidden">
           <div className="header surface sm:rounded-lg">
             <div className="header-content">
               <div className="header-body">
                 <h1>Shop</h1>
-                <p className="text-ui-300 max-w-[70ch] mt-4">
+                <p className="max-w-[70ch] mt-2">
                   Turn your hard work and successes into rewards you can enjoy!
                   Will you invest in some new gaming gear or just treat yourself
                   to something you&#39;ve had your eye on? Earn more coins to
@@ -39,10 +42,9 @@ export default function Home() {
         </section>
         <section className="px-4 md:px-0 mb-8 grid md:grid-cols-2 items-stretch gap-8 md:gap-4">
           <div className="flex flex-col">
-            <h2 className="px-2 sm:px-0 py-2 h6">Avatar frames</h2>
+            <h2 className="h5 mb-4">Avatar frames</h2>
             <div
-              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center lg:justify-end animate-slide-in-right animate-delay"
-              style={{ "--delay": `calc( 0 * 0.05s)` }}
+              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center lg:justify-end"
             >
               <div className="flex-3 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 xl:order-1 text-center md:text-left">
                 <h3>Get a new look</h3>
@@ -68,10 +70,9 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col">
-            <h2 className="px-2 sm:px-0 py-2 h6">Tokens</h2>
+            <h2 className="h5 mb-4">Tokens</h2>
             <div
-              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center animate-slide-in-right animate-delay"
-              style={{ "--delay": `calc( 0 * 0.05s)` }}
+              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center"
             >
               <div className="flex-3 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 xl:order-1 text-center md:text-left">
                 <h3>Need a token refill?</h3>
@@ -98,13 +99,13 @@ export default function Home() {
           </div>
         </section>
         <section className="px-4 md:px-0 mb-8">
-          <h2 className="px-2 sm:px-0 py-2 h6">Gift cards</h2>
+          <h2 className="h5 mb-4">Gift cards</h2>
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4">
             {prototype.vouchers.map((voucher, voucherIndex) => (
               <>
                 <li
                   key={voucher.id}
-                  className="surface rounded-2xl w-full sm:w-2/3 md:w-auto p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
+                  className="surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-delay"
                   style={{ "--delay": `calc( ${voucherIndex} * 0.05s)` }}
                 >
                   <div className="flex-1 flex flex-col items-center gap-2">
@@ -165,7 +166,7 @@ export default function Home() {
         {/*
 
         <section className="px-4 md:px-0 mb-4">
-          <h2 className="px-2 sm:px-0 py-2 h6">Tokens</h2>
+          <h2 className="h5 mb-4">Tokens</h2>
           <div className="relative">
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -top-20 -right-4 rotate-[33deg]"

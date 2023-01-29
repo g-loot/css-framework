@@ -201,14 +201,15 @@ export default function ModalBuyTokens(props) {
                         </div>
 
                         <div className="border-t border-ui-700 mt-4 pt-4">
-                          <button
-                            className={`button button-secondary w-full ${
+                        <button
+                            className={`button button-secondary button-currency button-coin w-full ${
                               submitting ? "is-loading" : ""
                             }`}
                             onClick={closeModalWithDelay}
                             disabled={selectedGamesCount === 0}
                           >
-                            <span>Buy</span>
+                            <div><span>Buy</span></div>
+                            <div><span>{item.amount}</span></div>
                           </button>
                         </div>
                       </div>
@@ -284,13 +285,14 @@ export default function ModalBuyTokens(props) {
 
                         <div className="border-t border-ui-700 mt-4 pt-4">
                           <button
-                            className={`button button-secondary w-full ${
+                            className={`button button-secondary button-currency button-coin w-full ${
                               submitting ? "is-loading" : ""
                             }`}
                             onClick={closeModalWithDelay}
                             disabled={selectedGamesCount === 0}
                           >
-                            <span>Buy</span>
+                            <div><span>Buy</span></div>
+                            <div><span>{item.amount}</span></div>
                           </button>
                         </div>
                       </div>

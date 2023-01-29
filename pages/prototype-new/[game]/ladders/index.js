@@ -51,7 +51,7 @@ export default function Ladders() {
                     everything you need to know about our competitions.
                   </p>
                   <Link
-                    href={`/prototype-new/${selectedGame.slug}/ladders/howitworks`}
+                    href={`/prototype/${selectedGame.slug}/ladders/howitworks`}
                   >
                     <button
                       type="button"
@@ -74,7 +74,7 @@ export default function Ladders() {
                     At Stryda we take player protection very seriously and
                     investigate any suspicious activity.
                   </p>
-                  <Link href={`/prototype-new/${selectedGame.slug}/ladders/rules`}>
+                  <Link href={`/prototype/${selectedGame.slug}/ladders/rules`}>
                     <button
                       type="button"
                       className="button button-sm button-secondary"
@@ -93,7 +93,7 @@ export default function Ladders() {
                 <div className="px-3 py-2 border-b border-ui-700 relative z-10 flex-none flex items-center justify-between">
                   <div className="font-bold">Your Ladder history</div>
                   <Link
-                    href={`/prototype-new/${
+                    href={`/prototype/${
                       selectedGame.slug
                     }/ladders/history${prototype.getURLparams()}`}
                   >
@@ -109,7 +109,7 @@ export default function Ladders() {
                         selectedGame.ladders.map((ladder, ladderIndex) => (
                           <>
                             <Link
-                              href={`/prototype-new/${game}/ladders/${
+                              href={`/prototype/${game}/ladders/${
                                 ladder.id
                               }${prototype.getURLparams()}`}
                             >

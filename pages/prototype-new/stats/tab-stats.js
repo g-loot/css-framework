@@ -10,7 +10,7 @@ import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 import CardMissionSecondary from "../../../components/Card/CardMissionSecondary";
 
-export default function TabMissionsMissions() {
+export default function TabStatsStats() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
@@ -37,20 +37,15 @@ export default function TabMissionsMissions() {
   return (
     <>
       
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0 mb-16">
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 mx-4 sm:mx-0 mb-16">
           {prototype.games.map((game, gameIndex) => (
             <>
               {game.isFavorite && (
-                <>
-                  {game.missions?.map((mission, missionIndex) => (
-                    <CardMissionSecondary
-                      gameSlug={game.slug}
-                      key={missionIndex}
-                      mission={mission}
-                      index={missionIndex}
-                    />
-                  ))}
-                </>
+                <div>
+                  <h2 className="h5 mb-4">{game.name} stats</h2>
+                  <div className="surface rounded aspect-landscape p-4">
+                  </div>
+                </div>
               )}
             </>
           ))}

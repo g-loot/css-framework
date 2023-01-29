@@ -75,7 +75,7 @@ export default function ComponentRewardLadder() {
       ) : (
         <div className="mb-2 mx-4 sm:mx-0">
           <p className="text-sm text-ui-300">
-            <Link href="/prototype-new/premium">
+            <Link href="/prototype/premium">
               <a className="text-premium-500 link">Premium</a>
             </Link>{" "}
             users earn an additional 50% XP for each completed Mission and registered Ladder match.
@@ -102,7 +102,7 @@ export default function ComponentRewardLadder() {
                   <p className="max-w-[80ch]">
                     To complete Missions and earn rewards, you need to{" "}
                     <Link
-                      href={`/prototype-new/profile/settings${prototype.getURLparams()}`}
+                      href={`/prototype/profile/settings${prototype.getURLparams()}`}
                     >
                       <a className="link">
                         connect your Steam account to Stryda
@@ -114,7 +114,7 @@ export default function ComponentRewardLadder() {
               </div>
               <div className="flex-none">
                 <Link
-                  href={`/prototype-new/profile/settings${prototype.getURLparams()}`}
+                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
                 >
                   <a className="button button-sm button-tertiary">
                     <span>

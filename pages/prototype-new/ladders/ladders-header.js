@@ -34,23 +34,40 @@ export default function LaddersHeader(props) {
 
   return (
     <>
-      <div className="relative">
-        <div className="absolute z-0 bg-ui-850 -inset-x-12 xl:-inset-x-24 bottom-0 -inset-y-4 border-b border-ui-700">
-          <span className="absolute inset-0 bg-cover animate-fade-in" style={{backgroundImage: 'url(https://res.cloudinary.com/gloot/image/upload/v1674691791/Stryda/demo/ladders_header_1.jpg)'}}/>
-        </div>
-        <div className="relative z-10 pt-32 pb-4 flex items-end">
-          {/*
-          <img
-            src="https://res.cloudinary.com/gloot/image/upload/v1674654182/Stryda/logos/stryda-logo-ladders-simple.svg"
-            height="auto"
-            width="auto"
-            alt="Ladders"
-            className="mb-1 h-20"
+      <section className="relative">
+        <div className="absolute z-0 bg-gradient-to-b from-ui-850 to-ui-800 -inset-x-12 xl:-inset-x-24 bottom-0 -inset-y-4 border-b border-ui-700">
+          <span
+            className="absolute inset-0 bg-cover"
+            style={{
+              backgroundImage:
+                "url(https://res.cloudinary.com/gloot/image/upload/v1674691791/Stryda/demo/ladders_header_1.jpg)",
+            }}
           />
-  */}
-          <h1>Ladders</h1>
         </div>
-      </div>
+        <div className="relative z-10 pt-32 pb-4">
+          <h1 className="animate-slide-in-left">Ladders</h1>
+          {freeEntry ? (
+            <>
+              <p className="text-ui-300 max-w-[70ch] mt-4 mb-2">
+                Use your stats to climb the ladders and win prizes. No waiting,
+                no dedicated servers. Play on your own schedule!
+              </p>
+              <p className="max-w-[70ch] mt-2">
+                <span className="font-bold">First time competing?</span> Your
+                entry ladder is on us! Simply pick any ladder you like and claim
+                your free ladder!
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="max-w-[70ch] mt-2">
+                Use your stats to climb the ladders and win prizes. No waiting,
+                no dedicated servers. Play on your own schedule!
+              </p>
+            </>
+          )}
+        </div>
+      </section>
     </>
   );
 }

@@ -122,7 +122,7 @@ export default function Missions() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={itemIndex}>
                     <Link
-                      href={`/prototype-new/${game}/missions?tab=${
+                      href={`/prototype/${game}/missions?tab=${
                         item.url
                       }${prototype.getURLparams("&")}`}
                     >

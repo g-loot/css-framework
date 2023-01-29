@@ -62,7 +62,7 @@ export default function Home() {
                 <div className="header-content">
                   <div className="header-body">
                     <h1>{selectedVoucher.name}</h1>
-                    <p className="text-ui-300 max-w-[70ch] mt-4">
+                    <p className="max-w-[70ch] mt-2">
                       {selectedVoucher.description}
                     </p>
                   </div>

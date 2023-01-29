@@ -33,7 +33,7 @@ export default function TabLaddersOngoing() {
                     style={{ "--delay": "calc(" + ladderIndex + " * 0.05s)" }}
                   >
                     <Link
-                      href={`/prototype-new/${selectedGame.slug}/ladders/${
+                      href={`/prototype/${selectedGame.slug}/ladders/${
                         ladder.id
                       }${prototype.getURLparams()}`}
                     >

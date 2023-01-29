@@ -26,9 +26,7 @@ export default function TabLaddersOngoing() {
   return (
     <>
       <>
-        <section className="my-8">
-          <FilterGame />
-        </section>
+        <FilterGame />
         <section className="my-8">
           <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
             <h2 className="h5">Ongoing Ladders</h2>

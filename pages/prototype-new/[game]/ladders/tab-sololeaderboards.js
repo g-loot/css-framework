@@ -130,7 +130,7 @@ export default function TabLaddersSoloLeaderboards() {
         <HowToLadder />
       </section>
   */}
-      {!hasClaim && (
+      {!hasClaim && selectedLadder && (
         <section
           className="pb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(1 * 0.05s)" }}
@@ -283,8 +283,8 @@ export default function TabLaddersSoloLeaderboards() {
                         <p className="text-ui-300 my-4">
                           After playing your free entry matches you will hit the
                           leaderboard. Your place will depend on the total of
-                          the Ladder points from your best matches and can always
-                          be imroved.
+                          the Ladder points from your best matches and can
+                          always be imroved.
                         </p>
                         <p className="text-sm text-main">
                           TIPS: Play more matches to improve your Ladder points
@@ -294,14 +294,7 @@ export default function TabLaddersSoloLeaderboards() {
                     </div>
                   ) : (
                     <div className="relative flex flex-col items-center">
-                      <img
-                        className="absolute z-10 -top-4 left-auto right-auto"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1672305058/Stryda/3dobjects/3dobject-megaphone.png"
-                        width="136"
-                        height="auto"
-                        alt=""
-                      />
-                      <div className="w-full mb-4 surface surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
+                      <div className="w-full mb-4 surface surface-halo halo-t rounded-lg p-4 text-center relative z-0">
                         <h2 className="h4 mb-2">Compete in this Ladder</h2>
                         <div className="uppercase  text-ui-100">
                           Play at least{" "}
@@ -328,17 +321,22 @@ export default function TabLaddersSoloLeaderboards() {
 
                 {isPremium ? (
                   <>
-                  <p className="text-ui-300 max-w-[30ch] mx-auto">
-                    As a <b className="text-ui-100">Premium user</b>, you earn <b className="text-ui-100">450 XP</b> for each registered Ladder match.
-                  </p>
-                  <p className="text-ui-300 max-w-[30ch] mx-auto">
-                    You will get the XP for your placement matches when you reach the leaderboard.
-                  </p>
+                    <p className="text-ui-300 max-w-[30ch] mx-auto">
+                      As a <b className="text-ui-100">Premium user</b>, you earn{" "}
+                      <b className="text-ui-100">450 XP</b> for each registered
+                      Ladder match.
+                    </p>
+                    <p className="text-ui-300 max-w-[30ch] mx-auto">
+                      You will get the XP for your placement matches when you
+                      reach the leaderboard.
+                    </p>
                   </>
                 ) : (
                   <>
                     <p className="text-ui-300 max-w-[30ch] mx-auto mb-4">
-                      Earn 300 XP for each registered Ladder match, you will get the XP for your placement matches when you reach the leaderboard.
+                      Earn 300 XP for each registered Ladder match, you will get
+                      the XP for your placement matches when you reach the
+                      leaderboard.
                     </p>
                     <p className="text-ui-300 max-w-[30ch] mx-auto">
                       <Link href="/prototoype/premium">
@@ -389,12 +387,18 @@ export default function TabLaddersSoloLeaderboards() {
                     <Tooltip
                       tooltip={
                         <div className="max-w-xs leading-tight">
-                          <h5 className="text-lg">Ladder levels</h5>
-                          <p className="text-sm mb-2">
-                            Some Ladders put players into different levels based
-                            on their skills and performance while others are
-                            open for everyone no matter the skill level.
-                          </p>
+                          {!selectedLadder.isPremium && (
+                            <>
+                              <h5 className="text-lg">Ladder levels</h5>
+                              <p className="text-sm mb-2">
+                                Some Ladders put players into different levels
+                                based on their skills and performance while
+                                others are open for everyone no matter the skill
+                                level.
+                              </p>
+                            </>
+                          )}
+
                           <h5 className="text-lg">Groups &amp; leaderboards</h5>
                           <p className="text-sm">
                             Some Ladders are so big that they are split into
@@ -409,117 +413,119 @@ export default function TabLaddersSoloLeaderboards() {
                       </button>
                     </Tooltip>
                   </div>
-                  <div className="relative z-0 overflow-x-auto scrollbar-hidden h-16 flex items-center my-4">
-                    <div className="hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r from-ui-900 via-ui-900 to-ui-900/0 pl-4 pr-8">
-                      <button
-                        type="button"
-                        className="button button-lg button-ghost rounded-full"
-                        onClick={() => {
-                          sideScroll(
-                            sliderRankWrapper.current,
-                            25,
-                            sliderRankWidth,
-                            -sliderRankWidth
-                          );
-                        }}
-                      >
-                        <span className="icon icon-ctrl-left" />
-                      </button>
-                    </div>
-                    <div className="hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l from-ui-900 via-ui-900 to-ui-900/0 pr-4 pl-8">
-                      <button
-                        type="button"
-                        className="button button-lg button-ghost rounded-full"
-                        onClick={() => {
-                          sideScroll(
-                            sliderRankWrapper.current,
-                            25,
-                            sliderRankWidth,
-                            sliderRankWidth
-                          );
-                        }}
-                      >
-                        <span className="icon icon-ctrl-right" />
-                      </button>
-                    </div>
+                  {!selectedLadder.isPowerPlay && (
+                    <div className="relative z-0 overflow-x-auto scrollbar-hidden h-16 flex items-center my-4">
+                      <div className="hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r from-ui-900 via-ui-900 to-ui-900/0 pl-4 pr-8">
+                        <button
+                          type="button"
+                          className="button button-lg button-ghost rounded-full"
+                          onClick={() => {
+                            sideScroll(
+                              sliderRankWrapper.current,
+                              25,
+                              sliderRankWidth,
+                              -sliderRankWidth
+                            );
+                          }}
+                        >
+                          <span className="icon icon-ctrl-left" />
+                        </button>
+                      </div>
 
-                    <ul
-                      ref={sliderRankWrapper}
-                      className="absolute z-0 inset-0 tabs tabs-rank scrollbar-hidden px-10 md:px-20"
-                    >
-                      <li className="tab-bronze" ref={sliderRankItem}>
-                        <a
-                          onClick={loadRank.bind(this, 1)}
-                          className={selectedRank === 1 ? "is-active" : ""}
+                      <div className="hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l from-ui-900 via-ui-900 to-ui-900/0 pr-4 pl-8">
+                        <button
+                          type="button"
+                          className="button button-lg button-ghost rounded-full"
+                          onClick={() => {
+                            sideScroll(
+                              sliderRankWrapper.current,
+                              25,
+                              sliderRankWidth,
+                              sliderRankWidth
+                            );
+                          }}
                         >
-                          <div>
+                          <span className="icon icon-ctrl-right" />
+                        </button>
+                      </div>
+                      <ul
+                        ref={sliderRankWrapper}
+                        className="absolute z-0 inset-0 tabs tabs-rank scrollbar-hidden px-10 md:px-20"
+                      >
+                        <li className="tab-bronze" ref={sliderRankItem}>
+                          <a
+                            onClick={loadRank.bind(this, 1)}
+                            className={selectedRank === 1 ? "is-active" : ""}
+                          >
                             <div>
-                              <span className="icon text-4xl icon-rank-bronze" />
-                              <span className="h4">Bronze</span>
-                            </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li className="tab-silver">
-                        <a
-                          onClick={loadRank.bind(this, 2)}
-                          className={selectedRank === 2 ? "is-active" : ""}
-                        >
-                          <div>
-                            <div>
-                              <span className="icon text-4xl icon-rank-silver" />
-                              <span className="h4">Silver</span>
-                            </div>
-                            <div className="avatar avatar-circle avatar-xs">
                               <div>
-                                <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                                <span className="icon text-4xl icon-rank-bronze" />
+                                <span className="h4">Bronze</span>
                               </div>
-                              <i className="radar" />
                             </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li className="tab-gold">
-                        <a
-                          onClick={loadRank.bind(this, 3)}
-                          className={selectedRank === 3 ? "is-active" : ""}
-                        >
-                          <div>
+                          </a>
+                        </li>
+                        <li className="tab-silver">
+                          <a
+                            onClick={loadRank.bind(this, 2)}
+                            className={selectedRank === 2 ? "is-active" : ""}
+                          >
                             <div>
-                              <span className="icon text-4xl icon-rank-gold" />
-                              <span className="h4">Gold</span>
+                              <div>
+                                <span className="icon text-4xl icon-rank-silver" />
+                                <span className="h4">Silver</span>
+                              </div>
+                              <div className="avatar avatar-circle avatar-xs">
+                                <div>
+                                  <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                                </div>
+                                <i className="radar" />
+                              </div>
                             </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li className="tab-platinum">
-                        <a
-                          onClick={loadRank.bind(this, 4)}
-                          className={selectedRank === 4 ? "is-active" : ""}
-                        >
-                          <div>
+                          </a>
+                        </li>
+                        <li className="tab-gold">
+                          <a
+                            onClick={loadRank.bind(this, 3)}
+                            className={selectedRank === 3 ? "is-active" : ""}
+                          >
                             <div>
-                              <span className="icon text-4xl icon-rank-platinum" />
-                              <span className="h4">Platinum</span>
+                              <div>
+                                <span className="icon text-4xl icon-rank-gold" />
+                                <span className="h4">Gold</span>
+                              </div>
                             </div>
-                          </div>
-                        </a>
-                      </li>
-                      <li className="tab-diamond">
-                        <a
-                          onClick={loadRank.bind(this, 5)}
-                          className={selectedRank === 5 ? "is-active" : ""}
-                        >
-                          <div>
+                          </a>
+                        </li>
+                        <li className="tab-platinum">
+                          <a
+                            onClick={loadRank.bind(this, 4)}
+                            className={selectedRank === 4 ? "is-active" : ""}
+                          >
                             <div>
-                              <span className="icon text-4xl icon-rank-diamond" />
-                              <span className="h4">Diamond</span>
+                              <div>
+                                <span className="icon text-4xl icon-rank-platinum" />
+                                <span className="h4">Platinum</span>
+                              </div>
                             </div>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                          </a>
+                        </li>
+                        <li className="tab-diamond">
+                          <a
+                            onClick={loadRank.bind(this, 5)}
+                            className={selectedRank === 5 ? "is-active" : ""}
+                          >
+                            <div>
+                              <div>
+                                <span className="icon text-4xl icon-rank-diamond" />
+                                <span className="h4">Diamond</span>
+                              </div>
+                            </div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
                   <div className="">
                     <div className="flex items-center py-4 gap-4">
                       <div className="hidden md:flex gap-2 items-center pr-4 leading-none border-r border-ui-700">
@@ -767,13 +773,26 @@ export default function TabLaddersSoloLeaderboards() {
                                     <div className="flex-1 flex items-center justify-center gap-4">
                                       {user.rewards?.map(
                                         (reward, rewardIndex) => (
-                                          <Reward
-                                            key={rewardIndex}
-                                            reward={reward}
-                                            gap="gap-2"
-                                            iconClassNames="text-lg"
-                                            textClassNames="text-lg"
-                                          />
+                                          <>
+                                            {selectedLadder.isPowerPlay ? (
+                                              <Reward
+                                                key={rewardIndex}
+                                                reward={reward}
+                                                xFactor={20}
+                                                gap="gap-2"
+                                                iconClassNames="text-lg"
+                                                textClassNames="text-lg"
+                                              />
+                                            ) : (
+                                              <Reward
+                                                key={rewardIndex}
+                                                reward={reward}
+                                                gap="gap-2"
+                                                iconClassNames="text-lg"
+                                                textClassNames="text-lg"
+                                              />
+                                            )}
+                                          </>
                                         )
                                       )}
                                     </div>
@@ -794,7 +813,7 @@ export default function TabLaddersSoloLeaderboards() {
                                           <div className="item h-[56px]">
                                             <div className="flex-1">
                                               <Link
-                                                href={`/prototype-new/profile/${
+                                                href={`/prototype/profile/${
                                                   user.user
                                                 }${prototype.getURLparams()}`}
                                               >
@@ -862,7 +881,7 @@ export default function TabLaddersSoloLeaderboards() {
                                               {prototype.getUserByID(user.user)
                                                 ?.clan ? (
                                                 <Link
-                                                  href={`/prototype-new/clans/${
+                                                  href={`/prototype/clans/${
                                                     prototype.getUserByID(
                                                       user.user
                                                     ).clan
@@ -993,13 +1012,13 @@ export default function TabLaddersSoloLeaderboards() {
                                           </li>
                                         </ul>
                                         <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
-                                          <Link href="/prototype-new/profile/1">
+                                          <Link href="/prototype/profile/1">
                                             <a className="link link-main link-hover flex items-center gap-1 text-sm">
                                               <span className="icon icon-profile-2" />
                                               <span>Go to Player profile</span>
                                             </a>
                                           </Link>
-                                          <Link href="/prototype-new/profile/1">
+                                          <Link href="/prototype/profile/1">
                                             <a className="link link-main link-hover flex items-center gap-1 text-sm">
                                               <span className="icon icon-multiple-12" />
                                               <span>Go to Clan page</span>

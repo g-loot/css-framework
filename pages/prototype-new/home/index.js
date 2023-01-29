@@ -16,6 +16,7 @@ import HomeLadderMissions from "./component-ladders-missions";
 import ComponentRewardLadder from "../missions/component-rewardladder";
 import { usePrototypeData } from "../../../contexts/prototype";
 import CarouselNew from "../../../components/Carousel/CarouselNew";
+import CardMissionSecondary from "../../../components/Card/CardMissionSecondary";
 
 export default function Home() {
   const { query } = useRouter();
@@ -79,7 +80,6 @@ export default function Home() {
           <CarouselNew />
         </section>
 
-
         <ComponentRewardLadder />
 
         <h2 className="h4 mb-4 mx-4 sm:mx-0">Ladders</h2>
@@ -92,9 +92,7 @@ export default function Home() {
             <h3 className="h6">Solo</h3>
             {!hasNoLadders && (
               <Link href="/prototype-new/valorant/ladders/">
-                <a className="link link-hover text-ui-300 text-sm">
-                  View Ladder history
-                </a>
+                <a className="link link-hover text-ui-300 text-sm">View all</a>
               </Link>
             )}
           </div>
@@ -130,7 +128,8 @@ export default function Home() {
               rewarding with <span className="text-premium-500">Premium</span>
             </h3>
             <p className="text-lg text-ui-100 mt-4 mb-5">
-              Get a 50% XP boost on all completed missions &amp; Ladders matches, remove ads and much more.
+              Get a 50% XP boost on all completed missions &amp; Ladders
+              matches, remove ads and much more.
             </p>
             <Link href={`/prototype-new/premium${prototype.getURLparams()}`}>
               <button
@@ -188,9 +187,39 @@ export default function Home() {
         </section>
         */}
 
-        <h2 className="h4 mt-8 mx-4 sm:mx-0">Missions</h2>
+        <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
+          <h3 className="h4">Missions</h3>
+          {!hasNoLadders && (
+            <Link href="/prototype-new/valorant/ladders/">
+              <a className="link link-hover text-ui-300 text-sm">View all</a>
+            </Link>
+          )}
+        </div>
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0 mb-16">
+          {prototype.games.map((game, gameIndex) => (
+            <>
+              {game.isFavorite && (
+                <>
+                  {game.missions?.map((mission, missionIndex) => (
+                    <CardMissionSecondary
+                      gameSlug={game.slug}
+                      key={missionIndex}
+                      mission={mission}
+                      index={missionIndex}
+                    />
+                  ))}
+                </>
+              )}
+            </>
+          ))}
+        </div>
+
+        {/*
+
         <HomeLadderMissions gameSlug="valorant" />
         <HomeLadderMissions gameSlug="pubg" />
+
+              */}
       </PrototypeStructure>
     </>
   );

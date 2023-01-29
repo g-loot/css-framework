@@ -112,7 +112,7 @@ export default function Ladders() {
                       <span>Learn how to Ladder</span>
                     </button>
                     <Link
-                      href={`/prototype-new/profile/settings${prototype.getURLparams()}`}
+                      href={`/prototype/profile/settings${prototype.getURLparams()}`}
                     >
                       <button
                         type="button"
@@ -134,7 +134,7 @@ export default function Ladders() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype-new/${game}/ladders?tab=${item.url}${prototype.getURLparams("&")}`}
+                      href={`/prototype/${game}/ladders?tab=${item.url}${prototype.getURLparams("&")}`}
                     >
                       <a
                         className={`${
