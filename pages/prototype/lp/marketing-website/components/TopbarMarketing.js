@@ -7,8 +7,8 @@ import { useRouter } from 'next/router';
 const TopBarMarketing = ({ props }) => {
   const [visible, setVisible] = useState(false)
 
-  const playBaseUrl = 'https://play.gloot.com'
-  const marketingBaseUrl = 'https://gloot.com'
+  const playBaseUrl = ''
+  const marketingBaseUrl = ''
 
   const ref = useRef(null)
 
@@ -58,7 +58,7 @@ const TopBarMarketing = ({ props }) => {
                 <img
                   width={123}
                   height={64}
-                  src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-white.svg"
                   alt="Stryda logo"
                   className="py-3"
                 />
@@ -67,7 +67,7 @@ const TopBarMarketing = ({ props }) => {
             </Link>
             <nav
               ref={ref}
-              className={`flex-grow fixed inset-x-0 top-0 z-10 items-center px-6 py-8 pb-12 rounded-t shadow-md transition-all duration-300 ease-[cubic-bezier(0.8,0,0.2,1)] transform bg-ui-900/95 backdrop-blur-sm  lg:flex lg:relative lg:top-auto lg:right-auto lg:bottom-auto lg:left-auto lg:p-0 lg:text-left lg:bg-ui-900/0 lg:translate-y-0 ${visible ? 'translate-y-0' : '-translate-y-full'}`}
+              className={`flex-1 flex justify-center flex-grow fixed inset-x-0 top-0 z-10 items-center px-6 py-8 pb-12 rounded-t shadow-md transition-all duration-300 ease-[cubic-bezier(0.8,0,0.2,1)] transform bg-ui-900/95 backdrop-blur-sm  lg:flex lg:relative lg:top-auto lg:right-auto lg:bottom-auto lg:left-auto lg:p-0 lg:text-left lg:bg-ui-900/0 lg:translate-y-0 ${visible ? 'translate-y-0' : '-translate-y-full'}`}
              >
               <button
                 title="Hide navigation"
@@ -76,16 +76,16 @@ const TopBarMarketing = ({ props }) => {
                 className="absolute top-0 right-0 my-6 mx-6 text-[2.25rem] lg:hidden">
                 ✕
               </button>
-              <ul className='flex flex-col space-y-6 w-2/3 text-base lg:flex-row lg:my-2 lg:space-y-0 lg:w-full lg:lg:gap-8'>
+              <ul className='tabs'>
                 {navLinks.map(([key, href, label, classnames], idx) => (
                   <li
                     key={idx}
                     className={cn(
-                      'border-b-2 whitespace-nowrap text-[1.25rem]',
+                      '',
                       classnames,
                       route === href || (href.length > 1 && route.startsWith(href))
-                        ? 'border-main'
-                        : 'border-ui-700/0',
+                        ? ''
+                        : '',
                     )}>
                     <Link href={`${marketingBaseUrl}${href}`} target='_blank'>
                       <a className='relative text-mono-100 transition-colors duration-200 hover:text-main'>{label}</a>

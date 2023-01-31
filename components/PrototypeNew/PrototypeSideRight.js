@@ -1,22 +1,20 @@
 import { useContext, useEffect, useState } from "react";
 
 import Link from "next/link";
-import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
+
 import ModalDownloadStarted from "../../pages/prototype-new/modal-downloadstarted";
-import Tooltip from "../Tooltip/Tooltip";
 import { UiContext } from "../../contexts/ui";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 import Notification from "../Notification/Notification";
 import { VariablesContext } from "../../contexts/variables";
-import TopBarClaim from "../TopBarClaim/TopBarClaim";
 import ModalBuyTokens from "../../pages/prototype-new/wallet/modal-buytokens";
 import Countdown from "../Countdown/Countdown";
-import Avatar from "../Avatar/Avatar";
 import ModalAvatarEdit from "../../pages/prototype-new/profile/[user_id]/modal-avataredit";
-import GameIcon from "../GameIcon/GameIcon";
 import TopBarClaimNew from "../TopBarClaim/TopBarClaimNew";
+import PrototypeSideRightClan from "./PrototypeSideRightClan";
+import PrototypeSideRightUser from "./PrototypeSideRightUser";
+import GameIcon from "../GameIcon/GameIcon";
 
 const notificationsGroups = [
   {
@@ -183,18 +181,14 @@ const notificationsGroups = [
 ];
 
 export default function PrototypeSideRight() {
-  const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
-  const variablesContext = useContext(VariablesContext);
   const hasAds = query.ads === "true" ? true : false;
   const isEmpty = query.empty === "true" ? true : false;
   const modalDownloadStarted =
     query.modaldownloadstarted === "true" ? true : false;
   const isPremium = query.premium === "true" ? true : false;
-  const hasAvatarFrame = query.avatarframe || false;
-  const [avatarFrame, setAvatarFrame] = useState(false);
   const modalAvatarEdit = query.modalavataredit === "true" ? true : false;
 
   useEffect(() => {
@@ -215,31 +209,19 @@ export default function PrototypeSideRight() {
     uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
   }
 
-  useEffect(() => {
-    if (hasAvatarFrame) {
-      setAvatarFrame(prototype.getShopitemByID(1, hasAvatarFrame));
-    }
-  }, []);
-
-  useEffect(() => {
-    if (modalAvatarEdit) {
-      openModalAvatarEdit(1);
-    }
-  }, [modalAvatarEdit]);
-
-  function openModalAvatarEdit(id) {
-    uiContext.openModal(<ModalAvatarEdit id={id} />);
-  }
-
   return (
     <>
       <div className="p-2 relative z-50">
         <div className="flex gap-2 items-center justify-between mb-4">
-          <div className="flex items-center rounded-full">
-            <button type="button" className="button button-tertiary rounded-full">
+          <Link href={`/prototype-new/search${prototype.getURLparams()}`}>
+            <button
+              type="button"
+              className="button button-tertiary rounded-full"
+            >
               <span className="icon icon-zoom text-ui-200" />
             </button>
-          </div>
+          </Link>
+
           <TopBarClaimNew />
           {/*
           <div className="form-group">
@@ -258,11 +240,9 @@ export default function PrototypeSideRight() {
             </div>
           </div>
   */}
+          {/*
           <div className="dropdown dropdown-end">
-            <div
-              tabIndex="1"
-              className="flex items-center rounded-full"
-            >
+            <div tabIndex="1" className="flex items-center rounded-full">
               <button
                 type="button"
                 className="w-[34px] button button-tertiary rounded-full"
@@ -336,6 +316,7 @@ export default function PrototypeSideRight() {
               </ul>
             </div>
           </div>
+                */}
           <div className="dropdown dropdown-end">
             <button
               tabIndex="1"
@@ -501,226 +482,97 @@ export default function PrototypeSideRight() {
           </div>
         </div>
       </div>
-      <div className="space-y-2 px-2">
-        <div className="grid place-content-center">
-          <div className="relative">
-            <div
-              className={`avatar avatar-xl avatar-circle ${
-                prototype.getUserByID(1).isPremium ? "avatar-premium" : ""
-              }`}
-            >
-              {avatarFrame && <img src={avatarFrame.image} alt="" />}
-              <div>
-                <img src={prototype.getUserByID(1).avatar} alt="avatar" />
+      <PrototypeSideRightUser />
+      <hr className="mt-4 mb-2" />
+      <PrototypeSideRightClan />
+      <hr className="mt-4 mb-2" />
+      <div className="flex gap-2 p-2">
+        <button
+          type="button"
+          className="flex-1 chip chip-sm chip-secondary uppercase chip-inverted"
+        >
+          <span>Missions</span>
+        </button>
+        <button
+          type="button"
+          className="flex-1 chip chip-sm chip-secondary uppercase"
+        >
+          <span>Ladders</span>
+        </button>
+      </div>
+      <div>
+        <ul>
+          <li className="item">
+            <div className="item-body">
+              <div className="item-title leading-none mb-2.5 text-sm">
+                Get 15 kills with the operator
+              </div>
+              <div className="text-ui-300 text-xs">
+                <div
+                  className="progressbar progressbar-xs"
+                  style={{
+                    "--percent": 54,
+                  }}
+                >
+                  <div />
+                </div>
               </div>
             </div>
-            <button
-              onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)}
-              type="button"
-              className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0"
-            >
-              <span className="icon icon-pen-2" />
-            </button>
-          </div>
-        </div>
-
-        <div
-          className={`text-center pt-2 ${
-            prototype.getUserByID(1).isPremium ? "text-premium-500" : ""
-          }`}
-        >
-          {prototype.getUserByID(1).nickname}
-        </div>
-
-        <div className="flex justify-center gap-1">
-          {prototype.getUserByID(1).games?.map((game, gameIndex) => (
-            <div
-              key={game.id}
-              className="cursor-pointer p-1 flex items-center justify-center"
-            >
-              <span
-                className={`icon text-xl ${
-                  prototype.getGameByID(game).slug === "apexlegends"
-                    ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                    : ""
-                } ${
-                  prototype.getGameByID(game).slug === "csgo"
-                    ? "icon-game-csgo-symbol text-game-csgo"
-                    : ""
-                }  ${
-                  prototype.getGameByID(game).slug === "dota2"
-                    ? "icon-game-dota2-symbol text-game-dota2"
-                    : ""
-                }  ${
-                  prototype.getGameByID(game).slug === "leagueoflegends"
-                    ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                    : ""
-                }  ${
-                  prototype.getGameByID(game).slug === "rocketleague"
-                    ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                    : ""
-                } ${
-                  prototype.getGameByID(game).slug === "pubg"
-                    ? "icon-game-pubg-symbol text-game-pubg"
-                    : ""
-                }  ${
-                  prototype.getGameByID(game).slug === "valorant"
-                    ? "icon-game-valorant-symbol text-game-valorant"
-                    : ""
-                }`}
-              />
+            <div className="item-actions">
+              <div>
+                <GameIcon game={1} />
+              </div>
             </div>
-          ))}
-        </div>
-        <div className="">
-          <div className="rounded-full py-1 px-2 bg-ui-700 flex items-center justify-center gap-x-3 hoverhighlight mx-auto">
-            <div className="inline-flex">
-              <Tooltip
-                tooltip={
-                  <div className="w-56 relative">
-                    <h6 className="my-4 text-ui-100">Coins</h6>
-                    <div className="absolute -top-8 -right-5 p-2">
-                      <img
-                        src="https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-coin-face.png"
-                        className="w-14 h-14"
-                        alt=""
-                      />
-                      <div className="lottie-blur absolute -inset-1">
-                        <Lottie
-                          animationData={LottieExplosion}
-                          loop={false}
-                          autoplay={true}
-                        />
-                      </div>
-                    </div>
-                    <ul className="leading-tight space-y-2 mt-2">
-                      <li className="flex gap-2 text-sm">
-                        <div className=" w-12 uppercase">Use</div>
-                        <div className="flex-1">
-                          To purchase items in the Shop.
-                        </div>
-                      </li>
-                      <li className="flex gap-2 text-sm">
-                        <div className=" w-12 uppercase">Get</div>
-                        <div className="flex-1">
-                          From <strong>Daily Login</strong> Streak and{" "}
-                          <strong>Weekly Ladder winnings</strong>.
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                }
-              >
-                <Link href={`/prototype-new/wallet${prototype.getURLparams()}`}>
-                  <div className="flex items-center gap-1 text-currency-1-500">
-                    <span className="icon icon-20 icon-coin" />
-                    <span className="">
-                      {prototype.getUserByID(1)?.wallet.coins}
-                    </span>
-                  </div>
-                </Link>
-              </Tooltip>
+          </li>
+          <li className="item">
+            <div className="item-body">
+              <div className="item-title leading-none mb-2.5 text-sm">
+                Get 6 assists
+              </div>
+              <div className="text-ui-300 text-xs">
+                <div
+                  className="progressbar progressbar-xs"
+                  style={{
+                    "--percent": 20,
+                  }}
+                >
+                  <div />
+                </div>
+              </div>
             </div>
-            <div className="inline-flex">
-              <Tooltip
-                tooltip={
-                  <div className="w-56 relative">
-                    <h6 className="my-4 text-ui-100">Token</h6>
-                    <div className="absolute -top-8 -right-5 p-2">
-                      <img
-                        src="https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-token-face.png"
-                        className="w-14 h-14"
-                        alt=""
-                      />
-                      <div className="lottie-blur absolute grid place-items-center -inset-1">
-                        <Lottie
-                          animationData={LottieExplosion}
-                          loop={false}
-                          autoplay={true}
-                        />
-                      </div>
-                    </div>
-                    <ul className="leading-tight space-y-2 mt-2">
-                      <li className="flex gap-2 text-sm">
-                        <div className=" w-12 uppercase">Use</div>
-                        <div className="flex-1">To enter Weekly Ladders.</div>
-                      </li>
-                      <li className="flex gap-2 text-sm">
-                        <div className=" w-12 uppercase">Get</div>
-                        <div className="flex-1">
-                          <strong>Missions, Daily Login Streak</strong> or{" "}
-                          <strong>buy them</strong> directly from the Wallet.
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                }
-              >
-                <Link href={`/prototype-new/wallet${prototype.getURLparams()}`}>
-                  <div className="flex items-center gap-1 text-currency-2-500">
-                    <span className="icon icon-20 icon-token" />
-                    <span className="">
-                      {prototype.getUserByID(1)?.wallet.tokens}
-                    </span>
-                  </div>
-                </Link>
-              </Tooltip>
+            <div className="item-actions">
+              <div>
+                <GameIcon game={2} />
+              </div>
             </div>
-            <div className="inline-flex">
-              <Tooltip
-                tooltip={
-                  <div className="w-56 relative">
-                    <h6 className="my-4 text-ui-100">Power token</h6>
-                    <div className="absolute -top-8 -right-5 p-2">
-                      <img
-                        src="https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-powertoken-face.png"
-                        className="w-14 h-14"
-                        alt=""
-                      />
-                      <div className="lottie-blur absolute grid place-items-center -inset-1">
-                        <Lottie
-                          animationData={LottieExplosion}
-                          loop={false}
-                          autoplay={true}
-                        />
-                      </div>
-                    </div>
-                    <ul className="leading-tight space-y-2 mt-2">
-                      <li className="flex gap-2 text-sm">
-                        <div className=" w-12 uppercase">Use</div>
-                        <div className="flex-1">To enter Power Plays.</div>
-                      </li>
-                      <li className="flex gap-2 text-sm">
-                        <div className=" w-12 uppercase">Get</div>
-                        <div className="flex-1">
-                          <strong>Buy them</strong> directly from the Wallet.
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                }
-              >
-                <Link href={`/prototype-new/wallet${prototype.getURLparams()}`}>
-                  <div className="flex items-center gap-1 text-currency-3-500">
-                    <span className="icon icon-20 icon-powertoken" />
-                    <span className="">
-                      {prototype.getUserByID(1)?.wallet.powertokens}
-                    </span>
-                  </div>
-                </Link>
-              </Tooltip>
+          </li>
+          <li className="item">
+            <div className="item-body">
+              <div className="item-title leading-none mb-2.5 text-sm">
+                Get 2 knife kills in competitive
+              </div>
+              <div className="text-ui-300 text-xs">
+                <div
+                  className="progressbar progressbar-xs"
+                  style={{
+                    "--percent": 100,
+                  }}
+                >
+                  <div />
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="text-center">
-          <Link href="/prototype-new/profile/1">
-            <button
-              type="button"
-              className="button button-secondary button-sm w-full"
-            >
-              <span>View profile</span>
-            </button>
-          </Link>
+            <div className="item-actions">
+              <div>
+                <GameIcon game={1} />
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div className="text-center text-sm mt-2">
+          <a href="#" className="link link-hover">
+            View all
+          </a>
         </div>
       </div>
     </>

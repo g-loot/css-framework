@@ -99,86 +99,71 @@ export default function PrototypeStructure({ children, title }) {
             )}
 
             <div className="flex items-stretch h-screen">
-              <div className="relative w-16 hidden bg-ui-800 md:flex flex-col border-r border-ui-700">
-                <i className="absolute z-40 lg:w-12 xl:w-24 h-screen left-0 translate-x-16 inset-y-0 from-ui-900/75 to-ui-900/0 bg-gradient-to-r" />
-                <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
-                  <div className="relative z-10 grid place-content-center aspect-square border-b border-ui-700 text-0 cursor-pointer after:transition-colors after:duration-200 after:content-[''] after:absolute after:inset-0 after:bg-ui-850/0 hover:after:bg-ui-850 active:after:bg-ui-850 hover:child:rotate-180">
-                    <span className="icon relative z-10 icon-stryda-symbol text-main text-3xl transition-transform duration-500 ease-[cubic-bezier(.7,0,.3,1)]" />
-                  </div>
-                </Link>
-                <ul className="relative z-50 flex-1 flex flex-col items-center justify-center px-1.5 space-y-1.5">
-                  {manNavLinks.map((item, itemIndex) => (
-                    <>
-                      <li className="w-full aspect-square flex items-center justify-center">
-                        <Link
-                          href={`/prototype-new/${
-                            item.url
-                          }${prototype.getURLparams()}`}
-                        >
-                          <button
-                            type="button"
-                            className={`flex-1 relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-t before:from-ui-850 before:to-ui-850 before:border before:border-ui-700 before:origin-right before:duration-200 before:transition-all before:ease-in-out before:rounded hover:before:opacity-100 hover:before:scale-100 hover:before:scale-x-100 tooltip tooltip-right ${
-                              router.pathname.includes(item.url)
-                                ? "text-main"
-                                : "before:opacity-0 before:scale-90 before:scale-x-0"
-                            }`}
-                            data-tooltip={item.label}
-                          >
-                            <span
-                              className={`icon text-2xl relative z-10 ${item.icon}`}
-                            />
-                          </button>
-                        </Link>
-                      </li>
-                      {/*
-                    <Link
-                      href={`/prototype-new/${
-                        item.url
-                      }${prototype.getURLparams()}`}
-                    >
-                      <button
-                        type="button"
-                        className={`relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-r before:from-ui-800 before:to-ui-900 before:border-y before:border-y-ui-700 before:origin-right before:duration-500 before:transition-all before:ease-[cubic-bezier(.7,0,.3,1)] hover:before:opacity-100 hover:before:translate-x-0 hover:before:scale-x-100 tooltip tooltip-right ${
-                          router.pathname.includes(item.url)
-                            ? "text-main"
-                            : "before:opacity-0 before:-translate-x-0 before:scale-x-0"
-                        }`}
-                        data-tooltip={item.label}
-                      >
-                        <span
-                          className={`icon text-2xl relative z-10 ${item.icon}`}
-                        />
-                      </button>
+              <div className="pl-2 py-2 flex items-stretch">
+                <div className="relative w-16 hidden md:flex flex-col">
+                  <i className="absolute z-40 lg:w-12 xl:w-24 h-[100dvh-0.5rem] left-0 translate-x-16 inset-y-0 from-ui-900/75 to-ui-900/0 bg-gradient-to-r" />
+                  <div className="p-1 rounded-full surface mb-2">
+                    <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
+                      <div className="relative z-10 grid place-content-center aspect-square text-0 cursor-pointer rounded-full hover:child:scale-90">
+                        <span className="icon relative z-10 icon-stryda-symbol text-main text-3xl transition-transform duration-500 ease-[cubic-bezier(.7,0,.3,1)]" />
+                      </div>
                     </Link>
-                      */}
-                    </>
-                  ))}
-                </ul>
-                <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
-                  <div className="relative z-10 grid place-content-center aspect-square border-t border-ui-700 text-0 cursor-pointer after:transition-colors after:duration-200 after:content-[''] after:absolute after:inset-0 after:bg-ui-850/0 hover:after:bg-ui-850 active:after:bg-ui-850">
-                    <span className="icon relative z-10 icon-c-question text-ui-300 text-3xl" />
                   </div>
-                </Link>
+                  <div className="flex-1 flex flex-col rounded-full surface">
+                    <ul className="relative z-50 flex-1 flex flex-col items-center justify-center px-1.5 space-y-1.5">
+                      {manNavLinks.map((item, itemIndex) => (
+                        <>
+                          <li key={itemIndex} className="w-full aspect-square flex items-center justify-center">
+                            <Link
+                              href={`/prototype-new/${
+                                item.url
+                              }${prototype.getURLparams()}`}
+                            >
+                              <button
+                                type="button"
+                                className={`flex-1 relative w-full aspect-square grid place-content-center transition-[color,background,transform,opacity] duration-200 ease-in-out active:before:bg-ui-900 before:content-[''] before:pointer-events-none before:absolute before:inset-0 before:bg-gradient-to-t before:from-ui-850 before:to-ui-850 before:border before:border-ui-700 before:origin-right before:duration-200 before:transition-all before:ease-in-out before:rounded hover:before:opacity-100 hover:before:scale-100 hover:before:scale-x-100 tooltip tooltip-right ${
+                                  router.pathname.includes(item.url)
+                                    ? "text-main"
+                                    : "before:opacity-0 before:scale-90 before:scale-x-0"
+                                }`}
+                                data-tooltip={item.label}
+                              >
+                                <span
+                                  className={`icon text-2xl relative z-10 ${item.icon}`}
+                                />
+                              </button>
+                            </Link>
+                          </li>
+                        </>
+                      ))}
+                    </ul>
+                    <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
+                      <div className="relative z-10 grid place-content-center aspect-square border-t border-ui-700 text-0 cursor-pointer after:transition-colors after:duration-200 after:content-[''] after:absolute after:inset-0 after:bg-ui-850/0 hover:after:bg-ui-850 active:after:bg-ui-850">
+                        <span className="icon relative z-10 icon-c-question text-ui-300 text-3xl" />
+                      </div>
+                    </Link>
+                  </div>
+                </div>
               </div>
 
               <div className="relative flex-1 overflow-hidden bg-ui-900 max-h-screen overflow-y-auto scrollbar scrollbar-hidden">
-                <div className="max-w-3xl lg:px-12 xl:px-24 pt-4 w-full mx-auto">
+                <div className="max-w-3xl lg:px-12 xl:px-24 pt-4 w-full">
                   {children}
                 </div>
                 <Footer className="child:max-w-3xl child hidden" />
               </div>
-              <div className="w-60 hidden lg:block bg-ui-800 border-l border-ui-700">
-                <i className="absolute z-40 lg:w-12 xl:w-24 h-screen right-0 -translate-x-60 inset-y-0 from-ui-900/75 to-ui-900/0 bg-gradient-to-l" />
-
-                <PrototypeSideRight />
-
-                {hasAds && (
-                  <div className="hidden 3xl:block absolute inset-y-0 right-0 w-[260px]">
-                    <div className="sticky top-[68px]">
-                      <Ad width="260" height="260" />
+              <div className="pr-2 py-2 flex items-stretch">
+                <div className="w-60 hidden lg:block rounded-[1.75rem] bg-ui-800 border border-ui-600 h-[calc(100dvh-1rem)">
+                  <i className="absolute z-40 lg:w-12 xl:w-24 h-[100dvh-0.5rem] right-0 -translate-x-[calc(15rem+0.5rem)] inset-y-0 from-ui-900/75 to-ui-900/0 bg-gradient-to-l" />
+                  <PrototypeSideRight />
+                  {hasAds && (
+                    <div className="hidden 3xl:block absolute inset-y-0 right-0 w-[260px]">
+                      <div className="sticky top-[68px]">
+                        <Ad width="260" height="260" />
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </div>
             </div>
           </div>

@@ -42,16 +42,17 @@ export default function LadderHeader() {
       {selectedGame && (
         <>
           <section className="sm:rouned flex flex-col md:flex-row gap-4 items-center mb-4">
-            {prototype.getLadderByID(game, ladder_id)?.isPowerPlay && (
-              <div className="relative">
-                <GameIcon game={selectedGame.id} className="absolute top-1 left-1" />
-                <img
-                  src={prototype.getLadderByID(game, ladder_id)?.cover}
-                  className="aspect-[16/6] rounded w-96"
-                  alt=""
-                />
-              </div>
-            )}
+            <div className="relative">
+              <GameIcon
+                game={selectedGame.id}
+                className="absolute top-1 left-1"
+              />
+              <img
+                src={prototype.getLadderByID(game, ladder_id)?.cover}
+                className="aspect-[16/6] rounded w-96"
+                alt=""
+              />
+            </div>
             <div className="flex-1 space-y-4">
               <h1 className="h4">
                 {prototype.getLadderByID(game, ladder_id)?.name}
@@ -104,7 +105,9 @@ export default function LadderHeader() {
                       <span className="icon icon-20 icon-lightning" />
                     </button>
                   </Tooltip>
-                  <p className="text-sm">Headshots from your 3 best matches decide a tie</p>
+                  <p className="text-sm">
+                    Headshots from your 3 best matches decide a tie
+                  </p>
                 </li>
               </ul>
             </div>

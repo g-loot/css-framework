@@ -24,7 +24,7 @@ export default function Footer(props) {
               width={148}
               height={40}
               src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
-              alt="Gloot logo"
+              alt="Stryda logo"
             />
 
             <p className="my-8 text-sm leading-relaxed">

@@ -85,7 +85,7 @@ export default function Premium() {
                 alt=""
               />
               <p className="text-ui-100 max-w-[20ch] mx-auto">
-                Earn mission rewards faster
+                Earn rewards faster
               </p>
             </div>
             <div
@@ -204,14 +204,6 @@ export default function Premium() {
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
-                        Access an exclusive Discord channel, chat directly with
-                        Stryda devs, and try out new features before they are
-                        released.
-                      </span>
-                    </li>
-                    <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl icon-e-remove text-ui-400" />
-                      <span className="text-ui-400">
                         Enjoy an ad-free experience on Stryda.
                       </span>
                     </li>
@@ -258,14 +250,6 @@ export default function Premium() {
                       <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
                         Create a Discord profile to describe who you are as a gamer and find a clan.
-                      </span>
-                    </li>
-                    <li className="flex gap-4 items-start">
-                      <span className="icon text-2xl icon-verified text-premium-500" />
-                      <span className="text-ui-200">
-                        Access an exclusive Discord channel, chat directly with
-                        Stryda devs, and try out new features before they are
-                        released.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">

@@ -28,9 +28,9 @@ export default function StatsHeader(props) {
   return (
     <>
       <section className="relative">
-        <div className="absolute z-0 bg-gradient-to-b from-ui-850 to-ui-800 -inset-x-12 xl:-inset-x-24 bottom-0 -inset-y-4 border-b border-ui-700">
+        <div className="absolute z-0 bg-ui-700 -inset-x-12 xl:-inset-x-24 bottom-0 -inset-y-4 border-b border-ui-700">
           <span
-            className="absolute inset-0 bg-cover"
+            className="absolute inset-0 bg-cover hidden "
             style={{
               backgroundImage:
                 "url(https://res.cloudinary.com/gloot/image/upload/v1674691791/Stryda/demo/ladders_header_1.jpg)",
