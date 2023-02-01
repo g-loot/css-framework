@@ -500,7 +500,7 @@ export default function TopbarNew() {
                               <div className=" w-12 uppercase">Get</div>
                               <div className="flex-1">
                                 From <strong>Daily Login</strong> Streak and{" "}
-                                <strong>Weekly Ladder winnings</strong>.
+                                <strong>Ladder winnings</strong>.
                               </div>
                             </li>
                           </ul>
@@ -542,7 +542,7 @@ export default function TopbarNew() {
                             <li className="flex gap-2 text-sm">
                               <div className=" w-12 uppercase">Use</div>
                               <div className="flex-1">
-                                To enter Weekly Ladders.
+                                To enter Ladders.
                               </div>
                             </li>
                             <li className="flex gap-2 text-sm">
@@ -651,7 +651,7 @@ export default function TopbarNew() {
                           <li className="flex gap-2 text-sm">
                             <div className=" w-12 uppercase">Get</div>
                             <div className="flex-1">
-                              From <strong>Weekly Ladders</strong> winnings.
+                              From <strong>Ladders</strong> winnings.
                             </div>
                           </li>
                         </ul>

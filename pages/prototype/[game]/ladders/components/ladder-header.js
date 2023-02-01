@@ -41,22 +41,40 @@ export default function LadderHeader() {
     <>
       {selectedGame && (
         <>
-          <section className="sm:rouned flex flex-col md:flex-row gap-4 items-center mb-4">
+          <section className="sm:rounded surface surface-dimmed flex flex-col md:flex-row gap-8 items-center mb-4 p-4">
             <div className="relative">
-              <GameIcon
-                game={selectedGame.id}
-                className="absolute top-1 left-1"
-              />
+              <div className="absolute top-1 left-1">
+                <Tooltip tooltip={<div>{selectedGame.name}</div>}>
+                  <GameIcon game={selectedGame.id} />
+                </Tooltip>
+              </div>
               <img
                 src={prototype.getLadderByID(game, ladder_id)?.cover}
-                className="aspect-[16/6] rounded w-96"
+                className="aspect-[16/6] object-cover rounded w-96"
                 alt=""
               />
             </div>
-            <div className="flex-1 space-y-4">
-              <h1 className="h4">
-                {prototype.getLadderByID(game, ladder_id)?.name}
-              </h1>
+            <div className="flex-1 relative">
+              <div className="mb-4 flex items-center justify-between">
+                <h1 className="h4">
+                  {prototype.getLadderByID(game, ladder_id)?.name}
+                </h1>
+                <div className="text-right flex items-center gap-1">
+                  <span className="icon text-sm text-ui-300 icon-clock" />
+                  <Countdown
+                    separator={"  "}
+                    hasDays={false}
+                    hasHours={true}
+                    hasMinutes={true}
+                    hasSeconds={true}
+                    targetDate={dateTimeAfterThreeDays}
+                    hasLabels={true}
+                    labelsAbbr={true}
+                    labelClassName="text-base block mr-1"
+                    className="text-base"
+                  />
+                </div>
+              </div>
               <ul className="flex flex-col gap-1 justify-between leading-tight">
                 <li className="flex gap-2 items-center">
                   <Tooltip

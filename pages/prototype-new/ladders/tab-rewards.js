@@ -279,7 +279,7 @@ export default function TabLaddersRewards() {
                 </div>
                 <div className="flex-1 flex flex-col items-stretch justify-start text-ui-300 space-y-2 leading-relaxed mt-4 py-4">
                   <p>
-                    Be one of the top players in Weekly Ladders to earn a Ticket
+                    Be one of the top players in Ladders to earn a Ticket
                     to the Monthly Showdown tournament.
                   </p>
                 </div>

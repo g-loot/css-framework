@@ -115,7 +115,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "Tokens are how you pay to enter your scores in the Weekly Ladder. Tokens can be earned through Mission Rewards, Daily Login Streaks, or bought from the shop.",
+        text: "Tokens are how you pay to enter your scores in the Ladder. Tokens can be earned through Mission Rewards, Daily Login Streaks, or bought from the shop.",
       },
     ],
   },

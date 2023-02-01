@@ -83,7 +83,7 @@ export default function PrototypeStructure({ children, title }) {
                     <h6 className="leading-none">Buy more Tokens</h6>
                     <p className="text-sm mt-2">
                       Uh oh. Out of Tokens? Do not worry you do not have to give
-                      up on the Weekly Ladder. You can buy more Tokens whenever
+                      up on the Ladder. You can buy more Tokens whenever
                       you need them. Visit your Wallet page to take advantage of
                       special bundle deals. Happy Laddering!
                     </p>

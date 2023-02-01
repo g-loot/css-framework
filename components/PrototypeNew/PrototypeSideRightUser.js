@@ -210,7 +210,7 @@ export default function PrototypeSideRightUser() {
                         <div className=" w-12 uppercase">Get</div>
                         <div className="flex-1">
                           From <strong>Daily Login</strong> Streak and{" "}
-                          <strong>Weekly Ladder winnings</strong>.
+                          <strong>Ladder winnings</strong>.
                         </div>
                       </li>
                     </ul>
@@ -251,7 +251,7 @@ export default function PrototypeSideRightUser() {
                     <ul className="leading-tight space-y-2 mt-2">
                       <li className="flex gap-2 text-sm">
                         <div className=" w-12 uppercase">Use</div>
-                        <div className="flex-1">To enter Weekly Ladders.</div>
+                        <div className="flex-1">To enter Ladders.</div>
                       </li>
                       <li className="flex gap-2 text-sm">
                         <div className=" w-12 uppercase">Get</div>

@@ -16,7 +16,7 @@ const WalletItems = [
       "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-coin-face.png",
     amount: "1328",
     use: "To purchase items in the <b>Shop</b>.",
-    get: "From <b>Daily Login Streak</b> and <b>Weekly Ladders</b>.",
+    get: "From <b>Daily Login Streak</b> and <b>Ladders</b>.",
     color: "text-currency-1-500",
     button: "visitshop",
     buttonLabel: "Visit shot",
@@ -55,7 +55,7 @@ const WalletItems = [
       "https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-ticket-unique.png",
     amount: "2",
     use: "To enter <b>Monthly Tournaments</b>.",
-    get: "From <b>Weekly Ladders</b>.",
+    get: "From <b>Ladders</b>.",
     color: "text-bronze-500",
   },
   {

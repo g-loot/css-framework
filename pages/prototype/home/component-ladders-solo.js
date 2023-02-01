@@ -29,7 +29,7 @@ const SoloLadders = [
     hasClaim: false,
     isPowerPlay: true,
     cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1674814563/Stryda/demo/ladder_powerplay_valorant_1.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1674822962/Stryda/demo/PowerPlay_Valorant1.jpg",
   },
   {
     id: 4,

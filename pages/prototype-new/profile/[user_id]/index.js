@@ -388,7 +388,7 @@ export default function Home() {
                 <div className="flex-1 flex flex-col surface sm:rounded-lg">
                   <div className="p-2 border-b border-ui-700 flex justify-between items-start">
                     <div>
-                      <h2 className="text-xl">Weekly Ladders</h2>
+                      <h2 className="text-xl">Ladders</h2>
                       <span className="text-sm text-ui-300">
                         Showing your latest Solo Ladders
                       </span>
