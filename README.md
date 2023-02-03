@@ -16,7 +16,7 @@ Download the repository then...
 
 Run this command in the root folder:
 ```bash
-$ npm install
+$ npm install --legacy-peer-deps
 $ npm run dev
 ```
 
