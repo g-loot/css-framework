@@ -1,18 +1,28 @@
+![Stryda CSS Framework](https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg)
 
-![G-Loot CSS Framework](https://res.cloudinary.com/gloot/image/upload/v1657002851/Marketing/2022_prototype/G-Loot_Framework_logo.svg)
+# Stryda CSS Framework
 
-✨ A repo for building the [css-framework library](https://www.npmjs.com/package/@g-loot/css-framework), creating functional prototypes and hosting our brand guidelines.
+A [next.js](https://nextjs.org/) project for building the [css-framework library](https://www.npmjs.com/package/@g-loot/css-framework), creating functional prototypes and hosting our brand guidelines.
 
-------
+The Stryda CSS Framework is a centralised front-end design system that allows any developer to quickly build pages that are **consistent** with the Stryda brand and its user interface system.
 
-## About the library
+Based on the utility-first framework  [Tailwind CSS](https://tailwindcss.com/), the Stryda CSS Framework provides **pre-defined components** listed as well as highly composable, low-level **utility classes** to build complex user interfaces with speed in mind.
 
-The G-Loot CSS Framework is a centralised front-end design system that allows any developer to quickly build pages that are **consistent** with the G-Loot brand and its user interface system.
+The main purpose of this repository is to create and maintain the various **css files** and the **tailwind theme** that are consumed by the various Stryda products.
 
-Based on the utility-first framework  [Tailwind CSS](https://tailwindcss.com/), the G-Loot CSS Framework provides **pre-defined components** listed as well as highly composable, low-level **utility classes** to build complex user interfaces with speed in mind.
+## Getting started
 
-The main purpose of this repository is to create and maintain the various **css files** and the **tailwind theme** that are consumed by the various G-Loot products. 
+Download the repository then...
 
+Run this command in the root folder:
+```bash
+$ npm install
+$ npm run dev
+```
+
+## How to use (How to use the project) (optional)
+
+Provide instructions and examples so users/contributors can use the project. This will make it easy for them in case they encounter a problem – they will always have a place to reference what is expected. Also include info about various scripts, testing strategy etc
 ## Pushing a new version
 
 When a push is made on the main branch, **the library is automatically updated** on both:
