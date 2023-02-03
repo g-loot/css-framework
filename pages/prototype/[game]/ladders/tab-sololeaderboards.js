@@ -272,7 +272,7 @@ export default function TabLaddersSoloLeaderboards() {
                         height="auto"
                         alt=""
                       />
-                      <div className="mb-4 surface surface-halo halo-t rounded-lg p-4 pt-32 text-center relative z-0">
+                      <div className="mb-4 surface rounded-lg p-4 pt-32 text-center relative z-0">
                         <h2 className="h4 mb-2">First Ladder is on us</h2>
                         <div className="uppercase  text-ui-100">
                           Play{" "}
@@ -294,7 +294,29 @@ export default function TabLaddersSoloLeaderboards() {
                     </div>
                   ) : (
                     <div className="relative flex flex-col items-center">
-                      <div className="w-full mb-4 surface surface-halo halo-t rounded-lg p-4 text-center relative z-0">
+                      {selectedLadder.isPowerPlay && (
+                        <div className="w-full mb-4 surface rounded-lg p-4 text-center relative z-0">
+                          <img
+                            src="https://res.cloudinary.com/gloot/image/upload/v1675423727/Stryda/illustrations/giftcards_1.png"
+                            width="auto"
+                            height="auto"
+                            alt=""
+                            className="-mt-14 mb-4"
+                          />
+                          <h2 className="h4 mb-4">
+                            Welcome to
+                            <br />
+                            Power Play!
+                          </h2>
+                          <p className="text-ui-300">
+                            Power Play Ladders works the same way as all other
+                            Ladders, but here you use Power Tokens, compete on
+                            leaderboards of 10 players and the winner takes home
+                            coins equal to a giftcard!
+                          </p>
+                        </div>
+                      )}
+                      <div className="w-full mb-4 surface rounded-lg p-4 text-center relative z-0">
                         <h2 className="h4 mb-2">Compete in this Ladder</h2>
                         <div className="uppercase  text-ui-100">
                           Play at least{" "}

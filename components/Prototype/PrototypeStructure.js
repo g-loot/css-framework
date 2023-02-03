@@ -20,6 +20,7 @@ export default function PrototypeStructure({ children, title }) {
     query.newstructure === "true" || query.newstructure === undefined
       ? true
       : false;
+  const isAnnouncement = query.announcement ? true : false;
   const variables = useContext(VariablesContext);
   return (
     <>
@@ -93,6 +94,14 @@ export default function PrototypeStructure({ children, title }) {
             <div className="drawer-content scrollbar-desktop scrollbar-secondary">
               <TopbarNew />
               <div className="container relative">
+                {isAnnouncement && (
+                  <div className="sticky top-[48px] z-50 w-full p-4 bg-ui-500/95 backdrop-blur-sm text-ui-90 text-">
+                    <div className="max-w-2xl mx-auto px-0 md:px-10 xl:px-20">
+                      Hello from the other side?
+                    </div>
+                  </div>
+                )}
+
                 <div
                   className={`max-w-2xl flex lg:gap-8 mx-auto px-0 md:px-10 xl:px-20 ${
                     hasAds ? "3xl:m-0" : ""
@@ -117,10 +126,10 @@ export default function PrototypeStructure({ children, title }) {
                             <h6 className="leading-none">Buy more Tokens</h6>
                             <p className="text-sm mt-2">
                               Uh oh. Out of Tokens? Do not worry you do not have
-                              to give up on the Ladder. You can buy more
-                              Tokens whenever you need them. Visit your Wallet
-                              page to take advantage of special bundle deals.
-                              Happy Laddering!
+                              to give up on the Ladder. You can buy more Tokens
+                              whenever you need them. Visit your Wallet page to
+                              take advantage of special bundle deals. Happy
+                              Laddering!
                             </p>
                             <button
                               type="button"
@@ -157,14 +166,14 @@ export default function PrototypeStructure({ children, title }) {
                     {variables.newBrand ? (
                       <>New brand name</>
                     ) : (
-                    <a className="flex items-center gap-2 interactive">
-                      <img
-                        width="110"
-                        height="auto"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
-                        alt="Stryda logo"
-                      />
-                    </a>
+                      <a className="flex items-center gap-2 interactive">
+                        <img
+                          width="110"
+                          height="auto"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
+                          alt="Stryda logo"
+                        />
+                      </a>
                     )}
                   </Link>
                   <div className="block md:hidden">
