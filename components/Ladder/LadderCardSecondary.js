@@ -15,6 +15,7 @@ export default function LadderCardSecondary(props) {
   const uiContext = useContext(UiContext);
   const isHorizontal = props.isHorizontal || false;
   const isEnrolled = props.ladder.isEnrolled || false;
+  const isClan = props.isClan || false;
   const ladder = props.ladder;
   const game_slug = props.game_slug || "valorant";
   const isDemo = props.isDemo || false;
@@ -27,7 +28,7 @@ export default function LadderCardSecondary(props) {
   return (
     <div
       className={`card-ladder card-secondary ${
-        isHorizontal ? "md:card-horizontal" : ""
+        isHorizontal ? "card-horizontal" : ""
       } ${isEnrolled && !ladder.hasClaim ? "is-active" : ""} ${
         ladder.status === "finished" ? "is-inactive" : ""
       }`}
@@ -201,7 +202,7 @@ export default function LadderCardSecondary(props) {
             </div>
           ) : (
             <>
-              {!ladder.isClan ? (
+              {!ladder.isClan || isClan ? (
                 <>
                   {ladder.isEnrolled ? (
                     <div className="flex-1 flex items-center gap-4">
@@ -313,11 +314,6 @@ export default function LadderCardSecondary(props) {
                             <div className="avatar avatar-circle avatar-tiny">
                               <div>
                                 <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
-                              </div>
-                            </div>
-                            <div className="avatar avatar-circle avatar-tiny">
-                              <div>
-                                <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                               </div>
                             </div>
                             <div className="avatar avatar-circle avatar-tiny">

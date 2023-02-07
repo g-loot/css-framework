@@ -26,8 +26,8 @@
     ease-[cubic-bezier(0.9,0,0.1,1)]
     ;
     > div {
-      width: calc(100%/var(--max));
       @apply
+      w-[calc(100%/var(--max))]
       flex
       justify-center
       items-center

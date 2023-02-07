@@ -170,15 +170,47 @@ export default function Home() {
           </div>
           <HomeLaddersClan />
         </section>
+        <section className="my-16 py-4 surface flex-1 sm:rounded-lg overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-end">
+          <div className="flex-2 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 lg:order-1 text-center lg:text-left">
+            <h3 className="h1 text-6xl lg:text-7xl">
+              Make your ggs more
+              <br />
+              rewarding with <span className="text-premium-500">Premium</span>
+            </h3>
+            <p className="text-ui-300 mt-2 mb-4 max-w-[40ch] mx-auto lg:mx-0">
+              Get a 50% XP boost on all completed missions & Ladders matches,
+              remove ads and much more.
+            </p>
+            <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+              <button type="button" className="button button-premium">
+                <span>Learn more</span>
+              </button>
+            </Link>
+          </div>
+          <div className="relative z-10 lg:order-2 flex-1 px-8 grid place-items-center">
+            <img
+              className="object-contain max-h-60"
+              src="https://res.cloudinary.com/gloot/image/upload/v1675777113/Stryda/illustrations/home_premium_banner.png"
+              alt=""
+            />
+          </div>
+          <img
+            className="absolute inset-0 h-full w-full object-cover object-right opacity-50"
+            src="https://res.cloudinary.com/gloot/image/upload/v1674045863/Stryda/illustrations/home-premium.jpg"
+            alt=""
+          />
+        </section>
+        {/*
         <section className="my-16 surface sm:rounded-lg overflow-hidden hidden lg:block">
           <div className="relative z-10 px-4 py-20 md:w-1/2 mx-auto text-center">
-            <h3 className="h1">
+            <h3 className="h1 text-7xl">
               Make your gg&#39;s more
               <br />
               rewarding with <span className="text-premium-500">Premium</span>
             </h3>
-            <p className="text-lg text-ui-100 mt-4 mb-5">
-              Get a 50% XP boost on all completed missions &amp; Ladders matches, remove ads and much more.
+            <p className="text-lg mt-4 mb-5">
+              Get a 50% XP boost on all completed missions &amp; Ladders
+              matches, remove ads and much more.
             </p>
             <Link href={`/prototype/premium${prototype.getURLparams()}`}>
               <button
@@ -195,7 +227,7 @@ export default function Home() {
             alt=""
           />
         </section>
-        {/*
+       
         <section className="my-16 surface sm:rounded-lg overflow-hidden hidden lg:block">
           <div className="relative z-10 p-12 w-1/2 xl:w-1/3">
             <h3>

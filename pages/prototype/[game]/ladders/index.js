@@ -7,9 +7,36 @@ import PrototypeStructure from "../../../../components/Prototype/PrototypeStruct
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
-import TabLaddersOngoingNew from "./tab-laddersongoingnew";
 import LaddersHeader from "./ladders-header";
 import AnimatedNumber from "../../../../components/AnimatedNumber/AnimatedNumber";
+
+import TabLaddersOngoingNew from "./tab-laddersongoingnew";
+import TabLaddersHistory from "./tab-history";
+import TabLaddersHowItWorks from "./tab-howitworks";
+import TabLaddersRules from "./tab-glootrules";
+
+const TabsItems = [
+  {
+    label: "Ladders",
+    url: "ongoing",
+    component: TabLaddersOngoingNew,
+  },
+  {
+    label: "How it works",
+    url: "how-it-works",
+    component: TabLaddersHowItWorks,
+  },
+  {
+    label: "Stryda rules",
+    url: "rules",
+    component: TabLaddersRules,
+  },
+  {
+    label: "Your Ladder history",
+    url: "history",
+    component: TabLaddersHistory,
+  },
+];
 
 export default function Ladders() {
   const router = useRouter();
@@ -17,6 +44,9 @@ export default function Ladders() {
   const [selectedGame, setSelectedGame] = useState(null);
   const { game } = router.query;
   const uiContext = useContext(UiContext);
+  const { tab } = router.query;
+  const defaultTab = "ongoing";
+  const selectedTab = tab ? tab : defaultTab;
 
   function openModalLadderHowitworksVideo() {
     uiContext.openModal(
@@ -41,7 +71,35 @@ export default function Ladders() {
         {selectedGame && (
           <>
             <LaddersHeader breadcrumbs={false} />
-            <TabLaddersOngoingNew />
+            <nav>
+              <ul className="tabs border-b border-ui-700">
+                {TabsItems.map((item, itemIndex) => (
+                  <li key={item}>
+                    <Link
+                      href={`/prototype/${game}/ladders?tab=${item.url}${prototype.getURLparams("&")}`}
+                    >
+                      <a
+                        className={`${
+                          selectedTab === item.url ? "is-active" : ""
+                        }`}
+                      >
+                        <span>{item.label}</span>
+                      </a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <section className="py-4">
+              {TabsItems.map((item, itemIndex) => {
+                if (item.url === selectedTab) {
+                  return React.createElement(item.component, { key: itemIndex })
+                }
+              })}
+            </section>
+
+            {/*
             <section className="py-4 flex flex-col xl:flex-row gap-4 items-stretch">
               <div className="flex-1 surface sm:rounded-lg overflow-hidden relative flex flex-col p-6">
                 <div className="flex-1 relative z-10 max-w-[25ch] flex flex-col justify-start items-start">
@@ -141,62 +199,8 @@ export default function Ladders() {
                 </div>
               </div>
             </section>
-            <section className="my-8 surface sm:rounded-lg p-8 text-center relative">
-              <img
-                className="hidden lg:block absolute pointer-events-none z-20 -top-8 right-2 rotate-[33deg]"
-                src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
-                width="90"
-                height="auto"
-                alt=""
-              />
-
-              <img
-                className="hidden lg:block absolute pointer-events-none z-20 -bottom-20 right-[calc(50%-28rem)] blur-sm rotate-[120deg]"
-                src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_2.png"
-                width="189"
-                height="auto"
-                alt=""
-              />
-              <img
-                className="hidden lg:block absolute pointer-events-none z-20 -top-14 left-[calc(50%-26rem)] blur-sm -rotate-[33deg]"
-                src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
-                width="150"
-                height="auto"
-                alt=""
-              />
-              <img
-                className="hidden lg:block absolute pointer-events-none z-20 -bottom-14 left-2 -rotate-[143deg]"
-                src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
-                width="134"
-                height="auto"
-                alt=""
-              />
-              <img
-                className="hidden lg:block absolute pointer-events-none z-20 top-32 left-5 -rotate-[74deg]"
-                src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_2.png"
-                width="49"
-                height="auto"
-                alt=""
-              />
-              <h3 className="text-2xl">
-                Last week, Stryda Ladderers won a total of
-              </h3>
-              <div className="flex gap-8 items-start justify-center leading-tight mt-4">
-                <div>
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-large.png"
-                    width="250"
-                    height="auto"
-                    className="-mt-6 -mb-8"
-                    alt=""
-                  />
-                  <div className="text-2xl lg:text-5xl text-currency-1-500">
-                    <AnimatedNumber number={21425235} />
-                  </div>
-                  <div className="uppercase text-lg text-currency-1-500">Coins</div>
-                </div>
-              </div>
-            </section>
+            
+                            */}
           </>
         )}
       </PrototypeStructure>
