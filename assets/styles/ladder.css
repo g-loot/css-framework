@@ -22,12 +22,12 @@
     transition-all
     duration-1000
     transform-gpu
-    translate-x-[calc((((100/var(--max))*(var(--step)-1))*1%)-0.25rem)]
+    translate-x-[calc((var(--step)-1)*(100%/var(--max)+((1rem/var(--max)))))]
     ease-[cubic-bezier(0.9,0,0.1,1)]
     ;
     > div {
       @apply
-      w-[calc(100%/var(--max))]
+      w-[calc(100%/var(--max)-(1rem-(1rem/var(--max))))]
       flex
       justify-center
       items-center
@@ -58,7 +58,6 @@
   flex-nowrap
   gap-4
   transform-gpu
-  px-0.5
   ;
 
   > li {
