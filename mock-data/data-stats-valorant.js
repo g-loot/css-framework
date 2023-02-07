@@ -468,4 +468,58 @@ export const StatsValorantWeapons = [
     type: 'melee',
     picturePath: getImageUrl('weapon-overdrive.png'),
   },
+  {
+    id: 21,
+    name: 'blast pack',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-blastpack.png'),
+  },
+  {
+    id: 22,
+    name: 'boom bot',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-boombot.png'),
+  },
+  {
+    id: 23,
+    name: 'head hunter',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-headhunter.png'),
+  },
+  {
+    id: 24,
+    name: 'paint shells',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-paintshells.png'),
+  },
+  {
+    id: 25,
+    name: 'shock bolt',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-shockbolt.png'),
+  },
+  {
+    id: 26,
+    name: 'show stopper',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-showstopper.png'),
+  },
+  {
+    id: 27,
+    name: 'snowball launcher',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-snowballlauncher.png'),
+  },
+  {
+    id: 28,
+    name: 'spike',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-spike.png'),
+  },
+  {
+    id: 29,
+    name: 'tour de force',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-tourdeforce.png'),
+  },
 ];

@@ -1439,15 +1439,3 @@ button {
     }
   }
 }
-
-
-/* button-group */
-
-.button-group {
-  > .button-currency:not(:last-child) {
-    
-    & + {
-      
-    } 
-  }
-}

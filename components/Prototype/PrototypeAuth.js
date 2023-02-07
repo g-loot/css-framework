@@ -27,14 +27,31 @@ export default function PrototypeAuth({ children, title }) {
                   "--delay": "calc(0 * 0.1s)",
                 }}
               >
-                <h1 className="text-left md:text-left text-ui-900 leading-[82px]">
-                  <span className="text-3xl font-body font-normal leading-[20px]">
-                    Home of
+                <h1 className="text-left md:text-left text-ui-900 leading-[0.8] text-7xl md:text-8xl border-l border-ui-900 pl-4">
+                  <span
+                    className="block animate-slide-in-left animate-delay"
+                    style={{
+                      "--delay": "calc(1 * 0.1s)",
+                    }}
+                  >
+                    Every
                   </span>
-                  <br />
-                  <span className="text-9xl">Everyday</span>
-                  <br />
-                  <span className="text-9xl">Esports</span>
+                  <span
+                    className="block animate-slide-in-left animate-delay"
+                    style={{
+                      "--delay": "calc(2 * 0.1s)",
+                    }}
+                  >
+                    round
+                  </span>
+                  <span
+                    className="block animate-slide-in-left animate-delay"
+                    style={{
+                      "--delay": "calc(3 * 0.1s)",
+                    }}
+                  >
+                    counts
+                  </span>
                 </h1>
               </div>
             </div>

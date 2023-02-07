@@ -46,6 +46,7 @@ export default function TabLaddersOngoing() {
                           ladder={ladder}
                           isHorizontal={false}
                           isClan={false}
+                          isGlobal={true}
                           gameID={game.id}
                         />
                       )}

@@ -95,8 +95,8 @@
   /* size */
 
   &.avatar-xl {
-    --inner-padding-one: 0.6rem;
-    --inner-padding-two: 0.6rem/2;
+    --inner-padding-one: 10px;
+    --inner-padding-two: 10px/2;
     @apply
     h-32
     w-32
@@ -112,8 +112,8 @@
     }
   }
   &.avatar-lg {
-    --inner-padding-one: 0.5rem;
-    --inner-padding-two: 0.5rem/2;
+    --inner-padding-one: 8px;
+    --inner-padding-two: 8px/2;
     @apply
     h-24
     w-24
@@ -129,8 +129,8 @@
     }
   }
   &.avatar-md {
-    --inner-padding-one: 0.3rem;
-    --inner-padding-two: 0.3rem/2;
+    --inner-padding-one: 6px;
+    --inner-padding-two: 6px/2;
     @apply
     h-20
     w-20
@@ -146,8 +146,8 @@
     }
   }
   &.avatar-sm {
-    --inner-padding-one: 0.25rem;
-    --inner-padding-two: 0.25rem/2;
+    --inner-padding-one: 4px;
+    --inner-padding-two: 4px/2;
     @apply
     h-14
     w-14
@@ -163,8 +163,8 @@
     }
   }
   &.avatar-xs {
-    --inner-padding-one: 0.2rem;
-    --inner-padding-two: 0.2rem/2;
+    --inner-padding-one: 4px;
+    --inner-padding-two: 4px/2;
     @apply
     h-9
     w-9
@@ -180,8 +180,8 @@
     }
   }
   &.avatar-tiny {
-    --inner-padding-one: 0.15rem;
-    --inner-padding-two: 0.15rem/2;
+    --inner-padding-one: 2px;
+    --inner-padding-two: 2px/2;
     @apply
     h-7
     w-7
@@ -190,7 +190,7 @@
       > * {
         & {
           @apply
-          text-xs
+          text-sm
           ;
         }
       }
