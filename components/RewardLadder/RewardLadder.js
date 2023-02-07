@@ -153,7 +153,7 @@ export default function RewardLadder(props) {
             <li className={`${step === 2 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>1</span>
+                  <span>2</span>
                 </div>
               </div>
               <div className="ladder-milestone">
@@ -178,7 +178,7 @@ export default function RewardLadder(props) {
             <li className={`${step === 3 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>2</span>
+                  <span>3</span>
                 </div>
               </div>
               <div className="ladder-milestone">
@@ -203,7 +203,7 @@ export default function RewardLadder(props) {
             <li className={`${step === 4 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>3</span>
+                  <span>4</span>
                 </div>
               </div>
               <div className="ladder-milestone">
@@ -228,7 +228,7 @@ export default function RewardLadder(props) {
             <li className={`${step === 5 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>4</span>
+                  <span>5</span>
                 </div>
               </div>
               <div className="ladder-milestone">
@@ -253,7 +253,7 @@ export default function RewardLadder(props) {
             <li className={`${step === 6 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>5</span>
+                  <span>6</span>
                 </div>
               </div>
               <div className="ladder-milestone">
@@ -278,7 +278,7 @@ export default function RewardLadder(props) {
             <li className={`${step === 7 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>6</span>
+                  <span>7</span>
                 </div>
               </div>
               <div className="ladder-milestone">
@@ -303,7 +303,7 @@ export default function RewardLadder(props) {
             <li className={`${step === 8 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>7</span>
+                  <span>8</span>
                 </div>
               </div>
               <div className="ladder-milestone">
@@ -328,7 +328,7 @@ export default function RewardLadder(props) {
             <li className={`is-lockedNO ${step === 9 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>8</span>
+                  <span>9</span>
                 </div>
               </div>
               <div className="ladder-milestone">
@@ -356,7 +356,7 @@ export default function RewardLadder(props) {
             <li className={`is-lockedNO ${step === 10 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>9</span>
+                  <span>10</span>
                 </div>
               </div>
               <div className="ladder-milestone">
@@ -384,7 +384,7 @@ export default function RewardLadder(props) {
             <li className={`is-lockedNO ${step === 11 ? `is-active` : ""}`}>
               <div className="ladder-info">
                 <div>
-                  <span>10</span>
+                  <span>11</span>
                 </div>
               </div>
               <div className="ladder-milestone">
