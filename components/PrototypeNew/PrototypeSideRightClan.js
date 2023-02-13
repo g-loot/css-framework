@@ -66,12 +66,17 @@ export default function PrototypeSideRightClan() {
               </Link>
               <div className="text-center px-2">
                 <Link href="/prototype-new/clans/1">
+                <a className="link link-hover text-sm">
+                  View clan
+                </a>
+                {/*
                   <button
                     type="button"
                     className="button button-secondary button-sm w-full"
                   >
                     <span>View Clan</span>
                   </button>
+                          */}
                 </Link>
               </div>
             </>

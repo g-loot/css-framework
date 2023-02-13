@@ -32,8 +32,8 @@ export default function Premium() {
                 height="auto"
               />
               <div className="lg:border-l lg:border-ui-500 lg:pl-10 text-center lg:text-left">
-                <h2 className="h1 max-w-[20ch] mx-auto lg:text-8xl">
-                  Make your GGs more rewarding
+                <h2 className="h1 max-w-[19ch] mx-auto lg:text-8xl">
+                  Make your GG more rewarding
                 </h2>
                 <button
                   type="button"

@@ -173,7 +173,7 @@ export default function Home() {
         <section className="my-16 py-4 surface flex-1 sm:rounded-lg overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-end">
           <div className="flex-2 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 lg:order-1 text-center lg:text-left">
             <h3 className="h1 text-6xl lg:text-7xl">
-              Make your ggs more
+              Make your gg more
               <br />
               rewarding with <span className="text-premium-500">Premium</span>
             </h3>

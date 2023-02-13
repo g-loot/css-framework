@@ -7,8 +7,8 @@
   @apply
   relative
   bg-ui-800
-  border-t
-  border-t-ui-700
+  border
+  border-ui-700
   ;
 }
 .surface {
@@ -42,40 +42,40 @@
   &:not(.halo-l):not(.halo-r):not(.halo-t):not(.halo-b) {
     @apply
     border-t
-    border-t-main
+    !border-t-main
     ;
   }
 
   &.halo-l {
     @apply
     border-l
-    border-l-main
+    !border-l-main
     ;
   }
   &.halo-r {
     @apply
     border-r
-    border-r-main
+    !border-r-main
     ;
   }
   &.halo-t {
     @apply
     border-t
-    border-t-main
+    !border-t-main
     ;
   }
   &.halo-b {
     @apply
     border-b
-    border-b-main
+    !border-b-main
     ;
   }
 }
 
 .surface-transparent {
   @apply
-  border-t
-  border-t-ui-700/0
+  border
+  border-ui-700/0
   bg-ui-800/0
   ;
 }
@@ -84,16 +84,16 @@
 .surface-dimmed {
   @apply
   bg-ui-850
-  border-t
-  border-t-ui-700/50
+  border
+  border-ui-700/50
   ;
 }
 
 .surface-ui-900 {
   @apply
   bg-ui-900
-  border-t
-  border-t-ui-800
+  border
+  border-ui-800
   ;
   .progressbar {
     @apply
@@ -105,8 +105,8 @@
 .surface-ui-800 {
   @apply
   bg-ui-800
-  border-t
-  border-t-ui-700
+  border
+  border-ui-700
   ;
   .progressbar {
     @apply
@@ -118,8 +118,8 @@
 .surface-ui-700 {
   @apply
   bg-ui-700
-  border-t
-  border-t-ui-600
+  border
+  border-ui-600
   ;
   .progressbar {
     @apply
@@ -131,8 +131,8 @@
 .surface-ui-600 {
   @apply
   bg-ui-600
-  border-t
-  border-t-ui-500
+  border
+  border-ui-500
   ;
   .progressbar {
     @apply
@@ -144,8 +144,8 @@
 .surface-premium,
 .surface-unlocked {
   @apply
-  border-t
-  border-t-premium-700/25
+  border
+  border-premium-700/25
   bg-ui-800
   ;
   .progressbar {
@@ -156,8 +156,8 @@
 }
 .surface-main {
   @apply
-  border-t
-  border-t-main
+  border
+  border-main
   bg-ui-800
   ;
 }
@@ -168,23 +168,23 @@
 	.sm\:surface {
     @apply
     bg-ui-800
-    border-t
-    border-t-ui-700
+    border
+    border-ui-700
     ;
   }
   .sm\:surface-dimmed {
     @apply
     bg-ui-850
-    border-t
-    border-t-ui-700/50
+    border
+    border-ui-700/50
     ;
   }
   
   .sm\:surface-ui-900 {
     @apply
     bg-ui-900
-    border-t
-    border-t-ui-800
+    border
+    border-ui-800
     ;
     .progressbar {
       @apply
@@ -195,8 +195,8 @@
   .sm\:surface-ui-800 {
     @apply
     bg-ui-800
-    border-t
-    border-t-ui-700
+    border
+    border-ui-700
     ;
     .progressbar {
       @apply
@@ -207,8 +207,8 @@
   .sm\:surface-ui-700 {
     @apply
     bg-ui-700
-    border-t
-    border-t-ui-600
+    border
+    border-ui-600
     ;
     .progressbar {
       @apply
@@ -219,8 +219,8 @@
   .sm\:surface-ui-600 {
     @apply
     bg-ui-600
-    border-t
-    border-t-ui-500
+    border
+    border-ui-500
     ;
     .progressbar {
       @apply
@@ -251,23 +251,23 @@
 	.md\:surface {
     @apply
     bg-ui-800
-    border-t
-    border-t-ui-700
+    border
+    border-ui-700
     ;
   }
   .md\:surface-dimmed {
     @apply
     bg-ui-850
-    border-t
-    border-t-ui-700/50
+    border
+    border-ui-700/50
     ;
   }
   
   .md\:surface-ui-900 {
     @apply
     bg-ui-900
-    border-t
-    border-t-ui-800
+    border
+    border-ui-800
     ;
     .progressbar {
       @apply
@@ -278,8 +278,8 @@
   .md\:surface-ui-800 {
     @apply
     bg-ui-800
-    border-t
-    border-t-ui-700
+    border
+    border-ui-700
     ;
     .progressbar {
       @apply
@@ -290,8 +290,8 @@
   .md\:surface-ui-700 {
     @apply
     bg-ui-700
-    border-t
-    border-t-ui-600
+    border
+    border-ui-600
     ;
     .progressbar {
       @apply
@@ -302,8 +302,8 @@
   .md\:surface-ui-600 {
     @apply
     bg-ui-600
-    border-t
-    border-t-ui-500
+    border
+    border-ui-500
     ;
     .progressbar {
       @apply
@@ -334,23 +334,23 @@
 	.lg\:surface {
     @apply
     bg-ui-800
-    border-t
-    border-t-ui-700
+    border
+    border-ui-700
     ;
   }
   .lg\:surface-dimmed {
     @apply
     bg-ui-850
-    border-t
-    border-t-ui-700/50
+    border
+    border-ui-700/50
     ;
   }
   
   .lg\:surface-ui-900 {
     @apply
     bg-ui-900
-    border-t
-    border-t-ui-800
+    border
+    border-ui-800
     ;
     .progressbar {
       @apply
@@ -361,8 +361,8 @@
   .lg\:surface-ui-800 {
     @apply
     bg-ui-800
-    border-t
-    border-t-ui-700
+    border
+    border-ui-700
     ;
     .progressbar {
       @apply
@@ -373,8 +373,8 @@
   .lg\:surface-ui-700 {
     @apply
     bg-ui-700
-    border-t
-    border-t-ui-600
+    border
+    border-ui-600
     ;
     .progressbar {
       @apply
@@ -385,8 +385,8 @@
   .lg\:surface-ui-600 {
     @apply
     bg-ui-600
-    border-t
-    border-t-ui-500
+    border
+    border-ui-500
     ;
     .progressbar {
       @apply
@@ -417,23 +417,23 @@
 	.xl\:surface {
     @apply
     bg-ui-800
-    border-t
-    border-t-ui-700
+    border
+    border-ui-700
     ;
   }
   .xl\:surface-dimmed {
     @apply
     bg-ui-850
-    border-t
-    border-t-ui-700/50
+    border
+    border-ui-700/50
     ;
   }
   
   .xl\:surface-ui-900 {
     @apply
     bg-ui-900
-    border-t
-    border-t-ui-800
+    border
+    border-ui-800
     ;
     .progressbar {
       @apply
@@ -444,8 +444,8 @@
   .xl\:surface-ui-800 {
     @apply
     bg-ui-800
-    border-t
-    border-t-ui-700
+    border
+    border-ui-700
     ;
     .progressbar {
       @apply
@@ -456,8 +456,8 @@
   .xl\:surface-ui-700 {
     @apply
     bg-ui-700
-    border-t
-    border-t-ui-600
+    border
+    border-ui-600
     ;
     .progressbar {
       @apply
@@ -468,8 +468,8 @@
   .xl\:surface-ui-600 {
     @apply
     bg-ui-600
-    border-t
-    border-t-ui-500
+    border
+    border-ui-500
     ;
     .progressbar {
       @apply

@@ -10,7 +10,7 @@ const slides = [
     description:
       "Ladder is our Stryda Special! You compete against other Stryda players to climb the leaderboard, get on top and win crazy rewards! Interested? Entry Ladder is on us! ",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674690687/Stryda/demo/carouselnew_1.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1675850211/Stryda/demo/carouselnew_1.jpg",
     buttonLabel: "Compete now",
     buttonURL: "/prototype/ladders?freeentry=true",
   },
@@ -20,7 +20,7 @@ const slides = [
     description:
       "Check your damage/round, K/D ratio, headshots percentage, and more, for your last 20 matches. Plus, specific stats for your most played agents",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674690687/Stryda/demo/carouselnew_2.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1675850211/Stryda/demo/carouselnew_2.jpg",
     buttonLabel: "Check it out",
     buttonURL: "/prototype/valorant/stats",
   },
@@ -30,7 +30,7 @@ const slides = [
     description:
       "Finish at the top of this fast paced ladder to instantly win a gift card.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674690687/Stryda/demo/carouselnew_3.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1675850211/Stryda/demo/carouselnew_3.jpg",
     buttonLabel: "View ladders",
     buttonURL: "/prototype/ladders",
   },
@@ -40,7 +40,7 @@ const slides = [
     description:
       "This week you can get 2x the usual rewards by competing on Ladders.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674690687/Stryda/demo/carouselnew_4.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1675850211/Stryda/demo/carouselnew_4.jpg",
     buttonLabel: "Learn more",
     buttonURL: "#",
   },
@@ -180,7 +180,7 @@ export default function CarouselNew(props) {
                 </div>
                 <div className="carousel-body">
                   <div>
-                    <h2 className="h1 text-ui-100 lg:!text-6xl">{slide.title}</h2>
+                    <h3 className="h1 text-6xl lg:text-7xl">{slide.title}</h3>
                     <p className="mb-5 mt-3 text-ui-200">{slide.description}</p>
                     <Link href={slide.buttonURL}>
                       <button type="button" className="button button-primary">

@@ -63,9 +63,7 @@ export default function PrototypeStructure({ children, title }) {
           className="drawer-toggle"
         />
         <div className="drawer-content scrollbar-desktop scrollbar-secondary">
-          {/*
           <TopbarNew />
-  */}
           <div className="relative">
             {hasContentCard && (
               <div className="fixed bottom-8 right-8 z-50">
@@ -169,8 +167,8 @@ export default function PrototypeStructure({ children, title }) {
                 </div>
                 <Footer className="child:max-w-3xl child hidden" />
               </div>
-              <div className="w-72 hidden lg:block bg-ui-800 border-l border-ui-700">
-                <i className="absolute z-40 lg:w-12 xl:w-24 h-screen right-0 -translate-x-72 inset-y-0 from-ui-900/75 to-ui-900/0 bg-gradient-to-l" />
+              <div className="w-60 hidden lg:block bg-ui-800 border-l border-ui-700">
+                <i className="absolute z-40 lg:w-12 xl:w-24 h-screen right-0 -translate-x-60 inset-y-0 from-ui-900/75 to-ui-900/0 bg-gradient-to-l" />
 
                 <PrototypeSideRight />
 

@@ -107,11 +107,11 @@ export default function TabLaddersRules() {
           <div className="col-span-1 md:col-span-2 xl:col-span-1 surface sm:rounded-lg p-4 sm:p-8 flex items-center gap-8">
             <div className="flex flex-col justify-center items-center text-center w-32">
               <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1670246843/Marketing/2022_prototype/Playerprotection_shield.svg"
+                src="https://res.cloudinary.com/gloot/image/upload/v1676324139/Stryda/logos/Stryda_Player_Protection.svg"
                 width="100"
                 height="auto"
               />
-              <span className="text-xs text-ui-300 leading-tight">
+              <span className="text-xs text-ui-300 leading-tight mt-2">
                 Ladders protected by Stryda Player Protection
               </span>
             </div>

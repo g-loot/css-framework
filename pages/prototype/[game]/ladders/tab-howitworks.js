@@ -1,10 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Accordion from "../../../../components/Accordion/Accordion";
 import FAQ from "../../../../components/FAQ/FAQ";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
 import ModalContainer from "../../../../components/Modal/ModalContainer";
+import { usePrototypeData } from "../../../../contexts/prototype";
 import { UiContext } from "../../../../contexts/ui";
 import { useRouter } from "next/router";
 
@@ -16,15 +17,30 @@ const MissionsHowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "Make sure you have the Stryda Tracker installed and running on your PC. In some games you also need to add your game account in your <a href='#' class='link link-main'>Stryda settings</a>.",
+        text: "<span class='text-lg text-ui-100'>Playing Valorant</span>",
+      },
+      {
+        type: "ul",
+        text: ["Make sure you connected your Riot account on Stryda"],
       },
       {
         type: "p",
-        text: "See if everything is working by running the Stryda Tracker on your PC and starting your game.",
+        text: "<span class='text-lg text-ui-100'>Playing PUBG: BATTLEGROUNDS</span>",
+      },
+      {
+        type: "ul",
+        text: ["Make sure you connected your Steam account on Stryda"],
       },
       {
         type: "p",
-        text: "The Stryda icon should appear in your game with a green dot. This means everything is up and running to track your progress.",
+        text: "<span class='text-lg text-ui-100'>Playing any other game</span>",
+      },
+      {
+        type: "ul",
+        text: [
+          "Make sure you have installed the Stryda App and the tracker plugin.",
+          "The Stryda icon should appear in your game at the top left of your screen meaning everything is up and running to track your progress.",
+        ],
       },
       {
         type: "p",
@@ -39,7 +55,7 @@ const MissionsHowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "To play in the Ladder you need Tokens. Each match costs a certain number of Tokens.",
+        text: "Playing in a ladder requires Tokens. Each match costs a certain number of Tokens.",
       },
       {
         type: "p",
@@ -47,13 +63,13 @@ const MissionsHowitworksTabs = [
       },
       {
         type: "p",
-        text: "If you run out of Tokens, there are several ways to get more.",
+        text: "If you run out of Tokens, there are several ways to get more:",
       },
       {
         type: "ul",
         text: [
-          "Earn Tokens by completing Missions and unlocking Mission Rewards.",
           "Buy Tokens in the Stryda wallet.",
+          "Earn Tokens by completing Missions and unlocking Mission Rewards.",
           "Claim free Tokens in your Daily Login Streak.",
         ],
       },
@@ -182,32 +198,43 @@ const MissionsHowitworksTabs = [
     ],
   },
   {
-    title: "If I'm having a problem with the Ladder",
+    title: "I am experiencing issues with the Ladders",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674737014/Stryda/illustrations/error.jpg",
     content: [
       {
         type: "p",
-        text: "If your Ladder stats aren’t tracking correctly, try these steps.",
+        text: "If you are playing VALORANT, make sure your Riot and Stryda accounts are linked in <a href='#' class='link link-main'>your settings</a>.",
       },
       {
-        type: "ul",
-        text: [
-          "Make sure the Stryda overlay is running and the icon is green. Or that you have added your correct game account in your Profile settings.",
-          "Make sure you’re playing in the correct game mode as shown on the Ladder page.",
-          "Wait a little while. Stats can take some time to be updated.",
-          "Check out the help page for more tips.",
-        ],
+        type: "p",
+        text: "If you are playing PUBG: BATTLEGROUNDS, make sure your Steam and Stryda accounts are linked in <a href='#' class='link link-main'>your settings</a>.",
+      },
+      {
+        type: "p",
+        text: "If you are playing any other game, make sure you have installed the Stryda App and the tracker plugin. Make sure the overlay is running with a green dot.",
+      },
+      {
+        type: "p",
+        text: "Note that stats can take some time to be updated.",
       },
     ],
   },
 ];
 
 export default function TabLaddersHowItWorks() {
+  const router = useRouter();
   const { query } = useRouter();
+  const prototype = usePrototypeData();
   const hasAds = query.ads === "true" ? true : false;
   const uiContext = useContext(UiContext);
   const modalVideo = query.modalvideo === "true" ? true : false;
+  const [selectedGame, setSelectedGame] = useState(null);
+  const { game } = router.query;
+
+  useEffect(() => {
+    setSelectedGame(prototype.getGameBySlug(game));
+  }, [game]);
 
   function openModalLadderHowitworksVideo() {
     uiContext.openModal(
@@ -223,157 +250,189 @@ export default function TabLaddersHowItWorks() {
 
   return (
     <>
-      <section
-        className="py-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc(1 * 0.05s)" }}
-      >
-        <div className="grid gap-8 grid-cols-1 xl:grid-cols-3 items-center">
-          <img
-            className="col-span-1 rounded-lg"
-            src="https://res.cloudinary.com/gloot/image/upload/v1674745238/Stryda/illustrations/ladder_leaderboard.jpg"
-            width="100%"
-            height="auto"
-            alt=""
-          />
-          <div className="col-span-2 px-4 sm:px-0">
-            <h2 className="h4 mb-4">What is a Ladder?</h2>
-            <div className="columns-2 space-y-4 gap-8">
-              <p className="text-ui-300 leading-relaxed">
-                In Ladders you compete against other Stryda players and/or Clans
-                to climb a leaderboard.
-              </p>
-              <ul className="list-inside list-disc space-y-4 text-ui-300 leading-relaxed">
+      {selectedGame && (
+        <>
+          <section
+            className="py-12 animate-slide-in-bottom animate-delay"
+            style={{ "--delay": "calc(1 * 0.05s)" }}
+          >
+            <div className="grid gap-8 grid-cols-1 xl:grid-cols-3 items-center">
+              <img
+                className="col-span-1 rounded-lg"
+                src="https://res.cloudinary.com/gloot/image/upload/v1674745238/Stryda/illustrations/ladder_leaderboard.jpg"
+                width="100%"
+                height="auto"
+                alt=""
+              />
+              <div className="col-span-2 px-4 sm:px-0">
+                <h2 className="h4 mb-4">What is a Ladder?</h2>
+                <div className="columns-2 space-y-4 gap-8">
+                  <p className="text-ui-300 leading-relaxed">
+                    In Ladders you compete against other Stryda players and/or
+                    Clans to climb a leaderboard.
+                  </p>
+                  <ul className="list-inside list-disc space-y-4 text-ui-300 leading-relaxed">
+                    <li>
+                      Ladders are based on your stats, just like Missions. You
+                      don’t need to be in the same server as the other Ladder
+                      players.
+                    </li>
+                    <li>
+                      You earn Ladder points based on the objective, e.g. kills,
+                      goals or score from the game.
+                    </li>
+                    <li>
+                      For Valorant and PUBG: BATTLEGROUNDS you need to connect
+                      your Riot and Steam accounts respectively to Stryda; for
+                      all the other games you need the Stryda App running while
+                      you play.
+                    </li>
+                    <li>
+                      Ladders use a “best-of” format. You can enter as many
+                      times as you want, and only your best scores count.
+                    </li>
+                    <li>
+                      You need to complete a set numbers of matches before you
+                      can join and see the Ladder leaderboard.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            className="pt-12 animate-slide-in-bottom animate-delay"
+            style={{ "--delay": "calc(2 * 0.05s)" }}
+          >
+            <div className="px-4 sm:px-0">
+              <h2 className="h4 mb-4">How the Ladder works</h2>
+            </div>
+            <div className="surface sm:rounded-lg overflow-hidden max-w-sm mx-auto mb-4 relative">
+              <div className="absolute inset-0 flex items-center justify-center bg-ui-900/50">
+                <button
+                  type="button"
+                  className="button button-primary button-lg button-play"
+                  onClick={openModalLadderHowitworksVideo}
+                >
+                  <span className="icon icon-circle-caret-right"></span>
+                </button>
+              </div>
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1658478390/Marketing/2022_prototype/brawls-howitworks-video.webp"
+                width="100%"
+                height="auto"
+                alt=""
+              />
+            </div>
+            <div className="overflow-x-auto scrollbar-desktop py-4">
+              <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px]">
+              {selectedGame.slug === "valorant" && (
+                  <li>
+                    <div>
+                      <i>1</i>
+                      <div className="text-sm text-ui-300">
+                        <Link
+                          href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                        >
+                          <a className="link">Connect your Riot account</a>
+                        </Link>
+                      </div>
+                      <span />
+                    </div>
+                  </li>
+                )}
+                {selectedGame.slug === "pubg" && (
+                  <li>
+                    <div>
+                      <i>1</i>
+                      <div className="text-sm text-ui-300">
+                        <Link
+                          href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                        >
+                          <a className="link">Connect your Steam account</a>
+                        </Link>
+                      </div>
+                      <span />
+                    </div>
+                  </li>
+                )}
+                {selectedGame.slug !== "valorant" &&
+                  selectedGame.slug !== "pubg" && (
+                    <li>
+                      <div>
+                        <i>1</i>
+                        <div className="text-sm text-ui-300">
+                          Have the Stryda tracker installed and running
+                        </div>
+                        <span />
+                      </div>
+                    </li>
+                  )}
+
                 <li>
-                  Ladders are based on your stats, just like Missions. You don’t
-                  need to be in the same server as the other Ladder players.
+                  <a href="#">
+                    <i>2</i>
+                    <div className="text-sm text-ui-300">
+                      Use Tokens to activate Ladder matches
+                    </div>
+                    <span />
+                  </a>
                 </li>
                 <li>
-                  You earn Ladder points based on the objective, e.g. kills,
-                  goals or score from the game.
+                  <a href="#">
+                    <i>3</i>
+                    <div className="text-sm text-ui-300">
+                      Launch the game and play matches in the correct game mode
+                    </div>
+                    <span />
+                  </a>
                 </li>
-                <li>You need the Stryda Tracker running while you play.</li>
                 <li>
-                  Ladders use a “best-of” format. You can enter as many times as
-                  you want, and only your best scores count.
+                  <a href="#">
+                    <i>4</i>
+                    <div className="text-sm text-ui-300">
+                      Your total Ladder points are based on the specific amount
+                      of matches required
+                    </div>
+                    <span />
+                  </a>
                 </li>
                 <li>
-                  You need to complete a set numbers of matches before you can
-                  join and see the Ladder leaderboard.
+                  <a href="#">
+                    <i>5</i>
+                    <div className="text-sm text-ui-300">
+                      Once the Ladder finishes you can see the final results
+                    </div>
+                    <span />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i>6</i>
+                    <div className="text-sm text-ui-300">
+                      Top players/Clans will be able to claim their rewards
+                    </div>
+                    <span />
+                  </a>
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-      <section
-        className="pt-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc(2 * 0.05s)" }}
-      >
-        <div className="px-4 sm:px-0">
-          <h2 className="h4 mb-4">How the Ladder works</h2>
-        </div>
-        <div className="surface sm:rounded-lg overflow-hidden max-w-sm mx-auto mb-4 relative">
-          <div className="absolute inset-0 flex items-center justify-center bg-ui-900/50">
-            <button
-              type="button"
-              className="button button-primary button-lg button-play"
-              onClick={openModalLadderHowitworksVideo}
-            >
-              <span className="icon icon-circle-caret-right"></span>
-            </button>
-          </div>
-          <img
-            src="https://res.cloudinary.com/gloot/image/upload/v1658478390/Marketing/2022_prototype/ladders-howitworks-video.webp"
-            width="100%"
-            height="auto"
-            alt=""
-          />
-        </div>
-        <div className="overflow-x-auto scrollbar-desktop py-4">
-          <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px]">
-            <li>
-              <a href="#">
-                <i>1</i>
-                <div className="text-sm text-ui-300">
-                  Have the Stryda Tracker installed and running
-                </div>
-                <span />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>2</i>
-                <div className="text-sm text-ui-300">
-                  In some games you need to add your game account in your Stryda
-                  settings
-                </div>
-                <span />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>3</i>
-                <div className="text-sm text-ui-300">
-                  Use Tokens to activate Ladder matches
-                </div>
-                <span />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>4</i>
-                <div className="text-sm text-ui-300">
-                  Launch the game and play matches in the correct game mode
-                </div>
-                <span />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>5</i>
-                <div className="text-sm text-ui-300">
-                  Your total Ladder points are based on the specific amount of
-                  matches required
-                </div>
-                <span />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>6</i>
-                <div className="text-sm text-ui-300">
-                  Once the Ladder finishes you can see the final results
-                </div>
-                <span />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>7</i>
-                <div className="text-sm text-ui-300">
-                  Top players/Clans will be able to claim their rewards
-                </div>
-                <span />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section
-        className="py-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc(3 * 0.05s)" }}
-      >
-        <div className="px-4 sm:px-0">
-          <h2 className="h4 mb-6">
-            Learn everything about the Ladders
-          </h2>
-        </div>
-        <div className="accordion accordion-highlighted surface sm:rounded-lg">
-          {MissionsHowitworksTabs.map((tab, tabIndex) => (
-            <FAQ key={tabIndex} content={tab} />
-          ))}
-        </div>
-      </section>
+          </section>
+          <section
+            className="py-12 animate-slide-in-bottom animate-delay"
+            style={{ "--delay": "calc(3 * 0.05s)" }}
+          >
+            <div className="px-4 sm:px-0">
+              <h2 className="h4 mb-6">Learn everything about the Ladders</h2>
+            </div>
+            <div className="accordion accordion-highlighted surface sm:rounded-lg">
+              {MissionsHowitworksTabs.map((tab, tabIndex) => (
+                <FAQ key={tabIndex} content={tab} />
+              ))}
+            </div>
+          </section>
+        </>
+      )}
     </>
   );
 }

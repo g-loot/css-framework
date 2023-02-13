@@ -164,7 +164,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "<a href='/prototype-new/clans' class='link link-main font-bold'>Ready to rock?</a>.",
+        text: "<a href='/prototype-new/clans' class='link link-main font-bold'>Ready to rock?</a>",
       },
     ],
   },

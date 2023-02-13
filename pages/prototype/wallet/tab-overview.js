@@ -47,6 +47,19 @@ const WalletItems = [
     button: "buy",
     buttonLabel: "Buy power tokens",
   },
+  {
+    id: 3,
+    name: "power tokens",
+    icon: "icon-powertoken",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-powertoken-face.png",
+    amount: "15",
+    use: "To enter rounds in the <b>Power Plays</b>.",
+    get: "Buy them directly from the <b>Wallet</b>.",
+    color: "text-currency-3-500",
+    button: "buy",
+    buttonLabel: "Buy power tokens",
+  },
   /*
   {
     id: 3,
@@ -117,11 +130,11 @@ export default function TabWalletOverview() {
     <>
       {!alernativeLayout && (
         <>
-          <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
             {WalletItems.map((item, itemIndex) => (
               <div
                 key={item.id}
-                className="surface rounded-xl flex flex-col items-stretch p-2 w-full max-w-xs lg:max-w-xl mx-auto animate-slide-in-bottom animate-delay"
+                className="surface rounded flex flex-col items-stretch p-2 w-full mx-auto animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
               >
                 <div

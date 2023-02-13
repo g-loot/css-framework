@@ -8,7 +8,8 @@
 .card-ladder,
 .card-mission,
 .card-tournament {
-  @apply transform-gpu
+  @apply 
+  transform-gpu
   /*overflow-hidden*/
   relative
   focus-visible:outline
@@ -16,18 +17,21 @@
   focus-visible:outline-1
   focus-visible:outline-main;
   &:not([class*="rounded"]) {
-    @apply rounded-lg;
+    @apply 
+    rounded-lg;
   }
 
   &:not([class*="surface"]) {
-    @apply bg-ui-800;
+    @apply 
+    bg-ui-800;
   }
 }
 
 .card-ladder,
 .card-mission {
   > .card-overlay {
-    @apply absolute
+    @apply 
+    absolute
     z-20
     inset-0
     backdrop-blur-sm
@@ -39,7 +43,8 @@
     bg-ui-800/90
     shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))];
     > div {
-      @apply relative
+      @apply 
+      relative
       z-10
       flex
       flex-col
@@ -48,7 +53,8 @@
       gap-2;
     }
     > img {
-      @apply absolute
+      @apply 
+      absolute
       z-0
       w-full
       h-full
@@ -56,15 +62,19 @@
       object-center;
     }
     ~ * {
-      @apply pointer-events-none;
+      @apply 
+      pointer-events-none;
       &.card-image-bg {
-        @apply mix-blend-luminosity;
+        @apply 
+        mix-blend-luminosity;
         > img {
-          @apply grayscale;
+          @apply 
+          grayscale;
         }
       }
       .card-status {
-        @apply text-ui-300;
+        @apply 
+        text-ui-300;
       }
     }
   }
@@ -72,7 +82,8 @@
 
 .card {
   .card-image {
-    @apply flex
+    @apply 
+    flex
     items-center
     justify-center
     rounded-t
@@ -80,7 +91,8 @@
   }
 
   .card-body {
-    @apply relative
+    @apply 
+    relative
     z-10
     flex
     flex-1
@@ -90,14 +102,17 @@
   }
 
   .card-title {
-    @apply leading-[1.1];
+    @apply 
+    leading-[1.1];
     &:not([class*="text-ui"]):not([class*="text-main"]) {
-      @apply text-ui-100;
+      @apply 
+      text-ui-100;
     }
   }
 
   .card-actions {
-    @apply leading-none
+    @apply 
+    leading-none
     flex
     flex-wrap
     items-start
@@ -108,18 +123,21 @@
     .card-image {
       &,
       figure {
-        @apply absolute
+        @apply 
+        absolute
         inset-0
         z-0;
 
         img {
-          @apply h-full
+          @apply 
+          h-full
           object-cover;
         }
       }
     }
     &::before {
-      @apply content-['']
+      @apply 
+      content-['']
       absolute
       z-10
       inset-0
@@ -133,7 +151,8 @@
 
 .card-mission,
 .card-tournament {
-  @apply w-full
+  @apply 
+  w-full
   relative
   flex
   flex-col
@@ -141,32 +160,38 @@
   justify-between
   transform-gpu;
   .card-decoration {
-    @apply z-20;
+    @apply 
+    z-20;
   }
   .card-body {
-    @apply relative
+    @apply 
+    relative
     z-20
     flex
     flex-col
     items-start
     space-y-3;
     .progressbar {
-      @apply relative
+      @apply 
+      relative
       -z-10;
     }
   }
   .card-title {
-    @apply leading-[1.1]
+    @apply 
+    leading-[1.1]
     text-ui-100
     uppercase;
   }
   .card-meta {
-    @apply flex
+    @apply 
+    flex
     w-full;
   }
   .card-bg {
     &::before {
-      @apply content-['']
+      @apply 
+      content-['']
       absolute
       z-10
       inset-0;
@@ -177,16 +202,19 @@
 /* card-tournament */
 
 .card-tournament {
-  @apply aspect-square
+  @apply 
+  aspect-square
   relative;
 
   .card-decoration {
-    @apply flex
+    @apply 
+    flex
     justify-between
     items-start
     p-2;
     > img {
-      @apply justify-self-stretch
+      @apply 
+      justify-self-stretch
       max-h-[5rem]
       max-w-[65%]
       mt-1
@@ -195,25 +223,30 @@
     }
   }
   .card-body {
-    @apply p-4;
+    @apply 
+    p-4;
   }
   .card-title {
-    @apply mt-4
+    @apply 
+    mt-4
     text-2xl;
   }
   .card-meta {
-    @apply flex
+    @apply 
+    flex
     justify-start
     items-stretch
     mt-4;
 
     > div {
-      @apply flex
+      @apply 
+      flex
       flex-col
       items-start
       justify-center;
       &:not(:last-child) {
-        @apply mr-4
+        @apply 
+        mr-4
         pr-4
         border-r
         border-ui-300/25;
@@ -221,21 +254,25 @@
     }
 
     label {
-      @apply text-sm
+      @apply 
+      text-sm
       text-ui-300
       leading-none
       mb-2;
     }
     ul {
-      @apply p-0
+      @apply 
+      p-0
       m-0
       text-sm
       text-ui-200;
       > li {
-        @apply pl-4
+        @apply 
+        pl-4
         relative;
         &::before {
-          @apply content-['']
+          @apply 
+          content-['']
           absolute
           left-0
           top-[calc(50%-(0.5rem/2))]
@@ -266,23 +303,28 @@
 /* card-mission */
 
 .card-mission {
-  @apply aspect-video;
+  @apply 
+  aspect-video;
 
   .card-body {
-    @apply bg-ui-800
+    @apply 
+    bg-ui-800
     p-2
     rounded-b;
 
     .card-title {
-      @apply text-xl
+      @apply 
+      text-xl
       mt-1;
 
       + .card-meta {
-        @apply mt-2.5;
+        @apply 
+        mt-2.5;
       }
     }
     .card-meta {
-      @apply items-center
+      @apply 
+      items-center
       justify-between
       text-sm
       text-ui-200
@@ -290,7 +332,8 @@
 
       > * {
         &::last-child {
-          @apply text-right;
+          @apply 
+          text-right;
         }
       }
     }
@@ -298,7 +341,8 @@
 
   .card-bg {
     &::before {
-      @apply hidden;
+      @apply 
+      hidden;
     }
   }
 
@@ -315,12 +359,14 @@
       }
     }
     .card-decoration {
-      @apply flex
+      @apply 
+      flex
       flex-1
       items-center
       inset-0;
       > img {
-        @apply relative
+        @apply 
+        relative
         z-30
         h-auto
         max-h-[50%];
@@ -330,9 +376,11 @@
 
   &.card-unlocked {
     .card-decoration {
-      @apply items-start;
+      @apply 
+      items-start;
       &::after {
-        @apply font-icon
+        @apply 
+        font-icon
         text-3xl
         content-['\ebe9']
         absolute
@@ -351,18 +399,22 @@
   }
 
   &.card-locked {
-    @apply transform-gpu
+    @apply 
+    transform-gpu
     overflow-hidden;
 
     .card-decoration {
-      @apply drop-shadow-[0_3px_1.5px_rgba(0,0,0,0.5)];
+      @apply 
+      drop-shadow-[0_3px_1.5px_rgba(0,0,0,0.5)];
       > img {
-        @apply w-auto
+        @apply 
+        w-auto
         mx-auto
         translate-y-4;
       }
       &::before {
-        @apply content-['']
+        @apply 
+        content-['']
         absolute
         z-0
         top-0
@@ -376,7 +428,8 @@
         clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
       }
       &::after {
-        @apply font-icon
+        @apply 
+        font-icon
         content-['\ea12']
         absolute
         z-10
@@ -397,11 +450,13 @@
     }
     .card-bg {
       * {
-        @apply grayscale;
+        @apply 
+        grayscale;
       }
 
       &::before {
-        @apply bg-ui-800/75;
+        @apply 
+        bg-ui-800/75;
       }
     }
   }
@@ -410,7 +465,8 @@
 /* card mission secondary */
 
 .card-mission.card-secondary {
-  @apply aspect-[7/4]
+  @apply 
+  aspect-[7/4]
   md:aspect-[7/3.5]
   flex
   flex-row
@@ -812,29 +868,35 @@
   }
 
   &.card-horizontal {
-    @apply flex
+    @apply 
+    flex
     flex-row
     md:max-w-[809px]
     min-h-10;
     > .card-image {
-      @apply order-2;
+      @apply 
+      order-2;
     }
     > .card-content {
-      @apply order-1
+      @apply 
+      order-1
       flex-1
       rounded-l
       rounded-r-none;
     }
     > .card-image-bg {
-      @apply left-[50%]
+      @apply 
+      
       w-auto
       rounded-r
       rounded-l-none;
       &::before {
-        @apply hidden;
+        @apply 
+        hidden;
       }
       > img {
-        @apply z-0
+        @apply 
+        z-0
         left-auto;
       }
     }
@@ -846,29 +908,35 @@
 @media only screen and (min-width: 640px) {
   .card-ladder.card-secondary {
     &.sm\:card-horizontal {
-      @apply flex
+      @apply 
+      flex
     flex-row
     md:max-w-[809px]
     min-h-10;
       > .card-image {
-        @apply order-2;
+        @apply 
+        order-2;
       }
       > .card-content {
-        @apply order-1
-      flex-1
-      rounded-l
-      rounded-r-none;
+        @apply 
+        order-1
+        flex-1
+        rounded-l
+        rounded-r-none;
       }
       > .card-image-bg {
-        @apply left-[50%]
-      w-auto
-      rounded-r
-      rounded-l-none;
+        @apply 
+        w-auto
+        rounded-r
+        rounded-l-none
+        ;
         &::before {
-          @apply hidden;
+          @apply 
+          hidden;
         }
         > img {
-          @apply z-0
+          @apply 
+          z-0
         left-auto;
         }
       }
@@ -878,30 +946,35 @@
 @media only screen and (min-width: 768px) {
   .card-ladder.card-secondary {
     &.md\:card-horizontal {
-      @apply flex
-    flex-row
-    md:max-w-[809px]
-    min-h-10;
+      @apply 
+      flex
+      flex-row
+      md:max-w-[809px]
+      min-h-10;
       > .card-image {
-        @apply order-2;
+        @apply 
+        order-2;
       }
       > .card-content {
-        @apply order-1
-      flex-1
-      rounded-l
-      rounded-r-none;
+        @apply 
+        order-1
+        flex-1
+        rounded-l
+        rounded-r-none;
       }
       > .card-image-bg {
-        @apply left-[50%]
-      w-auto
-      rounded-r
-      rounded-l-none;
+        @apply 
+        w-auto
+        rounded-r
+        rounded-l-none;
         &::before {
-          @apply hidden;
+          @apply 
+          hidden;
         }
         > img {
-          @apply z-0
-        left-auto;
+          @apply 
+          z-0
+          left-auto;
         }
       }
     }
@@ -910,29 +983,34 @@
 @media only screen and (min-width: 1024px) {
   .card-ladder.card-secondary {
     &.lg\:card-horizontal {
-      @apply flex
+      @apply 
+      flex
     flex-row
     md:max-w-[809px]
     min-h-10;
       > .card-image {
-        @apply order-2;
+        @apply 
+        order-2;
       }
       > .card-content {
-        @apply order-1
+        @apply 
+        order-1
       flex-1
       rounded-l
       rounded-r-none;
       }
       > .card-image-bg {
-        @apply left-[50%]
+        @apply 
       w-auto
       rounded-r
       rounded-l-none;
         &::before {
-          @apply hidden;
+          @apply 
+          hidden;
         }
         > img {
-          @apply z-0
+          @apply 
+          z-0
         left-auto;
         }
       }
@@ -942,27 +1020,31 @@
 @media only screen and (min-width: 1280px) {
   .card-ladder.card-secondary {
     &.xl\:card-horizontal {
-      @apply grid-cols-5
+      @apply 
+      grid-cols-5
       grid-rows-none
       w-full
       max-w-[calc(100vh-4rem)]
       md:max-w-[809px]
       min-h-10;
       > .card-image {
-        @apply order-2
+        @apply 
+        order-2
         col-span-2;
       }
       > .card-content {
-        @apply order-1
+        @apply 
+        order-1
         col-span-3
         rounded-l-lg
         rounded-r-none;
       }
       > .card-image-bg {
-        @apply left-[50%]
+        @apply 
         w-auto;
         &::before {
-          @apply content-['']
+          @apply 
+          content-['']
           absolute
           z-10
           w-1/3
@@ -973,7 +1055,8 @@
           to-ui-800/0;
         }
         > img {
-          @apply z-0
+          @apply 
+          z-0
           left-auto;
         }
       }
@@ -988,7 +1071,8 @@
 .card-ladder {
   &.is-active {
     &::after {
-      @apply content-['']
+      @apply 
+      content-['']
       absolute
       z-50
       inset-0
@@ -997,13 +1081,15 @@
       animate-[card-glow_2s_cubic-bezier(.4,0,.6,1)_infinite];
     }
     .card-status {
-      @apply animate-pulse
+      @apply 
+      animate-pulse
       text-main;
     }
   }
   &.is-inactive {
     .card-title {
-      @apply text-ui-300;
+      @apply 
+      text-ui-300;
     }
     .card-category {
       > * {
@@ -1012,25 +1098,31 @@
       }
     }
     .card-bg {
-      @apply mix-blend-luminosity;
+      @apply 
+      mix-blend-luminosity;
       > span {
-        @apply grayscale
+        @apply 
+        grayscale
         opacity-50;
       }
     }
     .card-image-bg {
-      @apply mix-blend-luminosity;
+      @apply 
+      mix-blend-luminosity;
       > img {
-        @apply grayscale
+        @apply 
+        grayscale
         opacity-50;
       }
     }
     .card-status {
-      @apply text-ui-300;
+      @apply 
+      text-ui-300;
     }
   }
   &.is-loading {
-    @apply relative
+    @apply 
+    relative
     pointer-events-none
     border-t
     border-t-ui-700
@@ -1042,7 +1134,8 @@
 
     &,
     [class*="text-"] {
-      @apply text-ui-800/0;
+      @apply 
+      text-ui-800/0;
     }
     background-image: linear-gradient(
       to right,
@@ -1053,31 +1146,37 @@
 
     :where(img, .card-decoration::before, .card-decoration::after, .chip
         > *, .card-bg, .card-meta > * > *, .avatar) {
-      @apply opacity-0;
+      @apply 
+      opacity-0;
     }
 
     *[class*="bg-"],
     .card-content {
-      @apply bg-ui-800/0
+      @apply 
+      bg-ui-800/0
       from-ui-800/0
       via-ui-800/0
       to-ui-800/0;
     }
 
     *[class*="border-"] {
-      @apply border-ui-800/0;
+      @apply 
+      border-ui-800/0;
     }
 
     .card-meta > div:not(:last-child) {
-      @apply border-ui-700;
+      @apply 
+      border-ui-700;
     }
 
     .card-title,
     .card-meta > *:not(.chip)  {
-      @apply relative
+      @apply 
+      relative
       text-ui-300/0;
       &::after {
-        @apply absolute
+        @apply 
+        absolute
         top-0
         left-0
         content-['']
@@ -1088,19 +1187,23 @@
     }
     .card-title {
       &::after {
-        @apply w-2/3
+        @apply 
+        w-2/3
         h-6;
       }
     }
     .card-meta > * {
-      @apply text-ui-200/0;
+      @apply 
+      text-ui-200/0;
       &::after {
-        @apply w-1/2
+        @apply 
+        w-1/2
         h-full;
       }
     }
     > * {
-      @apply text-ui-200/0
+      @apply 
+      text-ui-200/0
       bg-ui-200/0;
     }
     div,
@@ -1108,34 +1211,41 @@
       &.progressbar,
       &.chip,
       &.chip.chip-sliced:not([class*="bg-"]) {
-        @apply bg-none
+        @apply 
+        bg-none
         bg-ui-600/25
         border-0
         shadow-[inset_0_0_0_1px_rgba(255,255,255,0)];
         > div {
-          @apply opacity-0;
+          @apply 
+          opacity-0;
         }
       }
     }
     button {
-      @apply opacity-0;
+      @apply 
+      opacity-0;
     }
     .card-image-bg {
       &::before,
       &::after {
-        @apply hidden;
+        @apply 
+        hidden;
       }
     }
     .card-ladder.card-secondary {
       > div {
-        @apply bg-none
+        @apply 
+        bg-none
         bg-ui-600/25;
         > * {
-          @apply opacity-0;
+          @apply 
+          opacity-0;
         }
       }
       > i {
-        @apply hidden;
+        @apply 
+        hidden;
       }
     }
   }

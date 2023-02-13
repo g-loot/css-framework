@@ -15,6 +15,7 @@ import TopBarClaimNew from "../TopBarClaim/TopBarClaimNew";
 import PrototypeSideRightClan from "./PrototypeSideRightClan";
 import PrototypeSideRightUser from "./PrototypeSideRightUser";
 import GameIcon from "../GameIcon/GameIcon";
+import PrototypeSideRightMissionsLadders from "./PrototypeSideRightMissionsLadders";
 
 const notificationsGroups = [
   {
@@ -211,8 +212,8 @@ export default function PrototypeSideRight() {
 
   return (
     <>
-      <div className="p-2 relative z-50">
-        <div className="flex gap-2 items-center justify-between mb-4">
+      <div className="p-2 relative z-50 pt-12">
+        <div className="flex gap-2 items-center justify-between mb-4 hidden">
           <Link href={`/prototype-new/search${prototype.getURLparams()}`}>
             <button
               type="button"
@@ -223,100 +224,7 @@ export default function PrototypeSideRight() {
           </Link>
 
           <TopBarClaimNew />
-          {/*
-          <div className="form-group">
-            <div className="input-group">
-              <button role="button" className="button button-tertiary">
-                <span className="icon icon-zoom" />
-              </button>
-              <input
-                onFocus={handleSearch}
-                type="text"
-                name="search-field"
-                id="search-field"
-                className="input-sm !rounded-full"
-                placeHolder="search"
-              />
-            </div>
-          </div>
-  */}
-          {/*
-          <div className="dropdown dropdown-end">
-            <div tabIndex="1" className="flex items-center rounded-full">
-              <button
-                type="button"
-                className="w-[34px] button button-tertiary rounded-full"
-              >
-                <div className="pointer-events-none absolute -inset-1 !m-0 rounded-full">
-                  <i
-                    className="absolute inset-px rounded-full border border-main/40 animate-pulse hidden"
-                    style={{ animationDuration: "4s" }}
-                  />
-                </div>
-                <div className="text-sm font-bold text-ui-200 text-center pl-px">
-                  <div className="infobanner is-active">
-                    <div className="infobanner-front">
-                      <span className="font-bold text-xs">
-                        {isPremium ? <>+165%</> : <>+15%</>}
-                      </span>
-                    </div>
-                    <div className="infobanner-back">
-                      <span className="icon icon-xp-symbol text-3xl text-main mx-auto" />
-                    </div>
-                  </div>
-                </div>
-              </button>
-            </div>
-
-            <div
-              tabIndex="1"
-              className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[300px] overflow-hidden rounded-xl shadow-xl"
-            >
-              <h5 className="mx-2 mt-2">XP Boosts</h5>
-              <ul className="rounded-lg text-left text-sm p-2 leading-none">
-                {isPremium ? (
-                  <li className="flex gap-2 py-1 items-center">
-                    <div className="icon icon-e-add text-premium-500" />
-                    <div className="flex-1">Premium boost</div>
-                    <div className="text-right text-premium-500">+50%</div>
-                  </li>
-                ) : (
-                  <li className="flex gap-2 py-1 items-center text-ui-400">
-                    <div className="icon icon-e-remove" />
-                    <div className="flex-1 line-through">Premium boost</div>
-                    <div className="text-right line-through">+50%</div>
-                  </li>
-                )}
-                <li className="flex gap-2 py-1 items-center">
-                  <div className="icon icon-e-add text-main" />
-                  <div className="flex-1">Clan boost</div>
-                  <div className="text-right text-main">+10%</div>
-                </li>
-                <li className="separator bg-ui-600" />
-                <li className="flex gap-2 py-1 items-center">
-                  <div className="icon icon-e-add text-main" />
-                  <div className="flex-1 flex-col">
-                    <div>New user boost</div>
-                    <div>
-                      <Countdown
-                        separator={":"}
-                        hasDays={true}
-                        hasHours={true}
-                        hasMinutes={true}
-                        hasSeconds={true}
-                        hasLabels={false}
-                        labelsAbbr={false}
-                        labelClassName=""
-                        className="text-xs text-main"
-                      />
-                    </div>
-                  </div>
-                  <div className="text-right text-main">+5%</div>
-                </li>
-              </ul>
-            </div>
-          </div>
-                */}
+          
           <div className="dropdown dropdown-end">
             <button
               tabIndex="1"
@@ -486,95 +394,7 @@ export default function PrototypeSideRight() {
       <hr className="mt-4 mb-2" />
       <PrototypeSideRightClan />
       <hr className="mt-4 mb-2" />
-      <div className="flex gap-2 p-2">
-        <button
-          type="button"
-          className="flex-1 chip chip-sm chip-secondary uppercase chip-inverted"
-        >
-          <span>Missions</span>
-        </button>
-        <button
-          type="button"
-          className="flex-1 chip chip-sm chip-secondary uppercase"
-        >
-          <span>Ladders</span>
-        </button>
-      </div>
-      <div>
-        <ul>
-          <li className="item">
-            <div className="item-body">
-              <div className="item-title leading-none mb-2.5 text-sm">
-                Get 15 kills with the operator
-              </div>
-              <div className="text-ui-300 text-xs">
-                <div
-                  className="progressbar progressbar-xs"
-                  style={{
-                    "--percent": 54,
-                  }}
-                >
-                  <div />
-                </div>
-              </div>
-            </div>
-            <div className="item-actions">
-              <div>
-                <GameIcon game={1} />
-              </div>
-            </div>
-          </li>
-          <li className="item">
-            <div className="item-body">
-              <div className="item-title leading-none mb-2.5 text-sm">
-                Get 6 assists
-              </div>
-              <div className="text-ui-300 text-xs">
-                <div
-                  className="progressbar progressbar-xs"
-                  style={{
-                    "--percent": 20,
-                  }}
-                >
-                  <div />
-                </div>
-              </div>
-            </div>
-            <div className="item-actions">
-              <div>
-                <GameIcon game={2} />
-              </div>
-            </div>
-          </li>
-          <li className="item">
-            <div className="item-body">
-              <div className="item-title leading-none mb-2.5 text-sm">
-                Get 2 knife kills in competitive
-              </div>
-              <div className="text-ui-300 text-xs">
-                <div
-                  className="progressbar progressbar-xs"
-                  style={{
-                    "--percent": 100,
-                  }}
-                >
-                  <div />
-                </div>
-              </div>
-            </div>
-            <div className="item-actions">
-              <div>
-                <GameIcon game={1} />
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div className="text-center text-sm mt-2">
-          <a href="#" className="link link-hover">
-            View all
-          </a>
-        </div>
-      </div>
+      <PrototypeSideRightMissionsLadders />
     </>
   );
 }

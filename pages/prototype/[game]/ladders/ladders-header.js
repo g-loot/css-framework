@@ -107,6 +107,7 @@ export default function LaddersHeader(props) {
                   <span className="icon icon-circle-caret-right" />
                   <span>Learn how to Ladder</span>
                 </button>
+                {selectedGame.needsSteam && (
                 <Link
                   href={`/prototype/profile/settings${prototype.getURLparams()}`}
                 >
@@ -118,6 +119,33 @@ export default function LaddersHeader(props) {
                     <span>Steam required</span>
                   </button>
                 </Link>
+                )}
+                {selectedGame.needsRiot && (
+                <Link
+                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                >
+                  <button
+                    type="button"
+                    className="button button-secondary"
+                  >
+                    <span className="icon icon-riotgames-symbol" />
+                    <span>Riot required</span>
+                  </button>
+                </Link>
+                )}
+                {!selectedGame.needsSteam && !selectedGame.needsRiot && (
+                <Link
+                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                >
+                  <button
+                    type="button"
+                    className="button button-secondary"
+                  >
+                    <span className="icon icon-windows-symbol" />
+                    <span>Stryda App required</span>
+                  </button>
+                </Link>
+                )}
               </div>
             </div>
           </div>

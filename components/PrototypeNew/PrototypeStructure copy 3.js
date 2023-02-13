@@ -63,9 +63,7 @@ export default function PrototypeStructure({ children, title }) {
           className="drawer-toggle"
         />
         <div className="drawer-content scrollbar-desktop scrollbar-secondary">
-          {/*
           <TopbarNew />
-  */}
           <div className="relative">
             {hasContentCard && (
               <div className="fixed bottom-8 right-8 z-50">
@@ -101,7 +99,7 @@ export default function PrototypeStructure({ children, title }) {
             )}
 
             <div className="flex items-stretch h-screen">
-              <div className="relative w-16 hidden bg-ui-800 md:flex flex-col border-r border-ui-700">
+              <div className="relative w-16 hidden bg-ui-800 md:hidden flex-col border-r border-ui-700">
                 <i className="absolute z-40 lg:w-12 xl:w-24 h-screen left-0 translate-x-16 inset-y-0 from-ui-900/75 to-ui-900/0 bg-gradient-to-r" />
                 <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
                   <div className="relative z-10 grid place-content-center aspect-square border-b border-ui-700 text-0 cursor-pointer after:transition-colors after:duration-200 after:content-[''] after:absolute after:inset-0 after:bg-ui-850/0 hover:after:bg-ui-850 active:after:bg-ui-850 hover:child:rotate-180">
@@ -164,12 +162,12 @@ export default function PrototypeStructure({ children, title }) {
               </div>
 
               <div className="relative flex-1 overflow-hidden bg-ui-900 max-h-screen overflow-y-auto scrollbar scrollbar-hidden">
-                <div className="max-w-3xl lg:px-12 xl:px-24 pt-4 w-full mx-auto">
+                <div className="max-w-3xl lg:px-12 xl:px-24 pt-12 w-full mx-auto">
                   {children}
                 </div>
                 <Footer className="child:max-w-3xl child hidden" />
               </div>
-              <div className="w-72 hidden lg:block bg-ui-800 border-l border-ui-700">
+              <div className="w-72 hidden lg:block px-2 border-l border-ui-700">
                 <i className="absolute z-40 lg:w-12 xl:w-24 h-screen right-0 -translate-x-72 inset-y-0 from-ui-900/75 to-ui-900/0 bg-gradient-to-l" />
 
                 <PrototypeSideRight />

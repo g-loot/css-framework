@@ -1,35 +1,46 @@
+import { useState, useEffect } from "react";
 import Accordion from "../../../../components/Accordion/Accordion";
 import Link from "next/link";
 import { usePrototypeData } from "../../../../contexts/prototype";
+import { useRouter } from "next/router";
+import FAQ from "../../../../components/FAQ/FAQ";
 
 const MissionsHowitworksTabs = [
   {
     title: "Before you can do Missions & earn Mission Rewards",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674737014/Stryda/illustrations/cpu_install.jpg",
-    paragraphs: [
+    content: [
       {
-        text: "To complete Missions and earn rewards, you need to connect your Steam account to Stryda. Go to your profile to connect Steam. Make sure you have the Stryda Tracker installed and running on your PC. The application is lightweight and should not affect your gameplay. The Tracker is partly an anti-cheat to help us keep Stryda free from users abusing the platform. Download Stryda Tracker.",
+        type: "p",
+        text: "<span class='text-lg text-ui-100'>Playing VALORANT</span>",
       },
-    ],
-  },
-  {
-    title: "Launch the game",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
-    paragraphs: [
       {
-        text: "When you launch your game, Stryda Tracker will launch the Overlay. The Overlay is where you can see your Mission progress and the best scores from your Ladder rounds.",
+        type: "ul",
+        text: ["Make sure you connected your Riot account on Stryda"],
       },
-    ],
-  },
-  {
-    title: "Daily Missions & how they are tracked",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/missions_cards.jpg",
-    paragraphs: [
       {
-        text: "To start competing in Missions, you need to connect your Steam account and run the Stryda Tracker while you play. When your match has finished within the game, we will fetch the stats from that game and update your Mission progress. Sometimes it can take a while to get the stats from the latest match. Please, contact support if you are having trouble getting the stats for the past x hours. You can complete a set number of Missions each day, and new ones appear every 24 hours.",
+        type: "p",
+        text: "<span class='text-lg text-ui-100'>Playing PUBG: BATTLEGROUNDS</span>",
+      },
+      {
+        type: "ul",
+        text: ["Make sure you connected your Steam account on Stryda"],
+      },
+      {
+        type: "p",
+        text: "<span class='text-lg text-ui-100'>Playing any other game</span>",
+      },
+      {
+        type: "ul",
+        text: [
+          "Make sure you have installed the Stryda App and the tracker plugin.",
+          "The Stryda icon should appear in your game at the top left of your screen meaning everything is up and running to track your Mission progress.",
+        ],
+      },
+      {
+        type: "p",
+        text: "<a href='#' class='link link-main'>Download the Stryda App</a>",
       },
     ],
   },
@@ -37,8 +48,9 @@ const MissionsHowitworksTabs = [
     title: "Play in the right mode",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/gamemode.jpg",
-    paragraphs: [
+    content: [
       {
+        type: "p",
         text: "Some Missions must be played in certain game modes. Make sure to check before you play.",
       },
     ],
@@ -47,25 +59,29 @@ const MissionsHowitworksTabs = [
     title: "How XP works",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674737017/Stryda/illustrations/XP.jpg",
-    paragraphs: [
+    content: [
       {
-        text: "You will earn XP from each Daily Mission The XP you earn will be added to the Mission Rewards.",
+        type: "p",
+        text: "Each time you successfully complete a Mission, you earn XP, which you use to claim Battle Pass Rewards.",
       },
       {
-        text: "For each milestone you reach in the Mission rewards, you will unlock a reward. XP is accumulated from all games you play on Stryda. That means you can get XP from any game that is supported by Stryda. Your XP will reset after a week and can not be transferred to the next week. XP is accumulated from all games you play on Stryda. That means you can get XP from any game that is supported by Stryda.",
+        type: "p",
+        text: "The XP you earn will be added to the Battle Pass. For each milestone you reach in the Battle Pass, you will unlock a reward. XP is accumulated from all games you play on Stryda. That means you can get XP from any game that is supported by Stryda.",
       },
       {
-        text: "Your XP will reset after a week and can not be transfered to the next week.",
+        type: "p",
+        text: "Your XP will reset after the Battle Pass ends and can not be transferred to the next Battle Pass.",
       },
     ],
   },
   {
-    title: "Mission Rewards",
+    title: "Battle Pass",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/coins_tokens_xp.jpg",
-    paragraphs: [
+    content: [
       {
-        text: "Mission Rewards are how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Mission Rewards, you unlock another reward. Mission Rewards reset each week so you`ll always have something new to work towards.",
+        type: "p",
+        text: "The Battle Pass turns your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Battle Pass, you unlock another reward. The Battle Pass resets each week so you will always have something new to work towards.",
       },
     ],
   },
@@ -73,204 +89,217 @@ const MissionsHowitworksTabs = [
     title: "Premium Rewards",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674741728/Stryda/illustrations/premium_xp.jpg",
-    paragraphs: [
+    content: [
       {
-        text: "Become a Premium member to earn additional XPs for each completed mission.",
+        type: "p",
+        text: "Premium member get a 50% XP boost on all completed missions.",
+      },
+      {
+        type: "p",
+        text: "Become a Premium member today to earn rewards faster!",
       },
     ],
     hasButtonReward: true,
+  },
+  {
+    title: "I am experiencing issues with the Missions",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1674737014/Stryda/illustrations/error.jpg",
+    content: [
+      {
+        type: "p",
+        text: "If you are playing VALORANT, make sure your Riot and Stryda accounts are linked in <a href='#' class='link link-main'>your settings</a>.",
+      },
+      {
+        type: "p",
+        text: "If you are playing PUBG: BATTLEGROUNDS, make sure your Steam and Stryda accounts are linked in <a href='#' class='link link-main'>your settings</a>.",
+      },
+      {
+        type: "p",
+        text: "If you are playing any other game, make sure you have installed the Stryda App and the tracker plugin. Make sure the overlay is running with a green dot.",
+      },
+      {
+        type: "p",
+        text: "Note that stats can take some time to be updated.",
+      },
+    ],
   },
 ];
 
 export default function TabMissionsHowItWorks() {
   const prototype = usePrototypeData();
+  const [selectedGame, setSelectedGame] = useState(null);
+  const router = useRouter();
+  const { game } = router.query;
+
+  useEffect(() => {
+    setSelectedGame(prototype.getGameBySlug(game));
+  }, [game]);
+
   return (
     <>
-      <section
-        className="py-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc(1 * 0.05s)" }}
-      >
-        <div className="grid gap-8 grid-cols-1 xl:grid-cols-2">
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
-            <img
-              className="rounded-lg"
-              src="https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/missions_cards.jpg"
-              width="100%"
-              height="auto"
-              alt=""
-            />
-            <div className="px-4 sm:px-0">
-              <h2 className="h4 mb-4">What are Missions?</h2>
-              <p className="text-ui-300 leading-relaxed">
-                Daily missions are daily objectives that resets every 24 hours.
-                By completing Missions you will earn XP. The XP from all your
-                Missions goes into the Weekly Mission Rewards. You can complete
-                Daily Missions across the different games on Stryda.
-              </p>
+      {selectedGame && (
+        <>
+          <section
+            className="py-12 animate-slide-in-bottom animate-delay"
+            style={{ "--delay": "calc(1 * 0.05s)" }}
+          >
+            <div className="grid gap-8 grid-cols-1 xl:grid-cols-2">
+              <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
+                <img
+                  className="rounded-lg"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/missions_cards.jpg"
+                  width="100%"
+                  height="auto"
+                  alt=""
+                />
+                <div className="px-4 sm:px-0">
+                  <h2 className="h4 mb-4">Missions</h2>
+                  <p className="text-ui-300 leading-relaxed">
+                    Missions are daily objectives that reset every 24 hours. By
+                    completing missions you earn XP that allow you to progress
+                    on a weekly Battle pass with multiple rewards to claim. You
+                    can complete missions across all the games available on
+                    Stryda.
+                  </p>
+                </div>
+              </div>
+              <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
+                <img
+                  className="rounded-lg"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/coins_tokens_xp.jpg"
+                  width="100%"
+                  height="auto"
+                  alt=""
+                />
+                <div className="px-4 sm:px-0">
+                  <h2 className="h4 mb-4">Battle Pass Rewards</h2>
+                  <p className="text-ui-300 leading-relaxed">
+                    Each time you reach a milestone on the current Battle Pass,
+                    you unlock a reward which could be either Tokens, Coins or a
+                    combination of both. Battle Pass reset each week so you
+                    always have something new to work towards.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
-            <img
-              className="rounded-lg"
-              src="https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/coins_tokens_xp.jpg"
-              width="100%"
-              height="auto"
-              alt=""
-            />
+          </section>
+          <section
+            className="pt-12 animate-slide-in-bottom animate-delay"
+            style={{ "--delay": "calc(2 * 0.05s)" }}
+          >
             <div className="px-4 sm:px-0">
               <h2 className="h4 mb-4">
-                What are Mission Rewards?
+                How Missions and Missions Rewards work
               </h2>
-              <p className="text-ui-300 leading-relaxed">
-                Mission Rewards are how you turn your XP into useful stuff like
-                Coins or tokens. Each time you reach a milestone in the Mission
-                rewards, you unlock another reward. Mission rewards reset each
-                week so you will always have something new to work towards.
-              </p>
             </div>
-          </div>
-        </div>
-      </section>
-      <section
-        className="pt-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc(2 * 0.05s)" }}
-      >
-        <div className="px-4 sm:px-0">
-          <h2 className="h4 mb-4">
-            How Missions and Missions Rewards work
-          </h2>
-        </div>
-        <div className="overflow-x-auto scrollbar-desktop py-4">
-          <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px]">
-            <li>
-              <a href="#">
-                <i>1</i>
-                <div className="text-sm text-ui-300">
-                  Connect your Steam account to Stryda.
-                </div>
-                <span />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>2</i>
-                <div className="text-sm text-ui-300">
-                  Have the Stryda tracker installed and running.
-                </div>
-                <span />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>3</i>
-                <div className="text-sm text-ui-300">Launch your game.</div>
-                <span />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>4</i>
-                <div className="text-sm text-ui-300">
-                  Play a match in the correct game mode.
-                </div>
-                <span />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>5</i>
-                <div className="text-sm text-ui-300">
-                  The missions will be updated automatically once the match is
-                  finished.
-                </div>
-                <span />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>6</i>
-                <div className="text-sm text-ui-300">
-                  XP will be added to the Mission Rewards when you complete a
-                  mission.
-                </div>
-                <span />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <i>7</i>
-                <div className="text-sm text-ui-300">Claim your reward.</div>
-                <span />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section
-        className="py-12 animate-slide-in-bottom animate-delay"
-        style={{ "--delay": "calc(3 * 0.05s)" }}
-      >
-        <div className="px-4 sm:px-0">
-          <h2 className="h4 mb-6">
-            Step by step - How to complete Missions and earn Rewards
-          </h2>
-        </div>
-        <div className="accordion accordion-highlighted surface sm:rounded-lg">
-          {MissionsHowitworksTabs.map((tab, tabIndex) => (
-            <>
-              <Accordion
-                key={tab}
-                header={
-                  <>
-                    <div className="item">
-                      <div className="item-body">
-                        <div className="p-2 item-title text-lg">
-                          {tab.title}
-                        </div>
-                      </div>
-                      <div className="item-actions">
-                        <div>
-                          <span className="icon icon-24 icon-arrow-sm-down" />
-                        </div>
-                      </div>
-                    </div>
-                  </>
-                }
-              >
-                <div className="p-4 sm:p-8">
-                  <div className="max-w-md mx-auto grid grid-cols-1 sm:grid-cols-2 items-center gap-8">
-                    <div className="surface rounded-lg overflow-hidden">
-                      <img
-                        src={tab.image}
-                        width="100%"
-                        height="auto"
-                        className=""
-                      />
-                    </div>
-                    <div className=" text-ui-300 space-y-4 leading-relaxed">
-                      {tab.paragraphs.map((paragraph, paragraphIndex) => (
-                        <p
-                          key={paragraph}
-                          dangerouslySetInnerHTML={{
-                            __html: paragraph.text,
-                          }}
-                        />
-                      ))}
-                      {tab.hasButtonReward && (
-                        <Link href={`/prototype/premium${prototype.getURLparams()}`}>
-                          <a className="button button-premium is-shining">
-                            <span>Join Stryda Premium</span>
-                          </a>
+            <div className="overflow-x-auto scrollbar-desktop py-4">
+              <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px]">
+                {selectedGame.slug === "valorant" && (
+                  <li>
+                    <div>
+                      <i>1</i>
+                      <div className="text-sm text-ui-300">
+                        <Link
+                          href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                        >
+                          <a className="link">Connect your Riot account</a>
                         </Link>
-                      )}
+                      </div>
+                      <span />
                     </div>
+                  </li>
+                )}
+                {selectedGame.slug === "pubg" && (
+                  <li>
+                    <div>
+                      <i>1</i>
+                      <div className="text-sm text-ui-300">
+                        <Link
+                          href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                        >
+                          <a className="link">Connect your Steam account</a>
+                        </Link>
+                      </div>
+                      <span />
+                    </div>
+                  </li>
+                )}
+                {selectedGame.slug !== "valorant" &&
+                  selectedGame.slug !== "pubg" && (
+                    <li>
+                      <div>
+                        <i>1</i>
+                        <div className="text-sm text-ui-300">
+                          Have the Stryda tracker installed and running
+                        </div>
+                        <span />
+                      </div>
+                    </li>
+                  )}
+                <li>
+                  <div>
+                    <i>2</i>
+                    <div className="text-sm text-ui-300">Launch your game</div>
+                    <span />
                   </div>
-                </div>
-              </Accordion>
-            </>
-          ))}
-        </div>
-      </section>
+                </li>
+                <li>
+                  <div>
+                    <i>4</i>
+                    <div className="text-sm text-ui-300">
+                      Play a match in the correct game mode
+                    </div>
+                    <span />
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <i>5</i>
+                    <div className="text-sm text-ui-300">
+                      The missions will be updated automatically once the match
+                      is finished
+                    </div>
+                    <span />
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <i>6</i>
+                    <div className="text-sm text-ui-300">
+                      XP will be added to the Battle Pass when you complete a
+                      mission
+                    </div>
+                    <span />
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <i>7</i>
+                    <div className="text-sm text-ui-300">Claim your reward</div>
+                    <span />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section
+            className="py-12 animate-slide-in-bottom animate-delay"
+            style={{ "--delay": "calc(3 * 0.05s)" }}
+          >
+            <div className="px-4 sm:px-0">
+              <h2 className="h4 mb-6">
+                Step by step - How to complete Missions and earn Rewards
+              </h2>
+            </div>
+            <div className="accordion accordion-highlighted surface sm:rounded-lg">
+              {MissionsHowitworksTabs.map((tab, tabIndex) => (
+                <FAQ key={tabIndex} content={tab} />
+              ))}
+            </div>
+          </section>
+        </>
+      )}
     </>
   );
 }

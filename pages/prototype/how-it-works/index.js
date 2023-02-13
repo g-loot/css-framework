@@ -19,25 +19,25 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "To start competing in Missions, all you need to do is run the Stryda PC app while you play.  Each time you successfully complete a Mission, you earn XP, which you use to claim Mission Rewards. You can complete a set number of Missions each day, and new ones appear every 24 hours. Keep an eye on the PC app and gloot.com to see your progress and check out what’s new.",
+        text: "To start competing in Missions, all you need to do is connect Stryda to your game, either by connecting your Riot account (VALORANT) or Steam account (PUBG: BATTLEGROUNDS) or by running the Stryda PC app while you play (any other game).  Each time you successfully complete a Mission, you earn XP, which make you progress on the Battle Pass. You can complete up to 6 Missions each day, and new ones appear every 24 hours. Keep an eye on gloot.com to see your progress and check out what’s new.",
       },
     ],
   },
   {
     id: 2,
-    subtitle: "Missions Rewards",
-    title: "Reach milestione & unlock rewards",
+    subtitle: "Battle Pass",
+    title: "Reach milestones & unlock rewards",
     url: "missions-rewards",
     icon: "icon-military-medal",
     img: "https://res.cloudinary.com/gloot/image/upload/v1674654910/Stryda/illustrations/coins_tokens.png",
     content: [
       {
         type: "p",
-        text: "Mission Rewards are how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Mission Rewards, you unlock another reward.",
+        text: "The Battle Pass is how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Battle Pass, you unlock another reward.",
       },
       {
         type: "p",
-        text: "Mission Rewards and XP reset each week so you'll always have something new to work towards.",
+        text: "Battle Pass and XP reset each week so you'll always have something new to work towards.",
       },
     ],
   },
@@ -115,7 +115,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "Tokens are how you pay to enter your scores in the Ladder. Tokens can be earned through Mission Rewards, Daily Login Streaks, or bought from the shop.",
+        text: "Tokens are how you pay to enter your scores in the Ladder. Tokens can be earned through the Battle Pass, Daily Login Streaks, or bought from the shop.",
       },
     ],
   },
@@ -164,21 +164,21 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "<a href='/prototype/clans' class='link link-main font-bold'>Ready to rock?</a>.",
+        text: "<a href='/prototype/clans' class='link link-main font-bold'>Ready to rock?</a>",
       },
     ],
   },
   {
     id: 8,
-    subtitle: "PC app",
+    subtitle: "Stryda app",
     title: "Play games & track your stats",
     url: "pcapp",
-    icon: "icon-statistics",
+    icon: "icon-windows-symbol-symbol",
     img: "https://res.cloudinary.com/gloot/image/upload/v1674654906/Stryda/illustrations/overlay_stryda.png",
     content: [
       {
         type: "p",
-        text: "The Stryda PC app is at the heart of the Stryda experience. It’s what lets you track your stats while you play and take part in Missions, Ladders, and other competitions. When you run Stryda and start playing a supported game, the app starts “listening” for certain game events such as kills or headshots.",
+        text: "The Stryda App is at the heart of the Stryda experience. It’s what lets you track your stats while you play and take part in Missions, Ladders, and other competitions. When you run Stryda and start playing a supported game, the app starts “listening” for certain game events such as kills or headshots.",
       },
       {
         type: "p",
@@ -286,7 +286,7 @@ export default function HowItWorks() {
               {TabsItems.map((item, itemIndex) => (
                 <Link href={`?tab=${item.url}`} key={item.id}>
                   <li
-                    className={`item duration-500 origin-left p-3 rounded-lg shrink-0 w-[calc(100vw-100px)] lg:w-full ${
+                    className={`item duration-500 origin-left p-3 rounded-lg shrink-0 w-60 lg:w-full ${
                       selectedTab === item.url
                         ? "surface surface-halo halo-r"
                         : "opacity-50 lg:scale-90"
@@ -300,7 +300,7 @@ export default function HowItWorks() {
                         {item.subtitle}
                       </div>
                       <div
-                        className={`item-title transition-color duration-500 ease-in-out ${
+                        className={`item-title transition-color duration-500 ease-in-out leading-tight ${
                           selectedTab === item.url ? "text-main hover:text-main" : "text-ui-100"
                         }`}
                       >

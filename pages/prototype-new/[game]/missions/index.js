@@ -61,14 +61,47 @@ export default function Missions() {
                     earn Mission Rewards. You can complete the Daily Missions in
                     any game.
                   </p>
-                  {selectedGame.needsSteam && (
-                    <button
-                      type="button"
-                      className="button button-sm button-secondary"
-                    >
-                      <span>Tracker required</span>
-                    </button>
-                  )}
+                  <div className="flex flex-col md:flex-row gap-2">
+                {selectedGame.needsSteam && (
+                <Link
+                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                >
+                  <button
+                    type="button"
+                    className="button button-secondary"
+                  >
+                    <span className="icon icon-steam" />
+                    <span>Steam required</span>
+                  </button>
+                </Link>
+                )}
+                {selectedGame.needsRiot && (
+                <Link
+                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                >
+                  <button
+                    type="button"
+                    className="button button-secondary"
+                  >
+                    <span className="icon icon-riotgames-symbol" />
+                    <span>Riot required</span>
+                  </button>
+                </Link>
+                )}
+                {!selectedGame.needsSteam && !selectedGame.needsRiot && (
+                <Link
+                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                >
+                  <button
+                    type="button"
+                    className="button button-secondary"
+                  >
+                    <span className="icon icon-windows-symbol" />
+                    <span>Stryda App required</span>
+                  </button>
+                </Link>
+                )}
+              </div>
                 </div>
               </div>
               {/*

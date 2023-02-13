@@ -307,7 +307,7 @@
             .chip {
               > * {
                 @apply
-                text-ui-300/0
+                text-ui-300
                 ;
               }
             }

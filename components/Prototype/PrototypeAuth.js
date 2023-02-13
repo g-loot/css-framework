@@ -22,12 +22,12 @@ export default function PrototypeAuth({ children, title }) {
           <div className="absolute z-10 inset-0 overflow-y-auto overflow-x-hidden scrollbar-hidden flex flex-col justify-start items-center mx-2 md:mx-auto">
             <div className="w-full flex-1 m-auto flex flex-col justify-center items-center py-8">
               <div
-                className="max-w-xs mb-8 animate-slide-in-left animate-delay"
+                className="max-w-xs mb-8 animate-slide-in-left animate-delay border-l border-ui-900 pl-4"
                 style={{
                   "--delay": "calc(0 * 0.1s)",
                 }}
               >
-                <h1 className="text-left md:text-left text-ui-900 leading-[0.8] text-7xl md:text-8xl border-l border-ui-900 pl-4">
+                <h1 className="text-left md:text-left text-ui-900 leading-[0.8] text-7xl md:text-8xl">
                   <span
                     className="block animate-slide-in-left animate-delay"
                     style={{
@@ -53,6 +53,40 @@ export default function PrototypeAuth({ children, title }) {
                     counts
                   </span>
                 </h1>
+                <ul className="text-ui-900 mt-2 -mb-1.5 space-y-1 child:block child:animate-slide-in-left">
+                  <li
+                    className="animate-delay"
+                    style={{
+                      "--delay": "calc(4 * 0.1s)",
+                    }}
+                  >
+                    Innovative Competitions
+                  </li>
+                  <li
+                    className="animate-delay"
+                    style={{
+                      "--delay": "calc(5 * 0.1s)",
+                    }}
+                  >
+                    Track your progression
+                  </li>
+                  <li
+                    className="animate-delay"
+                    style={{
+                      "--delay": "calc(6 * 0.1s)",
+                    }}
+                  >
+                    Play and get rewarded
+                  </li>
+                  <li
+                    className="animate-delay"
+                    style={{
+                      "--delay": "calc(7 * 0.1s)",
+                    }}
+                  >
+                    Discover communities
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

@@ -70,7 +70,7 @@
   }
   &:hover {
     @apply
-    bg-ui-700/30
+    bg-ui-700
     ;
     .item-title {
       &:not([class*="hover:text-"]) {
@@ -172,10 +172,8 @@ ul.item-actions-hidden > .item,
 .items-spaced {
   > .item {
     @apply
-    border-b-0
-    border-x-0
-    border-t
-    border-t-ui-700
+    border
+    border-ui-700
     ;
     &:not([class*=surface]){
       @apply

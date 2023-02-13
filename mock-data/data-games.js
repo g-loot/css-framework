@@ -3,6 +3,7 @@ export const dataGames = [
     id: 1,
     maintenance: false,
     needsSteam: false,
+    needsRiot: true,
     isFavorite: true,
     hasReward: false,
     name: "Valorant",
@@ -1547,6 +1548,7 @@ export const dataGames = [
     id: 2,
     maintenance: false,
     needsSteam: true,
+    needsRiot: false,
     isFavorite: true,
     hasReward: true,
     name: "PUBG: BATTLEGROUNDS",
@@ -2224,6 +2226,7 @@ export const dataGames = [
     id: 3,
     maintenance: false,
     needsSteam: true,
+    needsRiot: false,
     isFavorite: false,
     name: "Apex Legends",
     shortName: "Apex Legends",
@@ -2272,6 +2275,7 @@ export const dataGames = [
     id: 4,
     maintenance: false,
     needsSteam: false,
+    needsRiot: false,
     isFavorite: false,
     name: "CS:GO",
     shortName: "CS:GO",
@@ -2320,6 +2324,7 @@ export const dataGames = [
     id: 5,
     maintenance: false,
     needsSteam: false,
+    needsRiot: false,
     isFavorite: false,
     name: "Dota 2",
     shortName: "Dota 2",
@@ -2370,6 +2375,7 @@ export const dataGames = [
     id: 6,
     maintenance: false,
     needsSteam: false,
+    needsRiot: false,
     isFavorite: false,
     name: "League of Legends",
     shortName: "League of Legends",
@@ -2420,7 +2426,8 @@ export const dataGames = [
     id: 7,
     maintenance: false,
     needsSteam: false,
-    isFavorite: false,
+    needsRiot: false,
+    isFavorite: true,
     name: "Rocket League",
     shortName: "Rocket League",
     slug: "rocketleague",
@@ -2437,30 +2444,366 @@ export const dataGames = [
     },
     missions: [
       {
-        name: "Get 22 kills",
-        category: 1,
-        label: "kills",
-        current: 11,
-        target: 22,
+        name: "Score 20 goals",
+        category: 3,
+        label: "goals",
+        current: 20,
+        target: 20,
         isPremium: false,
-        xp: 50,
-        isVisible: false,
+        isVisible: true,
         hasClaimed: false,
+        xp: 100,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_1.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_6.webp",
       },
       {
-        name: "Get 22 kills",
+        name: "Score 19 goals",
         category: 1,
-        label: "kills",
-        current: 11,
-        target: 22,
-        isPremium: true,
+        label: "goals",
+        current: 3,
+        target: 19,
+        isPremium: false,
+        isVisible: true,
+        hasClaimed: false,
         xp: 50,
+        image:
+        "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_5.webp",
+      },
+      {
+        name: "Score 15 goals",
+        category: 4,
+        label: "goals",
+        current: 0,
+        target: 15,
+        isPremium: false,
+        isVisible: true,
+        hasClaimed: false,
+        xp: 300,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_4.webp",
+      },
+      {
+        name: "Score 12 goals",
+        category: 1,
+        label: "goals",
+        current: 0,
+        target: 12,
+        isPremium: true,
         isVisible: false,
         hasClaimed: false,
+        xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_3.webp",
+      },
+      {
+        name: "Score 10 goals",
+        category: 1,
+        label: "goals",
+        current: 0,
+        target: 10,
+        isPremium: true,
+        isVisible: false,
+        hasClaimed: false,
+        xp: 50,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_1.webp",
+      },
+      {
+        name: "Score 20 goals",
+        category: 2,
+        label: "kills",
+        current: 0,
+        target: 30,
+        isPremium: true,
+        isVisible: false,
+        hasClaimed: false,
+        xp: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_2.webp",
+      },
+    ],
+    ladders: [
+      {
+        id: 1,
+        solo: true,
+        clan: true,
+        name: "Competitive Ladder",
+        cover:
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_2.webp",
+        status: "ongoing",
+        gameMode: "Competitive",
+        rewards: [
+          {
+            type: "coin",
+            value: 10000,
+          },
+        ],
+        isEnrolled: false,
+        progress: 3,
+        progressClan: 0,
+        soloLeaderboard: [
+          {
+            user: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 250000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 200000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 150000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 75000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 50000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 25000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 25000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 10000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+        clanLeaderboard: [
+          {
+            clan: 1,
+            rewards: [
+              {
+                type: "ticket",
+                value: 1,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "ticket",
+                value: 1,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "ticket",
+                value: 1,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "ticket",
+                value: 1,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "ticket",
+                value: 1,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 5,
+            rewards: [
+              {
+                type: "ticket",
+                value: 1,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 6,
+            rewards: null,
+            stats: {
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 7,
+            rewards: null,
+            stats: {
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+        soloResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        clanResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        topPerformers: [2, 3, 4],
       },
     ],
   },

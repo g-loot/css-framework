@@ -6,7 +6,6 @@
 
 .step,
 .step.step-primary {
-
   @apply
   flex
   flex-nowrap
@@ -527,6 +526,8 @@
         w-32
         -left-10
         top-16
+        pointer-events-auto
+        px-2
         ;
       }
     }

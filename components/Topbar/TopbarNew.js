@@ -206,68 +206,66 @@ export default function TopbarNew() {
   }
 
   return (
-    <div className="sticky top-0 z-50 bg-ui-900/0 navbar h-12 hidden">
+    <div className="fixed inset-x-0 top-0 z-50 bg-ui-900/90 border-b border-ui-800 navbar h-12">
       <div className="flex flex-1 justify-center">
-              <ul className="menu menu-horizontal ml-4">
-                  <li>
-                    <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
-                      <a
-                        className={` ${
-                          router.pathname.endsWith("prototype") ? "is-active" : ""
-                        } ${router.pathname.includes("home") ? "is-active" : ""}`}
-                      >
-                        <span>Home</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={`/prototype-new/missions${prototype.getURLparams()}`}>
-                      <a
-                        className={` ${
-                          router.pathname.includes("shop") ? "is-active" : ""
-                        }`}
-                      >
-                        <span>Missions</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={`/prototype-new/ladders${prototype.getURLparams()}`}>
-                      <a
-                        className={` ${
-                          router.pathname.includes("shop") ? "is-active" : ""
-                        }`}
-                      >
-                        <span>Ladders</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={`/prototype-new/shop${prototype.getURLparams()}`}>
-                      <a
-                        className={` ${
-                          router.pathname.includes("shop") ? "is-active" : ""
-                        }`}
-                      >
-                        <span>Shop</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={`/prototype-new/premium${prototype.getURLparams()}`}
-                    >
-                      <a
-                        className={` ${
-                          router.pathname.includes("premium") ? "is-active" : ""
-                        }`}
-                      >
-                        <span>Premium</span>
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
-            </div>
+        <ul className="menu menu-horizontal ml-4">
+          <li>
+            <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
+              <a
+                className={` ${
+                  router.pathname.endsWith("prototype") ? "is-active" : ""
+                } ${router.pathname.includes("home") ? "is-active" : ""}`}
+              >
+                <span>Home</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={`/prototype-new/missions${prototype.getURLparams()}`}>
+              <a
+                className={` ${
+                  router.pathname.includes("shop") ? "is-active" : ""
+                }`}
+              >
+                <span>Missions</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={`/prototype-new/ladders${prototype.getURLparams()}`}>
+              <a
+                className={` ${
+                  router.pathname.includes("shop") ? "is-active" : ""
+                }`}
+              >
+                <span>Ladders</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={`/prototype-new/shop${prototype.getURLparams()}`}>
+              <a
+                className={` ${
+                  router.pathname.includes("shop") ? "is-active" : ""
+                }`}
+              >
+                <span>Shop</span>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href={`/prototype-new/premium${prototype.getURLparams()}`}>
+              <a
+                className={` ${
+                  router.pathname.includes("premium") ? "is-active" : ""
+                }`}
+              >
+                <span>Premium</span>
+              </a>
+            </Link>
+          </li>
+        </ul>
+      </div>
       <div className="relative w-full max-w-3xl md:px-8 hidden">
         <div
           className={`flex lg:gap-8 mx-auto px-2 ${hasAds ? "3xl:m-0" : ""}`}
@@ -284,72 +282,72 @@ export default function TopbarNew() {
                   />
                 </a>
               </Link>
-
-              
-
-              
             </div>
 
             <div className="flex flex-1 justify-center">
               <ul className="menu menu-horizontal ml-4">
-                  <li>
-                    <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
-                      <a
-                        className={` ${
-                          router.pathname.endsWith("prototype") ? "is-active" : ""
-                        } ${router.pathname.includes("home") ? "is-active" : ""}`}
-                      >
-                        <span>Home</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={`/prototype-new/missions${prototype.getURLparams()}`}>
-                      <a
-                        className={` ${
-                          router.pathname.includes("shop") ? "is-active" : ""
-                        }`}
-                      >
-                        <span>Missions</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={`/prototype-new/ladders${prototype.getURLparams()}`}>
-                      <a
-                        className={` ${
-                          router.pathname.includes("shop") ? "is-active" : ""
-                        }`}
-                      >
-                        <span>Ladders</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={`/prototype-new/shop${prototype.getURLparams()}`}>
-                      <a
-                        className={` ${
-                          router.pathname.includes("shop") ? "is-active" : ""
-                        }`}
-                      >
-                        <span>Shop</span>
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={`/prototype-new/premium${prototype.getURLparams()}`}
+                <li>
+                  <Link href={`/prototype-new/home${prototype.getURLparams()}`}>
+                    <a
+                      className={` ${
+                        router.pathname.endsWith("prototype") ? "is-active" : ""
+                      } ${router.pathname.includes("home") ? "is-active" : ""}`}
                     >
-                      <a
-                        className={` ${
-                          router.pathname.includes("premium") ? "is-active" : ""
-                        }`}
-                      >
-                        <span>Premium</span>
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
+                      <span>Home</span>
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={`/prototype-new/missions${prototype.getURLparams()}`}
+                  >
+                    <a
+                      className={` ${
+                        router.pathname.includes("shop") ? "is-active" : ""
+                      }`}
+                    >
+                      <span>Missions</span>
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={`/prototype-new/ladders${prototype.getURLparams()}`}
+                  >
+                    <a
+                      className={` ${
+                        router.pathname.includes("shop") ? "is-active" : ""
+                      }`}
+                    >
+                      <span>Ladders</span>
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`/prototype-new/shop${prototype.getURLparams()}`}>
+                    <a
+                      className={` ${
+                        router.pathname.includes("shop") ? "is-active" : ""
+                      }`}
+                    >
+                      <span>Shop</span>
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={`/prototype-new/premium${prototype.getURLparams()}`}
+                  >
+                    <a
+                      className={` ${
+                        router.pathname.includes("premium") ? "is-active" : ""
+                      }`}
+                    >
+                      <span>Premium</span>
+                    </a>
+                  </Link>
+                </li>
+              </ul>
             </div>
             <div className="flex justify-end items-center gap-1 sm:gap-2 hidden">
               <div className="dropdown dropdown-center md:dropdown-end">
@@ -541,9 +539,7 @@ export default function TopbarNew() {
                           <ul className="leading-tight space-y-2 mt-2">
                             <li className="flex gap-2 text-sm">
                               <div className=" w-12 uppercase">Use</div>
-                              <div className="flex-1">
-                                To enter Ladders.
-                              </div>
+                              <div className="flex-1">To enter Ladders.</div>
                             </li>
                             <li className="flex gap-2 text-sm">
                               <div className=" w-12 uppercase">Get</div>

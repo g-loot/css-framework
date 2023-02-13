@@ -112,7 +112,7 @@ export default function PrototypeSideRightUser() {
           ))}
         </div>
               */}
-        <div className="rounded p-2 space-y-2 bg-ui-700 mx-auto">
+        <div className="rounded p-2 space-y-2 bg-ui-700 border border-ui-600 mx-auto">
           <div className="flex items-center justify-center gap-x-1 text-gold-500">
             <span>550</span>
             <div className="infobanner is-active">
