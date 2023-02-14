@@ -170,15 +170,29 @@ const TabsItems = [
   },
   {
     id: 8,
-    subtitle: "Stryda app",
+    subtitle: "Tracker plugin",
     title: "Play games & track your stats",
     url: "pcapp",
     icon: "icon-windows-symbol-symbol",
-    img: "https://res.cloudinary.com/gloot/image/upload/v1674654906/Stryda/illustrations/overlay_stryda.png",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1676368516/Stryda/illustrations/overlay_stryda.jpg",
     content: [
       {
         type: "p",
-        text: "The Stryda App is at the heart of the Stryda experience. It’s what lets you track your stats while you play and take part in Missions, Ladders, and other competitions. When you run Stryda and start playing a supported game, the app starts “listening” for certain game events such as kills or headshots.",
+        text: "The Stryda tracker plugin lets you track your stats while you play and take part in Missions, Ladders, and other competitions on the following games: ",
+      },
+      {
+        type: "ol",
+        text: [
+          "Apex Legends",
+          "CS:GO",
+          "Dota 2",
+          "League of Legends",
+          "Rocket League",
+        ],
+      },
+      {
+        type: "p",
+        text: "When you run Stryda and start playing a supported game, the app starts “listening” for certain game events such as kills or headshots.",
       },
       {
         type: "p",
@@ -364,6 +378,18 @@ export default function HowItWorks() {
                           )}
                           {content.type === "ul" && (
                             <ul className="list-bullet">
+                              {content.text.map((listItem, listItemIndex) => (
+                                <li
+                                  key={listItemIndex}
+                                  dangerouslySetInnerHTML={{
+                                    __html: listItem,
+                                  }}
+                                />
+                              ))}
+                            </ul>
+                          )}
+                          {content.type === "ol" && (
+                            <ul className="space-y-1 list-disc list-inside">
                               {content.text.map((listItem, listItemIndex) => (
                                 <li
                                   key={listItemIndex}

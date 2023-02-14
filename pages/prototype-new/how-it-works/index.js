@@ -174,7 +174,7 @@ const TabsItems = [
     title: "Play games & track your stats",
     url: "pcapp",
     icon: "icon-statistics",
-    img: "https://res.cloudinary.com/gloot/image/upload/v1674654906/Stryda/illustrations/overlay_stryda.png",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1676368516/Stryda/illustrations/overlay_stryda.jpg",
     content: [
       {
         type: "p",

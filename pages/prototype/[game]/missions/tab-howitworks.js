@@ -189,54 +189,21 @@ export default function TabMissionsHowItWorks() {
             style={{ "--delay": "calc(2 * 0.05s)" }}
           >
             <div className="px-4 sm:px-0">
-              <h2 className="h4 mb-4">
-                How Missions and Battle Pass work
-              </h2>
+              <h2 className="h4 mb-4">How Missions and Battle Pass work</h2>
             </div>
             <div className="overflow-x-auto scrollbar-desktop py-4">
               <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px]">
-                {selectedGame.slug === "valorant" && (
-                  <li>
-                    <div>
-                      <i>1</i>
-                      <div className="text-sm text-ui-300">
-                        <Link
-                          href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                        >
-                          <a className="link">Connect your Riot account</a>
-                        </Link>
-                      </div>
-                      <span />
+                <li>
+                  <div>
+                    <i>1</i>
+                    <div className="text-sm text-ui-300">
+                      Make sure you meet the requirements. Dependent on the
+                      game; either connect your game or install the Tracker
+                      Plugin
                     </div>
-                  </li>
-                )}
-                {selectedGame.slug === "pubg" && (
-                  <li>
-                    <div>
-                      <i>1</i>
-                      <div className="text-sm text-ui-300">
-                        <Link
-                          href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                        >
-                          <a className="link">Connect your Steam account</a>
-                        </Link>
-                      </div>
-                      <span />
-                    </div>
-                  </li>
-                )}
-                {selectedGame.slug !== "valorant" &&
-                  selectedGame.slug !== "pubg" && (
-                    <li>
-                      <div>
-                        <i>1</i>
-                        <div className="text-sm text-ui-300">
-                          Have the Stryda tracker installed and running
-                        </div>
-                        <span />
-                      </div>
-                    </li>
-                  )}
+                    <span />
+                  </div>
+                </li>
                 <li>
                   <div>
                     <i>2</i>

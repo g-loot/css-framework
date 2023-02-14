@@ -326,49 +326,17 @@ export default function TabLaddersHowItWorks() {
             </div>
             <div className="overflow-x-auto scrollbar-desktop py-4">
               <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px]">
-              {selectedGame.slug === "valorant" && (
-                  <li>
-                    <div>
-                      <i>1</i>
-                      <div className="text-sm text-ui-300">
-                        <Link
-                          href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                        >
-                          <a className="link">Connect your Riot account</a>
-                        </Link>
-                      </div>
-                      <span />
+                <li>
+                  <div>
+                    <i>1</i>
+                    <div className="text-sm text-ui-300">
+                      Make sure you meet the requirements. Dependent on the
+                      game; either connect your game or install the Tracker
+                      Plugin
                     </div>
-                  </li>
-                )}
-                {selectedGame.slug === "pubg" && (
-                  <li>
-                    <div>
-                      <i>1</i>
-                      <div className="text-sm text-ui-300">
-                        <Link
-                          href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                        >
-                          <a className="link">Connect your Steam account</a>
-                        </Link>
-                      </div>
-                      <span />
-                    </div>
-                  </li>
-                )}
-                {selectedGame.slug !== "valorant" &&
-                  selectedGame.slug !== "pubg" && (
-                    <li>
-                      <div>
-                        <i>1</i>
-                        <div className="text-sm text-ui-300">
-                          Have the Stryda tracker installed and running
-                        </div>
-                        <span />
-                      </div>
-                    </li>
-                  )}
-
+                    <span />
+                  </div>
+                </li>
                 <li>
                   <a href="#">
                     <i>2</i>
