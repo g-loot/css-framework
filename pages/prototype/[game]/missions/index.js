@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 const TabsItems = [
   {
-    label: "Missions & rewards",
+    label: "Missions",
     url: "missions",
     component: TabMissionsMissions,
   },

@@ -5,7 +5,8 @@ import Link from "next/link";
 import { usePrototypeData } from "../../contexts/prototype";
 
 export default function FAQ(props) {
-  const prototype = usePrototypeData();  
+  const prototype = usePrototypeData(); 
+  const isCol = props.isCol || false;
   
   return (
     <>
@@ -28,18 +29,17 @@ export default function FAQ(props) {
         }
       >
         <div className="p-4 md:p-8">
-          <div className="mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-8">
+          <div className="mx-auto flex flex-col lg:flex-row justify-start items-center gap-8">
             {props.content.image && (
-              <div className="col-span-1 surface rounded-lg overflow-hidden">
               <img
                 src={props.content.image}
-                width="100%"
+                width="auto"
                 height="auto"
-                className=""
+                className="max-w-sm h-auto"
+                alt={props.content.title}
               />
-              </div>
             )}
-            <div className="col-span-2 md:columns-2 text-ui-300 space-y-4 leading-relaxed">
+            <div className={`text-ui-300 space-y-4 leading-relaxed ${isCol ? 'md:columns-2' : 'max-w-[50ch]'}`}>
               {props.content.content?.map((content, contentIndex) => (
                 <>
                   {content.type === "p" && (

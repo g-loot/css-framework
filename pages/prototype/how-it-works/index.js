@@ -44,7 +44,7 @@ const TabsItems = [
   {
     id: 3,
     subtitle: "Ladder",
-    title: "Use stats to climb the leaderboard",
+    title: "Use stats to climb the ladder",
     url: "ladder",
     icon: "icon-ladder",
     img: "https://res.cloudinary.com/gloot/image/upload/v1672730609/Stryda/illustrations/ladder_leaderboard.png",

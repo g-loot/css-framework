@@ -7,7 +7,7 @@ import FAQ from "../../../../components/FAQ/FAQ";
 
 const MissionsHowitworksTabs = [
   {
-    title: "Before you can do Missions & earn Mission Rewards",
+    title: "Before you can do Missions",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674737014/Stryda/illustrations/cpu_install.jpg",
     content: [
@@ -173,7 +173,7 @@ export default function TabMissionsHowItWorks() {
                   alt=""
                 />
                 <div className="px-4 sm:px-0">
-                  <h2 className="h4 mb-4">Battle Pass Rewards</h2>
+                  <h2 className="h4 mb-4">Battle Pass</h2>
                   <p className="text-ui-300 leading-relaxed">
                     Each time you reach a milestone on the current Battle Pass,
                     you unlock a reward which could be either Tokens, Coins or a
@@ -190,7 +190,7 @@ export default function TabMissionsHowItWorks() {
           >
             <div className="px-4 sm:px-0">
               <h2 className="h4 mb-4">
-                How Missions and Missions Rewards work
+                How Missions and Battle Pass work
               </h2>
             </div>
             <div className="overflow-x-auto scrollbar-desktop py-4">
