@@ -30,7 +30,7 @@ export default function Tracker() {
                   An official Overwolf app for Windows
                 </span>
                 <span className="icon icon-overwolf-symbol text-2xl text-ui-300" />
-                <span className="icon icon-windows-symbol-symbol text-2xl text-ui-300" />
+                <span className="icon icon-windows-symbol text-2xl text-ui-300" />
               </li>
               <li
                 className="flex gap-2 items-center animate-slide-in-bottom animate-delay"

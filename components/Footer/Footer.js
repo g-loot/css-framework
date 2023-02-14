@@ -41,7 +41,7 @@ export default function Footer(props) {
             <img
               width={288}
               height={40}
-              src="https://gloot.com/payment-providers@2x.png"
+              src="https://stryda.gg/payment-providers@2x.png"
               alt="Payment providers"
             />
           </div>
@@ -59,7 +59,7 @@ export default function Footer(props) {
                     className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://gloot.com/company"
+                    href="https://stryda.gg/company"
                   >
                     About
                   </a>
@@ -99,7 +99,7 @@ export default function Footer(props) {
                     className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://gloot.com/terms-conditions"
+                    href="https://stryda.gg/terms-conditions"
                   >
                     Terms of service
                   </a>
@@ -109,7 +109,7 @@ export default function Footer(props) {
                     className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://gloot.com/privacy-policy"
+                    href="https://stryda.gg/privacy-policy"
                   >
                     Privacy policy
                   </a>
@@ -119,7 +119,7 @@ export default function Footer(props) {
                     className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://gloot.com/developer-terms"
+                    href="https://stryda.gg/developer-terms"
                   >
                     Developer terms
                   </a>
@@ -139,7 +139,7 @@ export default function Footer(props) {
                     className="link link-hover"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://gloot.com/how-it-works"
+                    href="https://stryda.gg/how-it-works"
                   >
                     How it works
                   </a>

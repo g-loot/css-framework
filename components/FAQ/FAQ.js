@@ -35,7 +35,7 @@ export default function FAQ(props) {
                 src={props.content.image}
                 width="auto"
                 height="auto"
-                className="max-w-sm h-auto"
+                className="max-w-sm lg:max-w-xs xl:max-w-sm h-auto"
                 alt={props.content.title}
               />
             )}

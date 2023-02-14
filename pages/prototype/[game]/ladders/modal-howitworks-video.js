@@ -31,10 +31,9 @@ export default function ModalLadderHowitworksVideo(props) {
                 className="mx-auto aspect-video rounded"
                 width="100%"
                 height="auto"
-                src="https://www.youtube.com/embed/3A-d57PMKEk?autoplay=1&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"
+                src="https://www.youtube.com/embed/EXb8cI4szRQ?autoplay=1&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"
                 title="YouTube video player"
                 frameBorder="0"
-                
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>

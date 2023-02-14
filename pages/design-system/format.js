@@ -34,7 +34,7 @@ const DSpage = () => {
                     nostra, per inceptos himenaeos. Curabitur rhoncus eget odio
                     non ornare. Nullam nec massa{" "}
                     <a
-                      href="https://gloot.com/games/valorant-esports"
+                      href="https://stryda.gg/games/valorant-esports"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

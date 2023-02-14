@@ -150,7 +150,7 @@ const conversationFull = [
         id: 2,
         type: "text",
         content:
-          "Is this the right link that you’ve sent? <a className='link' href='#' target='_blank'>https://gloot.com/</a>",
+          "Is this the right link that you’ve sent? <a className='link' href='#' target='_blank'>https://stryda.gg/</a>",
         reactions: [
           {
             emoji: "👍",

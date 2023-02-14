@@ -34,7 +34,7 @@ const MissionsHowitworksTabs = [
       {
         type: "ul",
         text: [
-          "Make sure you have installed the Stryda App and the tracker plugin.",
+          "Make sure you have installed the Stryda App and the Tracker Plugin.",
           "The Stryda icon should appear in your game at the top left of your screen meaning everything is up and running to track your Mission progress.",
         ],
       },
@@ -116,11 +116,15 @@ const MissionsHowitworksTabs = [
       },
       {
         type: "p",
-        text: "If you are playing any other game, make sure you have installed the Stryda App and the tracker plugin. Make sure the overlay is running with a green dot.",
+        text: "If you are playing any other game, make sure you have installed the Stryda App and the Tracker Plugin. Make sure the overlay is running with a green dot.",
       },
       {
         type: "p",
         text: "Note that stats can take some time to be updated.",
+      },
+      {
+        type: "p",
+        text: "If the issue persists check out our <a href='http://help.stryda.gg/' target='_blank' class='link'>help articles</a> or <a href='http://help.stryda.gg/' target='_blank' class='link'>contact support</a>.",
       },
     ],
   },

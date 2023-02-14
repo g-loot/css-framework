@@ -104,7 +104,7 @@
   }
   &:active {
     @apply
-    bg-ui-700/0
+    bg-ui-700
     ;
   }
 }

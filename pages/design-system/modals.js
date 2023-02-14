@@ -261,7 +261,7 @@ const DSpage = () => {
                       className="mx-auto aspect-video rounded"
                       width="100%"
                       height="auto"
-                      src="https://www.youtube.com/embed/3A-d57PMKEk?autoplay=1"
+                      src="https://www.youtube.com/embed/EXb8cI4szRQ?autoplay=1"
                       title="YouTube video player"
                       frameBorder="0"
                       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

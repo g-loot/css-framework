@@ -17,6 +17,10 @@ const MissionsHowitworksTabs = [
     content: [
       {
         type: "p",
+        text: "Before entering a ladder make sure you have read and agree to our <a href='https://stryda.netlify.app/prototype/valorant/ladders?tab=how-it-works' class='link'>rules</a> and our <a href='https://stryda.gg/terms-conditions' class='link'>terms and conditions</a>.",
+      },
+      {
+        type: "p",
         text: "<span class='text-lg text-ui-100'>Playing Valorant</span>",
       },
       {
@@ -38,7 +42,7 @@ const MissionsHowitworksTabs = [
       {
         type: "ul",
         text: [
-          "Make sure you have installed the Stryda App and the tracker plugin.",
+          "Make sure you have installed the Stryda App and the Tracker Plugin.",
           "The Stryda icon should appear in your game at the top left of your screen meaning everything is up and running to track your progress.",
         ],
       },
@@ -105,7 +109,11 @@ const MissionsHowitworksTabs = [
       },
       {
         type: "p",
-        text: "Some Ladders put players into different levels based on their skills and performance while others are open for everyone no matter the skill level. ",
+        text: "Some Ladders put players into different levels based on their performance in previous ladders while others are open for everyone no matter the skill level. ",
+      },
+      {
+        type: "p",
+        text: "Note that your in-game rank and your Ladder level have no correlation whatsoever.",
       },
       {
         type: "h3",
@@ -193,6 +201,10 @@ const MissionsHowitworksTabs = [
       },
       {
         type: "p",
+        text: "Any pending tokens activated to a ladder will be automatically refunded once it has been canceled/ended.",
+      },
+      {
+        type: "p",
         text: "Once the maintenance is over, the Ladder will continue. If there is a bigger issue or if the maintenance lasts for several days, Stryda will decide if the Ladder will continue. If the Ladder is canceled, you will get your Tokens back",
       },
     ],
@@ -204,19 +216,23 @@ const MissionsHowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "If you are playing VALORANT, make sure your Riot and Stryda accounts are linked in <a href='#' class='link link-main'>your settings</a>.",
+        text: "If you are playing VALORANT, make sure your Riot and Stryda accounts are linked in <a href='#' class='link'>your settings</a>.",
       },
       {
         type: "p",
-        text: "If you are playing PUBG: BATTLEGROUNDS, make sure your Steam and Stryda accounts are linked in <a href='#' class='link link-main'>your settings</a>.",
+        text: "If you are playing PUBG: BATTLEGROUNDS, make sure your Steam and Stryda accounts are linked in <a href='#' class='link'>your settings</a>.",
       },
       {
         type: "p",
-        text: "If you are playing any other game, make sure you have installed the Stryda App and the tracker plugin. Make sure the overlay is running with a green dot.",
+        text: "If you are playing any other game, make sure you have installed the Stryda App and the Tracker Plugin. Make sure the overlay is running with a green dot.",
       },
       {
         type: "p",
         text: "Note that stats can take some time to be updated.",
+      },
+      {
+        type: "p",
+        text: "If the issue persists check out our <a href='http://help.stryda.gg/' target='_blank' class='link'>help articles</a> or <a href='http://help.stryda.gg/' target='_blank' class='link'>contact support</a>.",
       },
     ],
   },
@@ -318,14 +334,14 @@ export default function TabLaddersHowItWorks() {
                 </button>
               </div>
               <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1658478390/Marketing/2022_prototype/brawls-howitworks-video.webp"
+                src="https://res.cloudinary.com/gloot/image/upload/v1676383443/Stryda/illustrations/ladders_howitworks_video.jpg"
                 width="100%"
                 height="auto"
                 alt=""
               />
             </div>
-            <div className="overflow-x-auto scrollbar-desktop py-4">
-              <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px]">
+            <div className="overflow-x-auto scrollbar-desktop pt-4">
+              <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px] !pb-44">
                 <li>
                   <div>
                     <i>1</i>

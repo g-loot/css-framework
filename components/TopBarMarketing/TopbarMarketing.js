@@ -8,7 +8,7 @@ const TopBarMarketing = ({ props }) => {
   const [visible, setVisible] = useState(false)
 
   const playBaseUrl = 'https://play.gloot.com'
-  const marketingBaseUrl = 'https://gloot.com'
+  const marketingBaseUrl = 'https://stryda.gg'
 
   const ref = useRef(null)
 

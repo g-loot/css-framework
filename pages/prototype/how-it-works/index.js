@@ -44,7 +44,7 @@ const TabsItems = [
   {
     id: 3,
     subtitle: "Ladder",
-    title: "Use stats to climb the ladder",
+    title: "Compete to climb the ladder",
     url: "ladder",
     icon: "icon-ladder",
     img: "https://res.cloudinary.com/gloot/image/upload/v1672730609/Stryda/illustrations/ladder_leaderboard.png",
@@ -170,15 +170,15 @@ const TabsItems = [
   },
   {
     id: 8,
-    subtitle: "Tracker plugin",
+    subtitle: "Tracker Plugin",
     title: "Play games & track your stats",
     url: "pcapp",
-    icon: "icon-windows-symbol-symbol",
+    icon: "icon-windows-symbol",
     img: "https://res.cloudinary.com/gloot/image/upload/v1676368516/Stryda/illustrations/overlay_stryda.jpg",
     content: [
       {
         type: "p",
-        text: "The Stryda tracker plugin lets you track your stats while you play and take part in Missions, Ladders, and other competitions on the following games: ",
+        text: "The Stryda Tracker Plugin lets you track your stats while you play and take part in Missions, Ladders, and other competitions on the following games: ",
       },
       {
         type: "ol",

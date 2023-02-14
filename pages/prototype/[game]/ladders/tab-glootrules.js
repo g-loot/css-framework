@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function TabLaddersRules() {
@@ -35,23 +36,8 @@ export default function TabLaddersRules() {
         className="pb-12 animate-slide-in-bottom animate-delay"
         style={{ "--delay": "calc(2 * 0.05s)" }}
       >
-        <div className="px-4 sm:px-0 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 text-center gap-8">
-          <div className="col-span-4 md:col-span-2 xl:col-span-1">
-            <img
-              className="mx-auto"
-              src="https://res.cloudinary.com/gloot/image/upload/v1676324396/Stryda/illustrations/stryda-rules-multipleaccountsgame.png"
-              width="200"
-              height="auto"
-              alt=""
-            />
-            <h3 className="text-2xl my-4 leading-tight">On game account</h3>
-            <p className="text-ui-300">
-              Use one game account only. Playing from multiple game accounts
-              while participating in Stryda competitions is considered in-game
-              smurfing.
-            </p>
-          </div>
-          <div className="col-span-4 md:col-span-2 xl:col-span-1">
+        <div className="px-4 sm:px-0 flex flex-col lg:flex-row text-center gap-8">
+          <div className="flex-1">
             <img
               className="mx-auto"
               src="https://res.cloudinary.com/gloot/image/upload/v1676324396/Stryda/illustrations/stryda-rules-accountsharing.png"
@@ -68,7 +54,7 @@ export default function TabLaddersRules() {
               Stryda accounts). Do not sell or buy game- or Stryda accounts.
             </p>
           </div>
-          <div className="col-span-4 md:col-span-2 xl:col-span-1">
+          <div className="flex-1">
             <img
               className="mx-auto"
               src="https://res.cloudinary.com/gloot/image/upload/v1676324455/Stryda/illustrations/stryda-rules-multipleaccountsstryda.png"
@@ -79,10 +65,10 @@ export default function TabLaddersRules() {
             <h3 className="text-2xl my-4 leading-tight">One Stryda account</h3>
             <p className="text-ui-300">
               You may only have one Stryda account. Do not create additional
-              Stryda accounts for any reason.
+              Stryda accounts for any reason. Your Stryda account should be in a rank that matches your skill level.
             </p>
           </div>
-          <div className="col-span-4 md:col-span-2 xl:col-span-1">
+          <div className="flex-1">
             <img
               className="mx-auto"
               src="https://res.cloudinary.com/gloot/image/upload/v1676324396/Stryda/illustrations/stryda-rules-punish.png"
@@ -92,6 +78,7 @@ export default function TabLaddersRules() {
             />
             <h3 className="text-2xl my-4 leading-tight">No cheating</h3>
             <p className="text-ui-300">
+              You should follow the ladder rules and our <a className="link" target="_blank" href="https://stryda.gg/terms-conditions">terms and conditions</a> that you have agreed upon when creating your account. <a className="link" target="_blank" href="https://help.stryda.gg">Click here</a> to read more about what we are considering abusing.
               Cheating and abusing of any kind is a bannable offense. We take
               reports of cheating very seriously and investigate them
               thoroughly.
