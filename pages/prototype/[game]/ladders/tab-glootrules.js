@@ -78,7 +78,7 @@ export default function TabLaddersRules() {
             />
             <h3 className="text-2xl my-4 leading-tight">No cheating</h3>
             <p className="text-ui-300">
-              You should follow the ladder rules and our <a className="link" target="_blank" href="https://stryda.gg/terms-conditions">terms and conditions</a> that you have agreed upon when creating your account. <a className="link" target="_blank" href="https://help.stryda.gg">Click here</a> to read more about what we are considering abusing.
+              You should follow the ladder rules and our <a className="link" target="_blank" rel="noreferrer" href="https://stryda.gg/terms-conditions">terms and conditions</a> that you have agreed upon when creating your account. <a className="link" target="_blank" rel="noreferrer" href="https://help.stryda.gg">Click here</a> to read more about what we are considering abusing.
               Cheating and abusing of any kind is a bannable offense. We take
               reports of cheating very seriously and investigate them
               thoroughly.
@@ -139,7 +139,7 @@ export default function TabLaddersRules() {
                   </a>
                   <a
                     href="https://help.gloot.com/"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     rel="noopener noreferrer"
                     className="button button-sm button-secondary"
                   >

@@ -124,7 +124,7 @@ const MissionsHowitworksTabs = [
       },
       {
         type: "p",
-        text: "If the issue persists check out our <a href='http://help.stryda.gg/' target='_blank' class='link'>help articles</a> or <a href='http://help.stryda.gg/' target='_blank' class='link'>contact support</a>.",
+        text: "If the issue persists check out our <a href='http://help.stryda.gg/' target='_blank' rel='noopener noreferrer' class='link'>help articles</a> or <a href='http://help.stryda.gg/' target='_blank' rel='noopener noreferrer' class='link'>contact support</a>.",
       },
     ],
   },

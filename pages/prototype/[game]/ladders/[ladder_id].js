@@ -9,7 +9,6 @@ import TabLaddersClanLeaderboard from "./tab-clanleaderboards";
 import TabLaddersHowItWorks from "./tab-howitworks";
 import TabLaddersRewards from "./tab-rewards";
 import TabLaddersSoloLeaderboards from "./tab-sololeaderboards";
-import TabLaddersRules from "./tab-glootrules";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -38,11 +37,6 @@ const TabsItems = [
     url: "how-it-works",
     component: TabLaddersHowItWorks,
   },
-  {
-    label: "Rules",
-    url: "rules",
-    component: TabLaddersRules,
-  },
 ];
 const TabsItemsNoClan = [
   {
@@ -59,11 +53,6 @@ const TabsItemsNoClan = [
     label: "How it works",
     url: "how-it-works",
     component: TabLaddersHowItWorks,
-  },
-  {
-    label: "Rules",
-    url: "rules",
-    component: TabLaddersRules,
   },
 ];
 

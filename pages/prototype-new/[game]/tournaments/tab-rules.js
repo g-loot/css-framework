@@ -60,7 +60,7 @@ const Rules = [
             text: [
               "Each player is only allowed to have one (1) Stryda account.",
               "Players are only allowed to use their own Stryda account.",
-              "Players are required to reach out via our <a className='link link-main' href='#' target='_blank'>help.gloot.com</a> if they face issues with their one (1) Stryda account.",
+              "Players are required to reach out via our <a className='link link-main' href='#' target='_blank' rel='noopener noreferrer'>help.gloot.com</a> if they face issues with their one (1) Stryda account.",
             ],
           },
         ],

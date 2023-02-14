@@ -72,7 +72,7 @@ const MissionsHowitworksTabs = [
         text: "You will see a drop down with your match connection information.",
       },
       {
-        text: "<a href='https://help.gloot.com/kb/en/article/how-do-i-join-a-match' target='_blank' class='link link-main'>How do I join a match on Stryda</a>",
+        text: "<a href='https://help.gloot.com/kb/en/article/how-do-i-join-a-match' target='_blank' target='_blank' rel='noopener noreferrer' class='link link-main'>How do I join a match on Stryda</a>",
       },
     ],
   },
@@ -117,7 +117,7 @@ const MissionsHowitworksTabs = [
         text: "There are a few reasons for your party to have been canceled.",
       },
       {
-        text: "Read more about canceled parties here: <a href='https://help.gloot.com/kb/en/article/why-was-my-tournament-enrollment-cancelled' target='_blank' class='link link-main'>why was my tournament enrollment canceled</a>",
+        text: "Read more about canceled parties here: <a href='https://help.gloot.com/kb/en/article/why-was-my-tournament-enrollment-cancelled' target='_blank' target='_blank' rel='noopener noreferrer' class='link link-main'>why was my tournament enrollment canceled</a>",
       },
     ],
   },
