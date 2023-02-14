@@ -1,16 +1,17 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 
-import Ad from "../../../components/Ad/Ad";
-import Countdown from "../../../components/Countdown/Countdown";
+import Ad from "../../../../components/Ad/Ad";
+import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import PrototypeStructure from "../../../components/PrototypeNew/PrototypeStructure";
+import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import TabLaddersClanLeaderboard from "./tab-clanleaderboards";
 import TabLaddersHowItWorks from "./tab-howitworks";
 import TabLaddersRewards from "./tab-rewards";
 import TabLaddersSoloLeaderboards from "./tab-sololeaderboards";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
+import TabLaddersRules from "./tab-glootrules";
+import { UiContext } from "../../../../contexts/ui";
+import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import LadderHeader from "./components/ladder-header";
 import LadderPlacements from "./components/ladder-placements";
@@ -37,6 +38,11 @@ const TabsItems = [
     url: "how-it-works",
     component: TabLaddersHowItWorks,
   },
+  {
+    label: "Rules",
+    url: "rules",
+    component: TabLaddersRules,
+  },
 ];
 const TabsItemsNoClan = [
   {
@@ -53,6 +59,11 @@ const TabsItemsNoClan = [
     label: "How it works",
     url: "how-it-works",
     component: TabLaddersHowItWorks,
+  },
+  {
+    label: "Rules",
+    url: "rules",
+    component: TabLaddersRules,
   },
 ];
 
