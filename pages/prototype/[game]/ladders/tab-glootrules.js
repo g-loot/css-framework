@@ -139,7 +139,7 @@ export default function TabLaddersRules() {
                   </a>
                   <a
                     href="https://help.gloot.com/"
-                    target="_blank" rel="noreferrer"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="button button-sm button-secondary"
                   >
