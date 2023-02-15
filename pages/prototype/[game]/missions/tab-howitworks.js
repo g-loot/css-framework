@@ -13,6 +13,10 @@ const MissionsHowitworksTabs = [
     content: [
       {
         type: "p",
+        text: "Before entering a ladder make sure you have read and agree to our <a href='https://stryda.netlify.app/prototype/valorant/ladders?tab=how-it-works' class='link'>rules</a> and our <a href='https://stryda.gg/terms-conditions' class='link'>terms and conditions</a>.",
+      },
+      {
+        type: "p",
         text: "<span class='text-lg text-ui-100'>Playing VALORANT</span>",
       },
       {

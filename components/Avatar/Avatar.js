@@ -32,6 +32,7 @@ export default function Avatar(props) {
           prototype.getUserByID(userId)?.isPremium ? "avatar-premium" : ""
         } ${className}`}
       >
+        <i>{prototype.getUserByID(userId).level}</i>
         {!prototype.getUserByID(userId).isYou && prototype.getUserByID(userId)?.avatarFrame && (
           <img src={prototype.getShopitemByID(1, prototype.getUserByID(userId).avatarFrame).image} alt="" />
         )}

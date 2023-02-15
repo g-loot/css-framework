@@ -6,7 +6,9 @@
   --inner-padding-one: 0.5rem;
   --inner-padding-two: 0.5rem/2;
   @apply
-  block
+  inline-flex
+  items-center
+  justify-center
   relative
   h-24
   w-24
@@ -90,6 +92,21 @@
       ;
       ;
     }
+  }
+  > b,
+  > strong {
+    @apply
+    absolute
+    z-20
+    bg-ui-500
+    border
+    border-ui-400
+    text-center
+    leading-none
+    -bottom-2
+    py-0.5
+    px-1.5
+    ;
   }
 
   /* size */

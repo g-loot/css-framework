@@ -685,31 +685,86 @@ const DSpage = () => {
                   
                 <div className="flex flex-wrap gap-4 justify-start items-center">
                   <div className="avatar avatar-circle">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674054397/Stryda/shop/avatarframes/avatarFrame_1.png" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674724614/Stryda/shop/avatarframes/Sweden.svg" alt="" />
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-md">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674054397/Stryda/shop/avatarframes/avatarFrame_2.png" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674724598/Stryda/shop/avatarframes/Rainbow.svg" alt="" />
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-sm">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674054397/Stryda/shop/avatarframes/avatarFrame_3.png" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674660549/Stryda/shop/avatarframes/Golden_Tron.svg" alt="" />
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674054397/Stryda/shop/avatarframes/avatarFrame_4.png" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Flower_Love.svg" alt="" />
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-tiny">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674054397/Stryda/shop/avatarframes/avatarFrame_2.png" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Glitch.svg" alt="" />
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/tL4bxyzf/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* With level */}
+      <div className="mb-12" id="with-level">
+        <h2 className="h3 mb-3">With level</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                  
+                <div className="flex flex-wrap gap-4 justify-start items-center">
+                  <div className="avatar avatar-circle">
+                    <b>300</b>
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-md">
+                    <b>255</b>
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-sm">
+                    <b>155</b>
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-xs">
+                    <b>55</b>
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-tiny">
+                    <b>5</b>
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
