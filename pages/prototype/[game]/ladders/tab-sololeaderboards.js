@@ -840,7 +840,7 @@ export default function TabLaddersSoloLeaderboards() {
                                                 }${prototype.getURLparams()}`}
                                               >
                                                 <div className="flex gap-2 items-center interactive">
-                                                  <Avatar id={user.user} />
+                                                  <Avatar id={user.user} hasTooltip={true} />
                                                   <div className="item-title">
                                                     <span
                                                       className={`${

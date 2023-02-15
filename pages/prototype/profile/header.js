@@ -82,16 +82,8 @@ export default function ProfileHeader(props) {
                 {selectedUser.isYou ? (
                   <div className="flex">
                     <div className="relative">
-                      <div
-                        className={`avatar avatar-xl avatar-circle ${
-                          selectedUser.isPremium ? "avatar-premium" : ""
-                        }`}
-                      >
-                        {avatarFrame && <img src={avatarFrame.image} alt="" />}
-                        <div>
-                          <img src={selectedUser.avatar} alt="avatar" />
-                        </div>
-                      </div>
+                      <Avatar size="avatar-xl" id={selectedUser.id} hasTooltip={true} tooltipPlacement={'bottom'} />
+
                       <button onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)} type="button" className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0">
                         <span className="icon icon-pen-2" />
                       </button>

@@ -684,6 +684,12 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                   
                 <div className="flex flex-wrap gap-4 justify-start items-center">
+                  <div className="avatar avatar-circle avatar-xl">
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674724614/Stryda/shop/avatarframes/Valorant.svg" alt="" />
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                    </div>
+                  </div>
                   <div className="avatar avatar-circle">
                     <img src="https://res.cloudinary.com/gloot/image/upload/v1674724614/Stryda/shop/avatarframes/Sweden.svg" alt="" />
                     <div>
@@ -739,8 +745,15 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                   
                 <div className="flex flex-wrap gap-4 justify-start items-center">
-                  <div className="avatar avatar-circle">
+                  <div className="avatar avatar-circle avatar-xl">
                     <b>300</b>
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Valorant.svg" alt="" />
+                    <div>
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle">
+                    <b>279</b>
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>

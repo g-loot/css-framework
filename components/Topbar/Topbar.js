@@ -777,7 +777,7 @@ export default function TopbarNew() {
                   tabIndex="1"
                   className="flex items-center rounded-full bg-ui-700 interactive"
                 >
-                  <Avatar id={1} />
+                  <Avatar id={1} hasLevel={false} />
                   <span className="icon icon-arrow-sm-down mx-2" />
                 </div>
 

@@ -490,7 +490,6 @@
 /* label position */
 
 .step:not(.step-label-bottom):not(.step-label-alternate) {
-  
   &.step-secondary,
   &.step-tertiary {
     @apply
@@ -506,6 +505,7 @@
     }
   }
 }
+
 .step.step-label-bottom:not(.step-vertical) {
   @apply
   pb-28
@@ -532,49 +532,18 @@
       }
     }
   }
-  &,
-  &.step-primary {
-    > li {
-      > a,
-      > div {
-        > div {
-          @apply
-          block
-          top-16
-          translate-x-6
-          ;
-        }
-      }
-    }
-  }
   &.step-secondary {
     > li {
       > a,
       > div {
         > div {
-          @apply
-          top-7
-          translate-x-1.5
-          ;
-        }
-      }
-    }
-  }
-  &.step-tertiary {
-    > li {
-      > a,
-      > div {
-        > div {
-          @apply
-          top-14
-          translate-x-6
-          ;
+          top: 1.75rem;
+          transform: translateX(-1rem);
         }
       }
     }
   }
 }
-
 
 /* vertical */
 

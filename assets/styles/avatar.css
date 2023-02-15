@@ -97,7 +97,7 @@
   > strong {
     @apply
     absolute
-    z-20
+    z-30
     bg-ui-500
     border
     border-ui-400
@@ -106,6 +106,8 @@
     -bottom-2
     py-0.5
     px-1.5
+    rounded
+    text-base
     ;
   }
 
@@ -127,6 +129,12 @@
         }
       }
     }
+    > b,
+    > strong {
+      @apply
+        text-lg
+      ;
+    }
   }
   &.avatar-lg {
     --inner-padding-one: 8px;
@@ -143,6 +151,12 @@
           ;
         }
       }
+    }
+    > b,
+    > strong {
+      @apply
+        text-base
+      ;
     }
   }
   &.avatar-md {
@@ -161,6 +175,12 @@
         }
       }
     }
+    > b,
+    > strong {
+      @apply
+        text-sm
+      ;
+    }
   }
   &.avatar-sm {
     --inner-padding-one: 4px;
@@ -177,6 +197,12 @@
           ;
         }
       }
+    }
+    > b,
+    > strong {
+      @apply
+        text-xs
+      ;
     }
   }
   &.avatar-xs {
@@ -195,6 +221,14 @@
         }
       }
     }
+    > b,
+    > strong {
+      @apply
+        text-xs
+        py-px
+        px-1
+      ;
+    }
   }
   &.avatar-tiny {
     --inner-padding-one: 2px;
@@ -211,6 +245,14 @@
           ;
         }
       }
+    }
+    > b,
+    > strong {
+      @apply
+        text-xs
+        py-px
+        px-1
+      ;
     }
   }
 
@@ -454,6 +496,12 @@
           }
         }
       }
+      > b,
+      > strong {
+        @apply
+          text-lg
+        ;
+      }
     }
     &.sm\:avatar-lg {
       --inner-padding-one: 0.6rem;
@@ -470,6 +518,12 @@
             ;
           }
         }
+      }
+      > b,
+      > strong {
+        @apply
+          text-base
+        ;
       }
     }
     &.sm\:avatar-md {
@@ -488,6 +542,12 @@
           }
         }
       }
+      > b,
+      > strong {
+        @apply
+          text-sm
+        ;
+      }
     }
     &.sm\:avatar-sm {
       --inner-padding-one: 0.25rem;
@@ -504,6 +564,12 @@
             ;
           }
         }
+      }
+      > b,
+      > strong {
+        @apply
+          text-xs
+        ;
       }
     }
     &.sm\:avatar-xs {
@@ -522,6 +588,14 @@
           }
         }
       }
+      > b,
+      > strong {
+        @apply
+          text-xs
+          py-px
+          px-1
+        ;
+      }
     }
     &.sm\:avatar-tiny {
       --inner-padding-one: 0.15rem;
@@ -538,6 +612,14 @@
             ;
           }
         }
+      }
+      > b,
+      > strong {
+        @apply
+          text-xs
+          py-px
+          px-1
+        ;
       }
     }
   }
@@ -560,6 +642,12 @@
           }
         }
       }
+      > b,
+      > strong {
+        @apply
+          text-lg
+        ;
+      }
     }
     &.md\:avatar-lg {
       --inner-padding-one: 0.6rem;
@@ -576,6 +664,12 @@
             ;
           }
         }
+      }
+      > b,
+      > strong {
+        @apply
+          text-base
+        ;
       }
     }
     &.md\:avatar-md {
@@ -594,6 +688,12 @@
           }
         }
       }
+      > b,
+      > strong {
+        @apply
+          text-sm
+        ;
+      }
     }
     &.md\:avatar-sm {
       --inner-padding-one: 0.25rem;
@@ -610,6 +710,12 @@
             ;
           }
         }
+      }
+      > b,
+      > strong {
+        @apply
+          text-xs
+        ;
       }
     }
     &.md\:avatar-xs {
@@ -628,6 +734,14 @@
           }
         }
       }
+      > b,
+      > strong {
+        @apply
+          text-xs
+          py-px
+          px-1
+        ;
+      }
     }
     &.md\:avatar-tiny {
       --inner-padding-one: 0.15rem;
@@ -644,6 +758,14 @@
             ;
           }
         }
+      }
+      > b,
+      > strong {
+        @apply
+          text-xs
+          py-px
+          px-1
+        ;
       }
     }
   }
@@ -666,6 +788,12 @@
           }
         }
       }
+      > b,
+      > strong {
+        @apply
+          text-lg
+        ;
+      }
     }
     &.lg\:avatar-lg {
       --inner-padding-one: 0.6rem;
@@ -682,6 +810,12 @@
             ;
           }
         }
+      }
+      > b,
+      > strong {
+        @apply
+          text-base
+        ;
       }
     }
     &.lg\:avatar-md {
@@ -700,6 +834,12 @@
           }
         }
       }
+      > b,
+      > strong {
+        @apply
+          text-sm
+        ;
+      }
     }
     &.lg\:avatar-sm {
       --inner-padding-one: 0.25rem;
@@ -716,6 +856,12 @@
             ;
           }
         }
+      }
+      > b,
+      > strong {
+        @apply
+          text-xs
+        ;
       }
     }
     &.lg\:avatar-xs {
@@ -734,6 +880,14 @@
           }
         }
       }
+      > b,
+      > strong {
+        @apply
+          text-xs
+          py-px
+          px-1
+        ;
+      }
     }
     &.lg\:avatar-tiny {
       --inner-padding-one: 0.15rem;
@@ -750,6 +904,14 @@
             ;
           }
         }
+      }
+      > b,
+      > strong {
+        @apply
+          text-xs
+          py-px
+          px-1
+        ;
       }
     }
   }
@@ -772,6 +934,12 @@
           }
         }
       }
+      > b,
+      > strong {
+        @apply
+          text-lg
+        ;
+      }
     }
     &.xl\:avatar-lg {
       --inner-padding-one: 0.6rem;
@@ -788,6 +956,12 @@
             ;
           }
         }
+      }
+      > b,
+      > strong {
+        @apply
+          text-base
+        ;
       }
     }
     &.xl\:avatar-md {
@@ -806,6 +980,12 @@
           }
         }
       }
+      > b,
+      > strong {
+        @apply
+          text-sm
+        ;
+      }
     }
     &.xl\:avatar-sm {
       --inner-padding-one: 0.25rem;
@@ -822,6 +1002,12 @@
             ;
           }
         }
+      }
+      > b,
+      > strong {
+        @apply
+          text-xs
+        ;
       }
     }
     &.xl\:avatar-xs {
@@ -840,6 +1026,14 @@
           }
         }
       }
+      > b,
+      > strong {
+        @apply
+          text-xs
+          py-px
+          px-1
+        ;
+      }
     }
     &.xl\:avatar-tiny {
       --inner-padding-one: 0.15rem;
@@ -856,6 +1050,14 @@
             ;
           }
         }
+      }
+      > b,
+      > strong {
+        @apply
+          text-xs
+          py-px
+          px-1
+        ;
       }
     }
   }

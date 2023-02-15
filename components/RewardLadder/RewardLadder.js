@@ -119,7 +119,7 @@ export default function RewardLadder(props) {
                   <span className="pl-2">550</span>
                   <span className="icon icon-xp-symbol" />
                 </div>
-                <Avatar id={1} />
+                <Avatar id={1} hasLevel={false} />
               </div>
             </div>
           </div>
