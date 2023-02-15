@@ -15,7 +15,7 @@ const TabsItems = [
     content: [
       {
         type: "p",
-        text: "Missions add a little extra challenge to your game by giving you objectives to achieve while you play. These could range from winning a certain number of rounds to getting kills with a particular weapon and are available across all of our supported games.",
+        text: "Missions add a little extra challenge to your game by giving you objectives to achieve while you play. These could range from winning a certain number of matches to getting kills with a particular weapon and are available across all of our supported games.",
       },
       {
         type: "p",
@@ -63,7 +63,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "For each entry to a Ladder, you pay 1 Token. Your score from the next game round you play will go towards your Ladder total.",
+        text: "To enter a Ladder you need to use Tokens. Your score from the next match you play will go towards your Ladder total.",
       },
     ],
   },
