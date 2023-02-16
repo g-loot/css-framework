@@ -92,31 +92,30 @@ export default function LadderCardSecondary(props) {
       </div>
       <div className="card-content">
         <div className="card-body">
-          <div>
-            <h2 className="h4 mb-2">{ladder.name}</h2>
-            <div className="flex gap-4 items-center">
-              <div className="flex items-center whitespace-nowrap gap-1">
-                <span className="icon icon-coin text-currency-1-500" />
-                <span className="text-currency-1-500 text-sm">
-                  {ladder.isPowerPlay ? (
-                    <>50 000 - 5 000 000</>
-                  ) : (
-                    <>5 000 - 30 000</>
-                  )}
-                </span>
+          <h2 className="h4">{ladder.name}</h2>
+          <div className="flex gap-4 items-center">
+            <div className="flex items-center whitespace-nowrap gap-1">
+              <span className="icon icon-coin text-currency-1-500" />
+              <span className="text-currency-1-500 text-sm">
+                {ladder.isPowerPlay ? (
+                  <>50 000 - 5 000 000</>
+                ) : (
+                  <>5 000 - 30 000</>
+                )}
+              </span>
+            </div>
+            {ladder.status === "finished" ? (
+              <div className="text-sm text-ui-300">
+                This competition has ended
               </div>
-              {ladder.status === "finished" ? (
-                <div className="text-sm text-ui-300">
-                  This competition has ended
-                </div>
-              ) : (
-                <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">
-                  <span className="mr-1">Time Left:</span>
-                  <span className="icon icon-clock" />
-                  <span>23H</span>
-                  <span>19M</span>
-                  <span>13S</span>
-                  {/*
+            ) : (
+              <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">
+                <span className="mr-1">Time Left:</span>
+                <span className="icon icon-clock" />
+                <span>23H</span>
+                <span>19M</span>
+                <span>13S</span>
+                {/*
                   <Countdown
                     separator={"  "}
                     hasDays={false}
@@ -130,9 +129,8 @@ export default function LadderCardSecondary(props) {
                     className="uppercase text-sm gap-1"
                   />
               */}
-                </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
         <div className="card-meta">

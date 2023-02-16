@@ -24,7 +24,7 @@ const ClanLadders = [
     gameID: 1,
     name: null,
     gameMode: "Unrated",
-    name: "Unrated Ladder",
+    name: "Competitive Ladder with a very long name",
     status: "ongoing",
     isEnrolled: true,
     hasClaim: false,

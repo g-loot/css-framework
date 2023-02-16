@@ -668,7 +668,7 @@ export const dataGames = [
         id: 3,
         solo: true,
         clan: true,
-        name: "Competitive Ladder",
+        name: "Competitive Ladder with a very long name",
         cover:
           "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-6.webp",
         status: "finished",

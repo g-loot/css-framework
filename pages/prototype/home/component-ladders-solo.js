@@ -48,7 +48,7 @@ const SoloLadders = [
     game_slug: "apexlegends",
     name: null,
     gameMode: "Ranked trio",
-    name: "Competitive Ladder",
+    name: "Competitive Ladder with a very long name",
     status: "ongoing",
     isEnrolled: false,
     hasClaim: false,

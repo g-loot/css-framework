@@ -801,7 +801,21 @@
       @apply flex-col
       md:flex-col
       md:col-span-3
-      bg-ui-800;
+      bg-ui-800
+      overflow-hidden;
+      > .card-body {
+        @apply
+        gap-2
+        ;
+        :where(h2, h3, h4, h5) {
+          @apply
+          text-lg
+          block
+          truncate
+          w-[calc(99%)]
+          ;
+        }
+      }
       > .card-meta {
         @apply mt-4
         flex
@@ -882,11 +896,11 @@
       order-1
       flex-1
       rounded-l
-      rounded-r-none;
+      rounded-r-none
+      ;
     }
     > .card-image-bg {
       @apply 
-      
       w-auto
       rounded-r
       rounded-l-none;
