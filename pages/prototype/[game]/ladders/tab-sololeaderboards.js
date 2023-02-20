@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
 import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
 import Avatar from "../../../../components/Avatar/Avatar";
+import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
 
 const Groups = [
   "A",
@@ -662,7 +663,7 @@ export default function TabLaddersSoloLeaderboards() {
                 <div className="mt-4 overflow-x-auto scrollbar-hidden">
                   <div className="min-w-md px-2 md:px-0">
                     <div className="flex gap-2 items-start text-center text-sm text-ui-300 uppercase mb-2">
-                      <div className="w-1/3 flex items-stretch overflow-hidden">
+                      <div className="w-1/4 flex items-stretch overflow-hidden">
                         <div className="w-1/3 px-2">#</div>
                         <div className="flex-1">Rewards</div>
                       </div>
@@ -673,7 +674,9 @@ export default function TabLaddersSoloLeaderboards() {
                             <span>Player</span>
                           </div>
                           <div className="item-body flex justify-around items-center pr-4">
-                            <span>Ladder points</span>
+                            <span className="w-10"></span>
+                            <span className="w-12"></span>
+                            <span className="w-12">points</span>
                             <span className="w-10 text-center">Clan</span>
                           </div>
                           <div className="item-actions flex items-center gap-2 opacity-0">
@@ -840,7 +843,11 @@ export default function TabLaddersSoloLeaderboards() {
                                                 }${prototype.getURLparams()}`}
                                               >
                                                 <div className="flex gap-2 items-center interactive">
-                                                  <Avatar id={user.user} hasTooltip={true} hasTooltipXP={false} />
+                                                  <Avatar
+                                                    id={user.user}
+                                                    hasTooltip={true}
+                                                    hasTooltipXP={false}
+                                                  />
                                                   <div className="item-title">
                                                     <span
                                                       className={`${
@@ -883,6 +890,24 @@ export default function TabLaddersSoloLeaderboards() {
                                                 </div>
                                               </Link>
                                             </div>
+                                            <div className="w-10">
+                                              {user.user != 1 &&
+                                                !prototype.getUserByID(
+                                                  user.user
+                                                )?.isFriend && (
+                                                  <Tooltip
+                                                placement="left"
+                                                tooltip={
+                                                  <div className="max-w-xs text-sm text-center leading-tight">
+                                                    Add as friend
+                                                  </div>
+                                                }
+                                              >
+                                                  <ButtonFeedback variant="button-tertiary rounded-full" icon="icon-add-27" message="Friend added" />
+                                                  </Tooltip>
+                                                )}
+                                            </div>
+
                                             <div className="item-body flex justify-around items-center">
                                               <Tooltip
                                                 placement="left"

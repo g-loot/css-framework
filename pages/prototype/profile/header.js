@@ -7,6 +7,7 @@ import ReadMore from "../../../components/ReadMore/ReadMore";
 import GameIcon from "../../../components/GameIcon/GameIcon";
 import Avatar from "../../../components/Avatar/Avatar";
 import ModalAvatarEdit from "./[user_id]/modal-avataredit";
+import ModalRemoveFriend from "../friends/modal-remove-friend";
 import { UiContext } from "../../../contexts/ui";
 
 export default function ProfileHeader(props) {
@@ -39,8 +40,12 @@ export default function ProfileHeader(props) {
   }, [modalAvatarEdit]);
 
   function openModalAvatarEdit(id) {
+    uiContext.openModal(<ModalAvatarEdit id={id} />);
+  }
+
+   function openModalRemoveFriends(id) {
     uiContext.openModal(
-      <ModalAvatarEdit id={id} />
+      <ModalRemoveFriend id={id}></ModalRemoveFriend>
     );
   }
 
@@ -82,9 +87,19 @@ export default function ProfileHeader(props) {
                 {selectedUser.isYou ? (
                   <div className="flex">
                     <div className="relative">
-                      <Avatar size="avatar-xl" id={selectedUser.id} hasTooltip={true} hasTooltipXP={true} tooltipPlacement={'bottom'} />
+                      <Avatar
+                        size="avatar-xl"
+                        id={selectedUser.id}
+                        hasTooltip={true}
+                        hasTooltipXP={true}
+                        tooltipPlacement={"bottom"}
+                      />
 
-                      <button onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)} type="button" className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0">
+                      <button
+                        onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)}
+                        type="button"
+                        className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0"
+                      >
                         <span className="icon icon-pen-2" />
                       </button>
                     </div>
@@ -166,101 +181,132 @@ export default function ProfileHeader(props) {
               </div>
             </div>
           </div>
-          <div className="hidden lg:block absolute z-20 top-3 right-3">
-            {selectedUser.isYou && (
-              <Link href="settings">
-                <a className="button button-sm button-tertiary">
-                  <span className="icon icon-cogwheel" />
-                  <span>Profile settings</span>
-                </a>
-              </Link>
-            )}
-          </div>
           <div className="header-meta lg:items-end p-3">
-            {!emptyClan ? (
-              <>
-                {selectedUser.clan ? (
-                  <Link
-                    href={`/prototype/clans/${
-                      selectedUser.clan
-                    }${prototype.getURLparams()}`}
-                  >
-                    <div className="item bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg interactive w-auto">
-                      <div className="item-image">
-                        <div className="avatar avatar-sm avatar-squircle interactive">
-                          <div>
-                            <img
-                              src={
-                                prototype.getClanByID(selectedUser.clan).avatar
-                              }
-                              alt="avatar"
-                            />
+            <div className="space-y-2">
+              {!emptyClan ? (
+                <>
+                  {selectedUser.clan ? (
+                    <Link
+                      href={`/prototype/clans/${
+                        selectedUser.clan
+                      }${prototype.getURLparams()}`}
+                    >
+                      <div className="item bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg interactive w-auto">
+                        <div className="item-image">
+                          <div className="avatar avatar-sm avatar-squircle interactive">
+                            <div>
+                              <img
+                                src={
+                                  prototype.getClanByID(selectedUser.clan)
+                                    .avatar
+                                }
+                                alt="avatar"
+                              />
+                            </div>
                           </div>
                         </div>
+                        <div className="item-body pr-2">
+                          <div className="text-sm text-ui-300 leading-none">
+                            Clan member of
+                          </div>
+                          <div className="item-title text-xl text-ui-100 interactive">
+                            &#91;
+                            {prototype.getClanByID(selectedUser.clan).tag}
+                            &#93;{" "}
+                            {prototype.getClanByID(selectedUser.clan).nickname}
+                          </div>
+                          {/*
+                              <div className="text-sm text-ui-300">
+                                {
+                                  prototype.getClanByID(selectedUser.clan).members
+                                    .length
+                                }{" "}
+                                members
+                              </div>
+                              */}
+                        </div>
                       </div>
-                      <div className="item-body pr-2">
-                        <div className="text-sm text-ui-300 leading-none">
-                          Clan member of
-                        </div>
-                        <div className="item-title text-xl text-ui-100 interactive">
-                          &#91;
-                          {prototype.getClanByID(selectedUser.clan).tag}
-                          &#93;{" "}
-                          {prototype.getClanByID(selectedUser.clan).nickname}
-                        </div>
-                        {/*
-                            <div className="text-sm text-ui-300">
-                              {
-                                prototype.getClanByID(selectedUser.clan).members
-                                  .length
-                              }{" "}
-                              members
-                            </div>
-                            */}
+                    </Link>
+                  ) : (
+                    <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                      <div className="text-center">
+                        {selectedUser.nickname} is not part of a clan.
+                      </div>
+                      <Link href="#">
+                        <a
+                          type="button"
+                          className="button button-sm button-primary w-full"
+                        >
+                          <span>Recruit to your clan</span>
+                        </a>
+                      </Link>
+                    </div>
+                  )}
+                </>
+              ) : (
+                <>
+                  {!selectedUser.isYou ? (
+                    <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                      <div className="text-center">
+                        {selectedUser.nickname} is not part of a clan.
                       </div>
                     </div>
+                  ) : (
+                    <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                      <div className="text-center">
+                        You are not part of a clan.
+                      </div>
+                      <Link href="/prototype/clans/search">
+                        <a
+                          type="button"
+                          className="button button-sm button-primary w-full"
+                        >
+                          <span>Join a clan</span>
+                        </a>
+                      </Link>
+                    </div>
+                  )}
+                </>
+              )}
+              {selectedUser.isYou && (
+                <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                  <Link href="settings">
+                          <a
+                            type="button"
+                            className="button button-sm button-secondary w-full"
+                          >
+                            <span className="icon icon-cogwheel" />
+                            <span>Profile settings</span>
+                          </a>
+                        </Link>
+                </div>
+              )}
+              {!selectedUser.isYou && selectedUser.isFriend && (
+                <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                    <a
+                      type="button"
+                      className="button button-sm button-secondary w-full"
+                      onClick={openModalRemoveFriends.bind(this, selectedUser.id)}
+                    >
+                      <span className="icon icon-a-remove" />
+                      <span>Remove as friend</span>
+                    </a>
+                </div>
+              )}
+              {!selectedUser.isYou && !selectedUser.isFriend && (
+                <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                  <Link href="/prototype/friends">
+                    <a
+                      type="button"
+                      className="button button-sm button-secondary w-full"
+                    >
+                      <span className="icon icon-add-27" />
+                      <span>Add as friend</span>
+                    </a>
                   </Link>
-                ) : (
-                  <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                    <div className="text-center">
-                      {selectedUser.nickname} is not part of a clan.
-                    </div>
-                    <Link href="#">
-                      <a
-                        type="button"
-                        className="button button-sm button-primary w-full"
-                      >
-                        <span>Recruit to your clan</span>
-                      </a>
-                    </Link>
-                  </div>
-                )}
-              </>
-            ) : (
-              <>
-                {!selectedUser.isYou ? (
-                  <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                    <div className="text-center">
-                      {selectedUser.nickname} is not part of a clan.
-                    </div>
-                  </div>
-                ) : (
-                  <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                    <div className="text-center">
-                      You are not part of a clan.
-                    </div>
-                    <Link href="/prototype/clans/search">
-                      <a
-                        type="button"
-                        className="button button-sm button-primary w-full"
-                      >
-                        <span>Join a clan</span>
-                      </a>
-                    </Link>
-                  </div>
-                )}
-              </>
-            )}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="header-bg">

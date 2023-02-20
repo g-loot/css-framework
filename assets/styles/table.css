@@ -24,7 +24,7 @@
     ;
   }
 
-  &:where(:not(.table-zebra)) :where(thead,tbody,tfoot) :where(tr:not(:last-child) :where(th,td)) {
+  &:where(:not(.table-zebra):not(.table-comptact)) :where(thead,tbody,tfoot) :where(tr:not(:last-child) :where(th,td)) {
     @apply
     border-b
     border-ui-700
@@ -87,11 +87,17 @@
   border-spacing-y-2
   ;
 
-
   :where(thead,tfoot) :where(th,td) {
     @apply
     py-0
     bg-ui-700/0
+    ;
+  }
+
+  :where(tbody) :where(tr :where(th,td)) {
+    @apply
+    border-b
+    border-ui-700
     ;
   }
 

@@ -30,7 +30,7 @@ export default function ClanSearch() {
     <>
       <PrototypeStructure title="Clans">
         <Ad width="1005" height="124" />
-        <h1 className="mb-4 px-4 sm:px-0">Find clans</h1>
+        <h1 className="mt-2 mb-4 px-4 sm:px-0">Find clans</h1>
         <section className="surface surface-dimmed sm:rounded-lg p-4 mb-4">
           <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-4 xl:gap-8">
             <div className="flex-2 flex items-center gap-4 xl:gap-8">

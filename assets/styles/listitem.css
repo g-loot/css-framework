@@ -29,6 +29,7 @@
   .item-image {
     @apply
     flex-none
+    text-0
     ;
   }
   .item-title {
@@ -40,7 +41,7 @@
       ;
     }
   }
-  &:not(:last-child):not([class*='border']) {
+  &:not(:last-child):not([class*='border']):not([class*='items-spaced']) {
     @apply
     border-b
     border-ui-700

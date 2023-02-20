@@ -218,7 +218,27 @@ export default function PrototypeLeftMenuNew(props) {
                   </div>
                 </button>
               </Link>
-           
+              <Link href={`/prototype/friends${prototype.getURLparams()}`}>
+                <button
+                  type="button"
+                  className={`item px-6 item-interactive border-b border-ui-700 ${
+                    router.pathname.includes("friends") ? "is-active" : ""
+                  }`}
+                >
+                  <div className="item-image">
+                    <div className="avatar avatar-simple avatar-xs">
+                      <div>
+                        <span className="icon icon-b-add icon-16 text-ui-200" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="item-body">
+                    <div className="item-title">
+                      <span className="text-sm uppercase">Friends</span>
+                    </div>
+                  </div>
+                </button>
+              </Link>
             </div>
             <PrototypeGamesNavNew />
             <div className="text-left p-2">

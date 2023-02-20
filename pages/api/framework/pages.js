@@ -868,6 +868,34 @@ export const FrameworkPages = {
         
       ],
     },
+    {
+      title: "Friends",
+      pages: [
+        {
+          label: "Friends",
+          url: "friends",
+          query: "",
+          tags: "friends,follow,bookmark,user,social",
+          tab: 0,
+        },
+        {
+          label: "Remove as friend",
+          chip: "modal",
+          url: "friends",
+          query: "modalremovefriends=true",
+          tags: "friends,follow,bookmark,user,social,modal, dialog, prompt, confirmation, remove",
+          tab: 1,
+        },
+        {
+          label: "No friends",
+          chip: "empty state",
+          url: "friends",
+          query: "empty=true",
+          tags: "friends,follow,bookmark,user,social, no friends, empty state",
+          tab: 1,
+        },
+      ],
+    },
   ],
 };
 
