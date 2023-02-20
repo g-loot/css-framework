@@ -71,7 +71,7 @@ export default function TabLaddersRules() {
           <div className="flex-1">
             <img
               className="mx-auto"
-              src="https://res.cloudinary.com/gloot/image/upload/v1676324396/Stryda/illustrations/stryda-rules-punish.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1676893079/Stryda/illustrations/stryda-rules-punish.png"
               width="200"
               height="auto"
               alt=""

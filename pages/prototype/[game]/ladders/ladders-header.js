@@ -105,7 +105,7 @@ export default function LaddersHeader(props) {
                   onClick={openModalLadderHowitworksVideo}
                 >
                   <span className="icon icon-circle-caret-right" />
-                  <span>Learn how to Ladder</span>
+                  <span>How to join the Ladder</span>
                 </button>
                 {selectedGame.needsSteam && (
                 <Link

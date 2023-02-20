@@ -82,7 +82,7 @@ export default function ProfileHeader(props) {
                 {selectedUser.isYou ? (
                   <div className="flex">
                     <div className="relative">
-                      <Avatar size="avatar-xl" id={selectedUser.id} hasTooltip={true} tooltipPlacement={'bottom'} />
+                      <Avatar size="avatar-xl" id={selectedUser.id} hasTooltip={true} hasTooltipXP={true} tooltipPlacement={'bottom'} />
 
                       <button onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)} type="button" className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0">
                         <span className="icon icon-pen-2" />

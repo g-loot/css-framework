@@ -282,6 +282,11 @@ export const DSpages = [
         url: "steps",
       },
       {
+        label: "Stepper",
+        tags: "step,stepper,number,increase,level up,xp",
+        url: "stepper",
+      },
+      {
         label: "Stats",
         tags: "stats,numbers,data,display,information,graphs,charts",
         url: "stats",

@@ -48,17 +48,16 @@ const WalletItems = [
     buttonLabel: "Buy power tokens",
   },
   {
-    id: 3,
-    name: "power tokens",
-    icon: "icon-powertoken",
+    id: 4,
+    name: "prize money",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-powertoken-face.png",
-    amount: "15",
-    use: "To enter rounds in the <b>Power Plays</b>.",
-    get: "Buy them directly from the <b>Wallet</b>.",
-    color: "text-currency-3-500",
-    button: "buy",
-    buttonLabel: "Buy power tokens",
+      "https://res.cloudinary.com/gloot/image/upload/v1676628558/Stryda/currencies/Reward-centered-wallet-unique.png",
+    amount: "0€",
+    use: false,
+    get: false,
+    color: "text-ui-100",
+    button: "#",
+    buttonLabel: "Withdraw",
   },
   /*
   {
@@ -162,24 +161,28 @@ export default function TabWalletOverview() {
                   </div>
                 </div>
                 <div className="text-sm leading-tight text-ui-300 mt-3 mb-6 flex-1">
-                  <div className="flex py-3 border-b border-ui-700/50 px-2 gap-2 max-w-xs mx-auto">
-                    <div className="w-1/4 uppercase text-ui-200">Use</div>
-                    <div
-                      className="flex-1 text-ui-300"
-                      dangerouslySetInnerHTML={{
-                        __html: item.use,
-                      }}
-                    />
-                  </div>
-                  <div className="flex py-3 px-2 gap-2 max-w-xs mx-auto">
-                    <div className="w-1/4 uppercase text-ui-200">Get</div>
-                    <div
-                      className="flex-1 text-ui-300"
-                      dangerouslySetInnerHTML={{
-                        __html: item.get,
-                      }}
-                    />
-                  </div>
+                  {item.use && (
+                    <div className="flex py-3 border-b border-ui-700/50 px-2 gap-2 max-w-xs mx-auto">
+                      <div className="w-1/4 uppercase text-ui-200">Use</div>
+                      <div
+                        className="flex-1 text-ui-300"
+                        dangerouslySetInnerHTML={{
+                          __html: item.use,
+                        }}
+                      />
+                    </div>
+                  )}
+                  {item.get && (
+                    <div className="flex py-3 px-2 gap-2 max-w-xs mx-auto">
+                      <div className="w-1/4 uppercase text-ui-200">Get</div>
+                      <div
+                        className="flex-1 text-ui-300"
+                        dangerouslySetInnerHTML={{
+                          __html: item.get,
+                        }}
+                      />
+                    </div>
+                  )}
                 </div>
                 {item.button && (
                   <>
@@ -189,7 +192,7 @@ export default function TabWalletOverview() {
                         className="button button-primary w-full"
                         onClick={openModalBuyTokens}
                       >
-                        <span>Buy tokens</span>
+                        <span>{item.buttonLabel}</span>
                       </button>
                     )}
                     {item.button === "visitshop" && (
@@ -198,9 +201,17 @@ export default function TabWalletOverview() {
                           type="button"
                           className="button button-secondary w-full"
                         >
-                          <span>Visit shop</span>
+                          <span>{item.buttonLabel}</span>
                         </button>
                       </Link>
+                    )}
+                    {item.button === "#" && (
+                      <button
+                        type="button"
+                        className="button button-primary w-full is-disabled"
+                      >
+                        <span>{item.buttonLabel}</span>
+                      </button>
                     )}
                   </>
                 )}

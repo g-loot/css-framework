@@ -141,7 +141,7 @@ export default function Home() {
                       onClick={openModalLadderHowitworksVideo}
                     >
                       <span className="icon icon-circle-caret-right" />
-                      <span>Learn how to Ladder</span>
+                      <span>How to join the Ladder</span>
                     </button>
                     <Link
                       href={`/prototype/profile/settings${prototype.getURLparams()}`}

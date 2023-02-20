@@ -20,6 +20,7 @@ export default function Avatar(props) {
   const hasAvatarFrame = query.avatarframe || false;
   const hasLevel = props.hasLevel !== undefined ? props.hasLevel : true;
   const hasTooltip = props.hasTooltip !== undefined ? props.hasTooltip : false;
+  const hasTooltipXP = props.hasTooltipXP !== undefined ? props.hasTooltipXP : false;
 
   useEffect(() => {
     if (hasAvatarFrame) {
@@ -66,7 +67,7 @@ export default function Avatar(props) {
     <>
       {hasTooltip ? (
         <>
-          {userId === 1 ? (
+          {hasTooltipXP && userId === 1 ? (
             <Tooltip
               placement={props.tooltipPlacement}
               tooltip={
@@ -75,7 +76,7 @@ export default function Avatar(props) {
                     10423/15000 XP
                   </div>
                   <div className="flex justify-between items-baseline text-sm mt-2 mb-1">
-                    <span>LVL {prototype.getUserByID(userId).level}</span>
+                    <span>Level {prototype.getUserByID(userId).level}</span>
                     <span className="text-ui-300">75%</span>
                   </div>
                   <div

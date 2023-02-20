@@ -1,0 +1,156 @@
+/*----------------------------*/
+/* STEPPER */
+/*----------------------------*/
+
+.stepper {
+  @apply
+  leading-[0]
+  inline-flex
+  items-baseline
+  ;
+  > span {
+    @apply
+    h-4
+    leading-none
+    inline-block
+    overflow-y-hidden
+    mx-auto
+    ;
+    &::before {
+      @apply
+      relative
+      content-["0\a_1\a_2\a_3\a_4\a_5\a_6\a_7\a_8\a_9\a0\a_1\a_2\a_3\a_4\a_5\a_6\a_7\a_8\a_9\a0\a_1\a_2\a_3\a_4\a_5\a_6\a_7\a_8\a_9\a0\a_1\a_2\a_3\a_4\a_5\a_6\a_7\a_8\a_9\a0\a_1\a_2\a_3\a_4\a_5\a_6\a_7\a_8\a_9\a"]
+      whitespace-pre
+      text-center
+      transition-all
+      duration-1000
+      top-0
+      ease-[cubic-bezier(0.9,0,0.1,1)]
+      animate-[stepper_5s_cubic-bezier(0.9,0,0.1,1)_both]
+      block
+      ;
+    }
+    &:nth-last-child(1)::before {
+      animation-duration: 2s;
+    }
+    &:nth-last-child(2)::before {
+      animation-duration: 2.5s;
+    }
+    &:nth-last-child(3)::before {
+      animation-duration: 3s;
+    }
+    &:nth-last-child(4)::before {
+      animation-duration: 3.5s;
+    }
+    &:nth-last-child(5)::before {
+      animation-duration: 4s;
+    }
+    &:nth-last-child(6)::before {
+      animation-duration: 4.5s;
+    }
+    &:nth-last-child(7)::before {
+      animation-duration: 5s;
+    }
+    &:nth-last-child(8)::before {
+      animation-duration: 5.5s;
+    }
+    &:nth-last-child(9)::before {
+      animation-duration: 6s;
+    }
+    &:nth-last-child(10)::before {
+      animation-duration: 6.5s;
+    }
+  }
+  &.text-8xl {
+    > span {
+      @apply
+      h-8xl
+      ;
+    }
+  }
+  &.text-7xl {
+    > span {
+      @apply
+      h-7xl
+      ;
+    }
+  }
+  &.text-6xl {
+    > span {
+      @apply
+      h-6xl
+      ;
+    }
+  }
+  &.text-5xl {
+    > span {
+      @apply
+      h-5xl
+      ;
+    }
+  }
+  &.text-4xl {
+    > span {
+      @apply
+      h-4xl
+      ;
+    }
+  }
+  &.text-3xl {
+    > span {
+      @apply
+      h-3xl
+      ;
+    }
+  }
+  &.text-2xl {
+    > span {
+      @apply
+      h-2xl
+      ;
+    }
+  }
+  &.text-xl {
+    > span {
+      @apply
+      h-xl
+      ;
+    }
+  }
+  &.text-lg {
+    > span {
+      @apply
+      h-lg
+      ;
+    }
+  }
+  &.text-tiny {
+    > span {
+      @apply
+      h-tiny
+      ;
+    }
+  }
+  &.text-sm {
+    > span {
+      @apply
+      h-sm
+      ;
+    }
+  }
+  &.text-xs {
+    > span {
+      @apply
+      h-xs
+      ;
+    }
+  }
+}
+@keyframes stepper {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(-9em + (var(--value) * -1em)));
+  }
+}

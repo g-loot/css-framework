@@ -30,7 +30,7 @@
     &::after {
       @apply
       absolute
-      inset-1
+      inset-[4px]
       transition-transform
       transform-gpu
       ease-[cubic-bezier(0.9,0,0.1,1)]
@@ -86,7 +86,7 @@
   > i {
     &::before {
       @apply
-      inset-[0.2rem]
+      inset-[3px]
       ;
     }
     &::after {
@@ -105,7 +105,7 @@
   > i {
     &::before {
       @apply
-      inset-0.5
+      inset-[2px]
       ;
     }
     &::after {
@@ -125,10 +125,7 @@
 .checkmark-invisible {
   &:not(.is-active) {
     @apply
-    bg-gradient-radial-to-b
-    from-ui-800/0
-    to-ui-800/0
-    text-ui-800/0
+    bg-ui-800/0
     shadow-[0_0_0_2px_rgba(var(--color-ui-600),0)]
     ;
   }

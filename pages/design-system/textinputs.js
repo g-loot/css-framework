@@ -446,10 +446,7 @@ const DSpage = () => {
                     <div className="form-group">
                       <label htmlFor="search-field">Search</label>
                       <div className="input-group">
-                        <button
-                          role="button"
-                          className="button button-ghost"
-                        >
+                        <button role="button" className="button button-ghost">
                           <span className="icon icon-zoom" />
                         </button>
                         <input
@@ -535,10 +532,12 @@ const DSpage = () => {
             <h3 className="h4 mb-6 lg:mb-10">Default (browser)</h3>
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
-              <div className="form-group">
-                      <label htmlFor="token2">How many tokens to you want to gift Jamlog?</label>
-                      <input min="1" max="100" name="token2" type="number" />
-                    </div>
+                <div className="form-group">
+                  <label htmlFor="token2">
+                    How many tokens to you want to gift Jamlog?
+                  </label>
+                  <input min="1" max="100" name="token2" type="number" />
+                </div>
               </div>
               <div className="flex-1">
                 <iframe
@@ -546,6 +545,33 @@ const DSpage = () => {
                   width="100%"
                   height="150"
                   src="//jsfiddle.net/augustin_hiebel/fqbmv056/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
+            <h3 className="h4 mb-6 lg:mb-10">With hidden buttons</h3>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="form-group">
+                  <label htmlFor="token2">
+                    How many tokens to you want to gift Jamlog?
+                  </label>
+                  <input
+                    min="1"
+                    max="100"
+                    name="token3"
+                    type="number"
+                    className="is-nodefault"
+                  />
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="150"
+                  src="//jsfiddle.net/augustin_hiebel/bwjsvac3/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

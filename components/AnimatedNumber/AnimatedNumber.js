@@ -7,7 +7,7 @@ export default function AnimatedNumber(props) {
     from: { number: 0 },
     number: n,
     delay: 200,
-    config: { duration: 3900, mass: 1, tension: 30, friction: 10 },
+    config: { duration: 3700, mass: 1, tension: 30, friction: 10 },
   });
 
   return <animated.span>{number.to((n) => n.toFixed(0))}</animated.span>;

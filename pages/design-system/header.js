@@ -199,7 +199,7 @@ const DSpage = () => {
                           className="button button-primary button-play"
                         >
                           <span className="icon icon-circle-caret-right" />
-                          <span>Learn how to Ladder</span>
+                          <span>How to join the Ladder</span>
                         </button>
 
                         <button

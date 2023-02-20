@@ -219,6 +219,14 @@ export const FrameworkPages = {
           tab: 3,
         },
         {
+          label: "Level Up",
+          chip: "modal",
+          url: "profile/1?modallevelup=true",
+          query: "",
+          tags: "profile, view, user, level up, xp, level, lvl",
+          tab: 3,
+        },
+        {
           title: true,
           label: "Profile (others)",
           tab: 0,

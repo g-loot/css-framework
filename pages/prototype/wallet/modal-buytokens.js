@@ -121,8 +121,7 @@ export default function ModalBuyTokens(props) {
                   height="auto"
                 />
                 <div className="leading-tight text-left py-2">
-                  Premium subscribers get up to 10 free extra tokens every time
-                  they make a token bundle purchase.
+                  Premium subscribers get up to 300 extra tokens every time they make a token bundle purchase
                 </div>
                 <div />
                 <div className="py-4">

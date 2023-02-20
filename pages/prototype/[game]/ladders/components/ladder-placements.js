@@ -225,7 +225,7 @@ export default function LadderPlacements() {
                     </div>
                     <div>
                       <span className={`icon ${selectedLadder?.isPowerPlay ? 'icon-token' : 'icon-powertoken'} `} />
-                      <span>2</span>
+                      <span>120</span>
                     </div>
                   </button>
                 )}
@@ -241,7 +241,7 @@ export default function LadderPlacements() {
                 </div>
                 <div>
                   <span className="icon icon-token " />
-                  <span>1</span>
+                  <span>60</span>
                 </div>
               </button>
             )}

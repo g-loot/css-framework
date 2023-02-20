@@ -13,6 +13,7 @@ import { UiContext } from "../../../../contexts/ui";
 import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
 import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
 import ModalAchievementReceived from "../../modal-achievementreceived";
+import ModalLevelUp from "../../modal-levelup";
 import ProfileHeader from "../header";
 
 const achievementsList = [
@@ -106,6 +107,7 @@ export default function Home() {
   const { user_id } = router.query;
   const { query } = useRouter();
   const modalAchievement = query.modalachievement === "true" ? true : false;
+  const modalLeveLUp = query.modallevelup === "true" ? true : false;
   
   useEffect(() => {
     if (modalAchievement) {
@@ -116,6 +118,18 @@ export default function Home() {
   function openModalAchievementReceived(level, name, icon) {
     uiContext.openModal(
       <ModalAchievementReceived level={level} name={name} icon={icon} />
+    );
+  }
+
+  useEffect(() => {
+    if (modalLeveLUp) {
+      openmodalLeveLUp();
+    }
+  }, [modalLeveLUp]);
+  
+  function openmodalLeveLUp(level, name, icon) {
+    uiContext.openModal(
+      <ModalLevelUp />
     );
   }
 

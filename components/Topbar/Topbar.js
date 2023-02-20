@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import Link from "next/link";
 import Lottie from "lottie-react";
@@ -190,6 +190,8 @@ export default function TopbarNew() {
   const modalDownloadStarted =
     query.modaldownloadstarted === "true" ? true : false;
   const isPremium = query.premium === "true" ? true : false;
+  const [hasBack, setHasBack] = useState(false);
+  const [hasForward, setHasForward] = useState(false);
 
   useEffect(() => {
     if (modalDownloadStarted) {
@@ -197,31 +199,21 @@ export default function TopbarNew() {
     }
   }, [modalDownloadStarted]);
 
-  /*
-
+ 
   useEffect(() => {
-    document.addEventListener("keydown", (e) => {
-      e.preventDefault();
-      if ((e.metaKey || e.ctrlKey) && e.code === "KeyC") {
-        console.log("KeyC", variablesContext.newBrand);
-        if(!variablesContext.newBrand) {
-          variablesContext.brandOn();
-        } else {
-          variablesContext.brandOff();
-        }
-      }
-    });
-  });
-  */
-
-  function brandToggle() {
-    if (!variablesContext.newBrand) {
-      variablesContext.brandOn();
-    } else {
-      variablesContext.brandOff();
+    if (window.history.length) {
+      setHasBack(true);
     }
-  }
-
+  }, [hasBack]);
+  
+   /*
+  useEffect(() => {
+    if (hasForward) {
+      setHasForward(false);
+    }
+  }, [hasForward]);
+  */
+  
   function openModalDownloadStarted() {
     uiContext.openModal(<ModalDownloadStarted></ModalDownloadStarted>);
   }
@@ -229,6 +221,15 @@ export default function TopbarNew() {
   function openModalBuyTokens() {
     uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
   }
+
+  function handleBack() {
+    router.back();
+    setHasForward(true);
+  }  
+  function handleForward() {
+    window.history.go(1);
+    setHasForward(false);
+  }  
 
   return (
     <div className="sticky top-0 z-50 bg-ui-850/90 navbar h-12 flex items-center border-b border-ui-700">
@@ -245,6 +246,14 @@ export default function TopbarNew() {
                 >
                   <div className="icon icon-menu-8 text-ui-200"></div>
                 </label>
+              </div>
+              <div className="hidden lg:flex gap-2">
+                <button type="button" className={`button button-tertiary rounded-full ${hasBack ? '' : 'opacity-50 pointer-events-none'}`} onClick={handleBack}>
+                  <span className="icon icon-ctrl-left" />
+                </button>
+                <button type="button" className={`button button-tertiary rounded-full ${hasForward ? '' : 'opacity-50 pointer-events-none'}`} onClick={handleForward}>
+                  <span className="icon icon-ctrl-right" />
+                </button>
               </div>
               <ul className="hidden lg:flex tabs tabs-secondary overflow-visible">
                 <li>
