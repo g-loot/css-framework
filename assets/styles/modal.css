@@ -76,7 +76,7 @@
   &:not([class*='surface']) {
     @apply
     bg-ui-800
-    border-t
+    border
     border-ui-700
     ;
   }

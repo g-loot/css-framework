@@ -1,9 +1,8 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
-import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
-import ModalLadderHowitworksVideo from "./modal-howitworks-video";
+import ModalLadderResults from "./modal-ladderresults";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import TabLaddersClanLeaderboard from "./tab-clanleaderboards";
 import TabLaddersHowItWorks from "./tab-howitworks";
@@ -77,12 +76,8 @@ export default function Home() {
   const defaultTab = "solo-leaderboard";
   const selectedTab = tab ? tab : defaultTab;
   const uiContext = useContext(UiContext);
-
-  function openModalLadderHowitworksVideo() {
-    uiContext.openModal(
-      <ModalLadderHowitworksVideo></ModalLadderHowitworksVideo>
-    );
-  }
+  const { query } = useRouter();
+  const modalLadderResults = query.modalladderresults === "true" ? true : false;
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
@@ -93,6 +88,18 @@ export default function Home() {
       prototype.defineDefaultGameID(selectedGame.id);
     }
   }, [selectedGame]);
+
+  useEffect(() => {
+    if (modalLadderResults) {
+      openmodalLadderResults();
+    }
+  }, [modalLadderResults]);
+  
+  function openmodalLadderResults(level, name, icon) {
+    uiContext.openModal(
+      <ModalLadderResults ladder={prototype.getLadderByID(game, ladder_id)} />
+    );
+  }
 
 
   return (

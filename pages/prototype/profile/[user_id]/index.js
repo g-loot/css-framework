@@ -127,7 +127,7 @@ export default function Home() {
     }
   }, [modalLeveLUp]);
   
-  function openmodalLeveLUp(level, name, icon) {
+  function openmodalLeveLUp() {
     uiContext.openModal(
       <ModalLevelUp />
     );

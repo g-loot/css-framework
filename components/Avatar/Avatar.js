@@ -85,7 +85,7 @@ export default function Avatar(props) {
                   >
                     <div />
                   </div>
-                  <div className="text-sm text-ui-300 mt-2">
+                  <div className="text-sm text-ui-300 mt-2 text-center">
                     1224XP until level {prototype.getUserByID(userId).level + 1}
                   </div>
                 </div>
