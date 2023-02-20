@@ -26,6 +26,7 @@ export default function ModalLadderResults(props) {
 
   return (
     <>
+    {ladder && (
       <div className="relative z-10">
         <div className="modal max-w-sm">
           <button
@@ -202,6 +203,7 @@ export default function ModalLadderResults(props) {
           </div>
         </div>
       </div>
+    )}
     </>
   );
 }
