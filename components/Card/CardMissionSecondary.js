@@ -60,17 +60,19 @@ export default function CardMissionSecondary(props) {
               {variablesContext.availableMissions < 2 ? (
                 <>
                   {!MissionRetrieved && (
-                    <button
+                    <><button
                       className="button button-secondary mx-auto"
                       onClick={handleGetMission.bind(this)}
                     >
                       <span>Get new mission</span>
                     </button>
+                    <div className="text-sm mt-2">{2 - variablesContext.availableMissions} mission{variablesContext.availableMissions < 1 && (<>s</>)} available</div>
+                    </>
                   )}
                 </>
               ) : (
                 <div className="text-ui-100">
-                  <h5>New missions in</h5>
+                  <h5 className="text-lg">New missions in</h5>
                   <Countdown
                     hasLabels={true}
                     labelsAbbr={true}
@@ -170,7 +172,7 @@ export default function CardMissionSecondary(props) {
                   </div>
                 )}
               </div>
-              <div className="card-title">{mission.name}</div>
+              <div className="card-title"><span>{mission.name}</span></div>
               <div className="card-meta">
                 {!hasClaimed && mission.target === mission.current ? (
                   <div>
@@ -279,7 +281,7 @@ export default function CardMissionSecondary(props) {
               {!hasClaimed && mission.target === mission.current ? (
                 <></>
               ) : (
-                <div>
+                <div className="card-progress">
                   <div className={`${mission.target === mission.current && hasClaimed ? 'opacity-0' : ''}`}>
                     <div className="text-sm text-ui-300">
                       {mission.current}/{mission.target}

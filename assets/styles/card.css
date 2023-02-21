@@ -314,7 +314,7 @@
 
     .card-title {
       @apply 
-      text-xl
+      text-lg
       mt-1;
 
       + .card-meta {
@@ -466,8 +466,11 @@
 
 .card-mission.card-secondary {
   @apply 
-  aspect-[7/4]
-  md:aspect-[7/3.5]
+  aspect-[8/2]
+  sm:aspect-[8/3]
+  md:aspect-[8/4]
+  xl:aspect-[8/3]
+  2xl:aspect-[8/3.5]
   flex
   flex-row
   items-stretch
@@ -510,7 +513,7 @@
   .card-bg {
     @apply relative
     order-1
-    flex-2;
+    flex-none;
   }
   .card-body {
     @apply flex-3
@@ -531,6 +534,21 @@
       &,
       > * {
         @apply rounded-r-none;
+      }
+    }
+    .card-progress {
+      > div {
+        @apply
+        flex
+        items-center
+        gap-4
+        -my-1
+        ;
+        > .progressbar {
+          @apply
+          -order-1
+          ;
+        }
       }
     }
   }
@@ -576,6 +594,13 @@
           @apply delay-[0.9s];
         }
       }
+    }
+  }
+  .revealer-front {
+    .card-bg {
+      @apply
+      flex-1
+      ;
     }
   }
   &.is-active {
