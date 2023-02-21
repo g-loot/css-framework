@@ -20,20 +20,16 @@ export default function ClanHeader() {
   }, [clan_id]);
 
   useEffect(() => {
-    if(hasAccepted && selectedClan) {
+    if (hasAccepted && selectedClan) {
       uiContext.openToastr({
         size: "medium",
         text: `You have successfully joined the clan ${selectedClan.nickname}.`,
         color: "green",
         autoDelete: true,
         autoDeleteDelay: 2500,
-      })
+      });
     }
   }, [hasAccepted, selectedClan]);
-
-
-
-  
 
   return (
     <>
@@ -133,30 +129,30 @@ export default function ClanHeader() {
               </div>
             </div>
           </div>
-          <div className="hidden lg:block absolute z-20 top-3 right-3">
-            {selectedClan.isYou && (
-              <a href="#" className="button button-sm button-tertiary">
-                <span className="icon icon-cogwheel" />
-                <span>Clan settings</span>
-              </a>
-            )}
-          </div>
           <div className="header-meta lg:items-end p-3 animate-slide-in-bottom">
             {selectedClan.isYou ? (
-              <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                <div className="text-center">
-                  You have <b>3</b> pending applications
+              <div className="space-y-2">
+                <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                  <div className="text-center">
+                    You have <b>3</b> pending applications
+                  </div>
+                  <div className="flex gap-2">
+                    <Link href="/prototype/clans/1/applications">
+                      <a
+                        type="button"
+                        className="button button-sm button-primary flex-1"
+                      >
+                        <span className="icon icon-a-time" />
+                        <span>View applicants</span>
+                      </a>
+                    </Link>
+                  </div>
                 </div>
-                <div className="flex gap-2">
-                  <Link href="/prototype/clans/1/applications">
-                    <a
-                      type="button"
-                      className="button button-sm button-primary flex-1"
-                    >
-                      <span className="icon icon-a-time" />
-                      <span>View applicants</span>
-                    </a>
-                  </Link>
+                <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
+                  <button type="button" className="button button-sm button-secondary w-full">
+                    <span className="icon icon-cogwheel" />
+                    <span>Clan settings</span>
+                  </button>
                 </div>
               </div>
             ) : (
@@ -164,7 +160,10 @@ export default function ClanHeader() {
                 {hasAccepted ? (
                   <>
                     <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
-                      <div className="text-center">Welcome to the {selectedClan.nickname} clan {prototype.getUserByID(1).nickname}!</div>
+                      <div className="text-center">
+                        Welcome to the {selectedClan.nickname} clan{" "}
+                        {prototype.getUserByID(1).nickname}!
+                      </div>
                     </div>
                   </>
                 ) : (

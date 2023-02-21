@@ -148,7 +148,7 @@ export default function ModalLadderResults(props) {
                 <h3 className="h6 text-ui-300 text-center mb-2">
                   Your final result
                 </h3>
-                <div className="px-0 md:px-10">
+                <div className="px-0 md:px-10 max-w-[calc(100vw-3rem)]">
                   <div className="w-full flex items-center justify-center bg-ui-850 rounded">
                     <Slider
                       itemWidth={138 + 16 + 16}
@@ -211,7 +211,7 @@ export default function ModalLadderResults(props) {
                 </div>
                 </div>
               </div>
-              <div className="flex justify-center mt-4 mb-2">
+              <div className="flex justify-center mt-2 mb-6">
                 <button
                   type="button"
                   className={`button button-primary ${

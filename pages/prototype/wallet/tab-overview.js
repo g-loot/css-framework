@@ -27,7 +27,7 @@ const WalletItems = [
     icon: "icon-token",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-token-face.png",
-    amount: "37",
+    amount: "10223",
     use: "To enter rounds in the <b>Ladders</b>.",
     get: "From <b>Missions, Daily Login Streak</b> or buy them directly from the <b>Wallet</b>.",
     color: "text-currency-2-500",
@@ -40,7 +40,7 @@ const WalletItems = [
     icon: "icon-powertoken",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-powertoken-face.png",
-    amount: "15",
+    amount: "30",
     use: "To enter rounds in the <b>Power Plays</b>.",
     get: "Buy them directly from the <b>Wallet</b>.",
     color: "text-currency-3-500",
@@ -153,7 +153,7 @@ export default function TabWalletOverview() {
                       <img src={item.image} />
                     </video>
                   ) : (
-                    <img src={item.image} alt="" className="h-32 w-32" />
+                    <img src={item.image} alt="" className="h-32 w-32 sm:h-24 sm:w-24 xl:h-32 xl:w-32" />
                   )}
                   <div>
                     <span className="text-3xl">{item.amount}</span>{" "}
