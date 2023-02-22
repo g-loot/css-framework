@@ -78,7 +78,7 @@
         @apply
         transition
         ease-linear
-        duration-75
+        duration-[0s]
         ;
       }
 
@@ -581,7 +581,7 @@
     @apply
     transition
     ease-linear
-    duration-75
+    duration-[0s]
     ;
   }
 

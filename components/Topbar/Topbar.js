@@ -247,7 +247,7 @@ export default function TopbarNew() {
                   <div className="icon icon-menu-8 text-ui-200"></div>
                 </label>
               </div>
-              <div className="hidden lg:flex gap-2">
+              <div className="hidden lg:flex gap-2 mr-2">
                 <button type="button" className={`button button-tertiary rounded-full ${hasBack ? '' : 'opacity-50 pointer-events-none'}`} onClick={handleBack}>
                   <span className="icon icon-ctrl-left" />
                 </button>

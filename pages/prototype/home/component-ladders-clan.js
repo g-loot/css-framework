@@ -140,6 +140,7 @@ export default function HomeLaddersClan() {
         <Slider
         itemWidth={809 + 16}
         bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
+        isHover={true}
       >
         {ClanLadders.map((item, itemIndex) => (
           <LadderCardSecondary
