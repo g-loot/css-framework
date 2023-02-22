@@ -72,7 +72,7 @@ export default function CardMissionSecondary(props) {
                 </>
               ) : (
                 <div className="text-ui-100">
-                  <h5 className="text-lg">New missions in</h5>
+                  <div>New missions in</div>
                   <Countdown
                     hasLabels={true}
                     labelsAbbr={true}

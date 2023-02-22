@@ -268,7 +268,31 @@ export default function Home() {
         </section>
         */}
 
-        <h2 className="h3 mt-8 mx-4 sm:mx-0">Missions</h2>
+        <h2 className="h3 mt-8 mb-4 mx-4 sm:mx-0">Missions</h2>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 mx-4 sm:mx-0 text-sm text-ui-300">
+          <div>
+            New missions in <b>4H 23M 12S</b>
+          </div>
+          <div className="md:text-right">
+            Your latest match ended <b>Dec 13 / 8:12 PM</b>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
+          <p>
+            {!isPremium && (
+              <>
+                Get{" "}
+                <Link href="/prototype/premium">
+                  <a className="text-premium-500 link">Premium</a>
+                </Link>{" "}
+                and earn +50% of XP on all missions
+              </>
+            )}
+          </p>
+          <p className="md:text-right">
+            You have completed 1 out of 6 missions
+          </p>
+        </div>
         <HomeLadderMissions gameSlug="valorant" />
         <HomeLadderMissions gameSlug="pubg" />
       </PrototypeStructure>

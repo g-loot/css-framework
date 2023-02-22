@@ -28,12 +28,12 @@ export default function HomeLadderMissions(props) {
 
   return (
     <section
-      className="py-8 animate-slide-in-bottom animate-delay"
+      className="mb-8 animate-slide-in-bottom animate-delay"
       style={{ "--delay": "calc(2 * 0.05s)" }}
     >
       <div className="flex items-center justify-between mb-2 mx-4 sm:mx-0">
         <h3 className="h6">
-          Daily missions in {prototype.getGameBySlug(props.gameSlug)?.name}
+          {prototype.getGameBySlug(props.gameSlug)?.name}
         </h3>
         <div className="hidden sm:flex items-center gap-2">
           <div
@@ -57,15 +57,6 @@ export default function HomeLadderMissions(props) {
               <span className="block sm:hidden">Update</span>
             </button>
           </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
-        <div>
-          New missions in <b>4H 23M 12S</b>
-        </div>
-        <div className="md:text-right">
-          Your latest match ended <b>Dec 13 / 8:12 PM</b>
         </div>
       </div>
 

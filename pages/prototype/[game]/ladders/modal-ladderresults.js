@@ -58,7 +58,7 @@ export default function ModalLadderResults(props) {
                           bgColor="from-ui-850 via-ui-850 to-ui-850/0"
                         >
                           <div className="flex items-center gap-6 whitespace-nowrap leading-tight">
-                            <div className="pl-10 pr-4 py-2 text-center flex flex-col gap-3 items-center">
+                            <div className="pl-10 pr-4 py-1 text-center flex flex-col gap-3 items-center">
                               <Avatar id={1} size="avatar-sm" />
                               <div
                                 className={`${
@@ -70,7 +70,7 @@ export default function ModalLadderResults(props) {
                                 {prototype.getUserByID(1)?.nickname}
                               </div>
                             </div>
-                            <div className="flex flex-col justify-center gap-5">
+                            <div className="flex flex-col justify-center gap-4">
                               <div className="flex gap-2 items-center">
                                 <span>You were <span className="text-ui-100">58 points</span> from winning</span>
                                 <div className="flex items-center whitespace-nowrap gap-1 text-currency-1-500">
@@ -105,14 +105,6 @@ export default function ModalLadderResults(props) {
                                   </div>
                                   <div className="text-ui-100 text-xl lg:text-2xl">
                                     #89
-                                  </div>
-                                </div>
-                                <div className="px-4 border-l border-ui-600">
-                                  <div className="text-xs text-ui-300 uppercase font-bold">
-                                    Rounds played
-                                  </div>
-                                  <div className="text-ui-100 text-xl lg:text-2xl">
-                                    4
                                   </div>
                                 </div>
                                 <div className="px-4 border-l border-ui-600">
