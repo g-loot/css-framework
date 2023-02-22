@@ -10,7 +10,7 @@ const slides = [
     description:
       "Ladder is our Stryda Special! You compete against other Stryda players to climb the leaderboard, get on top and win crazy rewards! Interested? Entry Ladder is on us! ",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672222065/Stryda/illustrations/Carousel_Free_entry_1.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1672222065/Stryda/illustrations/Carousel_Free_entry_2.jpg",
     buttonLabel: "Compete now",
     buttonURL: "/prototype/valorant/ladders?freeentry=true",
   },
@@ -50,7 +50,7 @@ const slides = [
 const modes = {
   name: "carouselmode",
   code: "carouselmode",
-  duration: 5,
+  duration: 4,
 };
 
 export default function Carousel(props) {
@@ -58,6 +58,7 @@ export default function Carousel(props) {
     props.isOnboarding !== undefined ? props.isOnboarding : false;
   const isWithButtons =
     props.isWithButtons !== undefined ? props.isWithButtons : false;
+  const size = props.size !== undefined ? props.size : "";
   const [slideNumber, setSlideNumber] = useState(0);
   const [percent, setPercent] = useState(0);
   const slideDuration = 3000;
@@ -153,7 +154,7 @@ export default function Carousel(props) {
 
   return (
     <>
-      <div className="carousel">
+      <div className={`carousel ${size}`}>
         <div
           className="carousel-slides"
           onMouseEnter={() => {

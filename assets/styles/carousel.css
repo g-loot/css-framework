@@ -874,3 +874,27 @@
     }
   }
 }
+
+/* size */
+
+.carousel.carousel-sm {
+  .carousel-slides {
+    @apply
+    lg:h-60
+    ;
+    .carousel-slide {
+      .carousel-body {
+        > * {
+          @apply
+          lg:max-w-sm
+          ;
+        }
+      }
+    }
+  }
+  .carousel-nav {
+    @apply
+    hidden
+    ;
+  }
+}

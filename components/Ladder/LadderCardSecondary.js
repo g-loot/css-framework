@@ -1,10 +1,13 @@
 import React from "react";
 import Countdown from "../Countdown/Countdown";
+import Lottie from "lottie-react";
+import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
 import { UiContext } from "../../contexts/ui";
 import { useContext } from "react";
 import { usePrototypeData } from "../../contexts/prototype";
 import ModalClaimLadderRewards from "../../pages/prototype/home/modal-claim-ladderrewards";
 import Link from "next/link";
+import Tooltip from "../Tooltip/Tooltip";
 
 const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
 const NOW_IN_MS = new Date().getTime();
@@ -20,6 +23,7 @@ export default function LadderCardSecondary(props) {
   const game_slug = props.game_slug || "valorant";
   const isDemo = props.isDemo || false;
   const isGlobal = props.isGlobal || false;
+  const className = props.className || "";
 
   function openModalClaimLadderRewards() {
     uiContext.openModal(<ModalClaimLadderRewards></ModalClaimLadderRewards>);
@@ -42,7 +46,9 @@ export default function LadderCardSecondary(props) {
           isHorizontal ? "card-horizontal" : ""
         } ${isEnrolled && !ladder.hasClaim ? "is-active" : ""} ${
           ladder.status === "finished" ? "is-inactive" : ""
-        } ${ladder.status !== "finished" ? "interactive" : ""}`}
+        } ${ladder.status !== "finished" ? "interactive" : ""} ${
+          ladder.isPremium ? "card-premium" : ""
+        } ${className}`}
       >
         {ladder.hasClaim && (
           <div className="card-overlay">
@@ -104,6 +110,39 @@ export default function LadderCardSecondary(props) {
         </div>
         <div className="card-content">
           <div className="card-body">
+            {ladder.isPremium && (
+              <Tooltip
+                placement="top"
+                tooltip={
+                  <div className="w-56 flex items-center gap-4 text-sm">
+                    <div className="relative">
+                      <span className="icon icon-crown text-6xl text-premium-500" />
+                      <div className="lottie-premium absolute -inset-1">
+                        <Lottie
+                          animationData={LottieExplosion}
+                          loop={false}
+                          autoplay={true}
+                        />
+                      </div>
+                    </div>
+                    <div className="flex-1">
+                      This Ladder is available for{" "}
+                      <span className="text-premium-500">Premium members</span>{" "}
+                      only.
+                    </div>
+                  </div>
+                }
+              >
+                <Link href="/prototype/premium">
+                  <button
+                    type="button"
+                    className="button button-ghost rounded-full absolute top-1 right-1"
+                  >
+                    <span className="icon icon-crown text-premium-500 icon-24" />
+                  </button>
+                </Link>
+              </Tooltip>
+            )}
             <h2 className="h4">{ladder.name}</h2>
             <div className="flex gap-4 items-center">
               <div className="flex items-center whitespace-nowrap gap-1">

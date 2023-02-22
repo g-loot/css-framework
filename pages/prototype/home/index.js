@@ -75,7 +75,7 @@ export default function Home() {
         <Ad width="1005" height="300" />
 
         <section className="surface sm:rounded-lg overflow-hidden mb-8">
-          <Carousel />
+          <Carousel size="carousel-sm" />
         </section>
 
         {/*

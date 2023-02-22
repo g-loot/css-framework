@@ -113,6 +113,29 @@
 
   /* size */
 
+  &.avatar-2xl {
+    --inner-padding-one: 12px;
+    --inner-padding-two: 12px/2;
+    @apply
+    h-40
+    w-40
+    ;
+    > div {
+      > * {
+        & {
+          @apply
+          text-5xl
+          ;
+        }
+      }
+    }
+    > b,
+    > strong {
+      @apply
+        text-xl
+      ;
+    }
+  }
   &.avatar-xl {
     --inner-padding-one: 10px;
     --inner-padding-two: 10px/2;
@@ -480,9 +503,32 @@
 
 @media only screen and (min-width: 640px) {
 	.avatar {
+    &.sm\:avatar-2xl {
+      --inner-padding-one: 12px;
+      --inner-padding-two: 12px/2;
+      @apply
+      h-32
+      w-32
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-5xl
+            ;
+          }
+        }
+      }
+      > b,
+      > strong {
+        @apply
+          text-xl
+        ;
+      }
+    }
     &.sm\:avatar-xl {
-      --inner-padding-one: 0.6rem;
-      --inner-padding-two: 0.6rem/2;
+      --inner-padding-one: 10px;
+      --inner-padding-two: 10px/2;
       @apply
       h-32
       w-32
@@ -504,8 +550,8 @@
       }
     }
     &.sm\:avatar-lg {
-      --inner-padding-one: 0.6rem;
-      --inner-padding-two: 0.6rem/2;
+      --inner-padding-one: 8px;
+      --inner-padding-two: 8px/2;
       @apply
       h-24
       w-24
@@ -527,8 +573,8 @@
       }
     }
     &.sm\:avatar-md {
-      --inner-padding-one: 0.3rem;
-      --inner-padding-two: 0.3rem/2;
+      --inner-padding-one: 6px;
+      --inner-padding-two: 6px/2;
       @apply
       h-20
       w-20
@@ -550,8 +596,8 @@
       }
     }
     &.sm\:avatar-sm {
-      --inner-padding-one: 0.25rem;
-      --inner-padding-two: 0.25rem/2;
+      --inner-padding-one: 4px;
+      --inner-padding-two: 4px/2;
       @apply
       h-14
       w-14
@@ -573,8 +619,8 @@
       }
     }
     &.sm\:avatar-xs {
-      --inner-padding-one: 0.2rem;
-      --inner-padding-two: 0.2rem/2;
+      --inner-padding-one: 4px;
+      --inner-padding-two: 4px/2;
       @apply
       h-8
       w-8
@@ -598,8 +644,8 @@
       }
     }
     &.sm\:avatar-tiny {
-      --inner-padding-one: 0.15rem;
-      --inner-padding-two: 0.15rem/2;
+      --inner-padding-one: 2px;
+      --inner-padding-two: 2px/2;
       @apply
       h-7
       w-7
@@ -626,9 +672,32 @@
 }
 @media only screen and (min-width: 768px) {
 	.avatar {
+    &.md\:avatar-2xl {
+      --inner-padding-one: 12px;
+      --inner-padding-two: 12px/2;
+      @apply
+      h-32
+      w-32
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-5xl
+            ;
+          }
+        }
+      }
+      > b,
+      > strong {
+        @apply
+          text-xl
+        ;
+      }
+    }
     &.md\:avatar-xl {
-      --inner-padding-one: 0.6rem;
-      --inner-padding-two: 0.6rem/2;
+      --inner-padding-one: 12px;
+      --inner-padding-two: 12px/2;
       @apply
       h-32
       w-32
@@ -650,8 +719,8 @@
       }
     }
     &.md\:avatar-lg {
-      --inner-padding-one: 0.6rem;
-      --inner-padding-two: 0.6rem/2;
+      --inner-padding-one: 8px;
+      --inner-padding-two: 8px/2;
       @apply
       h-24
       w-24
@@ -673,8 +742,8 @@
       }
     }
     &.md\:avatar-md {
-      --inner-padding-one: 0.3rem;
-      --inner-padding-two: 0.3rem/2;
+      --inner-padding-one: 6px;
+      --inner-padding-two: 6px/2;
       @apply
       h-20
       w-20
@@ -696,8 +765,8 @@
       }
     }
     &.md\:avatar-sm {
-      --inner-padding-one: 0.25rem;
-      --inner-padding-two: 0.25rem/2;
+      --inner-padding-one: 4px;
+      --inner-padding-two: 4px/2;
       @apply
       h-14
       w-14
@@ -719,8 +788,8 @@
       }
     }
     &.md\:avatar-xs {
-      --inner-padding-one: 0.2rem;
-      --inner-padding-two: 0.2rem/2;
+      --inner-padding-one: 4px;
+      --inner-padding-two: 4px/2;
       @apply
       h-8
       w-8
@@ -744,8 +813,8 @@
       }
     }
     &.md\:avatar-tiny {
-      --inner-padding-one: 0.15rem;
-      --inner-padding-two: 0.15rem/2;
+      --inner-padding-one: 2px;
+      --inner-padding-two: 2px/2;
       @apply
       h-7
       w-7
@@ -772,9 +841,32 @@
 }
 @media only screen and (min-width: 1024px) {
 	.avatar {
+    &.lg\:avatar-2xl {
+      --inner-padding-one: 12px;
+      --inner-padding-two: 12px/2;
+      @apply
+      h-32
+      w-32
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-5xl
+            ;
+          }
+        }
+      }
+      > b,
+      > strong {
+        @apply
+          text-xl
+        ;
+      }
+    }
     &.lg\:avatar-xl {
-      --inner-padding-one: 0.6rem;
-      --inner-padding-two: 0.6rem/2;
+      --inner-padding-one: 12px;
+      --inner-padding-two: 12px/2;
       @apply
       h-32
       w-32
@@ -796,8 +888,8 @@
       }
     }
     &.lg\:avatar-lg {
-      --inner-padding-one: 0.6rem;
-      --inner-padding-two: 0.6rem/2;
+      --inner-padding-one: 8px;
+      --inner-padding-two: 8px/2;
       @apply
       h-24
       w-24
@@ -819,8 +911,8 @@
       }
     }
     &.lg\:avatar-md {
-      --inner-padding-one: 0.3rem;
-      --inner-padding-two: 0.3rem/2;
+      --inner-padding-one: 6px;
+      --inner-padding-two: 6px/2;
       @apply
       h-20
       w-20
@@ -842,8 +934,8 @@
       }
     }
     &.lg\:avatar-sm {
-      --inner-padding-one: 0.25rem;
-      --inner-padding-two: 0.25rem/2;
+      --inner-padding-one: 4px;
+      --inner-padding-two: 4px/2;
       @apply
       h-14
       w-14
@@ -865,8 +957,8 @@
       }
     }
     &.lg\:avatar-xs {
-      --inner-padding-one: 0.2rem;
-      --inner-padding-two: 0.2rem/2;
+      --inner-padding-one: 4px;
+      --inner-padding-two: 4px/2;
       @apply
       h-8
       w-8
@@ -890,8 +982,8 @@
       }
     }
     &.lg\:avatar-tiny {
-      --inner-padding-one: 0.15rem;
-      --inner-padding-two: 0.15rem/2;
+      --inner-padding-one: 2px;
+      --inner-padding-two: 2px/2;
       @apply
       h-7
       w-7
@@ -918,9 +1010,32 @@
 }
 @media only screen and (min-width: 1280px) {
 	.avatar {
+    &.xl\:avatar-2xl {
+      --inner-padding-one: 12px;
+      --inner-padding-two: 12px/2;
+      @apply
+      h-32
+      w-32
+      ;
+      > div {
+        > * {
+          & {
+            @apply
+            text-5xl
+            ;
+          }
+        }
+      }
+      > b,
+      > strong {
+        @apply
+          text-xl
+        ;
+      }
+    }
     &.xl\:avatar-xl {
-      --inner-padding-one: 0.6rem;
-      --inner-padding-two: 0.6rem/2;
+      --inner-padding-one: 12px;
+      --inner-padding-two: 12px/2;
       @apply
       h-32
       w-32
@@ -942,8 +1057,8 @@
       }
     }
     &.xl\:avatar-lg {
-      --inner-padding-one: 0.6rem;
-      --inner-padding-two: 0.6rem/2;
+      --inner-padding-one: 8px;
+      --inner-padding-two: 8px/2;
       @apply
       h-24
       w-24
@@ -965,8 +1080,8 @@
       }
     }
     &.xl\:avatar-md {
-      --inner-padding-one: 0.3rem;
-      --inner-padding-two: 0.3rem/2;
+      --inner-padding-one: 6px;
+      --inner-padding-two: 6px/2;
       @apply
       h-20
       w-20
@@ -988,8 +1103,8 @@
       }
     }
     &.xl\:avatar-sm {
-      --inner-padding-one: 0.25rem;
-      --inner-padding-two: 0.25rem/2;
+      --inner-padding-one: 4px;
+      --inner-padding-two: 4px/2;
       @apply
       h-14
       w-14
@@ -1011,8 +1126,8 @@
       }
     }
     &.xl\:avatar-xs {
-      --inner-padding-one: 0.2rem;
-      --inner-padding-two: 0.2rem/2;
+      --inner-padding-one: 4px;
+      --inner-padding-two: 4px/2;
       @apply
       h-8
       w-8
@@ -1036,8 +1151,8 @@
       }
     }
     &.xl\:avatar-tiny {
-      --inner-padding-one: 0.15rem;
-      --inner-padding-two: 0.15rem/2;
+      --inner-padding-one: 2px;
+      --inner-padding-two: 2px/2;
       @apply
       h-7
       w-7

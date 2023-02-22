@@ -891,6 +891,24 @@ export default function TabLaddersSoloLeaderboards() {
                                               </Link>
                                             </div>
                                             <div className="w-10">
+                                            {user.user != 1 &&
+                                                prototype.getUserByID(
+                                                  user.user
+                                                )?.isFriend && (
+                                                  <Tooltip
+                                                placement="left"
+                                                tooltip={
+                                                  <div className="max-w-xs text-sm text-center leading-tight">
+                                                    {prototype.getUserByID(
+                                                  user.user
+                                                )?.nickname} is a friend
+                                                  </div>
+                                                }
+                                              >
+                                                  <span className="icon icon-b-add text-ui-300" />
+                                                  </Tooltip>
+                                                )}
+                                              {/*
                                               {user.user != 1 &&
                                                 !prototype.getUserByID(
                                                   user.user
@@ -906,6 +924,7 @@ export default function TabLaddersSoloLeaderboards() {
                                                   <ButtonFeedback variant="button-tertiary rounded-full" icon="icon-add-27" message="Friend added" />
                                                   </Tooltip>
                                                 )}
+                                              */}
                                             </div>
 
                                             <div className="item-body flex justify-around items-center">

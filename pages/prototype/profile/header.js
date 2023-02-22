@@ -298,7 +298,7 @@ export default function ProfileHeader(props) {
                   <Link href="/prototype/friends">
                     <a
                       type="button"
-                      className="button button-sm button-secondary w-full"
+                      className="button button-sm button-primary w-full"
                     >
                       <span className="icon icon-add-27" />
                       <span>Add as friend</span>

@@ -50,6 +50,20 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1, 4],
+    ladders: [
+      {
+        gameSlug: "valorant",
+        id: 1,
+      },
+      {
+        gameSlug: "pubg",
+        id: 2,
+      },
+      {
+        gameSlug: "valorant",
+        id: 3,
+      },
+    ],
   },
   {
     id: 2,
@@ -140,6 +154,20 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1],
+    ladders: [
+      {
+        gameSlug: "pubg",
+        id: 1,
+      },
+      {
+        gameSlug: "valorant",
+        id: 2,
+      },
+      {
+        gameSlug: "pubg",
+        id: 3,
+      },
+    ],
   },
   {
     id: 4,

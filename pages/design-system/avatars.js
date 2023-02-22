@@ -121,6 +121,25 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    2x extra large
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex gap-4 justify-start">
+                      <div className="avatar avatar-2xl">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar avatar-2xl avatar-squircle">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Extra large
                   </div>
                   <div className="flex-1">

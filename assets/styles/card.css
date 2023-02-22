@@ -88,6 +88,12 @@
     justify-center
     rounded-t
     overflow-hidden;
+
+    &:last-child {
+      @apply
+      rounded-b
+      ;
+    }
   }
 
   .card-body {
@@ -466,7 +472,7 @@
 
 .card-mission.card-secondary {
   @apply 
-  aspect-[8/2]
+  aspect-[8/4]
   sm:aspect-[8/3]
   md:aspect-[8/4]
   xl:aspect-[8/3]
@@ -811,6 +817,7 @@
   & {
     @apply flex-none
     w-full
+    min-w-xs
     max-w-[calc(100vw-4rem)]
     transition-all
     duration-200
@@ -819,8 +826,10 @@
     leading-tight;
     > .card-image,
     > .card-content {
-      @apply relative
-      z-10;
+      @apply 
+      relative
+      z-10
+      ;
     }
     > .card-content {
       @apply flex-col
@@ -860,6 +869,9 @@
       }
     }
     > .card-image {
+      @apply
+      w-full
+      ;
       > .card-image-content {
         @apply w-full
         flex-row
@@ -895,8 +907,10 @@
   }
 
   & {
-    @apply grid-cols-1
-    md:max-w-[397px];
+    @apply 
+    grid-cols-1
+    md:max-w-[397px]
+    ;
     > .card-image {
       @apply md:col-span-3
       md:aspect-[16/6];
@@ -914,6 +928,7 @@
     min-h-10;
     > .card-image {
       @apply 
+      w-auto
       order-2;
     }
     > .card-content {
@@ -940,6 +955,17 @@
       }
     }
   }
+
+  &.card-premium {
+    .card-image {
+      > .card-image-content {
+        @apply
+        border-b-4
+        border-b-premium-500
+        ;
+      }
+    }
+  }
 }
 
 /* responsive card ladder secondary stacked  */
@@ -949,11 +975,12 @@
     &.sm\:card-horizontal {
       @apply 
       flex
-    flex-row
-    md:max-w-[809px]
-    min-h-10;
+      flex-row
+      md:max-w-[809px]
+      min-h-10;
       > .card-image {
         @apply 
+        w-auto
         order-2;
       }
       > .card-content {
@@ -992,6 +1019,7 @@
       min-h-10;
       > .card-image {
         @apply 
+        w-auto
         order-2;
       }
       > .card-content {
@@ -1029,6 +1057,7 @@
     min-h-10;
       > .card-image {
         @apply 
+        w-auto
         order-2;
       }
       > .card-content {

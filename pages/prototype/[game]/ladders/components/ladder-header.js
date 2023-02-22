@@ -4,6 +4,9 @@ import { useRouter } from "next/router";
 import Countdown from "../../../../../components/Countdown/Countdown";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import GameIcon from "../../../../../components/GameIcon/GameIcon";
+import Lottie from "lottie-react";
+import LottieExplosion from "../../../../../assets/animations/explosion_stryda_1.json";
+import Link from "next/link";
 
 function calculateTimeLeft() {
   const year = new Date().getFullYear();
@@ -41,7 +44,7 @@ export default function LadderHeader() {
     <>
       {selectedGame && (
         <>
-          <section className="sm:rounded surface surface-dimmed flex flex-col md:flex-row gap-8 items-center mb-4 p-4">
+          <section className={`sm:rounded surface surface-dimmed flex flex-col md:flex-row gap-8 items-center mb-4 p-4 ${prototype.getLadderByID(game, ladder_id)?.isPremium ? 'border-b-4 border-b-premium-500' : ''}`}>
             <div className="relative">
               <div className="absolute top-1 left-1">
                 <Tooltip tooltip={<div>{selectedGame.name}</div>}>
@@ -56,9 +59,45 @@ export default function LadderHeader() {
             </div>
             <div className="flex-1 relative">
               <div className="mb-4 flex items-center justify-between">
-                <h1 className="h4">
-                  {prototype.getLadderByID(game, ladder_id)?.name}
-                </h1>
+                <div className="flex items-center gap-1">
+                  <h1 className="h4">
+                    {prototype.getLadderByID(game, ladder_id)?.name}
+                  </h1>
+                  {prototype.getLadderByID(game, ladder_id)?.isPremium && (
+                    <Tooltip
+                      tooltip={
+                        <div className="w-56 flex items-center gap-4 text-sm">
+                          <div className="relative">
+                            <span className="icon icon-crown text-6xl text-premium-500" />
+                            <div className="lottie-premium absolute -inset-1">
+                              <Lottie
+                                animationData={LottieExplosion}
+                                loop={false}
+                                autoplay={true}
+                              />
+                            </div>
+                          </div>
+                          <div className="flex-1">
+                            This Ladder is available for{" "}
+                            <span className="text-premium-500">
+                              Premium members
+                            </span>{" "}
+                            only.
+                          </div>
+                        </div>
+                      }
+                    >
+                      <Link href="/prototype/premium">
+                        <button
+                          type="button"
+                          className="button button-ghost rounded-full"
+                        >
+                          <span className="icon icon-crown text-premium-500 icon-24" />
+                        </button>
+                      </Link>
+                    </Tooltip>
+                  )}
+                </div>
                 <div className="text-right flex items-center gap-1">
                   <span className="icon text-sm text-ui-300 icon-clock" />
                   <Countdown

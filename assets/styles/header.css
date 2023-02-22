@@ -13,8 +13,6 @@
   overflow-hidden
   ;
 
-  
-
   &:not([class*="rounded"]) {
     @apply
     rounded-lg
@@ -187,4 +185,71 @@
       }
     }
   } 
+}
+
+/* variant */
+
+.header.header-secondary {
+  @apply
+  xl:flex-col
+  text-center
+  ;
+
+  > .header-bg {
+    @apply
+    block
+    relative
+    bottom-auto
+    -order-1
+    aspect-[12/2]
+    bg-ui-850
+    border-b
+    border-b-ui-700
+    ;
+    &::before {
+      @apply
+      hidden
+      ;
+    }
+    > img {
+      @apply
+      absolute
+      block
+      xl:w-full
+      ;
+    }
+  }
+  > .header-content {
+    @apply
+    md:flex-col
+    ;
+    > .header-body {
+      @apply
+      py-4
+      ;
+    }
+    > .header-image {
+      .avatar.avatar-2xl {
+        @apply
+        -mt-10
+        sm:-mt-20
+        2xl:-mt-40
+        ;
+      }
+      .avatar.avatar-xl {
+        @apply
+        -mt-8
+        sm:-mt-16
+        2xl:-mt-32
+        ;
+      }
+    }
+  }
+  > .header-meta {
+    @apply
+    items-center
+    border-t
+    border-t-ui-700
+    ;
+  }
 }

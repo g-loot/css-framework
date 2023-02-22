@@ -38,6 +38,19 @@ const SoloLadders = [
     gameMode: "Spike Rush",
     name: "Spike Rush Ladder",
     status: "ongoing",
+    isEnrolled: false,
+    hasClaim: false,
+    isPremium: true,
+    cover:
+      "https://res.cloudinary.com/gloot/image/upload/v1677087781/Stryda/demo/Spike_Rush_Premium_1.jpg",
+  },
+  {
+    id: 6,
+    game_slug: "valorant",
+    name: null,
+    gameMode: "Spike Rush",
+    name: "Premium Spike Rush",
+    status: "ongoing",
     isEnrolled: true,
     hasClaim: false,
     cover:

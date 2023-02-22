@@ -350,7 +350,7 @@ export const dataShopitems = [
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1674214222/Stryda/shop/avatarframes/Slovenia.svg",
       },
-    
+
       {
         id: 136,
         name: "Sweden",
@@ -501,7 +501,29 @@ export const dataShopitems = [
         price: 100000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1674214222/Stryda/shop/avatarframes/Bronze_Crystal.svg",
-        },
+      },
+      {
+        id: 157,
+        name: "Black Circle",
+        price: 1500,
+        isOwned: true,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Black_Circle.svg",
+      },
+      {
+        id: 158,
+        name: "Widow Maker",
+        price: 2000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Widow_Maker.svg",
+      },
+      {
+        id: 158,
+        name: "Fairy Mirror",
+        price: 1380,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Fairy_Mirror.svg",
+      },
     ],
   },
 ];
