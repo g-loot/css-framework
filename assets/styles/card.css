@@ -1339,3 +1339,40 @@
     box-shadow: inset 0 0 0 1px rgba(var(--color-main) / 100%);
   }
 }
+
+.rarity {
+  @apply
+  flex
+  items-center
+  gap-1
+  text-sm
+  ;
+
+  > .icon {
+    @apply
+    animate-rotate
+    text-xl
+    ;
+  }
+
+  &.rarity-level-1 {
+    @apply
+    text-bronze-500
+    ;
+  }
+  &.rarity-level-2 {
+    @apply
+    text-bronze-500
+    ;
+  }
+  &.rarity-level-3 {
+    @apply
+    text-bronze-500
+    ;
+  }
+  &.rarity-level-4 {
+    @apply
+    text-bronze-500
+    ;
+  }
+}

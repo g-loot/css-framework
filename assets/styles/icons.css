@@ -2202,3 +2202,21 @@
 .icon-powertoken::before {
   content: "\ec24";
 }
+
+.icon-category-1::before {
+  content: "\ec28";
+}
+
+.icon-category-2::before {
+  content: "\ec27";
+}
+
+.icon-category-3::before {
+  content: "\ec26";
+}
+
+.icon-category-4::before {
+  content: "\ec25";
+}
+
+

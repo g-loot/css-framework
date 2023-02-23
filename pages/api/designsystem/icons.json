@@ -4,56 +4,72 @@
       "name": "Brand",
       "icons": [
         {
-          "tags": "brand,gloot,g-loot,logo,symbol",
+          "tags": "brand,gloot,stryda,g-loot,logo,symbol",
           "name": "stryda-symbol"
         },
         {
-          "tags": "brand,gloot,logo",
+          "tags": "brand,gloot,stryda,logo",
           "name": "stryda-logo"
         },
         {
-          "tags": "brand,gloot,tagline,esports",
+          "tags": "brand,gloot,stryda,tagline,esports",
           "name": "tagline"
         },
         {
-          "tags": "brand,gloot,xp,reward",
+          "tags": "brand,gloot,stryda,xp,reward",
           "name": "xp-symbol"
         },
         {
-          "tags": "brand,gloot,xp,reward",
+          "tags": "brand,gloot,stryda,xp,reward",
           "name": "xp-symbol-outline"
         },
         {
-          "tags": "brand,gloot,coin,reward,voucher",
+          "tags": "brand,gloot,stryda,coin,reward,voucher",
           "name": "coin"
         },
         {
-          "tags": "brand,gloot,token,reward,ladder",
+          "tags": "brand,gloot,stryda,token,reward,ladder",
           "name": "token"
         },
         {
-          "tags": "brand,gloot,ticket,reward,tournament,showdown",
+          "tags": "brand,gloot,stryda,ticket,reward,tournament,showdown",
           "name": "ticket"
         },
         {
-          "tags": "brand,gloot,ticket,reward,tournament,showdown",
+          "tags": "brand,gloot,stryda,ticket,reward,tournament,showdown",
           "name": "ticket-shape"
         },
         {
-          "tags": "brand,gloot,missions,xp",
+          "tags": "brand,gloot,stryda,missions,xp",
           "name": "missions"
         },
         {
-          "tags": "brand,gloot,ladder,leaderboard",
+          "tags": "brand,gloot,stryda,ladder,leaderboard",
           "name": "ladder"
         },
         {
-          "tags": "brand,gloot,tournament,showdown",
+          "tags": "brand,gloot,stryda,tournament,showdown",
           "name": "showdown"
         },
         {
-          "tags": "brand,gloot,premium",
+          "tags": "brand,gloot,stryda,premium",
           "name": "ic_stars_24px"
+        },
+        {
+          "tags": "brand,gloot,stryda,mission,category,rarity,common,rare,epic,legendary",
+          "name": "category-1"
+        },
+        {
+          "tags": "brand,gloot,stryda,mission,category,rarity,common,rare,epic,legendary",
+          "name": "category-2"
+        },
+        {
+          "tags": "brand,gloot,stryda,mission,category,rarity,common,rare,epic,legendary",
+          "name": "category-3"
+        },
+        {
+          "tags": "brand,gloot,stryda,mission,category,rarity,common,rare,epic,legendary",
+          "name": "category-4"
         }
       ]
     },

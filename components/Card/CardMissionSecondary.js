@@ -102,7 +102,7 @@ export default function CardMissionSecondary(props) {
           <div
             className={`card-mission card-secondary ${
               mission.target === mission.current && hasClaimed ? "is-inactive" : ""
-            }`}
+            } ${mission.category === 1 ? 'card-mission-cat-1' : ''} ${mission.category === 2 ? 'card-mission-cat-2' : ''} ${mission.category === 3 ? 'card-mission-cat-3' : ''} ${mission.category === 4 ? 'card-mission-cat-4' : ''} ${mission.category === 5 ? 'card-mission-cat-5' : ''}`}
           >
             {/*
             {!hasClaimed && mission.target === mission.current && (
@@ -124,14 +124,10 @@ export default function CardMissionSecondary(props) {
             <div className="card-body">
               <div className="card-category">
                 {mission.category === 1 && (
-                  <div className="flex items-center text-sm text-bronze-500 gap-1">
-                    <img
-                      className="animate-rotate"
-                      src="https://res.cloudinary.com/gloot/image/upload/v1672650689/Stryda/logos/mission-category-1.svg"
-                      width="20"
-                      height="20"
-                      alt=""
-                    />
+                  
+                  
+                  <div className="rarity">
+                    <span className="icon icon-category-1" />
                     <span>common</span>
                   </div>
                 )}

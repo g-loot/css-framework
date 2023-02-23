@@ -84,7 +84,6 @@ export default function TabMissionsMissions() {
               </div>
             </div>
             */}
-            
 
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
               <div>
@@ -175,6 +174,51 @@ export default function TabMissionsMissions() {
               ))}
             </div>
           </section>
+          <section
+            className="py-8 animate-slide-in-bottom animate-delay"
+            style={{ "--delay": "calc(3 * 0.05s)" }}
+          >
+            <h2 className="h3 mb-4 mx-4 sm:mx-0">Completed missions</h2>
+            <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
+            <table className="table table-rounded rounded-xl w-full text-center">
+              <tbody>
+                {selectedGame?.missions.map((mission, missionIndex) => (
+                    <>
+                      <tr
+                        key={missionIndex}
+                        className="animate-slide-in-bottom animate-delay leading-tight"
+                        style={{
+                          "--delay": "calc(" + missionIndex + " * 0.05s)",
+                        }}
+                      >
+                        <td>
+                         
+                        </td>
+                        <td>
+                          <span className="font-bold">
+                            {mission.name}
+                          </span>
+                        </td>
+                        <td>
+                          <span className="font-bold">
+                            
+                          </span>
+                        </td>
+                        <td className="text-right">
+                          
+                        </td>
+                      </tr>
+                    </>
+                  ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="text-center mt-4 mb-8">
+            <button type="button" className="button button-sm button-primary">
+              <span>Load more</span>
+            </button>
+          </div>
+          </section>
           <section className="py-8 grid grid-cols-1 xl:grid-cols-3 gap-y-4 xl:gap-x-4 items-stretch">
             <div
               className={`relative z-10 surface surface-dimmed p-8 flex flex-col gap-8 md:flex-row justify-center sm:rounded-lg text-center md:text-left ${
@@ -193,8 +237,7 @@ export default function TabMissionsMissions() {
                   <span className="text-premium-500">Stryda Premium</span>
                 </h4>
                 <p className="max-w-[50ch] text-sm text-ui-300 mx-auto mt-2 mb-5">
-                  Increase your amount of XP you can earn each
-                  day with a{" "}
+                  Increase your amount of XP you can earn each day with a{" "}
                   <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                     <a className="link">Premium subscription</a>
                   </Link>

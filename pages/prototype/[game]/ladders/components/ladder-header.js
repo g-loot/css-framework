@@ -92,7 +92,7 @@ export default function LadderHeader() {
                           type="button"
                           className="button button-ghost rounded-full"
                         >
-                          <span className="icon icon-crown text-premium-500 icon-24" />
+                          <span className="icon icon-crown text-premium-500 text-2xl" />
                         </button>
                       </Link>
                     </Tooltip>

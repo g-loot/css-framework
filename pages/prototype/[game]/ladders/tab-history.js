@@ -3,6 +3,9 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
+import Tooltip from "../../../../components/Tooltip/Tooltip";
+import Lottie from "lottie-react";
+import LottieExplosion from "../../../../assets/animations/explosion_stryda_1.json";
 
 export default function TabLaddersHistory() {
   const router = useRouter();
@@ -71,8 +74,45 @@ export default function TabLaddersHistory() {
                               ladder.id
                             }${prototype.getURLparams()}`}
                           >
-                            <div className="text-left interactive">
-                              {ladder.name}
+                            <div className="flex items-center">
+                              <div className="text-left interactive">
+                                {ladder.name}
+                              </div>
+                              {ladder.isPremium && (
+                                <Tooltip
+                                  placement="top"
+                                  tooltip={
+                                    <div className="w-56 flex items-center gap-4 text-sm">
+                                      <div className="relative">
+                                        <span className="icon icon-crown text-6xl text-premium-500" />
+                                        <div className="lottie-premium absolute -inset-1">
+                                          <Lottie
+                                            animationData={LottieExplosion}
+                                            loop={false}
+                                            autoplay={true}
+                                          />
+                                        </div>
+                                      </div>
+                                      <div className="flex-1">
+                                        This Ladder is available for{" "}
+                                        <span className="text-premium-500">
+                                          Premium members
+                                        </span>{" "}
+                                        only.
+                                      </div>
+                                    </div>
+                                  }
+                                >
+                                  <Link href="/prototype/premium">
+                                    <button
+                                      type="button"
+                                      className="button button-ghost rounded-full"
+                                    >
+                                      <span className="icon icon-crown text-premium-500 text-lg" />
+                                    </button>
+                                  </Link>
+                                </Tooltip>
+                              )}
                             </div>
                           </Link>
                         </td>

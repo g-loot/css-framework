@@ -131,7 +131,7 @@ export default function LadderCardSecondary(props) {
                     type="button"
                     className="button button-ghost rounded-full absolute top-1 right-1"
                   >
-                    <span className="icon icon-crown text-premium-500 icon-24" />
+                    <span className="icon icon-crown text-premium-500 text-2xl" />
                   </button>
                 </Link>
               </Tooltip>
