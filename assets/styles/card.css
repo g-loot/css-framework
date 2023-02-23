@@ -871,6 +871,7 @@
     > .card-image {
       @apply
       w-full
+      aspect-[16/6]
       ;
       > .card-image-content {
         @apply w-full
@@ -889,9 +890,10 @@
       rounded
       rounded-b-none
       overflow-hidden
-      md:aspect-[16/6];
+      aspect-[16/6];
       > img {
-        @apply aspect-auto
+        @apply 
+        aspect-auto
         absolute
         inset-0
         object-cover
@@ -913,7 +915,7 @@
     ;
     > .card-image {
       @apply md:col-span-3
-      md:aspect-[16/6];
+      aspect-[16/6];
     }
     > .card-content {
       @apply rounded-b;

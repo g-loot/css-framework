@@ -112,7 +112,7 @@ export const dataGames = [
         status: "ongoing",
         gameMode: "Competitive",
         sponsor: false,
-        isPowerPlay: true,
+        isPowerPlay: false,
         rewards: [
           {
             type: "coin",
@@ -2229,6 +2229,7 @@ export const dataGames = [
           },
         ],
         isEnrolled: false,
+        hasClaim: true,
         progress: 0,
         progressClan: 0,
         soloLeaderboard: [

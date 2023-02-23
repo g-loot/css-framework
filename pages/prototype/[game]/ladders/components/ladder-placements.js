@@ -8,6 +8,9 @@ import ModalInfoBeforeYouPlay from "../modal-info-beforeyouplay";
 import LadderPlacementItem from "./ladder-placementitem";
 import ModalBuyTokens from "../../../wallet/modal-buytokens";
 import Link from "next/link";
+import Tooltip from "../../../../../components/Tooltip/Tooltip";
+import Lottie from "lottie-react";
+import LottieExplosion from "../../../../../assets/animations/explosion_stryda_1.json";
 
 const enrollSteps = [
   {
@@ -71,7 +74,7 @@ export default function LadderPlacements() {
   const { ladder_id } = router.query;
 
   useEffect(() => {
-    setSelectedLadder(prototype.getLadderByID(prototype.getGameBySlug(game), ladder_id));
+    setSelectedLadder(prototype.getLadderByID(game, ladder_id));
   }, [game, prototype, ladder_id]);
 
   function openModalInfoBeforeYouPlay(number) {
@@ -129,6 +132,77 @@ export default function LadderPlacements() {
 
   function openModalBuyTokens() {
     uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
+  }
+
+  function ActivateButton() {
+    return (
+      <>
+        {variablesContext.ladderStep < 3 ? (
+          <>
+            {freeEntry ? (
+              <div
+                className="tooltip tooltip-attention tooltip-right"
+                data-tooltip="Play entry matches and hit the leaderboard"
+              >
+                <button
+                  type="button"
+                  className="button button-claim is-shining"
+                  onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
+                >
+                  <div>
+                    <span>Activate free entry</span>
+                  </div>
+                </button>
+              </div>
+            ) : (
+              <>
+                <button
+                  type="button"
+                  className={`button button-primary button-currency ${
+                    selectedLadder?.isPowerPlay
+                      ? "button-powertoken"
+                      : "button-token"
+                  } ${
+                    selectedLadder?.isPremium && !isPremium
+                      ? "is-disabled"
+                      : "is-shining"
+                  }`}
+                  onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
+                >
+                  <div>
+                    <span>Activate 3 matches</span>
+                  </div>
+                  <div>
+                    <span
+                      className={`icon ${
+                        selectedLadder?.isPowerPlay
+                          ? "icon-powertoken"
+                          : "icon-token"
+                      } `}
+                    />
+                    <span>120</span>
+                  </div>
+                </button>
+              </>
+            )}
+          </>
+        ) : (
+          <button
+            type="button"
+            className="button button-primary button-currency button-token hidden"
+            onClick={incrementLadderStep.bind(this, 1)}
+          >
+            <div>
+              <span>Activate 1 match</span>
+            </div>
+            <div>
+              <span className="icon icon-token " />
+              <span>60</span>
+            </div>
+          </button>
+        )}
+      </>
+    );
   }
 
   useEffect(() => {
@@ -197,56 +271,34 @@ export default function LadderPlacements() {
         </div>
         <div className="flex flex-col md:flex-row gap-y-2 items-center justify-between px-4 pb-4">
           <div className="flex flex-col sm:flex-row items-center gap-3">
-            {variablesContext.ladderStep < 3 ? (
-              <>
-                {freeEntry ? (
-                  <div
-                    className="tooltip tooltip-attention tooltip-right"
-                    data-tooltip="Play entry matches and hit the leaderboard"
-                  >
-                    <button
-                      type="button"
-                      className="button button-claim is-shining"
-                      onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
-                    >
-                      <div>
-                        <span>Activate free entry</span>
+            {selectedLadder?.isPremium && !isPremium ? (
+              <Tooltip
+                tooltip={
+                  <div className="w-56 flex items-center gap-4 text-sm">
+                    <div className="relative">
+                      <span className="icon icon-crown text-6xl text-premium-500" />
+                      <div className="lottie-premium absolute -inset-1">
+                        <Lottie
+                          animationData={LottieExplosion}
+                          loop={false}
+                          autoplay={true}
+                        />
                       </div>
-                    </button>
+                    </div>
+                    <div className="flex-1">
+                      This Ladder is available for{" "}
+                      <span className="text-premium-500">Premium members</span>{" "}
+                      only.
+                    </div>
                   </div>
-                ) : (
-                  <>
-                  <button
-                    type="button"
-                    className={`button button-primary button-currency is-shining ${selectedLadder?.isPowerPlay ? 'button-token' : 'button-powertoken'} ${selectedLadder?.isPremium && !isPremium ? 'is-disabled' : ''}`}
-                    onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
-                  >
-                    <div>
-                      <span>Activate 3 matches</span>
-                    </div>
-                    <div>
-                      <span className={`icon ${selectedLadder?.isPowerPlay ? 'icon-token' : 'icon-powertoken'} `} />
-                      <span>120</span>
-                    </div>
-                  </button>
-                  </>
-                )}
-              </>
-            ) : (
-              <button
-                type="button"
-                className="button button-primary button-currency button-token hidden"
-                onClick={incrementLadderStep.bind(this, 1)}
+                }
               >
-                <div>
-                  <span>Activate 1 match</span>
-                </div>
-                <div>
-                  <span className="icon icon-token " />
-                  <span>60</span>
-                </div>
-              </button>
+                {ActivateButton()}
+              </Tooltip>
+            ) : (
+              ActivateButton()
             )}
+
             {!freeEntry && (
               <a
                 onClick={openModalBuyTokens}

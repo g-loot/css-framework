@@ -4,94 +4,33 @@ import { useRouter } from "next/router";
 import LadderCardSecondary from "../../../components/Ladder/LadderCardSecondary";
 import Slider from "../../../components/Slider/Slider";
 import Link from "next/link";
+import { usePrototypeData } from "../../../contexts/prototype";
 
-const ClanLadders = [
+const ClanLaddersNew = [
   {
+    game: "pubg",
     id: 1,
-    gameID: 2,
-    name: null,
-    gameMode: "Unrated",
-    name: "Unrated Ladder",
-    status: "ongoing",
-    isEnrolled: true,
-    hasClaim: true,
-    isClan: true,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
   },
   {
-    id: 0,
-    gameID: 1,
-    name: null,
-    gameMode: "Unrated",
-    name: "Competitive Ladder with a very long name",
-    status: "ongoing",
-    isEnrolled: true,
-    hasClaim: false,
-    isClan: true,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
+    game: "valorant",
+    id: 5,
   },
   {
+    game: "valorant",
     id: 2,
-    gameID: 4,
-    name: null,
-    gameMode: "Ranked Arena",
-    name: "Weekly Arena Ladder",
-    status: "ongoing",
-    isEnrolled: false,
-    hasClaim: false,
-    isClan: true,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-3.webp",
-  },
-];
-const ClanLaddersNoClan = [
-  {
-    id: 1,
-    gameID: 2,
-    name: null,
-    gameMode: "Unrated",
-    name: "Unrated Ladder",
-    status: "ongoing",
-    isEnrolled: false,
-    hasClaim: false,
-    isClan: true,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
   },
   {
-    id: 0,
-    gameID: 1,
-    name: null,
-    gameMode: "Unrated",
-    name: "Unrated Ladder",
-    status: "ongoing",
-    isEnrolled: false,
-    hasClaim: false,
-    isClan: true,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
-  },
-  {
-    id: 2,
-    gameID: 4,
-    name: null,
-    gameMode: "Ranked Arena",
-    name: "Weekly Arena Ladder",
-    status: "ongoing",
-    isEnrolled: false,
-    hasClaim: false,
-    isClan: true,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-3.webp",
-  },
-];
+    game: "valorant",
+    id: 3,
+  }
+]
 
 export default function HomeLaddersClan() {
   const { query } = useRouter();
   const hasNoClan = query.noclan === "true" ? true : false;
   const hasNoLadders = query.noladders === "true" ? true : false;
+  const prototype = usePrototypeData();
+
   return (
     <div className="relative">
       {hasNoClan && (
@@ -142,13 +81,12 @@ export default function HomeLaddersClan() {
         bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
         isHover={true}
       >
-        {ClanLadders.map((item, itemIndex) => (
+        {ClanLaddersNew.map((item, itemIndex) => (
           <LadderCardSecondary
-            key={item.id}
-            ladder={item}
+            key={itemIndex}
+            ladder={prototype.getLadderByID(item.game, item.id)}
             isHorizontal={true}
             isClan={false}
-            isDemo={true}
           />
         ))}
       </Slider>

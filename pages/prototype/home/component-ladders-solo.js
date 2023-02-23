@@ -7,92 +7,22 @@ import { usePrototypeData } from "../../../contexts/prototype";
 
 const SoloLadders = [
   {
-    id: 0,
-    game_slug: "pubg",
-    name: null,
-    gameMode: "Unrated",
-    name: "Unrated Ladder",
-    status: "ongoing",
-    isEnrolled: true,
-    hasClaim: true,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
-  },
-  {
+    game: "pubg",
     id: 1,
-    game_slug: "valorant",
-    name: null,
-    gameMode: "Unrated",
-    name: "Power Play",
-    status: "ongoing",
-    isEnrolled: true,
-    hasClaim: false,
-    isPowerPlay: true,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1674822962/Stryda/demo/PowerPlay_Valorant1.jpg",
   },
   {
-    id: 4,
-    game_slug: "valorant",
-    name: null,
-    gameMode: "Spike Rush",
-    name: "Spike Rush Ladder",
-    status: "ongoing",
-    isEnrolled: false,
-    hasClaim: false,
-    isPremium: true,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1677087781/Stryda/demo/Spike_Rush_Premium_1.jpg",
+    game: "valorant",
+    id: 0,
   },
   {
-    id: 6,
-    game_slug: "valorant",
-    name: null,
-    gameMode: "Spike Rush",
-    name: "Premium Spike Rush",
-    status: "ongoing",
-    isEnrolled: true,
-    hasClaim: false,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
+    game: "valorant",
+    id: 1,
   },
   {
+    game: "pubg",
     id: 2,
-    game_slug: "apexlegends",
-    name: null,
-    gameMode: "Ranked trio",
-    name: "Competitive Ladder with a very long name",
-    status: "ongoing",
-    isEnrolled: false,
-    hasClaim: false,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-1.webp",
-  },
-  {
-    id: 3,
-    game_slug: "apexlegends",
-    name: null,
-    gameMode: "Ranked Arena",
-    name: "Weekly Arena Ladder",
-    status: "ongoing",
-    isEnrolled: false,
-    hasClaim: false,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-3.webp",
-  },
-  {
-    id: 5,
-    game_slug: "pubg",
-    name: null,
-    gameMode: "Ranked squad FPP",
-    name: "Competitive Ladder",
-    status: "ongoing",
-    isEnrolled: false,
-    hasClaim: false,
-    cover:
-      "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
-  },
-];
+  }
+]
 
 export default function HomeLaddersSolo() {
   const { query } = useRouter();
@@ -129,15 +59,11 @@ export default function HomeLaddersSolo() {
         >
           {SoloLadders.map((item, itemIndex) => (
             <LadderCardSecondary
-              key={item.id}
-              /*
-              ladder={prototype.getLadderByID(item.game_slug, item.ladder_id)}
-              */
-              ladder={item}
+              key={itemIndex}
+              ladder={prototype.getLadderByID(item.game, item.id)}
               game_slug={item.game_slug}
               isHorizontal={false}
               isClan={false}
-              isDemo={true}
             />
           ))}
         </Slider>

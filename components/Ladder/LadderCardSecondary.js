@@ -21,7 +21,6 @@ export default function LadderCardSecondary(props) {
   const isClan = props.isClan || false;
   const ladder = props.ladder;
   const game_slug = props.game_slug || "valorant";
-  const isDemo = props.isDemo || false;
   const isGlobal = props.isGlobal || false;
   const className = props.className || "";
 
@@ -31,15 +30,9 @@ export default function LadderCardSecondary(props) {
 
   return (
     <Link
-      href={
-        !isDemo
-          ? `/prototype/${prototype.getGameBySlug(game_slug).slug}/ladders/${
-              ladder.id
-            }${prototype.getURLparams()}`
-          : `/prototype/valorant/ladders/${
-              ladder.isPowerPlay ? "1" : "2"
-            }${prototype.getURLparams()}`
-      }
+      href={`/prototype/${prototype.getGameBySlug(game_slug).slug}/ladders/${
+        ladder.id
+      }${prototype.getURLparams()}`}
     >
       <div
         className={`card-ladder card-secondary ${
