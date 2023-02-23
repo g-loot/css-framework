@@ -967,6 +967,15 @@
         ;
       }
     }
+    > .card-content {
+      > .card-body {
+        :where(h2, h3, h4, h5) {
+          @apply
+          w-[calc(99%-1.5rem)]
+          ;
+        }
+      }
+    }
   }
 }
 

@@ -75,7 +75,7 @@ export default function TabLaddersHistory() {
                             }${prototype.getURLparams()}`}
                           >
                             <div className="flex items-center">
-                              <div className="text-left interactive">
+                              <div className="text-left py-2 interactive">
                                 {ladder.name}
                               </div>
                               {ladder.isPremium && (
