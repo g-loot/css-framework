@@ -60,13 +60,18 @@ export default function CardMissionSecondary(props) {
               {variablesContext.availableMissions < 2 ? (
                 <>
                   {!MissionRetrieved && (
-                    <><button
-                      className="button button-secondary mx-auto"
-                      onClick={handleGetMission.bind(this)}
-                    >
-                      <span>Get new mission</span>
-                    </button>
-                    <div className="text-sm mt-2">{2 - variablesContext.availableMissions} mission{variablesContext.availableMissions < 1 && (<>s</>)} available</div>
+                    <>
+                      <button
+                        className="button button-secondary mx-auto"
+                        onClick={handleGetMission.bind(this)}
+                      >
+                        <span>Get new mission</span>
+                      </button>
+                      <div className="text-sm mt-2">
+                        {2 - variablesContext.availableMissions} mission
+                        {variablesContext.availableMissions < 1 && <>s</>}{" "}
+                        available
+                      </div>
                     </>
                   )}
                 </>
@@ -101,8 +106,14 @@ export default function CardMissionSecondary(props) {
         <div className="revealer-back">
           <div
             className={`card-mission card-secondary ${
-              mission.target === mission.current && hasClaimed ? "is-inactive" : ""
-            } ${mission.category === 1 ? 'card-mission-cat-1' : ''} ${mission.category === 2 ? 'card-mission-cat-2' : ''} ${mission.category === 3 ? 'card-mission-cat-3' : ''} ${mission.category === 4 ? 'card-mission-cat-4' : ''} ${mission.category === 5 ? 'card-mission-cat-5' : ''}`}
+              mission.target === mission.current && hasClaimed
+                ? "is-inactive"
+                : ""
+            } ${mission.category === 1 ? "card-mission-cat-1" : ""} ${
+              mission.category === 2 ? "card-mission-cat-2" : ""
+            } ${mission.category === 3 ? "card-mission-cat-3" : ""} ${
+              mission.category === 4 ? "card-mission-cat-4" : ""
+            } ${mission.category === 5 ? "card-mission-cat-5" : ""}`}
           >
             {/*
             {!hasClaimed && mission.target === mission.current && (
@@ -123,52 +134,25 @@ export default function CardMissionSecondary(props) {
             <div className="card-decoration"></div>
             <div className="card-body">
               <div className="card-category">
-                {mission.category === 1 && (
-                  
-                  
-                  <div className="rarity">
-                    <span className="icon icon-category-1" />
-                    <span>common</span>
-                  </div>
-                )}
-                {mission.category === 2 && (
-                  <div className="flex items-center text-sm text-gold-500 gap-1">
-                    <img
-                      className="animate-rotate"
-                      src="https://res.cloudinary.com/gloot/image/upload/v1672650689/Stryda/logos/mission-category-2.svg"
-                      width="20"
-                      height="20"
-                      alt=""
-                    />
-                    <span>rare</span>
-                  </div>
-                )}
-                {mission.category === 3 && (
-                  <div className="flex items-center text-sm text-purple-500 gap-1">
-                    <img
-                      className="animate-rotate"
-                      src="https://res.cloudinary.com/gloot/image/upload/v1672650689/Stryda/logos/mission-category-3.svg"
-                      width="20"
-                      height="20"
-                      alt=""
-                    />
-                    <span>epic</span>
-                  </div>
-                )}
-                {mission.category === 4 && (
-                  <div className="flex items-center text-sm text-teal-500 gap-1">
-                    <img
-                      className="animate-rotate"
-                      src="https://res.cloudinary.com/gloot/image/upload/v1672650689/Stryda/logos/mission-category-4.svg"
-                      width="20"
-                      height="20"
-                      alt=""
-                    />
-                    <span>legendary</span>
-                  </div>
-                )}
+                <div className="rarity">
+                  <span
+                    className={`icon ${
+                      mission.category === 1 ? "icon-category-1" : ""
+                    } ${mission.category === 2 ? "icon-category-2" : ""} ${
+                      mission.category === 3 ? "icon-category-3" : ""
+                    } ${mission.category === 4 ? "icon-category-4" : ""}`}
+                  />
+                  <span>
+                    {mission.category === 1 && <>common</>}
+                    {mission.category === 2 && <>rare</>}
+                    {mission.category === 3 && <>epic</>}
+                    {mission.category === 4 && <>legendary</>}
+                  </span>
+                </div>
               </div>
-              <div className="card-title"><span>{mission.name}</span></div>
+              <div className="card-title">
+                <span>{mission.name}</span>
+              </div>
               <div className="card-meta">
                 {!hasClaimed && mission.target === mission.current ? (
                   <div>
@@ -278,7 +262,13 @@ export default function CardMissionSecondary(props) {
                 <></>
               ) : (
                 <div className="card-progress">
-                  <div className={`${mission.target === mission.current && hasClaimed ? 'opacity-0' : ''}`}>
+                  <div
+                    className={`${
+                      mission.target === mission.current && hasClaimed
+                        ? "opacity-0"
+                        : ""
+                    }`}
+                  >
                     <div className="text-sm text-ui-300">
                       {mission.current}/{mission.target}
                     </div>

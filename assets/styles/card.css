@@ -564,6 +564,14 @@
       backdrop-blur-sm;
     }
   }
+
+  &.card-category-1 {
+    .rarity {
+      @apply
+      text-main
+      ;
+    }
+  }
 }
 
 .revealer {

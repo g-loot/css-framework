@@ -146,7 +146,15 @@ export default function LadderPlacements() {
               >
                 <button
                   type="button"
-                  className="button button-claim is-shining"
+                  className={`button is-shining ${
+                    selectedLadder?.isPremium
+                      ? "button-premium"
+                      : "button-claim"
+                  } ${
+                    selectedLadder?.isPremium && !isPremium
+                      ? "is-disabled"
+                      : "is-shining"
+                  }`}
                   onClick={openModalInfoBeforeYouPlay.bind(this, 3)}
                 >
                   <div>
@@ -158,7 +166,11 @@ export default function LadderPlacements() {
               <>
                 <button
                   type="button"
-                  className={`button button-primary button-currency ${
+                  className={`button button-currency ${
+                    selectedLadder?.isPremium
+                      ? "button-premium"
+                      : "button-claim"
+                  } ${
                     selectedLadder?.isPowerPlay
                       ? "button-powertoken"
                       : "button-token"

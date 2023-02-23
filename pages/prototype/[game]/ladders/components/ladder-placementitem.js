@@ -22,7 +22,7 @@ export default function LadderPlacementItem(props) {
   const { ladder_id } = router.query;
 
   useEffect(() => {
-    setSelectedLadder(prototype.getLadderByID(prototype.getGameBySlug(game), ladder_id));
+    setSelectedLadder(prototype.getLadderByID(game, ladder_id));
   }, [game, prototype, ladder_id]);
 
   useEffect(() => {
@@ -120,14 +120,14 @@ export default function LadderPlacementItem(props) {
                 <div className="absolute z-20 inset-0 p-4 flex items-center justify-center overflow-hidden rounded-lg">
                   <button
                     type="button"
-                    className={`button button-sm button-secondary button-currency w-full animate-slide-in-bottom ${selectedLadder?.isPowerPlay ? 'button-powertoken' : 'button-token'}`}
+                    className={`button button-sm button-currency w-full animate-slide-in-bottom ${selectedLadder?.isPowerPlay ? 'button-powertoken' : 'button-token'} ${selectedLadder?.isPremium ? 'button-premium' : 'button-secondary'}`}
                   >
                     <div>
                       <span>Activate</span>
                     </div>
                     <div>
                       <span className={`icon ${selectedLadder?.isPowerPlay ? 'icon-powertoken' : 'icon-token'}`} />
-                      <span>1</span>
+                      <span>50</span>
                     </div>
                   </button>
                 </div>
