@@ -522,15 +522,20 @@
     flex-none;
   }
   .card-body {
-    @apply flex-3
+    @apply 
+    flex-3
     order-2
     justify-end
     items-stretch
     p-4
+    rounded-r
     space-y-2
-    rounded-r;
+    ;
     .card-category {
-      @apply flex-1;
+      @apply 
+      flex-1 
+      !m-0
+      ;
     }
     .card-meta {
       @apply py-1;

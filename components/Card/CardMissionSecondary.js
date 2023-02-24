@@ -20,6 +20,7 @@ export default function CardMissionSecondary(props) {
   const { query } = useRouter();
   const isPremium = query.premium === "true" ? true : false;
   const modalClaimMission = query.modalclaimmission === "true" ? true : false;
+  const modalReshuffleMission = query.modalreshufflemission === "true" ? true : false;
   const gameSlug = props.gameSlug || "valorant";
   const [hasClaimed, setHasClaimed] = useState(mission.hasClaimed);
 
@@ -47,7 +48,13 @@ export default function CardMissionSecondary(props) {
     return (100 * max) / current;
   }
 
-  function handleReshuffle() {
+  useEffect(() => {
+    if (modalReshuffleMission) {
+      openModalReshuffleMission();
+    }
+  }, [modalReshuffleMission]);
+
+  function openModalReshuffleMission() {
     uiContext.openModal(
       <ModalReshuffleMission mission={mission}></ModalReshuffleMission>
     );
@@ -140,7 +147,7 @@ export default function CardMissionSecondary(props) {
             */}
             <div className="card-decoration"></div>
             <div className="card-body">
-              <div className="absolute z-10 top-1 right-1">
+            <div className="absolute z-10 top-2.5 right-2.5 m-0">
                 <Tooltip
                   tooltip={
                     <span className="text-sm">Reshuffle mission</span>
@@ -149,7 +156,7 @@ export default function CardMissionSecondary(props) {
                   <button
                     type="button"
                     className={`button button-ghost rounded-full`}
-                    onClick={handleReshuffle}
+                    onClick={openModalReshuffleMission}
                   >
                     <span className="icon icon-refresh-02 text-ui-400" />
                   </button>
@@ -178,6 +185,7 @@ export default function CardMissionSecondary(props) {
                   </span>
                 </div>
               </div>
+              
               <div className="card-title">
                 <span>{mission.name}</span>
               </div>
@@ -186,7 +194,7 @@ export default function CardMissionSecondary(props) {
                   <div>
                     <button
                       type="button"
-                      className="button button-claim is-shining mt-2 mb-3"
+                      className="button button-claim is-shining mt-1"
                       onClick={openModalClaimMission}
                     >
                       <span className="icon icon-present animate-bounce" />

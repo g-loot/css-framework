@@ -21,7 +21,7 @@ const TabsItems = [
     component: TabMissionsHowItWorks,
   },
   {
-    label: "Your Missions history",
+    label: "Your Mission history",
     url: "history",
     component: TabMissionsHistory,
   },
