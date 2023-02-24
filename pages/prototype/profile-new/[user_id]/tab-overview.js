@@ -423,7 +423,6 @@ export default function TabProfileOverview() {
                       <Slider
                         itemWidth={397 + 16}
                         bgColor="from-ui-800 via-ui-800 to-ui-800/0"
-                        isHover={true}
                       >
                         <div className="flex gap-6 py-2 px-6 hoverhighlight">
                         {selectedUser.ladders?.map((ladder, ladderIndex) => (

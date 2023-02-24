@@ -11,6 +11,10 @@ import { useRouter } from "next/router";
 import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
 import ComponentRewardLadder from "./component-rewardladder";
 import PremiumLogo from "../../../../components/PremiumLogo/PremiumLogo";
+import XPBoostList from "../../../../components/XPBoostList/XPBoostList";
+import Lottie from "lottie-react";
+import LottieExplosion from "../../../../assets/animations/explosion_stryda_1.json";
+import CardMissionTableTr from "../../../../components/Card/CardMissionTableTr";
 
 export default function TabMissionsMissions() {
   const router = useRouter();
@@ -180,44 +184,25 @@ export default function TabMissionsMissions() {
           >
             <h2 className="h3 mb-4 mx-4 sm:mx-0">Completed missions</h2>
             <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
-            <table className="table table-rounded rounded-xl w-full text-center">
-              <tbody>
-                {selectedGame?.missions.map((mission, missionIndex) => (
+              <table className="table table-rounded rounded-xl w-full">
+                <tbody>
+                  {selectedGame?.missions.map((mission, missionIndex) => (
                     <>
-                      <tr
+                      <CardMissionTableTr
                         key={missionIndex}
-                        className="animate-slide-in-bottom animate-delay leading-tight"
-                        style={{
-                          "--delay": "calc(" + missionIndex + " * 0.05s)",
-                        }}
-                      >
-                        <td>
-                         
-                        </td>
-                        <td>
-                          <span className="font-bold">
-                            {mission.name}
-                          </span>
-                        </td>
-                        <td>
-                          <span className="font-bold">
-                            
-                          </span>
-                        </td>
-                        <td className="text-right">
-                          
-                        </td>
-                      </tr>
+                        mission={mission}
+                        index={missionIndex}
+                      />
                     </>
                   ))}
-              </tbody>
-            </table>
-          </div>
-          <div className="text-center mt-4 mb-8">
-            <button type="button" className="button button-sm button-primary">
-              <span>Load more</span>
-            </button>
-          </div>
+                </tbody>
+              </table>
+            </div>
+            <div className="text-center mt-4 mb-8">
+              <button type="button" className="button button-sm button-primary">
+                <span>Load more</span>
+              </button>
+            </div>
           </section>
           <section className="py-8 grid grid-cols-1 xl:grid-cols-3 gap-y-4 xl:gap-x-4 items-stretch">
             <div

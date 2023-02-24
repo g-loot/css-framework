@@ -75,7 +75,7 @@ select:-webkit-autofill:focus {
 /*----------------------------*/
 
 .form-group {
-  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text, select) {
+  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], input[type=password], textarea, .input-text, select) {
     @apply
     block
     ;
@@ -87,7 +87,7 @@ select:-webkit-autofill:focus {
     ;
   }
 
-  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text, .form-select > select) {
+  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], input[type=password], textarea, .input-text, .form-select > select) {
     @apply
     w-full
     shadow-sm
@@ -109,7 +109,7 @@ select:-webkit-autofill:focus {
     }
   }
 
-  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text) {
+  :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], input[type=password], textarea, .input-text) {
     @apply
     shadow-[inset_2px_2px_6px_0px_rgb(0,0,0,0.25)]
     ;
@@ -121,7 +121,7 @@ select:-webkit-autofill:focus {
   }
 
 
-  > :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, .input-text, .form-select > select) {
+  > :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], textarea, .input-text, .form-select > select) {
     &:not([class*="rounded-"]) {
       @apply
       rounded
@@ -786,7 +786,7 @@ label.button {
     ;
   }
 
-  /* :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea, button, .button, .button.button-primary) */
+  /* :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], textarea, button, .button, .button.button-primary) */
 
   > * {
     @apply
@@ -890,7 +890,7 @@ label.button {
     pointer-events-none
     ;
 
-    ~ :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], textarea) {
+    ~ :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], textarea) {
       @apply
       pl-9
       ;
@@ -908,7 +908,7 @@ label.button {
         pl-2.5
         ;
       }
-      ~ input:not([type=date]),
+      ~ input:not([type=date]):not([type=datetime-local]),
       ~ textarea {
         @apply
         pr-9
@@ -1103,7 +1103,7 @@ input.input-number,
       }
     }
     &:not([data-error=false]) {
-      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text, select) {
+      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], input[type=password], textarea, .input-text, select) {
         @apply
         border-error-700
         focus-visible:outline-error-500
@@ -1164,7 +1164,7 @@ input.input-number,
       }
     }
     &:not([data-success=false]) {
-      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text, select) {
+      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], input[type=password], textarea, .input-text, select) {
         @apply
         border-success-700
         focus-visible:outline-success-500
@@ -1225,7 +1225,7 @@ input.input-number,
       }
     }
     &:not([data-attention=false]) {
-      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=file], input[type=password], textarea, .input-text, select) {
+      :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], input[type=password], textarea, .input-text, select) {
         @apply
         border-attention-700
         focus-visible:outline-attention-500
@@ -1291,6 +1291,7 @@ input.input-number,
     input[type=email],
     input[type=password],
     input[type=date],
+    input[type=datetime-local],
     textarea,
     .input-text {
       @apply
@@ -1325,6 +1326,7 @@ input[type=number]:disabled,
 input[type=email]:disabled,
 input[type=password]:disabled,
 input[type=date]:disabled,
+input[type=datetime-local]:disabled,
 input[type=file]:disabled,
 select:disabled,
 textarea:disabled,
@@ -1334,6 +1336,7 @@ input[type=number].is-disabled,
 input[type=email].is-disabled,
 input[type=password].is-disabled,
 input[type=date].is-disabled,
+input[type=datetime-local].is-disabled,
 input[type=file].is-disabled,
 select.is-disabled,
 textarea.is-disabled,
@@ -1354,7 +1357,8 @@ textarea.is-disabled,
 
 /* input date */
 
-input[type=date]::-webkit-calendar-picker-indicator {
+input[type=date]::-webkit-calendar-picker-indicator,
+input[type=datetime-local]::-webkit-calendar-picker-indicator {
   @apply
   opacity-0
   ;

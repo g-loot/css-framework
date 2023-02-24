@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { VariablesContext } from "../../contexts/variables";
 import Countdown from "../Countdown/Countdown";
 import ModalClaimMission from "../../pages/prototype/home/modal-claim-mission";
+import ModalReshuffleMission from "../../pages/prototype/home/modal-reshuffle-mission";
 import { UiContext } from "../../contexts/ui";
 import XPBoostList from "../XPBoostList/XPBoostList";
 
@@ -44,6 +45,12 @@ export default function CardMissionSecondary(props) {
 
   function calculatePercent(current, max) {
     return (100 * max) / current;
+  }
+
+  function handleReshuffle() {
+    uiContext.openModal(
+      <ModalReshuffleMission mission={mission}></ModalReshuffleMission>
+    );
   }
 
   return (
@@ -109,11 +116,11 @@ export default function CardMissionSecondary(props) {
               mission.target === mission.current && hasClaimed
                 ? "is-inactive"
                 : ""
-            } ${mission.category === 1 ? "card-mission-cat-1" : ""} ${
-              mission.category === 2 ? "card-mission-cat-2" : ""
-            } ${mission.category === 3 ? "card-mission-cat-3" : ""} ${
-              mission.category === 4 ? "card-mission-cat-4" : ""
-            } ${mission.category === 5 ? "card-mission-cat-5" : ""}`}
+            } ${mission.category === 1 ? "rarity-category-1" : ""} ${
+              mission.category === 2 ? "rarity-category-2" : ""
+            } ${mission.category === 3 ? "rarity-category-3" : ""} ${
+              mission.category === 4 ? "rarity-category-4" : ""
+            }`}
           >
             {/*
             {!hasClaimed && mission.target === mission.current && (
@@ -133,8 +140,29 @@ export default function CardMissionSecondary(props) {
             */}
             <div className="card-decoration"></div>
             <div className="card-body">
+              <div className="absolute z-10 top-1 right-1">
+                <Tooltip
+                  tooltip={
+                    <span className="text-sm">Reshuffle mission</span>
+                  }
+                >
+                  <button
+                    type="button"
+                    className={`button button-ghost rounded-full`}
+                    onClick={handleReshuffle}
+                  >
+                    <span className="icon icon-refresh-02 text-ui-400" />
+                  </button>
+                </Tooltip>
+              </div>
               <div className="card-category">
-                <div className="rarity">
+                <div
+                  className={`rarity ${
+                    mission.category === 1 ? "rarity-category-1" : ""
+                  } ${mission.category === 2 ? "rarity-category-2" : ""} ${
+                    mission.category === 3 ? "rarity-category-3" : ""
+                  } ${mission.category === 4 ? "rarity-category-4" : ""}`}
+                >
                   <span
                     className={`icon ${
                       mission.category === 1 ? "icon-category-1" : ""
@@ -288,6 +316,42 @@ export default function CardMissionSecondary(props) {
               )}
             </div>
             <div className="card-bg">
+              <div className="rounded bg-ui-800/90 p-0.5 absolute z-10 top-1 left-1 right-auto bottom-auto">
+                <div className="ml-0 p-1 border border-ui-700 rounded-sm bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
+                  <span
+                    className={`icon text-xl ${
+                      prototype.getGameBySlug(gameSlug).slug === "apexlegends"
+                        ? "icon-game-apexlegends-symbol text-game-apexlegends"
+                        : ""
+                    } ${
+                      prototype.getGameBySlug(gameSlug).slug === "csgo"
+                        ? "icon-game-csgo-symbol text-game-csgo"
+                        : ""
+                    }  ${
+                      prototype.getGameBySlug(gameSlug).slug === "dota2"
+                        ? "icon-game-dota2-symbol text-game-dota2"
+                        : ""
+                    }  ${
+                      prototype.getGameBySlug(gameSlug).slug ===
+                      "leagueoflegends"
+                        ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
+                        : ""
+                    }  ${
+                      prototype.getGameBySlug(gameSlug).slug === "rocketleague"
+                        ? "icon-game-rocketleague-symbol text-game-rocketleague"
+                        : ""
+                    } ${
+                      prototype.getGameBySlug(gameSlug).slug === "pubg"
+                        ? "icon-game-pubg-symbol text-game-pubg"
+                        : ""
+                    }  ${
+                      prototype.getGameBySlug(gameSlug).slug === "valorant"
+                        ? "icon-game-valorant-symbol text-game-valorant"
+                        : ""
+                    }`}
+                  />
+                </div>
+              </div>
               <span
                 style={{
                   backgroundImage: "url(" + mission.image + ")",

@@ -10,7 +10,7 @@ const DSpage = () => {
   const [StartAnim1, setStartAnim1] = useState(true);
   const [random1, setRandom1] = useState(7);
   const [random2, setRandom2] = useState(4);
-  const [random3, setRandom3] = useState(2);
+  const [random3, setRandom3] = useState(0);
 
   function handleStartAnim1() {
     setStartAnim1(false);

@@ -5,6 +5,7 @@ import Link from "next/link";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import TabMissionsHowItWorks from "./tab-howitworks";
 import TabMissionsMissions from "./tab-missions";
+import TabMissionsHistory from "./tab-history";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -18,6 +19,11 @@ const TabsItems = [
     label: "How it works",
     url: "how-it-works",
     component: TabMissionsHowItWorks,
+  },
+  {
+    label: "Your Missions history",
+    url: "history",
+    component: TabMissionsHistory,
   },
 ];
 

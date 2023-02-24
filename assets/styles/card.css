@@ -539,7 +539,9 @@
       @apply aspect-card;
       &,
       > * {
-        @apply rounded-r-none;
+        &:not([class*=rounded]) {
+          @apply rounded-r-none;
+        }
       }
     }
     .card-progress {
@@ -565,10 +567,48 @@
     }
   }
 
-  &.card-category-1 {
-    .rarity {
+  &[class*='rarity-category'] {
+    .card-bg::before {
       @apply
-      text-main
+      block
+      content-['']
+      w-1
+      absolute
+      z-20
+      transition-transform
+      duration-1000
+      left-auto
+      right-0
+      inset-y-0
+      ;
+      transition-delay: .5s;
+    }
+  }
+  &.rarity-category-1 {
+    .card-bg::before {
+      @apply
+      bg-bronze-500/50
+      ;
+    }
+  }
+  &.rarity-category-2 {
+    .card-bg::before {
+      @apply
+      bg-bronze-500
+      ;
+    }
+  }
+  &.rarity-category-3 {
+    .card-bg::before {
+      @apply
+      bg-gold-500/70
+      ;
+    }
+  }
+  &.rarity-category-4 {
+    .card-bg::before {
+      @apply
+      bg-gold-500
       ;
     }
   }
@@ -583,6 +623,11 @@
         transition-all
         duration-[.9s]
         ease-in-out;
+      }
+      &::before {
+        @apply
+        translate-x-2
+        ;
       }
     }
     .card-body {
@@ -629,6 +674,11 @@
       .card-bg {
         > span {
           @apply scale-100;
+        }
+        &::before {
+          @apply
+          translate-x-0
+          ;
         }
       }
       .card-body {
@@ -907,8 +957,8 @@
         object-cover
         object-center
         transition-all
-        duration-300
-        ease-[cubic-bezier(.8,0,.3,1)];
+        duration-500
+        ease-[cubic-bezier(.2,0,.2,1)];
       }
     }
     .card-status {
@@ -985,6 +1035,33 @@
       }
     }
   }
+
+  &.interactive {
+    &:hover {
+      @apply
+      opacity-100
+      ;
+      .card-image-bg img {
+        @apply
+        brightness-150
+        scale-105
+        ;
+      }
+    }
+  }
+
+  &.card-fluid {
+    @apply
+    min-w-[0]
+    max-w-[none]
+    md:!max-w-[none]
+    ;
+    > .card-image {
+      @apply
+      flex-auto
+      ;
+    }
+  }
 }
 
 /* responsive card ladder secondary stacked  */
@@ -1000,6 +1077,7 @@
       > .card-image {
         @apply 
         w-auto
+        flex-auto
         order-2;
       }
       > .card-content {
@@ -1039,6 +1117,7 @@
       > .card-image {
         @apply 
         w-auto
+        flex-auto
         order-2;
       }
       > .card-content {
@@ -1077,6 +1156,7 @@
       > .card-image {
         @apply 
         w-auto
+        flex-auto
         order-2;
       }
       > .card-content {
@@ -1372,24 +1452,24 @@
     ;
   }
 
-  &.rarity-level-1 {
+  &.rarity-category-1 {
+    @apply
+    text-bronze-500/50
+    ;
+  }
+  &.rarity-category-2 {
     @apply
     text-bronze-500
     ;
   }
-  &.rarity-level-2 {
+  &.rarity-category-3 {
     @apply
-    text-bronze-500
+    text-gold-500/70
     ;
   }
-  &.rarity-level-3 {
+  &.rarity-category-4 {
     @apply
-    text-bronze-500
-    ;
-  }
-  &.rarity-level-4 {
-    @apply
-    text-bronze-500
+    text-gold-500
     ;
   }
 }

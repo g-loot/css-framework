@@ -18,6 +18,7 @@ export default function LadderCardSecondary(props) {
   const uiContext = useContext(UiContext);
   const isHorizontal = props.isHorizontal || false;
   const isEnrolled = props.ladder.isEnrolled || false;
+  const isFluid = props.isFluid || false;
   const isClan = props.isClan || false;
   const ladder = props.ladder;
   const game_slug = props.game_slug || "valorant";
@@ -36,7 +37,11 @@ export default function LadderCardSecondary(props) {
     >
       <div
         className={`card-ladder card-secondary ${
-          isHorizontal ? "card-horizontal" : ""
+          isHorizontal && !isFluid ? "card-horizontal" : ""
+        } ${
+          isHorizontal && isFluid ? "lg:card-horizontal" : ""
+        } ${
+          isFluid ? "card-fluid" : ""
         } ${isEnrolled && !ladder.hasClaim ? "is-active" : ""} ${
           ladder.status === "finished" ? "is-inactive" : ""
         } ${ladder.status !== "finished" ? "interactive" : ""} ${

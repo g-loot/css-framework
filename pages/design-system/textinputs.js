@@ -509,6 +509,22 @@ const DSpage = () => {
                     </div>
                   </div>
                 </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="flex-1 space-y-4">
+                    <div className="form-group">
+                      <label htmlFor="datetime-local">Choose a date</label>
+                      <div className="input-group">
+                        <span className="icon icon-right icon-calendar-2" />
+                        <input
+                          id="datetime-local"
+                          name="datetime-local"
+                          type="datetime-local"
+                          value="2024-06-14T00:00"
+                        ></input>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="flex-1">
                 <iframe

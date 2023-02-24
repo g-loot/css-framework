@@ -55,7 +55,6 @@ export default function HomeLaddersSolo() {
         <Slider
           itemWidth={397 + 16}
           bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
-          isHover={true}
         >
           {SoloLadders.map((item, itemIndex) => (
             <LadderCardSecondary

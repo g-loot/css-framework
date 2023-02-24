@@ -304,7 +304,7 @@ export const DSpages = [
       },
       {
         label: "Text inputs",
-        tags: "form,data,input,range,value,ui,text,number,date,text inputs",
+        tags: "form,data,input,range,value,ui,text,number,date,text inputs,datetime",
         url: "textinputs",
       },
       {
