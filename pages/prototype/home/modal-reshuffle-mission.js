@@ -9,9 +9,23 @@ import { useRouter } from "next/router";
 import XPBoostList from "../../../components/XPBoostList/XPBoostList";
 import Link from "next/link";
 
+const missionDefault = {
+  name: "Get 6 assists",
+  category: 1,
+  label: "assists",
+  current: 3,
+  target: 6,
+  isPremium: false,
+  isVisible: true,
+  hasClaimed: false,
+  xp: 50,
+  image:
+  "https://res.cloudinary.com/gloot/image/upload/v1672672256/Stryda/demo/mission-valorant_3.jpg",
+}
+
 export default function ModalReshuffleMission(props) {
   const uiContext = useContext(UiContext);
-  const mission = props.mission;
+  const mission = props.mission || missionDefault;
   const variablesContext = useContext(VariablesContext);
   const [submitting, setSubmitting] = useState(false);
   const { query } = useRouter();
@@ -56,7 +70,7 @@ export default function ModalReshuffleMission(props) {
             <h2 className="modal-title">Reshuffle mission?</h2>
             <p>
               You are about to reshuffle the{" "}
-              <span className="text-ui-100 font-bold">{mission.name} </span>mission and get a new one.
+              <span className="text-ui-100 font-bold">{mission?.name} </span>mission and get a new one.
               <br />
               Are you sure?
             </p>
