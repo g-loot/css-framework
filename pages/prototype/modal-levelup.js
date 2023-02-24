@@ -47,13 +47,9 @@ export default function ModalLevelUp(props) {
                     <span className="absolute h-4 w-4 bottom-2 right-2 border-b border-b-ui-800 border-r border-r-ui-800" />
                   </div>
                   <h3>Level Up</h3>
-                  <div className="text-main text-lg">
-                    <AnimatedNumber number={15000} />
-                    /15000 XP
-                  </div>
                   <div className="flex justify-between items-baseline text-sm mt-2 mb-1">
                     <span>Level 146</span>
-                    <span className="text-ui-300">100%</span>
+                    <span className="text-ui-300"><AnimatedNumber number={15000} /> XP</span>
                   </div>
                   <div
                     className="progressbar progressbar-secondary w-full mb-4"
