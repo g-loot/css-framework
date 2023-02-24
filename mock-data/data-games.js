@@ -32,7 +32,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 100,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1672672256/Stryda/demo/mission-valorant_1.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_1.jpg",
       },
       {
         name: "Get 6 assists",
@@ -45,7 +45,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-        "https://res.cloudinary.com/gloot/image/upload/v1672672256/Stryda/demo/mission-valorant_3.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_3.jpg",
       },
       {
         name: "Get 2 knife kills in Competitive",
@@ -58,7 +58,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 300,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1672672256/Stryda/demo/mission-valorant_2.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_2.jpg",
       },
       {
         name: "Get 5 headshots",
@@ -71,7 +71,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1672672256/Stryda/demo/mission-valorant_4.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_4.jpg",
       },
       {
         name: "Win 1 game of Spike Rush",
@@ -84,7 +84,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1672672256/Stryda/demo/mission-valorant_5.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_5.jpg",
       },
       {
         name: "Get 30 kills",
@@ -97,7 +97,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 100,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1672672256/Stryda/demo/mission-valorant_6.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_6.jpg",
       },
     ],
     ladders: [

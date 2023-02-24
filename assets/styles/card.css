@@ -1448,6 +1448,7 @@
   items-center
   gap-1
   text-sm
+  uppercase
   ;
 
   > .icon {

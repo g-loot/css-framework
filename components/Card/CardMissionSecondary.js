@@ -147,7 +147,7 @@ export default function CardMissionSecondary(props) {
             */}
             <div className="card-decoration"></div>
             <div className="card-body">
-            <div className="absolute z-10 top-2.5 right-2.5 m-0">
+            <div className="absolute z-10 top-2 right-2 m-0">
                 <Tooltip
                   tooltip={
                     <span className="text-sm">Reshuffle mission</span>
