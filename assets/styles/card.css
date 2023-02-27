@@ -571,6 +571,9 @@
       backdrop-blur-sm;
     }
   }
+  &.is-loading {
+    
+  }
 
   &[class*='rarity-category'] {
     .card-bg::before {

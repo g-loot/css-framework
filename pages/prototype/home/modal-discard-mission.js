@@ -8,6 +8,7 @@ import AnimatedNumber from "../../../components/AnimatedNumber/AnimatedNumber";
 import { useRouter } from "next/router";
 import XPBoostList from "../../../components/XPBoostList/XPBoostList";
 import Link from "next/link";
+import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
 
 const missionDefault = {
   name: "Get 6 assists",
@@ -23,7 +24,7 @@ const missionDefault = {
     "https://res.cloudinary.com/gloot/image/upload/v1672672256/Stryda/demo/mission-valorant_3.jpg",
 };
 
-export default function ModalReshuffleMission(props) {
+export default function ModalDiscardMission(props) {
   const uiContext = useContext(UiContext);
   const mission = props.mission || missionDefault;
   const variablesContext = useContext(VariablesContext);
@@ -37,7 +38,7 @@ export default function ModalReshuffleMission(props) {
     setTimeout(() => {
       uiContext.openToastr({
         size: "medium",
-        text: "Mission reshuffled successfully",
+        text: "Mission discarded successfully",
         color: "green",
         autoDelete: true,
         autoDeleteDelay: 2500,
@@ -66,11 +67,12 @@ export default function ModalReshuffleMission(props) {
         {isPremium ? (
           <div className="modal-content">
             <div className="modal-body">
-              <h2 className="modal-title">Reshuffle mission?</h2>
+              <h2 className="modal-title">Discard mission?</h2>
               <p>
-                You are about to reshuffle the{" "}
+                You are about to discard the{" "}
                 <span className="text-ui-100 font-bold">{mission?.name} </span>
-                mission and get a new one.
+                mission. By doing this you will be able to get a new one in any
+                of your favorite games.
                 <br />
                 Are you sure?
               </p>
@@ -83,7 +85,7 @@ export default function ModalReshuffleMission(props) {
                 }`}
                 onClick={closeModalWithDelay}
               >
-                <span>Reshuffle mission</span>
+                <span>Discard mission</span>
               </button>
               <button
                 type="button"
@@ -97,14 +99,12 @@ export default function ModalReshuffleMission(props) {
         ) : (
           <div className="modal-content">
             <div className="modal-body">
-              <h2 className="modal-title">Reshuffle mission?</h2>
-              <p>
-                You are about to reshuffle the{" "}
-                <span className="text-ui-100 font-bold">{mission.name} </span>
-                mission and get a new one.
-                <br />
-                Are you sure?
-              </p>
+              <PremiumLogo
+                src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                width="210"
+                height="auto"
+                className="mx-auto mt-4 mb-6"
+              />
               <p>
                 <button
                   type="button"
@@ -113,24 +113,18 @@ export default function ModalReshuffleMission(props) {
                 >
                   Premium members
                 </button>{" "}
-                can reshuffle missions for free.
+                can discard one mission per day for free.
               </p>
             </div>
             <div className="modal-action">
               <button
                 type="button"
-                className={`button button-primary button-currency button-coin  ${
+                className={`button button-premium${
                   submitting ? "is-loading" : ""
                 }`}
-                onClick={closeModalWithDelay}
+                onClick={handleBecomePremium}
               >
-                <div>
-                  <span>Reshuffle mission</span>
-                </div>
-                <div>
-                  <span className="icon icon-coin text-currency-1-500   " />
-                  <span>200</span>
-                </div>
+                <span>Join Premium</span>
               </button>
               <button
                 type="button"

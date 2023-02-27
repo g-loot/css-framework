@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import { VariablesContext } from "../../contexts/variables";
 import Countdown from "../Countdown/Countdown";
 import ModalClaimMission from "../../pages/prototype/home/modal-claim-mission";
-import ModalReshuffleMission from "../../pages/prototype/home/modal-reshuffle-mission";
+import ModalDiscardMission from "../../pages/prototype/home/modal-discard-mission";
 import { UiContext } from "../../contexts/ui";
 import XPBoostList from "../XPBoostList/XPBoostList";
 
@@ -20,7 +20,7 @@ export default function CardMissionSecondary(props) {
   const { query } = useRouter();
   const isPremium = query.premium === "true" ? true : false;
   const modalClaimMission = query.modalclaimmission === "true" ? true : false;
-  const modalReshuffleMission = query.modalreshufflemission === "true" ? true : false;
+  const modalDiscardMission = query.modaldiscardmission === "true" ? true : false;
   const gameSlug = props.gameSlug || "valorant";
   const [hasClaimed, setHasClaimed] = useState(mission.hasClaimed);
 
@@ -49,14 +49,14 @@ export default function CardMissionSecondary(props) {
   }
 
   useEffect(() => {
-    if (modalReshuffleMission) {
-      openModalReshuffleMission();
+    if (modalDiscardMission) {
+      openModalDiscardMission();
     }
-  }, [modalReshuffleMission]);
+  }, [modalDiscardMission]);
 
-  function openModalReshuffleMission() {
+  function openModalDiscardMission() {
     uiContext.openModal(
-      <ModalReshuffleMission mission={mission}></ModalReshuffleMission>
+      <ModalDiscardMission mission={mission}></ModalDiscardMission>
     );
   }
 
@@ -69,7 +69,7 @@ export default function CardMissionSecondary(props) {
         key={mission}
       >
         <div className="revealer-front">
-          <div className="card-mission card-secondary">
+          <div className={`card-mission card-secondary ${variablesContext.availableMissions < 2 ? 'is-highlighted' : ''}`}>
             <div className="card-overlay">
               {variablesContext.availableMissions < 2 ? (
                 <>
@@ -150,13 +150,13 @@ export default function CardMissionSecondary(props) {
             <div className="absolute z-10 top-2 right-2 m-0">
                 <Tooltip
                   tooltip={
-                    <span className="text-sm">Reshuffle mission</span>
+                    <span className="text-sm">Discard mission</span>
                   }
                 >
                   <button
                     type="button"
                     className={`button button-ghost rounded-full`}
-                    onClick={openModalReshuffleMission}
+                    onClick={openModalDiscardMission}
                   >
                     <span className="icon icon-refresh-02 text-ui-400" />
                   </button>

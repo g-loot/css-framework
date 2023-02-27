@@ -80,31 +80,7 @@ export default function ProfileHeader(props) {
             </div>
           )}
           <div className="header-content">
-            <div className="header-image">
-              {selectedUser.isYou ? (
-                <div className="flex">
-                  <div className="relative">
-                    <Avatar
-                      size="avatar-2xl"
-                      id={selectedUser.id}
-                      hasTooltip={true}
-                      hasTooltipXP={true}
-                      tooltipPlacement={"bottom"}
-                    />
-
-                    <button
-                      onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)}
-                      type="button"
-                      className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0"
-                    >
-                      <span className="icon icon-pen-2" />
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <Avatar size="avatar-2xl" id={selectedUser.id} />
-              )}
-            </div>
+            
             <div className="header-body">
               <div className="flex flex-col md:flex-row gap-4 md:items-center self-center">
                 <div className="flex-1">
@@ -203,6 +179,29 @@ export default function ProfileHeader(props) {
           </div>
 
           <div className="header-bg">
+          {selectedUser.isYou ? (
+                <div className="flex">
+                  <div className="relative">
+                    <Avatar
+                      size="avatar-2xl"
+                      id={selectedUser.id}
+                      hasTooltip={true}
+                      hasTooltipXP={true}
+                      tooltipPlacement={"bottom"}
+                    />
+
+                    <button
+                      onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)}
+                      type="button"
+                      className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0"
+                    >
+                      <span className="icon icon-pen-2" />
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <Avatar size="avatar-2xl" id={selectedUser.id} />
+              )}
             <button
               onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)}
               type="button"

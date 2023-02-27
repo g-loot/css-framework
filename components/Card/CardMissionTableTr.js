@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 import { VariablesContext } from "../../contexts/variables";
 import Countdown from "../Countdown/Countdown";
 import ModalClaimMission from "../../pages/prototype/home/modal-claim-mission";
-import ModalReshuffleMission from "../../pages/prototype/home/modal-reshuffle-mission";
 import { UiContext } from "../../contexts/ui";
 import XPBoostList from "../XPBoostList/XPBoostList";
 
@@ -45,12 +44,6 @@ export default function CardMissionTableTr(props) {
 
   function calculatePercent(current, max) {
     return (100 * max) / current;
-  }
-
-  function handleReshuffle() {
-    uiContext.openModal(
-      <ModalReshuffleMission mission={mission}></ModalReshuffleMission>
-    );
   }
 
   return (
