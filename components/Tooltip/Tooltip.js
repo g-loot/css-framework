@@ -23,7 +23,7 @@ const Tooltip = (props) => {
     <>
       <div
         ref={setTriggerRef}
-        className={`inline-block ${props.tooltip ? "cursor-pointer" : ""} ${
+        className={`inline-flex ${props.tooltip ? "cursor-pointer" : ""} ${
           props.className
         }`}
       >

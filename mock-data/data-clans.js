@@ -24,15 +24,20 @@ export const dataClans = [
     },
     admin: 1,
     members: [
-      2,
       1,
-      3
+      2,
+      3,
+      4,
+      5,
+      8,
+      9,
+      10,
     ]
   },
   {
     id: 2,
     isYou: false,
-    isPublic: true,
+    isPublic: false,
     hasInvitedYou: false,
     isFeatured: true,
     nickname: "PizzaYOLO",
@@ -50,7 +55,6 @@ export const dataClans = [
     },
     admin: 4,
     members: [
-      4,
       6,
       7,
       8
@@ -81,8 +85,10 @@ export const dataClans = [
     },
     admin: 1,
     members: [
+      9,
+      10,
+      11,
       2,
-      1,
       3
     ]
   },
@@ -112,8 +118,11 @@ export const dataClans = [
     admin: 1,
     members: [
       4,
+      5,
       6,
-      7
+      7,
+      8,
+      9
     ]
   },
   {
@@ -149,7 +158,7 @@ export const dataClans = [
   {
     id: 6,
     isYou: false,
-    isPublic: true,
+    isPublic: false,
     hasInvitedYou: false,
     isFeatured: false,
     nickname: "Dusty Smokers",
@@ -172,14 +181,17 @@ export const dataClans = [
     admin: 1,
     members: [
       2,
-      1,
-      3
+      3,
+      4,
+      5,
+      6,
+      7
     ]
   },
   {
     id: 7,
     isYou: false,
-    isPublic: true,
+    isPublic: false,
     hasInvitedYou: true,
     isFeatured: false,
     nickname: "Valorians",
@@ -202,15 +214,22 @@ export const dataClans = [
     admin: 1,
     members: [
       2,
-      1,
-      3
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
     ]
   },
   {
     id: 8,
     isYou: false,
     isPublic: false,
-    hasInvitedYou: true,
+    hasInvitedYou: false,
     isFeatured: false,
     nickname: "#1",
     tag: "ONE",
@@ -231,9 +250,13 @@ export const dataClans = [
     },
     admin: 1,
     members: [
-      2,
-      1,
-      3
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5
     ]
   }
 ]

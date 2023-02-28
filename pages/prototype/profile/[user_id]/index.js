@@ -15,6 +15,8 @@ import AchievementIcon from "../../../../components/Achievements/AchievementIcon
 import ModalAchievementReceived from "../../modal-achievementreceived";
 import ModalLevelUp from "../../modal-levelup";
 import ProfileHeader from "../header";
+import Tooltip from "../../../../components/Tooltip/Tooltip";
+import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
 
 const achievementsList = [
   {
@@ -108,13 +110,13 @@ export default function Home() {
   const { query } = useRouter();
   const modalAchievement = query.modalachievement === "true" ? true : false;
   const modalLeveLUp = query.modallevelup === "true" ? true : false;
-  
+
   useEffect(() => {
     if (modalAchievement) {
       openModalAchievementReceived();
     }
   }, [modalAchievement]);
-  
+
   function openModalAchievementReceived(level, name, icon) {
     uiContext.openModal(
       <ModalAchievementReceived level={level} name={name} icon={icon} />
@@ -126,14 +128,10 @@ export default function Home() {
       openmodalLeveLUp();
     }
   }, [modalLeveLUp]);
-  
-  function openmodalLeveLUp() {
-    uiContext.openModal(
-      <ModalLevelUp />
-    );
-  }
 
-  
+  function openmodalLeveLUp() {
+    uiContext.openModal(<ModalLevelUp />);
+  }
 
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(user_id));
@@ -399,30 +397,103 @@ export default function Home() {
                 )}
                     */}
 
-                <div className="flex-1 flex flex-col surface sm:rounded-lg">
-                  <div className="p-2 border-b border-ui-700 flex justify-between items-start">
-                    <div>
-                      <h2 className="text-xl">Ladders</h2>
-                      <span className="text-sm text-ui-300">
-                        Showing your latest Solo Ladders
-                      </span>
+                <div className="flex-1 flex flex-col gap-4">
+                  <div className="surface sm:rounded-lg">
+                    <div className="p-2 border-b border-ui-700">
+                      <h2 className="text-xl">Game accounts</h2>
                     </div>
+                    <ul className="space-y-1 py-2 pl-4 pr-2">
+                      <li className="flex items-center gap-2 text-ui-300">
+                        <span className="icon icon-20 icon-riotgames-symbol" />
+                        <a
+                          className="flex-1 text-sm link link-hover"
+                          onClick={() => {
+                            uiContext.openToastr({
+                              size: "medium",
+                              text: "Game tag copied to your clipboard",
+                              color: "green",
+                              autoDelete: true,
+                              autoDeleteDelay: 2500,
+                            });
+                            navigator.clipboard.writeText("jackattack#2341");
+                          }}
+                        >
+                          jackattack#2341
+                        </a>
+                        <Tooltip
+                          placement="left"
+                          tooltip={
+                            <div className="max-w-xs text-sm text-center leading-tight">
+                              Copy
+                            </div>
+                          }
+                        >
+                          <ButtonFeedback
+                            variant="button-ghost rounded-full"
+                            icon="icon-document-copy"
+                            message="Game tag copied to your clipboard"
+                          />
+                        </Tooltip>
+                      </li>
+                      <li className="flex items-center gap-2 text-ui-300">
+                        <span className="icon icon-20 icon-steam" />
+                        <a
+                          className="flex-1 text-sm link link-hover"
+                          onClick={() => {
+                            uiContext.openToastr({
+                              size: "medium",
+                              text: "Game tag copied to your clipboard",
+                              color: "green",
+                              autoDelete: true,
+                              autoDeleteDelay: 2500,
+                            });
+                            navigator.clipboard.writeText("PUBG_Player_1");
+                          }}
+                        >
+                          PUBG_Player_1
+                        </a>
+                        <Tooltip
+                          placement="left"
+                          tooltip={
+                            <div className="max-w-xs text-sm text-center leading-tight">
+                              Copy
+                            </div>
+                          }
+                        >
+                          <ButtonFeedback
+                            variant="button-ghost rounded-full"
+                            icon="icon-document-copy"
+                            message="Game tag copied to your clipboard"
+                          />
+                        </Tooltip>
+                      </li>
+                    </ul>
                   </div>
-                  <div className="flex-1 relative overflow-hidden">
-                    <div className="lg:absolute inset-0 overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto scrollbar-desktop">
-                      <ul className="space-x-2 lg:space-x-0 lg:space-y-2 p-2 flex lg:block">
-                        {prototype.games.map((game, gameIndex) => (
-                          <>
-                            {game.ladders?.map((ladder, ladderIndex) => (
-                              <ListItemLadder
-                                key={ladderIndex}
-                                game={game}
-                                ladder={ladder}
-                              />
-                            ))}
-                          </>
-                        ))}
-                      </ul>
+                  <div className="flex-1 flex flex-col surface sm:rounded-lg">
+                    <div className="p-2 border-b border-ui-700 flex justify-between items-start">
+                      <div>
+                        <h2 className="text-xl">Ladders</h2>
+                        <span className="text-sm text-ui-300">
+                          Showing your latest Solo Ladders
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex-1 relative overflow-hidden">
+                      <div className="lg:absolute inset-0 overflow-x-auto lg:overflow-x-hidden lg:overflow-y-auto scrollbar-desktop min-h-[200px]">
+                        <ul className="space-x-2 lg:space-x-0 lg:space-y-2 p-2 flex lg:block">
+                          {prototype.games.map((game, gameIndex) => (
+                            <>
+                              {game.ladders?.map((ladder, ladderIndex) => (
+                                <ListItemLadder
+                                  key={ladderIndex}
+                                  game={game}
+                                  ladder={ladder}
+                                />
+                              ))}
+                            </>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>

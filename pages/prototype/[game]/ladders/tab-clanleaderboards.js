@@ -6,6 +6,7 @@ import Reward from "../../../../components/Reward/Reward";
 import Tooltip from "../../../../components/Tooltip/Tooltip";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
+import Avatar from "../../../../components/Avatar/Avatar";
 
 const Groups = [
   "A",
@@ -122,15 +123,11 @@ export default function TabLaddersSoloLeaderboards() {
             <div className="mb-4 space-y-8 surface surface-dimmed rounded-lg px-2 pb-2 pt-4">
               <div className="text-center">
                 <div className="text-sm uppercase">The 10 best matches</div>
-                <div className="text-2xl text-ui-100">
-                  Clan performance
-                </div>
+                <div className="text-2xl text-ui-100">Clan performance</div>
               </div>
               <div className="flex items-center justify-around gap-4 text-center leading-none">
                 <div>
-                  <div className="text-3xl text-ui-100 mb-2">
-                    125
-                  </div>
+                  <div className="text-3xl text-ui-100 mb-2">125</div>
                   <div className="text-sm uppercase text-ui-300">
                     Total Ladder
                     <br />
@@ -138,9 +135,7 @@ export default function TabLaddersSoloLeaderboards() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-3xl text-ui-100 mb-2">
-                    #5
-                  </div>
+                  <div className="text-3xl text-ui-100 mb-2">#5</div>
                   <div className="text-sm uppercase text-ui-300">
                     Current Ladder
                     <br />
@@ -337,7 +332,10 @@ export default function TabLaddersSoloLeaderboards() {
                     {selectedLadder &&
                       selectedLadder.clanLeaderboard.map((user, userIndex) => (
                         <>
-                          <div className="item rounded-lg h-[58px]" key={userIndex}>
+                          <div
+                            className="item rounded-lg h-[58px]"
+                            key={userIndex}
+                          >
                             <div className="item-image">
                               <div className="avatar avatar-squircle avatar-xs">
                                 <div />
@@ -509,34 +507,34 @@ export default function TabLaddersSoloLeaderboards() {
                                         Match points in best 10 matches
                                       </h5>
                                       <div className="flex flex-wrap justify-center gap-2">
-                                        <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                        <div className="px-3 py-1 rounded bg-ui-850">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
-                                        <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                        <div className="px-3 py-1 rounded bg-ui-850">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
-                                        <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                        <div className="px-3 py-1 rounded bg-ui-850">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
-                                        <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                        <div className="px-3 py-1 rounded bg-ui-850">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
-                                        <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                        <div className="px-3 py-1 rounded bg-ui-850">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
-                                        <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                        <div className="px-3 py-1 rounded bg-ui-850">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
-                                        <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                        <div className="px-3 py-1 rounded bg-ui-850">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
-                                        <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                        <div className="px-3 py-1 rounded bg-ui-850">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
-                                        <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                        <div className="px-3 py-1 rounded bg-ui-850">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
-                                        <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                        <div className="px-3 py-1 rounded bg-ui-850">
                                           {numberWithSpaces(getRandomInt(2000))}
                                         </div>
                                       </div>
@@ -681,6 +679,100 @@ export default function TabLaddersSoloLeaderboards() {
                                       </div>
                                     </li>
                                   </ul>
+                                  <div className="p-2">
+                                    <div className="bg-ui-850 rounded p-2 flex gap-2 items-center justify-between">
+                                      <div className="avatar-group -space-x-2">
+                                        {prototype
+                                          .getClanByID(user.clan)
+                                          .members?.slice(0, 5)
+                                          .map((item, itemIndex) => (
+                                            <Avatar
+                                              key={itemIndex}
+                                              hasTooltip={true}
+                                              id={item}
+                                              hasLevel={false}
+                                              size="avatar-xs"
+                                            />
+                                          ))}
+                                        {prototype.getClanByID(user.clan)
+                                          .members?.length > 5 && (
+                                          <div className="avatar avatar-circle avatar-xs">
+                                            <div>
+                                              <span>
+                                                +
+                                                {prototype.getClanByID(
+                                                  user.clan
+                                                ).members?.length - 5}
+                                              </span>
+                                            </div>
+                                          </div>
+                                        )}
+                                      </div>
+                                      <div className="text-center text-ui-300 text-sm">
+                                        {prototype.getClanByID(user.clan)
+                                          .members?.length < 20 && (
+                                          <>
+                                            {20 -
+                                              prototype.getClanByID(user.clan)
+                                                .members?.length}{" "}
+                                            available slots
+                                          </>
+                                        )}
+                                      </div>
+                                      <div>
+                                        {prototype.getClanByID(user.clan)
+                                          .isPublic ? (
+                                          <>
+                                            <Link href="#">
+                                              <a
+                                                type="button"
+                                                className="button button-sm button-secondary flex-1"
+                                              >
+                                                <span>Join clan</span>
+                                              </a>
+                                            </Link>
+                                          </>
+                                        ) : (
+                                          <>
+                                            {prototype.getClanByID(user.clan)
+                                              .hasInvitedYou ? (
+                                              <>
+                                                <div className="flex gap-2">
+                                                  <Link href="#">
+                                                    <a
+                                                      type="button"
+                                                      className="button button-sm button-success flex-1"
+                                                    >
+                                                      <span>Accept</span>
+                                                    </a>
+                                                  </Link>
+                                                  <Link href="#">
+                                                    <a
+                                                      type="button"
+                                                      className="button button-sm button-error flex-1"
+                                                    >
+                                                      <span>Decline</span>
+                                                    </a>
+                                                  </Link>
+                                                </div>
+                                              </>
+                                            ) : (
+                                              <>
+                                                <Link href="#">
+                                                  <a
+                                                    type="button"
+                                                    className="button button-sm button-secondary flex-1"
+                                                  >
+                                                    <span>Apply to join</span>
+                                                  </a>
+                                                </Link>
+                                              </>
+                                            )}
+                                          </>
+                                        )}
+                                      </div>
+                                    </div>
+                                  </div>
                                   <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
                                     <div className="flex items-center gap-4">
                                       <Link
@@ -691,26 +783,6 @@ export default function TabLaddersSoloLeaderboards() {
                                         <a className="link link-main link-hover flex items-center gap-1 text-sm">
                                           <span className="icon icon-multiple-12" />
                                           <span>Go to Clan page</span>
-                                        </a>
-                                      </Link>
-                                      <Link
-                                        href={`/prototype/clans/${
-                                          prototype.getClanByID(user.clan)?.id
-                                        }`}
-                                      >
-                                        <a className="link link-main link-hover flex items-center gap-1 text-sm">
-                                          {prototype.getClanByID(user.clan)
-                                            ?.isPublic ? (
-                                            <>
-                                              <span className="icon icon-door-3" />
-                                              <span>Join Clan</span>
-                                            </>
-                                          ) : (
-                                            <>
-                                              <span className="icon icon-single-position" />
-                                              <span>Apply to Clan</span>
-                                            </>
-                                          )}
                                         </a>
                                       </Link>
                                     </div>

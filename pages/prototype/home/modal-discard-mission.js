@@ -117,9 +117,9 @@ export default function ModalDiscardMission(props) {
                   onClick={handleBecomePremium}
                   className="text-premium-500 link"
                 >
-                  Premium members
+                  Premium
                 </button>{" "}
-                can discard one mission per day for free.
+                members can discard and get a new mission every day.
               </p>
             </div>
             <div className="modal-action">

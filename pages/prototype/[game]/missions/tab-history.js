@@ -86,7 +86,7 @@ export default function TabMissionsHistory() {
                 <p className="max-w-[50ch] text-sm text-ui-300 mx-auto mt-2 mb-5">
                   Increase your amount of XP you can earn each day with a{" "}
                   <Link href={`/prototype/premium${prototype.getURLparams()}`}>
-                    <a className="link">Premium subscription</a>
+                    <a className="link text-premium-500">Premium subscription</a>
                   </Link>
                   .
                 </p>

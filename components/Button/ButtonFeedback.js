@@ -16,7 +16,6 @@ export default function ButtonFeedback(props) {
 
   function handleButtonFeedback(message) {
     uiContext.openToastr({
-      size: "small",
       text: message,
       color: "green",
       autoDelete: true,

@@ -193,7 +193,21 @@ export default function TabProfileOverview() {
                     <ul className="space-y-2">
                       <li className="flex items-center gap-2 text-ui-300">
                         <span className="icon icon-20 icon-riotgames-symbol" />
-                        <span className="flex-1">augieaugie#2341</span>
+                        <a
+                          className="flex-1 link link-hover"
+                          onClick={() => {
+                            uiContext.openToastr({
+                              size: "medium",
+                              text: "Game tag copied to your clipboard",
+                              color: "green",
+                              autoDelete: true,
+                              autoDeleteDelay: 2500,
+                            });
+                            navigator.clipboard.writeText("jackattack#2341");
+                          }}
+                        >
+                          jackattack#2341
+                        </a>
                         <Tooltip
                           placement="left"
                           tooltip={
@@ -205,13 +219,27 @@ export default function TabProfileOverview() {
                           <ButtonFeedback
                             variant="button-ghost rounded-full"
                             icon="icon-document-copy"
-                            message="tag copied"
+                            message="Game tag copied to your clipboard"
                           />
                         </Tooltip>
                       </li>
                       <li className="flex items-center gap-2 text-ui-300">
-                        <span className="icon icon-20 icon-game-pubg-symbol" />
-                        <span className="flex-1">PUBG_Player_1</span>
+                        <span className="icon icon-20 icon-steam" />
+                        <a
+                          className="flex-1 link link-hover"
+                          onClick={() => {
+                            uiContext.openToastr({
+                              size: "medium",
+                              text: "Game tag copied to your clipboard",
+                              color: "green",
+                              autoDelete: true,
+                              autoDeleteDelay: 2500,
+                            });
+                            navigator.clipboard.writeText("PUBG_Player_1");
+                          }}
+                        >
+                          PUBG_Player_1
+                        </a>
                         <Tooltip
                           placement="left"
                           tooltip={
@@ -223,7 +251,7 @@ export default function TabProfileOverview() {
                           <ButtonFeedback
                             variant="button-ghost rounded-full"
                             icon="icon-document-copy"
-                            message="tag copied"
+                            message="Game tag copied to your clipboard"
                           />
                         </Tooltip>
                       </li>
