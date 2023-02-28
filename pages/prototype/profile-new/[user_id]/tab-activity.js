@@ -105,9 +105,13 @@ export default function TabProfileActivity() {
           )}
           {!isEmpty && (
             <>
-              <div className="max-w-lg mx-auto space-y-4">
+              <div className="max-w-md mx-auto space-y-4">
                 {ActivityFeed.map((item, itemIndex) => (
-                  <div key={itemIndex} className="flex items-stretch gap-4">
+                  <div
+                    key={itemIndex}
+                    className="flex items-stretch gap-4 animate-slide-in-bottom animate-delay"
+                    style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
+                  >
                     <div className="flex flex-col justify-center gap-4">
                       <div className="rounded-full w-16 h-16 grid place-content-center bg-ui-700">
                         <span

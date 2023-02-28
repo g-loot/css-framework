@@ -130,7 +130,7 @@ export default function TabProfileOverview() {
         <>
           {isEmpty && (
             <>
-              <div className="surface rounded-lg px-4 py-8 text-center">
+              <div className="surface rounded-lg px-4 py-8 text-center animate-slide-in-bottom">
                 <div className="max-w-xs mx-auto">
                   <span className="icon icon-smile text-6xl text-ui-500" />
                   <div className="mt-2 mb-6">
@@ -152,11 +152,20 @@ export default function TabProfileOverview() {
             </>
           )}
           {!isEmpty && (
-            <div className="flex flex-col lg:flex-row items-start gap-y-4 lg:gap-x-4">
+            <div className="flex flex-col lg:flex-row items-start gap-y-4 lg:gap-x-4 animate-slide-in-bottom">
               <div className="w-full lg:w-80 space-y-4">
                 <section className="surface md:rounded">
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                    <h2 className="h6">About</h2>
+                    <h2 className="h6 text-ui-100">About</h2>
+                    {selectedUser.isYou && (
+                      <Link
+                        href={`/prototype/profile-new/settings${prototype.getURLparams()}`}
+                      >
+                        <a className="link link-hover text-ui-300 text-sm">
+                          Edit
+                        </a>
+                      </Link>
+                    )}
                   </div>
                   <div className="p-4 space-y-4">
                     {selectedUser.bio && (
@@ -260,7 +269,18 @@ export default function TabProfileOverview() {
                 </section>
                 <section className="surface md:rounded">
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                    <h2 className="h6">Clan</h2>
+                    <h2 className="h6 text-ui-100">Clan</h2>
+                    {selectedUser.clan && (
+                      <Link
+                        href={`/prototype/clans/${
+                          selectedUser.clan
+                        }${prototype.getURLparams()}`}
+                      >
+                        <a className="link link-hover text-ui-300 text-sm">
+                          View
+                        </a>
+                      </Link>
+                    )}
                   </div>
                   <div className="space-y-4">
                     {!emptyClan ? (
@@ -347,10 +367,10 @@ export default function TabProfileOverview() {
                 {selectedUser.games && (
                   <section className="surface md:rounded">
                     <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                      <h2 className="h6">Games</h2>
+                      <h2 className="h6 text-ui-100">Games</h2>
                       <Link href={`${selectedUser.id}?tab=games`}>
                         <a className="link link-hover text-ui-300 text-sm">
-                          View all
+                          View
                         </a>
                       </Link>
                     </div>
@@ -380,13 +400,110 @@ export default function TabProfileOverview() {
                   </section>
                 )}
               </div>
-              <div className="flex-1 space-y-4">
+              <div className="flex-1 space-y-4 overflow-hidden">
                 <section className="surface md:rounded">
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                    <h2 className="h6">Latest Achievements</h2>
+                    <h2 className="h6 text-ui-100">Stats</h2>
                     <Link href={`${selectedUser.id}?tab=achievements`}>
                       <a className="link link-hover text-ui-300 text-sm">
-                        View all
+                        View
+                      </a>
+                    </Link>
+                  </div>
+                  <div>
+                    <Slider
+                      itemWidth={200 + 16}
+                      bgColor="from-ui-800 via-ui-800 to-ui-800/0"
+                    >
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-6 px-6 whitespace-nowrap">
+                          <div className="w-40">
+                            <img
+                              src="https://res.cloudinary.com/gloot/image/upload/v1673941215/Stryda/logos/stryda-logo-ladders-simple.svg"
+                              width="auto"
+                              height="auto"
+                              alt=""
+                              className="h-10"
+                            />
+                          </div>
+                          <div className="pl-4 border-l border-ui-600">
+                            <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
+                              Number of Ladders played
+                            </div>
+                            <div className="text-ui-100 text-xl lg:text-3xl">
+                              22
+                            </div>
+                          </div>
+                          <div className="pl-4 border-l border-ui-600">
+                            <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
+                              Times in top 50
+                            </div>
+                            <div className="text-ui-100 text-xl lg:text-3xl">
+                              2
+                            </div>
+                          </div>
+                          <div className="pl-4 border-l border-ui-600">
+                            <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
+                              Best placement
+                            </div>
+                            <div className="text-ui-100 text-xl lg:text-3xl">
+                              1
+                            </div>
+                          </div>
+                          <div className="pl-4 border-l border-ui-600">
+                            <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
+                              Most matches in a Ladder
+                            </div>
+                            <div className="text-ui-100 text-xl lg:text-3xl">
+                              16
+                            </div>
+                          </div>
+                          <div className="pl-4 border-l border-ui-600">
+                            <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
+                              Avg. matches / Ladder
+                            </div>
+                            <div className="text-ui-100 text-xl lg:text-3xl">
+                              9.8
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-6 px-6 whitespace-nowrap">
+                          <div className="w-40">
+                            <img
+                              src="https://res.cloudinary.com/gloot/image/upload/v1673941215/Stryda/logos/stryda-logo-missions-simple.svg"
+                              width="auto"
+                              height="auto"
+                              alt=""
+                              className="h-10 flex-none"
+                            />
+                          </div>
+                          <div className="pl-4 border-l border-ui-600">
+                            <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
+                              No. of missions completed
+                            </div>
+                            <div className="text-ui-100 text-xl lg:text-3xl">
+                              143
+                            </div>
+                          </div>
+                          <div className="pl-4 border-l border-ui-600">
+                            <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
+                              Missions / day avg.
+                            </div>
+                            <div className="text-ui-100 text-xl lg:text-3xl">
+                              2.3
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Slider>
+                  </div>
+                </section>
+                <section className="surface md:rounded">
+                  <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                    <h2 className="h6 text-ui-100">Latest Achievements</h2>
+                    <Link href={`${selectedUser.id}?tab=achievements`}>
+                      <a className="link link-hover text-ui-300 text-sm">
+                        View
                       </a>
                     </Link>
                   </div>
@@ -444,12 +561,12 @@ export default function TabProfileOverview() {
                     </Slider>
                   </div>
                 </section>
-                <section className="surface md:rounded">
+                <section className="surface md:rounded overflow-hidden">
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                    <h2 className="h6">Ladders</h2>
+                    <h2 className="h6 text-ui-100">Ladders</h2>
                     <Link href={`${selectedUser.id}?tab=games`}>
                       <a className="link link-hover text-ui-300 text-sm">
-                        View all
+                        View
                       </a>
                     </Link>
                   </div>

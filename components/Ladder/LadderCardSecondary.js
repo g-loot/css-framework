@@ -17,7 +17,7 @@ export default function LadderCardSecondary(props) {
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
   const isHorizontal = props.isHorizontal || false;
-  const isEnrolled = props.ladder.isEnrolled || false;
+  const isEnrolled = props.ladder?.isEnrolled || false;
   const isFluid = props.isFluid || false;
   const isClan = props.isClan || false;
   const ladder = props.ladder;
