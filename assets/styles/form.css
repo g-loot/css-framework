@@ -1385,10 +1385,10 @@ input[type=range].form-range {
 
   &:focus-visible {
     &::-webkit-slider-runnable-track {
-      --focus-shadow: 0 0 0 6px var(--color-ui-800) inset, 0 0 0 2rem rgb(var(--color-main)) inset
+      --focus-shadow: 0 0 0 6px var(--color-ui-800) inset, 0 0 0 2rem rgb(var(--color-main)) inset;
     }
     &::-moz-range-thumb {
-      --focus-shadow: 0 0 0 6px var(--color-ui-800) inset, 0 0 0 2rem rgb(var(--color-main)) inset
+      --focus-shadow: 0 0 0 6px var(--color-ui-800) inset, 0 0 0 2rem rgb(var(--color-main)) inset;
     }
   }
 
@@ -1433,8 +1433,6 @@ input[type=range].form-range {
     h-4
     w-4
     relative
-    top-[50%]
-    -translate-y-[50%]
     appearance-none
     border-none
     rounded-full
@@ -1446,7 +1444,6 @@ input[type=range].form-range {
     box-shadow: 0 0 0 3px rgb(var(--color-main)) inset, var(--focus-shadow, 0 0), calc(var(--filler-size) * -1 - var(--filler-offset)) 0 0 var(--filler-size)
   }
 }
-
 
 /* input file dropzone */
 
@@ -1503,6 +1500,7 @@ input[type=range].form-range {
 @layer utilities {
   input[type="number"] {
     &:not(.is-default) {
+      -moz-appearance:textfield;
       &::-webkit-inner-spin-button,
       &::-webkit-outer-spin-button {
         @apply

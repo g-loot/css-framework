@@ -76,7 +76,7 @@ export default function CardMissionSecondary(props) {
                   {!MissionRetrieved && (
                     <>
                       <button
-                        className="button button-secondary mx-auto"
+                        className="button button-primary mx-auto"
                         onClick={handleGetMission.bind(this)}
                       >
                         <span>Get new mission</span>
@@ -109,7 +109,7 @@ export default function CardMissionSecondary(props) {
               <span
                 style={{
                   backgroundImage:
-                    "url(https://res.cloudinary.com/gloot/image/upload/v1672672455/Stryda/demo/mission-back-" +
+                    "url(https://res.cloudinary.com/gloot/image/upload/v1677499396/Stryda/demo/mission-back-" +
                     gameSlug +
                     ".jpg)",
                 }}

@@ -40,6 +40,9 @@ export default function Notification(props) {
           {notification.type === "clan" && (
             <span className="icon icon-multiple-12 text-ui-300" />
           )}
+          {notification.type === "reward" && (
+            <span className="icon icon-present text-ui-300" />
+          )}
           {notification.type === "ladder" && (
             <span className="icon icon-ladder text-ui-300" />
           )}
@@ -98,7 +101,11 @@ export default function Notification(props) {
                     type="button"
                     className="button button-primary button-xs md:w-full"
                   >
-                    <span>View</span>
+                    <span>{notification.cta ? (
+                        <>{notification.cta}</>
+                      ) : (
+                        <>View</>
+                      )}</span>
                   </button>
                 </Link>
               </>

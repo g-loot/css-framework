@@ -76,6 +76,12 @@ export default function ModalDiscardMission(props) {
                 <br />
                 Are you sure?
               </p>
+              <div className="flex justify-center">
+                <div className="form-checkbox mt-3">
+                  <input type="checkbox" name="policy" id="skip" />
+                  <label htmlFor="skip">Got it! Skip this next time</label>
+                </div>
+              </div>
             </div>
             <div className="modal-action">
               <button

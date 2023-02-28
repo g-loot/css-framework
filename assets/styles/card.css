@@ -567,12 +567,35 @@
   }
   &.is-inactive {
     .card-overlay {
-      @apply bg-ui-800/90
+      @apply 
+      bg-ui-800/90
       backdrop-blur-sm;
     }
   }
-  &.is-loading {
-    
+  &.is-highlighted {
+    .card-bg {
+      &::before {
+        @apply
+        content-['']
+        absolute
+        block
+        shadow-[inset_0_0_0_0_rgb(var(--color-ui-700))]
+        -inset-full
+        -z-10
+        transform-gpu
+        animate-[card-highlighted_5s_linear_infinite]
+        ;
+        background-image: radial-gradient(10% 125% at 50% 100%, #FFF 0%, rgba(255, 255, 255, 0) 100%);
+      }
+      > span {
+        @apply
+        absolute
+        z-0
+        rounded-none
+        inset-1
+        ;
+      }
+    }
   }
 
   &[class*='rarity-category'] {
@@ -620,6 +643,30 @@
       ;
     }
   }
+}
+
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
 }
 
 .revealer {
@@ -1480,5 +1527,23 @@
     @apply
     text-gold-500
     ;
+  }
+}
+
+@keyframes card-highlighted {
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(-360deg);
+  }
+}
+
+@keyframes card-highlighted-2 {
+  0%{
+      --_i: 0%:
+  }
+  100%{
+    --_i: 100%:
   }
 }

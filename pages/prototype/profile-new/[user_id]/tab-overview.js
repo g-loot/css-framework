@@ -152,8 +152,8 @@ export default function TabProfileOverview() {
             </>
           )}
           {!isEmpty && (
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-4 lg:gap-x-4">
-              <div className="col-span-1 space-y-4">
+            <div className="flex flex-col lg:flex-row items-start gap-y-4 lg:gap-x-4">
+              <div className="w-full lg:w-80 space-y-4">
                 <section className="surface md:rounded">
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                     <h2 className="h6">About</h2>
@@ -333,9 +333,16 @@ export default function TabProfileOverview() {
                       >
                         <div className="flex gap-6 py-2 px-6 hoverhighlight">
                           {selectedUser.games?.map((game, gameIndex) => (
-                            <Link key={gameIndex} href={`${selectedUser.id}?tab=games`}>
+                            <Link
+                              key={gameIndex}
+                              href={`${selectedUser.id}?tab=games`}
+                            >
                               <a className="interactive rounded overflow-hidden w-24">
-                              <img src={prototype.getGameByID(game).assets.cover} alt={prototype.getGameByID(game).name} className="aspect-cover object-cover" />
+                                <img
+                                  src={prototype.getGameByID(game).assets.cover}
+                                  alt={prototype.getGameByID(game).name}
+                                  className="aspect-cover object-cover"
+                                />
                               </a>
                             </Link>
                           ))}
@@ -345,7 +352,7 @@ export default function TabProfileOverview() {
                   </section>
                 )}
               </div>
-              <div className="col-span-2 space-y-4">
+              <div className="flex-1 space-y-4">
                 <section className="surface md:rounded">
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                     <h2 className="h6">Latest Achievements</h2>
@@ -410,26 +417,29 @@ export default function TabProfileOverview() {
                   </div>
                 </section>
                 <section className="surface md:rounded">
-                    <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                      <h2 className="h6">Ladders</h2>
-                      <Link href={`${selectedUser.id}?tab=games`}>
-                        <a className="link link-hover text-ui-300 text-sm">
-                          View all
-                        </a>
-                      </Link>
-                    </div>
-                    <div>
-                      {selectedUser.ladders ? (
+                  <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                    <h2 className="h6">Ladders</h2>
+                    <Link href={`${selectedUser.id}?tab=games`}>
+                      <a className="link link-hover text-ui-300 text-sm">
+                        View all
+                      </a>
+                    </Link>
+                  </div>
+                  <div>
+                    {selectedUser.ladders ? (
                       <Slider
                         itemWidth={397 + 16}
                         bgColor="from-ui-800 via-ui-800 to-ui-800/0"
                       >
                         <div className="flex gap-6 py-2 px-6 hoverhighlight">
-                        {selectedUser.ladders?.map((ladder, ladderIndex) => (
+                          {selectedUser.ladders?.map((ladder, ladderIndex) => (
                             <>
                               <LadderCardSecondary
                                 key={ladderIndex}
-                                ladder={prototype.getLadderByID(ladder.gameSlug, ladder.id)}
+                                ladder={prototype.getLadderByID(
+                                  ladder.gameSlug,
+                                  ladder.id
+                                )}
                                 isHorizontal={false}
                                 isClan={false}
                                 gameID={1}
@@ -439,14 +449,17 @@ export default function TabProfileOverview() {
                           ))}
                         </div>
                       </Slider>
-                      ) : (
-                        <div className="text-center p-4">
-                          <span className="icon icon-ladder text-6xl text-ui-500" />
-                          <p className="mt-2 text-ui-300">{selectedUser.nickname} is not competing in any ladders</p>
-                        </div>
-                      )}
-                    </div>
-                  </section>
+                    ) : (
+                      <div className="text-center p-4">
+                        <span className="icon icon-ladder text-6xl text-ui-500" />
+                        <p className="mt-2 text-ui-300">
+                          {selectedUser.nickname} is not competing in any
+                          ladders
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </section>
               </div>
             </div>
           )}

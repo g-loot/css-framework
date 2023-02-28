@@ -45,6 +45,13 @@ export const PrototypeProvider = ({ children }) => {
       return game.slug === slug;
     })
   }
+  const getMissionByID = (slug, id) => {
+    const selectedGame = getGameBySlug(slug);
+    const selectedMission = selectedGame?.missions?.find(mission => {
+      return mission.id === parseInt(id);
+    });
+    return selectedMission;
+  }
   const getLadderByID = (slug, id) => {
     const selectedGame = getGameBySlug(slug);
     const selectedLadder = selectedGame?.ladders?.find(ladder => {
@@ -122,6 +129,7 @@ export const PrototypeProvider = ({ children }) => {
         getGameBySlug,
         getUserByID,
         getUserProfile,
+        getMissionByID,
         getLadderByID,
         getTournamentByID,
         getClanByID,

@@ -197,7 +197,8 @@
 
   > .header-bg {
     @apply
-    block
+    grid
+    place-content-center
     relative
     bottom-auto
     -order-1
@@ -227,22 +228,6 @@
       @apply
       py-4
       ;
-    }
-    > .header-image {
-      .avatar.avatar-2xl {
-        @apply
-        -mt-10
-        sm:-mt-20
-        2xl:-mt-40
-        ;
-      }
-      .avatar.avatar-xl {
-        @apply
-        -mt-8
-        sm:-mt-16
-        2xl:-mt-32
-        ;
-      }
     }
   }
   > .header-meta {

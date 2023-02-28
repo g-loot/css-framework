@@ -17,12 +17,28 @@ import Avatar from "../Avatar/Avatar";
 
 const notificationsGroups = [
   {
+    name: "Rewards",
+    notifications: [
+      {
+        description: "Unclaimed rewards",
+        type: "reward",
+        intro: "Rewards",
+        title: "Claim your rewards!",
+        text: "You have rewards to claim from the previous Battle Pass.",
+        cta: "Claim",
+        url: "/prototype/valorant/missions?modalclaimmission=true",
+        time: "1 min.",
+        read: false,
+      },
+    ],
+  },
+  {
     name: "Achievements",
     notifications: [
       {
         description: "Achievement unlocked",
         type: "achievement",
-        intro: "Achivement",
+        intro: "Achievement",
         title: "You unlocked an achievement!",
         text: "Congratulations on unlocking the <a href='#' class='link font-bold'>Mission achievement Level 1</a>!",
         cta: "View",
@@ -199,21 +215,20 @@ export default function TopbarNew() {
     }
   }, [modalDownloadStarted]);
 
- 
   useEffect(() => {
     if (window.history.length) {
       setHasBack(true);
     }
   }, [hasBack]);
-  
-   /*
+
+  /*
   useEffect(() => {
     if (hasForward) {
       setHasForward(false);
     }
   }, [hasForward]);
   */
-  
+
   function openModalDownloadStarted() {
     uiContext.openModal(<ModalDownloadStarted></ModalDownloadStarted>);
   }
@@ -225,11 +240,11 @@ export default function TopbarNew() {
   function handleBack() {
     router.back();
     setHasForward(true);
-  }  
+  }
   function handleForward() {
     window.history.go(1);
     setHasForward(false);
-  }  
+  }
 
   return (
     <div className="sticky top-0 z-50 bg-ui-850/90 navbar h-12 flex items-center border-b border-ui-700">
@@ -248,10 +263,22 @@ export default function TopbarNew() {
                 </label>
               </div>
               <div className="hidden lg:flex gap-2 mr-2">
-                <button type="button" className={`button button-tertiary rounded-full ${hasBack ? '' : 'opacity-50 pointer-events-none'}`} onClick={handleBack}>
+                <button
+                  type="button"
+                  className={`button button-tertiary rounded-full ${
+                    hasBack ? "" : "opacity-50 pointer-events-none"
+                  }`}
+                  onClick={handleBack}
+                >
                   <span className="icon icon-ctrl-left" />
                 </button>
-                <button type="button" className={`button button-tertiary rounded-full ${hasForward ? '' : 'opacity-50 pointer-events-none'}`} onClick={handleForward}>
+                <button
+                  type="button"
+                  className={`button button-tertiary rounded-full ${
+                    hasForward ? "" : "opacity-50 pointer-events-none"
+                  }`}
+                  onClick={handleForward}
+                >
                   <span className="icon icon-ctrl-right" />
                 </button>
               </div>
@@ -339,7 +366,9 @@ export default function TopbarNew() {
                     <div className="text-sm font-bold text-ui-200 text-center pl-px">
                       <div className="infobanner is-active">
                         <div className="infobanner-front">
-                          <span className="font-bold text-xs">{isPremium ? <>+165%</> : <>+15%</>}</span>
+                          <span className="font-bold text-xs">
+                            {isPremium ? <>+165%</> : <>+15%</>}
+                          </span>
                         </div>
                         <div className="infobanner-back">
                           <span className="icon icon-xp-symbol text-3xl text-main mx-auto" />
@@ -353,9 +382,7 @@ export default function TopbarNew() {
                   tabIndex="1"
                   className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[300px] overflow-hidden rounded-xl shadow-xl"
                 >
-                  <h5 className="mx-2 mt-2">
-                    XP Boosts
-                  </h5>
+                  <h5 className="mx-2 mt-2">XP Boosts</h5>
                   <ul className="rounded-lg text-left text-sm p-2 leading-none">
                     {isPremium ? (
                       <li className="flex gap-2 py-1 items-center">
@@ -373,9 +400,7 @@ export default function TopbarNew() {
                     <li className="flex gap-2 py-1 items-center">
                       <div className="icon icon-e-add text-main" />
                       <div className="flex-1">Clan boost</div>
-                      <div className="text-right text-main">
-                        +10%
-                      </div>
+                      <div className="text-right text-main">+10%</div>
                     </li>
                     <li className="separator bg-ui-600" />
                     <li className="flex gap-2 py-1 items-center">
@@ -508,9 +533,7 @@ export default function TopbarNew() {
                           <ul className="leading-tight space-y-2 mt-2">
                             <li className="flex gap-2 text-sm">
                               <div className=" w-12 uppercase">Use</div>
-                              <div className="flex-1">
-                                To enter Ladders.
-                              </div>
+                              <div className="flex-1">To enter Ladders.</div>
                             </li>
                             <li className="flex gap-2 text-sm">
                               <div className=" w-12 uppercase">Get</div>

@@ -6,12 +6,28 @@ import Notification from "../../components/Notification/Notification";
 
 const notificationsGroups = [
   {
+    name: "Rewards",
+    notifications: [
+      {
+        description: "Unclaimed rewards",
+        type: "reward",
+        intro: "Rewards",
+        title: "Claim your rewards!",
+        text: "You have rewards to claim from the previous Battle Pass.",
+        cta: "Claim",
+        url: "/prototype/valorant/missions?modalclaimmission=true",
+        time: "1 min.",
+        read: false,
+      },
+    ],
+  },
+  {
     name: "Achievements",
     notifications: [
       {
         description: "Achievement unlocked",
         type: "achievement",
-        intro: "Achivement",
+        intro: "Achievement",
         title: "You unlocked an achievement!",
         text: "Congratulations on unlocking the <a href='#' class='link font-bold'>Mission achievement Level 1</a>!",
         cta: "View",
@@ -19,7 +35,7 @@ const notificationsGroups = [
         time: "2 min.",
         read: false,
       },
-    ]
+    ],
   },
   {
     name: "Clan",

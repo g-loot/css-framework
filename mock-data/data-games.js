@@ -22,6 +22,7 @@ export const dataGames = [
     },
     missions: [
       {
+        id: 1,
         name: "Get 15 kills with the Operator",
         category: 3,
         label: "kills",
@@ -35,6 +36,7 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_1.jpg",
       },
       {
+        id: 2,
         name: "Get 6 assists",
         category: 1,
         label: "assists",
@@ -48,6 +50,7 @@ export const dataGames = [
         "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_3.jpg",
       },
       {
+        id: 3,
         name: "Get 2 knife kills in Competitive",
         category: 4,
         label: "double kills",
@@ -61,6 +64,7 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_2.jpg",
       },
       {
+        id: 4,
         name: "Get 5 headshots",
         category: 1,
         label: "headshots",
@@ -74,6 +78,7 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_4.jpg",
       },
       {
+        id: 5,
         name: "Win 1 game of Spike Rush",
         category: 1,
         label: "win",
@@ -87,6 +92,7 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_5.jpg",
       },
       {
+        id: 6,
         name: "Get 30 kills",
         category: 2,
         label: "kills",
@@ -2133,6 +2139,7 @@ export const dataGames = [
     },
     missions: [
       {
+        id: 1,
         name: "Get 15 kills",
         category: 1,
         label: "kills",
@@ -2146,6 +2153,7 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1672672870/Stryda/demo/mission-pubg_1.jpg",
       },
       {
+        id: 2,
         name: "Get 1 kill from more than 100m away",
         category: 1,
         label: "kill",
@@ -2159,6 +2167,7 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1672672870/Stryda/demo/mission-pubg_2.jpg",
       },
       {
+        id: 3,
         name: "Walk for 3000m",
         category: 2,
         label: "",
@@ -2172,6 +2181,7 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1672672870/Stryda/demo/mission-pubg_3.jpg",
       },
       {
+        id: 4,
         name: "Get 8 headshot kills",
         category: 2,
         label: "headshot kills",
@@ -2185,6 +2195,7 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1672672870/Stryda/demo/mission-pubg_4.jpg",
       },
       {
+        id: 5,
         name: "Revive your teammates twice",
         category: 3,
         label: "revive",
@@ -2198,6 +2209,7 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1672672870/Stryda/demo/mission-pubg_5.jpg",
       },
       {
+        id: 6,
         name: "Get 30 kills",
         category: 4,
         label: "kills",

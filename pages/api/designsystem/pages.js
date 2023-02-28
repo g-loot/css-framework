@@ -191,7 +191,7 @@ export const DSpages = [
       },
       {
         label: "Separator",
-        tags: "ui,separator,content,section,space",
+        tags: "ui,separator,content,section,space,hr",
         url: "separator",
       },
       {

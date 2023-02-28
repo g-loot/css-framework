@@ -137,13 +137,14 @@ hr,
   &:not(.separator-vertical) {
     @apply
     h-px
+    border-t
     ;
   }
 
   &.separator-vertical {
     @apply
     w-px
-    border-none
+    border-l
     ;
     &:not([class*='h-']) {
       @apply
