@@ -69,7 +69,11 @@ export default function TabProfileGames() {
           {!isEmpty && (
             <>
               <section className="grid lg:grid-cols-2 gap-4">
-             games
+                {selectedUser.games?.map((item, itemIndex) => (
+                  <>
+                  
+                  </>
+                ))}
               </section>
               {/*
               <div className="text-center mt-4 mb-8">

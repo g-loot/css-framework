@@ -20,7 +20,8 @@ export default function CardMissionSecondary(props) {
   const { query } = useRouter();
   const isPremium = query.premium === "true" ? true : false;
   const modalClaimMission = query.modalclaimmission === "true" ? true : false;
-  const modalDiscardMission = query.modaldiscardmission === "true" ? true : false;
+  const modalDiscardMission =
+    query.modaldiscardmission === "true" ? true : false;
   const gameSlug = props.gameSlug || "valorant";
   const [hasClaimed, setHasClaimed] = useState(mission.hasClaimed);
 
@@ -33,8 +34,10 @@ export default function CardMissionSecondary(props) {
   const [MissionRetrieved, setMissionRetrieved] = useState(false);
 
   function handleGetMission() {
-    setMissionRetrieved(!MissionRetrieved);
-    variablesContext.incrementAvailableMissions(1);
+    if (variablesContext.availableMissions < 2 && !MissionRetrieved) {
+      setMissionRetrieved(!MissionRetrieved);
+      variablesContext.incrementAvailableMissions(1);
+    }
   }
 
   function openModalClaimMission() {
@@ -66,25 +69,31 @@ export default function CardMissionSecondary(props) {
         className={`revealer ${mission.isVisible === true ? "is-active" : ""} ${
           MissionRetrieved === true ? "is-active" : ""
         }`}
+        onClick={handleGetMission.bind(this)}
         key={mission}
       >
         <div className="revealer-front">
-          <div className={`card-mission card-secondary ${variablesContext.availableMissions < 2 ? 'is-highlighted' : ''}`}>
+          <div
+            className={`card-mission card-secondary ${
+              variablesContext.availableMissions < 2 && mission.isVisible !== true && MissionRetrieved !== true ? "is-highlighted" : ""
+            }`}
+          >
             <div className="card-overlay">
               {variablesContext.availableMissions < 2 ? (
                 <>
                   {!MissionRetrieved && (
                     <>
+                      {/*
                       <button
-                        className="button button-primary mx-auto"
+                        className="button button-tertiary mx-auto"
                         onClick={handleGetMission.bind(this)}
                       >
                         <span>Get new mission</span>
                       </button>
+                  */}
+                      <h4>Reveal mission</h4>
                       <div className="text-sm mt-2">
-                        {2 - variablesContext.availableMissions} mission
-                        {variablesContext.availableMissions < 1 && <>s</>}{" "}
-                        available
+                        {2 - variablesContext.availableMissions} new available
                       </div>
                     </>
                   )}
@@ -147,11 +156,9 @@ export default function CardMissionSecondary(props) {
             */}
             <div className="card-decoration"></div>
             <div className="card-body">
-            <div className="absolute z-10 top-2 right-2 m-0">
+              <div className="absolute z-10 top-2 right-2 m-0">
                 <Tooltip
-                  tooltip={
-                    <span className="text-sm">Discard mission</span>
-                  }
+                  tooltip={<span className="text-sm">Discard mission</span>}
                 >
                   <button
                     type="button"
@@ -185,7 +192,7 @@ export default function CardMissionSecondary(props) {
                   </span>
                 </div>
               </div>
-              
+
               <div className="card-title">
                 <span>{mission.name}</span>
               </div>

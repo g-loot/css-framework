@@ -573,7 +573,66 @@
     }
   }
   &.is-highlighted {
+    @apply
+    cursor-pointer
+    -outline-offset-2
+    focus-visible:outline
+    focus-visible:outline-mono-100
+    transition-[color,background,transform,opacity]
+    duration-200
+    ease-in-out
+    active:outline
+    active:outline-mono-100
+    active:-outline-offset-2
+    active:outline-1
+    ;
+
+    *,
+    h1, 
+    h2, 
+    h3, 
+    h4, 
+    h5, 
+    h6,
+    .h1, 
+    .h2, 
+    .h3, 
+    .h4, 
+    .h5, 
+    .h6 {
+      @apply
+      text-ui-900
+      ;
+    }
+    &::before {
+      @apply
+      bg-main
+      -z-20
+      shadow-[inset_0_0_0_1px_rgba(var(--color-mono-100_/_0.5))]
+      ;
+    }
+    &::after {
+      @apply
+      bg-main
+      -z-40
+      ;
+    }
+    .card-overlay {
+      @apply
+      bg-ui-900/0
+      text-ui-900
+      ;
+    }
     .card-bg {
+      &::after {
+        @apply
+        content-['']
+        absolute
+        -z-10
+        inset-1
+        bg-main
+        ;
+      }
       &::before {
         @apply
         content-['']
@@ -581,11 +640,11 @@
         block
         shadow-[inset_0_0_0_0_rgb(var(--color-ui-700))]
         -inset-full
-        -z-10
+        -z-20
         transform-gpu
-        animate-[card-highlighted_5s_linear_infinite]
+        animate-[card-highlighted_2s_linear_infinite]
         ;
-        background-image: radial-gradient(10% 125% at 50% 100%, #FFF 0%, rgba(255, 255, 255, 0) 100%);
+        background-image: radial-gradient(10% 125% at 50% 100%, rgb(var(--color-mono-100)) 0%, rgba(255, 255, 255, 0) 100%);
       }
       > span {
         @apply
@@ -593,7 +652,25 @@
         z-0
         rounded-none
         inset-1
+        bg-blend-darken
+        opacity-10
+        transition-all
+        duration-300
+        ease-[cubic-bezier(.2,0,.2,1)]
+        bg-[length:110%]
         ;
+        filter: grayscale(100%) brightness(130%) contrast(130%);
+      }
+    }
+    &:hover, 
+    &:active {
+      .card-bg {
+        > span {
+          @apply
+          opacity-20
+          bg-[length:100%]
+          ;
+        }
       }
     }
   }

@@ -197,6 +197,7 @@
 
   > .header-bg {
     @apply
+    animate-slide-in-bottom
     grid
     place-content-center
     relative
