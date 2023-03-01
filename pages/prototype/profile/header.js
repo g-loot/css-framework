@@ -7,6 +7,7 @@ import ReadMore from "../../../components/ReadMore/ReadMore";
 import GameIcon from "../../../components/GameIcon/GameIcon";
 import Avatar from "../../../components/Avatar/Avatar";
 import ModalAvatarEdit from "./[user_id]/modal-avataredit";
+import ModalBannerEdit from "./[user_id]/modal-banneredit";
 import ModalRemoveFriend from "../friends/modal-remove-friend";
 import { UiContext } from "../../../contexts/ui";
 
@@ -22,6 +23,7 @@ export default function ProfileHeader(props) {
   const breadcrumbs = props.breadcrumbs;
   const [avatarFrame, setAvatarFrame] = useState(false);
   const modalAvatarEdit = query.modalavataredit === "true" ? true : false;
+  const modalBannerEdit = query.modalframeedit === "true" ? true : false;
   const hasProfileBanner = query.profilebanner || false;
   const [profileBanner, setProfileBanner] = useState(false);
 
@@ -43,6 +45,16 @@ export default function ProfileHeader(props) {
 
   function openModalAvatarEdit(id) {
     uiContext.openModal(<ModalAvatarEdit id={id} />);
+  }
+
+  useEffect(() => {
+    if (modalBannerEdit) {
+      openModalBannerEdit(1);
+    }
+  }, [modalBannerEdit]);
+
+  function openModalBannerEdit(id) {
+    uiContext.openModal(<ModalBannerEdit id={id} />);
   }
 
   function openModalRemoveFriends(id) {
@@ -90,7 +102,6 @@ export default function ProfileHeader(props) {
             </div>
           )}
           <div className="header-content">
-            
             <div className="header-body">
               <div className="flex flex-col md:flex-row gap-4 md:items-center self-center">
                 <div className="flex-1">
@@ -189,40 +200,45 @@ export default function ProfileHeader(props) {
           </div>
 
           <div className="header-bg">
-          {selectedUser.isYou ? (
-                <div className="flex">
-                  <div className="relative">
-                    <Avatar
-                      size="avatar-2xl"
-                      id={selectedUser.id}
-                      hasTooltip={true}
-                      hasTooltipXP={true}
-                      tooltipPlacement={"bottom"}
-                    />
+            {selectedUser.isYou ? (
+              <div className="flex">
+                <div className="relative">
+                  <Avatar
+                    size="avatar-2xl"
+                    id={selectedUser.id}
+                    hasTooltip={true}
+                    hasTooltipXP={true}
+                    tooltipPlacement={"bottom"}
+                  />
 
-                    <button
-                      onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)}
-                      type="button"
-                      className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0"
-                    >
-                      <span className="icon icon-pen-2" />
-                    </button>
-                  </div>
+                  <button
+                    onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)}
+                    type="button"
+                    className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0"
+                  >
+                    <span className="icon icon-pen-2" />
+                  </button>
                 </div>
-              ) : (
-                <Avatar size="avatar-2xl" id={selectedUser.id} />
-              )}
-            <button
-              onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)}
-              type="button"
-              className="button button-tertiary rounded-full absolute z-20 top-2 right-2"
-            >
-              <span className="icon icon-pen-2" />
-            </button>
+              </div>
+            ) : (
+              <Avatar size="avatar-2xl" id={selectedUser.id} />
+            )}
+            {selectedUser.isYou && (
+              <button
+                onClick={openModalBannerEdit.bind(this, hasAvatarFrame)}
+                type="button"
+                className="button button-tertiary rounded-full absolute z-20 top-2 right-2"
+              >
+                <span className="icon icon-camera" />
+              </button>
+            )}
             {hasProfileBanner ? (
               <img src={profileBanner?.image} alt={profileBanner?.name} />
             ) : (
-              <img src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png" alt="" />
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
+                alt=""
+              />
             )}
           </div>
         </section>

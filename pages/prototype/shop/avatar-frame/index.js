@@ -104,7 +104,7 @@ export default function Home() {
                 <>
                   <li
                     key={item.id}
-                    className="w-full surface rounded-2xl p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
+                    className="w-full surface rounded-2xl p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
                     style={{
                       "--delay": `calc( ${itemIndex} * 0.05s)`,
                     }}

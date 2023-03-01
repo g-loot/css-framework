@@ -104,18 +104,18 @@ export default function Home() {
                 <>
                   <li
                     key={item.id}
-                    className="w-full surface rounded-2xl flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
+                    className="w-full surface rounded-2xl flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
                     style={{
                       "--delay": `calc( ${itemIndex} * 0.05s)`,
                     }}
                   >
                     <div className="flex-1 flex flex-col items-center gap-2">
                       <img src={item.image} alt={item.name} className="aspect-[12/2] rounded-t object-cover" />
-                      <div className="mb-3 text-ui-300 uppercase text-xl">
+                    </div>
+                    <div className="border-t border-ui-700 p-4 flex items-center justify-between">
+                      <div className="text-ui-300 uppercase text-xl">
                         {item.name}
                       </div>
-                    </div>
-                    <div className="border-t border-ui-700 mx-4 py-4">
                       {!item.isOwned ? (
                         <>
                           {item.price && (
@@ -127,7 +127,7 @@ export default function Home() {
                                     this,
                                     item.id
                                   )}
-                                  className="button button-primary button-currency button-coin w-full"
+                                  className="button button-primary button-currency button-coin"
                                 >
                                   <div>
                                     <span>Purchase</span>
@@ -145,7 +145,7 @@ export default function Home() {
                                 >
                                   <button
                                     type="button"
-                                    className="button button-primary button-currency button-coin w-full is-disabled"
+                                    className="button button-primary button-currency button-coin is-disabled"
                                   >
                                     <div>
                                       <span>Purchase</span>

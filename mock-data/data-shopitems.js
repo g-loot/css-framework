@@ -543,14 +543,14 @@ export const dataShopitems = [
       {
         id: 1,
         name: "Stryda lines",
-        price: 100,
+        price: 50,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-01.jpg",
       },
       {
         id: 2,
         name: "Stryda gold",
-        price: 100,
+        price: 25000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-02.jpg",
       },
@@ -578,7 +578,7 @@ export const dataShopitems = [
       {
         id: 6,
         name: "Warriors",
-        price: 100,
+        price: 50000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-06.jpg",
       },
@@ -595,6 +595,20 @@ export const dataShopitems = [
         price: 100,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-08.jpg",
+      },
+      {
+        id: 9,
+        name: "Spike Rush",
+        price: 55000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-09.jpg",
+      },
+      {
+        id: 10,
+        name: "Battle Royale",
+        price: 55000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-10.jpg",
       },
     ],
   }

@@ -44,7 +44,7 @@ export default function Home() {
               {prototype.getShopsectionByID(1).name}
             </h2>
             <div
-              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center lg:justify-end animate-slide-in-right animate-delay"
+              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center lg:justify-end animate-slide-in-bottom animate-delay"
               style={{ "--delay": `calc( 0 * 0.05s)` }}
             >
               <div className="flex-3 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 xl:order-1 text-center md:text-left">
@@ -74,7 +74,7 @@ export default function Home() {
               {prototype.getShopsectionByID(2).name}
             </h2>
             <div
-              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center lg:justify-end animate-slide-in-right animate-delay"
+              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center lg:justify-end animate-slide-in-bottom animate-delay"
               style={{ "--delay": `calc( 0 * 0.05s)` }}
             >
               <div className="flex-3 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 xl:order-1 text-center md:text-left">
@@ -104,7 +104,7 @@ export default function Home() {
           <div className="flex flex-col">
             <h2 className="px-2 sm:px-0 py-2 h6">Tokens</h2>
             <div
-              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center animate-slide-in-right animate-delay"
+              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center animate-slide-in-bottom animate-delay"
               style={{ "--delay": `calc( 0 * 0.05s)` }}
             >
               <div className="flex-3 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 xl:order-1 text-center md:text-left">
@@ -138,7 +138,7 @@ export default function Home() {
               <>
                 <li
                   key={voucher.id}
-                  className="surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
+                  className="surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
                   style={{ "--delay": `calc( ${voucherIndex} * 0.05s)` }}
                 >
                   <div className="flex-1 flex flex-col items-center gap-2">
