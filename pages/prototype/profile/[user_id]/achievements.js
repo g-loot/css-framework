@@ -111,7 +111,6 @@ const achievementsList = [
     from: "5",
     to: "5",
   },
-  
 ];
 
 export default function Achievements() {

@@ -1240,7 +1240,6 @@
       > .card-image {
         @apply 
         w-auto
-        flex-auto
         order-2;
       }
       > .card-content {
@@ -1248,14 +1247,14 @@
         order-1
         flex-1
         rounded-l
-        rounded-r-none;
+        rounded-r-none
+        ;
       }
       > .card-image-bg {
         @apply 
         w-auto
         rounded-r
-        rounded-l-none
-        ;
+        rounded-l-none;
         &::before {
           @apply 
           hidden;
@@ -1263,7 +1262,7 @@
         > img {
           @apply 
           z-0
-        left-auto;
+          left-auto;
         }
       }
     }
@@ -1280,7 +1279,6 @@
       > .card-image {
         @apply 
         w-auto
-        flex-auto
         order-2;
       }
       > .card-content {
@@ -1288,7 +1286,8 @@
         order-1
         flex-1
         rounded-l
-        rounded-r-none;
+        rounded-r-none
+        ;
       }
       > .card-image-bg {
         @apply 
@@ -1313,27 +1312,27 @@
     &.lg\:card-horizontal {
       @apply 
       flex
-    flex-row
-    md:max-w-[809px]
-    min-h-10;
+      flex-row
+      md:max-w-[809px]
+      min-h-10;
       > .card-image {
         @apply 
         w-auto
-        flex-auto
         order-2;
       }
       > .card-content {
         @apply 
         order-1
-      flex-1
-      rounded-l
-      rounded-r-none;
+        flex-1
+        rounded-l
+        rounded-r-none
+        ;
       }
       > .card-image-bg {
         @apply 
-      w-auto
-      rounded-r
-      rounded-l-none;
+        w-auto
+        rounded-r
+        rounded-l-none;
         &::before {
           @apply 
           hidden;
@@ -1341,7 +1340,7 @@
         > img {
           @apply 
           z-0
-        left-auto;
+          left-auto;
         }
       }
     }
@@ -1351,38 +1350,31 @@
   .card-ladder.card-secondary {
     &.xl\:card-horizontal {
       @apply 
-      grid-cols-5
-      grid-rows-none
-      w-full
-      max-w-[calc(100vh-4rem)]
+      flex
+      flex-row
       md:max-w-[809px]
       min-h-10;
       > .card-image {
         @apply 
-        order-2
-        col-span-2;
+        w-auto
+        order-2;
       }
       > .card-content {
         @apply 
         order-1
-        col-span-3
-        rounded-l-lg
-        rounded-r-none;
+        flex-1
+        rounded-l
+        rounded-r-none
+        ;
       }
       > .card-image-bg {
         @apply 
-        w-auto;
+        w-auto
+        rounded-r
+        rounded-l-none;
         &::before {
           @apply 
-          content-['']
-          absolute
-          z-10
-          w-1/3
-          inset-y-0
-          bg-gradient-to-r
-          from-ui-800
-          via-ui-800/75
-          to-ui-800/0;
+          hidden;
         }
         > img {
           @apply 

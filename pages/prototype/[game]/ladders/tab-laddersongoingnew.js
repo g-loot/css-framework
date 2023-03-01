@@ -26,7 +26,7 @@ export default function TabLaddersOngoingNew() {
             <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
               <h2 className="h5">Ongoing solo Ladders</h2>
             </div>
-            <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0">
+            <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0 mt-2">
               {selectedGame.ladders.map((ladder, ladderIndex) => (
                 <>
                   {ladder.status !== "finished" && (
@@ -69,6 +69,7 @@ export default function TabLaddersOngoingNew() {
             <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
               <h2 className="h5">Ongoing clan Ladders</h2>
             </div>
+            {/*
             <div className="flex flex-col gap-4 mx-4 sm:mx-0">
                 {selectedGame.ladders.map((ladder, ladderIndex) => (
                   <>
@@ -85,7 +86,7 @@ export default function TabLaddersOngoingNew() {
                   </>
                 ))}
             </div>
-            {/*
+            */}
             <div className="relative">
               <Slider
                 itemWidth={397 + 16}
@@ -106,7 +107,7 @@ export default function TabLaddersOngoingNew() {
                 ))}
               </Slider>
             </div>
-                    */}
+                    
           </section>
 
           <section className="mt-16 mb-8 surface surface-dimmed sm:rounded-lg p-8 text-center relative">

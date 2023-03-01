@@ -159,7 +159,7 @@ export default function TabProfileOverview() {
                     <h2 className="h6 text-ui-100">About</h2>
                     {selectedUser.isYou && (
                       <Link
-                        href={`/prototype/profile-new/settings${prototype.getURLparams()}`}
+                        href={`/prototype/profile/settings${prototype.getURLparams()}`}
                       >
                         <a className="link link-hover text-ui-300 text-sm">
                           Edit
@@ -265,6 +265,43 @@ export default function TabProfileOverview() {
                         </Tooltip>
                       </li>
                     </ul>
+                  </div>
+                </section>
+                <section className="surface md:rounded">
+                  <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                    <h2 className="h6 text-ui-100">Level 145</h2>
+                    <Tooltip
+                      tooltip={
+                        <div className="max-w-xs text-sm text-center leading-tight">
+                          Get XP to reach higher levels
+                        </div>
+                      }
+                    >
+                      <button className="text-ui-300 text-0">
+                        <span className="icon icon-16 icon-c-info" />
+                      </button>
+                    </Tooltip>
+                  </div>
+                  <div className="p-4 space-y-1">
+                    <div className="flex items-center justify-center gap-2">
+                      <span className="text-main text-center text-lg">
+                        10423/15000
+                      </span>
+                      <span className="icon icon-xp-symbol text-4xl text-main" />
+                    </div>
+                    <div className="flex justify-between items-baseline text-sm mt-2 mb-1">
+                      <span>Level {selectedUser.level}</span>
+                      <span className="text-ui-300">75%</span>
+                    </div>
+                    <div
+                      className="progressbar progressbar-sm"
+                      style={{ "--percent": "75" }}
+                    >
+                      <div />
+                    </div>
+                    <div className="text-sm text-ui-300 mt-2 text-center">
+                      1224XP until level {selectedUser.level + 1}
+                    </div>
                   </div>
                 </section>
                 <section className="surface md:rounded">

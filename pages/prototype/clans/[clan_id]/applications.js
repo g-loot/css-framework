@@ -6,6 +6,7 @@ import PrototypeStructure from "../../../../components/Prototype/PrototypeStruct
 
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
+import ButtonSorting from "../../../../components/Button/ButtonSorting";
 
 const PlayerApplications = [
   {
@@ -214,59 +215,19 @@ export default function Applications() {
                     <thead>
                       <tr>
                         <th>
-                          <div className="text-ui-300 flex items-center gap-1">
-                            <span>User</span>
-                            <button
-                              type="button"
-                              className="button button-sm button-ghost rounded-full"
-                            >
-                              <span className="icon icon-arrow-sm-down"></span>
-                            </button>
-                          </div>
+                          <ButtonSorting>User</ButtonSorting>
                         </th>
                         <th>
-                          <div className="text-ui-300 flex items-center gap-1">
-                            <span>Date</span>
-                            <button
-                              type="button"
-                              className="button button-sm button-ghost rounded-full"
-                            >
-                              <span className="icon icon-arrow-sm-down"></span>
-                            </button>
-                          </div>
+                          <ButtonSorting>Date</ButtonSorting>
                         </th>
                         <th>
-                          <div className="text-ui-300 flex justify-center items-center gap-1">
-                            <span>Country</span>
-                            <button
-                              type="button"
-                              className="button button-sm button-ghost rounded-full"
-                            >
-                              <span className="icon icon-arrow-sm-down"></span>
-                            </button>
-                          </div>
+                          <ButtonSorting>Country</ButtonSorting>
                         </th>
                         <th>
-                          <div className="text-ui-300 flex justify-center items-center gap-1">
-                            <span>No. of Ladders played</span>
-                            <button
-                              type="button"
-                              className="button button-sm button-ghost rounded-full"
-                            >
-                              <span className="icon icon-arrow-sm-down"></span>
-                            </button>
-                          </div>
+                          <ButtonSorting>No. of Ladders played</ButtonSorting>
                         </th>
                         <th>
-                          <div className="text-ui-300 flex justify-center items-center gap-1">
-                            <span>Avg. Ladder position</span>
-                            <button
-                              type="button"
-                              className="button button-sm button-ghost rounded-full"
-                            >
-                              <span className="icon icon-arrow-sm-down"></span>
-                            </button>
-                          </div>
+                          <ButtonSorting>Avg. Ladder position</ButtonSorting>
                         </th>
                         <th>
                           <div className="text-ui-300 flex justify-center items-center gap-1">

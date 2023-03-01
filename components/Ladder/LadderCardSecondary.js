@@ -37,7 +37,7 @@ export default function LadderCardSecondary(props) {
     >
       <div
         className={`card-ladder card-secondary ${
-          isHorizontal && !isFluid ? "card-horizontal" : ""
+          isHorizontal && !isFluid ? "lg:card-horizontal" : ""
         } ${
           isHorizontal && isFluid ? "lg:card-horizontal" : ""
         } ${

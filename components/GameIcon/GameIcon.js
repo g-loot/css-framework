@@ -11,7 +11,7 @@ export default function GameIcon(props) {
   const game = props.game || 1;
 
   return (
-    <div className={`cursor-pointer p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/90 flex items-center justify-center ${className}`}>
+    <div className={`p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/90 flex items-center justify-center ${className}`}>
       <span
         className={`icon ${iconSize} ${
           prototype.getGameByID(game).slug ===

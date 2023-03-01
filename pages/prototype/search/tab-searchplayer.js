@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
 import ModalRecruitPlayer from "./modal-recruitplayer";
+import ButtonSorting from "../../../components/Button/ButtonSorting";
 
 export default function TabSearchPlayer() {
   const { query } = useRouter();
@@ -326,26 +327,10 @@ export default function TabSearchPlayer() {
             <thead>
               <tr>
                 <th>
-                  <div className="text-ui-300 flex items-center gap-1">
-                    <span>Player names</span>
-                    <button
-                      type="button"
-                      className="button button-sm button-ghost rounded-full"
-                    >
-                      <span className="icon icon-arrow-sm-down"></span>
-                    </button>
-                  </div>
+                  <ButtonSorting>Player names</ButtonSorting>
                 </th>
                 <th>
-                  <div className="text-ui-300 flex items-center gap-1">
-                    <span>Last active</span>
-                    <button
-                      type="button"
-                      className="button button-sm button-ghost rounded-full"
-                    >
-                      <span className="icon icon-arrow-sm-down"></span>
-                    </button>
-                  </div>
+                  <ButtonSorting>Last active</ButtonSorting>
                 </th>
                 <th>
                   <div className="text-ui-300 text-center">Recruitable</div>

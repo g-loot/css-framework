@@ -29,9 +29,9 @@ export default function XPBoostList(props) {
           }`}
           style={{ "--delay": "calc( 3 * 0.15s)" }}
         >
-          <span className={`icon ${isCompleted ? 'text-main icon-e-add' : 'text-ui-400 icon-e-remove'}`} />
+          <span className={`icon ${isCompleted ? 'text-premium-500 icon-e-add' : 'text-ui-400 icon-e-remove'}`} />
           <span className="flex-1">Premium boost</span>
-          <span className={`text-right ${isCompleted ? 'text-main' : 'text-ui-400'}`}>+{Math.round(xp * 0.5)}</span>
+          <span className={`text-right ${isCompleted ? 'text-premium-500' : 'text-ui-400'}`}>+{Math.round(xp * 0.5)}</span>
         </li>
       ) : (
         <li

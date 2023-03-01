@@ -2,7 +2,8 @@ export const dataShopitems = [
   {
     id: 1,
     name: "Avatar frames",
-    description: "qsqsdqsd",
+    title: "Get a new look",
+    description: "Add beautiful frames around your avatar and stand out from the crowd.",
     items: [
       {
         id: 1,
@@ -524,8 +525,79 @@ export const dataShopitems = [
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Fairy_Mirror.svg",
       },
+      {
+        id: 159,
+        name: "Malta",
+        price: 750000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Malta.svg",
+      },
     ],
   },
+  {
+    id: 2,
+    name: "Profile banners",
+    title: "Stand out",
+    description: "Customize your profile with one of our yummy banners.",
+    items: [
+      {
+        id: 1,
+        name: "Stryda lines",
+        price: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-01.jpg",
+      },
+      {
+        id: 2,
+        name: "Stryda gold",
+        price: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-02.jpg",
+      },
+      {
+        id: 3,
+        name: "Stryda waves",
+        price: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-03.jpg",
+      },
+      {
+        id: 4,
+        name: "Love rush",
+        price: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-04.jpg",
+      },
+      {
+        id: 5,
+        name: "No strings attached",
+        price: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-05.jpg",
+      },
+      {
+        id: 6,
+        name: "Warriors",
+        price: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-06.jpg",
+      },
+      {
+        id: 7,
+        name: "Summer",
+        price: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-07.jpg",
+      },
+      {
+        id: 8,
+        name: "About last night",
+        price: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-08.jpg",
+      },
+    ],
+  }
 ];
 
 export default {

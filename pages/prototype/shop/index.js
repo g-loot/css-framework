@@ -5,6 +5,7 @@ import PrototypeStructure from "../../../components/Prototype/PrototypeStructure
 import { usePrototypeData } from "../../../contexts/prototype";
 import { UiContext } from "../../../contexts/ui";
 import ModalBuyTokens from "../wallet/modal-buytokens";
+import dataShopitems from "../../../mock-data/data-shopitems";
 
 export default function Home() {
   const prototype = usePrototypeData();
@@ -39,22 +40,23 @@ export default function Home() {
         </section>
         <section className="px-4 md:px-0 mb-8 grid md:grid-cols-2 items-stretch gap-8 md:gap-4">
           <div className="flex flex-col">
-            <h2 className="px-2 sm:px-0 py-2 h6">Avatar frames</h2>
+            <h2 className="px-2 sm:px-0 py-2 h6">
+              {prototype.getShopsectionByID(1).name}
+            </h2>
             <div
               className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center lg:justify-end animate-slide-in-right animate-delay"
               style={{ "--delay": `calc( 0 * 0.05s)` }}
             >
               <div className="flex-3 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 xl:order-1 text-center md:text-left">
-                <h3>Get a new look</h3>
+                <h3>{prototype.getShopsectionByID(1).title}</h3>
                 <p className="text-ui-300 mt-2 mb-4 md:max-w-[40ch]">
-                  Add beautiful frames around your avatar and stand out from the
-                  crowd.
+                  {prototype.getShopsectionByID(1).description}
                 </p>
                 <Link
                   href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
                 >
                   <button type="button" className="button button-primary">
-                    <span>View avatar frames</span>
+                    <span>View {prototype.getShopsectionByID(1).name}</span>
                   </button>
                 </Link>
               </div>
@@ -67,6 +69,38 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="flex flex-col">
+            <h2 className="px-2 sm:px-0 py-2 h6">
+              {prototype.getShopsectionByID(2).name}
+            </h2>
+            <div
+              className="surface flex-1 sm:rounded-lg overflow-hidden flex flex-col xl:flex-row xl:items-center lg:justify-end animate-slide-in-right animate-delay"
+              style={{ "--delay": `calc( 0 * 0.05s)` }}
+            >
+              <div className="flex-3 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 xl:order-1 text-center md:text-left">
+                <h3>{prototype.getShopsectionByID(2).title}</h3>
+                <p className="text-ui-300 mt-2 mb-4 md:max-w-[40ch]">
+                  {prototype.getShopsectionByID(2).description}
+                </p>
+                <Link
+                  href={`/prototype/shop/profile-banner${prototype.getURLparams()}`}
+                >
+                  <button type="button" className="button button-primary">
+                    <span>View {prototype.getShopsectionByID(2).name}</span>
+                  </button>
+                </Link>
+              </div>
+              <div className="relative z-10 xl:order-2 flex-2 px-8 mt-8 md:mt-0 grid place-items-center">
+                <img
+                  className="object-contain"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1674739870/Stryda/illustrations/shop_avatarframes.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="px-4 md:px-0 my-8">
           <div className="flex flex-col">
             <h2 className="px-2 sm:px-0 py-2 h6">Tokens</h2>
             <div

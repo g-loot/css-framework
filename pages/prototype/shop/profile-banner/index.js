@@ -6,15 +6,15 @@ import PrototypeStructure from "../../../../components/Prototype/PrototypeStruct
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import { UiContext } from "../../../../contexts/ui";
-import ModalAvatarFramePurchaseConfirmation from "./modal-avatarframepurchaseconfirmation";
-import ModalAvatarFramePurchaseCompleted from "./modal-avatarframepurchasecompleted";
+import ModalProfileBannerPurchaseConfirmation from "./modal-profilebannerpurchaseconfirmation";
+import ModalProfileBannerPurchaseCompleted from "./modal-profilebannerpurchasecompleted";
 
 export default function Home() {
   const router = useRouter();
   const uiContext = useContext(UiContext);
   const { query } = useRouter();
   const prototype = usePrototypeData();
-  const [selectedShopsection, setSelectedShopsection] = useState(1);
+  const [selectedShopsection, setSelectedShopsection] = useState(2);
   const hasAds = query.ads === "true" ? true : false;
   const modalItemPurchaseConfirmation =
     query.modalpurchaseconfirmation === "true" ? true : false;
@@ -33,14 +33,14 @@ export default function Home() {
   }, [modalItemPurchaseCompleted]);
 
   function openModalItemPurchaseConfirmation(id) {
-    uiContext.openModal(<ModalAvatarFramePurchaseConfirmation id={id} />);
+    uiContext.openModal(<ModalProfileBannerPurchaseConfirmation id={id} />);
   }
   function openmodalItemPurchaseCompleted(id) {
-    uiContext.openModal(<ModalAvatarFramePurchaseCompleted id={id} />);
+    uiContext.openModal(<ModalProfileBannerPurchaseCompleted id={id} />);
   }
 
   useEffect(() => {
-    setSelectedShopsection(prototype.getShopsectionByID(1));
+    setSelectedShopsection(prototype.getShopsectionByID(2));
   }, []);
 
   function numberWithSpaces(x) {
@@ -97,33 +97,25 @@ export default function Home() {
         </section>
 
         <section className="mb-4 lg:mb-8">
-          <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4 mt-3">
+          <ul className="grid lg:grid-cols-2 justify-items-center gap-4 mt-3">
             {selectedShopsection.items
               ?.sort((itemA, itemB) => itemB.price - itemA.price)
               .map((item, itemIndex) => (
                 <>
                   <li
                     key={item.id}
-                    className="w-full surface rounded-2xl p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
+                    className="w-full surface rounded-2xl flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
                     style={{
                       "--delay": `calc( ${itemIndex} * 0.05s)`,
                     }}
                   >
                     <div className="flex-1 flex flex-col items-center gap-2">
-                      <div className="avatar avatar-circle avatar-xl my-3">
-                        <img src={item.image} alt="" />
-                        <div>
-                          <img
-                            src={prototype.getUserByID(1)?.avatar}
-                            alt="avatar"
-                          />
-                        </div>
-                      </div>
+                      <img src={item.image} alt={item.name} className="aspect-[12/2] rounded-t object-cover" />
                       <div className="mb-3 text-ui-300 uppercase text-xl">
                         {item.name}
                       </div>
                     </div>
-                    <div className="border-t border-ui-700 pt-4">
+                    <div className="border-t border-ui-700 mx-4 py-4">
                       {!item.isOwned ? (
                         <>
                           {item.price && (

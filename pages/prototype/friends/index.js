@@ -10,6 +10,7 @@ import { UiContext } from "../../../contexts/ui";
 import Avatar from "../../../components/Avatar/Avatar";
 import Tooltip from "../../../components/Tooltip/Tooltip";
 import GameIcon from "../../../components/GameIcon/GameIcon";
+import ButtonSorting from "../../../components/Button/ButtonSorting";
 
 export default function Friends() {
   const router = useRouter();
@@ -128,59 +129,19 @@ export default function Friends() {
                 <thead>
                   <tr>
                     <th>
-                      <div className="text-ui-300 flex items-center gap-1">
-                        <span>User</span>
-                        <button
-                          type="button"
-                          className="button button-sm button-ghost rounded-full"
-                        >
-                          <span className="icon icon-arrow-sm-down"></span>
-                        </button>
-                      </div>
+                      <ButtonSorting>User</ButtonSorting>
                     </th>
                     <th>
-                      <div className="text-ui-300 flex items-center gap-1">
-                        <span>Level</span>
-                        <button
-                          type="button"
-                          className="button button-sm button-ghost rounded-full"
-                        >
-                          <span className="icon icon-arrow-sm-down"></span>
-                        </button>
-                      </div>
+                      <ButtonSorting>Level</ButtonSorting>
                     </th>
                     <th>
-                      <div className="text-ui-300 flex justify-center items-center gap-1">
-                        <span>Avg. ladder placement</span>
-                        <button
-                          type="button"
-                          className="button button-sm button-ghost rounded-full"
-                        >
-                          <span className="icon icon-arrow-sm-down"></span>
-                        </button>
-                      </div>
+                      <ButtonSorting>Avg. ladder placement</ButtonSorting>
                     </th>
                     <th>
-                      <div className="text-ui-300 flex justify-center items-center gap-1">
-                        <span>No. of Ladders played</span>
-                        <button
-                          type="button"
-                          className="button button-sm button-ghost rounded-full"
-                        >
-                          <span className="icon icon-arrow-sm-down"></span>
-                        </button>
-                      </div>
+                      <ButtonSorting>No. of Ladders played</ButtonSorting>
                     </th>
                     <th>
-                      <div className="text-ui-300 flex justify-center items-center gap-1">
-                        <span>Missions completed</span>
-                        <button
-                          type="button"
-                          className="button button-sm button-ghost rounded-full"
-                        >
-                          <span className="icon icon-arrow-sm-down"></span>
-                        </button>
-                      </div>
+                      <ButtonSorting>Missions completed</ButtonSorting>
                     </th>
                   </tr>
                 </thead>

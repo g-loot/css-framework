@@ -238,4 +238,17 @@
     border-t-ui-700
     ;
   }
+
+  &.surface-dimmed {
+    > .header-bg {
+      @apply
+      border-b-ui-800
+      ;
+    }
+    > .header-meta {
+      @apply
+      border-t-ui-800
+      ;
+    }
+  }
 }
