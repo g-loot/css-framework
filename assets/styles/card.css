@@ -621,7 +621,31 @@
       @apply
       bg-ui-900/0
       text-ui-900
+      inset-1
+      rounded-none
+      shadow-[inset_0_0_0_1px_rgb(var(--color-mono-100)_/_0.75)]
       ;
+      &::before {
+        @apply
+        content-['']
+        absolute
+        z-50
+        inset-1
+        animate-[card-highlighted-corners_2s_ease_infinite]
+        bg-no-repeat
+        transition-opacity
+        duration-300
+        ease-[cubic-bezier(.2,0,.2,1)]
+        ;
+        --corner-translate: 0.25rem;
+        background-image: 
+          url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzEyNDZfMTE5NDI0KSI+CjxwYXRoIGQ9Ik0wIDYuOTkzODJlLTA3SDFWMTZIMFY2Ljk5MzgyZS0wN1oiIGZpbGw9IiMwNTA3MEYiLz4KPHBhdGggZD0iTTAgMVY2Ljk5MzgyZS0wN0wxNiAwVjFMMCAxWiIgZmlsbD0iIzA1MDcwRiIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzEyNDZfMTE5NDI0Ij4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="), 
+          url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzEyNDdfMTE5NDI4KSI+CjxwYXRoIGQ9Ik0xNiA2Ljk5MzgyZS0wN0gxNVYxNkgxNlY2Ljk5MzgyZS0wN1oiIGZpbGw9IiMwNTA3MEYiLz4KPHBhdGggZD0iTTE2IDFWNi45OTM4MmUtMDdMMCAwVjFMMTYgMVoiIGZpbGw9IiMwNTA3MEYiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xMjQ3XzExOTQyOCI+CjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K"),
+          url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzEyNDdfMTE5NDMyKSI+CjxwYXRoIGQ9Ik0wIDE2SDFWMEgwVjE2WiIgZmlsbD0iIzA1MDcwRiIvPgo8cGF0aCBkPSJNMCAxNVYxNkwxNiAxNlYxNUwwIDE1WiIgZmlsbD0iIzA1MDcwRiIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzEyNDdfMTE5NDMyIj4KPHJlY3Qgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="),
+          url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzEyNDdfMTE5NDMwKSI+CjxwYXRoIGQ9Ik0xNiAxNkgxNVYwSDE2VjE2WiIgZmlsbD0iIzA1MDcwRiIvPgo8cGF0aCBkPSJNMTYgMTVWMTZMMCAxNlYxNUwxNiAxNVoiIGZpbGw9IiMwNTA3MEYiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xMjQ3XzExOTQzMCI+CjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K")
+        ; 
+        background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%;
+      }
     }
     .card-bg {
       &::after {
@@ -642,9 +666,9 @@
         -inset-full
         -z-20
         transform-gpu
-        animate-[card-highlighted_2s_linear_infinite]
+        animate-[card-highlighted-border_2s_linear_infinite]
         ;
-        background-image: radial-gradient(10% 125% at 50% 100%, rgb(var(--color-mono-100)) 0%, rgba(255, 255, 255, 0) 100%);
+        background-image: radial-gradient(12% 80% at 50% 100%, rgb(var(--color-mono-100)) 0%, rgba(255, 255, 255, 0) 100%);
       }
       > span {
         @apply
@@ -664,6 +688,13 @@
     }
     &:hover, 
     &:active {
+      .card-overlay {
+        &::before {
+          @apply
+          opacity-0
+          ;
+        }
+      }
       .card-bg {
         > span {
           @apply
@@ -1607,7 +1638,7 @@
   }
 }
 
-@keyframes card-highlighted {
+@keyframes card-highlighted-border {
   0%{
       transform: rotate(0deg);
   }
@@ -1616,11 +1647,11 @@
   }
 }
 
-@keyframes card-highlighted-2 {
-  0%{
-      --_i: 0%:
+@keyframes card-highlighted-corners {
+  0%, 100% {
+    background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%;;
   }
-  100%{
-    --_i: 100%:
+  50%{
+    background-position: calc(0% + var(--corner-translate)) calc(0% + var(--corner-translate)), calc(100% - var(--corner-translate)) calc(0% + var(--corner-translate)), calc(0% + var(--corner-translate)) calc(100% - var(--corner-translate)), calc(100% - var(--corner-translate)) calc(100% - var(--corner-translate));
   }
 }

@@ -111,7 +111,7 @@ export default function ModalDiscardMission(props) {
                 height="auto"
                 className="mx-auto mt-4 mb-6"
               />
-              <p>
+              <p className="max-w-[30ch] mx-auto">
                 <button
                   type="button"
                   onClick={handleBecomePremium}

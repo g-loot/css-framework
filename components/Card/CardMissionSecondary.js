@@ -83,14 +83,6 @@ export default function CardMissionSecondary(props) {
                 <>
                   {!MissionRetrieved && (
                     <>
-                      {/*
-                      <button
-                        className="button button-tertiary mx-auto"
-                        onClick={handleGetMission.bind(this)}
-                      >
-                        <span>Get new mission</span>
-                      </button>
-                  */}
                       <h4>Reveal mission</h4>
                       <div className="text-sm mt-2">
                         {2 - variablesContext.availableMissions} new available
