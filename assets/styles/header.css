@@ -197,7 +197,7 @@
 
   > .header-bg {
     @apply
-    animate-slide-in-bottom
+    animate-fade-in
     grid
     place-content-center
     relative
@@ -234,8 +234,7 @@
   > .header-meta {
     @apply
     items-center
-    border-t
-    border-t-ui-700
+    pt-0
     ;
   }
 
@@ -243,11 +242,6 @@
     > .header-bg {
       @apply
       border-b-ui-800
-      ;
-    }
-    > .header-meta {
-      @apply
-      border-t-ui-800
       ;
     }
   }

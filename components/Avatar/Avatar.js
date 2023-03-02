@@ -20,7 +20,8 @@ export default function Avatar(props) {
   const hasAvatarFrame = query.avatarframe || false;
   const hasLevel = props.hasLevel !== undefined ? props.hasLevel : true;
   const hasTooltip = props.hasTooltip !== undefined ? props.hasTooltip : false;
-  const hasTooltipXP = props.hasTooltipXP !== undefined ? props.hasTooltipXP : false;
+  const hasTooltipXP =
+    props.hasTooltipXP !== undefined ? props.hasTooltipXP : false;
 
   useEffect(() => {
     if (hasAvatarFrame) {
@@ -37,20 +38,24 @@ export default function Avatar(props) {
       } ${className}`}
     >
       {hasLevel && <b>{prototype.getUserByID(userId).level}</b>}
-      {!prototype.getUserByID(userId).isYou &&
-        prototype.getUserByID(userId)?.avatarFrame && (
-          <img
-            src={
-              prototype.getShopitemByID(
-                1,
-                prototype.getUserByID(userId).avatarFrame
-              ).image
-            }
-            alt=""
-          />
-        )}
-      {prototype.getUserByID(userId).isYou && hasAvatarFrame && (
-        <img src={avatarFrame.image} alt="" />
+      {prototype.getUserByID(userId).isYou ? (
+        <>{hasAvatarFrame && <img src={avatarFrame.image} alt="" />}</>
+      ) : (
+        <>
+          {prototype.getUserByID(userId).shopItems.avatarFrame && (
+            <>
+              <img
+                src={
+                  prototype.getShopitemByID(
+                    1,
+                    prototype.getUserByID(userId).shopItems.avatarFrame
+                  ).image
+                }
+                alt=""
+              />
+            </>
+          )}
+        </>
       )}
 
       <div>
@@ -108,12 +113,14 @@ export default function Avatar(props) {
                     >
                       {hasLevel && <b>{prototype.getUserByID(userId).level}</b>}
                       {!prototype.getUserByID(userId).isYou &&
-                        prototype.getUserByID(userId)?.avatarFrame && (
+                        prototype.getUserByID(userId)?.shopItems
+                          ?.avatarFrame && (
                           <img
                             src={
                               prototype.getShopitemByID(
                                 1,
-                                prototype.getUserByID(userId).avatarFrame
+                                prototype.getUserByID(userId).shopItems
+                                  .avatarFrame
                               ).image
                             }
                             alt=""
@@ -130,7 +137,9 @@ export default function Avatar(props) {
                       {size === "avatar-xs" &&
                         prototype.getUserByID(userId)?.isYou &&
                         !hasAvatarFrame && <i className="radar" />}
-                      {prototype.getUserByID(userId).isOnline && !hasLevel && <i />}
+                      {prototype.getUserByID(userId).isOnline && !hasLevel && (
+                        <i />
+                      )}
                     </div>
                     <div>
                       <div className="flex items-center gap-1">

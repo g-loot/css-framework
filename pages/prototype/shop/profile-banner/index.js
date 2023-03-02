@@ -112,8 +112,8 @@ export default function Home() {
                     <div className="flex-1 flex flex-col items-center gap-2">
                       <img src={item.image} alt={item.name} className="aspect-[12/2] rounded-t object-cover" />
                     </div>
-                    <div className="border-t border-ui-700 p-4 flex items-center justify-between">
-                      <div className="text-ui-300 uppercase text-xl">
+                    <div className="border-t border-ui-700 p-4 flex items-center justify-between leading-none">
+                      <div className="text-ui-300 uppercase md:text-xl">
                         {item.name}
                       </div>
                       {!item.isOwned ? (

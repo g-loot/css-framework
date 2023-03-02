@@ -131,17 +131,29 @@ export default function Friends() {
                     <th>
                       <ButtonSorting>User</ButtonSorting>
                     </th>
-                    <th>
+                    <th className="text-center">
                       <ButtonSorting>Level</ButtonSorting>
                     </th>
-                    <th>
-                      <ButtonSorting>Avg. ladder placement</ButtonSorting>
+                    <th className="text-center">
+                      <ButtonSorting>
+                        avg. Ladder
+                        <br />
+                        placement
+                      </ButtonSorting>
                     </th>
-                    <th>
-                      <ButtonSorting>No. of Ladders played</ButtonSorting>
+                    <th className="text-center">
+                      <ButtonSorting>
+                        Ladders
+                        <br />
+                        played
+                      </ButtonSorting>
                     </th>
-                    <th>
-                      <ButtonSorting>Missions completed</ButtonSorting>
+                    <th className="text-center">
+                      <ButtonSorting>
+                        Missions
+                        <br />
+                        completed
+                      </ButtonSorting>
                     </th>
                   </tr>
                 </thead>
@@ -156,9 +168,35 @@ export default function Friends() {
                           type="button"
                           className="flex gap-3 items-center self-center interactive"
                         >
-                          <Avatar id={1} hasTooltip={true} />
-                          <div className="text-main">
-                            {prototype.getUserByID(1)?.nickname}
+                          <Avatar id={1} hasTooltip={true} size="avatar-sm" />
+                          <div className="space-y-0.5">
+                            <div className="text-main">
+                              {prototype.getUserByID(1)?.clan && (
+                                <>
+                                  &#91;
+                                  {
+                                    prototype.getClanByID(
+                                      prototype.getUserByID(1)?.clan
+                                    )?.tag
+                                  }
+                                  &#93;{" "}
+                                </>
+                              )}
+                              {prototype.getUserByID(1)?.nickname}
+                            </div>
+                            <div className="flex gap-1">
+                              <div className="flex gap-1">
+                                {prototype
+                                  .getUserByID(1)
+                                  .games.map((game, gameIndex) => (
+                                    <GameIcon
+                                      key={gameIndex}
+                                      game={game}
+                                      size="text-base"
+                                    />
+                                  ))}
+                              </div>
+                            </div>
                           </div>
                         </button>
                       </Link>
@@ -183,60 +221,7 @@ export default function Friends() {
                         {RandomNumber(10, 300)}
                       </div>
                     </td>
-                    <td>
-                      {prototype.getUserByID(1).clan && (
-                        <Tooltip
-                          tooltip={
-                            prototype.getClanByID(prototype.getUserByID(1).id)
-                              ?.nickname
-                          }
-                        >
-                          <div className="avatar avatar-squircle avatar-tiny">
-                            <div>
-                              <img
-                                src={
-                                  prototype.getClanByID(
-                                    prototype.getUserByID(1).clan
-                                  )?.avatar
-                                }
-                              />
-                            </div>
-                          </div>
-                        </Tooltip>
-                      )}
-                    </td>
-                    <td>
-                      <div className="flex gap-1">
-                        {prototype
-                          .getUserByID(1)
-                          .games.map((game, gameIndex) => (
-                            <GameIcon key={gameIndex} game={game} />
-                          ))}
-                      </div>
-                    </td>
-                    <td>
-                      <div className="dropdown dropdown-left">
-                        <label
-                          tabIndex="0"
-                          className="button button-ghost rounded-full opacity-0 pointer-events-none"
-                        >
-                          <span className="icon icon-dots-vertical" />
-                        </label>
-                        <div
-                          tabIndex="0"
-                          className="dropdown-content bg-ui-600 w-52 p-1"
-                        >
-                          <ul className="menu menu-rounded menu-secondary">
-                            <li>
-                              <a>
-                                <span className="icon icon-a-remove" />
-                                <span>Remove as friend</span>
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </td>
+                    <td className="w-14" />
                   </tr>
                 </tbody>
                 {!isEmpty && (
@@ -260,15 +245,47 @@ export default function Friends() {
                                   type="button"
                                   className="flex gap-3 items-center self-center interactive"
                                 >
-                                  <Avatar id={item.id} hasTooltip={true} />
-                                  <div
-                                    className={`${
-                                      prototype.getUserByID(item.id)?.isPremium
-                                        ? "text-premium-500"
-                                        : ""
-                                    }`}
-                                  >
-                                    {prototype.getUserByID(item.id)?.nickname}
+                                  <Avatar
+                                    id={item.id}
+                                    hasTooltip={true}
+                                    size="avatar-sm"
+                                  />
+                                  <div className="space-y-0.5">
+                                    <div
+                                      className={`${
+                                        prototype.getUserByID(item.id)
+                                          ?.isPremium
+                                          ? "text-premium-500"
+                                          : ""
+                                      }`}
+                                    >
+                                      {prototype.getUserByID(item.id)?.clan && (
+                                        <>
+                                          &#91;
+                                          {
+                                            prototype.getClanByID(
+                                              prototype.getUserByID(item.id)
+                                                ?.clan
+                                            )?.tag
+                                          }
+                                          &#93;{" "}
+                                        </>
+                                      )}
+                                      {prototype.getUserByID(item.id)?.nickname}
+                                    </div>
+                                    <div className="flex gap-1">
+                                      <div className="flex gap-1">
+                                        {prototype
+                                          .getUserByID(item.id)
+                                          .games.map((game, gameIndex) => (
+                                            <GameIcon
+                                              key={gameIndex}
+                                              game={game}
+                                              size="text-base"
+                                            />
+                                          ))}
+                                      </div>
+                                    </div>
                                   </div>
                                 </button>
                               </Link>
@@ -296,39 +313,7 @@ export default function Friends() {
                                 {RandomNumber(10, 300)}
                               </div>
                             </td>
-                            <td>
-                              {prototype.getUserByID(item.id).clan && (
-                                <Tooltip
-                                  tooltip={
-                                    prototype.getClanByID(
-                                      prototype.getUserByID(item.id).id
-                                    )?.nickname
-                                  }
-                                >
-                                  <div className="avatar avatar-squircle avatar-tiny">
-                                    <div>
-                                      <img
-                                        src={
-                                          prototype.getClanByID(
-                                            prototype.getUserByID(item.id).clan
-                                          )?.avatar
-                                        }
-                                      />
-                                    </div>
-                                  </div>
-                                </Tooltip>
-                              )}
-                            </td>
-                            <td>
-                              <div className="flex gap-1">
-                                {prototype
-                                  .getUserByID(item.id)
-                                  .games.map((game, gameIndex) => (
-                                    <GameIcon key={gameIndex} game={game} />
-                                  ))}
-                              </div>
-                            </td>
-                            <td>
+                            <td className="w-14">
                               <div className="dropdown dropdown-left">
                                 <label
                                   tabIndex="0"

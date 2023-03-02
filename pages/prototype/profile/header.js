@@ -19,11 +19,11 @@ export default function ProfileHeader(props) {
   const emptyClan = query.emptyclan === "true" ? true : false;
   const uiContext = useContext(UiContext);
   const { user_id } = router.query;
-  const hasAvatarFrame = query.avatarframe || false;
   const breadcrumbs = props.breadcrumbs;
   const [avatarFrame, setAvatarFrame] = useState(false);
   const modalAvatarEdit = query.modalavataredit === "true" ? true : false;
   const modalBannerEdit = query.modalframeedit === "true" ? true : false;
+  const hasAvatarFrame = query.avatarframe || false;
   const hasProfileBanner = query.profilebanner || false;
   const [profileBanner, setProfileBanner] = useState(false);
 
@@ -39,13 +39,9 @@ export default function ProfileHeader(props) {
 
   useEffect(() => {
     if (modalAvatarEdit) {
-      openModalAvatarEdit(1);
+      openModalAvatarEdit;
     }
   }, [modalAvatarEdit]);
-
-  function openModalAvatarEdit(id) {
-    uiContext.openModal(<ModalAvatarEdit id={id} />);
-  }
 
   useEffect(() => {
     if (modalBannerEdit) {
@@ -53,19 +49,39 @@ export default function ProfileHeader(props) {
     }
   }, [modalBannerEdit]);
 
-  function openModalBannerEdit(id) {
-    uiContext.openModal(<ModalBannerEdit id={id} />);
+  function openModalAvatarEdit() {
+    if(hasAvatarFrame) {
+      uiContext.openModal(<ModalAvatarEdit id={hasAvatarFrame} />);
+    } else if(selectedUser.shopItems?.avatarFrame) {
+      uiContext.openModal(<ModalAvatarEdit id={selectedUser.shopItems?.avatarFrame} />);
+    } else {
+      uiContext.openModal(<ModalAvatarEdit id={1} />);
+    }
+  }
+
+  function openModalBannerEdit() {
+    if(hasProfileBanner) {
+      uiContext.openModal(<ModalBannerEdit id={hasProfileBanner} />);
+    } else if(selectedUser.shopItems?.profileBanner) {
+      uiContext.openModal(<ModalBannerEdit id={selectedUser.shopItems?.profileBanner} />);
+    } else {
+      uiContext.openModal(<ModalBannerEdit id={1} />);
+    }
   }
 
   function openModalRemoveFriends(id) {
-    uiContext.openModal(<ModalRemoveFriend id={id}></ModalRemoveFriend>);
+    uiContext.openModal(<ModalRemoveFriend id={id} />);
   }
 
   useEffect(() => {
     if (hasProfileBanner) {
       setProfileBanner(prototype.getShopitemByID(2, hasProfileBanner));
     } else {
-      setProfileBanner(prototype.getShopitemByID(2, 1));
+      if(prototype.getUserByID(user_id).shopItems?.profileBanner) {
+        setProfileBanner(prototype.getShopitemByID(2, prototype.getUserByID(user_id).shopItems?.profileBanner));
+      } else {
+        setProfileBanner(prototype.getShopitemByID(2, 1));
+      }
     }
   }, [hasProfileBanner]);
 
@@ -108,7 +124,7 @@ export default function ProfileHeader(props) {
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                     <div className="flex items-baseline gap-1">
                       <h1
-                        className={`${
+                        className={`text-7xl leading-none -mb-2 ${
                           selectedUser.isPremium ? "text-premium-500" : ""
                         }`}
                       >
@@ -210,9 +226,8 @@ export default function ProfileHeader(props) {
                     hasTooltipXP={true}
                     tooltipPlacement={"bottom"}
                   />
-
                   <button
-                    onClick={openModalAvatarEdit.bind(this, hasAvatarFrame)}
+                    onClick={openModalAvatarEdit}
                     type="button"
                     className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0"
                   >
@@ -225,7 +240,7 @@ export default function ProfileHeader(props) {
             )}
             {selectedUser.isYou && (
               <button
-                onClick={openModalBannerEdit.bind(this, hasAvatarFrame)}
+                onClick={openModalBannerEdit}
                 type="button"
                 className="button button-tertiary rounded-full absolute z-20 top-2 right-2"
               >
@@ -235,10 +250,23 @@ export default function ProfileHeader(props) {
             {hasProfileBanner ? (
               <img src={profileBanner?.image} alt={profileBanner?.name} />
             ) : (
-              <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
-                alt=""
-              />
+              <>
+              {selectedUser.shopItems?.profileBanner ? (
+                <>
+                  <img
+                    src={prototype.getShopitemByID(2, selectedUser.shopItems?.profileBanner).image}
+                    alt=""
+                  />
+                </>
+              ) : (
+                <>
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
+                    alt=""
+                  />
+                </>
+              )}
+              </>
             )}
           </div>
         </section>

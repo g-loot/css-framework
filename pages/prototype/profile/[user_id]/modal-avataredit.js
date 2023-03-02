@@ -10,7 +10,7 @@ export default function ModalAvatarEdit(props) {
   const variablesContext = useContext(VariablesContext);
   const [selectedShopsection, setSelectedShopsection] = useState(1);
   const [submitting, setSubmitting] = useState(false);
-  const id = Math.round(props.id) || 1;
+  const id = Math.round(props.id) || false;
   const prototype = usePrototypeData();
   const [selectedFrame, setSelectedFrame] = useState(id);
 
@@ -117,33 +117,40 @@ export default function ModalAvatarEdit(props) {
                         </div>
                       </div>
                     </label>
-                    {selectedShopsection.items?.sort((itemA, itemB) => itemB.price - itemA.price).map((item, itemIndex) => (
-                      <>{item.isOwned || item.id === id && (
-                      <label className="form-checkbox form-image" key={item.id}>
-                        <input
-                          type="radio"
-                          name="avatarframe-radio"
-                          value={item.id}
-                          onChange={handlechange}
-                          defaultChecked={item.id === id}
-                        />
-                        <span className="sr-only">{item.name}</span>
-                        <div className="w-32 h-32 rounded-md flex items-center justify-center p-4 text-center">
-                          <div>
-                            <div className="avatar avatar-circle avatar-sm my-3 mx-auto">
-                              <img src={item.image} alt="" />
-                              <div>
-                                <img
-                                  src={prototype.getUserByID(1)?.avatar}
-                                  alt="avatar"
-                                />
+                    {selectedShopsection.items
+                      ?.sort((itemA, itemB) => itemB.price - itemA.price)
+                      .map((item, itemIndex) => (
+                        <>
+                          {item.isOwned && (
+                            <label
+                              className="form-checkbox form-image"
+                              key={item.id}
+                            >
+                              <input
+                                type="radio"
+                                name="avatarframe-radio"
+                                value={item.id}
+                                onChange={handlechange}
+                                defaultChecked={item.id === id}
+                              />
+                              <span className="sr-only">{item.name}</span>
+                              <div className="w-32 h-32 rounded-md flex items-center justify-center p-4 text-center">
+                                <div>
+                                  <div className="avatar avatar-circle avatar-sm my-3 mx-auto">
+                                    <img src={item.image} alt="" />
+                                    <div>
+                                      <img
+                                        src={prototype.getUserByID(1)?.avatar}
+                                        alt="avatar"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
-                            </div>
-                          </div>
-                        </div>
-                      </label>
-                      )}</>
-                    ))}
+                            </label>
+                          )}
+                        </>
+                      ))}
                   </div>
                 </Slider>
               </div>

@@ -123,6 +123,16 @@ const notificationsGroups = [
     name: "Ladder",
     notifications: [
       {
+        description: "Welcome gift",
+        type: "ladder",
+        intro: "Ladder",
+        title: "Welcome gift",
+        text: "To get you started with Ladders, your first placement stage is free. What are you waiting for?",
+        time: "4 days",
+        cta: "View",
+        url: "/prototype/valorant/ladders",
+      },
+      {
         description: "Maintenance issue",
         type: "ladder",
         intro: "Ladder",

@@ -551,6 +551,7 @@ export const dataShopitems = [
         id: 2,
         name: "Stryda gold",
         price: 25000,
+        isOwned: true,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-02.jpg",
       },
@@ -565,6 +566,7 @@ export const dataShopitems = [
         id: 4,
         name: "Love rush",
         price: 100,
+        isOwned: true,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-04.jpg",
       },
@@ -579,6 +581,7 @@ export const dataShopitems = [
         id: 6,
         name: "Warriors",
         price: 50000,
+        isOwned: true,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-06.jpg",
       },
@@ -593,6 +596,7 @@ export const dataShopitems = [
         id: 8,
         name: "About last night",
         price: 100,
+        isOwned: true,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-08.jpg",
       },
@@ -600,6 +604,7 @@ export const dataShopitems = [
         id: 9,
         name: "Spike Rush",
         price: 55000,
+        isOwned: true,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-09.jpg",
       },

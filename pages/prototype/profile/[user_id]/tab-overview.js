@@ -422,7 +422,7 @@ export default function TabProfileOverview() {
                               key={gameIndex}
                               href={`${selectedUser.id}?tab=games`}
                             >
-                              <a className="interactive rounded overflow-hidden w-24">
+                              <a className="interactive rounded lg:overflow-hidden w-24">
                                 <img
                                   src={prototype.getGameByID(game).assets.cover}
                                   alt={prototype.getGameByID(game).name}
@@ -437,7 +437,7 @@ export default function TabProfileOverview() {
                   </section>
                 )}
               </div>
-              <div className="flex-1 space-y-4 overflow-hidden">
+              <div className="flex-1 space-y-4 lg:overflow-hidden">
                 <section className="surface md:rounded">
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                     <h2 className="h6 text-ui-100">Stats</h2>
@@ -598,7 +598,7 @@ export default function TabProfileOverview() {
                     </Slider>
                   </div>
                 </section>
-                <section className="surface md:rounded overflow-hidden">
+                <section className="surface md:rounded">
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                     <h2 className="h6 text-ui-100">Ladders</h2>
                     <Link href={`${selectedUser.id}?tab=games`}>

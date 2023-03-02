@@ -38,7 +38,7 @@ export default function Slider(props) {
   }, [sliderContainer]);
 
   return (
-    <div className="relative rounded-t-lg overflow-hidden hoverinside:opacity-100 hoverinside:translate-x-0 hoverinside:opacity-100">
+    <div className="relative rounded-t-lg hoverinside:opacity-100 hoverinside:translate-x-0 hoverinside:opacity-100">
       <div
         className={`hidden absolute z-10 left-0 inset-y-0 self-stretch items-center pr-12 bg-gradient-to-r ${bgColor} p-2 hoverinside transition-all duration-300 opacity-0 -translate-x-4 ${
           slideLeft > 0 ? "md:flex" : "pointer-events-none"

@@ -22,6 +22,10 @@ export const dataUsers = [
       riotHashtag: 8573,
       twitch: "@jackattack123",
     },
+    shopItems: {
+      avatarFrame: false,
+      profileBanner: 2,
+    },
     stats: {
       xp: 10000,
       playedLadders: 143,
@@ -80,7 +84,6 @@ export const dataUsers = [
     lang: "ENG",
     avatar:
       "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
-    avatarFrame: 1,
     email: "kes@gmail.com",
     clan: null,
     bio: "Call me Kees. I'm a Tv geek. Student. Web fan. Organizer. Coffee ninja. Zombie scholar. Communicator. Twitter fanatic.",
@@ -88,6 +91,10 @@ export const dataUsers = [
       riotNickname: "KeesDief",
       riotHashtag: 8953,
       twitch: "@KeesDief",
+    },
+    shopItems: {
+      avatarFrame: 125,
+      profileBanner: 8,
     },
     stats: {
       xp: 234,
@@ -142,6 +149,10 @@ export const dataUsers = [
       riotHashtag: 8573,
       twitch: "@misterkilla",
     },
+    shopItems: {
+      avatarFrame: 3,
+      profileBanner: 10,
+    },
     stats: {
       xp: 9275,
       playedLadders: 243,
@@ -156,15 +167,15 @@ export const dataUsers = [
     games: [1],
     ladders: [
       {
-        gameSlug: "pubg",
+        gameSlug: "valorant",
         id: 1,
       },
       {
-        gameSlug: "valorant",
+        gameSlug: "pubg",
         id: 2,
       },
       {
-        gameSlug: "pubg",
+        gameSlug: "valorant",
         id: 3,
       },
     ],
@@ -184,7 +195,6 @@ export const dataUsers = [
     lang: "ENG",
     avatar:
       "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg",
-    avatarFrame: 5,
     email: "kykymimi@gmail.com",
     clan: 2,
     bio: "Do not disturb, I am Gaming.",
@@ -192,6 +202,10 @@ export const dataUsers = [
       riotNickname: "kykymimiGr",
       riotHashtag: 8573,
       twitch: "@kykymimi",
+    },
+    shopItems: {
+      avatarFrame: 5,
+      profileBanner: 7,
     },
     stats: {
       xp: 18970,
@@ -238,6 +252,10 @@ export const dataUsers = [
       riotHashtag: 8573,
       twitch: "@dirtyjohnny",
     },
+    shopItems: {
+      avatarFrame: 2,
+      profileBanner: 6,
+    },
     stats: {
       xp: 874,
       playedLadders: 3,
@@ -282,7 +300,6 @@ export const dataUsers = [
     lang: "ENG",
     avatar:
       "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg",
-    avatarFrame: 2,
     email: "robbiewilliams@gmail.com",
     clan: 5,
     bio: "Hi everyone! My name is PopoRob, but around the Internet I go by Zentouro (don’t ask, its a weird story involving an elven name generator when I was 8). I’m an Environmental Studies major at Middlebury College, focusing in Film and Media Culture. I also have minors in Chinese and Computer Science.",
@@ -290,6 +307,10 @@ export const dataUsers = [
       riotNickname: "PopoRob",
       riotHashtag: 8573,
       twitch: "@poporob",
+    },
+    shopItems: {
+      avatarFrame: 1,
+      profileBanner: false,
     },
     stats: {
       xp: 239,
@@ -327,6 +348,10 @@ export const dataUsers = [
       riotHashtag: 1425,
       twitch: "@valance",
     },
+    shopItems: {
+      avatarFrame: 2,
+      profileBanner: 4,
+    },
     stats: {
       xp: 198,
       playedLadders: 15,
@@ -361,6 +386,10 @@ export const dataUsers = [
       riotNickname: "Pilar",
       riotHashtag: 7482,
       twitch: "@PilarPilar",
+    },
+    shopItems: {
+      avatarFrame: 1,
+      profileBanner: false,
     },
     stats: {
       xp: 244,
@@ -398,6 +427,10 @@ export const dataUsers = [
       riotHashtag: 1254,
       twitch: "@HansGrubby",
     },
+    shopItems: {
+      avatarFrame: 102,
+      profileBanner: false,
+    },
     stats: {
       xp: 10000,
       playedLadders: 54,
@@ -434,6 +467,10 @@ export const dataUsers = [
       riotHashtag: 1254,
       twitch: "@FrenzyMan",
     },
+    shopItems: {
+      avatarFrame: false,
+      profileBanner: 2,
+    },
     stats: {
       xp: 297,
       playedLadders: 2,
@@ -462,7 +499,6 @@ export const dataUsers = [
     lang: "ENG",
     avatar:
       "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg",
-    avatarFrame: 4,
     email: "joppe@gmail.com",
     clan: null,
     bio: "Sleep. Eat. Game. Repeat.",
@@ -470,6 +506,10 @@ export const dataUsers = [
       riotNickname: "Joppe",
       riotHashtag: 1254,
       twitch: "@Joppe",
+    },
+    shopItems: {
+      avatarFrame: 110,
+      profileBanner: 2,
     },
     stats: {
       xp: 297,

@@ -93,7 +93,7 @@ export default function Home() {
               <div className="relative z-10 xl:order-2 flex-2 px-8 mt-8 md:mt-0 grid place-items-center">
                 <img
                   className="object-contain"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1674739870/Stryda/illustrations/shop_avatarframes.png"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1677760500/Stryda/illustrations/shop_profilebanners.png"
                   alt=""
                 />
               </div>
