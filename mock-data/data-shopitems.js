@@ -545,7 +545,7 @@ export const dataShopitems = [
         name: "Stryda lines",
         price: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-01.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_1.jpg",
       },
       {
         id: 2,
@@ -553,29 +553,29 @@ export const dataShopitems = [
         price: 25000,
         isOwned: true,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-02.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_2.jpg",
       },
       {
         id: 3,
-        name: "Stryda waves",
+        name: "Silver lining",
         price: 100,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-03.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_3.jpg",
       },
       {
         id: 4,
-        name: "Love rush",
+        name: "Golden lining",
         price: 100,
         isOwned: true,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-04.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_4.jpg",
       },
       {
         id: 5,
         name: "No strings attached",
         price: 100,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-05.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_5.jpg",
       },
       {
         id: 6,
@@ -583,37 +583,78 @@ export const dataShopitems = [
         price: 50000,
         isOwned: true,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-06.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_6.jpg",
       },
       {
         id: 7,
-        name: "Summer",
+        name: "Like a dream",
         price: 100,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-07.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_7.jpg",
       },
       {
         id: 8,
         name: "About last night",
         price: 100,
-        isOwned: true,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-08.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_8.jpg",
       },
       {
         id: 9,
-        name: "Spike Rush",
+        name: "Blue",
         price: 55000,
         isOwned: true,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-09.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_9.jpg",
       },
       {
         id: 10,
-        name: "Battle Royale",
+        name: "Purple",
         price: 55000,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1677683339/Stryda/shop/profilebanners/ProfileBackground_Stryda-10.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_10.jpg",
+      },
+      {
+        id: 11,
+        name: "We are Stryda",
+        price: 50,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_11.jpg",
+      },
+      {
+        id: 12,
+        name: "We are Stryda gold",
+        price: 25000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_12.jpg",
+      },
+      {
+        id: 13,
+        name: "I love tokens",
+        price: 10000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_13.jpg",
+      },
+      {
+        id: 14,
+        name: "Love rush",
+        price: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_14.jpg",
+      },
+      {
+        id: 15,
+        name: "No strings attached",
+        price: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_15.jpg",
+      },
+      {
+        id: 16,
+        name: "In between",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_16.jpg",
       },
     ],
   }
