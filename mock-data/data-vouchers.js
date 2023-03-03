@@ -3,7 +3,7 @@ export const dataVouchers = [
     id: 1,
     validity: "United States & Europe",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_riot.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1677838794/Stryda/shop/giftcards/store_giftcard_riot.jpg",
     name: "Riot Games",
     description:
       "What if playing games could give you new games? When you buy a Steam gift card through Stryda, that’s exactly what happens. Choose from thousands of games, software, and even hardware from Steam.",
@@ -154,7 +154,7 @@ export const dataVouchers = [
     id: 2,
     validity: "Worldwide",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_amazon.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1677838794/Stryda/shop/giftcards/store_giftcard_amazon.jpg",
     name: "Amazon.com",
     exception:
       "Available worldwide but only redeemable through Amazon US (amazon.com)",
@@ -192,7 +192,7 @@ export const dataVouchers = [
     id: 3,
     validity: "United States, Europe, Philippines & Brazil",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_steam.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1677838794/Stryda/shop/giftcards/store_giftcard_steam.jpg",
     name: "Steam",
     description: "What if playing games could give you new games? When you buy a Steam gift card through Stryda, that’s exactly what happens. Choose from thousands of games, software, and even hardware from Steam.",
     sections: [
@@ -376,7 +376,7 @@ export const dataVouchers = [
     id: 4,
     validity: "Worldwide",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1643193561/shop/Gift_Card_Image_-_DRKN_1x.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1677838912/Stryda/shop/giftcards/store_giftcard_drkn.jpg",
     name: "DRKN Gaming Streetwear",
     description: "This is not your average gamer gear. DRKN creates chic, fashionable streetwear for everyone from casual gamers to esports enthusiasts. Level-up your look with high-quality clothes from DRKN.",
     sections: [
@@ -426,6 +426,33 @@ export const dataVouchers = [
   },
   {
     id: 5,
+    validity: "Worldwide",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1677838794/Stryda/shop/giftcards/store_giftcard_gcoins.jpg",
+    name: "PUBG G-COINS",
+    description: "Turn your hard work and successes into rewards you can enjoy! Will you invest in some new gaming gear or just treat yourself to something you've had your eye on? Earn more coins to spend in the shop by finishing Missions or competing in Ladders.",
+    sections: [
+      {
+        id: 1,
+        name: "Worldwide",
+        giftcards: [
+          {
+            id: 1,
+            amount: "$10 (1000 G-COINS)",
+            price: 9000,
+          },
+          {
+            id: 2,
+            amount: "$20 (2000 G-COINS)",
+            price: 15000,
+          },
+        ],
+      },
+    ],
+  },
+  /*
+  {
+    id: 5,
     validity: "Brazil",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_ifood.webp",
@@ -454,6 +481,7 @@ export const dataVouchers = [
       },
     ],
   },
+  */
 ];
 
 export default {

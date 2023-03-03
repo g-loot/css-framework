@@ -19,7 +19,7 @@ export default function Home() {
       <PrototypeStructure title="Shop">
         <Ad width="1005" height="300" />
 
-        <section className="mb-8">
+        <section className="mb-4">
           <div className="header surface sm:rounded-lg">
             <div className="header-content">
               <div className="header-body">
@@ -38,6 +38,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/*
         <section className="px-4 md:px-0 mb-8 grid md:grid-cols-2 items-stretch gap-8 md:gap-4">
           <div className="flex flex-col">
             <h2 className="px-2 sm:px-0 py-2 h6">
@@ -131,15 +132,114 @@ export default function Home() {
             </div>
           </div>
         </section>
+  */}
         <section className="px-4 md:px-0 mb-8">
-          <h2 className="px-2 sm:px-0 py-2 h6">Gift cards</h2>
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4">
+            <li
+              onClick={openModalBuyTokens}
+              className="interactive surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+              style={{ "--delay": `calc( 0 * 0.05s)` }}
+            >
+              <div className="flex-1 flex flex-col items-center gap-2">
+                <div className="py-2 relative">
+                  <div className="w-6 h-6 rounded-full border border-t-ui-700 border-l-ui-700 border-b-ui-700/0 border-r-ui-700/0 bg-ui-900 absolute z-20 rotate-45 left-[calc(50%-0.75rem)] -top-1"></div>
+                  <div className="w-28 h-4 rounded-full border border-ui-700 bg-ui-900 relative z-10"></div>
+                </div>
+                <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center" />
+                <img
+                  src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_tokens.jpg"
+                  className="w-4/5 rounded-xl shadow-2xl my-3"
+                  height="auto"
+                  alt="Tokens"
+                />
+                <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
+                  <span>Tokens</span>
+                </h3>
+              </div>
+              <div className="border-t border-ui-700 pt-4">
+                <button
+                  type="button"
+                  onClick={openModalBuyTokens}
+                  className="button button-secondary w-full"
+                >
+                  <span>View tokens</span>
+                </button>
+              </div>
+            </li>
+            <Link
+              href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
+            >
+              <li
+                className="interactive surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+                style={{ "--delay": `calc( 1 * 0.05s)` }}
+              >
+                <div className="flex-1 flex flex-col items-center gap-2">
+                  <div className="py-2 relative">
+                    <div className="w-6 h-6 rounded-full border border-t-ui-700 border-l-ui-700 border-b-ui-700/0 border-r-ui-700/0 bg-ui-900 absolute z-20 rotate-45 left-[calc(50%-0.75rem)] -top-1"></div>
+                    <div className="w-28 h-4 rounded-full border border-ui-700 bg-ui-900 relative z-10"></div>
+                  </div>
+                  <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center" />
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_avatarframes.jpg"
+                    className="w-4/5 rounded-xl shadow-2xl my-3"
+                    height="auto"
+                    alt="Avatar frames"
+                  />
+                  <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
+                    <span>Avatar frames</span>
+                  </h3>
+                </div>
+                <div className="border-t border-ui-700 pt-4">
+                  <Link
+                    href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
+                  >
+                    <a type="button" className="button button-secondary w-full">
+                      <span>View frames</span>
+                    </a>
+                  </Link>
+                </div>
+              </li>
+            </Link>
+            <Link
+              href={`/prototype/shop/profile-banner${prototype.getURLparams()}`}
+            >
+              <li
+                className="interactive surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+                style={{ "--delay": `calc( 2 * 0.05s)` }}
+              >
+                <div className="flex-1 flex flex-col items-center gap-2">
+                  <div className="py-2 relative">
+                    <div className="w-6 h-6 rounded-full border border-t-ui-700 border-l-ui-700 border-b-ui-700/0 border-r-ui-700/0 bg-ui-900 absolute z-20 rotate-45 left-[calc(50%-0.75rem)] -top-1"></div>
+                    <div className="w-28 h-4 rounded-full border border-ui-700 bg-ui-900 relative z-10"></div>
+                  </div>
+                  <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center" />
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_profilebanners.jpg"
+                    className="w-4/5 rounded-xl shadow-2xl my-3"
+                    height="auto"
+                    alt="Profile banners"
+                  />
+                  <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
+                    <span>Profile banners</span>
+                  </h3>
+                </div>
+                <div className="border-t border-ui-700 pt-4">
+                  <Link
+                    href={`/prototype/shop/profile-banner${prototype.getURLparams()}`}
+                  >
+                    <a type="button" className="button button-secondary w-full">
+                      <span>View banners</span>
+                    </a>
+                  </Link>
+                </div>
+              </li>
+            </Link>
             {prototype.vouchers.map((voucher, voucherIndex) => (
               <>
                 <li
                   key={voucher.id}
-                  className="surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
-                  style={{ "--delay": `calc( ${voucherIndex} * 0.05s)` }}
+                  className="interactive surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+                  style={{ "--delay": `calc( ${voucherIndex + 3} * 0.05s)` }}
                 >
                   <div className="flex-1 flex flex-col items-center gap-2">
                     <div className="py-2 relative">

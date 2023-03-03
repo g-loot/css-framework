@@ -13,7 +13,7 @@ import Link from "next/link";
 import GameIcon from "../../../../components/GameIcon/GameIcon";
 import Accordion from "../../../../components/Accordion/Accordion";
 
-export default function TabProfileGames() {
+export default function TabProfileStats() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();

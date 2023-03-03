@@ -285,22 +285,19 @@ export default function TabProfileOverview() {
                   <div className="p-4 space-y-1">
                     <div className="flex items-center justify-center gap-2">
                       <span className="text-main text-center text-lg">
-                        10423/15000
+                        10423
                       </span>
                       <span className="icon icon-xp-symbol text-4xl text-main" />
                     </div>
                     <div className="flex justify-between items-baseline text-sm mt-2 mb-1">
                       <span>Level {selectedUser.level}</span>
-                      <span className="text-ui-300">75%</span>
+                      <span className="text-ui-300">15000 XP</span>
                     </div>
                     <div
                       className="progressbar progressbar-sm"
                       style={{ "--percent": "75" }}
                     >
                       <div />
-                    </div>
-                    <div className="text-sm text-ui-300 mt-2 text-center">
-                      1224XP until level {selectedUser.level + 1}
                     </div>
                   </div>
                 </section>
@@ -437,7 +434,7 @@ export default function TabProfileOverview() {
                   </section>
                 )}
               </div>
-              <div className="flex-1 space-y-4 lg:overflow-hidden">
+              <div className="flex-1 space-y-4 lg:overflow-hidden max-w-[100%]">
                 <section className="surface md:rounded">
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                     <h2 className="h6 text-ui-100">Stats</h2>
@@ -447,6 +444,53 @@ export default function TabProfileOverview() {
                       </a>
                     </Link>
                   </div>
+                  <div className="leading-tight grid grid-cols-2 xl:grid-cols-4 flex-1 gap-4 p-4">
+                    <div
+                      className="pl-4 border-l border-ui-600"
+                    >
+                      <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                        Ladders played
+                      </div>
+                      <div className="text-ui-100 text-xl lg:text-3xl">523</div>
+                      <div className="text-xs lg:text-sm text-ui-300">
+                        Top 25%
+                      </div>
+                    </div>
+                    <div
+                      className="pl-4 border-l border-ui-600"
+                    >
+                      <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                        Avg. placement
+                      </div>
+                      <div className="text-ui-100 text-xl lg:text-3xl">#42</div>
+                      <div className="text-xs lg:text-sm text-ui-300">
+                        Top 18%
+                      </div>
+                    </div>
+                    <div
+                      className="pl-4 border-l border-ui-600"
+                    >
+                      <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                        Times in top 50
+                      </div>
+                      <div className="text-ui-100 text-xl lg:text-3xl">4</div>
+                      <div className="text-xs lg:text-sm text-ui-300">
+                        Top 11%
+                      </div>
+                    </div>
+                    <div
+                      className="pl-4 border-l border-ui-600"
+                    >
+                      <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                        Missions completed
+                      </div>
+                      <div className="text-ui-100 text-xl lg:text-3xl">123</div>
+                      <div className="text-xs lg:text-sm text-ui-300">
+                        Top 4.5%
+                      </div>
+                    </div>
+                  </div>
+                  {/*
                   <div>
                     <Slider
                       itemWidth={200 + 16}
@@ -534,6 +578,7 @@ export default function TabProfileOverview() {
                       </div>
                     </Slider>
                   </div>
+                          */}
                 </section>
                 <section className="surface md:rounded">
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">

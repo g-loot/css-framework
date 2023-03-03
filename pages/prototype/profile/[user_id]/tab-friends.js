@@ -42,7 +42,7 @@ export default function TabProfileFriends() {
     if (loading) {
       setTimeout(() => {
         setLoading(false);
-      }, 4000);
+      }, RandomNumber(100, 2000));
     }
   }, [loading]);
 
@@ -138,23 +138,17 @@ export default function TabProfileFriends() {
                       </th>
                       <th className="text-center">
                         <ButtonSorting>
-                          avg. Ladder
-                          <br />
-                          placement
+                          avg. Ladder placement
                         </ButtonSorting>
                       </th>
                       <th className="text-center">
                         <ButtonSorting>
                           Ladders
-                          <br />
-                          played
                         </ButtonSorting>
                       </th>
                       <th className="text-center">
                         <ButtonSorting>
                           Missions
-                          <br />
-                          completed
                         </ButtonSorting>
                       </th>
                     </tr>

@@ -18,7 +18,7 @@ import ProfileHeader from "../header";
 import TabProfileOverview from "./tab-overview";
 import TabProfileActivity from "./tab-activity";
 import TabProfileAchievements from "./tab-achievements";
-import TabProfileGames from "./tab-games";
+import TabProfileStats from "./tab-stats";
 import TabProfileFriends from "./tab-friends";
 
 const TabsItems = [
@@ -38,9 +38,9 @@ const TabsItems = [
     component: TabProfileAchievements,
   },
   {
-    label: "Games",
-    url: "games",
-    component: TabProfileGames,
+    label: "Stats",
+    url: "stats",
+    component: TabProfileStats,
   },
   {
     label: "Friends",

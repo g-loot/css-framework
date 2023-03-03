@@ -218,7 +218,7 @@ export default function PrototypeLeftMenuNew(props) {
                   </div>
                 </button>
               </Link>
-              <Link href={`/prototype/friends${prototype.getURLparams()}`}>
+              <Link href={`/prototype/profile/1?tab=friends${prototype.getURLparams()}`}>
                 <button
                   type="button"
                   className={`item px-6 item-interactive border-b border-ui-700 ${
