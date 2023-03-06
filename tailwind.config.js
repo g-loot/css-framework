@@ -245,6 +245,7 @@ module.exports = {
         story: "9 / 16",
         card: "5 / 7",
         landscape: "10 / 3",
+        banner: "12 / 2",
       },
       height: {
         0: "0rem",

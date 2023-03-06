@@ -19,12 +19,12 @@ export default function ProfileHeader(props) {
   const emptyClan = query.emptyclan === "true" ? true : false;
   const uiContext = useContext(UiContext);
   const { user_id } = router.query;
-  const breadcrumbs = props.breadcrumbs;
-  const [avatarFrame, setAvatarFrame] = useState(false);
+  const breadcrumbs = props.breadcrumbs || false;
   const modalAvatarEdit = query.modalavataredit === "true" ? true : false;
   const modalBannerEdit = query.modalframeedit === "true" ? true : false;
   const hasAvatarFrame = query.avatarframe || false;
   const hasProfileBanner = query.profilebanner || false;
+  const [avatarFrame, setAvatarFrame] = useState(false);
   const [profileBanner, setProfileBanner] = useState(false);
 
   useEffect(() => {
@@ -50,20 +50,24 @@ export default function ProfileHeader(props) {
   }, [modalBannerEdit]);
 
   function openModalAvatarEdit() {
-    if(hasAvatarFrame) {
+    if (hasAvatarFrame) {
       uiContext.openModal(<ModalAvatarEdit id={hasAvatarFrame} />);
-    } else if(selectedUser.shopItems?.avatarFrame) {
-      uiContext.openModal(<ModalAvatarEdit id={selectedUser.shopItems?.avatarFrame} />);
+    } else if (selectedUser.shopItems?.avatarFrame) {
+      uiContext.openModal(
+        <ModalAvatarEdit id={selectedUser.shopItems?.avatarFrame} />
+      );
     } else {
       uiContext.openModal(<ModalAvatarEdit id={1} />);
     }
   }
 
   function openModalBannerEdit() {
-    if(hasProfileBanner) {
+    if (hasProfileBanner) {
       uiContext.openModal(<ModalBannerEdit id={hasProfileBanner} />);
-    } else if(selectedUser.shopItems?.profileBanner) {
-      uiContext.openModal(<ModalBannerEdit id={selectedUser.shopItems?.profileBanner} />);
+    } else if (selectedUser.shopItems?.profileBanner) {
+      uiContext.openModal(
+        <ModalBannerEdit id={selectedUser.shopItems?.profileBanner} />
+      );
     } else {
       uiContext.openModal(<ModalBannerEdit id={1} />);
     }
@@ -77,8 +81,13 @@ export default function ProfileHeader(props) {
     if (hasProfileBanner) {
       setProfileBanner(prototype.getShopitemByID(2, hasProfileBanner));
     } else {
-      if(prototype.getUserByID(user_id).shopItems?.profileBanner) {
-        setProfileBanner(prototype.getShopitemByID(2, prototype.getUserByID(user_id).shopItems?.profileBanner));
+      if (prototype.getUserByID(user_id).shopItems?.profileBanner) {
+        setProfileBanner(
+          prototype.getShopitemByID(
+            2,
+            prototype.getUserByID(user_id).shopItems?.profileBanner
+          )
+        );
       } else {
         setProfileBanner(prototype.getShopitemByID(2, 1));
       }
@@ -128,6 +137,15 @@ export default function ProfileHeader(props) {
                           selectedUser.isPremium ? "text-premium-500" : ""
                         }`}
                       >
+                        {selectedUser.clan && (
+                          <>
+                            {" "}
+                            &#91;
+                            {prototype.getClanByID(selectedUser.clan)?.tag}
+                            &#93;
+                          </>
+                        )}
+                        {" "}
                         {selectedUser.nickname}
                       </h1>
                       <img
@@ -251,21 +269,26 @@ export default function ProfileHeader(props) {
               <img src={profileBanner?.image} alt={profileBanner?.name} />
             ) : (
               <>
-              {selectedUser.shopItems?.profileBanner ? (
-                <>
-                  <img
-                    src={prototype.getShopitemByID(2, selectedUser.shopItems?.profileBanner).image}
-                    alt=""
-                  />
-                </>
-              ) : (
-                <>
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
-                    alt=""
-                  />
-                </>
-              )}
+                {selectedUser.shopItems?.profileBanner ? (
+                  <>
+                    <img
+                      src={
+                        prototype.getShopitemByID(
+                          2,
+                          selectedUser.shopItems?.profileBanner
+                        ).image
+                      }
+                      alt=""
+                    />
+                  </>
+                ) : (
+                  <>
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
+                      alt=""
+                    />
+                  </>
+                )}
               </>
             )}
           </div>

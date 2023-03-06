@@ -680,7 +680,7 @@ export const FrameworkPages = {
           chip: "modal",
           url: "valorant/ladders/1",
           query: "tab=solo-leaderboard&modalladderresults=true",
-          tags: "solo leaderboard, leaderboard, game, ladders, matches, enrollment, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze, claim, rewards",
+          tags: "solo leaderboard, leaderboard, game, ladders, matches, enrollment, final results, token, leaderboard, rewards, ranks, diamond, platinum, gold, silver, bronze, claim, rewards",
           tab: 2,
           new: false,
         },

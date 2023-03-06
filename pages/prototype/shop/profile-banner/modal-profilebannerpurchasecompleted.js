@@ -40,7 +40,7 @@ export default function ModalProfileBannerPurchaseCompleted(props) {
                 <img
                   src={selectedItem.image}
                   alt={selectedItem.name}
-                  className="aspect-[12/2] rounded object-cover surface mb-2 animate-fire-in animate-delay"
+                  className="aspect-banner rounded object-cover surface mb-2 animate-fire-in animate-delay"
                   style={{
                     "--delay": "calc(1 * 1.2s)",
                   }}

@@ -73,12 +73,109 @@ export default function TabProfileStats() {
           )}
           {!isEmpty && (
             <>
+              <div
+                className="surface accordion accordion-highlighted mb-4 animate-slide-in-bottom animate-delay"
+                style={{ "--delay": "calc( 0 * 0.05s)" }}
+              >
+                <Accordion
+                  header={
+                    <div className="item rounded px-4 py-8">
+                      <div className="item-body leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around flex-1 gap-4">
+                        <div className="pl-4 border-l border-ui-600">
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                            Ladders played
+                          </div>
+                          <div className="text-ui-100 text-xl lg:text-3xl">
+                            523
+                          </div>
+                          <div className="text-xs lg:text-sm text-ui-300">
+                            Top 25%
+                          </div>
+                        </div>
+                        <div className="pl-4 border-l border-ui-600">
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                            Avg. placement
+                          </div>
+                          <div className="text-ui-100 text-xl lg:text-3xl">
+                            #42
+                          </div>
+                          <div className="text-xs lg:text-sm text-ui-300">
+                            Top 18%
+                          </div>
+                        </div>
+                        <div className="pl-4 border-l border-ui-600">
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                            Times in top 50
+                          </div>
+                          <div className="text-ui-100 text-xl lg:text-3xl">
+                            4
+                          </div>
+                          <div className="text-xs lg:text-sm text-ui-300">
+                            Top 11%
+                          </div>
+                        </div>
+                        <div className="pl-4 border-l border-ui-600">
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                            Missions completed
+                          </div>
+                          <div className="text-ui-100 text-xl lg:text-3xl">
+                            123
+                          </div>
+                          <div className="text-xs lg:text-sm text-ui-300">
+                            Top 4.5%
+                          </div>
+                        </div>
+                      </div>
+                      <div className="item-actions">
+                        <div>
+                          <span className="icon icon-24 icon-arrow-sm-down" />
+                        </div>
+                      </div>
+                    </div>
+                  }
+                >
+                  <div className="flex flex-wrap text-center leading-tight items-stretch justify-left p-4 divide-x divide-ui-600 gap-y-4">
+                    <div className="rounded px-8 py-4 whitespace-nowrap">
+                      <div className="text-sm uppercase text-ui-200">
+                        Best placement
+                      </div>
+                      <div className="text-xl lg:text-2xl text-ui-100">
+                        #{RandomNumber(1, 10)}
+                      </div>
+                    </div>
+                    <div className="rounded px-8 py-4 whitespace-nowrap">
+                      <div className="text-sm uppercase text-ui-200">
+                        Most matches in a Ladder
+                      </div>
+                      <div className="text-xl lg:text-2xl text-ui-100">
+                        {RandomNumber(20, 30)}
+                      </div>
+                    </div>
+                    <div className="rounded px-8 py-4 whitespace-nowrap">
+                      <div className="text-sm uppercase text-ui-200">
+                        Avg. matches per Ladder
+                      </div>
+                      <div className="text-xl lg:text-2xl text-ui-100">
+                        {RandomNumber(1, 10)}
+                      </div>
+                    </div>
+                    <div className="rounded px-8 py-4 whitespace-nowrap">
+                      <div className="text-sm uppercase text-ui-200">
+                        Avg. Missions per day
+                      </div>
+                      <div className="text-xl lg:text-2xl text-ui-100">
+                        {RandomNumber(2, 4)}
+                      </div>
+                    </div>
+                  </div>
+                </Accordion>
+              </div>
               <section className="grid lg:grid-cols-2 gap-4">
                 {selectedUser.games?.map((item, itemIndex) => (
                   <div
                     key={itemIndex}
                     className="surface rounded animate-slide-in-bottom animate-delay"
-                    style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
+                    style={{ "--delay": "calc(" + Math.round(itemIndex + 1)  + " * 0.05s)" }}
                   >
                     <div className="item">
                       <div className="item-image">
@@ -90,8 +187,8 @@ export default function TabProfileStats() {
                         </div>
                       </div>
                     </div>
-                    <div className="leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around p-4 lg:my-8 gap-4">
-                      <div className="pl-4 border-l border-ui-600">
+                    <div className="leading-tight grid grid-cols-2 lg:flex flex-wrap justify-between p-4 lg:my-8 gap-4 child:border-l child:border-l-ui-600">
+                      <div className="pl-4">
                         <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                           Win rate
                         </div>
@@ -99,7 +196,7 @@ export default function TabProfileStats() {
                           {RandomNumber(50, 300)}
                         </div>
                       </div>
-                      <div className="pl-4 border-l border-ui-600">
+                      <div className="pl-4">
                         <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                           K/D ratio
                         </div>
@@ -107,7 +204,7 @@ export default function TabProfileStats() {
                           {RandomNumber(50, 300)}
                         </div>
                       </div>
-                      <div className="pl-4 border-l border-ui-600">
+                      <div className="pl-4">
                         <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                           Headshots kill avg.
                         </div>
@@ -115,7 +212,7 @@ export default function TabProfileStats() {
                           {RandomNumber(50, 300)}
                         </div>
                       </div>
-                      <div className="pl-4 border-l border-ui-600">
+                      <div className="pl-4">
                         <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
                           Assist avg.
                         </div>
@@ -127,7 +224,10 @@ export default function TabProfileStats() {
                     {prototype.getGameByID(item).slug === "valorant" ? (
                       <div className="border-t border-ui-700 text-center p-3 flex items-center justify-center">
                         <Link href="/prototype/valorant/stats">
-                          <button type="button" className="button button-sm button-primary">
+                          <button
+                            type="button"
+                            className="button button-sm button-primary"
+                          >
                             <span>View all Valorant stats</span>
                           </button>
                         </Link>
@@ -153,48 +253,62 @@ export default function TabProfileStats() {
                               </>
                             }
                           >
-                            <div className="grid grid-cols-3 lg:grid-cols-4 items-center gap-2 text-center p-2">
-                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                <div className="leading-none text-xs text-ui-300 uppercase">
-                                  Assists
-                                </div>
-                                <div className="font-bold">151</div>
-                              </div>
-                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                <div className="leading-none text-xs text-ui-300 uppercase">
+                            <div className="flex flex-wrap text-left leading-tight items-stretch p-4 child:border-l child:border-l-ui-600 gap-y-4">
+                              <div className="rounded px-8 py-4 whitespace-nowrap">
+                                <div className="text-sm uppercase text-ui-200">
                                   Kills
                                 </div>
-                                <div className="font-bold">405</div>
+                                <div className="text-xl lg:text-2xl text-ui-100">
+                                  {RandomNumber(500, 1000)}
+                                </div>
                               </div>
-                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                <div className="leading-none text-xs text-ui-300 uppercase">
+                              <div className="rounded px-8 py-4 whitespace-nowrap">
+                                <div className="text-sm uppercase text-ui-200">
                                   Deaths
                                 </div>
-                                <div className="font-bold">570</div>
+                                <div className="text-xl lg:text-2xl text-ui-100">
+                                  {RandomNumber(500, 900)}
+                                </div>
                               </div>
-                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                <div className="leading-none text-xs text-ui-300 uppercase">
+                              <div className="rounded px-8 py-4 whitespace-nowrap">
+                                <div className="text-sm uppercase text-ui-200">
+                                  Assists
+                                </div>
+                                <div className="text-xl lg:text-2xl text-ui-100">
+                                  {RandomNumber(50, 500)}
+                                </div>
+                              </div>
+                              <div className="rounded px-8 py-4 whitespace-nowrap">
+                                <div className="text-sm uppercase text-ui-200">
                                   Headshot kills
                                 </div>
-                                <div className="font-bold">144</div>
+                                <div className="text-xl lg:text-2xl text-ui-100">
+                                  {RandomNumber(100, 300)}
+                                </div>
                               </div>
-                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                <div className="leading-none text-xs text-ui-300 uppercase">
+                              <div className="rounded px-8 py-4 whitespace-nowrap">
+                                <div className="text-sm uppercase text-ui-200">
                                   Wins
                                 </div>
-                                <div className="font-bold">35</div>
+                                <div className="text-xl lg:text-2xl text-ui-100">
+                                  {RandomNumber(30, 50)}
+                                </div>
                               </div>
-                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                <div className="leading-none text-xs text-ui-300 uppercase">
+                              <div className="rounded px-8 py-4 whitespace-nowrap">
+                                <div className="text-sm uppercase text-ui-200">
                                   Losses
                                 </div>
-                                <div className="font-bold">24</div>
+                                <div className="text-xl lg:text-2xl text-ui-100">
+                                  {RandomNumber(20, 40)}
+                                </div>
                               </div>
-                              <div className="rounded bg-gradient-to-b from-ui-800 to-ui-700/25 p-4">
-                                <div className="leading-none text-xs text-ui-300 uppercase">
+                              <div className="rounded px-8 py-4 whitespace-nowrap text-center">
+                                <div className="text-sm uppercase text-ui-200">
                                   Draws
                                 </div>
-                                <div className="font-bold">1</div>
+                                <div className="text-xl lg:text-2xl text-ui-100">
+                                  {RandomNumber(3, 10)}
+                                </div>
                               </div>
                             </div>
                           </Accordion>

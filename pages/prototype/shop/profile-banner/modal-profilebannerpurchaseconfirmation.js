@@ -36,7 +36,7 @@ export default function ModalProfileBannerPurchaseConfirmation(props) {
               <h2 className="modal-title">Purchase confirmation</h2>
               <p>You are about to purchase the following item:</p>
               <div className="border-t border-ui-700 mt-4 pt-8 pb-4">
-                <img src={selectedItem.image} alt={selectedItem.name} className="aspect-[12/2] rounded object-cover surface mb-2" />
+                <img src={selectedItem.image} alt={selectedItem.name} className="aspect-banner rounded object-cover surface mb-2" />
                 <div className="text-ui-300 uppercase text-xl">
                   {selectedItem.name}
                 </div>

@@ -51,75 +51,73 @@ export default function ModalLadderResults(props) {
                   </div>
                   <div>
                     <h3 className="h6 text-ui-300 mb-2">Your final result</h3>
-                    <div className="max-w-[calc(100vw-3rem)]">
-                      <div className="w-full flex items-center justify-center bg-ui-850 rounded">
-                        <Slider
-                          itemWidth={138 + 16 + 16}
-                          bgColor="from-ui-850 via-ui-850 to-ui-850/0"
-                        >
-                          <div className="flex items-center gap-6 whitespace-nowrap leading-tight">
-                            <div className="pl-10 pr-4 py-1 text-center flex flex-col gap-3 items-center">
-                              <Avatar id={1} size="avatar-sm" />
-                              <div
-                                className={`${
-                                  prototype.getUserByID(1)?.isPremium
-                                    ? "text-premium-500"
-                                    : ""
-                                }`}
-                              >
-                                {prototype.getUserByID(1)?.nickname}
+                    <div className="w-full flex items-center justify-start bg-ui-850 rounded">
+                      <Slider
+                        itemWidth={138 + 16 + 16}
+                        bgColor="from-ui-850 via-ui-850 to-ui-850/0"
+                      >
+                        <div className="flex items-center gap-6 whitespace-nowrap leading-tight">
+                          <div className="pl-10 pr-4 py-1 text-center flex flex-col gap-3 items-center">
+                            <Avatar id={1} size="avatar-sm" />
+                            <div
+                              className={`${
+                                prototype.getUserByID(1)?.isPremium
+                                  ? "text-premium-500"
+                                  : ""
+                              }`}
+                            >
+                              {prototype.getUserByID(1)?.nickname}
+                            </div>
+                          </div>
+                          <div className="flex flex-col justify-center gap-4">
+                            <div className="flex gap-2 items-center">
+                              <span>You were <span className="text-ui-100">58 points</span> from winning</span>
+                              <div className="flex items-center whitespace-nowrap gap-1 text-currency-1-500">
+                                <span className="icon icon-coin text-lg" />
+                                <span>4222</span>
+                              </div>
+                              <div className="flex items-center whitespace-nowrap gap-1 text-currency-2-500">
+                                <span className="icon icon-powertoken text-lg" />
+                                <span>1</span>
                               </div>
                             </div>
-                            <div className="flex flex-col justify-center gap-4">
-                              <div className="flex gap-2 items-center">
-                                <span>You were <span className="text-ui-100">58 points</span> from winning</span>
-                                <div className="flex items-center whitespace-nowrap gap-1 text-currency-1-500">
-                                  <span className="icon icon-coin text-lg" />
-                                  <span>4222</span>
+                            <div className="flex items-top gap-6">
+                              <div className="px-4 border-l border-ui-600">
+                                <div className="text-xs text-ui-300 uppercase font-bold">
+                                  Earned XP
                                 </div>
-                                <div className="flex items-center whitespace-nowrap gap-1 text-currency-2-500">
-                                  <span className="icon icon-powertoken text-lg" />
-                                  <span>1</span>
+                                <div className="text-main text-xl lg:text-2xl">
+                                  +250 xp
                                 </div>
                               </div>
-                              <div className="flex items-top gap-6">
-                                <div className="px-4 border-l border-ui-600">
-                                  <div className="text-xs text-ui-300 uppercase font-bold">
-                                    Earned XP
-                                  </div>
-                                  <div className="text-main text-xl lg:text-2xl">
-                                    +250 xp
-                                  </div>
+                              <div className="px-4 border-l border-ui-600">
+                                <div className="text-xs text-ui-300 uppercase font-bold">
+                                  Total score
                                 </div>
-                                <div className="px-4 border-l border-ui-600">
-                                  <div className="text-xs text-ui-300 uppercase font-bold">
-                                    Total score
-                                  </div>
-                                  <div className="text-ui-100 text-xl lg:text-2xl">
-                                    324 pts
-                                  </div>
+                                <div className="text-ui-100 text-xl lg:text-2xl">
+                                  324 pts
                                 </div>
-                                <div className="px-4 border-l border-ui-600">
-                                  <div className="text-xs text-ui-300 uppercase font-bold">
-                                    Position
-                                  </div>
-                                  <div className="text-ui-100 text-xl lg:text-2xl">
-                                    #89
-                                  </div>
+                              </div>
+                              <div className="px-4 border-l border-ui-600">
+                                <div className="text-xs text-ui-300 uppercase font-bold">
+                                  Position
                                 </div>
-                                <div className="px-4 border-l border-ui-600">
-                                  <div className="text-xs text-ui-300 uppercase font-bold">
-                                    Top match score
-                                  </div>
-                                  <div className="text-ui-100 text-xl lg:text-2xl">
-                                    231 pts
-                                  </div>
+                                <div className="text-ui-100 text-xl lg:text-2xl">
+                                  #89
+                                </div>
+                              </div>
+                              <div className="px-4 border-l border-ui-600">
+                                <div className="text-xs text-ui-300 uppercase font-bold">
+                                  Top match score
+                                </div>
+                                <div className="text-ui-100 text-xl lg:text-2xl">
+                                  231 pts
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </Slider>
-                      </div>
+                        </div>
+                      </Slider>
                     </div>
                   </div>
                   <div>
