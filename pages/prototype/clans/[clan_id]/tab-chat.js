@@ -18,13 +18,11 @@ export default function TabClanChat() {
 
   return (
     <>
-      <div className="flex-1 surface sm:rounded-lg">
-        {selectedClan && (
+      {selectedClan && (
           <>
-            <Chat maxheight={`${!selectedClan.isYou ? "h-auto" : ""}`} isdisabled={!selectedClan.isYou} />
+            <Chat maxheight={`h-auto !overflow-hidden`} isdisabled={!selectedClan.isYou} />
           </>
         )}
-      </div>
     </>
   );
 }

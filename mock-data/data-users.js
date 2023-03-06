@@ -363,7 +363,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [7],
+    games: [1],
   },
   {
     id: 8,
@@ -482,7 +482,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [1, 7, 3, 4],
+    games: [1, 5, 3, 4],
   },
   {
     id: 11,
@@ -522,7 +522,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [1, 7, 3, 4],
+    games: [1, 3],
   },
 ];
 

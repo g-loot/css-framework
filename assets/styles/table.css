@@ -24,6 +24,14 @@
     ;
   }
 
+  tr {
+    @apply
+    relative
+    z-0
+    hover:z-10
+    ;
+  }
+
   &:where(:not(.table-zebra):not(.table-comptact)) :where(thead,tbody,tfoot) :where(tr:not(:last-child) :where(th,td)) {
     @apply
     border-b

@@ -5,22 +5,44 @@ import Chat from "../../../../components/Chat/Chat";
 import Link from "next/link";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import SectionClanActivity from "./section-activity";
+import TabClanOverview from "./tab-overview";
+import TabClanMembers from "./tab-members";
 import TabClanActivity from "./tab-activity";
 import TabClanChat from "./tab-chat";
+import TabClanApplications from "./tab-applications";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import ClanHeader from "./header";
 
 const TabsItems = [
   {
-    label: "Activity",
-    url: "activity",
-    component: TabClanActivity,
+    label: "Overview",
+    url: "overview",
+    component: TabClanOverview,
   },
   {
     label: "Chat",
     url: "chat",
     component: TabClanChat,
+    hasBadge: true,
+    isYou: true,
+  },
+  {
+    label: "Applications (3)",
+    url: "applications",
+    component: TabClanApplications,
+    hasBadge: true,
+    isYou: true,
+  },
+  {
+    label: "Members",
+    url: "members",
+    component: TabClanMembers,
+  },
+  {
+    label: "Activity",
+    url: "activity",
+    component: TabClanActivity,
   },
 ];
 
@@ -31,7 +53,7 @@ export default function Home() {
   const [selectedClan, setSelectedClan] = useState(null);
   const { clan_id } = router.query;
   const { tab } = router.query;
-  const defaultTab = "activity";
+  const defaultTab = "overview";
   const selectedTab = tab ? tab : defaultTab;
 
   useEffect(() => {
@@ -53,44 +75,60 @@ export default function Home() {
           <>
             <ClanHeader />
 
-            <section
-              className="hidden xl:flex flex-col xl:flex-row xl:items-start gap-4 animate-slide-in-bottom animate-delay"
-              style={{ "--delay": "calc(2 * 0.05s)" }}
-            >
-              <div className="flex-1 surface sm:rounded-lg overflow-hidden">
-                <Chat
-                  maxheight="xl:max-h-[calc(100vh-440px)]"
-                  isdisabled={!selectedClan.isYou}
-                />
-              </div>
-              <div className="xl:w-96 space-y-4">
-                <SectionClanActivity />
-              </div>
-            </section>
-
-            <nav className="block xl:hidden">
-              <ul className="tabs border-b border-ui-700">
+            <nav className="mt-4 flex justify-center">
+              <ul className="tabs">
                 {TabsItems.map((item, itemIndex) => (
-                  <li key={item}>
-                    <Link
-                      href={`/prototype/clans/${clan_id}?tab=${
-                        item.url
-                      }${prototype.getURLparams("&")}`}
-                    >
-                      <a
-                        className={`${
-                          selectedTab === item.url ? "is-active" : ""
-                        }`}
-                      >
-                        <span>{item.label}</span>
-                      </a>
-                    </Link>
-                  </li>
+                  <>
+                    {selectedClan.isYou && (
+                      <li key={item}>
+                        <Link
+                          href={`/prototype/clans/${clan_id}?tab=${
+                            item.url
+                          }${prototype.getURLparams("&")}`}
+                        >
+                          <a
+                            className={`${
+                              selectedTab === item.url ? "is-active" : ""
+                            }`}
+                          >
+                            <span data-badge={item.hasBadge ? '.' : undefined}>
+                              {item.label}{" "}
+                              {item.url === "members" && (
+                                <>({selectedClan.members.length})</>
+                              )}
+                            </span>
+                          </a>
+                        </Link>
+                      </li>
+                    )}
+                    {!selectedClan.isYou && !item.isYou && (
+                      <li key={item}>
+                        <Link
+                          href={`/prototype/clans/${clan_id}?tab=${
+                            item.url
+                          }${prototype.getURLparams("&")}`}
+                        >
+                          <a
+                            className={`${
+                              selectedTab === item.url ? "is-active" : ""
+                            }`}
+                          >
+                            <span data-badge={item.hasBadge ? '.' : undefined}>
+                              {item.label}{" "}
+                              {item.url === "members" && (
+                                <>({selectedClan.members.length})</>
+                              )}
+                            </span>
+                          </a>
+                        </Link>
+                      </li>
+                    )}
+                  </>
                 ))}
               </ul>
             </nav>
 
-            <section className="block xl:hidden py-4">
+            <section className="py-4">
               {TabsItems.map((item, itemIndex) => {
                 if (item.url === selectedTab) {
                   return React.createElement(item.component, {

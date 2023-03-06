@@ -5,7 +5,7 @@ import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
 import { UiContext } from "../../contexts/ui";
 import { useContext } from "react";
 import { usePrototypeData } from "../../contexts/prototype";
-import ModalClaimLadderRewards from "../../pages/prototype/home/modal-claim-ladderrewards";
+import ModalLadderResults from "../../pages/prototype/[game]/ladders/modal-ladderresults";
 import Link from "next/link";
 import Tooltip from "../Tooltip/Tooltip";
 
@@ -25,8 +25,15 @@ export default function LadderCardSecondary(props) {
   const isGlobal = props.isGlobal || false;
   const className = props.className || "";
 
-  function openModalClaimLadderRewards() {
-    uiContext.openModal(<ModalClaimLadderRewards></ModalClaimLadderRewards>);
+  function openmodalLadderResults() {
+    uiContext.openModal(
+      <ModalLadderResults
+        ladder={prototype.getLadderByID(
+          prototype.getGameBySlug(game_slug).slug,
+          ladder.id
+        )}
+      />
+    );
   }
 
   return (
@@ -38,9 +45,7 @@ export default function LadderCardSecondary(props) {
       <div
         className={`card-ladder card-secondary ${
           isHorizontal && !isFluid ? "lg:card-horizontal" : ""
-        } ${
-          isHorizontal && isFluid ? "lg:card-horizontal" : ""
-        } ${
+        } ${isHorizontal && isFluid ? "lg:card-horizontal" : ""} ${
           isFluid ? "card-fluid" : ""
         } ${isEnrolled && !ladder.hasClaim ? "is-active" : ""} ${
           ladder.status === "finished" ? "is-inactive" : ""
@@ -53,11 +58,10 @@ export default function LadderCardSecondary(props) {
             <div>
               <button
                 type="button"
-                className="button button-claim is-shining"
-                onClick={openModalClaimLadderRewards}
+                className="button button-primary is-shining"
+                onClick={openmodalLadderResults}
               >
-                <span className="icon icon-present animate-bounce" />
-                <span>Claim reward</span>
+                <span>View results</span>
               </button>
             </div>
           </div>

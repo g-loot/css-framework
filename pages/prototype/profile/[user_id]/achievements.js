@@ -9,19 +9,22 @@ import AchievementFrame from "../../../../components/Achievements/AchievementFra
 import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
 import ModalAchievementReceived from "../../modal-achievementreceived";
 import ProfileHeader from "../header";
+import Tooltip from "../../../../components/Tooltip/Tooltip";
 
 const achievementsList = [
   {
+    id: 1,
     level: 1,
     name: "Mission Expert",
     description: "Complete the entire mission ladder in 1 day.",
     icon: "missionladder",
-    percent: 50,
-    progress: 12,
-    from: "24",
+    percent: 40,
+    progress: 10,
+    from: "150",
     to: "300 XP",
   },
   {
+    id: 2,
     level: 2,
     name: "Mission Ladder",
     description: "Complete 30 missions",
@@ -32,6 +35,7 @@ const achievementsList = [
     to: "30 XP",
   },
   {
+    id: 3,
     level: 3,
     name: "Streak",
     description: "Reach a 100 days streak",
@@ -42,6 +46,7 @@ const achievementsList = [
     to: "100 days",
   },
   {
+    id: 4,
     level: 3,
     name: "Solo Ladder",
     description: "Finish #1 in the Silver League of a solo Ladder",
@@ -52,6 +57,7 @@ const achievementsList = [
     to: "1",
   },
   {
+    id: 5,
     level: 3,
     name: "Clan Ladder",
     description: "Finish #1 in the Gold League of a clan Ladder",
@@ -62,6 +68,7 @@ const achievementsList = [
     to: "1",
   },
   {
+    id: 6,
     level: 5,
     name: "Clan Supporter",
     description: "Gift 200 tokens to members of your clan",
@@ -72,6 +79,7 @@ const achievementsList = [
     to: "200",
   },
   {
+    id: 7,
     level: 1,
     name: "Token King",
     description: "Accumulate a total number of 100 tokens",
@@ -82,6 +90,7 @@ const achievementsList = [
     to: "100",
   },
   {
+    id: 8,
     level: 2,
     name: "XP King",
     description: "Accumulate a total number of 1000 XP",
@@ -92,6 +101,7 @@ const achievementsList = [
     to: "1000",
   },
   {
+    id: 9,
     level: 4,
     name: "Loyal Strydaer",
     description: "Has been on the platform for more than 300 days",
@@ -102,6 +112,7 @@ const achievementsList = [
     to: "300",
   },
   {
+    id: 10,
     level: 5,
     name: "Cross-games Champion",
     description: "Has enrolled in Ladders of 5 games",
@@ -151,9 +162,10 @@ export default function Achievements() {
               {achievementsList.map((item, itemIndex) => (
                 <div
                   key={itemIndex}
-                  className="surface sm:rounded-lg p-2 pr-4 flex items-center gap-6 animate-slide-in-bottom animate-delay"
+                  className="relative surface sm:rounded-lg p-2 pr-4 flex items-center gap-6 animate-slide-in-bottom animate-delay"
                   style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                 >
+                  
                   <div
                     className="w-36 h-36 achievement cursor-pointer"
                     onClick={openModalAchievementReceived.bind(

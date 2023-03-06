@@ -93,18 +93,18 @@ const DSpage = () => {
         Hamburger button
       </h2>
 
-      <div className='surface rounded-lg p-4'>
-        <div className=''>
-          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
-            <div className='flex-1 space-y-4 text-center'>
-              <label className='switch switch-rotate button button-tertiary rounded-full'>
-                <input type='checkbox' />
-                <div className='switch-on icon icon-24 icon-dots-vertical'></div>
-                <div className='switch-off icon icon-24 icon-e-remove'></div>
+      <div className="surface rounded-lg p-4">
+        <div className="">
+          <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+            <div className="flex-1 space-y-4 text-center">
+              <label className="switch switch-rotate button button-tertiary rounded-full">
+                <input type="checkbox" />
+                <div className="switch-on icon icon-24 icon-dots-vertical"></div>
+                <div className="switch-off icon icon-24 icon-e-remove"></div>
               </label>
             </div>
-            <div className='flex-1'>
-              <iframe className='rounded' width='100%' height='200' src='//jsfiddle.net/augustin_hiebel/Ltwch3rn/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094' ></iframe>
+            <div className="flex-1">
+              <iframe className="rounded" width="100%" height="200" src='//jsfiddle.net/augustin_hiebel/Ltwch3rn/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094' ></iframe>
             </div>
           </div>
         </div>

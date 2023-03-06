@@ -105,3 +105,14 @@
     ;
   }
 }
+.tabs {
+  > li {
+    > * {
+      [data-badge]::after {
+        @apply
+        absolute
+        -translate-y-2
+      }
+    }
+  }
+}

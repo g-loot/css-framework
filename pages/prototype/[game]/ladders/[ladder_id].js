@@ -95,7 +95,7 @@ export default function Home() {
     }
   }, [modalLadderResults]);
   
-  function openmodalLadderResults(level, name, icon) {
+  function openmodalLadderResults() {
     uiContext.openModal(
       <ModalLadderResults ladder={prototype.getLadderByID(game, ladder_id)} />
     );

@@ -168,6 +168,11 @@
           bg-ui-600
           rounded-tl-sm
           ;
+          img {
+            @apply
+            rounded-tl-sm
+            ;
+          }
           &.is-deleted {
             @apply
             bg-ui-600/0
