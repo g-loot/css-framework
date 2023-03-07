@@ -33,7 +33,7 @@ const TabsItems = [
     component: TabProfileActivity,
   },
   {
-    label: "Achievements",
+    label: "Achievements (15)",
     url: "achievements",
     component: TabProfileAchievements,
   },
@@ -43,7 +43,7 @@ const TabsItems = [
     component: TabProfileStats,
   },
   {
-    label: "Friends",
+    label: "Friends (3)",
     url: "friends",
     component: TabProfileFriends,
   },
