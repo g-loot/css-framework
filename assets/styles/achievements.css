@@ -123,7 +123,7 @@
   filter: brightness(0) saturate(100%) invert(53%) sepia(17%) saturate(565%) hue-rotate(339deg) brightness(94%) contrast(92%);
 }
 .achievement-level-2 > * {
-  filter: brightness(0) saturate(100%) invert(64%) sepia(9%) saturate(1952%) hue-rotate(351deg) brightness(89%) contrast(89%);
+  filter: brightness(0) saturate(100%) invert(57%) sepia(11%) saturate(1783%) hue-rotate(316deg) brightness(97%) contrast(85%);
 }
 .achievement-level-3 > * {
   filter: brightness(0) saturate(100%) invert(80%) sepia(10%) saturate(107%) hue-rotate(178deg) brightness(96%) contrast(86%);
@@ -133,6 +133,37 @@
 }
 .achievement-level-5 > * {
   filter: brightness(0) saturate(100%) invert(83%) sepia(100%) saturate(4522%) hue-rotate(317deg) brightness(100%) contrast(91%);
+}
+
+.text-achievement-level-0 {
+  @apply
+  text-ui-400
+  ;
+}
+.text-achievement-level-1 {
+  @apply
+  text-bronze-500
+  ;
+}
+.text-achievement-level-2 {
+  @apply
+  text-currency-2-700
+  ;
+}
+.text-achievement-level-3 {
+  @apply
+  text-silver-300
+  ;
+}
+.text-achievement-level-4 {
+  @apply
+  text-gold-700
+  ;
+}
+.text-achievement-level-5 {
+  @apply
+  text-gold-500
+  ;
 }
 
 [class*="achievement-level-"] {

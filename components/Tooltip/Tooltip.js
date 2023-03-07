@@ -24,7 +24,7 @@ const Tooltip = (props) => {
       <div
         ref={setTriggerRef}
         className={`inline-flex ${props.tooltip ? "cursor-pointer" : ""} ${
-          props.className
+          className
         }`}
       >
         {props.children}
@@ -35,11 +35,11 @@ const Tooltip = (props) => {
           <div
             ref={setTooltipRef}
             {...getTooltipProps({
-              className: `tooltip-container ${className}`,
+              className: `tooltip-container`,
             })}
           >
             <div
-              className={`tooltip-lg ${
+              className={`tooltip-lg ${className} ${
                 placement === "bottom" ? "tooltip-bottom" : ""
               } ${placement === "top" ? "tooltip-top" : ""} ${
                 placement === "left" ? "tooltip-left" : ""

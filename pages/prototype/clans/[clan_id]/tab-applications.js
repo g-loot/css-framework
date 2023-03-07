@@ -84,8 +84,8 @@ export default function TabClanApplications() {
   }, [loading]);
 
   return (
-    <>
-      <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-stretch px-4 sm:px-0 mb-0.5 mt-2">
+    <div className="animate-slide-in-bottom">
+      <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-stretch px-4 sm:px-0 mb-0.5">
         <div className="flex gap-4 items-center">
           <div className="form-group form-select">
             <select id="status">
@@ -252,7 +252,11 @@ export default function TabClanApplications() {
                                 type="button"
                                 className="flex gap-3 items-center self-center interactive"
                               >
-                                <Avatar id={item.user} size="avatar-sm" hasTooltip={true} />
+                                <Avatar
+                                  id={item.user}
+                                  size="avatar-sm"
+                                  hasTooltip={true}
+                                />
                                 <div
                                   className={`${
                                     prototype.getUserByID(item.user)?.isPremium
@@ -365,6 +369,6 @@ export default function TabClanApplications() {
           )}
         </>
       )}
-    </>
+    </div>
   );
 }

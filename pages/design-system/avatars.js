@@ -581,6 +581,59 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Loading */}
+      <div className="mb-12" id="loading">
+        <h2 className="h3 mb-3">Loading</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="flex-1">
+                    <div className="flex flex-wrap gap-4 justify-start items-center">
+                      <div className="avatar is-loading avatar-circle">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar is-loading avatar-circle avatar-md">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar is-loading avatar-circle avatar-sm">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar is-loading avatar-circle avatar-xs">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                        </div>
+                      </div>
+                      <div className="avatar is-loading avatar-circle avatar-tiny">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/L86wt5ok/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* With icon */}
       <div className="mb-12" id="with-icon">
         <h2 className="h3 mb-3">With icon</h2>

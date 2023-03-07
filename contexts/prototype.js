@@ -9,6 +9,7 @@ import { dataGames } from '../mock-data/data-games';
 import { dataUsers } from '../mock-data/data-users';
 import { dataVouchers } from '../mock-data/data-vouchers';
 import { dataShopitems } from '../mock-data/data-shopitems';
+import { dataAchievements } from '../mock-data/data-achievements';
 import { useRouter } from "next/router";
 
 export const PrototypeContext = createContext(
@@ -23,6 +24,7 @@ export const PrototypeProvider = ({ children }) => {
   const users = dataUsers;
   const vouchers = dataVouchers;
   const shopitems = dataShopitems;
+  const achievements = dataAchievements;
   const [defaultGameID, setDefaultGameID] = useState(1);
   
   const getGameByID = (id) => {
@@ -93,6 +95,18 @@ export const PrototypeProvider = ({ children }) => {
     });
     return selectedItem;
   }
+  const getAchievementsectionByID = (id) => {
+    return achievements.find(achievementsection => {
+      return achievementsection.id === parseInt(id);
+    })
+  }
+  const getAchievementitemByID = (id, itemId) => {
+    const selectedAchievementsection = getAchievementsectionByID(id);
+    const selectedItem = selectedAchievementsection.items.find(item => {
+      return item.id === parseInt(itemId);
+    });
+    return selectedItem;
+  }
   function getURLparams(prep) {
     const hasAds = query.ads === "true" ? true : false;
     const freeEntry = query.freeentry === "true" ? true : false;
@@ -137,6 +151,8 @@ export const PrototypeProvider = ({ children }) => {
         getVoucherByID,
         getShopsectionByID,
         getShopitemByID,
+        getAchievementsectionByID,
+        getAchievementitemByID,
         getURLparams,
         defineDefaultGameID,
       }}

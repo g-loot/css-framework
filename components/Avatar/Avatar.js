@@ -9,6 +9,9 @@ import { useRouter } from "next/router";
 import { usePrototypeData } from "../../contexts/prototype";
 import Tooltip from "../Tooltip/Tooltip";
 import GameIcon from "../GameIcon/GameIcon";
+import Link from "next/link";
+import AchievementFrame from "../Achievements/AchievementFrame";
+import AchievementIcon from "../Achievements/AchievementIcon";
 
 export default function Avatar(props) {
   const prototype = usePrototypeData();
@@ -22,6 +25,11 @@ export default function Avatar(props) {
   const hasTooltip = props.hasTooltip !== undefined ? props.hasTooltip : false;
   const hasTooltipXP =
     props.hasTooltipXP !== undefined ? props.hasTooltipXP : false;
+  const [selectedUser, setSelectedUser] = useState(null);
+
+  useEffect(() => {
+    setSelectedUser(prototype.getUserByID(userId));
+  }, [userId]);
 
   useEffect(() => {
     if (hasAvatarFrame) {
@@ -31,184 +39,266 @@ export default function Avatar(props) {
     }
   }, [hasAvatarFrame]);
 
-  const AvatarInner = (
-    <div
-      className={`avatar avatar-circle ${size}  ${
-        prototype.getUserByID(userId)?.isPremium ? "avatar-premium" : ""
-      } ${className}`}
-    >
-      {hasLevel && <b>{prototype.getUserByID(userId).level}</b>}
-      {prototype.getUserByID(userId).isYou ? (
-        <>{hasAvatarFrame && <img src={avatarFrame.image} alt="" />}</>
-      ) : (
-        <>
-          {prototype.getUserByID(userId).shopItems.avatarFrame && (
-            <>
-              <img
-                src={
-                  prototype.getShopitemByID(
-                    1,
-                    prototype.getUserByID(userId).shopItems.avatarFrame
-                  ).image
-                }
-                alt=""
-              />
-            </>
-          )}
-        </>
-      )}
+  function RandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
-      <div>
-        <img src={prototype.getUserByID(userId)?.avatar} />
+  const AvatarInner = (
+    <>
+    {selectedUser && (
+      <div
+        className={`avatar avatar-circle ${size}  ${
+          selectedUser?.isPremium ? "avatar-premium" : ""
+        } ${className}`}
+      >
+        {hasLevel && <b>{selectedUser.level}</b>}
+        {selectedUser.isYou ? (
+          <>{hasAvatarFrame && <img src={avatarFrame.image} alt="" />}</>
+        ) : (
+          <>
+            {selectedUser.shopItems.avatarFrame && (
+              <>
+                <img
+                  src={
+                    prototype.getShopitemByID(
+                      1,
+                      selectedUser.shopItems.avatarFrame
+                    ).image
+                  }
+                  alt=""
+                />
+              </>
+            )}
+          </>
+        )}
+        <div>
+          <img src={selectedUser?.avatar} />
+        </div>
+        {size === "avatar-xs" && selectedUser?.isYou && !hasAvatarFrame && (
+          <i className="radar" />
+        )}
+        {selectedUser.isOnline && !hasLevel && <i />}
       </div>
-      {size === "avatar-xs" &&
-        prototype.getUserByID(userId)?.isYou &&
-        !hasAvatarFrame && <i className="radar" />}
-      {prototype.getUserByID(userId).isOnline && !hasLevel && <i />}
-    </div>
+    )}
+    </>
   );
 
   return (
     <>
-      {hasTooltip ? (
+      {selectedUser && (
         <>
-          {hasTooltipXP && userId === 1 ? (
-            <Tooltip
-              placement={props.tooltipPlacement}
-              tooltip={
-                <div className="w-full min-w-[200px] p-2">
-                  <div className="text-main text-center text-lg">
-                    10423/15000 XP
-                  </div>
-                  <div className="flex justify-between items-baseline text-sm mt-2 mb-1">
-                    <span>Level {prototype.getUserByID(userId).level}</span>
-                    <span className="text-ui-300">75%</span>
-                  </div>
-                  <div
-                    className="progressbar progressbar-sm"
-                    style={{ "--percent": "75" }}
-                  >
-                    <div />
-                  </div>
-                  <div className="text-sm text-ui-300 mt-2 text-center">
-                    1224XP until level {prototype.getUserByID(userId).level + 1}
-                  </div>
-                </div>
-              }
-            >
-              {AvatarInner}
-            </Tooltip>
-          ) : (
-            <Tooltip
-              placement={props.tooltipPlacement}
-              tooltip={
-                <div className="w-full min-w-xs">
-                  <div className="flex items-center justify-center gap-4 p-2">
-                    <div
-                      className={`avatar avatar-circle avatar-sm  ${
-                        prototype.getUserByID(userId)?.isPremium
-                          ? "avatar-premium"
-                          : ""
-                      }`}
-                    >
-                      {hasLevel && <b>{prototype.getUserByID(userId).level}</b>}
-                      {!prototype.getUserByID(userId).isYou &&
-                        prototype.getUserByID(userId)?.shopItems
-                          ?.avatarFrame && (
-                          <img
-                            src={
-                              prototype.getShopitemByID(
-                                1,
-                                prototype.getUserByID(userId).shopItems
-                                  .avatarFrame
-                              ).image
-                            }
-                            alt=""
-                          />
-                        )}
-                      {prototype.getUserByID(userId).isYou &&
-                        hasAvatarFrame && (
-                          <img src={avatarFrame.image} alt="" />
-                        )}
-
+          {hasTooltip ? (
+            <>
+              {hasTooltipXP && userId === 1 ? (
+                <Tooltip
+                  placement={props.tooltipPlacement}
+                  tooltip={
+                    <div className="w-full max-w-[200px] p-2">
+                      <div className="text-main text-center text-lg">
+                        10423/15000 XP
+                      </div>
+                      <div className="flex justify-between items-baseline text-sm mt-2 mb-1">
+                        <span>Level {selectedUser.level}</span>
+                        <span className="text-ui-300">75%</span>
+                      </div>
+                      <div
+                        className="progressbar progressbar-sm"
+                        style={{ "--percent": "75" }}
+                      >
+                        <div />
+                      </div>
+                      <div className="text-sm text-ui-300 mt-2 text-center">
+                        1224XP until level {selectedUser.level + 1}
+                      </div>
+                    </div>
+                  }
+                >
+                  {AvatarInner}
+                </Tooltip>
+              ) : (
+                <Tooltip
+                  className="p-0"
+                  placement={props.tooltipPlacement}
+                  tooltip={
+                    <div className="w-full max-w-xs">
                       <div>
-                        <img src={prototype.getUserByID(userId)?.avatar} />
-                      </div>
-                      {size === "avatar-xs" &&
-                        prototype.getUserByID(userId)?.isYou &&
-                        !hasAvatarFrame && <i className="radar" />}
-                      {prototype.getUserByID(userId).isOnline && !hasLevel && (
-                        <i />
-                      )}
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-1">
-                        <h4>{prototype.getUserByID(userId).nickname}</h4>
-                        <img
-                          src={`https://flagcdn.com/${
-                            prototype.getUserByID(userId).countryFlag
-                          }.svg`}
-                          className="aspect-video rounded-sm w-6"
-                        />
-                      </div>
-                      <div className="flex gap-1 mt-1">
-                        {prototype
-                          .getUserByID(userId)
-                          .games?.map((game, gameIndex) => (
-                            <GameIcon
-                              key={gameIndex}
-                              game={game}
-                              size="text-sm"
+                        {selectedUser.shopItems?.profileBanner ? (
+                          <>
+                            <img
+                              src={
+                                prototype.getShopitemByID(
+                                  2,
+                                  selectedUser.shopItems?.profileBanner
+                                ).image
+                              }
+                              className="aspect-banner rounded-t bg-ui-800/75"
+                              alt=""
                             />
-                          ))}
+                          </>
+                        ) : (
+                          <>
+                            <img
+                              src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
+                              className="aspect-banner rounded-t bg-ui-800/75"
+                              alt=""
+                            />
+                          </>
+                        )}
+                      </div>
+                      <div className="flex flex-col items-center justify-center gap-4 px-4 -mt-7">
+                        <div
+                          className={`avatar avatar-circle avatar-sm  ${
+                            selectedUser?.isPremium ? "avatar-premium" : ""
+                          }`}
+                        >
+                          {hasLevel && <b>{selectedUser.level}</b>}
+                          {!selectedUser.isYou &&
+                            selectedUser?.shopItems?.avatarFrame && (
+                              <img
+                                src={
+                                  prototype.getShopitemByID(
+                                    1,
+                                    selectedUser.shopItems.avatarFrame
+                                  ).image
+                                }
+                                alt=""
+                              />
+                            )}
+                          {selectedUser.isYou && hasAvatarFrame && (
+                            <img src={avatarFrame.image} alt="" />
+                          )}
+                          <div>
+                            <img src={selectedUser?.avatar} />
+                          </div>
+                          {size === "avatar-xs" &&
+                            selectedUser?.isYou &&
+                            !hasAvatarFrame && <i className="radar" />}
+                          {selectedUser.isOnline && !hasLevel && <i />}
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-1">
+                            <h5>
+                              {selectedUser.clan && (
+                                <>
+                                  {" "}
+                                  &#91;
+                                  {
+                                    prototype.getClanByID(selectedUser.clan)
+                                      ?.tag
+                                  }
+                                  &#93;
+                                </>
+                              )}{" "}
+                              {selectedUser.nickname}
+                            </h5>
+                            <img
+                              src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
+                              className="aspect-video rounded-sm w-6"
+                            />
+                          </div>
+                          <div className="flex justify-center gap-1 mt-1">
+                            {prototype
+                              .getUserByID(userId)
+                              .games?.map((game, gameIndex) => (
+                                <GameIcon
+                                  key={gameIndex}
+                                  game={game}
+                                  size="text-sm"
+                                />
+                              ))}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-2">
+                        <div className="flex items-center justify-around gap-2 text-center leading-tight">
+                          <div>
+                            <div className="text-xs uppercase text-ui-300">participated in</div>
+                            <div className="text-xl uppercase text-ui-100">{selectedUser.stats.playedLadders} ladders</div>
+                          </div>
+                          <div>
+                            <div className="text-xs uppercase text-ui-300">Avg. Ladder score</div>
+                            <div className="text-xl uppercase text-ui-100">{RandomNumber(200, 1000)} pts</div>
+                          </div>
+                        </div>
+
+                        <div className="flex gap-1 items-center justify-between mt-2 px-2">
+                          <div className="flex gap-2 items-center justify-start">
+                            <div className="w-16 achievement-level-4">
+                              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl4-animated.svg" />
+                              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
+                            </div>
+                            <div className="truncate uppercase text-sm text-left text-achievement-level-4">
+                              Mission Hunter
+                            </div>
+                          </div>
+                          <button type="button" className="button button-sm button-tertiary">
+                            <span>View all</span>
+                          </button>
+
+                        </div>
+
+
+                        <div className="p-2 rounded bg-ui-800/50 mt-2">
+                          {selectedUser.clan ? (
+                            <Link
+                              href={`/prototype/clans/${
+                                selectedUser.clan
+                              }${prototype.getURLparams()}`}
+                            >
+                                <div className="flex gap-2 items-center justify-center">
+                                  <div className="text-sm text-ui-300 whitespace-nowrap mr-1">
+                                    Clan member of
+                                  </div>
+                                  <div className="avatar avatar-tiny avatar-squircle">
+                                    <div>
+                                      <img
+                                        src={
+                                          prototype.getClanByID(selectedUser.clan)
+                                            .avatar
+                                        }
+                                        alt="avatar"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="text-ui-100 truncate">
+                                    &#91;
+                                    {prototype.getClanByID(selectedUser.clan).tag}
+                                    &#93;{" "}
+                                    {
+                                      prototype.getClanByID(selectedUser.clan)
+                                        .nickname
+                                    }
+                                  </div>
+                                </div>
+                            </Link>
+                          ) : (
+                            <div className="space-y-2">
+                              <div className="text-center text-sm">
+                                {selectedUser.nickname} is not part of a clan.
+                              </div>
+                              <Link href="#">
+                                <a
+                                  type="button"
+                                  className="button button-sm button-primary w-full"
+                                >
+                                  <span>Recruit to your clan</span>
+                                </a>
+                              </Link>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="bg-ui-800 rounded mt-2 flex items-center gap-2 whitespace-nowrap p-2">
-                    <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1673941215/Stryda/logos/stryda-logo-missions-simple.svg"
-                      width="auto"
-                      height="auto"
-                      alt=""
-                      className="drop-shadow-xl h-7 flex-none"
-                    />
-                    <div className="pl-2 border-l border-ui-600">
-                      <div className="text-xs text-ui-300 uppercase font-bold">
-                        Missions completed
-                      </div>
-                      <div className="text-ui-100 text-lg">322</div>
-                    </div>
-                  </div>
-                  <div className="bg-ui-800 rounded mt-2 flex items-center gap-2 whitespace-nowrap p-2">
-                    <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1673941215/Stryda/logos/stryda-logo-ladders-simple.svg"
-                      width="auto"
-                      height="auto"
-                      alt=""
-                      className="drop-shadow-xl h-7 flex-none"
-                    />
-                    <div className="pl-2 border-l border-ui-600">
-                      <div className="text-xs text-ui-300 uppercase font-bold">
-                        Ladders played
-                      </div>
-                      <div className="text-ui-100 text-lg">22</div>
-                    </div>
-                    <div className="pl-2 border-l border-ui-600">
-                      <div className="text-xs text-ui-300 uppercase font-bold">
-                        Best placement
-                      </div>
-                      <div className="text-ui-100 text-lg">2</div>
-                    </div>
-                  </div>
-                </div>
-              }
-            >
-              {AvatarInner}
-            </Tooltip>
+                  }
+                >
+                  {AvatarInner}
+                </Tooltip>
+              )}
+            </>
+          ) : (
+            AvatarInner
           )}
         </>
-      ) : (
-        AvatarInner
       )}
     </>
   );
