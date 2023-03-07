@@ -194,7 +194,9 @@ export default function TabClanOverview() {
             {selectedClan.games && (
               <section className="surface md:rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                  <h2 className="h6 text-ui-100">Games ({selectedClan.games.length})</h2>
+                  <h2 className="h6 text-ui-100">
+                    Games ({selectedClan.games.length})
+                  </h2>
                   <Link
                     href={`${
                       selectedClan.id
@@ -212,20 +214,16 @@ export default function TabClanOverview() {
                   >
                     <div className="flex gap-6 py-2 px-6 hoverhighlight">
                       {selectedClan.games?.map((game, gameIndex) => (
-                        <Link
+                        <div
                           key={gameIndex}
-                          href={`${
-                            selectedClan.id
-                          }?tab=games${prototype.getURLparams()}`}
+                          className="rounded lg:overflow-hidden w-24"
                         >
-                          <a className="interactive rounded lg:overflow-hidden w-24">
-                            <img
-                              src={prototype.getGameByID(game).assets.cover}
-                              alt={prototype.getGameByID(game).name}
-                              className="aspect-cover object-cover"
-                            />
-                          </a>
-                        </Link>
+                          <img
+                            src={prototype.getGameByID(game).assets.cover}
+                            alt={prototype.getGameByID(game).name}
+                            className="aspect-cover object-cover"
+                          />
+                        </div>
                       ))}
                     </div>
                   </Slider>

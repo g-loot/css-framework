@@ -373,20 +373,16 @@ export default function TabProfileOverview() {
                   >
                     <div className="flex gap-6 py-2 px-6 hoverhighlight">
                       {selectedUser.games?.map((game, gameIndex) => (
-                        <Link
+                        <div
                           key={gameIndex}
-                          href={`${
-                            selectedUser.id
-                          }?tab=stats${prototype.getURLparams()}`}
+                          className="rounded lg:overflow-hidden w-24"
                         >
-                          <a className="interactive rounded lg:overflow-hidden w-24">
-                            <img
-                              src={prototype.getGameByID(game).assets.cover}
-                              alt={prototype.getGameByID(game).name}
-                              className="aspect-cover object-cover"
-                            />
-                          </a>
-                        </Link>
+                          <img
+                            src={prototype.getGameByID(game).assets.cover}
+                            alt={prototype.getGameByID(game).name}
+                            className="aspect-cover object-cover"
+                          />
+                        </div>
                       ))}
                     </div>
                   </Slider>
@@ -571,12 +567,12 @@ export default function TabProfileOverview() {
                   Achievements {!isEmpty && <>(16)</>}
                 </h2>
                 <Link
-                    href={`${
-                      selectedUser.id
-                    }?tab=achievements${prototype.getURLparams()}`}
-                  >
-                    <a className="link link-hover text-ui-300 text-sm">View</a>
-                  </Link>
+                  href={`${
+                    selectedUser.id
+                  }?tab=achievements${prototype.getURLparams()}`}
+                >
+                  <a className="link link-hover text-ui-300 text-sm">View</a>
+                </Link>
               </div>
               <div>
                 {!isEmpty ? (
@@ -622,7 +618,7 @@ export default function TabProfileOverview() {
                               )}
                             </div>
                             {item.level > 0 && (
-                              <span className="text-xs text-ui-300 uppercase">
+                              <span className="text-xs uppercase">
                                 Level {item.level}
                               </span>
                             )}
@@ -639,7 +635,8 @@ export default function TabProfileOverview() {
                         <>You haven&#39;t unlocked any achievements yet</>
                       ) : (
                         <>
-                          {selectedUser.nickname} hasn&#39;t unlocked any achievements yet
+                          {selectedUser.nickname} hasn&#39;t unlocked any
+                          achievements yet
                         </>
                       )}
                     </p>

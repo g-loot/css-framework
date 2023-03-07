@@ -17,16 +17,32 @@ import Avatar from "../Avatar/Avatar";
 
 const notificationsGroups = [
   {
+    name: "Rewards",
+    notifications: [
+      {
+        description: "Unclaimed rewards",
+        type: "reward",
+        intro: "Rewards",
+        title: "Claim your rewards!",
+        text: "You have rewards to claim from the previous Battle Pass.",
+        cta: "Claim",
+        url: "/prototype/valorant/missions?modalclaimmission=true",
+        time: "1 min.",
+        read: false,
+      },
+    ],
+  },
+  {
     name: "Achievements",
     notifications: [
       {
         description: "Achievement unlocked",
         type: "achievement",
-        intro: "Achivement",
+        intro: "Achievement",
         title: "You unlocked an achievement!",
         text: "Congratulations on unlocking the <a href='#' class='link font-bold'>Mission achievement Level 1</a>!",
         cta: "View",
-        url: "/prototype-new/profile/1/achievements?modalachievement=true",
+        url: "/prototype/profile/1?tab=achievements&modalachievement=true",
         time: "2 min.",
         read: false,
       },
@@ -42,7 +58,7 @@ const notificationsGroups = [
         title: "You have been kicked out",
         text: "You have been removed from the <a href='#' class='link font-bold'>BBL Esports</a> Clan. Find a new clan!",
         cta: "View",
-        url: "/prototype-new/clans/",
+        url: "/prototype/clans/",
         time: "1 min.",
       },
       {
@@ -60,7 +76,7 @@ const notificationsGroups = [
         title: "Your application was accepted",
         text: "Your application to the <a href='#' class='link font-bold'>BBL Esports</a> has been accepted. Welcome to the clan!",
         cta: "View",
-        url: "/prototype-new/clans/1",
+        url: "/prototype/clans/1",
         time: "1 min.",
       },
       {
@@ -78,7 +94,7 @@ const notificationsGroups = [
         title: "Invitation accepted",
         text: "<a href='#' class='link font-bold'>Harriss</a> has accepted and joined your clan.",
         cta: "View",
-        url: "/prototype-new/clans/1",
+        url: "/prototype/clans/1",
         time: "1 min.",
       },
       {
@@ -97,7 +113,7 @@ const notificationsGroups = [
         title: "You are getting noticed!",
         text: "You got invited to the <a href='#' class='link font-bold'>BBL Esports</a> Clan a while ago and haven't answered yet. If you don’t take action, the invitation will expire on 22.10.2022.",
         cta: "Invite",
-        url: "/prototype-new/clans/3",
+        url: "/prototype/clans/3",
         time: "1 day",
       },
       {
@@ -109,7 +125,7 @@ const notificationsGroups = [
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
         cta: "Invite",
-        url: "/prototype-new/clans/1/applications",
+        url: "/prototype/clans/1/applications",
         time: "2 days",
       },
     ],

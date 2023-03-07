@@ -168,7 +168,7 @@ export default function TabProfileAchievements() {
             {achievementsList.map((item, itemIndex) => (
               <div
                 key={itemIndex}
-                className="surface sm:rounded-lg p-2 pr-4 flex items-center gap-6 animate-slide-in-bottom animate-delay"
+                className={`surface sm:rounded-lg p-2 pr-4 flex items-center gap-6 animate-slide-in-bottom animate-delay ${item.level === 0 ? 'pointer-events-none' : ''}`}
                 style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
               >
                 {item.level > 0 && (
@@ -176,7 +176,7 @@ export default function TabProfileAchievements() {
                     {favoriteItem === item.id ? (
                       <button
                         type="button"
-                        className={`button button-ghost rounded-full`}
+                        className={`button button-ghost rounded-full pointer-events-none`}
                       >
                         <span className="icon icon-favorite text-main" />
                       </button>
@@ -198,7 +198,7 @@ export default function TabProfileAchievements() {
                   </div>
                 )}
                 <div
-                  className="w-36 h-36 achievement cursor-pointer"
+                  className={`w-36 h-36 achievement cursor-pointer ${item.level === 5 ? 'is-completed' : ''}`}
                   onClick={openModalAchievementReceived.bind(
                     this,
                     item.level,
@@ -217,7 +217,7 @@ export default function TabProfileAchievements() {
                     />
                   </div>
                   {item.level > 0 && (
-                    <span className="text-sm text-ui-300 uppercase">
+                    <span className="text-sm uppercase">
                       Level {item.level}
                     </span>
                   )}
@@ -225,21 +225,23 @@ export default function TabProfileAchievements() {
                 <div className="flex-1">
                   <h3 className="h5">{item.name}</h3>
                   <p className="text-ui-300 mt-2 mb-3">{item.description}</p>
-                  <div className="flex items-center gap-4 leading-none font-bold">
-                    <div
-                      className="progressbar progressbar-secondary w-full"
-                      style={{
-                        "--percent": item.percent,
-                        "--progress": item.progress,
-                      }}
-                    >
-                      <div />
-                      <div />
+                  {item.level < 5 && (
+                    <div className="flex items-center gap-4 leading-none font-bold">
+                      <div
+                        className="progressbar progressbar-secondary w-full"
+                        style={{
+                          "--percent": item.percent,
+                          "--progress": item.progress,
+                        }}
+                      >
+                        <div />
+                        <div />
+                      </div>
+                      <div className="flex-none mb-0.5">
+                        <span>{item.from}</span> / <span>{item.to}</span>
+                      </div>
                     </div>
-                    <div className="flex-none mb-0.5">
-                      <span>{item.from}</span> / <span>{item.to}</span>
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
             ))}

@@ -134,7 +134,7 @@ export default function TabProfileStats() {
                     </div>
                   }
                 >
-                  <div className="flex flex-wrap text-center leading-tight items-stretch justify-left p-4 divide-x divide-ui-600 gap-y-4">
+                  <div className="flex flex-wrap text-center leading-tight items-stretch justify-center p-4 divide-x divide-ui-600 gap-y-4">
                     <div className="rounded px-8 py-4 whitespace-nowrap">
                       <div className="text-sm uppercase text-ui-200">
                         Best placement

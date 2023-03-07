@@ -18,6 +18,7 @@
   border
   border-ui-700
   transform-gpu
+  text-ui-300
   ;
 
   > i {
@@ -72,6 +73,33 @@
         ;
       }
     }
+  }
+
+  &.is-completed {
+    @apply
+    border-main
+    ;
+
+    * {
+      @apply
+      text-main
+      ;
+    }
+    > i {
+      &::before,
+      &::after {
+        @apply
+        border-main
+        ;
+      }
+    }
+    /*
+    [class*=achievement-level-] {
+      > * {
+        filter: brightness(0) saturate(100%) invert(3%) sepia(6%) saturate(5055%) hue-rotate(188deg) brightness(96%) contrast(100%);
+      }
+    }
+    */
   }
 }
 
