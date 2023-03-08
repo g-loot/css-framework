@@ -199,6 +199,7 @@ export default function Chat(props) {
     props.maxheight !== undefined ? props.maxheight : "h-[700px]";
   const isDisabled = props.isdisabled;
   const isDemo = props.demo;
+  const isAbsolute = props.isAbsolute || false;
   const prototype = usePrototypeData();
   const [newMessageAdded, setNewMessageAdded] = useState(false);
   const conversationSelector =
@@ -361,7 +362,7 @@ export default function Chat(props) {
   }
   return (
     <>
-      <div className={`chat ${isDemo ? "chat-responsive" : ""}`}>
+      <div className={`chat ${isDemo ? 'chat-responsive' : ''} ${isAbsolute ? 'chat-absolute' : ''}`}>
         <div
           className={`chat-feed ${maxHeight} ${
             isDisabled ? "flex items-center justify-center" : ""

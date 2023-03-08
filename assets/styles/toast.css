@@ -112,7 +112,7 @@
 
   &.toast-green {
     @apply
-    bg-interaction-500
+    bg-success-500
     ;
   }
   &.toast-blue {

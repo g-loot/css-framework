@@ -14,7 +14,7 @@ const DSpage = () => {
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4 text-center">
-                <div className="alert">
+                <div className="alert" role="alert" aria-live="assertive">
                   <div>
                     <span className="icon icon-24 icon-c-info" />
                     <span>3 new tournaments available.</span>
@@ -42,7 +42,7 @@ const DSpage = () => {
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4 text-center">
-                <div className="alert">
+                <div className="alert" role="alert" aria-live="assertive">
                   <div>
                     <span className="icon icon-24 icon-c-info" />
                     <span>3 new tournaments available.</span>
@@ -50,7 +50,9 @@ const DSpage = () => {
                   <div className="flex-none">
                     <button
                       type="button"
-                      className="button button-tertiary button-close"
+                      className="button button-sm button-ghost button-close"
+                      data-dismiss="alert" 
+                      aria-label="Close"
                     >
                       <span className="icon icon-e-remove" />
                     </button>
@@ -78,7 +80,7 @@ const DSpage = () => {
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4 text-center">
-                <div className="alert">
+                <div className="alert" role="alert" aria-live="assertive">
                   <div>
                     <span className="icon icon-24 icon-c-info" />
                     <span>3 new tournaments available.</span>
@@ -256,7 +258,7 @@ const DSpage = () => {
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
-                <div className="alert">
+                <div className="alert" role="alert" aria-live="assertive">
                   <div>
                     <svg
                       width="120"
@@ -306,7 +308,7 @@ const DSpage = () => {
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
-                <div className="alert">
+                <div className="alert" role="alert" aria-live="assertive">
                   <div>
                     <img src="https://res.cloudinary.com/gloot/image/upload/v1660723695/Marketing/2022_prototype/Logo/logo-steam.svg" alt="Riot Games" width="120" height="auto"  />
                     <div>

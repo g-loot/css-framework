@@ -24,14 +24,13 @@ const TabsItems = [
     label: "Chat",
     url: "chat",
     component: TabClanChat,
-    hasBadge: true,
     isYou: true,
+    isMobile: true,
   },
   {
     label: "Applications (3)",
     url: "applications",
     component: TabClanApplications,
-    hasBadge: true,
     isYou: true,
   },
   {
@@ -43,6 +42,7 @@ const TabsItems = [
     label: "Activity",
     url: "activity",
     component: TabClanActivity,
+    hasBadge: true,
   },
 ];
 
@@ -80,7 +80,7 @@ export default function Home() {
                 {TabsItems.map((item, itemIndex) => (
                   <>
                     {selectedClan.isYou && (
-                      <li key={item}>
+                      <li key={item} className={`${item.isMobile ? 'lg:!hidden' : ''}`}>
                         <Link
                           href={`/prototype/clans/${clan_id}?tab=${
                             item.url

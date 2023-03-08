@@ -626,3 +626,12 @@
     ;
   }
 }
+
+.chat.chat-absolute {
+  @apply
+  flex
+  flex-col
+  absolute
+  inset-0
+  ;
+}
