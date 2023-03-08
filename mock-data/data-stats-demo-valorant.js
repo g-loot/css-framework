@@ -113,9 +113,32 @@ export const StatsValorantDemoGeneral = [
     rank: 8,
     topweapon: 18,
   },
+  {
+    id: 19,
+    agent: 19,
+    rank: 8,
+    topweapon: 18,
+  },
+  {
+    id: 20,
+    agent: 20,
+    rank: 8,
+    topweapon: 18,
+  },
 ];
 
 export const StatsValorantDemoFavoriteAgents = [
+  {
+    id: 3,
+    agent: 20,
+    timePlayed: "25H",
+    matches: 59,
+    win: 73.2,
+    kd: 1.5,
+    adr: 185.5,
+    acs: 282.7,
+    hs: 29.9,
+  },
   {
     id: 0,
     agent: 8,
@@ -983,6 +1006,16 @@ export const StatsValorantDemoWeapons = [
     weapon: 20,
     kills: 250,
     deaths: 230,
+    headshots: 85,
+    damageround: 39,
+    killsround: 71,
+    killdistance: 43,
+  },
+  {
+    id: 5,
+    weapon: 30,
+    kills: 249,
+    deaths: 229,
     headshots: 85,
     damageround: 39,
     killsround: 71,

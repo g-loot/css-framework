@@ -339,6 +339,18 @@ export const StatsValorantAgents = [
     picturePath: getImageUrl('agent-avatar-harbor.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-harbor.jpg'),
   },
+  {
+    id: 20,
+    name: 'gekko',
+    role: {
+      id: 2,
+      name: 'initiator',
+      color: '#E7B633',
+      picturePath: getImageUrl('role-initiator.webp'),
+    },
+    picturePath: getImageUrl('agent-avatar-gekko.png'),
+    backgroundPath: getImageUrl('valorant-stats-hero-gekko.jpg'),
+  },
 ];
 
 export const StatsValorantWeapons = [
@@ -521,5 +533,11 @@ export const StatsValorantWeapons = [
     name: 'tour de force',
     type: 'melee',
     picturePath: getImageUrl('weapon-tourdeforce.png'),
+  },
+  {
+    id: 30,
+    name: 'mosh pit',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-moshpit.png'),
   },
 ];

@@ -27,7 +27,7 @@ export default function Stats() {
   const [selectedGeneralStat, setSelectedGeneralStat] = useState(0);
   const [selectedStat, setSelectedStat] = useState(null);
   const { game } = router.query;
-  const variant = query.variant ? query.variant : 0;
+  const variant = query.variant ? query.variant : 20;
   const [loading, setLoading] = useState(true);
   const isEmpty = query.empty === "true" ? true : false;
 
