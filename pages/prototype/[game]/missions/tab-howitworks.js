@@ -13,49 +13,19 @@ const MissionsHowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "Before entering a ladder make sure you have read and agree to our <a href='https://stryda.netlify.app/prototype/valorant/ladders?tab=how-it-works' class='link'>rules</a> and our <a href='https://stryda.gg/terms-conditions' class='link'>terms and conditions</a>.",
+        text: "Before playing, ensure you have read and agreed to <a href='https://stryda.gg/terms-conditions' class='link'>Stryda’s terms and conditions</a>.",
       },
       {
         type: "p",
-        text: "<span class='text-lg text-ui-100'>Playing VALORANT</span>",
-      },
-      {
-        type: "ul",
-        text: ["Make sure you connected your Riot account on Stryda"],
+        text: "If you’re playing Valorant or PUBG, you need to connect your game account.",
       },
       {
         type: "p",
-        text: "<span class='text-lg text-ui-100'>Playing PUBG: BATTLEGROUNDS</span>",
-      },
-      {
-        type: "ul",
-        text: ["Make sure you connected your Steam account on Stryda"],
-      },
-      {
-        type: "p",
-        text: "<span class='text-lg text-ui-100'>Playing any other game</span>",
-      },
-      {
-        type: "ul",
-        text: [
-          "Make sure you have installed the Stryda App and the Tracker Plugin.",
-          "The Stryda icon should appear in your game at the top left of your screen meaning everything is up and running to track your Mission progress.",
-        ],
+        text: "For any other game, download and install the Stryda App with the tracker plugin. The application is lightweight and won’t affect your gameplay. The App focuses on anti-cheat, ensuring fair practices for all Stryda users.",
       },
       {
         type: "p",
         text: "<a href='#' class='link link-main'>Download the Stryda App</a>",
-      },
-    ],
-  },
-  {
-    title: "Play in the right mode",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/gamemode.jpg",
-    content: [
-      {
-        type: "p",
-        text: "Some Missions must be played in certain game modes. Make sure to check before you play.",
       },
     ],
   },
@@ -66,15 +36,11 @@ const MissionsHowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "Each time you successfully complete a Mission, you earn XP, which you use to claim Battle Pass Rewards.",
+        text: "Every time you successfully complete a Mission, you’ll earn XP, which you can use to claim rewards.",
       },
       {
         type: "p",
-        text: "The XP you earn will be added to the Battle Pass. For each milestone you reach in the Battle Pass, you will unlock a reward. XP is accumulated from all games you play on Stryda. That means you can get XP from any game that is supported by Stryda.",
-      },
-      {
-        type: "p",
-        text: "Your XP will reset after the Battle Pass ends and can not be transferred to the next Battle Pass.",
+        text: "The XP you earn will be added to your player level and to the Battle Pass. You will unlock a reward for each milestone you reach in the Battle Pass. XP is accumulated from all games you play on Stryda. That means you gain XP from any game that Stryda supports. ",
       },
     ],
   },
@@ -85,7 +51,11 @@ const MissionsHowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "The Battle Pass turns your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Battle Pass, you unlock another reward. The Battle Pass resets each week so you will always have something new to work towards.",
+        text: "Every time you reach a milestone on your Battle Pass, you unlock a new reward, increasingly more rewarding as you move deeper.",
+      },
+      {
+        type: "p",
+        text: "Each Battle Pass lasts for a set period of time, make sure to check out its duration so that you don’t miss out on any rewards!",
       },
     ],
   },
@@ -96,11 +66,7 @@ const MissionsHowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "Premium member get a 50% XP boost on all completed missions.",
-      },
-      {
-        type: "p",
-        text: "Become a Premium member today to earn rewards faster!",
+        text: "Premium members receive a 50% XP boost on all completed Missions. Become a Premium member today to earn faster rewards!",
       },
     ],
     hasButtonReward: true,
@@ -112,23 +78,11 @@ const MissionsHowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "If you are playing VALORANT, make sure your Riot and Stryda accounts are linked in <a href='#' class='link link-main'>your settings</a>.",
+        text: "If you are playing Valorant, make sure you have connected your Riot account to Stryda. For PUBG, please check that your Steam account is connected to Stryda. Complete this from the <a href='#' class='link link-main'>settings page</a>.",
       },
       {
         type: "p",
-        text: "If you are playing PUBG: BATTLEGROUNDS, make sure your Steam and Stryda accounts are linked in <a href='#' class='link link-main'>your settings</a>.",
-      },
-      {
-        type: "p",
-        text: "If you are playing any other game, make sure you have installed the Stryda App and the Tracker Plugin. Make sure the overlay is running with a green dot.",
-      },
-      {
-        type: "p",
-        text: "Note that stats can take some time to be updated.",
-      },
-      {
-        type: "p",
-        text: "If the issue persists check out our <a href='http://help.stryda.gg/' target='_blank' rel='noopener noreferrer' class='link'>help articles</a> or <a href='http://help.stryda.gg/' target='_blank' rel='noopener noreferrer' class='link'>contact support</a>.",
+        text: "If you are playing any other Stryda-supported games, you have to install the Stryda App and the tracker plugin. Make sure that the overlay is running, you will see a green dot visible. Note that stats can take some time to be updated. If the issue persists check out our <a href='http://help.stryda.gg/' target='_blank' rel='noopener noreferrer' class='link'>help articles</a>, or <a href='http://help.stryda.gg/' target='_blank' rel='noopener noreferrer' class='link'>contact support</a>.",
       },
     ],
   },
@@ -153,7 +107,7 @@ export default function TabMissionsHowItWorks() {
             style={{ "--delay": "calc(1 * 0.05s)" }}
           >
             <div className="grid gap-8 grid-cols-1 xl:grid-cols-2">
-              <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
+              <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-start">
                 <img
                   className="rounded-lg"
                   src="https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/missions_cards.jpg"
@@ -163,16 +117,20 @@ export default function TabMissionsHowItWorks() {
                 />
                 <div className="px-4 sm:px-0">
                   <h2 className="h4 mb-4">Missions</h2>
+                  <p className="text-ui-300 leading-relaxed mb-2">
+                    Missions are smaller objectives that you can complete
+                    whenever you want. By completing Missions, you level up your
+                    profile and progress in the Battle Pass. You can complete
+                    Missions across all the games available on Stryda.
+                  </p>
                   <p className="text-ui-300 leading-relaxed">
-                    Missions are daily objectives that reset every 24 hours. By
-                    completing missions you earn XP that allow you to progress
-                    on a weekly Battle pass with multiple rewards to claim. You
-                    can complete missions across all the games available on
-                    Stryda.
+                    Each day, you can reveal two new missions in any game you
+                    like and you can have a maximum of six missions active at
+                    the same time.
                   </p>
                 </div>
               </div>
-              <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center">
+              <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-start">
                 <img
                   className="rounded-lg"
                   src="https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/coins_tokens_xp.jpg"
@@ -182,11 +140,15 @@ export default function TabMissionsHowItWorks() {
                 />
                 <div className="px-4 sm:px-0">
                   <h2 className="h4 mb-4">Battle Pass</h2>
+                  <p className="text-ui-300 leading-relaxed mb-2">
+                    Every time you reach a milestone on your Battle Pass, you
+                    unlock a new reward, increasingly more rewarding as you move
+                    deeper.
+                  </p>
                   <p className="text-ui-300 leading-relaxed">
-                    Each time you reach a milestone on the current Battle Pass,
-                    you unlock a reward which could be either Tokens, Coins or a
-                    combination of both. Battle Pass reset each week so you
-                    always have something new to work towards.
+                    Each Battle Pass lasts for a set period of time, make sure
+                    to check out its duration so that you don’t miss out on any
+                    rewards!
                   </p>
                 </div>
               </div>
@@ -205,9 +167,9 @@ export default function TabMissionsHowItWorks() {
                   <div>
                     <i>1</i>
                     <div className="text-sm text-ui-300">
-                      Make sure you meet the requirements. Dependent on the
-                      game; either connect your game or install the Tracker
-                      Plugin
+                      Ensure you meet all Stryda requirements by either
+                      connecting your game account, or installing the Stryda
+                      App, along with the tracker plugin.
                     </div>
                     <span />
                   </div>
@@ -215,7 +177,19 @@ export default function TabMissionsHowItWorks() {
                 <li>
                   <div>
                     <i>2</i>
-                    <div className="text-sm text-ui-300">Launch your game</div>
+                    <div className="text-sm text-ui-300">
+                      Launch and play your game.
+                    </div>
+                    <span />
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <i>3</i>
+                    <div className="text-sm text-ui-300">
+                      The progress of your missions will be updated
+                      automatically once the match is finished.
+                    </div>
                     <span />
                   </div>
                 </li>
@@ -223,7 +197,8 @@ export default function TabMissionsHowItWorks() {
                   <div>
                     <i>4</i>
                     <div className="text-sm text-ui-300">
-                      Play a match in the correct game mode
+                      Once a mission is completed, claim your XP and head over
+                      to the Battle Pass.
                     </div>
                     <span />
                   </div>
@@ -232,26 +207,8 @@ export default function TabMissionsHowItWorks() {
                   <div>
                     <i>5</i>
                     <div className="text-sm text-ui-300">
-                      The missions will be updated automatically once the match
-                      is finished
+                      Claim your rewards.
                     </div>
-                    <span />
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <i>6</i>
-                    <div className="text-sm text-ui-300">
-                      XP will be added to the Battle Pass when you complete a
-                      mission
-                    </div>
-                    <span />
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <i>7</i>
-                    <div className="text-sm text-ui-300">Claim your reward</div>
                     <span />
                   </div>
                 </li>
