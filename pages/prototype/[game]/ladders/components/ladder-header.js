@@ -53,7 +53,7 @@ export default function LadderHeader() {
               </div>
               <img
                 src={prototype.getLadderByID(game, ladder_id)?.cover}
-                className="aspect-[16/6] object-cover rounded w-96"
+                className="aspect-cover object-cover rounded w-96"
                 alt=""
               />
             </div>

@@ -1523,7 +1523,7 @@ export const dataGames = [
         id: 4,
         solo: true,
         clan: true,
-        name: "Spike rush",
+        name: "Spike Rush",
         cover:
           "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-7.webp",
         status: "ongoing",
@@ -1674,8 +1674,8 @@ export const dataGames = [
             clan: 1,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 150000,
               },
             ],
             stats: {
@@ -1690,8 +1690,8 @@ export const dataGames = [
             clan: 2,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 150000,
               },
             ],
             stats: {
@@ -1706,8 +1706,8 @@ export const dataGames = [
             clan: 3,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 150000,
               },
             ],
             stats: {
@@ -1722,8 +1722,8 @@ export const dataGames = [
             clan: 8,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 150000,
               },
             ],
             stats: {
@@ -1738,8 +1738,8 @@ export const dataGames = [
             clan: 4,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 150000,
               },
             ],
             stats: {
@@ -1754,8 +1754,8 @@ export const dataGames = [
             clan: 5,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 150000,
               },
             ],
             stats: {
@@ -3255,8 +3255,8 @@ export const dataGames = [
             clan: 1,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 150000,
               },
             ],
             stats: {
@@ -3271,8 +3271,8 @@ export const dataGames = [
             clan: 2,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 150000,
               },
             ],
             stats: {
@@ -3287,8 +3287,8 @@ export const dataGames = [
             clan: 3,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 150000,
               },
             ],
             stats: {
@@ -3303,8 +3303,8 @@ export const dataGames = [
             clan: 8,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 150000,
               },
             ],
             stats: {
@@ -3319,8 +3319,8 @@ export const dataGames = [
             clan: 4,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 150000,
               },
             ],
             stats: {

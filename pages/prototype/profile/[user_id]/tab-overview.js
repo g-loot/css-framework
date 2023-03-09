@@ -17,7 +17,7 @@ import LadderCardSecondary from "../../../../components/Ladder/LadderCardSeconda
 const achievementsList = [
   {
     id: 1,
-    level: 1,
+    level: 5,
     name: "Mission Expert",
     description: "Complete the entire mission ladder in 1 day.",
     icon: "missionladder",
@@ -358,6 +358,7 @@ export default function TabProfileOverview() {
                   <h2 className="h6 text-ui-100">
                     Games ({selectedUser.games.length})
                   </h2>
+                  {/*
                   <Link
                     href={`${
                       selectedUser.id
@@ -365,28 +366,15 @@ export default function TabProfileOverview() {
                   >
                     <a className="link link-hover text-ui-300 text-sm">View</a>
                   </Link>
+                  */}
                 </div>
-                <div>
-                  <Slider
-                    itemWidth={138 + 16 + 16}
-                    bgColor="from-ui-800 via-ui-800 to-ui-800/0"
-                  >
-                    <div className="flex gap-6 py-2 px-6 hoverhighlight">
-                      {selectedUser.games?.map((game, gameIndex) => (
-                        <div
-                          key={gameIndex}
-                          className="rounded lg:overflow-hidden w-24"
-                        >
-                          <img
-                            src={prototype.getGameByID(game).assets.cover}
-                            alt={prototype.getGameByID(game).name}
-                            className="aspect-cover object-cover"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </Slider>
-                </div>
+                <ul className="flex gap-4 p-4">
+                  {selectedUser.games?.map((game, gameIndex) => (
+                    <li key={gameIndex}>
+                      <GameIcon game={game} />
+                    </li>
+                  ))}
+                </ul>
               </section>
             )}
           </div>
@@ -594,7 +582,7 @@ export default function TabProfileOverview() {
                               item.level > 0
                                 ? "cursor-pointer"
                                 : "pointer-events-none"
-                            }`}
+                            }  ${item.level === 5 ? 'is-completed' : ''}`}
                             onClick={openModalAchievementReceived.bind(
                               this,
                               item.level,
@@ -606,7 +594,7 @@ export default function TabProfileOverview() {
                             <i />
                             <div
                               className={`achievement-level-${item.level}`}
-                              data-tooltip={item.name}
+                              data-tooltip={`Level ${item.level}`}
                             >
                               <AchievementFrame
                                 url={`https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl${item.level}-animated.svg`}
@@ -619,7 +607,7 @@ export default function TabProfileOverview() {
                             </div>
                             {item.level > 0 && (
                               <span className="text-xs uppercase">
-                                Level {item.level}
+                                {item.name}
                               </span>
                             )}
                           </div>

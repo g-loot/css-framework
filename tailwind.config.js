@@ -246,6 +246,7 @@ module.exports = {
         card: "5 / 7",
         landscape: "10 / 3",
         banner: "12 / 2",
+        cover: "16 / 6",
       },
       height: {
         0: "0rem",

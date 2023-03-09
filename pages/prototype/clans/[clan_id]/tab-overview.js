@@ -267,6 +267,44 @@ export default function TabClanOverview() {
                 </ul>
               </section>
             )}
+            <section className="surface md:rounded">
+              <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                <h2 className="h6 text-ui-100">Ladders ({selectedClan.ladders?.length})</h2>
+                <Link
+                  href={`${
+                    selectedClan.id
+                  }?tab=activity${prototype.getURLparams()}`}
+                >
+                  <a className="link link-hover text-ui-300 text-sm">View</a>
+                </Link>
+              </div>
+              <div>
+                {selectedClan.ladders ? (
+                  <Slider
+                    itemWidth={397 + 16}
+                    bgColor="from-ui-800 via-ui-800 to-ui-800/0"
+                  >
+                      {selectedClan.ladders?.map((ladder, ladderIndex) => (
+                        <>
+                          <Link key={ladderIndex} href="#">
+                          <img src={prototype.getLadderByID(
+                              ladder.gameSlug,
+                              ladder.id
+                            ).cover} className="first:ml-4 rounded h-20 aspect-cover object-cover interactive" alt="" />
+                          </Link>
+                        </>
+                      ))}
+                  </Slider>
+                ) : (
+                  <div className="text-center p-4">
+                    <span className="icon icon-ladder text-6xl text-ui-500" />
+                    <p className="mt-2 text-ui-300">
+                      {selectedClan.nickname} is not competing in any ladders
+                    </p>
+                  </div>
+                )}
+              </div>
+            </section>
           </div>
           <div className="flex-1 surface md:rounded lg:overflow-hidden max-w-[100%] hidden lg:flex flex-col relative">
             <div className="absolute inset-0 overflow-hidden">
@@ -459,27 +497,13 @@ export default function TabClanOverview() {
                     </a>
                   </Link>
                 </div>
-                <div>
-                  <Slider
-                    itemWidth={138 + 16 + 16}
-                    bgColor="from-ui-800 via-ui-800 to-ui-800/0"
-                  >
-                    <div className="flex gap-6 py-2 px-6 hoverhighlight">
-                      {selectedClan.games?.map((game, gameIndex) => (
-                        <div
-                          key={gameIndex}
-                          className="rounded lg:overflow-hidden w-24"
-                        >
-                          <img
-                            src={prototype.getGameByID(game).assets.cover}
-                            alt={prototype.getGameByID(game).name}
-                            className="aspect-cover object-cover"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </Slider>
-                </div>
+                <ul className="flex gap-4 p-4">
+                  {selectedClan.games?.map((game, gameIndex) => (
+                    <li key={gameIndex}>
+                      <GameIcon game={game} />
+                    </li>
+                  ))}
+                </ul>
               </section>
             )}
           </div>

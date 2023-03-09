@@ -41,7 +41,7 @@ export default function ModalLadderResults(props) {
               <div className="modal-body">
                 <img
                   src={ladder?.cover}
-                  className="aspect-[16/6] object-cover w-full border border-ui-600"
+                  className="aspect-cover object-cover w-full border border-ui-600"
                   alt=""
                 />
                 <div className="p-4 space-y-4 text-left">
