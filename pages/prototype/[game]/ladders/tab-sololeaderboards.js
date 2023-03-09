@@ -14,6 +14,7 @@ import AchievementFrame from "../../../../components/Achievements/AchievementFra
 import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
 import Avatar from "../../../../components/Avatar/Avatar";
 import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
+import AvatarClan from "../../../../components/Avatar/AvatarClan";
 
 const Groups = [
   "A",
@@ -891,21 +892,23 @@ export default function TabLaddersSoloLeaderboards() {
                                               </Link>
                                             </div>
                                             <div className="w-10">
-                                            {user.user != 1 &&
-                                                prototype.getUserByID(
-                                                  user.user
-                                                )?.isFriend && (
+                                              {user.user != 1 &&
+                                                prototype.getUserByID(user.user)
+                                                  ?.isFriend && (
                                                   <Tooltip
-                                                placement="left"
-                                                tooltip={
-                                                  <div className="max-w-xs text-sm text-center leading-tight">
-                                                    {prototype.getUserByID(
-                                                  user.user
-                                                )?.nickname} is a friend
-                                                  </div>
-                                                }
-                                              >
-                                                  <span className="icon icon-b-add text-ui-300" />
+                                                    placement="left"
+                                                    tooltip={
+                                                      <div className="max-w-xs text-sm text-center leading-tight">
+                                                        {
+                                                          prototype.getUserByID(
+                                                            user.user
+                                                          )?.nickname
+                                                        }{" "}
+                                                        is a friend
+                                                      </div>
+                                                    }
+                                                  >
+                                                    <span className="icon icon-b-add text-ui-300" />
                                                   </Tooltip>
                                                 )}
                                               {/*
@@ -946,52 +949,14 @@ export default function TabLaddersSoloLeaderboards() {
                                               </span>
                                               {prototype.getUserByID(user.user)
                                                 ?.clan ? (
-                                                <Link
-                                                  href={`/prototype/clans/${
+                                                <AvatarClan
+                                                  id={
                                                     prototype.getUserByID(
                                                       user.user
-                                                    ).clan
-                                                  }${prototype.getURLparams()}`}
-                                                >
-                                                  <a>
-                                                    <Tooltip
-                                                      placement="left"
-                                                      tooltip={
-                                                        <div className="max-w-xs text-sm text-center leading-tight">
-                                                          {
-                                                            prototype.getClanByID(
-                                                              prototype.getUserByID(
-                                                                user.user
-                                                              )?.clan
-                                                            )?.nickname
-                                                          }
-                                                        </div>
-                                                      }
-                                                    >
-                                                      <div
-                                                        className={`avatar avatar-squircle avatar-xs interactive ${
-                                                          !prototype.getUserByID(
-                                                            user.user
-                                                          ).clan
-                                                            ? "opacity-0"
-                                                            : ""
-                                                        }`}
-                                                      >
-                                                        <div>
-                                                          <img
-                                                            src={
-                                                              prototype.getClanByID(
-                                                                prototype.getUserByID(
-                                                                  user.user
-                                                                )?.clan
-                                                              )?.avatar
-                                                            }
-                                                          />
-                                                        </div>
-                                                      </div>
-                                                    </Tooltip>
-                                                  </a>
-                                                </Link>
+                                                    )?.clan
+                                                  }
+                                                  hasTooltip={true}
+                                                />
                                               ) : (
                                                 <div
                                                   className={`avatar avatar-squircle avatar-xs interactive opacity-0`}

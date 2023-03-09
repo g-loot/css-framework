@@ -108,6 +108,8 @@
     px-1.5
     rounded
     text-base
+    h-auto
+    w-auto
     ;
   }
 
@@ -541,13 +543,13 @@
   }
   > .avatar {
     &,
-    & > *,
-    & > * > * {
+    & > *:not(b):not(strong):not(i),
+    & > *:not(b):not(strong):not(i) > * {
       @apply
       rounded-full
       ;
     }
-    > * {
+    > *:not(b):not(strong):not(i) {
       @apply
       w-full
       h-full

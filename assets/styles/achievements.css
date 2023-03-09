@@ -19,6 +19,8 @@
   border-ui-700
   transform-gpu
   text-ui-300
+  text-center
+  leading-none
   ;
 
   > i {

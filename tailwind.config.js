@@ -466,7 +466,7 @@ module.exports = {
           },
         },
         rotate: {
-          0: {
+          "0%": {
             transform: "rotate(0)",
           },
           "100%": {

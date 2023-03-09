@@ -22,6 +22,7 @@ export default function Avatar(props) {
   const [avatarFrame, setAvatarFrame] = useState(false);
   const hasAvatarFrame = query.avatarframe || false;
   const hasLevel = props.hasLevel !== undefined ? props.hasLevel : true;
+  const isOnline = props.isOnline !== undefined ? props.isOnline : false;
   const hasTooltip = props.hasTooltip !== undefined ? props.hasTooltip : false;
   const hasTooltipXP =
     props.hasTooltipXP !== undefined ? props.hasTooltipXP : false;
@@ -77,7 +78,7 @@ export default function Avatar(props) {
         {size === "avatar-xs" && selectedUser?.isYou && !hasAvatarFrame && (
           <i className="radar" />
         )}
-        {selectedUser.isOnline && !hasLevel && <i />}
+        {selectedUser.isOnline && !hasLevel && isOnline && <i />}
       </div>
     )}
     </>
@@ -177,7 +178,7 @@ export default function Avatar(props) {
                         </div>
                         <div>
                           <div className="flex items-center gap-1">
-                            <h5>
+                            <h5 className="text-ui-100">
                               {selectedUser.clan && (
                                 <>
                                   {" "}
@@ -212,18 +213,18 @@ export default function Avatar(props) {
                       <div className="p-2">
                         <div className="flex items-center justify-around gap-2 text-center leading-tight">
                           <div>
-                            <div className="text-xs uppercase text-ui-300">participated in</div>
-                            <div className="text-xl uppercase text-ui-100">{selectedUser.stats.playedLadders} ladders</div>
+                            <div className="text-xs uppercase text-ui-300">played ladders</div>
+                            <div className="text-xl uppercase text-ui-100">{selectedUser.stats.playedLadders}</div>
                           </div>
                           <div>
                             <div className="text-xs uppercase text-ui-300">Avg. Ladder score</div>
-                            <div className="text-xl uppercase text-ui-100">{RandomNumber(200, 1000)} pts</div>
+                            <div className="text-xl uppercase text-ui-100">{RandomNumber(200, 1000)}</div>
                           </div>
                         </div>
 
                         <div className="flex gap-1 items-center justify-between mt-2 px-2">
                           <div className="flex gap-2 items-center justify-start">
-                            <div className="w-16 achievement-level-4">
+                            <div className="w-16 h-16 achievement-level-4">
                               <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl4-animated.svg" />
                               <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
                             </div>
