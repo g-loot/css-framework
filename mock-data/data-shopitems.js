@@ -656,6 +656,69 @@ export const dataShopitems = [
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_16.jpg",
       },
+      {
+        id: 17,
+        name: "Nintendhand",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_17.jpg",
+      },
+      {
+        id: 18,
+        name: "The keys to success",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_18.jpg",
+      },
+      {
+        id: 19,
+        name: "Bomb has been planted",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_19.jpg",
+      },
+      {
+        id: 20,
+        name: "Camping allowed",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_20.jpg",
+      },
+      {
+        id: 21,
+        name: "GGWP",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_21.jpg",
+      },
+      {
+        id: 22,
+        name: "Fairy Lights",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_22.jpg",
+      },
+      {
+        id: 23,
+        name: "In The Dark",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_23.jpg",
+      },
+      {
+        id: 24,
+        name: "Aurora Borealis",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_24.jpg",
+      },
+      {
+        id: 25,
+        name: "Spikes",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_25.jpg",
+      },
     ],
   }
 ];

@@ -6,30 +6,37 @@ export default function Toast(props) {
   const uiContext = useContext(UiContext);
   const [isClosing, setIsClosing] = useState(false);
   const [isClosed, setIsClosed] = useState(false);
+  const dismissable =
+    props.dismissable !== undefined ? props.dismissable : true;
   const autoDelete = props.autoDelete !== undefined ? props.autoDelete : false;
-  const autoDeleteDelay = props.autoDeleteDelay !== undefined ? props.autoDeleteDelay : 5000;
+  const autoDeleteDelay =
+    props.autoDeleteDelay !== undefined ? props.autoDeleteDelay : 5000;
   const [heightValue, setHeightValue] = useState(0);
   const elementRef = useRef(null);
 
-  useEffect(()=> {
+  useEffect(() => {
     setHeightValue(elementRef.current.clientHeight);
   }, []);
 
   useEffect(() => {
-    if(autoDelete === true) {
+    if (autoDelete === true) {
       const interval = setTimeout(() => {
-        setIsClosing(true)
+        setIsClosing(true);
       }, autoDeleteDelay);
-      return () => {clearTimeout(interval);}
+      return () => {
+        clearTimeout(interval);
+      };
     }
   }, []);
 
   useEffect(() => {
-    if(isClosing === true) {
+    if (isClosing === true) {
       const interval = setTimeout(() => {
         uiContext.closeToastr(props.id);
       }, 440);
-      return () => {clearTimeout(interval);}
+      return () => {
+        clearTimeout(interval);
+      };
     }
   }, [isClosing]);
 
@@ -38,7 +45,13 @@ export default function Toast(props) {
   }
 
   return (
-    <div className={`transition-all duration-300 ease-in-out overflow-hidden shadow-2xl rounded-lg ${isClosing ? "animate-fade-out" : ""}`} id={props.id} style={{ height: `${isClosing ? 0 : heightValue}px` }}>
+    <div
+      className={`transition-all duration-300 ease-in-out overflow-hidden shadow-2xl rounded-lg ${
+        isClosing ? "animate-fade-out" : ""
+      }`}
+      id={props.id}
+      style={{ height: `${isClosing ? 0 : heightValue}px` }}
+    >
       <div ref={elementRef} className="pb-px">
         <div
           className={`toast ${props.size === "small" ? "toast-sm" : ""} ${
@@ -50,17 +63,24 @@ export default function Toast(props) {
           aria-live="assertive"
         >
           {props.icon && <span className={`icon icon-20 icon-${props.icon}`} />}
-          {!props.icon && <span className="icon icon-20 icon-c-info" />}
+          {!props.icon && (
+            <span
+              className={`icon icon-20 ${
+                props.color === "green" ? "icon-f-check" : ""
+              } ${props.color === "blue" ? "icon-c-info" : ""} ${
+                props.color === "orange" ? "icon-warning-sign" : ""
+              } ${props.color === "red" ? "icon-s-warning" : ""}`}
+            />
+          )}
           <div>
-            {props.title && (
-              <div className="toast-title">
-                {props.title}
-              </div>
-            )}
+            {props.title && <div className="toast-title">{props.title}</div>}
             <div className="toast-text">{props.text}</div>
             {props.buttons && (
               <div className="flex items-center gap-2 mt-2">
-                <button type="button" className="button button-primary button-sm">
+                <button
+                  type="button"
+                  className="button button-primary button-sm"
+                >
                   <span>Accept</span>
                 </button>
                 <button
@@ -72,15 +92,17 @@ export default function Toast(props) {
               </div>
             )}
           </div>
-          <button
-            type="button"
-            className="button button-sm button-ghost button-close"
-            data-dismiss="toast"
-            aria-label="Close"
-            onClick={closeToast}
-          >
-            <span className="icon icon-e-remove" />
-          </button>
+          {dismissable && (
+            <button
+              type="button"
+              className="button button-sm button-ghost button-close"
+              data-dismiss="toast"
+              aria-label="Close"
+              onClick={closeToast}
+            >
+              <span className="icon icon-e-remove" />
+            </button>
+          )}
         </div>
       </div>
     </div>

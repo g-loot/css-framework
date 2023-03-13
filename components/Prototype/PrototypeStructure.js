@@ -9,18 +9,19 @@ import TopbarNew from "../Topbar/Topbar";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 import { VariablesContext } from "../../contexts/variables";
+import { UiContext } from "../../contexts/ui";
 import React, { useContext } from "react";
 
 export default function PrototypeStructure({ children, title }) {
   const prototype = usePrototypeData();
   const { query } = useRouter();
+  const uiContext = useContext(UiContext);
   const hasAds = query.ads === "true" ? true : false;
   const hasContentCard = query.contentcard === "true" ? true : false;
   const isNewStructure =
     query.newstructure === "true" || query.newstructure === undefined
       ? true
       : false;
-  const isAnnouncement = query.announcement ? true : false;
   const variables = useContext(VariablesContext);
   return (
     <>
@@ -94,13 +95,7 @@ export default function PrototypeStructure({ children, title }) {
             <div className="drawer-content scrollbar-desktop scrollbar-secondary">
               <TopbarNew />
               <div className="container relative">
-                {isAnnouncement && (
-                  <div className="sticky top-[48px] z-50 w-full p-4 bg-ui-500/95 backdrop-blur-sm text-ui-90 text-">
-                    <div className="max-w-2xl mx-auto px-0 md:px-10 xl:px-20">
-                      Hello from the other side?
-                    </div>
-                  </div>
-                )}
+                <div id="alerts" className="alert-container"></div>
 
                 <div
                   className={`max-w-2xl flex lg:gap-8 mx-auto px-0 md:px-10 xl:px-20 ${

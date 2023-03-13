@@ -269,7 +269,7 @@ export default function Home() {
         */}
 
         <h2 className="h3 mt-8 mb-4 mx-4 sm:mx-0">Missions</h2>
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 mx-4 sm:mx-0 text-sm text-ui-300">
+        <div className="mb-2 mx-4 sm:mx-0 text-sm text-ui-300">
           {!isPremium && (
             <p>
               Get{" "}
@@ -279,9 +279,6 @@ export default function Home() {
               and earn +50% of XP on all missions
             </p>
           )}
-          <div className="md:text-right">
-            Your latest match ended <b>Dec 13 / 8:12 PM</b>
-          </div>
         </div>
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300"></div>
         <HomeLadderMissions gameSlug="valorant" />

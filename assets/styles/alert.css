@@ -2,6 +2,20 @@
 /* ALERT */
 /*----------------------------*/
 
+.alert-container {
+  @apply
+  sticky
+  top-12
+  z-50
+  ;
+
+  .alert {
+    @apply
+    rounded-none
+    ;
+  }
+}
+
 .alert {
   @apply
   rounded-xl
@@ -57,7 +71,11 @@
   &.alert-success, 
   &.alert-info, 
   &.alert-attention, 
-  &.alert-error {
+  &.alert-error,
+  &.alert-green, 
+  &.alert-blue, 
+  &.alert-orange, 
+  &.alert-red {
     @apply
     border-0
     ;
@@ -73,24 +91,28 @@
     }
   }
 
-  &.alert-success {
+  &.alert-success,
+  &.alert-green {
     @apply
     bg-success-500
     ;
   }
-  &.alert-info {
+  &.alert-info,
+  &.alert-blue {
     @apply
     bg-info-500
     ;
     
   }
-  &.alert-attention {
+  &.alert-attention,
+  &.alert-orange {
     @apply
     bg-attention-500
     ;
     
   }
-  &.alert-error {
+  &.alert-error,
+  &.alert-red {
     @apply
     bg-error-500
     ;
