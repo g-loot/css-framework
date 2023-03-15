@@ -33,7 +33,7 @@ export const dataShopitems = [
         name: "Glitch",
         price: 15000,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1678888206/Stryda/shop/avatarframes/Glitch.svg",
+          "https://res.cloudinary.com/gloot/image/upload/v1678890617/Stryda/shop/avatarframes/Glitch.svg",
       },
       {
         id: 5,

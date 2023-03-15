@@ -13,15 +13,22 @@ export default function Home() {
   const uiContext = useContext(UiContext);
   const [submitting, setSubmitting] = useState(false);
   const { query } = useRouter();
-  const isConnected = query.connected === "true" ? true : false;
   const [buttonFeedbackMessage1, setButtonFeedbackMessage1] = useState("");
   const [buttonFeedbackMessage2, setButtonFeedbackMessage2] = useState("");
   const delay = 4000;
   const prototype = usePrototypeData();
   const [selectedUser, setSelectedUser] = useState(prototype.getUserByID(1));
+  const [isConnected, setIsConnected] = useState(false);
+  const [isAlreadyConnected, setIsAlreadyConnected] = useState(false);
 
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(1));
+  }, []);
+
+  useEffect(() => {
+    if (query.connected === "true") {
+      setIsConnected(true);
+    }
   }, []);
 
   function buttonFeedback1(message) {
@@ -211,31 +218,66 @@ export default function Home() {
                     <div className="form-group">
                       <label htmlFor="social-steam">Riot Games</label>
                       <div className="flex-3">
-                        {isConnected && (
-                          <div className="input-group">
-                            <span>
+                        {isConnected ? (
+                          <>
+                            {isAlreadyConnected ? (
+                              <div className="space-y-3">
+                                <div className="flex items-center gap-3 text-attention-500">
+                                  <span className="icon text-xl icon-warning-sign" />
+                                  <p>
+                                    This Riot ID is already connected to a
+                                    Stryda account. Click the following button
+                                    to generate a recovery e-mail for that
+                                    address.
+                                  </p>
+                                </div>
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    setIsConnected(!isConnected);
+                                    setIsAlreadyConnected(!isAlreadyConnected);
+                                  }}
+                                  className="button button-primary w-full"
+                                >
+                                  <span>Send recovery email</span>
+                                </button>
+                              </div>
+                            ) : (
+                              <div
+                                className="input-group cursor-pointer"
+                                onClick={() =>
+                                  setIsAlreadyConnected(!isAlreadyConnected)
+                                }
+                              >
+                                <span>
+                                  <span className="icon icon-riotgames-symbol" />
+                                </span>
+                                <input
+                                  type="text"
+                                  name="gameaccount-riot"
+                                  id="gameaccount-riot"
+                                  disabled
+                                  value="jackattack#3827"
+                                />
+                              </div>
+                            )}
+                          </>
+                        ) : (
+                          <>
+                            <button
+                              type="button"
+                              onClick={() => setIsConnected(!isConnected)}
+                              className="button button-primary w-full"
+                            >
                               <span className="icon icon-riotgames-symbol" />
-                            </span>
-                            <input
-                              type="text"
-                              name="gameaccount-riot"
-                              id="gameaccount-riot"
-                              disabled
-                              value="jackattack#3827"
-                            />
-                          </div>
+                              <span>Connect with Riot ID</span>
+                            </button>
+                            <p className="text-ui-300 text-sm mt-2 leading-tight">
+                              By connecting with Riot I acknowledge making my
+                              profile public to all users.
+                            </p>
+                          </>
                         )}
-                        {!isConnected && (
-                          <button className="button button-primary w-full">
-                            <span className="icon icon-riotgames-symbol" />
-                            <span>Connect with Riot ID</span>
-                          </button>
-                        )}
-
-                        <p className="text-ui-300 text-sm mt-2 leading-tight">
-                          By connecting with Riot I acknowledge making my
-                          profile public to all users.
-                        </p>
                       </div>
                     </div>
                   </div>
