@@ -7,6 +7,7 @@ import { usePrototypeData } from "../../../contexts/prototype";
 import { UiContext } from "../../../contexts/ui";
 import { useRouter } from "next/router";
 import TextareaExpandable from "../../../components/Textarea/TextareaExpandable";
+import Tooltip from "../../../components/Tooltip/Tooltip";
 
 export default function Home() {
   const router = useRouter();
@@ -216,7 +217,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="form-group">
-                      <label htmlFor="social-steam">Riot Games</label>
+                      <label htmlFor="social-steam">Riot</label>
                       <div className="flex-3">
                         {isConnected ? (
                           <>
@@ -243,22 +244,35 @@ export default function Home() {
                                 </button>
                               </div>
                             ) : (
-                              <div
-                                className="input-group cursor-pointer"
-                                onClick={() =>
-                                  setIsAlreadyConnected(!isAlreadyConnected)
-                                }
-                              >
-                                <span>
-                                  <span className="icon icon-riotgames-symbol" />
-                                </span>
-                                <input
-                                  type="text"
-                                  name="gameaccount-riot"
-                                  id="gameaccount-riot"
-                                  disabled
-                                  value="jackattack#3827"
-                                />
+                              <div className="flex gap-4 items-center">
+                                <div
+                                  className="flex-1 input-group cursor-pointer"
+                                  onClick={() =>
+                                    setIsAlreadyConnected(!isAlreadyConnected)
+                                  }
+                                >
+                                  <span>
+                                    <span className="icon icon-riotgames-symbol" />
+                                  </span>
+                                  <input
+                                    type="text"
+                                    name="gameaccount-riot"
+                                    id="gameaccount-riot"
+                                    disabled
+                                    value="jackattack#3827"
+                                  />
+                                </div>
+                                <Tooltip
+                                  tooltip={
+                                    <div className="max-w-xs">
+                                      If you have updated your RIOT ID recently,
+                                      it can take up to 15 minutes to see the
+                                      changes.
+                                    </div>
+                                  }
+                                >
+                                  <span className="icon icon-c-info" />
+                                </Tooltip>
                               </div>
                             )}
                           </>
