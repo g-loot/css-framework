@@ -165,7 +165,7 @@ export default function TabProfileActivity() {
                               className={`achievement-level-${item.achievement.level}`}
                             >
                               <AchievementFrame
-                                url={`https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl${item.achievement.level}-animated.svg`}
+                                url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${item.achievement.level}-animated.svg`}
                               />
                               <AchievementIcon
                                 url={`https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-${item.achievement.icon}.svg`}

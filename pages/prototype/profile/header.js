@@ -220,7 +220,7 @@ export default function ProfileHeader(props) {
                 </a>
               )}
               {!selectedUser.isYou && !selectedUser.isFriend && (
-                <Link href="/prototype/friends">
+                <Link href={`/prototype/profile/${selectedUser.id}?tab=friends`}>
                   <a
                     type="button"
                     className="button button-sm button-primary w-full"

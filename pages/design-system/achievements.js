@@ -5,13 +5,28 @@ import { getLayout } from "../../components/DesignSystem/DSLayout";
 import AchievementFrame from "../../components/Achievements/AchievementFrame";
 import AchievementIcon from "../../components/Achievements/AchievementIcon";
 import { UiContext } from "../../contexts/ui";
+import { usePrototypeData } from "../../contexts/prototype";
 import ModalAchievementReceived from "../prototype/modal-achievementreceived";
 
 const DSpage = () => {
+  const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
-  function openModal() {
-    uiContext.openModal(<ModalAchievementReceived />);
+  const defaultAchievementLevel = 4;
+  const achievementLevels = [0, 1, 2, 3, 4, 5];
+  const [achievementLevel, setAchievementLevel] = useState(
+    achievementLevels[defaultAchievementLevel]
+  );
+
+  function handleLevel(e) {
+    setAchievementLevel(e.target.value);
   }
+
+  function openModalAchievementReceived(item, level) {
+    uiContext.openModal(
+      <ModalAchievementReceived item={item} level={+level} />
+    );
+  }
+
   return (
     <>
       <h1 className="mb-2">Achievements</h1>
@@ -24,8 +39,8 @@ const DSpage = () => {
             <i />
             <i />
             <div className="achievement-level-1">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl1-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl1-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-missionhunter.svg" />
             </div>
             <span></span>
           </div>
@@ -33,32 +48,32 @@ const DSpage = () => {
             <i />
             <i />
             <div className="achievement-level-2">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl2-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-missionladder.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl2-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-juggernaut.svg" />
             </div>
           </div>
           <div className="w-32 h-32 achievement">
             <i />
             <i />
             <div className="achievement-level-3">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl3-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-streak.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl3-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-ladderchampion.svg" />
             </div>
           </div>
           <div className="w-32 h-32 achievement">
             <i />
             <i />
             <div className="achievement-level-4">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl4-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-sololadder.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl4-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-kingoftokens.svg" />
             </div>
           </div>
           <div className="w-32 h-32 achievement">
             <i />
             <i />
             <div className="achievement-level-5">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl5-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-clansupporter.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl5-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-strider.svg" />
             </div>
           </div>
         </div>
@@ -81,13 +96,81 @@ const DSpage = () => {
                 <button
                   type="button"
                   className="button button-primary"
-                  onClick={openModal}
+                  onClick={openModalAchievementReceived.bind(
+                    this,
+                    prototype.getAchievementitemByID(1, 1),
+                    4
+                  )}
                 >
                   <span>Open modal</span>
                 </button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Achievements List */}
+      <div className="mb-12" id="achievements-list">
+        <div className="flex justify-between mb-2">
+          <h2 className="h3 mb-3">Achievements list</h2>
+          <div className="form-group form-select flex items-center gap-2">
+            <label htmlFor="colour" className="m-0">
+              Level:
+            </label>
+            <select id="colour" onChange={(e) => handleLevel(e)}>
+              {achievementLevels.map((value, key) => (
+                <option
+                  key={key}
+                  value={value}
+                  selected={defaultAchievementLevel === value}
+                >
+                  {value}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          {prototype
+            .getAchievementsectionByID(1)
+            .items.map((item, itemIndex) => (
+              <div
+                key={itemIndex}
+                className={`surface sm:rounded-lg p-2 pr-4 flex items-center gap-6`}
+              >
+                <div
+                  className={`w-32 h-32 achievement cursor-pointer ${
+                    achievementLevel === "5" ? "is-completed" : ""
+                  }`}
+                  onClick={openModalAchievementReceived.bind(
+                    this,
+                    item,
+                    achievementLevel
+                  )}
+                >
+                  <i />
+                  <i />
+                  <div className={`achievement-level-${achievementLevel}`}>
+                    <AchievementFrame
+                      url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${achievementLevel}-animated.svg`}
+                    />
+                    <AchievementIcon
+                      url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${item.icon}.svg`}
+                    />
+                  </div>
+                  {achievementLevel > 0 && (
+                    <span className="text-sm uppercase">
+                      Level {achievementLevel}
+                    </span>
+                  )}
+                </div>
+                <div className="flex-1">
+                  <h3 className="h5">{item.name}</h3>
+                  <p className="text-ui-300 mt-2">{item.description}</p>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
     </>

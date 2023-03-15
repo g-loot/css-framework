@@ -17,10 +17,8 @@ import LadderCardSecondary from "../../../../components/Ladder/LadderCardSeconda
 const achievementsList = [
   {
     id: 1,
-    level: 5,
-    name: "Mission Expert",
-    description: "Complete the entire mission ladder in 1 day.",
-    icon: "missionladder",
+    item: 1,
+    level: 1,
     percent: 40,
     progress: 10,
     from: "150",
@@ -28,10 +26,8 @@ const achievementsList = [
   },
   {
     id: 2,
+    item: 2,
     level: 2,
-    name: "Mission Ladder",
-    description: "Complete 30 missions",
-    icon: "mission",
     percent: 35,
     progress: 15,
     from: "15",
@@ -39,43 +35,35 @@ const achievementsList = [
   },
   {
     id: 3,
+    item: 3,
     level: 4,
-    name: "Streak",
-    description: "Reach a 100 days streak",
-    icon: "streak",
     percent: 80,
     progress: 10,
     from: "90",
     to: "100",
   },
   {
-    id: 6,
+    id: 4,
+    item: 4,
     level: 3,
-    name: "Clan Supporter",
-    description: "Gift 200 tokens to members of your clan",
-    icon: "clansupporter",
     percent: 75,
     progress: 10,
     from: "150",
     to: "200",
   },
   {
-    id: 8,
+    id: 5,
+    item: 5,
     level: 5,
-    name: "XP King",
-    description: "Accumulate a total number of 1000 XP",
-    icon: "xp",
     percent: 100,
     progress: 0,
     from: "3015",
     to: "1000",
   },
   {
-    id: 9,
+    id: 6,
+    item: 6,
     level: 5,
-    name: "Loyal Strydarian",
-    description: "Has been on the platform for more than 300 days",
-    icon: "loyal",
     percent: 100,
     progress: 0,
     from: "456",
@@ -552,7 +540,7 @@ export default function TabProfileOverview() {
             <section className="surface md:rounded">
               <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                 <h2 className="h6 text-ui-100">
-                  Achievements {!isEmpty && <>(16)</>}
+                  Achievements {!isEmpty && <>({selectedUser.achievements?.badges?.length})</>}
                 </h2>
                 <Link
                   href={`${
@@ -563,72 +551,72 @@ export default function TabProfileOverview() {
                 </Link>
               </div>
               <div>
-                {!isEmpty ? (
+                {isEmpty || selectedUser.achievements?.badges.length === 0 ? (
+                  
+                  <div className="text-center p-4">
+                  <span className="icon icon-medal text-6xl text-ui-500" />
+                  <p className="mt-2 text-ui-300">
+                    {selectedUser.isYou ? (
+                      <>You haven&#39;t unlocked any achievements yet</>
+                    ) : (
+                      <>
+                        {selectedUser.nickname} hasn&#39;t unlocked any
+                        achievements yet
+                      </>
+                    )}
+                  </p>
+                </div>
+                ) : (
                   <Slider
                     itemWidth={138 + 16 + 16}
                     bgColor="from-ui-800 via-ui-800 to-ui-800/0"
                   >
                     <div className="flex gap-6 py-2 px-6">
-                      {achievementsList.map((item, itemIndex) => (
+                      {selectedUser.achievements?.badges?.map((item, itemIndex) => (
                         <div
-                          key={itemIndex}
-                          className="animate-slide-in-right animate-delay"
-                          style={{
-                            "--delay": "calc(" + itemIndex + " * 0.05s)",
-                          }}
+                        key={itemIndex}
+                        className="animate-slide-in-right animate-delay"
+                        style={{
+                          "--delay": "calc(" + itemIndex + " * 0.05s)",
+                        }}
+                      >
+                        <div
+                          className={`w-32 h-32 achievement ${
+                            item.level > 0
+                              ? "cursor-pointer"
+                              : "pointer-events-none"
+                          }  ${item.level === 5 ? "is-completed" : ""}`}
+                          onClick={openModalAchievementReceived.bind(
+                            this,
+                            item.item,
+                            item.level,
+                          )}
                         >
+                          <i />
+                          <i />
                           <div
-                            className={`w-32 h-32 achievement ${
-                              item.level > 0
-                                ? "cursor-pointer"
-                                : "pointer-events-none"
-                            }  ${item.level === 5 ? 'is-completed' : ''}`}
-                            onClick={openModalAchievementReceived.bind(
-                              this,
-                              item.level,
-                              item.name,
-                              item.icon
-                            )}
+                            className={`achievement-level-${item.level}`}
+                            data-tooltip={`Level ${item.level}`}
                           >
-                            <i />
-                            <i />
-                            <div
-                              className={`achievement-level-${item.level}`}
-                              data-tooltip={`Level ${item.level}`}
-                            >
-                              <AchievementFrame
-                                url={`https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl${item.level}-animated.svg`}
-                              />
-                              {item.level > 0 && (
-                                <AchievementIcon
-                                  url={`https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-${item.icon}.svg`}
-                                />
-                              )}
-                            </div>
+                            <AchievementFrame
+                              url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${item.level}-animated.svg`}
+                            />
                             {item.level > 0 && (
-                              <span className="text-xs uppercase">
-                                {item.name}
-                              </span>
+                              <AchievementIcon
+                              url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${prototype.getAchievementitemByID(1, item.item).icon}.svg`}
+                              />
                             )}
                           </div>
+                          {item.level > 0 && (
+                            <span className="text-xs uppercase">
+                              {prototype.getAchievementitemByID(1, item.item).name}
+                            </span>
+                          )}
                         </div>
+                      </div>
                       ))}
                     </div>
                   </Slider>
-                ) : (
-                  <div className="text-center p-4">
-                    <span className="icon icon-medal text-6xl text-ui-500" />
-                    <p className="mt-2 text-ui-300">
-                      {selectedUser.isYou ? (
-                        <>You haven&#39;t unlocked any achievements yet</>
-                      ) : (
-                        <>
-                          {selectedUser.nickname} hasn&#39;t unlocked any
-                          achievements yet
-                        </>
-                      )}
-                    </p>
-                  </div>
                 )}
               </div>
             </section>

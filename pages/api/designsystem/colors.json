@@ -402,21 +402,21 @@
           "value": "bg-attention-300",
           "number": "300",
           "data": "system.attention.light",
-          "hex": "#FF8861"
+          "hex": "#FFAF61"
         },
         {
           "name": "Attention Main",
           "value": "bg-attention-500",
           "number": "500",
           "data": "system.attention.main",
-          "hex": "#F37851"
+          "hex": "#F39E51"
         },
         {
           "name": "Attention Dark",
           "value": "bg-attention-700",
           "number": "700",
           "data": "system.attention.dark",
-          "hex": "#D15C35"
+          "hex": "#D18135"
         },
         {
           "name": "Success Light",

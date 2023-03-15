@@ -225,7 +225,7 @@ export default function Avatar(props) {
                         <div className="flex gap-1 items-center justify-between mt-2 px-2">
                           <div className="flex gap-2 items-center justify-start">
                             <div className="w-16 h-16 achievement-level-4">
-                              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl4-animated.svg" />
+                              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl4-animated.svg" />
                               <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
                             </div>
                             <div className="truncate uppercase text-sm text-left text-achievement-level-4">

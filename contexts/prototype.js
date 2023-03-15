@@ -138,6 +138,7 @@ export const PrototypeProvider = ({ children }) => {
         users,
         clans,
         vouchers,
+        achievements,
         defaultGameID,
         getGameByID,
         getGameBySlug,

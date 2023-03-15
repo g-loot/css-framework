@@ -24,7 +24,7 @@ export const dataUsers = [
     },
     shopItems: {
       avatarFrame: false,
-      profileBanner: 2,
+      profileBanner: 26,
     },
     stats: {
       xp: 10000,
@@ -68,6 +68,146 @@ export const dataUsers = [
         id: 3,
       },
     ],
+    achievements: {
+      favoriteBadge: 2,
+      badges: [
+        {
+          id: 1,
+          item: 1,
+          level: 1,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 2,
+          item: 2,
+          level: 2,
+          percent: 35,
+          progress: 15,
+          from: "15",
+          to: "30",
+        },
+        {
+          id: 3,
+          item: 3,
+          level: 4,
+          percent: 80,
+          progress: 10,
+          from: "90",
+          to: "100",
+        },
+        {
+          id: 4,
+          item: 4,
+          level: 3,
+          percent: 75,
+          progress: 10,
+          from: "150",
+          to: "200",
+        },
+        {
+          id: 5,
+          item: 5,
+          level: 5,
+          percent: 100,
+          progress: 0,
+          from: "3015",
+          to: "1000",
+        },
+        {
+          id: 6,
+          item: 6,
+          level: 5,
+          percent: 100,
+          progress: 0,
+          from: "456",
+          to: "300",
+        },
+        {
+          id: 7,
+          item: 7,
+          level: 0,
+          percent: 0,
+          progress: 0,
+          from: "0",
+          to: "1",
+        },
+        {
+          id: 8,
+          item: 8,
+          level: 0,
+          percent: 0,
+          progress: 0,
+          from: "0",
+          to: "1",
+        },
+        {
+          id: 9,
+          item: 9,
+          level: 0,
+          percent: 0,
+          progress: 0,
+          from: "0",
+          to: "100",
+        },
+        {
+          id: 10,
+          item: 10,
+          level: 0,
+          percent: 0,
+          progress: 0,
+          from: "0",
+          to: "5",
+        },
+        {
+          id: 11,
+          item: 11,
+          level: 0,
+          percent: 0,
+          progress: 0,
+          from: "0",
+          to: "5",
+        },
+        {
+          id: 12,
+          item: 12,
+          level: 0,
+          percent: 0,
+          progress: 0,
+          from: "0",
+          to: "5",
+        },
+        {
+          id: 13,
+          item: 13,
+          level: 0,
+          percent: 0,
+          progress: 0,
+          from: "0",
+          to: "5",
+        },
+        {
+          id: 14,
+          item: 14,
+          level: 0,
+          percent: 0,
+          progress: 0,
+          from: "0",
+          to: "5",
+        },
+        {
+          id: 15,
+          item: 15,
+          level: 0,
+          percent: 0,
+          progress: 0,
+          from: "0",
+          to: "5",
+        },
+      ]
+    }
   },
   {
     id: 2,
@@ -94,7 +234,7 @@ export const dataUsers = [
     },
     shopItems: {
       avatarFrame: 125,
-      profileBanner: 8,
+      profileBanner: 19,
     },
     stats: {
       xp: 234,
@@ -124,6 +264,11 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1, 2, 5],
+    achievements: {
+      favoriteBadge: null,
+      badges: [
+      ]
+    }
   },
   {
     id: 3,
@@ -151,7 +296,7 @@ export const dataUsers = [
     },
     shopItems: {
       avatarFrame: 3,
-      profileBanner: 10,
+      profileBanner: 21,
     },
     stats: {
       xp: 9275,
@@ -179,6 +324,11 @@ export const dataUsers = [
         id: 3,
       },
     ],
+    achievements: {
+      favoriteBadge: null,
+      badges: [
+      ]
+    }
   },
   {
     id: 4,
@@ -205,7 +355,7 @@ export const dataUsers = [
     },
     shopItems: {
       avatarFrame: 5,
-      profileBanner: 7,
+      profileBanner: 33,
     },
     stats: {
       xp: 18970,
@@ -228,6 +378,47 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [5],
+    achievements: {
+      favoriteBadge: 2,
+      badges: [
+        {
+          id: 1,
+          item: 1,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 2,
+          item: 2,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 3,
+          item: 3,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 4,
+          item: 4,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+      ]
+    }
   },
   {
     id: 5,
@@ -254,7 +445,7 @@ export const dataUsers = [
     },
     shopItems: {
       avatarFrame: 2,
-      profileBanner: 6,
+      profileBanner: 11,
     },
     stats: {
       xp: 874,
@@ -284,6 +475,47 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1, 2],
+    achievements: {
+      favoriteBadge: 2,
+      badges: [
+        {
+          id: 1,
+          item: 1,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 2,
+          item: 2,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 3,
+          item: 3,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 4,
+          item: 4,
+          level: 5,
+          percent: 90,
+          progress: 10,
+          from: "900",
+          to: "1000",
+        },
+      ]
+    }
   },
   {
     id: 6,
@@ -324,6 +556,38 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1],
+    achievements: {
+      favoriteBadge: 2,
+      badges: [
+        {
+          id: 1,
+          item: 4,
+          level: 2,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 2,
+          item: 7,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 4,
+          item: 3,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+      ]
+    }
   },
   {
     id: 7,
@@ -349,8 +613,8 @@ export const dataUsers = [
       twitch: "@valance",
     },
     shopItems: {
-      avatarFrame: 2,
-      profileBanner: 4,
+      avatarFrame: 4,
+      profileBanner: 35,
     },
     stats: {
       xp: 198,
@@ -364,6 +628,38 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1],
+    achievements: {
+      favoriteBadge: 2,
+      badges: [
+        {
+          id: 1,
+          item: 4,
+          level: 5,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 2,
+          item: 7,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 4,
+          item: 3,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+      ]
+    }
   },
   {
     id: 8,
@@ -388,8 +684,8 @@ export const dataUsers = [
       twitch: "@PilarPilar",
     },
     shopItems: {
-      avatarFrame: 1,
-      profileBanner: false,
+      avatarFrame: false,
+      profileBanner: 36,
     },
     stats: {
       xp: 244,
@@ -403,6 +699,47 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [4, 6],
+    achievements: {
+      favoriteBadge: 2,
+      badges: [
+        {
+          id: 1,
+          item: 1,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 2,
+          item: 2,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 3,
+          item: 3,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 4,
+          item: 4,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+      ]
+    }
   },
   {
     id: 9,
@@ -429,7 +766,7 @@ export const dataUsers = [
     },
     shopItems: {
       avatarFrame: 102,
-      profileBanner: false,
+      profileBanner: 18,
     },
     stats: {
       xp: 10000,
@@ -443,6 +780,47 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1, 2, 3, 4],
+    achievements: {
+      favoriteBadge: 2,
+      badges: [
+        {
+          id: 1,
+          item: 1,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 2,
+          item: 2,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 3,
+          item: 3,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 4,
+          item: 4,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+      ]
+    }
   },
   {
     id: 10,
@@ -523,6 +901,47 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1, 3],
+    achievements: {
+      favoriteBadge: 2,
+      badges: [
+        {
+          id: 1,
+          item: 1,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 2,
+          item: 2,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 3,
+          item: 3,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 4,
+          item: 4,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+      ]
+    }
   },
 ];
 

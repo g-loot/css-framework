@@ -8,19 +8,16 @@ import LottieExplosionLvl3 from "../../assets/animations/explosion_stryda_7.json
 import LottieExplosionLvl4 from "../../assets/animations/explosion_stryda_8.json";
 import LottieExplosionLvl5 from "../../assets/animations/explosion_stryda_9.json";
 import { UiContext } from "../../contexts/ui.js";
-import { VariablesContext } from "../../contexts/variables";
+import { usePrototypeData } from "../../contexts/prototype";
 import AchievementFrame from "../../components/Achievements/AchievementFrame";
 import AchievementIcon from "../../components/Achievements/AchievementIcon";
 
 export default function ModalAchievementReceived(props) {
   const uiContext = useContext(UiContext);
-  const variablesContext = useContext(VariablesContext);
+  const prototype = usePrototypeData();
   const [submitting, setSubmitting] = useState(false);
+  const item = props.item || prototype.getAchievementitemByID(1, 1);
   const level = props.level || 5;
-  const icon = props.icon || "missionladder";
-  const name = props.name || "Reward Ladder";
-  const description =
-    props.description || "Complete the entire mission ladder in 1 day.";
   const percent = props.percent || 50;
   const progress = props.progress || 12;
   const from = props.from || "24";
@@ -72,21 +69,21 @@ export default function ModalAchievementReceived(props) {
                     <i />
                     <div className={`achievement-level-${level}`}>
                       <AchievementFrame
-                        url={`https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl${level}-animated.svg`}
+                        url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${level}-animated.svg`}
                       />
                       <AchievementIcon
-                        url={`https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-${icon}.svg`}
+                        url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${item.icon}.svg`}
                       />
                     </div>
                     <div>
-                      <div className="h4">{name}</div>
+                      <div className="h4">{item.name}</div>
                       <div className="text-sm text-ui-300 uppercase font-bold">
                         Level {level}
                       </div>
                     </div>
                   </div>
                   <div className="space-y-2 relative z-10">
-                    <p>{description}</p>
+                    <p>{item.description}</p>
                     <div className="flex items-center gap-4 leading-none pb-2">
                       <div
                         className="progressbar progressbar-secondary w-full"

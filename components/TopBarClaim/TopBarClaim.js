@@ -84,7 +84,7 @@ export default function TopBarClaim(props) {
           }`}
         >
           <span className="relative z-10">
-            <span className="max-sm:hidden">Daily Login</span> Streak
+            <span className="max-xl:hidden"><span className="max-2xl:hidden">Daily</span> Login Streak</span>
           </span>
         </div>
         {/*

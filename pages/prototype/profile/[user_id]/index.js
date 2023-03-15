@@ -21,33 +21,6 @@ import TabProfileAchievements from "./tab-achievements";
 import TabProfileStats from "./tab-stats";
 import TabProfileFriends from "./tab-friends";
 
-const TabsItems = [
-  {
-    label: "Overview",
-    url: "overview",
-    component: TabProfileOverview,
-  },
-  {
-    label: "Activity",
-    url: "activity",
-    component: TabProfileActivity,
-  },
-  {
-    label: "Achievements (15)",
-    url: "achievements",
-    component: TabProfileAchievements,
-  },
-  {
-    label: "Stats",
-    url: "stats",
-    component: TabProfileStats,
-  },
-  {
-    label: "Friends (3)",
-    url: "friends",
-    component: TabProfileFriends,
-  },
-];
 
 const achievementsList = [
   {
@@ -146,6 +119,13 @@ export default function Home() {
   const modalLeveLUp = query.modallevelup === "true" ? true : false;
   const hasProfileBanner = query.profilebanner || false;
   const [profileBanner, setProfileBanner] = useState(false);
+  const [achievementLength, setAchievementLength] = useState(0);
+
+  useEffect(() => {
+    if(selectedUser) {
+      setAchievementLength(selectedUser.achievements?.badges?.length)
+    }
+  }, [selectedUser]);
 
   useEffect(() => {
     if (hasProfileBanner) {
@@ -164,6 +144,35 @@ export default function Home() {
       <ModalAchievementReceived level={level} name={name} icon={icon} />
     );
   }
+
+
+const TabsItems = [
+  {
+    label: "Overview",
+    url: "overview",
+    component: TabProfileOverview,
+  },
+  {
+    label: "Activity",
+    url: "activity",
+    component: TabProfileActivity,
+  },
+  {
+    label: `Achievements (${achievementLength})`,
+    url: "achievements",
+    component: TabProfileAchievements,
+  },
+  {
+    label: "Stats",
+    url: "stats",
+    component: TabProfileStats,
+  },
+  {
+    label: "Friends (3)",
+    url: "friends",
+    component: TabProfileFriends,
+  },
+];
 
   useEffect(() => {
     if (modalLeveLUp) {

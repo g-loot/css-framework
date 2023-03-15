@@ -84,7 +84,7 @@ export default function Alert(props) {
             <div className="flex-none">
               <button
                 type="button"
-                className="button button-ghost button-close"
+                className="button button-sm button-ghost button-close"
                 data-dismiss="alert"
                 aria-label="Close"
                 onClick={closeAlert}

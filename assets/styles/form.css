@@ -31,7 +31,7 @@
     ;
   }
 }
-.form-group > label:not(.form-radio):not(.form-checkbox):not(.form-toggle):not(.button) {
+.form-group > label:not(.form-radio):not(.form-checkbox):not(.form-toggle):not(.button):not([class*=m-]) {
   @apply
   block
   mb-1

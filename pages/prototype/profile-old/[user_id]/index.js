@@ -199,7 +199,7 @@ export default function Home() {
                               data-tooltip={item.name}
                             >
                               <AchievementFrame
-                                url={`https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achievement-frame-lvl${item.level}-animated.svg`}
+                                url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${item.level}-animated.svg`}
                               />
                               {item.level > 0 && (
                                 <AchievementIcon

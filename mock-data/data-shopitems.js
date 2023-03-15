@@ -26,14 +26,14 @@ export const dataShopitems = [
         price: 30000,
         isOwned: true,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Valorant.svg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677838319/Stryda/shop/avatarframes/Valorant.svg",
       },
       {
         id: 4,
         name: "Glitch",
         price: 15000,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1674214222/Stryda/shop/avatarframes/Glitch.svg",
+          "https://res.cloudinary.com/gloot/image/upload/v1678888206/Stryda/shop/avatarframes/Glitch.svg",
       },
       {
         id: 5,
@@ -580,7 +580,7 @@ export const dataShopitems = [
       {
         id: 6,
         name: "Warriors",
-        price: 50000,
+        price: 5000,
         isOwned: true,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_6.jpg",
@@ -602,7 +602,7 @@ export const dataShopitems = [
       {
         id: 9,
         name: "Blue",
-        price: 55000,
+        price: 3000,
         isOwned: true,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_9.jpg",
@@ -610,7 +610,7 @@ export const dataShopitems = [
       {
         id: 10,
         name: "Purple",
-        price: 55000,
+        price: 4000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_10.jpg",
       },
@@ -652,72 +652,163 @@ export const dataShopitems = [
       {
         id: 16,
         name: "In between",
-        price: 50000,
+        price: 10000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_16.jpg",
       },
       {
         id: 17,
         name: "Nintendhand",
-        price: 50000,
+        price: 40000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_17.jpg",
       },
       {
         id: 18,
         name: "The keys to success",
-        price: 50000,
+        price: 40000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_18.jpg",
       },
       {
         id: 19,
         name: "Bomb has been planted",
-        price: 50000,
+        price: 40000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_19.jpg",
       },
       {
         id: 20,
         name: "Camping allowed",
-        price: 50000,
+        price: 40000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_20.jpg",
       },
       {
         id: 21,
         name: "GGWP",
-        price: 50000,
+        price: 40000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_21.jpg",
       },
       {
         id: 22,
         name: "Fairy Lights",
-        price: 50000,
+        price: 1000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_22.jpg",
       },
       {
         id: 23,
         name: "In The Dark",
-        price: 50000,
+        price: 2000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_23.jpg",
       },
       {
         id: 24,
         name: "Aurora Borealis",
-        price: 50000,
+        price: 20000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_24.jpg",
       },
       {
         id: 25,
         name: "Spikes",
-        price: 50000,
+        price: 40000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_25.jpg",
+      },
+      {
+        id: 26,
+        name: "Neon Dawn",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_26.jpg",
+      },
+      {
+        id: 27,
+        name: "Neon Night",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_27.jpg",
+      },
+      {
+        id: 28,
+        name: "Neon Dusk",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_28.jpg",
+      },
+      {
+        id: 29,
+        name: "Cracks",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_29.jpg",
+      },
+      {
+        id: 30,
+        name: "Don't rip me off",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_30.jpg",
+      },
+      {
+        id: 31,
+        name: "Fantasy",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_31.jpg",
+      },
+      {
+        id: 32,
+        name: "The World We Live In",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_32.jpg",
+      },
+      {
+        id: 33,
+        name: "Fire & Ice",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_33.jpg",
+      },
+      {
+        id: 34,
+        name: "Monsters",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_34.jpg",
+      },
+      {
+        id: 35,
+        name: "Silk road",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_35.jpg",
+      },
+      {
+        id: 36,
+        name: "Golden fate",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_36.jpg",
+      },
+      {
+        id: 37,
+        name: "Low poly",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_37.jpg",
+      },
+      {
+        id: 38,
+        name: "Lost in the forest",
+        price: 50000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_38.jpg",
       },
     ],
   }
