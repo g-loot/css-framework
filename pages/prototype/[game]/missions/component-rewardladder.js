@@ -10,6 +10,7 @@ import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
 import Slider from "../../../../components/Slider/Slider";
+import ModalClaimMission from "../../home/modal-claim-mission";
 
 export default function ComponentRewardLadder() {
   const router = useRouter();
@@ -21,6 +22,9 @@ export default function ComponentRewardLadder() {
   const isPremium = query.premium === "true" ? true : false;
   const { game } = router.query;
   const [submitting, setSubmitting] = useState(false);
+  const unclaimedRewards = query.unclaimedrewards === "true" ? true : false;
+  const [hasUnclaimedRewards, setHasUnclaimedRewards] =
+    useState(false);
 
   function addToastWithDelay(toast) {
     setSubmitting(true);
@@ -34,16 +38,27 @@ export default function ComponentRewardLadder() {
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
+  
+  useEffect(() => {
+    setHasUnclaimedRewards(unclaimedRewards);
+  }, [unclaimedRewards]);
+
+  function openModalClaimMission() {
+    setHasUnclaimedRewards(false);
+    uiContext.openModal(<ModalClaimMission />);
+  }
 
   return (
     <>
       <div className="flex items-baseline justify-between mb-2 px-4 sm:px-0">
         <div className="flex gap-2 items-baseline">
           <h2 className="h3 flex-none">Battle pass</h2>
+
           <Tooltip
             tooltip={
               <div className="max-w-xs text-sm text-center leading-tight">
-                Unlock rewards as you earn XP from completed missions and registered Ladder matches.
+                Unlock rewards as you earn XP from completed missions and
+                registered Ladder matches.
               </div>
             }
           >
@@ -52,17 +67,27 @@ export default function ComponentRewardLadder() {
             </button>
           </Tooltip>
         </div>
+
+        {hasUnclaimedRewards && (
+          <button
+            type="button"
+            className="button button-claim is-shining mt-1"
+            onClick={openModalClaimMission}
+          >
+            <span className="icon icon-present animate-bounce" />
+            <span>Claim past rewards</span>
+          </button>
+        )}
         <div className="text-sm text-ui-300">
           <span>
-              Resets in{" "}
-              <Countdown
-                separator=":"
-                hasHours={true}
-                hasMinutes={true}
-                hasSeconds={true}
-              />
-            </span>
-          
+            Resets in{" "}
+            <Countdown
+              separator=":"
+              hasHours={true}
+              hasMinutes={true}
+              hasSeconds={true}
+            />
+          </span>
         </div>
       </div>
       {/*
@@ -129,7 +154,10 @@ export default function ComponentRewardLadder() {
         </>
       )}
       <div className="mb-4">
-        <Slider itemWidth={480+16} bgColor="from-ui-900 via-ui-900/90 to-ui-900/0">
+        <Slider
+          itemWidth={480 + 16}
+          bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
+        >
           <RewardLadder hasReward={selectedGame?.hasReward} />
         </Slider>
       </div>

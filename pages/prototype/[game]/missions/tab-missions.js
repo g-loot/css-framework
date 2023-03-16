@@ -8,7 +8,6 @@ import { useRouter } from "next/router";
 import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
 import PremiumLogo from "../../../../components/PremiumLogo/PremiumLogo";
 import CardMissionTableTr from "../../../../components/Card/CardMissionTableTr";
-import ModalClaimMission from "../../home/modal-claim-mission";
 
 export default function TabMissionsMissions() {
   const router = useRouter();
@@ -18,10 +17,8 @@ export default function TabMissionsMissions() {
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
   const isPremium = query.premium === "true" ? true : false;
-  const unclaimedRewards = query.unclaimedrewards === "true" ? true : false;
   const { game } = router.query;
   const [submitting, setSubmitting] = useState(false);
-  const [hasUnclaimedRewards, setHasUnclaimedRewards] = useState(unclaimedRewards);
 
   function addToastWithDelay(toast) {
     setSubmitting(true);
@@ -35,13 +32,6 @@ export default function TabMissionsMissions() {
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
-
-  function openModalClaimMission() {
-    setHasUnclaimedRewards(false);
-    uiContext.openModal(
-      <ModalClaimMission></ModalClaimMission>
-    );
-  }
 
   return (
     <>
@@ -91,20 +81,6 @@ export default function TabMissionsMissions() {
               </div>
             </div>
             */}
-
-            {hasUnclaimedRewards && (
-              <div className="surface surface-dimmed rounded mb-8 p-8 text-center space-y-4">
-                <p>You have unclaimed mission rewards.</p>
-                <button
-                      type="button"
-                      className="button button-claim is-shining mt-1"
-                      onClick={openModalClaimMission}
-                    >
-                      <span className="icon icon-present animate-bounce" />
-                      <span>Claim rewards</span>
-                    </button>
-              </div>
-            )}
 
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
               <div>

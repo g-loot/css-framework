@@ -46,41 +46,41 @@ export default function Avatar(props) {
 
   const AvatarInner = (
     <>
-    {selectedUser && (
-      <div
-        className={`avatar avatar-circle ${size}  ${
-          selectedUser?.isPremium ? "avatar-premium" : ""
-        } ${className}`}
-      >
-        {hasLevel && <b>{selectedUser.level}</b>}
-        {selectedUser.isYou ? (
-          <>{hasAvatarFrame && <img src={avatarFrame.image} alt="" />}</>
-        ) : (
-          <>
-            {selectedUser.shopItems.avatarFrame && (
-              <>
-                <img
-                  src={
-                    prototype.getShopitemByID(
-                      1,
-                      selectedUser.shopItems.avatarFrame
-                    ).image
-                  }
-                  alt=""
-                />
-              </>
-            )}
-          </>
-        )}
-        <div>
-          <img src={selectedUser?.avatar} />
+      {selectedUser && (
+        <div
+          className={`avatar avatar-circle ${size}  ${
+            selectedUser?.isPremium ? "avatar-premium" : ""
+          } ${className}`}
+        >
+          {hasLevel && <b>{selectedUser.level}</b>}
+          {selectedUser.isYou ? (
+            <>{hasAvatarFrame && <img src={avatarFrame.image} alt="" />}</>
+          ) : (
+            <>
+              {selectedUser.shopItems.avatarFrame && (
+                <>
+                  <img
+                    src={
+                      prototype.getShopitemByID(
+                        1,
+                        selectedUser.shopItems.avatarFrame
+                      ).image
+                    }
+                    alt=""
+                  />
+                </>
+              )}
+            </>
+          )}
+          <div>
+            <img src={selectedUser?.avatar} />
+          </div>
+          {size === "avatar-xs" && selectedUser?.isYou && !hasAvatarFrame && (
+            <i className="radar" />
+          )}
+          {selectedUser.isOnline && !hasLevel && isOnline && <i />}
         </div>
-        {size === "avatar-xs" && selectedUser?.isYou && !hasAvatarFrame && (
-          <i className="radar" />
-        )}
-        {selectedUser.isOnline && !hasLevel && isOnline && <i />}
-      </div>
-    )}
+      )}
     </>
   );
 
@@ -213,31 +213,32 @@ export default function Avatar(props) {
                       <div className="p-2">
                         <div className="flex items-center justify-around gap-2 text-center leading-tight">
                           <div>
-                            <div className="text-xs uppercase text-ui-300">played ladders</div>
-                            <div className="text-xl uppercase text-ui-100">{selectedUser.stats.playedLadders}</div>
+                            <div className="text-xs uppercase text-ui-300">
+                              played ladders
+                            </div>
+                            <div className="text-xl uppercase text-ui-100">
+                              {selectedUser.stats.playedLadders}
+                            </div>
                           </div>
                           <div>
-                            <div className="text-xs uppercase text-ui-300">Avg. Ladder score</div>
-                            <div className="text-xl uppercase text-ui-100">{RandomNumber(200, 1000)}</div>
+                            <div className="text-xs uppercase text-ui-300">
+                              Avg. Ladder score
+                            </div>
+                            <div className="text-xl uppercase text-ui-100">
+                              {RandomNumber(200, 1000)}
+                            </div>
                           </div>
                         </div>
 
-                        <div className="flex gap-1 items-center justify-between mt-2 px-2">
-                          <div className="flex gap-2 items-center justify-start">
-                            <div className="w-16 h-16 achievement-level-4">
-                              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl4-animated.svg" />
-                              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
-                            </div>
-                            <div className="truncate uppercase text-sm text-left text-achievement-level-4">
-                              Mission Hunter
-                            </div>
+                        <div className="flex flex-col items-center justify-center mb-4 px-2">
+                          <div className="w-16 h-16 achievement-level-4">
+                            <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl4-animated.svg" />
+                            <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
                           </div>
-                          <button type="button" className="button button-sm button-tertiary">
-                            <span>View all</span>
-                          </button>
-
+                          <div className="uppercase text-xs text-left text-achievement-level-4 animate-slide-in-top">
+                            Mission Hunter
+                          </div>
                         </div>
-
 
                         <div className="p-2 rounded bg-ui-800/50 mt-2">
                           {selectedUser.clan ? (
@@ -246,31 +247,28 @@ export default function Avatar(props) {
                                 selectedUser.clan
                               }${prototype.getURLparams()}`}
                             >
-                                <div className="flex gap-2 items-center justify-center">
-                                  <div className="text-sm text-ui-300 whitespace-nowrap mr-1">
-                                    Clan member of
-                                  </div>
-                                  <div className="avatar avatar-tiny avatar-squircle">
-                                    <div>
-                                      <img
-                                        src={
-                                          prototype.getClanByID(selectedUser.clan)
-                                            .avatar
-                                        }
-                                        alt="avatar"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div className="text-ui-100 truncate">
-                                    &#91;
-                                    {prototype.getClanByID(selectedUser.clan).tag}
-                                    &#93;{" "}
-                                    {
-                                      prototype.getClanByID(selectedUser.clan)
-                                        .nickname
-                                    }
+                              <div className="flex gap-2 items-center justify-center">
+                                <div className="avatar avatar-tiny avatar-squircle">
+                                  <div>
+                                    <img
+                                      src={
+                                        prototype.getClanByID(selectedUser.clan)
+                                          .avatar
+                                      }
+                                      alt="avatar"
+                                    />
                                   </div>
                                 </div>
+                                <div className="text-ui-100 truncate">
+                                  &#91;
+                                  {prototype.getClanByID(selectedUser.clan).tag}
+                                  &#93;{" "}
+                                  {
+                                    prototype.getClanByID(selectedUser.clan)
+                                      .nickname
+                                  }
+                                </div>
+                              </div>
                             </Link>
                           ) : (
                             <div className="space-y-2">

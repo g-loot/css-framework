@@ -6,22 +6,6 @@ import Notification from "../../components/Notification/Notification";
 
 const notificationsGroups = [
   {
-    name: "Rewards",
-    notifications: [
-      {
-        description: "Unclaimed rewards",
-        type: "reward",
-        intro: "Rewards",
-        title: "Claim your rewards!",
-        text: "You have unclaimed mission rewards.",
-        cta: "View",
-        url: "/prototype/valorant/missions?unclaimedrewards=true",
-        time: "1 min.",
-        read: false,
-      },
-    ],
-  },
-  {
     name: "Achievements",
     notifications: [
       {
