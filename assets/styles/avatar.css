@@ -570,15 +570,29 @@
   }
 
   &.is-loading {
-    * {
+    img, 
+    span {
       @apply
       opacity-0
+      ;
+    }
+    &::before {
+      @apply
+      content-['']
+      absolute
+      z-40
+      inset-auto
+      h-6
+      w-6
+      rounded-full
+      bg-ui-800
       ;
     }
     &::after {
       @apply
       content-['']
       absolute
+      z-50
       inset-auto
       h-4
       w-4

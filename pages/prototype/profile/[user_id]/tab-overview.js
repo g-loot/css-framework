@@ -119,7 +119,7 @@ export default function TabProfileOverview() {
                     <ReadMore content={selectedUser.bio} max={150} />
                   </p>
                 )}
-                <div className="flex gap-1">
+                <div className="flex gap-1 border-y border-y-ui-700 py-3">
                   <a
                     href="#"
                     target="_blank"

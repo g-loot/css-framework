@@ -24,7 +24,7 @@ const notificationsGroups = [
         type: "reward",
         intro: "Rewards",
         title: "Claim your rewards!",
-        text: "You have rewards to claim from the previous Battle Pass.",
+        text: "You have unclaimed mission rewards.",
         cta: "Claim",
         url: "/prototype/valorant/missions?modalclaimmission=true",
         time: "1 min.",
