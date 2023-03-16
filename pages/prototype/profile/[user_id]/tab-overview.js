@@ -215,11 +215,11 @@ export default function TabProfileOverview() {
             </section>
             <section className="surface md:rounded">
               <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                <h2 className="h6 text-ui-100">Level 145</h2>
+                <h2 className="h6 text-ui-100">Level {selectedUser.level}</h2>
                 <Tooltip
                   tooltip={
                     <div className="max-w-xs text-sm text-center leading-tight">
-                      Get XP to reach higher levels
+                      Earn XP to progress to the next level
                     </div>
                   }
                 >
@@ -233,9 +233,9 @@ export default function TabProfileOverview() {
                   <span className="text-main text-center text-lg">10423</span>
                   <span className="icon icon-xp-symbol text-4xl text-main" />
                 </div>
-                <div className="flex justify-between items-baseline text-sm mt-2 mb-1">
-                  <span>Level {selectedUser.level}</span>
-                  <span className="text-ui-300">15000 XP</span>
+                <div className="flex justify-between items-baseline text-sm mt-2 mb-1 text-ui-300">
+                  <span>13000</span>
+                  <span>15000 XP</span>
                 </div>
                 <div
                   className="progressbar progressbar-sm"
