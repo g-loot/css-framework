@@ -17,14 +17,13 @@ export default function ModalInfoBeforeYouPlay(props) {
     setSubmitting(true);
 
     setTimeout(() => {
-      uiContext.openToastr({size: "small", text: "You have successfully registered to the Ladder", color: "green", autoDelete: true, autoDeleteDelay: 2500});
-      /*
-      router.push(
-        `${router.asPath}${
-          hasAds || tab !== undefined ? "&" : "?"
-        }registered=true`
-      );
-      */
+      uiContext.openToastr({
+        size: "medium",
+        text: "You have successfully registered to the Ladder",
+        color: "green",
+        autoDelete: true,
+        autoDeleteDelay: 2500,
+      });
       variablesContext.incrementLadderStep(props.incrementNumber);
       uiContext.closeModal();
       setSubmitting(false);

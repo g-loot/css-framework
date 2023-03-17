@@ -7,11 +7,20 @@
   sticky
   top-12
   z-50
+  p-1
+  space-y-1
   ;
+
+  > * {
+    @apply
+    flex-1
+    ;
+  }
 
   .alert {
     @apply
-    rounded-none
+    max-w-lg
+    mx-auto
     ;
   }
 }
@@ -24,7 +33,7 @@
   justify-between
   items-center
   gap-4
-  p-4
+  p-2
   text-ui-200
   bg-ui-700
   border

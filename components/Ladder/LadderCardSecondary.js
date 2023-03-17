@@ -43,13 +43,13 @@ export default function LadderCardSecondary(props) {
       }${prototype.getURLparams()}`}
     >
       <div
-        className={`card-ladder card-secondary ${
+        className={`card-ladder card-secondary interactive ${
           isHorizontal && !isFluid ? "lg:card-horizontal" : ""
         } ${isHorizontal && isFluid ? "lg:card-horizontal" : ""} ${
           isFluid ? "card-fluid" : ""
-        } ${isEnrolled && !ladder.hasClaim ? "is-active" : ""} ${
+        } ${isEnrolled && ladder.status !== "finished" && !ladder.hasClaim ? "is-active" : ""} ${
           ladder.status === "finished" ? "is-inactive" : ""
-        } ${ladder.status !== "finished" ? "interactive" : ""} ${
+        } ${
           ladder.isPremium ? "card-premium" : ""
         } ${className}`}
       >
@@ -104,9 +104,11 @@ export default function LadderCardSecondary(props) {
                 />
               </div>
               <span>{ladder.gameMode}</span>
-              <span className={`text-main card-status capitalize`}>
-                {ladder.isEnrolled ? <>Enrolled</> : <>{ladder.status}</>}
-              </span>
+              {ladder.status !== "finished" && (
+                <span className={`text-main card-status capitalize`}>
+                  {ladder.isEnrolled ? <>Enrolled</> : <>{ladder.status}</>}
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -254,7 +256,7 @@ export default function LadderCardSecondary(props) {
               </div>
             ) : (
               <>
-                {!ladder.isClan || isClan ? (
+                {!isClan ? (
                   <>
                     {ladder.isEnrolled ? (
                       <div className="flex-1 flex items-center gap-4">
@@ -266,7 +268,7 @@ export default function LadderCardSecondary(props) {
                             />
                           </div>
                         </div>
-                        <div className="infobanner is-active">
+                        <div className={`infobanner ${ladder.status === "ongoing" ? 'is-active' : ''}`}>
                           <div className="flex gap-2 infobanner-front">
                             <div>
                               <div className="uppercase text-xs text-ui-300">
@@ -335,7 +337,7 @@ export default function LadderCardSecondary(props) {
                               />
                             </div>
                           </div>
-                          <div className="infobanner is-active">
+                          <div className={`infobanner ${ladder.status === "ongoing" ? 'is-active' : ''}`}>
                             <div className="flex gap-2 infobanner-front">
                               <div>
                                 <div className="uppercase text-xs text-ui-300">

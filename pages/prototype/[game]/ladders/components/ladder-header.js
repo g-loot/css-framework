@@ -98,21 +98,23 @@ export default function LadderHeader() {
                     </Tooltip>
                   )}
                 </div>
-                <div className="text-right flex items-center gap-1">
-                  <span className="icon text-sm text-ui-300 icon-clock" />
-                  <Countdown
-                    separator={"  "}
-                    hasDays={false}
-                    hasHours={true}
-                    hasMinutes={true}
-                    hasSeconds={true}
-                    targetDate={dateTimeAfterThreeDays}
-                    hasLabels={true}
-                    labelsAbbr={true}
-                    labelClassName="text-base block mr-1"
-                    className="text-base"
-                  />
-                </div>
+                {prototype.getLadderByID(game, ladder_id)?.status !== "finished" && (
+                  <div className="text-right flex items-center gap-1">
+                    <span className="icon text-sm text-ui-300 icon-clock" />
+                    <Countdown
+                      separator={"  "}
+                      hasDays={false}
+                      hasHours={true}
+                      hasMinutes={true}
+                      hasSeconds={true}
+                      targetDate={dateTimeAfterThreeDays}
+                      hasLabels={true}
+                      labelsAbbr={true}
+                      labelClassName="text-base block mr-1"
+                      className="text-base"
+                    />
+                  </div>
+                )}
               </div>
               <ul className="flex flex-col gap-1 justify-between leading-tight">
                 <li className="flex gap-2 items-center">

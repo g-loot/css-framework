@@ -139,7 +139,7 @@ export default function TabLaddersSoloLeaderboards() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <div className="col-span-1 hidden lg:block pt-10">
-              {variablesContext.ladderStep >= 3 ? (
+              {variablesContext.ladderStep >= 3 || selectedLadder.status === "finished" ? (
                 <>
                   <div className="mb-4 space-y-8 surface surface-dimmed rounded-lg px-2 pb-2 pt-4">
                     <div className="text-2xl text-ui-100 text-center relative z-10">

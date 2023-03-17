@@ -10,16 +10,28 @@ import { useRouter } from "next/router";
 import LaddersHeader from "./ladders-header";
 import AnimatedNumber from "../../../../components/AnimatedNumber/AnimatedNumber";
 
-import TabLaddersOngoingNew from "./tab-laddersongoingnew";
+import TabLaddersOngoing from "./tab-laddersongoing";
+import TabLaddersUpcoming from "./tab-laddersupcoming";
+import TabLaddersCompleted from "./tab-ladderscompleted";
 import TabLaddersHistory from "./tab-history";
 import TabLaddersHowItWorks from "./tab-howitworks";
 import TabLaddersRules from "./tab-glootrules";
 
 const TabsItems = [
   {
-    label: "Ladders",
+    label: "Ongoing",
     url: "ongoing",
-    component: TabLaddersOngoingNew,
+    component: TabLaddersOngoing,
+  },
+  {
+    label: "Upcoming",
+    url: "upcoming",
+    component: TabLaddersUpcoming,
+  },
+  {
+    label: "Completed",
+    url: "completed",
+    component: TabLaddersCompleted,
   },
   {
     label: "How it works",
@@ -30,11 +42,6 @@ const TabsItems = [
     label: "Stryda rules",
     url: "rules",
     component: TabLaddersRules,
-  },
-  {
-    label: "Your Ladder history",
-    url: "history",
-    component: TabLaddersHistory,
   },
 ];
 

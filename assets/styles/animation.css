@@ -117,7 +117,7 @@
     absolute
     z-0
     inset-0
-    flex
+    hidden
     items-center
     select-none
     pointer-events-none
@@ -137,6 +137,9 @@
       ;
     }
     > .infobanner-back {
+      @apply
+      flex
+      ;
       > * {
         @apply
         animate-[infobar-back_5s_cubic-bezier(0.3,0,0.3,1)_infinite]

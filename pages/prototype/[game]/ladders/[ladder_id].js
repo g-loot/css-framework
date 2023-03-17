@@ -187,7 +187,10 @@ export default function Home() {
             */}
             <LadderHeader />
 
-            <LadderPlacements />
+            {prototype.getLadderByID(game, ladder_id).status !== "finished" && (
+              <LadderPlacements />
+            )}
+
 
             <nav>
               <ul className="tabs border-b border-ui-700">

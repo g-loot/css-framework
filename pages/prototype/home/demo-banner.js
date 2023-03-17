@@ -18,7 +18,7 @@ export default function Home() {
     setColorType(e.target.value);
   }
 
-  const [title, setTitle] = useState("Title");
+  const [title, setTitle] = useState("Lorem ipsum dolor");
 
   function handleTitle(e) {
     if (e.target.value.length > 0) {
@@ -28,7 +28,7 @@ export default function Home() {
     }
   }
 
-  const [description, setDescription] = useState("description");
+  const [description, setDescription] = useState("Consectetur adipiscing elit. Aliquam sed ante a ante laoreet vulputate.");
 
   function handleDescription(e) {
     if (e.target.value.length > 0) {
