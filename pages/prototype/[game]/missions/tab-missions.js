@@ -181,7 +181,7 @@ export default function TabMissionsMissions() {
               <div className="surface surface-dimmed rounded px-4 py-8 text-center">
                 <div className="max-w-xs mx-auto">
                   <span className="icon icon-missions text-6xl text-ui-500" />
-                  <p className="mt-2 text-sm text-ui-300">
+                  <p className="mt-2 text-ui-300">
                     You have not yet completed any missions.
                   </p>
                 </div>
