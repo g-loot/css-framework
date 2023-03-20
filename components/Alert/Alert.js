@@ -46,7 +46,7 @@ export default function Alert(props) {
 
   return (
     <div
-      className={`transition-all duration-300 ease-in-out overflow-hidden shadow-2xl ${
+      className={`transition-all duration-300 ease-in-out overflow-hidden ${
         isClosing ? "animate-fade-out" : ""
       }`}
       id={props.id}
@@ -76,8 +76,13 @@ export default function Alert(props) {
               />
             )}
             <span>
-              {props.title && <span className="font-bold uppercase">{props.title} </span>}
-              {props.text}
+              {props.title && <span className="alert-title">{props.title} </span>}
+                <span
+                className="alert-text"
+                dangerouslySetInnerHTML={{
+                  __html: props.text,
+                }}
+              />
             </span>
           </div>
           {dismissable && (

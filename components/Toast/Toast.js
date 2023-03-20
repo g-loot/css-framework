@@ -46,7 +46,7 @@ export default function Toast(props) {
 
   return (
     <div
-      className={`transition-all duration-300 ease-in-out overflow-hidden shadow-2xl rounded-lg ${
+      className={`transition-all duration-300 ease-in-out overflow-hidden rounded-lg ${
         isClosing ? "animate-fade-out" : ""
       }`}
       id={props.id}
@@ -74,7 +74,12 @@ export default function Toast(props) {
           )}
           <div>
             {props.title && <div className="toast-title">{props.title}</div>}
-            <div className="toast-text">{props.text}</div>
+            <div
+              className="toast-text"
+              dangerouslySetInnerHTML={{
+                __html: props.text,
+              }}
+            />
             {props.buttons && (
               <div className="flex items-center gap-2 mt-2">
                 <button

@@ -24,6 +24,7 @@ export default function CardMissionSecondary(props) {
     query.modaldiscardmission === "true" ? true : false;
   const gameSlug = props.gameSlug || "valorant";
   const [hasClaimed, setHasClaimed] = useState(mission.hasClaimed);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     if (modalClaimMission) {
@@ -31,17 +32,27 @@ export default function CardMissionSecondary(props) {
     }
   }, [modalClaimMission]);
 
+  useEffect(() => {
+    if (mission.isVisible) {
+      setMissionRetrieved(true);
+    }
+  }, [mission]);
+
   const [MissionRetrieved, setMissionRetrieved] = useState(false);
 
   function handleGetMission() {
     if (variablesContext.availableMissions < 2 && !MissionRetrieved) {
-      setMissionRetrieved(!MissionRetrieved);
-      variablesContext.incrementAvailableMissions(1);
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        setMissionRetrieved(!MissionRetrieved);
+        variablesContext.incrementAvailableMissions(1);
+      }, 500);
+      
     }
   }
 
   function openModalClaimMission() {
-    setHasClaimed(true);
     uiContext.openModal(
       <ModalClaimMission mission={mission}></ModalClaimMission>
     );
@@ -58,6 +69,8 @@ export default function CardMissionSecondary(props) {
   }, [modalDiscardMission]);
 
   function openModalDiscardMission() {
+    setMissionRetrieved(!MissionRetrieved);
+    variablesContext.incrementAvailableMissions(-1);
     uiContext.openModal(
       <ModalDiscardMission mission={mission}></ModalDiscardMission>
     );
@@ -66,7 +79,7 @@ export default function CardMissionSecondary(props) {
   return (
     <>
       <div
-        className={`revealer ${mission.isVisible === true ? "is-active" : ""} ${
+        className={`revealer ${
           MissionRetrieved === true ? "is-active" : ""
         }`}
         onClick={handleGetMission.bind(this)}
@@ -75,8 +88,8 @@ export default function CardMissionSecondary(props) {
         <div className="revealer-front">
           <div
             className={`card-mission card-secondary ${
-              variablesContext.availableMissions < 2 && mission.isVisible !== true && MissionRetrieved !== true ? "is-highlighted" : ""
-            }`}
+              variablesContext.availableMissions < 2 && !MissionRetrieved ? "is-highlighted" : ""
+            }  ${isLoading ? "is-loading" : ""}`}
           >
             <div className="card-overlay">
               {variablesContext.availableMissions < 2 ? (
@@ -157,7 +170,7 @@ export default function CardMissionSecondary(props) {
                     className={`button button-ghost rounded-full`}
                     onClick={openModalDiscardMission}
                   >
-                    <span className="icon icon-refresh-02 text-ui-400" />
+                    <span className="icon icon-trash-can text-ui-400" />
                   </button>
                 </Tooltip>
               </div>

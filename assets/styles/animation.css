@@ -175,6 +175,13 @@
   relative
   w-full
   ;
+
+  > * {
+    @apply
+    transition-all
+    duration-700
+    ;
+  }
   > .revealer-front {
     @apply
     absolute
@@ -183,57 +190,40 @@
     flex
     items-center
     justify-center
-    transition-all
-    duration-500
+    scale-100
+    opacity-100
+    ease-[cubic-bezier(1,0,.2,1)]
     ;
-    transition-delay: 0.5s;
   }
   > .revealer-back {
     @apply
     relative
     z-10
     pointer-events-none
+    scale-125
     opacity-0
+    brightness-[500%]
+    ease-[cubic-bezier(1,0,.2,1)]
     ;
   }
   &.is-active {
     > .revealer-front {
       @apply
+      opacity-0
       pointer-events-none
-      animate-[puff-out-center_.7s_cubic-bezier(1,.2,.8,1)_both]
+      scale-0
+      ease-[cubic-bezier(1,0,.2,1)]
       ;
     }
     > .revealer-back {
       @apply
       opacity-100
       pointer-events-auto
-      animate-[puff-in-center_.9s_cubic-bezier(1,0,.2,1)_both_0.1s]
+      scale-100
+      brightness-100
+      ease-[cubic-bezier(1,0,.2,1)]
       ;
     }
-  }
-}
-
-@keyframes puff-in-center {
-  0% {
-    transform: scale(1.2);
-    filter: brightness(500%);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    filter: brightness(100%);
-    opacity: 1;
-  }
-}
-
-@keyframes puff-out-center {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
   }
 }
 

@@ -69,6 +69,19 @@
     }
   }
 
+  a {
+    @apply
+    underline
+    active:no-underline
+    outline-offset-2
+    focus-visible:outline
+    focus-visible:outline-main
+    transition-[color,background,transform,opacity]
+    duration-200
+    ease-in-out
+    ;
+  }
+
   > .button-close:last-child {
     @apply
     -mt-1

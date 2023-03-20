@@ -64,6 +64,26 @@
     }
   }
 
+  a {
+    @apply
+    underline
+    active:no-underline
+    outline-offset-2
+    focus-visible:outline
+    focus-visible:outline-main
+    transition-[color,background,transform,opacity]
+    duration-200
+    ease-in-out
+    ;
+  }
+
+  .alert-title {
+    @apply
+    font-bold
+    uppercase
+    ;
+  }
+
   &.alert-sm {
     @apply
     p-2

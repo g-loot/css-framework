@@ -165,167 +165,51 @@ export default function LadderCardSecondary(props) {
                 </div>
               ) : (
                 <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">
-                  <span className="mr-1">Time Left:</span>
+                  <span className="mr-1">{ladder.status === "upcoming" ? (<>Starts in:</>) : (<>Time Left:</>)}</span>
                   <span className="icon icon-clock" />
                   <span>23H</span>
                   <span>19M</span>
                   <span>13S</span>
-                  {/*
-                  <Countdown
-                    separator={"  "}
-                    hasDays={false}
-                    hasHours={true}
-                    hasMinutes={true}
-                    hasSeconds={true}
-                    targetDate={dateTimeAfterThreeDays}
-                    hasLabels={true}
-                    labelsAbbr={true}
-                    labelClassName="text-base mr-1 block"
-                    className="uppercase text-sm gap-1"
-                  />
-              */}
                 </div>
               )}
             </div>
           </div>
-          <div className="card-meta">
-            {isGlobal ? (
-              <div className="flex-1 flex gap-4 text-sm leading-none pr-4">
-                {ladder.isEnrolled ? (
-                  <div className="flex-1 flex items-center gap-2">
-                    <div className="flex-none avatar avatar-circle avatar-tiny">
-                      <div>
-                        <img
-                          src={prototype.getUserByID(1)?.avatar}
-                          alt="avatar"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <div>1120pts</div>
-                      <div>#243</div>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="flex-1 flex items-center gap-2">
-                    <div className="flex-none avatar avatar-circle avatar-tiny">
-                      <div>
-                        <span className="icon icon-male" />
-                      </div>
-                    </div>
-                    <div>
-                      <span className="text-ui-300">Solo</span>
-                    </div>
-                  </div>
-                )}
-                {ladder.clan && (
-                  <>
-                    {ladder.isEnrolled ? (
-                      <div className="flex-1 flex items-center gap-2 leading-none">
-                        <div className="flex-none avatar avatar-squircle avatar-tiny">
-                          <div>
-                            <img
-                              src={
-                                prototype.getClanByID(
-                                  prototype.getUserByID(1).id
-                                )?.avatar
-                              }
-                              alt="avatar"
-                            />
-                          </div>
-                        </div>
+          {ladder.status !== "upcoming" && (
+            <div className="card-meta">
+              {isGlobal ? (
+                <div className="flex-1 flex gap-4 text-sm leading-none pr-4">
+                  {ladder.isEnrolled ? (
+                    <div className="flex-1 flex items-center gap-2">
+                      <div className="flex-none avatar avatar-circle avatar-tiny">
                         <div>
-                          <div>143120pts</div>
-                          <div>#42</div>
+                          <img
+                            src={prototype.getUserByID(1)?.avatar}
+                            alt="avatar"
+                          />
                         </div>
                       </div>
-                    ) : (
-                      <div className="flex-1 flex items-center gap-2">
-                        <div className="flex-none avatar avatar-squircle avatar-tiny">
-                          <div>
-                            <span className="icon icon-multiple-11" />
-                          </div>
-                        </div>
+                      <div>
+                        <div>1120pts</div>
+                        <div>#243</div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="flex-1 flex items-center gap-2">
+                      <div className="flex-none avatar avatar-circle avatar-tiny">
                         <div>
-                          <span className="text-ui-300">Clan</span>
+                          <span className="icon icon-male" />
                         </div>
                       </div>
-                    )}
-                  </>
-                )}
-              </div>
-            ) : (
-              <>
-                {!isClan ? (
-                  <>
-                    {ladder.isEnrolled ? (
-                      <div className="flex-1 flex items-center gap-4">
-                        <div className="flex-none avatar avatar-circle avatar-xs">
-                          <div>
-                            <img
-                              src={prototype.getUserByID(1)?.avatar}
-                              alt="avatar"
-                            />
-                          </div>
-                        </div>
-                        <div className={`infobanner ${ladder.status === "ongoing" ? 'is-active' : ''}`}>
-                          <div className="flex gap-2 infobanner-front">
-                            <div>
-                              <div className="uppercase text-xs text-ui-300">
-                                Points
-                              </div>
-                              <div className="text-sm">1120</div>
-                            </div>
-                            <div>
-                              <div className="uppercase text-xs text-ui-300">
-                                Position
-                              </div>
-                              <div className="text-sm">#243</div>
-                            </div>
-                          </div>
-                          <div className="infobanner-back absolute inset-0 flex items-center text-sm">
-                            <div className="animate-pulse text-ui-100">
-                              Waiting for your 3 matches...
-                            </div>
-                          </div>
-                        </div>
+                      <div>
+                        <span className="text-ui-300">Solo</span>
                       </div>
-                    ) : (
-                      <div className="flex items-center gap-2">
-                        <div className="avatar-group -space-x-2">
-                          <div className="avatar avatar-circle avatar-tiny">
-                            <div>
-                              <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
-                            </div>
-                          </div>
-                          <div className="avatar avatar-circle avatar-tiny">
-                            <div>
-                              <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
-                            </div>
-                          </div>
-                          <div className="avatar avatar-circle avatar-tiny">
-                            <div>
-                              <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
-                            </div>
-                          </div>
-                        </div>
-                        <span className="text-sm text-ui-300">
-                          423 players{" "}
-                          {ladder.status !== "finished" ? (
-                            <> are enrolled</>
-                          ) : (
-                            <>have partaken</>
-                          )}
-                        </span>
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    {ladder.isEnrolled ? (
-                      <>
-                        <div className="flex-1 flex items-center gap-4">
-                          <div className="flex-none avatar avatar-squircle avatar-xs">
+                    </div>
+                  )}
+                  {ladder.clan && (
+                    <>
+                      {ladder.isEnrolled ? (
+                        <div className="flex-1 flex items-center gap-2 leading-none">
+                          <div className="flex-none avatar avatar-squircle avatar-tiny">
                             <div>
                               <img
                                 src={
@@ -333,6 +217,40 @@ export default function LadderCardSecondary(props) {
                                     prototype.getUserByID(1).id
                                   )?.avatar
                                 }
+                                alt="avatar"
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <div>143120pts</div>
+                            <div>#42</div>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="flex-1 flex items-center gap-2">
+                          <div className="flex-none avatar avatar-squircle avatar-tiny">
+                            <div>
+                              <span className="icon icon-multiple-11" />
+                            </div>
+                          </div>
+                          <div>
+                            <span className="text-ui-300">Clan</span>
+                          </div>
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              ) : (
+                <>
+                  {!isClan ? (
+                    <>
+                      {ladder.isEnrolled ? (
+                        <div className="flex-1 flex items-center gap-4">
+                          <div className="flex-none avatar avatar-circle avatar-xs">
+                            <div>
+                              <img
+                                src={prototype.getUserByID(1)?.avatar}
                                 alt="avatar"
                               />
                             </div>
@@ -358,70 +276,140 @@ export default function LadderCardSecondary(props) {
                               </div>
                             </div>
                           </div>
-                          <div className="hidden sm:flex items-center gap-2">
-                            <div className="avatar-group -space-x-2">
-                              <div className="avatar avatar-circle avatar-tiny">
+                        </div>
+                      ) : (
+                        <div className="flex items-center gap-2">
+                          <div className="avatar-group -space-x-2">
+                            <div className="avatar avatar-circle avatar-tiny">
+                              <div>
+                                <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                              </div>
+                            </div>
+                            <div className="avatar avatar-circle avatar-tiny">
+                              <div>
+                                <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                              </div>
+                            </div>
+                            <div className="avatar avatar-circle avatar-tiny">
+                              <div>
+                                <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                              </div>
+                            </div>
+                          </div>
+                          <span className="text-sm text-ui-300">
+                            423 players{" "}
+                            {ladder.status !== "finished" ? (
+                              <> are enrolled</>
+                            ) : (
+                              <>have partaken</>
+                            )}
+                          </span>
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      {ladder.isEnrolled ? (
+                        <>
+                          <div className="flex-1 flex items-center gap-4">
+                            <div className="flex-none avatar avatar-squircle avatar-xs">
+                              <div>
+                                <img
+                                  src={
+                                    prototype.getClanByID(
+                                      prototype.getUserByID(1).id
+                                    )?.avatar
+                                  }
+                                  alt="avatar"
+                                />
+                              </div>
+                            </div>
+                            <div className={`infobanner ${ladder.status === "ongoing" ? 'is-active' : ''}`}>
+                              <div className="flex gap-2 infobanner-front">
                                 <div>
-                                  <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                                  <div className="uppercase text-xs text-ui-300">
+                                    Points
+                                  </div>
+                                  <div className="text-sm">1120</div>
+                                </div>
+                                <div>
+                                  <div className="uppercase text-xs text-ui-300">
+                                    Position
+                                  </div>
+                                  <div className="text-sm">#243</div>
                                 </div>
                               </div>
-                              <div className="avatar avatar-circle avatar-tiny">
-                                <div>
-                                  <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                              <div className="infobanner-back absolute inset-0 flex items-center text-sm">
+                                <div className="animate-pulse text-ui-100">
+                                  Waiting for your 3 matches...
                                 </div>
                               </div>
-                              <div className="avatar avatar-circle avatar-tiny">
-                                <div>
-                                  <span>+9</span>
+                            </div>
+                            <div className="hidden sm:flex items-center gap-2">
+                              <div className="avatar-group -space-x-2">
+                                <div className="avatar avatar-circle avatar-tiny">
+                                  <div>
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                                  </div>
+                                </div>
+                                <div className="avatar avatar-circle avatar-tiny">
+                                  <div>
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                                  </div>
+                                </div>
+                                <div className="avatar avatar-circle avatar-tiny">
+                                  <div>
+                                    <span>+9</span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      </>
-                    ) : (
-                      <div></div>
-                    )}
-                  </>
-                )}
-              </>
-            )}
-
-            {/*
-
-          <div className="flex items-end">
-            <Link
-              href={
-                !isDemo
-                  ? `/prototype/${
-                      prototype.getGameBySlug(game_slug).slug
-                    }/ladders/${ladder.id}${prototype.getURLparams()}`
-                  : `/prototype/valorant/ladders/${
-                      ladder.isPowerPlay ? "1" : "2"
-                    }${prototype.getURLparams()}`
-              }
-            >
-              <a>
-                <button
-                  type="button"
-                  className={`button button-sm ${
-                    ladder.status != "finished"
-                      ? "button-secondary"
-                      : "button-secondary"
-                  }`}
-                >
-                  {ladder.isEnrolled || ladder.status === "finished" ? (
-                    <span>View Ladder</span>
-                  ) : (
-                    <span>View Ladder</span>
+                        </>
+                      ) : (
+                        <div></div>
+                      )}
+                    </>
                   )}
-                </button>
-              </a>
-            </Link>
-          </div>
+                </>
+              )}
 
-          */}
-          </div>
+              {/*
+
+            <div className="flex items-end">
+              <Link
+                href={
+                  !isDemo
+                    ? `/prototype/${
+                        prototype.getGameBySlug(game_slug).slug
+                      }/ladders/${ladder.id}${prototype.getURLparams()}`
+                    : `/prototype/valorant/ladders/${
+                        ladder.isPowerPlay ? "1" : "2"
+                      }${prototype.getURLparams()}`
+                }
+              >
+                <a>
+                  <button
+                    type="button"
+                    className={`button button-sm ${
+                      ladder.status != "finished"
+                        ? "button-secondary"
+                        : "button-secondary"
+                    }`}
+                  >
+                    {ladder.isEnrolled || ladder.status === "finished" ? (
+                      <span>View Ladder</span>
+                    ) : (
+                      <span>View Ladder</span>
+                    )}
+                  </button>
+                </a>
+              </Link>
+            </div>
+
+            */}
+            </div>
+          )}
         </div>
         <div className="card-image-bg">
           <img src={ladder.cover} alt="" />

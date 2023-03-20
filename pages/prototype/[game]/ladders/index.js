@@ -49,6 +49,8 @@ export default function Ladders() {
   const router = useRouter();
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
+  const [laddersFinishedLength, setLaddersFinishedLength] = useState(null);
+
   const { game } = router.query;
   const uiContext = useContext(UiContext);
   const { tab } = router.query;
@@ -64,6 +66,13 @@ export default function Ladders() {
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game, prototype]);
+
+  useEffect(() => {
+    if(selectedGame) {
+      setLaddersFinishedLength(selectedGame.ladders.filter(g => g.status === 'finished' && g.hasClaim).length);
+    }
+  }, [game, prototype, selectedGame]);
+
 
   useEffect(() => {
     if (selectedGame != null) {
@@ -90,7 +99,7 @@ export default function Ladders() {
                           selectedTab === item.url ? "is-active" : ""
                         }`}
                       >
-                        <span>{item.label}</span>
+                        <span data-badge={item.url === 'completed' && laddersFinishedLength >= 1 ? '.' : undefined}>{item.label}</span>
                       </a>
                     </Link>
                   </li>

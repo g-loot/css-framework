@@ -623,15 +623,6 @@ export default function TabProfileOverview() {
             <section className="surface md:rounded">
               <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                 <h2 className="h6 text-ui-100">Ladders</h2>
-                {selectedUser.ladders && !isEmpty && (
-                  <Link
-                    href={`${
-                      selectedUser.id
-                    }?tab=stats${prototype.getURLparams()}`}
-                  >
-                    <a className="link link-hover text-ui-300 text-sm">View</a>
-                  </Link>
-                )}
               </div>
               <div>
                 {selectedUser.ladders && !isEmpty ? (

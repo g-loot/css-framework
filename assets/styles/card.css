@@ -687,7 +687,8 @@
       }
     }
     &:hover, 
-    &:active {
+    &:active,
+    &.is-loading {
       .card-overlay {
         &::before {
           @apply
@@ -700,6 +701,47 @@
           @apply
           opacity-20
           bg-[length:100%]
+          ;
+        }
+      }
+    }
+    &.is-loading {
+      .card-bg {
+        @apply
+        opacity-100
+        ;
+      }
+      .card-overlay {
+        &::after {
+          @apply
+          content-['']
+          absolute
+          inset-auto
+          h-8
+          w-8
+          block
+          border-2
+          border-ui-900/5
+          border-l-ui-900
+          opacity-100
+          rounded-full
+          mx-auto
+          left-[calc(50%-1rem)]
+          animate-[button-loader-rotate_1s_linear_infinite]
+          bg-none
+          transition-opacity
+          duration-300
+          ease-in-out
+          ;
+        }
+        * {
+          @apply
+          transition-all
+          duration-300
+          ease-in-out
+          scale-75
+          opacity-0
+          pointer-events-none
           ;
         }
       }
@@ -801,19 +843,19 @@
         duration-500
         ease-[cubic-bezier(.8,0,.2,.8)];
         &:nth-child(1) {
-          @apply delay-[0.5s];
+          @apply delay-[0.1s];
         }
         &:nth-child(2) {
-          @apply delay-[0.6s];
+          @apply delay-[0.2s];
         }
         &:nth-child(3) {
-          @apply delay-[0.7s];
+          @apply delay-[0.3s];
         }
         &:nth-child(4) {
-          @apply delay-[0.8s];
+          @apply delay-[0.4s];
         }
         &:nth-child(5) {
-          @apply delay-[0.9s];
+          @apply delay-[0.5s];
         }
       }
     }

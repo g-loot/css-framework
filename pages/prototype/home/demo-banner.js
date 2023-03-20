@@ -28,7 +28,7 @@ export default function Home() {
     }
   }
 
-  const [description, setDescription] = useState("Consectetur adipiscing elit. Aliquam sed ante a ante laoreet vulputate.");
+  const [description, setDescription] = useState("Consectetur adipiscing elit. Aliquam sed ante a ante <a href='#'>laoreet vulputate</a>.");
 
   function handleDescription(e) {
     if (e.target.value.length > 0) {

@@ -17,6 +17,7 @@ export default function TabMissionsMissions() {
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
   const isPremium = query.premium === "true" ? true : false;
+  const isEmpty = query.empty === "true" ? true : false;
   const { game } = router.query;
   const [submitting, setSubmitting] = useState(false);
 
@@ -176,26 +177,42 @@ export default function TabMissionsMissions() {
             style={{ "--delay": "calc(3 * 0.05s)" }}
           >
             <h2 className="h3 mb-4 mx-4 sm:mx-0">Completed missions</h2>
-            <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
-              <table className="table table-rounded rounded-xl w-full">
-                <tbody>
-                  {selectedGame?.missions.map((mission, missionIndex) => (
-                    <>
-                      <CardMissionTableTr
-                        key={missionIndex}
-                        mission={mission}
-                        index={missionIndex}
-                      />
-                    </>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <div className="text-center mt-4 mb-8">
-              <button type="button" className="button button-sm button-primary">
-                <span>Load more</span>
-              </button>
-            </div>
+            {isEmpty ? (
+              <div className="surface surface-dimmed rounded px-4 py-8 text-center">
+                <div className="max-w-xs mx-auto">
+                  <span className="icon icon-missions text-6xl text-ui-500" />
+                  <p className="mt-2 text-sm text-ui-300">
+                    You have not yet completed any missions.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <>
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
+                  <table className="table table-rounded rounded-xl w-full">
+                    <tbody>
+                      {selectedGame?.missions.map((mission, missionIndex) => (
+                        <>
+                          <CardMissionTableTr
+                            key={missionIndex}
+                            mission={mission}
+                            index={missionIndex}
+                          />
+                        </>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="text-center mt-4 mb-8">
+                  <button
+                    type="button"
+                    className="button button-sm button-primary"
+                  >
+                    <span>Load more</span>
+                  </button>
+                </div>
+              </>
+            )}
           </section>
           <section className="py-8 grid grid-cols-1 xl:grid-cols-3 gap-y-4 xl:gap-x-4 items-stretch">
             <div
@@ -217,7 +234,9 @@ export default function TabMissionsMissions() {
                 <p className="max-w-[50ch] text-sm text-ui-300 mx-auto mt-2 mb-5">
                   Increase your amount of XP you can earn each day with a{" "}
                   <Link href={`/prototype/premium${prototype.getURLparams()}`}>
-                    <a className="link text-premium-500">Premium subscription</a>
+                    <a className="link text-premium-500">
+                      Premium subscription
+                    </a>
                   </Link>
                   .
                 </p>
