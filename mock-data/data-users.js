@@ -378,6 +378,12 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [5],
+    ladders: [
+      {
+        gameSlug: "valorant",
+        id: 2,
+      },
+    ],
     achievements: {
       favoriteBadge: 2,
       badges: [
@@ -475,6 +481,12 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1, 2],
+    ladders: [
+      {
+        gameSlug: "valorant",
+        id: 3,
+      },
+    ],
     achievements: {
       favoriteBadge: 2,
       badges: [
@@ -556,6 +568,18 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1],
+    ladders: [
+      {
+        gameSlug: "pubg",
+        id: 2,
+      },
+    ],
+    ladders: [
+      {
+        gameSlug: "valorant",
+        id: 1,
+      },
+    ],
     achievements: {
       favoriteBadge: 2,
       badges: [
@@ -628,6 +652,16 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1],
+    ladders: [
+      {
+        gameSlug: "valorant",
+        id: 1,
+      },
+      {
+        gameSlug: "valorant",
+        id: 2,
+      },
+    ],
     achievements: {
       favoriteBadge: 2,
       badges: [
@@ -699,6 +733,16 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [4, 6],
+    ladders: [
+      {
+        gameSlug: "valorant",
+        id: 2,
+      },
+      {
+        gameSlug: "valorant",
+        id: 3,
+      },
+    ],
     achievements: {
       favoriteBadge: 2,
       badges: [
@@ -780,6 +824,16 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1, 2, 3, 4],
+    ladders: [
+      {
+        gameSlug: "valorant",
+        id: 1,
+      },
+      {
+        gameSlug: "valorant",
+        id: 2,
+      },
+    ],
     achievements: {
       favoriteBadge: 2,
       badges: [
@@ -901,6 +955,16 @@ export const dataUsers = [
       tickets: 3,
     },
     games: [1, 3],
+    ladders: [
+      {
+        gameSlug: "valorant",
+        id: 1,
+      },
+      {
+        gameSlug: "valorant",
+        id: 3,
+      },
+    ],
     achievements: {
       favoriteBadge: 2,
       badges: [

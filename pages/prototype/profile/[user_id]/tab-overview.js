@@ -14,63 +14,6 @@ import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
 import GameIcon from "../../../../components/GameIcon/GameIcon";
 import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
 
-const achievementsList = [
-  {
-    id: 1,
-    item: 1,
-    level: 1,
-    percent: 40,
-    progress: 10,
-    from: "150",
-    to: "300",
-  },
-  {
-    id: 2,
-    item: 2,
-    level: 2,
-    percent: 35,
-    progress: 15,
-    from: "15",
-    to: "30",
-  },
-  {
-    id: 3,
-    item: 3,
-    level: 4,
-    percent: 80,
-    progress: 10,
-    from: "90",
-    to: "100",
-  },
-  {
-    id: 4,
-    item: 4,
-    level: 3,
-    percent: 75,
-    progress: 10,
-    from: "150",
-    to: "200",
-  },
-  {
-    id: 5,
-    item: 5,
-    level: 5,
-    percent: 100,
-    progress: 0,
-    from: "3015",
-    to: "1000",
-  },
-  {
-    id: 6,
-    item: 6,
-    level: 5,
-    percent: 100,
-    progress: 0,
-    from: "456",
-    to: "300",
-  },
-];
-
 export default function TabProfileOverview() {
   const router = useRouter();
   const { query } = useRouter();
@@ -114,12 +57,12 @@ export default function TabProfileOverview() {
                 )}
               </div>
               <div className="p-4 space-y-4">
-                {selectedUser.bio && (
-                  <p className="text-ui-300 mt-1 text-left">
+                {selectedUser.bio && !isEmpty && (
+                  <p className="text-ui-300 mt-1 text-left pb-4 border-b border-ui-700">
                     <ReadMore content={selectedUser.bio} max={150} />
                   </p>
                 )}
-                <div className="flex gap-1 border-y border-y-ui-700 py-3">
+                <div className="flex gap-1">
                   <a
                     href="#"
                     target="_blank"
@@ -145,72 +88,74 @@ export default function TabProfileOverview() {
                     <span className="icon icon-20 text-ui-300 icon-discord" />
                   </a>
                 </div>
-                <ul className="space-y-2">
-                  <li className="flex items-center gap-2 text-ui-300">
-                    <span className="icon icon-20 icon-riotgames-symbol" />
-                    <a
-                      className="flex-1 link link-hover"
-                      onClick={() => {
-                        uiContext.openToastr({
-                          size: "medium",
-                          text: "Game tag copied to your clipboard",
-                          color: "green",
-                          autoDelete: true,
-                          autoDeleteDelay: 2500,
-                        });
-                        navigator.clipboard.writeText("jackattack#2341");
-                      }}
-                    >
-                      jackattack#2341
-                    </a>
-                    <Tooltip
-                      placement="left"
-                      tooltip={
-                        <div className="max-w-xs text-sm text-center leading-tight">
-                          Copy
-                        </div>
-                      }
-                    >
-                      <ButtonFeedback
-                        variant="button-ghost rounded-full"
-                        icon="icon-document-copy"
-                        message="Game tag copied to your clipboard"
-                      />
-                    </Tooltip>
-                  </li>
-                  <li className="flex items-center gap-2 text-ui-300">
-                    <span className="icon icon-20 icon-steam" />
-                    <a
-                      className="flex-1 link link-hover"
-                      onClick={() => {
-                        uiContext.openToastr({
-                          size: "medium",
-                          text: "Game tag copied to your clipboard",
-                          color: "green",
-                          autoDelete: true,
-                          autoDeleteDelay: 2500,
-                        });
-                        navigator.clipboard.writeText("PUBG_Player_1");
-                      }}
-                    >
-                      PUBG_Player_1
-                    </a>
-                    <Tooltip
-                      placement="left"
-                      tooltip={
-                        <div className="max-w-xs text-sm text-center leading-tight">
-                          Copy
-                        </div>
-                      }
-                    >
-                      <ButtonFeedback
-                        variant="button-ghost rounded-full"
-                        icon="icon-document-copy"
-                        message="Game tag copied to your clipboard"
-                      />
-                    </Tooltip>
-                  </li>
-                </ul>
+                {!isEmpty && (
+                  <ul className="space-y-2 pt-3 border-t border-y-ui-700">
+                    <li className="flex items-center gap-2 text-ui-300">
+                      <span className="icon icon-20 icon-riotgames-symbol" />
+                      <a
+                        className="flex-1 link link-hover"
+                        onClick={() => {
+                          uiContext.openToastr({
+                            size: "medium",
+                            text: "Game tag copied to your clipboard",
+                            color: "green",
+                            autoDelete: true,
+                            autoDeleteDelay: 2500,
+                          });
+                          navigator.clipboard.writeText(`${selectedUser.nickname}#2341`);
+                        }}
+                      >
+                        {selectedUser.nickname}#2341
+                      </a>
+                      <Tooltip
+                        placement="left"
+                        tooltip={
+                          <div className="max-w-xs text-sm text-center leading-tight">
+                            Copy
+                          </div>
+                        }
+                      >
+                        <ButtonFeedback
+                          variant="button-ghost rounded-full"
+                          icon="icon-document-copy"
+                          message="Game tag copied to your clipboard"
+                        />
+                      </Tooltip>
+                    </li>
+                    <li className="flex items-center gap-2 text-ui-300">
+                      <span className="icon icon-20 icon-steam" />
+                      <a
+                        className="flex-1 link link-hover"
+                        onClick={() => {
+                          uiContext.openToastr({
+                            size: "medium",
+                            text: "Game tag copied to your clipboard",
+                            color: "green",
+                            autoDelete: true,
+                            autoDeleteDelay: 2500,
+                          });
+                          navigator.clipboard.writeText(`PUBG_${selectedUser.nickname}`);
+                        }}
+                      >
+                        PUBG_{selectedUser.nickname}
+                      </a>
+                      <Tooltip
+                        placement="left"
+                        tooltip={
+                          <div className="max-w-xs text-sm text-center leading-tight">
+                            Copy
+                          </div>
+                        }
+                      >
+                        <ButtonFeedback
+                          variant="button-ghost rounded-full"
+                          icon="icon-document-copy"
+                          message="Game tag copied to your clipboard"
+                        />
+                      </Tooltip>
+                    </li>
+                  </ul>
+                )}
               </div>
             </section>
             <section className="surface md:rounded">
@@ -540,7 +485,10 @@ export default function TabProfileOverview() {
             <section className="surface md:rounded">
               <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                 <h2 className="h6 text-ui-100">
-                  Achievements {!isEmpty && <>({selectedUser.achievements?.badges?.length})</>}
+                  Achievements{" "}
+                  {!isEmpty && (
+                    <>({selectedUser.achievements?.badges?.length})</>
+                  )}
                 </h2>
                 <Link
                   href={`${
@@ -552,69 +500,80 @@ export default function TabProfileOverview() {
               </div>
               <div>
                 {isEmpty || selectedUser.achievements?.badges.length === 0 ? (
-                  
                   <div className="text-center p-4">
-                  <span className="icon icon-medal text-6xl text-ui-500" />
-                  <p className="mt-2 text-ui-300">
-                    {selectedUser.isYou ? (
-                      <>You haven&#39;t unlocked any achievements yet</>
-                    ) : (
-                      <>
-                        {selectedUser.nickname} hasn&#39;t unlocked any
-                        achievements yet
-                      </>
-                    )}
-                  </p>
-                </div>
+                    <span className="icon icon-medal text-6xl text-ui-500" />
+                    <p className="mt-2 text-ui-300">
+                      {selectedUser.isYou ? (
+                        <>You haven&#39;t unlocked any achievements yet</>
+                      ) : (
+                        <>
+                          {selectedUser.nickname} hasn&#39;t unlocked any
+                          achievements yet
+                        </>
+                      )}
+                    </p>
+                  </div>
                 ) : (
                   <Slider
                     itemWidth={138 + 16 + 16}
                     bgColor="from-ui-800 via-ui-800 to-ui-800/0"
                   >
                     <div className="flex gap-6 py-2 px-6">
-                      {selectedUser.achievements?.badges?.map((item, itemIndex) => (
-                        <div
-                        key={itemIndex}
-                        className="animate-slide-in-right animate-delay"
-                        style={{
-                          "--delay": "calc(" + itemIndex + " * 0.05s)",
-                        }}
-                      >
-                        <div
-                          className={`w-32 h-32 achievement ${
-                            item.level > 0
-                              ? "cursor-pointer"
-                              : "pointer-events-none"
-                          }  ${item.level === 5 ? "is-completed" : ""}`}
-                          onClick={openModalAchievementReceived.bind(
-                            this,
-                            item.item,
-                            item.level,
-                          )}
-                        >
-                          <i />
-                          <i />
+                      {selectedUser.achievements?.badges?.map(
+                        (item, itemIndex) => (
                           <div
-                            className={`achievement-level-${item.level}`}
-                            data-tooltip={`Level ${item.level}`}
+                            key={itemIndex}
+                            className="animate-slide-in-right animate-delay"
+                            style={{
+                              "--delay": "calc(" + itemIndex + " * 0.05s)",
+                            }}
                           >
-                            <AchievementFrame
-                              url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${item.level}-animated.svg`}
-                            />
-                            {item.level > 0 && (
-                              <AchievementIcon
-                              url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${prototype.getAchievementitemByID(1, item.item).icon}.svg`}
-                              />
-                            )}
+                            <div
+                              className={`w-32 h-32 achievement ${
+                                item.level > 0
+                                  ? "cursor-pointer"
+                                  : "pointer-events-none"
+                              }  ${item.level === 5 ? "is-completed" : ""}`}
+                              onClick={openModalAchievementReceived.bind(
+                                this,
+                                item.item,
+                                item.level
+                              )}
+                            >
+                              <i />
+                              <i />
+                              <div
+                                className={`achievement-level-${item.level}`}
+                                data-tooltip={`Level ${item.level}`}
+                              >
+                                <AchievementFrame
+                                  url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${item.level}-animated.svg`}
+                                />
+                                {item.level > 0 && (
+                                  <AchievementIcon
+                                    url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${
+                                      prototype.getAchievementitemByID(
+                                        1,
+                                        item.item
+                                      ).icon
+                                    }.svg`}
+                                  />
+                                )}
+                              </div>
+                              {item.level > 0 && (
+                                <span className="text-xs uppercase">
+                                  {
+                                    prototype.getAchievementitemByID(
+                                      1,
+                                      item.item
+                                    ).name
+                                  }
+                                </span>
+                              )}
+                            </div>
                           </div>
-                          {item.level > 0 && (
-                            <span className="text-xs uppercase">
-                              {prototype.getAchievementitemByID(1, item.item).name}
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                      ))}
+                        )
+                      )}
                     </div>
                   </Slider>
                 )}
@@ -633,17 +592,42 @@ export default function TabProfileOverview() {
                     <div className="flex gap-6 py-2 px-6 hoverhighlight">
                       {selectedUser.ladders?.map((ladder, ladderIndex) => (
                         <>
-                          <LadderCardSecondary
-                            key={ladderIndex}
-                            ladder={prototype.getLadderByID(
-                              ladder.gameSlug,
-                              ladder.id
-                            )}
-                            isHorizontal={false}
-                            isClan={false}
-                            gameID={1}
-                            className="surface-ui-700"
-                          />
+                          {selectedUser.isYou ? (
+                            <>
+                              {prototype.getLadderByID(
+                                ladder.gameSlug,
+                                ladder.id
+                              ).isEnrolled && (
+                                <>
+                                  <LadderCardSecondary
+                                    key={ladderIndex}
+                                    ladder={prototype.getLadderByID(
+                                      ladder.gameSlug,
+                                      ladder.id
+                                    )}
+                                    isHorizontal={false}
+                                    selectedUser={selectedUser}
+                                    isClan={false}
+                                    gameID={1}
+                                    className="surface-ui-700"
+                                  />
+                                </>
+                              )}
+                            </>
+                          ) : (
+                            <LadderCardSecondary
+                              key={ladderIndex}
+                              ladder={prototype.getLadderByID(
+                                ladder.gameSlug,
+                                ladder.id
+                              )}
+                              isHorizontal={false}
+                              selectedUser={selectedUser}
+                              isClan={false}
+                              gameID={1}
+                              className="surface-ui-700"
+                            />
+                          )}
                         </>
                       ))}
                     </div>

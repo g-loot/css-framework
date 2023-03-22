@@ -68,11 +68,14 @@ export default function Ladders() {
   }, [game, prototype]);
 
   useEffect(() => {
-    if(selectedGame) {
-      setLaddersFinishedLength(selectedGame.ladders.filter(g => g.status === 'finished' && g.hasClaim).length);
+    if (selectedGame) {
+      setLaddersFinishedLength(
+        selectedGame.ladders.filter(
+          (g) => g.status === "finished" && g.hasClaim
+        ).length
+      );
     }
   }, [game, prototype, selectedGame]);
-
 
   useEffect(() => {
     if (selectedGame != null) {
@@ -92,14 +95,22 @@ export default function Ladders() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype/${game}/ladders?tab=${item.url}${prototype.getURLparams("&")}`}
+                      href={`/prototype/${game}/ladders?tab=${
+                        item.url
+                      }${prototype.getURLparams("&")}`}
                     >
                       <a
                         className={`${
                           selectedTab === item.url ? "is-active" : ""
                         }`}
                       >
-                        <span data-badge={item.url === 'completed' && laddersFinishedLength >= 1 ? '.' : undefined}>{item.label}</span>
+                        <span>
+                          {item.label}
+                          {item.url === "completed" &&
+                            laddersFinishedLength >= 1 && (
+                              <i className="badge ml-1 absolute animate-bounce" />
+                            )}
+                        </span>
                       </a>
                     </Link>
                   </li>
@@ -110,7 +121,9 @@ export default function Ladders() {
             <section className="py-4">
               {TabsItems.map((item, itemIndex) => {
                 if (item.url === selectedTab) {
-                  return React.createElement(item.component, { key: itemIndex })
+                  return React.createElement(item.component, {
+                    key: itemIndex,
+                  });
                 }
               })}
             </section>

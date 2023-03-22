@@ -76,7 +76,7 @@ export default function Avatar(props) {
             <img src={selectedUser?.avatar} />
           </div>
           {size === "avatar-xs" && selectedUser?.isYou && !hasAvatarFrame && (
-            <i className="radar" />
+            <>{/*<i className="radar" />*/}</>
           )}
           {selectedUser.isOnline && !hasLevel && isOnline && <i />}
         </div>
