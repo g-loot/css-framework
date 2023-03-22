@@ -71,7 +71,16 @@ export default function Login() {
             />
           </div>
           <div className="form-group mb-8" data-success={checkAll(passwordStr)}>
-            <label htmlFor="password">Password</label>
+            <div className="flex justify-between items-baseline mb-1">
+              <label className="label" htmlFor="password">
+                Password
+              </label>
+              <Link href="/prototype/auth/recoverpassword">
+                <a className="link text-sm text-ui-300">
+                  Forgot your password?
+                </a>
+              </Link>
+            </div>
             <div className="input-group">
               <button
                 onClick={togglePassword}
@@ -96,7 +105,13 @@ export default function Login() {
               <span>Sign in</span>
             </button>
           </Link>
-          <p className="text-sm mb-6">
+          <p className="mb-6">
+            No account?{" "}
+            <Link href="/prototype/auth/signup">
+              <a className="link link-main">Create one</a>
+            </Link>
+          </p>
+          <p className="text-sm mb-6 text-ui-300">
             By clicking SIGN IN, you certify that you have read and agree to the{" "}
             <a href="#" className="link">
               Terms & Conditions
@@ -106,18 +121,16 @@ export default function Login() {
               Privacy Policy
             </a>
           </p>
-          <p className="text-sm mb-4">
-            <Link href="/prototype/auth/recoverpassword">
-              <a className="link link-main">Forgotten your password?</a>
-            </Link>
-          </p>
-          <p className="text-sm mb-6">
+
+          {/*
+          <div className="mb-6">
             <Link href="/prototype/auth/signup">
-              <a className="link link-main">
-                Don&#39;t have an account? Create one
-              </a>
+              <button type="button" className="button button-secondary w-full">
+                <span>Sign up</span>
+              </button>
             </Link>
-          </p>
+          </div>
+          */}
         </div>
       </PrototypeAuth>
     </>
