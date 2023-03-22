@@ -12,7 +12,7 @@ export default function TabScoreboard(props) {
   const uiContext = useContext(UiContext);
   const { scoreboard_id } = router.query;
   const isEmpty = query.empty === "true" ? true : false;
-  const selectedScoreboard = props.scoreboard || getScoreboardByID(1, 1);
+  const selectedScoreboard = props.scoreboard || null;
 
   const getGameScoreboardsByID = (id) => {
     return DataScoreboards.find((general) => {
