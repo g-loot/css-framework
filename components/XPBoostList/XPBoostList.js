@@ -40,9 +40,10 @@ export default function XPBoostList(props) {
           }`}
           style={{ "--delay": "calc( 3 * 0.15s)" }}
         >
-          <span className="icon icon-e-remove text-ui-400" />
-          <span className="flex-1 text-ui-400 line-through">Premium boost</span>
-          <span className="text-ui-400 line-through text-right">
+          <span className="icon icon-lock text-ui-400" />
+          <span className="flex-1 text-ui-400">Premium boost</span>
+          <span className="icon icon-crown text-lg text-ui-400" />
+          <span className="text-ui-400 text-right">
             +{Math.round(xp * 0.5)}
           </span>
         </li>

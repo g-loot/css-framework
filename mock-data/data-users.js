@@ -207,7 +207,8 @@ export const dataUsers = [
           to: "5",
         },
       ]
-    }
+    },
+    friends: [4, 8, 11],
   },
   {
     id: 2,
@@ -328,7 +329,8 @@ export const dataUsers = [
       favoriteBadge: null,
       badges: [
       ]
-    }
+    },
+    friends: [4, 8, 11],
   },
   {
     id: 4,
@@ -424,7 +426,8 @@ export const dataUsers = [
           to: "300",
         },
       ]
-    }
+    },
+    friends: [4, 8, 11],
   },
   {
     id: 5,
@@ -527,7 +530,8 @@ export const dataUsers = [
           to: "1000",
         },
       ]
-    }
+    },
+    friends: [4, 8, 11],
   },
   {
     id: 6,
@@ -611,7 +615,8 @@ export const dataUsers = [
           to: "300",
         },
       ]
-    }
+    },
+    friends: [4, 8, 11],
   },
   {
     id: 7,
@@ -693,7 +698,8 @@ export const dataUsers = [
           to: "300",
         },
       ]
-    }
+    },
+    friends: [4, 8, 11],
   },
   {
     id: 8,
@@ -783,7 +789,8 @@ export const dataUsers = [
           to: "300",
         },
       ]
-    }
+    },
+    friends: [4, 8, 11],
   },
   {
     id: 9,
@@ -941,7 +948,7 @@ export const dataUsers = [
     },
     shopItems: {
       avatarFrame: 110,
-      profileBanner: 2,
+      profileBanner: 27,
     },
     stats: {
       xp: 297,

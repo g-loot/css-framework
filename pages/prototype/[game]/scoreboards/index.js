@@ -6,17 +6,6 @@ import PrototypeStructure from "../../../../components/Prototype/PrototypeStruct
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { UiContext } from "../../../../contexts/ui";
 import { useRouter } from "next/router";
-import Accordion from "../../../../components/Accordion/Accordion";
-import { StatsValorantAgents } from "../../../../mock-data/data-stats-valorant";
-import { StatsValorantMaps } from "../../../../mock-data/data-stats-valorant";
-import { StatsValorantRanks } from "../../../../mock-data/data-stats-valorant";
-import { StatsValorantWeapons } from "../../../../mock-data/data-stats-valorant";
-import { StatsValorantDemoFavoriteAgents } from "../../../../mock-data/data-stats-demo-valorant";
-import { StatsValorantDemoGeneral } from "../../../../mock-data/data-stats-demo-valorant";
-import { StatsValorantDemoLatestMatches } from "../../../../mock-data/data-stats-demo-valorant";
-import { StatsValorantDemoWeapons } from "../../../../mock-data/data-stats-demo-valorant";
-import { StatsValorantDemoMaps } from "../../../../mock-data/data-stats-demo-valorant";
-import LoadMore from "../../../../components/LoadMore/LoadMore";
 
 import { DataScoreboards } from "../../../../mock-data/data-scoreboards";
 import TabScoreboardsOverview from "./tab-overview";
@@ -70,19 +59,24 @@ export default function Scoreboards() {
       return general.id === parseInt(id);
     });
   };
-  
+
   const getScoreboardByID = (gameID, id) => {
     const selectedGameScoreboards = getGameScoreboardsByID(gameID);
-    const selectedScoreboard = selectedGameScoreboards.scoreboards?.find(scoreboard => {
-      return scoreboard.id === parseInt(id);
-    });
+    const selectedScoreboard = selectedGameScoreboards.scoreboards?.find(
+      (scoreboard) => {
+        return scoreboard.id === parseInt(id);
+      }
+    );
     return selectedScoreboard;
   };
+  
   const getScoreboardBySlug = (gameID, slug) => {
     const selectedGameScoreboards = getGameScoreboardsByID(gameID);
-    const selectedScoreboard = selectedGameScoreboards.scoreboards?.find(scoreboard => {
-      return scoreboard.slug === slug;
-    });
+    const selectedScoreboard = selectedGameScoreboards.scoreboards?.find(
+      (scoreboard) => {
+        return scoreboard.slug === slug;
+      }
+    );
     return selectedScoreboard;
   };
 
@@ -100,23 +94,39 @@ export default function Scoreboards() {
       {selectedScoreboard && (
         <>
           {selectedGame && (
-            <PrototypeStructure title="Stats">
+            <PrototypeStructure title="Scoreboards">
               <Ad width="1005" height="300" />
 
               <section className="mb-4">
-                <div className="header surface sm:rounded-lg">
-                  <div className="header-content">
-                    <div className="header-body">
-                      <h1>Scoreboards</h1>
-                      <p className="text-ui-300 max-w-[70ch] mt-4">
-                        Measure yourself with other Strydarians.
-                      </p>
+                {selectedTab !== "all" ? (
+                  <div className="header surface sm:rounded-lg">
+                    <div className="header-content">
+                      <div className="header-body">
+                        <h1>{getScoreboardBySlug(0, selectedTab).name}</h1>
+                        <p className="text-ui-300 max-w-[70ch] mt-4">
+                          {getScoreboardBySlug(0, selectedTab).description}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="header-bg">
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
                     </div>
                   </div>
-                  <div className="header-bg">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
+                ) : (
+                  <div className="header surface sm:rounded-lg">
+                    <div className="header-content">
+                      <div className="header-body">
+                        <h1>Scoreboards</h1>
+                        <p className="text-ui-300 max-w-[70ch] mt-4">
+                          Measure yourself with other Strydarians.
+                        </p>
+                      </div>
+                    </div>
+                    <div className="header-bg">
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
+                    </div>
                   </div>
-                </div>
+                )}
               </section>
 
               {isEmpty ? (
@@ -158,7 +168,9 @@ export default function Scoreboards() {
 
                   <section className="py-4">
                     {selectedTab !== "all" ? (
-                      <TabScoreboard scoreboard={getScoreboardBySlug(0, selectedTab)} />
+                      <TabScoreboard
+                        scoreboard={getScoreboardBySlug(0, selectedTab)}
+                      />
                     ) : (
                       <TabScoreboardsOverview />
                     )}

@@ -94,6 +94,7 @@ select:-webkit-autofill:focus {
     bg-ui-700
     border
     border-ui-600
+    focus-visible:-outline-offset-1
     focus-visible:outline
     focus-visible:outline-1
     focus-visible:outline-ui-300

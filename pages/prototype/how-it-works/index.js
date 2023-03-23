@@ -204,6 +204,20 @@ const TabsItems = [
       },
     ],
   },
+  {
+    id: 9,
+    subtitle: "Player Level",
+    title: "Show your Stryda progress",
+    url: "playerlevel",
+    icon: "icon-speedometer",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1679562135/Stryda/illustrations/player_level.jpg",
+    content: [
+      {
+        type: "p",
+        text: "Progress on your player level through engaging in Stryda activities on the platform such as participating and clearing missions as well as playing ladder matches. Your player level will always be a part of your player avatar.",
+      },
+    ],
+  },
 ];
 
 const HowItWorksFAQs = [

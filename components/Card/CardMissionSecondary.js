@@ -233,7 +233,7 @@ export default function CardMissionSecondary(props) {
                           className={`chip chip-sm ${
                             mission.target === mission.current
                               ? "chip-xp chip-inverted"
-                              : "chip-secondary"
+                              : "chip-premium"
                           }`}
                         >
                           <span>{Math.round(mission.xp * 1.65)}</span>

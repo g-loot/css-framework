@@ -32,6 +32,14 @@
     ;
     transform: translate3d(calc(-100% + (1% * var(--percent))), 0, 0);
   }
+  &[style*="--percent:0"],
+  &[style*="--percent: 0"] {
+    > div {
+      @apply
+      opacity-0
+      ;
+    }
+  }
 }
 
 /* secondary */
