@@ -71,7 +71,7 @@ export default function TabScoreboardsOverview() {
                 <div className="py-3 flex items-start justify-between gap-3 p-3">
                   <ul className="flex-1 flex gap-x-3 gap-y-2 flex-wrap whitespace-nowrap leading-none">
                     {item.filters?.map((item, itemIndex) => (
-                      <ScoreboardFilter item={item} key={itemIndex} />
+                      <ScoreboardFilter id={item.id} value={item.value}  key={itemIndex} />
                     ))}
                   </ul>
                   <Link

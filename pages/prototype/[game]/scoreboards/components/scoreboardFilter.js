@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { DataScoreboardFilters } from "../../../../../mock-data/data-scoreboards";
 
-export default function ScoreboardFilter(props) {
-  const id = props.item.id || 0;
-  const value = props.item.value || 0;
+export default function ScoreboardFilter({id, value}) {
 
   const [selectedFilter, setSelectedFilter] = useState(null);
 
