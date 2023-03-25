@@ -5,7 +5,12 @@ export default function ScoreboardFilter(props) {
   const id = props.item.id || 0;
   const value = props.item.value || 0;
 
-  console.log(props.item, value);
+  const [selectedFilter, setSelectedFilter] = useState(null);
+
+  useEffect(() => {
+    setSelectedFilter(getScoreboardFilterByID(id));
+  }, [id]);
+
 
   const getScoreboardFilterByID = (id) => {
     return DataScoreboardFilters.find((filter) => {
@@ -15,14 +20,18 @@ export default function ScoreboardFilter(props) {
 
   return (
     <>
-      <li>
-        <span className="text-ui-400">{getScoreboardFilterByID(id).name}:</span>
-        <span className="text-main">
-          {getScoreboardFilterByID(id).items.map((item, itemIndex) => (
-            <>{value === item.id && <>{item.name}</>}</>
-          ))}
-        </span>
-      </li>
+      {selectedFilter && (
+        <li>
+          <span className="text-ui-400">
+            {getScoreboardFilterByID(id).name}:
+          </span>
+          <span className="text-main">
+            {getScoreboardFilterByID(id).items.map((item, itemIndex) => (
+              <>{value === item.id && <>{item.name}</>}</>
+            ))}
+          </span>
+        </li>
+      )}
     </>
   );
 }
