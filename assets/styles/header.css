@@ -246,3 +246,20 @@
     }
   }
 }
+
+.header.header-tertiary {
+  .header-bg {
+    &::before {
+      @apply
+      from-ui-900/90
+      to-ui-900/75
+      xl:w-full
+      ;
+    }
+    > img {
+      @apply
+      xl:w-full
+      ;
+    }
+  }
+}

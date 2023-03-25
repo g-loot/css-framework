@@ -23,6 +23,12 @@ const SubMenuItem = [
     icon: "icon-statistics",
     label: "Stats",
   },
+  {
+    onlygame: "valorant",
+    url: "scoreboards",
+    icon: "icon-stairs",
+    label: "Scoreboards",
+  },
   /*
   {
     url: "tournaments",

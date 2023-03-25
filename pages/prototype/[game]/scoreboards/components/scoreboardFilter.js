@@ -15,14 +15,18 @@ export default function ScoreboardFilter(props) {
 
   return (
     <>
-      <li>
-        <span className="text-ui-400">{getScoreboardFilterByID(id).name}:</span>
-        <span className="text-main">
-          {getScoreboardFilterByID(id).items.map((item, itemIndex) => (
-            <>{value === item.id && <>{item.name}</>}</>
-          ))}
-        </span>
-      </li>
+      {getScoreboardFilterByID(id) && (
+        <li>
+          <span className="text-ui-400">
+            {getScoreboardFilterByID(id).name}:
+          </span>
+          <span className="text-main">
+            {getScoreboardFilterByID(id).items.map((item, itemIndex) => (
+              <>{value === item.id && <>{item.name}</>}</>
+            ))}
+          </span>
+        </li>
+      )}
     </>
   );
 }

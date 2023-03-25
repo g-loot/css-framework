@@ -642,7 +642,7 @@ export const dataUsers = [
       twitch: "@valance",
     },
     shopItems: {
-      avatarFrame: 4,
+      avatarFrame: 110,
       profileBanner: 35,
     },
     stats: {
@@ -947,7 +947,7 @@ export const dataUsers = [
       twitch: "@Joppe",
     },
     shopItems: {
-      avatarFrame: 110,
+      avatarFrame: 4,
       profileBanner: 27,
     },
     stats: {

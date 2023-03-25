@@ -99,17 +99,20 @@ export default function Scoreboards() {
 
               <section className="mb-4">
                 {selectedTab !== "all" ? (
-                  <div className="header surface sm:rounded-lg">
+                  <div className="header header-tertiary surface sm:rounded-lg">
                     <div className="header-content">
+                      <div className="header-image">
+                        <img src={getScoreboardBySlug(0, selectedTab).logo} alt={getScoreboardBySlug(0, selectedTab).name} />
+                      </div>
                       <div className="header-body">
-                        <h1>{getScoreboardBySlug(0, selectedTab).name}</h1>
+                        <h1 className="sr-only">{getScoreboardBySlug(0, selectedTab).name}</h1>
                         <p className="text-ui-300 max-w-[70ch] mt-4">
                           {getScoreboardBySlug(0, selectedTab).description}
                         </p>
                       </div>
                     </div>
                     <div className="header-bg">
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
+                      <img src={getScoreboardBySlug(0, selectedTab).background} />
                     </div>
                   </div>
                 ) : (
@@ -123,7 +126,7 @@ export default function Scoreboards() {
                       </div>
                     </div>
                     <div className="header-bg">
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1679766103/Stryda/illustrations/Scoreboard_bg.jpg" />
                     </div>
                   </div>
                 )}

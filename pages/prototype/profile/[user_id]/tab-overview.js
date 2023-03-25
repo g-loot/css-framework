@@ -331,7 +331,7 @@ export default function TabProfileOverview() {
                         Ladders played
                       </div>
                       <div className="text-ui-100 text-xl lg:text-3xl">523</div>
-                      <div className="text-xs lg:text-sm text-ui-300">
+                      <div className="hidden text-xs lg:text-sm text-ui-300">
                         Top 25%
                       </div>
                     </div>
@@ -340,7 +340,7 @@ export default function TabProfileOverview() {
                         Avg. placement
                       </div>
                       <div className="text-ui-100 text-xl lg:text-3xl">#42</div>
-                      <div className="text-xs lg:text-sm text-ui-300">
+                      <div className="hidden text-xs lg:text-sm text-ui-300">
                         Top 18%
                       </div>
                     </div>
@@ -349,7 +349,7 @@ export default function TabProfileOverview() {
                         Times in top 50
                       </div>
                       <div className="text-ui-100 text-xl lg:text-3xl">4</div>
-                      <div className="text-xs lg:text-sm text-ui-300">
+                      <div className="hidden text-xs lg:text-sm text-ui-300">
                         Top 11%
                       </div>
                     </div>
@@ -358,7 +358,7 @@ export default function TabProfileOverview() {
                         Missions completed
                       </div>
                       <div className="text-ui-100 text-xl lg:text-3xl">123</div>
-                      <div className="text-xs lg:text-sm text-ui-300">
+                      <div className="hidden text-xs lg:text-sm text-ui-300">
                         Top 4.5%
                       </div>
                     </div>

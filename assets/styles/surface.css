@@ -92,7 +92,9 @@
     bg-[length:800px_100%]
     bg-[-200%_center]
     bg-no-repeat
-    animate-[surface-loader_1s_linear_infinite];
+    animate-[surface-loader_1s_linear_infinite]
+    opacity-100
+    ;
     background-image: linear-gradient(
       to right,
       rgba(var(--color-ui-800) / 100%) 8%,
@@ -120,6 +122,16 @@
   }
   100% {
     background-position: 900px 0;
+  }
+}
+
+/* interactive */
+
+.surface {
+  &.interactive {
+    @apply
+    -outline-offset-1
+    ;
   }
 }
 

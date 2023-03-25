@@ -15,6 +15,15 @@ export default function TabScoreboardsOverview() {
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
   const isEmpty = query.empty === "true" ? true : false;
+  const [isLoading, setIsLoading] = useState(true);
+  
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [isLoading]);
 
   const getGameScoreboardsByID = (id) => {
     return DataScoreboards.find((general) => {
@@ -23,18 +32,32 @@ export default function TabScoreboardsOverview() {
   };
 
   return (
-    <section className="grid lg:grid-cols-2 gap-4">
+    <>
+    
+    {isLoading ? (
+      <section className="grid lg:grid-cols-2 gap-4">
+        <div className="surface rounded is-loading aspect-cover" />
+        <div className="surface rounded is-loading aspect-cover" />
+        <div className="surface rounded is-loading aspect-cover" />
+        <div className="surface rounded is-loading aspect-cover" />
+      </section>
+    ) :
+     (
+      <section className="grid xl:grid-cols-2 gap-4">
       {getGameScoreboardsByID(0).scoreboards?.map((item, itemIndex) => (
+        <Link href={`/prototype/valorant/scoreboards?tab=${item.slug}${prototype.getURLparams()}`}>
         <div
           key={itemIndex}
-          className="surface sm:rounded  divide-y divide-solid divide-ui-700 animate-slide-in-bottom animate-delay"
+          className="surface sm:rounded interactive divide-y divide-solid divide-ui-700 animate-slide-in-bottom animate-delay"
           style={{
             "--delay": "calc((" + itemIndex + " + 5) * 0.05s)",
           }}
         >
-          <div className="relative aspect-cover grid place-content-center">
-            <h3>{item.name}</h3>
-            <img src="" alt="" className="absolute inset-0 object-cover" />
+          <div className="relative rounded-t aspect-landscape grid place-content-center overflow-hidden">
+            <h3 className="sr-only">{item.name}</h3>
+            <img src={item.logo} alt={item.name} className="h-24 w-auto relative z-20" />
+            <span className="absolute z-10 inset-0 bg-ui-900/80" />
+            <img src={item.background} alt="" className="absolute z-0 inset-0 object-cover" />
           </div>
           <div className="py-3 flex items-start justify-between gap-3 p-3">
             <ul className="flex-1 flex gap-x-3 gap-y-2 flex-wrap whitespace-nowrap leading-none">
@@ -42,14 +65,14 @@ export default function TabScoreboardsOverview() {
                 <ScoreboardFilter item={item} key={itemIndex} />
               ))}
             </ul>
-            <Link href={`/prototype/valorant/scoreboards?tab=${item.slug}`}>
+            <Link href={`/prototype/valorant/scoreboards?tab=${item.slug}${prototype.getURLparams()}`}>
               <button type="button" className="button button-tertiary rounded-full">
                 <span className="icon icon-preferences" />
               </button>
             </Link>
           </div>
-          <ul className="">
-            <li className="item bg-ui-700">
+          <ul className="border-t border-ui-600">
+            <li className="item bg-ui-700 border-b border-ui-600">
               <div className="w-9 text-center">
                 <span className="text-ui-100">{item.scores.placement}</span>
               </div>
@@ -193,14 +216,18 @@ export default function TabScoreboardsOverview() {
             ))}
           </ul>
           <div className="p-2">
-            <Link href={`/prototype/valorant/scoreboards?tab=${item.slug}`}>
+            <Link href={`/prototype/valorant/scoreboards?tab=${item.slug}${prototype.getURLparams()}`}>
               <button type="button" className="button button-secondary w-full">
                 <span>View full leaderboard</span>
               </button>
             </Link>
           </div>
         </div>
+        </Link>
       ))}
     </section>
+    )}
+    </>
+    
   );
 }

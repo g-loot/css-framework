@@ -7,9 +7,9 @@ export const DataScoreboards = [
         id: 0,
         name: "All Stars",
         slug: "all-stars",
-        description: "qsdqsd",
-        logo: "",
-        background: "",
+        description: "Who has the best win rate in VALORANT? Measure yourself with everyone else.",
+        logo: "https://res.cloudinary.com/gloot/image/upload/v1679653549/Stryda/logos/scoreboards/scoreboard_valorant_allstars.svg",
+        background: "https://res.cloudinary.com/gloot/image/upload/v1679765506/Stryda/demo/valorant_scoreboards_allstars.jpg",
         players: [8, 4, 5, 2, 3, 7, 9, 11, 10, 6, 1],
         scores: {
           top: 10,
@@ -52,11 +52,11 @@ export const DataScoreboards = [
       },
       {
         id: 1,
-        name: "Level-up Podium",
-        slug: "levelup-podium",
-        description: "qsdqsd",
-        logo: "",
-        background: "",
+        name: "Level-up Champions",
+        slug: "levelup-champions",
+        description: "The Level-Up Champions ranks players based on the number of XP.",
+        logo: "https://res.cloudinary.com/gloot/image/upload/v1679653551/Stryda/logos/scoreboards/scoreboard_valorant_levelupchampions.svg",
+        background: "https://res.cloudinary.com/gloot/image/upload/v1679765506/Stryda/demo/valorant_scoreboards_levelupchampions.jpg",
         players: [2, 10, 11, 6, 1, 8, 4, 5, 3],
         scores: {
           top: 15,
@@ -115,27 +115,27 @@ export const DataScoreboardFilters = [
       },
       {
         id: 1,
-        name: "astra",
+        name: "Astra",
       },
       {
         id: 2,
-        name: "breach",
+        name: "Breach",
       },
       {
         id: 3,
-        name: "brimstone",
+        name: "Brimstone",
       },
       {
         id: 4,
-        name: "chamber",
+        name: "Chamber",
       },
       {
         id: 5,
-        name: "cypher",
+        name: "Cypher",
       },
       {
         id: 6,
-        name: "jett",
+        name: "Jett",
       },
       {
         id: 7,
@@ -143,59 +143,59 @@ export const DataScoreboardFilters = [
       },
       {
         id: 8,
-        name: "killjoy",
+        name: "Killjoy",
       },
       {
         id: 9,
-        name: "neon",
+        name: "Neon",
       },
       {
         id: 10,
-        name: "omen",
+        name: "Omen",
       },
       {
         id: 11,
-        name: "phoenix",
+        name: "Phoenix",
       },
       {
         id: 12,
-        name: "raze",
+        name: "Raze",
       },
       {
         id: 13,
-        name: "reyna",
+        name: "Reyna",
       },
       {
         id: 14,
-        name: "sage",
+        name: "Sage",
       },
       {
         id: 15,
-        name: "skye",
+        name: "Skye",
       },
       {
         id: 16,
-        name: "sova",
+        name: "Sova",
       },
       {
         id: 17,
-        name: "viper",
+        name: "Viper",
       },
       {
         id: 18,
-        name: "yoru",
+        name: "Yoru",
       },
       {
         id: 19,
-        name: "fade",
+        name: "Fade",
       },
       {
         id: 20,
-        name: "harbor",
+        name: "Harbor",
       },
       {
         id: 21,
-        name: "gekko",
+        name: "Gekko",
       },
     ],
   },
@@ -260,6 +260,10 @@ export const DataScoreboardFilters = [
         name: "All",
       },
       {
+        id: 4,
+        name: "Competitive",
+      },
+      {
         id: 1,
         name: "Unrated",
       },
@@ -272,16 +276,13 @@ export const DataScoreboardFilters = [
         name: "Swiftplay",
       },
       {
-        id: 4,
-        name: "Competitive",
+        id: 6,
+        name: "Deathmatch",
       },
+      /*
       {
         id: 5,
         name: "Premier",
-      },
-      {
-        id: 6,
-        name: "Deathmatch",
       },
       {
         id: 7,
@@ -295,6 +296,7 @@ export const DataScoreboardFilters = [
         id: 9,
         name: "Snowball Fight",
       },
+      */
     ],
   },
   {
