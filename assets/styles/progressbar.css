@@ -36,7 +36,16 @@
   &[style*="--percent: 0"] {
     > div {
       @apply
+      transition-none
       opacity-0
+      ;
+    }
+  }
+  &[style*='--percent:100'],
+  &[style*='--percent: 100'] {
+    > div {
+      @apply
+      transition-none
       ;
     }
   }

@@ -667,7 +667,7 @@
       inset-0
       bg-[-200%]
       bg-[length:200%_auto]
-      animate-[tab-shining-rays_5s_linear_infinite]
+      animate-[tab-shining-rays_5s_cubic-bezier(0.4,0,0.2,1)_infinite]
       bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_55%,_rgba(255,255,255,0)_56%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,.2)_71%,_rgba(255,255,255,0)_80%,_rgba(255,255,255,0)_81%)]
       bg-no-repeat
       ;

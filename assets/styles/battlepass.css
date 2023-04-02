@@ -1,0 +1,281 @@
+/*----------------------------*/
+/* BATTLE PASS */
+/*----------------------------*/
+
+
+.battlepass-container {
+  @apply
+  flex
+  flex-col
+  justify-center
+  items-center
+  gap-4
+  ;
+}
+
+.battlepass-viewer {
+  @apply
+  flex
+  flex-col
+  items-center
+  justify-center
+  gap-4
+  text-center
+  pb-16
+  ;
+  filter: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiAgCiAgICA8ZmlsdGVyIGlkPSJmaWx0ZXIiPgogICAgICAgIDxmZVR1cmJ1bGVuY2UgdHlwZT0idHVyYnVsZW5jZSIgYmFzZUZyZXF1ZW5jeT0iMC4wNyAwLjAxIiBudW1PY3RhdmVzPSI1IiBzZWVkPSIyIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIiB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJlc3VsdD0ibm9pc2UiPjwvZmVUdXJidWxlbmNlPgogICAgICAgIDxmZURpc3BsYWNlbWVudE1hcCBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJub2lzZSIgc2NhbGU9IjAuMDAwODE3MzQiIHhDaGFubmVsU2VsZWN0b3I9IlIiIHlDaGFubmVsU2VsZWN0b3I9IkIiIHg9IjAlIiB5PSIwJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48L2ZlRGlzcGxhY2VtZW50TWFwPgogICAgPC9maWx0ZXI+Cjwvc3ZnPg==#filter');
+
+
+  .battlepass-reward {
+    @apply
+    relative
+    w-72
+    aspect-square
+    rounded
+    overflow-hidden
+    ;
+    > i {
+      @apply
+      z-30
+      absolute
+      inset-0
+      bg-[-15%]
+      bg-[length:300%_auto]
+      animate-[battlepass-shining-rays_5s_cubic-bezier(0.4,0,0.2,1)_infinite]
+      bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_55%,_rgba(255,255,255,0)_56%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,.2)_71%,_rgba(255,255,255,0)_80%,_rgba(255,255,255,0)_81%)]
+      bg-no-repeat
+      ;
+      mask-size: cover;
+      mask-repeat: no-repeat;
+    }
+  }
+}
+
+.battlepass-nav {
+  @apply
+  flex
+  items-center
+  justify-center
+  rounded-full
+  bg-ui-800
+  text-center
+  text-sm
+  select-none
+  ;
+
+  > span {
+    @apply
+    min-w-[4.5rem]
+    ;
+  }
+}
+
+.battlepass {
+  @apply
+  flex
+  gap-4
+  ;
+}
+
+.battlepass-step {
+  @apply
+  w-32
+  flex
+  flex-col
+  items-stretch
+  gap-2
+  relative
+  ;
+  .battlepass-info {
+    @apply
+    order-2
+    ;
+    > .progressbar {
+      &::before {
+        @apply
+        content-['']
+        absolute
+        left-1/2
+        h-full
+        w-px
+        bg-ui-700
+        z-10
+        ;
+      }
+      > div {
+        @apply
+        transition-none
+        ;
+      }
+    }
+    > .progressbar,
+    > .progressbar > * {
+      @apply
+      rounded-[0.125rem]
+      ;
+    }
+  }
+
+  .battlepass-content {
+    @apply
+    order-1
+    bg-ui-800
+    border-2
+    border-ui-600
+    hover:border-ui-400
+    active:border-ui-600
+    rounded
+    aspect-square
+    cursor-pointer
+    relative
+    overflow-hidden
+    outline
+    -outline-offset-2
+    outline-1
+    outline-interaction-500/0
+    focus-visible:outline
+    focus-visible:outline-offset-2
+    focus-visible:outline-1
+    ;
+    .battlepass-decoration {
+      @apply
+      absolute
+      z-20
+      bottom-0
+      inset-x-0
+      bg-ui-900/75
+      text-ui-100
+      uppercase
+      text-sm
+      px-2
+      py-1
+      leading-none
+      ;
+    }
+    .battlepass-body {
+      &::before {
+        @apply
+        content-['']
+        absolute
+        z-0
+        rounded
+        inset-0
+        ;
+        background: 
+        radial-gradient(ellipse at 50% 25%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%), 
+        radial-gradient(50% 20% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0.13) 0.01%, rgba(255, 255, 255, 0) 100%);
+      }
+      * {
+        @apply
+        relative
+        z-10
+        ;
+      }
+    }
+  }
+
+  &.is-current {
+    .battlepass-content {
+     
+    }
+
+    ~ .battlepass-step {
+      .battlepass-content {
+      
+      }
+    }
+  }
+  &.is-premium {
+    &::before {
+      @apply
+      content-['premium']
+      text-ui-900
+      absolute
+      z-30
+      h-5
+      top-[calc(-1.25rem_+_1px)]
+      left-0
+      text-sm
+      leading-3
+      uppercase
+      pl-2
+      pr-3
+      py-1
+      rounded-tl
+      ;
+      clip-path: polygon(0 0, calc(100% - 0.5em) 0, 100% 100%, 0 100%);
+    }
+    .battlepass-content {
+      @apply
+      border-premium-500
+      hover:border-premium-300
+      active:border-premium-700
+      rounded-tl-none
+      ;
+    }
+    &::before {
+      @apply
+      bg-premium-500
+      ;
+    }
+    &:hover::before {
+      @apply
+      bg-premium-300
+      ;
+    }
+    &:active::before {
+      @apply
+      bg-premium-700
+      ;
+    }
+  }
+  &.is-active {
+    .battlepass-content {
+      @apply
+      border-interaction-500
+      hover:border-interaction-300
+      active:border-interaction-700
+      ;
+      &::after {
+        @apply
+        content-['']
+        z-30
+        absolute
+        inset-0
+        bg-[-15%]
+        bg-[length:300%_auto]
+        animate-[battlepass-shining-rays_5s_cubic-bezier(0.4,0,0.2,1)_infinite]
+        bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_55%,_rgba(255,255,255,0)_56%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,.2)_71%,_rgba(255,255,255,0)_80%,_rgba(255,255,255,0)_81%)]
+        bg-no-repeat
+        ;
+      }
+    }
+    &.is-premium {
+      &::before {
+        @apply
+        bg-interaction-500
+        ;
+      }
+      &:hover::before {
+        @apply
+        bg-interaction-300
+        ;
+      }
+      &:active::before {
+        @apply
+        bg-interaction-700
+        ;
+      }
+    }
+  }
+ 
+}
+
+@keyframes battlepass-shining-rays {
+  0%, 25% {
+    background-position: -15%;
+  }
+  50%, 100% {
+    background-position: 150%;
+  }
+}

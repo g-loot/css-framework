@@ -13,7 +13,7 @@ export const DataScoreboards = [
         players: [8, 4, 5, 2, 3, 7, 9, 11, 10, 6, 1],
         scores: {
           top: 10,
-          placement: 50,
+          placement: 11,
           min: 0,
           max: 85,
           objective: "Win",
@@ -60,7 +60,7 @@ export const DataScoreboards = [
         players: [2, 10, 11, 6, 1, 8, 4, 5, 3],
         scores: {
           top: 15,
-          placement: 140,
+          placement: 5,
           min: 0,
           max: 2400,
           objective: "XP",

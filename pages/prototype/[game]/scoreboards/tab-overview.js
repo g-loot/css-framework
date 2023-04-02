@@ -151,8 +151,8 @@ export default function TabScoreboardsOverview() {
                     </div>
                     <div className="item-actions w-20 text-right">
                       <div>
-                        {item.scores.objective}
-                        {item.scores.label}
+                        {item.scores?.max}
+                        {item.scores?.label}
                       </div>
                     </div>
                   </li>
@@ -226,8 +226,9 @@ export default function TabScoreboardsOverview() {
                       </div>
                       <div className="item-actions w-20 text-right">
                         <div>
-                          {item.scores.objective}
-                          {item.scores.label}
+                         
+                          {item.scores?.max - playerIndex}
+                              {item.scores?.label}
                         </div>
                       </div>
                     </li>
