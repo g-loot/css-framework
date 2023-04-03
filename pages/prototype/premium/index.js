@@ -6,6 +6,45 @@ import { UiContext } from "../../../contexts/ui";
 import ModalBuyPremium from "./modal-buypremium";
 import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
 
+const PremiumBenefits = [
+  {
+    id: 1,
+    name: "Get a 50% XP boost",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1680512036/Stryda/illustrations/picture_premium_XP_2.png",
+  },
+  {
+    id: 2,
+    name: "Get free extra tokens for each token purchase",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1680512036/Stryda/illustrations/picture_premium_extra_tokens_2.png",
+  },
+  {
+    id: 3,
+    name: "Remove ads on the platform",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1680512036/Stryda/illustrations/picture_premium_ads_2.png",
+  },
+  {
+    id: 4,
+    name: "Ability to participate in premium only ladders",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1680512517/Stryda/illustrations/picture_premium_ladders_2.png",
+  },
+  {
+    id: 5,
+    name: "Significantly higher chance for rare, epic and legendary missions",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1680512036/Stryda/illustrations/picture_premium_rarity_2.png",
+  },
+  {
+    id: 6,
+    name: "Get 2 mission rerolls per day",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1680512036/Stryda/illustrations/picture_premium_missions_2.png",
+  },
+];
+
 export default function Premium() {
   const { query } = useRouter();
   const modalBuyPremium = query.modalpremium === "true" ? true : false;
@@ -53,75 +92,25 @@ export default function Premium() {
             </div>
           </section>
 
-          <section className="grid md:grid-cols-2 lg:grid-cols-4 justify-center mb-24 max-w-lg mx-auto text-center leading-none">
-            <div
-              className="animate-slide-in-bottom animate-delay"
-              style={{
-                "--delay": "calc(0 * 0.05s)",
-              }}
-            >
-              <img
-                className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1674657217/Stryda/illustrations/picture_premium_xp_boost.png"
-                width="300"
-                height="auto"
-                alt=""
-              />
-              <p className="text-ui-100 max-w-[20ch] mx-auto">
-                Get a 50% XP boost
-              </p>
-            </div>
-            <div
-              className="animate-slide-in-bottom animate-delay"
-              style={{
-                "--delay": "calc(1 * 0.05s)",
-              }}
-            >
-              <img
-                className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1674657217/Stryda/illustrations/picture_premium_rewards.png"
-                width="300"
-                height="auto"
-                alt=""
-              />
-              <p className="text-ui-100 max-w-[20ch] mx-auto">
-                Earn rewards faster
-              </p>
-            </div>
-            <div
-              className="animate-slide-in-bottom animate-delay"
-              style={{
-                "--delay": "calc(2 * 0.05s)",
-              }}
-            >
-              <img
-                className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1674657217/Stryda/illustrations/picture_premium_extra_tokens.png"
-                width="300"
-                height="auto"
-                alt=""
-              />
-              <p className="text-ui-100 max-w-[20ch] mx-auto">
-                Get free extra tokens for each token purchase
-              </p>
-            </div>
-            <div
-              className="animate-slide-in-bottom animate-delay"
-              style={{
-                "--delay": "calc(3 * 0.05s)",
-              }}
-            >
-              <img
-                className="mx-auto block"
-                src="https://res.cloudinary.com/gloot/image/upload/v1674657217/Stryda/illustrations/picture_premium_no_ads.png"
-                width="300"
-                height="auto"
-                alt=""
-              />
-              <p className="text-ui-100 max-w-[20ch] mx-auto">
-                Remove ads on the platform
-              </p>
-            </div>
+          <section className="grid md:grid-cols-2 lg:grid-cols-3 justify-center mb-24 max-w-lg mx-auto text-center leading-none">
+            {PremiumBenefits.map((item, itemIndex) => (
+              <div
+                className="animate-slide-in-bottom animate-delay"
+                key={itemIndex}
+                style={{
+                  "--delay": "calc((" + itemIndex + " + 5) * 0.05s)",
+                }}
+              >
+                <img
+                  className="mx-auto block"
+                  src={item.image}
+                  width="300"
+                  height="auto"
+                  alt=""
+                />
+                <p className="text-ui-100 max-w-[25ch] mx-auto">{item.name}</p>
+              </div>
+            ))}
           </section>
 
           <section className="relative z-10 pt-12 md:pt-20 mb-40 container max-w-lg mx-auto">
@@ -198,7 +187,8 @@ export default function Premium() {
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl icon-e-remove text-ui-400" />
                       <span className="text-ui-400">
-                        Create a Discord profile to describe who you are as a gamer and find a clan.
+                        Create a Discord profile to describe who you are as a
+                        gamer and find a clan.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
@@ -249,7 +239,8 @@ export default function Premium() {
                     <li className="flex gap-4 items-start">
                       <span className="icon text-2xl icon-verified text-premium-500" />
                       <span className="text-ui-200">
-                        Create a Discord profile to describe who you are as a gamer and find a clan.
+                        Create a Discord profile to describe who you are as a
+                        gamer and find a clan.
                       </span>
                     </li>
                     <li className="flex gap-4 items-start">
