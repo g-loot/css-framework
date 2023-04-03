@@ -9,6 +9,7 @@ import { usePrototypeData } from "../../../contexts/prototype";
 import Tooltip from "../../../components/Tooltip/Tooltip";
 import Link from "next/link";
 import CardMissionSecondary from "../../../components/Card/CardMissionSecondary";
+import ButtonStatsUpdate from "../../../components/ButtonStatsUpdate/ButtonStatsUpdate";
 
 export default function HomeLadderMissions(props) {
   const { query } = useRouter();
@@ -40,22 +41,7 @@ export default function HomeLadderMissions(props) {
             className="tooltip tooltip-left"
             data-tooltip="This might take up to 15 minutes. Make sure the match you’re trying to fetch is 100% completed."
           >
-            <button
-              className={`button button-xs button-secondary ${
-                submitting ? "is-loading" : ""
-              }`}
-              onClick={addToastWithDelay.bind(this, {
-                icon: "f-check",
-                color: "green",
-                text: "Your stats have been updated.",
-                autoDelete: true,
-                autoDeleteDelay: 2500,
-              })}
-            >
-              <span className="icon icon-16 icon-refresh-02" />
-              <span className="hidden sm:block">Request a stats update</span>
-              <span className="block sm:hidden">Update</span>
-            </button>
+            <ButtonStatsUpdate />
           </div>
         </div>
       </div>

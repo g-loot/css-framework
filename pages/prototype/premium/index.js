@@ -11,37 +11,37 @@ const PremiumBenefits = [
     id: 1,
     name: "Get a 50% XP boost",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680512036/Stryda/illustrations/picture_premium_XP_2.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_XP_2.png",
   },
   {
     id: 2,
     name: "Get free extra tokens for each token purchase",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680512036/Stryda/illustrations/picture_premium_extra_tokens_2.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_extra_tokens_2.png",
   },
   {
     id: 3,
     name: "Remove ads on the platform",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680512036/Stryda/illustrations/picture_premium_ads_2.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_ads_2.png",
   },
   {
     id: 4,
-    name: "Ability to participate in premium only ladders",
+    name: "Significantly higher chance for rare, epic and legendary missions",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680512517/Stryda/illustrations/picture_premium_ladders_2.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_rarity_2.png",
   },
   {
     id: 5,
-    name: "Significantly higher chance for rare, epic and legendary missions",
+    name: "Ability to participate in premium only ladders",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680512036/Stryda/illustrations/picture_premium_rarity_2.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_ladders_2.png",
   },
   {
     id: 6,
-    name: "Get 2 mission rerolls per day",
+    name: "Get 2 mission discards per day in order to reroll new ones",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680512036/Stryda/illustrations/picture_premium_missions_2.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_missions_2.png",
   },
 ];
 

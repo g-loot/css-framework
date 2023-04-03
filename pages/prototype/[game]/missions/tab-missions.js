@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
 import PremiumLogo from "../../../../components/PremiumLogo/PremiumLogo";
 import CardMissionTableTr from "../../../../components/Card/CardMissionTableTr";
+import ButtonStatsUpdate from "../../../../components/ButtonStatsUpdate/ButtonStatsUpdate";
 
 export default function TabMissionsMissions() {
   const router = useRouter();
@@ -29,6 +30,7 @@ export default function TabMissionsMissions() {
       setSubmitting(false);
     }, 1000);
   }
+
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
@@ -85,31 +87,9 @@ export default function TabMissionsMissions() {
 
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
               <div>
-                New missions in <b>4H 23M 12S</b>
+              Your latest match ended <b>Dec 13 / 8:12 PM</b>
               </div>
-              <div className="md:text-right flex items-center gap-2">
-                <div>
-                  Your latest match ended <b>Dec 13 / 8:12 PM</b>
-                </div>
-                <button
-                  className={`button button-xs button-secondary ${
-                    submitting ? "is-loading" : ""
-                  }`}
-                  onClick={addToastWithDelay.bind(this, {
-                    icon: "f-check",
-                    color: "green",
-                    text: "Your stats have been updated.",
-                    autoDelete: true,
-                    autoDeleteDelay: 2500,
-                  })}
-                >
-                  <span className="icon icon-16 icon-refresh-02" />
-                  <span className="hidden sm:block">
-                    Request a stats update
-                  </span>
-                  <span className="block sm:hidden">Update</span>
-                </button>
-              </div>
+              <ButtonStatsUpdate />
             </div>
 
             {/*
