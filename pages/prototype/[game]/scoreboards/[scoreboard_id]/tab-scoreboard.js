@@ -83,29 +83,60 @@ export default function TabScoreboard(props) {
           </section>
 
           <section
-            className={`pb-8 ${!isLoading ? 'animate-slide-in-bottom animate-delay' : ''}`}
+            className={`pb-8 ${
+              !isLoading ? "animate-slide-in-bottom animate-delay" : ""
+            }`}
             style={{ "--delay": "calc(1 * 0.05s)" }}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-              <div className="col-span-1 hidden lg:block pt-9 space-y-4">
+            <div className="flex flex-col lg:flex-row gap-8">
+              <div className="w-80 hidden lg:block pt-9 space-y-4">
                 <div
-                  className={`surface rounded text-center ${
+                  className={`surface p-2 pt-4 rounded text-center ${
                     isLoading ? "is-loading" : ""
                   }`}
                 >
-                  <p className="text-ui-300 p-3">Your placement</p>
-                  <div className="border-t border-ui-700 space-y-2 p-3">
-                    <h4>Top {selectedScoreboard.scores.top}%</h4>
-                    <p className="text-ui-300">
-                      #{selectedScoreboard.scores.placement}
-                    </p>
-                    <button
-                      type="button"
-                      className="button button-sm button-secondary w-full"
-                    >
-                      <span>Go to my position</span>
-                    </button>
-                  </div>
+                  <Avatar id={1} hasLevel={false} size="avatar-lg" />
+                  {selectedScoreboard.isEligible ? (
+                    <>
+                      <p>
+                        {prototype.getUserByID(1).clan && (
+                          <>
+                            &#91;
+                            {
+                              prototype.getClanByID(
+                                prototype.getUserByID(1).clan
+                              )?.tag
+                            }
+                            &#93;{" "}
+                          </>
+                        )}{" "}
+                        {prototype.getUserByID(1).nickname}
+                      </p>
+                      <div className="py-2 space-y-2">
+                        <h3>#{selectedScoreboard.scores.placement}</h3>
+                        <p className="text-ui-300 text-sm uppercase flex gap-3 justify-center">
+                          <span>
+                            {selectedScoreboard.scores.max - 20}
+                            {selectedScoreboard.scores?.label}{" "}
+                            {selectedScoreboard.scores?.objective}
+                          </span>
+                          <span>Top {selectedScoreboard.scores.top}%</span>
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        className="button button-sm button-secondary w-full"
+                      >
+                        <span>Go to my position</span>
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-ui-300 py-2">
+                        Play more matches to be eligible for this scoreboard.
+                      </p>
+                    </>
+                  )}
                 </div>
                 <div
                   className={`surface rounded text-center ${
@@ -113,34 +144,156 @@ export default function TabScoreboard(props) {
                   }`}
                 >
                   <p className="text-ui-300 p-3">Friends placement</p>
-                  <ul className="border-t border-ui-700 child:flex child:justify-between child:py-2 child:px-3">
+                  <ul className="border-t border-ui-700 child:flex child:items-center child:justify-between child:py-2 child:px-2 child:gap-3">
                     {prototype.getUserByID(1).friends.map((item, itemIndex) => (
-                      <li key={itemIndex} className="even:bg-ui-700">
-                        <span>
-                          {prototype.getUserByID(item).clan && (
-                            <>
-                              &#91;
-                              {
-                                prototype.getClanByID(
-                                  prototype.getUserByID(item).clan
-                                )?.tag
-                              }
-                              &#93;{" "}
-                            </>
-                          )}
-                          {prototype.getUserByID(item).nickname}
-                        </span>
-                        <span>
-                          {selectedScoreboard.scores?.max - itemIndex}
-                          {selectedScoreboard.scores?.label}
-                        </span>
-                      </li>
+                      <Link
+                        key={itemIndex}
+                        href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                      >
+                        <li className="interactive even:bg-ui-700 overflow-hidden">
+                          <span className="w-9 text-center">
+                            {RandomNumber(4, 200)}
+                          </span>
+                          <Avatar id={item} />
+                          <span className="flex-1 text-left truncate">
+                            {prototype.getUserByID(item).clan && (
+                              <>
+                                &#91;
+                                {
+                                  prototype.getClanByID(
+                                    prototype.getUserByID(item).clan
+                                  )?.tag
+                                }
+                                &#93;{" "}
+                              </>
+                            )}
+                            {prototype.getUserByID(item).nickname}
+                          </span>
+                          <span className="text-right">
+                            {selectedScoreboard.scores?.max - itemIndex}
+                            {selectedScoreboard.scores?.label}
+                          </span>
+                        </li>
+                      </Link>
                     ))}
                   </ul>
                 </div>
               </div>
-              <div className="col-span-1 lg:col-span-3">
+              <div className="flex-1">
                 <div className="px-2 md:px-0">
+                  <ul className="items-spaced lg:hidden">
+                    {selectedScoreboard.isEligible ? (
+                      <li
+                        className={`item rounded ${
+                          isLoading ? "" : "animate-slide-in-bottom"
+                        }`}
+                      >
+                        <div className="w-14 text-center px-2 flex items-center justify-center">
+                          <span
+                            className={`text-2xl  ${selectedScoreboard.scores.placement} === 0 ? "text-gold-500" : ""
+                               }${selectedScoreboard.scores.placement} === 1 ? "text-silver-500" : ""} ${selectedScoreboard.scores.placement} === 2 ? "text-bronze-500" : ""
+                               } ${selectedScoreboard.scores.placement} > 2 ? "text-ui-300" : ""}`}
+                          >
+                            {selectedScoreboard.scores.placement}
+                          </span>
+                          <div className="absolute">
+                            <svg
+                              className={`${selectedScoreboard.scores.placement} === 0 ? "fill-gold-500" : ""
+                                 }${selectedScoreboard.scores.placement} === 1 ? "fill-silver-500" : ""} ${selectedScoreboard.scores.placement} === 2 ? "fill-bronze-500" : ""
+                                 } ${selectedScoreboard.scores.placement} > 2 ? "hidden" : ""}`}
+                              width="52"
+                              height="30"
+                              viewBox="0 0 52 30"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path d="M11.7039 27.2265L7.12878 29.95L14.686 27.9073C15.3028 27.7406 15.866 27.409 16.3186 26.9461C16.7712 26.4831 17.0973 25.905 17.2638 25.2705L14.9254 24.8456C14.283 24.7288 13.701 24.3822 13.2816 23.867C12.8623 23.3518 12.6327 22.7008 12.6327 22.0282V0.950012L8.2045 17.6286L2.89837 11.1091L8.50356 23.6777L2 22.4956L11.7039 27.2265Z" />
+                              <path d="M39.5599 27.2265L44.135 29.95L36.5778 27.9073C35.961 27.7406 35.3978 27.409 34.9452 26.9461C34.4926 26.4831 34.1665 25.905 34 25.2705L36.3383 24.8456C36.9808 24.7288 37.5628 24.3822 37.9822 23.867C38.4015 23.3518 38.6311 22.7008 38.6311 22.0282V0.950012L43.0593 17.6286L48.3654 11.1091L42.7602 23.6777L49.2638 22.4956L39.5599 27.2265Z" />
+                            </svg>
+                          </div>
+                        </div>
+                        <div className="item-image">
+                          <Link
+                            href={`/prototype/profile/1${prototype.getURLparams()}`}
+                          >
+                            <Avatar
+                              id={1}
+                              hasTooltip={true}
+                              hasTooltipXP={false}
+                            />
+                          </Link>
+                        </div>
+                        <div className="item-body">
+                          <Link
+                            href={`/prototype/profile/1${prototype.getURLparams()}`}
+                          >
+                            <div className="item-title interactive truncate">
+                              <span
+                                className={`${
+                                  prototype.getUserByID(1)?.isYou
+                                    ? "text-main font-bold"
+                                    : ""
+                                } ${
+                                  prototype.getUserByID(1)?.isPremium
+                                    ? "text-premium-500"
+                                    : ""
+                                }`}
+                              >
+                                {prototype.getUserByID(1)?.clan && (
+                                  <>
+                                    &#91;
+                                    {
+                                      prototype.getClanByID(
+                                        prototype.getUserByID(1)?.clan
+                                      )?.tag
+                                    }
+                                    &#93;{" "}
+                                  </>
+                                )}
+                                {prototype.getUserByID(1)?.nickname}
+                              </span>
+                            </div>
+                          </Link>
+                        </div>
+                        <div className="item-body text-center">
+                          <Tooltip tooltip={`Ascendant`}>
+                            <img
+                              className="h-10"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/rank-acendant.webp"
+                              height="auto"
+                              width="auto"
+                              alt=""
+                            />
+                          </Tooltip>
+                        </div>
+                        <div className="item-actions w-20 text-right">
+                          <div>
+                            {selectedScoreboard.scores?.max - 20}
+                            {selectedScoreboard.scores?.label}
+                          </div>
+                        </div>
+                      </li>
+                    ) : (
+                      <li
+                        className={`item rounded ${
+                          isLoading ? "" : "animate-slide-in-bottom"
+                        }`}
+                      >
+                        <div className="w-14 text-center px-2 flex items-center justify-center">
+                          <span className="text-2xl text-ui-300">-</span>
+                        </div>
+                        <div className="item-image">
+                          <Avatar id={1} hasLevel={false} />
+                        </div>
+                        <div className="item-body">
+                          <div className="item-title text-ui-300">
+                            Play more matches to be eligible for this
+                            scoreboard.
+                          </div>
+                        </div>
+                      </li>
+                    )}
+                  </ul>
                   <div className="item border-0 text-sm uppercase text-ui-300">
                     <div className="w-14" />
                     <div className="item-image w-9" />
@@ -238,7 +391,7 @@ export default function TabScoreboard(props) {
                             <Link
                               href={`/prototype/profile/${item}${prototype.getURLparams()}`}
                             >
-                              <div className="item-title interactive">
+                              <div className="item-title interactive truncate">
                                 <span
                                   className={`${
                                     prototype.getUserByID(item)?.isYou

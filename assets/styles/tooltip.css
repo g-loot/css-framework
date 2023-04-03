@@ -2,7 +2,7 @@
 /* TOOLTIP */
 /*----------------------------*/
 
-:where(.tooltip, [data-tooltip]) {
+:where(.tooltip, [data-tooltip]:not([data-tooltip=""])) {
   @apply
   relative
   cursor-pointer
@@ -32,7 +32,7 @@
     text-ui-200
   }
 
-  &:not([data-tooltip]) {
+  &:not([data-tooltip]:not([data-tooltip=""])) {
     > blockquote {
       @apply
       max-w-[16rem]
@@ -54,7 +54,7 @@
     }
   }
 
-  &[data-tooltip] {
+  &[data-tooltip]:not([data-tooltip=""]) {
     &::after {
       @apply
       content-[attr(data-tooltip)]
@@ -164,7 +164,7 @@
 
 /* tooltip attention */
 
-[data-tooltip] {
+[data-tooltip]:not([data-tooltip=""]) {
   &.tooltip-attention {
     @apply
     outline
@@ -406,7 +406,7 @@
 /* responsive positioning */
 
 @media only screen and (min-width: 640px) {
-	.tooltip[data-tooltip] {
+	.tooltip[data-tooltip]:not([data-tooltip=""]) {
     &.sm\:tooltip-top {
       &::after {
         @apply
@@ -581,7 +581,7 @@
   }
 }
 @media only screen and (min-width: 768px) {
-	.tooltip[data-tooltip] {
+	.tooltip[data-tooltip]:not([data-tooltip=""]) {
     &.md\:tooltip-top {
       &::after {
         @apply
@@ -754,7 +754,7 @@
   }
 }
 @media only screen and (min-width: 1024px) {
-	.tooltip[data-tooltip] {
+	.tooltip[data-tooltip]:not([data-tooltip=""]) {
     &.lg\:tooltip-top {
       &::after {
         @apply
@@ -929,7 +929,7 @@
   }
 }
 @media only screen and (min-width: 1280px) {
-	.tooltip[data-tooltip] {
+	.tooltip[data-tooltip]:not([data-tooltip=""]) {
     &.xl\:tooltip-top {
       &::after {
         @apply

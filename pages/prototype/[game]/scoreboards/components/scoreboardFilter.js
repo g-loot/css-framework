@@ -19,14 +19,16 @@ export default function ScoreboardFilter({id, value}) {
   return (
     <>
       {selectedFilter && (
-        <li>
-          <span className="text-ui-400">
-            {getScoreboardFilterByID(id).name}:
-          </span>
-          <span className="text-main">
-            {getScoreboardFilterByID(id).items.map((item, itemIndex) => (
-              <>{value === item.id && <>{item.name}</>}</>
-            ))}
+        <li className="chip chip-secondary chip-sm">
+          <span>
+            <span className="text-ui-400">
+              {getScoreboardFilterByID(id).name}:
+            </span>
+            <span className="text-ui-200">
+              {getScoreboardFilterByID(id).items.map((item, itemIndex) => (
+                <>{value === item.id && <>{item.name}</>}</>
+              ))}
+            </span>
           </span>
         </li>
       )}

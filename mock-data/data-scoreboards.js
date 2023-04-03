@@ -11,6 +11,7 @@ export const DataScoreboards = [
         logo: "https://res.cloudinary.com/gloot/image/upload/v1679653549/Stryda/logos/scoreboards/scoreboard_valorant_allstars.svg",
         background: "https://res.cloudinary.com/gloot/image/upload/v1679765506/Stryda/demo/valorant_scoreboards_allstars.jpg",
         players: [8, 4, 5, 2, 3, 7, 9, 11, 10, 6, 1],
+        isEligible: true,
         scores: {
           top: 10,
           placement: 11,
@@ -58,6 +59,7 @@ export const DataScoreboards = [
         logo: "https://res.cloudinary.com/gloot/image/upload/v1679653551/Stryda/logos/scoreboards/scoreboard_valorant_levelupchampions.svg",
         background: "https://res.cloudinary.com/gloot/image/upload/v1679765506/Stryda/demo/valorant_scoreboards_levelupchampions.jpg",
         players: [2, 10, 11, 6, 1, 8, 4, 5, 3],
+        isEligible: false,
         scores: {
           top: 15,
           placement: 5,

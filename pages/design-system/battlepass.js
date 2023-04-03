@@ -71,7 +71,7 @@ const DSpage = () => {
             <div className="flex gap-4 flex-col">
               <BattlePass />
 
-              <div className="flex-1">
+              <div className="flex-1 hidden">
                 <iframe
                   className="rounded"
                   width="100%"

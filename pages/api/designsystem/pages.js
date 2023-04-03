@@ -204,6 +204,11 @@ export const DSpages = [
         tags: "content,reward,ladder,progression,leaderboard,claim,tokens,coins,prize,delight,daily rewards",
         url: "dailyreward",
       },
+      {
+        label: "Battle Pass",
+        tags: "content,reward,battle pass,battlepass,progression,leaderboard,claim,tokens,coins,prize,delight,reward ladder",
+        url: "battlepass",
+      },
     ],
   },
   {

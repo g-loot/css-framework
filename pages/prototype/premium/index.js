@@ -33,7 +33,7 @@ const PremiumBenefits = [
   },
   {
     id: 5,
-    name: "Ability to participate in premium only ladders",
+    name: "Ability to participate in premium only competitions",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_ladders_2.png",
   },

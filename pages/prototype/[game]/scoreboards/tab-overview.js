@@ -49,7 +49,7 @@ export default function TabScoreboardsOverview() {
               }${prototype.getURLparams()}`}
             >
               <div
-                className="surface sm:rounded interactive divide-y divide-solid divide-ui-700 animate-slide-in-bottom animate-delay"
+                className="surface sm:rounded interactive animate-slide-in-bottom animate-delay"
                 style={{
                   "--delay": "calc((" + itemIndex + " + 5) * 0.05s)",
                 }}
@@ -69,9 +69,13 @@ export default function TabScoreboardsOverview() {
                   />
                 </div>
                 <div className="py-3 flex items-start justify-between gap-3 p-3">
-                  <ul className="flex-1 flex gap-x-3 gap-y-2 flex-wrap whitespace-nowrap leading-none">
+                  <ul className="flex-1 flex gap-x-2 gap-y-1 flex-wrap whitespace-nowrap leading-none">
                     {item.filters?.map((item, itemIndex) => (
-                      <ScoreboardFilter id={item.id} value={item.value}  key={itemIndex} />
+                      <ScoreboardFilter
+                        id={item.id}
+                        value={item.value}
+                        key={itemIndex}
+                      />
                     ))}
                   </ul>
                   <Link
@@ -87,75 +91,111 @@ export default function TabScoreboardsOverview() {
                     </button>
                   </Link>
                 </div>
-                <ul className="border-t border-ui-600">
-                  <li className="item bg-ui-700 border-b border-ui-600">
-                    <div className="w-9 text-center">
-                      <span className="text-ui-100">
-                        {item.scores.placement}
-                      </span>
-                    </div>
-                    <div className="item-image">
-                      <Link
-                        href={`/prototype/profile/${1}${prototype.getURLparams()}`}
-                      >
-                        <Avatar
-                          id={1}
-                          hasTooltip={true}
-                          hasTooltipXP={false}
-                          size="avatar-tiny"
-                        />
-                      </Link>
-                    </div>
-                    <div className="item-body">
-                      <Link
-                        href={`/prototype/profile/${1}${prototype.getURLparams()}`}
-                      >
-                        <div className="item-title interactive">
-                          <span
-                            className={`${
-                              prototype.getUserByID(1)?.isYou
-                                ? "text-main font-bold"
-                                : ""
-                            } ${
-                              prototype.getUserByID(1)?.isPremium
-                                ? "text-premium-500"
-                                : ""
-                            }`}
-                          >
-                            {prototype.getUserByID(1)?.clan && (
-                              <>
-                                &#91;
-                                {
-                                  prototype.getClanByID(
-                                    prototype.getUserByID(1)?.clan
-                                  )?.tag
-                                }
-                                &#93;{" "}
-                              </>
-                            )}
-                            {prototype.getUserByID(1)?.nickname}
-                          </span>
-                        </div>
-                      </Link>
-                    </div>
-                    <div className="item-body text-center">
-                      <Tooltip tooltip={`Ascendant`}>
-                        <img
-                          className="h-6"
-                          src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/rank-acendant.webp"
-                          height="auto"
-                          width="auto"
-                          alt=""
-                        />
-                      </Tooltip>
-                    </div>
-                    <div className="item-actions w-20 text-right">
-                      <div>
-                        {item.scores?.max}
-                        {item.scores?.label}
+                <ul className="border-y border-ui-600">
+                  {item.isEligible ? (
+                    <li className="item bg-ui-700">
+                      <div className="w-9 text-center">
+                        <span className="text-ui-100">
+                          {item.scores.placement}
+                        </span>
                       </div>
-                    </div>
-                  </li>
+                      <div className="item-image">
+                        <Link
+                          href={`/prototype/profile/${1}${prototype.getURLparams()}`}
+                        >
+                          <Avatar
+                            id={1}
+                            hasTooltip={true}
+                            hasTooltipXP={false}
+                            size="avatar-tiny"
+                          />
+                        </Link>
+                      </div>
+                      <div className="item-body">
+                        <Link
+                          href={`/prototype/profile/${1}${prototype.getURLparams()}`}
+                        >
+                          <div className="item-title interactive truncate ">
+                            <span
+                              className={`${
+                                prototype.getUserByID(1)?.isYou
+                                  ? "text-main font-bold"
+                                  : ""
+                              } ${
+                                prototype.getUserByID(1)?.isPremium
+                                  ? "text-premium-500"
+                                  : ""
+                              }`}
+                            >
+                              {prototype.getUserByID(1)?.clan && (
+                                <>
+                                  &#91;
+                                  {
+                                    prototype.getClanByID(
+                                      prototype.getUserByID(1)?.clan
+                                    )?.tag
+                                  }
+                                  &#93;{" "}
+                                </>
+                              )}
+                              {prototype.getUserByID(1)?.nickname}
+                            </span>
+                          </div>
+                        </Link>
+                      </div>
+                      <div className="item-body text-center">
+                        <Tooltip tooltip={`Ascendant`}>
+                          <img
+                            className="h-6"
+                            src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/rank-acendant.webp"
+                            height="auto"
+                            width="auto"
+                            alt=""
+                          />
+                        </Tooltip>
+                      </div>
+                      <div className="item-actions w-20 text-right">
+                        <div>
+                          {item.scores?.max}
+                          {item.scores?.label}
+                        </div>
+                      </div>
+                    </li>
+                  ) : (
+                    <li className="item bg-ui-700">
+                      <div className="w-9 text-center">
+                        <span className="text-ui-100">-</span>
+                      </div>
+                      <div className="item-image">
+                        <Avatar id={1} hasLevel={false} size="avatar-tiny" />
+                      </div>
+                      <div className="item-body">
+                        <div className="item-title text-ui-300">
+                          You are not eligible for this leaderboard
+                        </div>
+                      </div>
+                      <div className="item-actions">
+                        <div>
+                          <Tooltip
+                            tooltip={
+                              `This is what you have to do to join this
+                              leaderboard`
+                            }
+                          >
+                            <button className="text-ui-300 text-0">
+                              <span className="icon icon-16 icon-c-info" />
+                            </button>
+                          </Tooltip>
+                        </div>
+                      </div>
+                    </li>
+                  )}
+                </ul>
+                <div className="p-2 pl-5 text-sm text-right text-ui-400 uppercase flex items-baseline justify-between">
+                  <span>#</span>
+                  <span>{item.scores?.objective}</span>
+                </div>
+                <ul className="border-t border-ui-700">
                   {item.players?.slice(0, 5).map((player, playerIndex) => (
                     <li key={playerIndex} className="item">
                       <div className="w-9 text-center">
@@ -185,7 +225,7 @@ export default function TabScoreboardsOverview() {
                         <Link
                           href={`/prototype/profile/${player}${prototype.getURLparams()}`}
                         >
-                          <div className="item-title">
+                          <div className="item-title interactive truncate">
                             <span
                               className={`${
                                 prototype.getUserByID(player)?.isYou
@@ -226,15 +266,14 @@ export default function TabScoreboardsOverview() {
                       </div>
                       <div className="item-actions w-20 text-right">
                         <div>
-                         
                           {item.scores?.max - playerIndex}
-                              {item.scores?.label}
+                          {item.scores?.label}
                         </div>
                       </div>
                     </li>
                   ))}
                 </ul>
-                <div className="p-2">
+                <div className="p-2 text-center border-t border-ui-700">
                   <Link
                     href={`/prototype/valorant/scoreboards?tab=${
                       item.slug
@@ -242,7 +281,7 @@ export default function TabScoreboardsOverview() {
                   >
                     <button
                       type="button"
-                      className="button button-secondary w-full"
+                      className="button button-secondary button-sm"
                     >
                       <span>View full leaderboard</span>
                     </button>
