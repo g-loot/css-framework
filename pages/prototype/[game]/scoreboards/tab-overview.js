@@ -253,7 +253,7 @@ export default function TabScoreboardsOverview() {
                           </div>
                         </Link>
                       </div>
-                      <div className="item-body text-center">
+                      <div className="item-body text-center text-0">
                         <Tooltip tooltip={`Ascendant`}>
                           <img
                             className="h-6"

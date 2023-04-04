@@ -1,4 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {
+  useContext,
+  useEffect,
+  useState,
+  useRef,
+  useCallback,
+} from "react";
 
 import ModalClaimLadderRewards from "../../pages/prototype/home/modal-claim-ladderrewards";
 import { UiContext } from "../../contexts/ui";
@@ -9,19 +15,56 @@ import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 import Avatar from "../Avatar/Avatar";
 
+const useResize = (myRef) => {
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+
+  const handleResize = useCallback(() => {
+    setWidth(myRef.current.offsetWidth);
+    setHeight(myRef.current.offsetHeight);
+  }, [myRef]);
+
+  useEffect(() => {
+    window.addEventListener("load", handleResize);
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("load", handleResize);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [myRef, handleResize]);
+
+  return { width, height };
+};
+
 export default function BattlePass(props) {
+  const selectedBattlePass = props.id || 0;
   const [currentStep, setCurrentStep] = useState(1);
   const [activeStep, setActiveStep] = useState(1);
   const [originStep, setOriginStep] = useState(0);
   const [maxSteps, setmaxSteps] = useState(5);
 
+  const componentRef = useRef();
+  const { width, height } = useResize(componentRef);
+
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
 
   useEffect(() => {
-    setCurrentStep(getBattlePassByID(0).currentStep);
-    setActiveStep(getBattlePassByID(0).currentStep);
+    setCurrentStep(getBattlePassByID(selectedBattlePass).currentStep);
+    setActiveStep(getBattlePassByID(selectedBattlePass).currentStep);
+    if(getBattlePassByID(selectedBattlePass).currentStep > maxSteps) {
+      setOriginStep(getBattlePassByID(selectedBattlePass).currentStep - 1); 
+    }
   }, []);
+
+  useEffect(() => {
+    if (width > 750) {
+      setmaxSteps(5);
+    } else {
+      setmaxSteps(3);
+    }
+  }, [width]);
 
   const getBattlePassByID = (id) => {
     return DataBattlePass.find((battlepasses) => {
@@ -77,9 +120,7 @@ export default function BattlePass(props) {
   }
 
   function handlePrevBatch() {
-    console.log("prevBatch1");
     if (activeStep === originStep + 1) {
-      console.log("prevBatch2");
       setOriginStep(originStep - maxSteps);
     }
   }
@@ -91,14 +132,20 @@ export default function BattlePass(props) {
 
   return (
     <>
-      <div className="battlepass-container scrollbar-desktop">
+      <div
+        className="battlepass-container scrollbar-desktop"
+        ref={componentRef}
+      >
         <div className="battlepass-viewer">
           <div className="battlepass-reward">
             <i
               style={{
-                "-webkit-mask-image": "url(https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/" + getBattlePassRewardByID(
-                  getBattlePassStepByID(activeStep).reward
-                ).image + ".png)",
+                "-webkit-mask-image":
+                  "url(https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/" +
+                  getBattlePassRewardByID(
+                    getBattlePassStepByID(activeStep).reward
+                  ).image +
+                  ".png)",
               }}
             />
             <img
@@ -122,6 +169,32 @@ export default function BattlePass(props) {
                 .name
             }
           </h3>
+          <div className="h-9 text-center flex items-center justify-center">
+            {getBattlePassStepByID(activeStep).id < currentStep && (
+              <button type="button" className="button button-claim">
+                <span className="icon icon-present animate-bounce" />
+                <span>Claim reward</span>
+              </button>
+            )}
+            {getBattlePassStepByID(activeStep).id === currentStep && (
+              <span>
+                <span className="text-ui-300">
+                  {1000 + 100 * getBattlePassStepByID(activeStep).id - 75} /
+                </span>{" "}
+                <span className="text-ui-100">
+                  {1000 + 100 * getBattlePassStepByID(activeStep).id} XP
+                </span>
+              </span>
+            )}
+            {getBattlePassStepByID(activeStep).id > currentStep && (
+              <span>
+                <span className="text-ui-300">0 /</span>{" "}
+                <span className="text-ui-100">
+                  {1000 + 100 * getBattlePassStepByID(activeStep).id} XP
+                </span>
+              </span>
+            )}
+          </div>
         </div>
         <ul className="battlepass">
           {getBattlePassByID(0)

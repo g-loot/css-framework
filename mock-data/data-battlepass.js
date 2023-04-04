@@ -1,7 +1,7 @@
 export const DataBattlePass = [
   {
     id: 0,
-    currentStep: 3,
+    currentStep: 4,
     currentProgress: 70,
     steps: [
       {

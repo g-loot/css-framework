@@ -42,7 +42,7 @@
       bg-[-15%]
       bg-[length:400%_auto]
       animate-[battlepass-shining-rays_5s_cubic-bezier(0.1,0,0.8,1)_infinite]
-      bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_50%,_rgba(255,255,255,0)_60%,_rgba(255,255,255,.2)_61%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,0)_71%)]
+      bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_54%,_rgba(255,255,255,0)_60.9%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,0)_71%)]
       bg-no-repeat
       ;
       mask-size: cover;
@@ -245,7 +245,7 @@
         bg-[-15%]
         bg-[length:300%_auto]
         animate-[battlepass-shining-rays_5s_cubic-bezier(0.4,0,0.2,1)_infinite]
-        bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_55%,_rgba(255,255,255,0)_56%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,.2)_71%,_rgba(255,255,255,0)_80%,_rgba(255,255,255,0)_81%)]
+        bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_55%,_rgba(255,255,255,0)_56%,_rgba(255,255,255,0)_70.9%,_rgba(255,255,255,.3)_71%,_rgba(255,255,255,0)_80%,_rgba(255,255,255,0)_81%)]
         bg-no-repeat
         ;
       }

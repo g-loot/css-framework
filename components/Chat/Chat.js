@@ -768,7 +768,7 @@ export default function Chat(props) {
                 ref={messageInput}
                 name="send-message"
                 id="send-message"
-                className="rounded-3xl max-h-[200px] resize-none"
+                className="rounded-[1.25rem] max-h-[200px] resize-none"
                 rows={rows}
                 onChange={(text) => setValue(text.target.value)}
                 placeholder={`${
