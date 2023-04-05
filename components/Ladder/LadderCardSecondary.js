@@ -168,7 +168,7 @@ export default function LadderCardSecondary(props) {
               </div>
               {ladder.status === "finished" ? (
                 <div className="text-sm text-ui-300">
-                  Ended April {RandomNumber(1,30)} 2023
+                  Ended on April {RandomNumber(1,30)} 2023
                 </div>
               ) : (
                 <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">

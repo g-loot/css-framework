@@ -60,7 +60,8 @@ export default function Battlepass(props) {
   }, []);
 
   useEffect(() => {
-    if (width) {
+    if (width > 0) {
+      console.log(width);
       if (width > 992) {
         setmaxSteps(7);
       } else if (width < 992 && width > 848) {
@@ -221,6 +222,10 @@ export default function Battlepass(props) {
                 key={itemIndex}
                 className={`battlepass-step ${
                   item.isPremium ? `is-premium` : ""
+                } ${
+                  item.isBonus ? `is-bonus` : ""
+                } ${
+                  item.isSeparator ? `is-separator` : ""
                 } ${activeStep === item.id ? `is-active` : ""}
                         
                         ${
@@ -268,7 +273,7 @@ export default function Battlepass(props) {
             <span className="icon icon-ctrl-left" />
           </button>
           <span>
-            {activeStep} / {getBattlepassByID(0).steps.length}
+            {activeStep} / {getBattlepassByID(0).steps.filter((value)=>{return value.isBonus !== true}).length}
           </span>
           <button
             type="button"

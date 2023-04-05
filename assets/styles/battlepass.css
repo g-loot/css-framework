@@ -115,6 +115,7 @@
   gap-2
   relative
   ;
+
   .battlepass-info {
     @apply
     order-2
@@ -165,6 +166,9 @@
     focus-visible:outline
     focus-visible:outline-offset-2
     focus-visible:outline-1
+    transition-[box-shadow]
+    duration-200
+    ease-in-out
     ;
     .battlepass-decoration {
       @apply
@@ -203,17 +207,6 @@
     }
   }
 
-  &.is-current {
-    .battlepass-content {
-     
-    }
-
-    ~ .battlepass-step {
-      .battlepass-content {
-      
-      }
-    }
-  }
   &.is-premium {
     &::before {
       @apply
@@ -258,12 +251,14 @@
       ;
     }
   }
+
   &.is-active {
     .battlepass-content {
       @apply
       border-interaction-500
       hover:border-interaction-300
       active:border-interaction-700
+      shadow-[0_0_0_4px_rgb(var(--color-ui-600))]
       ;
       &::after {
         @apply
@@ -297,7 +292,35 @@
       }
     }
   }
- 
+
+  &.is-bonus {
+    .battlepass-content {
+      @apply
+      border
+      rounded-tr-[1.5rem]
+      ;
+    }
+  }
+  
+  &.is-separator {
+    @apply
+    ml-4
+    ;
+    &::before {
+      @apply
+      content-['']
+      absolute
+      inset-y-0
+      -left-4
+      block
+      w-px
+      h-full
+      border-dashed
+      border-l
+      border-ui-600
+      ;
+    }
+  }
 }
 
 @keyframes battlepass-shining-rays {

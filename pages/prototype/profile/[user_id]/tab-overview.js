@@ -625,7 +625,7 @@ export default function TabProfileOverview() {
                     itemWidth={397 + 16}
                     bgColor="from-ui-800 via-ui-800 to-ui-800/0"
                   >
-                    <div className="flex gap-6 py-2 px-6 hoverhighlight">
+                    <div className="flex gap-6 py-2 px-6">
                       {selectedUser.ladders?.map((ladder, ladderIndex) => (
                         <>
                           {selectedUser.isYou ? (
