@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 
 import { DataGroupFinderPosts } from "../../../../mock-data/data-groupfinder";
 import Avatar from "../../../../components/Avatar/Avatar";
+import Tooltip from "../../../../components/Tooltip/Tooltip";
 
 export default function TabGroupFinderFeed() {
   const router = useRouter();
@@ -47,24 +48,48 @@ export default function TabGroupFinderFeed() {
     <>
       <section className="grid gap-4 md:grid-cols-2">
         {getGameGroupFinderPostsByID(0).posts?.map((item, itemIndex) => (
-          <div key={itemIndex} className="surface rounded">
-            <div className="item">
-              <div className="item-image">
-                <Link
-                  href={`/prototype/profile/${
-                    item.author
-                  }${prototype.getURLparams()}`}
-                >
-                  <Avatar
-                    id={item.author}
-                    hasTooltip={true}
-                    hasTooltipXP={false}
-                    size="avatar-sm"
-                  />
-                </Link>
-              </div>
-              <div className="item-body leading-tight">
-                <div className="item-title">
+          <div key={itemIndex} className={`surface rounded flex flex-col ${prototype.getUserByID(item.author).isPremium ? 'col-span-2 order-1' : 'order-2'}`}>
+            <div className="flex-1 flex items-start gap-2 p-3 relative">
+              {prototype.getUserByID(item.author)?.isYou && (
+                <div className="absolute top-1 right-1">
+                  <div className="dropdown dropdown-end">
+                    <label
+                      tabIndex="1"
+                      className="button button-ghost rounded-full"
+                    >
+                      <span className="icon icon-dots-vertical" />
+                    </label>
+                    <div tabIndex="1" className="dropdown-content w-52 p-1">
+                      <ul className="menu menu-rounded">
+                        <li>
+                          <a tabIndex="1">
+                            <span>Edit</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a tabIndex="1">
+                            <span>Delete</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+              <Link
+                href={`/prototype/profile/${
+                  item.author
+                }${prototype.getURLparams()}`}
+              >
+                <Avatar
+                  id={item.author}
+                  hasTooltip={true}
+                  hasTooltipXP={false}
+                  size="avatar-sm"
+                />
+              </Link>
+              <div>
+                <div className="leading-tight">
                   <Link
                     href={`/prototype/profile/${
                       item.author
@@ -97,39 +122,69 @@ export default function TabGroupFinderFeed() {
                       </span>
                     </div>
                   </Link>
+                  <div className="text-sm text-ui-300">{item.datePosted}</div>
                 </div>
-                <div className="text-sm text-ui-300">
-                  {item.datePosted}
-                </div>
-              </div>
-              {prototype.getUserByID(item.author)?.isYou && (
-                <div className="item-actions">
-                  <div>
-                  <div className="dropdown dropdown-end">
-                      <label tabIndex="1" className="button button-ghost rounded-full">
-                        <span className="icon icon-dots-vertical" />
-                      </label>
-                      <div tabIndex="1" className="dropdown-content w-52 p-1">
-                        <ul className="menu menu-rounded">
-                          <li>
-                            <a tabIndex="1">
-                              <span>Edit</span>
-                            </a>
-                          </li>
-                          <li>
-                            <a tabIndex="1">
-                              <span>Delete</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
+                <p className="pt-2 pb-3">
+                  I am looking for{" "}
+                  <span className="font-bold text-ui-100">
+                    {item.numberPlayer} player
+                    {item.numberPlayer > 1 && <>s</>}
+                  </span>{" "}
+                  to play <span className="uppercase">{game}</span>{" "}
+                  <span className="capitalize font-bold text-ui-100">
+                    {item.gameMode}
+                  </span>
+                  .
+                </p>
+                <div className="border-l-2 border-ui-700 py-2 px-4 space-y-3">
+                  {prototype.getUserByID(item.author).isPremium && item.customText && (
+                    <p className="italic text-ui-300">
+                      {item.customText}
+                    </p>
+                  )}
+                  <div className="inline-flex items-center justify-between gap-4">
+                    <Tooltip
+                      tooltip={prototype.getUserByID(item.author).countryFlag}
+                    >
+                      <img
+                        src={`https://flagcdn.com/${
+                          prototype.getUserByID(item.author).countryFlag
+                        }.svg`}
+                        className="aspect-video rounded-sm max-w-[1.5rem]"
+                      />
+                    </Tooltip>
+                    <span className="text-ui-200 font-bold">{item.region}</span>
+                    <Tooltip tooltip={`Ascendant`}>
+                      <img
+                        className="h-6"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/rank-acendant.webp"
+                        height="auto"
+                        width="auto"
+                        alt=""
+                      />
+                    </Tooltip>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
-            <div className="p-8">
-              I am looking for <span className="font-bold text-ui-100">{item.numberPlayer} player{item.numberPlayer > 1 && (<>s</>)}</span> to play <span className="uppercase">{game}</span> <span className="capitalize font-bold text-ui-100">{item.gameMode}</span>
+            <div className="border-t border-ui-700 p-1 flex items-center justify-center gap-1">
+              {prototype.getUserByID(item.author)?.socials.riotNickname && (
+                <button type="button" className="button button-ghost flex-1">
+                  <span className="icon icon-riotgames-symbol" />
+                  <span className="normal-case">
+                    {prototype.getUserByID(item.author)?.socials.riotNickname}#
+                    {prototype.getUserByID(item.author)?.socials.riotHashtag}
+                  </span>
+                </button>
+              )}
+              {prototype.getUserByID(item.author)?.socials.discord && (
+                <button type="button" className="button button-ghost flex-1">
+                  <span className="icon icon-discord" />
+                  <span className="normal-case">
+                    {prototype.getUserByID(item.author)?.socials.discord}
+                  </span>
+                </button>
+              )}
             </div>
           </div>
         ))}

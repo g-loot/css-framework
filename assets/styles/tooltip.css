@@ -162,6 +162,56 @@
   }
 }
 
+/* loading */
+
+.tooltip-container {
+  @apply
+  rounded
+  overflow-hidden
+  ;
+
+  &.is-loading {
+    @apply 
+    relative
+    pointer-events-none
+    bg-ui-600/95
+    bg-[length:800px_100%]
+    bg-[-200%_center]
+    bg-no-repeat
+    animate-[surface-loader_1s_linear_infinite]
+    opacity-100
+    transition-none
+    ;
+    background-image: linear-gradient(
+      to right,
+      rgba(var(--color-ui-600) / 0%) 8%,
+      rgba(var(--color-ui-500) / 100%) 18%,
+      rgba(var(--color-ui-600) / 0%) 33%
+    );
+    &,
+    *,
+    [class*="text-"] {
+      @apply 
+      !text-ui-800/0;
+    }
+    * {
+      @apply
+      !opacity-0
+      !bg-ui-800/0
+      ;
+    }
+  }
+}
+
+@keyframes surface-loader {
+  0% {
+    background-position: -900px 0;
+  }
+  100% {
+    background-position: 900px 0;
+  }
+}
+
 /* tooltip attention */
 
 [data-tooltip]:not([data-tooltip=""]) {

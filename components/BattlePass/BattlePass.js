@@ -60,16 +60,18 @@ export default function Battlepass(props) {
   }, []);
 
   useEffect(() => {
-    if (width > 992) {
-      setmaxSteps(7);
-    } else if (width < 992 && width > 848) {
-      setmaxSteps(6);
-    } else if (width < 848 && width > 750) {
-      setmaxSteps(5);
-    } else if (width < 750 && width > 350) {
-      setmaxSteps(3);
-    } else {
-      setmaxSteps(2);
+    if (width) {
+      if (width > 992) {
+        setmaxSteps(7);
+      } else if (width < 992 && width > 848) {
+        setmaxSteps(6);
+      } else if (width < 848 && width > 750) {
+        setmaxSteps(5);
+      } else if (width < 750 && width > 350) {
+        setmaxSteps(3);
+      } else {
+        setmaxSteps(2);
+      }
     }
   }, [width]);
 

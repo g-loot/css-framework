@@ -205,7 +205,7 @@ export const DSpages = [
         url: "dailyreward",
       },
       {
-        label: "Battle Pass",
+        label: "Battlepass",
         tags: "content,reward,battle pass,battlepass,progression,leaderboard,claim,tokens,coins,prize,delight,reward ladder",
         url: "battlepass",
       },

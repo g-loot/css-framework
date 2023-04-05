@@ -20,6 +20,7 @@ export const dataUsers = [
     socials: {
       riotNickname: "JackAttack123",
       riotHashtag: 8573,
+      discord: "@jackattack123",
       twitch: "@jackattack123",
     },
     shopItems: {
@@ -235,6 +236,7 @@ export const dataUsers = [
     socials: {
       riotNickname: "KeesDief",
       riotHashtag: 8953,
+      discord: "@KeesDief",
       twitch: "@KeesDief",
     },
     shopItems: {
@@ -274,7 +276,7 @@ export const dataUsers = [
     },
     games: [1],
     achievements: {
-      favoriteBadge: false,
+      favoriteBadge: 4,
       badges: [],
     },
   },
@@ -300,6 +302,7 @@ export const dataUsers = [
     socials: {
       riotNickname: "MrKilla",
       riotHashtag: 8573,
+      discord: "@misterkilla",
       twitch: "@misterkilla",
     },
     shopItems: {
@@ -363,6 +366,7 @@ export const dataUsers = [
     socials: {
       riotNickname: "kykymimiGr",
       riotHashtag: 8573,
+      discord: "@kykymimi",
       twitch: "@kykymimi",
     },
     shopItems: {
@@ -472,6 +476,7 @@ export const dataUsers = [
     socials: {
       riotNickname: "DirtyJohnny",
       riotHashtag: 8573,
+      discord: "@dirtyjohnny",
       twitch: "@dirtyjohnny",
     },
     shopItems: {
@@ -588,6 +593,7 @@ export const dataUsers = [
     socials: {
       riotNickname: "PopoRob",
       riotHashtag: 8573,
+      discord: "@poporob",
       twitch: "@poporob",
     },
     shopItems: {
@@ -679,6 +685,7 @@ export const dataUsers = [
     socials: {
       riotNickname: "valance",
       riotHashtag: 1425,
+      discord: "@valance",
       twitch: "@valance",
     },
     shopItems: {
@@ -870,6 +877,7 @@ export const dataUsers = [
       riotNickname: "HansGrubby",
       riotHashtag: 1254,
       twitch: "@HansGrubby",
+      twitch: "@HansGrubby",
     },
     shopItems: {
       avatarFrame: 102,
@@ -972,6 +980,7 @@ export const dataUsers = [
     socials: {
       riotNickname: "FrenzyMan",
       riotHashtag: 1254,
+      discord: "@FrenzyMan",
       twitch: "@FrenzyMan",
     },
     shopItems: {
@@ -1016,6 +1025,7 @@ export const dataUsers = [
     socials: {
       riotNickname: "Joppe",
       riotHashtag: 1254,
+      discord: "@Joppe",
       twitch: "@Joppe",
     },
     shopItems: {

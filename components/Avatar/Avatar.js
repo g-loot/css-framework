@@ -27,7 +27,7 @@ export default function Avatar(props) {
   const hasTooltipXP =
     props.hasTooltipXP !== undefined ? props.hasTooltipXP : false;
   const [selectedUser, setSelectedUser] = useState(null);
-  
+
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(userId));
   }, [userId]);
@@ -118,7 +118,7 @@ export default function Avatar(props) {
                 </Tooltip>
               ) : (
                 <Tooltip
-                  hasLoading={true}
+                  isLoading={true}
                   className="p-0"
                   placement={props.tooltipPlacement}
                   tooltip={
@@ -238,7 +238,7 @@ export default function Avatar(props) {
                             </div>
                           </div>
                         </div>
-                        {selectedUser.achievements.favoriteBadge && (
+                        {selectedUser.achievements?.favoriteBadge && (
                           <div className="flex flex-col items-center justify-center mb-4 px-2">
                             <div className="w-16 h-16 achievement-level-4">
                               <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl4-animated.svg" />

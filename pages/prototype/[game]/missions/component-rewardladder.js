@@ -10,7 +10,7 @@ import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
 import Slider from "../../../../components/Slider/Slider";
-import ModalClaimMission from "../../home/modal-claim-mission";
+import ModalClaimLadderRewards from "../../home/modal-claim-ladderrewards";
 import Battlepass from "../../../../components/BattlePass/BattlePass";
 
 export default function ComponentRewardLadder() {
@@ -44,9 +44,9 @@ export default function ComponentRewardLadder() {
     setHasUnclaimedRewards(unclaimedRewards);
   }, [unclaimedRewards]);
 
-  function openModalClaimMission() {
+  function openModalClaimLadderRewards() {
     setHasUnclaimedRewards(false);
-    uiContext.openModal(<ModalClaimMission />);
+    uiContext.openModal(<ModalClaimLadderRewards />);
   }
 
   return (
@@ -73,7 +73,7 @@ export default function ComponentRewardLadder() {
           <button
             type="button"
             className="button button-claim is-shining mt-1"
-            onClick={openModalClaimMission}
+            onClick={openModalClaimLadderRewards}
           >
             <span className="icon icon-present animate-bounce" />
             <span>Claim past rewards</span>

@@ -1,11 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as ReactDOM from "react-dom";
 import { usePopperTooltip } from "react-popper-tooltip";
 
 const Tooltip = (props) => {
   const tooltipPosition =
     props.placement !== undefined ? props.placement : "auto";
+  const loading =
+    props.isLoading !== undefined ? props.isLoading : false;
   const className = props.className || "";
+  const [isLoading, setIsLoading] = useState(loading);
+  
+  function handleHover() {
+    if (loading) {
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 700);
+    }
+  }
 
   const {
     getArrowProps,
@@ -23,6 +35,7 @@ const Tooltip = (props) => {
     <>
       <div
         ref={setTriggerRef}
+        onMouseEnter={handleHover}
         className={`inline-flex ${props.tooltip ? "cursor-pointer" : ""} ${
           className
         }`}
@@ -35,7 +48,7 @@ const Tooltip = (props) => {
           <div
             ref={setTooltipRef}
             {...getTooltipProps({
-              className: `tooltip-container`,
+              className: `tooltip-container ${isLoading ? 'is-loading' : ''}`,
             })}
           >
             <div

@@ -62,8 +62,8 @@ export default function Home() {
           </div>
         </section>
 
-        <nav>
-          <ul className="tabs border-b border-ui-700">
+        <nav className="border-b border-ui-700 flex items-center justify-between gap-4">
+          <ul className="tabs">
             {TabsItems.map((item, itemIndex) => (
               <li key={item}>
                 <Link
@@ -80,6 +80,10 @@ export default function Home() {
               </li>
             ))}
           </ul>
+          <button type="button" className="button button-primary">
+            <span className="icon icon-i-add" />
+            <span>Add new post</span>
+          </button>
         </nav>
 
         <section className="py-4">
