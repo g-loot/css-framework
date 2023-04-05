@@ -8,7 +8,7 @@ import { getLayout } from "../../components/DesignSystem/DSLayout";
 
 import { DataBattlepass } from "../../mock-data/data-battlepass";
 import { DataBattlepassRewards } from "../../mock-data/data-battlepass";
-import Battlepass from "../../components/Battlepass/Battlepass";
+import Battlepass from "../../components/BattlePass/BattlePass";
 
 const DSpage = () => {
   const [currentStep, setcurrentStep] = useState(1);
