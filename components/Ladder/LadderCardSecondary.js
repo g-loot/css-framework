@@ -18,6 +18,7 @@ export default function LadderCardSecondary(props) {
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
   const isHorizontal = props.isHorizontal || false;
+  const gameID = props.gameID || 1;
   const isEnrolled = props.ladder?.isEnrolled || false;
   const isFluid = props.isFluid || false;
   const selectedUser = props.selectedUser || prototype.getUserByID(1);
@@ -78,32 +79,32 @@ export default function LadderCardSecondary(props) {
               <div className="ml-0 p-1 border border-ui-700 rounded-sm bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
                 <span
                   className={`icon text-xl ${
-                    prototype.getGameBySlug(game_slug).slug === "apexlegends"
+                    prototype.getGameByID(gameID).slug === "apexlegends"
                       ? "icon-game-apexlegends-symbol text-game-apexlegends"
                       : ""
                   } ${
-                    prototype.getGameBySlug(game_slug).slug === "csgo"
+                    prototype.getGameByID(gameID).slug === "csgo"
                       ? "icon-game-csgo-symbol text-game-csgo"
                       : ""
                   }  ${
-                    prototype.getGameBySlug(game_slug).slug === "dota2"
+                    prototype.getGameByID(gameID).slug === "dota2"
                       ? "icon-game-dota2-symbol text-game-dota2"
                       : ""
                   }  ${
-                    prototype.getGameBySlug(game_slug).slug ===
+                    prototype.getGameByID(gameID).slug ===
                     "leagueoflegends"
                       ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
                       : ""
                   }  ${
-                    prototype.getGameBySlug(game_slug).slug === "rocketleague"
+                    prototype.getGameByID(gameID).slug === "rocketleague"
                       ? "icon-game-rocketleague-symbol text-game-rocketleague"
                       : ""
                   } ${
-                    prototype.getGameBySlug(game_slug).slug === "pubg"
+                    prototype.getGameByID(gameID).slug === "pubg"
                       ? "icon-game-pubg-symbol text-game-pubg"
                       : ""
                   }  ${
-                    prototype.getGameBySlug(game_slug).slug === "valorant"
+                    prototype.getGameByID(gameID).slug === "valorant"
                       ? "icon-game-valorant-symbol text-game-valorant"
                       : ""
                   }`}
@@ -167,7 +168,7 @@ export default function LadderCardSecondary(props) {
               </div>
               {ladder.status === "finished" ? (
                 <div className="text-sm text-ui-300">
-                  This competition has ended
+                  Ended on April {RandomNumber(1,30)} 2023
                 </div>
               ) : (
                 <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">

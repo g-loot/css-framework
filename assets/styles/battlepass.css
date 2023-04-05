@@ -28,6 +28,16 @@
 
   .battlepass-reward {
     @apply
+    flex
+    flex-col
+    items-center
+    justify-center
+    gap-4
+    ;
+  }
+
+  .battlepass-reward-image {
+    @apply
     relative
     w-72
     aspect-square
@@ -48,6 +58,24 @@
       mask-size: cover;
       mask-repeat: no-repeat;
     }
+  }
+
+  .battlepass-reward-name {
+    @apply
+    text-3xl
+    uppercase
+    text-ui-100
+    ;
+  }
+
+  .battlepass-reward-info {
+    @apply
+    h-9
+    text-center
+    flex
+    items-center
+    justify-center
+    ;
   }
 }
 
@@ -74,6 +102,7 @@
   @apply
   flex
   gap-4
+  pt-5
   ;
 }
 
@@ -277,5 +306,55 @@
   }
   50%, 100% {
     background-position: 150%;
+  }
+}
+
+/* size */
+
+.battlepass-container.battlepass-md {
+  .battlepass-viewer {
+    @apply
+    flex-row
+    justify-between
+    items-center
+    w-full
+    pb-3
+    gap-2
+    border-b
+    border-ui-700
+    ;
+    > .battlepass-reward {
+      @apply
+      flex-row
+      flex-1
+      justify-start
+      text-left
+      ;
+      > .battlepass-reward-image {
+        @apply
+        w-12
+        border
+        border-ui-700
+        rounded
+        ;
+        > i {
+          @apply
+          hidden
+          ;
+        }
+      }
+      > .battlepass-reward-name {
+        @apply
+        text-base
+        normal-case
+        ;
+      }
+      > .battlepass-reward-info {
+        @apply
+        text-right
+        h-12
+        ;
+      }
+    }
   }
 }

@@ -102,7 +102,9 @@ export default function TabProfileOverview() {
                             autoDelete: true,
                             autoDeleteDelay: 2500,
                           });
-                          navigator.clipboard.writeText(`${selectedUser.nickname}#2341`);
+                          navigator.clipboard.writeText(
+                            `${selectedUser.nickname}#2341`
+                          );
                         }}
                       >
                         {selectedUser.nickname}#2341
@@ -134,7 +136,9 @@ export default function TabProfileOverview() {
                             autoDelete: true,
                             autoDeleteDelay: 2500,
                           });
-                          navigator.clipboard.writeText(`PUBG_${selectedUser.nickname}`);
+                          navigator.clipboard.writeText(
+                            `PUBG_${selectedUser.nickname}`
+                          );
                         }}
                       >
                         PUBG_{selectedUser.nickname}
@@ -330,37 +334,69 @@ export default function TabProfileOverview() {
                       <div className="text-xs lg:text-sm text-ui-200 uppercase">
                         Ladders played
                       </div>
-                      <div className="text-ui-100 text-xl lg:text-3xl">523</div>
-                      <div className="hidden text-xs lg:text-sm text-ui-300">
-                        Top 25%
+                      <div className="text-ui-100 text-xl lg:text-3xl">
+                        {selectedUser.stats.playedLadders ? (
+                          <>{selectedUser.stats.playedLadders}</>
+                        ) : (
+                          <>——</>
+                        )}
                       </div>
+                      {selectedUser.stats.playedLadders && (
+                        <div className="hidden text-xs lg:text-sm text-ui-300">
+                          Top 25%
+                        </div>
+                      )}
                     </div>
                     <div className="pl-4 border-l border-ui-600">
                       <div className="text-xs lg:text-sm text-ui-200 uppercase">
                         Avg. placement
                       </div>
-                      <div className="text-ui-100 text-xl lg:text-3xl">#42</div>
-                      <div className="hidden text-xs lg:text-sm text-ui-300">
-                        Top 18%
+                      <div className="text-ui-100 text-xl lg:text-3xl">
+                        {selectedUser.stats.avgPlacement ? (
+                          <>#{selectedUser.stats.avgPlacement}</>
+                        ) : (
+                          <>——</>
+                        )}
                       </div>
+                      {selectedUser.stats.avgPlacement && (
+                        <div className="hidden text-xs lg:text-sm text-ui-300">
+                          Top 18%
+                        </div>
+                      )}
                     </div>
                     <div className="pl-4 border-l border-ui-600">
                       <div className="text-xs lg:text-sm text-ui-200 uppercase">
                         Times in top 50
                       </div>
-                      <div className="text-ui-100 text-xl lg:text-3xl">4</div>
-                      <div className="hidden text-xs lg:text-sm text-ui-300">
-                        Top 11%
+                      <div className="text-ui-100 text-xl lg:text-3xl">
+                        {selectedUser.stats.timesInTop ? (
+                          <>{selectedUser.stats.timesInTop}</>
+                        ) : (
+                          <>——</>
+                        )}
                       </div>
+                      {selectedUser.stats.timesInTop && (
+                        <div className="hidden text-xs lg:text-sm text-ui-300">
+                          Top 11%
+                        </div>
+                      )}
                     </div>
                     <div className="pl-4 border-l border-ui-600">
                       <div className="text-xs lg:text-sm text-ui-200 uppercase">
                         Missions completed
                       </div>
-                      <div className="text-ui-100 text-xl lg:text-3xl">123</div>
-                      <div className="hidden text-xs lg:text-sm text-ui-300">
-                        Top 4.5%
+                      <div className="text-ui-100 text-xl lg:text-3xl">
+                        {selectedUser.stats.completedMissions ? (
+                          <>{selectedUser.stats.completedMissions}</>
+                        ) : (
+                          <>——</>
+                        )}
                       </div>
+                      {selectedUser.stats.completedMissions && (
+                        <div className="hidden text-xs lg:text-sm text-ui-300">
+                          Top 4.5%
+                        </div>
+                      )}
                     </div>
                   </>
                 ) : (
@@ -608,7 +644,10 @@ export default function TabProfileOverview() {
                                     isHorizontal={false}
                                     selectedUser={selectedUser}
                                     isClan={false}
-                                    gameID={1}
+                                    gameID={
+                                      prototype.getGameBySlug(ladder.gameSlug)
+                                        .id
+                                    }
                                     className="surface-ui-700"
                                   />
                                 </>
@@ -624,7 +663,9 @@ export default function TabProfileOverview() {
                               isHorizontal={false}
                               selectedUser={selectedUser}
                               isClan={false}
-                              gameID={1}
+                              gameID={
+                                prototype.getGameBySlug(ladder.gameSlug).id
+                              }
                               className="surface-ui-700"
                             />
                           )}

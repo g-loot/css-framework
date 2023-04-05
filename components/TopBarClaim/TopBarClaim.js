@@ -71,13 +71,6 @@ export default function TopBarClaim(props) {
         }`}
         onClick={dropdownActive}
       >
-        <span
-          className={`icon icon-present ${
-            !variablesContext.dailyRewardClaimed
-              ? "text-main animate-bounce"
-              : ""
-          }`}
-        />
         <div
           className={`relative uppercase text-sm whitespace-nowrap ${
             !variablesContext.dailyRewardClaimed ? "text-main" : ""
@@ -87,6 +80,13 @@ export default function TopBarClaim(props) {
             <span className="max-xl:hidden"><span className="max-2xl:hidden">Daily</span> Login Streak</span>
           </span>
         </div>
+        <span
+          className={`icon icon-present ${
+            !variablesContext.dailyRewardClaimed
+              ? "text-main animate-bounce"
+              : ""
+          }`}
+        />
         {/*
         {StartAnim1 && !variablesContext.dailyRewardClaimed && (
           <div className="absolute z-0 -top-0.5 bottom-0.5 flex items-center justify-center lottie-blur">

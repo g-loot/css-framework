@@ -11,6 +11,7 @@ import { useRouter } from "next/router";
 import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
 import Slider from "../../../../components/Slider/Slider";
 import ModalClaimMission from "../../home/modal-claim-mission";
+import Battlepass from "../../../../components/BattlePass/BattlePass";
 
 export default function ComponentRewardLadder() {
   const router = useRouter();
@@ -19,12 +20,12 @@ export default function ComponentRewardLadder() {
   const uiContext = useContext(UiContext);
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
+  const newBattlepass = query.newbattlepass === "true" ? true : false;
   const isPremium = query.premium === "true" ? true : false;
   const { game } = router.query;
   const [submitting, setSubmitting] = useState(false);
   const unclaimedRewards = query.unclaimedrewards === "true" ? true : false;
-  const [hasUnclaimedRewards, setHasUnclaimedRewards] =
-    useState(false);
+  const [hasUnclaimedRewards, setHasUnclaimedRewards] = useState(false);
 
   function addToastWithDelay(toast) {
     setSubmitting(true);
@@ -38,7 +39,7 @@ export default function ComponentRewardLadder() {
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
-  
+
   useEffect(() => {
     setHasUnclaimedRewards(unclaimedRewards);
   }, [unclaimedRewards]);
@@ -52,7 +53,7 @@ export default function ComponentRewardLadder() {
     <>
       <div className="flex flex-col gap-2 lg:flex-row items-baseline justify-between mb-2 px-4 sm:px-0">
         <div className="flex gap-2 items-baseline">
-          <h2 className="h3 flex-none">Battle pass</h2>
+          <h2 className="h3 flex-none">Battlepass</h2>
 
           <Tooltip
             tooltip={
@@ -153,19 +154,19 @@ export default function ComponentRewardLadder() {
           </div>
         </>
       )}
-      <div className="mb-4">
-        <Slider
-          itemWidth={480 + 16}
-          bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
-        >
-          <RewardLadder hasReward={selectedGame?.hasReward} />
-        </Slider>
-      </div>
-      {/*
-      <div className="text-center text-sm text-ui-300 mt-4">
-        XP is accumulated from missions in all games and from registered Ladder matches.
-      </div>
-      */}
+
+      {newBattlepass ? (
+        <Battlepass size="battlepass-md" />
+      ) : (
+        <div className="mb-4">
+          <Slider
+            itemWidth={480 + 16}
+            bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
+          >
+            <RewardLadder hasReward={selectedGame?.hasReward} />
+          </Slider>
+        </div>
+      )}
     </>
   );
 }

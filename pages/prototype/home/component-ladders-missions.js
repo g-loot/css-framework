@@ -36,14 +36,7 @@ export default function HomeLadderMissions(props) {
         <h3 className="h6">
           {prototype.getGameBySlug(props.gameSlug)?.name}
         </h3>
-        <div className="hidden sm:flex items-center gap-2">
-          <div
-            className="tooltip tooltip-left"
-            data-tooltip="This might take up to 15 minutes. Make sure the match you’re trying to fetch is 100% completed."
-          >
-            <ButtonStatsUpdate />
-          </div>
-        </div>
+        <ButtonStatsUpdate />
       </div>
 
       {/*

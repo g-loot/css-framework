@@ -27,7 +27,7 @@ export default function Avatar(props) {
   const hasTooltipXP =
     props.hasTooltipXP !== undefined ? props.hasTooltipXP : false;
   const [selectedUser, setSelectedUser] = useState(null);
-
+  
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(userId));
   }, [userId]);
@@ -118,10 +118,11 @@ export default function Avatar(props) {
                 </Tooltip>
               ) : (
                 <Tooltip
+                  hasLoading={true}
                   className="p-0"
                   placement={props.tooltipPlacement}
                   tooltip={
-                    <div className="w-full max-w-xs">
+                    <div className={`w-72 h-[350px] flex flex-col`}>
                       <div>
                         {selectedUser.shopItems?.profileBanner ? (
                           <>
@@ -146,7 +147,7 @@ export default function Avatar(props) {
                           </>
                         )}
                       </div>
-                      <div className="flex flex-col items-center justify-center gap-4 px-4 -mt-7">
+                      <div className="flex-1 flex flex-col items-center justify-center gap-4 px-4 -mt-7">
                         <div
                           className={`avatar avatar-circle avatar-sm  ${
                             selectedUser?.isPremium ? "avatar-premium" : ""
@@ -217,7 +218,11 @@ export default function Avatar(props) {
                               played ladders
                             </div>
                             <div className="text-xl uppercase text-ui-100">
-                              {selectedUser.stats.playedLadders}
+                              {selectedUser.stats.playedLadders ? (
+                                <>{selectedUser.stats.playedLadders}</>
+                              ) : (
+                                <>——</>
+                              )}
                             </div>
                           </div>
                           <div>
@@ -225,21 +230,25 @@ export default function Avatar(props) {
                               Avg. Ladder score
                             </div>
                             <div className="text-xl uppercase text-ui-100">
-                              {RandomNumber(200, 1000)}
+                              {selectedUser.stats.avgScore ? (
+                                <>{selectedUser.stats.avgScore}</>
+                              ) : (
+                                <>——</>
+                              )}
                             </div>
                           </div>
                         </div>
-
-                        <div className="flex flex-col items-center justify-center mb-4 px-2">
-                          <div className="w-16 h-16 achievement-level-4">
-                            <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl4-animated.svg" />
-                            <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
+                        {selectedUser.achievements.favoriteBadge && (
+                          <div className="flex flex-col items-center justify-center mb-4 px-2">
+                            <div className="w-16 h-16 achievement-level-4">
+                              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl4-animated.svg" />
+                              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
+                            </div>
+                            <div className="uppercase text-xs text-left text-achievement-level-4 animate-slide-in-top">
+                              Mission Hunter
+                            </div>
                           </div>
-                          <div className="uppercase text-xs text-left text-achievement-level-4 animate-slide-in-top">
-                            Mission Hunter
-                          </div>
-                        </div>
-
+                        )}
                         <div className="p-2 rounded bg-ui-800/50 mt-2">
                           {selectedUser.clan ? (
                             <Link

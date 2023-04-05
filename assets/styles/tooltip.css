@@ -168,7 +168,7 @@
   &.tooltip-attention {
     @apply
     outline
-    outline-offset-2
+    -outline-offset-1
     outline-1
     outline-main
     rounded

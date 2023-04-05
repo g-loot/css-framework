@@ -88,7 +88,11 @@ export default function PrototypeGamesNavNew({ children }) {
                         </div>
                       </div>
                       <div className="item-body">
-                        <div className={`item-title text-sm uppercase ${item.slug === game ? "font-bold" : ""}`}>
+                        <div
+                          className={`item-title text-sm uppercase ${
+                            item.slug === game ? "font-bold" : ""
+                          }`}
+                        >
                           {item.name}
                         </div>
                       </div>
@@ -104,7 +108,8 @@ export default function PrototypeGamesNavNew({ children }) {
                 <ul className="menu menu-secondary menu-rounded px-4 pb-4">
                   {SubMenuItem.map((subItem, subItemIndex) => (
                     <>
-                      {(!subItem.onlygame || subItem.onlygame === item.slug) && (
+                      {(!subItem.onlygame ||
+                        subItem.onlygame === item.slug) && (
                         <li key={subItem}>
                           <Link
                             href={`/prototype/${item.slug}/${
@@ -119,8 +124,16 @@ export default function PrototypeGamesNavNew({ children }) {
                                   : ""
                               }`}
                             >
-                              <span className={`pl-3 pr-3 icon icon-20 ${subItem.icon}`} />
-                              <span className="uppercase">{subItem.label}</span>
+                              <span
+                                className={`pl-3 pr-3 icon icon-20 ${subItem.icon}`}
+                              />
+                              <span className="uppercase">
+                                <span>{subItem.label}</span>
+                                {item.slug === "valorant" &&
+                                  subItem.url === "ladders" && (
+                                    <span className="ml-2 icon icon-present animate-bounce" />
+                                  )}
+                              </span>
                             </a>
                           </Link>
                         </li>

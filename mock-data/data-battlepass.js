@@ -1,7 +1,7 @@
-export const DataBattlePass = [
+export const DataBattlepass = [
   {
     id: 0,
-    currentStep: 4,
+    currentStep: 5,
     currentProgress: 70,
     steps: [
       {
@@ -86,7 +86,7 @@ export const DataBattlePass = [
   },
 ];
 
-export const DataBattlePassRewards = [
+export const DataBattlepassRewards = [
   {
     id: 1,
     name: "10 coins & 5 tokens",

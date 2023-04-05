@@ -28,7 +28,11 @@ export const dataUsers = [
     },
     stats: {
       xp: 10000,
-      playedLadders: 143,
+      playedLadders: 14,
+      avgPlacement: 32,
+      avgScore: 532,
+      timesInTop: 3,
+      completedMissions: 558,
       playedTournaments: 12,
       gamestats: [
         {
@@ -206,7 +210,7 @@ export const dataUsers = [
           from: "0",
           to: "5",
         },
-      ]
+      ],
     },
     friends: [4, 8, 11],
   },
@@ -217,9 +221,9 @@ export const dataUsers = [
     isFriend: false,
     level: 75,
     isOnline: false,
-    nickname: "Kes2Band",
+    nickname: "MrEmptyState",
     firstname: "Kees",
-    lastname: "Dieffenthaller",
+    lastname: "Empty",
     country: "Germany",
     countryFlag: "de",
     lang: "ENG",
@@ -234,13 +238,17 @@ export const dataUsers = [
       twitch: "@KeesDief",
     },
     shopItems: {
-      avatarFrame: 125,
-      profileBanner: 19,
+      avatarFrame: false,
+      profileBanner: false,
     },
     stats: {
-      xp: 234,
-      playedLadders: 34,
-      playedTournaments: 0,
+      xp: false,
+      playedLadders: false,
+      avgPlacement: false,
+      avgScore: false,
+      timesInTop: false,
+      completedMissions: false,
+      playedTournaments: false,
       gamestats: [
         {
           game: 2,
@@ -264,12 +272,11 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [1, 2, 5],
+    games: [1],
     achievements: {
-      favoriteBadge: null,
-      badges: [
-      ]
-    }
+      favoriteBadge: false,
+      badges: [],
+    },
   },
   {
     id: 3,
@@ -302,6 +309,10 @@ export const dataUsers = [
     stats: {
       xp: 9275,
       playedLadders: 243,
+      avgPlacement: 32,
+      avgScore: 532,
+      timesInTop: 3,
+      completedMissions: 558,
       playedTournaments: 22,
     },
     wallet: {
@@ -326,9 +337,8 @@ export const dataUsers = [
       },
     ],
     achievements: {
-      favoriteBadge: null,
-      badges: [
-      ]
+      favoriteBadge: 4,
+      badges: [],
     },
     friends: [4, 8, 11],
   },
@@ -361,7 +371,11 @@ export const dataUsers = [
     },
     stats: {
       xp: 18970,
-      playedLadders: 143,
+      playedLadders: 14,
+      avgPlacement: 32,
+      avgScore: 532,
+      timesInTop: 3,
+      completedMissions: 558,
       playedTournaments: 12,
       gamestats: [
         {
@@ -384,6 +398,14 @@ export const dataUsers = [
       {
         gameSlug: "valorant",
         id: 2,
+      },
+      {
+        gameSlug: "pubg",
+        id: 2,
+      },
+      {
+        gameSlug: "valorant",
+        id: 3,
       },
     ],
     achievements: {
@@ -425,7 +447,7 @@ export const dataUsers = [
           from: "150",
           to: "300",
         },
-      ]
+      ],
     },
     friends: [4, 8, 11],
   },
@@ -459,6 +481,10 @@ export const dataUsers = [
     stats: {
       xp: 874,
       playedLadders: 3,
+      avgPlacement: 32,
+      avgScore: 532,
+      timesInTop: 3,
+      completedMissions: 558,
       playedTournaments: 0,
       gamestats: [
         {
@@ -485,6 +511,14 @@ export const dataUsers = [
     },
     games: [1, 2],
     ladders: [
+      {
+        gameSlug: "valorant",
+        id: 3,
+      },
+      {
+        gameSlug: "pubg",
+        id: 2,
+      },
       {
         gameSlug: "valorant",
         id: 3,
@@ -529,7 +563,7 @@ export const dataUsers = [
           from: "900",
           to: "1000",
         },
-      ]
+      ],
     },
     friends: [4, 8, 11],
   },
@@ -563,6 +597,10 @@ export const dataUsers = [
     stats: {
       xp: 239,
       playedLadders: 74,
+      avgPlacement: 32,
+      avgScore: 532,
+      timesInTop: 3,
+      completedMissions: 558,
       playedTournaments: 2,
     },
     wallet: {
@@ -577,11 +615,13 @@ export const dataUsers = [
         gameSlug: "pubg",
         id: 2,
       },
-    ],
-    ladders: [
+      {
+        gameSlug: "pubg",
+        id: 2,
+      },
       {
         gameSlug: "valorant",
-        id: 1,
+        id: 3,
       },
     ],
     achievements: {
@@ -614,7 +654,7 @@ export const dataUsers = [
           from: "150",
           to: "300",
         },
-      ]
+      ],
     },
     friends: [4, 8, 11],
   },
@@ -648,6 +688,10 @@ export const dataUsers = [
     stats: {
       xp: 198,
       playedLadders: 15,
+      avgPlacement: 32,
+      avgScore: 532,
+      timesInTop: 3,
+      completedMissions: 558,
       playedTournaments: 0,
     },
     wallet: {
@@ -665,6 +709,14 @@ export const dataUsers = [
       {
         gameSlug: "valorant",
         id: 2,
+      },
+      {
+        gameSlug: "pubg",
+        id: 2,
+      },
+      {
+        gameSlug: "valorant",
+        id: 3,
       },
     ],
     achievements: {
@@ -697,7 +749,7 @@ export const dataUsers = [
           from: "150",
           to: "300",
         },
-      ]
+      ],
     },
     friends: [4, 8, 11],
   },
@@ -730,6 +782,10 @@ export const dataUsers = [
     stats: {
       xp: 244,
       playedLadders: 54,
+      avgPlacement: 32,
+      avgScore: 532,
+      timesInTop: 3,
+      completedMissions: 558,
       playedTournaments: 23,
     },
     wallet: {
@@ -788,7 +844,7 @@ export const dataUsers = [
           from: "150",
           to: "300",
         },
-      ]
+      ],
     },
     friends: [4, 8, 11],
   },
@@ -822,6 +878,10 @@ export const dataUsers = [
     stats: {
       xp: 10000,
       playedLadders: 54,
+      avgPlacement: 32,
+      avgScore: 532,
+      timesInTop: 3,
+      completedMissions: 558,
       playedTournaments: 23,
     },
     wallet: {
@@ -840,132 +900,9 @@ export const dataUsers = [
         gameSlug: "valorant",
         id: 2,
       },
-    ],
-    achievements: {
-      favoriteBadge: 2,
-      badges: [
-        {
-          id: 1,
-          item: 1,
-          level: 4,
-          percent: 40,
-          progress: 10,
-          from: "150",
-          to: "300",
-        },
-        {
-          id: 2,
-          item: 2,
-          level: 4,
-          percent: 40,
-          progress: 10,
-          from: "150",
-          to: "300",
-        },
-        {
-          id: 3,
-          item: 3,
-          level: 3,
-          percent: 40,
-          progress: 10,
-          from: "150",
-          to: "300",
-        },
-        {
-          id: 4,
-          item: 4,
-          level: 3,
-          percent: 40,
-          progress: 10,
-          from: "150",
-          to: "300",
-        },
-      ]
-    }
-  },
-  {
-    id: 10,
-    isYou: false,
-    isPremium: false,
-    isFriend: false,
-    level: 111,
-    isOnline: true,
-    nickname: "FrenzyMan",
-    firstname: "Scott",
-    lastname: "Fritz",
-    country: "Austria",
-    countryFlag: "at",
-    lang: "GER",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg",
-    email: "frenzyman@gmail.com",
-    clan: null,
-    bio: "Just one more game.",
-    socials: {
-      riotNickname: "FrenzyMan",
-      riotHashtag: 1254,
-      twitch: "@FrenzyMan",
-    },
-    shopItems: {
-      avatarFrame: false,
-      profileBanner: 2,
-    },
-    stats: {
-      xp: 297,
-      playedLadders: 2,
-      playedTournaments: 0,
-    },
-    wallet: {
-      coins: 50000,
-      tokens: 245,
-      powertokens: 15,
-      tickets: 3,
-    },
-    games: [1, 5, 3, 4],
-  },
-  {
-    id: 11,
-    isYou: false,
-    isPremium: true,
-    isFriend: true,
-    level: 72,
-    isOnline: true,
-    nickname: "Joppe",
-    firstname: "Johan",
-    lastname: "Per",
-    country: "Malta",
-    countryFlag: "mt",
-    lang: "ENG",
-    avatar:
-      "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg",
-    email: "joppe@gmail.com",
-    clan: null,
-    bio: "Sleep. Eat. Game. Repeat.",
-    socials: {
-      riotNickname: "Joppe",
-      riotHashtag: 1254,
-      twitch: "@Joppe",
-    },
-    shopItems: {
-      avatarFrame: 4,
-      profileBanner: 27,
-    },
-    stats: {
-      xp: 297,
-      playedLadders: 2,
-      playedTournaments: 0,
-    },
-    wallet: {
-      coins: 50000,
-      tokens: 245,
-      powertokens: 15,
-      tickets: 3,
-    },
-    games: [1, 3],
-    ladders: [
       {
-        gameSlug: "valorant",
-        id: 1,
+        gameSlug: "pubg",
+        id: 2,
       },
       {
         gameSlug: "valorant",
@@ -1011,8 +948,155 @@ export const dataUsers = [
           from: "150",
           to: "300",
         },
-      ]
-    }
+      ],
+    },
+  },
+  {
+    id: 10,
+    isYou: false,
+    isPremium: false,
+    isFriend: false,
+    level: 111,
+    isOnline: true,
+    nickname: "FrenzyMan",
+    firstname: "Scott",
+    lastname: "Fritz",
+    country: "Austria",
+    countryFlag: "at",
+    lang: "GER",
+    avatar:
+      "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg",
+    email: "frenzyman@gmail.com",
+    clan: null,
+    bio: "Just one more game.",
+    socials: {
+      riotNickname: "FrenzyMan",
+      riotHashtag: 1254,
+      twitch: "@FrenzyMan",
+    },
+    shopItems: {
+      avatarFrame: false,
+      profileBanner: 2,
+    },
+    stats: {
+      xp: 297,
+      playedLadders: 2,
+      avgPlacement: 32,
+      avgScore: 532,
+      timesInTop: 3,
+      completedMissions: 558,
+      playedTournaments: 0,
+    },
+    wallet: {
+      coins: 50000,
+      tokens: 245,
+      powertokens: 15,
+      tickets: 3,
+    },
+    games: [1, 5, 3, 4],
+  },
+  {
+    id: 11,
+    isYou: false,
+    isPremium: true,
+    isFriend: true,
+    level: 72,
+    isOnline: true,
+    nickname: "Joppe",
+    firstname: "Johan",
+    lastname: "Per",
+    country: "Malta",
+    countryFlag: "mt",
+    lang: "ENG",
+    avatar:
+      "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg",
+    email: "joppe@gmail.com",
+    clan: null,
+    bio: "Sleep. Eat. Game. Repeat.",
+    socials: {
+      riotNickname: "Joppe",
+      riotHashtag: 1254,
+      twitch: "@Joppe",
+    },
+    shopItems: {
+      avatarFrame: 4,
+      profileBanner: 27,
+    },
+    stats: {
+      xp: 297,
+      playedLadders: 2,
+      avgPlacement: 32,
+      avgScore: 532,
+      timesInTop: 3,
+      completedMissions: 558,
+      playedTournaments: 0,
+    },
+    wallet: {
+      coins: 50000,
+      tokens: 245,
+      powertokens: 15,
+      tickets: 3,
+    },
+    games: [1, 3],
+    ladders: [
+      {
+        gameSlug: "valorant",
+        id: 1,
+      },
+      {
+        gameSlug: "valorant",
+        id: 3,
+      },
+      {
+        gameSlug: "pubg",
+        id: 2,
+      },
+      {
+        gameSlug: "valorant",
+        id: 3,
+      },
+    ],
+    achievements: {
+      favoriteBadge: 2,
+      badges: [
+        {
+          id: 1,
+          item: 1,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 2,
+          item: 2,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 3,
+          item: 3,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 4,
+          item: 4,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+      ],
+    },
   },
 ];
 

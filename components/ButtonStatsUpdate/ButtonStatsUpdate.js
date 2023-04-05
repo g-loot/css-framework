@@ -11,18 +11,18 @@ export default function ButtonStatsUpdate(props) {
   const [isMoreProminent, setIsMoreProminent] = useState(false);
 
   useEffect(() => {
-    handleMoreProminent(4000);
+    handleMoreProminent(5000);
   }, []);
 
   function addToastWithDelay(toast) {
     setSubmitting(true);
+    setIsMoreProminent(false);
 
     setTimeout(() => {
-      setIsMoreProminent(false);
       uiContext.openToastr(toast);
       setSubmitting(false);
-      handleMoreProminent(8000);
-    }, 1000);
+      handleMoreProminent(15000);
+    }, 2500);
   }
 
   function handleMoreProminent(duration) {
@@ -34,10 +34,10 @@ export default function ButtonStatsUpdate(props) {
   return (
     <>
       <div
-        className={`${
-          isMoreProminent ? "tooltip tooltip-attention tooltip-left" : ""
+        className={`tooltip-left ${
+          isMoreProminent && !submitting ? "tooltip tooltip-attention" : ""
         }`}
-        data-tooltip={isMoreProminent ? 'Missing progress? Press here!' : ''}
+        data-tooltip={`${isMoreProminent ? 'Missing progress? Press here!' : ''}${submitting ? 'This might take up to 15 minutes. Make sure the match you’re trying to fetch is 100% completed.' : ''}`}
       >
         <button
           className={`button button-xs ${

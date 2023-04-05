@@ -9,8 +9,8 @@ import React, {
 import ModalClaimLadderRewards from "../../pages/prototype/home/modal-claim-ladderrewards";
 import { UiContext } from "../../contexts/ui";
 import { VariablesContext } from "../../contexts/variables";
-import { DataBattlePass } from "../../mock-data/data-battlepass";
-import { DataBattlePassRewards } from "../../mock-data/data-battlepass";
+import { DataBattlepass } from "../../mock-data/data-battlepass";
+import { DataBattlepassRewards } from "../../mock-data/data-battlepass";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 import Avatar from "../Avatar/Avatar";
@@ -37,8 +37,9 @@ const useResize = (myRef) => {
   return { width, height };
 };
 
-export default function BattlePass(props) {
-  const selectedBattlePass = props.id || 0;
+export default function Battlepass(props) {
+  const size = props.size || "battlepass-lg";
+  const selectedBattlepass = props.id || 0;
   const [currentStep, setCurrentStep] = useState(1);
   const [activeStep, setActiveStep] = useState(1);
   const [originStep, setOriginStep] = useState(0);
@@ -51,33 +52,39 @@ export default function BattlePass(props) {
   const variablesContext = useContext(VariablesContext);
 
   useEffect(() => {
-    setCurrentStep(getBattlePassByID(selectedBattlePass).currentStep);
-    setActiveStep(getBattlePassByID(selectedBattlePass).currentStep);
-    if(getBattlePassByID(selectedBattlePass).currentStep > maxSteps) {
-      setOriginStep(getBattlePassByID(selectedBattlePass).currentStep - 1); 
+    setCurrentStep(getBattlepassByID(selectedBattlepass).currentStep);
+    setActiveStep(getBattlepassByID(selectedBattlepass).currentStep);
+    if (getBattlepassByID(selectedBattlepass).currentStep > maxSteps) {
+      setOriginStep(getBattlepassByID(selectedBattlepass).currentStep - 1);
     }
   }, []);
 
   useEffect(() => {
-    if (width > 750) {
+    if (width > 992) {
+      setmaxSteps(7);
+    } else if (width < 992 && width > 848) {
+      setmaxSteps(6);
+    } else if (width < 848 && width > 750) {
       setmaxSteps(5);
-    } else {
+    } else if (width < 750 && width > 350) {
       setmaxSteps(3);
+    } else {
+      setmaxSteps(2);
     }
   }, [width]);
 
-  const getBattlePassByID = (id) => {
-    return DataBattlePass.find((battlepasses) => {
+  const getBattlepassByID = (id) => {
+    return DataBattlepass.find((battlepasses) => {
       return battlepasses.id === parseInt(id);
     });
   };
-  const getBattlePassStepByID = (id) => {
-    return getBattlePassByID(0).steps.find((step) => {
+  const getBattlepassStepByID = (id) => {
+    return getBattlepassByID(0).steps.find((step) => {
       return step.id === parseInt(id);
     });
   };
-  const getBattlePassRewardByID = (id) => {
-    return DataBattlePassRewards.find((reward) => {
+  const getBattlepassRewardByID = (id) => {
+    return DataBattlepassRewards.find((reward) => {
       return reward.id === parseInt(id);
     });
   };
@@ -86,7 +93,7 @@ export default function BattlePass(props) {
     if (item.id < currentStep) {
       return 100;
     } else if (item.id === currentStep) {
-      return getBattlePassByID(0).currentProgress;
+      return getBattlepassByID(0).currentProgress;
     } else {
       return 0;
     }
@@ -133,71 +140,79 @@ export default function BattlePass(props) {
   return (
     <>
       <div
-        className="battlepass-container scrollbar-desktop"
+        className={`battlepass-container ${
+          size === "battlepass-md" ? "battlepass-md" : ""
+        }`}
         ref={componentRef}
       >
         <div className="battlepass-viewer">
           <div className="battlepass-reward">
-            <i
-              style={{
-                "-webkit-mask-image":
-                  "url(https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/" +
-                  getBattlePassRewardByID(
-                    getBattlePassStepByID(activeStep).reward
-                  ).image +
-                  ".png)",
-              }}
-            />
-            <img
-              src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                getBattlePassRewardByID(
-                  getBattlePassStepByID(activeStep).reward
-                ).image
-              }.png`}
-              width="100%"
-              height="auto"
-              alt={
-                getBattlePassRewardByID(
-                  getBattlePassStepByID(activeStep).reward
+            <div className="battlepass-reward-image">
+              <i
+                style={{
+                  "-webkit-mask-image":
+                    "url(https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/" +
+                    getBattlepassRewardByID(
+                      getBattlepassStepByID(activeStep).reward
+                    ).image +
+                    ".png)",
+                }}
+              />
+              <img
+                src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                  getBattlepassRewardByID(
+                    getBattlepassStepByID(activeStep).reward
+                  ).image
+                }.png`}
+                width="100%"
+                height="auto"
+                alt={
+                  getBattlepassRewardByID(
+                    getBattlepassStepByID(activeStep).reward
+                  ).name
+                }
+              />
+            </div>
+            <p className="battlepass-reward-name">
+              {size === "battlepass-md" && (
+                <span className="uppercase text-ui-300">{getBattlepassStepByID(activeStep).name}:{" "}</span>
+              )}
+              {
+                getBattlepassRewardByID(
+                  getBattlepassStepByID(activeStep).reward
                 ).name
               }
-            />
+            </p>
           </div>
-          <h3>
-            {
-              getBattlePassRewardByID(getBattlePassStepByID(activeStep).reward)
-                .name
-            }
-          </h3>
-          <div className="h-9 text-center flex items-center justify-center">
-            {getBattlePassStepByID(activeStep).id < currentStep && (
+          <div className="battlepass-reward-info">
+            {getBattlepassStepByID(activeStep).id < currentStep && (
               <button type="button" className="button button-claim">
                 <span className="icon icon-present animate-bounce" />
                 <span>Claim reward</span>
               </button>
             )}
-            {getBattlePassStepByID(activeStep).id === currentStep && (
+            {getBattlepassStepByID(activeStep).id === currentStep && (
               <span>
                 <span className="text-ui-300">
-                  {1000 + 100 * getBattlePassStepByID(activeStep).id - 75} /
+                  {1000 + 100 * getBattlepassStepByID(activeStep).id - 75} /
                 </span>{" "}
                 <span className="text-ui-100">
-                  {1000 + 100 * getBattlePassStepByID(activeStep).id} XP
+                  {1000 + 100 * getBattlepassStepByID(activeStep).id} XP
                 </span>
               </span>
             )}
-            {getBattlePassStepByID(activeStep).id > currentStep && (
+            {getBattlepassStepByID(activeStep).id > currentStep && (
               <span>
                 <span className="text-ui-300">0 /</span>{" "}
                 <span className="text-ui-100">
-                  {1000 + 100 * getBattlePassStepByID(activeStep).id} XP
+                  {1000 + 100 * getBattlepassStepByID(activeStep).id} XP
                 </span>
               </span>
             )}
           </div>
         </div>
         <ul className="battlepass">
-          {getBattlePassByID(0)
+          {getBattlepassByID(0)
             .steps.slice(originStep, originStep + maxSteps)
             .map((item, itemIndex) => (
               <li
@@ -207,7 +222,7 @@ export default function BattlePass(props) {
                 } ${activeStep === item.id ? `is-active` : ""}
                         
                         ${
-                          getBattlePassByID(0).currentStep === item.id
+                          getBattlepassByID(0).currentStep === item.id
                             ? `is-current`
                             : ""
                         }
@@ -230,11 +245,11 @@ export default function BattlePass(props) {
                   <div className="battlepass-body">
                     <img
                       src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                        getBattlePassRewardByID(item.reward).image
+                        getBattlepassRewardByID(item.reward).image
                       }.png`}
                       width="100%"
                       height="auto"
-                      alt={getBattlePassRewardByID(item.reward).name}
+                      alt={getBattlepassRewardByID(item.reward).name}
                     />
                   </div>
                 </button>
@@ -251,13 +266,13 @@ export default function BattlePass(props) {
             <span className="icon icon-ctrl-left" />
           </button>
           <span>
-            {activeStep} / {getBattlePassByID(0).steps.length}
+            {activeStep} / {getBattlepassByID(0).steps.length}
           </span>
           <button
             type="button"
             className="button button-ghost rounded-full button-sm"
             onClick={() => handleNext()}
-            disabled={activeStep === getBattlePassByID(0).steps.length}
+            disabled={activeStep === getBattlepassByID(0).steps.length}
           >
             <span className="icon icon-ctrl-right" />
           </button>
