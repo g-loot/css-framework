@@ -25,7 +25,6 @@
   ;
   filter: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPiAgCiAgICA8ZmlsdGVyIGlkPSJmaWx0ZXIiPgogICAgICAgIDxmZVR1cmJ1bGVuY2UgdHlwZT0idHVyYnVsZW5jZSIgYmFzZUZyZXF1ZW5jeT0iMC4wNyAwLjAxIiBudW1PY3RhdmVzPSI1IiBzZWVkPSIyIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIiB4PSIwJSIgeT0iMCUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHJlc3VsdD0ibm9pc2UiPjwvZmVUdXJidWxlbmNlPgogICAgICAgIDxmZURpc3BsYWNlbWVudE1hcCBpbj0iU291cmNlR3JhcGhpYyIgaW4yPSJub2lzZSIgc2NhbGU9IjAuMDAwODE3MzQiIHhDaGFubmVsU2VsZWN0b3I9IlIiIHlDaGFubmVsU2VsZWN0b3I9IkIiIHg9IjAlIiB5PSIwJSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48L2ZlRGlzcGxhY2VtZW50TWFwPgogICAgPC9maWx0ZXI+Cjwvc3ZnPg==#filter');
 
-
   .battlepass-reward {
     @apply
     flex
@@ -35,48 +34,49 @@
     gap-4
     ;
   }
+}
 
-  .battlepass-reward-image {
-    @apply
-    relative
-    w-72
-    aspect-square
-    rounded
-    overflow-hidden
-    ;
-    > i {
-      @apply
-      z-30
-      absolute
-      inset-0
-      bg-[-15%]
-      bg-[length:400%_auto]
-      animate-[battlepass-shining-rays_5s_cubic-bezier(0.1,0,0.8,1)_infinite]
-      bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_54%,_rgba(255,255,255,0)_60.9%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,0)_71%)]
-      bg-no-repeat
-      ;
-      mask-size: cover;
-      mask-repeat: no-repeat;
-    }
-  }
 
-  .battlepass-reward-name {
+.battlepass-reward-image {
+  @apply
+  relative
+  w-72
+  aspect-square
+  rounded
+  overflow-hidden
+  ;
+  > i {
     @apply
-    text-3xl
-    uppercase
-    text-ui-100
+    z-30
+    absolute
+    inset-0
+    bg-[-15%]
+    bg-[length:400%_auto]
+    animate-[battlepass-shining-rays_5s_cubic-bezier(0.1,0,0.8,1)_infinite]
+    bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_54%,_rgba(255,255,255,0)_60.9%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,0)_71%)]
+    bg-no-repeat
     ;
+    mask-size: cover;
+    mask-repeat: no-repeat;
   }
+}
 
-  .battlepass-reward-info {
-    @apply
-    h-9
-    text-center
-    flex
-    items-center
-    justify-center
-    ;
-  }
+.battlepass-reward-name {
+  @apply
+  text-3xl
+  uppercase
+  text-ui-100
+  ;
+}
+
+.battlepass-reward-info {
+  @apply
+  h-9
+  text-center
+  flex
+  items-center
+  justify-center
+  ;
 }
 
 .battlepass-nav {
@@ -85,7 +85,9 @@
   items-center
   justify-center
   rounded-full
-  bg-ui-800
+  bg-ui-700
+  border
+  border-ui-600
   text-center
   text-sm
   select-none
@@ -115,6 +117,21 @@
   gap-2
   relative
   ;
+
+  &:hover {
+    .battlepass-content {
+      @apply
+      border-ui-400
+      ;
+    }
+  }
+  &:active {
+    .battlepass-content {
+      @apply
+      border-ui-600
+      ;
+    }
+  }
 
   .battlepass-info {
     @apply
@@ -152,8 +169,6 @@
     bg-ui-800
     border-2
     border-ui-600
-    hover:border-ui-400
-    active:border-ui-600
     rounded
     aspect-square
     cursor-pointer
@@ -167,7 +182,7 @@
     focus-visible:outline-offset-2
     focus-visible:outline-1
     transition-[box-shadow]
-    duration-200
+    duration-100
     ease-in-out
     ;
     .battlepass-decoration {
@@ -177,7 +192,7 @@
       bottom-0
       inset-x-0
       bg-ui-900/75
-      text-ui-100
+      text-ui-300
       uppercase
       text-sm
       px-2
@@ -224,16 +239,109 @@
       pr-3
       py-1
       rounded-tl
+      transition-[box-shadow]
+      duration-100
+      ease-in-out
       ;
       clip-path: polygon(0 0, calc(100% - 0.5em) 0, 100% 100%, 0 100%);
     }
     .battlepass-content {
       @apply
+      rounded-tl-none
+      ;
+    }
+    &::before {
+      @apply
+      bg-ui-600
+      text-premium-500
+      ;
+    }
+    &:hover::before {
+      @apply
+      bg-ui-400
+      text-ui-900
+      ;
+    }
+    &:active::before {
+      @apply
+      bg-ui-600
+      ;
+    }
+  }
+
+  &.is-active {
+    &:hover {
+      .battlepass-content {
+        @apply
+        border-interaction-500
+        ;
+      }
+    }
+    &:active {
+      .battlepass-content {
+        @apply
+        border-interaction-700
+        ;
+      }
+    }
+    .battlepass-content {
+      @apply
+      border-interaction-500
+      shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
+      ;
+      &::after {
+        @apply
+        content-['']
+        z-30
+        absolute
+        inset-0
+        bg-[-15%]
+        bg-[length:300%_auto]
+        animate-[battlepass-shining-rays_5s_cubic-bezier(0.4,0,0.2,1)_infinite]
+        bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_55%,_rgba(255,255,255,0)_56%,_rgba(255,255,255,0)_70.9%,_rgba(255,255,255,.3)_71%,_rgba(255,255,255,0)_80%,_rgba(255,255,255,0)_81%)]
+        bg-no-repeat
+        ;
+      }
+      .battlepass-decoration {
+        @apply
+        text-interaction-500
+        ;
+      }
+    }
+    &.is-premium {
+      &::before {
+        @apply
+        bg-interaction-500
+        text-ui-900
+        ;
+      }
+      &:hover::before {
+        @apply
+        bg-interaction-300
+        ;
+      }
+      &:active::before {
+        @apply
+        bg-interaction-700
+        ;
+      }
+    }
+  }
+
+  &.is-active.is-premium {
+    .battlepass-content {
+      @apply
       border-premium-500
       hover:border-premium-300
       active:border-premium-700
+      shadow-[0_0_0_2px_rgb(var(--color-premium-500))]
       rounded-tl-none
       ;
+      .battlepass-decoration {
+        @apply
+        text-premium-500
+        ;
+      }
     }
     &::before {
       @apply
@@ -249,47 +357,6 @@
       @apply
       bg-premium-700
       ;
-    }
-  }
-
-  &.is-active {
-    .battlepass-content {
-      @apply
-      border-interaction-500
-      hover:border-interaction-300
-      active:border-interaction-700
-      shadow-[0_0_0_4px_rgb(var(--color-ui-600))]
-      ;
-      &::after {
-        @apply
-        content-['']
-        z-30
-        absolute
-        inset-0
-        bg-[-15%]
-        bg-[length:300%_auto]
-        animate-[battlepass-shining-rays_5s_cubic-bezier(0.4,0,0.2,1)_infinite]
-        bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_55%,_rgba(255,255,255,0)_56%,_rgba(255,255,255,0)_70.9%,_rgba(255,255,255,.3)_71%,_rgba(255,255,255,0)_80%,_rgba(255,255,255,0)_81%)]
-        bg-no-repeat
-        ;
-      }
-    }
-    &.is-premium {
-      &::before {
-        @apply
-        bg-interaction-500
-        ;
-      }
-      &:hover::before {
-        @apply
-        bg-interaction-300
-        ;
-      }
-      &:active::before {
-        @apply
-        bg-interaction-700
-        ;
-      }
     }
   }
 
@@ -317,7 +384,7 @@
       h-full
       border-dashed
       border-l
-      border-ui-600
+      border-ui-500
       ;
     }
   }
@@ -342,22 +409,23 @@
     items-center
     w-full
     pb-3
-    gap-2
+    gap-4
     border-b
     border-ui-700
     ;
     > .battlepass-reward {
       @apply
-      flex-row
       flex-1
+      flex-row
       justify-start
       text-left
       ;
       > .battlepass-reward-image {
         @apply
-        w-12
+        w-14
+        shrink-0
         border
-        border-ui-700
+        border-ui-600
         rounded
         ;
         > i {
@@ -370,14 +438,17 @@
         @apply
         text-base
         normal-case
+        truncate
         ;
       }
-      > .battlepass-reward-info {
-        @apply
-        text-right
-        h-12
-        ;
-      }
+    }
+    > .battlepass-reward-info {
+      @apply
+      flex-1
+      justify-end
+      text-right
+      h-12
+      ;
     }
   }
 }

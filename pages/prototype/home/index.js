@@ -81,8 +81,7 @@ export default function Home() {
         {/*
 
         <section
-          className="mb-8 animate-slide-in-bottom animate-delay"
-          style={{ "--delay": "calc(1 * 0.05s)" }}
+          className="mb-8"
         >
           <div className="flex flex-col sm:flex-row flex-wrap items-baseline sm:justify-between gap-2 mb-4 mx-4 sm:mx-0">
             <h3 className="h6">Your latest tracked match</h3>
@@ -132,10 +131,7 @@ export default function Home() {
 
         <h2 className="h3 mb-4 mx-4 sm:mx-0">Ladders</h2>
 
-        <section
-          className="mb-8 animate-slide-in-bottom animate-delay"
-          style={{ "--delay": "calc(2 * 0.05s)" }}
-        >
+        <section className="mb-8">
           <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
             <h3 className="h6">Solo</h3>
             {!hasNoLadders && (
@@ -148,10 +144,7 @@ export default function Home() {
           </div>
           <HomeLaddersSolo />
         </section>
-        <section
-          className="mb-8 animate-slide-in-bottom animate-delay"
-          style={{ "--delay": "calc(2 * 0.05s)" }}
-        >
+        <section className="mb-8">
           <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
             <h3 className="h6">Clan</h3>
             {hasNoClan ? (

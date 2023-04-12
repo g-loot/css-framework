@@ -144,6 +144,49 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* with claim */}
+      <div className="mb-12" id="with-claim">
+        <h2 className="h3 mb-3">With claim</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center justify-center">
+                  <ul className="tabs">
+                    <li>
+                      <button className="is-active">
+                        <span>Home</span>
+                        <span className="icon icon-present animate-bounce" />
+                      </button>
+                    </li>
+                    <li>
+                      <button className="is-active">
+                        <span>Missions</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button>
+                        <span>Ladders</span>
+                        <span className="icon icon-present animate-bounce" />
+                      </button>
+                    </li>
+                  </ul>
+                </div>x
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/zr378pqa/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Rank tab */}
       <div className="mb-12" id="rank-tab">
         <h2 className="h3 mb-3">Rank tab</h2>

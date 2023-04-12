@@ -576,18 +576,6 @@
       opacity-0
       ;
     }
-    &::before {
-      @apply
-      content-['']
-      absolute
-      z-40
-      inset-auto
-      h-6
-      w-6
-      rounded-full
-      bg-ui-800
-      ;
-    }
     &::after {
       @apply
       content-['']
@@ -607,6 +595,14 @@
       animate-[button-loader-rotate_1s_linear_infinite]
       bg-none
       ;
+    }
+    > div {
+      @apply
+      bg-ui-500
+      from-ui-500
+      via-ui-500
+      to-ui-500
+      animate-pulse
     }
   }
 }

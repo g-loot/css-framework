@@ -38,7 +38,8 @@
     > div {
       @apply
       relative
-      block 
+      flex
+      gap-2 
       text-ui-300
       cursor-pointer
       select-none

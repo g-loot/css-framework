@@ -329,7 +329,9 @@ export default function TopbarNew() {
                       */}
               </ul>
 
+              {/*
               <TopBarClaim />
+                    */}
             </div>
             <div className="flex justify-end items-center gap-1 sm:gap-2">
               <div className="dropdown dropdown-center md:dropdown-end">

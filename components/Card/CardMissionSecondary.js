@@ -25,6 +25,7 @@ export default function CardMissionSecondary(props) {
   const gameSlug = props.gameSlug || "valorant";
   const [hasClaimed, setHasClaimed] = useState(mission.hasClaimed);
   const [isLoading, setIsLoading] = useState(false);
+  const [isCapped, setIsCapped] = useState(false);
 
   useEffect(() => {
     if (modalClaimMission) {
@@ -48,7 +49,6 @@ export default function CardMissionSecondary(props) {
         setMissionRetrieved(!MissionRetrieved);
         variablesContext.incrementAvailableMissions(1);
       }, 500);
-      
     }
   }
 
@@ -79,16 +79,16 @@ export default function CardMissionSecondary(props) {
   return (
     <>
       <div
-        className={`revealer ${
-          MissionRetrieved === true ? "is-active" : ""
-        }`}
+        className={`revealer ${MissionRetrieved === true ? "is-active" : ""}`}
         onClick={handleGetMission.bind(this)}
         key={mission}
       >
         <div className="revealer-front">
           <div
             className={`card-mission card-secondary ${
-              variablesContext.availableMissions < 2 && !MissionRetrieved ? "is-highlighted" : ""
+              variablesContext.availableMissions < 2 && !MissionRetrieved
+                ? "is-highlighted"
+                : ""
             }  ${isLoading ? "is-loading" : ""}`}
           >
             <div className="card-overlay">
@@ -104,19 +104,37 @@ export default function CardMissionSecondary(props) {
                   )}
                 </>
               ) : (
-                <div className="text-ui-100">
-                  <div>New missions in</div>
-                  <Countdown
-                    hasLabels={true}
-                    labelsAbbr={true}
-                    hasDays={false}
-                    hasHours={true}
-                    hasMinutes={true}
-                    hasSeconds={false}
-                    labelClassName="text-base mr-2"
-                    className="text-4xl"
-                  />
-                </div>
+                <>
+                  {isCapped ? (
+                    <>
+                      <div className="text-ui-100">
+                        <div className="text-xl">Maximum missions revealed</div>
+                        <div className="text-sm">
+                          Complete missions to get new ones
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div
+                        className="text-ui-100"
+                        onClick={() => setIsCapped(!isCapped)}
+                      >
+                        <div>New missions in</div>
+                        <Countdown
+                          hasLabels={true}
+                          labelsAbbr={true}
+                          hasDays={false}
+                          hasHours={true}
+                          hasMinutes={true}
+                          hasSeconds={false}
+                          labelClassName="text-base mr-2"
+                          className="text-4xl"
+                        />
+                      </div>
+                    </>
+                  )}
+                </>
               )}
             </div>
             <div className="card-bg">
@@ -206,7 +224,7 @@ export default function CardMissionSecondary(props) {
                   <div>
                     <button
                       type="button"
-                      className="button button-claim is-shining mt-1"
+                      className="button button-claim mt-1"
                       onClick={openModalClaimMission}
                     >
                       <span className="icon icon-present animate-bounce" />

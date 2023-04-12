@@ -172,7 +172,6 @@
 
   &.is-loading {
     @apply 
-    relative
     pointer-events-none
     bg-ui-600/95
     bg-[length:800px_100%]

@@ -2942,6 +2942,40 @@ export const dataGames = [
         },
         topPerformers: [1, 5, 6],
       },
+       {
+        id: 11,
+        solo: true,
+        clan: false,
+        name: "Empty Unrated",
+        cover:
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
+        status: "ongoing",
+        gameMode: "Unrated",
+        rewards: [
+          {
+            type: "coin",
+            value: 10000,
+          },
+        ],
+        isEnrolled: false,
+        hasClaim: false,
+        progress: 3,
+        progressClan: 0,
+        soloLeaderboard: false,
+        soloResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        clanResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        topPerformers: [2, 3, 4],
+      },
     ],
     tournaments: [
       {

@@ -122,7 +122,7 @@ export default function Avatar(props) {
                   className="p-0"
                   placement={props.tooltipPlacement}
                   tooltip={
-                    <div className={`w-72 h-[350px] flex flex-col`}>
+                    <div className={`w-72 h-[370px] flex flex-col`}>
                       <div>
                         {selectedUser.shopItems?.profileBanner ? (
                           <>

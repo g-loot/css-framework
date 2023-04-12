@@ -37,6 +37,81 @@ const Groups = [
   "S",
 ];
 
+const rewardDistribSolo = [
+  {
+    name: "1",
+    rewards: [
+      {
+        type: "coin",
+        value: 150000,
+      },
+    ],
+  },
+  {
+    name: "2",
+    rewards: [
+      {
+        type: "coin",
+        value: 90000,
+      },
+    ],
+  },
+  {
+    name: "3",
+    rewards: [
+      {
+        type: "coin",
+        value: 90000,
+      },
+    ],
+  },
+  {
+    name: "4-10",
+    rewards: [
+      {
+        type: "coin",
+        value: 90000,
+      },
+    ],
+  },
+  {
+    name: "11-50",
+    rewards: [
+      {
+        type: "coin",
+        value: 40000,
+      },
+    ],
+  },
+  {
+    name: "51-100",
+    rewards: [
+      {
+        type: "coin",
+        value: 5000,
+      },
+    ],
+  },
+  {
+    name: "101-200",
+    rewards: [
+      {
+        type: "coin",
+        value: 2000,
+      },
+    ],
+  },
+  {
+    name: "201-400",
+    rewards: [
+      {
+        type: "coin",
+        value: 500,
+      },
+    ],
+  },
+];
+
 const sideScroll = (element, speed, distance, step) => {
   let scrollAmount = 0;
   const slideTimer = setInterval(() => {
@@ -139,7 +214,8 @@ export default function TabLaddersSoloLeaderboards() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <div className="col-span-1 hidden lg:block pt-10">
-              {variablesContext.ladderStep >= 3 || selectedLadder.status === "finished" ? (
+              {variablesContext.ladderStep >= 3 ||
+              selectedLadder.status === "finished" ? (
                 <>
                   <div className="mb-4 space-y-8 surface surface-dimmed rounded-lg px-2 pb-2 pt-4">
                     <div className="text-2xl text-ui-100 text-center relative z-10">
@@ -403,729 +479,853 @@ export default function TabLaddersSoloLeaderboards() {
               </div>
             ) : (
               <div className="col-span-1 lg:col-span-3">
-                <div className="sm:rounded-lg">
-                  <div className="relative z-10 flex items-center justify-end gap-2 px-4">
-                    <span className="text-sm text-ui-300">
-                      What are the different Ladder levels?
-                    </span>
-                    <Tooltip
-                      tooltip={
-                        <div className="max-w-xs leading-tight">
-                          {!selectedLadder.isPremium && (
-                            <>
-                              <h5 className="text-lg">Ladder levels</h5>
-                              <p className="text-sm mb-2">
-                                Some Ladders put players into different levels
-                                based on their skills and performance while
-                                others are open for everyone no matter the skill
-                                level.
+                {selectedLadder.soloLeaderboard ? (
+                  <>
+                    <div className="sm:rounded-lg">
+                      <div className="relative z-10 flex items-center justify-end gap-2 px-4">
+                        <span className="text-sm text-ui-300">
+                          What are the different Ladder levels?
+                        </span>
+                        <Tooltip
+                          tooltip={
+                            <div className="max-w-xs leading-tight">
+                              {!selectedLadder.isPremium && (
+                                <>
+                                  <h5 className="text-lg">Ladder levels</h5>
+                                  <p className="text-sm mb-2">
+                                    Some Ladders put players into different
+                                    levels based on their skills and performance
+                                    while others are open for everyone no matter
+                                    the skill level.
+                                  </p>
+                                </>
+                              )}
+
+                              <h5 className="text-lg">
+                                Groups &amp; leaderboards
+                              </h5>
+                              <p className="text-sm">
+                                Some Ladders are so big that they are split into
+                                smaller groups to give everyone a better chance
+                                to win. Each group has its own leaderboard and
+                                rewards.
                               </p>
-                            </>
-                          )}
-
-                          <h5 className="text-lg">Groups &amp; leaderboards</h5>
-                          <p className="text-sm">
-                            Some Ladders are so big that they are split into
-                            smaller groups to give everyone a better chance to
-                            win. Each group has its own leaderboard and rewards.
-                          </p>
-                        </div>
-                      }
-                    >
-                      <button type="button" className="text-ui-300">
-                        <span className="icon icon-16 icon-c-info" />
-                      </button>
-                    </Tooltip>
-                  </div>
-                  {!selectedLadder.isPowerPlay && (
-                    <div className="relative z-0 overflow-x-auto scrollbar-hidden h-16 flex items-center my-4">
-                      <div className="hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r from-ui-900 via-ui-900 to-ui-900/0 pl-4 pr-8">
-                        <button
-                          type="button"
-                          className="button button-lg button-ghost rounded-full"
-                          onClick={() => {
-                            sideScroll(
-                              sliderRankWrapper.current,
-                              25,
-                              sliderRankWidth,
-                              -sliderRankWidth
-                            );
-                          }}
-                        >
-                          <span className="icon icon-ctrl-left" />
-                        </button>
-                      </div>
-
-                      <div className="hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l from-ui-900 via-ui-900 to-ui-900/0 pr-4 pl-8">
-                        <button
-                          type="button"
-                          className="button button-lg button-ghost rounded-full"
-                          onClick={() => {
-                            sideScroll(
-                              sliderRankWrapper.current,
-                              25,
-                              sliderRankWidth,
-                              sliderRankWidth
-                            );
-                          }}
-                        >
-                          <span className="icon icon-ctrl-right" />
-                        </button>
-                      </div>
-                      <ul
-                        ref={sliderRankWrapper}
-                        className="absolute z-0 inset-0 tabs tabs-rank scrollbar-hidden px-10 md:px-20"
-                      >
-                        <li className="tab-bronze" ref={sliderRankItem}>
-                          <a
-                            onClick={loadRank.bind(this, 1)}
-                            className={selectedRank === 1 ? "is-active" : ""}
-                          >
-                            <div>
-                              <div>
-                                <span className="icon text-4xl icon-rank-bronze" />
-                                <span className="h4">Bronze</span>
-                              </div>
                             </div>
-                          </a>
-                        </li>
-                        <li className="tab-silver">
-                          <a
-                            onClick={loadRank.bind(this, 2)}
-                            className={selectedRank === 2 ? "is-active" : ""}
+                          }
+                        >
+                          <button type="button" className="text-ui-300">
+                            <span className="icon icon-16 icon-c-info" />
+                          </button>
+                        </Tooltip>
+                      </div>
+                      {!selectedLadder.isPowerPlay && (
+                        <div className="relative z-0 overflow-x-auto scrollbar-hidden h-16 flex items-center my-4">
+                          <div className="hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r from-ui-900 via-ui-900 to-ui-900/0 pl-4 pr-8">
+                            <button
+                              type="button"
+                              className="button button-lg button-ghost rounded-full"
+                              onClick={() => {
+                                sideScroll(
+                                  sliderRankWrapper.current,
+                                  25,
+                                  sliderRankWidth,
+                                  -sliderRankWidth
+                                );
+                              }}
+                            >
+                              <span className="icon icon-ctrl-left" />
+                            </button>
+                          </div>
+
+                          <div className="hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l from-ui-900 via-ui-900 to-ui-900/0 pr-4 pl-8">
+                            <button
+                              type="button"
+                              className="button button-lg button-ghost rounded-full"
+                              onClick={() => {
+                                sideScroll(
+                                  sliderRankWrapper.current,
+                                  25,
+                                  sliderRankWidth,
+                                  sliderRankWidth
+                                );
+                              }}
+                            >
+                              <span className="icon icon-ctrl-right" />
+                            </button>
+                          </div>
+                          <ul
+                            ref={sliderRankWrapper}
+                            className="absolute z-0 inset-0 tabs tabs-rank scrollbar-hidden px-10 md:px-20"
                           >
-                            <div>
-                              <div>
-                                <span className="icon text-4xl icon-rank-silver" />
-                                <span className="h4">Silver</span>
-                              </div>
-                              <div className="avatar avatar-circle avatar-xs">
+                            <li className="tab-bronze" ref={sliderRankItem}>
+                              <a
+                                onClick={loadRank.bind(this, 1)}
+                                className={
+                                  selectedRank === 1 ? "is-active" : ""
+                                }
+                              >
                                 <div>
-                                  <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                                  <div>
+                                    <span className="icon text-4xl icon-rank-bronze" />
+                                    <span className="h4">Bronze</span>
+                                  </div>
                                 </div>
-                                <i className="radar" />
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                        <li className="tab-gold">
-                          <a
-                            onClick={loadRank.bind(this, 3)}
-                            className={selectedRank === 3 ? "is-active" : ""}
-                          >
-                            <div>
-                              <div>
-                                <span className="icon text-4xl icon-rank-gold" />
-                                <span className="h4">Gold</span>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                        <li className="tab-platinum">
-                          <a
-                            onClick={loadRank.bind(this, 4)}
-                            className={selectedRank === 4 ? "is-active" : ""}
-                          >
-                            <div>
-                              <div>
-                                <span className="icon text-4xl icon-rank-platinum" />
-                                <span className="h4">Platinum</span>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                        <li className="tab-diamond">
-                          <a
-                            onClick={loadRank.bind(this, 5)}
-                            className={selectedRank === 5 ? "is-active" : ""}
-                          >
-                            <div>
-                              <div>
-                                <span className="icon text-4xl icon-rank-diamond" />
-                                <span className="h4">Diamond</span>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                  <div className="">
-                    <div className="flex items-center py-4 gap-4">
-                      <div className="hidden md:flex gap-2 items-center pr-4 leading-none border-r border-ui-700">
-                        <span className="uppercase text-sm text-ui-300">
-                          Your group:
-                        </span>
-                        <button
-                          type="button"
-                          onClick={loadGroup.bind(this, 6)}
-                          className={`chip chip-secondary rounded shrink-0 w-10 ${
-                            selectedGroup === 6
-                              ? "pointer-events-none"
-                              : "opacity-40"
-                          }`}
-                        >
-                          <span
-                            className={`${
-                              selectedGroup === 6 ? "text-main" : ""
-                            }`}
-                          >
-                            G
-                          </span>
-                        </button>
-                      </div>
-                      <div className="flex-1 flex gap-2 items-center leading-none">
-                        <span className="hidden md:block uppercase text-sm text-ui-300">
-                          Groups:
-                        </span>
-                        <div className="flex-1 flex items-stretch gap-2">
-                          <div className="hidden md:block">
-                            <button
-                              type="button"
-                              className="button button-sm button-secondary rounded-full"
-                              onClick={() => {
-                                sideScroll(
-                                  sliderGroupWrapper.current,
-                                  25,
-                                  sliderGroupWidth,
-                                  -sliderGroupWidth * 3
-                                );
-                                loadGroup.bind(this, selectedGroup - 2);
-                              }}
-                            >
-                              <span className="icon icon-arrow-sm-left" />
-                            </button>
-                          </div>
-                          <div
-                            ref={sliderGroupWrapper}
-                            className="flex-1 overflow-hidden relative h-8 md:h-auto flex justify-center overflow-x-auto scrollbar-hidden"
-                          >
-                            <div className="flex justify-start absolute inset-0 px-2 md:px-0">
-                              <div className="flex flex-row-reverse items-center justify-start gap-2">
-                                {Groups.map((group, groupIndex) => (
-                                  <>
-                                    <button
-                                      type="button"
-                                      key={groupIndex}
-                                      ref={sliderGroupItem}
-                                      onClick={loadGroup.bind(this, groupIndex)}
-                                      className={`chip chip-secondary rounded shrink-0 w-10 ${
-                                        selectedGroup === groupIndex
-                                          ? "pointer-events-none"
-                                          : "opacity-40"
-                                      }`}
-                                    >
-                                      {groupIndex === 6 && (
-                                        <span
-                                          className={`icon icon-profile-2 ${
-                                            selectedGroup === groupIndex
-                                              ? "text-main"
-                                              : ""
-                                          }`}
-                                        />
-                                      )}
-                                      <span
-                                        className={`${
-                                          selectedGroup === groupIndex
-                                            ? "text-main"
-                                            : ""
-                                        }`}
-                                      >
-                                        {group}
-                                      </span>
-                                    </button>
-                                  </>
-                                ))}
-                              </div>
-                            </div>
-                          </div>
-                          <div className="hidden md:block">
-                            <button
-                              type="button"
-                              className="button button-sm button-secondary rounded-full"
-                              onClick={() => {
-                                sideScroll(
-                                  sliderGroupWrapper.current,
-                                  25,
-                                  sliderGroupWidth,
-                                  sliderGroupWidth * 3
-                                );
-                                loadGroup.bind(this, selectedGroup + 1);
-                              }}
-                            >
-                              <span className="icon icon-arrow-sm-right" />
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-4 overflow-x-auto scrollbar-hidden">
-                  <div className="min-w-md px-2 md:px-0">
-                    <div className="flex gap-2 items-start text-center text-sm text-ui-300 uppercase mb-2">
-                      <div className="w-1/4 flex items-stretch overflow-hidden">
-                        <div className="w-1/3 px-2">#</div>
-                        <div className="flex-1">Rewards</div>
-                      </div>
-                      <div className="flex-1">
-                        <div className="item py-0">
-                          <div className="item-image w-10"></div>
-                          <div className="item-body text-left">
-                            <span>Player</span>
-                          </div>
-                          <div className="item-body flex justify-around items-center pr-4">
-                            <span className="w-10"></span>
-                            <span className="w-12"></span>
-                            <span className="w-12">points</span>
-                            <span className="w-10 text-center">Clan</span>
-                          </div>
-                          <div className="item-actions flex items-center gap-2 opacity-0">
-                            <div>
-                              <span className="icon icon-24 icon-arrow-sm-down" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {isLoadingGroup && (
-                      <ul className="items-spaced space-y-2 is-loading">
-                        {selectedLadder &&
-                          selectedLadder.soloLeaderboard.map(
-                            (user, userIndex) => (
-                              <>
-                                <div className="item rounded-lg h-[58px]">
-                                  <div className="item-image">
-                                    <div className="avatar avatar-circle avatar-xs">
-                                      <div />
-                                    </div>
+                              </a>
+                            </li>
+                            <li className="tab-silver">
+                              <a
+                                onClick={loadRank.bind(this, 2)}
+                                className={
+                                  selectedRank === 2 ? "is-active" : ""
+                                }
+                              >
+                                <div>
+                                  <div>
+                                    <span className="icon text-4xl icon-rank-silver" />
+                                    <span className="h4">Silver</span>
                                   </div>
-                                  <div className="item-body">
-                                    <div className="item-title">Loading</div>
-                                  </div>
-                                  <div className="item-body flex justify-around items-center">
-                                    <span className="text-ui-300 leading-none">
-                                      Loading
-                                    </span>
-                                    <div className="avatar avatar-squircle avatar-xs">
-                                      <div />
-                                    </div>
-                                  </div>
-                                  <div className="item-actions flex items-center gap-2">
+                                  <div className="avatar avatar-circle avatar-xs">
                                     <div>
-                                      <span className="icon icon-24 icon-arrow-sm-down" />
+                                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                                     </div>
+                                    <i className="radar" />
                                   </div>
                                 </div>
-                              </>
-                            )
-                          )}
-                      </ul>
-                    )}
-                    {!isLoadingGroup && (
-                      <>
-                        {selectedLadder &&
-                          selectedLadder.soloLeaderboard?.map(
-                            (user, userIndex) => (
-                              <>
-                                <div
-                                  className={`flex gap-2 items-start mb-2 ${
-                                    isLoadingGroup
-                                      ? ""
-                                      : "animate-slide-in-bottom animate-delay"
-                                  }`}
-                                  style={{
-                                    "--delay":
-                                      "calc(" + userIndex + " * 0.05s)",
+                              </a>
+                            </li>
+                            <li className="tab-gold">
+                              <a
+                                onClick={loadRank.bind(this, 3)}
+                                className={
+                                  selectedRank === 3 ? "is-active" : ""
+                                }
+                              >
+                                <div>
+                                  <div>
+                                    <span className="icon text-4xl icon-rank-gold" />
+                                    <span className="h4">Gold</span>
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li className="tab-platinum">
+                              <a
+                                onClick={loadRank.bind(this, 4)}
+                                className={
+                                  selectedRank === 4 ? "is-active" : ""
+                                }
+                              >
+                                <div>
+                                  <div>
+                                    <span className="icon text-4xl icon-rank-platinum" />
+                                    <span className="h4">Platinum</span>
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                            <li className="tab-diamond">
+                              <a
+                                onClick={loadRank.bind(this, 5)}
+                                className={
+                                  selectedRank === 5 ? "is-active" : ""
+                                }
+                              >
+                                <div>
+                                  <div>
+                                    <span className="icon text-4xl icon-rank-diamond" />
+                                    <span className="h4">Diamond</span>
+                                  </div>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      )}
+                      <div className="">
+                        <div className="flex items-center py-4 gap-4">
+                          <div className="hidden md:flex gap-2 items-center pr-4 leading-none border-r border-ui-700">
+                            <span className="uppercase text-sm text-ui-300">
+                              Your group:
+                            </span>
+                            <button
+                              type="button"
+                              onClick={loadGroup.bind(this, 6)}
+                              className={`chip chip-secondary rounded shrink-0 w-10 ${
+                                selectedGroup === 6
+                                  ? "pointer-events-none"
+                                  : "opacity-40"
+                              }`}
+                            >
+                              <span
+                                className={`${
+                                  selectedGroup === 6 ? "text-main" : ""
+                                }`}
+                              >
+                                G
+                              </span>
+                            </button>
+                          </div>
+                          <div className="flex-1 flex gap-2 items-center leading-none">
+                            <span className="hidden md:block uppercase text-sm text-ui-300">
+                              Groups:
+                            </span>
+                            <div className="flex-1 flex items-stretch gap-2">
+                              <div className="hidden md:block">
+                                <button
+                                  type="button"
+                                  className="button button-sm button-secondary rounded-full"
+                                  onClick={() => {
+                                    sideScroll(
+                                      sliderGroupWrapper.current,
+                                      25,
+                                      sliderGroupWidth,
+                                      -sliderGroupWidth * 3
+                                    );
+                                    loadGroup.bind(this, selectedGroup - 2);
                                   }}
                                 >
-                                  <div
-                                    className={`surface rounded-lg w-1/4 h-[58px] flex items-stretch overflow-hidden ${
-                                      prototype.getUserByID(user.user)?.isYou
-                                        ? ""
-                                        : ""
-                                    }`}
-                                  >
-                                    <div
-                                      className={`w-1/3 text-center px-2 flex items-center justify-center ${
-                                        userIndex > 2
-                                          ? "bg-ui-700/25"
-                                          : "bg-ui-700"
-                                      }`}
-                                    >
-                                      <span
-                                        className={`text-2xl  ${
-                                          userIndex === 0 ? "text-gold-500" : ""
-                                        }${
-                                          userIndex === 1
-                                            ? "text-silver-500"
-                                            : ""
-                                        } ${
-                                          userIndex === 2
-                                            ? "text-bronze-500"
-                                            : ""
-                                        } ${
-                                          userIndex > 2 ? "text-ui-300" : ""
-                                        }`}
-                                      >
-                                        {userIndex + 1}
-                                      </span>
-                                      <div className="absolute">
-                                        <svg
-                                          className={`${
-                                            userIndex === 0
-                                              ? "fill-gold-500"
-                                              : ""
-                                          }${
-                                            userIndex === 1
-                                              ? "fill-silver-500"
-                                              : ""
-                                          } ${
-                                            userIndex === 2
-                                              ? "fill-bronze-500"
-                                              : ""
-                                          } ${userIndex > 2 ? "hidden" : ""}`}
-                                          width="52"
-                                          height="30"
-                                          viewBox="0 0 52 30"
-                                          fill="none"
-                                          xmlns="http://www.w3.org/2000/svg"
+                                  <span className="icon icon-arrow-sm-left" />
+                                </button>
+                              </div>
+                              <div
+                                ref={sliderGroupWrapper}
+                                className="flex-1 overflow-hidden relative h-8 md:h-auto flex justify-center overflow-x-auto scrollbar-hidden"
+                              >
+                                <div className="flex justify-start absolute inset-0 px-2 md:px-0">
+                                  <div className="flex flex-row-reverse items-center justify-start gap-2">
+                                    {Groups.map((group, groupIndex) => (
+                                      <>
+                                        <button
+                                          type="button"
+                                          key={groupIndex}
+                                          ref={sliderGroupItem}
+                                          onClick={loadGroup.bind(
+                                            this,
+                                            groupIndex
+                                          )}
+                                          className={`chip chip-secondary rounded shrink-0 w-10 ${
+                                            selectedGroup === groupIndex
+                                              ? "pointer-events-none"
+                                              : "opacity-40"
+                                          }`}
                                         >
-                                          <path d="M11.7039 27.2265L7.12878 29.95L14.686 27.9073C15.3028 27.7406 15.866 27.409 16.3186 26.9461C16.7712 26.4831 17.0973 25.905 17.2638 25.2705L14.9254 24.8456C14.283 24.7288 13.701 24.3822 13.2816 23.867C12.8623 23.3518 12.6327 22.7008 12.6327 22.0282V0.950012L8.2045 17.6286L2.89837 11.1091L8.50356 23.6777L2 22.4956L11.7039 27.2265Z" />
-                                          <path d="M39.5599 27.2265L44.135 29.95L36.5778 27.9073C35.961 27.7406 35.3978 27.409 34.9452 26.9461C34.4926 26.4831 34.1665 25.905 34 25.2705L36.3383 24.8456C36.9808 24.7288 37.5628 24.3822 37.9822 23.867C38.4015 23.3518 38.6311 22.7008 38.6311 22.0282V0.950012L43.0593 17.6286L48.3654 11.1091L42.7602 23.6777L49.2638 22.4956L39.5599 27.2265Z" />
-                                        </svg>
+                                          {groupIndex === 6 && (
+                                            <span
+                                              className={`icon icon-profile-2 ${
+                                                selectedGroup === groupIndex
+                                                  ? "text-main"
+                                                  : ""
+                                              }`}
+                                            />
+                                          )}
+                                          <span
+                                            className={`${
+                                              selectedGroup === groupIndex
+                                                ? "text-main"
+                                                : ""
+                                            }`}
+                                          >
+                                            {group}
+                                          </span>
+                                        </button>
+                                      </>
+                                    ))}
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="hidden md:block">
+                                <button
+                                  type="button"
+                                  className="button button-sm button-secondary rounded-full"
+                                  onClick={() => {
+                                    sideScroll(
+                                      sliderGroupWrapper.current,
+                                      25,
+                                      sliderGroupWidth,
+                                      sliderGroupWidth * 3
+                                    );
+                                    loadGroup.bind(this, selectedGroup + 1);
+                                  }}
+                                >
+                                  <span className="icon icon-arrow-sm-right" />
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-4 overflow-x-auto scrollbar-hidden">
+                      <div className="min-w-md px-2 md:px-0">
+                        <div className="flex gap-2 items-start text-center text-sm text-ui-300 uppercase mb-2">
+                          <div className="w-1/4 flex items-stretch overflow-hidden">
+                            <div className="w-1/3 px-2">#</div>
+                            <div className="flex-1">Rewards</div>
+                          </div>
+                          <div className="flex-1">
+                            <div className="item py-0">
+                              <div className="item-image w-10"></div>
+                              <div className="item-body text-left">
+                                <span>Player</span>
+                              </div>
+                              <div className="item-body flex justify-around items-center pr-4">
+                                <span className="w-10"></span>
+                                <span className="w-12"></span>
+                                <span className="w-12">points</span>
+                                <span className="w-10 text-center">Clan</span>
+                              </div>
+                              <div className="item-actions flex items-center gap-2 opacity-0">
+                                <div>
+                                  <span className="icon icon-24 icon-arrow-sm-down" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        {isLoadingGroup && (
+                          <ul className="items-spaced space-y-2 is-loading">
+                            {selectedLadder &&
+                              selectedLadder.soloLeaderboard.map(
+                                (user, userIndex) => (
+                                  <>
+                                    <div className="item rounded-lg h-[58px]">
+                                      <div className="item-image">
+                                        <div className="avatar avatar-circle avatar-xs">
+                                          <div />
+                                        </div>
+                                      </div>
+                                      <div className="item-body">
+                                        <div className="item-title">
+                                          Loading
+                                        </div>
+                                      </div>
+                                      <div className="item-body flex justify-around items-center">
+                                        <span className="text-ui-300 leading-none">
+                                          Loading
+                                        </span>
+                                        <div className="avatar avatar-squircle avatar-xs">
+                                          <div />
+                                        </div>
+                                      </div>
+                                      <div className="item-actions flex items-center gap-2">
+                                        <div>
+                                          <span className="icon icon-24 icon-arrow-sm-down" />
+                                        </div>
                                       </div>
                                     </div>
-                                    <div className="flex-1 flex items-center justify-center gap-4">
-                                      {user.rewards?.map(
-                                        (reward, rewardIndex) => (
-                                          <>
-                                            {selectedLadder.isPowerPlay ? (
-                                              <Reward
-                                                key={rewardIndex}
-                                                reward={reward}
-                                                xFactor={20}
-                                                gap="gap-2"
-                                                iconClassNames="text-lg"
-                                                textClassNames="text-lg"
-                                              />
-                                            ) : (
-                                              <Reward
-                                                key={rewardIndex}
-                                                reward={reward}
-                                                gap="gap-2"
-                                                iconClassNames="text-lg"
-                                                textClassNames="text-lg"
-                                              />
-                                            )}
-                                          </>
-                                        )
-                                      )}
-                                    </div>
-                                  </div>
-                                  <div
-                                    className={`flex-1 accordion surface rounded-lg ${
-                                      prototype.getUserByID(user.user)?.isYou
-                                        ? ""
-                                        : ""
-                                    }`}
-                                  >
-                                    <Accordion
-                                      isNoHover={true}
-                                      buttonActivation={true}
-                                      buttonActivationSimple={true}
-                                      header={
-                                        <>
-                                          <div className="item h-[56px]">
-                                            <div className="flex-1">
-                                              <Link
-                                                href={`/prototype/profile/${
-                                                  user.user
-                                                }${prototype.getURLparams()}`}
-                                              >
-                                                <div className="flex gap-2 items-center interactive">
-                                                  <Avatar
-                                                    id={user.user}
-                                                    hasTooltip={true}
-                                                    hasTooltipXP={false}
+                                  </>
+                                )
+                              )}
+                          </ul>
+                        )}
+                        {!isLoadingGroup && (
+                          <>
+                            {selectedLadder &&
+                              selectedLadder.soloLeaderboard &&
+                              selectedLadder.soloLeaderboard?.map(
+                                (user, userIndex) => (
+                                  <>
+                                    <div
+                                      className={`flex gap-2 items-start mb-2 ${
+                                        isLoadingGroup
+                                          ? ""
+                                          : "animate-slide-in-bottom animate-delay"
+                                      }`}
+                                      style={{
+                                        "--delay":
+                                          "calc(" + userIndex + " * 0.05s)",
+                                      }}
+                                    >
+                                      <div
+                                        className={`surface rounded-lg w-1/4 h-[58px] flex items-stretch overflow-hidden ${
+                                          prototype.getUserByID(user.user)
+                                            ?.isYou
+                                            ? ""
+                                            : ""
+                                        }`}
+                                      >
+                                        <div
+                                          className={`w-1/3 text-center px-2 flex items-center justify-center ${
+                                            userIndex > 2
+                                              ? "bg-ui-700/25"
+                                              : "bg-ui-700"
+                                          }`}
+                                        >
+                                          <span
+                                            className={`text-2xl  ${
+                                              userIndex === 0
+                                                ? "text-gold-500"
+                                                : ""
+                                            }${
+                                              userIndex === 1
+                                                ? "text-silver-500"
+                                                : ""
+                                            } ${
+                                              userIndex === 2
+                                                ? "text-bronze-500"
+                                                : ""
+                                            } ${
+                                              userIndex > 2 ? "text-ui-300" : ""
+                                            }`}
+                                          >
+                                            {userIndex + 1}
+                                          </span>
+                                          <div className="absolute">
+                                            <svg
+                                              className={`${
+                                                userIndex === 0
+                                                  ? "fill-gold-500"
+                                                  : ""
+                                              }${
+                                                userIndex === 1
+                                                  ? "fill-silver-500"
+                                                  : ""
+                                              } ${
+                                                userIndex === 2
+                                                  ? "fill-bronze-500"
+                                                  : ""
+                                              } ${
+                                                userIndex > 2 ? "hidden" : ""
+                                              }`}
+                                              width="52"
+                                              height="30"
+                                              viewBox="0 0 52 30"
+                                              fill="none"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <path d="M11.7039 27.2265L7.12878 29.95L14.686 27.9073C15.3028 27.7406 15.866 27.409 16.3186 26.9461C16.7712 26.4831 17.0973 25.905 17.2638 25.2705L14.9254 24.8456C14.283 24.7288 13.701 24.3822 13.2816 23.867C12.8623 23.3518 12.6327 22.7008 12.6327 22.0282V0.950012L8.2045 17.6286L2.89837 11.1091L8.50356 23.6777L2 22.4956L11.7039 27.2265Z" />
+                                              <path d="M39.5599 27.2265L44.135 29.95L36.5778 27.9073C35.961 27.7406 35.3978 27.409 34.9452 26.9461C34.4926 26.4831 34.1665 25.905 34 25.2705L36.3383 24.8456C36.9808 24.7288 37.5628 24.3822 37.9822 23.867C38.4015 23.3518 38.6311 22.7008 38.6311 22.0282V0.950012L43.0593 17.6286L48.3654 11.1091L42.7602 23.6777L49.2638 22.4956L39.5599 27.2265Z" />
+                                            </svg>
+                                          </div>
+                                        </div>
+                                        <div className="flex-1 flex items-center justify-center gap-4">
+                                          {user.rewards?.map(
+                                            (reward, rewardIndex) => (
+                                              <>
+                                                {selectedLadder.isPowerPlay ? (
+                                                  <Reward
+                                                    key={rewardIndex}
+                                                    reward={reward}
+                                                    xFactor={20}
+                                                    gap="gap-2"
+                                                    iconClassNames="text-lg"
+                                                    textClassNames="text-lg"
                                                   />
-                                                  <div className="item-title">
-                                                    <span
-                                                      className={`${
-                                                        prototype.getUserByID(
-                                                          user.user
-                                                        )?.isYou
-                                                          ? "text-main font-bold"
-                                                          : ""
-                                                      } ${
-                                                        prototype.getUserByID(
-                                                          user.user
-                                                        )?.isPremium
-                                                          ? "text-premium-500"
-                                                          : ""
-                                                      }`}
-                                                    >
-                                                      {prototype.getUserByID(
-                                                        user.user
-                                                      )?.clan && (
-                                                        <>
-                                                          &#91;
+                                                ) : (
+                                                  <Reward
+                                                    key={rewardIndex}
+                                                    reward={reward}
+                                                    gap="gap-2"
+                                                    iconClassNames="text-lg"
+                                                    textClassNames="text-lg"
+                                                  />
+                                                )}
+                                              </>
+                                            )
+                                          )}
+                                        </div>
+                                      </div>
+                                      <div
+                                        className={`flex-1 accordion surface rounded-lg ${
+                                          prototype.getUserByID(user.user)
+                                            ?.isYou
+                                            ? ""
+                                            : ""
+                                        }`}
+                                      >
+                                        <Accordion
+                                          isNoHover={true}
+                                          buttonActivation={true}
+                                          buttonActivationSimple={true}
+                                          header={
+                                            <>
+                                              <div className="item h-[56px]">
+                                                <div className="flex-1">
+                                                  <Link
+                                                    href={`/prototype/profile/${
+                                                      user.user
+                                                    }${prototype.getURLparams()}`}
+                                                  >
+                                                    <div className="flex gap-2 items-center interactive">
+                                                      <Avatar
+                                                        id={user.user}
+                                                        hasTooltip={true}
+                                                        hasTooltipXP={false}
+                                                      />
+                                                      <div className="item-title">
+                                                        <span
+                                                          className={`${
+                                                            prototype.getUserByID(
+                                                              user.user
+                                                            )?.isYou
+                                                              ? "text-main font-bold"
+                                                              : ""
+                                                          } ${
+                                                            prototype.getUserByID(
+                                                              user.user
+                                                            )?.isPremium
+                                                              ? "text-premium-500"
+                                                              : ""
+                                                          }`}
+                                                        >
+                                                          {prototype.getUserByID(
+                                                            user.user
+                                                          )?.clan && (
+                                                            <>
+                                                              &#91;
+                                                              {
+                                                                prototype.getClanByID(
+                                                                  prototype.getUserByID(
+                                                                    user.user
+                                                                  )?.clan
+                                                                )?.tag
+                                                              }
+                                                              &#93;{" "}
+                                                            </>
+                                                          )}
+
                                                           {
-                                                            prototype.getClanByID(
+                                                            prototype.getUserByID(
+                                                              user.user
+                                                            )?.nickname
+                                                          }
+                                                        </span>
+                                                      </div>
+                                                    </div>
+                                                  </Link>
+                                                </div>
+                                                <div className="w-10">
+                                                  {user.user != 1 &&
+                                                    prototype.getUserByID(
+                                                      user.user
+                                                    )?.isFriend && (
+                                                      <Tooltip
+                                                        placement="left"
+                                                        tooltip={
+                                                          <div className="max-w-xs text-sm text-center leading-tight">
+                                                            {
                                                               prototype.getUserByID(
                                                                 user.user
-                                                              )?.clan
-                                                            )?.tag
-                                                          }
-                                                          &#93;{" "}
-                                                        </>
-                                                      )}
-
-                                                      {
-                                                        prototype.getUserByID(
-                                                          user.user
-                                                        )?.nickname
-                                                      }
-                                                    </span>
-                                                  </div>
+                                                              )?.nickname
+                                                            }{" "}
+                                                            is a friend
+                                                          </div>
+                                                        }
+                                                      >
+                                                        <span className="icon icon-b-add text-ui-300" />
+                                                      </Tooltip>
+                                                    )}
+                                                  {/*
+                                               {user.user != 1 &&
+                                                 !prototype.getUserByID(
+                                                   user.user
+                                                 )?.isFriend && (
+                                                   <Tooltip
+                                                 placement="left"
+                                                 tooltip={
+                                                   <div className="max-w-xs text-sm text-center leading-tight">
+                                                     Add as friend
+                                                   </div>
+                                                 }
+                                               >
+                                                   <ButtonFeedback variant="button-tertiary rounded-full" icon="icon-add-27" message="Friend added" />
+                                                   </Tooltip>
+                                                 )}
+                                               */}
                                                 </div>
-                                              </Link>
-                                            </div>
-                                            <div className="w-10">
-                                              {user.user != 1 &&
-                                                prototype.getUserByID(user.user)
-                                                  ?.isFriend && (
+
+                                                <div className="item-body flex justify-around items-center">
                                                   <Tooltip
                                                     placement="left"
                                                     tooltip={
                                                       <div className="max-w-xs text-sm text-center leading-tight">
-                                                        {
-                                                          prototype.getUserByID(
-                                                            user.user
-                                                          )?.nickname
-                                                        }{" "}
-                                                        is a friend
+                                                        Mission LVL 1
                                                       </div>
                                                     }
                                                   >
-                                                    <span className="icon icon-b-add text-ui-300" />
+                                                    <div className="w-12 achievement-level-1">
+                                                      <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl1-animated.svg" />
+                                                      <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
+                                                    </div>
                                                   </Tooltip>
-                                                )}
-                                              {/*
-                                              {user.user != 1 &&
-                                                !prototype.getUserByID(
-                                                  user.user
-                                                )?.isFriend && (
-                                                  <Tooltip
-                                                placement="left"
-                                                tooltip={
-                                                  <div className="max-w-xs text-sm text-center leading-tight">
-                                                    Add as friend
-                                                  </div>
-                                                }
-                                              >
-                                                  <ButtonFeedback variant="button-tertiary rounded-full" icon="icon-add-27" message="Friend added" />
-                                                  </Tooltip>
-                                                )}
-                                              */}
-                                            </div>
-
-                                            <div className="item-body flex justify-around items-center">
-                                              <Tooltip
-                                                placement="left"
-                                                tooltip={
-                                                  <div className="max-w-xs text-sm text-center leading-tight">
-                                                    Mission LVL 1
-                                                  </div>
-                                                }
-                                              >
-                                                <div className="w-12 achievement-level-1">
-                                                  <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl1-animated.svg" />
-                                                  <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
+                                                  <span className="text-ui-300 leading-none">
+                                                    {user.stats.ladderPoints}
+                                                  </span>
+                                                  {prototype.getUserByID(
+                                                    user.user
+                                                  )?.clan ? (
+                                                    <AvatarClan
+                                                      id={
+                                                        prototype.getUserByID(
+                                                          user.user
+                                                        )?.clan
+                                                      }
+                                                      hasTooltip={true}
+                                                    />
+                                                  ) : (
+                                                    <div
+                                                      className={`avatar avatar-squircle avatar-xs interactive opacity-0`}
+                                                    />
+                                                  )}
                                                 </div>
-                                              </Tooltip>
-                                              <span className="text-ui-300 leading-none">
-                                                {user.stats.ladderPoints}
-                                              </span>
-                                              {prototype.getUserByID(user.user)
-                                                ?.clan ? (
-                                                <AvatarClan
-                                                  id={
-                                                    prototype.getUserByID(
-                                                      user.user
-                                                    )?.clan
-                                                  }
-                                                  hasTooltip={true}
-                                                />
-                                              ) : (
-                                                <div
-                                                  className={`avatar avatar-squircle avatar-xs interactive opacity-0`}
-                                                />
-                                              )}
+                                              </div>
+                                            </>
+                                          }
+                                        >
+                                          <div className="p-2">
+                                            <ul className="gap-2 grid grid-cols-3">
+                                              <li className="col-span-3 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
+                                                <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1 not-italic">
+                                                  Match points in best [number]
+                                                  matches
+                                                </h5>
+                                                <div className="flex justify-center gap-2">
+                                                  <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                                    {numberWithSpaces(
+                                                      getRandomInt(2000)
+                                                    )}
+                                                  </div>
+                                                  <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                                    {numberWithSpaces(
+                                                      getRandomInt(2000)
+                                                    )}
+                                                  </div>
+                                                  <div className="px-3 py-1 rounded bg-ui-850 text-xl">
+                                                    {numberWithSpaces(
+                                                      getRandomInt(2000)
+                                                    )}
+                                                  </div>
+                                                </div>
+                                              </li>
+                                              <li className="col-span-3 md:col-span-1 p-3 flex flex-col text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
+                                                <h5 className="flex-none uppercase font-normal font-body text-sm text-ui-300 mb-1 not-italic">
+                                                  Match played
+                                                </h5>
+                                                <div className="flex-1 flex justify-center gap-2">
+                                                  <div className="px-3 py-1 flex flex-col justify-center items-center text-lg">
+                                                    <div>
+                                                      {numberWithSpaces(
+                                                        getRandomInt(500)
+                                                      )}
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </li>
+                                              <li className="col-span-3 md:col-span-1 p-3 flex flex-col text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
+                                                <h5 className="flex-none uppercase font-normal font-body text-sm text-ui-300 mb-1 not-italic">
+                                                  Tiebreaker points
+                                                </h5>
+                                                <div className="flex-1 flex justify-center gap-2">
+                                                  <div className="px-3 py-1 flex flex-col justify-center items-center text-lg">
+                                                    <div>
+                                                      {numberWithSpaces(
+                                                        getRandomInt(2000)
+                                                      )}{" "}
+                                                      damage
+                                                    </div>
+                                                    <div>
+                                                      {numberWithSpaces(
+                                                        getRandomInt(50)
+                                                      )}{" "}
+                                                      headshots
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </li>
+                                              <li className="col-span-3 md:col-span-1 p-3 flex flex-col text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
+                                                <h5 className="flex-none uppercase font-normal font-body text-sm text-ui-300 mb-1 not-italic">
+                                                  Player game score
+                                                </h5>
+                                                <div className="flex-1 flex justify-center gap-2">
+                                                  <div className="px-3 py-1 flex flex-col justify-center items-center text-lg">
+                                                    <div>
+                                                      {numberWithSpaces(
+                                                        getRandomInt(500)
+                                                      )}
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                            <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
+                                              <Link href="/prototype/profile/1">
+                                                <a className="link link-main link-hover flex items-center gap-1 text-sm">
+                                                  <span className="icon icon-profile-2" />
+                                                  <span>
+                                                    Go to Player profile
+                                                  </span>
+                                                </a>
+                                              </Link>
+                                              <Link href="/prototype/profile/1">
+                                                <a className="link link-main link-hover flex items-center gap-1 text-sm">
+                                                  <span className="icon icon-multiple-12" />
+                                                  <span>Go to Clan page</span>
+                                                </a>
+                                              </Link>
+                                              <button
+                                                type="button"
+                                                className="button button-tertiary button-sm"
+                                              >
+                                                <span className="icon icon-c-warning" />
+                                                <span>Report abuse</span>
+                                              </button>
                                             </div>
                                           </div>
-                                        </>
-                                      }
-                                    >
-                                      <div className="p-2">
-                                        <ul className="gap-2 grid grid-cols-3">
-                                          <li className="col-span-3 p-3 text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                                            <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1 not-italic">
-                                              Match points in best [number]
-                                              matches
-                                            </h5>
-                                            <div className="flex justify-center gap-2">
-                                              <div className="px-3 py-1 rounded bg-ui-850 text-xl">
-                                                {numberWithSpaces(
-                                                  getRandomInt(2000)
-                                                )}
-                                              </div>
-                                              <div className="px-3 py-1 rounded bg-ui-850 text-xl">
-                                                {numberWithSpaces(
-                                                  getRandomInt(2000)
-                                                )}
-                                              </div>
-                                              <div className="px-3 py-1 rounded bg-ui-850 text-xl">
-                                                {numberWithSpaces(
-                                                  getRandomInt(2000)
-                                                )}
-                                              </div>
-                                            </div>
-                                          </li>
-                                          <li className="col-span-3 md:col-span-1 p-3 flex flex-col text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                                            <h5 className="flex-none uppercase font-normal font-body text-sm text-ui-300 mb-1 not-italic">
-                                              Match played
-                                            </h5>
-                                            <div className="flex-1 flex justify-center gap-2">
-                                              <div className="px-3 py-1 flex flex-col justify-center items-center text-lg">
-                                                <div>
-                                                  {numberWithSpaces(
-                                                    getRandomInt(500)
-                                                  )}
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </li>
-                                          <li className="col-span-3 md:col-span-1 p-3 flex flex-col text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                                            <h5 className="flex-none uppercase font-normal font-body text-sm text-ui-300 mb-1 not-italic">
-                                              Tiebreaker points
-                                            </h5>
-                                            <div className="flex-1 flex justify-center gap-2">
-                                              <div className="px-3 py-1 flex flex-col justify-center items-center text-lg">
-                                                <div>
-                                                  {numberWithSpaces(
-                                                    getRandomInt(2000)
-                                                  )}{" "}
-                                                  damage
-                                                </div>
-                                                <div>
-                                                  {numberWithSpaces(
-                                                    getRandomInt(50)
-                                                  )}{" "}
-                                                  headshots
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </li>
-                                          <li className="col-span-3 md:col-span-1 p-3 flex flex-col text-center rounded bg-gradient-to-b from-ui-800 to-ui-700/25">
-                                            <h5 className="flex-none uppercase font-normal font-body text-sm text-ui-300 mb-1 not-italic">
-                                              Player game score
-                                            </h5>
-                                            <div className="flex-1 flex justify-center gap-2">
-                                              <div className="px-3 py-1 flex flex-col justify-center items-center text-lg">
-                                                <div>
-                                                  {numberWithSpaces(
-                                                    getRandomInt(500)
-                                                  )}
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </li>
-                                        </ul>
-                                        <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
-                                          <Link href="/prototype/profile/1">
-                                            <a className="link link-main link-hover flex items-center gap-1 text-sm">
-                                              <span className="icon icon-profile-2" />
-                                              <span>Go to Player profile</span>
-                                            </a>
-                                          </Link>
-                                          <Link href="/prototype/profile/1">
-                                            <a className="link link-main link-hover flex items-center gap-1 text-sm">
-                                              <span className="icon icon-multiple-12" />
-                                              <span>Go to Clan page</span>
-                                            </a>
-                                          </Link>
-                                          <button
-                                            type="button"
-                                            className="button button-tertiary button-sm"
-                                          >
-                                            <span className="icon icon-c-warning" />
-                                            <span>Report abuse</span>
-                                          </button>
-                                        </div>
+                                        </Accordion>
                                       </div>
-                                    </Accordion>
-                                  </div>
-                                </div>
-                              </>
-                            )
-                          )}
-                      </>
+                                    </div>
+                                  </>
+                                )
+                              )}
+                          </>
+                        )}
+                      </div>
+                    </div>
+                    {!isLoadingRank && (
+                      <div>
+                        <div className="flex gap-2 justify-center items-center my-4">
+                          <button
+                            type="button"
+                            onClick={loadGroup.bind(this, selectedGroup)}
+                            className="button button-ghost"
+                          >
+                            <span className="icon icon-arrow-up" />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={loadGroup.bind(this, selectedGroup)}
+                            className="button button-ghost"
+                          >
+                            <span>Top 15</span>
+                          </button>
+                          <button
+                            type="button"
+                            className="button button-ghost is-active"
+                          >
+                            <span>My position</span>
+                          </button>
+                          <button
+                            type="button"
+                            onClick={loadGroup.bind(this, selectedGroup)}
+                            className="button button-ghost"
+                          >
+                            <span>Bottom 15</span>
+                          </button>
+                          <button
+                            type="button"
+                            onClick={loadGroup.bind(this, selectedGroup)}
+                            className="button button-ghost"
+                          >
+                            <span className="icon icon-arrow-down" />
+                          </button>
+                        </div>
+                        <div className="text-center my-4 text-sm">
+                          <div className="text-ui-400">
+                            The leaderboard is updated every X minute,{" "}
+                            <a href="#" className="link link-main">
+                              reload the page
+                            </a>{" "}
+                            for an update
+                          </div>
+                          <div className="text-ui-300">
+                            Leaderboard ID:{" "}
+                            <span className="text-ui-100 font-bold">
+                              225VG19
+                            </span>
+                          </div>
+                        </div>
+                      </div>
                     )}
-                  </div>
-                </div>
-                {!isLoadingRank && (
-                  <div>
-                    <div className="flex gap-2 justify-center items-center my-4">
-                      <button
-                        type="button"
-                        onClick={loadGroup.bind(this, selectedGroup)}
-                        className="button button-ghost"
-                      >
-                        <span className="icon icon-arrow-up" />
-                      </button>
-                      <button
-                        type="button"
-                        onClick={loadGroup.bind(this, selectedGroup)}
-                        className="button button-ghost"
-                      >
-                        <span>Top 15</span>
-                      </button>
-                      <button
-                        type="button"
-                        className="button button-ghost is-active"
-                      >
-                        <span>My position</span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={loadGroup.bind(this, selectedGroup)}
-                        className="button button-ghost"
-                      >
-                        <span>Bottom 15</span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={loadGroup.bind(this, selectedGroup)}
-                        className="button button-ghost"
-                      >
-                        <span className="icon icon-arrow-down" />
-                      </button>
-                    </div>
-                    <div className="text-center my-4 text-sm">
-                      <div className="text-ui-400">
-                        The leaderboard is updated every X minute,{" "}
-                        <a href="#" className="link link-main">
-                          reload the page
-                        </a>{" "}
-                        for an update
-                      </div>
-                      <div className="text-ui-300">
-                        Leaderboard ID:{" "}
-                        <span className="text-ui-100 font-bold">225VG19</span>
-                      </div>
-                    </div>
-                  </div>
+                  </>
+                ) : (
+                  <>
+                    <ul className="pt-10">
+                      {rewardDistribSolo.map((item, itemIndex) => (
+                        <li
+                          key={itemIndex}
+                          className="flex gap-2 items-stretch mb-2 animate-slide-in-bottom animate-delay"
+                          style={{
+                            "--delay": "calc(" + itemIndex + " * 0.05s)",
+                          }}
+                        >
+                          <div className="surface rounded-lg w-80 h-[58px] flex items-stretch overflow-hidden">
+                            <div
+                              className={`w-2/5 text-center px-2 flex items-center justify-center ${
+                                itemIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
+                              }`}
+                            >
+                              <span
+                                className={`text-xl  ${
+                                  itemIndex === 0 ? "text-gold-500" : ""
+                                }${itemIndex === 1 ? "text-silver-500" : ""} ${
+                                  itemIndex === 2 ? "text-bronze-500" : ""
+                                } ${itemIndex > 2 ? "text-ui-300" : ""}`}
+                              >
+                                {item.name}
+                              </span>
+                              <div className="absolute">
+                                <svg
+                                  className={`${
+                                    itemIndex === 0 ? "fill-gold-500" : ""
+                                  }${
+                                    itemIndex === 1 ? "fill-silver-500" : ""
+                                  } ${
+                                    itemIndex === 2 ? "fill-bronze-500" : ""
+                                  } ${itemIndex > 2 ? "hidden" : ""}`}
+                                  width="52"
+                                  height="30"
+                                  viewBox="0 0 52 30"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path d="M11.7039 27.2265L7.12878 29.95L14.686 27.9073C15.3028 27.7406 15.866 27.409 16.3186 26.9461C16.7712 26.4831 17.0973 25.905 17.2638 25.2705L14.9254 24.8456C14.283 24.7288 13.701 24.3822 13.2816 23.867C12.8623 23.3518 12.6327 22.7008 12.6327 22.0282V0.950012L8.2045 17.6286L2.89837 11.1091L8.50356 23.6777L2 22.4956L11.7039 27.2265Z" />
+                                  <path d="M39.5599 27.2265L44.135 29.95L36.5778 27.9073C35.961 27.7406 35.3978 27.409 34.9452 26.9461C34.4926 26.4831 34.1665 25.905 34 25.2705L36.3383 24.8456C36.9808 24.7288 37.5628 24.3822 37.9822 23.867C38.4015 23.3518 38.6311 22.7008 38.6311 22.0282V0.950012L43.0593 17.6286L48.3654 11.1091L42.7602 23.6777L49.2638 22.4956L39.5599 27.2265Z" />
+                                </svg>
+                              </div>
+                            </div>
+                            <div className="flex-1 flex items-center justify-center gap-4">
+                              {item.rewards?.map((reward, rewardIndex) => (
+                                <>
+                                  {selectedLadder.isPowerPlay ? (
+                                    <Reward
+                                      key={rewardIndex}
+                                      reward={reward}
+                                      xFactor={20}
+                                      gap="gap-2"
+                                      iconClassNames="text-lg"
+                                      textClassNames="text-lg"
+                                    />
+                                  ) : (
+                                    <Reward
+                                      key={rewardIndex}
+                                      reward={reward}
+                                      gap="gap-2"
+                                      iconClassNames="text-lg"
+                                      textClassNames="text-lg"
+                                    />
+                                  )}
+                                </>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="flex-1 surface rounded-lg item">
+                            <div className="item-image">
+                              <div className="avatar avatar-circle avatar-xs">
+                                <div>
+                                  <span className="icon icon-profile" />
+                                </div>
+                              </div>
+                            </div>
+                            <div className="item-body">
+                              <span className="text-ui-300">
+                                Be the first to join this leaderboard
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
                 )}
               </div>
             )}

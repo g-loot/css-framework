@@ -54,9 +54,14 @@ export default function LadderCardSecondary(props) {
           isHorizontal && !isFluid ? "lg:card-horizontal" : ""
         } ${isHorizontal && isFluid ? "lg:card-horizontal" : ""} ${
           isFluid ? "card-fluid" : ""
-        } ${isEnrolled && ladder.status !== "finished" && !ladder.hasClaim && selectedUser.isYou ? "is-active" : ""} ${
-          ladder.status === "finished" ? "is-inactive" : ""
         } ${
+          isEnrolled &&
+          ladder.status !== "finished" &&
+          !ladder.hasClaim &&
+          selectedUser.isYou
+            ? "is-active"
+            : ""
+        } ${ladder.status === "finished" ? "is-inactive" : ""} ${
           ladder.isPremium ? "card-premium" : ""
         } ${className}`}
       >
@@ -65,7 +70,7 @@ export default function LadderCardSecondary(props) {
             <div>
               <button
                 type="button"
-                className="button button-primary is-shining"
+                className="button button-primary"
                 onClick={openmodalLadderResults}
               >
                 <span>View results</span>
@@ -91,8 +96,7 @@ export default function LadderCardSecondary(props) {
                       ? "icon-game-dota2-symbol text-game-dota2"
                       : ""
                   }  ${
-                    prototype.getGameByID(gameID).slug ===
-                    "leagueoflegends"
+                    prototype.getGameByID(gameID).slug === "leagueoflegends"
                       ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
                       : ""
                   }  ${
@@ -113,7 +117,11 @@ export default function LadderCardSecondary(props) {
               <span>{ladder.gameMode}</span>
               {ladder.status !== "finished" && (
                 <span className={`text-main card-status capitalize`}>
-                  {ladder.isEnrolled && selectedUser.isYou ? <>Enrolled</> : <>{ladder.status}</>}
+                  {ladder.isEnrolled && selectedUser.isYou ? (
+                    <>Enrolled</>
+                  ) : (
+                    <>{ladder.status}</>
+                  )}
                 </span>
               )}
             </div>
@@ -168,11 +176,17 @@ export default function LadderCardSecondary(props) {
               </div>
               {ladder.status === "finished" ? (
                 <div className="text-sm text-ui-300">
-                  Ended on April {RandomNumber(1,30)} 2023
+                  Ended on April {RandomNumber(1, 30)} 2023
                 </div>
               ) : (
                 <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">
-                  <span className="mr-1">{ladder.status === "upcoming" ? (<>Starts in:</>) : (<>Time Left:</>)}</span>
+                  <span className="mr-1">
+                    {ladder.status === "upcoming" ? (
+                      <>Starts in:</>
+                    ) : (
+                      <>Time Left:</>
+                    )}
+                  </span>
                   <span className="icon icon-clock" />
                   <span>23H</span>
                   <span>19M</span>
@@ -187,7 +201,11 @@ export default function LadderCardSecondary(props) {
                 <div className="flex-1 flex gap-4 text-sm leading-none pr-4">
                   {ladder.isEnrolled || !selectedUser.isYou ? (
                     <div className="flex-1 flex items-center gap-2">
-                      <Avatar id={selectedUser.id} size="avatar-tiny" hasTooltip={false} />
+                      <Avatar
+                        id={selectedUser.id}
+                        size="avatar-tiny"
+                        hasTooltip={false}
+                      />
                       <div>
                         <div>{RandomNumber(200, 1000)}pts</div>
                         <div>#{RandomNumber(1, 600)}</div>
@@ -213,9 +231,7 @@ export default function LadderCardSecondary(props) {
                             <div>
                               <img
                                 src={
-                                  prototype.getClanByID(
-                                    selectedUser.id
-                                  )?.avatar
+                                  prototype.getClanByID(selectedUser.id)?.avatar
                                 }
                                 alt="avatar"
                               />
@@ -247,20 +263,34 @@ export default function LadderCardSecondary(props) {
                     <>
                       {ladder.isEnrolled || !selectedUser.isYou ? (
                         <div className="flex-1 flex items-center gap-4">
-                          <Avatar id={selectedUser.id} size="avatar-xs" hasTooltip={false} />
-                          <div className={`infobanner ${ladder.status === "ongoing" && selectedUser.isYou ? 'is-active' : ''}`}>
+                          <Avatar
+                            id={selectedUser.id}
+                            size="avatar-xs"
+                            hasTooltip={false}
+                          />
+                          <div
+                            className={`infobanner ${
+                              ladder.status === "ongoing" && selectedUser.isYou
+                                ? "is-active"
+                                : ""
+                            }`}
+                          >
                             <div className="flex gap-2 infobanner-front">
                               <div>
                                 <div className="uppercase text-xs text-ui-300">
                                   Points
                                 </div>
-                                <div className="text-sm">{RandomNumber(200, 1000)}</div>
+                                <div className="text-sm">
+                                  {RandomNumber(200, 1000)}
+                                </div>
                               </div>
                               <div>
                                 <div className="uppercase text-xs text-ui-300">
                                   Position
                                 </div>
-                                <div className="text-sm">#{RandomNumber(1, 600)}</div>
+                                <div className="text-sm">
+                                  #{RandomNumber(1, 600)}
+                                </div>
                               </div>
                             </div>
                             <div className="infobanner-back absolute inset-0 flex items-center text-sm">
@@ -271,33 +301,48 @@ export default function LadderCardSecondary(props) {
                           </div>
                         </div>
                       ) : (
-                        <div className="flex items-center gap-2">
-                          <div className="avatar-group -space-x-2">
-                            <div className="avatar avatar-circle avatar-tiny">
-                              <div>
-                                <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                        <>
+                          {ladder.soloLeaderboard ? (
+                            <div className="flex items-center gap-2">
+                              <div className="avatar-group -space-x-2">
+                                <div className="avatar avatar-circle avatar-tiny">
+                                  <div>
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                                  </div>
+                                </div>
+                                <div className="avatar avatar-circle avatar-tiny">
+                                  <div>
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                                  </div>
+                                </div>
+                                <div className="avatar avatar-circle avatar-tiny">
+                                  <div>
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                                  </div>
+                                </div>
                               </div>
+                              <span className="text-sm text-ui-300">
+                                423 players{" "}
+                                {ladder.status !== "finished" ? (
+                                  <> are enrolled</>
+                                ) : (
+                                  <>have partaken</>
+                                )}
+                              </span>
                             </div>
-                            <div className="avatar avatar-circle avatar-tiny">
-                              <div>
-                                <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
-                              </div>
+                          ) : (
+                            <div className="flex items-center gap-2">
+                              <Avatar
+                                id={selectedUser.id}
+                                size="avatar-xs"
+                                hasTooltip={false}
+                              />
+                              <span className="text-sm text-ui-300">
+                                Be the first to enroll
+                              </span>
                             </div>
-                            <div className="avatar avatar-circle avatar-tiny">
-                              <div>
-                                <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
-                              </div>
-                            </div>
-                          </div>
-                          <span className="text-sm text-ui-300">
-                            423 players{" "}
-                            {ladder.status !== "finished" ? (
-                              <> are enrolled</>
-                            ) : (
-                              <>have partaken</>
-                            )}
-                          </span>
-                        </div>
+                          )}
+                        </>
                       )}
                     </>
                   ) : (
@@ -309,15 +354,21 @@ export default function LadderCardSecondary(props) {
                               <div>
                                 <img
                                   src={
-                                    prototype.getClanByID(
-                                      selectedUser.id
-                                    )?.avatar
+                                    prototype.getClanByID(selectedUser.id)
+                                      ?.avatar
                                   }
                                   alt="avatar"
                                 />
                               </div>
                             </div>
-                            <div className={`infobanner ${ladder.status === "ongoing" && selectedUser.isYou ? 'is-active' : ''}`}>
+                            <div
+                              className={`infobanner ${
+                                ladder.status === "ongoing" &&
+                                selectedUser.isYou
+                                  ? "is-active"
+                                  : ""
+                              }`}
+                            >
                               <div className="flex gap-2 infobanner-front">
                                 <div>
                                   <div className="uppercase text-xs text-ui-300">

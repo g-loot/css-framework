@@ -20,7 +20,7 @@ export default function ComponentRewardLadder() {
   const uiContext = useContext(UiContext);
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
-  const newBattlepass = query.newbattlepass === "true" ? true : false;
+  const oldBattlepass = query.oldbattlepass === "true" ? true : false;
   const isPremium = query.premium === "true" ? true : false;
   const { game } = router.query;
   const [submitting, setSubmitting] = useState(false);
@@ -79,7 +79,7 @@ export default function ComponentRewardLadder() {
             <span>Claim past rewards</span>
           </button>
         )}
-        <div className="text-sm text-ui-300">
+        <div className="text-sm text-ui-300 flex gap-2 items-baseline">
           <span>
             Resets in{" "}
             <Countdown
@@ -89,6 +89,11 @@ export default function ComponentRewardLadder() {
               hasSeconds={true}
             />
           </span>
+          <Link href="/prototype/valorant/ladders/">
+            <a className="link link-hover text-ui-300 text-sm">
+              View Battlepass
+            </a>
+          </Link>
         </div>
       </div>
       {/*
@@ -155,8 +160,10 @@ export default function ComponentRewardLadder() {
         </>
       )}
 
-      {newBattlepass ? (
-        <Battlepass size="battlepass-md" />
+      {!oldBattlepass ? (
+        <div className="surface sm:rounded p-2 pb-4 mt-4 mb-8">
+          <Battlepass size="battlepass-md" />
+        </div>
       ) : (
         <div className="mb-4">
           <Slider

@@ -108,7 +108,7 @@ export default function Ladders() {
                           {item.label}
                           {item.url === "completed" &&
                             laddersFinishedLength >= 1 && (
-                              <span className="ml-2 icon icon-present text-main animate-bounce" />
+                              <span className="ml-2 icon icon-present animate-bounce" />
                             )}
                         </span>
                       </a>

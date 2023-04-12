@@ -6,14 +6,13 @@ import React, {
   useCallback,
 } from "react";
 
-import ModalClaimLadderRewards from "../../pages/prototype/home/modal-claim-ladderrewards";
+import ModalClaimBattlepassReward from "../../pages/prototype/home/modal-claim-battlepassrewards";
 import { UiContext } from "../../contexts/ui";
 import { VariablesContext } from "../../contexts/variables";
 import { DataBattlepass } from "../../mock-data/data-battlepass";
 import { DataBattlepassRewards } from "../../mock-data/data-battlepass";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
-import Avatar from "../Avatar/Avatar";
 
 const useResize = (myRef) => {
   const [width, setWidth] = useState(0);
@@ -43,7 +42,7 @@ export default function Battlepass(props) {
   const [currentStep, setCurrentStep] = useState(1);
   const [activeStep, setActiveStep] = useState(1);
   const [originStep, setOriginStep] = useState(0);
-  const [maxSteps, setmaxSteps] = useState(5);
+  const [maxSteps, setmaxSteps] = useState(7);
 
   const componentRef = useRef();
   const { width, height } = useResize(componentRef);
@@ -81,11 +80,13 @@ export default function Battlepass(props) {
       return battlepasses.id === parseInt(id);
     });
   };
+
   const getBattlepassStepByID = (id) => {
     return getBattlepassByID(0).steps.find((step) => {
       return step.id === parseInt(id);
     });
   };
+
   const getBattlepassRewardByID = (id) => {
     return DataBattlepassRewards.find((reward) => {
       return reward.id === parseInt(id);
@@ -117,6 +118,7 @@ export default function Battlepass(props) {
       "max " + maxSteps
     );
   }
+
   function handleNext() {
     const step = activeStep + 1;
     setActiveStep(step);
@@ -134,10 +136,15 @@ export default function Battlepass(props) {
       setOriginStep(originStep - maxSteps);
     }
   }
+
   function handleNextBatch() {
     if (activeStep === originStep + maxSteps) {
       setOriginStep(activeStep);
     }
+  }
+
+  function openModalClaimBattlepassRewards(rewardID) {
+    uiContext.openModal(<ModalClaimBattlepassReward rewardID={rewardID} />);
   }
 
   return (
@@ -178,7 +185,9 @@ export default function Battlepass(props) {
             </div>
             <p className="battlepass-reward-name">
               {size === "battlepass-md" && (
-                <span className="uppercase text-ui-300">{getBattlepassStepByID(activeStep).name}:{" "}</span>
+                <span className="uppercase text-ui-300">
+                  {getBattlepassStepByID(activeStep).name}:{" "}
+                </span>
               )}
               {
                 getBattlepassRewardByID(
@@ -187,12 +196,42 @@ export default function Battlepass(props) {
               }
             </p>
           </div>
+          <div className="battlepass-reward-action">
+            
+            {getBattlepassStepByID(activeStep).id < currentStep ? (
+              <button
+              type="button"
+              className="button button-claim"
+              onClick={openModalClaimBattlepassRewards.bind(
+                this,
+                getBattlepassStepByID(activeStep).reward
+              )}
+            >
+              <span className="icon icon-present animate-bounce" />
+              <span>Claim reward</span>
+            </button>
+            ) : (
+              <button
+              type="button"
+              className="button button-tertiary is-disabled"
+            >
+              <span className="icon icon-lock" />
+              <span>Claim reward</span>
+            </button>
+            )
+            
+            }
+          </div>
           <div className="battlepass-reward-info">
             {getBattlepassStepByID(activeStep).id < currentStep && (
-              <button type="button" className="button button-claim">
-                <span className="icon icon-present animate-bounce" />
-                <span>Claim reward</span>
-              </button>
+              <span>
+                <span className="text-ui-300">
+                  {1000 + 100 * getBattlepassStepByID(activeStep).id} /
+                </span>{" "}
+                <span className="text-ui-100">
+                  {1000 + 100 * getBattlepassStepByID(activeStep).id} XP
+                </span>
+              </span>
             )}
             {getBattlepassStepByID(activeStep).id === currentStep && (
               <span>
@@ -204,6 +243,7 @@ export default function Battlepass(props) {
                 </span>
               </span>
             )}
+
             {getBattlepassStepByID(activeStep).id > currentStep && (
               <span>
                 <span className="text-ui-300">0 /</span>{" "}
@@ -222,9 +262,7 @@ export default function Battlepass(props) {
                 key={itemIndex}
                 className={`battlepass-step ${
                   item.isPremium ? `is-premium` : ""
-                } ${
-                  item.isBonus ? `is-bonus` : ""
-                } ${
+                } ${item.isBonus ? `is-bonus` : ""} ${
                   item.isSeparator ? `is-separator` : ""
                 } ${activeStep === item.id ? `is-active` : ""}
                         
@@ -273,7 +311,12 @@ export default function Battlepass(props) {
             <span className="icon icon-ctrl-left" />
           </button>
           <span>
-            {activeStep} / {getBattlepassByID(0).steps.filter((value)=>{return value.isBonus !== true}).length}
+            {activeStep} /{" "}
+            {
+              getBattlepassByID(0).steps.filter((value) => {
+                return value.isBonus !== true;
+              }).length
+            }
           </span>
           <button
             type="button"

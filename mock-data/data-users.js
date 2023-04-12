@@ -276,7 +276,7 @@ export const dataUsers = [
     },
     games: [1],
     achievements: {
-      favoriteBadge: 4,
+      favoriteBadge: false,
       badges: [],
     },
   },

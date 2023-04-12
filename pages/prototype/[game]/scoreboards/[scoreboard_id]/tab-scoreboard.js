@@ -96,22 +96,21 @@ export default function TabScoreboard(props) {
                   }`}
                 >
                   <Avatar id={1} hasLevel={false} size="avatar-lg" />
+                  <p>
+                    {prototype.getUserByID(1).clan && (
+                      <>
+                        &#91;
+                        {
+                          prototype.getClanByID(prototype.getUserByID(1).clan)
+                            ?.tag
+                        }
+                        &#93;{" "}
+                      </>
+                    )}{" "}
+                    {prototype.getUserByID(1).nickname}
+                  </p>
                   {selectedScoreboard.isEligible ? (
                     <>
-                      <p>
-                        {prototype.getUserByID(1).clan && (
-                          <>
-                            &#91;
-                            {
-                              prototype.getClanByID(
-                                prototype.getUserByID(1).clan
-                              )?.tag
-                            }
-                            &#93;{" "}
-                          </>
-                        )}{" "}
-                        {prototype.getUserByID(1).nickname}
-                      </p>
                       <div className="py-2 space-y-2">
                         <h3>#{selectedScoreboard.scores.placement}</h3>
                         <p className="text-ui-300 text-sm uppercase flex gap-3 justify-center">
@@ -132,6 +131,9 @@ export default function TabScoreboard(props) {
                     </>
                   ) : (
                     <>
+                      <div className="py-2 space-y-2">
+                        <h3>——</h3>
+                      </div>
                       <p className="text-ui-300 py-2">
                         Play more matches to be eligible for this scoreboard.
                       </p>
@@ -154,7 +156,7 @@ export default function TabScoreboard(props) {
                           <span className="w-9 text-center">
                             {RandomNumber(4, 200)}
                           </span>
-                          <Avatar id={item} />
+                          <Avatar id={item} hasTooltip={true} />
                           <span className="flex-1 text-left truncate">
                             {prototype.getUserByID(item).clan && (
                               <>
@@ -191,16 +193,16 @@ export default function TabScoreboard(props) {
                         <div className="w-14 text-center px-2 flex items-center justify-center">
                           <span
                             className={`text-2xl  ${selectedScoreboard.scores.placement} === 0 ? "text-gold-500" : ""
-                               }${selectedScoreboard.scores.placement} === 1 ? "text-silver-500" : ""} ${selectedScoreboard.scores.placement} === 2 ? "text-bronze-500" : ""
-                               } ${selectedScoreboard.scores.placement} > 2 ? "text-ui-300" : ""}`}
+                              }${selectedScoreboard.scores.placement} === 1 ? "text-silver-500" : ""} ${selectedScoreboard.scores.placement} === 2 ? "text-bronze-500" : ""
+                              } ${selectedScoreboard.scores.placement} > 2 ? "text-ui-300" : ""}`}
                           >
                             {selectedScoreboard.scores.placement}
                           </span>
                           <div className="absolute">
                             <svg
                               className={`${selectedScoreboard.scores.placement} === 0 ? "fill-gold-500" : ""
-                                 }${selectedScoreboard.scores.placement} === 1 ? "fill-silver-500" : ""} ${selectedScoreboard.scores.placement} === 2 ? "fill-bronze-500" : ""
-                                 } ${selectedScoreboard.scores.placement} > 2 ? "hidden" : ""}`}
+                                }${selectedScoreboard.scores.placement} === 1 ? "fill-silver-500" : ""} ${selectedScoreboard.scores.placement} === 2 ? "fill-bronze-500" : ""
+                                } ${selectedScoreboard.scores.placement} > 2 ? "hidden" : ""}`}
                               width="52"
                               height="30"
                               viewBox="0 0 52 30"

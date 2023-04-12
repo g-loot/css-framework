@@ -56,7 +56,7 @@ const rewardDistribClan = [
     rewards: [
       {
         type: "coin",
-        value: 150000,
+        value: 450000,
       },
     ],
   },
@@ -65,7 +65,7 @@ const rewardDistribClan = [
     rewards: [
       {
         type: "coin",
-        value: 125000,
+        value: 425000,
       },
     ],
   },
@@ -74,7 +74,7 @@ const rewardDistribClan = [
     rewards: [
       {
         type: "coin",
-        value: 100000,
+        value: 400000,
       },
     ],
   },
@@ -83,7 +83,7 @@ const rewardDistribClan = [
     rewards: [
       {
         type: "coin",
-        value: 90000,
+        value: 30000,
       },
     ],
   },
@@ -92,7 +92,7 @@ const rewardDistribClan = [
     rewards: [
       {
         type: "coin",
-        value: 7000,
+        value: 1500,
       },
     ],
   },
