@@ -110,7 +110,7 @@ export default function CardMissionSecondary(props) {
                       <div className="text-ui-100">
                         <div className="text-xl">Maximum missions revealed</div>
                         <div className="text-sm">
-                          Complete missions to get new ones
+                          Complete or discard missions to unlock new ones
                         </div>
                       </div>
                     </>
