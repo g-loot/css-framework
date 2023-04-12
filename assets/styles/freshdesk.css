@@ -1,0 +1,6 @@
+/* Overriding Freshdesk's button width */
+
+#launcher-frame {
+  min-width: 87px !important;
+  max-width: 87px !important;
+}

@@ -1,6 +1,8 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
+@import "./freshdesk.css";
+
 @import "./animation";
 @import "./colors";
 @import "./fonts";
