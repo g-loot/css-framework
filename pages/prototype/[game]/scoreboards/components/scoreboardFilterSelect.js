@@ -3,7 +3,7 @@ import { DataScoreboardFilters } from "../../../../../mock-data/data-scoreboards
 import Select, { components, GroupHeadingProps } from "react-select";
 
 
-export default function ScoreboardFilterSelect({ id, onLoad }) {
+export default function ScoreboardFilterSelect({ id, item, onLoad }) {
   const [selectedFilter, setSelectedFilter] = useState(null);
 
   useEffect(() => {
@@ -14,6 +14,21 @@ export default function ScoreboardFilterSelect({ id, onLoad }) {
     return DataScoreboardFilters.find((filter) => {
       return filter.id === parseInt(id);
     });
+  };
+
+  const getFiltersectionByID = (sectionID) => {
+    const selectedSection = selectedFilter.sections.find(section => {
+      return section.id === parseInt(sectionID);
+    });
+    return selectedSection;
+  };
+  
+  const getFilteroptionByID = (sectionID, optionID) => {
+    const selectedFiltersection = getFiltersectionByID(sectionID);
+    const selectedOption = selectedFiltersection.options.find(option => {
+      return option.id === parseInt(optionID);
+    });
+    return selectedOption;
   };
 
 
@@ -76,12 +91,14 @@ const groupedOptions = [
             */}
 
             <Select
-              options={groupedOptions}
+              options={getScoreboardFilterByID(id).sections}
               components={{ GroupHeading }}
+              defaultValue={{ label: getFilteroptionByID(item.section, item.value).label, value: getFilteroptionByID(item.section, item.value).id }}
               className="react-select-container"
               classNamePrefix="react-select"
               menuPortalTarget={document.body}
               onChange={onLoad}
+              NOmenuIsOpen={true}
             />
           </div>
         </>

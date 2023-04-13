@@ -1571,10 +1571,13 @@ div.react-select__indicator {
 div.react-select__menu {
   @apply
   bg-ui-600
+  min-w-[200px]
   ;
 }
 div.react-select__menu-list {
-  
+  @apply
+  whitespace-nowrap
+  ;
 }
 
 div.react-select__option {
@@ -1585,5 +1588,21 @@ div.react-select__option {
     @apply
     bg-ui-500
     ;
+  }
+}
+
+div.react-select__group:last-child {
+  @apply
+  text-premium-500
+  ;
+  > div > div {
+    @apply
+    text-premium-500
+    ;
+    &.react-select__option--is-selected {
+        @apply
+        text-ui-100
+        ;
+    }
   }
 }
