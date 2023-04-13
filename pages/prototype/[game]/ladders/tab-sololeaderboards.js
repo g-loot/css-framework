@@ -467,12 +467,11 @@ export default function TabLaddersSoloLeaderboards() {
                     alt=""
                   />
                   <div className="mt-2 mb-6">
-                    <h3 className="h4 text-ui-300 leading-tight mb-1">
+                    <h3 className="h4 text-ui-100 leading-tight mb-1">
                       Be the first to join this leaderboard!
                     </h3>
-                    <p className="max-w-[45ch] text-ui-400 mx-auto">
-                      The top position is currently all yours for taking if your
-                      skill is on this level.
+                    <p className="text-ui-300 mx-auto">
+                      The top position is currently all yours for taking if your skill is on this level.
                     </p>
                   </div>
                 </div>
@@ -1240,10 +1239,10 @@ export default function TabLaddersSoloLeaderboards() {
                 ) : (
                   <div className="mt-10">
                     <div className="mt-2 mb-6 text-center">
-                      <h3 className="h4 text-ui-300 leading-tight mb-1">
+                      <h3 className="h4 text-ui-100 leading-tight mb-3">
                         Be the first to join this leaderboard!
                       </h3>
-                      <p className="max-w-[45ch] text-ui-400 mx-auto">
+                      <p className="max-w-[35ch] text-ui-300 mx-auto">
                         The top position is currently all yours for taking if
                         your skill is on this level.
                       </p>

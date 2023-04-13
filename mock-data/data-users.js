@@ -232,12 +232,7 @@ export const dataUsers = [
       "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
     email: "kes@gmail.com",
     clan: null,
-    bio: "Call me Kees. I'm a Tv geek. Student. Web fan. Organizer. Coffee ninja. Zombie scholar. Communicator. Twitter fanatic.",
     socials: {
-      riotNickname: "KeesDief",
-      riotHashtag: 8953,
-      discord: "@KeesDief",
-      twitch: "@KeesDief",
     },
     shopItems: {
       avatarFrame: false,

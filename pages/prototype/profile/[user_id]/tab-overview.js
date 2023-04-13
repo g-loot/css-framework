@@ -88,76 +88,80 @@ export default function TabProfileOverview() {
                     <span className="icon icon-20 text-ui-300 icon-discord" />
                   </a>
                 </div>
-                {!isEmpty && (
+                {selectedUser.socials?.riotNickname && selectedUser.socials?.discord && (
                   <ul className="space-y-2 pt-3 border-t border-y-ui-700">
-                    <li className="flex items-center gap-2 text-ui-300">
-                      <span className="icon icon-20 icon-riotgames-symbol" />
-                      <a
-                        className="flex-1 link link-hover"
-                        onClick={() => {
-                          uiContext.openToastr({
-                            size: "medium",
-                            text: "Game tag copied to your clipboard",
-                            color: "green",
-                            autoDelete: true,
-                            autoDeleteDelay: 2500,
-                          });
-                          navigator.clipboard.writeText(
-                            `${selectedUser.nickname}#2341`
-                          );
-                        }}
-                      >
-                        {selectedUser.nickname}#2341
-                      </a>
-                      <Tooltip
-                        placement="left"
-                        tooltip={
-                          <div className="max-w-xs text-sm text-center leading-tight">
-                            Copy
-                          </div>
-                        }
-                      >
-                        <ButtonFeedback
-                          variant="button-ghost rounded-full"
-                          icon="icon-document-copy"
-                          message="Game tag copied to your clipboard"
-                        />
-                      </Tooltip>
-                    </li>
-                    <li className="flex items-center gap-2 text-ui-300">
-                      <span className="icon icon-20 icon-steam" />
-                      <a
-                        className="flex-1 link link-hover"
-                        onClick={() => {
-                          uiContext.openToastr({
-                            size: "medium",
-                            text: "Game tag copied to your clipboard",
-                            color: "green",
-                            autoDelete: true,
-                            autoDeleteDelay: 2500,
-                          });
-                          navigator.clipboard.writeText(
-                            `PUBG_${selectedUser.nickname}`
-                          );
-                        }}
-                      >
-                        PUBG_{selectedUser.nickname}
-                      </a>
-                      <Tooltip
-                        placement="left"
-                        tooltip={
-                          <div className="max-w-xs text-sm text-center leading-tight">
-                            Copy
-                          </div>
-                        }
-                      >
-                        <ButtonFeedback
-                          variant="button-ghost rounded-full"
-                          icon="icon-document-copy"
-                          message="Game tag copied to your clipboard"
-                        />
-                      </Tooltip>
-                    </li>
+                    {selectedUser.socials?.riotNickname && (
+                      <li className="flex items-center gap-2 text-ui-300">
+                        <span className="icon icon-20 icon-riotgames-symbol" />
+                        <a
+                          className="flex-1 link link-hover"
+                          onClick={() => {
+                            uiContext.openToastr({
+                              size: "medium",
+                              text: "Game tag copied to your clipboard",
+                              color: "green",
+                              autoDelete: true,
+                              autoDeleteDelay: 2500,
+                            });
+                            navigator.clipboard.writeText(
+                              `${selectedUser.socials?.riotNickname}+#+${selectedUser.socials?.riotHashtag}`
+                            );
+                          }}
+                        >
+                          {selectedUser.socials?.riotNickname}#{selectedUser.socials?.riotHashtag}
+                        </a>
+                        <Tooltip
+                          placement="left"
+                          tooltip={
+                            <div className="max-w-xs text-sm text-center leading-tight">
+                              Copy
+                            </div>
+                          }
+                        >
+                          <ButtonFeedback
+                            variant="button-ghost rounded-full"
+                            icon="icon-document-copy"
+                            message="Game tag copied to your clipboard"
+                          />
+                        </Tooltip>
+                      </li>
+                    )}
+                    {selectedUser.socials?.discord && (
+                      <li className="flex items-center gap-2 text-ui-300">
+                        <span className="icon icon-20 icon-steam" />
+                        <a
+                          className="flex-1 link link-hover"
+                          onClick={() => {
+                            uiContext.openToastr({
+                              size: "medium",
+                              text: "Game tag copied to your clipboard",
+                              color: "green",
+                              autoDelete: true,
+                              autoDeleteDelay: 2500,
+                            });
+                            navigator.clipboard.writeText(
+                              `${selectedUser.socials?.discord}`
+                            );
+                          }}
+                        >
+                          {selectedUser.socials?.discord}
+                        </a>
+                        <Tooltip
+                          placement="left"
+                          tooltip={
+                            <div className="max-w-xs text-sm text-center leading-tight">
+                              Copy
+                            </div>
+                          }
+                        >
+                          <ButtonFeedback
+                            variant="button-ghost rounded-full"
+                            icon="icon-document-copy"
+                            message="Game tag copied to your clipboard"
+                          />
+                        </Tooltip>
+                      </li>
+                    )}
                   </ul>
                 )}
               </div>

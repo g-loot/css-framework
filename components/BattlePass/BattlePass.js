@@ -42,7 +42,7 @@ export default function Battlepass(props) {
   const [currentStep, setCurrentStep] = useState(1);
   const [activeStep, setActiveStep] = useState(1);
   const [originStep, setOriginStep] = useState(0);
-  const [maxSteps, setmaxSteps] = useState(7);
+  const [maxSteps, setmaxSteps] = useState(9);
 
   const componentRef = useRef();
   const { width, height } = useResize(componentRef);
@@ -60,8 +60,11 @@ export default function Battlepass(props) {
 
   useEffect(() => {
     if (width > 0) {
-      console.log(width);
-      if (width > 992) {
+      if (width > 1288) {
+        setmaxSteps(9);
+      } else if (width < 1288 && width > 1160) {
+        setmaxSteps(8);
+      } else if (width < 1160 && width > 992) {
         setmaxSteps(7);
       } else if (width < 992 && width > 848) {
         setmaxSteps(6);
