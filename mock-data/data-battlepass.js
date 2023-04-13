@@ -24,13 +24,13 @@ export const DataBattlepass = [
       },
       {
         id: 4,
-        name: "tier 5",
+        name: "tier 4",
         reward: 27,
         isPremium: false,
       },
       {
         id: 5,
-        name: "tier 4",
+        name: "tier 5",
         reward: 3,
         isPremium: true,
       },

@@ -1518,3 +1518,72 @@ input[type=range].form-range {
     }
   }
 }
+
+/* react-select */
+
+div.react-select__control {
+  @apply
+  bg-ui-700
+  border-ui-600
+  text-ui-200
+  min-h-[42px]
+  shadow-none
+  ;
+  &:hover {
+    @apply
+    border-ui-500
+    ;
+  }
+  &.react-select__control--is-focused {
+    @apply
+    border-ui-400
+    ;
+  }
+}
+
+div.react-select__placeholder {
+  @apply
+  text-ui-400
+  ;
+}
+
+input.react-select__input {
+  @apply
+  shadow-none
+  ;
+}
+div.react-select__input-container,
+div.react-select__single-value {
+  @apply
+  text-ui-200
+  ;
+}
+span.react-select__indicator-separator {
+  @apply
+  bg-ui-500
+  ;
+}
+div.react-select__indicator {
+  @apply
+  text-ui-300
+  ;
+}
+div.react-select__menu {
+  @apply
+  bg-ui-600
+  ;
+}
+div.react-select__menu-list {
+  
+}
+
+div.react-select__option {
+  @apply
+  bg-ui-600
+  ;
+  &.react-select__option--is-focused {
+    @apply
+    bg-ui-500
+    ;
+  }
+}

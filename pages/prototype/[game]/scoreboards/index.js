@@ -112,7 +112,24 @@ export default function Scoreboards() {
                       </div>
                     </div>
                     <div className="header-bg">
+                    {getScoreboardBySlug(0, selectedTab).video ? (
+                      <div className="absolute z-0 inset-0 grid place-content-center">
+                        <video
+                          autoPlay
+                          playsInline
+                          loop
+                          muted
+                          preload
+                          width="100%"
+                          height="100%"
+                          className="w-full"
+                          src={getScoreboardBySlug(0, selectedTab).video}
+                        ></video>
+                      </div>
+                    ) : (
                       <img src={getScoreboardBySlug(0, selectedTab).background} />
+                    )}
+                      
                     </div>
                   </div>
                 ) : (

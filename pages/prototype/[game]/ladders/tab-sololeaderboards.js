@@ -472,7 +472,7 @@ export default function TabLaddersSoloLeaderboards() {
                     </h3>
                     <p className="max-w-[45ch] text-ui-400 mx-auto">
                       The top position is currently all yours for taking if your
-                      skill is on this level
+                      skill is on this level.
                     </p>
                   </div>
                 </div>
@@ -1238,17 +1238,25 @@ export default function TabLaddersSoloLeaderboards() {
                     )}
                   </>
                 ) : (
-                  <>
-                    <ul className="pt-10">
+                  <div className="mt-10">
+                    <div className="mt-2 mb-6 text-center">
+                      <h3 className="h4 text-ui-300 leading-tight mb-1">
+                        Be the first to join this leaderboard!
+                      </h3>
+                      <p className="max-w-[45ch] text-ui-400 mx-auto">
+                        The top position is currently all yours for taking if
+                        your skill is on this level.
+                      </p>
+                    </div>
+                    <ul className="max-w-sm mx-auto">
                       {rewardDistribSolo.map((item, itemIndex) => (
                         <li
                           key={itemIndex}
-                          className="flex gap-2 items-stretch mb-2 animate-slide-in-bottom animate-delay"
+                          className="surface rounded-lg h-[58px] flex items-stretch overflow-hidden mb-2 animate-slide-in-bottom animate-delay"
                           style={{
                             "--delay": "calc(" + itemIndex + " * 0.05s)",
                           }}
                         >
-                          <div className="surface rounded-lg w-80 h-[58px] flex items-stretch overflow-hidden">
                             <div
                               className={`w-2/5 text-center px-2 flex items-center justify-center ${
                                 itemIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
@@ -1307,25 +1315,10 @@ export default function TabLaddersSoloLeaderboards() {
                                 </>
                               ))}
                             </div>
-                          </div>
-                          <div className="flex-1 surface rounded-lg item">
-                            <div className="item-image">
-                              <div className="avatar avatar-circle avatar-xs">
-                                <div>
-                                  <span className="icon icon-profile" />
-                                </div>
-                              </div>
-                            </div>
-                            <div className="item-body">
-                              <span className="text-ui-300">
-                                Be the first to join this leaderboard
-                              </span>
-                            </div>
-                          </div>
                         </li>
                       ))}
                     </ul>
-                  </>
+                  </div>
                 )}
               </div>
             )}

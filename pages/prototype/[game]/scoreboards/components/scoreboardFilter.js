@@ -26,7 +26,7 @@ export default function ScoreboardFilter({id, value}) {
             </span>
             <span className="text-ui-200">
               {getScoreboardFilterByID(id).items.map((item, itemIndex) => (
-                <>{value === item.id && <>{item.name}</>}</>
+                <>{value === item.id && <>{item.label}</>}</>
               ))}
             </span>
           </span>

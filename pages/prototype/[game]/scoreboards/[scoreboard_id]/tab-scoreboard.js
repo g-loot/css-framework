@@ -36,7 +36,8 @@ export default function TabScoreboard(props) {
     });
   };
 
-  function handleLoad() {
+  function handleLoad(e) {
+    console.log(e.value);
     setIsLoading(true);
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -72,7 +73,7 @@ export default function TabScoreboard(props) {
     <>
       {selectedScoreboard && (
         <>
-          <section className="flex items-center gap-x-4 gap-y-2 mb-4 px-2 md:px-0 whitespace-nowrap overflow-x-auto scrollbar-hidden">
+          <section className="flex items-center gap-x-4 gap-y-2 mb-4 px-2 md:px-0 whitespace-nowrap overflow-x-autoNO scrollbar-hidden">
             {selectedScoreboard.filters?.map((item, itemIndex) => (
               <ScoreboardFilterSelect
                 id={item.id}

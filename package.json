@@ -34,6 +34,7 @@
     "tailwind.config.js"
   ],
   "dependencies": {
+    "react-select": "^5.7.2",
     "react-spring": "^9.6.1"
   }
 }
