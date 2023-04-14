@@ -85,7 +85,7 @@ export const DataBattlepass = [
       {
         id: 14,
         name: "bonus 1",
-        reward: 23,
+        reward: 24,
         isPremium: false,
         isBonus: true,
         isSeparator: true,
@@ -107,7 +107,7 @@ export const DataBattlepass = [
       {
         id: 17,
         name: "bonus 4",
-        reward: 39,
+        reward: 32,
         isPremium: false,
         isBonus: true,
       },

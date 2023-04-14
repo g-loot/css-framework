@@ -1,6 +1,10 @@
 import React, { useState, useContext, useEffect } from "react";
 import Lottie from "lottie-react";
 import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
+import LottieExplosionLvl1 from "../../assets/animations/Mission_Reveal_Lvl_1_2000ms.json";
+import LottieExplosionLvl2 from "../../assets/animations/Mission_Reveal_Lvl_2_2000ms.json";
+import LottieExplosionLvl3 from "../../assets/animations/Mission_Reveal_Lvl_3_2000ms.json";
+import LottieExplosionLvl4 from "../../assets/animations/Mission_Reveal_Lvl_4_2000ms.json";
 import Tooltip from "../Tooltip/Tooltip";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -26,6 +30,19 @@ export default function CardMissionSecondary(props) {
   const [hasClaimed, setHasClaimed] = useState(mission.hasClaimed);
   const [isLoading, setIsLoading] = useState(false);
   const [isCapped, setIsCapped] = useState(false);
+
+  function LottieExplosion(level) {
+    console.log(level);
+    if (level === 1) {
+      return LottieExplosionLvl1;
+    } else if (level === 2) {
+      return LottieExplosionLvl2;
+    } else if (level === 3) {
+      return LottieExplosionLvl3;
+    } else if (level === 4) {
+      return LottieExplosionLvl4;
+    }
+  }
 
   useEffect(() => {
     if (modalClaimMission) {
@@ -396,6 +413,15 @@ export default function CardMissionSecondary(props) {
                 }}
               />
             </div>
+            {MissionRetrieved && !mission.isVisible && (
+              <div className="absolute z-40 inset-0 grid place-content-center lottie-blur">
+                <Lottie
+                  animationData={LottieExplosion(mission.category)}
+                  loop={false}
+                  autoplay={true}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>

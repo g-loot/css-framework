@@ -1527,6 +1527,7 @@ div.react-select__control {
   border-ui-600
   text-ui-200
   min-h-[42px]
+  min-w-[100px]
   shadow-none
   ;
   &:hover {
