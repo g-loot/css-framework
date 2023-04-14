@@ -86,6 +86,25 @@
   @apply
   drop-shadow-main-lg
   ;
+
+  &.rarity-category-1 {
+    @apply
+    opacity-50
+    ;
+    filter: brightness(0) saturate(100%) invert(50%) sepia(51%) saturate(216%) hue-rotate(339deg) brightness(93%) contrast(84%);
+  }
+  &.rarity-category-2 {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(51%) saturate(216%) hue-rotate(339deg) brightness(93%) contrast(84%);
+  }
+  &.rarity-category-3 {
+    @apply
+    opacity-75
+    ;
+    filter: brightness(0) saturate(100%) invert(97%) sepia(32%) saturate(3987%) hue-rotate(316deg) brightness(98%) contrast(95%);
+  }
+  &.rarity-category-4 {
+    filter: brightness(0) saturate(100%) invert(97%) sepia(32%) saturate(3987%) hue-rotate(316deg) brightness(98%) contrast(95%);
+  }
 }
 .lottie-premium {
   @apply
@@ -195,6 +214,23 @@
     ease-[cubic-bezier(1,0,.2,1)]
     ;
   }
+  > .revealer-transition {
+    @apply
+    absolute
+    z-40
+    inset-0
+    grid
+    place-content-center
+    pointer-events-none
+    select-none
+    ;
+
+    & + .revealer-back {
+      @apply
+      delay-[1250ms]
+      ;
+    }
+  }
   > .revealer-back {
     @apply
     relative
@@ -202,10 +238,11 @@
     pointer-events-none
     scale-125
     opacity-0
-    brightness-[500%]
+    brightness-[1000%]
     ease-[cubic-bezier(1,0,.2,1)]
     ;
   }
+  
   &.is-active {
     > .revealer-front {
       @apply

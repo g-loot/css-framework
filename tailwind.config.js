@@ -591,6 +591,12 @@ module.exports = {
           "0px 0px 16px rgba(243, 195, 81, 0.75)",
           "0px 0px 32px rgba(243, 195, 81, 1)",
         ],
+        "rarity-category-1": [
+          "0px 0px 3px rgb(var(--color-bronze-500) / 0.25)",
+          "0px 0px 6px rgb(var(--color-bronze-500) / 0.5)",
+          "0px 0px 16px rgb(var(--color-bronze-500) / 0.75)",
+          "0px 0px 32px rgb(var(--color-bronze-500) / 1)",
+        ],
       },
     },
   },

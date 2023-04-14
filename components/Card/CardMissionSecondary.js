@@ -166,6 +166,19 @@ export default function CardMissionSecondary(props) {
             </div>
           </div>
         </div>
+        {MissionRetrieved && !mission.isVisible && (
+              <div className={`revealer-transition lottie-blur ${mission.category === 1 ? "rarity-category-1" : ""} ${
+                mission.category === 2 ? "rarity-category-2" : ""
+              } ${mission.category === 3 ? "rarity-category-3" : ""} ${
+                mission.category === 4 ? "rarity-category-4" : ""
+              }`}>
+                <Lottie
+                  animationData={LottieExplosion(mission.category)}
+                  loop={false}
+                  autoplay={true}
+                />
+              </div>
+            )}
         <div className="revealer-back">
           <div
             className={`card-mission card-secondary ${
@@ -413,15 +426,6 @@ export default function CardMissionSecondary(props) {
                 }}
               />
             </div>
-            {MissionRetrieved && !mission.isVisible && (
-              <div className="absolute z-40 inset-0 grid place-content-center lottie-blur">
-                <Lottie
-                  animationData={LottieExplosion(mission.category)}
-                  loop={false}
-                  autoplay={true}
-                />
-              </div>
-            )}
           </div>
         </div>
       </div>

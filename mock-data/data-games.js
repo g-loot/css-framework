@@ -134,7 +134,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 250000,
+                value: 6800,
               },
             ],
             stats: {
@@ -150,7 +150,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 200000,
+                value: 5000,
               },
             ],
             stats: {
@@ -166,7 +166,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 150000,
+                value: 4000,
               },
             ],
             stats: {
@@ -182,7 +182,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 75000,
+                value: 3300,
               },
             ],
             stats: {
@@ -198,7 +198,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 50000,
+                value: 2700,
               },
             ],
             stats: {
@@ -214,7 +214,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 25000,
+                value: 2300,
               },
             ],
             stats: {
@@ -230,7 +230,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 25000,
+                value: 2000,
               },
             ],
             stats: {
@@ -246,7 +246,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 10000,
+                value: 1800,
               },
             ],
             stats: {
@@ -275,7 +275,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 45000,
               },
             ],
             stats: {
