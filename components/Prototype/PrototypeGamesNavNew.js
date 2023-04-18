@@ -19,15 +19,21 @@ const SubMenuItem = [
   },
   {
     onlygame: "valorant",
-    url: "stats",
-    icon: "icon-statistics",
-    label: "Stats",
-  },
-  {
-    onlygame: "valorant",
     url: "scoreboards",
     icon: "icon-stairs",
     label: "Scoreboards",
+  },
+  {
+    onlygame: "valorant",
+    url: "clanseasonleaderboards",
+    icon: "icon-multiple-11",
+    label: "Clan Season",
+  },
+  {
+    onlygame: "valorant",
+    url: "stats",
+    icon: "icon-statistics",
+    label: "Stats",
   },
   /*
   {
@@ -110,7 +116,7 @@ export default function PrototypeGamesNavNew({ children }) {
                     <>
                       {(!subItem.onlygame ||
                         subItem.onlygame === item.slug) && (
-                        <li key={subItem}>
+                        <li key={subItemIndex}>
                           <Link
                             href={`/prototype/${item.slug}/${
                               subItem.url

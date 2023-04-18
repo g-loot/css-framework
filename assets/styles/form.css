@@ -1521,13 +1521,23 @@ input[type=range].form-range {
 
 /* react-select */
 
+div.react-select-container {
+  &.is-premium {
+    div.react-select__single-value {
+      @apply
+      text-premium-500
+      ;
+    }
+  }
+}
+
 div.react-select__control {
   @apply
   bg-ui-700
   border-ui-600
   text-ui-200
   min-h-[42px]
-  min-w-[100px]
+  min-w-[150px]
   shadow-none
   ;
   &:hover {

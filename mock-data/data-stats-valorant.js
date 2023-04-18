@@ -53,48 +53,128 @@ export const StatsValorantMaps = [
 export const StatsValorantRanks = [
   {
     id: 0,
-    name: 'iron',
-    picturePath: getImageUrl('rank-iron.webp'),
+    name: 'iron 1',
+    picturePath: getImageUrl('rank_iron_1.png'),
   },
   {
     id: 1,
-    name: 'bronze',
-    picturePath: getImageUrl('rank-bronze.webp'),
+    name: 'iron 2',
+    picturePath: getImageUrl('rank_iron_2.png'),
   },
   {
     id: 2,
-    name: 'silver',
-    picturePath: getImageUrl('rank-silver.webp'),
+    name: 'iron 3',
+    picturePath: getImageUrl('rank_iron_3.png'),
   },
   {
     id: 3,
-    name: 'gold',
-    picturePath: getImageUrl('rank-gold.webp'),
+    name: 'bronze 1',
+    picturePath: getImageUrl('rank_bronze_1.png'),
   },
   {
     id: 4,
-    name: 'platinum',
-    picturePath: getImageUrl('rank-platinum.webp'),
+    name: 'bronze 2',
+    picturePath: getImageUrl('rank_bronze_2.png'),
   },
   {
     id: 5,
-    name: 'diamond',
-    picturePath: getImageUrl('rank-diamond.webp'),
+    name: 'bronze 3',
+    picturePath: getImageUrl('rank_bronze_3.png'),
   },
   {
     id: 6,
-    name: 'immortal',
-    picturePath: getImageUrl('rank-immortal.webp'),
+    name: 'silver 1',
+    picturePath: getImageUrl('rank_silver_1.png'),
   },
   {
     id: 7,
-    name: 'radiant',
-    picturePath: getImageUrl('rank-radiant.webp'),
+    name: 'silver 2',
+    picturePath: getImageUrl('rank_silver_2.png'),
   },
   {
     id: 8,
-    name: 'acendant',
-    picturePath: getImageUrl('rank-acendant.webp'),
+    name: 'silver 3',
+    picturePath: getImageUrl('rank_silver_3.png'),
+  },
+  {
+    id: 9,
+    name: 'gold 1',
+    picturePath: getImageUrl('rank_gold_1.png'),
+  },
+  {
+    id: 10,
+    name: 'gold 2',
+    picturePath: getImageUrl('rank_gold_2.png'),
+  },
+  {
+    id: 11,
+    name: 'gold 3',
+    picturePath: getImageUrl('rank_gold_3.png'),
+  },
+  {
+    id: 12,
+    name: 'platinum 1',
+    picturePath: getImageUrl('rank_platinum_1.png'),
+  },
+  {
+    id: 13,
+    name: 'platinum 2',
+    picturePath: getImageUrl('rank_platinum_2.png'),
+  },
+  {
+    id: 14,
+    name: 'platinum 3',
+    picturePath: getImageUrl('rank_platinum_3.png'),
+  },
+  {
+    id: 15,
+    name: 'diamond 1',
+    picturePath: getImageUrl('rank_diamond_1.png'),
+  },
+  {
+    id: 16,
+    name: 'diamond 2',
+    picturePath: getImageUrl('rank_diamond_2.png'),
+  },
+  {
+    id: 17,
+    name: 'diamond 3',
+    picturePath: getImageUrl('rank_diamond_3.png'),
+  },
+  {
+    id: 18,
+    name: 'ascendant 1',
+    picturePath: getImageUrl('rank_ascendant_1.png'),
+  },
+  {
+    id: 19,
+    name: 'ascendant 2',
+    picturePath: getImageUrl('rank_ascendant_2.png'),
+  },
+  {
+    id: 20,
+    name: 'ascendant 3',
+    picturePath: getImageUrl('rank_ascendant_3.png'),
+  },
+  {
+    id: 21,
+    name: 'immortal 1',
+    picturePath: getImageUrl('rank_immortal_1.png'),
+  },
+  {
+    id: 22,
+    name: 'immortal 2',
+    picturePath: getImageUrl('rank_immortal_2.png'),
+  },
+  {
+    id: 23,
+    name: 'immortal 3',
+    picturePath: getImageUrl('rank_immortal_3.png'),
+  },
+  {
+    id: 24,
+    name: 'radiant',
+    picturePath: getImageUrl('rank_radiant.png'),
   },
 ];
 

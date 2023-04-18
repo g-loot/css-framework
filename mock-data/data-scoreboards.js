@@ -75,8 +75,33 @@ export const DataScoreboards = [
         filters: [
           {
             id: 0,
-            section: 1,
-            value: 1,
+            section: 0,
+            value: 0,
+          },
+          {
+            id: 1,
+            section: 0,
+            value: 0,
+          },
+          {
+            id: 2,
+            section: 0,
+            value: 0,
+          },
+          {
+            id: 3,
+            section: 0,
+            value: 0,
+          },
+          {
+            id: 4,
+            section: 0,
+            value: 0,
+          },
+          {
+            id: 5,
+            section: 0,
+            value: 0,
           },
         ],
       },

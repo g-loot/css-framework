@@ -3287,6 +3287,156 @@ export const dataGames = [
         },
       },
     ],
+    clanLeaderboards: [
+      {
+        id: 0,
+        isCurrent: true,
+        name: "Nordic Uprising",
+        logo: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-logo.png",
+        bg:
+          "https://res.cloudinary.com/gloot/image/upload/v1681756064/Stryda/demo/nordicuprising-bg.jpg",
+        meta: {
+          objective: "Play together in a 5 people clan party.",
+          gameMode: "Competitive",
+          tieBreaker: "Headshots from your 3 best matches decide a tie.",
+        },
+        rewards: [
+          {
+            type: "coin",
+            value: 3000000,
+          },
+        ],
+        isEnrolled: false,
+        progress: 0,
+        progressClan: 0,
+        leaderboard: [
+          {
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 6000,
+              },
+            ],
+            stats: {
+              wins: 13,
+              losses: 1,
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
+            stats: {
+              wins: 10,
+              losses: 2,
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 4000,
+              },
+            ],
+            stats: {
+              wins: 10,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 3000,
+              },
+            ],
+            stats: {
+              wins: 8,
+              losses: 2,
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [],
+            stats: {
+              wins: 6,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 5,
+            rewards: [],
+            stats: {
+              wins: 5,
+              losses: 2,
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 6,
+            rewards: null,
+            stats: {
+              wins: 5,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 7,
+            rewards: null,
+            stats: {
+              wins: 4,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+      }
+    ]
   },
   {
     id: 2,

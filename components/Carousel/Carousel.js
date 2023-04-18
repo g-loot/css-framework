@@ -1,8 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
-import DigitalClock from "./DigitalClock";
-
 const slides = [
   {
     subtitle: "Free entry",

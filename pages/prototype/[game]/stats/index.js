@@ -30,6 +30,7 @@ export default function Stats() {
   const variant = query.variant ? query.variant : 20;
   const [loading, setLoading] = useState(true);
   const isEmpty = query.empty === "true" ? true : false;
+  const isPremium = query.premium === "true" ? true : false;
 
   useEffect(() => {
     if (loading) {
@@ -211,49 +212,49 @@ export default function Stats() {
                       <div className="flex-3">
                         <div className="text-ui-400 mb-4">Stats overview</div>
                         <div className="flex flex-wrap text-center gap-2 md:gap-4 leading-tight items-stretch justify-between">
-                          <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                          <div className="rounded bg-gradient-to-b from-ui-900/30 to-ui-900/10 p-2 w-28">
                             <div className="text-xs lg:text-sm uppercase text-ui-300">
                               Wins
                             </div>
                             <div className="font-bold">--</div>
                           </div>
-                          <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                          <div className="rounded bg-gradient-to-b from-ui-900/30 to-ui-900/10 p-2 w-28">
                             <div className="text-xs lg:text-sm uppercase text-ui-300">
                               Kills
                             </div>
                             <div className="font-bold">--</div>
                           </div>
-                          <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                          <div className="rounded bg-gradient-to-b from-ui-900/30 to-ui-900/10 p-2 w-28">
                             <div className="text-xs lg:text-sm uppercase text-ui-300">
                               Deaths
                             </div>
                             <div className="font-bold">--</div>
                           </div>
-                          <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                          <div className="rounded bg-gradient-to-b from-ui-900/30 to-ui-900/10 p-2 w-28">
                             <div className="text-xs lg:text-sm uppercase text-ui-300">
                               Asists
                             </div>
                             <div className="font-bold">--</div>
                           </div>
-                          <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                          <div className="rounded bg-gradient-to-b from-ui-900/30 to-ui-900/10 p-2 w-28">
                             <div className="text-xs lg:text-sm uppercase text-ui-300">
                               Score/Round
                             </div>
                             <div className="font-bold">--</div>
                           </div>
-                          <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                          <div className="rounded bg-gradient-to-b from-ui-900/30 to-ui-900/10 p-2 w-28">
                             <div className="text-xs lg:text-sm uppercase text-ui-300">
                               KDA Ratio
                             </div>
                             <div className="font-bold">--</div>
                           </div>
-                          <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                          <div className="rounded bg-gradient-to-b from-ui-900/30 to-ui-900/10 p-2 w-28">
                             <div className="text-xs lg:text-sm uppercase text-ui-300">
                               Kills/Round
                             </div>
                             <div className="font-bold">--</div>
                           </div>
-                          <div className="rounded bg-gradient-to-b from-ui-900/50 to-ui-900/10 p-2 w-28">
+                          <div className="rounded bg-gradient-to-b from-ui-900/30 to-ui-900/10 p-2 w-28">
                             <div className="text-xs lg:text-sm uppercase text-ui-300">
                               KDA Ratio
                             </div>
@@ -761,9 +762,108 @@ export default function Stats() {
                       )}
                     </tbody>
                   </table>
-                  <div className="text-center">
-                    <LoadMore className="button-sm button-tertiary" />
-                  </div>
+
+                  {!isPremium && (
+                    <div className="relative mb-2 -mt-2">
+                      <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/50 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
+                        <p className="text-lg text-ui-300 mb-4">
+                          Want to see the full overview of stats?
+                        </p>
+                        <Link href="/prototype/premium">
+                          <button
+                            type="button"
+                            className="button button-premium"
+                          >
+                            <span>Get Premium now</span>
+                          </button>
+                        </Link>
+                      </div>
+                      <table className="table table-rounded rounded-lg w-full text-center min-w-lg">
+                        <tbody className="child:overflow-hidden leading-tight">
+                          <tr>
+                            <td className="p-0">
+                              <div className="flex items-center gap-4 text-left w-24">
+                                <img
+                                  className="w-16 h-16 rounded-l"
+                                  src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-astra.webp"
+                                  alt=""
+                                  width="auto"
+                                  height="auto"
+                                />
+                                <div>
+                                  <div className="text-ui-100 capitalize">
+                                    Get Premium
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                          </tr>
+                          <tr>
+                            <td className="p-0">
+                              <div className="flex items-center gap-4 text-left w-24">
+                                <img
+                                  className="w-16 h-16 rounded-l"
+                                  src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-yoru.webp"
+                                  alt=""
+                                  width="auto"
+                                  height="auto"
+                                />
+                                <div>
+                                  <div className="text-ui-100 capitalize">
+                                    Get Premium
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                          </tr>
+                          <tr>
+                            <td className="p-0">
+                              <div className="flex items-center gap-4 text-left w-24">
+                                <img
+                                  className="w-16 h-16 rounded-l"
+                                  src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-neon.webp"
+                                  alt=""
+                                  width="auto"
+                                  height="auto"
+                                />
+                                <div>
+                                  <div className="text-ui-100 capitalize">
+                                    Get Premium
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                  {isPremium && (
+                    <div className="text-center">
+                      <LoadMore className="button-sm button-tertiary" />
+                    </div>
+                  )}
                 </div>
               </section>
               <section className="mb-8">
@@ -1162,9 +1262,271 @@ export default function Stats() {
                       ))}
                     </div>
                   ))}
-                  <div className="text-center">
-                    <LoadMore className="button-sm button-tertiary" />
-                  </div>
+                  {!isPremium && (
+                    <div className="mb-2 relative">
+                      <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/30 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
+                        <p className="text-lg text-ui-300 mb-4">
+                          Want to see the full overview of stats?
+                        </p>
+                        <Link href="/prototype/premium">
+                          <button
+                            type="button"
+                            className="button button-premium"
+                          >
+                            <span>Get Premium now</span>
+                          </button>
+                        </Link>
+                      </div>
+                      <div className="relative z-0">
+                        <div className="flex items-center gap-2 my-2 text-ui-400 text-xs lg:text-sm uppercase mx-4 md:mx-0">
+                          <span className="icon icon-calendar-date-2" />
+                          <span>NOV 6</span>
+                        </div>
+                        <div className="item surface sm:rounded-lg text-center surface-halo halo-l mb-2">
+                          <div className="item-image">
+                            <div className="avatar avatar-sm avatar-diamond">
+                              <div>
+                                <img
+                                  src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-neon.webp"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div className="item-body w-36 flex-none text-left">
+                            <div>
+                              <div className="text-ui-100 capitalize">
+                                Premium
+                              </div>
+                              <div className="text-ui-300 font-normal capitalize">
+                                -- • --
+                              </div>
+                            </div>
+                          </div>
+                          <div className="item-body flex-0 flex gap-2 items-center justify-around w-48">
+                            <div className="text-2xl uppercase w-20 text-center">
+                              <span className="text-main">Victory</span>
+                            </div>
+                            <div className="w-16">
+                              <div className="text-ui-300 text-xl">
+                                <span className="text-success-300">--</span> -{" "}
+                                <span className="text-success-300">--</span>
+                              </div>
+                              <div className="text-sm text-ui-400 font-normal">
+                                -- place
+                              </div>
+                            </div>
+                          </div>
+                          <div className="item-body flex-1 flex gap-2 items-center justify-around">
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                --
+                              </div>
+                              <div>--</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                K/D/A
+                              </div>
+                              <div>-- - -- - --</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                KD
+                              </div>
+                              <div>--</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                ADR
+                              </div>
+                              <div>--</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                ACS
+                              </div>
+                              <div>--</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                HS%
+                              </div>
+                              <div>--</div>
+                            </div>
+                          </div>
+                          <div className="item-actions">
+                            <div>
+                              <span className="icon icon-24 icon-arrow-sm-down" />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="item surface sm:rounded-lg text-center surface-halo halo-l mb-2">
+                          <div className="item-image">
+                            <div className="avatar avatar-sm avatar-diamond">
+                              <div>
+                                <img
+                                  src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-astra.webp"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div className="item-body w-36 flex-none text-left">
+                            <div>
+                              <div className="text-ui-100 capitalize">
+                                Premium
+                              </div>
+                              <div className="text-ui-300 font-normal capitalize">
+                                -- • --
+                              </div>
+                            </div>
+                          </div>
+                          <div className="item-body flex-0 flex gap-2 items-center justify-around w-48">
+                            <div className="text-2xl uppercase w-20 text-center">
+                              <span className="text-main">Victory</span>
+                            </div>
+                            <div className="w-16">
+                              <div className="text-ui-300 text-xl">
+                                <span className="text-success-300">--</span> -{" "}
+                                <span className="text-success-300">--</span>
+                              </div>
+                              <div className="text-sm text-ui-400 font-normal">
+                                -- place
+                              </div>
+                            </div>
+                          </div>
+                          <div className="item-body flex-1 flex gap-2 items-center justify-around">
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                --
+                              </div>
+                              <div>--</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                K/D/A
+                              </div>
+                              <div>-- - -- - --</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                KD
+                              </div>
+                              <div>--</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                ADR
+                              </div>
+                              <div>--</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                ACS
+                              </div>
+                              <div>--</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                HS%
+                              </div>
+                              <div>--</div>
+                            </div>
+                          </div>
+                          <div className="item-actions">
+                            <div>
+                              <span className="icon icon-24 icon-arrow-sm-down" />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="item surface sm:rounded-lg text-center surface-halo halo-l mb-2">
+                          <div className="item-image">
+                            <div className="avatar avatar-sm avatar-diamond">
+                              <div>
+                                <img
+                                  src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-yoru.webp"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div className="item-body w-36 flex-none text-left">
+                            <div>
+                              <div className="text-ui-100 capitalize">
+                                Premium
+                              </div>
+                              <div className="text-ui-300 font-normal capitalize">
+                                -- • --
+                              </div>
+                            </div>
+                          </div>
+                          <div className="item-body flex-0 flex gap-2 items-center justify-around w-48">
+                            <div className="text-2xl uppercase w-20 text-center">
+                              <span className="text-main">Victory</span>
+                            </div>
+                            <div className="w-16">
+                              <div className="text-ui-300 text-xl">
+                                <span className="text-success-300">--</span> -{" "}
+                                <span className="text-success-300">--</span>
+                              </div>
+                              <div className="text-sm text-ui-400 font-normal">
+                                -- place
+                              </div>
+                            </div>
+                          </div>
+                          <div className="item-body flex-1 flex gap-2 items-center justify-around">
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                --
+                              </div>
+                              <div>--</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                K/D/A
+                              </div>
+                              <div>-- - -- - --</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                KD
+                              </div>
+                              <div>--</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                ADR
+                              </div>
+                              <div>--</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                ACS
+                              </div>
+                              <div>--</div>
+                            </div>
+                            <div>
+                              <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                                HS%
+                              </div>
+                              <div>--</div>
+                            </div>
+                          </div>
+                          <div className="item-actions">
+                            <div>
+                              <span className="icon icon-24 icon-arrow-sm-down" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  {isPremium && (
+                    <div className="text-center">
+                      <LoadMore className="button-sm button-tertiary" />
+                    </div>
+                  )}
                 </div>
               </section>
               <section className="mb-8">
@@ -1282,7 +1644,7 @@ export default function Stats() {
                     <tbody className="child:overflow-hidden leading-tight">
                       {StatsValorantDemoWeapons.map((item, itemIndex) => (
                         <tr key={itemIndex}>
-                          <td className="w-76">
+                          <td className="w-76 h-20">
                             <div className="flex items-center gap-4 text-left">
                               <div className="w-52">
                                 <img
@@ -1316,9 +1678,101 @@ export default function Stats() {
                       ))}
                     </tbody>
                   </table>
-                  <div className="text-center">
-                    <LoadMore className="button-sm button-tertiary" />
-                  </div>
+                  {!isPremium && (
+                    <div className="relative mb-2 -mt-2">
+                      <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/30 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
+                        <p className="text-lg text-ui-300 mb-4">
+                          Want to see the full overview of stats?
+                        </p>
+                        <Link href="/prototype/premium">
+                          <button
+                            type="button"
+                            className="button button-premium"
+                          >
+                            <span>Get Premium now</span>
+                          </button>
+                        </Link>
+                      </div>
+                      <table className="table table-rounded rounded-lg w-full text-center min-w-lg">
+                        <tbody className="child:overflow-hidden leading-tight">
+                          <tr>
+                            <td className="w-76 h-20">
+                              <div className="flex items-center gap-4 text-left">
+                                <div className="w-52">
+                                  <img
+                                    className="drop-shadow-lg mx-auto"
+                                    src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/weapon-stinger.webp"
+                                    alt=""
+                                    width="75"
+                                    height="auto"
+                                  />
+                                </div>
+                                <div>
+                                  <div className="text-ui-100 capitalize">
+                                    Premium
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td className="w-52">--</td>
+                            <td className="w-52">--</td>
+                            <td className="w-52">--</td>
+                          </tr>
+                          <tr>
+                            <td className="w-76 h-20">
+                              <div className="flex items-center gap-4 text-left">
+                                <div className="w-52">
+                                  <img
+                                    className="drop-shadow-lg mx-auto"
+                                    src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/weapon-bucky.webp"
+                                    alt=""
+                                    width="75"
+                                    height="auto"
+                                  />
+                                </div>
+                                <div>
+                                  <div className="text-ui-100 capitalize">
+                                    Premium
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td className="w-52">--</td>
+                            <td className="w-52">--</td>
+                            <td className="w-52">--</td>
+                          </tr>
+                          <tr>
+                            <td className="w-76 h-20">
+                              <div className="flex items-center gap-4 text-left">
+                                <div className="w-52">
+                                  <img
+                                    className="drop-shadow-lg mx-auto"
+                                    src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/weapon-bulldog.webp"
+                                    alt=""
+                                    width="75"
+                                    height="auto"
+                                  />
+                                </div>
+                                <div>
+                                  <div className="text-ui-100 capitalize">
+                                    Premium
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td className="w-52">--</td>
+                            <td className="w-52">--</td>
+                            <td className="w-52">--</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                  {isPremium && (
+                    <div className="text-center">
+                      <LoadMore className="button-sm button-tertiary" />
+                    </div>
+                  )}
                 </div>
               </section>
               <section className="mb-8">
@@ -1345,7 +1799,7 @@ export default function Stats() {
                     <tbody className="child:overflow-hidden leading-tight">
                       {StatsValorantDemoMaps.map((item, itemIndex) => (
                         <tr key={itemIndex}>
-                          <td className="text-left capitalize">
+                          <td className="text-left capitalize w-36">
                             {getMapByID(item.map).name}
                           </td>
                           <td className="p-0 relative w-72 h-24">
@@ -1383,9 +1837,140 @@ export default function Stats() {
                       ))}
                     </tbody>
                   </table>
-                  <div className="text-center">
-                    <LoadMore className="button-sm button-tertiary" />
-                  </div>
+                  {!isPremium && (
+                    <div className="relative mb-2 -mt-2">
+                      <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/30 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
+                        <p className="text-lg text-ui-300 mb-4">
+                          Want to see the full overview of stats?
+                        </p>
+                        <Link href="/prototype/premium">
+                          <button
+                            type="button"
+                            className="button button-premium"
+                          >
+                            <span>Get Premium now</span>
+                          </button>
+                        </Link>
+                      </div>
+                      <table className="table table-rounded rounded-lg w-full text-center min-w-lg pointer-events-none">
+                        <tbody className="child:overflow-hidden leading-tight">
+                          <tr>
+                            <td className="text-left capitalize w-36">
+                              Premium
+                            </td>
+                            <td className="p-0 relative w-72 h-24">
+                              <span className="absolute z-10 inset-y-0 left-0 w-12 bg-gradient-to-r from-ui-800 to-ui-800/0" />
+                              <span className="absolute z-10 inset-y-0 right-0 w-12 bg-gradient-to-l from-ui-800 to-ui-800/0" />
+                              <img
+                                className="absolute z-20 inset-y-0 -left-8 h-full object-cover"
+                                src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                                alt=""
+                                width="auto"
+                                height="auto"
+                              />
+                              <img
+                                className="absolute z-20 inset-y-0 -right-8 h-full object-cover -scale-y-100 -scale-x-100"
+                                src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                                alt=""
+                                width="auto"
+                                height="auto"
+                              />
+                              <img
+                                className="absolute inset-0 h-full w-full object-cover"
+                                src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-split.webp"
+                                alt=""
+                                width="auto"
+                                height="auto"
+                              />
+                            </td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                          </tr>
+                          <tr>
+                            <td className="text-left capitalize w-36">
+                              Premium
+                            </td>
+                            <td className="p-0 relative w-72 h-24">
+                              <span className="absolute z-10 inset-y-0 left-0 w-12 bg-gradient-to-r from-ui-800 to-ui-800/0" />
+                              <span className="absolute z-10 inset-y-0 right-0 w-12 bg-gradient-to-l from-ui-800 to-ui-800/0" />
+                              <img
+                                className="absolute z-20 inset-y-0 -left-8 h-full object-cover"
+                                src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                                alt=""
+                                width="auto"
+                                height="auto"
+                              />
+                              <img
+                                className="absolute z-20 inset-y-0 -right-8 h-full object-cover -scale-y-100 -scale-x-100"
+                                src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                                alt=""
+                                width="auto"
+                                height="auto"
+                              />
+                              <img
+                                className="absolute inset-0 h-full w-full object-cover"
+                                src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-pearl.webp"
+                                alt=""
+                                width="auto"
+                                height="auto"
+                              />
+                            </td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                          </tr>
+                          <tr>
+                            <td className="text-left capitalize w-36">
+                              Premium
+                            </td>
+                            <td className="p-0 relative w-72 h-24">
+                              <span className="absolute z-10 inset-y-0 left-0 w-12 bg-gradient-to-r from-ui-800 to-ui-800/0" />
+                              <span className="absolute z-10 inset-y-0 right-0 w-12 bg-gradient-to-l from-ui-800 to-ui-800/0" />
+                              <img
+                                className="absolute z-20 inset-y-0 -left-8 h-full object-cover"
+                                src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                                alt=""
+                                width="auto"
+                                height="auto"
+                              />
+                              <img
+                                className="absolute z-20 inset-y-0 -right-8 h-full object-cover -scale-y-100 -scale-x-100"
+                                src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                                alt=""
+                                width="auto"
+                                height="auto"
+                              />
+                              <img
+                                className="absolute inset-0 h-full w-full object-cover"
+                                src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-bind.webp"
+                                alt=""
+                                width="auto"
+                                height="auto"
+                              />
+                            </td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                            <td>--</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                  {isPremium && (
+                    <div className="text-center">
+                      <LoadMore className="button-sm button-tertiary" />
+                    </div>
+                  )}
                 </div>
               </section>
             </>

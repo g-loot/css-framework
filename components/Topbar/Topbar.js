@@ -692,7 +692,7 @@ export default function TopbarNew() {
                       <div className="flex items-center justify-between p-2">
                         <div className="form-group form-select">
                           <select id="favorite-game" className="input-sm">
-                            <option selected>Show all categories</option>
+                            <option defaultValue={true}>Show all categories</option>
                             <option>Clans</option>
                             <option>Ladders</option>
                             <option>Missions</option>

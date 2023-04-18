@@ -964,23 +964,23 @@ const DSpage = () => {
                     </div>
                   </div>
                 </div>
-                <div className="avatar-group -space-x-3">
-                  <div className="avatar avatar-circle avatar-xs">
+                  <div className="avatar avatar-squircle avatar-xs">
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                     </div>
                   </div>
-                  <div className="avatar avatar-circle avatar-xs">
+                <div className="avatar-group -space-x-3">
+                  <div className="avatar avatar-squircle avatar-xs">
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                     </div>
                   </div>
-                  <div className="avatar avatar-circle avatar-xs">
+                  <div className="avatar avatar-squircle avatar-xs">
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                     </div>
                   </div>
-                  <div className="avatar avatar-circle avatar-xs">
+                  <div className="avatar avatar-squircle avatar-xs">
                     <div>
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
                     </div>

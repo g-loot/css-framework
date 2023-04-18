@@ -61,6 +61,20 @@ export const PrototypeProvider = ({ children }) => {
     });
     return selectedLadder;
   }
+  const getClanLeaderboardByID = (slug, id) => {
+    const selectedGame = getGameBySlug(slug);
+    const selectedLadder = selectedGame?.clanLeaderboards?.find(ladder => {
+      return ladder.id === parseInt(id);
+    });
+    return selectedLadder;
+  }
+  const getCurrentClanLeaderboard = (slug, id) => {
+    const selectedGame = getGameBySlug(slug);
+    const selectedLadder = selectedGame?.clanLeaderboards?.find(ladder => {
+      return ladder.isCurrent === true;
+    });
+    return selectedLadder;
+  }
   const getTournamentByID = (slug, id) => {
     const selectedGame = getGameBySlug(slug);
     const selectedTournament = selectedGame.tournaments?.find(tournament => {
@@ -156,6 +170,8 @@ export const PrototypeProvider = ({ children }) => {
         getAchievementitemByID,
         getURLparams,
         defineDefaultGameID,
+        getClanLeaderboardByID,
+        getCurrentClanLeaderboard
       }}
     >
       {children}

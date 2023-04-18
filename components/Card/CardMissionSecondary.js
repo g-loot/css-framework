@@ -79,6 +79,11 @@ export default function CardMissionSecondary(props) {
     return (100 * max) / current;
   }
 
+  function handleReset() {
+    console.log("caca");
+    variablesContext.incrementAvailableMissions(5);
+  }
+
   useEffect(() => {
     if (modalDiscardMission) {
       openModalDiscardMission();
@@ -124,7 +129,7 @@ export default function CardMissionSecondary(props) {
                 <>
                   {isCapped ? (
                     <>
-                      <div className="text-ui-100">
+                      <div className="text-ui-100" onClick={handleReset}>
                         <div className="text-xl">Maximum missions revealed</div>
                         <div className="text-sm">
                           Complete or discard missions to unlock new ones

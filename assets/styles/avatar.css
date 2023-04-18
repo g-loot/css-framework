@@ -542,13 +542,6 @@
     }
   }
   > .avatar {
-    &,
-    & > *:not(b):not(strong):not(i),
-    & > *:not(b):not(strong):not(i) > * {
-      @apply
-      rounded-full
-      ;
-    }
     > *:not(b):not(strong):not(i) {
       @apply
       w-full

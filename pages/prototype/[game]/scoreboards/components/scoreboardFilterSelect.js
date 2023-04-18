@@ -5,7 +5,8 @@ import Select, { components, GroupHeadingProps } from "react-select";
 
 export default function ScoreboardFilterSelect({ id, item, onLoad }) {
   const [selectedFilter, setSelectedFilter] = useState(null);
-
+  const [isPremium, setIsPremium] = useState(false);
+  
   useEffect(() => {
     setSelectedFilter(getScoreboardFilterByID(id));
   }, [id]);
@@ -31,38 +32,6 @@ export default function ScoreboardFilterSelect({ id, item, onLoad }) {
     return selectedOption;
   };
 
-
-
-const colourOptions = [
-  { value: "ocean", label: "Ocean"},
-  { value: "blue", label: "Blue"},
-  { value: "purple", label: "Purple"},
-  { value: "red", label: "Red"},
-  { value: "orange", label: "Orange"},
-  { value: "yellow", label: "Yellow"},
-  { value: "green", label: "Green"},
-  { value: "forest", label: "Forest"},
-  { value: "slate", label: "Slate"},
-  { value: "silver", label: "Silver"},
-];
-
-const flavourOptions = [
-  { value: "vanilla", label: "Vanilla"},
-  { value: "chocolate", label: "Chocolate"},
-  { value: "strawberry", label: "Strawberry"},
-];
-const groupedOptions = [
-  {
-    label: "Colours",
-    options: colourOptions,
-  },
-  {
-    label: "Flavours",
-    options: flavourOptions,
-  },
-];
-
-
   const GroupHeading = (props) => (
     <div
       className={`${
@@ -72,6 +41,15 @@ const groupedOptions = [
       <components.GroupHeading {...props} />
     </div>
   );
+
+  function handleChange(e) {
+    if (e.value !== "All") {
+      setIsPremium(true);
+    } else {
+      setIsPremium(false);
+    }
+    onLoad(e);
+  }
 
   return (
     <>
@@ -94,10 +72,10 @@ const groupedOptions = [
               options={getScoreboardFilterByID(id).sections}
               components={{ GroupHeading }}
               defaultValue={{ label: getFilteroptionByID(item.section, item.value).label, value: getFilteroptionByID(item.section, item.value).id }}
-              className="react-select-container"
+              className={`react-select-container ${isPremium ? 'is-premium' : ''}`}
               classNamePrefix="react-select"
               menuPortalTarget={document.body}
-              onChange={onLoad}
+              onChange={e => { handleChange(e) }}
               NOmenuIsOpen={true}
             />
           </div>

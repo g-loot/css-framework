@@ -37,6 +37,14 @@ const useResize = (myRef) => {
 };
 
 export default function Battlepass(props) {
+  const [mounted, setMounted] = useState();
+
+  useEffect(() => {
+    if (!mounted) {
+      setMounted(true);
+    }
+  }, []);
+
   const size = props.size || "battlepass-lg";
   const selectedBattlepass = props.id || 0;
   const [currentStep, setCurrentStep] = useState(1);
@@ -152,6 +160,7 @@ export default function Battlepass(props) {
 
   return (
     <>
+    {mounted && (
       <div
         className={`battlepass-container ${
           size === "battlepass-md" ? "battlepass-md" : ""
@@ -331,6 +340,7 @@ export default function Battlepass(props) {
           </button>
         </div>
       </div>
+    )}
     </>
   );
 }

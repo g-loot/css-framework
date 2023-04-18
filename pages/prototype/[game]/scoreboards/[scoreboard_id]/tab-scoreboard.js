@@ -84,7 +84,7 @@ export default function TabScoreboard(props) {
     <>
       {selectedScoreboard && (
         <>
-          <section className="flex items-center gap-x-4 gap-y-2 mb-4 px-2 md:px-0 whitespace-nowrap overflow-x-autoNO scrollbar-hidden">
+          <section className="flex items-center gap-x-4 gap-y-2 mb-4 px-2 md:px-0 whitespace-nowrap overflow-x-auto scrollbar-hidden">
             {selectedScoreboard.filters?.map((item, itemIndex) => (
               <ScoreboardFilterSelect
                 id={item.id}
