@@ -11,8 +11,8 @@ import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import Countdown from "../../../../../components/Countdown/Countdown";
 import GameIcon from "../../../../../components/GameIcon/GameIcon";
 import TabClanLeaderboardsLeaderboards from "./tab-clanleaderboards";
-import TabClanLeaderboardsHowItWorks from "./tab-howitworks";
-import TabClanLeaderboardsRewards from "./tab-rewards";
+import TabClanLeaderboardsAbout from "./tab-about";
+import TabClanLeaderboardsHistory from "./tab-history";
 
 const TabsItems = [
   {
@@ -21,14 +21,14 @@ const TabsItems = [
     component: TabClanLeaderboardsLeaderboards,
   },
   {
-    label: "Rewards",
-    url: "rewards",
-    component: TabClanLeaderboardsRewards,
+    label: "About",
+    url: "how-it-works",
+    component: TabClanLeaderboardsAbout,
   },
   {
-    label: "How it works",
-    url: "how-it-works",
-    component: TabClanLeaderboardsHowItWorks,
+    label: "History",
+    url: "history",
+    component: TabClanLeaderboardsHistory,
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Ladders() {
     setSelectedLeaderboard(
       prototype.getClanLeaderboardByID(game, leaderboard_id)
     );
-  }, [selectedGame]);
+  }, [leaderboard_id]);
 
   useEffect(() => {
     if (selectedGame) {
@@ -76,9 +76,8 @@ export default function Ladders() {
   return (
     <>
       {selectedGame && selectedLeaderboard && (
-        <PrototypeStructure title={selectedLeaderboard.name}>
+        <PrototypeStructure title="Clan Season Leaderboard">
           <Ad width="1005" height="300" />
-
           <section className="surface sm:rounded overflow-hidden mb-4">
             <div className="h-44 relative w-full flex items-center justify-center">
               <img
@@ -111,7 +110,7 @@ export default function Ladders() {
                     />
                   </div>
                 ) : (
-                  <div className="text-sm text-ui-300">Ended 2 months ago</div>
+                  <div className="text-sm text-ui-300">Ended {selectedLeaderboard.id * 2} months ago</div>
                 )}
               </div>
               <div className="border-t border-ui-700 mt-4 pt-4">
@@ -159,11 +158,7 @@ export default function Ladders() {
                   <li className="flex gap-2 items-center">
                     <Tooltip
                       className="tooltip-sm"
-                      tooltip={
-                        <span className="text-sm">
-                          {selectedLeaderboard.meta.tieBreaker}
-                        </span>
-                      }
+                      tooltip={<span className="text-sm">Tie Breaker</span>}
                     >
                       <button className="text-ui-300 text-0">
                         <span className="icon icon-20 icon-lightning" />

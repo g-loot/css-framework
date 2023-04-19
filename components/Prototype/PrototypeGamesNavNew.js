@@ -8,29 +8,34 @@ import { useRouter } from "next/router";
 
 const SubMenuItem = [
   {
+    slug: "missions",
     url: "missions",
     icon: "icon-missions",
     label: "Missions",
   },
   {
+    slug: "ladders",
     url: "ladders",
     icon: "icon-ladder",
     label: "ladders",
   },
   {
     onlygame: "valorant",
+    slug: "scoreboards",
     url: "scoreboards",
     icon: "icon-stairs",
     label: "Scoreboards",
   },
   {
     onlygame: "valorant",
-    url: "clanseasonleaderboards",
+    slug: "clanseasonleaderboards",
+    url: "clanseasonleaderboards/0",
     icon: "icon-multiple-11",
     label: "Clan Season",
   },
   {
     onlygame: "valorant",
+    slug: "stats",
     url: "stats",
     icon: "icon-statistics",
     label: "Stats",
@@ -124,7 +129,7 @@ export default function PrototypeGamesNavNew({ children }) {
                           >
                             <a
                               className={`${
-                                router.pathname.includes(subItem.url) &&
+                                router.pathname.includes(subItem.slug) &&
                                 item.slug === game
                                   ? "is-active"
                                   : ""

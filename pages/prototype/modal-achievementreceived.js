@@ -69,10 +69,10 @@ export default function ModalAchievementReceived(props) {
                     <i />
                     <div className={`achievement-level-${level}`}>
                       <AchievementFrame
-                        url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${level}-animated.svg`}
+                        url={`https://res.cloudinary.com/gloot/image/upload/Stryda/achievements/frames/achievement-frame-lvl${level}-animated.svg`}
                       />
                       <AchievementIcon
-                        url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${item.icon}.svg`}
+                        url={`https://res.cloudinary.com/gloot/image/upload/Stryda/achievements/icons/achievement-icon-${item.icon}.svg`}
                       />
                     </div>
                     <div>

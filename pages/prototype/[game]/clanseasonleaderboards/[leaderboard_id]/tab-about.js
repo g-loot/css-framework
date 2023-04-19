@@ -8,6 +8,8 @@ import ModalContainer from "../../../../../components/Modal/ModalContainer";
 import { usePrototypeData } from "../../../../../contexts/prototype";
 import { UiContext } from "../../../../../contexts/ui";
 import { useRouter } from "next/router";
+import Tooltip from "../../../../../components/Tooltip/Tooltip";
+import Reward from "../../../../../components/Reward/Reward";
 
 const MissionsHowitworksTabs = [
   {
@@ -238,7 +240,55 @@ const MissionsHowitworksTabs = [
   },
 ];
 
-export default function TabClanLeaderboardsHowItWorks() {
+const rewardDistribClan = [
+  {
+    name: "1-10",
+    rewards: [
+      {
+        type: "coin",
+        value: 450000,
+      },
+    ],
+  },
+  {
+    name: "11-20",
+    rewards: [
+      {
+        type: "coin",
+        value: 425000,
+      },
+    ],
+  },
+  {
+    name: "21-50",
+    rewards: [
+      {
+        type: "coin",
+        value: 400000,
+      },
+    ],
+  },
+  {
+    name: "51-150",
+    rewards: [
+      {
+        type: "coin",
+        value: 30000,
+      },
+    ],
+  },
+  {
+    name: "151-300",
+    rewards: [
+      {
+        type: "coin",
+        value: 1500,
+      },
+    ],
+  },
+];
+
+export default function TabClanLeaderboardsAbout() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
@@ -273,6 +323,32 @@ export default function TabClanLeaderboardsHowItWorks() {
             style={{ "--delay": "calc(1 * 0.05s)" }}
           >
             <div className="grid gap-8 grid-cols-1 xl:grid-cols-3 items-center">
+              <div className="col-span-2 px-4 sm:px-0">
+                <h2 className="h4 mb-4">Welcome to the Clan Seasons</h2>
+                <div className="columns-2 space-y-4 gap-8">
+                  <p className="text-ui-300 leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin porta magna et nulla ultrices viverra.
+                  </p>
+                  <ul className="list-inside list-disc space-y-4 text-ui-300 leading-relaxed">
+                    <li>
+                      onec urna orci, interdum ac varius ut, luctus eget leo.
+                    </li>
+                    <li>
+                      Quisque aliquam, massa at euismod tristique, magna augue
+                      sagittis nunc, sit amet porta risus libero ut mi.
+                    </li>
+                    <li>
+                      Vestibulum cursus lorem vitae nulla sodales, sed posuere
+                      tortor efficitur.
+                    </li>
+                    <li>
+                      Integer vestibulum semper nisi. Mauris porta accumsan sem
+                      at fermentum. Nullam eu mattis risus.
+                    </li>
+                  </ul>
+                </div>
+              </div>
               <img
                 className="col-span-1 rounded-lg"
                 src="https://res.cloudinary.com/gloot/image/upload/v1674745238/Stryda/illustrations/ladder_leaderboard.jpg"
@@ -280,42 +356,90 @@ export default function TabClanLeaderboardsHowItWorks() {
                 height="auto"
                 alt=""
               />
-              <div className="col-span-2 px-4 sm:px-0">
-                <h2 className="h4 mb-4">What is a Ladder?</h2>
-                <div className="columns-2 space-y-4 gap-8">
-                  <p className="text-ui-300 leading-relaxed">
-                    In Ladders you compete against other Stryda players and/or
-                    Clans to climb a leaderboard.
-                  </p>
-                  <ul className="list-inside list-disc space-y-4 text-ui-300 leading-relaxed">
-                    <li>
-                      Ladders are based on your stats, just like Missions. You
-                      don’t need to be in the same server as the other Ladder
-                      players.
+            </div>
+          </section>
+          <section
+            className="pb-8 animate-slide-in-bottom"
+            style={{ "--delay": "calc(2 * 0.05s)" }}
+          >
+            <div className="flex flex-col lg:flex-row items-stretch gap-4 mb-8">
+              <div className="flex-2 surface sm:rounded-lg p-4 relative flex flex-col items-stretch">
+                <div className="border-b border-ui-700 pb-4">
+                  <h2 className="text-2xl">Reward distribution</h2>
+                </div>
+                <div className="flex-1 flex flex-col items-center mt-4">
+                  <ul className="leading-none space-y-1 w-full">
+                    <li className="flex justify-between gap-2 text-xs text-ui-300 uppercase px-4 pb-2 relative z-10">
+                      <span>Position</span>
+                      <div className="flex gap-2 items-center">
+                        <span>Clan rewards</span>
+                        <Tooltip
+                          tooltip={
+                            <div className="max-w-xs text-sm text-ui-200 leading-tight normal-case space-y-2">
+                              <p>
+                                Rewards will be distributed evenly to everyone
+                                in the clan once the Ladder has ended.
+                              </p>
+                              <p>
+                                For example, if the Clan reward is [number]
+                                Coins and [number] Golden tickets - each Clan
+                                member will split on the [number] Coins and
+                                [number] Golden tickets.
+                              </p>
+                            </div>
+                          }
+                        >
+                          <button className="text-ui-300 text-0">
+                            <span className="icon icon-16 icon-c-info" />
+                          </button>
+                        </Tooltip>
+                      </div>
                     </li>
-                    <li>
-                      You earn Ladder points based on the objective, e.g. kills,
-                      goals or score from the game.
-                    </li>
-                    <li>
-                      For Valorant and PUBG: BATTLEGROUNDS you need to connect
-                      your Riot and Steam accounts respectively to Stryda; for
-                      all the other games you need the Stryda App running while
-                      you play.
-                    </li>
-                    <li>
-                      Ladders use a “best-of” format. You can enter as many
-                      times as you want, and only your best scores count.
-                    </li>
-                    <li>
-                      You need to complete a set numbers of matches before you
-                      can join and see the Ladder leaderboard.
-                    </li>
+                    {rewardDistribClan.map((reward, rewardIndex) => (
+                      <li
+                        key={reward}
+                        className="flex items-center justify-between gap-2 rounded bg-ui-850/50 py-2 px-4 relative z-0 animate-slide-in-bottom animate-delay"
+                        style={{
+                          "--delay": "calc(" + rewardIndex + " * 0.05s)",
+                        }}
+                      >
+                        <span className="text-lg">{reward.name}</span>
+                        <div className="flex items-center justify-center gap-4">
+                          {reward.rewards.map((reward, rewardIndex) => (
+                            <>
+                              <Reward
+                                key={rewardIndex}
+                                reward={reward}
+                                gap="gap-2"
+                                iconClassNames="text-lg"
+                                textClassNames="text-lg"
+                              />
+                            </>
+                          ))}
+                        </div>
+                      </li>
+                    ))}
                   </ul>
+                </div>
+              </div>
+              <div className="flex-1 surface sm:rounded-lg p-4 relative flex flex-col items-stretch">
+                <div className="border-b border-ui-700 pb-4">
+                  <h2 className="text-2xl">Coins</h2>
+                </div>
+                <div className="flex-1 flex flex-col items-start justify-center text-ui-300 space-y-2 leading-relaxed mt-4">
+                  <p>
+                    Use Coins to buy gift cards in the Stryda shop. Get gift
+                    cards for clothes, games, and more.
+                  </p>
+                  <p>
+                    The higher you are on the Ladder leaderboards, the more
+                    Coins you can win!
+                  </p>
                 </div>
               </div>
             </div>
           </section>
+          {/*
           <section
             className="pt-12 animate-slide-in-bottom animate-delay"
             style={{ "--delay": "calc(2 * 0.05s)" }}
@@ -415,6 +539,7 @@ export default function TabClanLeaderboardsHowItWorks() {
               ))}
             </div>
           </section>
+              */}
         </>
       )}
     </>

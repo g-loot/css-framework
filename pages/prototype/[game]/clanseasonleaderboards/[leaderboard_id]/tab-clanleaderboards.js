@@ -50,6 +50,20 @@ export default function TabClanLeaderboardsLeaderboards() {
   const { game } = router.query;
   const { leaderboard_id } = router.query;
 
+  const [loading, setLoading] = useState(true);
+
+  function RandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, RandomNumber(300, 3000));
+    }
+  }, [loading]);
+
   useEffect(() => {
     setSelectedClanLeaderboard(
       prototype.getClanLeaderboardByID(game, leaderboard_id)
@@ -120,12 +134,122 @@ export default function TabClanLeaderboardsLeaderboards() {
         className="pb-8 animate-slide-in-bottom animate-delay"
         style={{ "--delay": "calc(1 * 0.05s)" }}
       >
+        <div className="relative z-0 overflow-x-auto scrollbar-hidden h-16 flex items-center my-4">
+          <div className="hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r from-ui-900 via-ui-900 to-ui-900/0 pl-4 pr-8">
+            <button
+              type="button"
+              className="button button-lg button-ghost rounded-full"
+              onClick={() => {
+                sideScroll(
+                  sliderRankWrapper.current,
+                  25,
+                  sliderRankWidth,
+                  -sliderRankWidth
+                );
+              }}
+            >
+              <span className="icon icon-ctrl-left" />
+            </button>
+          </div>
+
+          <div className="hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l from-ui-900 via-ui-900 to-ui-900/0 pr-4 pl-8">
+            <button
+              type="button"
+              className="button button-lg button-ghost rounded-full"
+              onClick={() => {
+                sideScroll(
+                  sliderRankWrapper.current,
+                  25,
+                  sliderRankWidth,
+                  sliderRankWidth
+                );
+              }}
+            >
+              <span className="icon icon-ctrl-right" />
+            </button>
+          </div>
+          <ul
+            ref={sliderRankWrapper}
+            className="absolute z-0 inset-0 tabs tabs-rank scrollbar-hidden px-10 md:px-20"
+          >
+            <li className="tab-bronze" ref={sliderRankItem}>
+              <a
+                onClick={loadRank.bind(this, 1)}
+                className={selectedRank === 1 ? "is-active" : ""}
+              >
+                <div>
+                  <div>
+                    <span className="icon text-4xl icon-rank-bronze" />
+                    <span className="h4">Bronze</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li className="tab-silver">
+              <a
+                onClick={loadRank.bind(this, 2)}
+                className={selectedRank === 2 ? "is-active" : ""}
+              >
+                <div>
+                  <div>
+                    <span className="icon text-4xl icon-rank-silver" />
+                    <span className="h4">Silver</span>
+                  </div>
+                  <div className="avatar avatar-squircle avatar-xs">
+                    <div>
+                      <img src={prototype.getClanByID(1).avatar} />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li className="tab-gold">
+              <a
+                onClick={loadRank.bind(this, 3)}
+                className={selectedRank === 3 ? "is-active" : ""}
+              >
+                <div>
+                  <div>
+                    <span className="icon text-4xl icon-rank-gold" />
+                    <span className="h4">Gold</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li className="tab-platinum">
+              <a
+                onClick={loadRank.bind(this, 4)}
+                className={selectedRank === 4 ? "is-active" : ""}
+              >
+                <div>
+                  <div>
+                    <span className="icon text-4xl icon-rank-platinum" />
+                    <span className="h4">Platinum</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li className="tab-diamond">
+              <a
+                onClick={loadRank.bind(this, 5)}
+                className={selectedRank === 5 ? "is-active" : ""}
+              >
+                <div>
+                  <div>
+                    <span className="icon text-4xl icon-rank-diamond" />
+                    <span className="h4">Diamond</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
         <div className="mt-4 overflow-x-auto scrollbar-hidden">
           <div className="min-w-md px-2 md:px-0">
             <div className="flex gap-2 items-start text-center text-sm text-ui-300 uppercase mb-2 relative z-10">
-              <div className="w-80 flex items-stretch overflow-hidden">
+              <div className="w-56 flex items-stretch overflow-hidden">
                 <div className="w-1/3 px-2">#</div>
-                <div className="flex-1 flex gap-2 items-center">
+                <div className="flex-1 flex gap-2 items-center justify-center">
                   <span>Rewards</span>
                   <Tooltip
                     tooltip={
@@ -213,7 +337,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                           }}
                         >
                           <div
-                            className={`surface rounded-lg w-80 h-[58px] flex items-stretch overflow-hidden ${
+                            className={`surface rounded-lg w-56 h-[58px] flex items-stretch overflow-hidden ${
                               prototype.getClanByID(clan.clan)?.isYou ? "" : ""
                             }`}
                           >
@@ -293,7 +417,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                               />
                                             </div>
                                           </div>
-                                          <div className="item-title">
+                                          <div className="item-title whitespace-nowrap">
                                             <span
                                               className={`${
                                                 prototype.getClanByID(clan.clan)
@@ -331,14 +455,14 @@ export default function TabClanLeaderboardsLeaderboards() {
                                       <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
                                         Matches played
                                       </h5>
-                                      <div className="text-main text-xl lg:text-3xl">
+                                      <div className="text-ui-100 text-xl lg:text-3xl">
                                         {clan.stats.wins + clan.stats.losses}
                                       </div>
                                     </div>
                                     <div className="flex gap-3 lg:text-right">
                                       <div className="">
                                         <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
-                                          Wins
+                                          Win{clan.stats.wins > 1 && <>s</>}
                                         </h5>
                                         <div className="text-success-500 text-xl lg:text-3xl">
                                           {clan.stats.wins}
@@ -351,7 +475,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                       </div>
                                       <div className="">
                                         <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
-                                          Wins
+                                          Loss{clan.stats.losses > 1 && <>es</>}
                                         </h5>
                                         <div className="text-error-500 text-xl lg:text-3xl">
                                           {clan.stats.losses}
@@ -366,7 +490,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                         <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
                                           Score
                                         </h5>
-                                        <div className="text-main text-xl lg:text-3xl">
+                                        <div className="text-ui-100 text-xl lg:text-3xl">
                                           {clan.stats.wins - clan.stats.losses}
                                         </div>
                                       </div>
@@ -374,29 +498,39 @@ export default function TabClanLeaderboardsLeaderboards() {
                                   </li>
                                   <li className="bg-ui-800 p-3 text-center rounded max-h-[150px] overflow-y-auto scrollbar-desktop">
                                     <ul className="text-sm space-y-1">
-                                      {prototype.getClanByID(clan.clan).members.map((user, userIndex) => (
-                                        <li key={userIndex} className="border-t border-ui-700">
-                                          <Link href={`/prototype/profile/${user}`}>
-                                            <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
-                                              <span className="text-ui-300">
-                                                &#91;
-                                                {
-                                                  prototype.getClanByID(clan.clan)
-                                                    ?.tag
-                                                }
-                                                &#93;{" "}
-                                                {
-                                                  prototype.getUserByID(user)
-                                                    .nickname
-                                                }
-                                              </span>
-                                              <span className="font-bold">
-                                                {numberWithSpaces(500 - userIndex)}
-                                              </span>
-                                            </a>
-                                          </Link>
-                                        </li>
-                                      ))}
+                                      {prototype
+                                        .getClanByID(clan.clan)
+                                        .members.map((user, userIndex) => (
+                                          <li
+                                            key={userIndex}
+                                            className="border-t border-ui-700"
+                                          >
+                                            <Link
+                                              href={`/prototype/profile/${user}`}
+                                            >
+                                              <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
+                                                <span className="text-ui-300">
+                                                  &#91;
+                                                  {
+                                                    prototype.getClanByID(
+                                                      clan.clan
+                                                    )?.tag
+                                                  }
+                                                  &#93;{" "}
+                                                  {
+                                                    prototype.getUserByID(user)
+                                                      .nickname
+                                                  }
+                                                </span>
+                                                <span className="font-bold">
+                                                  {numberWithSpaces(
+                                                    500 - userIndex
+                                                  )}
+                                                </span>
+                                              </a>
+                                            </Link>
+                                          </li>
+                                        ))}
                                       <li className="border-t border-ui-700">
                                         <Link href="/prototype/profile/3">
                                           <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
