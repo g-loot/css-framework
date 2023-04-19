@@ -76,7 +76,7 @@ export default function ScoreboardFilterSelect({ id, item, onLoad }) {
               classNamePrefix="react-select"
               menuPortalTarget={document.body}
               onChange={e => { handleChange(e) }}
-              NOmenuIsOpen={true}
+              //menuIsOpen={true}
             />
           </div>
         </>

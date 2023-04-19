@@ -1602,6 +1602,14 @@ div.react-select__option {
   }
 }
 
+div.react-select__group:first-child {
+  div.react-select__group-heading {
+    @apply
+    hidden
+    ;
+  }
+}
+
 div.react-select__group:last-child {
   @apply
   text-premium-500

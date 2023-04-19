@@ -230,6 +230,35 @@
       delay-[1250ms]
       ;
     }
+
+    &.rarity-category-1 {
+      & + .revealer-back {
+        @apply
+        delay-[650ms]
+        ;
+      }
+    }
+    &.rarity-category-2 {
+      & + .revealer-back {
+        @apply
+        delay-[850ms]
+        ;
+      }
+    }
+    &.rarity-category-3 {
+      & + .revealer-back {
+        @apply
+        delay-[1050ms]
+        ;
+      }
+    }
+    &.rarity-category-4 {
+      & + .revealer-back {
+        @apply
+        delay-[1250ms]
+        ;
+      }
+    }
   }
   > .revealer-back {
     @apply

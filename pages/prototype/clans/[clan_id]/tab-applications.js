@@ -254,7 +254,7 @@ export default function TabClanApplications() {
                               >
                                 <Avatar
                                   id={item.user}
-                                  size="avatar-sm"
+                                  size="avatar-xs"
                                   hasTooltip={true}
                                 />
                                 <div
