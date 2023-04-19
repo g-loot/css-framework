@@ -1537,7 +1537,7 @@ export const dataGames = [
             value: 10000,
           },
         ],
-        isEnrolled: true,
+        isEnrolled: false,
         hasClaim: false,
         progress: 3,
         progressClan: 0,
@@ -2945,7 +2945,7 @@ export const dataGames = [
        {
         id: 11,
         solo: true,
-        clan: false,
+        clan: true,
         name: "Empty Unrated",
         cover:
           "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
@@ -2962,6 +2962,7 @@ export const dataGames = [
         progress: 3,
         progressClan: 0,
         soloLeaderboard: false,
+        clanLeaderboard: false,
         soloResults: {
           placement: 23,
           points: 84,

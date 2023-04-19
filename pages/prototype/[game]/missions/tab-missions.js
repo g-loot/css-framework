@@ -142,15 +142,30 @@ export default function TabMissionsMissions() {
               </>
             )}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0">
-              {selectedGame?.missions.map((mission, missionIndex) => (
-                <CardMissionSecondary
-                  key={missionIndex}
-                  mission={mission}
-                  index={missionIndex}
-                />
-              ))}
-            </div>
+{isEmpty ? (
+              <div className="surface surface-dimmed rounded px-4 py-8 text-center">
+                <div className="max-w-xs mx-auto">
+                  <span className="icon icon-missions text-6xl text-ui-500" />
+                  <p className="mt-2 text-ui-300">
+                    The missions are currently unavailable. If the issue persists check out our <a rel="noreferrer" href="http://help.stryda.gg/" target="_blank" className="link">help articles</a> or <a rel="noreferrer" href="http://help.stryda.gg/" target="_blank" className="link">contact support</a>.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0">
+                  {selectedGame?.missions.map((mission, missionIndex) => (
+                    <CardMissionSecondary
+                      key={missionIndex}
+                      mission={mission}
+                      index={missionIndex}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+
+            
           </section>
           <section
             className="py-8 animate-slide-in-bottom animate-delay"

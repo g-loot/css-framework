@@ -11,6 +11,7 @@ export default function Home() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const [selectedVoucher, setSelectedVoucher] = useState(null);
+  const [selectedSection, setSelectedSection] = useState(1);
   const hasAds = query.ads === "true" ? true : false;
   const { voucher_id } = router.query;
 
@@ -87,10 +88,29 @@ export default function Home() {
                 </div>
               </div>
             )}
+
+            <nav>
+              <ul className="tabs border-b border-ui-700">
+                {selectedVoucher.sections?.map((section, sectionIndex) => (
+                  <li key={sectionIndex}>
+                    <button type="button" onClick={() => setSelectedSection(section.id)}  className={`${
+                        section.id === selectedSection ? "is-active" : ""
+                      }`}>
+                      <span>{section.name}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
             {selectedVoucher.sections?.map((section, sectionIndex) => (
               <>
-                <section className="mb-4 lg:mb-8">
+              {section.id === selectedSection && (
+
+                <section className="my-4 lg:my-8">
+                  {/*
                   <h2 className="text-2xl flex-none py-2">{section.name}</h2>
+                  */}
                   {section.countries && (
                     <ul className="flex gap-x-3 items-center flex-wrap text-ui-300 mt-2">
                       <li>
@@ -199,6 +219,7 @@ export default function Home() {
                     ))}
                   </ul>
                 </section>
+              )}
               </>
             ))}
           </>

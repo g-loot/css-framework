@@ -236,61 +236,69 @@ export default function Home() {
             </Link>
             {prototype.vouchers.map((voucher, voucherIndex) => (
               <>
-                <li
-                  key={voucher.id}
-                  className="interactive surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
-                  style={{ "--delay": `calc( ${voucherIndex + 3} * 0.05s)` }}
+                <Link
+                  href={`/prototype/shop/${
+                    voucher.id
+                  }${prototype.getURLparams()}`}
                 >
-                  <div className="flex-1 flex flex-col items-center gap-2">
-                    <div className="py-2 relative">
-                      <div className="w-6 h-6 rounded-full border border-t-ui-700 border-l-ui-700 border-b-ui-700/0 border-r-ui-700/0 bg-ui-900 absolute z-20 rotate-45 left-[calc(50%-0.75rem)] -top-1"></div>
-                      <div className="w-28 h-4 rounded-full border border-ui-700 bg-ui-900 relative z-10"></div>
-                    </div>
-                    <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center">
-                      <div className="leading-tight">
-                        <strong className="uppercase">Valid in:</strong>
-                        <br />
-                        <span className="leading-none">{voucher.validity}</span>
+                  <li
+                    key={voucher.id}
+                    className="interactive surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+                    style={{ "--delay": `calc( ${voucherIndex + 3} * 0.05s)` }}
+                  >
+                    <div className="flex-1 flex flex-col items-center gap-2">
+                      <div className="py-2 relative">
+                        <div className="w-6 h-6 rounded-full border border-t-ui-700 border-l-ui-700 border-b-ui-700/0 border-r-ui-700/0 bg-ui-900 absolute z-20 rotate-45 left-[calc(50%-0.75rem)] -top-1"></div>
+                        <div className="w-28 h-4 rounded-full border border-ui-700 bg-ui-900 relative z-10"></div>
+                      </div>
+                      <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center">
+                        <div className="leading-tight">
+                          <strong className="uppercase">Valid in:</strong>
+                          <br />
+                          <span className="leading-none">
+                            {voucher.validity}
+                          </span>
+                        </div>
+                      </div>
+                      <img
+                        src={voucher.image}
+                        className="w-4/5 rounded-xl shadow-2xl my-3"
+                        height="auto"
+                        alt="Gift card"
+                      />
+                      <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
+                        <span>Gift cards</span>
+                        <small className="text-ui-300 text-2xl">
+                          {voucher.name}
+                        </small>
+                      </h3>
+                      <div className="mt-2 h-12 flex items-center">
+                        {voucher.exception && (
+                          <>
+                            <p className="text-ui-300 text-sm max-w-[45ch]">
+                              *Available worldwide but only redeemable through
+                              Amazon US (amazon.com)
+                            </p>
+                          </>
+                        )}
                       </div>
                     </div>
-                    <img
-                      src={voucher.image}
-                      className="w-4/5 rounded-xl shadow-2xl my-3"
-                      height="auto"
-                      alt="Gift card"
-                    />
-                    <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
-                      <span>Gift cards</span>
-                      <small className="text-ui-300 text-2xl">
-                        {voucher.name}
-                      </small>
-                    </h3>
-                    <div className="mt-2 h-12 flex items-center">
-                      {voucher.exception && (
-                        <>
-                          <p className="text-ui-300 text-sm max-w-[45ch]">
-                            *Available worldwide but only redeemable through
-                            Amazon US (amazon.com)
-                          </p>
-                        </>
-                      )}
-                    </div>
-                  </div>
-                  <div className="border-t border-ui-700 pt-4">
-                    <Link
-                      href={`/prototype/shop/${
-                        voucher.id
-                      }${prototype.getURLparams()}`}
-                    >
-                      <a
-                        type="button"
-                        className="button button-secondary w-full"
+                    <div className="border-t border-ui-700 pt-4">
+                      <Link
+                        href={`/prototype/shop/${
+                          voucher.id
+                        }${prototype.getURLparams()}`}
                       >
-                        <span>View gift cards</span>
-                      </a>
-                    </Link>
-                  </div>
-                </li>
+                        <a
+                          type="button"
+                          className="button button-secondary w-full"
+                        >
+                          <span>View gift cards</span>
+                        </a>
+                      </Link>
+                    </div>
+                  </li>
+                </Link>
               </>
             ))}
           </ul>

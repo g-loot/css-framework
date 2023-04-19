@@ -389,32 +389,69 @@ export default function LadderCardSecondary(props) {
                                 </div>
                               </div>
                             </div>
-                            <div className="hidden sm:flex items-center gap-2">
-                              <div className="avatar-group -space-x-2">
-                                <div className="avatar avatar-circle avatar-tiny">
-                                  <div>
-                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
-                                  </div>
-                                </div>
-                                <div className="avatar avatar-circle avatar-tiny">
-                                  <div>
-                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
-                                  </div>
-                                </div>
-                                <div className="avatar avatar-circle avatar-tiny">
-                                  <div>
-                                    <span>+9</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                         </>
                       ) : (
-                        <div></div>
+                        <>
+                          {ladder.clanLeaderboard ? (
+                            <div className="flex items-center gap-2">
+                              <div className="avatar-group -space-x-2">
+                                <div className="avatar avatar-squircle avatar-tiny">
+                                  <div>
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Un1c0rns.png" />
+                                  </div>
+                                </div>
+                                <div className="avatar avatar-squircle avatar-tiny">
+                                  <div>
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png" />
+                                  </div>
+                                </div>
+                                <div className="avatar avatar-squircle avatar-tiny">
+                                  <div>
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png" />
+                                  </div>
+                                </div>
+                              </div>
+                              <span className="text-sm text-ui-300">
+                                121 clans{" "}
+                                {ladder.status !== "finished" ? (
+                                  <> are enrolled</>
+                                ) : (
+                                  <>have partaken</>
+                                )}
+                              </span>
+                            </div>
+                          ) : (
+                            <div className="flex items-center gap-2">
+                              <div className="avatar avatar-squircle avatar-xs">
+                                <div>
+                                  <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Foxy.png" />
+                                </div>
+                              </div>
+                              <span className="text-sm text-ui-300">
+                                Be the first to enroll
+                              </span>
+                            </div>
+                          )}
+                        </>
                       )}
                     </>
                   )}
+                </>
+              )}
+
+              {ladder.isEnrolled && (
+                <>
+                {!isClan ? (
+                  <ul className="text-sm border-l border-ui-700 pl-4 text-ui-300 flex flex-col items-start justify-center">
+                    <li>{RandomNumber(100, 5000)} players are enrolled</li>
+                    <li>in {RandomNumber(4, 30)} groups</li>
+                  </ul>
+                ) : (
+                  <ul className="text-sm border-l border-ui-700 pl-4 text-ui-300 flex flex-col items-start justify-center">
+                    <li>{RandomNumber(10, 800)} clans are enrolled</li>
+                  </ul>
+                )}
                 </>
               )}
 

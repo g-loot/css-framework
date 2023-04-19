@@ -114,7 +114,7 @@ export default function ModalClaimDailyRewards(props) {
                   }`}
                   onClick={closeModalWithDelay}
                 >
-                  <span>Claim rewards</span>
+                  <span>Close</span>
                 </button>
               </div>
             </div>

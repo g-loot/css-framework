@@ -111,7 +111,7 @@ export default function ModalClaimLadderRewards(props) {
                 }`}
                 onClick={closeModalWithDelay}
               >
-                <span>Claim rewards</span>
+                <span>Close</span>
               </button>
             </div>
           </div>

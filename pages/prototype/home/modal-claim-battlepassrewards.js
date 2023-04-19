@@ -104,7 +104,7 @@ export default function ModalClaimBattlepassReward(props) {
                 }`}
                 onClick={closeModalWithDelay}
               >
-                <span>Claim rewards</span>
+                <span>Close</span>
               </button>
             </div>
           </div>

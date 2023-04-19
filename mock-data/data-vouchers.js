@@ -4,9 +4,10 @@ export const dataVouchers = [
     validity: "United States & Europe",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1677838794/Stryda/shop/giftcards/store_giftcard_riot.jpg",
+    url: "riot-games",
     name: "Riot Games",
     description:
-      "What if playing games could give you new games? When you buy a Steam gift card through Stryda, that’s exactly what happens. Choose from thousands of games, software, and even hardware from Steam.",
+      "Want to turn your wins into some sweet skins or even a new character? Choose a Riot Games gift card.",
     sections: [
       {
         id: 1,
@@ -155,86 +156,53 @@ export const dataVouchers = [
     validity: "Worldwide",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1677838794/Stryda/shop/giftcards/store_giftcard_amazon.jpg",
+    url: "amazon",
     name: "Amazon.com",
     exception:
       "Available worldwide but only redeemable through Amazon US (amazon.com)",
     description:
       "Turn your wins into games, movies, snacks, and more. With an Amazon gift card, you have millions of items to choose from. What will you pick?",
-      alert: {
-        title: "Please note",
-        description: "Available worldwide but only redeemable through Amazon US (amazon.com).",
+    alert: {
+      title: "Please note",
+      description:
+        "Available worldwide but only redeemable through Amazon US (amazon.com).",
+    },
+    sections: [
+      {
+        id: 1,
+        name: "Worldwide",
+        giftcards: [
+          {
+            id: 1,
+            amount: "$20",
+            price: 15000,
+          },
+          {
+            id: 2,
+            amount: "$50",
+            price: 34000,
+          },
+          {
+            id: 3,
+            amount: "$100",
+            price: 59000,
+          },
+        ],
       },
-      sections: [
-        {
-          id: 1,
-          name: "Worldwide",
-          giftcards: [
-            {
-              id: 1,
-              amount: "$20",
-              price: 15000,
-            },
-            {
-              id: 2,
-              amount: "$50",
-              price: 34000,
-            },
-            {
-              id: 3,
-              amount: "$100",
-              price: 59000,
-            },
-          ],
-        },
-      ],
+    ],
   },
   {
     id: 3,
     validity: "United States, Europe, Philippines & Brazil",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1677838794/Stryda/shop/giftcards/store_giftcard_steam.jpg",
+    url: "steam",
     name: "Steam",
-    description: "What if playing games could give you new games? When you buy a Steam gift card through Stryda, that’s exactly what happens. Choose from thousands of games, software, and even hardware from Steam.",
+    description:
+      "What if playing games could give you new games? When you buy a Steam gift card through Stryda, that’s exactly what happens. Choose from thousands of games, software, and even hardware from Steam.",
     sections: [
       {
         id: 1,
-        name: "United Kingdom",
-        giftcards: [
-          {
-            id: 1,
-            amount: "£20",
-            price: 20000,
-          },
-          {
-            id: 2,
-            amount: "£50",
-            price: 46500,
-          },
-          {
-            id: 3,
-            amount: "£100",
-            price: 79000,
-          },
-        ],
-      },
-      {
-        id: 2,
-        name: "Brazil",
-        giftcards: [
-          {
-            id: 1,
-            amount: "R$20",
-            price: 15000,
-          },
-          {
-            id: 2,
-            amount: "R$50",
-            price: 27000,
-          },
-        ],
-      },
-      {
-        id: 3,
         name: "Europe",
         countries: [
           {
@@ -349,24 +317,62 @@ export const dataVouchers = [
         ],
       },
       {
-        id: 4,
-        name: "Philippines",
-        giftcards: [
-          {
-            id: 1,
-            amount: "1000PHP",
-            price: 16500,
-          },
-        ],
-      },
-      {
-        id: 5,
+        id: 2,
         name: "United States",
         giftcards: [
           {
             id: 1,
             amount: "$20",
             price: 15000,
+          },
+        ],
+      },
+      {
+        id: 3,
+        name: "United Kingdom",
+        giftcards: [
+          {
+            id: 1,
+            amount: "£20",
+            price: 20000,
+          },
+          {
+            id: 2,
+            amount: "£50",
+            price: 46500,
+          },
+          {
+            id: 3,
+            amount: "£100",
+            price: 79000,
+          },
+        ],
+      },
+      
+      {
+        id: 4,
+        name: "Brazil",
+        giftcards: [
+          {
+            id: 1,
+            amount: "R$20",
+            price: 15000,
+          },
+          {
+            id: 2,
+            amount: "R$50",
+            price: 27000,
+          },
+        ],
+      },
+      {
+        id: 5,
+        name: "Philippines",
+        giftcards: [
+          {
+            id: 1,
+            amount: "1000PHP",
+            price: 16500,
           },
         ],
       },
@@ -377,8 +383,10 @@ export const dataVouchers = [
     validity: "Worldwide",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1677838912/Stryda/shop/giftcards/store_giftcard_drkn.jpg",
+    url: "drkn",
     name: "DRKN Gaming Streetwear",
-    description: "This is not your average gamer gear. DRKN creates chic, fashionable streetwear for everyone from casual gamers to esports enthusiasts. Level-up your look with high-quality clothes from DRKN.",
+    description:
+      "This is not your average gamer gear. DRKN creates chic, fashionable streetwear for everyone from casual gamers to esports enthusiasts. Level-up your look with high-quality clothes from DRKN.",
     sections: [
       {
         id: 1,
@@ -429,8 +437,10 @@ export const dataVouchers = [
     validity: "Worldwide",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1677838794/Stryda/shop/giftcards/store_giftcard_gcoins.jpg",
+    url: "pubg",
     name: "PUBG G-COINS",
-    description: "Turn your hard work and successes into rewards you can enjoy! Will you invest in some new gaming gear or just treat yourself to something you've had your eye on? Earn more coins to spend in the shop by finishing Missions or competing in Ladders.",
+    description:
+      "Turn your hard work and successes into rewards you can enjoy! Will you invest in some new gaming gear or just treat yourself to something you've had your eye on? Earn more coins to spend in the shop by finishing Missions or competing in Ladders.",
     sections: [
       {
         id: 1,
@@ -456,7 +466,8 @@ export const dataVouchers = [
     validity: "Brazil",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_ifood.webp",
-    name: "iFood",
+    url: "ifood",
+      name: "iFood",
     description: "Hungry? Fuel your gaming with iFood. Get dinner, drinks, and even groceries delivered to your door at the click of a button.",
     alert: {
       title: "Please note",

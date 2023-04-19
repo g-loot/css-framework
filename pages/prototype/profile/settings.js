@@ -8,6 +8,7 @@ import { UiContext } from "../../../contexts/ui";
 import { useRouter } from "next/router";
 import TextareaExpandable from "../../../components/Textarea/TextareaExpandable";
 import Tooltip from "../../../components/Tooltip/Tooltip";
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -315,6 +316,12 @@ export default function Home() {
                 >
                   <span>Save changes</span>
                 </button>
+                <Link href={`/prototype/profile/1`}>
+                  <button type="button" className="button button-secondary">
+                    <span>Cancel</span>
+                  </button>
+                </Link>
+                {/*
                 <button
                   type="button"
                   className="button button-secondary"
@@ -322,8 +329,9 @@ export default function Home() {
                   data-feedback={buttonFeedbackMessage1}
                   onClick={buttonFeedback1.bind(this, "Settings reset")}
                 >
-                  <span>Reset</span>
+                  <span>Cancel</span>
                 </button>
+                */}
               </div>
             </div>
           </div>

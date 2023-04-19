@@ -1,18 +1,39 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
+import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Avatar from "../../../../components/Avatar/Avatar";
 import GameIcon from "../../../../components/GameIcon/GameIcon";
+import ModalGiftTokens from "../modal-gift-tokens";
 import ButtonSorting from "../../../../components/Button/ButtonSorting";
+import Tooltip from "../../../../components/Tooltip/Tooltip";
 
 export default function TabClanMembers() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
+  const uiContext = useContext(UiContext);
   const [selectedClan, setSelectedClan] = useState(null);
   const { clan_id } = router.query;
+  const modalGiftTokens = query.modalgifttokens === "true" ? true : false;
+  const [hasOnlyOne, setHasOnlyOne] = useState(false);
+  const [selectedUser, setSelectedUser] = useState(
+    prototype.getUserByID(2).nickname
+  );
+
+  function openModalGiftTokens() {
+    uiContext.openModal(
+      <ModalGiftTokens selectedUser={selectedUser}></ModalGiftTokens>
+    );
+  }
+
+  useEffect(() => {
+    if (modalGiftTokens) {
+      openModalGiftTokens();
+    }
+  }, [modalGiftTokens]);
 
   function RandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -205,7 +226,7 @@ export default function TabClanMembers() {
             {selectedClan.members?.map((item, itemIndex) => (
               <li
                 key={item.id}
-                className="item animate-slide-in-bottom animate-delay"
+                className="item animate-slide-in-bottom animate-delay relative z-0 hover:z-40"
                 style={{
                   "--delay": "calc(" + Math.round(itemIndex + 1) + " * 0.05s)",
                 }}
@@ -246,79 +267,101 @@ export default function TabClanMembers() {
                   </div>
                 </div>
                 <div className="item-actions">
-                  <div className="flex gap-1">
+                  <div className="flex gap-1" onClick={() => setHasOnlyOne(!hasOnlyOne)}>
                     {prototype
                       .getUserByID(item)
                       .games?.map((game, gameIndex) => (
-                        <GameIcon key={gameIndex} game={game} />
+                        <GameIcon
+                          key={gameIndex}
+                          game={game}
+                        />
                       ))}
                   </div>
                 </div>
                 {selectedClan.isYou && (
-                  <div className="item-actions">
-                    <div
-                      className={`dropdown dropdown-left ${
-                        itemIndex + 1 === selectedClan.members?.length
-                          ? "dropdown-end"
-                          : ""
-                      }`}
-                    >
-                      <label
-                        tabIndex="0"
-                        className="button button-ghost rounded-full"
-                      >
-                        <span className="icon icon-dots-vertical" />
-                      </label>
-                      <div
-                        tabIndex="0"
-                        className="dropdown-content bg-ui-600 w-52 p-1"
-                      >
-                        <ul className="menu menu-rounded menu-secondary">
-                          {selectedClan.admin ===
-                            prototype.getUserByID(item).id && (
-                            <>
-                              <li>
-                                <a>
-                                  <span className="icon icon-leave" />
-                                  <span>Leave clan</span>
-                                </a>
-                              </li>
-                            </>
-                          )}
-                          {selectedClan.admin !==
-                            prototype.getUserByID(item).id && (
-                            <>
-                              <li>
-                                <a>
-                                  <span className="icon icon-chess-king" />
-                                  <span>Promote to captain</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a>
-                                  <span className="icon icon-s-ban" />
-                                  <span>Kick</span>
-                                </a>
-                              </li>
-                              <li>
-                                <a
-                                  onClick={() => {
-                                    setSelectedUser(
-                                      prototype.getUserByID(item).nickname
-                                    );
-                                    openModalGiftTokens();
-                                  }}
-                                >
-                                  <span className="icon icon-token" />
-                                  <span>Gift tokens</span>
-                                </a>
-                              </li>
-                            </>
-                          )}
-                        </ul>
+                  <>
+                    {hasOnlyOne ? (
+                      <Tooltip tooltip={`Gift token`}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setSelectedUser(
+                              prototype.getUserByID(item).nickname
+                            );
+                            openModalGiftTokens();
+                          }}
+                          className="button button-tertiary rounded-full"
+                        >
+                          <span className="icon icon-token" />
+                        </button>
+                      </Tooltip>
+                    ) : (
+                      <div className="item-actions">
+                        <div
+                          className={`dropdown dropdown-left ${
+                            itemIndex + 1 === selectedClan.members?.length
+                              ? "dropdown-end"
+                              : ""
+                          }`}
+                        >
+                          <label
+                            tabIndex="0"
+                            className="button button-ghost rounded-full"
+                          >
+                            <span className="icon icon-dots-vertical" />
+                          </label>
+                          <div
+                            tabIndex="0"
+                            className="dropdown-content bg-ui-600 w-52 p-1"
+                          >
+                            <ul className="menu menu-rounded menu-secondary">
+                              {selectedClan.admin ===
+                                prototype.getUserByID(item).id && (
+                                <>
+                                  <li>
+                                    <a>
+                                      <span className="icon icon-leave" />
+                                      <span>Leave clan</span>
+                                    </a>
+                                  </li>
+                                </>
+                              )}
+                              {selectedClan.admin !==
+                                prototype.getUserByID(item).id && (
+                                <>
+                                  <li>
+                                    <a>
+                                      <span className="icon icon-chess-king" />
+                                      <span>Promote to captain</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a>
+                                      <span className="icon icon-s-ban" />
+                                      <span>Kick</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      onClick={() => {
+                                        setSelectedUser(
+                                          prototype.getUserByID(item).nickname
+                                        );
+                                        openModalGiftTokens();
+                                      }}
+                                    >
+                                      <span className="icon icon-token" />
+                                      <span>Gift tokens</span>
+                                    </a>
+                                  </li>
+                                </>
+                              )}
+                            </ul>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
+                    )}
+                  </>
                 )}
               </li>
             ))}
