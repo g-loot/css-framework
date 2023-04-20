@@ -130,32 +130,32 @@ export const DataBattlepassRewards = [
   },
   {
     id: 2,
-    name: "20 coins & 10 tokens",
+    name: "100 coins & 10 tokens",
     image: "battlepass-reward-2",
   },
   {
     id: 3,
-    name: "100 coins & 50 tokens",
+    name: "250 coins & 50 tokens",
     image: "battlepass-reward-3",
   },
   {
     id: 4,
-    name: "150 coins & 75 tokens",
+    name: "500 coins & 75 tokens",
     image: "battlepass-reward-4",
   },
   {
     id: 5,
-    name: "25 coins",
+    name: "100 coins",
     image: "battlepass-reward-5",
   },
   {
     id: 6,
-    name: "75 coins",
+    name: "250 coins",
     image: "battlepass-reward-6",
   },
   {
     id: 7,
-    name: "150 coins",
+    name: "500 coins",
     image: "battlepass-reward-7",
   },
   {

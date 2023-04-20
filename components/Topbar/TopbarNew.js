@@ -882,6 +882,16 @@ export default function TopbarNew() {
                         <span>Download tracker</span>
                       </a>
                     </li>
+                    <li>
+                      <Link href={`/prototype/refer-a-friend/`}>
+                        <button
+                          type="button"
+                        >
+                          <span className="icon icon-b-love" />
+                          <span>Refer a friend</span>
+                        </button>
+                      </Link>
+                    </li>
                     <li className="separator"></li>
                     <li>
                       <Link href={`/`}>

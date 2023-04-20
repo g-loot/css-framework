@@ -618,7 +618,7 @@ button {
         block
         border-2
         border-ui-900
-        border-l-ui-100
+        border-l-main
         opacity-100
         rounded-full
         mx-auto
@@ -646,7 +646,7 @@ button {
         &::after {
           @apply
           border-ui-600
-          border-l-ui-100
+          border-l-main
           ;
         }
       }
@@ -657,7 +657,7 @@ button {
         &::after {
           @apply
           border-ui-600
-          border-l-ui-100
+          border-l-main
           ;
         }
       }

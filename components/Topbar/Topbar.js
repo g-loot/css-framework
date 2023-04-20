@@ -852,6 +852,16 @@ export default function TopbarNew() {
                       </Link>
                     </li>
                     <li>
+                      <Link href={`/prototype/refer-a-friend/`}>
+                        <button
+                          type="button"
+                        >
+                          <span className="icon icon-b-love" />
+                          <span>Refer a friend</span>
+                        </button>
+                      </Link>
+                    </li>
+                    <li>
                       <a
                         tabIndex="1"
                         onClick={openModalDownloadStarted}

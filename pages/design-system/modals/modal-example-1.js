@@ -40,14 +40,6 @@ const Modal1 = (props) => {
             </p>
           </div>
           <div className="modal-action">
-            { /*
-            {submitting && <span>...Submitting</span>}
-            {!submitting && (
-              <button type="button" onClick={closeModalWithDelay}>
-                Ok
-              </button>
-            )}
-            */}
             <button
               type="button"
               className={`button button-primary ${
