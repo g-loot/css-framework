@@ -52,7 +52,7 @@ export default function ReferAFriend() {
   const uiContext = useContext(UiContext);
   const empty = query.empty === "true" ? true : false;
 
-  const [isEmpty, setIsEmpty] = useState(empty);
+  const [isEmpty, setIsEmpty] = useState(false);
   const statusLoading = query.loading === "true" ? true : false;
   const [loading, setLoading] = useState(true);
   const [hasInvited, setHasInvited] = useState(false);
@@ -63,13 +63,15 @@ export default function ReferAFriend() {
   }
 
   useEffect(() => {
-    if (empty) {
-      setIsEmpty(true);
-    }
     if (statusLoading) {
       setLoading(true);
     }
   }, []);
+  useEffect(() => {
+    if (empty) {
+      setIsEmpty(true);
+    }
+  }, [empty]);
 
   useEffect(() => {
     if (loading) {
