@@ -7,6 +7,7 @@ import ModalClaimBattlepassReward from "../home/modal-claim-battlepassrewards";
 import ButtonReminder from "./components/ButtonReminder";
 import { usePrototypeData } from "../../../contexts/prototype";
 import Avatar from "../../../components/Avatar/Avatar";
+import Link from "next/link";
 
 const referralsItems = [
   {
@@ -62,6 +63,9 @@ export default function ReferAFriend() {
   }
 
   useEffect(() => {
+    if (empty) {
+      setIsEmpty(true);
+    }
     if (statusLoading) {
       setLoading(true);
     }
@@ -241,7 +245,9 @@ export default function ReferAFriend() {
                             className="button-sm button-ghost"
                             toastMessage="Reminder successfully sent"
                           />
-                          <span className="hidden md:block w-24">1 second ago</span>
+                          <span className="hidden md:block w-24">
+                            1 second ago
+                          </span>
                         </div>
                       </li>
                     )}
@@ -309,32 +315,69 @@ export default function ReferAFriend() {
                                 "calc((" + itemIndex + " + 5) * 0.05s)",
                             }}
                           >
-                            <div className="item-image">
-                              <Avatar
-                                id={item.user}
-                                hasLevel={true}
-                                hasTooltip={true}
-                                size="avatar-xs"
-                              />
-                            </div>
-                            <div className="item-body">
-                              <div className="item-title truncate">
-                                {prototype.getUserByID(item.user).nickname}
-                              </div>
+                            <div className="flex-1">
+                              <Link
+                                href={`/prototype/profile/${
+                                  item.user
+                                }${prototype.getURLparams()}`}
+                              >
+                                <div className="flex gap-2 items-center interactive">
+                                  <Avatar
+                                    id={item.user}
+                                    hasTooltip={true}
+                                    hasTooltipXP={false}
+                                  />
+                                  <div className="item-title truncate">
+                                    <span
+                                      className={`${
+                                        prototype.getUserByID(item.user)?.isYou
+                                          ? "text-main font-bold"
+                                          : ""
+                                      } ${
+                                        prototype.getUserByID(item.user)
+                                          ?.isPremium
+                                          ? "text-premium-500"
+                                          : ""
+                                      }`}
+                                    >
+                                      {prototype.getUserByID(item.user)
+                                        ?.clan && (
+                                        <>
+                                          &#91;
+                                          {
+                                            prototype.getClanByID(
+                                              prototype.getUserByID(item.user)
+                                                ?.clan
+                                            )?.tag
+                                          }
+                                          &#93;{" "}
+                                        </>
+                                      )}
+
+                                      {
+                                        prototype.getUserByID(item.user)
+                                          ?.nickname
+                                      }
+                                    </span>
+                                  </div>
+                                </div>
+                              </Link>
                             </div>
                             <div className="item-body text-right text-ui-300 flex justify-end items-center gap-4 p-1">
                               {prototype.getUserByID(item.user).level > 10 ? (
                                 <>
                                   {item.hasClaimed ? (
-                                    <span className="whitespace-nowrap text-gold-500">
-                                      <span className="translate-y-1 icon icon-i-add text-2xl" />
-                                      <span className="translate-y-0.5 icon icon-coin" />{" "}
-                                      <span className="font-bold">500</span>
-                                    </span>
+                                    <div className="whitespace-nowrap text-gold-500 flex items-center">
+                                      <div className="icon icon-i-add text-2xl" />
+                                      <div className="icon icon-coin mr-1" />{" "}
+                                      <div className="font-bold">500</div>
+                                    </div>
                                   ) : (
                                     <button
                                       type="button"
-                                      onClick={openModalModalClaimBattlepassReward}
+                                      onClick={
+                                        openModalModalClaimBattlepassReward
+                                      }
                                       className="button button-claim button-sm is-shining"
                                     >
                                       <span className="icon icon-present animate-bounce" />

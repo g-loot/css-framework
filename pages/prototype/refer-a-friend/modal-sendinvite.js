@@ -18,7 +18,7 @@ export default function ModalReferSendInvite({onLoad}) {
     setTimeout(() => {
       uiContext.openToastr({
         size: "",
-        text: "Tokens bought successfully",
+        text: "Invite sent",
         color: "green",
         autoDelete: true,
         autoDeleteDelay: 2500,
@@ -57,7 +57,7 @@ export default function ModalReferSendInvite({onLoad}) {
             <p>
               Invite your friends to Stryda. Once their Stryda account reaches
               Lv 10, you and your friend can claim 500 coins. Simply enter your
-              friend&#39;s email address and hit “Send invite.”
+              friend&#39;s email address and hit “Send invite”.
             </p>
             <div className="form-group mt-4" data-success={isEmail(emailStr)}>
               <label htmlFor="email">Email address</label>
