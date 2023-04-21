@@ -318,7 +318,7 @@ export default function ReferAFriend() {
                           <ButtonReminder
                             label="Send a reminder"
                             className="button-sm button-ghost"
-                            toastMessage="Reminder successfully sent"
+                            toastMessage="Reminder email successfully sent"
                           />
                           <span className="hidden md:block w-24">
                             1 second ago
@@ -356,7 +356,7 @@ export default function ReferAFriend() {
                               <ButtonReminder
                                 label="Send a reminder"
                                 className="button-sm button-ghost"
-                                toastMessage="Reminder successfully sent"
+                                toastMessage="Reminder email successfully sent"
                               />
                               <span className="hidden md:block w-24">
                                 {item.date}
