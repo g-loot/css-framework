@@ -303,3 +303,18 @@
     animation: none !important;
   }
 }
+
+/* easter egg */
+
+.animate-flythrough {
+  animation: flythrough 10s linear 0s infinite forwards;
+}
+
+@keyframes flythrough {
+  from {
+    transform: scale(1.5) translateX(-100%);
+  }
+  to {
+    transform: scale(1.5) translateX(100%);
+  }
+}

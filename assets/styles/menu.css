@@ -228,20 +228,22 @@
       }
     }
   }
-}
 
-li.separator {
-  @apply
-  block
-  h-px
-  w-full
-  my-2
-  select-none
-  ;
-  &:not([class*='bg-']) {
+  li.separator {
     @apply
-    bg-ui-700
+    block
+    h-px
+    w-full
+    my-2
+    select-none
+    opacity-100
+    border-0
     ;
+    &:not([class*='bg-']) {
+      @apply
+      bg-ui-300
+      ;
+    }
   }
 }
 

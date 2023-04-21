@@ -50,7 +50,7 @@ const howitworksSteps = [
     id: 0,
     name: "Step 1",
     description: "Invite a friend to join",
-    url: "https://res.cloudinary.com/gloot/image/upload/Stryda/illustrations/referral_step_1.png",
+    url: "https://res.cloudinary.com/gloot/image/upload/v1682079218/Stryda/illustrations/referral_step_1.png",
     hasButton: true,
   },
   {
@@ -68,7 +68,8 @@ const howitworksSteps = [
   {
     id: 4,
     name: "Step 4",
-    description: "You both get 500 coins",
+    description:
+      "You both get <span class='whitespace-nowrap text-gold-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>500</span></span> to enjoy on the platform!",
     url: "https://res.cloudinary.com/gloot/image/upload/v1682069954/Stryda/illustrations/referral_step_4.png",
   },
 ];
@@ -133,12 +134,12 @@ export default function ReferAFriend() {
 
   return (
     <>
-      <PrototypeStructure title="Refer a friend">
+      <PrototypeStructure title="Recruit a friend">
         <section className="mb-8">
           <div className="header surface sm:rounded-lg">
             <div className="header-content">
               <div className="header-body">
-                <h1>Refer a friend</h1>
+                <h1>Recruit a friend</h1>
                 <p className="text-ui-300 max-w-[70ch] mt-4 mb-5">
                   Get{" "}
                   <span className="whitespace-nowrap text-gold-500 px-1">
@@ -221,10 +222,10 @@ export default function ReferAFriend() {
         ) : (
           <>
             {isEmpty ? (
-              <div className="px-4 py-8 text-center">
+              <div className="px-4 text-center">
                 <div className="overflow-x-auto scrollbar-hidden -mx-4 flex justify-start">
                   <div className="relative z-10 flex-1 flex items-start lg:justify-center py-8 pl-8 w-full max-w-[1240px] mx-auto">
-                    <div className="absolute z-0 top-[182px] left-0 -right-[200px] lg:inset-x-10 hidden lg:block">
+                    <div className="absolute z-0 top-[179px] left-0 -right-[200px] lg:inset-x-10 hidden lg:block animate-scale-in-x-left">
                       <i className="absolute w-2 h-2 bg-main rounded-full left-0 -top-1" />
                       <i className="absolute w-2 h-2 bg-main rounded-full right-0 -top-1" />
                       <i className="absolute h-px bg-main inset-x-0" />
@@ -232,18 +233,26 @@ export default function ReferAFriend() {
                     {howitworksSteps.map((item, itemIndex) => (
                       <div
                         key={itemIndex}
-                        className="flex-1 min-w-[240px] relative z-0 mx-4"
+                        className="flex-1 min-w-[240px] relative z-0 mx-4 animate-slide-in-bottom animate-delay"
+                        style={{
+                          "--delay": "calc((" + itemIndex + " + 5) * 0.05s)",
+                        }}
                       >
                         <img
                           src={item.url}
                           alt={item.name}
                           className="h-32 w-auto mx-auto relative z-0"
                         />
-                        <div className="w-8 h-8 rounded-full border-4 border-main bg-ui-900 mx-auto mt-2" />
-                        <h2 className="h1 text-4xl md:text-5xl md:leading-[0.8] mt-4">
+                        <div className="w-6 h-6 rounded-full border-4 border-main bg-ui-900 mx-auto mt-2" />
+                        <h3 className="h1 text-4xl md:text-5xl md:leading-[0.8] mt-7">
                           {item.name}
-                        </h2>
-                        <p className="mt-2 mb-4">{item.description}</p>
+                        </h3>
+                        <p
+                          className="mt-2 mb-4"
+                          dangerouslySetInnerHTML={{
+                            __html: item.description,
+                          }}
+                        />
                         {item.hasButton && (
                           <button
                             type="button"

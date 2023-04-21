@@ -86,6 +86,18 @@ export default function PrototypeStructure({ children, title }) {
       {isNewStructure && (
         <>
           <PrototypeHead title={title} />
+          {/*
+          <div className="fixed z-50 inset-0 flex items-center justify-center pointer-events-none">
+            <div className="relative animate-antoncat">
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1682078710/Stryda/demo/antoncat.gif"
+                alt=""
+                width="100%"
+                height="auto"
+              />
+            </div>
+          </div>
+          */}
           <div className="drawer drawer-mobile drawer-framed">
             <input
               id="drawer-prototype"

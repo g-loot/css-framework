@@ -840,6 +840,16 @@ export default function TopbarNew() {
                       </Link>
                     </li>
                     <li>
+                      <Link href={`/prototype/recruit-a-friend/`}>
+                        <button
+                          type="button"
+                        >
+                          <span className="icon icon-b-love" />
+                          <span>Recruit a friend</span>
+                        </button>
+                      </Link>
+                    </li>
+                    <li>
                       <Link
                         href={`/prototype/how-it-works${
                           hasAds ? "&ads=true" : ""
@@ -849,16 +859,6 @@ export default function TopbarNew() {
                           <span className="icon icon-file-article" />
                           <span>How Stryda works</span>
                         </a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={`/prototype/refer-a-friend/`}>
-                        <button
-                          type="button"
-                        >
-                          <span className="icon icon-b-love" />
-                          <span>Refer a friend</span>
-                        </button>
                       </Link>
                     </li>
                     <li>
