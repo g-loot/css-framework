@@ -32,7 +32,7 @@
           "name": "token"
         },
         {
-          "tags": "brand,gloot,token,power,reward,ladder,ladder",
+          "tags": "brand,gloot,token,power,powertoken,reward,ladder,ladder",
           "name": "powertoken"
         },
         {

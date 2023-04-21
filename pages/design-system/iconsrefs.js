@@ -46,37 +46,44 @@ const DSpage = () => {
                   return true;
                 }
               })
-              .map((item) => (
-                <div
-                  key={item}
-                  description={item.keywords}
-                  className="surface surface-dimmed rounded-lg text-0 w-32 h-32 inline-flex flex-col justify-center items-center relative text-ui-300"
-                >
-                  <span
-                    className={`icon block text-4xl mb-4 icon-${item.name}`}
-                  />
-                  <div className="absolute bottom-0 p-2 text-ui-400 text-xs text-center leading-none">
-                    <div className="text-xs text-ui-300">
-                      <span className="tooltip tooltip-top" data-tooltip="Copy">
-                        <a
-                          className="link"
-                          onClick={() => {
-                            uiContext.openToastr({
-                              size: "medium",
-                              text: "Icon class name copied to your clipboard",
-                              color: "green",
-                              autoDelete: true,
-                              autoDeleteDelay: 2500,
-                            });
-                            navigator.clipboard.writeText(item.name);
-                          }}
-                        >
-                          {item.name}
-                        </a>
-                      </span>
+              .map((item, itemIndex) => (
+                <>
+                  {!item.disabled && (
+                    <div
+                      key={itemIndex}
+                      description={item.keywords}
+                      className="surface surface-dimmed rounded-lg text-0 w-32 h-32 inline-flex flex-col justify-center items-center relative text-ui-300"
+                    >
+                      <span
+                        className={`icon block text-4xl mb-4 icon-${item.name}`}
+                      />
+                      <div className="absolute bottom-0 p-2 text-ui-400 text-xs text-center leading-none">
+                        <div className="text-xs text-ui-300">
+                          <span
+                            className="tooltip tooltip-top"
+                            data-tooltip="Copy"
+                          >
+                            <a
+                              className="link"
+                              onClick={() => {
+                                uiContext.openToastr({
+                                  size: "medium",
+                                  text: "Icon class name copied to your clipboard",
+                                  color: "green",
+                                  autoDelete: true,
+                                  autoDeleteDelay: 2500,
+                                });
+                                navigator.clipboard.writeText(item.name);
+                              }}
+                            >
+                              {item.name}
+                            </a>
+                          </span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  )}
+                </>
               ))}
           </div>
           <div className={`w-full ${filter ? "mb-2" : "mb-8"}`}></div>

@@ -45,6 +45,34 @@ const referralsItems = [
   },
 ];
 
+const howitworksSteps = [
+  {
+    id: 0,
+    name: "Step 1",
+    description: "Invite a friend to join",
+    url: "https://res.cloudinary.com/gloot/image/upload/Stryda/illustrations/referral_step_1.png",
+    hasButton: true,
+  },
+  {
+    id: 2,
+    name: "Step 2",
+    description: "Your friend signs up through the invite email",
+    url: "https://res.cloudinary.com/gloot/image/upload/Stryda/illustrations/referral_step_2.png",
+  },
+  {
+    id: 3,
+    name: "Step 3",
+    description: "Your friend reaches level 10",
+    url: "https://res.cloudinary.com/gloot/image/upload/Stryda/illustrations/referral_step_3.png",
+  },
+  {
+    id: 4,
+    name: "Step 4",
+    description: "You both get 500 coins",
+    url: "https://res.cloudinary.com/gloot/image/upload/v1682069954/Stryda/illustrations/referral_step_4.png",
+  },
+];
+
 export default function ReferAFriend() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
@@ -193,7 +221,43 @@ export default function ReferAFriend() {
         ) : (
           <>
             {isEmpty ? (
-              <div className="surface rounded-lg px-4 py-8 text-center">
+              <div className="px-4 py-8 text-center">
+                <div className="overflow-x-auto scrollbar-hidden -mx-4 flex justify-start">
+                  <div className="relative z-10 flex-1 flex items-start lg:justify-center py-8 pl-8 w-full max-w-[1240px] mx-auto">
+                    <div className="absolute z-0 top-[182px] left-0 -right-[200px] lg:inset-x-10 hidden lg:block">
+                      <i className="absolute w-2 h-2 bg-main rounded-full left-0 -top-1" />
+                      <i className="absolute w-2 h-2 bg-main rounded-full right-0 -top-1" />
+                      <i className="absolute h-px bg-main inset-x-0" />
+                    </div>
+                    {howitworksSteps.map((item, itemIndex) => (
+                      <div
+                        key={itemIndex}
+                        className="flex-1 min-w-[240px] relative z-0 mx-4"
+                      >
+                        <img
+                          src={item.url}
+                          alt={item.name}
+                          className="h-32 w-auto mx-auto relative z-0"
+                        />
+                        <div className="w-8 h-8 rounded-full border-4 border-main bg-ui-900 mx-auto mt-2" />
+                        <h2 className="h1 text-4xl md:text-5xl md:leading-[0.8] mt-4">
+                          {item.name}
+                        </h2>
+                        <p className="mt-2 mb-4">{item.description}</p>
+                        {item.hasButton && (
+                          <button
+                            type="button"
+                            className="button button-primary"
+                            onClick={openModalReferSendInvite}
+                          >
+                            <span>Invite a friend</span>
+                          </button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/*
                 <div className="max-w-xs mx-auto">
                   <span className="icon icon-smile text-6xl text-ui-500" />
                   <div className="mt-2 mb-6">
@@ -210,13 +274,13 @@ export default function ReferAFriend() {
                     <span>Invite a friend</span>
                   </button>
                 </div>
+                        */}
               </div>
             ) : (
               <>
                 <section className="mb-8">
                   <h2 className="h5 mb-2">
-                    {referralsItems.filter((i) => !i.user).length} pending
-                    referral
+                    Pending referral
                     {referralsItems.filter((i) => !i.user).length > 1 ? (
                       <>s</>
                     ) : (
@@ -297,8 +361,7 @@ export default function ReferAFriend() {
                 </section>
                 <section className="mb-8">
                   <h2 className="h5 mb-2">
-                    {referralsItems.filter((i) => i.user).length} approved
-                    referral
+                    Approved referral
                     {referralsItems.filter((i) => i.user).length > 1 ? (
                       <>s</>
                     ) : (
@@ -369,9 +432,9 @@ export default function ReferAFriend() {
                               {prototype.getUserByID(item.user).level > 10 ? (
                                 <>
                                   {item.hasClaimed ? (
-                                    <div className="whitespace-nowrap text-gold-500 flex items-center">
-                                      <div className="icon icon-i-add text-2xl" />
-                                      <div className="icon icon-coin mr-1" />{" "}
+                                    <div className="whitespace-nowrap text-gold-500 flex items-center gap-1">
+                                      <div className="icon icon-check mr-1" />
+                                      <div className="icon icon-coin" />{" "}
                                       <div className="font-bold">500</div>
                                     </div>
                                   ) : (

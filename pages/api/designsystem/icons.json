@@ -9,11 +9,13 @@
         },
         {
           "tags": "brand,gloot,stryda,logo",
-          "name": "stryda-logo"
+          "name": "stryda-logo",
+          "disabled": true
         },
         {
           "tags": "brand,gloot,stryda,tagline,esports",
-          "name": "tagline"
+          "name": "tagline",
+          "disabled": true
         },
         {
           "tags": "brand,gloot,stryda,xp,reward",
@@ -30,6 +32,10 @@
         {
           "tags": "brand,gloot,stryda,token,reward,ladder",
           "name": "token"
+        },
+        {
+          "tags": "brand,gloot,stryda,powertoken,power,token,reward,ladder",
+          "name": "powertoken"
         },
         {
           "tags": "brand,gloot,stryda,ticket,reward,tournament,showdown",
