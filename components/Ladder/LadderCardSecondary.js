@@ -23,6 +23,7 @@ export default function LadderCardSecondary(props) {
   const isFluid = props.isFluid || false;
   const selectedUser = props.selectedUser || prototype.getUserByID(1);
   const isClan = props.isClan || false;
+  const clanID = props.clanID || 1;
   const ladder = props.ladder;
   const game_slug = props.game_slug || "valorant";
   const isGlobal = props.isGlobal || false;
@@ -354,7 +355,7 @@ export default function LadderCardSecondary(props) {
                               <div>
                                 <img
                                   src={
-                                    prototype.getClanByID(selectedUser.id)
+                                    prototype.getClanByID(clanID)
                                       ?.avatar
                                   }
                                   alt="avatar"
@@ -425,7 +426,10 @@ export default function LadderCardSecondary(props) {
                             <div className="flex items-center gap-2">
                               <div className="avatar avatar-squircle avatar-xs">
                                 <div>
-                                  <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Foxy.png" />
+                                  <img src={
+                                    prototype.getClanByID(clanID)
+                                      ?.avatar
+                                  } alt="avatar" />
                                 </div>
                               </div>
                               <span className="text-sm text-ui-300">

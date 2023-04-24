@@ -247,7 +247,7 @@ export default function TabClanLeaderboardsLeaderboards() {
         <div className="mt-4 overflow-x-auto scrollbar-hidden">
           <div className="min-w-md px-2 md:px-0">
             <div className="flex gap-2 items-start text-center text-sm text-ui-300 uppercase mb-2 relative z-10">
-              <div className="w-56 flex items-stretch overflow-hidden">
+              <div className="w-48 flex items-stretch overflow-hidden">
                 <div className="w-1/3 px-2">#</div>
                 <div className="flex-1 flex gap-2 items-center justify-center">
                   <span>Rewards</span>
@@ -337,7 +337,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                           }}
                         >
                           <div
-                            className={`surface rounded-lg w-56 h-[58px] flex items-stretch overflow-hidden ${
+                            className={`surface rounded-lg w-48 h-[58px] flex items-stretch overflow-hidden ${
                               prototype.getClanByID(clan.clan)?.isYou ? "" : ""
                             }`}
                           >
@@ -450,7 +450,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                             >
                               <div className="p-2">
                                 <ul className="space-y-2">
-                                  <li className="bg-ui-800 p-3 flex flex-col lg:flex-row lg:justify-between leading-none">
+                                  <li className="bg-ui-800 p-3 flex justify-between leading-none">
                                     <div className="">
                                       <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
                                         Matches played
@@ -459,7 +459,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                         {clan.stats.wins + clan.stats.losses}
                                       </div>
                                     </div>
-                                    <div className="flex gap-3 lg:text-right">
+                                    <div className="flex gap-3 text-right">
                                       <div className="">
                                         <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
                                           Win{clan.stats.wins > 1 && <>s</>}

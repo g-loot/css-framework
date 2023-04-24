@@ -233,9 +233,9 @@ export default function TabScoreboard(props) {
                             isLoading ? "" : "animate-slide-in-bottom"
                           }`}
                         >
-                          <div className="w-14 text-center px-2 flex items-center justify-center">
+                          <div className="w-10 lg:w-12 text-center px-2 flex items-center justify-center">
                             <span
-                              className={`text-2xl  ${selectedScoreboard.scores.placement} === 0 ? "text-gold-500" : ""
+                              className={`text-xl lg:text-2xl  ${selectedScoreboard.scores.placement} === 0 ? "text-gold-500" : ""
                             }${selectedScoreboard.scores.placement} === 1 ? "text-silver-500" : ""} ${selectedScoreboard.scores.placement} === 2 ? "text-bronze-500" : ""
                             } ${selectedScoreboard.scores.placement} > 2 ? "text-ui-300" : ""}`}
                             >
@@ -300,10 +300,10 @@ export default function TabScoreboard(props) {
                               </div>
                             </Link>
                           </div>
-                          <div className="item-body text-center text-0">
+                          <div className="item-body text-center text-0 flex-0 w-10">
                             <Tooltip tooltip={`Ascendant`}>
                               <img
-                                className="h-10"
+                                className="h-8"
                                 src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/rank-acendant.webp"
                                 height="auto"
                                 width="auto"
@@ -324,7 +324,7 @@ export default function TabScoreboard(props) {
                             isLoading ? "" : "animate-slide-in-bottom"
                           }`}
                         >
-                          <div className="w-14 text-center px-2 flex items-center justify-center">
+                          <div className="w-10 lg:w-12 text-center px-2 flex items-center justify-center">
                             <span className="text-2xl text-ui-300">-</span>
                           </div>
                           <div className="item-image">
@@ -343,7 +343,7 @@ export default function TabScoreboard(props) {
                       <div className="w-14" />
                       <div className="item-image w-9" />
                       <div className="item-body">Player</div>
-                      <div className="item-body text-center">Rank</div>
+                      <div className="item-body text-center flex-0 w-10">Rank</div>
                       <div className="item-actions w-20 text-right">
                         <div>
                           {selectedScoreboard.scores.objective}
@@ -393,9 +393,9 @@ export default function TabScoreboard(props) {
                               "--delay": "calc(" + itemIndex + " * 0.05s)",
                             }}
                           >
-                            <div className="w-14 text-center px-2 flex items-center justify-center">
+                            <div className="w-10 lg:w-12 text-center px-2 flex items-center justify-center">
                               <span
-                                className={`text-2xl  ${
+                                className={`text-xl lg:text-2xl  ${
                                   itemIndex === 0 ? "text-gold-500" : ""
                                 }${itemIndex === 1 ? "text-silver-500" : ""} ${
                                   itemIndex === 2 ? "text-bronze-500" : ""
@@ -466,10 +466,10 @@ export default function TabScoreboard(props) {
                                 </div>
                               </Link>
                             </div>
-                            <div className="item-body text-center">
+                            <div className="item-body text-center text-0 flex-0 w-10">
                               <Tooltip tooltip={`Ascendant`}>
                                 <img
-                                  className="h-10"
+                                  className="h-8"
                                   src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/rank-acendant.webp"
                                   height="auto"
                                   width="auto"

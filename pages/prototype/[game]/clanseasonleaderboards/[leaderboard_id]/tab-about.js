@@ -351,7 +351,7 @@ export default function TabClanLeaderboardsAbout() {
               </div>
               <img
                 className="col-span-1 rounded-lg"
-                src="https://res.cloudinary.com/gloot/image/upload/v1674745238/Stryda/illustrations/ladder_leaderboard.jpg"
+                src="https://res.cloudinary.com/gloot/image/upload/v1682322125/Stryda/illustrations/clan_season.png"
                 width="100%"
                 height="auto"
                 alt=""
@@ -426,7 +426,7 @@ export default function TabClanLeaderboardsAbout() {
                 <div className="border-b border-ui-700 pb-4">
                   <h2 className="text-2xl">Coins</h2>
                 </div>
-                <div className="flex-1 flex flex-col items-start justify-center text-ui-300 space-y-2 leading-relaxed mt-4">
+                <div className="flex-1 flex flex-col items-start justify-center text-ui-300 space-y-2 leading-relaxed">
                   <p>
                     Use Coins to buy gift cards in the Stryda shop. Get gift
                     cards for clothes, games, and more.
@@ -435,6 +435,13 @@ export default function TabClanLeaderboardsAbout() {
                     The higher you are on the Ladder leaderboards, the more
                     Coins you can win!
                   </p>
+                </div>
+                <div className="border-t border-ui-700 pt-4">
+                  <Link href={`/prototype/shop`}>
+                    <button type="button" className="button button-secondary">
+                      <span>Visit the shop</span>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

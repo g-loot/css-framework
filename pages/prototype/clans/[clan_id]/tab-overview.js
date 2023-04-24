@@ -625,7 +625,7 @@ export default function TabClanOverview() {
 
             <section className="surface md:rounded">
               <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                <h2 className="h6 text-ui-100">Ladders</h2>
+                <h2 className="h6 text-ui-100">Ladders ({selectedClan.ladders?.length})</h2>
                 <Link
                   href={`${
                     selectedClan.id
@@ -650,7 +650,8 @@ export default function TabClanOverview() {
                               ladder.id
                             )}
                             isHorizontal={false}
-                            isClan={false}
+                            isClan={true}
+                            clanID={selectedClan.id}
                             className="surface-ui-700"
                           />
                         </>
