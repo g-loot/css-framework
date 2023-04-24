@@ -3,7 +3,6 @@ import React, { useContext, useEffect, useState } from "react";
 import Accordion from "../../../../../components/Accordion/Accordion";
 import FAQ from "../../../../../components/FAQ/FAQ";
 import Link from "next/link";
-import ModalLadderHowitworksVideo from "../modal-howitworks-video";
 import ModalContainer from "../../../../../components/Modal/ModalContainer";
 import { usePrototypeData } from "../../../../../contexts/prototype";
 import { UiContext } from "../../../../../contexts/ui";
@@ -302,26 +301,58 @@ export default function TabClanLeaderboardsAbout() {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
 
-  function openModalLadderHowitworksVideo() {
-    uiContext.openModal(
-      <ModalLadderHowitworksVideo></ModalLadderHowitworksVideo>
-    );
-  }
-
-  useEffect(() => {
-    if (modalVideo) {
-      openModalLadderHowitworksVideo();
-    }
-  }, [modalVideo]);
-
   return (
     <>
       {selectedGame && (
         <>
           <section
-            className="py-12 animate-slide-in-bottom animate-delay"
+            className="pt-4 pb-8 animate-slide-in-bottom animate-delay"
             style={{ "--delay": "calc(1 * 0.05s)" }}
           >
+            <div className="flex-1 surface sm:rounded-lg p-4 relative flex flex-col items-stretch">
+              <div className="border-b border-ui-700 pb-4">
+                <h2 className="text-2xl">About Clan Seasons</h2>
+              </div>
+              <div className="p-4 flex items-center gap-8 leading-relaxed">
+                <div className="flex-3 columns-2 gap-8 space-y-4 order-2 md:order-1 text-ui-300 leading-relaxed">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ac diam sed interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam suscipit nibh eget scelerisque eleifend. Vestibulum eget gravida orci. Donec lorem justo, eleifend eget ultrices id, sagittis in nisi.
+                  </p>
+                  <p>
+                    Nam dapibus nibh a odio blandit, ac pellentesque velit posuere. Aenean at pellentesque orci. Fusce egestas est leo, a blandit lectus tincidunt sed. In ullamcorper elit non ultricies mollis. Suspendisse non sem id turpis cursus fringilla id nec tellus. Sed efficitur hendrerit tempus. Phasellus nec lobortis nunc, eget laoreet lectus.
+                  </p>
+                  <ul className="list-outside list-disc space-y-4">
+                    <li>
+                      onec urna orci, interdum ac varius ut, luctus eget leo.
+                    </li>
+                    <li>
+                      Quisque aliquam, massa at euismod tristique, magna augue
+                      sagittis nunc, sit amet porta risus libero ut mi.
+                    </li>
+                    <li>
+                      Vestibulum cursus lorem vitae nulla sodales, sed posuere
+                      tortor efficitur.
+                    </li>
+                    <li>
+                      Integer vestibulum semper nisi. Mauris porta accumsan sem
+                      at fermentum. Nullam eu mattis risus.
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex-2 order-1 md:order-2">
+                  <img
+                    className="frounded"
+                    src="https://res.cloudinary.com/gloot/image/upload/Stryda/illustrations/clan_season.png"
+                    width="100%"
+                    height="auto"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/*
+
             <div className="grid gap-8 grid-cols-1 xl:grid-cols-3 items-center">
               <div className="col-span-2 px-4 sm:px-0">
                 <h2 className="h4 mb-4">Welcome to the Clan Seasons</h2>
@@ -357,12 +388,13 @@ export default function TabClanLeaderboardsAbout() {
                 alt=""
               />
             </div>
+      */}
           </section>
           <section
             className="pb-8 animate-slide-in-bottom"
             style={{ "--delay": "calc(2 * 0.05s)" }}
           >
-            <div className="flex flex-col lg:flex-row items-stretch gap-4 mb-8">
+            <div className="flex flex-col lg:flex-row items-stretch gap-8 mb-8">
               <div className="flex-2 surface sm:rounded-lg p-4 relative flex flex-col items-stretch">
                 <div className="border-b border-ui-700 pb-4">
                   <h2 className="text-2xl">Reward distribution</h2>

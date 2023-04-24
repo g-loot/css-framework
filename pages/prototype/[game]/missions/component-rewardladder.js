@@ -87,7 +87,7 @@ export default function ComponentRewardLadder() {
               hasSeconds={true}
             />
           </span>
-          <Link href="/prototype/valorant/ladders/">
+          <Link href={`/prototype/battlepass${prototype.getURLparams()}`}>
             <a className="link link-hover text-ui-300 text-sm">
               View Battlepass
             </a>
@@ -159,7 +159,7 @@ export default function ComponentRewardLadder() {
       )}
 
       {!oldBattlepass ? (
-        <div className="surface sm:rounded p-2 pb-4 mt-4 mb-8">
+        <div className="mt-4 mb-8">
           <Battlepass size="battlepass-md" />
         </div>
       ) : (

@@ -48,6 +48,7 @@ const PremiumBenefits = [
 export default function Premium() {
   const { query } = useRouter();
   const modalBuyPremium = query.modalpremium === "true" ? true : false;
+  const isPremium = query.premium === "true" ? true : false;
   const uiContext = useContext(UiContext);
   useEffect(() => {
     if (modalBuyPremium) {
@@ -62,32 +63,91 @@ export default function Premium() {
   return (
     <>
       <PrototypeStructure title="Premium">
-        <section>
-          <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start justify-center my-12">
-            <PremiumLogo
-              src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
-              width="275"
-              height="auto"
-            />
-            <div className="lg:border-l lg:border-ui-500 lg:pl-10 text-center lg:text-left">
-              <h2 className="h1 max-w-[19ch] mx-auto lg:text-8xl">
-                Make your GG more rewarding
-              </h2>
-              <button
-                type="button"
-                onClick={openModalBuyPremium}
-                className="button button-lg button-premium is-shining my-4"
+        {isPremium ? (
+          <>
+            <section>
+              <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start justify-center my-12">
+                <PremiumLogo
+                  src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                  width="275"
+                  height="auto"
+                />
+                <div className="lg:border-l lg:border-ui-500 lg:pl-10 text-center lg:text-left">
+                  <h2 className="h1 max-w-[30ch] mx-auto text-5xl lg:text-7xl">
+                    Enjoy the full potential of Stryda gaming experience
+                  </h2>
+                </div>
+              </div>
+            </section>
+
+            <section className="px-4 md:px-0 my-20 flex flex-col md:flex-row items-stretch gap-8 max-w-md mx-auto animate-slide-in-bottom">
+              <div
+                className="flex-1 surface rounded flex flex-col items-stretch justify-start"
               >
-                <span>View premium plans</span>
-              </button>
-              <p className="text-sm text-ui-300">
-                Cancel anytime.{" "}
-                <a className="underline cursor-pointer">Terms and conditions</a>{" "}
-                apply.
-              </p>
-            </div>
-          </div>
-        </section>
+                <h2 className="h5 text-center p-3 border-b border-ui-700">
+                  Subscription details
+                </h2>
+                <div className="p-4 flex-1 flex flex-col items-stretch">
+                  <div className="surface-ui-600 rounded p-4 text-center flex-1 flex flex-col items-center justify-center">
+                    <p>
+                      Premium:{" "}
+                      <span className="text-premium-500 font-bold">
+                        trial activated
+                      </span>
+                    </p>
+                    <p className="text-sm text-ui-300">
+                      Trial ends on May 19, 2023
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className="flex-1 surface rounded flex flex-col items-stretch justify-start"
+              >
+                <h2 className="h5 text-center p-3 border-b border-ui-700">
+                  Payment method
+                </h2>
+                <div className="p-4 flex-1 flex flex-col items-stretch">
+                  <div className="surface-ui-600 rounded p-4 text-center flex-1 flex flex-col items-center justify-center">
+                    <p>Free trial</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </>
+        ) : (
+          <>
+            <section>
+              <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start justify-center my-12">
+                <PremiumLogo
+                  src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                  width="275"
+                  height="auto"
+                />
+                <div className="lg:border-l lg:border-ui-500 lg:pl-10 text-center lg:text-left">
+                  <h2 className="h1 max-w-[19ch] mx-auto lg:text-8xl">
+                    Make your GG more rewarding
+                  </h2>
+                  <button
+                    type="button"
+                    onClick={openModalBuyPremium}
+                    className="button button-lg button-premium is-shining my-4"
+                  >
+                    <span>View premium plans</span>
+                  </button>
+                  <p className="text-sm text-ui-300">
+                    Cancel anytime.{" "}
+                    <a className="underline cursor-pointer">
+                      Terms and conditions
+                    </a>{" "}
+                    apply.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </>
+        )}
 
         <section className="grid md:grid-cols-2 lg:grid-cols-3 justify-center mb-24 max-w-lg mx-auto text-center leading-none">
           {PremiumBenefits.map((item, itemIndex) => (

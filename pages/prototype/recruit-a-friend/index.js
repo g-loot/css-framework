@@ -389,7 +389,7 @@ export default function ReferAFriend() {
                                 "calc((" + itemIndex + " + 5) * 0.05s)",
                             }}
                           >
-                            <div className="flex-1">
+                            <div className="item-body">
                               <Link
                                 href={`/prototype/profile/${
                                   item.user
@@ -401,43 +401,57 @@ export default function ReferAFriend() {
                                     hasTooltip={true}
                                     hasTooltipXP={false}
                                   />
-                                  <div className="item-title truncate">
-                                    <span
-                                      className={`${
-                                        prototype.getUserByID(item.user)?.isYou
-                                          ? "text-main font-bold"
-                                          : ""
-                                      } ${
-                                        prototype.getUserByID(item.user)
-                                          ?.isPremium
-                                          ? "text-premium-500"
-                                          : ""
-                                      }`}
-                                    >
-                                      {prototype.getUserByID(item.user)
-                                        ?.clan && (
-                                        <>
-                                          &#91;
-                                          {
-                                            prototype.getClanByID(
-                                              prototype.getUserByID(item.user)
-                                                ?.clan
-                                            )?.tag
-                                          }
-                                          &#93;{" "}
-                                        </>
-                                      )}
+                                  <div>
+                                    <div className="item-title truncate">
+                                      <span
+                                        className={`${
+                                          prototype.getUserByID(item.user)
+                                            ?.isYou
+                                            ? "text-main font-bold"
+                                            : ""
+                                        } ${
+                                          prototype.getUserByID(item.user)
+                                            ?.isPremium
+                                            ? "text-premium-500"
+                                            : ""
+                                        }`}
+                                      >
+                                        {prototype.getUserByID(item.user)
+                                          ?.clan && (
+                                          <>
+                                            &#91;
+                                            {
+                                              prototype.getClanByID(
+                                                prototype.getUserByID(item.user)
+                                                  ?.clan
+                                              )?.tag
+                                            }
+                                            &#93;{" "}
+                                          </>
+                                        )}
 
-                                      {
-                                        prototype.getUserByID(item.user)
-                                          ?.nickname
-                                      }
-                                    </span>
+                                        {
+                                          prototype.getUserByID(item.user)
+                                            ?.nickname
+                                        }
+                                      </span>
+                                    </div>
+                                    {prototype.getUserByID(item.user).level <
+                                      10 && (
+                                      <div className="text-ui-300 text-xs leading-none md:hidden">
+                                        You will get rewarded once{" "}
+                                        {
+                                          prototype.getUserByID(item.user)
+                                            .nickname
+                                        }{" "}
+                                        reaches level 10
+                                      </div>
+                                    )}
                                   </div>
                                 </div>
                               </Link>
                             </div>
-                            <div className="item-body text-right text-ui-300 flex justify-end items-center gap-4 p-1">
+                            <div className="item-actions text-right text-ui-300 flex justify-end items-center gap-4 p-1">
                               {prototype.getUserByID(item.user).level > 10 ? (
                                 <>
                                   {item.hasClaimed ? (
@@ -460,7 +474,7 @@ export default function ReferAFriend() {
                                   )}
                                 </>
                               ) : (
-                                <span className="text-ui-300">
+                                <span className="text-ui-300 hidden md:block">
                                   You will get rewarded once{" "}
                                   {prototype.getUserByID(item.user).nickname}{" "}
                                   reaches level 10

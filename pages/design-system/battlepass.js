@@ -62,7 +62,7 @@ const DSpage = () => {
 
   return (
     <>
-      <h1 className="mb-2">Battle Pass</h1>
+      <h1 className="mb-2">Battlepass</h1>
 
       {/* big */}
       <div className="mb-12" id="big">

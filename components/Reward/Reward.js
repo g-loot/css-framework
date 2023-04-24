@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { usePrototypeData } from "../../contexts/prototype";
+import Tooltip from "../Tooltip/Tooltip";
 
 function numberWithSpaces(x) {
   var parts = x.toString().split(".");
@@ -8,13 +10,14 @@ function numberWithSpaces(x) {
 }
 export default function Reward(props) {
   const xFactor = props.xFactor || 1;
+  const prototype = usePrototypeData();
 
   return (
     <>
       {props.reward.type === "coin" && (
         <div
           className={`flex items-center whitespace-nowrap ${
-            props.gap ? props.gap : "gap-2"
+            props.gap ? props.gap : "gap-1"
           }`}
         >
           <span
@@ -28,7 +31,7 @@ export default function Reward(props) {
       {props.reward.type === "token" && (
         <div
           className={`flex items-center whitespace-nowrap ${
-            props.gap ? props.gap : "gap-2"
+            props.gap ? props.gap : "gap-1"
           }`}
         >
           <span
@@ -42,7 +45,7 @@ export default function Reward(props) {
       {props.reward.type === "powertoken" && (
         <div
           className={`flex items-center whitespace-nowrap ${
-            props.gap ? props.gap : "gap-2"
+            props.gap ? props.gap : "gap-1"
           }`}
         >
           <span
@@ -56,13 +59,47 @@ export default function Reward(props) {
       {props.reward.type === "ticket" && (
         <div
           className={`flex items-center whitespace-nowrap ${
-            props.gap ? props.gap : "gap-2"
+            props.gap ? props.gap : "gap-1"
           }`}
         >
           <span className={`icon icon-ticket ${props.iconClassNames}`} />
           <span className={`${props.textClassNames}`}>
             {numberWithSpaces(Math.round(props.reward.value * xFactor))}
           </span>
+        </div>
+      )}
+      {props.reward.type === "avatarframe" && (
+        <div
+          className={`flex items-center whitespace-nowrap ${
+            props.gap ? props.gap : "gap-1"
+          }`}
+        >
+          <Tooltip tooltip="1 avatar frame">
+            <div className="avatar avatar-circle avatar-tiny">
+              <img
+                src={prototype.getShopitemByID(1, props.reward.value).image}
+                alt=""
+              />
+              <div>
+                <img src={prototype.getUserByID(1)?.avatar} alt="avatar" />
+              </div>
+            </div>
+          </Tooltip>
+        </div>
+      )}
+      {props.reward.type === "profilebanner" && (
+        <div
+          className={`flex items-center whitespace-nowrap ${
+            props.gap ? props.gap : "gap-1"
+          }`}
+        >
+          <Tooltip tooltip="1 profile banner">
+            <img
+              src={prototype.getShopitemByID(2, props.reward.value).image}
+              alt=""
+              className="w-7 h-7 rounded object-cover border border-ui-600"
+            />
+          </Tooltip>
         </div>
       )}
     </>

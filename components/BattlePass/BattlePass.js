@@ -13,6 +13,8 @@ import { DataBattlepass } from "../../mock-data/data-battlepass";
 import { DataBattlepassRewards } from "../../mock-data/data-battlepass";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import Tooltip from "../Tooltip/Tooltip";
 
 const useResize = (myRef) => {
   const [width, setWidth] = useState(0);
@@ -38,6 +40,8 @@ const useResize = (myRef) => {
 
 export default function Battlepass(props) {
   const [mounted, setMounted] = useState();
+  const { query } = useRouter();
+  const isPremium = query.premium === "true" ? true : false;
 
   useEffect(() => {
     if (!mounted) {
@@ -160,123 +164,152 @@ export default function Battlepass(props) {
 
   return (
     <>
-    {mounted && (
-      <div
-        className={`battlepass-container ${
-          size === "battlepass-md" ? "battlepass-md" : ""
-        }`}
-        ref={componentRef}
-      >
-        <div className="battlepass-viewer">
-          <div className="battlepass-reward">
-            <div className="battlepass-reward-image">
-              <i
-                style={{
-                  "-webkit-mask-image":
-                    "url(https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/" +
+      {mounted && (
+        <div
+          className={`battlepass-container ${
+            size === "battlepass-md" ? "battlepass-md" : ""
+          }`}
+          ref={componentRef}
+        >
+          <div className={`battlepass-viewer ${size === "battlepass-md" ? '!hidden' : ''}`}>
+            <div className="battlepass-reward">
+              <div className="battlepass-reward-image">
+                <i
+                  style={{
+                    "-webkit-mask-image":
+                      "url(https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/" +
+                      getBattlepassRewardByID(
+                        getBattlepassStepByID(activeStep).reward
+                      ).image +
+                      ".png)",
+                  }}
+                />
+                <img
+                  src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
                     getBattlepassRewardByID(
                       getBattlepassStepByID(activeStep).reward
-                    ).image +
-                    ".png)",
-                }}
-              />
-              <img
-                src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                  getBattlepassRewardByID(
-                    getBattlepassStepByID(activeStep).reward
-                  ).image
-                }.png`}
-                width="100%"
-                height="auto"
-                alt={
+                    ).image
+                  }.png`}
+                  width="100%"
+                  height="auto"
+                  alt={
+                    getBattlepassRewardByID(
+                      getBattlepassStepByID(activeStep).reward
+                    ).name
+                  }
+                />
+              </div>
+              <p className="battlepass-reward-name">
+                {size === "battlepass-md" && (
+                  <span className="uppercase text-ui-300">
+                    {getBattlepassStepByID(activeStep).name}:{" "}
+                  </span>
+                )}
+                {
                   getBattlepassRewardByID(
                     getBattlepassStepByID(activeStep).reward
                   ).name
                 }
-              />
+              </p>
             </div>
-            <p className="battlepass-reward-name">
-              {size === "battlepass-md" && (
-                <span className="uppercase text-ui-300">
-                  {getBattlepassStepByID(activeStep).name}:{" "}
+            <div className="battlepass-reward-action">
+              {getBattlepassStepByID(activeStep).id < currentStep ? (
+                <>
+                  {getBattlepassStepByID(activeStep).isPremium ? (
+                    <>
+                      {isPremium ? (
+                        <button
+                          type="button"
+                          className="button button-claim"
+                          onClick={openModalClaimBattlepassRewards.bind(
+                            this,
+                            getBattlepassStepByID(activeStep).reward
+                          )}
+                        >
+                          <span className="icon icon-present animate-bounce" />
+                          <span>Claim reward</span>
+                        </button>
+                      ) : (
+                        <Link href={`/prototype/premium`}>
+                          <button
+                            type="button"
+                            className="button button-tertiary"
+                          >
+                            <span className="icon icon-crown text-premium-500" />
+                            <span className="text-premium-500">
+                              Get Premium
+                            </span>
+                          </button>
+                        </Link>
+                      )}
+                    </>
+                  ) : (
+                    <button
+                      type="button"
+                      className="button button-claim"
+                      onClick={openModalClaimBattlepassRewards.bind(
+                        this,
+                        getBattlepassStepByID(activeStep).reward
+                      )}
+                    >
+                      <span className="icon icon-present animate-bounce" />
+                      <span>Claim reward</span>
+                    </button>
+                  )}
+                </>
+              ) : (
+                <button
+                  type="button"
+                  className="button button-tertiary is-disabled"
+                >
+                  <span className="icon icon-lock" />
+                  <span>Claim reward</span>
+                </button>
+              )}
+            </div>
+            <div className="battlepass-reward-info">
+              {getBattlepassStepByID(activeStep).id < currentStep && (
+                <span>
+                  <span className="text-ui-300">
+                    {1000 + 100 * getBattlepassStepByID(activeStep).id} /
+                  </span>{" "}
+                  <span className="text-ui-100">
+                    {1000 + 100 * getBattlepassStepByID(activeStep).id} XP
+                  </span>
                 </span>
               )}
-              {
-                getBattlepassRewardByID(
-                  getBattlepassStepByID(activeStep).reward
-                ).name
-              }
-            </p>
-          </div>
-          <div className="battlepass-reward-action">
-            
-            {getBattlepassStepByID(activeStep).id < currentStep ? (
-              <button
-              type="button"
-              className="button button-claim"
-              onClick={openModalClaimBattlepassRewards.bind(
-                this,
-                getBattlepassStepByID(activeStep).reward
+              {getBattlepassStepByID(activeStep).id === currentStep && (
+                <span>
+                  <span className="text-ui-300">
+                    {1000 + 100 * getBattlepassStepByID(activeStep).id - 75} /
+                  </span>{" "}
+                  <span className="text-ui-100">
+                    {1000 + 100 * getBattlepassStepByID(activeStep).id} XP
+                  </span>
+                </span>
               )}
-            >
-              <span className="icon icon-present animate-bounce" />
-              <span>Claim reward</span>
-            </button>
-            ) : (
-              <button
-              type="button"
-              className="button button-tertiary is-disabled"
-            >
-              <span className="icon icon-lock" />
-              <span>Claim reward</span>
-            </button>
-            )
-            
-            }
-          </div>
-          <div className="battlepass-reward-info">
-            {getBattlepassStepByID(activeStep).id < currentStep && (
-              <span>
-                <span className="text-ui-300">
-                  {1000 + 100 * getBattlepassStepByID(activeStep).id} /
-                </span>{" "}
-                <span className="text-ui-100">
-                  {1000 + 100 * getBattlepassStepByID(activeStep).id} XP
-                </span>
-              </span>
-            )}
-            {getBattlepassStepByID(activeStep).id === currentStep && (
-              <span>
-                <span className="text-ui-300">
-                  {1000 + 100 * getBattlepassStepByID(activeStep).id - 75} /
-                </span>{" "}
-                <span className="text-ui-100">
-                  {1000 + 100 * getBattlepassStepByID(activeStep).id} XP
-                </span>
-              </span>
-            )}
 
-            {getBattlepassStepByID(activeStep).id > currentStep && (
-              <span>
-                <span className="text-ui-300">0 /</span>{" "}
-                <span className="text-ui-100">
-                  {1000 + 100 * getBattlepassStepByID(activeStep).id} XP
+              {getBattlepassStepByID(activeStep).id > currentStep && (
+                <span>
+                  <span className="text-ui-300">0 /</span>{" "}
+                  <span className="text-ui-100">
+                    {1000 + 100 * getBattlepassStepByID(activeStep).id} XP
+                  </span>
                 </span>
-              </span>
-            )}
+              )}
+            </div>
           </div>
-        </div>
-        <ul className="battlepass">
-          {getBattlepassByID(0)
-            .steps.slice(originStep, originStep + maxSteps)
-            .map((item, itemIndex) => (
-              <li
-                key={itemIndex}
-                className={`battlepass-step ${
-                  item.isPremium ? `is-premium` : ""
-                } ${item.isBonus ? `is-bonus` : ""} ${
-                  item.isSeparator ? `is-separator` : ""
-                } ${activeStep === item.id ? `is-active` : ""}
+          <ul className="battlepass">
+            {getBattlepassByID(0)
+              .steps.slice(originStep, originStep + maxSteps)
+              .map((item, itemIndex) => (
+                <li
+                  key={itemIndex}
+                  className={`battlepass-step ${
+                    item.isPremium ? `is-premium` : ""
+                  } ${item.isBonus ? `is-bonus` : ""} ${
+                    item.isSeparator ? `is-separator` : ""
+                  } ${activeStep === item.id ? `is-active` : ""}
                         
                         ${
                           getBattlepassByID(0).currentStep === item.id
@@ -284,63 +317,109 @@ export default function Battlepass(props) {
                             : ""
                         }
                         `}
-              >
-                <div className="battlepass-info">
-                  <div
-                    className="progressbar progressbar-sm"
-                    style={{ "--percent": handleProgress(item) }}
-                  >
-                    <div />
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  className="battlepass-content"
-                  onClick={handleActive.bind(this, item.id)}
                 >
-                  <div className="battlepass-decoration">{item.name}</div>
-                  <div className="battlepass-body">
-                    <img
-                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                        getBattlepassRewardByID(item.reward).image
-                      }.png`}
-                      width="100%"
-                      height="auto"
-                      alt={getBattlepassRewardByID(item.reward).name}
-                    />
+                  <div className="battlepass-info">
+                    <div
+                      className="progressbar progressbar-sm"
+                      style={{ "--percent": handleProgress(item) }}
+                    >
+                      <div />
+                    </div>
                   </div>
-                </button>
-              </li>
-            ))}
-        </ul>
-        <div className="battlepass-nav">
-          <button
-            type="button"
-            className="button button-ghost rounded-full button-sm"
-            onClick={() => handlePrev()}
-            disabled={activeStep === 1}
-          >
-            <span className="icon icon-ctrl-left" />
-          </button>
-          <span>
-            {activeStep} /{" "}
-            {
-              getBattlepassByID(0).steps.filter((value) => {
-                return value.isBonus !== true;
-              }).length
-            }
-          </span>
-          <button
-            type="button"
-            className="button button-ghost rounded-full button-sm"
-            onClick={() => handleNext()}
-            disabled={activeStep === getBattlepassByID(0).steps.length}
-          >
-            <span className="icon icon-ctrl-right" />
-          </button>
+                  <button
+                    type="button"
+                    className="battlepass-content"
+                    data-tooltip={size === "battlepass-md" && item.id >= currentStep ? getBattlepassRewardByID(item.reward).name : ''}
+                    onClick={handleActive.bind(this, item.id)}
+                  >
+                    {size === "battlepass-md" && item.id < currentStep && (
+                      <div className="absolute inset-0 z-50 flex items-center justify-center p-2 bg-ui-900/90">
+                        {item.isPremium ? (
+                    <>
+                      {isPremium ? (
+                        <button
+                          type="button"
+                          className="button button-sm whitespace-nowrap button-claim"
+                          onClick={openModalClaimBattlepassRewards.bind(
+                            this,
+                            item.reward
+                          )}
+                        >
+                          <span className="icon icon-present animate-bounce" />
+                          <span>Claim</span>
+                        </button>
+                      ) : (
+                        <Link href={`/prototype/premium`}>
+                          <button
+                            type="button"
+                            className="button button-sm whitespace-nowrap button-tertiary is-disabled"
+                          >
+                            <span className="icon icon-lock" />
+                            <span className="">
+                              Claim
+                            </span>
+                          </button>
+                        </Link>
+                      )}
+                    </>
+                  ) : (
+                    <button
+                      type="button"
+                      className="button button-sm whitespace-nowrap button-claim"
+                      onClick={openModalClaimBattlepassRewards.bind(
+                        this,
+                        item.reward
+                      )}
+                    >
+                      <span className="icon icon-present animate-bounce" />
+                      <span>Claim</span>
+                    </button>
+                  )}
+                      </div>
+                    )}
+                    <div className="battlepass-decoration">{item.name}</div>
+                    <div className="battlepass-body">
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(item.reward).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt={getBattlepassRewardByID(item.reward).name}
+                      />
+                    </div>
+                  </button>
+                </li>
+              ))}
+          </ul>
+          <div className="battlepass-nav">
+            <button
+              type="button"
+              className="button button-ghost rounded-full button-sm"
+              onClick={() => handlePrev()}
+              disabled={activeStep === 1}
+            >
+              <span className="icon icon-ctrl-left" />
+            </button>
+            <span>
+              {activeStep} /{" "}
+              {
+                getBattlepassByID(0).steps.filter((value) => {
+                  return value.isBonus !== true;
+                }).length
+              }
+            </span>
+            <button
+              type="button"
+              className="button button-ghost rounded-full button-sm"
+              onClick={() => handleNext()}
+              disabled={activeStep === getBattlepassByID(0).steps.length}
+            >
+              <span className="icon icon-ctrl-right" />
+            </button>
+          </div>
         </div>
-      </div>
-    )}
+      )}
     </>
   );
 }

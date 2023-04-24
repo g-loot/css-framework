@@ -3316,7 +3316,15 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 6000,
+                value: 1000,
+              },
+              {
+                type: "token",
+                value: 100,
+              },
+              {
+                type: "powertoken",
+                value: 5,
               },
             ],
             stats: {
@@ -3334,7 +3342,15 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 5000,
+                value: 700,
+              },
+              {
+                type: "avatarframe",
+                value: 4,
+              },
+              {
+                type: "profilebanner",
+                value: 33,
               },
             ],
             stats: {
@@ -3352,7 +3368,11 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 4000,
+                value: 600,
+              },
+              {
+                type: "avatarframe",
+                value: 5,
               },
             ],
             stats: {
@@ -3370,7 +3390,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 3000,
+                value: 500,
               },
             ],
             stats: {
@@ -3452,7 +3472,15 @@ export const dataGames = [
         rewards: [
           {
             type: "coin",
-            value: 3000000,
+            value: 1000,
+          },
+          {
+            type: "token",
+            value: 100,
+          },
+          {
+            type: "powertoken",
+            value: 5,
           },
         ],
         isEnrolled: false,
@@ -3464,7 +3492,15 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 6000,
+                value: 700,
+              },
+              {
+                type: "avatarframe",
+                value: 4,
+              },
+              {
+                type: "profilebanner",
+                value: 33,
               },
             ],
             stats: {
@@ -3482,7 +3518,11 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 5000,
+                value: 500,
+              },
+              {
+                type: "profilebanner",
+                value: 31,
               },
             ],
             stats: {
@@ -3500,7 +3540,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 4000,
+                value: 400,
               },
             ],
             stats: {
@@ -3518,7 +3558,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 3000,
+                value: 200,
               },
             ],
             stats: {

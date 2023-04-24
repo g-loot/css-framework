@@ -154,7 +154,16 @@ export default function TabClanLeaderboardsHistory() {
                                     />
                                   </div>
                                   <div>
-                                    <div className="h-4 mb-2">{item.name}</div>
+                                    <div className="flex gap-2 items-center mb-2">
+                                      <span>{item.name}</span>
+                                      {item.isCurrent && (
+                                        <span className="chip chip-secondary chip-sm">
+                                          <span className="text-main animate-pulse">
+                                            Ongoing
+                                          </span>
+                                        </span>
+                                      )}
+                                    </div>
                                     <div className="text-sm text-ui-300">
                                       {item.isCurrent ? (
                                         <>12 days left</>
@@ -170,12 +179,16 @@ export default function TabClanLeaderboardsHistory() {
                                       {item.leaderboard
                                         .slice(0, 3)
                                         .map((clan, clanIndex) => (
-                                          <div key={clanIndex} className="avatar avatar-squircle avatar-tiny">
+                                          <div
+                                            key={clanIndex}
+                                            className="avatar avatar-squircle avatar-tiny"
+                                          >
                                             <div>
                                               <img
                                                 src={
-                                                  prototype.getClanByID(clan.clan)
-                                                    .avatar
+                                                  prototype.getClanByID(
+                                                    clan.clan
+                                                  ).avatar
                                                 }
                                                 alt="avatar"
                                               />

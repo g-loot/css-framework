@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
-import ModalLadderHowitworksVideo from "./modal-howitworks-video";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
@@ -31,12 +30,6 @@ export default function Ladders() {
   const { tab } = router.query;
   const defaultTab = "overview";
   const selectedTab = tab ? tab : defaultTab;
-
-  function openModalLadderHowitworksVideo() {
-    uiContext.openModal(
-      <ModalLadderHowitworksVideo></ModalLadderHowitworksVideo>
-    );
-  }
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));

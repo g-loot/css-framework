@@ -88,12 +88,21 @@ export default function Ladders() {
               <img
                 src={selectedLeaderboard.bg}
                 alt={selectedLeaderboard.name}
-                className="absolute inset-0 z-0 object-cover w-full h-full"
+                className={`absolute inset-0 z-0 object-cover w-full h-full ${
+                  selectedLeaderboard.isCurrent ? "" : "grayscale opacity-50"
+                }`}
               />
             </div>
             <div className="border-t border-ui-700 p-4">
               <div className="flex gap-2 md:items-center justify-between">
-                <h1 className="h4">{selectedLeaderboard.name}</h1>
+                <div className="flex items-center gap-2">
+                  <h1 className="h4">{selectedLeaderboard.name}</h1>
+                  {selectedLeaderboard.isCurrent && (
+                    <span className="chip chip-secondary">
+                      <span className="text-main animate-pulse">Ongoing</span>
+                    </span>
+                  )}
+                </div>
                 {selectedLeaderboard.isCurrent ? (
                   <div className="text-right flex items-center gap-1">
                     <span className="icon text-sm text-ui-300 icon-clock" />
@@ -110,7 +119,9 @@ export default function Ladders() {
                     />
                   </div>
                 ) : (
-                  <div className="text-sm text-ui-300">Ended {selectedLeaderboard.id * 2} months ago</div>
+                  <span className="chip chip-secondary">
+                    <span>Ended {selectedLeaderboard.id * 2} months ago</span>
+                  </span>
                 )}
               </div>
               <div className="border-t border-ui-700 mt-4 pt-4">

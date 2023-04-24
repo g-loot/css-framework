@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import Link from "next/link";
-import ModalLadderHowitworksVideo from "./modal-howitworks-video";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -15,12 +14,6 @@ export default function LaddersHeader(props) {
   const uiContext = useContext(UiContext);
   const freeEntry = query.freeentry === "true" ? true : false;
   const breadcrumbs = props.breadcrumbs;
-
-  function openModalLadderHowitworksVideo() {
-    uiContext.openModal(
-      <ModalLadderHowitworksVideo></ModalLadderHowitworksVideo>
-    );
-  }
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));

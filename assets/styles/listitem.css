@@ -17,9 +17,6 @@
     ;
   }
   .item-body {
-    @apply
-    overflow-hidden
-    ;
     &:not([class*='flex-']) {
       @apply
       flex-1
