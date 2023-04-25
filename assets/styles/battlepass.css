@@ -483,6 +483,11 @@
   pointer-events-none
   ;
 
+  .battlepass-nav-container,
+  .battlepass-reward-action,
+  .battlepass-reward > p,
+  .battlepass-reward-info > span,
+  .battlepass-reward-image,
   .battlepass-content {
     @apply 
     relative
@@ -492,7 +497,9 @@
     bg-[-200%_center]
     bg-no-repeat
     animate-[battlepass-body-loader_1s_linear_infinite]
+    shadow-[0_0_0_1px_rgb(var(--color-ui-700))]
     opacity-100
+    rounded
     ;
     background-image: linear-gradient(
       to right,
@@ -514,10 +521,23 @@
     }
   }
 
+  .battlepass-content {
+    @apply
+    border-ui-700
+    ;
+  }
+
   .battlepass-step {
     &.is-active {
-      
+
     }
+  }
+
+  .battlepass-reward-action,
+  .battlepass-nav-container {
+    @apply
+    rounded-full
+    ;
   }
 
   .battlepass-step::before,

@@ -243,9 +243,11 @@ export default function TabClanLeaderboardsHistory() {
                             </div>
                             <div className="item-body p-2">
                               <div className="flex flex-col lg:flex-row gap-2">
-                                <div className="flex-1 leading-tight border-b border-ui-700 pb-2 lg:pb-0 lg:border-none">
+                                <div className="flex-1 leading-relaxed border-b border-ui-700 pb-2 lg:pb-0 lg:border-none">
                                   <div className="flex gap-2 items-center">
-                                    <div className="item-title">{item.name}</div>
+                                    <div className="item-title">
+                                      {item.name}
+                                    </div>
                                     {item.isCurrent && (
                                       <span className="chip chip-secondary chip-sm">
                                         <span className="text-main animate-pulse">
@@ -262,68 +264,68 @@ export default function TabClanLeaderboardsHistory() {
                                     )}
                                   </div>
                                 </div>
-                                <div className="w-64">
-                              {item.isCurrent ? (
-                                <div className="flex-1 flex items-center gap-4">
-                                  <div className="flex-none avatar avatar-squircle avatar-xs">
-                                    <div>
-                                      <img
-                                        src={
-                                          prototype.getClanByID(1)
-                                            ?.avatar
-                                        }
-                                        alt="avatar"
-                                      />
-                                    </div>
-                                  </div>
-                                  <div className="flex gap-2">
-                                  <div>
-                                    <div className="uppercase text-xs text-ui-300">
-                                      Points
-                                    </div>
-                                    <div className="text-sm">1120</div>
-                                  </div>
-                                  <div>
-                                    <div className="uppercase text-xs text-ui-300">
-                                      Position
-                                    </div>
-                                    <div className="text-sm">#243</div>
-                                  </div>
-                                </div>
-                                </div>
-                              ) : (
-                                <div className="flex items-center gap-2">
-                                  <div className="avatar-group -space-x-2">
-                                    {item.leaderboard
-                                      .slice(0, 3)
-                                      .map((clan, clanIndex) => (
-                                        <div
-                                          key={clanIndex}
-                                          className="avatar avatar-squircle avatar-tiny"
-                                        >
-                                          <div>
-                                            <img
-                                              src={
-                                                prototype.getClanByID(clan.clan)
-                                                  .avatar
-                                              }
-                                              alt="avatar"
-                                            />
-                                          </div>
+                                <div className="w-64 flex items-center">
+                                  {item.isCurrent ? (
+                                    <div className="flex-1 flex items-center gap-4">
+                                      <div className="flex-none avatar avatar-squircle avatar-xs">
+                                        <div>
+                                          <img
+                                            src={
+                                              prototype.getClanByID(1)?.avatar
+                                            }
+                                            alt="avatar"
+                                          />
                                         </div>
-                                      ))}
-                                  </div>
-                                  <span className="text-sm text-ui-300">
-                                    {RandomNumber(10, 100)} clans{" "}
-                                    {item.isCurrent ? (
-                                      <> are enrolled</>
-                                    ) : (
-                                      <>have partaken</>
-                                    )}
-                                  </span>
+                                      </div>
+                                      <div className="flex gap-2">
+                                        <div>
+                                          <div className="uppercase text-xs text-ui-300">
+                                            Points
+                                          </div>
+                                          <div className="text-sm">1120</div>
+                                        </div>
+                                        <div>
+                                          <div className="uppercase text-xs text-ui-300">
+                                            Position
+                                          </div>
+                                          <div className="text-sm">#243</div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  ) : (
+                                    <div className="flex items-center gap-2">
+                                      <div className="avatar-group -space-x-2">
+                                        {item.leaderboard
+                                          .slice(0, 3)
+                                          .map((clan, clanIndex) => (
+                                            <div
+                                              key={clanIndex}
+                                              className="avatar avatar-squircle avatar-tiny"
+                                            >
+                                              <div>
+                                                <img
+                                                  src={
+                                                    prototype.getClanByID(
+                                                      clan.clan
+                                                    ).avatar
+                                                  }
+                                                  alt="avatar"
+                                                />
+                                              </div>
+                                            </div>
+                                          ))}
+                                      </div>
+                                      <span className="text-sm text-ui-300">
+                                        {RandomNumber(10, 100)} clans{" "}
+                                        {item.isCurrent ? (
+                                          <> are enrolled</>
+                                        ) : (
+                                          <>have partaken</>
+                                        )}
+                                      </span>
+                                    </div>
+                                  )}
                                 </div>
-                              )}
-                              </div>
                               </div>
                             </div>
                           </li>
