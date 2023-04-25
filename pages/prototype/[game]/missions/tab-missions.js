@@ -9,6 +9,7 @@ import CardMissionSecondary from "../../../../components/Card/CardMissionSeconda
 import PremiumLogo from "../../../../components/PremiumLogo/PremiumLogo";
 import CardMissionTableTr from "../../../../components/Card/CardMissionTableTr";
 import ButtonStatsUpdate from "../../../../components/ButtonStatsUpdate/ButtonStatsUpdate";
+import LoadMore from "../../../../components/LoadMore/LoadMore";
 
 export default function TabMissionsMissions() {
   const router = useRouter();
@@ -30,7 +31,6 @@ export default function TabMissionsMissions() {
       setSubmitting(false);
     }, 1000);
   }
-
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
@@ -87,7 +87,7 @@ export default function TabMissionsMissions() {
 
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
               <div>
-              Your latest match ended <b>Dec 13 / 8:12 PM</b>
+                Your latest match ended <b>Dec 13 / 8:12 PM</b>
               </div>
               <ButtonStatsUpdate />
             </div>
@@ -142,12 +142,31 @@ export default function TabMissionsMissions() {
               </>
             )}
 
-{isEmpty ? (
+            {isEmpty ? (
               <div className="surface surface-dimmed rounded px-4 py-8 text-center">
                 <div className="max-w-xs mx-auto">
                   <span className="icon icon-missions text-6xl text-ui-500" />
                   <p className="mt-2 text-ui-300">
-                    The missions are currently unavailable. If the issue persists check out our <a rel="noreferrer" href="http://help.stryda.gg/" target="_blank" className="link">help articles</a> or <a rel="noreferrer" href="http://help.stryda.gg/" target="_blank" className="link">contact support</a>.
+                    The missions are currently unavailable. If the issue
+                    persists check out our{" "}
+                    <a
+                      rel="noreferrer"
+                      href="http://help.stryda.gg/"
+                      target="_blank"
+                      className="link"
+                    >
+                      help articles
+                    </a>{" "}
+                    or{" "}
+                    <a
+                      rel="noreferrer"
+                      href="http://help.stryda.gg/"
+                      target="_blank"
+                      className="link"
+                    >
+                      contact support
+                    </a>
+                    .
                   </p>
                 </div>
               </div>
@@ -164,8 +183,6 @@ export default function TabMissionsMissions() {
                 </div>
               </>
             )}
-
-            
           </section>
           <section
             className="py-8 animate-slide-in-bottom animate-delay"
@@ -199,12 +216,7 @@ export default function TabMissionsMissions() {
                   </table>
                 </div>
                 <div className="text-center mt-4 mb-8">
-                  <button
-                    type="button"
-                    className="button button-sm button-primary"
-                  >
-                    <span>Load more</span>
-                  </button>
+                  <LoadMore className="button-sm button-tertiary" />
                 </div>
               </>
             )}

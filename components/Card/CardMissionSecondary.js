@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
+import LottieExplosionLvl from "../../assets/animations/Mission_Reveal_Lvl_1_2000ms.json";
 import LottieExplosionLvl1 from "../../assets/animations/Mission_Reveal_Lvl_1_2000ms.json";
 import LottieExplosionLvl2 from "../../assets/animations/Mission_Reveal_Lvl_2_2000ms.json";
 import LottieExplosionLvl3 from "../../assets/animations/Mission_Reveal_Lvl_3_2000ms.json";
@@ -32,16 +32,17 @@ export default function CardMissionSecondary(props) {
   const [isCapped, setIsCapped] = useState(false);
 
   function LottieExplosion(level) {
-    console.log(level);
-    if (level === 1) {
+    if(level === 1) {
       return LottieExplosionLvl1;
-    } else if (level === 2) {
+    } else if(level === 2) {
       return LottieExplosionLvl2;
-    } else if (level === 3) {
+    } else if(level === 3) {
       return LottieExplosionLvl3;
-    } else if (level === 4) {
+    } else if(level === 4) {
       return LottieExplosionLvl4;
-    }
+    } else {
+      return LottieExplosionLvl;
+    } 
   }
 
   useEffect(() => {
@@ -171,7 +172,7 @@ export default function CardMissionSecondary(props) {
             </div>
           </div>
         </div>
-        {MissionRetrieved && !mission.isVisible && (
+        {MissionRetrieved && !mission.isVisible && mission.category && (
               <div className={`revealer-transition lottie-blur ${mission.category === 1 ? "rarity-category-1" : ""} ${
                 mission.category === 2 ? "rarity-category-2" : ""
               } ${mission.category === 3 ? "rarity-category-3" : ""} ${
@@ -196,22 +197,6 @@ export default function CardMissionSecondary(props) {
               mission.category === 4 ? "rarity-category-4" : ""
             }`}
           >
-            {/*
-            {!hasClaimed && mission.target === mission.current && (
-              <div className="card-overlay">
-                <div>
-                  <button
-                    type="button"
-                    className="button button-claim is-shining"
-                    onClick={openModalClaimMission}
-                  >
-                    <span className="icon icon-present animate-bounce" />
-                    <span>Claim reward</span>
-                  </button>
-                </div>
-              </div>
-            )}
-            */}
             <div className="card-decoration"></div>
             <div className="card-body">
               <div className="absolute z-10 top-2 right-2 m-0">

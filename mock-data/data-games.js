@@ -4434,7 +4434,6 @@ export const dataGames = [
       {
         name: "Get 22 kills",
         category: 1,
-        category: 1,
         label: "kills",
         current: 11,
         target: 22,
@@ -4446,9 +4445,8 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-dota2_1.webp",
       },
       {
-        name: "Get 22 kills",
-        category: 1,
-        category: 1,
+        name: "Get 40 kills",
+        category: 4,
         label: "kills",
         current: 11,
         target: 22,
@@ -4485,7 +4483,6 @@ export const dataGames = [
       {
         name: "Get 22 kills",
         category: 1,
-        category: 1,
         label: "kills",
         current: 11,
         target: 22,
@@ -4497,9 +4494,8 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-leagueoflegends_1.webp",
       },
       {
-        name: "Get 22 kills",
-        category: 1,
-        category: 1,
+        name: "Get 40 kills",
+        category: 4,
         label: "kills",
         current: 11,
         target: 22,
