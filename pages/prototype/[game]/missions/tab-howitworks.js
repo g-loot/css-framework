@@ -40,22 +40,22 @@ const MissionsHowitworksTabs = [
       },
       {
         type: "p",
-        text: "The XP you earn will be added to your player level and to the Battle Pass. You will unlock a reward for each milestone you reach in the Battle Pass. XP is accumulated from all games you play on Stryda. That means you gain XP from any game that Stryda supports. ",
+        text: "The XP you earn will be added to your player level and to the Battlepass. You will unlock a reward for each milestone you reach in the Battlepass. XP is accumulated from all games you play on Stryda. That means you gain XP from any game that Stryda supports. ",
       },
     ],
   },
   {
-    title: "Battle Pass",
+    title: "Battlepass",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/coins_tokens_xp.jpg",
     content: [
       {
         type: "p",
-        text: "Every time you reach a milestone on your Battle Pass, you unlock a new reward, increasingly more rewarding as you move deeper.",
+        text: "Every time you reach a milestone on your Battlepass, you unlock a new reward, increasingly more rewarding as you move deeper.",
       },
       {
         type: "p",
-        text: "Each Battle Pass lasts for a set period of time, make sure to check out its duration so that you don’t miss out on any rewards!",
+        text: "Each Battlepass lasts for a set period of time, make sure to check out its duration so that you don’t miss out on any rewards!",
       },
     ],
   },
@@ -120,7 +120,7 @@ export default function TabMissionsHowItWorks() {
                   <p className="text-ui-300 leading-relaxed mb-2">
                     Missions are smaller objectives that you can complete
                     whenever you want. By completing Missions, you level up your
-                    profile and progress in the Battle Pass. You can complete
+                    profile and progress in the Battlepass. You can complete
                     Missions across all the games available on Stryda.
                   </p>
                   <p className="text-ui-300 leading-relaxed">
@@ -139,14 +139,14 @@ export default function TabMissionsHowItWorks() {
                   alt=""
                 />
                 <div className="px-4 sm:px-0">
-                  <h2 className="h4 mb-4">Battle Pass</h2>
+                  <h2 className="h4 mb-4">Battlepass</h2>
                   <p className="text-ui-300 leading-relaxed mb-2">
-                    Every time you reach a milestone on your Battle Pass, you
+                    Every time you reach a milestone on your Battlepass, you
                     unlock a new reward, increasingly more rewarding as you move
                     deeper.
                   </p>
                   <p className="text-ui-300 leading-relaxed">
-                    Each Battle Pass lasts for a set period of time, make sure
+                    Each Battlepass lasts for a set period of time, make sure
                     to check out its duration so that you don’t miss out on any
                     rewards!
                   </p>
@@ -159,7 +159,7 @@ export default function TabMissionsHowItWorks() {
             style={{ "--delay": "calc(2 * 0.05s)" }}
           >
             <div className="px-4 sm:px-0">
-              <h2 className="h4 mb-4">How Missions and Battle Pass work</h2>
+              <h2 className="h4 mb-4">How Missions and Battlepass work</h2>
             </div>
             <div className="overflow-x-auto scrollbar-desktop overflow-y-hidden py-4">
               <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px] !pb-44">
@@ -198,7 +198,7 @@ export default function TabMissionsHowItWorks() {
                     <i>4</i>
                     <div className="text-sm text-ui-300">
                       Once a mission is completed, claim your XP and head over
-                      to the Battle Pass.
+                      to the Battlepass.
                     </div>
                     <span />
                   </div>

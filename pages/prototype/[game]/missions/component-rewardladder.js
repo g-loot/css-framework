@@ -88,7 +88,7 @@ export default function ComponentRewardLadder() {
             />
           </span>
           <Link href={`/prototype/battlepass${prototype.getURLparams()}`}>
-            <a className="link link-hover text-ui-300 text-sm">
+            <a className="link text-ui-300 text-sm">
               View Battlepass
             </a>
           </Link>

@@ -136,7 +136,7 @@ export default function Home() {
             <h3 className="h6">Solo</h3>
             {!hasNoLadders && (
               <Link href="/prototype/valorant/ladders/">
-                <a className="link link-hover text-ui-300 text-sm">
+                <a className="link text-ui-300 text-sm">
                   View Ladder history
                 </a>
               </Link>
@@ -149,13 +149,13 @@ export default function Home() {
             <h3 className="h6">Clan</h3>
             {hasNoClan ? (
               <Link href="/prototype/clans/">
-                <a className="link link-hover text-ui-300 text-sm">
+                <a className="link text-ui-300 text-sm">
                   Discover Clans
                 </a>
               </Link>
             ) : (
               <Link href="/prototype/valorant/ladders/">
-                <a className="link link-hover text-ui-300 text-sm">
+                <a className="link text-ui-300 text-sm">
                   View your Clan
                 </a>
               </Link>

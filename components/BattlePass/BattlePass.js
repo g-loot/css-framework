@@ -55,6 +55,19 @@ export default function Battlepass(props) {
   const [activeStep, setActiveStep] = useState(1);
   const [originStep, setOriginStep] = useState(0);
   const [maxSteps, setmaxSteps] = useState(9);
+  const [loading, setLoading] = useState(true);
+
+  function RandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, RandomNumber(300, 3000));
+    }
+  }, [loading]);
 
   const componentRef = useRef();
   const { width, height } = useResize(componentRef);
@@ -134,6 +147,18 @@ export default function Battlepass(props) {
     );
   }
 
+  function contentClick(step) {
+    if (size === "battlepass-md" && step.id < currentStep) {
+      if (step.isPremium && !isPremium) {
+        window.location.href = `/prototype/premium`;
+      } else {
+        openModalClaimBattlepassRewards(step.reward);
+      }
+    } else {
+      setActiveStep(step.id);
+    }
+  }
+
   function handleNext() {
     const step = activeStep + 1;
     setActiveStep(step);
@@ -144,6 +169,14 @@ export default function Battlepass(props) {
       "origin " + originStep,
       "max " + maxSteps
     );
+  }
+
+  function handleForward() {
+    if (activeStep < maxSteps) {
+      const step = maxSteps + 2;
+      setActiveStep(step);
+      setOriginStep(step);
+    }
   }
 
   function handlePrevBatch() {
@@ -166,12 +199,16 @@ export default function Battlepass(props) {
     <>
       {mounted && (
         <div
-          className={`battlepass-container ${
+          className={`battlepass-container ${loading ? 'is-loading' : ''} ${
             size === "battlepass-md" ? "battlepass-md" : ""
           }`}
           ref={componentRef}
         >
-          <div className={`battlepass-viewer ${size === "battlepass-md" ? '!hidden' : ''}`}>
+          <div
+            className={`battlepass-viewer ${
+              size === "battlepass-md" ? "!hidden" : ""
+            }`}
+          >
             <div className="battlepass-reward">
               <div className="battlepass-reward-image">
                 <i
@@ -329,52 +366,44 @@ export default function Battlepass(props) {
                   <button
                     type="button"
                     className="battlepass-content"
-                    data-tooltip={size === "battlepass-md" && item.id >= currentStep ? getBattlepassRewardByID(item.reward).name : ''}
-                    onClick={handleActive.bind(this, item.id)}
+                    data-tooltip={
+                      size === "battlepass-md" && item.id >= currentStep
+                        ? getBattlepassRewardByID(item.reward).name
+                        : ""
+                    }
+                    onClick={contentClick.bind(this, item)}
                   >
                     {size === "battlepass-md" && item.id < currentStep && (
                       <div className="absolute inset-0 z-50 flex items-center justify-center p-2 bg-ui-900/90">
                         {item.isPremium ? (
-                    <>
-                      {isPremium ? (
-                        <button
-                          type="button"
-                          className="button button-sm whitespace-nowrap button-claim"
-                          onClick={openModalClaimBattlepassRewards.bind(
-                            this,
-                            item.reward
-                          )}
-                        >
-                          <span className="icon icon-present animate-bounce" />
-                          <span>Claim</span>
-                        </button>
-                      ) : (
-                        <Link href={`/prototype/premium`}>
+                          <>
+                            {isPremium ? (
+                              <button
+                                type="button"
+                                className="button button-sm whitespace-nowrap button-claim"
+                              >
+                                <span className="icon icon-present animate-bounce" />
+                                <span>Claim</span>
+                              </button>
+                            ) : (
+                              <button
+                                type="button"
+                                className="button button-sm whitespace-nowrap button-tertiary is-disabled"
+                              >
+                                <span className="icon icon-lock" />
+                                <span className="">Claim</span>
+                              </button>
+                            )}
+                          </>
+                        ) : (
                           <button
                             type="button"
-                            className="button button-sm whitespace-nowrap button-tertiary is-disabled"
+                            className="button button-sm whitespace-nowrap button-claim"
                           >
-                            <span className="icon icon-lock" />
-                            <span className="">
-                              Claim
-                            </span>
+                            <span className="icon icon-present animate-bounce" />
+                            <span>Claim</span>
                           </button>
-                        </Link>
-                      )}
-                    </>
-                  ) : (
-                    <button
-                      type="button"
-                      className="button button-sm whitespace-nowrap button-claim"
-                      onClick={openModalClaimBattlepassRewards.bind(
-                        this,
-                        item.reward
-                      )}
-                    >
-                      <span className="icon icon-present animate-bounce" />
-                      <span>Claim</span>
-                    </button>
-                  )}
+                        )}
                       </div>
                     )}
                     <div className="battlepass-decoration">{item.name}</div>
@@ -392,30 +421,50 @@ export default function Battlepass(props) {
                 </li>
               ))}
           </ul>
-          <div className="battlepass-nav">
+          <div className="battlepass-nav-container">
             <button
               type="button"
-              className="button button-ghost rounded-full button-sm"
+              className="button button-tertiary rounded-full button-sm"
               onClick={() => handlePrev()}
               disabled={activeStep === 1}
             >
-              <span className="icon icon-ctrl-left" />
+              <span className="icon icon-ctrl-backward" />
             </button>
-            <span>
-              {activeStep} /{" "}
-              {
-                getBattlepassByID(0).steps.filter((value) => {
-                  return value.isBonus !== true;
-                }).length
-              }
-            </span>
+            <div className="battlepass-nav">
+              <button
+                type="button"
+                className="button button-ghost rounded-full button-sm"
+                onClick={() => handlePrev()}
+                disabled={activeStep === 1}
+              >
+                <span className="icon icon-ctrl-left" />
+              </button>
+              <span>
+                {activeStep} /{" "}
+                {
+                  getBattlepassByID(0).steps.filter((value) => {
+                    return value.isBonus !== true;
+                  }).length
+                }
+              </span>
+              <button
+                type="button"
+                className="button button-ghost rounded-full button-sm"
+                onClick={() => handleNext()}
+                disabled={activeStep === getBattlepassByID(0).steps.length}
+              >
+                <span className="icon icon-ctrl-right" />
+              </button>
+            </div>
             <button
               type="button"
-              className="button button-ghost rounded-full button-sm"
-              onClick={() => handleNext()}
-              disabled={activeStep === getBattlepassByID(0).steps.length}
+              className="button button-tertiary rounded-full button-sm"
+              onClick={() => handleForward()}
+              disabled={
+                activeStep + maxSteps > getBattlepassByID(0).steps.length
+              }
             >
-              <span className="icon icon-ctrl-right" />
+              <span className="icon icon-ctrl-forward" />
             </button>
           </div>
         </div>

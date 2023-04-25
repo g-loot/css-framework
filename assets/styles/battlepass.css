@@ -79,6 +79,15 @@
   ;
 }
 
+.battlepass-nav-container {
+  @apply
+  flex
+  items-center
+  justify-center
+  gap-2
+  ;
+}
+
 .battlepass-nav {
   @apply
   flex
@@ -463,5 +472,71 @@
       h-12
       ;
     }
+  }
+}
+
+/* loading */
+
+
+.battlepass-container.is-loading {
+  @apply
+  pointer-events-none
+  ;
+
+  .battlepass-content {
+    @apply 
+    relative
+    pointer-events-none
+    bg-ui-800
+    bg-[length:800px_100%]
+    bg-[-200%_center]
+    bg-no-repeat
+    animate-[battlepass-body-loader_1s_linear_infinite]
+    opacity-100
+    ;
+    background-image: linear-gradient(
+      to right,
+      rgba(var(--color-ui-800) / 100%) 8%,
+      rgba(var(--color-ui-700) / 100%) 18%,
+      rgba(var(--color-ui-800) / 100%) 33%
+    );
+    &,
+    *,
+    [class*="text-"] {
+      @apply 
+      !text-ui-800/0;
+    }
+    * {
+      @apply
+      !opacity-0
+      !bg-ui-800/0
+      ;
+    }
+  }
+
+  .battlepass-step {
+    &.is-active {
+      
+    }
+  }
+
+  .battlepass-step::before,
+  .battlepass-content::before,
+  .battlepass-body::before,
+  .battlepass-body>img,
+  .battlepass-decoration,
+  .battlepass-info>.progressbar>* {
+    @apply
+    hidden
+    ;
+  }
+}
+
+@keyframes battlepass-body-loader {
+  0% {
+    background-position: -900px 0;
+  }
+  100% {
+    background-position: 900px 0;
   }
 }

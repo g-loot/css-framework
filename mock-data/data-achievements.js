@@ -50,7 +50,7 @@ export const dataAchievements = [
       {
         id: 7,
         name: "Iron Man",
-        description: "Complete the Battle Pass before reset",
+        description: "Complete the Battlepass before reset",
         icon: "ironman",
       },
       {

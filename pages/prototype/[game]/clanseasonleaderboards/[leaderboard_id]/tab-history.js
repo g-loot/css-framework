@@ -125,94 +125,212 @@ export default function TabClanLeaderboardsHistory() {
                     </div>
                   </section>
                 ) : (
-                  <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
-                    <table className="table table-rounded rounded-xl w-full">
-                      <tbody>
-                        {selectedGame.clanLeaderboards.map(
-                          (item, itemIndex) => (
-                            <Link
-                              key={itemIndex}
-                              href={`/prototype/${game}/clanseasonleaderboards/${item.id}`}
-                            >
-                              <tr
-                                className="interactive animate-slide-in-bottom animate-delay"
-                                style={{
-                                  "--delay": "calc(" + itemIndex + " * 0.05s)",
-                                }}
+                  <>
+                    <div className="hidden overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
+                      <table className="table table-rounded rounded-xl w-full">
+                        <tbody>
+                          {selectedGame.clanLeaderboards.map(
+                            (item, itemIndex) => (
+                              <Link
+                                key={itemIndex}
+                                href={`/prototype/${game}/clanseasonleaderboards/${item.id}`}
                               >
-                                <td className="flex items-center gap-4">
-                                  <div className="w-48 aspect-video relative flex items-center justify-center overflow-hidden rounded">
-                                    <img
-                                      src={item.logo}
-                                      alt={item.name}
-                                      className="relative z-10 max-w-[120px] max-h-[60px] h-auto w-full"
-                                    />
-                                    <img
-                                      src={item.bg}
-                                      alt={item.name}
-                                      className="absolute inset-0 z-0 object-cover w-full h-full"
-                                    />
+                                <tr
+                                  className="interactive animate-slide-in-bottom animate-delay"
+                                  style={{
+                                    "--delay":
+                                      "calc(" + itemIndex + " * 0.05s)",
+                                  }}
+                                >
+                                  <td className="flex items-center gap-4">
+                                    <div className="w-48 aspect-video relative flex items-center justify-center overflow-hidden rounded">
+                                      <img
+                                        src={item.logo}
+                                        alt={item.name}
+                                        className="relative z-10 max-w-[120px] max-h-[60px] h-auto w-full"
+                                      />
+                                      <img
+                                        src={item.bg}
+                                        alt={item.name}
+                                        className="absolute inset-0 z-0 object-cover w-full h-full"
+                                      />
+                                    </div>
+                                    <div>
+                                      <div className="flex gap-2 items-center mb-2">
+                                        <span>{item.name}</span>
+                                        {item.isCurrent && (
+                                          <span className="chip chip-secondary chip-sm">
+                                            <span className="text-main animate-pulse">
+                                              Ongoing
+                                            </span>
+                                          </span>
+                                        )}
+                                      </div>
+                                      <div className="text-sm text-ui-300">
+                                        {item.isCurrent ? (
+                                          <>12 days left</>
+                                        ) : (
+                                          <>Ended {item.id * 2} months ago</>
+                                        )}
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div className="flex items-center gap-2">
+                                      <div className="avatar-group -space-x-2">
+                                        {item.leaderboard
+                                          .slice(0, 3)
+                                          .map((clan, clanIndex) => (
+                                            <div
+                                              key={clanIndex}
+                                              className="avatar avatar-squircle avatar-tiny"
+                                            >
+                                              <div>
+                                                <img
+                                                  src={
+                                                    prototype.getClanByID(
+                                                      clan.clan
+                                                    ).avatar
+                                                  }
+                                                  alt="avatar"
+                                                />
+                                              </div>
+                                            </div>
+                                          ))}
+                                      </div>
+                                      <span className="text-sm text-ui-300">
+                                        {RandomNumber(10, 100)} clans{" "}
+                                        {item.isCurrent ? (
+                                          <> are enrolled</>
+                                        ) : (
+                                          <>have partaken</>
+                                        )}
+                                      </span>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </Link>
+                            )
+                          )}
+                        </tbody>
+                      </table>
+                    </div>
+                    <ul className="items-spaced item-interactive space-y-2">
+                      {selectedGame.clanLeaderboards.map((item, itemIndex) => (
+                        <Link
+                          key={itemIndex}
+                          href={`/prototype/${game}/clanseasonleaderboards/${item.id}`}
+                        >
+                          <li
+                            className="item rounded p-0 animate-slide-in-bottom animate-delay"
+                            style={{
+                              "--delay": "calc(" + itemIndex + " * 0.05s)",
+                            }}
+                          >
+                            <div className="item-image p-0">
+                              <div className="w-48 aspect-video relative flex items-center justify-center overflow-hidden rounded-l">
+                                <img
+                                  src={item.logo}
+                                  alt={item.name}
+                                  className="relative z-10 max-w-[120px] max-h-[60px] h-auto w-full"
+                                />
+                                <img
+                                  src={item.bg}
+                                  alt={item.name}
+                                  className="absolute inset-0 z-0 object-cover w-full h-full"
+                                />
+                              </div>
+                            </div>
+                            <div className="item-body p-2">
+                              <div className="flex flex-col lg:flex-row gap-2">
+                                <div className="flex-1 leading-tight border-b border-ui-700 pb-2 lg:pb-0 lg:border-none">
+                                  <div className="flex gap-2 items-center">
+                                    <div className="item-title">{item.name}</div>
+                                    {item.isCurrent && (
+                                      <span className="chip chip-secondary chip-sm">
+                                        <span className="text-main animate-pulse">
+                                          Ongoing
+                                        </span>
+                                      </span>
+                                    )}
+                                  </div>
+                                  <div className="text-sm text-ui-300">
+                                    {item.isCurrent ? (
+                                      <>12 days left</>
+                                    ) : (
+                                      <>Ended {item.id * 2} months ago</>
+                                    )}
+                                  </div>
+                                </div>
+                                <div className="w-64">
+                              {item.isCurrent ? (
+                                <div className="flex-1 flex items-center gap-4">
+                                  <div className="flex-none avatar avatar-squircle avatar-xs">
+                                    <div>
+                                      <img
+                                        src={
+                                          prototype.getClanByID(1)
+                                            ?.avatar
+                                        }
+                                        alt="avatar"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div className="flex gap-2">
+                                  <div>
+                                    <div className="uppercase text-xs text-ui-300">
+                                      Points
+                                    </div>
+                                    <div className="text-sm">1120</div>
                                   </div>
                                   <div>
-                                    <div className="flex gap-2 items-center mb-2">
-                                      <span>{item.name}</span>
-                                      {item.isCurrent && (
-                                        <span className="chip chip-secondary chip-sm">
-                                          <span className="text-main animate-pulse">
-                                            Ongoing
-                                          </span>
-                                        </span>
-                                      )}
+                                    <div className="uppercase text-xs text-ui-300">
+                                      Position
                                     </div>
-                                    <div className="text-sm text-ui-300">
-                                      {item.isCurrent ? (
-                                        <>12 days left</>
-                                      ) : (
-                                        <>Ended {item.id * 2} months ago</>
-                                      )}
-                                    </div>
+                                    <div className="text-sm">#243</div>
                                   </div>
-                                </td>
-                                <td>
-                                  <div className="flex items-center gap-2">
-                                    <div className="avatar-group -space-x-2">
-                                      {item.leaderboard
-                                        .slice(0, 3)
-                                        .map((clan, clanIndex) => (
-                                          <div
-                                            key={clanIndex}
-                                            className="avatar avatar-squircle avatar-tiny"
-                                          >
-                                            <div>
-                                              <img
-                                                src={
-                                                  prototype.getClanByID(
-                                                    clan.clan
-                                                  ).avatar
-                                                }
-                                                alt="avatar"
-                                              />
-                                            </div>
+                                </div>
+                                </div>
+                              ) : (
+                                <div className="flex items-center gap-2">
+                                  <div className="avatar-group -space-x-2">
+                                    {item.leaderboard
+                                      .slice(0, 3)
+                                      .map((clan, clanIndex) => (
+                                        <div
+                                          key={clanIndex}
+                                          className="avatar avatar-squircle avatar-tiny"
+                                        >
+                                          <div>
+                                            <img
+                                              src={
+                                                prototype.getClanByID(clan.clan)
+                                                  .avatar
+                                              }
+                                              alt="avatar"
+                                            />
                                           </div>
-                                        ))}
-                                    </div>
-                                    <span className="text-sm text-ui-300">
-                                      {RandomNumber(10, 100)} clans{" "}
-                                      {item.isCurrent ? (
-                                        <> are enrolled</>
-                                      ) : (
-                                        <>have partaken</>
-                                      )}
-                                    </span>
+                                        </div>
+                                      ))}
                                   </div>
-                                </td>
-                              </tr>
-                            </Link>
-                          )
-                        )}
-                      </tbody>
-                    </table>
-                  </div>
+                                  <span className="text-sm text-ui-300">
+                                    {RandomNumber(10, 100)} clans{" "}
+                                    {item.isCurrent ? (
+                                      <> are enrolled</>
+                                    ) : (
+                                      <>have partaken</>
+                                    )}
+                                  </span>
+                                </div>
+                              )}
+                              </div>
+                              </div>
+                            </div>
+                          </li>
+                        </Link>
+                      ))}
+                    </ul>
+                  </>
                 )}
               </>
             )}

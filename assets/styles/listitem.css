@@ -54,9 +54,16 @@
 .item-interactive > .item,
 .item.item-interactive {
   @apply
-  transition
-  duration-100
   cursor-pointer
+  -outline-offset-1
+  active:outline
+  active:outline-1
+  outline-ui-400
+  focus-visible:outline
+  focus-visible:outline-main
+  transition-[color,background,transform,opacity]
+  duration-200
+  ease-in-out
   ;
   .item-title {
     &:not([class*="text-"]) {

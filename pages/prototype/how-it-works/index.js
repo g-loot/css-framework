@@ -19,13 +19,13 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "To start competing in Missions, all you need to do is connect Stryda to your game, either by connecting your Riot account (VALORANT) or Steam account (PUBG: BATTLEGROUNDS) or by running the Stryda PC app while you play (any other game).  Each time you successfully complete a Mission, you earn XP, which make you progress on the Battle Pass. You can complete up to 6 Missions each day, and new ones appear every 24 hours. Keep an eye on gloot.com to see your progress and check out what’s new.",
+        text: "To start competing in Missions, all you need to do is connect Stryda to your game, either by connecting your Riot account (VALORANT) or Steam account (PUBG: BATTLEGROUNDS) or by running the Stryda PC app while you play (any other game).  Each time you successfully complete a Mission, you earn XP, which make you progress on the Battlepass. You can complete up to 6 Missions each day, and new ones appear every 24 hours. Keep an eye on gloot.com to see your progress and check out what’s new.",
       },
     ],
   },
   {
     id: 2,
-    subtitle: "Battle Pass",
+    subtitle: "Battlepass",
     title: "Reach milestones & unlock rewards",
     url: "missions-rewards",
     icon: "icon-military-medal",
@@ -33,11 +33,11 @@ const TabsItems = [
     content: [
       {
         type: "p",
-        text: "The Battle Pass is how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Battle Pass, you unlock another reward.",
+        text: "The Battlepass is how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Battlepass, you unlock another reward.",
       },
       {
         type: "p",
-        text: "Battle Pass and XP reset each week so you'll always have something new to work towards.",
+        text: "Battlepass and XP reset each week so you'll always have something new to work towards.",
       },
     ],
   },
@@ -115,7 +115,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "Tokens are how you pay to enter your scores in the Ladder. Tokens can be earned through the Battle Pass, Daily Login Streaks, or bought from the shop.",
+        text: "Tokens are how you pay to enter your scores in the Ladder. Tokens can be earned through the Battlepass, Daily Login Streaks, or bought from the shop.",
       },
     ],
   },
