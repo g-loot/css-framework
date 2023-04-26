@@ -21,8 +21,12 @@ const useResize = (myRef) => {
   const [height, setHeight] = useState(0);
 
   const handleResize = useCallback(() => {
-    setWidth(myRef.current.offsetWidth);
-    setHeight(myRef.current.offsetHeight);
+
+    setTimeout(() => {
+      setWidth(myRef.current.offsetWidth);
+      setHeight(myRef.current.offsetHeight);
+    }, 500);
+    
   }, [myRef]);
 
   useEffect(() => {
@@ -74,7 +78,6 @@ export default function Battlepass(props) {
   const { width, height } = useResize(componentRef);
 
   const uiContext = useContext(UiContext);
-  const variablesContext = useContext(VariablesContext);
 
   useEffect(() => {
     setCurrentStep(getBattlepassByID(selectedBattlepass).currentStep);
@@ -85,22 +88,18 @@ export default function Battlepass(props) {
   }, []);
 
   useEffect(() => {
-    if (width > 0) {
-      if (width > 1288) {
-        setmaxSteps(9);
-      } else if (width < 1288 && width > 1160) {
-        setmaxSteps(8);
-      } else if (width < 1160 && width > 992) {
-        setmaxSteps(7);
-      } else if (width < 992 && width > 848) {
-        setmaxSteps(6);
-      } else if (width < 848 && width > 750) {
-        setmaxSteps(5);
-      } else if (width < 750 && width > 350) {
-        setmaxSteps(3);
-      } else {
-        setmaxSteps(2);
-      }
+    if (width > 1288) {
+      setmaxSteps(9);
+    } else if (width < 1288 && width > 1160) {
+      setmaxSteps(7);
+    } else if (width < 1160 && width > 992) {
+      setmaxSteps(5);
+    } else if (width < 992 && width > 848) {
+      setmaxSteps(4);
+    } else if (width < 848 && width > 750) {
+      setmaxSteps(3);
+    } else if (width < 750) {
+      setmaxSteps(2);
     }
   }, [width]);
 

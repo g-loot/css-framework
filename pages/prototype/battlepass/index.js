@@ -40,7 +40,7 @@ export default function BattlepassPage() {
         </section>
         <section className="mb-8 surface surface-dimmed p-4 relative sm:rounded animate-slide-in-bottom overflow-hidden">
         <div className="p-4 flex flex-col lg:flex-row items-start justify-between pb-8 mb-8 gap-4 lg:gap-8 border-b border-ui-700">
-            <div className="flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-8">
+            <div className="flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-8 text-center md:text-left">
               <h2>Xmas mayhem</h2>
               <div className="flex-1 xl:border-l xl:border-ui-700 xl:pl-8 flex items-center">
                 <p className="max-w-[50ch] text-ui-300">

@@ -52,15 +52,9 @@
     inset-0
     bg-[150%]
     bg-[length:400%_auto]
-    /*
-    animate-[battlepass-shining-rays_5s_cubic-bezier(0.1,0,0.8,1)_infinite]
-    bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_54%,_rgba(255,255,255,0)_60.9%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,0)_71%)]
+    animate-[battlepass-reward-image-rays_10s_cubic-bezier(0.1,0,0.8,1)_infinite]
+    bg-[linear-gradient(130deg,_rgba(255,255,255,0)_44%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_50%,_rgba(255,255,255,0)_59%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_66%)]
     bg-no-repeat
-    */
-    animate-[battlepass-reward-image-rays_8s_cubic-bezier(0.1,0,0.8,1)_infinite]
-    bg-[linear-gradient(130deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_54%,_rgba(255,255,255,0)_60.9%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,0)_71%)]
-    bg-no-repeat
-    blur
     ;
     mask-size: cover;
     mask-repeat: no-repeat;
@@ -395,7 +389,7 @@
         bg-[150%]
         bg-[length:300%_auto]
         animate-[battlepass-reward-image-rays_6s_cubic-bezier(0.1,0,0.8,1)_infinite]
-        bg-[linear-gradient(130deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_54%,_rgba(255,255,255,0)_60.9%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,0)_71%)]
+        bg-[linear-gradient(130deg,_rgba(255,255,255,0)_44%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_54%,_rgba(255,255,255,0)_59%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%)]
         bg-no-repeat
         bg-center
         shadow-[inset_0_0_2rem_0_rgb(var(--color-main)/50%)]
