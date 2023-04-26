@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import Slider from "../../../../components/Slider/Slider";
 import ModalClaimLadderRewards from "../../home/modal-claim-ladderrewards";
 import Battlepass from "../../../../components/BattlePass/BattlePass";
+import ResetsIn from "../../../../components/Countdown/ResetsIn";
 
 export default function ComponentRewardLadder() {
   const router = useRouter();
@@ -78,15 +79,7 @@ export default function ComponentRewardLadder() {
           </button>
         )}
         <div className="text-sm text-ui-300 flex gap-2 items-baseline">
-          <span>
-            Resets in{" "}
-            <Countdown
-              separator=":"
-              hasHours={true}
-              hasMinutes={true}
-              hasSeconds={true}
-            />
-          </span>
+          <ResetsIn />
           <Link href={`/prototype/battlepass${prototype.getURLparams()}`}>
             <a className="link text-ui-300 text-sm">
               View Battlepass

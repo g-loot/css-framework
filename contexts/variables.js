@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 
 export const VariablesContext = React.createContext({
   ladderStep: 0,
-  availableMissions: 0,
+  availableMissions: 4,
   rewardClaimed: false,
   dailyRewardClaimed: false,
   newBrand: false,
@@ -15,7 +15,7 @@ export const VariablesContext = React.createContext({
 
 const defaultVariablesState = {
   ladderStep: 0,
-  availableMissions: 0,
+  availableMissions: 4,
   rewardClaimed: false,
   dailyRewardClaimed: false,
   newBrand: false,
@@ -36,9 +36,9 @@ const variablesReducer = (state, action) => {
   if (action.type === "INCREMENT_AVAILABLEMISSIONS") {
     let availableMissions = state.availableMissions;
     if (action.payload.incrementValue) {
-      availableMissions = availableMissions + action.payload.incrementValue;
+      availableMissions = availableMissions - action.payload.incrementValue;
     } else {
-      availableMissions = availableMissions + 1;
+      availableMissions = availableMissions - 1;
     }
     return {
       ...state,

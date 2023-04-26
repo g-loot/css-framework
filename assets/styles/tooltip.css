@@ -168,6 +168,10 @@
   @apply
   rounded
   overflow-hidden
+  !bg-ui-600/0
+  text-ui-200
+  !border-none
+  !p-0
   ;
 
   &.is-loading {

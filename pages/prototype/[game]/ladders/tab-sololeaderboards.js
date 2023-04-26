@@ -217,13 +217,13 @@ export default function TabLaddersSoloLeaderboards() {
               {variablesContext.ladderStep >= 3 ||
               selectedLadder.status === "finished" ? (
                 <>
-                  <div className="mb-4 space-y-8 surface surface-dimmed rounded-lg px-2 pb-2 pt-4">
-                    <div className="text-2xl text-ui-100 text-center relative z-10">
+                  <div className="mb-4 space-y-8 surface surface-dimmed rounded-lg px-2 pb-2 pt-8">
+                    <div className="h5 text-ui-100 text-center relative z-10">
                       Your performance
                     </div>
                     <div className="flex items-center justify-around gap-4 text-center leading-none">
                       <div>
-                        <div className="text-3xl  text-ui-100 mb-2">125</div>
+                        <div className="text-3xl text-main mb-2">125</div>
                         <div className="text-sm uppercase text-ui-300">
                           Total Ladder
                           <br />
@@ -231,7 +231,7 @@ export default function TabLaddersSoloLeaderboards() {
                         </div>
                       </div>
                       <div>
-                        <div className="text-3xl  text-ui-100 mb-2">#5</div>
+                        <div className="text-3xl text-main mb-2">#5</div>
                         <div className="text-sm uppercase text-ui-300">
                           Current Ladder
                           <br />

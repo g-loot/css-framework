@@ -731,15 +731,7 @@ export default function TopbarNew() {
                       <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 pb-2 space-y-2">
                         {notificationsGroups.map(
                           (notificationGroup, notificationGroupIndex) => (
-                            <>
                               <div key={notificationGroupIndex}>
-                                {/*
-                                {notificationsGroups.length > 1 && (
-                                  <h5 className="px-2 font-body uppercase text-ui-300 text-sm font-normal not-italic mb-2">
-                                    {notificationGroup.name}
-                                  </h5>
-                                )}
-                                */}
                                 <ul className="items-spaced space-y-2">
                                   {notificationGroup.notifications?.map(
                                     (notification, notificationIndex) => (
@@ -751,57 +743,6 @@ export default function TopbarNew() {
                                   )}
                                 </ul>
                               </div>
-                              {/*
-                        <div key={notificationGroupIndex}>
-                          <h5 className="px-2 text-ui-300 text-sm mb-2">
-                            {notificationGroup.name}
-                          </h5>
-                          <ul className="items-spaced space-y-2">
-                            {notificationGroup.notifications?.map(
-                              (notification, notificationIndex) => (
-                                <Link
-                                  key={notificationIndex}
-                                  href={`/prototype-new/wallet${prototype.getURLparams()}`}
-                                >
-                                  <li
-                                    className={`item rounded-xl item-interactive relative surface surface-ui-600 hover:opacity-50 ${
-                                      notification.read ? "opacity-25" : ""
-                                    }`}
-                                  >
-                                    <div className="item-image">
-                                      <div className="avatar avatar-square avatar-simple avatar-md">
-                                        <div>
-                                          <img src={notification.image} />
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div className="item-body leading-tight">
-                                      <div className="text-ui-300 text-sm leading-tight">
-                                        {notification.intro}
-                                      </div>
-                                      <div className="item-title text-ui-100 text-lg my-1">
-                                        {notification.title}
-                                      </div>
-                                      <div className="text-ui-300 text-sm leading-tight">
-                                        {notification.text}
-                                      </div>
-                                    </div>
-                                    <div className="absolute top-2 right-4">
-                                      <div className=" flex items-center justify-end gap-1">
-                                        <div className="text-xs text-ui-300">
-                                          {notification.time}
-                                        </div>
-                                        <i className="badge bg-error-500" />
-                                      </div>
-                                    </div>
-                                  </li>
-                                </Link>
-                              )
-                            )}
-                          </ul>
-                        </div>
-                        */}
-                            </>
                           )
                         )}
                       </div>

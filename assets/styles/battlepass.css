@@ -50,19 +50,35 @@
     z-30
     absolute
     inset-0
-    bg-[-15%]
+    bg-[150%]
     bg-[length:400%_auto]
+    /*
     animate-[battlepass-shining-rays_5s_cubic-bezier(0.1,0,0.8,1)_infinite]
     bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_54%,_rgba(255,255,255,0)_60.9%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,0)_71%)]
     bg-no-repeat
+    */
+    animate-[battlepass-reward-image-rays_8s_cubic-bezier(0.1,0,0.8,1)_infinite]
+    bg-[linear-gradient(130deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_54%,_rgba(255,255,255,0)_60.9%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,0)_71%)]
+    bg-no-repeat
+    blur
     ;
     mask-size: cover;
     mask-repeat: no-repeat;
   }
 }
 
+@keyframes battlepass-reward-image-rays {
+  0%, 25% {
+    background-position: 150%;
+  }
+  50%, 100% {
+    background-position: -15%;
+  }
+}
+
 .battlepass-reward-name {
   @apply
+  leading-none
   text-3xl
   uppercase
   text-ui-100
@@ -132,6 +148,12 @@
       @apply
       border-ui-400
       ;
+      .battlepass-decoration::before {
+        @apply
+        bg-ui-400
+        text-ui-900
+        ;
+      }
     }
   }
   &:active {
@@ -139,6 +161,11 @@
       @apply
       border-ui-600
       ;
+      .battlepass-decoration::before {
+        @apply
+        bg-ui-600
+        ;
+      }
     }
   }
 
@@ -196,41 +223,95 @@
     .battlepass-decoration {
       @apply
       absolute
-      z-20
-      bottom-0
-      inset-x-0
-      bg-ui-900/75
-      text-ui-300
-      uppercase
-      text-sm
-      px-2
-      py-1
-      leading-none
-      rounded-b
+      inset-0
       ;
+      > span {
+        @apply
+        absolute
+        z-20
+        bottom-0
+        inset-x-0
+        bg-ui-900/75
+        text-ui-300
+        uppercase
+        text-sm
+        px-2
+        py-1
+        leading-none
+        rounded-b
+        ;
+      }
     }
     .battlepass-body {
       @apply
       overflow-hidden
       rounded
+      absolute
+      inset-0
+      flex
+      items-center
+      justify-center
       ;
-      &::before {
+      &::before,
+      &::after {
         @apply
         content-['']
         absolute
-        z-0
         rounded
         inset-0
         overflow-hidden
+        ;
+      }
+      &::before {
+        @apply
+        z-0
         ;
         background: 
         radial-gradient(ellipse at 50% 25%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 100%), 
         radial-gradient(50% 20% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0.13) 0.01%, rgba(255, 255, 255, 0) 100%);
       }
-      * {
+      &::after {
+        @apply
+        z-20
+        ;
+      }
+      *:not(img) {
         @apply
         relative
+        z-30
+        ;
+      }
+      img {
+        @apply
+        absolute
         z-10
+        inset-0
+        object-cover
+        object-center
+        ;
+      }
+    }
+  }
+
+  &.is-locked {
+    .battlepass-decoration {
+      &::before {
+        @apply
+        absolute
+        top-0
+        right-0
+        z-50
+        font-icon
+        content-['\ea12']
+        w-[42px]
+        h-[42px]
+        pr-1
+        text-right
+        leading-6
+        bg-ui-600
+        text-ui-200
+        ;
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
         ;
       }
     }
@@ -249,19 +330,24 @@
       text-sm
       leading-3
       uppercase
-      pl-2
-      pr-3
       py-1
+      pl-1.5
+      pr-5
       rounded-tl
       transition-[box-shadow]
       duration-100
       ease-in-out
       ;
-      clip-path: polygon(0 0, calc(100% - 0.5em) 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 0, calc(100% - 1.25rem) 0, 100% 100%, 0 100%);
     }
     .battlepass-content {
       @apply
       rounded-tl-none
+      ;
+    }
+    .battlepass-decoration::before {
+      @apply
+      text-premium-500
       ;
     }
     &::before {
@@ -270,11 +356,13 @@
       text-premium-500
       ;
     }
-    &:hover::before {
-      @apply
-      bg-ui-400
-      text-ui-900
-      ;
+    &:hover {
+      &::before {
+        @apply
+        bg-ui-400
+        text-ui-900
+        ;
+      }
     }
     &:active::before {
       @apply
@@ -283,12 +371,74 @@
     }
   }
 
+  &.is-past {
+    .battlepass-content {
+      .battlepass-body {
+        &::after {
+          @apply
+          bg-ui-900/75
+          ;
+        }
+      }
+    }
+  }
+
+  &.is-current {
+    .battlepass-content {
+      &::before {
+        @apply
+        content-['']
+        z-30
+        absolute
+        inset-0
+        rounded-[calc(0.25rem-2px)]
+        bg-[150%]
+        bg-[length:300%_auto]
+        animate-[battlepass-reward-image-rays_6s_cubic-bezier(0.1,0,0.8,1)_infinite]
+        bg-[linear-gradient(130deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_54%,_rgba(255,255,255,0)_60.9%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%,_rgba(255,255,255,0)_71%)]
+        bg-no-repeat
+        bg-center
+        shadow-[inset_0_0_2rem_0_rgb(var(--color-main)/50%)]
+        ;
+      }
+      .battlepass-decoration {
+        > span {
+          @apply
+          text-main
+          ;
+        } 
+      }
+    }
+  }
+
   &.is-active {
+    .battlepass-content {
+      @apply
+      border-interaction-500
+      shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
+      ;
+      .battlepass-decoration {
+        @apply
+        text-interaction-500
+        ;
+        &::before {
+          @apply
+          bg-interaction-500
+          text-ui-900
+          ;
+        }
+      }
+    }
     &:hover {
       .battlepass-content {
         @apply
         border-interaction-500
         ;
+        .battlepass-decoration::before {
+          @apply
+          bg-interaction-500
+          ;
+        }
       }
     }
     &:active {
@@ -296,31 +446,11 @@
         @apply
         border-interaction-700
         ;
-      }
-    }
-    .battlepass-content {
-      @apply
-      border-interaction-500
-      shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
-      ;
-      &::before {
-        @apply
-        content-['']
-        z-30
-        absolute
-        inset-0
-        rounded
-        bg-[-15%]
-        bg-[length:300%_auto]
-        animate-[battlepass-shining-rays_5s_cubic-bezier(0.4,0,0.2,1)_infinite]
-        bg-[linear-gradient(45deg,_rgba(255,255,255,0)_45.9%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_55%,_rgba(255,255,255,0)_56%,_rgba(255,255,255,0)_70.9%,_rgba(255,255,255,.3)_71%,_rgba(255,255,255,0)_80%,_rgba(255,255,255,0)_81%)]
-        bg-no-repeat
-        ;
-      }
-      .battlepass-decoration {
-        @apply
-        text-interaction-500
-        ;
+        .battlepass-decoration::before {
+          @apply
+          bg-interaction-700
+          ;
+        }
       }
     }
     &.is-premium {
@@ -347,14 +477,35 @@
     .battlepass-content {
       @apply
       border-premium-500
-      hover:border-premium-300
-      active:border-premium-700
       shadow-[0_0_0_2px_rgb(var(--color-premium-500))]
       rounded-tl-none
       ;
       .battlepass-decoration {
         @apply
         text-premium-500
+        ;
+        &::before {
+          @apply
+          bg-premium-500
+          text-ui-900
+          ;
+        }
+      }
+      &:hover {
+        @apply
+        border-premium-300
+        ;
+        .battlepass-decoration {
+          &::before {
+            @apply
+            bg-premium-300
+            ;
+          }
+        }
+      }
+      &:active {
+        @apply
+        border-premium-700
         ;
       }
     }
@@ -431,7 +582,7 @@
     items-center
     w-full
     pb-3
-    gap-4
+    gap-5
     border-b
     border-ui-700
     ;
@@ -500,6 +651,9 @@
     shadow-[0_0_0_1px_rgb(var(--color-ui-700))]
     opacity-100
     rounded
+    flex
+    items-center
+    justify-center
     ;
     background-image: linear-gradient(
       to right,
@@ -525,12 +679,6 @@
     @apply
     border-ui-700
     ;
-  }
-
-  .battlepass-step {
-    &.is-active {
-
-    }
   }
 
   .battlepass-reward-action,
@@ -560,3 +708,4 @@
     background-position: 900px 0;
   }
 }
+

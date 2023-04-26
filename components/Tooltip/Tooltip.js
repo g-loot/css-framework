@@ -5,6 +5,8 @@ import { usePopperTooltip } from "react-popper-tooltip";
 const Tooltip = (props) => {
   const tooltipPosition =
     props.placement !== undefined ? props.placement : "auto";
+  const alwaysVisible =
+    props.alwaysVisible !== undefined ? props.alwaysVisible : false;
   const loading =
     props.isLoading !== undefined ? props.isLoading : false;
   const className = props.className || "";
@@ -27,6 +29,10 @@ const Tooltip = (props) => {
     visible,
   } = usePopperTooltip({
     placement: tooltipPosition,
+    interactive: true,
+    delayHide: 50,
+    delayShow: 100,
+    ...(alwaysVisible ? { visible: true } : {}),
   });
 
   const placement = getTooltipProps()["data-popper-placement"];

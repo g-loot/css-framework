@@ -1,10 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
 import Lottie from "lottie-react";
-import LottieExplosionLvl from "../../assets/animations/Mission_Reveal_Lvl_1_2000ms.json";
-import LottieExplosionLvl1 from "../../assets/animations/Mission_Reveal_Lvl_1_2000ms.json";
-import LottieExplosionLvl2 from "../../assets/animations/Mission_Reveal_Lvl_2_2000ms.json";
-import LottieExplosionLvl3 from "../../assets/animations/Mission_Reveal_Lvl_3_2000ms.json";
-import LottieExplosionLvl4 from "../../assets/animations/Mission_Reveal_Lvl_4_2000ms.json";
+import LottieExplosion from "../../assets/animations/explosion-1.json";
+import LottieExplosionLvl from "../../assets/animations/Mission_Reveal_Lvl_1_1100ms.json";
+import LottieExplosionLvl1 from "../../assets/animations/Mission_Reveal_Lvl_1_1100ms.json";
+import LottieExplosionLvl2 from "../../assets/animations/Mission_Reveal_Lvl_2_1600ms.json";
+import LottieExplosionLvl3 from "../../assets/animations/Mission_Reveal_Lvl_3_1900ms.json";
+import LottieExplosionLvl4 from "../../assets/animations/Mission_Reveal_Lvl_4_2900ms.json";
 import Tooltip from "../Tooltip/Tooltip";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -31,20 +32,6 @@ export default function CardMissionSecondary(props) {
   const [isLoading, setIsLoading] = useState(false);
   const [isCapped, setIsCapped] = useState(false);
 
-  function LottieExplosion(level) {
-    if(level === 1) {
-      return LottieExplosionLvl1;
-    } else if(level === 2) {
-      return LottieExplosionLvl2;
-    } else if(level === 3) {
-      return LottieExplosionLvl3;
-    } else if(level === 4) {
-      return LottieExplosionLvl4;
-    } else {
-      return LottieExplosionLvl;
-    } 
-  }
-
   useEffect(() => {
     if (modalClaimMission) {
       openModalClaimMission();
@@ -60,7 +47,7 @@ export default function CardMissionSecondary(props) {
   const [MissionRetrieved, setMissionRetrieved] = useState(false);
 
   function handleGetMission() {
-    if (variablesContext.availableMissions < 2 && !MissionRetrieved) {
+    if (variablesContext.availableMissions > 0 && !MissionRetrieved) {
       setIsLoading(true);
       setTimeout(() => {
         setIsLoading(false);
@@ -81,7 +68,6 @@ export default function CardMissionSecondary(props) {
   }
 
   function handleReset() {
-    console.log("caca");
     variablesContext.incrementAvailableMissions(5);
   }
 
@@ -109,19 +95,19 @@ export default function CardMissionSecondary(props) {
         <div className="revealer-front">
           <div
             className={`card-mission card-secondary ${
-              variablesContext.availableMissions < 2 && !MissionRetrieved
+              variablesContext.availableMissions > 0 && !MissionRetrieved
                 ? "is-highlighted"
                 : ""
             }  ${isLoading ? "is-loading" : ""}`}
           >
             <div className="card-overlay">
-              {variablesContext.availableMissions < 2 ? (
+              {variablesContext.availableMissions > 0 ? (
                 <>
                   {!MissionRetrieved && (
                     <>
                       <h4>Reveal mission</h4>
                       <div className="text-sm mt-2">
-                        {2 - variablesContext.availableMissions} new available
+                        {variablesContext.availableMissions} new available
                       </div>
                     </>
                   )}
@@ -172,19 +158,46 @@ export default function CardMissionSecondary(props) {
             </div>
           </div>
         </div>
+
         {MissionRetrieved && !mission.isVisible && mission.category && (
-              <div className={`revealer-transition lottie-blur ${mission.category === 1 ? "rarity-category-1" : ""} ${
-                mission.category === 2 ? "rarity-category-2" : ""
-              } ${mission.category === 3 ? "rarity-category-3" : ""} ${
-                mission.category === 4 ? "rarity-category-4" : ""
-              }`}>
-                <Lottie
-                  animationData={LottieExplosion(mission.category)}
-                  loop={false}
-                  autoplay={true}
-                />
-              </div>
+          <div
+            className={`revealer-transition lottie-blur ${
+              mission.category === 1 ? "rarity-category-1" : ""
+            } ${mission.category === 2 ? "rarity-category-2" : ""} ${
+              mission.category === 3 ? "rarity-category-3" : ""
+            } ${mission.category === 4 ? "rarity-category-4" : ""}`}
+          >
+            {mission.category === 1 && (
+              <Lottie
+                animationData={LottieExplosionLvl1}
+                loop={false}
+                autoplay={true}
+              />
             )}
+            {mission.category === 2 && (
+              <Lottie
+                animationData={LottieExplosionLvl2}
+                loop={false}
+                autoplay={true}
+              />
+            )}
+            {mission.category === 3 && (
+              <Lottie
+                animationData={LottieExplosionLvl3}
+                loop={false}
+                autoplay={true}
+              />
+            )}
+            {mission.category === 4 && (
+              <Lottie
+                animationData={LottieExplosionLvl4}
+                loop={false}
+                autoplay={true}
+              />
+            )}
+          </div>
+        )}
+
         <div className="revealer-back">
           <div
             className={`card-mission card-secondary ${

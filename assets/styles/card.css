@@ -768,28 +768,28 @@
   &.rarity-category-1 {
     .card-bg::before {
       @apply
-      bg-bronze-500/50
+      bg-ui-300
       ;
     }
   }
   &.rarity-category-2 {
     .card-bg::before {
       @apply
-      bg-bronze-500
+      bg-blue-300
       ;
     }
   }
   &.rarity-category-3 {
     .card-bg::before {
       @apply
-      bg-gold-500/70
+      bg-error-300
       ;
     }
   }
   &.rarity-category-4 {
     .card-bg::before {
       @apply
-      bg-gold-500
+      bg-attention-300
       ;
     }
   }
@@ -1679,22 +1679,22 @@
 
   &.rarity-category-1 {
     @apply
-    text-bronze-500/50
+    text-ui-300
     ;
   }
   &.rarity-category-2 {
     @apply
-    text-bronze-500
+    text-blue-300
     ;
   }
   &.rarity-category-3 {
     @apply
-    text-gold-500/70
+    text-error-300
     ;
   }
   &.rarity-category-4 {
     @apply
-    text-gold-500
+    text-attention-300
     ;
   }
 }

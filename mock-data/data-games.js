@@ -80,7 +80,7 @@ export const dataGames = [
       {
         id: 5,
         name: "Win 3 games of Spike Rush",
-        category: 4,
+        category: 2,
         label: "win",
         current: 0,
         target: 3,
@@ -93,8 +93,22 @@ export const dataGames = [
       },
       {
         id: 6,
-        name: "Get 50 kills",
+        name: "Get 25 kills",
         category: 3,
+        label: "kills",
+        current: 0,
+        target: 25,
+        isPremium: true,
+        isVisible: false,
+        hasClaimed: false,
+        xp: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_6.jpg",
+      },
+      {
+        id: 7,
+        name: "Get 50 kills",
+        category: 4,
         label: "kills",
         current: 0,
         target: 50,
@@ -104,6 +118,34 @@ export const dataGames = [
         xp: 100,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_6.jpg",
+      },
+      {
+        id: 8,
+        name: "Join a Clan",
+        category: 3,
+        label: "clan",
+        current: 0,
+        target: 1,
+        isPremium: true,
+        isVisible: false,
+        hasClaimed: false,
+        xp: 300,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/Missions/Specials/Platform%20missions/mission-platform-10.jpg",
+      },
+      {
+        id: 9,
+        name: "Earn 500 coins",
+        category: 2,
+        label: "coins",
+        current: 0,
+        target: 500,
+        isPremium: true,
+        isVisible: false,
+        hasClaimed: false,
+        xp: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/Missions/Specials/Platform%20missions/mission-platform-1.jpg",
       },
     ],
     ladders: [
@@ -3666,7 +3708,7 @@ export const dataGames = [
       {
         id: 2,
         name: "Get 1 kill from more than 100m away",
-        category: 1,
+        category: 2,
         label: "kill",
         current: 0,
         target: 1,
@@ -3680,7 +3722,7 @@ export const dataGames = [
       {
         id: 3,
         name: "Walk for 3000m",
-        category: 2,
+        category: 3,
         label: "",
         current: 0,
         target: 1,
@@ -3694,7 +3736,7 @@ export const dataGames = [
       {
         id: 4,
         name: "Get 8 headshot kills",
-        category: 2,
+        category: 4,
         label: "headshot kills",
         current: 0,
         target: 8,

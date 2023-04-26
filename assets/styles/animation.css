@@ -91,19 +91,19 @@
     @apply
     opacity-50
     ;
-    filter: brightness(0) saturate(100%) invert(50%) sepia(51%) saturate(216%) hue-rotate(339deg) brightness(93%) contrast(84%);
+    filter: brightness(0) saturate(100%) invert(60%) sepia(7%) saturate(721%) hue-rotate(194deg) brightness(86%) contrast(83%);
   }
   &.rarity-category-2 {
-    filter: brightness(0) saturate(100%) invert(50%) sepia(51%) saturate(216%) hue-rotate(339deg) brightness(93%) contrast(84%);
+    filter: brightness(0) saturate(100%) invert(74%) sepia(88%) saturate(3965%) hue-rotate(185deg) brightness(108%) contrast(102%);
   }
   &.rarity-category-3 {
     @apply
     opacity-75
     ;
-    filter: brightness(0) saturate(100%) invert(97%) sepia(32%) saturate(3987%) hue-rotate(316deg) brightness(98%) contrast(95%);
+    filter: brightness(0) saturate(100%) invert(42%) sepia(24%) saturate(1909%) hue-rotate(317deg) brightness(112%) contrast(100%);
   }
   &.rarity-category-4 {
-    filter: brightness(0) saturate(100%) invert(97%) sepia(32%) saturate(3987%) hue-rotate(316deg) brightness(98%) contrast(95%);
+    filter: brightness(0) saturate(100%) invert(62%) sepia(84%) saturate(311%) hue-rotate(342deg) brightness(103%) contrast(100%);
   }
 }
 .lottie-premium {
@@ -227,35 +227,35 @@
 
     & + .revealer-back {
       @apply
-      delay-[1250ms]
+      delay-[0ms]
       ;
     }
 
     &.rarity-category-1 {
       & + .revealer-back {
         @apply
-        delay-[650ms]
+        delay-[900ms]
         ;
       }
     }
     &.rarity-category-2 {
       & + .revealer-back {
         @apply
-        delay-[850ms]
+        delay-[1400ms]
         ;
       }
     }
     &.rarity-category-3 {
       & + .revealer-back {
         @apply
-        delay-[1050ms]
+        delay-[1700ms]
         ;
       }
     }
     &.rarity-category-4 {
       & + .revealer-back {
         @apply
-        delay-[1250ms]
+        delay-[2700ms]
         ;
       }
     }

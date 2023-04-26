@@ -57,7 +57,7 @@ export default function CardMissionSecondary(props) {
         <div className="revealer-front">
           <div className="card-mission card-secondary">
             <div className="card-overlay">
-              {variablesContext.availableMissions < 2 ? (
+              {variablesContext.availableMissions < 4 ? (
                 <>
                   {!MissionRetrieved && (
                     <button

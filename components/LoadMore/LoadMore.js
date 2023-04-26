@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 export default function LoadMore(props) {
   const [loading, setLoading] = useState(false);
+  const label = props.label || 'View more';
 
   function handleLoading() {
     setLoading(true);
@@ -19,7 +20,7 @@ export default function LoadMore(props) {
       }`}
       onClick={handleLoading}
     >
-      <span>View more</span>
+      <span>{label}</span>
     </button>
   );
 }
