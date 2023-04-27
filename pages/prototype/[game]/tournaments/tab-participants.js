@@ -65,7 +65,7 @@ export default function TabTournamentsOverview() {
                             <span
                               className={`${
                                 prototype.getClanByID(clan)?.isYou
-                                  ? "text-blue-300 font-bold"
+                                  ? "text-main font-bold"
                                   : ""
                               }`}
                             >

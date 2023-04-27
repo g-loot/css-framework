@@ -1446,8 +1446,24 @@
           "name": "tablet"
         },
         {
+          "tags": "arrow,back,left,direction,backward,backwards,keyboard,move,navigation,out,position,previous,chevron",
+          "name": "ctrl-left"
+        },
+        {
           "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards,chevron",
           "name": "ctrl-right"
+        },
+        {
+          "tags": "arrow,back,left,direction,backward,backwards,keyboard,move,navigation,out,position,previous,chevron",
+          "name": "ctrl-double-left"
+        },
+        {
+          "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards,chevron,double",
+          "name": "ctrl-double-right"
+        },
+        {
+          "tags": "arrow,direction,bottom,down,keyboard,move,navigation,chevron",
+          "name": "ctrl-down"
         },
         {
           "tags": "ui,interface,shopping,safe,object,help,support,life,lifebuoy,lifering",
@@ -1460,14 +1476,6 @@
         {
           "tags": "ui,interface,shopping,safe,object,help,support,life,lifebuoy,lifering",
           "name": "support"
-        },
-        {
-          "tags": "arrow,back,left,direction,backward,backwards,keyboard,move,navigation,out,position,previous,chevron",
-          "name": "ctrl-left"
-        },
-        {
-          "tags": "arrow,direction,bottom,down,keyboard,move,navigation,chevron",
-          "name": "ctrl-down"
         },
         {
           "tags": "play,media,video,film,movie,editing,camera,multimedia,show",

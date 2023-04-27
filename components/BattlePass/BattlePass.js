@@ -119,7 +119,7 @@ export default function Battlepass(props) {
   };
 
   const getBattlepassStepByID = (id) => {
-    return getBattlepassByID(0).steps.find((step) => {
+    return getBattlepassByID(selectedBattlepass).steps.find((step) => {
       return step.id === parseInt(id);
     });
   };
@@ -134,7 +134,7 @@ export default function Battlepass(props) {
     if (item.id < currentStep) {
       return 100;
     } else if (item.id === currentStep) {
-      return getBattlepassByID(0).currentProgress;
+      return getBattlepassByID(selectedBattlepass).currentProgress;
     } else {
       return 0;
     }
@@ -144,12 +144,6 @@ export default function Battlepass(props) {
     const step = activeStep - 1;
     setActiveStep(step);
     handlePrevBatch();
-    console.log(
-      step,
-      "active " + activeStep,
-      "origin " + originStep,
-      "max " + maxSteps
-    );
   }
 
   function contentClick(step) {
@@ -168,12 +162,6 @@ export default function Battlepass(props) {
     const step = activeStep + 1;
     setActiveStep(step);
     handleNextBatch();
-    console.log(
-      step,
-      "active " + activeStep,
-      "origin " + originStep,
-      "max " + maxSteps
-    );
   }
 
   function handleForward() {
@@ -198,6 +186,15 @@ export default function Battlepass(props) {
 
   function openModalClaimBattlepassRewards(rewardID) {
     uiContext.openModal(<ModalClaimBattlepassReward rewardID={rewardID} />);
+  }
+
+  function calculPercent(currentValue) {
+    const currentTarget = (300 + (100 * currentValue));
+    const previousTarget = (300 + (100 * (currentValue - 1)));
+    const currentMinusPrevious = Math.round(currentTarget - previousTarget);
+    const currentProgress = getBattlepassByID(selectedBattlepass).currentProgress;
+    const percent = Math.round((currentProgress * currentMinusPrevious) / 100)
+    return Math.round(previousTarget + percent);
   }
 
   return (
@@ -272,10 +269,10 @@ export default function Battlepass(props) {
                           isPremium ? "text-premium-500" : "text-ui-300"
                         }`}
                       >
-                        1425
+                        {calculPercent(getBattlepassByID(selectedBattlepass).currentStep)}
                       </span>{" "}
                       <span>
-                        / {1000 + 100 * getBattlepassStepByID(activeStep).id}
+                        / {300 + 100 * getBattlepassStepByID(activeStep).id}
                       </span>
                     </span>
                     <span className="icon icon-xp-symbol text-3xl" />
@@ -340,7 +337,7 @@ export default function Battlepass(props) {
             </div>
           </div>
           <ul className="battlepass">
-            {getBattlepassByID(0)
+            {getBattlepassByID(selectedBattlepass)
               .steps.slice(originStep, originStep + maxSteps)
               .map((item, itemIndex) => (
                 <li
@@ -353,18 +350,22 @@ export default function Battlepass(props) {
                     activeStep === item.id ? `is-active` : ""
                   }
                         ${
-                          getBattlepassByID(0).currentStep === item.id
+                          getBattlepassByID(selectedBattlepass).currentStep === item.id
                             ? `is-current`
                             : ""
                         }
                         ${
-                          getBattlepassByID(0).currentStep > item.id
+                          getBattlepassByID(selectedBattlepass).currentStep > item.id
                             ? `is-past`
                             : ""
                         }
                         `}
                 >
-                  <div className="battlepass-info">
+                  <div className="battlepass-info" data-tooltip={
+                      size === "battlepass-md"
+                        ? `${calculPercent(getBattlepassByID(selectedBattlepass).currentStep)} / ${300 + 100 * item.id} XP`
+                        : ""
+                    }>
                     <div
                       className="progressbar progressbar-sm"
                       style={{ "--percent": handleProgress(item) }}
@@ -439,7 +440,7 @@ export default function Battlepass(props) {
               onClick={() => handlePrev()}
               disabled={activeStep === 1}
             >
-              <span className="icon icon-ctrl-backward" />
+              <span className="icon icon-ctrl-double-left" />
             </button>
             <div className="battlepass-nav">
               <button
@@ -453,7 +454,7 @@ export default function Battlepass(props) {
               <span>
                 {activeStep} /{" "}
                 {
-                  getBattlepassByID(0).steps.filter((value) => {
+                  getBattlepassByID(selectedBattlepass).steps.filter((value) => {
                     return value.isBonus !== true;
                   }).length
                 }
@@ -462,7 +463,7 @@ export default function Battlepass(props) {
                 type="button"
                 className="button button-ghost rounded-full button-sm"
                 onClick={() => handleNext()}
-                disabled={activeStep === getBattlepassByID(0).steps.length}
+                disabled={activeStep === getBattlepassByID(selectedBattlepass).steps.length}
               >
                 <span className="icon icon-ctrl-right" />
               </button>
@@ -472,10 +473,10 @@ export default function Battlepass(props) {
               className="button button-tertiary rounded-full button-sm"
               onClick={() => handleForward()}
               disabled={
-                activeStep + maxSteps > getBattlepassByID(0).steps.length
+                activeStep + maxSteps > getBattlepassByID(selectedBattlepass).steps.length
               }
             >
-              <span className="icon icon-ctrl-forward" />
+              <span className="icon icon-ctrl-double-right" />
             </button>
           </div>
         </div>

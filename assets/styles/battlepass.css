@@ -544,6 +544,7 @@
       @apply
       content-['']
       absolute
+      z-0
       inset-y-0
       -left-4
       block
@@ -551,7 +552,28 @@
       h-full
       border-dashed
       border-l
-      border-ui-500
+      border-ui-400
+      ;
+    }
+    &::after {
+      @apply
+      content-['BONUS']
+      -rotate-90
+      -translate-x-12
+      translate-y-14
+      absolute
+      z-10
+      block
+      text-lg
+      text-center
+      leading-7
+      h-7
+      w-16
+      text-ui-100
+      bg-ui-900/90
+      rounded
+      top-0
+      left-0
       ;
     }
   }

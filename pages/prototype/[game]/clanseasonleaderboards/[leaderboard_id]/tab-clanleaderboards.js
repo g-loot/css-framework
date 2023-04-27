@@ -440,14 +440,14 @@ export default function TabClanLeaderboardsLeaderboards() {
                             }}
                           >
                             <div
-                              className={`surface rounded-lg w-96 h-[58px] flex items-stretch overflow-hidden ${
+                              className={`surface rounded-lg w-80 h-[58px] flex items-stretch overflow-hidden ${
                                 prototype.getClanByID(clan.clan)?.isYou
                                   ? ""
                                   : ""
                               }`}
                             >
                               <div
-                                className={`w-1/3 text-center px-2 flex items-center justify-center ${
+                                className={`w-16 text-center px-2 flex items-center justify-center ${
                                   clanIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
                                 }`}
                               >
@@ -532,7 +532,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                                   prototype.getClanByID(
                                                     clan.clan
                                                   )?.isYou
-                                                    ? "text-blue-300 font-bold"
+                                                    ? "text-main font-bold"
                                                     : ""
                                                 }`}
                                               >

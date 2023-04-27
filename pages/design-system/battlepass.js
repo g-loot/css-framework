@@ -64,9 +64,9 @@ const DSpage = () => {
     <>
       <h1 className="mb-2">Battlepass</h1>
 
-      {/* big */}
-      <div className="mb-12" id="big">
-        <h2 className="h3 mb-3">Big</h2>
+      {/* full */}
+      <div className="mb-12" id="full">
+        <h2 className="h3 mb-3">Full</h2>
         <div className="pt-4">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -92,6 +92,30 @@ const DSpage = () => {
           <div className="">
             <div className="flex gap-4 flex-col">
               <Battlepass size="battlepass-md" />
+
+              <div className="flex-1 hidden">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/c1nbf68L/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* with current */}
+      <div className="mb-12" id="with-current-product">
+        <h2 className="h3 mb-3">With current product</h2>
+        <div className="pt-4">
+          <div className="">
+            <div className="flex gap-4 flex-col">
+              <h3 className="h4">Medium</h3>
+              <Battlepass id={1} size="battlepass-md" />
+              <h3 className="h4">Full</h3>
+              <Battlepass id={1} />
 
               <div className="flex-1 hidden">
                 <iframe
