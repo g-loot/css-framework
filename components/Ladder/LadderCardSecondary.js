@@ -45,7 +45,10 @@ export default function LadderCardSecondary(props) {
   }
 
   return (
-    <Link
+    <>
+    
+    {ladder && prototype.getGameByID(gameID) && (
+      <Link
       href={`/prototype/${prototype.getGameBySlug(game_slug).slug}/ladders/${
         ladder.id
       }${prototype.getURLparams()}`}
@@ -177,7 +180,7 @@ export default function LadderCardSecondary(props) {
               </div>
               {ladder.status === "finished" ? (
                 <div className="text-sm text-ui-300">
-                  Ended on April {RandomNumber(1, 30)} 2023
+                  Ended on April 12 2023
                 </div>
               ) : (
                 <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">
@@ -208,8 +211,8 @@ export default function LadderCardSecondary(props) {
                         hasTooltip={false}
                       />
                       <div>
-                        <div>{RandomNumber(200, 1000)}pts</div>
-                        <div>#{RandomNumber(1, 600)}</div>
+                        <div>200pts</div>
+                        <div>#12</div>
                       </div>
                     </div>
                   ) : (
@@ -239,8 +242,8 @@ export default function LadderCardSecondary(props) {
                             </div>
                           </div>
                           <div>
-                            <div>{RandomNumber(200, 1000)}pts</div>
-                            <div>#{RandomNumber(1, 600)}</div>
+                            <div>879 pts</div>
+                            <div>#3</div>
                           </div>
                         </div>
                       ) : (
@@ -282,7 +285,7 @@ export default function LadderCardSecondary(props) {
                                   Points
                                 </div>
                                 <div className="text-sm">
-                                  {RandomNumber(200, 1000)}
+                                  523
                                 </div>
                               </div>
                               <div>
@@ -290,7 +293,7 @@ export default function LadderCardSecondary(props) {
                                   Position
                                 </div>
                                 <div className="text-sm">
-                                  #{RandomNumber(1, 600)}
+                                  #7
                                 </div>
                               </div>
                             </div>
@@ -448,51 +451,16 @@ export default function LadderCardSecondary(props) {
                 <>
                 {!isClan ? (
                   <ul className="text-sm border-l border-ui-700 pl-4 text-ui-300 flex flex-col items-start justify-center">
-                    <li>{RandomNumber(100, 5000)} players are enrolled</li>
-                    <li>in {RandomNumber(4, 30)} groups</li>
+                    <li>843 players are enrolled</li>
+                    <li>in 5 groups</li>
                   </ul>
                 ) : (
                   <ul className="text-sm border-l border-ui-700 pl-4 text-ui-300 flex flex-col items-start justify-center">
-                    <li>{RandomNumber(10, 800)} clans are enrolled</li>
+                    <li>143 clans are enrolled</li>
                   </ul>
                 )}
                 </>
               )}
-
-              {/*
-
-            <div className="flex items-end">
-              <Link
-                href={
-                  !isDemo
-                    ? `/prototype/${
-                        prototype.getGameBySlug(game_slug).slug
-                      }/ladders/${ladder.id}${prototype.getURLparams()}`
-                    : `/prototype/valorant/ladders/${
-                        ladder.isPowerPlay ? "1" : "2"
-                      }${prototype.getURLparams()}`
-                }
-              >
-                <a>
-                  <button
-                    type="button"
-                    className={`button button-sm ${
-                      ladder.status != "finished"
-                        ? "button-secondary"
-                        : "button-secondary"
-                    }`}
-                  >
-                    {ladder.isEnrolled || ladder.status === "finished" ? (
-                      <span>View Ladder</span>
-                    ) : (
-                      <span>View Ladder</span>
-                    )}
-                  </button>
-                </a>
-              </Link>
-            </div>
-
-            */}
             </div>
           )}
         </div>
@@ -501,5 +469,8 @@ export default function LadderCardSecondary(props) {
         </div>
       </div>
     </Link>
+    )}
+    
+    </>
   );
 }

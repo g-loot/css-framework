@@ -21,12 +21,9 @@ const useResize = (myRef) => {
   const [height, setHeight] = useState(0);
 
   const handleResize = useCallback(() => {
+    setWidth(myRef.current.offsetWidth);
+    setHeight(myRef.current.offsetHeight);
 
-    setTimeout(() => {
-      setWidth(myRef.current.offsetWidth);
-      setHeight(myRef.current.offsetHeight);
-    }, 500);
-    
   }, [myRef]);
 
   useEffect(() => {
@@ -61,6 +58,8 @@ export default function Battlepass(props) {
   const [originStep, setOriginStep] = useState(0);
   const [maxSteps, setmaxSteps] = useState(9);
   const [loading, setLoading] = useState(true);
+  const uiContext = useContext(UiContext);
+
 
   function RandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -75,9 +74,35 @@ export default function Battlepass(props) {
   }, [loading]);
 
   const componentRef = useRef();
-  const { width, height } = useResize(componentRef);
+  const { divWidth, setDivWidth } = useState(0);
 
-  const uiContext = useContext(UiContext);
+  const handleResize = useCallback(() => {
+    const divWidthResized = componentRef.current.offsetWidth;
+    if (divWidthResized > 1288) {
+      setmaxSteps(9);
+    } else if (divWidthResized < 1288 && divWidthResized > 1160) {
+      setmaxSteps(7);
+    } else if (divWidthResized < 1160 && divWidthResized > 992) {
+      setmaxSteps(7);
+    } else if (divWidthResized < 992 && divWidthResized > 848) {
+      setmaxSteps(4);
+    } else if (divWidthResized < 848 && divWidthResized > 750) {
+      setmaxSteps(3);
+    } else if (divWidthResized < 750) {
+      setmaxSteps(2);
+    }
+  }, [componentRef]);
+
+
+  useEffect(() => {
+    window.addEventListener("load", handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("load", handleResize);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [componentRef, handleResize]);
+
 
   useEffect(() => {
     setCurrentStep(getBattlepassByID(selectedBattlepass).currentStep);
@@ -86,22 +111,6 @@ export default function Battlepass(props) {
       setOriginStep(getBattlepassByID(selectedBattlepass).currentStep - 1);
     }
   }, []);
-
-  useEffect(() => {
-    if (width > 1288) {
-      setmaxSteps(9);
-    } else if (width < 1288 && width > 1160) {
-      setmaxSteps(7);
-    } else if (width < 1160 && width > 992) {
-      setmaxSteps(5);
-    } else if (width < 992 && width > 848) {
-      setmaxSteps(4);
-    } else if (width < 848 && width > 750) {
-      setmaxSteps(3);
-    } else if (width < 750) {
-      setmaxSteps(2);
-    }
-  }, [width]);
 
   const getBattlepassByID = (id) => {
     return DataBattlepass.find((battlepasses) => {

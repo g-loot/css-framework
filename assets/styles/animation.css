@@ -223,6 +223,7 @@
     place-content-center
     pointer-events-none
     select-none
+    animate-fade-out
     ;
 
     & + .revealer-back {
@@ -232,6 +233,7 @@
     }
 
     &.rarity-category-1 {
+      animation-delay: 900ms;
       & + .revealer-back {
         @apply
         delay-[900ms]
@@ -239,23 +241,26 @@
       }
     }
     &.rarity-category-2 {
+      animation-delay: 1300ms;
       & + .revealer-back {
         @apply
-        delay-[1400ms]
+        delay-[1300ms]
         ;
       }
     }
     &.rarity-category-3 {
+      animation-delay: 1600ms;
       & + .revealer-back {
         @apply
-        delay-[1700ms]
+        delay-[1600ms]
         ;
       }
     }
     &.rarity-category-4 {
+      animation-delay: 2600ms;
       & + .revealer-back {
         @apply
-        delay-[2700ms]
+        delay-[2600ms]
         ;
       }
     }
