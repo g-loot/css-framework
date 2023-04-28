@@ -776,7 +776,7 @@ export default function Stats() {
                       <div className="relative mb-2 -mt-2">
                         <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/50 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
                           <p className="text-ui-300 mb-2">
-                            Want to see the full overview of stats?
+                            Get Premium to see the full overview of stats.
                           </p>
                           <Link href="/prototype/premium">
                             <button
@@ -861,7 +861,7 @@ export default function Stats() {
               <section className="mb-8">
                 <h2 className="h5 mx-4 md:mx-0">Last 20 matches</h2>
                 <div className="overflow-x-auto scrollbar-desktop leading-tight pb-4">
-                  {StatsValorantDemoLatestMatches.slice(0, maxMap).map(
+                  {StatsValorantDemoLatestMatches.slice(0, maxMap - 1).map(
                     (item, itemIndex) => (
                       <div key={itemIndex} className="mb-2">
                         <div className="flex items-center gap-2 my-2 text-ui-400 text-xs lg:text-sm uppercase mx-4 md:mx-0">
@@ -1267,7 +1267,7 @@ export default function Stats() {
                       <div className="mb-2 relative">
                         <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/30 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
                           <p className="text-ui-300 mb-2">
-                            Want to see the full overview of stats?
+                            Get Premium to see the full overview of stats.
                           </p>
                           <Link href="/prototype/premium">
                             <button
@@ -1567,7 +1567,7 @@ export default function Stats() {
                       </tr>
                     </thead>
                     <tbody className="child:overflow-hidden leading-tight">
-                      {StatsValorantDemoWeapons.slice(0, maxMap).map(
+                      {StatsValorantDemoWeapons.slice(0, maxMap - 1).map(
                         (item, itemIndex) => (
                           <tr key={itemIndex}>
                             <td className="w-76 h-20">
@@ -1610,7 +1610,7 @@ export default function Stats() {
                       <div className="relative mb-2 -mt-2">
                         <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/30 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
                           <p className="text-ui-300 mb-2">
-                            Want to see the full overview of stats?
+                            Get Premium to see the full overview of stats.
                           </p>
                           <Link href="/prototype/premium">
                             <button
@@ -1757,7 +1757,7 @@ export default function Stats() {
                       <div className="relative mb-2 -mt-2">
                         <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/30 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
                           <p className="text-ui-300 mb-2">
-                            Want to see the full overview of stats?
+                            Get Premium to see the full overview of stats.
                           </p>
                           <Link href="/prototype/premium">
                             <button

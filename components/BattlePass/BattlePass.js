@@ -23,7 +23,6 @@ const useResize = (myRef) => {
   const handleResize = useCallback(() => {
     setWidth(myRef.current.offsetWidth);
     setHeight(myRef.current.offsetHeight);
-
   }, [myRef]);
 
   useEffect(() => {
@@ -60,7 +59,6 @@ export default function Battlepass(props) {
   const [loading, setLoading] = useState(true);
   const uiContext = useContext(UiContext);
 
-
   function RandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
@@ -93,7 +91,6 @@ export default function Battlepass(props) {
     }
   }, [componentRef]);
 
-
   useEffect(() => {
     window.addEventListener("load", handleResize);
     window.addEventListener("resize", handleResize);
@@ -102,7 +99,6 @@ export default function Battlepass(props) {
       window.removeEventListener("resize", handleResize);
     };
   }, [componentRef, handleResize]);
-
 
   useEffect(() => {
     setCurrentStep(getBattlepassByID(selectedBattlepass).currentStep);
@@ -189,11 +185,12 @@ export default function Battlepass(props) {
   }
 
   function calculPercent(currentValue) {
-    const currentTarget = (300 + (100 * currentValue));
-    const previousTarget = (300 + (100 * (currentValue - 1)));
+    const currentTarget = 300 + 100 * currentValue;
+    const previousTarget = 300 + 100 * (currentValue - 1);
     const currentMinusPrevious = Math.round(currentTarget - previousTarget);
-    const currentProgress = getBattlepassByID(selectedBattlepass).currentProgress;
-    const percent = Math.round((currentProgress * currentMinusPrevious) / 100)
+    const currentProgress =
+      getBattlepassByID(selectedBattlepass).currentProgress;
+    const percent = Math.round((currentProgress * currentMinusPrevious) / 100);
     return Math.round(previousTarget + percent);
   }
 
@@ -201,7 +198,7 @@ export default function Battlepass(props) {
     <>
       {mounted && (
         <div
-          className={`battlepass-container ${loading ? "is-loading" : ""} ${
+          className={`battlepass-container relative z-10 ${loading ? "is-loading" : ""} ${
             size === "battlepass-md" ? "battlepass-md" : ""
           }`}
           ref={componentRef}
@@ -269,7 +266,9 @@ export default function Battlepass(props) {
                           isPremium ? "text-premium-500" : "text-ui-300"
                         }`}
                       >
-                        {calculPercent(getBattlepassByID(selectedBattlepass).currentStep)}
+                        {calculPercent(
+                          getBattlepassByID(selectedBattlepass).currentStep
+                        )}
                       </span>{" "}
                       <span>
                         / {300 + 100 * getBattlepassStepByID(activeStep).id}
@@ -350,22 +349,29 @@ export default function Battlepass(props) {
                     activeStep === item.id ? `is-active` : ""
                   }
                         ${
-                          getBattlepassByID(selectedBattlepass).currentStep === item.id
+                          getBattlepassByID(selectedBattlepass).currentStep ===
+                          item.id
                             ? `is-current`
                             : ""
                         }
                         ${
-                          getBattlepassByID(selectedBattlepass).currentStep > item.id
+                          getBattlepassByID(selectedBattlepass).currentStep >
+                          item.id
                             ? `is-past`
                             : ""
                         }
                         `}
                 >
-                  <div className="battlepass-info" data-tooltip={
+                  <div
+                    className="battlepass-info"
+                    data-tooltip={
                       size === "battlepass-md"
-                        ? `${calculPercent(getBattlepassByID(selectedBattlepass).currentStep)} / ${300 + 100 * item.id} XP`
+                        ? `${calculPercent(
+                            getBattlepassByID(selectedBattlepass).currentStep
+                          )} / ${300 + 100 * item.id} XP`
                         : ""
-                    }>
+                    }
+                  >
                     <div
                       className="progressbar progressbar-sm"
                       style={{ "--percent": handleProgress(item) }}
@@ -454,16 +460,21 @@ export default function Battlepass(props) {
               <span>
                 {activeStep} /{" "}
                 {
-                  getBattlepassByID(selectedBattlepass).steps.filter((value) => {
-                    return value.isBonus !== true;
-                  }).length
+                  getBattlepassByID(selectedBattlepass).steps.filter(
+                    (value) => {
+                      return value.isBonus !== true;
+                    }
+                  ).length
                 }
               </span>
               <button
                 type="button"
                 className="button button-ghost rounded-full button-sm"
                 onClick={() => handleNext()}
-                disabled={activeStep === getBattlepassByID(selectedBattlepass).steps.length}
+                disabled={
+                  activeStep ===
+                  getBattlepassByID(selectedBattlepass).steps.length
+                }
               >
                 <span className="icon icon-ctrl-right" />
               </button>
@@ -473,7 +484,8 @@ export default function Battlepass(props) {
               className="button button-tertiary rounded-full button-sm"
               onClick={() => handleForward()}
               disabled={
-                activeStep + maxSteps > getBattlepassByID(selectedBattlepass).steps.length
+                activeStep + maxSteps >
+                getBattlepassByID(selectedBattlepass).steps.length
               }
             >
               <span className="icon icon-ctrl-double-right" />
