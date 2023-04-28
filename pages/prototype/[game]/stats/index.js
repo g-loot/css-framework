@@ -772,11 +772,11 @@ export default function Stats() {
                   </table>
 
                   {!isPremium && (
-                    <LoadMoreContainer className="button-sm button-tertiary">
+                    <LoadMoreContainer className="button-sm button-tertiary" label="View more agents">
                       <div className="relative mb-2 -mt-2">
                         <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/50 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
                           <p className="text-ui-300 mb-2">
-                            Get Premium to see the full overview of stats.
+                            Get Premium to see the full overview of your stats.
                           </p>
                           <Link href="/prototype/premium">
                             <button
@@ -784,7 +784,7 @@ export default function Stats() {
                               className="button button-sm button-tertiary"
                             >
                               <span className="icon icon-crown text-premium-500" />
-                              <span>View all agents</span>
+                              <span className="text-premium-500">Get Premium</span>
                             </button>
                           </Link>
                         </div>
@@ -1263,11 +1263,11 @@ export default function Stats() {
                     )
                   )}
                   {!isPremium && (
-                    <LoadMoreContainer className="button-sm button-tertiary">
+                    <LoadMoreContainer className="button-sm button-tertiary" label="View more matches">
                       <div className="mb-2 relative">
                         <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/30 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
                           <p className="text-ui-300 mb-2">
-                            Get Premium to see the full overview of stats.
+                            Get Premium to see the full overview of your stats.
                           </p>
                           <Link href="/prototype/premium">
                             <button
@@ -1275,7 +1275,7 @@ export default function Stats() {
                               className="button button-sm button-tertiary"
                             >
                               <span className="icon icon-crown text-premium-500" />
-                              <span>View all matches</span>
+                              <span className="text-premium-500">Get Premium</span>
                             </button>
                           </Link>
                         </div>
@@ -1606,11 +1606,11 @@ export default function Stats() {
                     </tbody>
                   </table>
                   {!isPremium && (
-                    <LoadMoreContainer className="button-sm button-tertiary">
+                    <LoadMoreContainer className="button-sm button-tertiary" label="View more weapons">
                       <div className="relative mb-2 -mt-2">
                         <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/30 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
                           <p className="text-ui-300 mb-2">
-                            Get Premium to see the full overview of stats.
+                            Get Premium to see the full overview of your stats.
                           </p>
                           <Link href="/prototype/premium">
                             <button
@@ -1618,7 +1618,7 @@ export default function Stats() {
                               className="button button-sm button-tertiary"
                             >
                               <span className="icon icon-crown text-premium-500" />
-                              <span>View all weapons</span>
+                              <span className="text-premium-500">Get Premium</span>
                             </button>
                           </Link>
                         </div>
@@ -1753,11 +1753,11 @@ export default function Stats() {
                     </tbody>
                   </table>
                   {!isPremium && (
-                    <LoadMoreContainer className="button-sm button-tertiary">
+                    <LoadMoreContainer className="button-sm button-tertiary" label="View more maps">
                       <div className="relative mb-2 -mt-2">
                         <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/30 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
                           <p className="text-ui-300 mb-2">
-                            Get Premium to see the full overview of stats.
+                            Get Premium to see the full overview of your stats.
                           </p>
                           <Link href="/prototype/premium">
                             <button
@@ -1765,7 +1765,7 @@ export default function Stats() {
                               className="button button-sm button-tertiary"
                             >
                               <span className="icon icon-crown text-premium-500" />
-                              <span>View all maps</span>
+                              <span className="text-premium-500">Get Premium</span>
                             </button>
                           </Link>
                         </div>

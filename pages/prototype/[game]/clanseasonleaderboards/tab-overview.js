@@ -6,6 +6,7 @@ import LadderCardSecondary from "../../../../components/Ladder/LadderCardSeconda
 import Slider from "../../../../components/Slider/Slider";
 import AnimatedNumber from "../../../../components/AnimatedNumber/AnimatedNumber";
 import Link from "next/link";
+import ResetsIn from "../../../../components/Countdown/ResetsIn";
 
 export default function TabClanSeasonLeaderboardOverview() {
   const router = useRouter();
@@ -82,22 +83,11 @@ export default function TabClanSeasonLeaderboardOverview() {
                         {prototype.getCurrentClanLeaderboard(game).status ===
                         "finished" ? (
                           <div className="text-sm text-ui-300">
-                            Ended on April {RandomNumber(1, 30)} 2023
+                            Ended on April {RandomNumber(1, 30)}
                           </div>
                         ) : (
                           <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">
-                            <span className="mr-1">
-                              {prototype.getCurrentClanLeaderboard(game)
-                                .status === "upcoming" ? (
-                                <>Starts in:</>
-                              ) : (
-                                <>Time Left:</>
-                              )}
-                            </span>
-                            <span className="icon icon-clock" />
-                            <span>23H</span>
-                            <span>19M</span>
-                            <span>13S</span>
+                            <ResetsIn label={prototype.getCurrentClanLeaderboard(game).status === 'upcoming' ? 'Starts' : 'Finishes'} />
                           </div>
                         )}
                       </div>

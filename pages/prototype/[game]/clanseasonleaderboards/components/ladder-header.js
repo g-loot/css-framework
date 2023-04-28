@@ -7,6 +7,7 @@ import GameIcon from "../../../../../components/GameIcon/GameIcon";
 import Lottie from "lottie-react";
 import LottieExplosion from "../../../../../assets/animations/explosion_stryda_1.json";
 import Link from "next/link";
+import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 
 function calculateTimeLeft() {
   const year = new Date().getFullYear();
@@ -98,22 +99,28 @@ export default function LadderHeader() {
                     </Tooltip>
                   )}
                 </div>
+               
                 {prototype.getLadderByID(game, ladder_id)?.status !== "finished" && (
-                  <div className="text-right flex items-center gap-1">
-                    <span className="icon text-sm text-ui-300 icon-clock" />
-                    <Countdown
-                      separator={"  "}
-                      hasDays={false}
-                      hasHours={true}
-                      hasMinutes={true}
-                      hasSeconds={true}
-                      targetDate={dateTimeAfterThreeDays}
-                      hasLabels={true}
-                      labelsAbbr={true}
-                      labelClassName="text-base block mr-1"
-                      className="text-base"
-                    />
-                  </div>
+                    <>
+                      <ResetsIn label="Finishes" />
+                      {/*
+                      <div className="text-right flex items-center gap-1">
+                        <span className="icon text-sm text-ui-300 icon-clock" />
+                        <Countdown
+                          separator={"  "}
+                          hasDays={false}
+                          hasHours={true}
+                          hasMinutes={true}
+                          hasSeconds={true}
+                          targetDate={dateTimeAfterThreeDays}
+                          hasLabels={true}
+                          labelsAbbr={true}
+                          labelClassName="text-base block mr-1"
+                          className="text-base"
+                        />
+                      </div>
+                      */}
+                    </>
                 )}
               </div>
               <ul className="flex flex-col gap-1 justify-between leading-tight">

@@ -13,6 +13,7 @@ import GameIcon from "../../../../../components/GameIcon/GameIcon";
 import TabClanLeaderboardsLeaderboards from "./tab-clanleaderboards";
 import TabClanLeaderboardsAbout from "./tab-about";
 import TabClanLeaderboardsHistory from "./tab-history";
+import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 
 const TabsItems = [
   {
@@ -104,20 +105,7 @@ export default function Ladders() {
                   )}
                 </div>
                 {selectedLeaderboard.isCurrent ? (
-                  <div className="text-right flex items-center gap-1">
-                    <span className="icon text-sm text-ui-300 icon-clock" />
-                    <Countdown
-                      separator={"  "}
-                      hasDays={false}
-                      hasHours={true}
-                      hasMinutes={true}
-                      hasSeconds={true}
-                      hasLabels={true}
-                      labelsAbbr={true}
-                      labelClassName="text-base block mr-1"
-                      className="text-base"
-                    />
-                  </div>
+                  <ResetsIn label="Finishes" />
                 ) : (
                   <span className="chip chip-secondary">
                     <span>Ended {selectedLeaderboard.id * 2} months ago</span>

@@ -9,6 +9,7 @@ import ModalLadderResults from "../../pages/prototype/[game]/ladders/modal-ladde
 import Link from "next/link";
 import Tooltip from "../Tooltip/Tooltip";
 import Avatar from "../Avatar/Avatar";
+import ResetsIn from "../Countdown/ResetsIn";
 
 const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
 const NOW_IN_MS = new Date().getTime();
@@ -180,21 +181,11 @@ export default function LadderCardSecondary(props) {
               </div>
               {ladder.status === "finished" ? (
                 <div className="text-sm text-ui-300">
-                  Ended on April 12 2023
+                  Ended on April 12
                 </div>
               ) : (
                 <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">
-                  <span className="mr-1">
-                    {ladder.status === "upcoming" ? (
-                      <>Starts in:</>
-                    ) : (
-                      <>Time Left:</>
-                    )}
-                  </span>
-                  <span className="icon icon-clock" />
-                  <span>23H</span>
-                  <span>19M</span>
-                  <span>13S</span>
+                  <ResetsIn label={ladder.status === 'upcoming' ? 'Starts' : 'Finishes'} />
                 </div>
               )}
             </div>

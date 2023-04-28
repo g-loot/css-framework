@@ -72,10 +72,9 @@ export default function Battlepass(props) {
   }, [loading]);
 
   const componentRef = useRef();
-  const { divWidth, setDivWidth } = useState(0);
 
   const handleResize = useCallback(() => {
-    const divWidthResized = componentRef.current.offsetWidth;
+    const divWidthResized = componentRef?.current.offsetWidth;
     if (divWidthResized > 1288) {
       setmaxSteps(9);
     } else if (divWidthResized < 1288 && divWidthResized > 1160) {
@@ -106,7 +105,7 @@ export default function Battlepass(props) {
     if (getBattlepassByID(selectedBattlepass).currentStep > maxSteps) {
       setOriginStep(getBattlepassByID(selectedBattlepass).currentStep - 1);
     }
-  }, []);
+  }, [selectedBattlepass]);
 
   const getBattlepassByID = (id) => {
     return DataBattlepass.find((battlepasses) => {
@@ -198,9 +197,9 @@ export default function Battlepass(props) {
     <>
       {mounted && (
         <div
-          className={`battlepass-container relative z-10 ${loading ? "is-loading" : ""} ${
-            size === "battlepass-md" ? "battlepass-md" : ""
-          }`}
+          className={`battlepass-container relative z-10 ${
+            loading ? "is-loading" : ""
+          } ${size === "battlepass-md" ? "battlepass-md" : ""}`}
           ref={componentRef}
         >
           <div
@@ -393,7 +392,7 @@ export default function Battlepass(props) {
                       <span>{item.name}</span>
                     </div>
                     <div className="battlepass-body">
-                      {!item.hasClaimed && item.id < currentStep && (
+                      {!item.hasClaimed && item.id < getBattlepassByID(selectedBattlepass).currentStep && (
                         <>
                           {item.isPremium ? (
                             <>
