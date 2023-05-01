@@ -281,47 +281,51 @@ export default function Battlepass(props) {
             <div className="battlepass-reward-action">
               {getBattlepassStepByID(activeStep).id < currentStep ? (
                 <>
-                  {getBattlepassStepByID(activeStep).isPremium ? (
-                    <>
-                      {isPremium ? (
-                        <button
-                          type="button"
-                          className="button button-claim"
-                          onClick={openModalClaimBattlepassRewards.bind(
-                            this,
-                            getBattlepassStepByID(activeStep).reward
-                          )}
-                        >
-                          <span className="icon icon-present animate-bounce" />
-                          <span>Claim reward</span>
-                        </button>
-                      ) : (
-                        <Link href={`/prototype/premium`}>
+                {!getBattlepassStepByID(activeStep).hasClaimed && (
+                  <>
+                    {getBattlepassStepByID(activeStep).isPremium ? (
+                      <>
+                        {isPremium ? (
                           <button
                             type="button"
-                            className="button button-tertiary"
+                            className="button button-claim"
+                            onClick={openModalClaimBattlepassRewards.bind(
+                              this,
+                              getBattlepassStepByID(activeStep).reward
+                            )}
                           >
-                            <span className="icon icon-crown text-premium-500" />
-                            <span className="text-premium-500">
-                              Get Premium
-                            </span>
+                            <span className="icon icon-present animate-bounce" />
+                            <span>Claim reward</span>
                           </button>
-                        </Link>
-                      )}
-                    </>
-                  ) : (
-                    <button
-                      type="button"
-                      className="button button-claim"
-                      onClick={openModalClaimBattlepassRewards.bind(
-                        this,
-                        getBattlepassStepByID(activeStep).reward
-                      )}
-                    >
-                      <span className="icon icon-present animate-bounce" />
-                      <span>Claim reward</span>
-                    </button>
-                  )}
+                        ) : (
+                          <Link href={`/prototype/premium`}>
+                            <button
+                              type="button"
+                              className="button button-tertiary"
+                            >
+                              <span className="icon icon-crown text-premium-500" />
+                              <span className="text-premium-500">
+                                Get Premium
+                              </span>
+                            </button>
+                          </Link>
+                        )}
+                      </>
+                    ) : (
+                      <button
+                        type="button"
+                        className="button button-claim"
+                        onClick={openModalClaimBattlepassRewards.bind(
+                          this,
+                          getBattlepassStepByID(activeStep).reward
+                        )}
+                      >
+                        <span className="icon icon-present animate-bounce" />
+                        <span>Claim reward</span>
+                      </button>
+                    )}
+                  </>
+                )}
                 </>
               ) : (
                 <button

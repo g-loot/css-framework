@@ -55,6 +55,11 @@
     gap-4
     ;
   }
+  .battlepass-reward-action {
+    @apply
+    min-h-[2.25rem]
+    ;
+  }
 }
 
 

@@ -84,6 +84,17 @@
 /* loading */
 
 .surface {
+  > * {
+    @apply
+    transition-opacity
+    duration-1000;
+  }
+  &:not(.is-loading) {
+    > * {
+      @apply
+      opacity-100;
+    }
+  }
   &.is-loading {
     @apply 
     relative
