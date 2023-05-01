@@ -7,13 +7,14 @@ import ModalFavoriteGames from '../../pages/prototype/modal-favoritegames';
 import ModalTournamentSchedule from '../../pages/prototype/modal-tournamentschedule';
 import PrototypeGamesNav from './PrototypeGamesNav';
 import { UiContext } from '../../contexts/ui';
+import { usePrototypeData } from '../../contexts/prototype';
 import { useRouter } from 'next/router';
 
 export default function PrototypeLeftMenu(props) {
   const router = useRouter();
   const { query } = useRouter();
+  const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
-  const hasAds = query.ads === 'true' ? true : false;
   const { user_id } = router.query;
   const modalFavoriteGames = query.modalfavoritegames === "true" ? true : false;
   const modalTournamentSchedule = query.modaltournamentschedule === "true" ? true : false;
@@ -44,7 +45,7 @@ export default function PrototypeLeftMenu(props) {
       <div className="surface rounded-lg overflow-hidden">
         <ul className="menu">
           <li>
-            <Link href={`/prototype/home${hasAds ? '?ads=true' : ''}`}>
+            <Link href={`/prototype/home${prototype.getURLparams()}`}>
               <a className={`${router.pathname.endsWith('prototype') ? 'is-active' : ''} ${router.pathname.includes("home") ? 'is-active' : ''}`}>
                 <span className="icon rounded w-8 flex items-center justify-center">
                   <span className={`icon icon-16 icon-home-2`}/>
@@ -54,7 +55,7 @@ export default function PrototypeLeftMenu(props) {
             </Link>
           </li>
           <li>
-            <Link href={`/prototype/profile/1${hasAds ? '?ads=true' : ''}`}>
+            <Link href={`/prototype/profile/1${prototype.getURLparams()}`}>
               <a className={`${router.pathname.includes("profile") && user_id == 1  ? 'is-active' : ''}`}>
                 <span className="icon rounded w-8 flex items-center justify-center">
                   <span className={`icon icon-16 icon-circle-09`}/>
@@ -64,7 +65,7 @@ export default function PrototypeLeftMenu(props) {
             </Link>
           </li>
           <li>
-            <Link href={`/prototype/clans${hasAds ? '?ads=true' : ''}`}>
+            <Link href={`/prototype/clans${prototype.getURLparams()}`}>
               <a className={`${router.pathname.includes("clans") ? 'is-active' : ''}`}>
                 <span className="icon rounded w-8 flex items-center justify-center">
                   <span className={`icon icon-16 icon-multiple-12`}/>
@@ -74,7 +75,7 @@ export default function PrototypeLeftMenu(props) {
             </Link>
           </li>
           <li>
-            <Link href={`/prototype/shop${hasAds ? '?ads=true' : ''}`}>
+            <Link href={`/prototype/shop${prototype.getURLparams()}`}>
               <a className={`${router.pathname.includes("shop") ? 'is-active' : ''}`}>
                 <span className="icon rounded w-8 flex items-center justify-center">
                   <span className={`icon icon-16 icon-shop`}/>
@@ -84,7 +85,7 @@ export default function PrototypeLeftMenu(props) {
             </Link>
           </li>
           <li>
-            <Link href={`/prototype/premium${hasAds ? '?ads=true' : ''}`}>
+            <Link href={`/prototype/premium${prototype.getURLparams()}`}>
               <a className={`${router.pathname.includes("premium") ? 'is-active' : ''}`}>
                 <span className="icon rounded w-8 flex items-center justify-center">
                   <span className={`icon icon-16 icon-ic_stars_24px`}/>

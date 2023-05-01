@@ -112,7 +112,7 @@ export default function PrototypeLeftMenuNew(props) {
         {!loading && (
           <div className="flex-1">
             <div className="">
-            <Link href={`/prototype/home${prototype.getURLparams()}`}>
+              <Link href={`/prototype/home${prototype.getURLparams()}`}>
                 <div
                   className={`lg:hidden item px-6 item-interactive ${
                     router.pathname.includes("home") ? "is-active" : ""
@@ -132,7 +132,7 @@ export default function PrototypeLeftMenuNew(props) {
                   </div>
                 </div>
               </Link>
-            <Link href={`/prototype/shop${prototype.getURLparams()}`}>
+              <Link href={`/prototype/shop${prototype.getURLparams()}`}>
                 <div
                   className={`lg:hidden item px-6 item-interactive ${
                     router.pathname.includes("shop") ? "is-active" : ""
@@ -218,7 +218,29 @@ export default function PrototypeLeftMenuNew(props) {
                   </div>
                 </button>
               </Link>
-              <Link href={`/prototype/profile/1?tab=friends${prototype.getURLparams()}`}>
+              <Link href={`/prototype/battlepass${prototype.getURLparams()}`}>
+                <div
+                  className={`xl:hidden item px-6 item-interactive ${
+                    router.pathname.includes("battlepass") ? "is-active" : ""
+                  }`}
+                >
+                  <div className="item-image">
+                    <div className="avatar avatar-simple avatar-xs">
+                      <div>
+                        <span className="icon icon-gold-coin icon-16" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="item-body">
+                    <div className="item-title">
+                      <span className="text-sm uppercase">Battlepass</span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link
+                href={`/prototype/profile/1?tab=friends${prototype.getURLparams()}`}
+              >
                 <button
                   type="button"
                   className={`item px-6 item-interactive border-b border-ui-700 ${
@@ -260,7 +282,11 @@ export default function PrototypeLeftMenuNew(props) {
               </button>
             </div>
             <div className="px-2 block lg:hidden">
-              <button onClick={openModalBuyTokens} type="button" className="button button-sm button-claim w-full">
+              <button
+                onClick={openModalBuyTokens}
+                type="button"
+                className="button button-sm button-claim w-full"
+              >
                 <span>Get tokens</span>
               </button>
             </div>

@@ -5,7 +5,6 @@ import PrototypeHead from "./PrototypeHead";
 import PrototypeLeftMenu from "./PrototypeLeftMenu";
 import PrototypeLeftMenuNew from "./PrototypeLeftMenuNew";
 import Topbar from "../Topbar/Topbar";
-import TopbarNew from "../Topbar/Topbar";
 import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 import { VariablesContext } from "../../contexts/variables";
@@ -105,7 +104,7 @@ export default function PrototypeStructure({ children, title }) {
               className="drawer-toggle"
             />
             <div className="drawer-content scrollbar-desktop scrollbar-secondary">
-              <TopbarNew />
+              <Topbar />
               <div className="container relative">
                 <div id="alerts" className="alert-container"></div>
 
@@ -148,13 +147,12 @@ export default function PrototypeStructure({ children, title }) {
                         </div>
                       </div>
                     )}
-
                     {children}
                   </div>
                 </div>
                 {hasAds && (
                   <div className="hidden 3xl:block absolute inset-y-0 right-0 w-[260px]">
-                    <div className="sticky top-[68px]">
+                    <div className="sticky top-[64px]">
                       <Ad width="260" height="260" />
                     </div>
                   </div>
@@ -170,10 +168,7 @@ export default function PrototypeStructure({ children, title }) {
               <aside className="w-72 bg-ui-850 border-r border-ui-700 flex flex-col shadow-2xl">
                 <div className="h-12 flex items-center lg:items-start justify-between border-b border-ui-700 lg:pt-1 pl-7 pr-2 sticky z-10 top-0">
                   <Link href={`/prototype/home${prototype.getURLparams()}`}>
-                    {variables.newBrand ? (
-                      <>New brand name</>
-                    ) : (
-                      <a className="flex items-center gap-2 interactive">
+                  <a className="flex items-center gap-2 interactive">
                         <img
                           width="110"
                           height="auto"
@@ -181,7 +176,6 @@ export default function PrototypeStructure({ children, title }) {
                           alt="Stryda logo"
                         />
                       </a>
-                    )}
                   </Link>
                   <div className="block md:hidden">
                     <label

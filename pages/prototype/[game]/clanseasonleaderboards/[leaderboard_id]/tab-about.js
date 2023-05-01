@@ -313,8 +313,8 @@ export default function TabClanLeaderboardsAbout() {
               <div className="border-b border-ui-700 pb-4">
                 <h2 className="text-2xl">About Clan Seasons</h2>
               </div>
-              <div className="p-4 flex items-center gap-8 leading-relaxed">
-                <div className="flex-3 columns-2 gap-8 space-y-4 order-2 md:order-1 text-ui-300 leading-relaxed">
+              <div className="p-4 flex flex-col lg:flex-row items-center gap-8 leading-relaxed">
+                <div className="flex-3 xl:columns-2 gap-8 space-y-4 order-2 lg:order-1 text-ui-300 leading-relaxed">
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ac diam sed interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam suscipit nibh eget scelerisque eleifend. Vestibulum eget gravida orci. Donec lorem justo, eleifend eget ultrices id, sagittis in nisi.
                   </p>
@@ -339,7 +339,7 @@ export default function TabClanLeaderboardsAbout() {
                     </li>
                   </ul>
                 </div>
-                <div className="flex-2 order-1 md:order-2">
+                <div className="flex-2 order-1 lg:order-2">
                   <img
                     className="frounded"
                     src="https://res.cloudinary.com/gloot/image/upload/Stryda/illustrations/clan_season.png"
