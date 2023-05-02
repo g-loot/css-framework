@@ -11,6 +11,25 @@
   items-center
   gap-4
   ;
+  .battlepass-summary {
+    @apply
+    absolute
+    p-4
+    z-40
+    inset-0
+    ;
+    & ~ * {
+      @apply
+      opacity-0
+      pointer-events-none
+      ;
+    }
+    > ul {
+      @apply
+      mb-4
+      ;
+    }
+  }
 }
 
 .battlepass-viewer {
@@ -62,6 +81,116 @@
   }
 }
 
+.battlepass-summary {
+  @apply
+  text-center
+  flex
+  flex-col
+  items-center
+  justify-center
+  p-4
+  ;
+
+  > ul {
+    @apply
+    flex
+    flex-wrap
+    items-center
+    justify-center
+    lg:divide-x
+    lg:divide-ui-700
+    mt-8
+    lg:mt-4
+    gap-y-4
+    py-8
+    bg-ui-850/90
+    backdrop-blur-sm
+    border
+    border-ui-700
+    rounded
+    overflow-hidden
+    ;
+    > li {
+      @apply
+      px-10
+      animate-slide-in-bottom
+      ;
+      animation-delay: calc(var(--delay, 1) * 0.1s);
+      &:nth-child(1) {
+        --delay: 1;
+      }
+      &:nth-child(2) {
+        --delay: 2;
+      }
+      &:nth-child(3) {
+        --delay: 3;
+      }
+      &:nth-child(4) {
+        --delay: 4;
+      }
+      &:nth-child(5) {
+        --delay: 5;
+      }
+      &:nth-child(6) {
+        --delay: 6;
+      }
+      &:nth-child(7) {
+        --delay: 7;
+      }
+      &:nth-child(8) {
+        --delay: 8;
+      }
+      &:nth-child(9) {
+        --delay: 9;
+      }
+      img,
+      .carousel-slides-container,
+      .carousel-slide {
+        @apply
+        w-20
+        h-20
+        lg:w-28
+        lg:h-28
+      }
+      .carousel-control {
+        @apply
+        -inset-x-7
+        ;
+      }
+      img,
+      .carousel-item {
+        @apply
+        rounded
+        mx-auto
+        ;
+      }
+      > .battlepass-reward {
+        @apply
+        flex
+        flex-col
+        leading-tight
+        mt-4
+        ;
+        > span {
+          &:nth-of-type(1) {
+            @apply
+            text-sm
+            text-ui-300
+            uppercase
+            ;
+          }
+          &:nth-of-type(2) {
+            @apply
+            text-xl
+            md:text-4xl
+            text-main
+            ;
+          }
+        }
+      }
+    }
+  }
+}
 
 .battlepass-reward-image {
   @apply
@@ -76,23 +205,14 @@
     z-30
     absolute
     inset-0
-    bg-[150%]
-    bg-[length:400%_auto]
-    animate-[battlepass-reward-image-rays_10s_cubic-bezier(0.1,0,0.8,1)_infinite]
-    bg-[linear-gradient(130deg,_rgba(255,255,255,0)_44%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_50%,_rgba(255,255,255,0)_59%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_66%)]
+    bg-[160%]
+    bg-[length:300%_auto]
+    animate-[battlepass-shining-rays_3s_cubic-bezier(.7,0,.3,1)_infinite_1.2s]
+    bg-[linear-gradient(130deg,_rgba(255,255,255,0)_44%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_60%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%)]
     bg-no-repeat
     ;
     mask-size: cover;
     mask-repeat: no-repeat;
-  }
-}
-
-@keyframes battlepass-reward-image-rays {
-  0%, 25% {
-    background-position: 150%;
-  }
-  50%, 100% {
-    background-position: -15%;
   }
 }
 
@@ -424,12 +544,11 @@
         absolute
         inset-0
         rounded-[calc(0.25rem-2px)]
-        bg-[150%]
+        bg-[160%]
         bg-[length:300%_auto]
-        animate-[battlepass-reward-image-rays_6s_cubic-bezier(0.1,0,0.8,1)_infinite]
-        bg-[linear-gradient(130deg,_rgba(255,255,255,0)_44%,_rgba(255,255,255,.4)_46%,_rgba(255,255,255,0)_54%,_rgba(255,255,255,0)_59%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%)]
+        animate-[battlepass-shining-rays_3s_cubic-bezier(.7,0,.3,1)_infinite_1.2s]
+        bg-[linear-gradient(130deg,_rgba(255,255,255,0)_44%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_60%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%)]
         bg-no-repeat
-        bg-center
         shadow-[inset_0_0_2rem_0_rgb(var(--color-main)/50%)]
         ;
       }
@@ -618,11 +737,11 @@
 }
 
 @keyframes battlepass-shining-rays {
-  0%, 25% {
-    background-position: -15%;
+  0% {
+    background-position: 160%;
   }
-  50%, 100% {
-    background-position: 150%;
+  75%, 100% {
+    background-position: -10%;
   }
 }
 
@@ -680,6 +799,43 @@
       justify-end
       text-right
       h-12
+      ;
+    }
+  }
+  .battlepass-summary {
+    @apply
+    relative
+    ;
+    > ul {
+      @apply
+      w-full
+      py-4
+      ;
+      > li {
+        img,
+        .carousel-slides-container,
+        .carousel-slide {
+          @apply
+          w-20
+          h-20
+        }
+        > .battlepass-reward {
+          @apply
+          mt-2
+          ;
+          > span {
+            &:nth-of-type(2) {
+              @apply
+              text-2xl
+              ;
+            }
+          }
+        }
+      }
+    }
+    & ~ * {
+      @apply
+      hidden
       ;
     }
   }
@@ -767,4 +923,3 @@
     background-position: 900px 0;
   }
 }
-

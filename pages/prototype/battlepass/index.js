@@ -1,21 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import Battlepass from "../../../components/BattlePass/BattlePass";
-import { useRouter } from "next/router";
-import { UiContext } from "../../../contexts/ui";
-import Avatar from "../../../components/Avatar/Avatar";
-import Link from "next/link";
-import { usePrototypeData } from "../../../contexts/prototype";
 import { DataBattlepass } from "../../../mock-data/data-battlepass";
 import Tooltip from "../../../components/Tooltip/Tooltip";
+import ResetsIn from "../../../components/Countdown/ResetsIn";
 
 export default function BattlepassPage() {
-  const { query } = useRouter();
-  const uiContext = useContext(UiContext);
-  const prototype = usePrototypeData();
-  const isPremium = query.premium === "true" ? true : false;
-  const battlepass = query.battlepass || 0;
-
   const [selectedBattlepassID, setSelectedBattlepassID] = useState(0);
   const [selectedBattlepass, setSelectedBattlepass] = useState(null);
 
@@ -27,7 +17,6 @@ export default function BattlepassPage() {
 
   useEffect(() => {
     setSelectedBattlepass(getBattlepassByID(0));
-    console.log(selectedBattlepass);
   }, [selectedBattlepassID]);
 
   function switchBattlepasses() {
@@ -61,7 +50,7 @@ export default function BattlepassPage() {
             </div>
       </section>*/}
           <section className="mb-8 surface surface-dimmed p-4 relative sm:rounded overflow-hidden animate-slide-in-bottom">
-            <div className="relative z-10 p-4 flex flex-col lg:flex-row items-start justify-between pb-8 mb-8 gap-4 lg:gap-8 border-b border-ui-100/10">
+            <div className="relative z-10 p-4 flex flex-col lg:flex-row items-start justify-between pb-8 mb-4 gap-4 lg:gap-8 border-b border-ui-100/10">
               <div className="flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-8 text-center md:text-left">
                 <h1 onClick={() => switchBattlepasses()}>
                   {getBattlepassByID(selectedBattlepassID).meta?.name}
@@ -72,21 +61,26 @@ export default function BattlepassPage() {
                   </p>
                 </div>
               </div>
-              <Tooltip
-                tooltip={
-                  <div className="max-w-xs text-sm text-center leading-tight">
-                    The Battlepass is how you turn your XP into useful stuff
-                    like Coins or Tokens. Each time you reach a milestone in the
-                    Battlepass, you unlock another reward. Battlepass and XP
-                    reset each week so you will always have something new to
-                    work towards.
-                  </div>
-                }
-              >
-                <button className="text-ui-300 text-0">
-                  <span className="icon icon-16 icon-c-info" />
-                </button>
-              </Tooltip>
+              <div className="text-right flex gap-2">
+                <Tooltip
+                  tooltip={
+                    <div className="max-w-xs text-sm text-center leading-tight">
+                      The Battlepass is how you turn your XP into useful stuff
+                      like Coins or Tokens. Each time you reach a milestone in the
+                      Battlepass, you unlock another reward. Battlepass and XP
+                      reset each week so you will always have something new to
+                      work towards.
+                    </div>
+                  }
+                >
+                  <button className="text-ui-300 text-0">
+                    <span className="icon icon-16 icon-c-info" />
+                  </button>
+                </Tooltip>
+                <div className="chip chip-secondary">
+                  <ResetsIn />
+                </div>
+              </div>
             </div>
             <Battlepass id={selectedBattlepassID} />
             <img

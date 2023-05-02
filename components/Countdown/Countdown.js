@@ -14,15 +14,15 @@ const NOW_IN_MS = new Date().getTime();
 const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 
 const Countdown = (props) => {
-  const hasDays = props.hasDays !== undefined ? props.hasDays : false;
-  const hasHours = props.hasHours !== undefined ? props.hasHours : false;
-  const hasMinutes = props.hasMinutes !== undefined ? props.hasMinutes : false;
-  const hasSeconds = props.hasSeconds !== undefined ? props.hasSeconds : true;
-  const hasLabels = props.hasLabels !== undefined ? props.hasLabels : false;
-  const labelsAbbr = props.labelsAbbr !== undefined ? props.labelsAbbr : false;
-  const className = props.className !== undefined ? props.className : "";
-  const labelClassName = props.labelClassName !== undefined ? props.labelClassName : "";
-  const separator = props.separator !== undefined ? props.separator : "";
+  const hasDays = props.hasDays || false;
+  const hasHours = props.hasHours || true;
+  const hasMinutes = props.hasMinutes || true;
+  const hasSeconds = props.hasSeconds || true;
+  const hasLabels = props.hasLabels || true;
+  const labelsAbbr = props.labelsAbbr || true;
+  const className = props.className || "";
+  const labelClassName = props.labelClassName || "";
+  const separator = props.separator || "";
   const targetDate =
     props.targetDate !== undefined ? props.targetDate : dateTimeAfterThreeDays;
 
@@ -38,12 +38,12 @@ const Countdown = (props) => {
             <span style={{ "--value": days }} />
             {hasLabels && !labelsAbbr && (
               <>
-                <small className={labelClassName}>Days</small>
+                <i className={labelClassName}>Days</i>
               </>
             )}
             {hasLabels && labelsAbbr && (
               <>
-                <small className={labelClassName}>D</small>
+                <i className={labelClassName}>D</i>
               </>
             )}
             {separator}
@@ -55,12 +55,12 @@ const Countdown = (props) => {
 
             {hasLabels && !labelsAbbr && (
               <>
-                <small className={labelClassName}>Hours</small>
+                <i className={labelClassName}>Hours</i>
               </>
             )}
             {hasLabels && labelsAbbr && (
               <>
-                <small className={labelClassName}>H</small>
+                <i className={labelClassName}>H</i>
               </>
             )}
             {separator}
@@ -71,12 +71,12 @@ const Countdown = (props) => {
             <span style={{ "--value": minutes }} />
             {hasLabels && !labelsAbbr && (
               <>
-                <small className={labelClassName}>Minutes</small>
+                <i className={labelClassName}>Minutes</i>
               </>
             )}
             {hasLabels && labelsAbbr && (
               <>
-                <small className={labelClassName}>M</small>
+                <i className={labelClassName}>M</i>
               </>
             )}
             {separator}
@@ -87,12 +87,12 @@ const Countdown = (props) => {
             <span style={{ "--value": seconds }} />
             {hasLabels && !labelsAbbr && (
               <>
-                <small className={labelClassName}>Seconds</small>
+                <i className={labelClassName}>Seconds</i>
               </>
             )}
             {hasLabels && labelsAbbr && (
               <>
-                <small className={labelClassName}>S</small>
+                <i className={labelClassName}>S</i>
               </>
             )}
           </>

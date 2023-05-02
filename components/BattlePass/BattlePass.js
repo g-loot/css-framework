@@ -15,6 +15,10 @@ import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Avatar from "../Avatar/Avatar";
+import AnimatedNumber from "../AnimatedNumber/AnimatedNumber";
+import Slider from "../Slider/Slider";
+import CarouselSingle, { CarouselItem } from "../Carousel/CarouselSingle";
+import ResetsIn from "../Countdown/ResetsIn";
 
 const useResize = (myRef) => {
   const [width, setWidth] = useState(0);
@@ -202,6 +206,154 @@ export default function Battlepass(props) {
           } ${size === "battlepass-md" ? "battlepass-md" : ""}`}
           ref={componentRef}
         >
+          {getBattlepassByID(selectedBattlepass).isFinished && (
+            <div className="battlepass-summary">
+              <h4>Congratulations on completing the battlepass</h4>
+              <ul>
+                <li>
+                  <img
+                    src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                      getBattlepassRewardByID(41).image
+                    }.png`}
+                    width="100%"
+                    height="auto"
+                    alt=""
+                  />
+                  <div className="battlepass-reward">
+                    <span>Total XP</span>
+                    <span>
+                      <AnimatedNumber number={2240} />
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <img
+                    src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                      getBattlepassRewardByID(7).image
+                    }.png`}
+                    width="100%"
+                    height="auto"
+                    alt=""
+                  />
+                  <div className="battlepass-reward">
+                    <span>Coins</span>
+                    <span>
+                      <AnimatedNumber number={1411} />
+                    </span>
+                  </div>{" "}
+                </li>
+                <li>
+                  <img
+                    src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                      getBattlepassRewardByID(10).image
+                    }.png`}
+                    width="100%"
+                    height="auto"
+                    alt=""
+                  />
+                  <div className="battlepass-reward">
+                    <span>Tokens</span>
+                    <span>
+                      <AnimatedNumber number={879} />
+                    </span>
+                  </div>{" "}
+                </li>
+                <li>
+                  <CarouselSingle autoPlay={false}>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(15).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(16).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(17).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                  </CarouselSingle>
+                  <div className="battlepass-reward">
+                    <span>Avatar frames</span>
+                    <span>
+                      <AnimatedNumber number={3} />
+                    </span>
+                  </div>{" "}
+                </li>
+                <li>
+                  <CarouselSingle autoPlay={false}>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(30).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(31).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(33).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(35).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                  </CarouselSingle>
+                  <div className="battlepass-reward">
+                    <span>Profile</span>
+                    <span>
+                      <AnimatedNumber number={4} />
+                    </span>
+                  </div>
+                </li>
+              </ul>
+              <p className="text-ui-300">
+                <ResetsIn label="New Battlepass" status={2} />
+              </p>
+            </div>
+          )}
           <div
             className={`battlepass-viewer ${
               size === "battlepass-md" ? "!hidden" : ""
@@ -281,51 +433,51 @@ export default function Battlepass(props) {
             <div className="battlepass-reward-action">
               {getBattlepassStepByID(activeStep).id < currentStep ? (
                 <>
-                {!getBattlepassStepByID(activeStep).hasClaimed && (
-                  <>
-                    {getBattlepassStepByID(activeStep).isPremium ? (
-                      <>
-                        {isPremium ? (
-                          <button
-                            type="button"
-                            className="button button-claim"
-                            onClick={openModalClaimBattlepassRewards.bind(
-                              this,
-                              getBattlepassStepByID(activeStep).reward
-                            )}
-                          >
-                            <span className="icon icon-present animate-bounce" />
-                            <span>Claim reward</span>
-                          </button>
-                        ) : (
-                          <Link href={`/prototype/premium`}>
+                  {!getBattlepassStepByID(activeStep).hasClaimed && (
+                    <>
+                      {getBattlepassStepByID(activeStep).isPremium ? (
+                        <>
+                          {isPremium ? (
                             <button
                               type="button"
-                              className="button button-tertiary"
+                              className="button button-claim"
+                              onClick={openModalClaimBattlepassRewards.bind(
+                                this,
+                                getBattlepassStepByID(activeStep).reward
+                              )}
                             >
-                              <span className="icon icon-crown text-premium-500" />
-                              <span className="text-premium-500">
-                                Get Premium
-                              </span>
+                              <span className="icon icon-present animate-bounce" />
+                              <span>Claim reward</span>
                             </button>
-                          </Link>
-                        )}
-                      </>
-                    ) : (
-                      <button
-                        type="button"
-                        className="button button-claim"
-                        onClick={openModalClaimBattlepassRewards.bind(
-                          this,
-                          getBattlepassStepByID(activeStep).reward
-                        )}
-                      >
-                        <span className="icon icon-present animate-bounce" />
-                        <span>Claim reward</span>
-                      </button>
-                    )}
-                  </>
-                )}
+                          ) : (
+                            <Link href={`/prototype/premium`}>
+                              <button
+                                type="button"
+                                className="button button-tertiary"
+                              >
+                                <span className="icon icon-crown text-premium-500" />
+                                <span className="text-premium-500">
+                                  Get Premium
+                                </span>
+                              </button>
+                            </Link>
+                          )}
+                        </>
+                      ) : (
+                        <button
+                          type="button"
+                          className="button button-claim"
+                          onClick={openModalClaimBattlepassRewards.bind(
+                            this,
+                            getBattlepassStepByID(activeStep).reward
+                          )}
+                        >
+                          <span className="icon icon-present animate-bounce" />
+                          <span>Claim reward</span>
+                        </button>
+                      )}
+                    </>
+                  )}
                 </>
               ) : (
                 <button
@@ -396,39 +548,41 @@ export default function Battlepass(props) {
                       <span>{item.name}</span>
                     </div>
                     <div className="battlepass-body">
-                      {!item.hasClaimed && item.id < getBattlepassByID(selectedBattlepass).currentStep && (
-                        <>
-                          {item.isPremium ? (
-                            <>
-                              {isPremium && (
-                                <button
-                                  type="button"
-                                  className="button button-sm whitespace-nowrap button-claim"
-                                >
-                                  <span className="icon icon-present animate-bounce" />
-                                  <span>Claim</span>
-                                </button>
-                              )}
-                            </>
-                          ) : (
-                            <>
-                              {size === "battlepass-md" ? (
-                                <button
-                                  type="button"
-                                  className="button button-sm whitespace-nowrap button-claim"
-                                >
-                                  <span className="icon icon-present animate-bounce" />
-                                  <span>Claim</span>
-                                </button>
-                              ) : (
-                                <div className="bg-main rounded-full w-12 h-12 grid place-content-center text-2xl text-ui-900">
-                                  <span className="icon icon-present animate-bounce" />
-                                </div>
-                              )}
-                            </>
-                          )}
-                        </>
-                      )}
+                      {!item.hasClaimed &&
+                        item.id <
+                          getBattlepassByID(selectedBattlepass).currentStep && (
+                          <>
+                            {item.isPremium ? (
+                              <>
+                                {isPremium && (
+                                  <button
+                                    type="button"
+                                    className="button button-sm whitespace-nowrap button-claim"
+                                  >
+                                    <span className="icon icon-present animate-bounce" />
+                                    <span>Claim</span>
+                                  </button>
+                                )}
+                              </>
+                            ) : (
+                              <>
+                                {size === "battlepass-md" ? (
+                                  <button
+                                    type="button"
+                                    className="button button-sm whitespace-nowrap button-claim"
+                                  >
+                                    <span className="icon icon-present animate-bounce" />
+                                    <span>Claim</span>
+                                  </button>
+                                ) : (
+                                  <div className="bg-main rounded-full w-12 h-12 grid place-content-center text-2xl text-ui-900">
+                                    <span className="icon icon-present animate-bounce" />
+                                  </div>
+                                )}
+                              </>
+                            )}
+                          </>
+                        )}
                       <img
                         src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
                           getBattlepassRewardByID(item.reward).image

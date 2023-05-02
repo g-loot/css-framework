@@ -898,3 +898,110 @@
     ;
   }
 }
+
+/* carousel-single */
+
+.carousel-single {
+  @apply
+  relative
+  flex
+  justify-center
+  ;
+
+  .carousel-slides-container {
+    @apply
+    relative
+    overflow-hidden
+    ;
+  }
+  .carousel-slides {
+    @apply
+    relative
+    z-0
+    whitespace-nowrap
+    transition-transform
+    duration-300
+    ;
+  }
+  .carousel-slide {
+    @apply
+    inline-flex
+    items-center
+    ;
+  }
+  .carousel-indicators {
+    @apply
+    flex
+    content-center
+    ;
+  }
+  .carousel-nav {
+    @apply
+    inline-flex
+    mx-auto
+    items-center
+    justify-center
+    bottom-1
+    absolute
+    z-30
+    rounded-full
+    bg-ui-800/50
+    leading-[0]
+    p-0.5
+    ;
+    button {
+      @apply
+      p-1
+      rounded-full
+      ;
+      span {
+        @apply
+        rounded-full
+        w-1.5
+        h-1.5
+        block
+        overflow-hidden
+        text-ui-200/0
+        bg-ui-500
+        ;
+      }
+      &.is-active {
+        span {
+          @apply
+          bg-ui-100
+          ;
+        }
+      }
+    }
+  }
+  .carousel-control {
+    @apply
+    absolute
+    flex
+    items-center
+    justify-between
+    inset-0
+    ;
+    > .button:first-child {
+      @apply
+      left-0
+      ;
+    }
+    > .button:last-child {
+      @apply
+      right-0
+      ;
+    }
+  }
+}
+
+/*
+.carousel-indicators > button {
+  margin: 5px;
+}
+
+.carousel-indicators > button.active {
+  background-color: green;
+  color: #fff;
+}
+*/

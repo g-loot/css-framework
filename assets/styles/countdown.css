@@ -8,6 +8,17 @@
   inline-flex
   items-baseline
   ;
+  > * {
+    @apply
+    not-italic
+    ;
+  }
+
+  > i:not(:last-child) {
+    @apply
+    mr-0.5
+    ;
+  }
   > span {
     @apply
     h-4
@@ -27,7 +38,6 @@
       top-[calc(var(--value)_*_-1em)]
       ease-[cubic-bezier(0.9,0,0.1,1)]
       ;
-      /*top-[calc(var(--value)*-1em)]*/
     }
   }
   &.text-8xl {

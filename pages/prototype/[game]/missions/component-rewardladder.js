@@ -11,6 +11,7 @@ import Slider from "../../../../components/Slider/Slider";
 import ModalClaimLadderRewards from "../../home/modal-claim-ladderrewards";
 import Battlepass from "../../../../components/BattlePass/BattlePass";
 import ResetsIn from "../../../../components/Countdown/ResetsIn";
+import { DataBattlepass } from "../../../../mock-data/data-battlepass";
 
 export default function ComponentRewardLadder() {
   const router = useRouter();
@@ -25,6 +26,23 @@ export default function ComponentRewardLadder() {
   const [submitting, setSubmitting] = useState(false);
   const unclaimedRewards = query.unclaimedrewards === "true" ? true : false;
   const [hasUnclaimedRewards, setHasUnclaimedRewards] = useState(false);
+
+  const [selectedBattlepassID, setSelectedBattlepassID] = useState(0);
+  const [selectedBattlepass, setSelectedBattlepass] = useState(null);
+
+  const getBattlepassByID = (id) => {
+    return DataBattlepass.find((battlepass) => {
+      return battlepass.id === parseInt(id);
+    });
+  };
+
+  function switchBattlepasses() {
+    if (selectedBattlepassID < DataBattlepass.length - 1) {
+      setSelectedBattlepassID(selectedBattlepassID + 1);
+    } else {
+      setSelectedBattlepassID(0);
+    }
+  }
 
   function addToastWithDelay(toast) {
     setSubmitting(true);
@@ -52,7 +70,7 @@ export default function ComponentRewardLadder() {
     <>
       <div className="flex flex-col gap-2 lg:flex-row items-baseline justify-between mb-2 px-4 sm:px-0">
         <div className="flex gap-2 items-baseline">
-          <h2 className="h3 flex-none">Battlepass</h2>
+          <h2 className="h3 flex-none" onClick={() => switchBattlepasses()}>Battlepass</h2>
 
           <Tooltip
             tooltip={
@@ -153,7 +171,7 @@ export default function ComponentRewardLadder() {
 
       {!oldBattlepass ? (
         <div className="mt-4 mb-8">
-          <Battlepass size="battlepass-md" />
+          <Battlepass id={selectedBattlepassID} size="battlepass-md" />
         </div>
       ) : (
         <div className="mb-4">

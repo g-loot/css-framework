@@ -16,14 +16,13 @@ export default function ResetsIn(props) {
   }
 
   return (
-    <span onClick={incrementStatus}>
+    <span onClick={incrementStatus} className="whitespace-nowrap">
       {status === 0 && <>{label} on August 24</>}
-      {status === 1 && <>{label} on Monday</>}
+      {status === 1 && <>{label} on Monday at 2pm CET</>}
       {status === 2 && (
         <>
           {label} in{" "}
           <Countdown
-            separator=":"
             hasHours={true}
             hasMinutes={true}
             hasSeconds={true}
