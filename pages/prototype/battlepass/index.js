@@ -50,9 +50,8 @@ export default function BattlepassPage() {
             </div>
       </section>*/}
           <section className="mb-8 surface surface-dimmed p-4 relative sm:rounded overflow-hidden animate-slide-in-bottom">
-            <div className="relative z-10 p-4 flex flex-col lg:flex-row items-start justify-between pb-8 mb-4 gap-4 lg:gap-8 border-b border-ui-100/10">
-              <div className="flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-8 text-center md:text-left">
-                <h1 onClick={() => switchBattlepasses()}>
+            <div className="relative z-10 flex flex-col lg:flex-row lg:items-start text-center lg:text-left lg:justify-between pb-4 mb-4 gap-4 lg:gap-8 border-b border-ui-100/10">
+                <h1 onClick={() => switchBattlepasses()} className="pt-1.5">
                   {getBattlepassByID(selectedBattlepassID).meta?.name}
                 </h1>
                 <div className="flex-1 xl:border-l xl:border-ui-100/10 xl:pl-8 flex items-center">
@@ -60,8 +59,7 @@ export default function BattlepassPage() {
                     {getBattlepassByID(selectedBattlepassID).meta?.description}
                   </p>
                 </div>
-              </div>
-              <div className="text-right flex gap-2">
+              <div className="text-center lg:text-right flex justify-center lg:justify-end gap-2">
                 <Tooltip
                   tooltip={
                     <div className="max-w-xs text-sm text-center leading-tight">

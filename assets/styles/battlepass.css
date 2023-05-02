@@ -13,15 +13,11 @@
   ;
   .battlepass-summary {
     @apply
-    absolute
-    p-4
     z-40
-    inset-0
     ;
     & ~ * {
       @apply
-      opacity-0
-      pointer-events-none
+      hidden
       ;
     }
     > ul {
@@ -29,6 +25,14 @@
       mb-4
       ;
     }
+  }
+}
+
+.battlepass-container:not(.battlepass-md) {
+  .battlepass-summary {
+    @apply
+    min-h-[678px]
+    ;
   }
 }
 
@@ -88,7 +92,6 @@
   flex-col
   items-center
   justify-center
-  p-4
   ;
 
   > ul {
@@ -97,11 +100,10 @@
     flex-wrap
     items-center
     justify-center
-    lg:divide-x
-    lg:divide-ui-700
-    mt-8
-    lg:mt-4
-    gap-y-4
+    2xl:divide-x
+    2xl:divide-ui-700
+    mt-4
+    gap-y-8
     py-8
     bg-ui-850/90
     backdrop-blur-sm
@@ -112,7 +114,8 @@
     ;
     > li {
       @apply
-      px-10
+      px-6
+      xl:px-10
       animate-slide-in-bottom
       ;
       animation-delay: calc(var(--delay, 1) * 0.1s);
