@@ -172,6 +172,7 @@
   text-ui-200
   !border-none
   !p-0
+  z-[60]
   ;
 
   > * {
