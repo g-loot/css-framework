@@ -200,6 +200,7 @@ export default function Chat(props) {
   const isDisabled = props.isdisabled;
   const isDemo = props.demo;
   const isAbsolute = props.isAbsolute || false;
+  const variant = props.variant || false;
   const prototype = usePrototypeData();
   const [newMessageAdded, setNewMessageAdded] = useState(false);
   const conversationSelector =
@@ -362,7 +363,11 @@ export default function Chat(props) {
   }
   return (
     <>
-      <div className={`chat ${isDemo ? 'chat-responsive' : ''} ${isAbsolute ? 'chat-absolute' : ''}`}>
+      <div
+        className={`chat ${variant === "secondary" ? "chat-secondary" : ""}${
+          isDemo ? "chat-responsive" : ""
+        } ${isAbsolute ? "chat-absolute" : ""}`}
+      >
         <div
           className={`chat-feed ${maxHeight} ${
             isDisabled ? "flex items-center justify-center" : ""
@@ -379,33 +384,30 @@ export default function Chat(props) {
                 >
                   {!message.isEvent && (
                     <>
-                      {!message.isYourself && (
-                        <Link
-                          href={`/prototype/profile/${
-                            prototype.getUserByID(message.author)?.id
-                          }`}
-                        >
-                          <div className="chat-author interactive">
-                            <div
-                              className={`avatar avatar-circle avatar-sm ${
-                                prototype.getUserByID(message.author)?.isPremium
-                                  ? "avatar-premium"
-                                  : ""
-                              }`}
-                            >
-                              <div>
-                                <img
-                                  src={
-                                    prototype.getUserByID(message.author)
-                                      ?.avatar
-                                  }
-                                  alt="avatar"
-                                />
-                              </div>
+                      <Link
+                        href={`/prototype/profile/${
+                          prototype.getUserByID(message.author)?.id
+                        }`}
+                      >
+                        <div className="chat-author interactive">
+                          <div
+                            className={`avatar avatar-circle avatar-sm ${
+                              prototype.getUserByID(message.author)?.isPremium
+                                ? "avatar-premium"
+                                : ""
+                            }`}
+                          >
+                            <div>
+                              <img
+                                src={
+                                  prototype.getUserByID(message.author)?.avatar
+                                }
+                                alt="avatar"
+                              />
                             </div>
                           </div>
-                        </Link>
-                      )}
+                        </div>
+                      </Link>
                     </>
                   )}
 

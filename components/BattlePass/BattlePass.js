@@ -56,20 +56,22 @@ export default function Battlepass(props) {
   const componentRef = useRef();
 
   const handleResize = useCallback(() => {
-    const divWidthResized = componentRef?.current.offsetWidth;
-    if (divWidthResized > 1288) {
-      setmaxSteps(9);
-    } else if (divWidthResized < 1288 && divWidthResized > 1160) {
-      setmaxSteps(7);
-    } else if (divWidthResized < 1160 && divWidthResized > 992) {
-      setmaxSteps(7);
-    } else if (divWidthResized < 992 && divWidthResized > 848) {
-      setmaxSteps(4);
-    } else if (divWidthResized < 848 && divWidthResized > 750) {
-      setmaxSteps(3);
-    } else if (divWidthResized < 750) {
-      setmaxSteps(2);
-    }
+    setTimeout(() => {
+      const divWidthResized = componentRef?.current?.offsetWidth;
+      if (divWidthResized > 1288) {
+        setmaxSteps(9);
+      } else if (divWidthResized < 1288 && divWidthResized > 1160) {
+        setmaxSteps(7);
+      } else if (divWidthResized < 1160 && divWidthResized > 992) {
+        setmaxSteps(7);
+      } else if (divWidthResized < 992 && divWidthResized > 848) {
+        setmaxSteps(4);
+      } else if (divWidthResized < 848 && divWidthResized > 750) {
+        setmaxSteps(3);
+      } else if (divWidthResized < 750) {
+        setmaxSteps(2);
+      }
+    }, 50);
   }, [componentRef]);
 
   useEffect(() => {
@@ -428,7 +430,9 @@ export default function Battlepass(props) {
                               <span>Claim reward</span>
                             </button>
                           ) : (
-                            <Link href={`/prototype/premium`}>
+                            <Link
+                              href={`/prototype/premium${prototype.getURLparams()}`}
+                            >
                               <button
                                 type="button"
                                 className="button button-tertiary"
@@ -465,6 +469,16 @@ export default function Battlepass(props) {
                   <span className="icon icon-lock" />
                   <span>Claim reward</span>
                 </button>
+              )}
+              {!isPremium && (
+                <div className="battlepass-premium">
+                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                    <a className="text-premium-500 flex items-center gap-2 whitespace-nowrap rounded-full leading-none p-2 bg-ui-850/90">
+                      <span className="icon icon-crown text-lg" />
+                      <span className="link text-sm">Get Premium to claim locked tiers</span>
+                    </a>
+                  </Link>
+                </div>
               )}
             </div>
           </div>

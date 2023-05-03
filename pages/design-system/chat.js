@@ -79,7 +79,10 @@ const DSpage = () => {
 
       {/* Structure */}
       <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+        <div className="flex items-center justify-between">
+          <h2 className="h3 mb-3">Structure</h2>
+
+        </div>
 
         <div className="surface rounded-lg">
           <Chat />
@@ -91,6 +94,15 @@ const DSpage = () => {
             height="300"
             src="//jsfiddle.net/augustin_hiebel/4q6jn89g/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
           ></iframe>
+        </div>
+      </div>
+
+      {/* Variant */}
+      <div className="mb-12" id="variant">
+        <h2 className="h3 mb-3">Variant: secondary</h2>
+
+        <div className="surface rounded-lg">
+          <Chat variant="secondary" />
         </div>
       </div>
 

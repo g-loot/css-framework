@@ -499,6 +499,7 @@
     ;
   }
 }
+
 .chat-react {
   @apply
   bg-gradient-radial-spotlight
@@ -634,4 +635,66 @@
   absolute
   inset-0
   ;
+}
+
+.chat.chat-secondary {
+  
+  .chat-group.is-owner code.tag, 
+  [isowner='true'] code.tag {
+    @apply
+    text-ui-100
+    ;
+  }
+  .chat-group {
+    .chat-messages {
+      @apply
+      pl-4
+      w-full
+      lg:max-w-[100%]
+      ;
+      .chat-message {
+        @apply
+        bg-main/0
+        hover:bg-ui-850
+        !rounded
+        items-start
+        ;
+        .chat-bubble {
+          @apply
+          bg-main/0
+          rounded-none
+          w-full
+          min-w-[max-content]
+          ;
+          > *:not(.chat-reactions) {
+            @apply
+            text-ui-200
+            ;
+          }
+          .chat-reactions {
+            @apply
+            h-auto
+            justify-start
+            ;
+          }
+        }
+      }
+    }
+    &.is-owner {
+      @apply
+      text-left
+      flex-row
+      ;
+      .chat-messages {
+        @apply
+        items-start
+        ;
+        .chat-message {
+          @apply
+          flex-row
+          ;
+        }
+      }
+    }
+  }
 }
