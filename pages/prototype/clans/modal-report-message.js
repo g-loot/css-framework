@@ -36,7 +36,6 @@ export default function ModalReportMessage(props) {
                 <option disabled selected>Choose an option</option>
                 <option>Discrimination</option>
                 <option>Toxicity</option>
-                <option>Toxicity</option>
                 <option>NSFW Content</option>
                 <option>Violation of Privacy</option>
               </select>

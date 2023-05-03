@@ -24,7 +24,7 @@ const conversationFull = [
   },
   {
     id: 1,
-    time: "15 min. ago",
+    time: "2 hours ago",
     author: 3,
     isYourself: false,
     messages: [
@@ -69,7 +69,7 @@ const conversationFull = [
   },
   {
     id: 2,
-    time: "15 min. ago",
+    time: "1 hour ago",
     author: 1,
     isYourself: true,
     messages: [
@@ -92,7 +92,7 @@ const conversationFull = [
   },
   {
     id: 3,
-    time: "15 min. ago",
+    time: "54 min. ago",
     author: 4,
     isYourself: false,
     messages: [
@@ -106,7 +106,7 @@ const conversationFull = [
   },
   {
     id: 4,
-    time: "15 min. ago",
+    time: "55 min. ago",
     author: 1,
     isYourself: true,
     messages: [
@@ -120,7 +120,7 @@ const conversationFull = [
   },
   {
     id: 5,
-    time: "15 min. ago",
+    time: "55 min. ago",
     author: 2,
     isYourself: false,
     messages: [
@@ -133,7 +133,7 @@ const conversationFull = [
   },
   {
     id: 6,
-    time: "15 min. ago",
+    time: "54 min. ago",
     author: 4,
     isYourself: false,
     messages: [
@@ -164,7 +164,7 @@ const conversationFull = [
   },
   {
     id: 7,
-    time: "15 min. ago",
+    time: "25 min. ago",
     author: 1,
     isYourself: true,
     messages: [
@@ -220,7 +220,8 @@ const conversationFull = [
       {
         id: 1,
         type: "text",
-        content: "<a class='link'>MrKilla</a> has gifted <a class='link'>Nomadiction</a> 60 tokens",
+        content:
+          "<a class='link'>MrKilla</a> has gifted <a class='link'>Nomadiction</a> 60 tokens",
         reactions: [
           {
             emoji: "❤️",
@@ -230,7 +231,6 @@ const conversationFull = [
       },
     ],
   },
- 
 ];
 
 export default function Chat(props) {
@@ -429,7 +429,12 @@ export default function Chat(props) {
                         }`}
                       >
                         <div className="chat-author interactive">
-                          <Avatar id={message.author} size="avatar-sm" hasTooltip={true} hasLevel={false} />
+                          <Avatar
+                            id={message.author}
+                            size="avatar-sm"
+                            hasTooltip={true}
+                            hasLevel={false}
+                          />
                         </div>
                       </Link>
                     </>
@@ -451,15 +456,7 @@ export default function Chat(props) {
                                   : "text-ui-100"
                               }`}
                             >
-                              {message.isYourself && <>You</>}
-                              {!message.isYourself && (
-                                <>
-                                  {
-                                    prototype.getUserByID(message.author)
-                                      ?.nickname
-                                  }
-                                </>
-                              )}
+                              {prototype.getUserByID(message.author)?.nickname}
                             </span>
                           </Link>
                           {message.time && (
@@ -511,7 +508,9 @@ export default function Chat(props) {
                                   {prototype.getLadderByID("valorant", 2)?.name}{" "}
                                   is over, and the results are in:
                                 </p>
-                                <Link href={`/prototype/valorant/ladders/2${prototype.getURLparams()}`}>
+                                <Link
+                                  href={`/prototype/valorant/ladders/2${prototype.getURLparams()}`}
+                                >
                                   <div className="inline-flex flex-col lg:flex-row items-center gap-4 justify-center text-left surface-ui-600 p-2 rounded interactive">
                                     <div className="relative">
                                       <div className="absolute top-1 left-1">
@@ -563,7 +562,7 @@ export default function Chat(props) {
                                       </ul>
                                       <div className="text-ui-300 text-sm">
                                         See stats and more results on the{" "}
-                                          <a className="link">full leaderboard</a>
+                                        <a className="link">full leaderboard</a>
                                       </div>
                                     </div>
                                   </div>
