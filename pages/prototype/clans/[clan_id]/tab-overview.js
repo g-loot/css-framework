@@ -308,7 +308,7 @@ export default function TabClanOverview() {
           </div>
           <div className="flex-1 surface md:rounded lg:overflow-hidden max-w-[100%] hidden lg:flex flex-col relative">
             <div className="absolute inset-0 overflow-hidden">
-              <Chat isAbsolute={true} maxheight={`h-auto`} />
+              <Chat variant="secondary" isAbsolute={true} maxheight={`h-auto`} />
             </div>
           </div>
         </div>

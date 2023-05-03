@@ -50,6 +50,8 @@ export default function Avatar(props) {
         <div
           className={`avatar avatar-circle ${size}  ${
             selectedUser?.isPremium ? "avatar-premium" : ""
+          } ${
+            selectedUser?.isOnline ? "is-online" : ""
           } ${className}`}
         >
           {hasLevel && <b>{selectedUser.level}</b>}
@@ -151,6 +153,8 @@ export default function Avatar(props) {
                         <div
                           className={`avatar avatar-circle avatar-sm  ${
                             selectedUser?.isPremium ? "avatar-premium" : ""
+                          } ${
+                            selectedUser?.isOnline ? "is-online" : ""
                           }`}
                         >
                           {hasLevel && <b>{selectedUser.level}</b>}
@@ -198,7 +202,23 @@ export default function Avatar(props) {
                               className="aspect-video rounded-sm w-6"
                             />
                           </div>
-                          <div className="flex justify-center gap-1 mt-1">
+                          
+                          {selectedUser?.isOnline ? (
+                            <div className="flex justify-center mt-0.5 mb-1">
+                              <div className="chip chip-status chip-success chip-xs">
+                                <span className="badge" />
+                                <span>online</span>
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="flex justify-center mt-0.5 mb-1">
+                              <div className="chip chip-status chip-xs">
+                                <span className="badge" />
+                                <span>last seen 3 days ago</span>
+                              </div>
+                            </div>
+                          )}
+                          <div className="flex justify-center gap-1 mb-1">
                             {prototype
                               .getUserByID(userId)
                               .games?.map((game, gameIndex) => (
@@ -207,7 +227,7 @@ export default function Avatar(props) {
                                   game={game}
                                   size="text-sm"
                                 />
-                              ))}
+                            ))}
                           </div>
                         </div>
                       </div>

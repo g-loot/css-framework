@@ -960,7 +960,7 @@ export const dataUsers = [
     isPremium: false,
     isFriend: false,
     level: 111,
-    isOnline: true,
+    isOnline: false,
     nickname: "FrenzyMan",
     firstname: "Scott",
     lastname: "Fritz",

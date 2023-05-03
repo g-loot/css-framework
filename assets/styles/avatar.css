@@ -1278,3 +1278,26 @@
     }
   }
 }
+
+/* status */
+
+.avatar {
+  &.is-online {
+    > b,
+    > strong {
+      @apply
+      border-success-700/40
+      text-success-300
+      ;
+    }
+  }
+  &.is-offline {
+    > b,
+    > strong {
+      @apply
+      border-dashed
+      text-ui-400
+      ;
+    }
+  }
+}

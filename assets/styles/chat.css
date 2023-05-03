@@ -176,7 +176,8 @@
           &.is-deleted {
             @apply
             bg-ui-600/0
-            shadow-[inset_0_0_0_1px_rgb(var(--color-ui-600))];
+            border 
+            border-ui-600
             ;
             > *:not(.chat-reactions) {
               @apply
@@ -286,7 +287,11 @@
           text-ui-200
           text-center
           ;
-          /* shadow-xl */
+          img {
+            @apply
+            rounded
+            ;
+          }
         }
         .chat-reactions,
         .chat-actions {
@@ -638,43 +643,141 @@
 }
 
 .chat.chat-secondary {
-  
-  .chat-group.is-owner code.tag, 
-  [isowner='true'] code.tag {
-    @apply
-    text-ui-100
-    ;
-  }
   .chat-group {
+    @apply
+    pt-8
+    ;
     .chat-messages {
       @apply
-      pl-4
+      px-0
       w-full
       lg:max-w-[100%]
       ;
+      > *:not(.chat-message) {
+        @apply
+        pb-0
+        ;
+      }
+      > *:first-child:not(.chat-message) {
+        @apply
+        pl-4
+        ;
+      }
       .chat-message {
         @apply
         bg-main/0
-        hover:bg-ui-850
         !rounded
         items-start
+        w-full
+        pb-0
         ;
         .chat-bubble {
           @apply
           bg-main/0
+          hover:bg-ui-850/50
           rounded-none
           w-full
-          min-w-[max-content]
+          pt-1.5
+          pb-2
+          px-4
           ;
+          &.is-deleted {
+            @apply
+            border-none
+            line-through
+            ;
+            > * {
+              @apply
+              text-ui-400
+              ;
+            }
+          }
+          img {
+            @apply
+            rounded
+            ;
+          }
           > *:not(.chat-reactions) {
             @apply
             text-ui-200
+            leading-snug
             ;
           }
           .chat-reactions {
             @apply
             h-auto
             justify-start
+            inset-0
+            m-0
+            mt-1.5
+            bottom-0
+            gap-1.5
+            ;
+            .chat-reaction {
+              @apply
+              text-lg
+              rounded
+              from-ui-700
+              to-ui-700
+              gap-1.5
+              ;
+              &.is-owner {
+                @apply
+                from-interaction-500/5
+                to-interaction-500/5
+                text-interaction-500
+                border-interaction-500/20
+                hover:border-interaction-300/20
+                active:border-interaction-700/20
+                ;
+              }
+            }
+          }
+        }
+        .chat-actions { 
+          @apply
+          absolute
+          z-20
+          -top-4
+          right-0
+          gap-1
+          ;
+          .chat-action-hidden {
+            @apply
+            rounded-full
+            bg-ui-600
+            border
+            border-ui-500
+            ;
+          }
+        }
+      }
+    }
+    &:not(.is-event) {
+      .chat-messages {
+        .chat-message {
+          .chat-bubble {
+            @apply
+            bg-main/0
+            hover:bg-ui-850/50
+            ;
+            > *:not(.chat-reactions) {
+              @apply
+              pr-20
+              ;
+            }
+          }
+        }
+      }
+    }
+    &.is-event {
+      .chat-messages {
+        .chat-message {
+          .chat-bubble {
+            @apply
+            py-4
+            bg-main/0
+            hover:bg-ui-850/0
             ;
           }
         }
@@ -693,6 +796,17 @@
           @apply
           flex-row
           ;
+          code.tag {
+            @apply
+            bg-ui-200/10
+            text-ui-100
+            ;
+            &.is-owner {
+              @apply
+              text-main
+              ;
+            }
+          }
         }
       }
     }

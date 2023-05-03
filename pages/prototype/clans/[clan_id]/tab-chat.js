@@ -20,7 +20,7 @@ export default function TabClanChat() {
     <>
       {selectedClan && (
           <>
-            <Chat maxheight={`h-auto !overflow-hidden`} isdisabled={!selectedClan.isYou} />
+            <Chat variant="secondary" maxheight={`h-auto !overflow-hidden`} isdisabled={!selectedClan.isYou} />
           </>
         )}
     </>

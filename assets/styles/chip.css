@@ -1118,36 +1118,54 @@
       bg-ui-500/50
       ;
     }
-    &.chip-green {
+    > .badge {
       @apply
-      text-interaction-500
-      bg-interaction-700/25
+      bg-ui-300
       ;
     }
     &.chip-attention {
       @apply
       text-attention-500
-      bg-attention-700/25
+      bg-attention-700/10
       ;
+      > .badge {
+        @apply
+        bg-attention-500
+        ;
+      }
     }
     &.chip-info {
       @apply
       text-info-500
-      bg-info-700/25
+      bg-info-700/10
       ;
+      > .badge {
+        @apply
+        bg-info-700
+        ;
+      }
     }
     &.chip-success {
       @apply
       text-success-500
-      bg-success-700/25
+      bg-success-700/10
       ;
+      > .badge {
+        @apply
+        bg-success-500
+        ;
+      }
     }
     &.chip-error {
       @apply
       text-error-500
-      bg-error-700/25
+      bg-error-700/10
       ;
+      > .badge {
+        @apply
+        bg-error-500
+        ;
+      }
     }
-    
   }
 }
