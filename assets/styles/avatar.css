@@ -1287,7 +1287,7 @@
     > strong {
       @apply
       border-success-700/40
-      text-success-300
+      text-success-500
       ;
     }
   }

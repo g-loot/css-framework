@@ -7,6 +7,7 @@ import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import GameIcon from "../GameIcon/GameIcon";
+import Avatar from "../Avatar/Avatar";
 
 const conversationFull = [
   {
@@ -24,7 +25,7 @@ const conversationFull = [
   {
     id: 1,
     time: "15 min. ago",
-    author: 2,
+    author: 3,
     isYourself: false,
     messages: [
       {
@@ -34,7 +35,7 @@ const conversationFull = [
         reactions: [
           {
             emoji: "❤️",
-            author: [4, 0, 7],
+            author: [4, 3, 7],
           },
           {
             emoji: "👏",
@@ -56,7 +57,7 @@ const conversationFull = [
         reactions: [
           {
             emoji: "❤️",
-            author: [4, 0],
+            author: [4, 3],
           },
           {
             emoji: "👏",
@@ -155,7 +156,26 @@ const conversationFull = [
         reactions: [
           {
             emoji: "👍",
-            author: [4, 0, 1],
+            author: [4, 3, 1],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 7,
+    time: "15 min. ago",
+    author: 1,
+    isYourself: true,
+    messages: [
+      {
+        id: 1,
+        type: "text",
+        content: "Yes thats the right link I’ve sent. Check it out",
+        reactions: [
+          {
+            emoji: "❤️",
+            author: [4, 3, 1],
           },
         ],
       },
@@ -174,14 +194,33 @@ const conversationFull = [
   },
   {
     id: 9,
-    time: "15 min. ago",
+    time: "5 min. ago",
+    author: 3,
+    isYourself: true,
+    messages: [
+      {
+        id: 1,
+        type: "text",
+        content: "Great job guys! We got coiiiiiiiiins!",
+        reactions: [
+          {
+            emoji: "❤️",
+            author: [3],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 10,
+    time: "2 min. ago",
     author: 2,
     isEvent: true,
     messages: [
       {
         id: 1,
         type: "text",
-        content: "Welcome Martin to the Clan!",
+        content: "<a class='link'>MrKilla</a> has gifted <a class='link'>Nomadiction</a> 60 tokens",
         reactions: [
           {
             emoji: "❤️",
@@ -191,25 +230,7 @@ const conversationFull = [
       },
     ],
   },
-  {
-    id: 10,
-    time: "15 min. ago",
-    author: 1,
-    isYourself: true,
-    messages: [
-      {
-        id: 1,
-        type: "text",
-        content: "Yes thats the right link I’ve sent. Check it out",
-        reactions: [
-          {
-            emoji: "❤️",
-            author: [4, 0, 1],
-          },
-        ],
-      },
-    ],
-  },
+ 
 ];
 
 export default function Chat(props) {
@@ -408,22 +429,7 @@ export default function Chat(props) {
                         }`}
                       >
                         <div className="chat-author interactive">
-                          <div
-                            className={`avatar avatar-circle avatar-sm ${
-                              prototype.getUserByID(message.author)?.isPremium
-                                ? "avatar-premium"
-                                : ""
-                            }`}
-                          >
-                            <div>
-                              <img
-                                src={
-                                  prototype.getUserByID(message.author)?.avatar
-                                }
-                                alt="avatar"
-                              />
-                            </div>
-                          </div>
+                          <Avatar id={message.author} size="avatar-sm" hasTooltip={true} hasLevel={false} />
                         </div>
                       </Link>
                     </>
