@@ -8,7 +8,6 @@ import React, {
 
 import ModalClaimBattlepassReward from "../../pages/prototype/home/modal-claim-battlepassrewards";
 import { UiContext } from "../../contexts/ui";
-import { VariablesContext } from "../../contexts/variables";
 import { DataBattlepass } from "../../mock-data/data-battlepass";
 import { DataBattlepassRewards } from "../../mock-data/data-battlepass";
 import { usePrototypeData } from "../../contexts/prototype";
@@ -16,21 +15,14 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Avatar from "../Avatar/Avatar";
 import AnimatedNumber from "../AnimatedNumber/AnimatedNumber";
-import Slider from "../Slider/Slider";
 import CarouselSingle, { CarouselItem } from "../Carousel/CarouselSingle";
 import ResetsIn from "../Countdown/ResetsIn";
 
 export default function Battlepass(props) {
-  const [mounted, setMounted] = useState();
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const isPremium = query.premium === "true" ? true : false;
-
-  useEffect(() => {
-    if (!mounted) {
-      setMounted(true);
-    }
-  }, []);
+  const [finishedState, setFinishedState] = useState(true);
 
   const size = props.size || "battlepass-lg";
   const selectedBattlepass = props.id || 0;
@@ -84,10 +76,13 @@ export default function Battlepass(props) {
   }, [componentRef, handleResize]);
 
   useEffect(() => {
+    console.log(getBattlepassByID(selectedBattlepass).meta.name);
     setCurrentStep(getBattlepassByID(selectedBattlepass).currentStep);
     setActiveStep(getBattlepassByID(selectedBattlepass).currentStep);
     if (getBattlepassByID(selectedBattlepass).currentStep > maxSteps) {
       setOriginStep(getBattlepassByID(selectedBattlepass).currentStep - 1);
+    } else {
+      setOriginStep(0);
     }
   }, [selectedBattlepass]);
 
@@ -179,8 +174,7 @@ export default function Battlepass(props) {
 
   return (
     <>
-      {mounted && (
-        <div
+      <div
           className={`battlepass-container relative z-10 ${
             loading ? "is-loading" : ""
           } ${size === "battlepass-md" ? "battlepass-md" : ""}`}
@@ -188,7 +182,17 @@ export default function Battlepass(props) {
         >
           {getBattlepassByID(selectedBattlepass).isFinished && (
             <div className="battlepass-summary">
-              <h4>Congratulations on completing the battlepass</h4>
+              {finishedState ? (
+                <>
+                <h4 onClick={() => setFinishedState(!finishedState)}>Battlepass completed</h4>
+                <p className="text-ui-300">Congratulations for reaching the end of the Battlepass!</p>
+                </>
+              ) : (
+                <>
+                <h4 onClick={() => setFinishedState(!finishedState)}>Battlepass finished</h4>
+                <p className="text-ui-300">Congratulations on reaching Tier 9</p>
+                </>
+              )}
               <ul>
                 <li>
                   <img
@@ -243,7 +247,7 @@ export default function Battlepass(props) {
                     <CarouselItem>
                       <img
                         src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                          getBattlepassRewardByID(15).image
+                          getBattlepassRewardByID(17).image
                         }.png`}
                         width="100%"
                         height="auto"
@@ -263,7 +267,7 @@ export default function Battlepass(props) {
                     <CarouselItem>
                       <img
                         src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                          getBattlepassRewardByID(17).image
+                          getBattlepassRewardByID(15).image
                         }.png`}
                         width="100%"
                         height="auto"
@@ -274,7 +278,7 @@ export default function Battlepass(props) {
                   <div className="battlepass-reward">
                     <span>Avatar frames</span>
                     <span>
-                      <AnimatedNumber number={3} />
+                      3
                     </span>
                   </div>{" "}
                 </li>
@@ -283,7 +287,7 @@ export default function Battlepass(props) {
                     <CarouselItem>
                       <img
                         src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                          getBattlepassRewardByID(30).image
+                          getBattlepassRewardByID(36).image
                         }.png`}
                         width="100%"
                         height="auto"
@@ -322,9 +326,9 @@ export default function Battlepass(props) {
                     </CarouselItem>
                   </CarouselSingle>
                   <div className="battlepass-reward">
-                    <span>Profile</span>
+                    <span>Profile banners</span>
                     <span>
-                      <AnimatedNumber number={4} />
+                      4
                     </span>
                   </div>
                 </li>
@@ -641,7 +645,6 @@ export default function Battlepass(props) {
             </button>
           </div>
         </div>
-      )}
     </>
   );
 }
