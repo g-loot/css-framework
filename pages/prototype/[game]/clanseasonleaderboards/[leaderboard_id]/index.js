@@ -17,8 +17,8 @@ import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 
 const TabsItems = [
   {
-    label: "Leaderboard",
-    url: "leaderboard",
+    label: "Current season",
+    url: "current-season",
     component: TabClanLeaderboardsLeaderboards,
   },
   {
@@ -27,8 +27,8 @@ const TabsItems = [
     component: TabClanLeaderboardsAbout,
   },
   {
-    label: "History",
-    url: "history",
+    label: "All seasons",
+    url: "all-seasons",
     component: TabClanLeaderboardsHistory,
   },
 ];
@@ -45,7 +45,7 @@ export default function Ladders() {
   const { leaderboard_id } = router.query;
   const uiContext = useContext(UiContext);
   const { tab } = router.query;
-  const defaultTab = "leaderboard";
+  const defaultTab = "current-season";
   const selectedTab = tab ? tab : defaultTab;
 
   useEffect(() => {

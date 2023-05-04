@@ -77,7 +77,7 @@ const howitworksSteps = [
 export default function ReferAFriend() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
-  const modalrefersendinvite = query.modalpremium === "true" ? true : false;
+  const modalrefersendinvite = query.modal === "true" ? true : false;
   const uiContext = useContext(UiContext);
   const empty = query.empty === "true" ? true : false;
 

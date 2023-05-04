@@ -29,7 +29,7 @@ const SubMenuItem = [
   {
     onlygame: "valorant",
     slug: "clanseasonleaderboards",
-    url: "clanseasonleaderboards/0",
+    url: "clanseasonleaderboards",
     icon: "icon-multiple-11",
     label: "Clan Season",
   },
