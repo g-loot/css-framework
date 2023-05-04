@@ -692,11 +692,6 @@
               ;
             }
           }
-          img {
-            @apply
-            rounded
-            ;
-          }
           > *:not(.chat-reactions) {
             @apply
             text-ui-200
@@ -761,7 +756,12 @@
             bg-main/0
             hover:bg-ui-850/50
             ;
-            > *:not(.chat-reactions) {
+            img {
+              @apply
+              rounded-[1rem]
+              ;
+            }
+            > *:not(.chat-reactions):not(img) {
               @apply
               pr-20
               ;
@@ -796,6 +796,11 @@
           @apply
           flex-row
           ;
+          .chat-actions {
+            @apply
+            flex-row
+            ;
+          }
           code.tag {
             @apply
             bg-ui-200/10

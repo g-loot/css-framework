@@ -106,11 +106,20 @@
     -bottom-2
     py-0.5
     px-1.5
-    rounded
+    rounded-full
     text-base
     h-auto
     w-auto
+    inline-flex
+    items-center
+    gap-1
     ;
+    &::after {
+      @apply
+      w-2
+      h-2
+      ;
+    }
   }
 
   /* size */
@@ -136,6 +145,12 @@
       @apply
         text-xl
       ;
+      &::after {
+        @apply
+        w-3
+        h-3
+        ;
+      }
     }
   }
   &.avatar-xl {
@@ -159,6 +174,12 @@
       @apply
         text-lg
       ;
+      &::after {
+        @apply
+        w-2.5
+        h-2.5
+        ;
+      }
     }
   }
   &.avatar-lg {
@@ -182,6 +203,12 @@
       @apply
         text-base
       ;
+      &::after {
+        @apply
+        w-2
+        h-2
+        ;
+      }
     }
   }
   &.avatar-md {
@@ -205,6 +232,12 @@
       @apply
         text-sm
       ;
+      &::after {
+        @apply
+        w-[7px]
+        h-[7px]
+        ;
+      }
     }
   }
   &.avatar-sm {
@@ -228,6 +261,12 @@
       @apply
         text-xs
       ;
+      &::after {
+        @apply
+        w-1.5
+        h-1.5
+        ;
+      }
     }
   }
   &.avatar-xs {
@@ -252,7 +291,14 @@
         text-xs
         py-px
         px-1
+        gap-0.5
       ;
+      &::after {
+        @apply
+        w-1.5
+        h-1.5
+        ;
+      }
     }
   }
   &.avatar-tiny {
@@ -277,7 +323,14 @@
         text-xs
         py-px
         px-1
+        gap-0.5
       ;
+      &::after {
+        @apply
+        w-1.5
+        h-1.5
+        ;
+      }
     }
   }
 
@@ -608,8 +661,8 @@
       --inner-padding-one: 12px;
       --inner-padding-two: 12px/2;
       @apply
-      h-32
-      w-32
+      h-40
+      w-40
       ;
       > div {
         > * {
@@ -625,6 +678,12 @@
         @apply
           text-xl
         ;
+        &::after {
+          @apply
+          w-3
+          h-3
+          ;
+        }
       }
     }
     &.sm\:avatar-xl {
@@ -648,6 +707,12 @@
         @apply
           text-lg
         ;
+        &::after {
+          @apply
+          w-2.5
+          h-2.5
+          ;
+        }
       }
     }
     &.sm\:avatar-lg {
@@ -671,6 +736,12 @@
         @apply
           text-base
         ;
+        &::after {
+          @apply
+          w-2
+          h-2
+          ;
+        }
       }
     }
     &.sm\:avatar-md {
@@ -694,6 +765,12 @@
         @apply
           text-sm
         ;
+        &::after {
+          @apply
+          w-[7px]
+          h-[7px]
+          ;
+        }
       }
     }
     &.sm\:avatar-sm {
@@ -717,14 +794,20 @@
         @apply
           text-xs
         ;
+        &::after {
+          @apply
+          w-1.5
+          h-1.5
+          ;
+        }
       }
     }
     &.sm\:avatar-xs {
       --inner-padding-one: 4px;
       --inner-padding-two: 4px/2;
       @apply
-      h-8
-      w-8
+      h-9
+      w-9
       ;
       > div {
         > * {
@@ -741,7 +824,14 @@
           text-xs
           py-px
           px-1
+          gap-0.5
         ;
+        &::after {
+          @apply
+          w-1.5
+          h-1.5
+          ;
+        }
       }
     }
     &.sm\:avatar-tiny {
@@ -755,7 +845,7 @@
         > * {
           & {
             @apply
-            text-xs
+            text-sm
             ;
           }
         }
@@ -766,7 +856,14 @@
           text-xs
           py-px
           px-1
+          gap-0.5
         ;
+        &::after {
+          @apply
+          w-1.5
+          h-1.5
+          ;
+        }
       }
     }
   }
@@ -777,8 +874,8 @@
       --inner-padding-one: 12px;
       --inner-padding-two: 12px/2;
       @apply
-      h-32
-      w-32
+      h-40
+      w-40
       ;
       > div {
         > * {
@@ -794,11 +891,17 @@
         @apply
           text-xl
         ;
+        &::after {
+          @apply
+          w-3
+          h-3
+          ;
+        }
       }
     }
     &.md\:avatar-xl {
-      --inner-padding-one: 12px;
-      --inner-padding-two: 12px/2;
+      --inner-padding-one: 10px;
+      --inner-padding-two: 10px/2;
       @apply
       h-32
       w-32
@@ -817,6 +920,12 @@
         @apply
           text-lg
         ;
+        &::after {
+          @apply
+          w-2.5
+          h-2.5
+          ;
+        }
       }
     }
     &.md\:avatar-lg {
@@ -840,6 +949,12 @@
         @apply
           text-base
         ;
+        &::after {
+          @apply
+          w-2
+          h-2
+          ;
+        }
       }
     }
     &.md\:avatar-md {
@@ -863,6 +978,12 @@
         @apply
           text-sm
         ;
+        &::after {
+          @apply
+          w-[7px]
+          h-[7px]
+          ;
+        }
       }
     }
     &.md\:avatar-sm {
@@ -886,14 +1007,20 @@
         @apply
           text-xs
         ;
+        &::after {
+          @apply
+          w-1.5
+          h-1.5
+          ;
+        }
       }
     }
     &.md\:avatar-xs {
       --inner-padding-one: 4px;
       --inner-padding-two: 4px/2;
       @apply
-      h-8
-      w-8
+      h-9
+      w-9
       ;
       > div {
         > * {
@@ -910,7 +1037,14 @@
           text-xs
           py-px
           px-1
+          gap-0.5
         ;
+        &::after {
+          @apply
+          w-1.5
+          h-1.5
+          ;
+        }
       }
     }
     &.md\:avatar-tiny {
@@ -924,7 +1058,7 @@
         > * {
           & {
             @apply
-            text-xs
+            text-sm
             ;
           }
         }
@@ -935,7 +1069,14 @@
           text-xs
           py-px
           px-1
+          gap-0.5
         ;
+        &::after {
+          @apply
+          w-1.5
+          h-1.5
+          ;
+        }
       }
     }
   }
@@ -946,8 +1087,8 @@
       --inner-padding-one: 12px;
       --inner-padding-two: 12px/2;
       @apply
-      h-32
-      w-32
+      h-40
+      w-40
       ;
       > div {
         > * {
@@ -963,11 +1104,17 @@
         @apply
           text-xl
         ;
+        &::after {
+          @apply
+          w-3
+          h-3
+          ;
+        }
       }
     }
     &.lg\:avatar-xl {
-      --inner-padding-one: 12px;
-      --inner-padding-two: 12px/2;
+      --inner-padding-one: 10px;
+      --inner-padding-two: 10px/2;
       @apply
       h-32
       w-32
@@ -986,6 +1133,12 @@
         @apply
           text-lg
         ;
+        &::after {
+          @apply
+          w-2.5
+          h-2.5
+          ;
+        }
       }
     }
     &.lg\:avatar-lg {
@@ -1009,6 +1162,12 @@
         @apply
           text-base
         ;
+        &::after {
+          @apply
+          w-2
+          h-2
+          ;
+        }
       }
     }
     &.lg\:avatar-md {
@@ -1032,6 +1191,12 @@
         @apply
           text-sm
         ;
+        &::after {
+          @apply
+          w-[7px]
+          h-[7px]
+          ;
+        }
       }
     }
     &.lg\:avatar-sm {
@@ -1055,14 +1220,20 @@
         @apply
           text-xs
         ;
+        &::after {
+          @apply
+          w-1.5
+          h-1.5
+          ;
+        }
       }
     }
     &.lg\:avatar-xs {
       --inner-padding-one: 4px;
       --inner-padding-two: 4px/2;
       @apply
-      h-8
-      w-8
+      h-9
+      w-9
       ;
       > div {
         > * {
@@ -1079,7 +1250,14 @@
           text-xs
           py-px
           px-1
+          gap-0.5
         ;
+        &::after {
+          @apply
+          w-1.5
+          h-1.5
+          ;
+        }
       }
     }
     &.lg\:avatar-tiny {
@@ -1093,7 +1271,7 @@
         > * {
           & {
             @apply
-            text-xs
+            text-sm
             ;
           }
         }
@@ -1104,7 +1282,14 @@
           text-xs
           py-px
           px-1
+          gap-0.5
         ;
+        &::after {
+          @apply
+          w-1.5
+          h-1.5
+          ;
+        }
       }
     }
   }
@@ -1115,8 +1300,8 @@
       --inner-padding-one: 12px;
       --inner-padding-two: 12px/2;
       @apply
-      h-32
-      w-32
+      h-40
+      w-40
       ;
       > div {
         > * {
@@ -1132,11 +1317,17 @@
         @apply
           text-xl
         ;
+        &::after {
+          @apply
+          w-3
+          h-3
+          ;
+        }
       }
     }
     &.xl\:avatar-xl {
-      --inner-padding-one: 12px;
-      --inner-padding-two: 12px/2;
+      --inner-padding-one: 10px;
+      --inner-padding-two: 10px/2;
       @apply
       h-32
       w-32
@@ -1155,6 +1346,12 @@
         @apply
           text-lg
         ;
+        &::after {
+          @apply
+          w-2.5
+          h-2.5
+          ;
+        }
       }
     }
     &.xl\:avatar-lg {
@@ -1178,6 +1375,12 @@
         @apply
           text-base
         ;
+        &::after {
+          @apply
+          w-2
+          h-2
+          ;
+        }
       }
     }
     &.xl\:avatar-md {
@@ -1201,6 +1404,12 @@
         @apply
           text-sm
         ;
+        &::after {
+          @apply
+          w-[7px]
+          h-[7px]
+          ;
+        }
       }
     }
     &.xl\:avatar-sm {
@@ -1224,14 +1433,20 @@
         @apply
           text-xs
         ;
+        &::after {
+          @apply
+          w-1.5
+          h-1.5
+          ;
+        }
       }
     }
     &.xl\:avatar-xs {
       --inner-padding-one: 4px;
       --inner-padding-two: 4px/2;
       @apply
-      h-8
-      w-8
+      h-9
+      w-9
       ;
       > div {
         > * {
@@ -1248,7 +1463,14 @@
           text-xs
           py-px
           px-1
+          gap-0.5
         ;
+        &::after {
+          @apply
+          w-1.5
+          h-1.5
+          ;
+        }
       }
     }
     &.xl\:avatar-tiny {
@@ -1262,7 +1484,7 @@
         > * {
           & {
             @apply
-            text-xs
+            text-sm
             ;
           }
         }
@@ -1273,7 +1495,14 @@
           text-xs
           py-px
           px-1
+          gap-0.5
         ;
+        &::after {
+          @apply
+          w-1.5
+          h-1.5
+          ;
+        }
       }
     }
   }
@@ -1282,22 +1511,42 @@
 /* status */
 
 .avatar {
-  &.is-online {
+  &.avatar-online,
+  &.avatar-offline {
     > b,
     > strong {
-      @apply
-      border-success-700/40
-      text-success-500
-      ;
+      &::after {
+        @apply
+        content-['']
+        rounded-full
+        block
+        ;
+      }
     }
   }
-  &.is-offline {
+  &.avatar-online {
+    > b,
+    > strong {
+      &::after {
+        @apply
+        bg-success-500
+        ;
+      }
+    }
+  }
+  &.avatar-offline {
     > b,
     > strong {
       @apply
       border-dashed
       text-ui-400
       ;
+      &::after {
+        @apply
+        bg-ui-400/50
+        shadow-[inset_0_0_0_2px_rgb(var(--color-ui-300))]
+        ;
+      }
     }
   }
 }

@@ -919,8 +919,16 @@ const DSpage = () => {
                       <span>default</span>
                     </button>
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 flex items-center gap-2">
                     <button type="button" className="chip chip-status">
+                      <span className="icon icon-calendar-date-2" />
+                      <span>Label</span>
+                    </button>
+                    <button type="button" className="chip chip-sm chip-status">
+                      <span className="icon icon-calendar-date-2" />
+                      <span>Label</span>
+                    </button>
+                    <button type="button" className="chip chip-xs chip-status">
                       <span className="icon icon-calendar-date-2" />
                       <span>Label</span>
                     </button>
@@ -930,10 +938,24 @@ const DSpage = () => {
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Attention
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 flex items-center gap-2">
                     <button
                       type="button"
                       className="chip chip-status chip-attention"
+                    >
+                      <span className="icon icon-warning-sign" />
+                      <span>Label</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-sm chip-status chip-attention"
+                    >
+                      <span className="icon icon-warning-sign" />
+                      <span>Label</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-xs chip-status chip-attention"
                     >
                       <span className="icon icon-warning-sign" />
                       <span>Label</span>
@@ -944,10 +966,24 @@ const DSpage = () => {
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Success
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 flex items-center gap-2">
                     <button
                       type="button"
                       className="chip chip-status chip-success"
+                    >
+                      <span className="icon icon-check" />
+                      <span>Label</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-sm chip-status chip-success"
+                    >
+                      <span className="icon icon-check" />
+                      <span>Label</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-xs chip-status chip-success"
                     >
                       <span className="icon icon-check" />
                       <span>Label</span>
@@ -958,10 +994,24 @@ const DSpage = () => {
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Info
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 flex items-center gap-2">
                     <button
                       type="button"
                       className="chip chip-status chip-info"
+                    >
+                      <span className="icon icon-c-info" />
+                      <span>Label</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-sm chip-status chip-info"
+                    >
+                      <span className="icon icon-c-info" />
+                      <span>Label</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-xs chip-status chip-info"
                     >
                       <span className="icon icon-c-info" />
                       <span>Label</span>
@@ -972,10 +1022,24 @@ const DSpage = () => {
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Error
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 flex items-center gap-2">
                     <button
                       type="button"
                       className="chip chip-status chip-error"
+                    >
+                      <span className="icon icon-s-ban" />
+                      <span>Label</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-sm chip-status chip-error"
+                    >
+                      <span className="icon icon-s-ban" />
+                      <span>Label</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-xs chip-status chip-error"
                     >
                       <span className="icon icon-s-ban" />
                       <span>Label</span>
@@ -986,13 +1050,83 @@ const DSpage = () => {
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Transparent
                   </div>
-                  <div className="flex-1">
+                  <div className="flex-1 flex items-center gap-2">
                     <button
                       type="button"
                       className="chip chip-status chip-transparent"
                     >
                       <span className="icon icon-calendar-date-2" />
                       <span>Label</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-sm chip-status chip-transparent"
+                    >
+                      <span className="icon icon-calendar-date-2" />
+                      <span>Label</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-xs chip-status chip-transparent"
+                    >
+                      <span className="icon icon-calendar-date-2" />
+                      <span>Label</span>
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Success (with badge)
+                  </div>
+                  <div className="flex-1 flex items-center gap-2">
+                    <button
+                      type="button"
+                      className="chip chip-status chip-success"
+                    >
+                      <span className="badge" />
+                      <span>Online</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-sm chip-status chip-success"
+                    >
+                      <span className="badge" />
+                      <span>Online</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-xs chip-status chip-success"
+                    >
+                      <span className="badge" />
+                      <span>Online</span>
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Default (with badge)
+                  </div>
+                  <div className="flex-1 flex items-center gap-2">
+                    <button
+                      type="button"
+                      className="chip chip-status"
+                    >
+                      <span className="badge" />
+                      <span>Offline</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-sm chip-status"
+                    >
+                      <span className="badge" />
+                      <span>Offline</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-xs chip-status"
+                    >
+                      <span className="badge" />
+                      <span>Offline</span>
                     </button>
                   </div>
                 </div>

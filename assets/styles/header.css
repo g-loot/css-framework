@@ -262,3 +262,17 @@
     }
   }
 }
+
+/* no surface */
+
+.header.no-surface {
+  @apply
+  bg-ui-800/0
+  border-0
+  ;
+  .header-bg {
+    @apply
+    hidden
+    ;
+  }
+}

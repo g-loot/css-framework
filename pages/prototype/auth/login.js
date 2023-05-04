@@ -67,6 +67,7 @@ export default function Login() {
               name="email"
               id="email"
               autoFocus
+              tabIndex={1}
               onChange={(event) => setEmailStr(event.target.value)}
             />
           </div>
@@ -76,7 +77,7 @@ export default function Login() {
                 Password
               </label>
               <Link href="/prototype/auth/recoverpassword">
-                <a className="link text-sm text-ui-300">
+                <a className="link text-sm text-ui-300" tabIndex={3}>
                   Forgot your password?
                 </a>
               </Link>
@@ -85,6 +86,7 @@ export default function Login() {
               <button
                 onClick={togglePassword}
                 className="button button-sm button-ghost"
+                tabIndex={2}
               >
                 {!passwordShown ? <span>Show</span> : <span>Hide</span>}
               </button>
@@ -92,6 +94,7 @@ export default function Login() {
                 type={passwordShown ? "text" : "password"}
                 name="password"
                 id="password"
+                tabIndex={1}
                 onChange={(event) => setPasswordStr(event.target.value)}
               />
             </div>

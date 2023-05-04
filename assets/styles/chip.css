@@ -1112,6 +1112,7 @@
     @apply
     rounded
     text-ui-300
+    uppercase
     ;
     &:not(.chip-transparent) {
       @apply
@@ -1166,6 +1167,16 @@
         bg-error-500
         ;
       }
+    }
+    &.chip-sm {
+      @apply
+      gap-2
+      ;
+    }
+    &.chip-xs {
+      @apply
+      gap-1.5
+      ;
     }
   }
 }

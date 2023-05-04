@@ -51,7 +51,7 @@ export default function Avatar(props) {
           className={`avatar avatar-circle ${size}  ${
             selectedUser?.isPremium ? "avatar-premium" : ""
           } ${
-            selectedUser?.isOnline ? "is-online" : ""
+            selectedUser?.isOnline ? "avatar-online" : ""
           } ${className}`}
         >
           {hasLevel && <b>{selectedUser.level}</b>}

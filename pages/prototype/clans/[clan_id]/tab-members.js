@@ -262,19 +262,30 @@ export default function TabClanMembers() {
                       )}
                     </div>
                   </Link>
-                  <div className="text-ui-300 text-xs">
-                    {prototype.getUserByID(item).lang} • Today
+                  <div className="text-ui-300 text-xs flex gap-1 items-center">
+                    {/*<span>{prototype.getUserByID(item).lang}</span> <span>•</span> */}
+                    {prototype.getUserByID(item)?.isOnline ? (
+                      <div className="chip chip-status chip-success chip-xs">
+                        <span className="badge" />
+                        <span>online</span>
+                      </div>
+                    ) : (
+                      <div className="chip chip-status chip-xs">
+                        <span className="badge" />
+                        <span>last seen 3 days ago</span>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className="item-actions">
-                  <div className="flex gap-1" onClick={() => setHasOnlyOne(!hasOnlyOne)}>
+                  <div
+                    className="flex gap-1"
+                    onClick={() => setHasOnlyOne(!hasOnlyOne)}
+                  >
                     {prototype
                       .getUserByID(item)
                       .games?.map((game, gameIndex) => (
-                        <GameIcon
-                          key={gameIndex}
-                          game={game}
-                        />
+                        <GameIcon key={gameIndex} game={game} />
                       ))}
                   </div>
                 </div>
