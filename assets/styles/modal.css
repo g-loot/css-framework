@@ -192,11 +192,6 @@
         @apply
         my-2
         ;
-        &:not([class*="leading-"]) {
-          @apply
-          leading-loose
-          ;
-        }
         &:not([class*="text-"]) {
           @apply
           text-ui-200

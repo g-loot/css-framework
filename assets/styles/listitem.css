@@ -30,7 +30,7 @@
     ;
   }
   .item-title {
-    &:not(class*='whitespace-') {
+    &:not([class*='whitespace-']) {
       @apply
       whitespace-nowrap
       overflow-hidden

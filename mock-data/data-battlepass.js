@@ -103,7 +103,7 @@ export const DataBattlepass = [
       {
         id: 14,
         name: "bonus 1",
-        reward: 24,
+        reward: 5,
         isPremium: false,
         hasClaimed: false,
         isBonus: true,
@@ -112,7 +112,7 @@ export const DataBattlepass = [
       {
         id: 15,
         name: "bonus 2",
-        reward: 37,
+        reward: 8,
         isPremium: false,
         hasClaimed: false,
         isBonus: true,
@@ -120,7 +120,7 @@ export const DataBattlepass = [
       {
         id: 16,
         name: "bonus 3",
-        reward: 12,
+        reward: 2,
         isPremium: false,
         hasClaimed: false,
         isBonus: true,
@@ -128,7 +128,7 @@ export const DataBattlepass = [
       {
         id: 17,
         name: "bonus 4",
-        reward: 32,
+        reward: 6,
         isPremium: false,
         hasClaimed: false,
         isBonus: true,
@@ -136,7 +136,7 @@ export const DataBattlepass = [
       {
         id: 18,
         name: "bonus 5",
-        reward: 13,
+        reward: 9,
         isPremium: false,
         hasClaimed: false,
         isBonus: true,
@@ -469,7 +469,7 @@ export const DataBattlepass = [
       {
         id: 14,
         name: "bonus 1",
-        reward: 24,
+        reward: 5,
         isPremium: false,
         hasClaimed: false,
         isBonus: true,
@@ -478,7 +478,7 @@ export const DataBattlepass = [
       {
         id: 15,
         name: "bonus 2",
-        reward: 37,
+        reward: 8,
         isPremium: false,
         hasClaimed: false,
         isBonus: true,
@@ -486,7 +486,7 @@ export const DataBattlepass = [
       {
         id: 16,
         name: "bonus 3",
-        reward: 12,
+        reward: 2,
         isPremium: false,
         hasClaimed: false,
         isBonus: true,
@@ -494,7 +494,7 @@ export const DataBattlepass = [
       {
         id: 17,
         name: "bonus 4",
-        reward: 32,
+        reward: 6,
         isPremium: false,
         hasClaimed: false,
         isBonus: true,
@@ -502,7 +502,7 @@ export const DataBattlepass = [
       {
         id: 18,
         name: "bonus 5",
-        reward: 13,
+        reward: 9,
         isPremium: false,
         hasClaimed: false,
         isBonus: true,
@@ -614,7 +614,7 @@ export const DataBattlepass = [
       {
         id: 14,
         name: "bonus 1",
-        reward: 24,
+        reward: 5,
         isPremium: false,
         hasClaimed: true,
         isBonus: true,
@@ -623,7 +623,7 @@ export const DataBattlepass = [
       {
         id: 15,
         name: "bonus 2",
-        reward: 37,
+        reward: 8,
         isPremium: false,
         hasClaimed: true,
         isBonus: true,
@@ -631,7 +631,7 @@ export const DataBattlepass = [
       {
         id: 16,
         name: "bonus 3",
-        reward: 12,
+        reward: 2,
         isPremium: false,
         hasClaimed: true,
         isBonus: true,
@@ -639,7 +639,7 @@ export const DataBattlepass = [
       {
         id: 17,
         name: "bonus 4",
-        reward: 32,
+        reward: 6,
         isPremium: false,
         hasClaimed: true,
         isBonus: true,
@@ -647,7 +647,7 @@ export const DataBattlepass = [
       {
         id: 18,
         name: "bonus 5",
-        reward: 13,
+        reward: 9,
         isPremium: false,
         hasClaimed: true,
         isBonus: true,

@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import Battlepass from "../../../components/BattlePass/BattlePass";
 import { DataBattlepass } from "../../../mock-data/data-battlepass";
 import Tooltip from "../../../components/Tooltip/Tooltip";
 import ResetsIn from "../../../components/Countdown/ResetsIn";
+import ModalBattlepassBonusSteps from "./modal-bonus-steps";
+import { UiContext } from "../../../contexts/ui";
 
 export default function BattlepassPage() {
   const [selectedBattlepassID, setSelectedBattlepassID] = useState(0);
   const [selectedBattlepass, setSelectedBattlepass] = useState(null);
+  const uiContext = useContext(UiContext);
 
   const getBattlepassByID = (id) => {
     return DataBattlepass.find((battlepass) => {
@@ -25,6 +28,10 @@ export default function BattlepassPage() {
     } else {
       setSelectedBattlepassID(0);
     }
+  }
+
+  function openModalBattlepassBonusSteps() {
+    uiContext.openModal(<ModalBattlepassBonusSteps></ModalBattlepassBonusSteps>);
   }
 
   return (
@@ -49,6 +56,7 @@ export default function BattlepassPage() {
               <img src="" alt="Battlepass" />
             </div>
       </section>*/}
+          
           <section className="mb-8 surface surface-dimmed p-4 relative sm:rounded overflow-hidden animate-slide-in-bottom">
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-start text-center lg:text-left lg:justify-between pb-4 mb-4 gap-4 lg:gap-8 border-b border-ui-100/10">
                 <div className="flex-1 flex flex-col items-center lg:items-start 2xl:flex-row gap-4 2xl:gap-8">
@@ -90,6 +98,10 @@ export default function BattlepassPage() {
               alt=""
               className="absolute w-full h-full inset-0 pointer-events-none object-cover object-bottom animate-fade-in"
             />
+          </section>
+
+          <section className="text-ui-100/0 h-0 lg:flex justify-between">
+            <a onClick={() => openModalBattlepassBonusSteps(selectedBattlepassID)}>Open bonus steps modal</a>
           </section>
         </PrototypeStructure>
       )}

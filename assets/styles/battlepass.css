@@ -81,8 +81,11 @@
     @apply
     w-full
     min-h-[2.25rem]
-    grid
-    grid-cols-3
+    flex
+    flex-col
+    gap-2
+    lg:grid
+    lg:grid-cols-3
     ;
     > *:not(.battlepass-premium) {
       @apply
@@ -92,7 +95,8 @@
     }
     > .battlepass-premium {
       @apply
-      place-self-end
+      place-self-center
+      lg:place-self-end
       col-start-3
       ;
     }

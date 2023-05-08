@@ -290,6 +290,7 @@ module.exports = {
         "scale-out-x-right": "scaleOutXRight 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
         "fire-in": "fireIn 0.88s cubic-bezier(0.7, 0, 0.1, 1) both",
         "fire-out": "fireOut 0.44s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "text-attention": "textAttention 2s ease-in-out infinite both",
       },
       keyframes: {
         slideInLeft: {
@@ -552,6 +553,14 @@ module.exports = {
             opacity: "0",
             transform: "scale(2)",
             filter: "brightness(1000%)",
+          },
+        },
+        textAttention: {
+          "0%,100%": {
+            color: "rgb(var(--color-ui-200))",
+          },
+          "50%": {
+            color: "rgb(var(--color-mono-100))",
           },
         },
       },

@@ -31,7 +31,6 @@ export default function PrototypeGamesNav({ children }) {
   const { game } = router.query;
   const [isActive, setActive] = useState(false);
   const elementRef = useRef(null);
-  const hasAds = query.ads === "true" ? true : false;
 
   var height = elementRef.current?.clientHeight;
 

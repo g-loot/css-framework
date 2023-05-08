@@ -35,6 +35,7 @@ button {
   font-body
   uppercase
   transform-gpu
+  shrink-0
   ;
   outline-radius: 100%;
 

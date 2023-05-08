@@ -63,7 +63,7 @@ export default function TabProfileAchievements() {
                         }`}
                         style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                       >
-                        <div className={`w-36 h-36 achievement cursor-pointer`}>
+                        <div className={`w-36 h-36 achievement`}>
                           <i />
                           <i />
                           <div className={`achievement-level-0`}>
@@ -149,7 +149,7 @@ export default function TabProfileAchievements() {
                       ) : (
                         <Tooltip
                           tooltip={
-                            <span className="text-sm">Define as favorite</span>
+                            <span className="text-sm">Show on playercard</span>
                           }
                         >
                           <button
@@ -164,7 +164,7 @@ export default function TabProfileAchievements() {
                     </div>
                   )}
                   <div
-                    className={`w-36 h-36 achievement cursor-pointer ${
+                    className={`w-36 h-36 achievement ${
                       item.level === 5 ? "is-completed" : ""
                     }`}
                     onClick={openModalAchievementReceived.bind(

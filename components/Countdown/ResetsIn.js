@@ -16,13 +16,16 @@ export default function ResetsIn(props) {
   }
 
   return (
-    <span onClick={incrementStatus} className="whitespace-nowrap">
+    <span onClick={incrementStatus} className={`whitespace-nowrap ${status === 2 ? 'animate-text-attention' : ''}`}>
       {status === 0 && <>{label} on August 24</>}
       {status === 1 && <>{label} on Monday at 2pm CET</>}
       {status === 2 && (
         <>
           {label} in{" "}
           <Countdown
+            className="w-20 inline-flex"
+            labelClassName="mr-1"
+            isAnimated={false}
             hasHours={true}
             hasMinutes={true}
             hasSeconds={true}
