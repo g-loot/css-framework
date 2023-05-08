@@ -6,11 +6,14 @@ import Tooltip from "../../../components/Tooltip/Tooltip";
 import ResetsIn from "../../../components/Countdown/ResetsIn";
 import ModalBattlepassBonusSteps from "./modal-bonus-steps";
 import { UiContext } from "../../../contexts/ui";
+import { useRouter } from "next/router";
 
 export default function BattlepassPage() {
   const [selectedBattlepassID, setSelectedBattlepassID] = useState(0);
   const [selectedBattlepass, setSelectedBattlepass] = useState(null);
   const uiContext = useContext(UiContext);
+  const { query } = useRouter();
+  const modalBattlepassBonusSteps = query.modalbonussteps === "true" ? true : false;
 
   const getBattlepassByID = (id) => {
     return DataBattlepass.find((battlepass) => {
@@ -30,8 +33,14 @@ export default function BattlepassPage() {
     }
   }
 
+  useEffect(() => {
+    if (modalBattlepassBonusSteps) {
+      openModalBattlepassBonusSteps();
+    }
+  }, [modalBattlepassBonusSteps]);
+
   function openModalBattlepassBonusSteps() {
-    uiContext.openModal(<ModalBattlepassBonusSteps></ModalBattlepassBonusSteps>);
+    uiContext.openModal(<ModalBattlepassBonusSteps id={selectedBattlepassID} />);
   }
 
   return (
@@ -101,7 +110,7 @@ export default function BattlepassPage() {
           </section>
 
           <section className="text-ui-100/0 h-0 lg:flex justify-between">
-            <a onClick={() => openModalBattlepassBonusSteps(selectedBattlepassID)}>Open bonus steps modal</a>
+            <a onClick={openModalBattlepassBonusSteps}>Open bonus steps modal</a>
           </section>
         </PrototypeStructure>
       )}
