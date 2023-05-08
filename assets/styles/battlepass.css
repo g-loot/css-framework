@@ -128,12 +128,10 @@
       flex-wrap
       items-center
       justify-center
-      2xl:divide-x
-      2xl:divide-ui-700
       ;
       > li {
         @apply
-        px-6
+        p-6
         xl:px-10
         animate-slide-in-bottom
         ;
@@ -402,6 +400,8 @@
         py-1
         leading-none
         rounded-b
+        whitespace-normal
+        text-left
         ;
       }
     }

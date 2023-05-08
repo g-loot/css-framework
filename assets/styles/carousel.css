@@ -921,12 +921,20 @@
     whitespace-nowrap
     transition-transform
     duration-300
+    h-auto
+    text-0
     ;
+    > * {
+      @apply
+      text-base
+      ;
+    }
   }
   .carousel-slide {
     @apply
     inline-flex
     items-center
+    justify-center
     ;
   }
   .carousel-indicators {

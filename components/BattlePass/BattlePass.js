@@ -105,6 +105,18 @@ export default function Battlepass(props) {
     });
   };
 
+  const getBattlepassBonusSteps = () => {
+    return getBattlepassByID(selectedBattlepass).steps.filter((step) => {
+      return step.isBonus === true;
+    });
+  };
+
+  const getBattlepassPremiumSteps = () => {
+    return getBattlepassByID(selectedBattlepass).steps.filter((step) => {
+      return step.isPremium === true;
+    });
+  };
+
   function handleProgress(item) {
     if (item.id < currentStep) {
       return 100;
@@ -339,33 +351,62 @@ export default function Battlepass(props) {
                   </div>
                 </li>
               </ul>
-              <div className="border-t border-ui-700 p-6 flex flex-col lg:flex-row gap-6 items-start">
-                <div>
-                  <PremiumLogo
-                    src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
-                    width="200"
-                    height="auto"
-                  />
+              {!isPremium && (
+                <div className="border-t border-ui-700 p-4 flex flex-col xl:flex-row gap-6 items-center overflow-hidden rounded-b relative">
+                  <i className="absolute -z-10 w-[500px] h-[500px] -rotate-45 -top-[280px] -right-[250px] bg-gradient-to-br from-ui-700/50 via-ui-700/10 to-ui-700/0" />
+                  <div>
+                    <PremiumLogo
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                      width="auto"
+                      height="60"
+                      className="h-16"
+                    />
+                  </div>
+                  <div className="flex-1 xl text-center xl:text-left space-y-3 xl:border-l xl:border-ui-700 xl:pl-6">
+                    <p>Get Premium to unlock exclusive rewards.</p>
+                    <Link
+                      href={`/prototype/premium${prototype.getURLparams()}`}
+                    >
+                      <button
+                        type="button"
+                        className="button button-premium is-shining"
+                      >
+                        <span className="icon icon-crown" />
+                        <span>Get Premium</span>
+                      </button>
+                    </Link>
+                  </div>
+                  <div className="w-52">
+                    <CarouselSingle autoPlay={false}>
+                      {getBattlepassPremiumSteps().map((item, itemIndex) => (
+                        <CarouselItem key={itemIndex}>
+                          <div className="battlepass-step is-premium is-locked mt-5">
+                            <div className="battlepass-content">
+                              <div className="battlepass-decoration">
+                                <span>
+                                  {getBattlepassRewardByID(item.reward).name}
+                                </span>
+                              </div>
+                              <div className="battlepass-body">
+                                <img
+                                  src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                                    getBattlepassRewardByID(item.reward).image
+                                  }.png`}
+                                  width="100%"
+                                  height="auto"
+                                  alt={
+                                    getBattlepassRewardByID(item.reward).name
+                                  }
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </CarouselItem>
+                      ))}
+                    </CarouselSingle>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <p>
-                    Get Premium to get access to exclusive rewards. 
-                  </p>
-
-                </div>
-                <Link
-                            href={`/prototype/premium${prototype.getURLparams()}`}
-                          >
-                            <button
-                              type="button"
-                              className="button button-premium is-shining"
-                            >
-                              <span className="icon icon-crown" />
-                              <span>Get Premium</span>
-                            </button>
-                          </Link>
-
-              </div>
+              )}
             </div>
             <p className="text-ui-300">
               <ResetsIn label="New Battlepass" status={2} />

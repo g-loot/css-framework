@@ -1,15 +1,13 @@
 import React from "react";
 
-function PremiumLogo(props) {
+export default function PremiumLogo(props) {
   return (
     <img
       src={`${props.src}?${Date.now()}`}
-      width={props.width}
-      height={props.height}
+      width={props.width || 'auto'}
+      height={props.height || 'auto'}
       alt="Stryda Premium"
-      className={props.className}
+      className={props.className || ''}
     />
   );
 }
-
-export default React.memo(PremiumLogo);
