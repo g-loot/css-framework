@@ -17,6 +17,7 @@ import Avatar from "../Avatar/Avatar";
 import AnimatedNumber from "../AnimatedNumber/AnimatedNumber";
 import CarouselSingle, { CarouselItem } from "../Carousel/CarouselSingle";
 import ResetsIn from "../Countdown/ResetsIn";
+import PremiumLogo from "../PremiumLogo/PremiumLogo";
 
 export default function Battlepass(props) {
   const { query } = useRouter();
@@ -201,142 +202,171 @@ export default function Battlepass(props) {
                 </p>
               </>
             )}
-            <ul>
-              <li>
-                <img
-                  src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                    getBattlepassRewardByID(41).image
-                  }.png`}
-                  width="100%"
-                  height="auto"
-                  alt=""
-                />
-                <div className="battlepass-reward">
-                  <span>Total XP</span>
-                  <span>
-                    <AnimatedNumber number={2240} />
-                  </span>
+            <div>
+              <ul>
+                <li>
+                  <img
+                    src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                      getBattlepassRewardByID(41).image
+                    }.png`}
+                    width="100%"
+                    height="auto"
+                    alt=""
+                  />
+                  <div className="battlepass-reward">
+                    <span>Total XP</span>
+                    <span>
+                      <AnimatedNumber number={2240} />
+                    </span>
+                  </div>
+                </li>
+                <li>
+                  <img
+                    src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                      getBattlepassRewardByID(7).image
+                    }.png`}
+                    width="100%"
+                    height="auto"
+                    alt=""
+                  />
+                  <div className="battlepass-reward">
+                    <span>Coins</span>
+                    <span>
+                      <AnimatedNumber number={1411} />
+                    </span>
+                  </div>{" "}
+                </li>
+                <li>
+                  <img
+                    src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                      getBattlepassRewardByID(10).image
+                    }.png`}
+                    width="100%"
+                    height="auto"
+                    alt=""
+                  />
+                  <div className="battlepass-reward">
+                    <span>Tokens</span>
+                    <span>
+                      <AnimatedNumber number={879} />
+                    </span>
+                  </div>{" "}
+                </li>
+                <li>
+                  <CarouselSingle autoPlay={false}>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(17).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(16).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(15).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                  </CarouselSingle>
+                  <div className="battlepass-reward">
+                    <span>Avatar frames</span>
+                    <span>3</span>
+                  </div>{" "}
+                </li>
+                <li>
+                  <CarouselSingle autoPlay={false}>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(36).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(31).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(33).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                    <CarouselItem>
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(35).image
+                        }.png`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </CarouselItem>
+                  </CarouselSingle>
+                  <div className="battlepass-reward">
+                    <span>Profile banners</span>
+                    <span>4</span>
+                  </div>
+                </li>
+              </ul>
+              <div className="border-t border-ui-700 p-6 flex flex-col lg:flex-row gap-6 items-start">
+                <div>
+                  <PremiumLogo
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                    width="200"
+                    height="auto"
+                  />
                 </div>
-              </li>
-              <li>
-                <img
-                  src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                    getBattlepassRewardByID(7).image
-                  }.png`}
-                  width="100%"
-                  height="auto"
-                  alt=""
-                />
-                <div className="battlepass-reward">
-                  <span>Coins</span>
-                  <span>
-                    <AnimatedNumber number={1411} />
-                  </span>
-                </div>{" "}
-              </li>
-              <li>
-                <img
-                  src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                    getBattlepassRewardByID(10).image
-                  }.png`}
-                  width="100%"
-                  height="auto"
-                  alt=""
-                />
-                <div className="battlepass-reward">
-                  <span>Tokens</span>
-                  <span>
-                    <AnimatedNumber number={879} />
-                  </span>
-                </div>{" "}
-              </li>
-              <li>
-                <CarouselSingle autoPlay={false}>
-                  <CarouselItem>
-                    <img
-                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                        getBattlepassRewardByID(17).image
-                      }.png`}
-                      width="100%"
-                      height="auto"
-                      alt=""
-                    />
-                  </CarouselItem>
-                  <CarouselItem>
-                    <img
-                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                        getBattlepassRewardByID(16).image
-                      }.png`}
-                      width="100%"
-                      height="auto"
-                      alt=""
-                    />
-                  </CarouselItem>
-                  <CarouselItem>
-                    <img
-                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                        getBattlepassRewardByID(15).image
-                      }.png`}
-                      width="100%"
-                      height="auto"
-                      alt=""
-                    />
-                  </CarouselItem>
-                </CarouselSingle>
-                <div className="battlepass-reward">
-                  <span>Avatar frames</span>
-                  <span>3</span>
-                </div>{" "}
-              </li>
-              <li>
-                <CarouselSingle autoPlay={false}>
-                  <CarouselItem>
-                    <img
-                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                        getBattlepassRewardByID(36).image
-                      }.png`}
-                      width="100%"
-                      height="auto"
-                      alt=""
-                    />
-                  </CarouselItem>
-                  <CarouselItem>
-                    <img
-                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                        getBattlepassRewardByID(31).image
-                      }.png`}
-                      width="100%"
-                      height="auto"
-                      alt=""
-                    />
-                  </CarouselItem>
-                  <CarouselItem>
-                    <img
-                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                        getBattlepassRewardByID(33).image
-                      }.png`}
-                      width="100%"
-                      height="auto"
-                      alt=""
-                    />
-                  </CarouselItem>
-                  <CarouselItem>
-                    <img
-                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                        getBattlepassRewardByID(35).image
-                      }.png`}
-                      width="100%"
-                      height="auto"
-                      alt=""
-                    />
-                  </CarouselItem>
-                </CarouselSingle>
-                <div className="battlepass-reward">
-                  <span>Profile banners</span>
-                  <span>4</span>
+                <div className="flex-1">
+                  <p>
+                    Get Premium to get access to exclusive rewards. 
+                  </p>
+
                 </div>
-              </li>
-            </ul>
+                <Link
+                            href={`/prototype/premium${prototype.getURLparams()}`}
+                          >
+                            <button
+                              type="button"
+                              className="button button-premium is-shining"
+                            >
+                              <span className="icon icon-crown" />
+                              <span>Get Premium</span>
+                            </button>
+                          </Link>
+
+              </div>
+            </div>
             <p className="text-ui-300">
               <ResetsIn label="New Battlepass" status={2} />
             </p>
@@ -485,7 +515,7 @@ export default function Battlepass(props) {
                       {getBattlepassByID(selectedBattlepass).currentStep > 1 ? (
                         <>Get Premium to claim 1 locked tier</>
                       ) : (
-                        <>Get Premium</>
+                        <>Get premium to access exclusive rewards</>
                       )}
                     </span>
                   </a>

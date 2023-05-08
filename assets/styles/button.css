@@ -753,15 +753,27 @@ button {
       content-['']
       absolute
       inset-0
+      z-50
+      /*
       bg-[length:200%_auto]
       animate-[button-shining-rays_2s_linear_infinite]
       bg-[linear-gradient(45deg,#fff0_45%,#fffc_46%,#fffc_54%,#fff0_55%,#fff0)]
+      */
+      bg-[linear-gradient(130deg,_rgba(255,255,255,0)_44%,_rgba(255,255,255,.5)_46%,_rgba(255,255,255,0)_60%)]
+      bg-[160%]
+      bg-[length:300%_auto]
+      animate-[battlepass-shining-rays_3s_cubic-bezier(.7,0,.3,1)_infinite]
       ;
     }
 
     &::before {
-      animation-delay: 300ms;
+   
     }
+    &::after {
+      animation-delay: .1s;
+      
+    }
+
   }
 
   /* Close */ 

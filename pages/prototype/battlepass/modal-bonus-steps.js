@@ -61,11 +61,10 @@ export default function ModalBattlepassBonusSteps(props) {
           <div className="modal-body">
             <h2 className="modal-title">Battlepass completed</h2>
             <p>
-              Congratulations on completing the Battlepass, you have now reached
-              the bonus stage where you can get even more rewards. The bonus stage repeats itself until a new Battlepass starts so keep grinding those rewards!
+              Congratulations on completing the Battlepass. Continue earning XP through the bonus steps.
             </p>
             <div>
-              <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-4">
+              <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-8">
                 {getBattlepassBonusSteps().map((item, itemIndex) => (
                   <li
                     key={itemIndex}

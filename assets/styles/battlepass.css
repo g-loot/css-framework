@@ -84,8 +84,8 @@
     flex
     flex-col
     gap-2
-    lg:grid
-    lg:grid-cols-3
+    xl:grid
+    xl:grid-cols-3
     ;
     > *:not(.battlepass-premium) {
       @apply
@@ -96,7 +96,7 @@
     > .battlepass-premium {
       @apply
       place-self-center
-      lg:place-self-end
+      xl:place-self-end
       col-start-3
       ;
     }
@@ -112,17 +112,9 @@
   justify-center
   ;
 
-  > ul {
+  > div {
     @apply
-    flex
-    flex-wrap
-    items-center
-    justify-center
-    2xl:divide-x
-    2xl:divide-ui-700
-    mt-4
-    gap-y-8
-    py-8
+    my-4
     bg-ui-850/90
     backdrop-blur-sm
     border
@@ -130,82 +122,92 @@
     rounded
     overflow-hidden
     ;
-    > li {
+    > ul {
       @apply
-      px-6
-      xl:px-10
-      animate-slide-in-bottom
+      flex
+      flex-wrap
+      items-center
+      justify-center
+      2xl:divide-x
+      2xl:divide-ui-700
       ;
-      animation-delay: calc(var(--delay, 1) * 0.1s);
-      &:nth-child(1) {
-        --delay: 1;
-      }
-      &:nth-child(2) {
-        --delay: 2;
-      }
-      &:nth-child(3) {
-        --delay: 3;
-      }
-      &:nth-child(4) {
-        --delay: 4;
-      }
-      &:nth-child(5) {
-        --delay: 5;
-      }
-      &:nth-child(6) {
-        --delay: 6;
-      }
-      &:nth-child(7) {
-        --delay: 7;
-      }
-      &:nth-child(8) {
-        --delay: 8;
-      }
-      &:nth-child(9) {
-        --delay: 9;
-      }
-      img,
-      .carousel-slides-container,
-      .carousel-slide {
+      > li {
         @apply
-        w-20
-        h-20
-        lg:w-28
-        lg:h-28
-      }
-      .carousel-control {
-        @apply
-        -inset-x-7
+        px-6
+        xl:px-10
+        animate-slide-in-bottom
         ;
-      }
-      img,
-      .carousel-item {
-        @apply
-        rounded
-        mx-auto
-        ;
-      }
-      > .battlepass-reward {
-        @apply
-        flex
-        flex-col
-        leading-tight
-        mt-4
-        ;
-        > span {
-          &:nth-of-type(1) {
-            @apply
-            text-sm
-            text-ui-300
-            uppercase
-            ;
-          }
-          &:nth-of-type(2) {
-            @apply
-            text-xl
-            md:text-4xl
-            text-main
-            ;
+        animation-delay: calc(var(--delay, 1) * 0.1s);
+        &:nth-child(1) {
+          --delay: 1;
+        }
+        &:nth-child(2) {
+          --delay: 2;
+        }
+        &:nth-child(3) {
+          --delay: 3;
+        }
+        &:nth-child(4) {
+          --delay: 4;
+        }
+        &:nth-child(5) {
+          --delay: 5;
+        }
+        &:nth-child(6) {
+          --delay: 6;
+        }
+        &:nth-child(7) {
+          --delay: 7;
+        }
+        &:nth-child(8) {
+          --delay: 8;
+        }
+        &:nth-child(9) {
+          --delay: 9;
+        }
+        img,
+        .carousel-slides-container,
+        .carousel-slide {
+          @apply
+          w-20
+          h-20
+          lg:w-28
+          lg:h-28
+        }
+        .carousel-control {
+          @apply
+          -inset-x-7
+          ;
+        }
+        img,
+        .carousel-item {
+          @apply
+          rounded
+          mx-auto
+          ;
+        }
+        > .battlepass-reward {
+          @apply
+          flex
+          flex-col
+          leading-tight
+          mt-4
+          ;
+          > span {
+            &:nth-of-type(1) {
+              @apply
+              text-sm
+              text-ui-300
+              uppercase
+              ;
+            }
+            &:nth-of-type(2) {
+              @apply
+              text-xl
+              md:text-4xl
+              text-main
+              ;
+            }
           }
         }
       }
@@ -917,7 +919,6 @@
     ;
   }
 
-  .battlepass-reward-action,
   .battlepass-nav-container {
     @apply
     rounded-full

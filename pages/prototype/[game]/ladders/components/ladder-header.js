@@ -45,7 +45,13 @@ export default function LadderHeader() {
     <>
       {selectedGame && (
         <>
-          <section className={`sm:rounded surface surface-dimmed flex flex-col md:flex-row gap-8 items-center mb-4 p-4 ${prototype.getLadderByID(game, ladder_id)?.isPremium ? 'border-b-4 border-b-premium-500' : ''}`}>
+          <section
+            className={`sm:rounded surface surface-dimmed flex flex-col md:flex-row gap-8 items-center mb-4 p-4 ${
+              prototype.getLadderByID(game, ladder_id)?.isPremium
+                ? "border-b-4 border-b-premium-500"
+                : ""
+            }`}
+          >
             <div className="relative">
               <div className="absolute top-1 left-1">
                 <Tooltip tooltip={<div>{selectedGame.name}</div>}>
@@ -99,25 +105,24 @@ export default function LadderHeader() {
                     </Tooltip>
                   )}
                 </div>
-                {prototype.getLadderByID(game, ladder_id)?.status !== "finished" && (
+                {prototype.getLadderByID(game, ladder_id)?.status !==
+                  "finished" && (
                   <>
                     <div className="text-right text-sm">
-                      <ResetsIn label="Finishes" />
-                      {/* 
-                      <span className="icon text-sm text-ui-300 icon-clock" />
-                      <Countdown
-                        separator={"  "}
-                        hasDays={false}
-                        hasHours={true}
-                        hasMinutes={true}
-                        hasSeconds={true}
-                        targetDate={dateTimeAfterThreeDays}
-                        hasLabels={true}
-                        labelsAbbr={true}
-                        labelClassName="text-base block mr-1"
-                        className="text-base"
+                      <ResetsIn
+                        label={
+                          prototype.getLadderByID(game, ladder_id)?.status ===
+                          "upcoming"
+                            ? "Starts"
+                            : "Finishes"
+                        }
+                        status={
+                          prototype.getLadderByID(game, ladder_id)?.status ===
+                          "upcoming"
+                            ? 2
+                            : 1
+                        }
                       />
-                      */}
                     </div>
                   </>
                 )}

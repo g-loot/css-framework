@@ -1077,8 +1077,21 @@
 /* card ladder secondary */
 
 .card-ladder.card-secondary {
+  &::after {
+    @apply 
+    content-['']
+    absolute
+    z-50
+    inset-0
+    rounded
+    pointer-events-none
+    border
+    border-ui-700
+    ;
+  }
   & {
-    @apply flex-none
+    @apply 
+    flex-none
     w-full
     min-w-xs
     max-w-[calc(100vw-4rem)]
@@ -1086,7 +1099,18 @@
     duration-200
     ease-[cubic-bezier(.8,0,.3,1)]
     transform-gpu
-    leading-tight;
+    leading-tight
+    focus-visible:outline-none
+    active:outline-none
+    ;
+    &:active::after {
+      @apply
+      outline
+      outline-1
+      -outline-offset-1
+      outline-ui-400
+      ;
+    }
     > .card-image,
     > .card-content {
       @apply 
@@ -1444,9 +1468,12 @@
       inset-0
       rounded
       pointer-events-none
-      animate-[card-glow_2s_cubic-bezier(.4,0,.6,1)_infinite]
+      border
+      border-ui-700
+      /*animate-[card-glow_2s_cubic-bezier(.4,0,.6,1)_infinite]*/
       ;
     }
+    /*
     &.card-premium {
       &::after {
         @apply
@@ -1454,10 +1481,13 @@
         ;
       }
     }
+    */
     .card-status {
       @apply 
       animate-pulse
-      text-main;
+      text-main
+      font-bold
+      ;
     }
     &.card-premium {
       .card-status {

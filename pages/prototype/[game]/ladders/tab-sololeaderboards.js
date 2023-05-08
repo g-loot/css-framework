@@ -15,6 +15,7 @@ import AchievementIcon from "../../../../components/Achievements/AchievementIcon
 import Avatar from "../../../../components/Avatar/Avatar";
 import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
 import AvatarClan from "../../../../components/Avatar/AvatarClan";
+import ResetsIn from "../../../../components/Countdown/ResetsIn";
 
 const Groups = [
   "A",
@@ -447,20 +448,38 @@ export default function TabLaddersSoloLeaderboards() {
                   </>
                 )}
               </div>
-              <div className="flex justify-center mb-4">
-                <button
-                  type="button"
-                  className="button button-ghost is-active mx-auto"
-                >
-                  <span>My position</span>
-                </button>
-              </div>
+
+              {selectedLadder.status !== "upcoming" && (
+                <div className="flex justify-center mb-4">
+                  <button
+                    type="button"
+                    className="button button-ghost is-active mx-auto"
+                  >
+                    <span>My position</span>
+                  </button>
+                </div>
+              )}
             </div>
-            {isEmpty ? (
+            {isEmpty || selectedLadder.status === "upcoming" ? (
               <div className="col-span-1 lg:col-span-3">
                 <div className="mt-10">
-                  <h3 className="h4 mt-2 mb-6 text-ui-100 leading-tight text-center max-w-[20ch] mx-auto">
-                    Be the first to join this leaderboard!
+                  <h3 className="h4 mt-2 mb-6 text-ui-100 leading-tight text-center">
+                    {selectedLadder.status === "upcoming" ? (
+                      <>
+                        This Ladders starts{" "}
+                        <ResetsIn
+                          label=" "
+                          status={
+                            prototype.getLadderByID(game, ladder_id)?.status ===
+                            "upcoming"
+                              ? 2
+                              : 1
+                          }
+                        />
+                      </>
+                    ) : (
+                      <>Be the first to join this leaderboard!</>
+                    )}
                   </h3>
                   <ul className="max-w-sm mx-auto">
                     {rewardDistribSolo.map((item, itemIndex) => (

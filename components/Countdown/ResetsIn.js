@@ -23,7 +23,7 @@ export default function ResetsIn(props) {
         <>
           {label} in{" "}
           <Countdown
-            className="w-20 inline-flex"
+            className="inline-flex"
             labelClassName="mr-1"
             isAnimated={false}
             hasHours={true}

@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 const rewardDistribSolo = [
   {
-    name: "Diamond",
+    name: "1",
     rewards: [
       {
         type: "coin",
@@ -14,7 +14,7 @@ const rewardDistribSolo = [
     ],
   },
   {
-    name: "Platinum",
+    name: "2",
     rewards: [
       {
         type: "coin",
@@ -23,7 +23,7 @@ const rewardDistribSolo = [
     ],
   },
   {
-    name: "Gold",
+    name: "3",
     rewards: [
       {
         type: "coin",
@@ -32,7 +32,7 @@ const rewardDistribSolo = [
     ],
   },
   {
-    name: "Silver",
+    name: "4-10",
     rewards: [
       {
         type: "coin",
@@ -41,11 +41,38 @@ const rewardDistribSolo = [
     ],
   },
   {
-    name: "Bronze",
+    name: "11-50",
     rewards: [
       {
         type: "coin",
-        value: 90000,
+        value: 40000,
+      },
+    ],
+  },
+  {
+    name: "51-100",
+    rewards: [
+      {
+        type: "coin",
+        value: 5000,
+      },
+    ],
+  },
+  {
+    name: "101-200",
+    rewards: [
+      {
+        type: "coin",
+        value: 2000,
+      },
+    ],
+  },
+  {
+    name: "201-400",
+    rewards: [
+      {
+        type: "coin",
+        value: 500,
       },
     ],
   },
