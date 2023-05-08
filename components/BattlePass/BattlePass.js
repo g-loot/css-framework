@@ -77,7 +77,6 @@ export default function Battlepass(props) {
   }, [componentRef, handleResize]);
 
   useEffect(() => {
-    console.log(getBattlepassByID(selectedBattlepass).meta.name);
     setCurrentStep(getBattlepassByID(selectedBattlepass).currentStep);
     setActiveStep(getBattlepassByID(selectedBattlepass).currentStep);
     if (getBattlepassByID(selectedBattlepass).currentStep > maxSteps) {
