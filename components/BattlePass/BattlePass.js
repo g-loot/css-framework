@@ -361,8 +361,8 @@ export default function Battlepass(props) {
                       className="h-16"
                     />
                   </div>
-                  <div className="flex-1 xl text-center xl:text-left space-y-3 xl:border-l xl:border-ui-700 xl:pl-6">
-                    <p>Get Premium to unlock exclusive rewards.</p>
+                  <div className="flex-1 text-center xl:text-left space-y-3 xl:border-l xl:border-ui-700 xl:pl-6">
+                    <p className="max-w-[30ch]">Unlock exclusive Premium rewards before the Battlepass ends.</p>
                     <Link
                       href={`/prototype/premium${prototype.getURLparams()}`}
                     >

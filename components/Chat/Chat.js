@@ -511,7 +511,7 @@ export default function Chat(props) {
                                 <Link
                                   href={`/prototype/valorant/ladders/2${prototype.getURLparams()}`}
                                 >
-                                  <div className="inline-flex flex-col lg:flex-row items-center gap-4 justify-center text-left surface-ui-600 p-2 rounded interactive">
+                                  <div className="inline-flex flex-col 2xl:flex-row 2xl:items-center gap-4 justify-center text-left surface-ui-600 p-2 rounded interactive">
                                     <div className="relative">
                                       <div className="absolute top-1 left-1">
                                         <Tooltip tooltip="Valorant">
@@ -523,18 +523,18 @@ export default function Chat(props) {
                                           prototype.getLadderByID("valorant", 2)
                                             ?.cover
                                         }
-                                        className="aspect-cover object-cover rounded w-96"
+                                        className="aspect-cover object-cover rounded w-full 2xl:w-96"
                                         alt=""
                                       />
                                     </div>
-                                    <div className="space-y-3">
+                                    <div className="space-y-3 px-2 pb-2 2xl:p-0">
                                       <h4 className="text-xl">
                                         {
                                           prototype.getLadderByID("valorant", 2)
                                             ?.name
                                         }
                                       </h4>
-                                      <ul className="flex items-top gap-6">
+                                      <ul className="flex flex-col xl:flex-row items-top gap-4 xl:gap-6">
                                         <li className="px-4 border-l border-ui-400/50">
                                           <div className="text-xs text-ui-300 uppercase font-bold">
                                             Total score
