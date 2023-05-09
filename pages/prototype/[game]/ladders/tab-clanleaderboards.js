@@ -419,35 +419,35 @@ export default function TabLaddersSoloLeaderboards() {
                                     >
                                       <div
                                         className={`text-xl px-6 relative ${
-                                          itemIndex === 0 ? "text-gold-500" : ""
+                                          userIndex === 0 ? "text-gold-500" : ""
                                         }${
-                                          itemIndex === 1
+                                          userIndex === 1
                                             ? "text-silver-500"
                                             : ""
                                         } ${
-                                          itemIndex === 2
+                                          userIndex === 2
                                             ? "text-bronze-500"
                                             : ""
                                         } ${
-                                          itemIndex > 2 ? "text-ui-300" : ""
+                                          userIndex > 2 ? "text-ui-300" : ""
                                         }`}
                                       >
-                                        <span>{item.name}</span>
+                                        <span>{user.name}</span>
                                         <div className="absolute inset-0 flex items-center justify-between">
                                           <svg
                                             className={`${
-                                              itemIndex === 0
+                                              userIndex === 0
                                                 ? "fill-gold-500"
                                                 : ""
                                             }${
-                                              itemIndex === 1
+                                              userIndex === 1
                                                 ? "fill-silver-500"
                                                 : ""
                                             } ${
-                                              itemIndex === 2
+                                              userIndex === 2
                                                 ? "fill-bronze-500"
                                                 : ""
-                                            } ${itemIndex > 2 ? "hidden" : ""}`}
+                                            } ${userIndex > 2 ? "hidden" : ""}`}
                                             width="30"
                                             height="30"
                                             viewBox="0 0 30 30"
@@ -458,18 +458,18 @@ export default function TabLaddersSoloLeaderboards() {
                                           </svg>
                                           <svg
                                             className={`-scale-x-100 ${
-                                              itemIndex === 0
+                                              userIndex === 0
                                                 ? "fill-gold-500"
                                                 : ""
                                             }${
-                                              itemIndex === 1
+                                              userIndex === 1
                                                 ? "fill-silver-500"
                                                 : ""
                                             } ${
-                                              itemIndex === 2
+                                              userIndex === 2
                                                 ? "fill-bronze-500"
                                                 : ""
-                                            } ${itemIndex > 2 ? "hidden" : ""}`}
+                                            } ${userIndex > 2 ? "hidden" : ""}`}
                                             width="30"
                                             height="30"
                                             viewBox="0 0 30 30"

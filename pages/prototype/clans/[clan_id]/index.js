@@ -73,7 +73,9 @@ export default function Home() {
 
         {selectedClan && (
           <>
+          {!selectedClan.isYou && (
             <ClanHeader />
+          )}
 
             <nav className="mt-4 flex justify-center">
               <ul className="tabs">
