@@ -608,9 +608,9 @@ export default function TabClanOverview() {
                 <Link
                   href={`${
                     selectedClan.id
-                  }?tab=achievements${prototype.getURLparams()}`}
+                  }?tab=stats${prototype.getURLparams()}`}
                 >
-                  <a className="link link-hover text-ui-300 text-sm hidden">
+                  <a className="link link-hover text-ui-300 text-sm">
                     View
                   </a>
                 </Link>

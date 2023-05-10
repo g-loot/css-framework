@@ -779,6 +779,12 @@
             bg-main/0
             hover:bg-ui-850/0
             ;
+            &.chat-bubble-image > img {
+              @apply
+              mx-auto
+              rounded-[1rem]
+              ;
+            }
           }
         }
       }

@@ -10,6 +10,7 @@ import TabClanMembers from "./tab-members";
 import TabClanActivity from "./tab-activity";
 import TabClanChat from "./tab-chat";
 import TabClanApplications from "./tab-applications";
+import TabClanStats from "./tab-stats";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import ClanHeader from "./header";
@@ -26,6 +27,11 @@ const TabsItems = [
     component: TabClanChat,
     isYou: true,
     isMobile: true,
+  },
+  {
+    label: "Stats",
+    url: "stats",
+    component: TabClanStats,
   },
   {
     label: "Applications (3)",

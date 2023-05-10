@@ -129,6 +129,11 @@ const conversationFull = [
         type: "text",
         content: "Coming now <code class='tag' href='#'>@Kes2Band</code>",
       },
+      {
+        id: 2,
+        type: "image",
+        content: "https://media.giphy.com/media/fBEMsUeGHdpsClFsxM/giphy.gif",
+      },
     ],
   },
   {
@@ -206,6 +211,17 @@ const conversationFull = [
           {
             emoji: "❤️",
             author: [3],
+          },
+        ],
+      },
+      {
+        id: 2,
+        type: "image",
+        content: "https://media.giphy.com/media/Swx36wwSsU49HAnIhC/giphy.gif",
+        reactions: [
+          {
+            emoji: "😂",
+            author: [1],
           },
         ],
       },
