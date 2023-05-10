@@ -1,20 +1,17 @@
-import React, {
-  useEffect,
-  useId,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useRouter } from "next/router";
 import { usePrototypeData } from "../../contexts/prototype";
+import { UiContext } from "../../contexts/ui";
 import Tooltip from "../Tooltip/Tooltip";
 import GameIcon from "../GameIcon/GameIcon";
 import Link from "next/link";
 import AchievementFrame from "../Achievements/AchievementFrame";
 import AchievementIcon from "../Achievements/AchievementIcon";
+import ModalGiftTokens from "../../pages/prototype/clans/modal-gift-tokens";
 
 export default function Avatar(props) {
   const prototype = usePrototypeData();
+  const uiContext = useContext(UiContext);
   const { query } = useRouter();
   const userId = props.id || 1;
   const size = props.size || "avatar-xs";
@@ -27,6 +24,12 @@ export default function Avatar(props) {
   const hasTooltipXP =
     props.hasTooltipXP !== undefined ? props.hasTooltipXP : false;
   const [selectedUser, setSelectedUser] = useState(null);
+
+  function openModalGiftTokens() {
+    uiContext.openModal(
+      <ModalGiftTokens selectedUser={selectedUser.nickname} />
+    );
+  }
 
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(userId));
@@ -50,9 +53,7 @@ export default function Avatar(props) {
         <div
           className={`avatar avatar-circle ${size}  ${
             selectedUser?.isPremium ? "avatar-premium" : ""
-          } ${
-            selectedUser?.isOnline ? "avatar-online" : ""
-          } ${className}`}
+          } ${selectedUser?.isOnline ? "is-online" : ""} ${className}`}
         >
           {hasLevel && <b>{selectedUser.level}</b>}
           {selectedUser.isYou ? (
@@ -77,10 +78,6 @@ export default function Avatar(props) {
           <div>
             <img src={selectedUser?.avatar} />
           </div>
-          {size === "avatar-xs" && selectedUser?.isYou && !hasAvatarFrame && (
-            <>{/*<i className="radar" />*/}</>
-          )}
-          {selectedUser.isOnline && !hasLevel && isOnline && <i />}
         </div>
       )}
     </>
@@ -124,7 +121,7 @@ export default function Avatar(props) {
                   className="p-0"
                   placement={props.tooltipPlacement}
                   tooltip={
-                    <div className={`w-72 h-[370px] flex flex-col`}>
+                    <div className={`w-72 flex flex-col`}>
                       <div>
                         {selectedUser.shopItems?.profileBanner ? (
                           <>
@@ -149,88 +146,88 @@ export default function Avatar(props) {
                           </>
                         )}
                       </div>
-                      <div className="flex-1 flex flex-col items-center justify-center gap-4 px-4 -mt-7">
-                        <div
-                          className={`avatar avatar-circle avatar-sm  ${
-                            selectedUser?.isPremium ? "avatar-premium" : ""
-                          } ${
-                            selectedUser?.isOnline ? "is-online" : ""
-                          }`}
-                        >
-                          {hasLevel && <b>{selectedUser.level}</b>}
-                          {!selectedUser.isYou &&
-                            selectedUser?.shopItems?.avatarFrame && (
-                              <img
-                                src={
-                                  prototype.getShopitemByID(
-                                    1,
-                                    selectedUser.shopItems.avatarFrame
-                                  ).image
-                                }
-                                alt=""
-                              />
-                            )}
-                          {selectedUser.isYou && hasAvatarFrame && (
-                            <img src={avatarFrame.image} alt="" />
-                          )}
-                          <div>
-                            <img src={selectedUser?.avatar} />
-                          </div>
-                          {size === "avatar-xs" &&
-                            selectedUser?.isYou &&
-                            !hasAvatarFrame && <i className="radar" />}
-                          {selectedUser.isOnline && !hasLevel && <i />}
-                        </div>
-                        <div>
-                          <div className="flex items-center gap-1">
-                            <h5 className="text-ui-100">
-                              {selectedUser.clan && (
-                                <>
-                                  {" "}
-                                  &#91;
-                                  {
-                                    prototype.getClanByID(selectedUser.clan)
-                                      ?.tag
+                      <Link
+                        href={`/prototype/profile/${
+                          selectedUser?.id
+                        }${prototype.getURLparams()}`}
+                      >
+                        <div className="flex-1 flex flex-col items-center justify-center gap-4 px-4 -mt-7 interactive">
+                          <div
+                            className={`avatar avatar-circle avatar-sm  ${
+                              selectedUser?.isPremium ? "avatar-premium" : ""
+                            } ${selectedUser?.isOnline ? "is-online" : ""}`}
+                          >
+                            {hasLevel && <b>{selectedUser.level}</b>}
+                            {!selectedUser.isYou &&
+                              selectedUser?.shopItems?.avatarFrame && (
+                                <img
+                                  src={
+                                    prototype.getShopitemByID(
+                                      1,
+                                      selectedUser.shopItems.avatarFrame
+                                    ).image
                                   }
-                                  &#93;
-                                </>
-                              )}{" "}
-                              {selectedUser.nickname}
-                            </h5>
-                            <img
-                              src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
-                              className="aspect-video rounded-sm w-6"
-                            />
-                          </div>
-                          
-                          {selectedUser?.isOnline ? (
-                            <div className="flex justify-center mt-0.5 mb-1">
-                              <div className="chip chip-status chip-success chip-xs">
-                                <span className="badge" />
-                                <span>online</span>
-                              </div>
-                            </div>
-                          ) : (
-                            <div className="flex justify-center mt-0.5 mb-1">
-                              <div className="chip chip-status chip-xs">
-                                <span className="badge" />
-                                <span>last seen 3 days ago</span>
-                              </div>
-                            </div>
-                          )}
-                          <div className="flex justify-center gap-1 mb-1">
-                            {prototype
-                              .getUserByID(userId)
-                              .games?.map((game, gameIndex) => (
-                                <GameIcon
-                                  key={gameIndex}
-                                  game={game}
-                                  size="text-sm"
+                                  alt=""
                                 />
-                            ))}
+                              )}
+                            {selectedUser.isYou && hasAvatarFrame && (
+                              <img src={avatarFrame.image} alt="" />
+                            )}
+                            <div>
+                              <img src={selectedUser?.avatar} />
+                            </div>
+                          </div>
+                          <div>
+                            <div className="flex items-center gap-1">
+                              <h5 className="text-ui-100">
+                                {selectedUser.clan && (
+                                  <>
+                                    {" "}
+                                    &#91;
+                                    {
+                                      prototype.getClanByID(selectedUser.clan)
+                                        ?.tag
+                                    }
+                                    &#93;
+                                  </>
+                                )}{" "}
+                                {selectedUser.nickname}
+                              </h5>
+                              <img
+                                src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
+                                className="aspect-video rounded-sm w-6"
+                              />
+                            </div>
+
+                            {selectedUser?.isOnline ? (
+                              <div className="flex justify-center mt-0.5 mb-1">
+                                <div className="chip chip-status chip-success chip-xs">
+                                  <span className="badge" />
+                                  <span>online</span>
+                                </div>
+                              </div>
+                            ) : (
+                              <div className="flex justify-center mt-0.5 mb-1">
+                                <div className="chip chip-status chip-xs">
+                                  <span className="badge" />
+                                  <span>last seen 3 days ago</span>
+                                </div>
+                              </div>
+                            )}
+                            <div className="flex justify-center gap-1 mb-1">
+                              {prototype
+                                .getUserByID(userId)
+                                .games?.map((game, gameIndex) => (
+                                  <GameIcon
+                                    key={gameIndex}
+                                    game={game}
+                                    size="text-sm"
+                                  />
+                                ))}
+                            </div>
                           </div>
                         </div>
-                      </div>
+                      </Link>
                       <div className="p-2">
                         <div className="flex items-center justify-around gap-2 text-center leading-tight">
                           <div>
@@ -315,6 +312,18 @@ export default function Avatar(props) {
                             </div>
                           )}
                         </div>
+                        {selectedUser.clan === 1 && (
+                          <button
+                            type="button"
+                            className="button button-sm button-secondary rounded-full w-full mt-2"
+                            onClick={() => {
+                              openModalGiftTokens();
+                            }}
+                          >
+                            <span className="icon icon-token" />
+                            <span>Gift tokens</span>
+                          </button>
+                        )}
                       </div>
                     </div>
                   }

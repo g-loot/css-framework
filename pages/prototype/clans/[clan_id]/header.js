@@ -65,7 +65,7 @@ export default function ClanHeader(props) {
     <>
       {selectedClan && (
         <>
-          <section className="header header-secondary surface surface-dimmed sm:rounded-lg">
+          <section className="header header-secondary surface surface-dimmed sm:rounded-lg mb-4">
             {breadcrumbs && (
               <div className="header-breadcrumbs">
                 <nav className="breadcrumbs" aria-label="Breadcrumb">

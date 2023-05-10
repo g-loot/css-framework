@@ -77,7 +77,7 @@ export default function Home() {
             <ClanHeader />
           )}
 
-            <nav className="mt-4 flex justify-center">
+            <nav className="flex justify-center">
               <ul className="tabs">
                 {TabsItems.map((item, itemIndex) => (
                   <>

@@ -25,58 +25,6 @@
   transform-gpu
   text-ui-300
   ;
-  
-  /*
-
-  > .avatar {
-    &:first-child {
-      &:not([class*="ml-"]) {
-        @apply
-        ml-0.5
-        ;
-      }
-    }
-    &:last-child {
-      &:not([class*="mr-"]) {
-        @apply
-        mr-0.5
-        ;
-      }
-    }
-  }
-  > .button {
-    &:first-child {
-      &:not([class*="ml-"]) {
-        @apply
-        ml-1
-        ;
-      }
-    }
-    &:last-child {
-      &:not([class*="mr-"]) {
-        @apply
-        mr-1
-        ;
-      }
-    }
-  }
-  > .icon {
-    &:first-child {
-      &:not([class*="ml-"]) {
-        @apply
-        ml-1.5
-        ;
-      }
-    }
-    &:last-child {
-      &:not([class*="mr-"]) {
-        @apply
-        mr-1.5
-        ;
-      }
-    }
-  }
-  */
 
   /* sliced */
 
@@ -1172,11 +1120,25 @@
       @apply
       gap-2
       ;
+      .badge {
+        @apply
+        min-w-[0]
+        h-[7px]
+        w-[7px]
+        ;
+      }
     }
     &.chip-xs {
       @apply
       gap-1.5
       ;
+      .badge {
+        @apply
+        min-w-[0]
+        h-1.5
+        w-1.5
+        ;
+      }
     }
   }
 }

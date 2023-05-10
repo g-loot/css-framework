@@ -915,13 +915,13 @@ const DSpage = () => {
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-wrap gap-4 justify-start items-center">
-                      <div className="avatar avatar-online avatar-circle">
+                      <div className="avatar is-online avatar-circle">
                       <b>35</b>
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
                       </div>
-                      <div className="avatar avatar-online avatar-circle avatar-sm">
+                      <div className="avatar is-online avatar-circle avatar-sm">
                       <b>35</b>
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
@@ -936,13 +936,13 @@ const DSpage = () => {
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-wrap gap-4 justify-start items-center">
-                      <div className="avatar avatar-offline avatar-circle">
+                      <div className="avatar is-offline avatar-circle">
                       <b>35</b>
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
                       </div>
-                      <div className="avatar avatar-offline avatar-circle avatar-sm">
+                      <div className="avatar is-offline avatar-circle avatar-sm">
                       <b>35</b>
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />

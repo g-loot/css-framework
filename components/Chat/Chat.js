@@ -46,14 +46,14 @@ const conversationFull = [
       {
         id: 2,
         type: "image",
-        content: "https://media.giphy.com/media/HFMUv2KLirAyA7noXQ/giphy.gif",
+        content: "https://media.giphy.com/media/AzKoQdu1cVb7JkTd9T/giphy.gif",
       },
       {
         id: 3,
         type: "text",
         isDeleted: true,
         content:
-          "Welcome aboard <code class='tag is-owner' href='#' content-editable='false'>@JackAttack123</code> 👋",
+          "Welcome <code class='tag is-owner' href='#' content-editable='false'>@JackAttack123</code> 👋",
         reactions: [
           {
             emoji: "❤️",

@@ -184,84 +184,6 @@ export default function Topbar() {
                     */}
             </div>
             <div className="flex justify-end items-center gap-1 sm:gap-2">
-              <div className="dropdown dropdown-center md:dropdown-end">
-                <div
-                  tabIndex="1"
-                  className="flex items-center rounded-full bg-ui-700 interactive"
-                >
-                  <button
-                    type="button"
-                    className="w-[34px] button button-ghost rounded-full"
-                  >
-                    <div className="pointer-events-none absolute -inset-1 !m-0 rounded-full">
-                      <i
-                        className="absolute inset-px rounded-full border border-main/40 animate-pulse"
-                        style={{ animationDuration: "4s" }}
-                      />
-                    </div>
-                    <div className="text-sm font-bold text-ui-200 text-center pl-px">
-                      <div className="infobanner is-active">
-                        <div className="infobanner-front">
-                          <span className="font-bold text-xs">
-                            {isPremium ? <>+165%</> : <>+15%</>}
-                          </span>
-                        </div>
-                        <div className="infobanner-back">
-                          <span className="icon icon-xp-symbol text-3xl text-main mx-auto" />
-                        </div>
-                      </div>
-                    </div>
-                  </button>
-                </div>
-
-                <div
-                  tabIndex="1"
-                  className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[300px] overflow-hidden rounded-xl shadow-xl"
-                >
-                  <h5 className="mx-2 mt-2">XP Boosts</h5>
-                  <ul className="rounded-lg text-left text-sm p-2 leading-none">
-                    {isPremium ? (
-                      <li className="flex gap-2 py-1 items-center">
-                        <div className="icon icon-e-add text-premium-500" />
-                        <div className="flex-1">Premium boost</div>
-                        <div className="text-right text-premium-500">+50%</div>
-                      </li>
-                    ) : (
-                      <li className="flex gap-2 py-1 items-center text-ui-400">
-                        <div className="icon icon-e-remove" />
-                        <div className="flex-1 line-through">Premium boost</div>
-                        <div className="text-right line-through">+50%</div>
-                      </li>
-                    )}
-                    <li className="flex gap-2 py-1 items-center">
-                      <div className="icon icon-e-add text-main" />
-                      <div className="flex-1">Clan boost</div>
-                      <div className="text-right text-main">+10%</div>
-                    </li>
-                    <li className="separator bg-ui-600" />
-                    <li className="flex gap-2 py-1 items-center">
-                      <div className="icon icon-e-add text-main" />
-                      <div className="flex-1 flex-col">
-                        <div>New user boost</div>
-                        <div>
-                          <Countdown
-                            separator={":"}
-                            hasDays={true}
-                            hasHours={true}
-                            hasMinutes={true}
-                            hasSeconds={true}
-                            hasLabels={false}
-                            labelsAbbr={false}
-                            labelClassName=""
-                            className="text-xs text-main"
-                          />
-                        </div>
-                      </div>
-                      <div className="text-right text-main">+5%</div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
 
               <Tooltip
                 placement="bottom"
@@ -279,6 +201,144 @@ export default function Topbar() {
                   </Link>
                 </div>
               </Tooltip>
+
+              <div className="dropdown dropdown-end">
+                <div
+                  tabIndex="1"
+                  className="flex items-center rounded-full bg-ui-700 interactive"
+                >
+                  <button
+                    type="button"
+                    className="button button-ghost rounded-full"
+                  >
+                    <span
+                      data-badge={!isEmpty ? "12" : ""}
+                      className="leading-[0] after:absolute after:-right-3 after:top-1 after:bg-error-300"
+                    >
+                      <span className="icon icon-alarm text-ui-200" />
+                    </span>
+                  </button>
+                </div>
+
+                <div
+                  tabIndex="1"
+                  className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
+                >
+                  {isEmpty && (
+                    <div className="h-72 flex items-center justify-center text-center">
+                      <div>
+                        <span className="icon icon-smile text-6xl text-ui-500" />
+                        <p className="text-sm text-ui-400 mt-2">
+                          You&lsquo;re all caught up!
+                        </p>
+                        <p className="text-ui-300">
+                          Check back later for new notifications.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                  {!isEmpty && (
+                    <>
+                      <div className="flex items-center justify-between p-2">
+                        <div className="form-group form-select">
+                          <select id="favorite-game" className="input-sm">
+                            <option defaultValue={true}>Show all categories</option>
+                            <option>Clans</option>
+                            <option>Ladders</option>
+                            <option>Missions</option>
+                            <option>Wallet</option>
+                          </select>
+                        </div>
+
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost"
+                        >
+                          <span className="icon icon-check-double" />
+                          <span>Mark all as read</span>
+                        </button>
+                      </div>
+                      <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 pb-2 space-y-2">
+                        {dataNotifications.map(
+                          (notificationGroup, notificationGroupIndex) => (
+                            <>
+                              <div key={notificationGroupIndex}>
+                                {/*
+                                {dataNotifications.length > 1 && (
+                                  <h5 className="px-2 font-body uppercase text-ui-300 text-sm font-normal not-italic mb-2">
+                                    {notificationGroup.name}
+                                  </h5>
+                                )}
+                                */}
+                                <ul className="items-spaced space-y-2">
+                                  {notificationGroup.notifications?.map(
+                                    (notification, notificationIndex) => (
+                                      <Notification
+                                        key={notificationIndex}
+                                        notification={notification}
+                                      />
+                                    )
+                                  )}
+                                </ul>
+                              </div>
+                              {/*
+                        <div key={notificationGroupIndex}>
+                          <h5 className="px-2 text-ui-300 text-sm mb-2">
+                            {notificationGroup.name}
+                          </h5>
+                          <ul className="items-spaced space-y-2">
+                            {notificationGroup.notifications?.map(
+                              (notification, notificationIndex) => (
+                                <Link
+                                  key={notificationIndex}
+                                  href={`/prototype/wallet${prototype.getURLparams()}`}
+                                >
+                                  <li
+                                    className={`item rounded-xl item-interactive relative surface surface-ui-600 hover:opacity-50 ${
+                                      notification.read ? "opacity-25" : ""
+                                    }`}
+                                  >
+                                    <div className="item-image">
+                                      <div className="avatar avatar-square avatar-simple avatar-md">
+                                        <div>
+                                          <img src={notification.image} />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div className="item-body leading-tight">
+                                      <div className="text-ui-300 text-sm leading-tight">
+                                        {notification.intro}
+                                      </div>
+                                      <div className="item-title text-ui-100 text-lg my-1">
+                                        {notification.title}
+                                      </div>
+                                      <div className="text-ui-300 text-sm leading-tight">
+                                        {notification.text}
+                                      </div>
+                                    </div>
+                                    <div className="absolute top-2 right-4">
+                                      <div className=" flex items-center justify-end gap-1">
+                                        <div className="text-xs text-ui-300">
+                                          {notification.time}
+                                        </div>
+                                        <i className="badge bg-error-500" />
+                                      </div>
+                                    </div>
+                                  </li>
+                                </Link>
+                              )
+                            )}
+                          </ul>
+                        </div>
+                        */}
+                            </>
+                          )
+                        )}
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
 
               <div className="flex gap-x-3 items-stretch justify-center bg-ui-700 min-w-[2.25rem] h-9 xl:px-3 rounded-full">
                 <div className="inline-flex xl:hidden items-center">
@@ -509,134 +569,76 @@ export default function Topbar() {
                 >
                   <button
                     type="button"
-                    className="button button-ghost rounded-full"
+                    className="w-[34px] button button-ghost rounded-full"
                   >
-                    <span
-                      data-badge={!isEmpty ? "12" : ""}
-                      className="leading-[0] after:absolute after:-right-3 after:top-1 after:bg-error-300"
-                    >
-                      <span className="icon icon-alarm text-ui-200" />
-                    </span>
+                    <div className="pointer-events-none absolute -inset-1 !m-0 rounded-full">
+                      <i
+                        className="absolute inset-px rounded-full border border-main/40 animate-pulse"
+                        style={{ animationDuration: "4s" }}
+                      />
+                    </div>
+                    <div className="text-sm font-bold text-ui-200 text-center pl-px">
+                      <div className="infobanner is-active">
+                        <div className="infobanner-front">
+                          <span className="font-bold text-xs">
+                            {isPremium ? <>+165%</> : <>+15%</>}
+                          </span>
+                        </div>
+                        <div className="infobanner-back">
+                          <span className="icon icon-xp-symbol text-3xl text-main mx-auto" />
+                        </div>
+                      </div>
+                    </div>
                   </button>
                 </div>
 
                 <div
                   tabIndex="1"
-                  className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
+                  className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[300px] overflow-hidden rounded-xl shadow-xl"
                 >
-                  {isEmpty && (
-                    <div className="h-72 flex items-center justify-center text-center">
-                      <div>
-                        <span className="icon icon-smile text-6xl text-ui-500" />
-                        <p className="text-sm text-ui-400 mt-2">
-                          You&lsquo;re all caught up!
-                        </p>
-                        <p className="text-ui-300">
-                          Check back later for new notifications.
-                        </p>
-                      </div>
-                    </div>
-                  )}
-                  {!isEmpty && (
-                    <>
-                      <div className="flex items-center justify-between p-2">
-                        <div className="form-group form-select">
-                          <select id="favorite-game" className="input-sm">
-                            <option defaultValue={true}>Show all categories</option>
-                            <option>Clans</option>
-                            <option>Ladders</option>
-                            <option>Missions</option>
-                            <option>Wallet</option>
-                          </select>
+                  <h5 className="mx-2 mt-2">XP Boosts</h5>
+                  <ul className="rounded-lg text-left text-sm p-2 leading-none">
+                    {isPremium ? (
+                      <li className="flex gap-2 py-1 items-center">
+                        <div className="icon icon-e-add text-premium-500" />
+                        <div className="flex-1">Premium boost</div>
+                        <div className="text-right text-premium-500">+50%</div>
+                      </li>
+                    ) : (
+                      <li className="flex gap-2 py-1 items-center text-ui-400">
+                        <div className="icon icon-lock" />
+                        <div className="flex-1">Premium boost</div>
+                        <div className="icon icon-crown" />
+                        <div className="text-right">+50%</div>
+                      </li>
+                    )}
+                    <li className="flex gap-2 py-1 items-center">
+                      <div className="icon icon-e-add text-main" />
+                      <div className="flex-1">Clan boost</div>
+                      <div className="text-right text-main">+10%</div>
+                    </li>
+                    <li className="separator bg-ui-600" />
+                    <li className="flex gap-2 py-1 items-center">
+                      <div className="icon icon-e-add text-main" />
+                      <div className="flex-1 flex-col">
+                        <div>New user boost</div>
+                        <div>
+                          <Countdown
+                            separator={":"}
+                            hasDays={true}
+                            hasHours={true}
+                            hasMinutes={true}
+                            hasSeconds={true}
+                            hasLabels={false}
+                            labelsAbbr={false}
+                            labelClassName=""
+                            className="text-xs text-main"
+                          />
                         </div>
-
-                        <button
-                          type="button"
-                          className="button button-sm button-ghost"
-                        >
-                          <span className="icon icon-check-double" />
-                          <span>Mark all as read</span>
-                        </button>
                       </div>
-                      <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 pb-2 space-y-2">
-                        {dataNotifications.map(
-                          (notificationGroup, notificationGroupIndex) => (
-                            <>
-                              <div key={notificationGroupIndex}>
-                                {/*
-                                {dataNotifications.length > 1 && (
-                                  <h5 className="px-2 font-body uppercase text-ui-300 text-sm font-normal not-italic mb-2">
-                                    {notificationGroup.name}
-                                  </h5>
-                                )}
-                                */}
-                                <ul className="items-spaced space-y-2">
-                                  {notificationGroup.notifications?.map(
-                                    (notification, notificationIndex) => (
-                                      <Notification
-                                        key={notificationIndex}
-                                        notification={notification}
-                                      />
-                                    )
-                                  )}
-                                </ul>
-                              </div>
-                              {/*
-                        <div key={notificationGroupIndex}>
-                          <h5 className="px-2 text-ui-300 text-sm mb-2">
-                            {notificationGroup.name}
-                          </h5>
-                          <ul className="items-spaced space-y-2">
-                            {notificationGroup.notifications?.map(
-                              (notification, notificationIndex) => (
-                                <Link
-                                  key={notificationIndex}
-                                  href={`/prototype/wallet${prototype.getURLparams()}`}
-                                >
-                                  <li
-                                    className={`item rounded-xl item-interactive relative surface surface-ui-600 hover:opacity-50 ${
-                                      notification.read ? "opacity-25" : ""
-                                    }`}
-                                  >
-                                    <div className="item-image">
-                                      <div className="avatar avatar-square avatar-simple avatar-md">
-                                        <div>
-                                          <img src={notification.image} />
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div className="item-body leading-tight">
-                                      <div className="text-ui-300 text-sm leading-tight">
-                                        {notification.intro}
-                                      </div>
-                                      <div className="item-title text-ui-100 text-lg my-1">
-                                        {notification.title}
-                                      </div>
-                                      <div className="text-ui-300 text-sm leading-tight">
-                                        {notification.text}
-                                      </div>
-                                    </div>
-                                    <div className="absolute top-2 right-4">
-                                      <div className=" flex items-center justify-end gap-1">
-                                        <div className="text-xs text-ui-300">
-                                          {notification.time}
-                                        </div>
-                                        <i className="badge bg-error-500" />
-                                      </div>
-                                    </div>
-                                  </li>
-                                </Link>
-                              )
-                            )}
-                          </ul>
-                        </div>
-                        */}
-                            </>
-                          )
-                        )}
-                      </div>
-                    </>
-                  )}
+                      <div className="text-right text-main">+5%</div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 

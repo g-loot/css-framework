@@ -645,7 +645,7 @@
 .chat.chat-secondary {
   .chat-group {
     @apply
-    pt-8
+    pt-4
     ;
     .chat-messages {
       @apply

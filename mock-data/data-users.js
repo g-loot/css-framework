@@ -292,7 +292,7 @@ export const dataUsers = [
       "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg",
     avatarFrame: 3,
     email: "mrkil@gmail.com",
-    clan: 3,
+    clan: 1,
     bio: "Extreme alcohol guru. Hardcore troublemaker. Food lover. Musicaholic. Typical social media geek.",
     socials: {
       riotNickname: "MrKilla",
@@ -583,7 +583,7 @@ export const dataUsers = [
     avatar:
       "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg",
     email: "robbiewilliams@gmail.com",
-    clan: 5,
+    clan: 1,
     bio: "Hi everyone! My name is PopoRob, but around the Internet I go by Zentouro (don’t ask, its a weird story involving an elven name generator when I was 8). I’m an Environmental Studies major at Middlebury College, focusing in Film and Media Culture. I also have minors in Chinese and Computer Science.",
     socials: {
       riotNickname: "PopoRob",
@@ -771,7 +771,7 @@ export const dataUsers = [
     avatar:
       "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg",
     email: "PilarPilar@gmail.com",
-    clan: 4,
+    clan: 1,
     socials: {
       riotNickname: "Pilar",
       riotHashtag: 7482,
@@ -970,7 +970,7 @@ export const dataUsers = [
     avatar:
       "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg",
     email: "frenzyman@gmail.com",
-    clan: null,
+    clan: 1,
     bio: "Just one more game.",
     socials: {
       riotNickname: "FrenzyMan",
@@ -1015,7 +1015,111 @@ export const dataUsers = [
     avatar:
       "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_11.jpg",
     email: "joppe@gmail.com",
-    clan: null,
+    clan: 2,
+    bio: "Sleep. Eat. Game. Repeat.",
+    socials: {
+      riotNickname: "Joppe",
+      riotHashtag: 1254,
+      discord: "@Joppe",
+      twitch: "@Joppe",
+    },
+    shopItems: {
+      avatarFrame: 4,
+      profileBanner: 27,
+    },
+    stats: {
+      xp: 297,
+      playedLadders: 2,
+      avgPlacement: 32,
+      avgScore: 532,
+      timesInTop: 3,
+      completedMissions: 558,
+      playedTournaments: 0,
+    },
+    wallet: {
+      coins: 50000,
+      tokens: 245,
+      powertokens: 15,
+      tickets: 3,
+    },
+    games: [1, 3],
+    ladders: [
+      {
+        gameSlug: "valorant",
+        id: 1,
+      },
+      {
+        gameSlug: "valorant",
+        id: 3,
+      },
+      {
+        gameSlug: "pubg",
+        id: 2,
+      },
+      {
+        gameSlug: "valorant",
+        id: 3,
+      },
+    ],
+    achievements: {
+      favoriteBadge: 2,
+      badges: [
+        {
+          id: 1,
+          item: 1,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 2,
+          item: 2,
+          level: 4,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 3,
+          item: 3,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+        {
+          id: 4,
+          item: 4,
+          level: 3,
+          percent: 40,
+          progress: 10,
+          from: "150",
+          to: "300",
+        },
+      ],
+    },
+  },
+  {
+    id: 12,
+    isYou: false,
+    isPremium: true,
+    isFriend: true,
+    level: 72,
+    isOnline: true,
+    nickname: "KooKoo",
+    firstname: "Kristian",
+    lastname: "Kook",
+    country: "France",
+    countryFlag: "fr",
+    lang: "FR",
+    avatar:
+      "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_12.jpg",
+    email: "joppe@gmail.com",
+    clan: 1,
     bio: "Sleep. Eat. Game. Repeat.",
     socials: {
       riotNickname: "Joppe",

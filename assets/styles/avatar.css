@@ -1511,8 +1511,8 @@
 /* status */
 
 .avatar {
-  &.avatar-online,
-  &.avatar-offline {
+  &.is-online,
+  &.is-offline {
     > b,
     > strong {
       &::after {
@@ -1524,7 +1524,7 @@
       }
     }
   }
-  &.avatar-online {
+  &.is-online {
     > b,
     > strong {
       &::after {
@@ -1534,7 +1534,7 @@
       }
     }
   }
-  &.avatar-offline {
+  &.is-offline {
     > b,
     > strong {
       @apply
