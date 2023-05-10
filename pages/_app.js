@@ -1,5 +1,4 @@
 import "../assets/styles/globals.css";
-import "aos/dist/aos.css";
 
 import React from "react";
 import App from "next/app";

@@ -438,9 +438,7 @@
   items-center
   gap-2
   p-2
-  border-t
-  border-ui-700
-  bg-ui-800
+  bg-ui-600
   ;
   > .form-group {
     @apply

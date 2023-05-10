@@ -184,7 +184,7 @@ export default function Ladders() {
                       selectedGame.slug
                     }/ladders/history${prototype.getURLparams()}`}
                   >
-                    <a className="link link-hover text-ui-300 text-sm">
+                    <a className="link link-hover text-ui-300 text-sm leading-none">
                       View all
                     </a>
                   </Link>

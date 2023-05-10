@@ -68,7 +68,7 @@ export default function Slider(props) {
 
       <div
         ref={sliderWrapper}
-        className="relative z-0 overflow-x-auto scrollbar-hidden last:after:content-[''] last:after:w-24 last:after:block py-4 px-4 md:px-0"
+        className="relative z-0 overflow-x-auto scrollbar-hidden last:after:content-[''] last:after:w-12 last:after:block py-4 px-4 md:px-0"
       >
         <div className={`flex gap-4 items-stretch ${isHover ? 'hoverhighlight' : ''}`} ref={sliderContainer}>
           {props.children}

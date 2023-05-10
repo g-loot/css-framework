@@ -302,8 +302,13 @@ export const dataGames = [
         ],
         clanLeaderboard: [
           {
-            clan: 1,
-            rewards: [],
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 30000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 123,
@@ -317,7 +322,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 45000,
+                value: 20000,
               },
             ],
             stats: {
@@ -333,7 +338,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 12000,
               },
             ],
             stats: {
@@ -345,11 +350,11 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
+            clan: 1,
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 8000,
               },
             ],
             stats: {
@@ -365,7 +370,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 7000,
               },
             ],
             stats: {
@@ -381,7 +386,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 6000,
               },
             ],
             stats: {
@@ -394,7 +399,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 78,
@@ -405,7 +415,12 @@ export const dataGames = [
           },
           {
             clan: 7,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 77,
@@ -861,11 +876,11 @@ export const dataGames = [
         ],
         clanLeaderboard: [
           {
-            clan: 1,
+            clan: 8,
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 30000,
               },
             ],
             stats: {
@@ -881,7 +896,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 20000,
               },
             ],
             stats: {
@@ -897,7 +912,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 12000,
               },
             ],
             stats: {
@@ -909,11 +924,11 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
+            clan: 1,
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 8000,
               },
             ],
             stats: {
@@ -929,7 +944,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 7000,
               },
             ],
             stats: {
@@ -945,7 +960,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 6000,
               },
             ],
             stats: {
@@ -958,7 +973,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 78,
@@ -969,7 +989,12 @@ export const dataGames = [
           },
           {
             clan: 7,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 77,
@@ -1145,11 +1170,11 @@ export const dataGames = [
         ],
         clanLeaderboard: [
           {
-            clan: 1,
+            clan: 8,
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 30000,
               },
             ],
             stats: {
@@ -1165,7 +1190,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 20000,
               },
             ],
             stats: {
@@ -1181,7 +1206,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 12000,
               },
             ],
             stats: {
@@ -1193,11 +1218,11 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
+            clan: 1,
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 8000,
               },
             ],
             stats: {
@@ -1213,7 +1238,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 7000,
               },
             ],
             stats: {
@@ -1229,7 +1254,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 6000,
               },
             ],
             stats: {
@@ -1242,7 +1267,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 78,
@@ -1253,7 +1283,12 @@ export const dataGames = [
           },
           {
             clan: 7,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 77,
@@ -1430,11 +1465,11 @@ export const dataGames = [
         ],
         clanLeaderboard: [
           {
-            clan: 1,
+            clan: 8,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 30000,
               },
             ],
             stats: {
@@ -1449,8 +1484,8 @@ export const dataGames = [
             clan: 2,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 20000,
               },
             ],
             stats: {
@@ -1465,8 +1500,8 @@ export const dataGames = [
             clan: 3,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 12000,
               },
             ],
             stats: {
@@ -1478,11 +1513,11 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
+            clan: 1,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 8000,
               },
             ],
             stats: {
@@ -1497,8 +1532,8 @@ export const dataGames = [
             clan: 4,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 7000,
               },
             ],
             stats: {
@@ -1513,8 +1548,8 @@ export const dataGames = [
             clan: 5,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 6000,
               },
             ],
             stats: {
@@ -1527,7 +1562,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 78,
@@ -1538,7 +1578,12 @@ export const dataGames = [
           },
           {
             clan: 7,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 77,
@@ -1715,11 +1760,11 @@ export const dataGames = [
         ],
         clanLeaderboard: [
           {
-            clan: 1,
+            clan: 8,
             rewards: [
               {
                 type: "coin",
-                value: 150000,
+                value: 30000,
               },
             ],
             stats: {
@@ -1735,7 +1780,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 150000,
+                value: 20000,
               },
             ],
             stats: {
@@ -1751,7 +1796,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 150000,
+                value: 12000,
               },
             ],
             stats: {
@@ -1763,11 +1808,11 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
+            clan: 1,
             rewards: [
               {
                 type: "coin",
-                value: 150000,
+                value: 8000,
               },
             ],
             stats: {
@@ -1783,7 +1828,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 150000,
+                value: 7000,
               },
             ],
             stats: {
@@ -1799,7 +1844,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 150000,
+                value: 6000,
               },
             ],
             stats: {
@@ -1812,7 +1857,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 78,
@@ -1823,7 +1873,12 @@ export const dataGames = [
           },
           {
             clan: 7,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 77,
@@ -2001,11 +2056,11 @@ export const dataGames = [
         ],
         clanLeaderboard: [
           {
-            clan: 1,
+            clan: 8,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 30000,
               },
             ],
             stats: {
@@ -2020,8 +2075,8 @@ export const dataGames = [
             clan: 2,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 20000,
               },
             ],
             stats: {
@@ -2036,8 +2091,8 @@ export const dataGames = [
             clan: 3,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 12000,
               },
             ],
             stats: {
@@ -2049,11 +2104,11 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
+            clan: 1,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 8000,
               },
             ],
             stats: {
@@ -2068,8 +2123,8 @@ export const dataGames = [
             clan: 4,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 7000,
               },
             ],
             stats: {
@@ -2084,8 +2139,8 @@ export const dataGames = [
             clan: 5,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 6000,
               },
             ],
             stats: {
@@ -2098,7 +2153,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 78,
@@ -2109,7 +2169,12 @@ export const dataGames = [
           },
           {
             clan: 7,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 77,
@@ -2287,11 +2352,11 @@ export const dataGames = [
         ],
         clanLeaderboard: [
           {
-            clan: 1,
+            clan: 8,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 30000,
               },
             ],
             stats: {
@@ -2306,8 +2371,8 @@ export const dataGames = [
             clan: 2,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 20000,
               },
             ],
             stats: {
@@ -2322,8 +2387,8 @@ export const dataGames = [
             clan: 3,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 12000,
               },
             ],
             stats: {
@@ -2335,11 +2400,11 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
+            clan: 1,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 8000,
               },
             ],
             stats: {
@@ -2354,8 +2419,8 @@ export const dataGames = [
             clan: 4,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 7000,
               },
             ],
             stats: {
@@ -2370,8 +2435,8 @@ export const dataGames = [
             clan: 5,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 6000,
               },
             ],
             stats: {
@@ -2384,7 +2449,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 78,
@@ -2395,7 +2465,12 @@ export const dataGames = [
           },
           {
             clan: 7,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 77,
@@ -2573,11 +2648,11 @@ export const dataGames = [
         ],
         clanLeaderboard: [
           {
-            clan: 1,
+            clan: 8,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 30000,
               },
             ],
             stats: {
@@ -2592,8 +2667,8 @@ export const dataGames = [
             clan: 2,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 20000,
               },
             ],
             stats: {
@@ -2608,8 +2683,8 @@ export const dataGames = [
             clan: 3,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 12000,
               },
             ],
             stats: {
@@ -2621,11 +2696,11 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
+            clan: 1,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 8000,
               },
             ],
             stats: {
@@ -2640,8 +2715,8 @@ export const dataGames = [
             clan: 4,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 7000,
               },
             ],
             stats: {
@@ -2656,8 +2731,8 @@ export const dataGames = [
             clan: 5,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 6000,
               },
             ],
             stats: {
@@ -2670,7 +2745,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 78,
@@ -2681,7 +2761,12 @@ export const dataGames = [
           },
           {
             clan: 7,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 77,
@@ -2857,8 +2942,13 @@ export const dataGames = [
         ],
         clanLeaderboard: [
           {
-            clan: 1,
-            rewards: [],
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 30000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 123,
@@ -2872,7 +2962,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 20000,
               },
             ],
             stats: {
@@ -2888,7 +2978,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 12000,
               },
             ],
             stats: {
@@ -2900,11 +2990,11 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
+            clan: 1,
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 8000,
               },
             ],
             stats: {
@@ -2920,7 +3010,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 7000,
               },
             ],
             stats: {
@@ -2936,7 +3026,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 100000,
+                value: 6000,
               },
             ],
             stats: {
@@ -2949,7 +3039,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 78,
@@ -2960,7 +3055,12 @@ export const dataGames = [
           },
           {
             clan: 7,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 77,
@@ -3929,8 +4029,13 @@ export const dataGames = [
         ],
         clanLeaderboard: [
           {
-            clan: 1,
-            rewards: [],
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 30000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 123,
@@ -3941,7 +4046,12 @@ export const dataGames = [
           },
           {
             clan: 2,
-            rewards: [],
+            rewards: [
+              {
+                type: "coin",
+                value: 20000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 115,
@@ -3952,7 +4062,12 @@ export const dataGames = [
           },
           {
             clan: 3,
-            rewards: [],
+            rewards: [
+              {
+                type: "coin",
+                value: 12000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 113,
@@ -3962,8 +4077,13 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
-            rewards: [],
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 8000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 108,
@@ -3974,7 +4094,12 @@ export const dataGames = [
           },
           {
             clan: 4,
-            rewards: [],
+            rewards: [
+              {
+                type: "coin",
+                value: 7000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 98,
@@ -3985,7 +4110,12 @@ export const dataGames = [
           },
           {
             clan: 5,
-            rewards: [],
+            rewards: [
+              {
+                type: "coin",
+                value: 6000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 97,
@@ -3996,7 +4126,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 78,
@@ -4007,7 +4142,12 @@ export const dataGames = [
           },
           {
             clan: 7,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 77,
@@ -4176,8 +4316,13 @@ export const dataGames = [
         ],
         clanLeaderboard: [
           {
-            clan: 1,
-            rewards: [],
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 30000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 123,
@@ -4188,7 +4333,12 @@ export const dataGames = [
           },
           {
             clan: 2,
-            rewards: [],
+            rewards: [
+              {
+                type: "coin",
+                value: 20000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 115,
@@ -4199,7 +4349,12 @@ export const dataGames = [
           },
           {
             clan: 3,
-            rewards: [],
+            rewards: [
+              {
+                type: "coin",
+                value: 12000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 113,
@@ -4209,8 +4364,13 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
-            rewards: [],
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 8000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 108,
@@ -4221,7 +4381,12 @@ export const dataGames = [
           },
           {
             clan: 4,
-            rewards: [],
+            rewards: [
+              {
+                type: "coin",
+                value: 7000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 98,
@@ -4232,7 +4397,12 @@ export const dataGames = [
           },
           {
             clan: 5,
-            rewards: [],
+            rewards: [
+              {
+                type: "coin",
+                value: 6000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 97,
@@ -4243,7 +4413,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 78,
@@ -4254,7 +4429,12 @@ export const dataGames = [
           },
           {
             clan: 7,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 77,
@@ -4801,11 +4981,11 @@ export const dataGames = [
         ],
         clanLeaderboard: [
           {
-            clan: 1,
+            clan: 8,
             rewards: [
               {
                 type: "coin",
-                value: 150000,
+                value: 30000,
               },
             ],
             stats: {
@@ -4821,7 +5001,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 150000,
+                value: 20000,
               },
             ],
             stats: {
@@ -4837,7 +5017,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 150000,
+                value: 12000,
               },
             ],
             stats: {
@@ -4849,11 +5029,11 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
+            clan: 1,
             rewards: [
               {
                 type: "coin",
-                value: 150000,
+                value: 8000,
               },
             ],
             stats: {
@@ -4869,7 +5049,7 @@ export const dataGames = [
             rewards: [
               {
                 type: "coin",
-                value: 150000,
+                value: 7000,
               },
             ],
             stats: {
@@ -4884,8 +5064,8 @@ export const dataGames = [
             clan: 5,
             rewards: [
               {
-                type: "ticket",
-                value: 1,
+                type: "coin",
+                value: 6000,
               },
             ],
             stats: {
@@ -4898,7 +5078,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 78,
@@ -4909,7 +5094,12 @@ export const dataGames = [
           },
           {
             clan: 7,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
             stats: {
               placement: 27,
               ladderPoints: 77,

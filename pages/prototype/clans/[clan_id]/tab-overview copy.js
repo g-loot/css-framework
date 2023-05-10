@@ -33,7 +33,7 @@ export default function TabClanOverview() {
                   <Link
                     href={`/prototype/profile/settings${prototype.getURLparams()}`}
                   >
-                    <a className="link link-hover text-ui-300 text-sm">Edit</a>
+                    <a className="link link-hover text-ui-300 text-sm leading-none">Edit</a>
                   </Link>
                 )}
               </div>
@@ -202,7 +202,7 @@ export default function TabClanOverview() {
                       selectedClan.id
                     }?tab=games${prototype.getURLparams()}`}
                   >
-                    <a className="link link-hover text-ui-300 text-sm hidden">
+                    <a className="link link-hover text-ui-300 text-sm leading-none hidden">
                       View
                     </a>
                   </Link>
@@ -240,7 +240,7 @@ export default function TabClanOverview() {
                     selectedClan.id
                   }?tab=achievements${prototype.getURLparams()}`}
                 >
-                  <a className="link link-hover text-ui-300 text-sm hidden">
+                  <a className="link link-hover text-ui-300 text-sm leading-none hidden">
                     View
                   </a>
                 </Link>
@@ -282,13 +282,13 @@ export default function TabClanOverview() {
                         selectedClan.id
                       }?tab=members${prototype.getURLparams()}`}
                     >
-                      <a className="link link-hover text-ui-300 text-sm">
+                      <a className="link link-hover text-ui-300 text-sm leading-none">
                         View
                       </a>
                     </Link>
                     {/*
                   <Link href={`${selectedClan.id}?tab=applications${prototype.getURLparams()}`}>
-                    <a className="link link-hover text-ui-300 text-sm">
+                    <a className="link link-hover text-ui-300 text-sm leading-none">
                       Applications
                     </a>
                   </Link>
@@ -300,7 +300,7 @@ export default function TabClanOverview() {
                       selectedClan.id
                     }?tab=members${prototype.getURLparams()}`}
                   >
-                    <a className="link link-hover text-ui-300 text-sm">View</a>
+                    <a className="link link-hover text-ui-300 text-sm leading-none">View</a>
                   </Link>
                 )}
               </div>
@@ -355,7 +355,7 @@ export default function TabClanOverview() {
                     selectedClan.id
                   }?tab=activity${prototype.getURLparams()}`}
                 >
-                  <a className="link link-hover text-ui-300 text-sm">View</a>
+                  <a className="link link-hover text-ui-300 text-sm leading-none">View</a>
                 </Link>
               </div>
               <div>

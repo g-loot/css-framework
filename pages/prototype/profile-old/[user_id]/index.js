@@ -161,7 +161,7 @@ export default function Home() {
                       )}
                     </div>
                     <Link href={`${selectedUser.id}/achievements`}>
-                      <a className="link link-hover text-ui-300 text-sm">
+                      <a className="link link-hover text-ui-300 text-sm leading-none">
                         View all achievements
                       </a>
                     </Link>
@@ -559,7 +559,7 @@ export default function Home() {
                       {prototype.getGameByID(stat.game).slug === "valorant" && (
                         <div className="item-action">
                           <Link href="/prototype/valorant/stats">
-                            <a className="link link-hover text-ui-300 text-sm">
+                            <a className="link link-hover text-ui-300 text-sm leading-none">
                               View all Valorant stats
                             </a>
                           </Link>

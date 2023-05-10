@@ -116,6 +116,7 @@ export default function BattlepassPage() {
             />
           </section>
 
+          {/* for demo purposes only */}
           <section className="text-ui-100/0 h-0 lg:flex justify-between">
             <a onClick={openModalBattlepassBonusSteps}>
               Open bonus steps modal

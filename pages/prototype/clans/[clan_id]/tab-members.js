@@ -23,9 +23,15 @@ export default function TabClanMembers() {
     prototype.getUserByID(2).nickname
   );
 
+  const getClanMembers = () => {
+    return prototype.users.filter((user) => {
+      return user.clan === selectedClan.id;
+    });
+  };
+
   function openModalGiftTokens() {
     uiContext.openModal(
-      <ModalGiftTokens selectedUser={selectedUser}></ModalGiftTokens>
+      <ModalGiftTokens selectedUser={selectedUser} />
     );
   }
 
@@ -223,7 +229,7 @@ export default function TabClanMembers() {
           </div>
                                     */}
           <ul className="items-spaced space-y-2">
-            {selectedClan.members?.map((item, itemIndex) => (
+            {getClanMembers()?.map((item, itemIndex) => (
               <li
                 key={item.id}
                 className="item animate-slide-in-bottom animate-delay relative z-0 hover:z-40"
@@ -234,37 +240,37 @@ export default function TabClanMembers() {
                 <div className="item-image pr-2">
                   <Link
                     href={`/prototype/profile/${
-                      prototype.getUserByID(item).id
+                      prototype.getUserByID(item.id).id
                     }${prototype.getURLparams()}`}
                   >
-                    <Avatar id={item} size="avatar-sm" hasTooltip={true} />
+                    <Avatar id={item.id} size="avatar-sm" hasTooltip={true} />
                   </Link>
                 </div>
                 <div className="item-body">
                   <Link
                     href={`/prototype/profile/${
-                      prototype.getUserByID(item).id
+                      prototype.getUserByID(item.id).id
                     }${prototype.getURLparams()}`}
                   >
                     <div className="item-title flex gap-2 items-center interactive">
                       <span
                         className={`${
-                          prototype.getUserByID(item)?.isPremium
+                          prototype.getUserByID(item.id)?.isPremium
                             ? "text-premium-500"
                             : ""
                         }`}
                       >
-                        {prototype.getUserByID(item).nickname}
+                        {prototype.getUserByID(item.id).nickname}
                       </span>
                       {selectedClan.admin ===
-                        prototype.getUserByID(item).id && (
+                        prototype.getUserByID(item.id).id && (
                         <span className="icon icon-chess-king text-sm" />
                       )}
                     </div>
                   </Link>
                   <div className="text-ui-300 text-xs flex gap-1 items-center">
-                    {/*<span>{prototype.getUserByID(item).lang}</span> <span>•</span> */}
-                    {prototype.getUserByID(item)?.isOnline ? (
+                    {/*<span>{prototype.getUserByID(item.id).lang}</span> <span>•</span> */}
+                    {prototype.getUserByID(item.id)?.isOnline ? (
                       <div className="chip chip-status chip-success chip-xs">
                         <span className="badge" />
                         <span>online</span>
@@ -283,7 +289,7 @@ export default function TabClanMembers() {
                     onClick={() => setHasOnlyOne(!hasOnlyOne)}
                   >
                     {prototype
-                      .getUserByID(item)
+                      .getUserByID(item.id)
                       .games?.map((game, gameIndex) => (
                         <GameIcon key={gameIndex} game={game} />
                       ))}
@@ -297,7 +303,7 @@ export default function TabClanMembers() {
                           type="button"
                           onClick={() => {
                             setSelectedUser(
-                              prototype.getUserByID(item).nickname
+                              prototype.getUserByID(item.id).nickname
                             );
                             openModalGiftTokens();
                           }}
@@ -327,7 +333,7 @@ export default function TabClanMembers() {
                           >
                             <ul className="menu menu-rounded menu-secondary">
                               {selectedClan.admin ===
-                                prototype.getUserByID(item).id && (
+                                prototype.getUserByID(item.id).id && (
                                 <>
                                   <li>
                                     <a>
@@ -338,7 +344,7 @@ export default function TabClanMembers() {
                                 </>
                               )}
                               {selectedClan.admin !==
-                                prototype.getUserByID(item).id && (
+                                prototype.getUserByID(item.id).id && (
                                 <>
                                   <li>
                                     <a>
@@ -356,7 +362,7 @@ export default function TabClanMembers() {
                                     <a
                                       onClick={() => {
                                         setSelectedUser(
-                                          prototype.getUserByID(item).nickname
+                                          prototype.getUserByID(item.id).nickname
                                         );
                                         openModalGiftTokens();
                                       }}

@@ -11,6 +11,7 @@ import TabClanActivity from "./tab-activity";
 import TabClanChat from "./tab-chat";
 import TabClanApplications from "./tab-applications";
 import TabClanStats from "./tab-stats";
+import TabClanAbout from "./tab-about";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import ClanHeader from "./header";
@@ -20,6 +21,12 @@ const TabsItems = [
     label: "Overview",
     url: "overview",
     component: TabClanOverview,
+  },
+  {
+    label: "About",
+    url: "about",
+    component: TabClanAbout,
+    isYou: true,
   },
   {
     label: "Chat",
@@ -66,6 +73,13 @@ export default function Home() {
     setSelectedClan(prototype.getClanByID(clan_id));
   }, [clan_id]);
 
+
+  const getClanMembers = () => {
+    return prototype.users.filter((user) => {
+      return user.clan === selectedClan.id;
+    });
+  };
+
   function numberWithSpaces(x) {
     var parts = x.toString().split(".");
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
@@ -102,7 +116,7 @@ export default function Home() {
                             <span data-badge={item.hasBadge ? '.' : undefined}>
                               {item.label}{" "}
                               {item.url === "members" && (
-                                <>({selectedClan.members.length})</>
+                                <>({getClanMembers().length})</>
                               )}
                             </span>
                           </a>
@@ -124,7 +138,7 @@ export default function Home() {
                             <span data-badge={item.hasBadge ? '.' : undefined}>
                               {item.label}{" "}
                               {item.url === "members" && (
-                                <>({selectedClan.members.length})</>
+                                <>({getClanMembers().length})</>
                               )}
                             </span>
                           </a>
