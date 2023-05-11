@@ -241,7 +241,7 @@
     ;
     &:not([class*='bg-']) {
       @apply
-      bg-ui-300
+      bg-ui-500
       ;
     }
   }

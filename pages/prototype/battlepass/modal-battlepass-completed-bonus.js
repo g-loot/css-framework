@@ -8,7 +8,7 @@ import { useRouter } from "next/router.js";
 import Lottie from "lottie-react";
 import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
 
-export default function ModalBattlepassBonusSteps(props) {
+export default function ModalBattlepassCompletedBonusSteps(props) {
   const uiContext = useContext(UiContext);
   const { query } = useRouter();
   const prototype = usePrototypeData();
@@ -78,7 +78,7 @@ export default function ModalBattlepassBonusSteps(props) {
                       "--delay": "calc(" + itemIndex + " * 0.05s)",
                     }}
                   >
-                    <div className="battlepass-info">
+                    <div className="battlepass-info text-left px-2">
                       <div>{300 + 100 * item.id} XP</div>
                     </div>
                     <button

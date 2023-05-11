@@ -4,14 +4,20 @@ import Battlepass from "../../../components/BattlePass/BattlePass";
 import { DataBattlepass } from "../../../mock-data/data-battlepass";
 import Tooltip from "../../../components/Tooltip/Tooltip";
 import ResetsIn from "../../../components/Countdown/ResetsIn";
-import ModalBattlepassBonusSteps from "./modal-bonus-steps";
+import ModalBattlepassCompletedBonusSteps from "./modal-battlepass-completed-bonus";
+import ModalBattlepassCompletedClaim from "./modal-battlepass-completed-claim";
+import ModalBattlepassCompletedSummary from "./modal-battlepass-completed-summary";
 import { UiContext } from "../../../contexts/ui";
 import { useRouter } from "next/router";
 
 export default function BattlepassPage() {
   const { query } = useRouter();
-  const modalBattlepassBonusSteps =
+  const modalbonussteps =
     query.modalbonussteps === "true" ? true : false;
+  const modalclaim =
+    query.modalclaim === "true" ? true : false;
+  const modalsummary =
+    query.modalsummary === "true" ? true : false;
   const battlepassID =
     query.battlepass !== undefined ? parseInt(query.battlepass) : 0;
   const [selectedBattlepassID, setSelectedBattlepassID] =
@@ -39,14 +45,38 @@ export default function BattlepassPage() {
   }
 
   useEffect(() => {
-    if (modalBattlepassBonusSteps) {
-      openModalBattlepassBonusSteps();
+    if (modalbonussteps) {
+      openModalBattlepassCompletedBonusSteps();
     }
-  }, [modalBattlepassBonusSteps]);
+  }, [modalbonussteps]);
 
-  function openModalBattlepassBonusSteps() {
+  function openModalBattlepassCompletedBonusSteps() {
     uiContext.openModal(
-      <ModalBattlepassBonusSteps id={selectedBattlepassID} />
+      <ModalBattlepassCompletedBonusSteps id={selectedBattlepassID} />
+    );
+  }
+
+  useEffect(() => {
+    if (modalclaim) {
+      openModalBattlepassCompletedClaim();
+    }
+  }, [modalclaim]);
+
+  function openModalBattlepassCompletedClaim() {
+    uiContext.openModal(
+      <ModalBattlepassCompletedClaim id={selectedBattlepassID} />
+    );
+  }
+
+  useEffect(() => {
+    if (modalsummary) {
+      openModalBattlepassCompletedSummary();
+    }
+  }, [modalsummary]);
+
+  function openModalBattlepassCompletedSummary() {
+    uiContext.openModal(
+      <ModalBattlepassCompletedSummary id={selectedBattlepassID} />
     );
   }
 
@@ -54,25 +84,6 @@ export default function BattlepassPage() {
     <>
       {selectedBattlepass && (
         <PrototypeStructure title="Battlepass">
-          {/*
-          <section className="header surface sm:rounded-lg mb-4">
-            <div className="header-content">
-              <div className="header-body">
-                <h1>Battlepass</h1>
-                <p className="text-ui-300 max-w-[70ch] mt-4 mb-5">
-                  The Battlepass is how you turn your XP into useful stuff like
-                  Coins or Tokens. Each time you reach a milestone in the
-                  Battlepass, you unlock another reward. Battlepass and XP reset
-                  each week so you&#39;ll always have something new to work
-                  towards.
-                </p>
-              </div>
-            </div>
-            <div className="header-bg">
-              <img src="" alt="Battlepass" />
-            </div>
-      </section>*/}
-
           <section className="mb-8 surface surface-dimmed p-4 relative sm:rounded overflow-hidden animate-slide-in-bottom">
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-start text-center lg:text-left lg:justify-between pb-4 mb-4 gap-4 lg:gap-8 border-b border-ui-100/10">
               <div className="flex-1 flex flex-col items-center lg:items-start 2xl:flex-row gap-4 2xl:gap-8">
@@ -117,9 +128,15 @@ export default function BattlepassPage() {
           </section>
 
           {/* for demo purposes only */}
-          <section className="text-ui-100/0 h-0 lg:flex justify-between">
-            <a onClick={openModalBattlepassBonusSteps}>
-              Open bonus steps modal
+          <section className="text-ui-100/0 inline-flex flex-col">
+            <a onClick={openModalBattlepassCompletedBonusSteps}>
+              Open battlepass completed: bonus steps modal
+            </a>
+            <a onClick={openModalBattlepassCompletedClaim}>
+              Open battlepass completed: claim modal
+            </a>
+            <a onClick={openModalBattlepassCompletedSummary}>
+              Open battlepass completed: summary modal
             </a>
           </section>
         </PrototypeStructure>

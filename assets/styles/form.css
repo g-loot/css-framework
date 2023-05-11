@@ -688,12 +688,12 @@ label.button {
         duration-300
         ease-in-out
         origin-center
-        opacity-25
+        opacity-50
         scale-90
         grayscale
         brightness-90
         hover:scale-95
-        hover:opacity-50
+        hover:opacity-75
         hover:grayscale-0
         ;
 

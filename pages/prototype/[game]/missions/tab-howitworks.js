@@ -5,7 +5,7 @@ import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import FAQ from "../../../../components/FAQ/FAQ";
 
-const MissionsHowitworksTabs = [
+const HowitworksTabs = [
   {
     title: "Before you can do Missions",
     image:
@@ -125,7 +125,7 @@ export default function TabMissionsHowItWorks() {
                   </p>
                   <p className="text-ui-300 leading-relaxed">
                     Each day, you can reveal two new missions in any game you
-                    like and you can have a maximum of six missions active at
+                    like and you can have a maximum of nine missions active at
                     the same time.
                   </p>
                 </div>
@@ -225,7 +225,7 @@ export default function TabMissionsHowItWorks() {
               </h2>
             </div>
             <div className="accordion accordion-highlighted surface sm:rounded-lg">
-              {MissionsHowitworksTabs.map((tab, tabIndex) => (
+              {HowitworksTabs.map((tab, tabIndex) => (
                 <FAQ key={tabIndex} content={tab} />
               ))}
             </div>

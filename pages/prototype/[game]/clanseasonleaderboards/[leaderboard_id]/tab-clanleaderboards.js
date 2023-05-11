@@ -10,47 +10,67 @@ import Avatar from "../../../../../components/Avatar/Avatar";
 
 const rewardDistribClan = [
   {
-    name: "1-10",
+    name: "1",
     rewards: [
       {
         type: "coin",
-        value: 450000,
+        value: 1000,
+      },
+      {
+        type: "token",
+        value: 100,
+      },
+      {
+        type: "powertoken",
+        value: 5,
       },
     ],
   },
   {
-    name: "11-20",
+    name: "2",
     rewards: [
       {
         type: "coin",
-        value: 425000,
+        value: 700,
+      },
+      {
+        type: "avatarframe",
+        value: 4,
+      },
+      {
+        type: "profilebanner",
+        value: 33,
       },
     ],
   },
   {
-    name: "21-50",
+    name: "3",
     rewards: [
       {
         type: "coin",
-        value: 400000,
+        value: 600,
+      },
+      {
+        type: "avatarframe",
+        value: 5,
       },
     ],
   },
   {
-    name: "51-150",
+    name: "4",
     rewards: [
       {
         type: "coin",
-        value: 30000,
+        value: 500,
       },
     ],
   },
   {
-    name: "151-300",
+    name: "5-10",
     rewards: [
       {
         type: "coin",
-        value: 1500,
+        value: 200,
       },
     ],
   },
@@ -94,7 +114,8 @@ export default function TabClanLeaderboardsLeaderboards() {
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedClanLeaderboard, setSelectedClanLeaderboard] = useState(null);
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
   const { leaderboard_id } = router.query;
@@ -174,17 +195,12 @@ export default function TabClanLeaderboardsLeaderboards() {
 
   return (
     <>
-      {/*
-      <section className="pb-4">
-        <HowToLadder />
-      </section>
-  */}
-
       {isEmpty ? (
         <div className="col-span-1 lg:col-span-3">
           <div className="mt-10">
             <h3 className="h4 mt-2 mb-6 text-ui-100 leading-tight text-center max-w-[20ch] mx-auto">
-              Play together with 5 members of your clan and be the first to join this leaderboard!
+              Play together with 5 members of your clan and be the first to join
+              this leaderboard!
             </h3>
             <ul className="max-w-sm mx-auto">
               {rewardDistribClan.map((item, itemIndex) => (
@@ -200,15 +216,45 @@ export default function TabClanLeaderboardsLeaderboards() {
                       itemIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
                     }`}
                   >
-                    <span
-                      className={`text-xl  ${
+                    <div
+                      className={`relative text-xl text-center px-6  ${
                         itemIndex === 0 ? "text-gold-500" : ""
                       }${itemIndex === 1 ? "text-silver-500" : ""} ${
                         itemIndex === 2 ? "text-bronze-500" : ""
                       } ${itemIndex > 2 ? "text-ui-300" : ""}`}
                     >
-                      {item.name}
-                    </span>
+                      <span>{item.name}</span>
+                      <div className="absolute inset-0 flex items-center justify-between">
+                        <svg
+                          className={`${
+                            itemIndex === 0 ? "fill-gold-500" : ""
+                          }${itemIndex === 1 ? "fill-silver-500" : ""} ${
+                            itemIndex === 2 ? "fill-bronze-500" : ""
+                          } ${itemIndex > 2 ? "hidden" : ""}`}
+                          width="30"
+                          height="30"
+                          viewBox="0 0 30 30"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M11.7039 27.2265L7.12878 29.95L14.686 27.9073C15.3028 27.7406 15.866 27.409 16.3186 26.9461C16.7712 26.4831 17.0973 25.905 17.2638 25.2705L14.9254 24.8456C14.283 24.7288 13.701 24.3822 13.2816 23.867C12.8623 23.3518 12.6327 22.7008 12.6327 22.0282V0.950012L8.2045 17.6286L2.89837 11.1091L8.50356 23.6777L2 22.4956L11.7039 27.2265Z" />
+                        </svg>
+                        <svg
+                          className={`-scale-x-100 ${
+                            itemIndex === 0 ? "fill-gold-500" : ""
+                          }${itemIndex === 1 ? "fill-silver-500" : ""} ${
+                            itemIndex === 2 ? "fill-bronze-500" : ""
+                          } ${itemIndex > 2 ? "hidden" : ""}`}
+                          width="30"
+                          height="30"
+                          viewBox="0 0 30 30"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M11.7039 27.2265L7.12878 29.95L14.686 27.9073C15.3028 27.7406 15.866 27.409 16.3186 26.9461C16.7712 26.4831 17.0973 25.905 17.2638 25.2705L14.9254 24.8456C14.283 24.7288 13.701 24.3822 13.2816 23.867C12.8623 23.3518 12.6327 22.7008 12.6327 22.0282V0.950012L8.2045 17.6286L2.89837 11.1091L8.50356 23.6777L2 22.4956L11.7039 27.2265Z" />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                   <div className="flex-1 flex items-center justify-center gap-4">
                     {item.rewards?.map((reward, rewardIndex) => (
@@ -447,7 +493,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                               }`}
                             >
                               <div
-                                className={`w-16 text-center px-2 flex items-center justify-center ${
+                                className={`w-16 relative text-center px-2 flex items-center justify-center ${
                                   clanIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
                                 }`}
                               >
@@ -462,7 +508,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                 >
                                   {clanIndex + 1}
                                 </span>
-                                <div className="absolute">
+                                <div className="absolute inset-0 flex items-center justify-between">
                                   <svg
                                     className={`${
                                       clanIndex === 0 ? "fill-gold-500" : ""
@@ -471,14 +517,29 @@ export default function TabClanLeaderboardsLeaderboards() {
                                     } ${
                                       clanIndex === 2 ? "fill-bronze-500" : ""
                                     } ${clanIndex > 2 ? "hidden" : ""}`}
-                                    width="52"
+                                    width="30"
                                     height="30"
-                                    viewBox="0 0 52 30"
+                                    viewBox="0 0 30 30"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
                                   >
                                     <path d="M11.7039 27.2265L7.12878 29.95L14.686 27.9073C15.3028 27.7406 15.866 27.409 16.3186 26.9461C16.7712 26.4831 17.0973 25.905 17.2638 25.2705L14.9254 24.8456C14.283 24.7288 13.701 24.3822 13.2816 23.867C12.8623 23.3518 12.6327 22.7008 12.6327 22.0282V0.950012L8.2045 17.6286L2.89837 11.1091L8.50356 23.6777L2 22.4956L11.7039 27.2265Z" />
-                                    <path d="M39.5599 27.2265L44.135 29.95L36.5778 27.9073C35.961 27.7406 35.3978 27.409 34.9452 26.9461C34.4926 26.4831 34.1665 25.905 34 25.2705L36.3383 24.8456C36.9808 24.7288 37.5628 24.3822 37.9822 23.867C38.4015 23.3518 38.6311 22.7008 38.6311 22.0282V0.950012L43.0593 17.6286L48.3654 11.1091L42.7602 23.6777L49.2638 22.4956L39.5599 27.2265Z" />
+                                  </svg>
+                                  <svg
+                                    className={`-scale-x-100 ${
+                                      clanIndex === 0 ? "fill-gold-500" : ""
+                                    }${
+                                      clanIndex === 1 ? "fill-silver-500" : ""
+                                    } ${
+                                      clanIndex === 2 ? "fill-bronze-500" : ""
+                                    } ${clanIndex > 2 ? "hidden" : ""}`}
+                                    width="30"
+                                    height="30"
+                                    viewBox="0 0 30 30"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path d="M11.7039 27.2265L7.12878 29.95L14.686 27.9073C15.3028 27.7406 15.866 27.409 16.3186 26.9461C16.7712 26.4831 17.0973 25.905 17.2638 25.2705L14.9254 24.8456C14.283 24.7288 13.701 24.3822 13.2816 23.867C12.8623 23.3518 12.6327 22.7008 12.6327 22.0282V0.950012L8.2045 17.6286L2.89837 11.1091L8.50356 23.6777L2 22.4956L11.7039 27.2265Z" />
                                   </svg>
                                 </div>
                               </div>
@@ -913,6 +974,10 @@ export default function TabClanLeaderboardsLeaderboards() {
           )}
         </section>
       )}
+      {/* for demo purposes only */}
+      <section className="text-ui-100/0 h-0 lg:flex justify-between">
+        <a onClick={() => setIsEmpty(!isEmpty)}>Toggle empty state</a>
+      </section>
     </>
   );
 }

@@ -8,11 +8,10 @@ import { usePrototypeData } from "../../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import AnimatedNumber from "../../../../../components/AnimatedNumber/AnimatedNumber";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
-import Countdown from "../../../../../components/Countdown/Countdown";
-import GameIcon from "../../../../../components/GameIcon/GameIcon";
 import TabClanLeaderboardsLeaderboards from "./tab-clanleaderboards";
-import TabClanLeaderboardsAbout from "./tab-about";
+import TabClanLeaderboardsHowItWorks from "./tab-howitworks";
 import TabClanLeaderboardsHistory from "./tab-history";
+import TabClanLeaderboardsRewards from "./tab-rewards";
 import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 
 const TabsItems = [
@@ -22,14 +21,19 @@ const TabsItems = [
     component: TabClanLeaderboardsLeaderboards,
   },
   {
-    label: "About",
-    url: "how-it-works",
-    component: TabClanLeaderboardsAbout,
-  },
-  {
     label: "All seasons",
     url: "all-seasons",
     component: TabClanLeaderboardsHistory,
+  },
+  {
+    label: "How it works",
+    url: "how-it-works",
+    component: TabClanLeaderboardsHowItWorks,
+  },
+  {
+    label: "Rewards",
+    url: "rewards",
+    component: TabClanLeaderboardsRewards,
   },
 ];
 

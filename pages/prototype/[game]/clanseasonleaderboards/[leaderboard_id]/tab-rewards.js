@@ -3,96 +3,69 @@ import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import { usePrototypeData } from "../../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
-const rewardDistribSolo = [
-  {
-    name: "Diamond",
-    rewards: [
-      {
-        type: "coin",
-        value: 150000,
-      },
-    ],
-  },
-  {
-    name: "Platinum",
-    rewards: [
-      {
-        type: "coin",
-        value: 90000,
-      },
-    ],
-  },
-  {
-    name: "Gold",
-    rewards: [
-      {
-        type: "coin",
-        value: 90000,
-      },
-    ],
-  },
-  {
-    name: "Silver",
-    rewards: [
-      {
-        type: "coin",
-        value: 90000,
-      },
-    ],
-  },
-  {
-    name: "Bronze",
-    rewards: [
-      {
-        type: "coin",
-        value: 90000,
-      },
-    ],
-  },
-];
 const rewardDistribClan = [
   {
-    name: "1-10",
+    name: "1",
     rewards: [
       {
         type: "coin",
-        value: 450000,
+        value: 1000,
+      },
+      {
+        type: "token",
+        value: 100,
+      },
+      {
+        type: "powertoken",
+        value: 5,
       },
     ],
   },
   {
-    name: "11-20",
+    name: "2",
     rewards: [
       {
         type: "coin",
-        value: 425000,
+        value: 700,
+      },
+      {
+        type: "avatarframe",
+        value: 4,
+      },
+      {
+        type: "profilebanner",
+        value: 33,
       },
     ],
   },
   {
-    name: "21-50",
+    name: "3",
     rewards: [
       {
         type: "coin",
-        value: 400000,
+        value: 600,
+      },
+      {
+        type: "avatarframe",
+        value: 5,
       },
     ],
   },
   {
-    name: "51-150",
+    name: "4",
     rewards: [
       {
         type: "coin",
-        value: 30000,
+        value: 500,
       },
     ],
   },
   {
-    name: "151-300",
+    name: "5-10",
     rewards: [
       {
         type: "coin",
-        value: 1500,
+        value: 200,
       },
     ],
   },

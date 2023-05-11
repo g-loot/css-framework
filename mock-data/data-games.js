@@ -3454,33 +3454,7 @@ export const dataGames = [
         progressClan: 0,
         leaderboard: [
           {
-            clan: 1,
-            rewards: [
-              {
-                type: "coin",
-                value: 1000,
-              },
-              {
-                type: "token",
-                value: 100,
-              },
-              {
-                type: "powertoken",
-                value: 5,
-              },
-            ],
-            stats: {
-              wins: 13,
-              losses: 1,
-              placement: 27,
-              ladderPoints: 123,
-              matchPlayed: 11,
-              tiebreakerPoints: 1402,
-              gameScore: 143,
-            },
-          },
-          {
-            clan: 2,
+            clan: 5,
             rewards: [
               {
                 type: "coin",
@@ -3496,6 +3470,28 @@ export const dataGames = [
               },
             ],
             stats: {
+              wins: 13,
+              losses: 1,
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 500,
+              },
+              {
+                type: "profilebanner",
+                value: 31,
+              },
+            ],
+            stats: {
               wins: 10,
               losses: 2,
               placement: 27,
@@ -3506,15 +3502,11 @@ export const dataGames = [
             },
           },
           {
-            clan: 3,
+            clan: 7,
             rewards: [
               {
                 type: "coin",
-                value: 600,
-              },
-              {
-                type: "avatarframe",
-                value: 5,
+                value: 400,
               },
             ],
             stats: {
@@ -3528,11 +3520,11 @@ export const dataGames = [
             },
           },
           {
-            clan: 8,
+            clan: 2,
             rewards: [
               {
                 type: "coin",
-                value: 500,
+                value: 200,
               },
             ],
             stats: {
@@ -3546,8 +3538,13 @@ export const dataGames = [
             },
           },
           {
-            clan: 4,
-            rewards: [],
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
             stats: {
               wins: 6,
               losses: 3,
@@ -3559,8 +3556,13 @@ export const dataGames = [
             },
           },
           {
-            clan: 5,
-            rewards: [],
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
             stats: {
               wins: 5,
               losses: 2,
@@ -3572,8 +3574,13 @@ export const dataGames = [
             },
           },
           {
-            clan: 6,
-            rewards: null,
+            clan: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
             stats: {
               wins: 5,
               losses: 3,
@@ -3585,8 +3592,13 @@ export const dataGames = [
             },
           },
           {
-            clan: 7,
-            rewards: null,
+            clan: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
             stats: {
               wins: 4,
               losses: 3,
@@ -3715,7 +3727,12 @@ export const dataGames = [
           },
           {
             clan: 1,
-            rewards: [],
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
             stats: {
               wins: 6,
               losses: 3,
@@ -3728,7 +3745,12 @@ export const dataGames = [
           },
           {
             clan: 8,
-            rewards: [],
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
             stats: {
               wins: 5,
               losses: 2,
@@ -3741,7 +3763,12 @@ export const dataGames = [
           },
           {
             clan: 3,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
             stats: {
               wins: 5,
               losses: 3,
@@ -3754,7 +3781,12 @@ export const dataGames = [
           },
           {
             clan: 6,
-            rewards: null,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
             stats: {
               wins: 4,
               losses: 3,

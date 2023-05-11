@@ -28,14 +28,6 @@
   }
 }
 
-.battlepass-container:not(.battlepass-md) {
-  .battlepass-summary {
-    @apply
-    min-h-[678px]
-    ;
-  }
-}
-
 .battlepass-viewer {
   @apply
   flex

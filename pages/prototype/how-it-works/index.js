@@ -19,7 +19,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "To start competing in Missions, all you need to do is connect Stryda to your game, either by connecting your Riot account (VALORANT) or Steam account (PUBG: BATTLEGROUNDS) or by running the Stryda PC app while you play (any other game).  Each time you successfully complete a Mission, you earn XP, which make you progress on the Battlepass. You can complete up to 6 Missions each day, and new ones appear every 24 hours. Keep an eye on gloot.com to see your progress and check out what’s new.",
+        text: "To start competing in Missions, all you need to do is connect Stryda to your game, either by connecting your Riot account (VALORANT) or Steam account (PUBG: BATTLEGROUNDS) or by running the Stryda PC app while you play (any other game).  Each time you successfully complete a Mission, you earn XP, which make you progress on the Battlepass. You can complete up to 9 Missions each day, and new ones appear every 24 hours. Keep an eye on gloot.com to see your progress and check out what’s new.",
       },
     ],
   },

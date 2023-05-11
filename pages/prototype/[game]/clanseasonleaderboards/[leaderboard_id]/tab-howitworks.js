@@ -1,12 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Accordion from "../../../../components/Accordion/Accordion";
-import FAQ from "../../../../components/FAQ/FAQ";
+import Accordion from "../../../../../components/Accordion/Accordion";
+import FAQ from "../../../../../components/FAQ/FAQ";
 import Link from "next/link";
-import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import ModalContainer from "../../../../components/Modal/ModalContainer";
-import { usePrototypeData } from "../../../../contexts/prototype";
-import { UiContext } from "../../../../contexts/ui";
+import ModalContainer from "../../../../../components/Modal/ModalContainer";
+import { usePrototypeData } from "../../../../../contexts/prototype";
+import { UiContext } from "../../../../../contexts/ui";
 import { useRouter } from "next/router";
 
 const HowitworksTabs = [
@@ -238,31 +237,18 @@ const HowitworksTabs = [
   },
 ];
 
-export default function TabLaddersHowItWorks() {
+export default function TabClanLeaderboardsHowItWorks() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const hasAds = query.ads === "true" ? true : false;
   const uiContext = useContext(UiContext);
-  const modalVideo = query.modalvideo === "true" ? true : false;
   const [selectedGame, setSelectedGame] = useState(null);
   const { game } = router.query;
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
-
-  function openModalLadderHowitworksVideo() {
-    uiContext.openModal(
-      <ModalLadderHowitworksVideo></ModalLadderHowitworksVideo>
-    );
-  }
-
-  useEffect(() => {
-    if (modalVideo) {
-      openModalLadderHowitworksVideo();
-    }
-  }, [modalVideo]);
 
   return (
     <>
@@ -281,7 +267,7 @@ export default function TabLaddersHowItWorks() {
                 alt=""
               />
               <div className="col-span-2 px-4 sm:px-0">
-                <h2 className="h4 mb-4">What is a Ladder?</h2>
+                <h2 className="h4 mb-4">What is a Clan Season?</h2>
                 <div className="columns-2 space-y-4 gap-8">
                   <p className="text-ui-300 leading-relaxed">
                     In Ladders you compete against other Stryda players and/or
@@ -321,24 +307,7 @@ export default function TabLaddersHowItWorks() {
             style={{ "--delay": "calc(2 * 0.05s)" }}
           >
             <div className="px-4 sm:px-0">
-              <h2 className="h4 mb-4">How the Ladder works</h2>
-            </div>
-            <div className="surface sm:rounded-lg overflow-hidden max-w-sm mx-auto mb-4 relative">
-              <div className="absolute inset-0 flex items-center justify-center bg-ui-900/50">
-                <button
-                  type="button"
-                  className="button button-primary button-lg button-play"
-                  onClick={openModalLadderHowitworksVideo}
-                >
-                  <span className="icon icon-circle-caret-right"></span>
-                </button>
-              </div>
-              <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1676383443/Stryda/illustrations/ladders_howitworks_video.jpg"
-                width="100%"
-                height="auto"
-                alt=""
-              />
+              <h2 className="h4 mb-4">How the Clan Seasons work</h2>
             </div>
             <div className="overflow-x-auto scrollbar-desktop overflow-y-hidden pt-4">
               <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px] !pb-44">
@@ -407,7 +376,7 @@ export default function TabLaddersHowItWorks() {
             style={{ "--delay": "calc(3 * 0.05s)" }}
           >
             <div className="px-4 sm:px-0">
-              <h2 className="h4 mb-6">Learn everything about the Ladders</h2>
+              <h2 className="h4 mb-6">Learn everything about the Clan Seasons</h2>
             </div>
             <div className="accordion accordion-highlighted surface sm:rounded-lg">
               {HowitworksTabs.map((tab, tabIndex) => (
