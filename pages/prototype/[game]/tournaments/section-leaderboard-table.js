@@ -6,6 +6,7 @@ import ModalContainer from "../../../../components/Modal/ModalContainer";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
+import LeaderboardWings from "../../../../components/LeaderboardWings/LeaderboardWings";
 
 const TournamentLeaderboard = [
   {
@@ -583,32 +584,7 @@ export default function SectionTournamentsLeaderboardTable() {
                           }}
                         >
                           <div className="item-image w-16 hidden relative md:flex items-center justify-center">
-                            <span
-                              className={`text-2xl  ${
-                                userIndex === 0 ? "text-gold-500" : ""
-                              }${userIndex === 1 ? "text-silver-500" : ""} ${
-                                userIndex === 2 ? "text-bronze-500" : ""
-                              } ${userIndex > 2 ? "text-ui-300" : ""}`}
-                            >
-                              {userIndex + 1}
-                            </span>
-                            <div className="absolute">
-                              <svg
-                                className={`${
-                                  userIndex === 0 ? "fill-gold-500" : ""
-                                }${userIndex === 1 ? "fill-silver-500" : ""} ${
-                                  userIndex === 2 ? "fill-bronze-500" : ""
-                                } ${userIndex > 2 ? "hidden" : ""}`}
-                                width="52"
-                                height="30"
-                                viewBox="0 0 52 30"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path d="M11.7039 27.2265L7.12878 29.95L14.686 27.9073C15.3028 27.7406 15.866 27.409 16.3186 26.9461C16.7712 26.4831 17.0973 25.905 17.2638 25.2705L14.9254 24.8456C14.283 24.7288 13.701 24.3822 13.2816 23.867C12.8623 23.3518 12.6327 22.7008 12.6327 22.0282V0.950012L8.2045 17.6286L2.89837 11.1091L8.50356 23.6777L2 22.4956L11.7039 27.2265Z" />
-                                <path d="M39.5599 27.2265L44.135 29.95L36.5778 27.9073C35.961 27.7406 35.3978 27.409 34.9452 26.9461C34.4926 26.4831 34.1665 25.905 34 25.2705L36.3383 24.8456C36.9808 24.7288 37.5628 24.3822 37.9822 23.867C38.4015 23.3518 38.6311 22.7008 38.6311 22.0282V0.950012L43.0593 17.6286L48.3654 11.1091L42.7602 23.6777L49.2638 22.4956L39.5599 27.2265Z" />
-                              </svg>
-                            </div>
+                            <LeaderboardWings id={userIndex} />
                           </div>
                           <div className="item-image w-20">
                             <Link

@@ -147,13 +147,15 @@
   }
 }
 
+/*
 .tabs:not(.tabs-secondary) {
-  :where(a, button, .button, div) {
+  :where(a, button, .button, div):not([class*=leading-]) {
     @apply
     leading-none
     ;
   }
 }
+*/
 
 .tabs:not(.tabs-rank):not(.tabs-tertiary) {
   > li {
@@ -320,7 +322,7 @@
       &::after {
         @apply
         content-['']
-        w-px
+        w-0.5
         h-full
         absolute
         z-50
@@ -331,6 +333,7 @@
         inset-y-0
         scale-x-150
         shadow-[inset_0_0_0_1px_rgba(255,255,255,0.25)]
+        bg-main
         ;
       }
       &::before {
@@ -392,8 +395,6 @@
           @apply
           z-0
           bg-ui-800
-          border-t
-          border-t-ui-700
           ;
         }
       }

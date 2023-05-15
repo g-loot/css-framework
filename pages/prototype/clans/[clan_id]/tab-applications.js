@@ -56,8 +56,17 @@ export default function TabClanApplications() {
     setSelectedClan(prototype.getClanByID(clan_id));
   }, [clan_id]);
 
-  const statusLoading = query.loading === "true" ? true : false;
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, RandomNumber(500,1000));
+  }, []);
+
+  function RandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
   function numberWithSpaces(x) {
     var parts = x.toString().split(".");
@@ -65,23 +74,7 @@ export default function TabClanApplications() {
     return parts.join(".");
   }
 
-  function RandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
 
-  useEffect(() => {
-    if (statusLoading) {
-      setLoading(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (loading) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 4000);
-    }
-  }, [loading]);
 
   return (
     <div className="animate-slide-in-bottom">
@@ -119,7 +112,7 @@ export default function TabClanApplications() {
           </div>
         </div>
       </div>
-      {loading && (
+      {loading ? (
         <section className="mt-2">
           <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
             <table className="table table-rounded rounded-xl is-loading w-full">
@@ -176,8 +169,7 @@ export default function TabClanApplications() {
             </table>
           </div>
         </section>
-      )}
-      {!loading && (
+      ) : (
         <>
           {isEmpty ? (
             <div
@@ -221,15 +213,7 @@ export default function TabClanApplications() {
                         <ButtonSorting>Avg. Ladder position</ButtonSorting>
                       </th>
                       <th>
-                        <div className="text-ui-300 flex justify-center items-center gap-1">
-                          <span>Status</span>
-                          <button
-                            type="button"
-                            className="button button-sm button-ghost rounded-full"
-                          >
-                            <span className="icon icon-arrow-sm-down"></span>
-                          </button>
-                        </div>
+                        <ButtonSorting>Status</ButtonSorting>
                       </th>
                     </tr>
                   </thead>

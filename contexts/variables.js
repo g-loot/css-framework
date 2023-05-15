@@ -5,7 +5,6 @@ export const VariablesContext = React.createContext({
   availableMissions: 4,
   rewardClaimed: false,
   dailyRewardClaimed: false,
-  newBrand: false,
   incrementLadderStep: function () {},
   claimReward: function () {},
   unclaimReward: function () {},
@@ -18,8 +17,8 @@ const defaultVariablesState = {
   availableMissions: 4,
   rewardClaimed: false,
   dailyRewardClaimed: false,
-  newBrand: false,
 };
+
 const variablesReducer = (state, action) => {
   if (action.type === "INCREMENT_LADDERSTEP") {
     let ladderStep = state.ladderStep;
@@ -63,18 +62,6 @@ const variablesReducer = (state, action) => {
     return {
       ...state,
       dailyRewardClaimed: false,
-    };
-  } else if (action.type === "BRAND_ON") {
-    console.log("BRAND_ON");
-    return {
-      ...state,
-      newBrand: true,
-    };
-  } else if (action.type === "BRAND_OFF") {
-    console.log("BRAND_OFF");
-    return {
-      ...state,
-      newBrand: false,
     };
   }
 };
@@ -121,18 +108,6 @@ const VariablesContextProvider = (props) => {
       type: "DAILY_REWARD_UNCLAIM",
     });
   };
-  const brandOn = () => {
-    document.body.classList.add("stryda");
-    dispatchVariablesAction({
-      type: "BRAND_ON",
-    });
-  };
-  const brandOff = () => {
-    document.body.classList.remove("stryda");
-    dispatchVariablesAction({
-      type: "BRAND_OFF",
-    });
-  };
 
   const variablesContext = {
     ladderStep: variablesState.ladderStep,
@@ -146,8 +121,6 @@ const VariablesContextProvider = (props) => {
     unclaimReward,
     claimDailyReward,
     unclaimDailyReward,
-    brandOn,
-    brandOff,
   };
   return (
     <VariablesContext.Provider value={variablesContext}>

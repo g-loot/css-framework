@@ -502,29 +502,29 @@ export default function TabClanAbout() {
                           Ladders played
                         </div>
                         <div className="text-ui-100 text-xl lg:text-3xl">
-                          523
+                          82
                         </div>
-                        <div className="text-xs lg:text-sm text-ui-300">
+                        <div className="hidden text-xs lg:text-sm text-ui-300">
                           Top 25%
                         </div>
                       </div>
                       <div className="pl-4 border-l border-ui-600">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Avg. placement
+                          Ladder rounds
                         </div>
                         <div className="text-ui-100 text-xl lg:text-3xl">
-                          #42
+                          146
                         </div>
-                        <div className="text-xs lg:text-sm text-ui-300">
+                        <div className="hidden text-xs lg:text-sm text-ui-300">
                           Top 18%
                         </div>
                       </div>
                       <div className="pl-4 border-l border-ui-600">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Times in top 50
+                          Missions completed
                         </div>
-                        <div className="text-ui-100 text-xl lg:text-3xl">4</div>
-                        <div className="text-xs lg:text-sm text-ui-300">
+                        <div className="text-ui-100 text-xl lg:text-3xl">1 295</div>
+                        <div className="hidden text-xs lg:text-sm text-ui-300">
                           Top 11%
                         </div>
                       </div>
