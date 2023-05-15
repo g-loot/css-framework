@@ -235,13 +235,13 @@ export default function Carousel(props) {
           {isWithButtons && (
             <div className="carousel-control">
               <button
-                className="button button-secondary"
+                className="button button-sm rounded-full button-secondary"
                 onClick={prevHandler.bind(this, slideNumber, slides.length)}
               >
                 <span className="icon icon-ctrl-left" />
               </button>
               <button
-                className="button button-secondary"
+                className="button button-sm rounded-full button-secondary"
                 onClick={nextHandler.bind(this, slideNumber, slides.length)}
               >
                 <span className="icon icon-ctrl-right" />

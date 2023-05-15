@@ -47,7 +47,7 @@ export default function TabClanStats() {
     <>
       {selectedClan && (
         <>
-         
+          <section className="text-center p-8 animate-slide-in-bottom">Work in progress</section>
         </>
       )}
     </>

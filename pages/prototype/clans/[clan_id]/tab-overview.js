@@ -50,6 +50,7 @@ export default function TabClanOverview() {
         <>
           <div className="flex flex-col lg:flex-row items-start gap-y-4 lg:gap-x-4 animate-slide-in-bottom">
             <div className="w-full lg:w-80 space-y-4">
+              {/*
               <section className="surface md:rounded relative">
                 <div className="relative flex items-center justify-center">
                   <div className="relative z-10 mt-4">
@@ -115,6 +116,7 @@ export default function TabClanOverview() {
                   )}
                 </div>
               </section>
+                  */}
               <section className="surface md:rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">
@@ -136,8 +138,9 @@ export default function TabClanOverview() {
                       itemWidth={256 + 16}
                       bgColor="from-ui-800 via-ui-800 to-ui-800/0"
                     >
+                      <div className="grid grid-flow-col grid-rows-2 gap-4 px-4">
                       {selectedClan.ladders?.map((ladder, ladderIndex) => (
-                        <Link
+                          <Link
                           key={ladderIndex}
                           href={`/prototype/${
                             prototype.getGameBySlug(ladder.gameSlug).slug
@@ -145,7 +148,7 @@ export default function TabClanOverview() {
                             ladder.id
                           }?tab=clan-leaderboard${prototype.getURLparams()}`}
                         >
-                          <div className="first:ml-4 rounded surface surface-ui-600 overflow-hidden w-64 shrink-0 interactive">
+                          <div className="rounded surface surface-ui-600 overflow-hidden w-64 shrink-0 interactive">
                             <div className="relative">
                               <div className="absolute top-1 left-1">
                                 <Tooltip tooltip="Valorant">
@@ -182,6 +185,7 @@ export default function TabClanOverview() {
                           </div>
                         </Link>
                       ))}
+                      </div>
                     </Slider>
                   ) : (
                     <div className="text-center p-4">

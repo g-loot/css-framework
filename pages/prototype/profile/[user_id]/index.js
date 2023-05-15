@@ -195,10 +195,11 @@ const TabsItems = [
 
         {selectedUser && (
           <>
+
             <ProfileHeader />
 
             <nav className="mt-4 flex justify-center">
-              <ul className="tabs">
+              <ul className="tabs tabs-tertiary">
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link

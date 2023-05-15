@@ -155,7 +155,7 @@
   }
 }
 
-.tabs:not(.tabs-rank) {
+.tabs:not(.tabs-rank):not(.tabs-tertiary) {
   > li {
     > a,
     > button,
@@ -180,6 +180,65 @@
     text-sm
     uppercase
     ;
+  }
+} 
+
+.tabs.tabs-tertiary {
+  @apply
+  gap-2
+  pt-0
+  ;
+  li {
+    > a, 
+    > button,
+    > div {
+      @apply
+      rounded-full
+      py-2
+      px-4
+      leading-tight
+      transition-[color,background,transform]
+      duration-75
+      bg-ui-700
+      hover:bg-ui-600
+      active:bg-ui-500
+      text-ui-200
+      hover:text-ui-100
+      active:text-ui-100
+      outline
+      -outline-offset-1
+      outline-1
+      outline-interaction-500/0
+      focus-visible:outline
+      focus-visible:outline-1
+      focus-visible:outline-ui-100
+      active:outline-ui-100
+      ;
+      &::before,
+      &::after {
+        @apply
+        hidden
+        ;
+      }
+      [data-badge]::after {
+        @apply
+        top-1
+        ;
+      }
+      &.is-active {
+        @apply
+        text-ui-800
+        bg-interaction-500
+        hover:bg-interaction-300
+        active:bg-interaction-700
+        ;
+        [data-badge]::after {
+          @apply
+          bg-ui-900
+          ;
+        }
+      }
+    }
   }
 } 
 

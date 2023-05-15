@@ -98,6 +98,52 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Tertiary */}
+      <div className="mb-12" id="tertiary">
+        <h2 className="h3 mb-3">Tertiary</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center justify-center">
+                  <ul className="tabs tabs-tertiary">
+                    <li>
+                      <button type="button" className="is-active">
+                        <span>Ladders</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button>
+                        <span>How it works</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button>
+                        <span>Rules</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button>
+                        <span>Ladder history</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/bmqh0v1r/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* with badges */}
       <div className="mb-12" id="with-badges">
         <h2 className="h3 mb-3">With badges</h2>

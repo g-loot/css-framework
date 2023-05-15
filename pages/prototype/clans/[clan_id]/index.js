@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
-import Chat from "../../../../components/Chat/Chat";
 import Link from "next/link";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
-import SectionClanActivity from "./section-activity";
-import TabClanOverview from "./tab-overview";
 import TabClanMembers from "./tab-members";
 import TabClanActivity from "./tab-activity";
 import TabClanChat from "./tab-chat";
@@ -16,24 +13,16 @@ import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import ClanHeader from "./header";
 
-const TabsItems = [
+const TabsItemsOwn = [
   {
-    label: "Overview",
-    url: "overview",
-    component: TabClanOverview,
+    label: "Chat",
+    url: "chat",
+    component: TabClanChat,
   },
   {
     label: "About",
     url: "about",
     component: TabClanAbout,
-    isYou: true,
-  },
-  {
-    label: "Chat",
-    url: "chat",
-    component: TabClanChat,
-    isYou: true,
-    isMobile: true,
   },
   {
     label: "Stats",
@@ -59,6 +48,30 @@ const TabsItems = [
   },
 ];
 
+const TabsItems = [
+  {
+    label: "About",
+    url: "about",
+    component: TabClanAbout,
+  },
+  {
+    label: "Stats",
+    url: "stats",
+    component: TabClanStats,
+  },
+  {
+    label: "Members",
+    url: "members",
+    component: TabClanMembers,
+  },
+  {
+    label: "Activity",
+    url: "activity",
+    component: TabClanActivity,
+    hasBadge: true,
+  },
+];
+
 export default function Home() {
   const router = useRouter();
   const { query } = useRouter();
@@ -66,13 +79,35 @@ export default function Home() {
   const [selectedClan, setSelectedClan] = useState(null);
   const { clan_id } = router.query;
   const { tab } = router.query;
-  const defaultTab = "overview";
-  const selectedTab = tab ? tab : defaultTab;
+  const defaultTab = "about";
+  const [selectedTab, setSelectedTab] = useState(false);
+
+  useEffect(() => {
+    if (selectedClan) {
+      if (tab) {
+        console.log("tab", tab);
+        setSelectedTab(tab);
+      } else {
+        if (selectedClan.isYou) {
+          setSelectedTab("chat");
+        } else {
+          setSelectedTab("about");
+        }
+      }
+    }
+  }, [tab, selectedClan]);
 
   useEffect(() => {
     setSelectedClan(prototype.getClanByID(clan_id));
   }, [clan_id]);
 
+  const getRelatedTabs = () => {
+    if (selectedClan.isYou) {
+      return TabsItemsOwn;
+    } else {
+      return TabsItems;
+    }
+  };
 
   const getClanMembers = () => {
     return prototype.users.filter((user) => {
@@ -93,16 +128,17 @@ export default function Home() {
 
         {selectedClan && (
           <>
-          {!selectedClan.isYou && (
-            <ClanHeader />
-          )}
+            {!selectedClan.isYou && <ClanHeader />}
 
             <nav className="flex justify-center">
-              <ul className="tabs">
-                {TabsItems.map((item, itemIndex) => (
+              <ul className="tabs tabs-tertiary">
+                {getRelatedTabs().map((item, itemIndex) => (
                   <>
                     {selectedClan.isYou && (
-                      <li key={item} className={`${item.isMobile ? 'lg:!hidden' : ''}`}>
+                      <li
+                        key={item}
+                        className={`${item.isMobile ? "lg:!hidden" : ""}`}
+                      >
                         <Link
                           href={`/prototype/clans/${clan_id}?tab=${
                             item.url
@@ -113,7 +149,7 @@ export default function Home() {
                               selectedTab === item.url ? "is-active" : ""
                             }`}
                           >
-                            <span data-badge={item.hasBadge ? '.' : undefined}>
+                            <span data-badge={item.hasBadge ? "." : undefined}>
                               {item.label}{" "}
                               {item.url === "members" && (
                                 <>({getClanMembers().length})</>
@@ -135,7 +171,7 @@ export default function Home() {
                               selectedTab === item.url ? "is-active" : ""
                             }`}
                           >
-                            <span data-badge={item.hasBadge ? '.' : undefined}>
+                            <span data-badge={item.hasBadge ? "." : undefined}>
                               {item.label}{" "}
                               {item.url === "members" && (
                                 <>({getClanMembers().length})</>
@@ -149,9 +185,8 @@ export default function Home() {
                 ))}
               </ul>
             </nav>
-
             <section className="py-4">
-              {TabsItems.map((item, itemIndex) => {
+              {getRelatedTabs().map((item, itemIndex) => {
                 if (item.url === selectedTab) {
                   return React.createElement(item.component, {
                     key: itemIndex,
