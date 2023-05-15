@@ -53,9 +53,9 @@ export const dataUsers = [
       ],
     },
     wallet: {
-      coins: 1328,
-      tokens: 37,
-      powertokens: 15,
+      coins: 15300,
+      tokens: 2187,
+      powertokens: 105,
       tickets: 3,
     },
     games: [1, 4],

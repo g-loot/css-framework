@@ -113,18 +113,28 @@ export const dataVouchers = [
         giftcards: [
           {
             id: 1,
-            amount: "20€",
-            price: "15000",
+            amount: "5€",
+            price: 5500,
           },
           {
             id: 2,
-            amount: "50€",
-            price: false,
+            amount: "10€",
+            price: 9000,
           },
           {
             id: 3,
+            amount: "20€",
+            price: 15000,
+          },
+          {
+            id: 4,
+            amount: "50€",
+            price: 34000,
+          },
+          {
+            id: 5,
             amount: "100€",
-            price: false,
+            price: 59000,
           },
         ],
       },
@@ -134,18 +144,28 @@ export const dataVouchers = [
         giftcards: [
           {
             id: 1,
+            amount: "$5",
+            price: 5500,
+          },
+          {
+            id: 2,
+            amount: "$10",
+            price: 9000,
+          },
+          {
+            id: 3,
             amount: "$20",
             price: 15000,
           },
           {
-            id: 2,
+            id: 4,
             amount: "$50",
             price: 34000,
           },
           {
-            id: 3,
+            id: 5,
             amount: "$100",
-            price: 59000,
+            price: false,
           },
         ],
       },
@@ -302,7 +322,7 @@ export const dataVouchers = [
           {
             id: 1,
             amount: "20€",
-            price: 15000,
+            price: 16500,
           },
           {
             id: 2,
@@ -348,7 +368,7 @@ export const dataVouchers = [
           },
         ],
       },
-      
+
       {
         id: 4,
         name: "Brazil",
