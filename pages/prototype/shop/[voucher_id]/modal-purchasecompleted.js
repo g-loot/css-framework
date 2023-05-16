@@ -110,7 +110,10 @@ export default function ModalPurchaseCompleted(props) {
                     <img
                       src={getVoucherByID(voucher).image}
                       alt=""
-                      className="w-full h-auto rounded animate-scale-in"
+                      className="w-full h-auto shadow-2xl rounded animate-fire-in animate-delay"
+                      style={{
+                        "--delay": "calc(1 * 1.2s)",
+                      }}
                     />
                   </div>
                   <div className="leading-normal">

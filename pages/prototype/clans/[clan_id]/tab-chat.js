@@ -120,7 +120,7 @@ export default function TabClanChat() {
               <section className="surface md:rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">
-                    Ongoing Ladders ({selectedClan.ladders?.length})
+                    Ladders ({selectedClan.ladders?.length})
                   </h2>
                   <Link
                     href={`${
@@ -132,61 +132,56 @@ export default function TabClanChat() {
                     </a>
                   </Link>
                 </div>
-                <div>
+                <div className="max-h-60 overflow-y-auto scrollbar-desktop">
                   {selectedClan.ladders ? (
-                    <Slider
-                      itemWidth={256 + 16}
-                      bgColor="from-ui-800 via-ui-800 to-ui-800/0"
-                    >
-                      <div className="grid grid-flow-col grid-rows-2 gap-4 px-4">
-                      {selectedClan.ladders?.map((ladder, ladderIndex) => (
-                          <Link
-                          key={ladderIndex}
-                          href={`/prototype/${
-                            prototype.getGameBySlug(ladder.gameSlug).slug
-                          }/ladders/${
-                            ladder.id
-                          }?tab=clan-leaderboard${prototype.getURLparams()}`}
-                        >
-                          <div className="rounded surface surface-ui-600 overflow-hidden w-64 shrink-0 interactive">
-                            <div className="relative">
-                              <div className="absolute top-1 left-1">
-                                <Tooltip tooltip="Valorant">
-                                  <GameIcon
-                                    game={
-                                      prototype.getGameBySlug(ladder.gameSlug)
-                                        .id
-                                    }
-                                  />
-                                </Tooltip>
-                              </div>
-                              <img
-                                src={
-                                  prototype.getLadderByID(
-                                    ladder.gameSlug,
-                                    ladder.id
-                                  ).cover
-                                }
-                                className="aspect-cover object-cover"
-                                alt=""
-                              />
+                    <div className="p-4 space-y-4">
+                    {selectedClan.ladders?.map((ladder, ladderIndex) => (
+                        <Link
+                        key={ladderIndex}
+                        href={`/prototype/${
+                          prototype.getGameBySlug(ladder.gameSlug).slug
+                        }/ladders/${
+                          ladder.id
+                        }?tab=clan-leaderboard${prototype.getURLparams()}`}
+                      >
+                        <div className="rounded surface surface-ui-600 overflow-hidden interactive">
+                          <div className="relative">
+                            <div className="absolute top-1 left-1">
+                              <Tooltip tooltip="Valorant">
+                                <GameIcon
+                                  game={
+                                    prototype.getGameBySlug(ladder.gameSlug)
+                                      .id
+                                  }
+                                />
+                              </Tooltip>
                             </div>
-                            <div className="p-2 border-t border-ui-500 flex justify-between items-baseline gap-2">
-                              <p className="truncate flex-1">
-                                {
-                                  prototype.getLadderByID(
-                                    ladder.gameSlug,
-                                    ladder.id
-                                  ).name
-                                }
-                              </p>
-                              <p className="text-lg text-ui-100">#42</p>
-                            </div>
+                            <img
+                              src={
+                                prototype.getLadderByID(
+                                  ladder.gameSlug,
+                                  ladder.id
+                                ).cover
+                              }
+                              className="aspect-cover object-cover"
+                              alt=""
+                            />
                           </div>
-                        </Link>
-                      ))}
-                      </div>
-                    </Slider>
+                          <div className="p-2 border-t border-ui-500 flex justify-between items-baseline gap-2">
+                            <p className="truncate flex-1">
+                              {
+                                prototype.getLadderByID(
+                                  ladder.gameSlug,
+                                  ladder.id
+                                ).name
+                              }
+                            </p>
+                            <p className="text-lg text-ui-100">#42</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                    </div>
                   ) : (
                     <div className="text-center p-4">
                       <span className="icon icon-ladder text-6xl text-ui-500" />
@@ -236,7 +231,7 @@ export default function TabClanChat() {
                     <ul>
                       {getClanMembers().map((item, itemIndex) => (
                         <li key={itemIndex} className="item">
-                          <div className="item-image">
+                          <div className="item-image ml-2">
                             <Link
                               href={`/prototype/profile/${
                                 prototype.getUserByID(item.id).id

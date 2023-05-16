@@ -97,7 +97,7 @@ export default function ModalPurchaseConfirmation(props) {
                   <img
                     src={getVoucherByID(voucher).image}
                     alt=""
-                    className="w-full h-auto rounded animate-scale-in"
+                    className="w-full h-auto shadow-2xl rounded animate-scale-in"
                   />
                 </div>
                 <div className="leading-normal">

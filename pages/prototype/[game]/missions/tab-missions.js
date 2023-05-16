@@ -194,7 +194,7 @@ export default function TabMissionsMissions() {
                 <div className="max-w-xs mx-auto">
                   <span className="icon icon-missions text-6xl text-ui-500" />
                   <p className="mt-2 text-ui-300">
-                    You have not yet completed any missions.
+                    Participate in the Battlepass and complete missions. They will be listed here.
                   </p>
                 </div>
               </div>
