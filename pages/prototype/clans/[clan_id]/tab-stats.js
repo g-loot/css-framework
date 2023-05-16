@@ -102,7 +102,7 @@ export default function TabClanStats() {
     <>
       {selectedClan && (
         <>
-          <section>
+          <section className="mt-4 animate-slide-in-bottom">
             <div className="flex justify-start overflow-x-auto scrollbar-hidden">
               <div className="inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0 mx-auto">
                 <ul className="tabs tabs-rank">
@@ -133,6 +133,8 @@ export default function TabClanStats() {
                 </ul>
               </div>
             </div>
+          </section>
+          <section className="animate-slide-in-bottom">
             <div className="px-2 md:px-0">
               <div className="item border-0 text-sm uppercase text-ui-300">
                 <div className="w-14" />

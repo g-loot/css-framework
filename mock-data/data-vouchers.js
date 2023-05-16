@@ -480,39 +480,6 @@ export const dataVouchers = [
       },
     ],
   },
-  /*
-  {
-    id: 5,
-    validity: "Brazil",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657092351/Marketing/2022_prototype/giftcards/store_giftcard_ifood.webp",
-    url: "ifood",
-      name: "iFood",
-    description: "Hungry? Fuel your gaming with iFood. Get dinner, drinks, and even groceries delivered to your door at the click of a button.",
-    alert: {
-      title: "Please note",
-      description: "These vouchers must be used within 3 months of purchase.",
-    },
-    sections: [
-      {
-        id: 1,
-        name: "Europe",
-        giftcards: [
-          {
-            id: 1,
-            amount: "R$100",
-            price: 15000,
-          },
-          {
-            id: 2,
-            amount: "R$250",
-            price: 34000,
-          },
-        ],
-      },
-    ],
-  },
-  */
 ];
 
 export default {

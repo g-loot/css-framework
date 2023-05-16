@@ -1,19 +1,58 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
+import { UiContext } from "../../../../contexts/ui";
+import ModalPurchaseConfirmation from "./modal-purchaseconfirmation";
+import ModalPurchaseCompleted from "./modal-purchasecompleted";
 
 export default function Home() {
   const router = useRouter();
   const { query } = useRouter();
+  const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const [selectedVoucher, setSelectedVoucher] = useState(null);
   const [selectedSection, setSelectedSection] = useState(1);
   const hasAds = query.ads === "true" ? true : false;
   const { voucher_id } = router.query;
+  const modalPurchaseConfirmation =
+    query.modalpurchaseconfirmation === "true" ? true : false;
+  const modalPurchaseCompleted =
+    query.modalpurchasecompleted === "true" ? true : false;
+
+  useEffect(() => {
+    if (modalPurchaseConfirmation) {
+      openModalPurchaseConfirmation();
+    }
+  }, [modalPurchaseConfirmation]);
+
+  useEffect(() => {
+    if (modalPurchaseCompleted) {
+      openmodalPurchaseCompleted();
+    }
+  }, [modalPurchaseCompleted]);
+
+  function openModalPurchaseConfirmation(selectedVoucher, section, giftcard) {
+    uiContext.openModal(
+      <ModalPurchaseConfirmation
+        voucher={selectedVoucher}
+        section={section}
+        giftcard={giftcard}
+      />
+    );
+  }
+  function openModalPurchaseCompleted(selectedVoucher, section, giftcard) {
+    uiContext.openModal(
+      <ModalPurchaseCompleted
+        voucher={selectedVoucher}
+        section={section}
+        giftcard={giftcard}
+      />
+    );
+  }
 
   useEffect(() => {
     setSelectedVoucher(prototype.getVoucherByID(voucher_id));
@@ -93,9 +132,13 @@ export default function Home() {
               <ul className="tabs border-b border-ui-700">
                 {selectedVoucher.sections?.map((section, sectionIndex) => (
                   <li key={sectionIndex}>
-                    <button type="button" onClick={() => setSelectedSection(section.id)}  className={`${
+                    <button
+                      type="button"
+                      onClick={() => setSelectedSection(section.id)}
+                      className={`${
                         section.id === selectedSection ? "is-active" : ""
-                      }`}>
+                      }`}
+                    >
                       <span>{section.name}</span>
                     </button>
                   </li>
@@ -105,91 +148,76 @@ export default function Home() {
 
             {selectedVoucher.sections?.map((section, sectionIndex) => (
               <>
-              {section.id === selectedSection && (
-
-                <section className="my-4 lg:my-8">
-                  {/*
+                {section.id === selectedSection && (
+                  <section className="my-4 lg:my-8">
+                    {/*
                   <h2 className="text-2xl flex-none py-2">{section.name}</h2>
                   */}
-                  {section.countries && (
-                    <ul className="flex gap-x-3 items-center flex-wrap text-ui-300 mt-2">
-                      <li>
-                        <span className="uppercase font-bold">Valid in:</span>
-                      </li>
-                      {section.countries.map((country, countryIndex) => (
-                        <li
-                          key={countryIndex}
-                          className="flex gap-1 items-center"
-                        >
-                          <div className="w-4 h-4 rounded-full relative overflow-hidden">
-                            <img
-                              src={`https://flagcdn.com/${country.flag}.svg`}
-                              className="object-cover object-center absolute inset-0 w-full h-full"
-                            />
-                          </div>
-                          <span>{country.name}</span>
+                    {section.countries && (
+                      <ul className="flex gap-x-3 items-center flex-wrap text-ui-300 mt-2">
+                        <li>
+                          <span className="uppercase font-bold">Valid in:</span>
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                        {section.countries.map((country, countryIndex) => (
+                          <li
+                            key={countryIndex}
+                            className="flex gap-1 items-center"
+                          >
+                            <div className="w-4 h-4 rounded-full relative overflow-hidden">
+                              <img
+                                src={`https://flagcdn.com/${country.flag}.svg`}
+                                className="object-cover object-center absolute inset-0 w-full h-full"
+                              />
+                            </div>
+                            <span>{country.name}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
 
-                  <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4 mt-3">
-                    {section.giftcards.map((giftcard, giftcardIndex) => (
-                      <>
-                        <li
-                          key={giftcard.id}
-                          className="surface rounded-2xl w-3/4 sm:w-2/3 md:w-auto p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
-                          style={{
-                            "--delay": `calc( ${giftcardIndex} * 0.05s)`,
-                          }}
-                        >
-                          <div className="flex-1 flex flex-col items-center gap-2">
-                            <div className="py-2 relative">
-                              <div className="w-6 h-6 rounded-full border border-t-ui-700 border-l-ui-700 border-b-ui-700/0 border-r-ui-700/0 bg-ui-900 absolute z-20 rotate-45 left-[calc(50%-0.75rem)] -top-1"></div>
-                              <div className="w-28 h-4 rounded-full border border-ui-700 bg-ui-900 relative z-10"></div>
+                    <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4 mt-3">
+                      {section.giftcards.map((giftcard, giftcardIndex) => (
+                        <>
+                          <li
+                            key={giftcard.id}
+                            className="surface rounded-2xl w-3/4 sm:w-2/3 md:w-auto p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
+                            style={{
+                              "--delay": `calc( ${giftcardIndex} * 0.05s)`,
+                            }}
+                          >
+                            <div className="flex-1 flex flex-col items-center gap-2">
+                              <div className="py-2 relative">
+                                <div className="w-6 h-6 rounded-full border border-t-ui-700 border-l-ui-700 border-b-ui-700/0 border-r-ui-700/0 bg-ui-900 absolute z-20 rotate-45 left-[calc(50%-0.75rem)] -top-1"></div>
+                                <div className="w-28 h-4 rounded-full border border-ui-700 bg-ui-900 relative z-10"></div>
+                              </div>
+                              <img
+                                src={selectedVoucher.image}
+                                className="w-4/5 rounded-xl shadow-2xl mb-3"
+                                height="auto"
+                                alt="Gift card"
+                              />
+                              <h3 className="uppercase text-3xl leading-none">
+                                Gift card {giftcard.amount}
+                              </h3>
+                              <div className="mb-3 text-ui-300 uppercase text-xl">
+                                {selectedVoucher.name}
+                              </div>
                             </div>
-                            <img
-                              src={selectedVoucher.image}
-                              className="w-4/5 rounded-xl shadow-2xl mb-3"
-                              height="auto"
-                              alt="Gift card"
-                            />
-                            <h3 className="uppercase text-3xl leading-none">
-                              Gift card {giftcard.amount}
-                            </h3>
-                            <div className="mb-3 text-ui-300 uppercase text-xl">
-                              {selectedVoucher.name}
-                            </div>
-                          </div>
-                          <div className="border-t border-ui-700 pt-4">
-                            {giftcard.price && (
-                              <>
-                                {prototype.getUserProfile().wallet.coins >=
-                                  giftcard.price && (
-                                  <button
-                                    type="button"
-                                    className="button button-primary button-currency button-coin w-full"
-                                  >
-                                    <div>
-                                      <span>Purchase</span>
-                                    </div>
-                                    <div>
-                                      <span className="icon icon-coin" />
-                                      <span>
-                                        {numberWithSpaces(giftcard.price)}
-                                      </span>
-                                    </div>
-                                  </button>
-                                )}
-                                {prototype.getUserProfile().wallet.coins <
-                                  giftcard.price && (
-                                  <div
-                                    className="tooltip"
-                                    data-tooltip="Not enough funds"
-                                  >
+                            <div className="border-t border-ui-700 pt-4">
+                              {giftcard.price && (
+                                <>
+                                  {prototype.getUserProfile().wallet.coins >=
+                                    giftcard.price && (
                                     <button
                                       type="button"
-                                      className="button button-primary button-currency button-coin w-full is-disabled"
+                                      className="button button-primary button-currency button-coin w-full"
+                                      onClick={() =>
+                                        openModalPurchaseConfirmation(
+                                          selectedVoucher.id,
+                                          section.id,
+                                          giftcard.id
+                                        )
+                                      }
                                     >
                                       <div>
                                         <span>Purchase</span>
@@ -201,25 +229,46 @@ export default function Home() {
                                         </span>
                                       </div>
                                     </button>
-                                  </div>
-                                )}
-                              </>
-                            )}
-                            {!giftcard.price && (
-                              <button
-                                type="button"
-                                className="button button-primary is-disabled w-full"
-                              >
-                                <span>Out of stock</span>
-                              </button>
-                            )}
-                          </div>
-                        </li>
-                      </>
-                    ))}
-                  </ul>
-                </section>
-              )}
+                                  )}
+                                  {prototype.getUserProfile().wallet.coins <
+                                    giftcard.price && (
+                                    <div
+                                      className="tooltip"
+                                      data-tooltip="Not enough funds"
+                                    >
+                                      <button
+                                        type="button"
+                                        className="button button-primary button-currency button-coin w-full is-disabled"
+                                      >
+                                        <div>
+                                          <span>Purchase</span>
+                                        </div>
+                                        <div>
+                                          <span className="icon icon-coin" />
+                                          <span>
+                                            {numberWithSpaces(giftcard.price)}
+                                          </span>
+                                        </div>
+                                      </button>
+                                    </div>
+                                  )}
+                                </>
+                              )}
+                              {!giftcard.price && (
+                                <button
+                                  type="button"
+                                  className="button button-primary is-disabled w-full"
+                                >
+                                  <span>Out of stock</span>
+                                </button>
+                              )}
+                            </div>
+                          </li>
+                        </>
+                      ))}
+                    </ul>
+                  </section>
+                )}
               </>
             ))}
           </>
