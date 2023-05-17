@@ -53,6 +53,12 @@ export default function TabClanAbout() {
     setSelectedClan(prototype.getClanByID(clan_id));
   }, [clan_id]);
 
+  function numberWithSpaces(x) {
+    var parts = x.toString().split(".");
+    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    return parts.join(".");
+  }
+
   return (
     <>
       {selectedClan && (
@@ -279,7 +285,8 @@ export default function TabClanAbout() {
                 </section>
               </div>
 
-              <section className="text-ui-100/0 h-0">
+              {/* for demo purposes only */}
+              <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
                 <div onClick={() => setIsAdmin(!isAdmin)}>
                   Toggle admin view
                 </div>
@@ -499,33 +506,37 @@ export default function TabClanAbout() {
                     <div className="leading-tight grid grid-cols-2 xl:grid-cols-4 flex-1 gap-4 p-4">
                       <div className="pl-4 border-l border-ui-600">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                          Coins won
+                        </div>
+                        <div className="flex items-center gap-1 text-currency-1-500 text-xl lg:text-3xl">
+                          <span className="icon icon-coin" />
+                          <span>
+                            {numberWithSpaces(selectedClan.stats.totalCoins)}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="pl-4 border-l border-ui-600">
+                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
                           Ladders played
                         </div>
                         <div className="text-ui-100 text-xl lg:text-3xl">
-                          82
-                        </div>
-                        <div className="hidden text-xs lg:text-sm text-ui-300">
-                          Top 25%
+                          {numberWithSpaces(selectedClan.stats.totalLadders)}
                         </div>
                       </div>
                       <div className="pl-4 border-l border-ui-600">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Ladder rounds
+                          Avg. placement
                         </div>
                         <div className="text-ui-100 text-xl lg:text-3xl">
-                          146
-                        </div>
-                        <div className="hidden text-xs lg:text-sm text-ui-300">
-                          Top 18%
+                          #{selectedClan.stats.avgPlacement}
                         </div>
                       </div>
                       <div className="pl-4 border-l border-ui-600">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Missions completed
+                          Avg. Ladders / week
                         </div>
-                        <div className="text-ui-100 text-xl lg:text-3xl">1 295</div>
-                        <div className="hidden text-xs lg:text-sm text-ui-300">
-                          Top 11%
+                        <div className="text-ui-100 text-xl lg:text-3xl">
+                          {selectedClan.stats.avgLaddersWeek}
                         </div>
                       </div>
                     </div>

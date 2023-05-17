@@ -222,6 +222,7 @@
     animate-[battlepass-shining-rays_3s_cubic-bezier(.7,0,.3,1)_infinite_1.2s]
     bg-[linear-gradient(130deg,_rgba(255,255,255,0)_44%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_60%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%)]
     bg-no-repeat
+    hidden
     ;
     mask-size: cover;
     mask-repeat: no-repeat;
@@ -377,6 +378,11 @@
       absolute
       inset-0
       ;
+      &:not([class*=text-]) {
+        @apply
+        text-left
+        ;
+      }
       > span {
         @apply
         absolute
@@ -392,7 +398,6 @@
         leading-none
         rounded-b
         whitespace-normal
-        text-left
         ;
       }
     }

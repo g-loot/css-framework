@@ -117,6 +117,7 @@ export default function TabClanLeaderboardsLeaderboards() {
   const [selectedClanLeaderboard, setSelectedClanLeaderboard] = useState(null);
   const empty = query.empty === "true" ? true : false;
   const [isEmpty, setIsEmpty] = useState(empty);
+  const [hasRanks, setHasRanks] = useState(false);
   const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
   const { leaderboard_id } = router.query;
@@ -240,120 +241,122 @@ export default function TabClanLeaderboardsLeaderboards() {
           className="pb-8 animate-slide-in-bottom animate-delay"
           style={{ "--delay": "calc(1 * 0.05s)" }}
         >
-          <div className="relative z-0 overflow-x-auto scrollbar-hidden h-16 flex items-center my-4">
-            <div className="hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r from-ui-900 via-ui-900 to-ui-900/0 pl-4 pr-8">
-              <button
-                type="button"
-                className="button button-lg button-ghost rounded-full"
-                onClick={() => {
-                  sideScroll(
-                    sliderRankWrapper.current,
-                    25,
-                    sliderRankWidth,
-                    -sliderRankWidth
-                  );
-                }}
-              >
-                <span className="icon icon-ctrl-left" />
-              </button>
-            </div>
+          {hasRanks && (
+            <div className="relative z-0 overflow-x-auto scrollbar-hidden h-16 flex items-center my-4">
+              <div className="hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r from-ui-900 via-ui-900 to-ui-900/0 pl-4 pr-8">
+                <button
+                  type="button"
+                  className="button button-lg button-ghost rounded-full"
+                  onClick={() => {
+                    sideScroll(
+                      sliderRankWrapper.current,
+                      25,
+                      sliderRankWidth,
+                      -sliderRankWidth
+                    );
+                  }}
+                >
+                  <span className="icon icon-ctrl-left" />
+                </button>
+              </div>
 
-            <div className="hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l from-ui-900 via-ui-900 to-ui-900/0 pr-4 pl-8">
-              <button
-                type="button"
-                className="button button-lg button-ghost rounded-full"
-                onClick={() => {
-                  sideScroll(
-                    sliderRankWrapper.current,
-                    25,
-                    sliderRankWidth,
-                    sliderRankWidth
-                  );
-                }}
+              <div className="hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l from-ui-900 via-ui-900 to-ui-900/0 pr-4 pl-8">
+                <button
+                  type="button"
+                  className="button button-lg button-ghost rounded-full"
+                  onClick={() => {
+                    sideScroll(
+                      sliderRankWrapper.current,
+                      25,
+                      sliderRankWidth,
+                      sliderRankWidth
+                    );
+                  }}
+                >
+                  <span className="icon icon-ctrl-right" />
+                </button>
+              </div>
+              <ul
+                ref={sliderRankWrapper}
+                className="absolute z-0 inset-0 tabs tabs-rank scrollbar-hidden px-10 md:px-20"
               >
-                <span className="icon icon-ctrl-right" />
-              </button>
-            </div>
-            <ul
-              ref={sliderRankWrapper}
-              className="absolute z-0 inset-0 tabs tabs-rank scrollbar-hidden px-10 md:px-20"
-            >
-              <li className="tab-bronze" ref={sliderRankItem}>
-                <a
-                  onClick={loadRank.bind(this, 1)}
-                  className={selectedRank === 1 ? "is-active" : ""}
-                >
-                  <div>
+                <li className="tab-bronze" ref={sliderRankItem}>
+                  <a
+                    onClick={loadRank.bind(this, 1)}
+                    className={selectedRank === 1 ? "is-active" : ""}
+                  >
                     <div>
-                      <span className="icon text-4xl icon-rank-bronze" />
-                      <span className="h4">Bronze</span>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li className="tab-silver">
-                <a
-                  onClick={loadRank.bind(this, 2)}
-                  className={selectedRank === 2 ? "is-active" : ""}
-                >
-                  <div>
-                    <div>
-                      <span className="icon text-4xl icon-rank-silver" />
-                      <span className="h4">Silver</span>
-                    </div>
-                    <div className="avatar avatar-squircle avatar-xs">
                       <div>
-                        <img src={prototype.getClanByID(1).avatar} />
+                        <span className="icon text-4xl icon-rank-bronze" />
+                        <span className="h4">Bronze</span>
                       </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-              <li className="tab-gold">
-                <a
-                  onClick={loadRank.bind(this, 3)}
-                  className={selectedRank === 3 ? "is-active" : ""}
-                >
-                  <div>
+                  </a>
+                </li>
+                <li className="tab-silver">
+                  <a
+                    onClick={loadRank.bind(this, 2)}
+                    className={selectedRank === 2 ? "is-active" : ""}
+                  >
                     <div>
-                      <span className="icon text-4xl icon-rank-gold" />
-                      <span className="h4">Gold</span>
+                      <div>
+                        <span className="icon text-4xl icon-rank-silver" />
+                        <span className="h4">Silver</span>
+                      </div>
+                      <div className="avatar avatar-squircle avatar-xs">
+                        <div>
+                          <img src={prototype.getClanByID(1).avatar} />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-              <li className="tab-platinum">
-                <a
-                  onClick={loadRank.bind(this, 4)}
-                  className={selectedRank === 4 ? "is-active" : ""}
-                >
-                  <div>
+                  </a>
+                </li>
+                <li className="tab-gold">
+                  <a
+                    onClick={loadRank.bind(this, 3)}
+                    className={selectedRank === 3 ? "is-active" : ""}
+                  >
                     <div>
-                      <span className="icon text-4xl icon-rank-platinum" />
-                      <span className="h4">Platinum</span>
+                      <div>
+                        <span className="icon text-4xl icon-rank-gold" />
+                        <span className="h4">Gold</span>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-              <li className="tab-diamond">
-                <a
-                  onClick={loadRank.bind(this, 5)}
-                  className={selectedRank === 5 ? "is-active" : ""}
-                >
-                  <div>
+                  </a>
+                </li>
+                <li className="tab-platinum">
+                  <a
+                    onClick={loadRank.bind(this, 4)}
+                    className={selectedRank === 4 ? "is-active" : ""}
+                  >
                     <div>
-                      <span className="icon text-4xl icon-rank-diamond" />
-                      <span className="h4">Diamond</span>
+                      <div>
+                        <span className="icon text-4xl icon-rank-platinum" />
+                        <span className="h4">Platinum</span>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+                  </a>
+                </li>
+                <li className="tab-diamond">
+                  <a
+                    onClick={loadRank.bind(this, 5)}
+                    className={selectedRank === 5 ? "is-active" : ""}
+                  >
+                    <div>
+                      <div>
+                        <span className="icon text-4xl icon-rank-diamond" />
+                        <span className="h4">Diamond</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          )}
           <div className="mt-4 overflow-x-auto scrollbar-hidden">
             <div className="min-w-md px-2 md:px-0">
               <div className="flex gap-2 items-start text-center text-sm text-ui-300 uppercase mb-2 relative z-10">
-                <div className="w-48 flex items-stretch overflow-hidden">
+                <div className="w-80 flex items-stretch overflow-hidden">
                   <div className="w-1/3 px-2">#</div>
                   <div className="flex-1 flex gap-2 items-center justify-center">
                     <span>Rewards</span>
@@ -894,8 +897,9 @@ export default function TabClanLeaderboardsLeaderboards() {
         </section>
       )}
       {/* for demo purposes only */}
-      <section className="text-ui-100/0 h-0 lg:flex justify-between">
+      <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
         <a onClick={() => setIsEmpty(!isEmpty)}>Toggle empty state</a>
+        <a onClick={() => setHasRanks(!hasRanks)}>Toggle ranks</a>
       </section>
     </>
   );

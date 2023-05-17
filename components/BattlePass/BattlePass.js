@@ -18,14 +18,15 @@ import AnimatedNumber from "../AnimatedNumber/AnimatedNumber";
 import CarouselSingle, { CarouselItem } from "../Carousel/CarouselSingle";
 import ResetsIn from "../Countdown/ResetsIn";
 import PremiumLogo from "../PremiumLogo/PremiumLogo";
+import ModalBattlepassCompletedPremium from "../../pages/prototype/battlepass/modal-battlepass-completed-premium";
 
 export default function Battlepass(props) {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const isPremium = query.premium === "true" ? true : false;
-
   const size = props.size || "battlepass-lg";
   const isfinished = props.isFinished || false;
+  const hasPremium = props.hasPremium || false;
   const selectedBattlepass = props.id || 0;
   const [currentStep, setCurrentStep] = useState(1);
   const [activeStep, setActiveStep] = useState(1);
@@ -197,6 +198,11 @@ export default function Battlepass(props) {
     return Math.round(previousTarget + percent);
   }
 
+  function buyPremium() {
+    uiContext.closeModal();
+    uiContext.openModal(<ModalBattlepassCompletedPremium />);
+  }
+
   return (
     <>
       <div
@@ -221,7 +227,8 @@ export default function Battlepass(props) {
                   <div className="battlepass-reward">
                     <span>Total XP</span>
                     <span>
-                      <AnimatedNumber number={2240} />
+                      2240
+                      {/*<AnimatedNumber number={2240} />*/}
                     </span>
                   </div>
                 </li>
@@ -237,7 +244,8 @@ export default function Battlepass(props) {
                   <div className="battlepass-reward">
                     <span>Coins</span>
                     <span>
-                      <AnimatedNumber number={1411} />
+                      1411
+                      {/*<AnimatedNumber number={1411} />*/}
                     </span>
                   </div>{" "}
                 </li>
@@ -253,7 +261,8 @@ export default function Battlepass(props) {
                   <div className="battlepass-reward">
                     <span>Tokens</span>
                     <span>
-                      <AnimatedNumber number={879} />
+                      879
+                      {/* <AnimatedNumber number={879} />*/}
                     </span>
                   </div>{" "}
                 </li>
@@ -344,64 +353,72 @@ export default function Battlepass(props) {
                   </div>
                 </li>
               </ul>
-              {!isPremium && (
-                <div className="border-t border-ui-700 p-4 flex flex-col xl:flex-row gap-6 items-center overflow-hidden rounded-b relative">
-                  <i className="absolute -z-10 w-[500px] h-[500px] -rotate-45 -top-[280px] -right-[250px] bg-gradient-to-br from-ui-700/50 via-ui-700/10 to-ui-700/0" />
-                  <div>
-                    <PremiumLogo
-                      src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
-                      width="auto"
-                      height="60"
-                      className="h-16"
-                    />
-                  </div>
-                  <div className="flex-1 text-center xl:text-left space-y-3 xl:border-l xl:border-ui-700 xl:pl-6">
-                    <p className="max-w-[30ch]">
-                      Unlock exclusive Premium rewards before the Battlepass
-                      ends.
-                    </p>
-                    <Link
-                      href={`/prototype/premium${prototype.getURLparams()}`}
-                    >
-                      <button
-                        type="button"
-                        className="button button-premium is-shining"
-                      >
-                        <span className="icon icon-crown" />
-                        <span>Get Premium</span>
-                      </button>
-                    </Link>
-                  </div>
-                  <div className="w-52">
-                    <CarouselSingle autoPlay={false}>
-                      {getBattlepassPremiumSteps().map((item, itemIndex) => (
-                        <CarouselItem key={itemIndex}>
-                          <div className="battlepass-step is-premium is-locked mt-5">
-                            <div className="battlepass-content">
-                              <div className="battlepass-decoration">
-                                <span>
-                                  {getBattlepassRewardByID(item.reward).name}
-                                </span>
-                              </div>
-                              <div className="battlepass-body">
-                                <img
-                                  src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                                    getBattlepassRewardByID(item.reward).image
-                                  }.png`}
-                                  width="100%"
-                                  height="auto"
-                                  alt={
-                                    getBattlepassRewardByID(item.reward).name
-                                  }
-                                />
-                              </div>
-                            </div>
-                          </div>
-                        </CarouselItem>
-                      ))}
-                    </CarouselSingle>
-                  </div>
-                </div>
+              {hasPremium && (
+                <>
+                  {!isPremium && (
+                    <div className="border-t border-ui-700 p-4 flex flex-col xl:flex-row gap-6 items-center overflow-hidden rounded-b relative">
+                      <i className="absolute -z-10 w-[500px] h-[500px] -rotate-45 -top-[280px] -right-[250px] bg-gradient-to-br from-ui-700/50 via-ui-700/10 to-ui-700/0" />
+                      <div>
+                        <PremiumLogo
+                          src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                          width="auto"
+                          height="60"
+                          className="h-16"
+                        />
+                      </div>
+                      <div className="flex-1 text-center xl:text-left space-y-2 xl:border-l xl:border-ui-700 xl:pl-6">
+                        <p className="max-w-[30ch]">
+                          Unlock exclusive Premium rewards before the Battlepass
+                          ends.
+                        </p>
+                        <button
+                            type="button"
+                            className="button button-premium is-shining"
+                            onClick={buyPremium}
+                          >
+                            <span className="icon icon-crown" />
+                            <span>Get Premium</span>
+                          </button>
+                      </div>
+                      <div className="w-52">
+                        <CarouselSingle autoPlay={false}>
+                          {getBattlepassPremiumSteps().map(
+                            (item, itemIndex) => (
+                              <CarouselItem key={itemIndex}>
+                                <div className="battlepass-step is-premium is-locked mt-5">
+                                  <div className="battlepass-content">
+                                    <div className="battlepass-decoration">
+                                      <span>
+                                        {
+                                          getBattlepassRewardByID(item.reward)
+                                            .name
+                                        }
+                                      </span>
+                                    </div>
+                                    <div className="battlepass-body">
+                                      <img
+                                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                                          getBattlepassRewardByID(item.reward)
+                                            .image
+                                        }.png`}
+                                        width="100%"
+                                        height="auto"
+                                        alt={
+                                          getBattlepassRewardByID(item.reward)
+                                            .name
+                                        }
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                              </CarouselItem>
+                            )
+                          )}
+                        </CarouselSingle>
+                      </div>
+                    </div>
+                  )}
+                </>
               )}
             </div>
             <p className="text-ui-300">

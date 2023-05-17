@@ -17,21 +17,19 @@ const ClanStats = [
     isActive: true,
     name: "Ladders played",
     label: "Ladders",
-    value: 82,
     users: [2, 5, 4, 12, 13, 9, 10, 1, 3],
   },
   {
     id: 2,
-    name: "Ladder rounds",
-    label: "rounds",
-    value: 426,
+    name: "Avg. placement",
+    label: "Avg. placement",
     users: [5, 3, 2, 8, 11, 1, 6, 7, 14],
+    decreases: true,
   },
   {
     id: 3,
-    name: "Missions completed",
-    label: "missions",
-    value: 1294,
+    name: "Avg. Ladders / week",
+    label: "Avg. Ladders / week",
     users: [12, 11, 13, 1, 2, 4, 3, 8, 9],
   },
 ];
@@ -45,7 +43,8 @@ export default function TabClanStats() {
   const [selectedStats, setSelectedStats] = useState(1);
   const { clan_id } = router.query;
   const modalGiftTokens = query.modalgifttokens === "true" ? true : false;
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedUser, setSelectedUser] = useState(
     prototype.getUserByID(2).nickname
@@ -122,7 +121,21 @@ export default function TabClanStats() {
                                 {item.name}
                               </div>
                               <div className="text-ui-100 text-xl lg:text-3xl">
-                                {numberWithSpaces(item.value)}
+                                {isEmpty ? (
+                                  <>--</>
+                                ) : (
+                                  <>
+                                    {item.id === 1 && (
+                                      <>{selectedClan.stats.totalLadders}</>
+                                    )}
+                                    {item.id === 2 && (
+                                      <>#{selectedClan.stats.avgPlacement}</>
+                                    )}
+                                    {item.id === 3 && (
+                                      <>{selectedClan.stats.avgLaddersWeek}</>
+                                    )}
+                                  </>
+                                )}
                               </div>
                             </div>
                           </div>
@@ -136,14 +149,21 @@ export default function TabClanStats() {
           </section>
           <section className="animate-slide-in-bottom">
             <div className="px-2 md:px-0">
-              <div className="item border-0 text-sm uppercase text-ui-300">
-                <div className="w-14" />
-                <div className="item-image w-7" />
-                <div className="item-body">Player</div>
-                <div className="item-actions px-4 text-right">
-                  <div>{getClanStatsByID(selectedStats).label}</div>
+              {!isEmpty && (
+                <div className="item border-0 text-sm uppercase text-ui-300">
+                  <div className="w-14" />
+                  <div className="item-image w-7" />
+                  <div className="item-body">Player</div>
+                  <div className="item-actions px-4 text-right">
+                    <div>
+                      {getClanStatsByID(selectedStats).prefix && (
+                        <>{getClanStatsByID(selectedStats).prefix}</>
+                      )}
+                      {getClanStatsByID(selectedStats).label}
+                    </div>
+                  </div>
                 </div>
-              </div>
+              )}
               {isLoading ? (
                 <ul className="items-spaced is-loading space-y-2">
                   {getClanStatsByID(selectedStats).users?.map(
@@ -175,86 +195,150 @@ export default function TabClanStats() {
                   )}
                 </ul>
               ) : (
-                <ul className="items-spaced space-y-2">
-                  {getClanStatsByID(selectedStats).users?.map(
-                    (item, itemIndex) => (
-                      <li
-                        key={itemIndex}
-                        className={`item rounded ${
-                          isLoading
-                            ? ""
-                            : "animate-slide-in-bottom animate-delay"
-                        }`}
-                        style={{
-                          "--delay": "calc(" + itemIndex + " * 0.05s)",
-                        }}
-                      >
-                        <div className="w-10 lg:w-12 text-center px-2 flex items-center justify-center">
-                          <LeaderboardWings id={itemIndex} />
+                <>
+                  {" "}
+                  {isEmpty ? (
+                    <div className="mt-10 surface sm:rounded px-4 py-8 text-center">
+                      <div className="max-w-xs mx-auto">
+                        <span className="icon icon-podium text-6xl text-ui-500" />
+                        <div className="mt-2 text-ui-300">
+                          This leaderboard is empty.
                         </div>
-                        <div className="item-image">
-                          <Link
-                            href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                      </div>
+                    </div>
+                  ) : (
+                    <ul className="items-spaced space-y-2">
+                      {getClanStatsByID(selectedStats).users?.map(
+                        (item, itemIndex) => (
+                          <li
+                            key={itemIndex}
+                            className={`item rounded ${
+                              isLoading
+                                ? ""
+                                : "animate-slide-in-bottom animate-delay"
+                            }`}
+                            style={{
+                              "--delay": "calc(" + itemIndex + " * 0.05s)",
+                            }}
                           >
-                            <Avatar
-                              id={item}
-                              hasTooltip={true}
-                              hasTooltipXP={false}
-                            />
-                          </Link>
-                        </div>
-                        <div className="item-body">
-                          <Link
-                            href={`/prototype/profile/${item}${prototype.getURLparams()}`}
-                          >
-                            <div className="item-title interactive truncate">
-                              <span
+                            <div className="w-10 lg:w-12 text-center px-2 flex items-center justify-center">
+                              <LeaderboardWings id={itemIndex} />
+                            </div>
+                            <div className="item-image">
+                              <Link
+                                href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                              >
+                                <Avatar
+                                  id={item}
+                                  hasTooltip={true}
+                                  hasTooltipXP={false}
+                                />
+                              </Link>
+                            </div>
+                            <div className="item-body">
+                              <Link
+                                href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                              >
+                                <div className="item-title interactive truncate">
+                                  <span
+                                    className={`${
+                                      prototype.getUserByID(item)?.isYou
+                                        ? "text-main font-bold"
+                                        : ""
+                                    } ${
+                                      prototype.getUserByID(item)?.isPremium
+                                        ? "text-premium-500"
+                                        : ""
+                                    }`}
+                                  >
+                                    {prototype.getUserByID(item)?.clan && (
+                                      <>
+                                        &#91;
+                                        {
+                                          prototype.getClanByID(
+                                            prototype.getUserByID(item)?.clan
+                                          )?.tag
+                                        }
+                                        &#93;{" "}
+                                      </>
+                                    )}
+                                    {prototype.getUserByID(item)?.nickname}
+                                  </span>
+                                </div>
+                              </Link>
+                            </div>
+                            <div className="item-actions px-4 text-right text-lg">
+                              <div
                                 className={`${
                                   prototype.getUserByID(item)?.isYou
-                                    ? "text-main font-bold"
-                                    : ""
-                                } ${
-                                  prototype.getUserByID(item)?.isPremium
-                                    ? "text-premium-500"
+                                    ? "text-main"
                                     : ""
                                 }`}
                               >
-                                {prototype.getUserByID(item)?.clan && (
+                                {getClanStatsByID(selectedStats).id === 1 && (
                                   <>
-                                    &#91;
-                                    {
-                                      prototype.getClanByID(
-                                        prototype.getUserByID(item)?.clan
-                                      )?.tag
-                                    }
-                                    &#93;{" "}
+                                    {getClanStatsByID(selectedStats)
+                                      .decreases ? (
+                                      <>
+                                        {numberWithSpaces(
+                                          selectedClan.stats.totalLadders +
+                                            itemIndex
+                                        )}
+                                      </>
+                                    ) : (
+                                      <>
+                                        {numberWithSpaces(
+                                          selectedClan.stats.totalLadders -
+                                            itemIndex
+                                        )}
+                                      </>
+                                    )}
                                   </>
                                 )}
-                                {prototype.getUserByID(item)?.nickname}
-                              </span>
+                                {getClanStatsByID(selectedStats).id === 2 && (
+                                  <>
+                                    {getClanStatsByID(selectedStats)
+                                      .decreases ? (
+                                      <>
+                                        #
+                                        {selectedClan.stats.avgPlacement +
+                                          itemIndex}
+                                      </>
+                                    ) : (
+                                      <>
+                                        #
+                                        {selectedClan.stats.avgPlacement -
+                                          itemIndex}
+                                      </>
+                                    )}
+                                  </>
+                                )}
+                                {getClanStatsByID(selectedStats).id === 3 && (
+                                  <>
+                                    {getClanStatsByID(selectedStats)
+                                      .decreases ? (
+                                      <>
+                                        {selectedClan.stats.avgLaddersWeek +
+                                          itemIndex}
+                                      </>
+                                    ) : (
+                                      <>
+                                        {selectedClan.stats.avgLaddersWeek -
+                                          itemIndex}
+                                      </>
+                                    )}
+                                  </>
+                                )}
+                              </div>
                             </div>
-                          </Link>
-                        </div>
-                        <div className="item-actions px-4 text-right text-lg">
-                          <div
-                            className={`${
-                              prototype.getUserByID(item)?.isYou
-                                ? "text-main"
-                                : ""
-                            }`}
-                          >
-                            {numberWithSpaces(
-                              getClanStatsByID(selectedStats).value / 2 +
-                                (itemIndex + 10)
-                            )}
-                          </div>
-                        </div>
-                      </li>
-                    )
+                          </li>
+                        )
+                      )}
+                    </ul>
                   )}
-                </ul>
+                </>
               )}
-              {!isLoading && (
+              {!isLoading && !isEmpty && (
                 <div>
                   <div className="flex gap-2 justify-center items-center my-4">
                     <button
@@ -311,6 +395,10 @@ export default function TabClanStats() {
           </section>
         </>
       )}
+      {/* for demo purposes only */}
+      <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+        <a onClick={() => setIsEmpty(!isEmpty)}>Toggle empty state</a>
+      </section>
     </>
   );
 }

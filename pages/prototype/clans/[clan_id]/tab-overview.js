@@ -139,52 +139,52 @@ export default function TabClanOverview() {
                       bgColor="from-ui-800 via-ui-800 to-ui-800/0"
                     >
                       <div className="grid grid-flow-col grid-rows-2 gap-4 px-4">
-                      {selectedClan.ladders?.map((ladder, ladderIndex) => (
+                        {selectedClan.ladders?.map((ladder, ladderIndex) => (
                           <Link
-                          key={ladderIndex}
-                          href={`/prototype/${
-                            prototype.getGameBySlug(ladder.gameSlug).slug
-                          }/ladders/${
-                            ladder.id
-                          }?tab=clan-leaderboard${prototype.getURLparams()}`}
-                        >
-                          <div className="rounded surface surface-ui-600 overflow-hidden w-64 shrink-0 interactive">
-                            <div className="relative">
-                              <div className="absolute top-1 left-1">
-                                <Tooltip tooltip="Valorant">
-                                  <GameIcon
-                                    game={
-                                      prototype.getGameBySlug(ladder.gameSlug)
-                                        .id
-                                    }
-                                  />
-                                </Tooltip>
+                            key={ladderIndex}
+                            href={`/prototype/${
+                              prototype.getGameBySlug(ladder.gameSlug).slug
+                            }/ladders/${
+                              ladder.id
+                            }?tab=clan-leaderboard${prototype.getURLparams()}`}
+                          >
+                            <div className="rounded surface surface-ui-600 overflow-hidden w-64 shrink-0 interactive">
+                              <div className="relative">
+                                <div className="absolute top-1 left-1">
+                                  <Tooltip tooltip="Valorant">
+                                    <GameIcon
+                                      game={
+                                        prototype.getGameBySlug(ladder.gameSlug)
+                                          .id
+                                      }
+                                    />
+                                  </Tooltip>
+                                </div>
+                                <img
+                                  src={
+                                    prototype.getLadderByID(
+                                      ladder.gameSlug,
+                                      ladder.id
+                                    ).cover
+                                  }
+                                  className="aspect-cover object-cover"
+                                  alt=""
+                                />
                               </div>
-                              <img
-                                src={
-                                  prototype.getLadderByID(
-                                    ladder.gameSlug,
-                                    ladder.id
-                                  ).cover
-                                }
-                                className="aspect-cover object-cover"
-                                alt=""
-                              />
+                              <div className="p-2 border-t border-ui-500 flex justify-between items-baseline gap-2">
+                                <p className="truncate flex-1">
+                                  {
+                                    prototype.getLadderByID(
+                                      ladder.gameSlug,
+                                      ladder.id
+                                    ).name
+                                  }
+                                </p>
+                                <p className="text-lg text-ui-100">#42</p>
+                              </div>
                             </div>
-                            <div className="p-2 border-t border-ui-500 flex justify-between items-baseline gap-2">
-                              <p className="truncate flex-1">
-                                {
-                                  prototype.getLadderByID(
-                                    ladder.gameSlug,
-                                    ladder.id
-                                  ).name
-                                }
-                              </p>
-                              <p className="text-lg text-ui-100">#42</p>
-                            </div>
-                          </div>
-                        </Link>
-                      ))}
+                          </Link>
+                        ))}
                       </div>
                     </Slider>
                   ) : (
@@ -391,7 +391,7 @@ export default function TabClanOverview() {
             </div>
           </div>
           {/* for demo purposes only */}
-          <section className="text-ui-100/0 h-0">
+          <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
             <div onClick={() => setIsAdmin(!isAdmin)}>Toggle admin view</div>
             <div
               onClick={() =>

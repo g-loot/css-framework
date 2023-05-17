@@ -7,6 +7,8 @@ import { DataBattlepassRewards } from "../../../mock-data/data-battlepass.js";
 import { useRouter } from "next/router.js";
 import Lottie from "lottie-react";
 import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
+import Battlepass from "../../../components/BattlePass/BattlePass.js";
+import ModalBattlepassCompletedPremium from "./modal-battlepass-completed-premium.js";
 
 export default function ModalBattlepassCompletedBonusSteps(props) {
   const uiContext = useContext(UiContext);
@@ -49,7 +51,7 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
 
   return (
     <>
-      <div className="modal max-w-md modal-center">
+      <div className="modal max-w-lg modal-center">
         <button
           type="button"
           className="button button-secondary button-close"
@@ -61,57 +63,17 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
           <div className="modal-body">
             <h2 className="modal-title">Battlepass completed</h2>
             <p>
-              Congratulations on completing the Battlepass. Continue earning XP through the bonus steps.
+              Congratulations on reaching the final step on the Battlepass. Continue earning XP through the bonus steps.
             </p>
-            <div>
-              <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2 mt-8">
-                {getBattlepassBonusSteps().map((item, itemIndex) => (
-                  <li
-                    key={itemIndex}
-                    className={`battlepass-step animate-slide-in-bottom animate-delay ${
-                      item.isPremium ? `is-premium` : ""
-                    } ${item.isPremium && !isPremium ? `is-locked` : ""} ${
-                      item.isBonus ? `is-bonus` : ""
-                    }
-                        `}
-                    style={{
-                      "--delay": "calc(" + itemIndex + " * 0.05s)",
-                    }}
-                  >
-                    <div className="battlepass-info text-left px-2">
-                      <div>{300 + 100 * item.id} XP</div>
-                    </div>
-                    <button
-                      type="button"
-                      className={`battlepass-content`}
-                      data-tooltip={getBattlepassRewardByID(item.reward).name}
-                    >
-                      <div className="battlepass-decoration">
-                        <span>{item.name}</span>
-                      </div>
-                      <div className="battlepass-body">
-                        <img
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                            getBattlepassRewardByID(item.reward).image
-                          }.png`}
-                          width="100%"
-                          height="auto"
-                          alt={getBattlepassRewardByID(item.reward).name}
-                        />
-                      </div>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <Battlepass id={selectedBattlepass} isFinished={true} hasPremium={true} />
           </div>
           <div className="modal-action">
             <button
               type="button"
-              className="button button-primary w-1/2 lg:w-1/3"
+              className="button button-primary w-full md:w-1/2 lg:w-1/3"
               onClick={uiContext.closeModal}
             >
-              <span>Close</span>
+              <span>Explore bonus steps</span>
             </button>
           </div>
         </div>

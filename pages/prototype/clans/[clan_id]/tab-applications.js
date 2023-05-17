@@ -51,6 +51,7 @@ export default function TabClanApplications() {
   const [selectedClan, setSelectedClan] = useState(null);
   const { clan_id } = router.query;
   const isEmpty = query.empty === "true" ? true : false;
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     setSelectedClan(prototype.getClanByID(clan_id));
@@ -61,7 +62,7 @@ export default function TabClanApplications() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, RandomNumber(500,1000));
+    }, RandomNumber(500, 1000));
   }, []);
 
   function RandomNumber(min, max) {
@@ -74,11 +75,20 @@ export default function TabClanApplications() {
     return parts.join(".");
   }
 
-
-
   return (
     <div className="animate-slide-in-bottom">
       <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-stretch px-4 sm:px-0 mb-0.5">
+        <div className="leading-none text-center surface rounded py-2 p-4 flex justify-between items-center gap-4">
+          <div className="text-ui-300">
+            <b className="text-ui-200">2</b>/32 slots available
+          </div>
+          <div
+            className="progressbar progressbar-sm w-full sm:w-36"
+            style={{ "--percent": "95" }}
+          >
+            <div />
+          </div>
+        </div>
         <div className="flex gap-4 items-center">
           <div className="form-group form-select">
             <select id="status">
@@ -96,19 +106,10 @@ export default function TabClanApplications() {
                 name="search"
                 id="search"
                 placeholder="Search"
+                value={filter}
+                onChange={(event) => setFilter(event.target.value)}
               />
             </div>
-          </div>
-        </div>
-        <div className="leading-none text-center surface rounded py-2 p-4 flex justify-between items-center gap-4">
-          <div className="text-ui-300">
-            <b className="text-ui-200">2</b>/32 slots available
-          </div>
-          <div
-            className="progressbar progressbar-sm w-full sm:w-36"
-            style={{ "--percent": "95" }}
-          >
-            <div />
           </div>
         </div>
       </div>
@@ -212,13 +213,23 @@ export default function TabClanApplications() {
                       <th>
                         <ButtonSorting>Avg. Ladder position</ButtonSorting>
                       </th>
-                      <th>
+                      <th className="text-right">
                         <ButtonSorting>Status</ButtonSorting>
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                    {PlayerApplications.map((item, itemIndex) => (
+                    {PlayerApplications?.filter((item) => {
+                      if (!filter) return true;
+                      if (
+                        prototype
+                          .getUserByID(item.user)
+                          .nickname.toLowerCase()
+                          .includes(filter.toLowerCase())
+                      ) {
+                        return true;
+                      }
+                    }).map((item, itemIndex) => (
                       <>
                         <tr
                           key={item.id}
@@ -284,37 +295,35 @@ export default function TabClanApplications() {
                               #{RandomNumber(10, 300)}
                             </div>
                           </td>
-                          <td>
-                            <div className="text-center">
-                              {item.status === "pending" && (
-                                <div className="flex justify-center gap-2">
-                                  <button
-                                    type="button"
-                                    className="button button-sm button-success"
-                                  >
-                                    <span>Accept</span>
-                                  </button>
-                                  <button
-                                    type="button"
-                                    className="button button-sm button-error"
-                                  >
-                                    <span>Decline</span>
-                                  </button>
-                                </div>
-                              )}
-                              {item.status === "accepted" && (
-                                <div className="chip chip-status chip-success">
-                                  <span className="icon icon-check" />
-                                  <span>Accepted</span>
-                                </div>
-                              )}
-                              {item.status === "declined" && (
-                                <div className="chip chip-status chip-error">
-                                  <span className="icon icon-s-ban" />
-                                  <span>Declined</span>
-                                </div>
-                              )}
-                            </div>
+                          <td className="text-right">
+                            {item.status === "pending" && (
+                              <div className="flex justify-end gap-2">
+                                <button
+                                  type="button"
+                                  className="button button-sm button-success"
+                                >
+                                  <span>Accept</span>
+                                </button>
+                                <button
+                                  type="button"
+                                  className="button button-sm button-error"
+                                >
+                                  <span>Decline</span>
+                                </button>
+                              </div>
+                            )}
+                            {item.status === "accepted" && (
+                              <div className="chip chip-status chip-success">
+                                <span className="icon icon-check" />
+                                <span>Accepted</span>
+                              </div>
+                            )}
+                            {item.status === "declined" && (
+                              <div className="chip chip-status chip-error">
+                                <span className="icon icon-s-ban" />
+                                <span>Declined</span>
+                              </div>
+                            )}
                           </td>
                         </tr>
                       </>

@@ -9,7 +9,7 @@ import Lottie from "lottie-react";
 import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
 import Battlepass from "../../../components/BattlePass/BattlePass.js";
 
-export default function ModalBattlepassCompletedSummary(props) {
+export default function ModalBattlepassCompletedPremium(props) {
   const uiContext = useContext(UiContext);
   const { query } = useRouter();
   const prototype = usePrototypeData();
@@ -60,19 +60,27 @@ export default function ModalBattlepassCompletedSummary(props) {
         </button>
         <div className="modal-content">
           <div className="modal-body">
-            <h2 className="modal-title">Battlepass ended</h2>
-            <p>Well done Here is a summary of your Battle pass</p>
-            <Battlepass id={selectedBattlepass} isFinished={true} hasPremium={true} />
+            <h2 className="modal-title">Premium rewards unlocked</h2>
+            <p>
+              Thank you for getting Premium, you have now unlocked exclusive
+              Battlepass rewards.
+            </p>
+            <Battlepass
+              id={selectedBattlepass}
+              isFinished={true}
+              hasPremium={false}
+            />
           </div>
           <div className="modal-action">
             <button
               type="button"
-              className={`button button-primary w-1/2 lg:w-1/3 ${
+              className={`button button-claim w-full md:w-1/2 lg:w-1/3 ${
                 submitting ? "is-loading" : ""
               }`}
               onClick={closeModalWithDelay}
             >
-              <span>Close</span>
+              <span className="icon icon-present animate-bounce" />
+              <span>Claim rewards</span>
             </button>
           </div>
         </div>

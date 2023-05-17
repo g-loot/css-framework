@@ -2,10 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
-import ReadMore from "../../../../components/ReadMore/ReadMore";
 import Link from "next/link";
-import Slider from "../../../../components/Slider/Slider";
-import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
 import Avatar from "../../../../components/Avatar/Avatar";
 import Chat from "../../../../components/Chat/Chat";
 import GameIcon from "../../../../components/GameIcon/GameIcon";
@@ -135,52 +132,85 @@ export default function TabClanChat() {
                 <div className="max-h-60 overflow-y-auto scrollbar-desktop">
                   {selectedClan.ladders ? (
                     <div className="p-4 space-y-4">
-                    {selectedClan.ladders?.map((ladder, ladderIndex) => (
+                      {selectedClan.ladders?.map((ladder, ladderIndex) => (
                         <Link
-                        key={ladderIndex}
-                        href={`/prototype/${
-                          prototype.getGameBySlug(ladder.gameSlug).slug
-                        }/ladders/${
-                          ladder.id
-                        }?tab=clan-leaderboard${prototype.getURLparams()}`}
-                      >
-                        <div className="rounded surface surface-ui-600 overflow-hidden interactive">
-                          <div className="relative">
-                            <div className="absolute top-1 left-1">
-                              <Tooltip tooltip="Valorant">
-                                <GameIcon
-                                  game={
-                                    prototype.getGameBySlug(ladder.gameSlug)
-                                      .id
-                                  }
-                                />
-                              </Tooltip>
+                          key={ladderIndex}
+                          href={`/prototype/${
+                            prototype.getGameBySlug(ladder.gameSlug).slug
+                          }/ladders/${
+                            ladder.id
+                          }?tab=clan-leaderboard${prototype.getURLparams()}`}
+                        >
+                          <div className="rounded surface surface-ui-600 overflow-hidden interactive">
+                            <div className="relative">
+                              <div className="absolute top-1 left-1">
+                                <div className="rounded bg-ui-800/90 p-px pr-2 flex gap-1 items-center text-xs text-ui-200">
+                                  <GameIcon
+                                    game={
+                                      prototype.getGameBySlug(ladder.gameSlug)
+                                        .id
+                                    }
+                                    size="text-lg"
+                                  />
+                                  <span>
+                                    {
+                                      prototype.getLadderByID(
+                                        ladder.gameSlug,
+                                        ladder.id
+                                      ).gameMode
+                                    }
+                                  </span>
+                                  {prototype.getLadderByID(
+                                    ladder.gameSlug,
+                                    ladder.id
+                                  ).status !== "finished" && (
+                                    <span
+                                      className={`text-main card-status capitalize`}
+                                    >
+                                      {prototype.getLadderByID(
+                                        ladder.gameSlug,
+                                        ladder.id
+                                      ).isEnrolled ? (
+                                        <>Enrolled</>
+                                      ) : (
+                                        <>
+                                          {
+                                            prototype.getLadderByID(
+                                              ladder.gameSlug,
+                                              ladder.id
+                                            ).status
+                                          }
+                                        </>
+                                      )}
+                                    </span>
+                                  )}
+                                </div>
+                              </div>
+                              <img
+                                src={
+                                  prototype.getLadderByID(
+                                    ladder.gameSlug,
+                                    ladder.id
+                                  ).cover
+                                }
+                                className="aspect-cover object-cover"
+                                alt=""
+                              />
                             </div>
-                            <img
-                              src={
-                                prototype.getLadderByID(
-                                  ladder.gameSlug,
-                                  ladder.id
-                                ).cover
-                              }
-                              className="aspect-cover object-cover"
-                              alt=""
-                            />
+                            <div className="p-2 border-t border-ui-500 flex justify-between items-baseline gap-2">
+                              <p className="truncate flex-1">
+                                {
+                                  prototype.getLadderByID(
+                                    ladder.gameSlug,
+                                    ladder.id
+                                  ).name
+                                }
+                              </p>
+                              <p className="text-lg text-ui-100">#42</p>
+                            </div>
                           </div>
-                          <div className="p-2 border-t border-ui-500 flex justify-between items-baseline gap-2">
-                            <p className="truncate flex-1">
-                              {
-                                prototype.getLadderByID(
-                                  ladder.gameSlug,
-                                  ladder.id
-                                ).name
-                              }
-                            </p>
-                            <p className="text-lg text-ui-100">#42</p>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
+                        </Link>
+                      ))}
                     </div>
                   ) : (
                     <div className="text-center p-4">
@@ -386,7 +416,7 @@ export default function TabClanChat() {
             </div>
           </div>
           {/* for demo purposes only */}
-          <section className="text-ui-100/0 h-0">
+          <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
             <div onClick={() => setIsAdmin(!isAdmin)}>Toggle admin view</div>
             <div
               onClick={() =>

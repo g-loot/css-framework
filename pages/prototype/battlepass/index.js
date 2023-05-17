@@ -128,9 +128,12 @@ export default function BattlepassPage() {
           </section>
 
           {/* for demo purposes only */}
-          <section className="text-ui-100/0 inline-flex flex-col">
+          <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
             <a onClick={openModalBattlepassCompletedBonusSteps}>
               Open battlepass completed: bonus steps modal
+            </a>
+            <a onClick={openModalBattlepassCompletedBonusSteps}>
+              Open battlepass completed: bonus step bought
             </a>
             <a onClick={openModalBattlepassCompletedClaim}>
               Open battlepass completed: claim modal

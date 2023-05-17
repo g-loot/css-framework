@@ -20,6 +20,12 @@ export const dataClans = [
     },
     admin: 1,
     members: [1, 2, 3, 4, 5, 8, 9, 10],
+    stats: {
+      totalCoins: 142332,
+      totalLadders: 523,
+      avgPlacement: 52,
+      avgLaddersWeek: 12,
+    },
     ladders: [
       {
         gameSlug: "valorant",
@@ -58,6 +64,12 @@ export const dataClans = [
     },
     admin: 4,
     members: [6, 7, 8],
+    stats: {
+      totalCoins: 142332,
+      totalLadders: 523,
+      avgPlacement: 52,
+      avgLaddersWeek: 12,
+    },
     ladders: [
       {
         gameSlug: "valorant",
@@ -94,6 +106,12 @@ export const dataClans = [
     },
     admin: 1,
     members: [9, 10, 11, 2, 3],
+    stats: {
+      totalCoins: 142332,
+      totalLadders: 523,
+      avgPlacement: 52,
+      avgLaddersWeek: 12,
+    },
     ladders: [
       {
         gameSlug: "valorant",
@@ -130,6 +148,12 @@ export const dataClans = [
     },
     admin: 1,
     members: [4, 5, 6, 7, 8, 9],
+    stats: {
+      totalCoins: 142332,
+      totalLadders: 523,
+      avgPlacement: 52,
+      avgLaddersWeek: 12,
+    },
     ladders: [
       {
         gameSlug: "valorant",
@@ -166,6 +190,12 @@ export const dataClans = [
     },
     admin: 1,
     members: [1, 7, 9],
+    stats: {
+      totalCoins: 142332,
+      totalLadders: 523,
+      avgPlacement: 52,
+      avgLaddersWeek: 12,
+    },
     ladders: [
       {
         gameSlug: "valorant",
@@ -202,6 +232,12 @@ export const dataClans = [
     },
     admin: 1,
     members: [2, 3, 4, 5, 6, 7],
+    stats: {
+      totalCoins: 142332,
+      totalLadders: 523,
+      avgPlacement: 52,
+      avgLaddersWeek: 12,
+    },
     ladders: [
       {
         gameSlug: "valorant",
@@ -238,6 +274,12 @@ export const dataClans = [
     },
     admin: 1,
     members: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    stats: {
+      totalCoins: 142332,
+      totalLadders: 523,
+      avgPlacement: 52,
+      avgLaddersWeek: 12,
+    },
     ladders: [
       {
         gameSlug: "valorant",

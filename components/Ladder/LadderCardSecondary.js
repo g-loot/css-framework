@@ -10,6 +10,7 @@ import Link from "next/link";
 import Tooltip from "../Tooltip/Tooltip";
 import Avatar from "../Avatar/Avatar";
 import ResetsIn from "../Countdown/ResetsIn";
+import GameIcon from "../GameIcon/GameIcon";
 
 const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
 const NOW_IN_MS = new Date().getTime();
@@ -86,6 +87,8 @@ export default function LadderCardSecondary(props) {
         <div className="card-image">
           <div className="card-image-content">
             <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
+              <GameIcon game={gameID} />
+              {/*
               <div className="ml-0 p-1 border border-ui-700 rounded-sm bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
                 <span
                   className={`icon text-xl ${
@@ -119,6 +122,7 @@ export default function LadderCardSecondary(props) {
                   }`}
                 />
               </div>
+                */}
               <span>{ladder.gameMode}</span>
               {ladder.status !== "finished" && (
                 <span className={`text-main card-status capitalize`}>
