@@ -7,6 +7,7 @@ import Avatar from "../../../../components/Avatar/Avatar";
 import LeaderboardWings from "../../../../components/LeaderboardWings/LeaderboardWings";
 import MissionsCompletedList from "../../../../components/MissionsCompletedList/MissionsCompletedList";
 import Tooltip from "../../../../components/Tooltip/Tooltip";
+import { DataBattlepass } from "../../../../mock-data/data-battlepass";
 
 export default function TabMissionsLeaderboard(props) {
   const prototype = usePrototypeData();
@@ -41,6 +42,16 @@ export default function TabMissionsLeaderboard(props) {
   return (
     <>
       <section className="flex items-center gap-x-4 gap-y-2 mb-4 px-2 md:px-0 whitespace-nowrap overflow-x-auto scrollbar-hidden">
+        <div className="form-group form-select flex gap-2 items-center">
+          <label className="mb-0" htmlFor="favorite-game">Battlepass:</label>
+          <select id="favorite-game" onChange={loadList}>
+            <option selected>All</option>
+            {DataBattlepass.map((item, itemIndex) => (
+              <option key={itemIndex}>{item.meta.name}</option>
+            ))}
+          </select>
+        </div>
+        {/*
         <div className="form-group form-select">
           <label>Battlepass:</label>
           <Select
@@ -61,6 +72,7 @@ export default function TabMissionsLeaderboard(props) {
             onChange={loadList}
           />
         </div>
+          */}
       </section>
       <section
         className={`pb-8 ${
