@@ -637,7 +637,7 @@ export const FrameworkPages = {
           tab: 1,
           new: false,
         },
-         {
+        {
           label: "Claim mission",
           chip: "modal",
           url: "valorant/missions",
@@ -660,6 +660,13 @@ export const FrameworkPages = {
           query: "modaldiscardmission=true&premium=true",
           tags: "game, missions, discard, new mission, draw, modal, prompt, dialog",
           tab: 1,
+        },
+        {
+          label: "Leaderboard",
+          url: "valorant/missions",
+          query: "tab=leaderboard",
+          tags: "game, missions, leaderboard, how it works, explanation",
+          tab: 0,
         },
         {
           label: "How it works",
@@ -1011,7 +1018,6 @@ export const FrameworkPages = {
           new: false,
           tab: 1,
         },
-        
       ],
     },
     {

@@ -6,6 +6,7 @@ import PrototypeStructure from "../../../../components/Prototype/PrototypeStruct
 import TabMissionsHowItWorks from "./tab-howitworks";
 import TabMissionsMissions from "./tab-missions";
 import TabMissionsHistory from "./tab-history";
+import TabMissionsLeaderboard from "./tab-leaderboard";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -14,6 +15,11 @@ const TabsItems = [
     label: "Missions",
     url: "missions",
     component: TabMissionsMissions,
+  },
+  {
+    label: "Leaderboard",
+    url: "leaderboard",
+    component: TabMissionsLeaderboard,
   },
   {
     label: "How it works",
@@ -68,46 +74,46 @@ export default function Missions() {
                     any game.
                   </p>
                   <div className="flex flex-col md:flex-row gap-2">
-                {selectedGame.needsSteam && (
-                <Link
-                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                >
-                  <button
-                    type="button"
-                    className="button button-secondary"
-                  >
-                    <span className="icon icon-steam" />
-                    <span>Steam required</span>
-                  </button>
-                </Link>
-                )}
-                {selectedGame.needsRiot && (
-                <Link
-                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                >
-                  <button
-                    type="button"
-                    className="button button-secondary"
-                  >
-                    <span className="icon icon-riotgames-symbol" />
-                    <span>Riot required</span>
-                  </button>
-                </Link>
-                )}
-                {!selectedGame.needsSteam && !selectedGame.needsRiot && (
-                <Link
-                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                >
-                  <button
-                    type="button"
-                    className="button button-secondary"
-                  >
-                    <span className="icon icon-windows-symbol" />
-                    <span>Stryda App required</span>
-                  </button>
-                </Link>
-                )}
-              </div>
+                    {selectedGame.needsSteam && (
+                      <Link
+                        href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                      >
+                        <button
+                          type="button"
+                          className="button button-secondary"
+                        >
+                          <span className="icon icon-steam" />
+                          <span>Steam required</span>
+                        </button>
+                      </Link>
+                    )}
+                    {selectedGame.needsRiot && (
+                      <Link
+                        href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                      >
+                        <button
+                          type="button"
+                          className="button button-secondary"
+                        >
+                          <span className="icon icon-riotgames-symbol" />
+                          <span>Riot required</span>
+                        </button>
+                      </Link>
+                    )}
+                    {!selectedGame.needsSteam && !selectedGame.needsRiot && (
+                      <Link
+                        href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                      >
+                        <button
+                          type="button"
+                          className="button button-secondary"
+                        >
+                          <span className="icon icon-windows-symbol" />
+                          <span>Stryda App required</span>
+                        </button>
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </div>
               {/*
