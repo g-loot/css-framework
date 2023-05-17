@@ -85,6 +85,7 @@
 .lottie-blur {
   @apply
   drop-shadow-main-lg
+  pointer-events-none
   ;
 
   &.rarity-category-1 {

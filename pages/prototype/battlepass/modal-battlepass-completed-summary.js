@@ -43,9 +43,10 @@ export default function ModalBattlepassCompletedSummary(props) {
   function closeModalWithDelay() {
     setSubmitting(true);
     setTimeout(() => {
+      window.location.href = "/prototype/battlepass";
       uiContext.closeModal();
       setSubmitting(false);
-    }, 3000);
+    }, 500);
   }
 
   return (
@@ -61,8 +62,8 @@ export default function ModalBattlepassCompletedSummary(props) {
         <div className="modal-content">
           <div className="modal-body">
             <h2 className="modal-title">Battlepass ended</h2>
-            <p>Well done Here is a summary of your Battle pass</p>
-            <Battlepass id={selectedBattlepass} isFinished={true} hasPremium={true} />
+            <p className="mb-8">Here is a summary of your Battlepass rewards</p>
+            <Battlepass id={selectedBattlepass} isFinished={true} hasPremium={true} hasCountdown={false} />
           </div>
           <div className="modal-action">
             <button
@@ -72,18 +73,9 @@ export default function ModalBattlepassCompletedSummary(props) {
               }`}
               onClick={closeModalWithDelay}
             >
-              <span>Close</span>
+              <span>Explore new Battlepass</span>
             </button>
           </div>
-        </div>
-      </div>
-      <div className="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
-        <div className="lottie-blur h-[75vh] w-[75vh] flex items-center justify-center">
-          <Lottie
-            animationData={LottieExplosion}
-            loop={false}
-            autoplay={true}
-          />
         </div>
       </div>
     </>

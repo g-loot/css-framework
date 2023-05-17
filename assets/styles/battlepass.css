@@ -105,13 +105,11 @@
 
   > div {
     @apply
-    my-4
     bg-ui-850/90
     backdrop-blur-sm
     border
     border-ui-700
     rounded
-    overflow-hidden
     ;
     > ul {
       @apply
@@ -124,9 +122,9 @@
         @apply
         p-6
         xl:px-10
-        animate-slide-in-bottom
+        animate-fire-in
         ;
-        animation-delay: calc(var(--delay, 1) * 0.1s);
+        animation-delay: calc(var(--delay, 1) * 0.15s);
         &:nth-child(1) {
           --delay: 1;
         }
@@ -154,28 +152,17 @@
         &:nth-child(9) {
           --delay: 9;
         }
-        img,
-        .carousel-slides-container,
-        .carousel-slide {
+        > .battlepass-reward-image {
           @apply
+          relative
           w-20
           h-20
           lg:w-28
           lg:h-28
-        }
-        .carousel-control {
-          @apply
-          -inset-x-7
+          overflow-visible
           ;
         }
-        img,
-        .carousel-item {
-          @apply
-          rounded
-          mx-auto
-          ;
-        }
-        > .battlepass-reward {
+        > .battlepass-reward-text {
           @apply
           flex
           flex-col
@@ -194,11 +181,34 @@
               @apply
               text-xl
               md:text-4xl
-              text-main
               ;
+              &:not([class*=text-]) {
+                @apply
+                text-main
+                ;
+              }
             }
           }
         }
+        .carousel-control {
+          @apply
+          -inset-x-7
+          ;
+        }
+        img,
+        .carousel-item {
+          @apply
+          rounded
+          mx-auto
+          ;
+        }
+      }
+      + div {
+        @apply
+        animate-slide-in-bottom
+        animate-delay
+        ;
+        animation-delay: calc(10 * 0.15s);
       }
     }
   }
@@ -868,68 +878,70 @@
   pointer-events-none
   ;
 
-  .battlepass-nav-container,
-  .battlepass-reward-action,
-  .battlepass-reward > p,
-  .battlepass-reward-info > span,
-  .battlepass-reward-image,
-  .battlepass-content {
-    @apply 
-    relative
-    pointer-events-none
-    bg-ui-800
-    bg-[length:800px_100%]
-    bg-[-200%_center]
-    bg-no-repeat
-    animate-[battlepass-body-loader_1s_linear_infinite]
-    shadow-[0_0_0_1px_rgb(var(--color-ui-700))]
-    opacity-100
-    rounded
-    flex
-    items-center
-    justify-center
-    ;
-    background-image: linear-gradient(
-      to right,
-      rgba(var(--color-ui-800) / 100%) 8%,
-      rgba(var(--color-ui-700) / 100%) 18%,
-      rgba(var(--color-ui-800) / 100%) 33%
-    );
-    &,
-    *,
-    [class*="text-"] {
+  > *:not(.battlepass-summary) {
+    .battlepass-nav-container,
+    .battlepass-reward-action,
+    .battlepass-reward > p,
+    .battlepass-reward-info > span,
+    .battlepass-reward-image,
+    .battlepass-content {
       @apply 
-      !text-ui-800/0;
+      relative
+      pointer-events-none
+      bg-ui-800
+      bg-[length:800px_100%]
+      bg-[-200%_center]
+      bg-no-repeat
+      animate-[battlepass-body-loader_1s_linear_infinite]
+      shadow-[0_0_0_1px_rgb(var(--color-ui-700))]
+      opacity-100
+      rounded
+      flex
+      items-center
+      justify-center
+      ;
+      background-image: linear-gradient(
+        to right,
+        rgba(var(--color-ui-800) / 100%) 8%,
+        rgba(var(--color-ui-700) / 100%) 18%,
+        rgba(var(--color-ui-800) / 100%) 33%
+      );
+      &,
+      *,
+      [class*="text-"] {
+        @apply 
+        !text-ui-800/0;
+      }
+      * {
+        @apply
+        !opacity-0
+        !bg-ui-800/0
+        ;
+      }
     }
-    * {
+  
+    .battlepass-content {
       @apply
-      !opacity-0
-      !bg-ui-800/0
+      border-ui-700
       ;
     }
-  }
-
-  .battlepass-content {
-    @apply
-    border-ui-700
-    ;
-  }
-
-  .battlepass-nav-container {
-    @apply
-    rounded-full
-    ;
-  }
-
-  .battlepass-step::before,
-  .battlepass-content::before,
-  .battlepass-body::before,
-  .battlepass-body>img,
-  .battlepass-decoration,
-  .battlepass-info>.progressbar>* {
-    @apply
-    hidden
-    ;
+  
+    .battlepass-nav-container {
+      @apply
+      rounded-full
+      ;
+    }
+  
+    .battlepass-step::before,
+    .battlepass-content::before,
+    .battlepass-body::before,
+    .battlepass-body>img,
+    .battlepass-decoration,
+    .battlepass-info>.progressbar>* {
+      @apply
+      hidden
+      ;
+    }
   }
 }
 

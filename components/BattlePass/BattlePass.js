@@ -4,6 +4,7 @@ import React, {
   useState,
   useRef,
   useCallback,
+  Fragment,
 } from "react";
 
 import ModalClaimBattlepassReward from "../../pages/prototype/home/modal-claim-battlepassrewards";
@@ -14,9 +15,10 @@ import { usePrototypeData } from "../../contexts/prototype";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Avatar from "../Avatar/Avatar";
+import Lottie from "lottie-react";
+import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
 import AnimatedNumber from "../AnimatedNumber/AnimatedNumber";
 import CarouselSingle, { CarouselItem } from "../Carousel/CarouselSingle";
-import ResetsIn from "../Countdown/ResetsIn";
 import PremiumLogo from "../PremiumLogo/PremiumLogo";
 import ModalBattlepassCompletedPremium from "../../pages/prototype/battlepass/modal-battlepass-completed-premium";
 
@@ -35,6 +37,31 @@ export default function Battlepass(props) {
   const [loading, setLoading] = useState(true);
   const [isFinished, setIsFinished] = useState(false);
   const uiContext = useContext(UiContext);
+  const [explosion1, setExplosion1] = useState(false);
+  const [explosion2, setExplosion2] = useState(false);
+  const [explosion3, setExplosion3] = useState(false);
+  const [explosion4, setExplosion4] = useState(false);
+  const [explosion5, setExplosion5] = useState(false);
+
+  useEffect(() => {
+    const delay = 100;
+    const offset = 150;
+    setTimeout(() => {
+      setExplosion1(true);
+    }, delay + offset * 1);
+    setTimeout(() => {
+      setExplosion2(true);
+    }, delay + offset * 2);
+    setTimeout(() => {
+      setExplosion3(true);
+    }, delay + offset * 3);
+    setTimeout(() => {
+      setExplosion4(true);
+    }, delay + offset * 4);
+    setTimeout(() => {
+      setExplosion5(true);
+    }, delay + offset * 5);
+  }, []);
 
   function RandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -206,7 +233,7 @@ export default function Battlepass(props) {
   return (
     <>
       <div
-        className={`battlepass-container relative z-10 ${
+        className={`battlepass-container relative z-50 ${
           loading ? "is-loading" : ""
         } ${size === "battlepass-md" ? "battlepass-md" : ""}`}
         ref={componentRef}
@@ -216,140 +243,237 @@ export default function Battlepass(props) {
             <div>
               <ul>
                 <li>
-                  <img
-                    src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                      getBattlepassRewardByID(41).image
-                    }.png`}
-                    width="100%"
-                    height="auto"
-                    alt=""
-                  />
-                  <div className="battlepass-reward">
+                  <div className="battlepass-reward-image">
+                    {explosion1 && (
+                      <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
+                        <Lottie
+                          animationData={LottieExplosion}
+                          loop={false}
+                          autoplay={true}
+                        />
+                      </div>
+                    )}
+                    <img
+                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                        getBattlepassRewardByID(41).image
+                      }.png`}
+                      width="100%"
+                      height="auto"
+                      alt=""
+                    />
+                  </div>
+                  <div className="battlepass-reward-text">
                     <span>Total XP</span>
-                    <span>
+                    <span className={!hasPremium ? 'text-premium-500' : ''}>
                       2240
                       {/*<AnimatedNumber number={2240} />*/}
                     </span>
                   </div>
                 </li>
                 <li>
-                  <img
-                    src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                      getBattlepassRewardByID(7).image
-                    }.png`}
-                    width="100%"
-                    height="auto"
-                    alt=""
-                  />
-                  <div className="battlepass-reward">
+                  <div className="battlepass-reward-image">
+                    {explosion2 && (
+                      <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
+                        <Lottie
+                          animationData={LottieExplosion}
+                          loop={false}
+                          autoplay={true}
+                        />
+                      </div>
+                    )}
+                    <img
+                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                        getBattlepassRewardByID(7).image
+                      }.png`}
+                      width="100%"
+                      height="auto"
+                      alt=""
+                    />
+                  </div>
+                  <div className="battlepass-reward-text">
                     <span>Coins</span>
-                    <span>
+                    <span className={!hasPremium ? 'text-premium-500' : ''}>
                       1411
                       {/*<AnimatedNumber number={1411} />*/}
                     </span>
                   </div>{" "}
                 </li>
                 <li>
-                  <img
-                    src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                      getBattlepassRewardByID(10).image
-                    }.png`}
-                    width="100%"
-                    height="auto"
-                    alt=""
-                  />
-                  <div className="battlepass-reward">
+                  <div className="battlepass-reward-image">
+                    {explosion3 && (
+                      <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
+                        <Lottie
+                          animationData={LottieExplosion}
+                          loop={false}
+                          autoplay={true}
+                        />
+                      </div>
+                    )}
+                    <img
+                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                        getBattlepassRewardByID(10).image
+                      }.png`}
+                      width="100%"
+                      height="auto"
+                      alt=""
+                    />
+                  </div>
+                  <div className="battlepass-reward-text">
                     <span>Tokens</span>
-                    <span>
+                    <span className={!hasPremium ? 'text-premium-500' : ''}>
                       879
                       {/* <AnimatedNumber number={879} />*/}
                     </span>
                   </div>{" "}
                 </li>
                 <li>
-                  <CarouselSingle autoPlay={false}>
-                    <CarouselItem>
-                      <img
-                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                          getBattlepassRewardByID(17).image
-                        }.png`}
-                        width="100%"
-                        height="auto"
-                        alt=""
-                      />
-                    </CarouselItem>
-                    <CarouselItem>
-                      <img
-                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                          getBattlepassRewardByID(16).image
-                        }.png`}
-                        width="100%"
-                        height="auto"
-                        alt=""
-                      />
-                    </CarouselItem>
-                    <CarouselItem>
-                      <img
-                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                          getBattlepassRewardByID(15).image
-                        }.png`}
-                        width="100%"
-                        height="auto"
-                        alt=""
-                      />
-                    </CarouselItem>
-                  </CarouselSingle>
-                  <div className="battlepass-reward">
+                  <div className="battlepass-reward-image">
+                    {explosion4 && (
+                      <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
+                        <Lottie
+                          animationData={LottieExplosion}
+                          loop={false}
+                          autoplay={true}
+                        />
+                      </div>
+                    )}
+                    <CarouselSingle autoPlay={false}>
+                      {!hasPremium ? (
+                        <>
+                          <CarouselItem>
+                            <Fragment>
+                              <img
+                                src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                                  getBattlepassRewardByID(18).image
+                                }.png`}
+                                width="100%"
+                                height="auto"
+                                alt=""
+                              />
+                              <span className="absolute top-0.5 inset-x-0.5 text-sm uppercase text-center text-premium-500 rounded bg-ui-850/80">
+                                Premium
+                              </span>
+                            </Fragment>
+                          </CarouselItem>
+                        </>
+                      ) : (
+                        <></>
+                      )}
+                      <CarouselItem>
+                        <img
+                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                            getBattlepassRewardByID(17).image
+                          }.png`}
+                          width="100%"
+                          height="auto"
+                          alt=""
+                        />
+                      </CarouselItem>
+                      <CarouselItem>
+                        <img
+                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                            getBattlepassRewardByID(16).image
+                          }.png`}
+                          width="100%"
+                          height="auto"
+                          alt=""
+                        />
+                      </CarouselItem>
+                      <CarouselItem>
+                        <img
+                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                            getBattlepassRewardByID(15).image
+                          }.png`}
+                          width="100%"
+                          height="auto"
+                          alt=""
+                        />
+                      </CarouselItem>
+                    </CarouselSingle>
+                  </div>
+                  <div className="battlepass-reward-text">
                     <span>Avatar frames</span>
-                    <span>3</span>
+                    <span className={!hasPremium ? 'text-premium-500' : ''}>{!hasPremium ? <>4</> : <>3</>}</span>
                   </div>{" "}
                 </li>
                 <li>
-                  <CarouselSingle autoPlay={false}>
-                    <CarouselItem>
-                      <img
-                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                          getBattlepassRewardByID(36).image
-                        }.png`}
-                        width="100%"
-                        height="auto"
-                        alt=""
-                      />
-                    </CarouselItem>
-                    <CarouselItem>
-                      <img
-                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                          getBattlepassRewardByID(31).image
-                        }.png`}
-                        width="100%"
-                        height="auto"
-                        alt=""
-                      />
-                    </CarouselItem>
-                    <CarouselItem>
-                      <img
-                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                          getBattlepassRewardByID(33).image
-                        }.png`}
-                        width="100%"
-                        height="auto"
-                        alt=""
-                      />
-                    </CarouselItem>
-                    <CarouselItem>
-                      <img
-                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                          getBattlepassRewardByID(35).image
-                        }.png`}
-                        width="100%"
-                        height="auto"
-                        alt=""
-                      />
-                    </CarouselItem>
-                  </CarouselSingle>
-                  <div className="battlepass-reward">
+                  <div className="battlepass-reward-image">
+                    {explosion5 && (
+                      <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
+                        <Lottie
+                          animationData={LottieExplosion}
+                          loop={false}
+                          autoplay={true}
+                        />
+                      </div>
+                    )}
+                    <CarouselSingle autoPlay={false}>
+                      {!hasPremium ? (
+                        <>
+                          <CarouselItem>
+                            <Fragment>
+                              <img
+                                src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                                  getBattlepassRewardByID(31).image
+                                }.png`}
+                                width="100%"
+                                height="auto"
+                                alt=""
+                              />
+                              <span className="absolute top-0.5 inset-x-0.5 text-sm uppercase text-center text-premium-500 rounded bg-ui-850/80">
+                                Premium
+                              </span>
+                            </Fragment>
+                          </CarouselItem>
+                        </>
+                      ) : (
+                        <></>
+                      )}
+                      <CarouselItem>
+                        <img
+                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                            getBattlepassRewardByID(36).image
+                          }.png`}
+                          width="100%"
+                          height="auto"
+                          alt=""
+                        />
+                      </CarouselItem>
+                      <CarouselItem>
+                        <img
+                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                            getBattlepassRewardByID(31).image
+                          }.png`}
+                          width="100%"
+                          height="auto"
+                          alt=""
+                        />
+                      </CarouselItem>
+                      <CarouselItem>
+                        <img
+                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                            getBattlepassRewardByID(33).image
+                          }.png`}
+                          width="100%"
+                          height="auto"
+                          alt=""
+                        />
+                      </CarouselItem>
+                      <CarouselItem>
+                        <img
+                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                            getBattlepassRewardByID(35).image
+                          }.png`}
+                          width="100%"
+                          height="auto"
+                          alt=""
+                        />
+                      </CarouselItem>
+                    </CarouselSingle>
+                  </div>
+                  <div className="battlepass-reward-text">
                     <span>Profile banners</span>
-                    <span>4</span>
+                    <span className={!hasPremium ? 'text-premium-500' : ''}>{!hasPremium ? <>5</> : <>4</>}</span>
                   </div>
                 </li>
               </ul>
@@ -360,7 +484,7 @@ export default function Battlepass(props) {
                       <i className="absolute -z-10 w-[500px] h-[500px] -rotate-45 -top-[280px] -right-[250px] bg-gradient-to-br from-ui-700/50 via-ui-700/10 to-ui-700/0" />
                       <div>
                         <PremiumLogo
-                          src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1684315905/Stryda/logos/stryda-premium-logo-main-white.svg"
                           width="auto"
                           height="60"
                           className="h-16"
@@ -372,13 +496,13 @@ export default function Battlepass(props) {
                           ends.
                         </p>
                         <button
-                            type="button"
-                            className="button button-premium is-shining"
-                            onClick={buyPremium}
-                          >
-                            <span className="icon icon-crown" />
-                            <span>Get Premium</span>
-                          </button>
+                          type="button"
+                          className="button button-premium is-shining"
+                          onClick={buyPremium}
+                        >
+                          <span className="icon icon-crown" />
+                          <span>Get Premium</span>
+                        </button>
                       </div>
                       <div className="w-52">
                         <CarouselSingle autoPlay={false}>
@@ -421,9 +545,6 @@ export default function Battlepass(props) {
                 </>
               )}
             </div>
-            <p className="text-ui-300">
-              <ResetsIn label="New Battlepass" status={2} />
-            </p>
           </div>
         ) : (
           <>

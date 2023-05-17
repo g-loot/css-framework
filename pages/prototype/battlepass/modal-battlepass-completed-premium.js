@@ -6,7 +6,7 @@ import { DataBattlepass } from "../../../mock-data/data-battlepass.js";
 import { DataBattlepassRewards } from "../../../mock-data/data-battlepass.js";
 import { useRouter } from "next/router.js";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
+import LottieExplosion from "../../../assets/animations/explosion_stryda_9.json";
 import Battlepass from "../../../components/BattlePass/BattlePass.js";
 
 export default function ModalBattlepassCompletedPremium(props) {
@@ -44,6 +44,13 @@ export default function ModalBattlepassCompletedPremium(props) {
     setSubmitting(true);
     setTimeout(() => {
       uiContext.closeModal();
+      uiContext.openToastr({
+        size: "medium",
+        text: "Premium rewards claimed",
+        color: "green",
+        autoDelete: true,
+        autoDeleteDelay: 2500,
+      });
       setSubmitting(false);
     }, 3000);
   }
@@ -61,7 +68,7 @@ export default function ModalBattlepassCompletedPremium(props) {
         <div className="modal-content">
           <div className="modal-body">
             <h2 className="modal-title">Premium rewards unlocked</h2>
-            <p>
+            <p className="mb-8">
               Thank you for getting Premium, you have now unlocked exclusive
               Battlepass rewards.
             </p>
@@ -74,13 +81,12 @@ export default function ModalBattlepassCompletedPremium(props) {
           <div className="modal-action">
             <button
               type="button"
-              className={`button button-claim w-full md:w-1/2 lg:w-1/3 ${
+              className={`button button-primary w-full md:w-1/2 lg:w-1/3 ${
                 submitting ? "is-loading" : ""
               }`}
-              onClick={closeModalWithDelay}
+              onClick={() => uiContext.closeModal()}
             >
-              <span className="icon icon-present animate-bounce" />
-              <span>Claim rewards</span>
+              <span>Close</span>
             </button>
           </div>
         </div>

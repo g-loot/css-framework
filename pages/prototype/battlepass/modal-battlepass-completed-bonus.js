@@ -9,6 +9,7 @@ import Lottie from "lottie-react";
 import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
 import Battlepass from "../../../components/BattlePass/BattlePass.js";
 import ModalBattlepassCompletedPremium from "./modal-battlepass-completed-premium.js";
+import ResetsIn from "../../../components/Countdown/ResetsIn.js";
 
 export default function ModalBattlepassCompletedBonusSteps(props) {
   const uiContext = useContext(UiContext);
@@ -62,10 +63,13 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
         <div className="modal-content">
           <div className="modal-body">
             <h2 className="modal-title">Battlepass completed</h2>
-            <p>
+            <p className="mb-8">
               Congratulations on reaching the final step on the Battlepass. Continue earning XP through the bonus steps.
             </p>
             <Battlepass id={selectedBattlepass} isFinished={true} hasPremium={true} />
+            <p className="text-ui-300">
+              <ResetsIn label="New Battlepass" status={2} />
+            </p>
           </div>
           <div className="modal-action">
             <button
@@ -76,15 +80,6 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
               <span>Explore bonus steps</span>
             </button>
           </div>
-        </div>
-      </div>
-      <div className="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
-        <div className="lottie-blur h-[75vh] w-[75vh] flex items-center justify-center">
-          <Lottie
-            animationData={LottieExplosion}
-            loop={false}
-            autoplay={true}
-          />
         </div>
       </div>
     </>

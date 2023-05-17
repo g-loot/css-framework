@@ -189,12 +189,19 @@
       }
 
       p {
-        @apply
-        my-2
-        ;
         &:not([class*="text-"]) {
           @apply
           text-ui-200
+          ;
+        }
+        &:not([class*="my-"]):not([class*="mt-"]):not(:first-child) {
+          @apply
+          mt-2
+          ;
+        }
+        &:not([class*="my-"]):not([class*="mb-"]):not(:last-child) {
+          @apply
+          mb-2
           ;
         }
       }

@@ -6,7 +6,7 @@ import { DataBattlepass } from "../../../mock-data/data-battlepass.js";
 import { DataBattlepassRewards } from "../../../mock-data/data-battlepass.js";
 import { useRouter } from "next/router.js";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
+import LottieExplosion from "../../../assets/animations/explosion_stryda_7.json";
 import ModalBattlepassCompletedSummary from "./modal-battlepass-completed-summary.js";
 
 export default function ModalBattlepassCompletedClaim(props) {
@@ -44,6 +44,13 @@ export default function ModalBattlepassCompletedClaim(props) {
     setSubmitting(true);
     setTimeout(() => {
       uiContext.closeModal();
+      uiContext.openToastr({
+        size: "medium",
+        text: "Rewards claimed",
+        color: "green",
+        autoDelete: true,
+        autoDeleteDelay: 2500,
+      });
       uiContext.openModal(
         <ModalBattlepassCompletedSummary/>
       );
