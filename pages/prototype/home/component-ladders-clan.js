@@ -49,7 +49,7 @@ export default function HomeLaddersClan() {
           </div>
           <img
             className="absolute inset-0 h-full w-full object-cover object-right opacity-20 lg:opacity-100"
-            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1673862556/Stryda/illustrations/home-laddernoclan.jpg"
+            src="https://res.cloudinary.com/gloot/image/upload/v1673862556/Stryda/illustrations/home-laddernoclan.jpg"
             alt=""
           />
         </div>
@@ -70,7 +70,7 @@ export default function HomeLaddersClan() {
         </div>
         <img
           className="absolute inset-0 h-full w-full object-cover object-right opacity-20 lg:opacity-100"
-          src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1673862556/Stryda/illustrations/home-laddernoclan.jpg"
+          src="https://res.cloudinary.com/gloot/image/upload/v1673862556/Stryda/illustrations/home-laddernoclan.jpg"
           alt=""
         />
       </div>

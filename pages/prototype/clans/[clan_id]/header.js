@@ -223,7 +223,7 @@ export default function ClanHeader(props) {
                   ) : (
                     <>
                       <img
-                        src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672241804/Stryda/illustrations/Generic_bg.png"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
                         alt=""
                       />
                     </>
@@ -437,7 +437,7 @@ export default function ClanHeader(props) {
               )}
             </div>
             <div className="header-bg">
-              <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672241804/Stryda/illustrations/Generic_bg.png" />
+              <img src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png" />
             </div>
           </section>
         </>

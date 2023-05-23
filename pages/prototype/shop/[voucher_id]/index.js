@@ -108,7 +108,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="header-bg">
-                  <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
+                  <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
                 </div>
               </div>
             </section>

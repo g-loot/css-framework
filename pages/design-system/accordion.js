@@ -222,7 +222,7 @@ const DSpage = () => {
                   <div className="flex flex-col md:flex-row items-center gap-8 p-8">
                     <div className="flex-none grow-0">
                       <img
-                        src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672328330/Stryda/logos/stryda-logo-ladders.svg"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672328330/Stryda/logos/stryda-logo-ladders.svg"
                         width="auto"
                         height="110"
                         className="mx-auto"
@@ -306,10 +306,10 @@ const DSpage = () => {
                         height="150"
                       >
                         <source
-                          src="https://res.cloudinary.com/gloot/video/upload/f_auto/v1644396746/Marketing/202109_gloot2/3D/HomeStepToken.webm"
+                          src="https://res.cloudinary.com/gloot/video/upload/v1644396746/Marketing/202109_gloot2/3D/HomeStepToken.webm"
                           type="video/webm"
                         />
-                        <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1644184592/Marketing/202109_gloot2/Square_token.png" />
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1644184592/Marketing/202109_gloot2/Square_token.png" />
                       </video>
                     </div>
                     <div className="text-ui-300 space-y-4">

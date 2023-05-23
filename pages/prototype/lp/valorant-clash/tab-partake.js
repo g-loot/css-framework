@@ -4,7 +4,7 @@ export default function ValorantClashTabPartake() {
       <section className="py-24">
         <div className="container max-w-lg mx-auto px-4 lg:px-0">
           <div className="animate-pulse">
-          <img className="mx-auto animate-[loader-rotate_30s_linear_infinite] opacity-50" src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1663770400/Marketing/2022_Valorant_clash/Valorant_Clash_spike.svg" width="75" height="75" alt="" />
+          <img className="mx-auto animate-[loader-rotate_30s_linear_infinite] opacity-50" src="https://res.cloudinary.com/gloot/image/upload/v1663770400/Marketing/2022_Valorant_clash/Valorant_Clash_spike.svg" width="75" height="75" alt="" />
           </div>
           <h2
             className="animate-slide-in-bottom animate-delay text-center my-6"

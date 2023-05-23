@@ -143,7 +143,7 @@ export default function Scoreboards() {
                       </div>
                     </div>
                     <div className="header-bg">
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1679766103/Stryda/illustrations/Scoreboard_bg.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1679766103/Stryda/illustrations/Scoreboard_bg.jpg" />
                     </div>
                   </div>
                 )}

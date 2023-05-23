@@ -306,17 +306,17 @@ export default function LadderCardSecondary(props) {
                               <div className="avatar-group -space-x-2">
                                 <div className="avatar avatar-circle avatar-tiny">
                                   <div>
-                                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                                   </div>
                                 </div>
                                 <div className="avatar avatar-circle avatar-tiny">
                                   <div>
-                                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                                   </div>
                                 </div>
                                 <div className="avatar avatar-circle avatar-tiny">
                                   <div>
-                                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                                   </div>
                                 </div>
                               </div>
@@ -397,17 +397,17 @@ export default function LadderCardSecondary(props) {
                               <div className="avatar-group -space-x-2">
                                 <div className="avatar avatar-squircle avatar-tiny">
                                   <div>
-                                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Un1c0rns.png" />
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Un1c0rns.png" />
                                   </div>
                                 </div>
                                 <div className="avatar avatar-squircle avatar-tiny">
                                   <div>
-                                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png" />
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png" />
                                   </div>
                                 </div>
                                 <div className="avatar avatar-squircle avatar-tiny">
                                   <div>
-                                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png" />
+                                    <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png" />
                                   </div>
                                 </div>
                               </div>

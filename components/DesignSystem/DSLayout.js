@@ -54,7 +54,7 @@ const DSLayout = ({ children }) => {
                       className=""
                       width="123"
                       height="64"
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
                       alt="Stryda logo"
                     />
                     <div className="text-lg uppercase not-italic leading-none pl-9">

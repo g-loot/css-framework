@@ -69,7 +69,7 @@ export default function TabClanOverview() {
                     )}
                   </div>
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672241804/Stryda/illustrations/Generic_bg.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
                     className="aspect-banner absolute z-0 inset-x-0 top-0 rounded-t bg-ui-800/75 border-b border-ui-700"
                     alt=""
                   />

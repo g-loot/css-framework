@@ -27,7 +27,7 @@ export default function TopbarFramework(props) {
                 <img
                   width="123"
                   height="64"
-                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
                   alt="Stryda logo"
                 />
                 <span className="text-ui-300 leading-none pb-1.5">Design System</span>

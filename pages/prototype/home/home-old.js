@@ -148,7 +148,7 @@ export default function Home() {
             <div
               className="absolute pointer-events-none inset-0 z-10 bg-center bg-no-repeat bg-cover"
               style={{
-                backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653907437/Marketing/2022_prototype/bg-claim.jpg)`,
+                backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653907437/Marketing/2022_prototype/bg-claim.jpg)`,
               }}
             ></div>
           </div>
@@ -253,7 +253,7 @@ export default function Home() {
               <div className="absolute z-0 inset-0 flex items-center justify-center overflow-hidden">
                 <img
                   className="relative z-10"
-                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660741451/Marketing/2022_prototype/3Dobjects/3dobject-clan.webp"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1660741451/Marketing/2022_prototype/3Dobjects/3dobject-clan.webp"
                   width="200"
                   height="auto"
                   alt="Clan"
@@ -379,7 +379,7 @@ export default function Home() {
             <div
               className="absolute pointer-events-none inset-0 z-0 bg-right-bottom bg-no-repeat bg-contain"
               style={{
-                backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653289889/Marketing/202109_gloot2/laststats-valorant.png)`,
+                backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653289889/Marketing/202109_gloot2/laststats-valorant.png)`,
               }}
             ></div>
           </div>

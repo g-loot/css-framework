@@ -12,13 +12,13 @@ export const dataGames = [
     type: "FPS hero shooter",
     assets: {
       cover:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1644677000/Marketing/202109_gloot2/Game_cover_Valorant.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/v1644677000/Marketing/202109_gloot2/Game_cover_Valorant.jpg",
       heroMission:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp",
       heroLadder:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
       heroTournament:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
     },
     missions: [
       {
@@ -33,7 +33,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 100,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677242971/Stryda/demo/mission-valorant_1.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_1.jpg",
       },
       {
         id: 2,
@@ -47,7 +47,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677242971/Stryda/demo/mission-valorant_3.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_3.jpg",
       },
       {
         id: 3,
@@ -61,7 +61,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 300,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677242971/Stryda/demo/mission-valorant_2.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_2.jpg",
       },
       {
         id: 4,
@@ -75,7 +75,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677242971/Stryda/demo/mission-valorant_4.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_4.jpg",
       },
       {
         id: 5,
@@ -89,7 +89,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677242971/Stryda/demo/mission-valorant_5.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_5.jpg",
       },
       {
         id: 6,
@@ -103,7 +103,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 100,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677242971/Stryda/demo/mission-valorant_6.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_6.jpg",
       },
       {
         id: 7,
@@ -117,7 +117,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 100,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677242971/Stryda/demo/mission-valorant_6.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677242971/Stryda/demo/mission-valorant_6.jpg",
       },
       {
         id: 8,
@@ -156,7 +156,7 @@ export const dataGames = [
         name: "Premium Spike Rush",
         isPremium: true,
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677087781/Stryda/demo/Spike_Rush_Premium_1.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677087781/Stryda/demo/Spike_Rush_Premium_1.jpg",
         status: "ongoing",
         gameMode: "Competitive",
         sponsor: false,
@@ -450,7 +450,7 @@ export const dataGames = [
         clan: false,
         name: "Power Play",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677087506/Stryda/demo/PowerPlay_Valorant1.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677087506/Stryda/demo/PowerPlay_Valorant1.jpg",
         status: "ongoing",
         gameMode: "Competitive",
         sponsor: false,
@@ -730,11 +730,11 @@ export const dataGames = [
         name: "Premium clan & solo unrated",
         isPremium: true,
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677087781/Stryda/demo/Unrated_Premium_1.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677087781/Stryda/demo/Unrated_Premium_1.jpg",
         status: "ongoing",
         gameMode: "Competitive",
         sponsor:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         rewards: [
           {
             type: "coin",
@@ -1024,11 +1024,11 @@ export const dataGames = [
         clan: true,
         name: "Ladder - the Fall edition",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
         status: "finished",
         gameMode: "Competitive",
         sponsor:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         rewards: [
           {
             type: "coin",
@@ -1318,11 +1318,11 @@ export const dataGames = [
         clan: true,
         name: "Unrated",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-7.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-7.webp",
         status: "finished",
         gameMode: "Unrated",
         sponsor:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         rewards: [
           {
             type: "coin",
@@ -1613,11 +1613,11 @@ export const dataGames = [
         clan: true,
         name: "Spike Rush",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-7.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-7.webp",
         status: "ongoing",
         gameMode: "Spike Rush",
         sponsor:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         rewards: [
           {
             type: "coin",
@@ -1909,11 +1909,11 @@ export const dataGames = [
         name: "Spike Rush",
         isPremium: true,
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-6.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-6.webp",
         status: "finished",
         gameMode: "Competitive",
         sponsor:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         rewards: [
           {
             type: "coin",
@@ -2205,11 +2205,11 @@ export const dataGames = [
         name: "Spike Rush clan & solo",
         isPremium: false,
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-1.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-1.webp",
         status: "upcoming",
         gameMode: "Spike Rush",
         sponsor:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         rewards: [
           {
             type: "coin",
@@ -2501,11 +2501,11 @@ export const dataGames = [
         name: "Competitive",
         isPremium: true,
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
         status: "upcoming",
         gameMode: "Competitive",
         sponsor:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         rewards: [
           {
             type: "coin",
@@ -2796,7 +2796,7 @@ export const dataGames = [
         clan: false,
         name: "Power Play Finished",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677087506/Stryda/demo/PowerPlay_Valorant1.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677087506/Stryda/demo/PowerPlay_Valorant1.jpg",
         status: "finished",
         gameMode: "Competitive",
         sponsor: false,
@@ -3090,7 +3090,7 @@ export const dataGames = [
         clan: true,
         name: "Empty Unrated",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
         status: "ongoing",
         gameMode: "Unrated",
         rewards: [
@@ -3126,7 +3126,7 @@ export const dataGames = [
         type: "skirmish",
         name: "Valorant Open Tour",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
         status: "ongoing",
         sponsor: false,
         details: {
@@ -3203,10 +3203,10 @@ export const dataGames = [
         type: "showdown",
         name: "Valorant European Champions",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
         status: "registration",
         sponsor:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         details: {
           region: "NA",
           date: "2023-02-19T18:00:00Z",
@@ -3287,7 +3287,7 @@ export const dataGames = [
           "https://images.squarespace-cdn.com/content/v1/61a700ec7413220d43316e53/14672157-dacd-4278-b72c-8a8344be8389/hero-background.jpg?format=original",
         status: "registration",
         sponsor:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         details: {
           region: "Europe",
           date: "2023-02-19T18:00:00Z",
@@ -3357,7 +3357,7 @@ export const dataGames = [
         type: "open",
         name: "Valorant New Zealand Champions",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-5.webp",
         status: "finished",
         sponsor: false,
         details: {
@@ -3617,7 +3617,7 @@ export const dataGames = [
         name: "Easter Battle",
         logo: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/easterbattle-logo.png",
         bg:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1681913805/Stryda/demo/easterbattle-bg.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1681913805/Stryda/demo/easterbattle-bg.jpg",
         meta: {
           objective: "Play in a party composed of 5 clan members.",
           gameMode: "Competitive",
@@ -3814,13 +3814,13 @@ export const dataGames = [
     type: "Squad FPP",
     assets: {
       cover:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1644676999/Marketing/202109_gloot2/Game_cover_PUBG_Battlegrounds.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_PUBG_Battlegrounds.jpg",
       heroMission:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
       heroLadder:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-2.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-2.webp",
       heroTournament:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-3.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-3.webp",
     },
     missions: [
       {
@@ -3835,7 +3835,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 300,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672672870/Stryda/demo/mission-pubg_1.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1672672870/Stryda/demo/mission-pubg_1.jpg",
       },
       {
         id: 2,
@@ -3849,7 +3849,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672672870/Stryda/demo/mission-pubg_2.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1672672870/Stryda/demo/mission-pubg_2.jpg",
       },
       {
         id: 3,
@@ -3863,7 +3863,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672672870/Stryda/demo/mission-pubg_3.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1672672870/Stryda/demo/mission-pubg_3.jpg",
       },
       {
         id: 4,
@@ -3877,7 +3877,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672672870/Stryda/demo/mission-pubg_4.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1672672870/Stryda/demo/mission-pubg_4.jpg",
       },
       {
         id: 5,
@@ -3891,7 +3891,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 100,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672672870/Stryda/demo/mission-pubg_5.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1672672870/Stryda/demo/mission-pubg_5.jpg",
       },
       {
         id: 6,
@@ -3905,7 +3905,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 300,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672672870/Stryda/demo/mission-pubg_6.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1672672870/Stryda/demo/mission-pubg_6.jpg",
       },
     ],
     ladders: [
@@ -3915,7 +3915,7 @@ export const dataGames = [
         clan: true,
         name: "Competitive Ladder",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-4.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-4.webp",
         status: "ongoing",
         gameMode: "Competitive",
         sponsor: false,
@@ -4202,11 +4202,11 @@ export const dataGames = [
         clan: false,
         name: "Ladder - the Winter edition",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-5.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-5.webp",
         status: "finished",
         gameMode: "Competitive",
         sponsor:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
         rewards: [
           {
             type: "coin",
@@ -4489,10 +4489,10 @@ export const dataGames = [
         id: 1,
         type: "custom",
         customLogo:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655121508/Logos%20for%20tournaments/G-Loot_PUBG_S6_-_wordmark_textured_az2upn.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1655121508/Logos%20for%20tournaments/G-Loot_PUBG_S6_-_wordmark_textured_az2upn.webp",
         name: "Season 6 | Grand Final",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655724447/Backgrounds%20for%20events/platform-banner_4_va1sn1_zrhcim.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1655724447/Backgrounds%20for%20events/platform-banner_4_va1sn1_zrhcim.webp",
         status: "ongoing",
         sponsor: false,
         details: {
@@ -4578,13 +4578,13 @@ export const dataGames = [
     type: "Battle royale-hero shooter",
     assets: {
       cover:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1644676999/Marketing/202109_gloot2/Game_cover_Apex_Legends.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Apex_Legends.jpg",
       heroMission:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-1.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-1.webp",
       heroLadder:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-2.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-2.webp",
       heroTournament:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-3.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-apexlegends-3.webp",
     },
     missions: [
       {
@@ -4598,7 +4598,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-apexlegends_1.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-apexlegends_1.webp",
       },
       {
         name: "Get 22 kills",
@@ -4611,7 +4611,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-apexlegends_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-apexlegends_2.webp",
       },
     ],
   },
@@ -4627,13 +4627,13 @@ export const dataGames = [
     type: "FPS",
     assets: {
       cover:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1644676999/Marketing/202109_gloot2/Game_cover_CSGO.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_CSGO.jpg",
       heroMission:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-1.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-1.webp",
       heroLadder:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-2.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-2.webp",
       heroTournament:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-3.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-3.webp",
     },
     missions: [
       {
@@ -4647,7 +4647,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_1.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_1.webp",
       },
       {
         name: "Get 22 kills",
@@ -4660,7 +4660,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_2.webp",
       },
     ],
   },
@@ -4676,13 +4676,13 @@ export const dataGames = [
     type: "MOBA",
     assets: {
       cover:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1644676999/Marketing/202109_gloot2/Game_cover_Dota_2.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Dota_2.jpg",
       heroMission:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-dota2-1.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-dota2-1.webp",
       heroLadder:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-dota2-2.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-dota2-2.webp",
       heroTournament:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-dota2-3.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-dota2-3.webp",
     },
     missions: [
       {
@@ -4696,7 +4696,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-dota2_1.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-dota2_1.webp",
       },
       {
         name: "Get 40 kills",
@@ -4709,7 +4709,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-dota2_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-dota2_2.webp",
       },
     ],
   },
@@ -4725,13 +4725,13 @@ export const dataGames = [
     type: "MOBA",
     assets: {
       cover:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1645621586/Marketing/202109_gloot2/Game_cover_League_of_Legends.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/v1645621586/Marketing/202109_gloot2/Game_cover_League_of_Legends.jpg",
       heroMission:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-1.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-1.webp",
       heroLadder:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-2.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-2.webp",
       heroTournament:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-3.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-3.webp",
     },
     missions: [
       {
@@ -4745,7 +4745,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-leagueoflegends_1.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-leagueoflegends_1.webp",
       },
       {
         name: "Get 40 kills",
@@ -4758,7 +4758,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-leagueoflegends_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-leagueoflegends_2.webp",
       },
     ],
   },
@@ -4774,13 +4774,13 @@ export const dataGames = [
     type: "Vehicular soccer",
     assets: {
       cover:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1644676999/Marketing/202109_gloot2/Game_cover_Rocket_League.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Rocket_League.jpg",
       heroMission:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-1.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-1.webp",
       heroLadder:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-2.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-2.webp",
       heroTournament:
-        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-3.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-rocketleague-3.webp",
     },
     missions: [
       {
@@ -4794,7 +4794,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 100,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_6.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_6.webp",
       },
       {
         name: "Score 19 goals",
@@ -4807,7 +4807,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_5.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_5.webp",
       },
       {
         name: "Score 15 goals",
@@ -4820,7 +4820,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 300,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_4.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_4.webp",
       },
       {
         name: "Score 12 goals",
@@ -4833,7 +4833,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_3.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_3.webp",
       },
       {
         name: "Score 10 goals",
@@ -4846,7 +4846,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 50,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_1.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_1.webp",
       },
       {
         name: "Score 20 goals",
@@ -4859,7 +4859,7 @@ export const dataGames = [
         hasClaimed: false,
         xp: 100,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_2.webp",
       },
     ],
     ladders: [
@@ -4869,7 +4869,7 @@ export const dataGames = [
         clan: true,
         name: "Competitive Ladder",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1657634600/Marketing/2022_prototype/DummyContent/missions/mission-rocketleague_2.webp",
         status: "ongoing",
         gameMode: "Competitive",
         rewards: [

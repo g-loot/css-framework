@@ -51,16 +51,14 @@ export default function ModalBattlepassCompletedClaim(props) {
         autoDelete: true,
         autoDeleteDelay: 2500,
       });
-      uiContext.openModal(
-        <ModalBattlepassCompletedSummary/>
-      );
+      uiContext.openModal(<ModalBattlepassCompletedSummary />);
       setSubmitting(false);
     }, 3000);
   }
 
   return (
     <>
-      <div className="modal max-w-sm modal-center">
+      <div className="modal">
         <button
           type="button"
           className="button button-secondary button-close"
@@ -68,11 +66,22 @@ export default function ModalBattlepassCompletedClaim(props) {
         >
           <span className="icon icon-e-remove" />
         </button>
+        <div className="modal-image">
+          <span
+            style={{
+              backgroundImage:
+                "url(https://res.cloudinary.com/gloot/image/upload/v1684830804/Stryda/illustrations/modal-battlepass-claim.jpg)",
+            }}
+          />
+        </div>
         <div className="modal-content">
           <div className="modal-body">
             <h2 className="modal-title">Battlepass ended</h2>
             <p>
-              Time to claim your past rewards before jumping into the new Battlepass!
+              The <strong className="text-ui-100">HyperX Battlepass</strong> has ended. Congratulations for reaching <strong className="text-ui-100 uppercase">Tier 11</strong>.
+            </p>
+            <p>
+              It is now time to <strong className="text-ui-100">claim your past rewards</strong> before jumping into the new Battlepass!
             </p>
           </div>
           <div className="modal-action">

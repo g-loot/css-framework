@@ -57,12 +57,12 @@ const PrototypePage = () => {
       <section
         className="relative full-width bg-cover bg-no-repeat overflow-hidden bg-center pt-24"
         style={{
-          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1655119438/Marketing/2022_PUBG_season_6/season-6-hero-bg.jpg)`,
+          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1655119438/Marketing/2022_PUBG_season_6/season-6-hero-bg.jpg)`,
         }}
       >
         <div className="container mx-auto max-w-xl flex flex-col relative pb-8">
           <img
-            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655362920/Marketing/2022_PUBG_season_6/Stryda_S6_logo.png"
+            src="https://res.cloudinary.com/gloot/image/upload/v1655362920/Marketing/2022_PUBG_season_6/Stryda_S6_logo.png"
             className="block 2xl:hidden mx-auto"
             width={200}
             height={200}
@@ -83,14 +83,14 @@ const PrototypePage = () => {
             ></iframe>
           </div>
           <img
-            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655120411/Marketing/2022_PUBG_season_6/season_6-hero-julie.png"
+            src="https://res.cloudinary.com/gloot/image/upload/v1655120411/Marketing/2022_PUBG_season_6/season_6-hero-julie.png"
             className="absolute z-20 pointer-events-none hidden lg:block -bottom-8 -left-[calc(1100px/2)] xl:-left-[calc(900px/2)] scale-75 origin-bottom lg:scale-100"
             width={770}
             height={686}
             alt="Julie"
           />
           <img
-            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655362920/Marketing/2022_PUBG_season_6/Stryda_S6_logo.png"
+            src="https://res.cloudinary.com/gloot/image/upload/v1655362920/Marketing/2022_PUBG_season_6/Stryda_S6_logo.png"
             className="absolute z-20 pointer-events-none hidden 2xl:block bottom-12 left-[calc(100%-212px)]"
             width={212}
             height={212}
@@ -104,9 +104,9 @@ const PrototypePage = () => {
           muted
           loop
           preload
-          poster="https://res.cloudinary.com/gloot/video/upload/f_auto/v1638395219/Marketing/202109_gloot2/sparks_1_backup.webm"
+          poster="https://res.cloudinary.com/gloot/video/upload/v1638395219/Marketing/202109_gloot2/sparks_1_backup.webm"
         >
-          <source src="https://res.cloudinary.com/gloot/video/upload/f_auto/v1638395219/Marketing/202109_gloot2/sparks_1.webm" />
+          <source src="https://res.cloudinary.com/gloot/video/upload/v1638395219/Marketing/202109_gloot2/sparks_1.webm" />
         </video>
       </section>
 

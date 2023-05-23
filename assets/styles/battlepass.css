@@ -66,7 +66,6 @@
     items-center
     justify-center
     gap-4
-    animate-scale-in
     ;
   }
   .battlepass-reward-action {
@@ -153,17 +152,29 @@
         &:nth-child(9) {
           --delay: 9;
         }
-        > .battlepass-reward-image {
+        .battlepass-reward-image {
           @apply
           relative
+          block
           w-20
           h-20
           lg:w-28
           lg:h-28
           overflow-visible
           ;
+          > img {
+            @apply
+            absolute
+            z-0
+            inset-0
+            object-cover
+            object-center
+            aspect-square
+            shadow-none
+            ;
+          }
         }
-        > .battlepass-reward-text {
+        .battlepass-reward-text {
           @apply
           flex
           flex-col
@@ -249,6 +260,7 @@
   > img {
     @apply
     rounded
+    shadow-xl
     ;
   }
 }
@@ -263,6 +275,11 @@
   items-center
   justify-center
   ;
+  > img {
+    @apply
+    shadow-xl
+    ;
+  }
 }
 .battlepass-reward-name {
   @apply

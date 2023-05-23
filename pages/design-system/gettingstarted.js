@@ -97,8 +97,8 @@ const DSpage = () => (
       <a href='https://stackblitz.com/edit/gloot-framework?file=tailwind.config.js' target='_blank' rel='noreferrer' className='inline-block rounded-2xl surface transition-all duration-200 hover:opacity-50'>
         <figure className='p-6 w-full aspect-[2/1] items-end'>
           <div className='grid w-full'>
-            <img className='col-start-1 row-start-1 w-full h-auto' src='https://res.cloudinary.com/gloot/image/upload/f_auto/v1654947800/Marketing/2022_prototype/react.svg' alt="React (Webpack)" />
-            <img className='col-start-1 row-start-1 w-3/5 -mr-4 -mb-4 place-self-end justify-self-end drop-shadow-md h-auto' src='https://res.cloudinary.com/gloot/image/upload/f_auto/v1654947822/Marketing/2022_prototype/webpack.svg' />
+            <img className='col-start-1 row-start-1 w-full h-auto' src='https://res.cloudinary.com/gloot/image/upload/v1654947800/Marketing/2022_prototype/react.svg' alt="React (Webpack)" />
+            <img className='col-start-1 row-start-1 w-3/5 -mr-4 -mb-4 place-self-end justify-self-end drop-shadow-md h-auto' src='https://res.cloudinary.com/gloot/image/upload/v1654947822/Marketing/2022_prototype/webpack.svg' />
           </div>
         </figure>
       </a>

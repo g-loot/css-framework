@@ -61,7 +61,7 @@ export default function ModalBannerEdit(props) {
                     <div className="w-full aspect-landscape rounded-md flex items-center justify-center text-center">
                       <div>
                         <img
-                          src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672241804/Stryda/illustrations/Generic_bg.png"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
                           className="aspect-landscape object-cover"
                           alt=""
                         />
@@ -117,7 +117,7 @@ export default function ModalBannerEdit(props) {
                 </div>
                 <img
                   className="md:order-2 md:w-1/2 px-8 mt-8 md:mt-0"
-                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674215034/Stryda/illustrations/shop_profilebanners.png"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1674215034/Stryda/illustrations/shop_profilebanners.png"
                   alt=""
                 />
               </div>

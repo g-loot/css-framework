@@ -22,7 +22,7 @@ const DSpage = () => {
                   <div className="flex-1">
                     <div className="avatar">
                       <div>
-                        <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                       </div>
                     </div>
                   </div>
@@ -56,7 +56,7 @@ const DSpage = () => {
                   <div className="flex-1">
                     <div className="avatar avatar-circle">
                       <div>
-                        <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                       </div>
                     </div>
                   </div>
@@ -68,7 +68,7 @@ const DSpage = () => {
                   <div className="flex-1">
                     <div className="avatar avatar-squircle">
                       <div>
-                        <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                       </div>
                     </div>
                   </div>
@@ -80,7 +80,7 @@ const DSpage = () => {
                   <div className="flex-1">
                     <div className="avatar avatar-diamond">
                       <div>
-                        <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                       </div>
                     </div>
                   </div>
@@ -92,7 +92,7 @@ const DSpage = () => {
                   <div className="flex-1">
                     <div className="avatar avatar-hexagon">
                       <div>
-                        <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                        <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                       </div>
                     </div>
                   </div>
@@ -127,12 +127,12 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-start">
                       <div className="avatar avatar-2xl">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-2xl avatar-squircle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                     </div>
@@ -146,12 +146,12 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-start">
                       <div className="avatar avatar-xl">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-xl avatar-squircle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                     </div>
@@ -168,12 +168,12 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-start">
                       <div className="avatar">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-squircle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                     </div>
@@ -187,12 +187,12 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-start">
                       <div className="avatar avatar-md">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-md avatar-squircle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                     </div>
@@ -206,12 +206,12 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-start">
                       <div className="avatar avatar-sm">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-sm avatar-squircle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                     </div>
@@ -225,12 +225,12 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-start">
                       <div className="avatar avatar-xs">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-xs avatar-squircle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                     </div>
@@ -244,12 +244,12 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-start">
                       <div className="avatar avatar-tiny">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-tiny avatar-squircle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                     </div>
@@ -288,12 +288,12 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-start">
                       <div className="avatar">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-squircle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                         </div>
                       </div>
                     </div>
@@ -307,12 +307,12 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-start">
                       <div className="avatar avatar-gold">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-gold avatar-squircle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                         </div>
                       </div>
                     </div>
@@ -326,12 +326,12 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-start">
                       <div className="avatar avatar-silver">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-silver avatar-squircle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                         </div>
                       </div>
                     </div>
@@ -345,12 +345,12 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-bronze">
                       <div className="avatar avatar-bronze">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-bronze avatar-squircle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                         </div>
                       </div>
                     </div>
@@ -364,12 +364,12 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-start">
                       <div className="avatar avatar-premium">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-premium avatar-squircle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg" />
                         </div>
                       </div>
                     </div>
@@ -408,13 +408,13 @@ const DSpage = () => {
                     <div className="flex flex-wrap gap-4 justify-start items-center">
                       <div className="avatar avatar-circle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
                         <i />
                       </div>
                       <div className="avatar avatar-circle avatar-sm">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
                         <i />
                       </div>
@@ -429,13 +429,13 @@ const DSpage = () => {
                     <div className="flex flex-wrap gap-4 justify-start items-center">
                       <div className="avatar avatar-circle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
                         <i className="disabled" />
                       </div>
                       <div className="avatar avatar-circle avatar-sm">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
                         <i className="disabled" />
                       </div>
@@ -450,13 +450,13 @@ const DSpage = () => {
                     <div className="flex flex-wrap gap-4 justify-start items-center">
                       <div className="avatar avatar-circle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
                         <i className="error" />
                       </div>
                       <div className="avatar avatar-circle avatar-sm">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
                         <i className="error" />
                       </div>
@@ -471,13 +471,13 @@ const DSpage = () => {
                     <div className="flex flex-wrap gap-4 justify-start items-center">
                       <div className="avatar avatar-circle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
                         <i className="attention" />
                       </div>
                       <div className="avatar avatar-circle avatar-sm">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
                         <i className="attention" />
                       </div>
@@ -492,13 +492,13 @@ const DSpage = () => {
                     <div className="flex flex-wrap gap-4 justify-start items-center">
                       <div className="avatar avatar-circle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
                         <i className="info" />
                       </div>
                       <div className="avatar avatar-circle avatar-sm">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
                         <i className="info" />
                       </div>
@@ -513,13 +513,13 @@ const DSpage = () => {
                     <div className="flex flex-wrap gap-4 justify-start items-center">
                       <div className="avatar avatar-circle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
                         <i className="radar" />
                       </div>
                       <div className="avatar avatar-circle avatar-sm">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg" />
                         </div>
                         <i className="radar info" />
                       </div>
@@ -556,12 +556,12 @@ const DSpage = () => {
                     <div className="flex flex-wrap gap-4 justify-start items-center">
                       <div className="avatar avatar-simple">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-diamond avatar-simple">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg" />
                         </div>
                       </div>
                     </div>
@@ -594,27 +594,27 @@ const DSpage = () => {
                     <div className="flex flex-wrap gap-4 justify-start items-center">
                       <div className="avatar is-loading avatar-circle">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                         </div>
                       </div>
                       <div className="avatar is-loading avatar-squircle avatar-md">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                         </div>
                       </div>
                       <div className="avatar is-loading avatar-diamond avatar-sm">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                         </div>
                       </div>
                       <div className="avatar is-loading avatar-circle avatar-xs">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                         </div>
                       </div>
                       <div className="avatar is-loading avatar-circle avatar-tiny">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                         </div>
                       </div>
                     </div>
@@ -757,39 +757,39 @@ const DSpage = () => {
                   
                 <div className="flex flex-wrap gap-4 justify-start items-center">
                   <div className="avatar avatar-circle avatar-xl">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674724614/Stryda/shop/avatarframes/Valorant.svg" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674724614/Stryda/shop/avatarframes/Valorant.svg" alt="" />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674724614/Stryda/shop/avatarframes/Sweden.svg" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674724614/Stryda/shop/avatarframes/Sweden.svg" alt="" />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-md">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674724598/Stryda/shop/avatarframes/Glitch.svg" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674724598/Stryda/shop/avatarframes/Glitch.svg" alt="" />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-sm">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674660549/Stryda/shop/avatarframes/Golden_Tron.svg" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674660549/Stryda/shop/avatarframes/Golden_Tron.svg" alt="" />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674213692/Stryda/shop/avatarframes/Flower_Love.svg" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Flower_Love.svg" alt="" />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-tiny">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674213692/Stryda/shop/avatarframes/Rainbow.svg" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Rainbow.svg" alt="" />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                 </div>
@@ -819,47 +819,47 @@ const DSpage = () => {
                 <div className="flex flex-wrap gap-4 justify-start items-center">
                   <div className="avatar avatar-circle avatar-2xl">
                     <b>300</b>
-                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674213692/Stryda/shop/avatarframes/Valorant.svg" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Valorant.svg" alt="" />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xl">
                     <b>300</b>
-                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674213692/Stryda/shop/avatarframes/Valorant.svg" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Valorant.svg" alt="" />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle">
                     <b>279</b>
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-md">
                     <b>255</b>
-                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674724598/Stryda/shop/avatarframes/Glitch.svg" alt="" />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674724598/Stryda/shop/avatarframes/Glitch.svg" alt="" />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-sm">
                     <b>155</b>
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
                     <b>55</b>
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-tiny">
                     <b>5</b>
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
                     </div>
                   </div>
                 </div>
@@ -897,13 +897,13 @@ const DSpage = () => {
                       <div className="avatar avatar-circle">
                         <b>35</b>
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
                       </div>
                       <div className="avatar avatar-circle avatar-sm">
                       <b>35</b>
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
                       </div>
                     </div>
@@ -918,13 +918,13 @@ const DSpage = () => {
                       <div className="avatar is-online avatar-circle">
                       <b>35</b>
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
                       </div>
                       <div className="avatar is-online avatar-circle avatar-sm">
                       <b>35</b>
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
                       </div>
                     </div>
@@ -939,13 +939,13 @@ const DSpage = () => {
                       <div className="avatar is-offline avatar-circle">
                       <b>35</b>
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
                       </div>
                       <div className="avatar is-offline avatar-circle avatar-sm">
                       <b>35</b>
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
                       </div>
                     </div>
@@ -1010,7 +1010,7 @@ const DSpage = () => {
                     <div className="flex gap-4 justify-start">
                       <div className="avatar avatar-tiny md:avatar-sm lg:avatar-lg xl:avatar-xl">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                         </div>
                       </div>
                     </div>
@@ -1041,88 +1041,88 @@ const DSpage = () => {
                 <div className="avatar-group -space-x-2">
                   <div className="avatar avatar-circle avatar-tiny">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-tiny">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-tiny">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-tiny">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
                     </div>
                   </div>
                 </div>
                 <div className="avatar-group -space-x-3">
                   <div className="avatar avatar-circle avatar-xs">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
                     </div>
                   </div>
                 </div>
                 <div className="avatar-group -space-x-4">
                   <div className="avatar avatar-circle avatar-sm">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-sm">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-sm">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-sm">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
                     </div>
                   </div>
                 </div>
                 <div className="avatar-group -space-x-5">
                   <div className="avatar avatar-circle avatar-md">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-md">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-md">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-md">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
                     </div>
                   </div>
                 </div>
@@ -1151,17 +1151,17 @@ const DSpage = () => {
                 <div className="avatar-group -space-x-2">
                   <div className="avatar avatar-circle avatar-tiny">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-tiny">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-tiny">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-tiny">
@@ -1173,17 +1173,17 @@ const DSpage = () => {
                 <div className="avatar-group -space-x-3">
                   <div className="avatar avatar-circle avatar-xs">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
@@ -1195,17 +1195,17 @@ const DSpage = () => {
                 <div className="avatar-group -space-x-4">
                   <div className="avatar avatar-circle avatar-sm">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-sm">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-sm">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-sm">
@@ -1217,17 +1217,17 @@ const DSpage = () => {
                 <div className="avatar-group -space-x-5">
                   <div className="avatar avatar-circle avatar-md">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-md">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-md">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-md">

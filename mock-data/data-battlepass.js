@@ -6,7 +6,7 @@ export const DataBattlepass = [
     meta: {
       name: "HyperX Battlepass",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ac diam sed interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-      backgroundImage: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1684756295/Stryda/demo/battlepass_bg_HyperX.jpg",
+      backgroundImage: "https://res.cloudinary.com/gloot/image/upload/v1684756295/Stryda/demo/battlepass_bg_HyperX.jpg",
     },
     steps: [
       {
@@ -150,7 +150,7 @@ export const DataBattlepass = [
     meta: {
       name: "Battlepass",
       description: "The Battlepass is how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Battlepass, you unlock another reward. Battlepass and XP reset each week so you will always have something new to work towards.",
-      backgroundImage: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1684756295/Stryda/demo/battlepass_bg_generic.jpg",
+      backgroundImage: "https://res.cloudinary.com/gloot/image/upload/v1684756295/Stryda/demo/battlepass_bg_generic.jpg",
     },
     steps: [
       {
@@ -411,22 +411,22 @@ export const DataBattlepass = [
     currentStep: 1,
     currentProgress: 0,
     meta: {
-      name: "XMas Mayhem!",
+      name: "XMas Battlepass",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ac diam sed interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-      backgroundImage: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1684756295/Stryda/demo/battlepass_bg_xmas.jpg",
+      backgroundImage: "https://res.cloudinary.com/gloot/image/upload/v1684756295/Stryda/demo/battlepass_bg_xmas.jpg",
     },
     steps: [
       {
         id: 1,
         name: "tier 1",
-        reward: 30,
+        reward: 18,
         isPremium: false,
         hasClaimed: true,
       },
       {
         id: 2,
         name: "tier 2",
-        reward: 18,
+        reward: 30,
         isPremium: false,
         hasClaimed: false,
       },
@@ -824,6 +824,6 @@ export const DataBattlepassRewards = [
     id: 41,
     type: "image",
     name: "XP",
-    image: "battlepass-reward-41.jpg",
+    image: "battlepass-reward-41.png",
   },
 ];

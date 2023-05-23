@@ -10,19 +10,19 @@ const Teams = [
     name: "Team name",
     tag: "GT2",
     avatar:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png",
     members: [
       {
         avatar:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
       },
       {
         avatar:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg",
       },
       {
         avatar:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg",
       },
     ],
   },
@@ -31,19 +31,19 @@ const Teams = [
     name: "GhOOOsTS",
     tag: "GhO",
     avatar:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_GhOOOsTS.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_GhOOOsTS.png",
     members: [
       {
         avatar:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg",
       },
       {
         avatar:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
       },
       {
         avatar:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg",
       },
     ],
   },
@@ -52,19 +52,19 @@ const Teams = [
     name: "Foxy",
     tag: "Fox",
     avatar:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Foxy.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Foxy.png",
     members: [
       {
         avatar:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg",
       },
       {
         avatar:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_6.jpg",
       },
       {
         avatar:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg",
       },
     ],
   },
@@ -73,19 +73,19 @@ const Teams = [
     name: "l10n",
     tag: "LI",
     avatar:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png",
+      "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png",
     members: [
       {
         avatar:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_8.jpg",
       },
       {
         avatar:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
       },
       {
         avatar:
-          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_9.jpg",
       },
     ],
   },
@@ -106,7 +106,7 @@ export default function Home() {
             className="surface md:rounded-lg p-4 lg:p-8 bg-cover bg-left"
             style={{
               backgroundImage:
-                "url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1657121339/Marketing/2022_prototype/Teams_bg.webp)",
+                "url(https://res.cloudinary.com/gloot/image/upload/v1657121339/Marketing/2022_prototype/Teams_bg.webp)",
             }}
           >
             <div className="">

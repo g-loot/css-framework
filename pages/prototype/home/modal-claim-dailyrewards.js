@@ -66,7 +66,7 @@ export default function ModalClaimDailyRewards(props) {
                     <img
                       className="mx-auto animate-fire-in animate-delay"
                       style={{ "--delay": "calc( 1 * 0.2s)" }}
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                       width="180"
                       height="auto"
                       alt=""
@@ -92,7 +92,7 @@ export default function ModalClaimDailyRewards(props) {
                     <img
                       className="mx-auto animate-fire-in animate-delay"
                       style={{ "--delay": "calc( 2 * 0.2s)" }}
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-centered-token-medium.png"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-medium.png"
                       width="180"
                       height="auto"
                       alt=""

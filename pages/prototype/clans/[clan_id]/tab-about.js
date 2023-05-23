@@ -133,7 +133,7 @@ export default function TabClanAbout() {
                   )}
 
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672241804/Stryda/illustrations/Generic_bg.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
                     alt=""
                   />
                 </div>

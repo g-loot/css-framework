@@ -48,7 +48,7 @@ const DSpage = () => {
                 <div className="modal-image">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`,
                     }}
                   />
                 </div>
@@ -101,7 +101,7 @@ const DSpage = () => {
                 <div className="modal-image">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`,
                     }}
                   />
                 </div>
@@ -153,7 +153,7 @@ const DSpage = () => {
                 </button>
                 <div className="modal-image">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1653326622/Marketing/2022_prototype/DummyContent/trophy.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1653326622/Marketing/2022_prototype/DummyContent/trophy.png"
                     width="200"
                     height="auto"
                     alt="Trophy"
@@ -299,7 +299,7 @@ const DSpage = () => {
                     <div className="">
                       <img
                         className="mx-auto"
-                        src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                         width="140"
                         height="auto"
                         alt=""
@@ -316,7 +316,7 @@ const DSpage = () => {
                     <div className="">
                       <img
                         className="mx-auto"
-                        src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671799703/Stryda/currencies/Reward-centered-token-extrasmall.png"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1671799703/Stryda/currencies/Reward-centered-token-extrasmall.png"
                         width="140"
                         height="auto"
                         alt=""

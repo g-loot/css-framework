@@ -168,10 +168,10 @@ export default function Achievements() {
                     <i />
                     <div className={`achievement-level-${item.level}`}>
                       <AchievementFrame
-                        url={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${item.level}-animated.svg`}
+                        url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${item.level}-animated.svg`}
                       />
                       <AchievementIcon
-                        url={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1674739347/Stryda/achievements/achivement-icon-${item.icon}.svg`}
+                        url={`https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-${item.icon}.svg`}
                       />
                     </div>
                     <span className="text-sm text-ui-300 uppercase">

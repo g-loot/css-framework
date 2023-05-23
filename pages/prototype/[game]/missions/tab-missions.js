@@ -228,7 +228,7 @@ export default function TabMissionsMissions() {
               }`}
             >
               <PremiumLogo
-                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
                 width="210"
                 height="auto"
                 className="mx-auto md:mx-0"

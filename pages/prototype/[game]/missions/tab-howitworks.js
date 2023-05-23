@@ -9,7 +9,7 @@ const HowitworksTabs = [
   {
     title: "Before you can do Missions",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737014/Stryda/illustrations/cpu_install.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737014/Stryda/illustrations/cpu_install.jpg",
     content: [
       {
         type: "p",
@@ -32,7 +32,7 @@ const HowitworksTabs = [
   {
     title: "How XP works",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737017/Stryda/illustrations/XP.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737017/Stryda/illustrations/XP.jpg",
     content: [
       {
         type: "p",
@@ -47,7 +47,7 @@ const HowitworksTabs = [
   {
     title: "Battlepass",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737013/Stryda/illustrations/coins_tokens_xp.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/coins_tokens_xp.jpg",
     content: [
       {
         type: "p",
@@ -62,7 +62,7 @@ const HowitworksTabs = [
   {
     title: "Premium Rewards",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674741728/Stryda/illustrations/premium_xp.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1674741728/Stryda/illustrations/premium_xp.jpg",
     content: [
       {
         type: "p",
@@ -74,7 +74,7 @@ const HowitworksTabs = [
   {
     title: "I am experiencing issues with the Missions",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737014/Stryda/illustrations/error.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1674737014/Stryda/illustrations/error.jpg",
     content: [
       {
         type: "p",
@@ -110,7 +110,7 @@ export default function TabMissionsHowItWorks() {
               <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-start">
                 <img
                   className="rounded-lg"
-                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737015/Stryda/illustrations/missions_cards.jpg"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/missions_cards.jpg"
                   width="100%"
                   height="auto"
                   alt=""
@@ -133,7 +133,7 @@ export default function TabMissionsHowItWorks() {
               <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-start">
                 <img
                   className="rounded-lg"
-                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737013/Stryda/illustrations/coins_tokens_xp.jpg"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/coins_tokens_xp.jpg"
                   width="100%"
                   height="auto"
                   alt=""

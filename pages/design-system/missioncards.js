@@ -71,7 +71,7 @@ const DSpage = () => {
                 <div className="card-bg">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
                     }}
                   />
                 </div>
@@ -97,7 +97,7 @@ const DSpage = () => {
                 <div className="card-bg">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
                     }}
                   />
                 </div>
@@ -125,7 +125,7 @@ const DSpage = () => {
               <div className="card-mission card-locked">
                 <div className="card-decoration">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1653293407/Marketing/2022_prototype/Premium_logo.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1653293407/Marketing/2022_prototype/Premium_logo.png"
                     width="auto"
                     height="auto"
                     alt="Stryda Premium"
@@ -150,7 +150,7 @@ const DSpage = () => {
                 <div className="card-bg">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653310937/Marketing/2022_prototype/DummyContent/mission-valorant_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-valorant_1.jpg)`,
                     }}
                   />
                 </div>
@@ -178,7 +178,7 @@ const DSpage = () => {
               <div className="card-mission card-unlocked">
                 <div className="card-decoration">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1653293407/Marketing/2022_prototype/Premium_logo.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1653293407/Marketing/2022_prototype/Premium_logo.png"
                     width="auto"
                     height="auto"
                     alt="Stryda Premium"
@@ -203,7 +203,7 @@ const DSpage = () => {
                 <div className="card-bg">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653310937/Marketing/2022_prototype/DummyContent/mission-apexlegends_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-apexlegends_1.jpg)`,
                     }}
                   />
                 </div>
@@ -249,7 +249,7 @@ const DSpage = () => {
                 <div className="card-bg">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653310937/Marketing/2022_prototype/DummyContent/mission-rocketleague_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-rocketleague_1.jpg)`,
                     }}
                   />
                 </div>
@@ -328,7 +328,7 @@ const DSpage = () => {
                 <div className="card-bg">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
                     }}
                   />
                 </div>
@@ -358,7 +358,7 @@ const DSpage = () => {
                 <div className="card-bg">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
                     }}
                   />
                 </div>
@@ -380,7 +380,7 @@ const DSpage = () => {
                     <div className="card-bg">
                       <span
                         style={{
-                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
+                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
                         }}
                       />
                     </div>
@@ -412,7 +412,7 @@ const DSpage = () => {
                     <div className="card-bg">
                       <span
                         style={{
-                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
+                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-pubg_1.jpg)`,
                         }}
                       />
                     </div>
@@ -460,7 +460,7 @@ const DSpage = () => {
                 <div className="card-bg">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653310937/Marketing/2022_prototype/DummyContent/mission-rocketleague_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-rocketleague_1.jpg)`,
                     }}
                   />
                 </div>

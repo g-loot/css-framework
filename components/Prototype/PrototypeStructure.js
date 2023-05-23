@@ -89,7 +89,7 @@ export default function PrototypeStructure({ children, title }) {
           <div className="fixed z-50 inset-0 flex items-center justify-center pointer-events-none">
             <div className="relative animate-antoncat">
               <img
-                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1682078710/Stryda/demo/antoncat.gif"
+                src="https://res.cloudinary.com/gloot/image/upload/v1682078710/Stryda/demo/antoncat.gif"
                 alt=""
                 width="100%"
                 height="auto"
@@ -118,7 +118,7 @@ export default function PrototypeStructure({ children, title }) {
                       <div className="fixed bottom-8 right-8 z-50">
                         <div className="min-h-[300px] w-64 surface surface-ui-700 rounded-xl shadow-xl overflow-hidden">
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1662645306/Marketing/2022_prototype/Illustrations/ladder_leaderboard.webp"
+                            src="https://res.cloudinary.com/gloot/image/upload/v1662645306/Marketing/2022_prototype/Illustrations/ladder_leaderboard.webp"
                             alt=""
                             className="object-cover aspect-video"
                           />
@@ -172,7 +172,7 @@ export default function PrototypeStructure({ children, title }) {
                         <img
                           width="110"
                           height="auto"
-                          src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
                           alt="Stryda logo"
                         />
                       </a>

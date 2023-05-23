@@ -77,17 +77,17 @@ export default function Home() {
                     src={`${
                       prototype.getTournamentByID(game, tournament_id).type ===
                       "skirmish"
-                        ? "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657888942/Marketing/2022_prototype/Logo/samesize-skirmish.svg"
+                        ? "https://res.cloudinary.com/gloot/image/upload/v1657888942/Marketing/2022_prototype/Logo/samesize-skirmish.svg"
                         : ""
                     } ${
                       prototype.getTournamentByID(game, tournament_id).type ===
                       "showdown"
-                        ? "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657888942/Marketing/2022_prototype/Logo/samesize-showdown.svg"
+                        ? "https://res.cloudinary.com/gloot/image/upload/v1657888942/Marketing/2022_prototype/Logo/samesize-showdown.svg"
                         : ""
                     } ${
                       prototype.getTournamentByID(game, tournament_id).type ===
                       "open"
-                        ? "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657888942/Marketing/2022_prototype/Logo/samesize-open.svg"
+                        ? "https://res.cloudinary.com/gloot/image/upload/v1657888942/Marketing/2022_prototype/Logo/samesize-open.svg"
                         : ""
                     } ${
                       prototype.getTournamentByID(game, tournament_id).type ===

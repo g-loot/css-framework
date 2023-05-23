@@ -115,7 +115,7 @@ export default function PrototypeLeftMenu(props) {
             </button>
           </div>
         </div>
-        <div className='absolute pointer-events-none inset-0 z-10 bg-right-bottom bg-no-repeat bg-contain rounded-xl' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1659467776/Marketing/2022_prototype/bg-tournamentschedule.webp)`}}></div>
+        <div className='absolute pointer-events-none inset-0 z-10 bg-right-bottom bg-no-repeat bg-contain rounded-xl' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1659467776/Marketing/2022_prototype/bg-tournamentschedule.webp)`}}></div>
       </div>
       <Ad width='260'height='260'/>
     </div>

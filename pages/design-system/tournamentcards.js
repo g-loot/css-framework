@@ -16,7 +16,7 @@ const DSpage = () => {
               <button type="button" className="card-tournament">
                 <div className="card-decoration">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1653224681/Marketing/2022_prototype/Logo/Showdown-sameheight.svg"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Showdown-sameheight.svg"
                     width="auto"
                     height="auto"
                     alt="Stryda Showdown"
@@ -61,7 +61,7 @@ const DSpage = () => {
                 <div className="card-bg">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831593/Marketing/202109_gloot2/tournament-apexlegends_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-apexlegends_1.jpg)`,
                     }}
                   />
                 </div>
@@ -89,7 +89,7 @@ const DSpage = () => {
               <button type="button" className="card-tournament">
                 <div className="card-decoration">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1653224681/Marketing/2022_prototype/Logo/Skirmish-sameheight.svg"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Skirmish-sameheight.svg"
                     width="auto"
                     height="auto"
                     alt="Stryda Skirmish"
@@ -132,7 +132,7 @@ const DSpage = () => {
                 <div className="card-bg">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831593/Marketing/202109_gloot2/tournament-valorant_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-valorant_1.jpg)`,
                     }}
                   />
                 </div>
@@ -160,7 +160,7 @@ const DSpage = () => {
               <button type="button" className="card-tournament">
                 <div className="card-decoration">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
                     width="auto"
                     height="auto"
                     alt="Stryda Open"
@@ -203,7 +203,7 @@ const DSpage = () => {
                 <div className="card-bg">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`,
                     }}
                   />
                 </div>
@@ -231,7 +231,7 @@ const DSpage = () => {
               <div className="card-tournament is-loading">
                 <div className="card-decoration">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
                     width="auto"
                     height="auto"
                     alt="Stryda Showdown"
@@ -274,7 +274,7 @@ const DSpage = () => {
                 <div className="card-bg">
                   <span
                     style={{
-                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`,
+                      backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`,
                     }}
                   />
                 </div>

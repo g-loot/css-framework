@@ -31,14 +31,14 @@ export default function SectionClanStats() {
             <div className="relative flex items-center justify-center py-8">
               <img
                 className="relative z-10 h-24"
-                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1657888942/Marketing/2022_prototype/Logo/samesize-ladder.svg"
+                src="https://res.cloudinary.com/gloot/image/upload/v1657888942/Marketing/2022_prototype/Logo/samesize-ladder.svg"
                 width="auto"
                 height="auto"
                 alt=""
               />
               <div className="absolute z-0 inset-0 flex items-center justify-center">
                 <img
-                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1659466410/Marketing/2022_prototype/Statsbg_ladder.webp"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1659466410/Marketing/2022_prototype/Statsbg_ladder.webp"
                   width="auto"
                   height="auto"
                   alt=""
@@ -83,14 +83,14 @@ export default function SectionClanStats() {
             <div className="relative flex items-center justify-center py-8">
               <img
                 className="relative z-10 h-24"
-                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1657888942/Marketing/2022_prototype/Logo/samesize-showdown.svg"
+                src="https://res.cloudinary.com/gloot/image/upload/v1657888942/Marketing/2022_prototype/Logo/samesize-showdown.svg"
                 width="auto"
                 height="auto"
                 alt=""
               />
               <div className="absolute z-0 inset-0 flex items-center justify-center">
                 <img
-                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1659466410/Marketing/2022_prototype/Statsbg_tournament.webp"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1659466410/Marketing/2022_prototype/Statsbg_tournament.webp"
                   width="auto"
                   height="auto"
                   alt=""

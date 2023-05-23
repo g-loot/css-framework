@@ -55,7 +55,7 @@ const DSpage = () => {
                 <div className='flex items-center gap-4'>
                   <div className='avatar avatar-circle'>
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                     </div>
                   </div>
                   <button className='button button-sm button-secondary'>

@@ -199,11 +199,11 @@ export default function Home() {
                               data-tooltip={item.name}
                             >
                               <AchievementFrame
-                                url={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${item.level}-animated.svg`}
+                                url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${item.level}-animated.svg`}
                               />
                               {item.level > 0 && (
                                 <AchievementIcon
-                                  url={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1674739347/Stryda/achievements/achivement-icon-${item.icon}.svg`}
+                                  url={`https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-${item.icon}.svg`}
                                 />
                               )}
                             </div>
@@ -226,7 +226,7 @@ export default function Home() {
                     >
                       <div className="flex items-center gap-6 px-6 whitespace-nowrap">
                         <img
-                          src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1673941215/Stryda/logos/stryda-logo-ladders-simple.svg"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1673941215/Stryda/logos/stryda-logo-ladders-simple.svg"
                           width="auto"
                           height="auto"
                           alt=""
@@ -282,7 +282,7 @@ export default function Home() {
                     >
                       <div className="flex items-center gap-6 px-6 whitespace-nowrap">
                         <img
-                          src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1673941215/Stryda/logos/stryda-logo-missions-simple.svg"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1673941215/Stryda/logos/stryda-logo-missions-simple.svg"
                           width="auto"
                           height="auto"
                           alt=""

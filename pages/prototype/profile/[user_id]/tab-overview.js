@@ -521,11 +521,11 @@ export default function TabProfileOverview() {
                                   data-tooltip={`Level ${item.level}`}
                                 >
                                   <AchievementFrame
-                                    url={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${item.level}-animated.svg`}
+                                    url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${item.level}-animated.svg`}
                                   />
                                   {item.level > 0 && (
                                     <AchievementIcon
-                                      url={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1678872380/Stryda/achievements/icons/achievement-icon-${
+                                      url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${
                                         prototype.getAchievementitemByID(
                                           1,
                                           item.item

@@ -171,21 +171,21 @@ export default async function handler(req, res) {
           assets: {
             color: '#D03B34',
             cover:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1622115586/GNOG%20assets/Games/apex_legends/cover.png',
+              'https://res.cloudinary.com/gloot/image/upload/v1622115586/GNOG%20assets/Games/apex_legends/cover.png',
             cover_dark:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1633936363/GNOG%20assets/Games/apex_legends/cover_dark.png',
+              'https://res.cloudinary.com/gloot/image/upload/v1633936363/GNOG%20assets/Games/apex_legends/cover_dark.png',
             game_picker:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1632130039/GNOG%20assets/Games/apex_legends/game_picker.png',
-            hero: 'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619016839/GNOG%20assets/Games/apex_legends/hero.jpg',
+              'https://res.cloudinary.com/gloot/image/upload/v1632130039/GNOG%20assets/Games/apex_legends/game_picker.png',
+            hero: 'https://res.cloudinary.com/gloot/image/upload/v1619016839/GNOG%20assets/Games/apex_legends/hero.jpg',
             logo: {
               primary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619015845/GNOG%20assets/Games/apex_legends/logo_primary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619015845/GNOG%20assets/Games/apex_legends/logo_primary_color.png',
               primary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619015830/GNOG%20assets/Games/apex_legends/logo_primary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619015830/GNOG%20assets/Games/apex_legends/logo_primary_white.png',
               secondary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619078980/GNOG%20assets/Games/apex_legends/logo_secondary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619078980/GNOG%20assets/Games/apex_legends/logo_secondary_color.png',
               secondary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619078670/GNOG%20assets/Games/apex_legends/logo_secondary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619078670/GNOG%20assets/Games/apex_legends/logo_secondary_white.png',
             },
           },
           id: '787864400',
@@ -205,21 +205,21 @@ export default async function handler(req, res) {
         {
           assets: {
             color: '#F2A900',
-            cover: 'https://res.cloudinary.com/gloot/image/upload/f_auto/v1643719500/GNOG%20assets/Games/pubg/cover1.jpg',
+            cover: 'https://res.cloudinary.com/gloot/image/upload/v1643719500/GNOG%20assets/Games/pubg/cover1.jpg',
             cover_dark:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1633936853/GNOG%20assets/Games/pubg/cover_dark.png',
+              'https://res.cloudinary.com/gloot/image/upload/v1633936853/GNOG%20assets/Games/pubg/cover_dark.png',
             game_picker:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1632130437/GNOG%20assets/Games/pubg/game_picker.png',
+              'https://res.cloudinary.com/gloot/image/upload/v1632130437/GNOG%20assets/Games/pubg/game_picker.png',
             hero: '',
             logo: {
               primary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619016454/GNOG%20assets/Games/pubg/logo_primary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619016454/GNOG%20assets/Games/pubg/logo_primary_color.png',
               primary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619016443/GNOG%20assets/Games/pubg/logo_primary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619016443/GNOG%20assets/Games/pubg/logo_primary_white.png',
               secondary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619080759/GNOG%20assets/Games/pubg/logo_secondary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619080759/GNOG%20assets/Games/pubg/logo_secondary_color.png',
               secondary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1642068586/GNOG%20assets/Games/pubg/logo_secondary_whitev2.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1642068586/GNOG%20assets/Games/pubg/logo_secondary_whitev2.png',
             },
           },
           id: '3966731725',
@@ -237,21 +237,21 @@ export default async function handler(req, res) {
         {
           assets: {
             color: '#E45357',
-            cover: 'https://res.cloudinary.com/gloot/image/upload/f_auto/v1622115451/GNOG%20assets/Games/valorant/cover.png',
+            cover: 'https://res.cloudinary.com/gloot/image/upload/v1622115451/GNOG%20assets/Games/valorant/cover.png',
             cover_dark:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1633936936/GNOG%20assets/Games/valorant/cover_dark.png',
+              'https://res.cloudinary.com/gloot/image/upload/v1633936936/GNOG%20assets/Games/valorant/cover_dark.png',
             game_picker:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1632130606/GNOG%20assets/Games/valorant/game_picker.png',
-            hero: 'https://res.cloudinary.com/gloot/image/upload/f_auto/v1622190427/GNOG%20assets/Games/valorant/hero.jpg',
+              'https://res.cloudinary.com/gloot/image/upload/v1632130606/GNOG%20assets/Games/valorant/game_picker.png',
+            hero: 'https://res.cloudinary.com/gloot/image/upload/v1622190427/GNOG%20assets/Games/valorant/hero.jpg',
             logo: {
               primary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619014308/GNOG%20assets/Games/valorant/logo_primary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619014308/GNOG%20assets/Games/valorant/logo_primary_color.png',
               primary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619014356/GNOG%20assets/Games/valorant/logo_primary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619014356/GNOG%20assets/Games/valorant/logo_primary_white.png',
               secondary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619081223/GNOG%20assets/Games/valorant/logo_secondary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619081223/GNOG%20assets/Games/valorant/logo_secondary_color.png',
               secondary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619081202/GNOG%20assets/Games/valorant/logo_secondary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619081202/GNOG%20assets/Games/valorant/logo_secondary_white.png',
             },
           },
           id: '1892449706',
@@ -271,21 +271,21 @@ export default async function handler(req, res) {
         {
           assets: {
             color: '#F98100',
-            cover: 'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619009178/GNOG%20assets/Games/csgo/cover.png',
+            cover: 'https://res.cloudinary.com/gloot/image/upload/v1619009178/GNOG%20assets/Games/csgo/cover.png',
             cover_dark:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1633936412/GNOG%20assets/Games/csgo/cover_dark.png',
+              'https://res.cloudinary.com/gloot/image/upload/v1633936412/GNOG%20assets/Games/csgo/cover_dark.png',
             game_picker:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1632130064/GNOG%20assets/Games/csgo/game_picker.png',
-            hero: 'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619009935/GNOG%20assets/Games/csgo/hero.jpg',
+              'https://res.cloudinary.com/gloot/image/upload/v1632130064/GNOG%20assets/Games/csgo/game_picker.png',
+            hero: 'https://res.cloudinary.com/gloot/image/upload/v1619009935/GNOG%20assets/Games/csgo/hero.jpg',
             logo: {
               primary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619013513/GNOG%20assets/Games/csgo/logo_primary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619013513/GNOG%20assets/Games/csgo/logo_primary_color.png',
               primary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619013517/GNOG%20assets/Games/csgo/logo_primary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619013517/GNOG%20assets/Games/csgo/logo_primary_white.png',
               secondary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619075288/GNOG%20assets/Games/csgo/logo_secondary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619075288/GNOG%20assets/Games/csgo/logo_secondary_color.png',
               secondary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619075262/GNOG%20assets/Games/csgo/logo_secondary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619075262/GNOG%20assets/Games/csgo/logo_secondary_white.png',
             },
           },
           id: '2619660763',
@@ -305,21 +305,21 @@ export default async function handler(req, res) {
         {
           assets: {
             color: '#EF3D36',
-            cover: 'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619009254/GNOG%20assets/Games/dota_2/cover.png',
+            cover: 'https://res.cloudinary.com/gloot/image/upload/v1619009254/GNOG%20assets/Games/dota_2/cover.png',
             cover_dark:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1633936644/GNOG%20assets/Games/dota_2/cover_dark.png',
+              'https://res.cloudinary.com/gloot/image/upload/v1633936644/GNOG%20assets/Games/dota_2/cover_dark.png',
             game_picker:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1632130084/GNOG%20assets/Games/dota_2/game_picker.png',
-            hero: 'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619011943/GNOG%20assets/Games/dota_2/hero.jpg',
+              'https://res.cloudinary.com/gloot/image/upload/v1632130084/GNOG%20assets/Games/dota_2/game_picker.png',
+            hero: 'https://res.cloudinary.com/gloot/image/upload/v1619011943/GNOG%20assets/Games/dota_2/hero.jpg',
             logo: {
               primary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619013651/GNOG%20assets/Games/dota_2/logo_primary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619013651/GNOG%20assets/Games/dota_2/logo_primary_color.png',
               primary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619013663/GNOG%20assets/Games/dota_2/logo_primary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619013663/GNOG%20assets/Games/dota_2/logo_primary_white.png',
               secondary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619079099/GNOG%20assets/Games/dota_2/logo_secondary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619079099/GNOG%20assets/Games/dota_2/logo_secondary_color.png',
               secondary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619079078/GNOG%20assets/Games/dota_2/logo_secondary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619079078/GNOG%20assets/Games/dota_2/logo_secondary_white.png',
             },
           },
           id: '1440666116',
@@ -340,21 +340,21 @@ export default async function handler(req, res) {
           assets: {
             color: '#C5954A',
             cover:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1622103228/GNOG%20assets/Games/league_of_legends/cover.png',
+              'https://res.cloudinary.com/gloot/image/upload/v1622103228/GNOG%20assets/Games/league_of_legends/cover.png',
             cover_dark:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1633936699/GNOG%20assets/Games/league_of_legends/cover_dark.png',
+              'https://res.cloudinary.com/gloot/image/upload/v1633936699/GNOG%20assets/Games/league_of_legends/cover_dark.png',
             game_picker:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1632130397/GNOG%20assets/Games/league_of_legends/game_picker.png',
+              'https://res.cloudinary.com/gloot/image/upload/v1632130397/GNOG%20assets/Games/league_of_legends/game_picker.png',
             hero: '',
             logo: {
               primary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619014180/GNOG%20assets/Games/league_of_legends/logo_primary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619014180/GNOG%20assets/Games/league_of_legends/logo_primary_color.png',
               primary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619014193/GNOG%20assets/Games/league_of_legends/logo_primary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619014193/GNOG%20assets/Games/league_of_legends/logo_primary_white.png',
               secondary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619080527/GNOG%20assets/Games/league_of_legends/logo_secondary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619080527/GNOG%20assets/Games/league_of_legends/logo_secondary_color.png',
               secondary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619080523/GNOG%20assets/Games/league_of_legends/logo_secondary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619080523/GNOG%20assets/Games/league_of_legends/logo_secondary_white.png',
             },
           },
           id: '3434118582',
@@ -375,21 +375,21 @@ export default async function handler(req, res) {
           assets: {
             color: '#2E71C6',
             cover:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619015677/GNOG%20assets/Games/rocket_league/cover.png',
+              'https://res.cloudinary.com/gloot/image/upload/v1619015677/GNOG%20assets/Games/rocket_league/cover.png',
             cover_dark:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1633936893/GNOG%20assets/Games/rocket_league/cover_dark.png',
+              'https://res.cloudinary.com/gloot/image/upload/v1633936893/GNOG%20assets/Games/rocket_league/cover_dark.png',
             game_picker:
-              'https://res.cloudinary.com/gloot/image/upload/f_auto/v1632130472/GNOG%20assets/Games/rocket_league/game_picker.png',
-            hero: 'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619016970/GNOG%20assets/Games/rocket_league/hero.jpg',
+              'https://res.cloudinary.com/gloot/image/upload/v1632130472/GNOG%20assets/Games/rocket_league/game_picker.png',
+            hero: 'https://res.cloudinary.com/gloot/image/upload/v1619016970/GNOG%20assets/Games/rocket_league/hero.jpg',
             logo: {
               primary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619015715/GNOG%20assets/Games/rocket_league/logo_primary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619015715/GNOG%20assets/Games/rocket_league/logo_primary_color.png',
               primary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619015734/GNOG%20assets/Games/rocket_league/logo_primary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619015734/GNOG%20assets/Games/rocket_league/logo_primary_white.png',
               secondary_color:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619081060/GNOG%20assets/Games/rocket_league/logo_secondary_color.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619081060/GNOG%20assets/Games/rocket_league/logo_secondary_color.png',
               secondary_white:
-                'https://res.cloudinary.com/gloot/image/upload/f_auto/v1619081048/GNOG%20assets/Games/rocket_league/logo_secondary_white.png',
+                'https://res.cloudinary.com/gloot/image/upload/v1619081048/GNOG%20assets/Games/rocket_league/logo_secondary_white.png',
             },
           },
           id: '1719436358',

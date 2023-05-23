@@ -50,7 +50,7 @@ const howitworksSteps = [
     id: 0,
     name: "Step 1",
     description: "Invite a friend to join",
-    url: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1682079218/Stryda/illustrations/referral_step_1.png",
+    url: "https://res.cloudinary.com/gloot/image/upload/v1682079218/Stryda/illustrations/referral_step_1.png",
     hasButton: true,
   },
   {
@@ -70,7 +70,7 @@ const howitworksSteps = [
     name: "Step 4",
     description:
       "You both get <span class='whitespace-nowrap text-gold-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>500</span></span> to enjoy on the platform!",
-    url: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1682069954/Stryda/illustrations/referral_step_4.png",
+    url: "https://res.cloudinary.com/gloot/image/upload/v1682069954/Stryda/illustrations/referral_step_4.png",
   },
 ];
 

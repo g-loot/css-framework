@@ -1,4 +1,4 @@
-![G-Loot CSS Framework](https://res.cloudinary.com/gloot/image/upload/f_auto/v1657002851/Marketing/2022_prototype/G-Loot_Framework_logo.svg)
+![G-Loot CSS Framework](https://res.cloudinary.com/gloot/image/upload/v1657002851/Marketing/2022_prototype/G-Loot_Framework_logo.svg)
 
 A **CSS Framework** built on [Tailwind CSS](https://www.npmjs.com/package/tailwindcss) to bring consistency and speed to **G-Loot products**.
 

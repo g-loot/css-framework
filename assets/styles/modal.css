@@ -184,7 +184,8 @@
         text-3xl
         lg:text-4xl
         pr-8
-        my-2
+        mt-2
+        mb-4
         ;
       }
 

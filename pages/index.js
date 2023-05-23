@@ -129,7 +129,7 @@ const Index = () => {
                       <div
                         className="flex-none aspect-landscape bg-cover bg-center rounded border border-ui-700"
                         style={{
-                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1672668756/Stryda/framework/cover-designsystem.jpg)`,
+                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668756/Stryda/framework/cover-designsystem.jpg)`,
                         }}
                       ></div>
                       <div className="flex-1 flex flex-col items-start justify-start p-2">
@@ -162,7 +162,7 @@ const Index = () => {
                       <div
                         className="flex-none aspect-landscape bg-cover bg-center rounded border border-ui-700"
                         style={{
-                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1672668756/Stryda/framework/cover-prototype.jpg)`,
+                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668756/Stryda/framework/cover-prototype.jpg)`,
                         }}
                       ></div>
                       <div className="flex-1 flex flex-col items-start justify-start p-2">
@@ -193,7 +193,7 @@ const Index = () => {
                       <div
                         className="flex-none aspect-landscape bg-cover bg-center rounded border border-ui-700"
                         style={{
-                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1672668756/Stryda/framework/cover-componentlibrary.jpg)`,
+                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668756/Stryda/framework/cover-componentlibrary.jpg)`,
                         }}
                       ></div>
                       <div className="flex-1 flex flex-col items-start justify-start p-2">

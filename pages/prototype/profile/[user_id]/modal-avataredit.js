@@ -171,7 +171,7 @@ export default function ModalAvatarEdit(props) {
                 </div>
                 <img
                   className="md:order-2 md:w-1/2 px-8 mt-8 md:mt-0"
-                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674215034/Stryda/illustrations/shop_avatarframes.png"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1674215034/Stryda/illustrations/shop_avatarframes.png"
                   alt=""
                 />
               </div>

@@ -15,7 +15,7 @@ export default function BrandTopBar({children, data}) {
             </div>
             <Link href='../'>
               <a className='block interactive'>
-                <img width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672130648/Stryda/logos/stryda-logo-main-white.svg" alt="Stryda logo" />
+                <img width="123" height="64" src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg" alt="Stryda logo" />
               </a>
             </Link>
           </div>

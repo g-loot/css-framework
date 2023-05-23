@@ -325,7 +325,7 @@ const DSpage = () => {
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4 text-center flex items-center justify-center">
                 <div className="animate-rotate">
-                  <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672652127/Stryda/logos/mission-category-2.svg" alt="" width="42" height="42" />
+                  <img src="https://res.cloudinary.com/gloot/image/upload/v1672652127/Stryda/logos/mission-category-2.svg" alt="" width="42" height="42" />
                 </div>
               </div>
               <div className="flex-1">

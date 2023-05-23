@@ -27,7 +27,7 @@ const Modal1 = (props) => {
         <div className="modal-image">
           <span
             style={{
-              backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`,
+              backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`,
             }}
           />
         </div>

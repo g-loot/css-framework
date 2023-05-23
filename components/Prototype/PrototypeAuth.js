@@ -92,7 +92,7 @@ export default function PrototypeAuth({ children, title }) {
           </div>
           <div className="absolute z-0 bottom-0 top-1/3 right-0">
             <img
-              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1673204805/Stryda/illustrations/3D_logo_BG.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1673204805/Stryda/illustrations/3D_logo_BG.png"
               alt=""
               className="w-full h-full object-contain object-right-bottom"
             />

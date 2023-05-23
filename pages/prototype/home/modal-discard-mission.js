@@ -21,7 +21,7 @@ const missionDefault = {
   hasClaimed: false,
   xp: 50,
   image:
-    "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672672256/Stryda/demo/mission-valorant_3.jpg",
+    "https://res.cloudinary.com/gloot/image/upload/v1672672256/Stryda/demo/mission-valorant_3.jpg",
 };
 
 export default function ModalDiscardMission(props) {
@@ -106,7 +106,7 @@ export default function ModalDiscardMission(props) {
           <div className="modal-content">
             <div className="modal-body">
               <PremiumLogo
-                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
                 width="210"
                 height="auto"
                 className="mx-auto mt-4 mb-6"

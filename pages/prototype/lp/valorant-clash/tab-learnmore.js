@@ -49,7 +49,7 @@ export default function ValorantClashTabLearnMore() {
                 casters and analysts.
               </p>
             </div>
-            <a href="https://res.cloudinary.com/gloot/raw/upload/f_auto/v1664272203/Marketing/2022_Valorant_clash/Stryda_VALROANT_CLASH_Presskit.zip" target="_blank" rel="noopener noreferrer" className="button button-lg button-secondary">
+            <a href="https://res.cloudinary.com/gloot/raw/upload/v1664272203/Marketing/2022_Valorant_clash/Stryda_VALROANT_CLASH_Presskit.zip" target="_blank" rel="noopener noreferrer" className="button button-lg button-secondary">
               <span className="icon icon-data-download" />
               <span>Download presskit</span>
             </a>
@@ -63,7 +63,7 @@ export default function ValorantClashTabLearnMore() {
         <Parallax
           className="relative py-24"
           blur={0}
-          bgImage="https://res.cloudinary.com/gloot/image/upload/f_auto/v1663763819/Marketing/2022_Valorant_clash/Valorant_Clash_separator_4.webp"
+          bgImage="https://res.cloudinary.com/gloot/image/upload/v1663763819/Marketing/2022_Valorant_clash/Valorant_Clash_separator_4.webp"
           bgImageAlt=""
           strength={100}
         >
@@ -137,7 +137,7 @@ export default function ValorantClashTabLearnMore() {
         <Parallax
           className="relative py-24"
           blur={0}
-          bgImage="https://res.cloudinary.com/gloot/image/upload/f_auto/v1663763819/Marketing/2022_Valorant_clash/Valorant_Clash_separator_5.webp"
+          bgImage="https://res.cloudinary.com/gloot/image/upload/v1663763819/Marketing/2022_Valorant_clash/Valorant_Clash_separator_5.webp"
           bgImageAlt=""
           strength={100}
         >

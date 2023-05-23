@@ -60,7 +60,7 @@ export default function Home() {
               <div className="header-content">
                 <div className="header-image">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1657888944/Marketing/2022_prototype/Logo/samesize-tournaments.svg"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1657888944/Marketing/2022_prototype/Logo/samesize-tournaments.svg"
                     alt="Tournaments"
                   />
                 </div>

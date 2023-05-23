@@ -110,7 +110,7 @@ const DSpage = () => {
       <div className="flex justify-between items-baseline">
         <h1 className="mb-2">Explosion</h1>
         <a
-          href="https://res.cloudinary.com/gloot/raw/upload/f_auto/v1675254905/Stryda/animations/explosions.zip"
+          href="https://res.cloudinary.com/gloot/raw/upload/v1675254905/Stryda/animations/explosions.zip"
           target="_blank"
           rel="noopener noreferrer"
           className="button button-sm button-secondary"

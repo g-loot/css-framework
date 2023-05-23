@@ -5,7 +5,7 @@ import { getLayout } from '../../components/DesignSystem/DSLayout'
 const DSpage = () => (
   <div>
 
-    <div className='max-w-md mx-auto aspect-landscape bg-cover bg-center rounded-lg mb-12 border border-ui-700' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1672668756/Stryda/framework/cover-designsystem.jpg)`}}></div>
+    <div className='max-w-md mx-auto aspect-landscape bg-cover bg-center rounded-lg mb-12 border border-ui-700' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668756/Stryda/framework/cover-designsystem.jpg)`}}></div>
     <div className='max-w-sm mx-auto space-y-4 text-ui-100 leading-none mb-6'>
       <h1 className='leading-none h2'>
         Stryda CSS Framework <small className='text-ui-300'>introduction</small>
@@ -22,7 +22,7 @@ const DSpage = () => (
     </div>
 
     {/*
-    <div className='max-w-md mx-auto aspect-video bg-cover bg-center rounded-lg my-12 border border-ui-600' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653377432/Marketing/2022_prototype/methodology-styledcomponents.jpg)`}}></div>
+    <div className='max-w-md mx-auto aspect-video bg-cover bg-center rounded-lg my-12 border border-ui-600' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653377432/Marketing/2022_prototype/methodology-styledcomponents.jpg)`}}></div>
     <div className='max-w-sm mx-auto space-y-4 text-ui-200'>
       <h2 className='leading-none uppercase text-2xl text-ui-300'>
         The styled-component way
@@ -34,7 +34,7 @@ const DSpage = () => (
         The use of the Styled System library, that is suppose to enable flexibility when creating layouts is very limited and non-intuitive.
       </p>
     </div>
-    <div className='max-w-md mx-auto aspect-video bg-cover bg-center rounded-lg my-12 border border-ui-600' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653377432/Marketing/2022_prototype/methodology-class.jpg)`}}></div>
+    <div className='max-w-md mx-auto aspect-video bg-cover bg-center rounded-lg my-12 border border-ui-600' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653377432/Marketing/2022_prototype/methodology-class.jpg)`}}></div>
     <div className='max-w-sm mx-auto space-y-4 text-ui-200'>
       <h2 className='leading-none uppercase text-2xl text-ui-300'>
         The class(y) way

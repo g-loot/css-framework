@@ -252,7 +252,7 @@ const DSpage = () => {
                   <div className="card-bg">
                     <span
                       style={{
-                        backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1653310937/Marketing/2022_prototype/DummyContent/mission-rocketleague_1.jpg)`,
+                        backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1653310937/Marketing/2022_prototype/DummyContent/mission-rocketleague_1.jpg)`,
                       }}
                     />
                   </div>
@@ -276,7 +276,7 @@ const DSpage = () => {
                 <div className="card-tournament is-loading">
                   <div className="card-decoration">
                     <img
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
                       width="auto"
                       height="auto"
                       alt="Stryda Showdown"
@@ -315,7 +315,7 @@ const DSpage = () => {
                   <div className="card-bg">
                     <span
                       style={{
-                        backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`,
+                        backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg)`,
                       }}
                     />
                   </div>
@@ -348,7 +348,7 @@ const DSpage = () => {
                     <div className="item-image">
                       <div className="avatar avatar-square avatar-simple avatar-xs">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                         </div>
                       </div>
                     </div>
@@ -361,7 +361,7 @@ const DSpage = () => {
                     <div className="item-image">
                       <div className="avatar avatar-square avatar-simple avatar-xs">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                         </div>
                       </div>
                     </div>
@@ -374,7 +374,7 @@ const DSpage = () => {
                     <div className="item-image">
                       <div className="avatar avatar-square avatar-simple avatar-xs">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                         </div>
                       </div>
                     </div>
@@ -387,7 +387,7 @@ const DSpage = () => {
                     <div className="item-image">
                       <div className="avatar avatar-square avatar-simple avatar-xs">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                         </div>
                       </div>
                     </div>

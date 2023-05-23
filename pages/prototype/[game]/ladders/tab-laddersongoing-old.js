@@ -237,7 +237,7 @@ export default function TabLaddersOngoingOld() {
                                       <div className="flex items-center whitespace-nowrap gap-2">
                                         <img
                                           className="h-8"
-                                          src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp"
+                                          src="https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp"
                                           width="auto"
                                           height="auto"
                                           alt=""
@@ -376,7 +376,7 @@ export default function TabLaddersOngoingOld() {
               <div className="flex gap-8 items-start justify-center leading-tight mt-4">
                 <div>
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-large.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-large.png"
                     width="250"
                     height="auto"
                     className="-mt-6 -mb-8"
@@ -390,7 +390,7 @@ export default function TabLaddersOngoingOld() {
                 {/*
                 <div>
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1659613036/Marketing/2022_prototype/CurrencyRewards/Reward-ticket-multiple.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1659613036/Marketing/2022_prototype/CurrencyRewards/Reward-ticket-multiple.png"
                     width="140"
                     height="auto"
                     alt=""

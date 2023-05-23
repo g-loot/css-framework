@@ -88,7 +88,7 @@ export default function CardMissionSecondary(props) {
               <span
                 style={{
                   backgroundImage:
-                    "url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1672672455/Stryda/demo/mission-back-" +
+                    "url(https://res.cloudinary.com/gloot/image/upload/v1672672455/Stryda/demo/mission-back-" +
                     gameSlug +
                     ".jpg)",
                 }}
@@ -123,7 +123,7 @@ export default function CardMissionSecondary(props) {
                   <div className="flex items-center text-sm text-bronze-500 gap-1">
                     <img
                       className="animate-rotate"
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672650689/Stryda/logos/mission-category-1.svg"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672650689/Stryda/logos/mission-category-1.svg"
                       width="20"
                       height="20"
                       alt=""
@@ -135,7 +135,7 @@ export default function CardMissionSecondary(props) {
                   <div className="flex items-center text-sm text-gold-500 gap-1">
                     <img
                       className="animate-rotate"
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672650689/Stryda/logos/mission-category-2.svg"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672650689/Stryda/logos/mission-category-2.svg"
                       width="20"
                       height="20"
                       alt=""
@@ -147,7 +147,7 @@ export default function CardMissionSecondary(props) {
                   <div className="flex items-center text-sm text-purple-500 gap-1">
                     <img
                       className="animate-rotate"
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672650689/Stryda/logos/mission-category-3.svg"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672650689/Stryda/logos/mission-category-3.svg"
                       width="20"
                       height="20"
                       alt=""
@@ -159,7 +159,7 @@ export default function CardMissionSecondary(props) {
                   <div className="flex items-center text-sm text-teal-500 gap-1">
                     <img
                       className="animate-rotate"
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672650689/Stryda/logos/mission-category-4.svg"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672650689/Stryda/logos/mission-category-4.svg"
                       width="20"
                       height="20"
                       alt=""

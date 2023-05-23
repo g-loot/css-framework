@@ -144,7 +144,7 @@ export default function Stats() {
                 <div className="absolute z-0 inset-0 flex items-end md:items-center justify-center opacity-25 md:opacity-100">
                   <img
                     className="absolute z-0 object-cover left-[33%] md:left-auto object-center animate-slide-in-bottom"
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1669897461/Marketing/2022_VALORANT_agent_generator/images/valorant-stats-hero-empty.jpg"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1669897461/Marketing/2022_VALORANT_agent_generator/images/valorant-stats-hero-empty.jpg"
                     alt=""
                   />
                 </div>
@@ -358,7 +358,7 @@ export default function Stats() {
               <div className="my-16 text-center px-4 md:px-0">
                 <div className="mx-auto mb-4 max-w-sm">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1669821582/Marketing/2022_VALORANT_agent_generator/images/empty-valorant-character.png"
+                    src="https://res.cloudinary.com/gloot/image/upload/v1669821582/Marketing/2022_VALORANT_agent_generator/images/empty-valorant-character.png"
                     height="auto"
                     width="auto"
                     alt=""
@@ -685,7 +685,7 @@ export default function Stats() {
                             />
                             <img
                               className="relative z-0"
-                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671446426/Stryda/stats/valorant/hitmap.svg"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1671446426/Stryda/stats/valorant/hitmap.svg"
                               width="125"
                               height="264"
                               alt=""
@@ -857,7 +857,7 @@ export default function Stats() {
                                   <div className="flex items-center gap-4 text-left w-24">
                                     <img
                                       className="w-16 h-16 rounded-l"
-                                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/agent-avatar-astra.webp"
+                                      src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-astra.webp"
                                       alt=""
                                       width="auto"
                                       height="auto"
@@ -882,7 +882,7 @@ export default function Stats() {
                                   <div className="flex items-center gap-4 text-left w-24">
                                     <img
                                       className="w-16 h-16 rounded-l"
-                                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/agent-avatar-yoru.webp"
+                                      src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-yoru.webp"
                                       alt=""
                                       width="auto"
                                       height="auto"
@@ -1352,7 +1352,7 @@ export default function Stats() {
                               <div className="avatar avatar-sm avatar-diamond">
                                 <div>
                                   <img
-                                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/agent-avatar-neon.webp"
+                                    src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-neon.webp"
                                     alt=""
                                   />
                                 </div>
@@ -1431,7 +1431,7 @@ export default function Stats() {
                               <div className="avatar avatar-sm avatar-diamond">
                                 <div>
                                   <img
-                                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/agent-avatar-astra.webp"
+                                    src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-astra.webp"
                                     alt=""
                                   />
                                 </div>
@@ -1530,14 +1530,14 @@ export default function Stats() {
                           <div className="flex items-center gap-4 text-left relative">
                             <img
                               className="absolute z-0 -inset-y-4 -left-5 h-[calc(100%+2rem)] object-cover"
-                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
                               alt=""
                               width="auto"
                               height="auto"
                             />
                             <img
                               className="absolute z-0 -inset-y-4 right-0 h-[calc(100%+2rem)] object-cover -scale-y-100 -scale-x-100"
-                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
                               alt=""
                               width="auto"
                               height="auto"
@@ -1702,7 +1702,7 @@ export default function Stats() {
                                     <div className="w-52">
                                       <img
                                         className="drop-shadow-lg mx-auto"
-                                        src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/weapon-stinger.webp"
+                                        src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/weapon-stinger.webp"
                                         alt=""
                                         width="75"
                                         height="auto"
@@ -1725,7 +1725,7 @@ export default function Stats() {
                                     <div className="w-52">
                                       <img
                                         className="drop-shadow-lg mx-auto"
-                                        src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/weapon-bucky.webp"
+                                        src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/weapon-bucky.webp"
                                         alt=""
                                         width="75"
                                         height="auto"
@@ -1788,14 +1788,14 @@ export default function Stats() {
                               <span className="absolute z-10 inset-y-0 right-0 w-12 bg-gradient-to-l from-ui-800 to-ui-800/0" />
                               <img
                                 className="absolute z-20 inset-y-0 -left-8 h-full object-cover"
-                                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                                src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
                                 alt=""
                                 width="auto"
                                 height="auto"
                               />
                               <img
                                 className="absolute z-20 inset-y-0 -right-8 h-full object-cover -scale-y-100 -scale-x-100"
-                                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                                src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
                                 alt=""
                                 width="auto"
                                 height="auto"
@@ -1853,21 +1853,21 @@ export default function Stats() {
                                   <span className="absolute z-10 inset-y-0 right-0 w-12 bg-gradient-to-l from-ui-800 to-ui-800/0" />
                                   <img
                                     className="absolute z-20 inset-y-0 -left-8 h-full object-cover"
-                                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                                    src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
                                     alt=""
                                     width="auto"
                                     height="auto"
                                   />
                                   <img
                                     className="absolute z-20 inset-y-0 -right-8 h-full object-cover -scale-y-100 -scale-x-100"
-                                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                                    src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
                                     alt=""
                                     width="auto"
                                     height="auto"
                                   />
                                   <img
                                     className="absolute inset-0 h-full w-full object-cover"
-                                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/map-split.webp"
+                                    src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-split.webp"
                                     alt=""
                                     width="auto"
                                     height="auto"
@@ -1889,21 +1889,21 @@ export default function Stats() {
                                   <span className="absolute z-10 inset-y-0 right-0 w-12 bg-gradient-to-l from-ui-800 to-ui-800/0" />
                                   <img
                                     className="absolute z-20 inset-y-0 -left-8 h-full object-cover"
-                                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                                    src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
                                     alt=""
                                     width="auto"
                                     height="auto"
                                   />
                                   <img
                                     className="absolute z-20 inset-y-0 -right-8 h-full object-cover -scale-y-100 -scale-x-100"
-                                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
+                                    src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-overlay-left.svg"
                                     alt=""
                                     width="auto"
                                     height="auto"
                                   />
                                   <img
                                     className="absolute inset-0 h-full w-full object-cover"
-                                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/map-bind.webp"
+                                    src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/map-bind.webp"
                                     alt=""
                                     width="auto"
                                     height="auto"

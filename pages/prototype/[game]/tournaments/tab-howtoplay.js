@@ -8,7 +8,7 @@ const HowToPlay = [
     description:
       "Tournaments are esports competitions that take place in real time, on shared servers. Some tournaments are free to enter, while others require an entry fee such as Tickets. For some tournaments, you’ll need to have an existing team. Others can be joined solo or without a complete team.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660050649/Marketing/2022_prototype/tournaments-howitworks-ticket.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1660050649/Marketing/2022_prototype/tournaments-howitworks-ticket.webp",
     even: true,
     steps: [
       {
@@ -33,7 +33,7 @@ const HowToPlay = [
     description:
       "Check the Overview to see which kind of party you’ll need for this tournament. Tournaments can be Team Party or Mixed Party.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660050649/Marketing/2022_prototype/tournaments-howitworks-party.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1660050649/Marketing/2022_prototype/tournaments-howitworks-party.webp",
     even: false,
     steps: [
       {
@@ -61,7 +61,7 @@ const HowToPlay = [
   {
     title: "In game",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660050649/Marketing/2022_prototype/tournaments-howitworks-game.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1660050649/Marketing/2022_prototype/tournaments-howitworks-game.webp",
     even: true,
     steps: [
       {
@@ -83,7 +83,7 @@ const HowToPlay = [
     title: "After the tournament",
     description: "After a tournament ends you will be able to view the final leaderboard and get information about any prize you will receive.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1660052222/Marketing/2022_prototype/tournaments-howitworks-after.webp",
+      "https://res.cloudinary.com/gloot/image/upload/v1660052222/Marketing/2022_prototype/tournaments-howitworks-after.webp",
     even: false,
   },
 ];

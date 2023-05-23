@@ -64,7 +64,7 @@ export default function ModalClaimLadderRewards(props) {
                     <img
                       className="mx-auto animate-fire-in animate-delay"
                       style={{ "--delay": "calc( 1 * 0.2s)" }}
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-medium.png"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-medium.png"
                       width="180"
                       height="auto"
                       alt=""
@@ -90,7 +90,7 @@ export default function ModalClaimLadderRewards(props) {
                     <img
                       className="mx-auto animate-fire-in animate-delay"
                       style={{ "--delay": "calc( 2 * 0.2s)" }}
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674640634/Stryda/currencies/Reward-centered-token-large.png"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-centered-token-large.png"
                       width="180"
                       height="auto"
                       alt=""

@@ -139,7 +139,7 @@ export default function SectionClanActivity() {
                                   <div className="flex items-center gap-2">
                                     <img
                                       className="h-6"
-                                      src={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
+                                      src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-coin-unique.webp`}
                                       width="auto"
                                       height="auto"
                                       alt=""
@@ -153,7 +153,7 @@ export default function SectionClanActivity() {
                                   <div className="flex items-center gap-2">
                                     <img
                                       className="h-6"
-                                      src={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
+                                      src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-token-unique.webp`}
                                       width="auto"
                                       height="auto"
                                       alt=""
@@ -167,7 +167,7 @@ export default function SectionClanActivity() {
                                   <div className="flex items-center gap-2">
                                     <img
                                       className="h-6"
-                                      src={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}
+                                      src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-ticket-unique.webp`}
                                       width="auto"
                                       height="auto"
                                       alt=""

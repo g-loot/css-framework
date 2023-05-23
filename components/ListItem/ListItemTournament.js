@@ -40,7 +40,7 @@ export default function ListItemTournament(props) {
                       <div className="flex items-center gap-1">
                         <img
                           className="h-4"
-                          src={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-${reward.type}-unique.webp`}
+                          src={`https://res.cloudinary.com/gloot/image/upload/v1658134262/Marketing/2022_prototype/CurrencyRewards/Reward-cropped-${reward.type}-unique.webp`}
                           width="auto"
                           height="auto"
                           alt=""

@@ -287,7 +287,7 @@ export default function Battlepass(props) {
                     <img
                       src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
                         getBattlepassRewardByID(7).image
-                      }.png`}
+                      }`}
                       width="100%"
                       height="auto"
                       alt=""
@@ -315,7 +315,7 @@ export default function Battlepass(props) {
                     <img
                       src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
                         getBattlepassRewardByID(10).image
-                      }.png`}
+                      }`}
                       width="100%"
                       height="auto"
                       alt=""
@@ -344,11 +344,11 @@ export default function Battlepass(props) {
                       {!hasPremium ? (
                         <>
                           <CarouselItem>
-                            <Fragment>
+                            <div className="battlepass-reward-image">
                               <img
                                 src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
                                   getBattlepassRewardByID(18).image
-                                }.png`}
+                                }`}
                                 width="100%"
                                 height="auto"
                                 alt=""
@@ -356,41 +356,45 @@ export default function Battlepass(props) {
                               <span className="absolute top-0.5 inset-x-0.5 text-sm uppercase text-center text-premium-500 rounded bg-ui-850/80">
                                 Premium
                               </span>
-                            </Fragment>
+                            </div>
                           </CarouselItem>
                         </>
-                      ) : (
-                        <></>
-                      )}
+                      ) : (<></>)}
                       <CarouselItem>
-                        <img
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                            getBattlepassRewardByID(17).image
-                          }.png`}
-                          width="100%"
-                          height="auto"
-                          alt=""
-                        />
+                        <div className="battlepass-reward-image">
+                          <img
+                            src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                              getBattlepassRewardByID(17).image
+                            }`}
+                            width="100%"
+                            height="auto"
+                            alt=""
+                          />
+                        </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <img
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                            getBattlepassRewardByID(16).image
-                          }.png`}
-                          width="100%"
-                          height="auto"
-                          alt=""
-                        />
+                        <div className="battlepass-reward-image">
+                          <img
+                            src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                              getBattlepassRewardByID(16).image
+                            }`}
+                            width="100%"
+                            height="auto"
+                            alt=""
+                          />
+                        </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <img
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                            getBattlepassRewardByID(15).image
-                          }.png`}
-                          width="100%"
-                          height="auto"
-                          alt=""
-                        />
+                        <div className="battlepass-reward-image">
+                          <img
+                            src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                              getBattlepassRewardByID(15).image
+                            }`}
+                            width="100%"
+                            height="auto"
+                            alt=""
+                          />
+                        </div>
                       </CarouselItem>
                     </CarouselSingle>
                   </div>
@@ -416,11 +420,11 @@ export default function Battlepass(props) {
                       {!hasPremium ? (
                         <>
                           <CarouselItem>
-                            <Fragment>
+                            <div className="battlepass-reward-image">
                               <img
                                 src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
                                   getBattlepassRewardByID(31).image
-                                }.png`}
+                                }`}
                                 width="100%"
                                 height="auto"
                                 alt=""
@@ -428,51 +432,59 @@ export default function Battlepass(props) {
                               <span className="absolute top-0.5 inset-x-0.5 text-sm uppercase text-center text-premium-500 rounded bg-ui-850/80">
                                 Premium
                               </span>
-                            </Fragment>
+                            </div>
                           </CarouselItem>
                         </>
                       ) : (
                         <></>
                       )}
                       <CarouselItem>
-                        <img
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                            getBattlepassRewardByID(36).image
-                          }.png`}
-                          width="100%"
-                          height="auto"
-                          alt=""
-                        />
+                        <div className="battlepass-reward-image">
+                          <img
+                            src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                              getBattlepassRewardByID(36).image
+                            }`}
+                            width="100%"
+                            height="auto"
+                            alt=""
+                          />
+                        </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <img
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                            getBattlepassRewardByID(31).image
-                          }.png`}
-                          width="100%"
-                          height="auto"
-                          alt=""
-                        />
+                        <div className="battlepass-reward-image">
+                          <img
+                            src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                              getBattlepassRewardByID(31).image
+                            }`}
+                            width="100%"
+                            height="auto"
+                            alt=""
+                          />
+                        </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <img
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                            getBattlepassRewardByID(33).image
-                          }.png`}
-                          width="100%"
-                          height="auto"
-                          alt=""
-                        />
+                        <div className="battlepass-reward-image">
+                          <img
+                            src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                              getBattlepassRewardByID(33).image
+                            }`}
+                            width="100%"
+                            height="auto"
+                            alt=""
+                          />
+                        </div>
                       </CarouselItem>
                       <CarouselItem>
-                        <img
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                            getBattlepassRewardByID(35).image
-                          }.png`}
-                          width="100%"
-                          height="auto"
-                          alt=""
-                        />
+                        <div className="battlepass-reward-image">
+                          <img
+                            src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                              getBattlepassRewardByID(35).image
+                            }`}
+                            width="100%"
+                            height="auto"
+                            alt=""
+                          />
+                        </div>
                       </CarouselItem>
                     </CarouselSingle>
                   </div>
@@ -531,7 +543,7 @@ export default function Battlepass(props) {
                                         src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
                                           getBattlepassRewardByID(item.reward)
                                             .image
-                                        }.png`}
+                                        }`}
                                         width="100%"
                                         height="auto"
                                         alt={
@@ -574,15 +586,23 @@ export default function Battlepass(props) {
                         hasTooltipXP={false}
                       />
                       <img
-                        src={prototype.getShopitemByID(2, getBattlepassRewardByID(
-                          getBattlepassStepByID(activeStep).reward
-                        ).shopItemID).image}
+                        src={
+                          prototype.getShopitemByID(
+                            2,
+                            getBattlepassRewardByID(
+                              getBattlepassStepByID(activeStep).reward
+                            ).shopItemID
+                          ).image
+                        }
                         width="100%"
                         height="auto"
                         alt={
-                          prototype.getShopitemByID(2, getBattlepassRewardByID(
-                            getBattlepassStepByID(activeStep).reward
-                          ).shopItemID).name
+                          prototype.getShopitemByID(
+                            2,
+                            getBattlepassRewardByID(
+                              getBattlepassStepByID(activeStep).reward
+                            ).shopItemID
+                          ).name
                         }
                       />
                     </div>
@@ -593,16 +613,24 @@ export default function Battlepass(props) {
                 ).type === "avatarframe" && (
                   <div className="battlepass-reward-image">
                     <div className="avatar avatar-circle avatar-xl lg:avatar-2xl my-3">
-                        <img src={prototype.getShopitemByID(1, getBattlepassRewardByID(
-                          getBattlepassStepByID(activeStep).reward
-                        ).shopItemID).image} alt="" />
-                        <div>
-                          <img
-                            src={prototype.getUserByID(1)?.avatar}
-                            alt="avatar"
-                          />
-                        </div>
+                      <img
+                        src={
+                          prototype.getShopitemByID(
+                            1,
+                            getBattlepassRewardByID(
+                              getBattlepassStepByID(activeStep).reward
+                            ).shopItemID
+                          ).image
+                        }
+                        alt=""
+                      />
+                      <div>
+                        <img
+                          src={prototype.getUserByID(1)?.avatar}
+                          alt="avatar"
+                        />
                       </div>
+                    </div>
                   </div>
                 )}
                 {getBattlepassRewardByID(

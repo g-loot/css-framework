@@ -139,7 +139,7 @@ export default function Avatar(props) {
                         ) : (
                           <>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672241804/Stryda/illustrations/Generic_bg.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
                               className="aspect-banner rounded-t bg-ui-800/75"
                               alt=""
                             />
@@ -258,8 +258,8 @@ export default function Avatar(props) {
                         {selectedUser.achievements?.favoriteBadge && (
                           <div className="flex flex-col items-center justify-center mb-4 px-2">
                             <div className="w-16 h-16 achievement-level-4">
-                              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1678871888/Stryda/achievements/frames/achievement-frame-lvl4-animated.svg" />
-                              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
+                              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl4-animated.svg" />
+                              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
                             </div>
                             <div className="uppercase text-xs text-left text-achievement-level-4 animate-slide-in-top">
                               Mission Hunter

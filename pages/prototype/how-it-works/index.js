@@ -11,7 +11,7 @@ const TabsItems = [
     title: "Compete & earn XP",
     url: "missions",
     icon: "icon-missions",
-    img: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672727103/Stryda/illustrations/missions_cards.png",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1672727103/Stryda/illustrations/missions_cards.png",
     content: [
       {
         type: "p",
@@ -29,7 +29,7 @@ const TabsItems = [
     title: "Reach milestones & unlock rewards",
     url: "missions-rewards",
     icon: "icon-military-medal",
-    img: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674654910/Stryda/illustrations/coins_tokens.png",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1674654910/Stryda/illustrations/coins_tokens.png",
     content: [
       {
         type: "p",
@@ -47,7 +47,7 @@ const TabsItems = [
     title: "Compete to climb the ladder",
     url: "ladder",
     icon: "icon-ladder",
-    img: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672730609/Stryda/illustrations/ladder_leaderboard.png",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1672730609/Stryda/illustrations/ladder_leaderboard.png",
     content: [
       {
         type: "p",
@@ -73,7 +73,7 @@ const TabsItems = [
     title: "Get more out of Stryda",
     url: "premium",
     icon: "icon-fireworks",
-    img: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674654906/Stryda/illustrations/premium.png",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1674654906/Stryda/illustrations/premium.png",
     content: [
       {
         type: "p",
@@ -99,7 +99,7 @@ const TabsItems = [
     title: "Turn your gaming into cool prizes",
     url: "coins-tokens",
     icon: "icon-coin",
-    img: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674654905/Stryda/illustrations/coins_tokens.png",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1674654905/Stryda/illustrations/coins_tokens.png",
     content: [
       {
         type: "h4",
@@ -125,7 +125,7 @@ const TabsItems = [
     title: "Spend your currency into prizes",
     url: "shop",
     icon: "icon-shop",
-    img: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674656221/Stryda/illustrations/shop_vouchers.png",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1674656221/Stryda/illustrations/shop_vouchers.png",
     content: [
       {
         type: "p",
@@ -147,7 +147,7 @@ const TabsItems = [
     title: "Be stronger with clans",
     url: "clans",
     icon: "icon-multiple-11",
-    img: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674654905/Stryda/illustrations/clans.png",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1674654905/Stryda/illustrations/clans.png",
     content: [
       {
         type: "p",
@@ -174,7 +174,7 @@ const TabsItems = [
     title: "Play games & track your stats",
     url: "pcapp",
     icon: "icon-windows-symbol",
-    img: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1676368516/Stryda/illustrations/overlay_stryda.jpg",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1676368516/Stryda/illustrations/overlay_stryda.jpg",
     content: [
       {
         type: "p",
@@ -210,7 +210,7 @@ const TabsItems = [
     title: "Show your Stryda progress",
     url: "playerlevel",
     icon: "icon-speedometer",
-    img: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1679562135/Stryda/illustrations/player_level.jpg",
+    img: "https://res.cloudinary.com/gloot/image/upload/v1679562135/Stryda/illustrations/player_level.jpg",
     content: [
       {
         type: "p",
@@ -301,7 +301,7 @@ export default function HowItWorks() {
               </div>
             </div>
             <div className="header-bg">
-              <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672245449/Stryda/illustrations/HowItWorks_bg.png" />
+              <img src="https://res.cloudinary.com/gloot/image/upload/v1672245449/Stryda/illustrations/HowItWorks_bg.png" />
             </div>
           </div>
         </section>

@@ -40,7 +40,7 @@ export default function ModalGiftTokens(props) {
             <h2 className="modal-title">Gift tokens</h2>
             <img
               className="mx-auto -mt-2 -mb-4"
-              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672159789/Stryda/currencies/Reward-centered-token-medium.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-medium.png"
               width="175"
               height="175"
               alt=""

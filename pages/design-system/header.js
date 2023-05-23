@@ -70,7 +70,7 @@ const DSpage = () => {
                   <div className="header-content">
                     <div className="header-image">
                       <img
-                        src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674657396/Stryda/logos/stryda-logo-missions.svg"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1674657396/Stryda/logos/stryda-logo-missions.svg"
                         alt=""
                       />
                     </div>
@@ -130,7 +130,7 @@ const DSpage = () => {
                   </div>
                   <div className="header-bg">
                     <img
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-1.webp"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-1.webp"
                       alt=""
                     />
                   </div>
@@ -182,7 +182,7 @@ const DSpage = () => {
                   <div className="header-content">
                     <div className="header-image">
                       <img
-                        src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674492306/Stryda/logos/stryda-logo-ladders.svg"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1674492306/Stryda/logos/stryda-logo-ladders.svg"
                         alt=""
                       />
                     </div>
@@ -230,7 +230,7 @@ const DSpage = () => {
                   </div>
                   <div className="header-bg">
                     <img
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-1.webp"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-1.webp"
                       alt=""
                     />
                   </div>
@@ -282,7 +282,7 @@ const DSpage = () => {
                   <div className="header-content">
                     <div className="header-image">
                       <img
-                        src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1657888944/Marketing/2022_prototype/Logo/samesize-showdown.svg"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1657888944/Marketing/2022_prototype/Logo/samesize-showdown.svg"
                         alt=""
                       />
                     </div>
@@ -316,7 +316,7 @@ const DSpage = () => {
                   </div>
                   <div className="header-bg">
                     <img
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp"
                       alt=""
                     />
                   </div>
@@ -382,7 +382,7 @@ const DSpage = () => {
                   </div>
                   <div className="header-bg">
                     <img
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672219552/Stryda/illustrations/Clans_bg.jpg"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672219552/Stryda/illustrations/Clans_bg.jpg"
                       alt=""
                     />
                   </div>
@@ -415,7 +415,7 @@ const DSpage = () => {
                         <div className="avatar avatar-xl avatar-circle">
                           <div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg"
+                              src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg"
                               alt="avatar"
                             />
                           </div>
@@ -512,7 +512,7 @@ const DSpage = () => {
                   </div>
                   <div className="header-bg">
                     <img
-                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672241804/Stryda/illustrations/Generic_bg.png"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
                       alt=""
                     />
                   </div>

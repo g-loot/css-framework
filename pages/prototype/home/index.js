@@ -183,13 +183,13 @@ export default function Home() {
           <div className="relative z-10 lg:order-2 flex-1 px-8 grid place-items-center">
             <img
               className="object-contain max-h-60"
-              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1675777113/Stryda/illustrations/home_premium_banner.png"
+              src="https://res.cloudinary.com/gloot/image/upload/v1675777113/Stryda/illustrations/home_premium_banner.png"
               alt=""
             />
           </div>
           <img
             className="absolute inset-0 h-full w-full object-cover object-right opacity-50"
-            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674045863/Stryda/illustrations/home-premium.jpg"
+            src="https://res.cloudinary.com/gloot/image/upload/v1674045863/Stryda/illustrations/home-premium.jpg"
             alt=""
           />
         </section>

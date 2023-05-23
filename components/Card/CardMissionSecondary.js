@@ -150,7 +150,7 @@ export default function CardMissionSecondary(props) {
               <span
                 style={{
                   backgroundImage:
-                    "url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1677499396/Stryda/demo/mission-back-" +
+                    "url(https://res.cloudinary.com/gloot/image/upload/v1677499396/Stryda/demo/mission-back-" +
                     gameSlug +
                     ".jpg)",
                 }}

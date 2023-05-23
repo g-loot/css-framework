@@ -48,7 +48,7 @@ const DSpage = () => {
                   </button>
                   <div className="avatar avatar-simple" data-badge="88">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                     </div>
                   </div>
                 </div>
