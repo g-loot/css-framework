@@ -90,7 +90,7 @@ export const dataNotifications = [
         title: "Your clan is getting noticed!",
         text: "<a href='#' class='link font-bold'>Mr Killa</a> wants to join your Clan! Take action, otherwise the application will expire on 22.10.2022.",
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
+          "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-valorant_5.webp",
         cta: "Invite",
         url: "/prototype/clans/1/applications",
         time: "2 days",

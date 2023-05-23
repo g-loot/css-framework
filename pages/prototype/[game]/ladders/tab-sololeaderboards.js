@@ -347,7 +347,7 @@ export default function TabLaddersSoloLeaderboards() {
                     <div className="relative flex flex-col items-center">
                       <img
                         className="absolute z-10 -top-4 left-auto right-auto"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1672305058/Stryda/3dobjects/3dobject-partypopper.png"
+                        src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672305058/Stryda/3dobjects/3dobject-partypopper.png"
                         width="136"
                         height="auto"
                         alt=""
@@ -377,7 +377,7 @@ export default function TabLaddersSoloLeaderboards() {
                       {selectedLadder.isPowerPlay && (
                         <div className="w-full mb-4 surface rounded-lg p-4 text-center relative z-0">
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1675423727/Stryda/illustrations/giftcards_1.png"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1675423727/Stryda/illustrations/giftcards_1.png"
                             width="auto"
                             height="auto"
                             alt=""
@@ -1050,8 +1050,8 @@ export default function TabLaddersSoloLeaderboards() {
                                                     }
                                                   >
                                                     <div className="w-12 achievement-level-1">
-                                                      <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl1-animated.svg" />
-                                                      <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
+                                                      <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1678871888/Stryda/achievements/frames/achievement-frame-lvl1-animated.svg" />
+                                                      <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
                                                     </div>
                                                   </Tooltip>
                                                   <span className="text-ui-300 leading-none">

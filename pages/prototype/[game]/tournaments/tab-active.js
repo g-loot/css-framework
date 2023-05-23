@@ -46,15 +46,15 @@ export default function TabTournamentsActive() {
                             <img
                               src={`${
                                 tournament.type === "skirmish"
-                                  ? "https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Skirmish-sameheight.svg"
+                                  ? "https://res.cloudinary.com/gloot/image/upload/f_auto/v1653224681/Marketing/2022_prototype/Logo/Skirmish-sameheight.svg"
                                   : ""
                               } ${
                                 tournament.type === "showdown"
-                                  ? "https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Showdown-sameheight.svg"
+                                  ? "https://res.cloudinary.com/gloot/image/upload/f_auto/v1653224681/Marketing/2022_prototype/Logo/Showdown-sameheight.svg"
                                   : ""
                               } ${
                                 tournament.type === "open"
-                                  ? "https://res.cloudinary.com/gloot/image/upload/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
+                                  ? "https://res.cloudinary.com/gloot/image/upload/f_auto/v1653224681/Marketing/2022_prototype/Logo/Open-sameheight.svg"
                                   : ""
                               } ${
                                 tournament.type === "custom"
@@ -177,28 +177,28 @@ export default function TabTournamentsActive() {
           <div className="relative">
             <img
               className="hidden xl:block absolute pointer-events-none z-20 top-2 right-40 rotate-[45deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1659430626/Marketing/2022_prototype/Decoration-grenade.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1659430626/Marketing/2022_prototype/Decoration-grenade.webp"
               width="150"
               height="auto"
               alt=""
             />
             <img
               className="hidden xl:block absolute pointer-events-none z-20 -bottom-4 right-6 blur-sm rotate-[33deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1657625027/Marketing/2022_prototype/3D_object_crown.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1657625027/Marketing/2022_prototype/3D_object_crown.webp"
               width="190"
               height="auto"
               alt=""
             />
             <img
               className="hidden xl:block absolute pointer-events-none z-20 -top-8 left-32 blur-sm -rotate-[180deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1659430626/Marketing/2022_prototype/Decoration-star.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1659430626/Marketing/2022_prototype/Decoration-star.webp"
               width="170"
               height="auto"
               alt=""
             />
             <img
               className="hidden xl:block absolute pointer-events-none z-20 -bottom-4 left-20 -rotate-[74deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1659430626/Marketing/2022_prototype/Decoration-star.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1659430626/Marketing/2022_prototype/Decoration-star.webp"
               width="100"
               height="auto"
               alt=""
@@ -207,7 +207,7 @@ export default function TabTournamentsActive() {
             <div
               className="relative z-10 surface rounded-lg p-8 text-center flex flex-col items-center justify-center bg-cover bg-center"
               style={{
-                backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1660134304/Marketing/2022_prototype/tournament_stream_bg.webp)`,
+                backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1660134304/Marketing/2022_prototype/tournament_stream_bg.webp)`,
               }}
             >
               <h2 className="text-4xl">

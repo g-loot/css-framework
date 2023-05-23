@@ -14,7 +14,7 @@ export default function TabLaddersRules() {
           <div className="flex-1">
           <img
             className="rounded-lg"
-            src="https://res.cloudinary.com/gloot/image/upload/v1676324982/Stryda/illustrations/picture_gamer_4.jpg"
+            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1676324982/Stryda/illustrations/picture_gamer_4.jpg"
             width="100%"
             height="auto"
             alt=""
@@ -40,7 +40,7 @@ export default function TabLaddersRules() {
           <div className="flex-1">
             <img
               className="mx-auto"
-              src="https://res.cloudinary.com/gloot/image/upload/v1676324396/Stryda/illustrations/stryda-rules-accountsharing.png"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1676324396/Stryda/illustrations/stryda-rules-accountsharing.png"
               width="200"
               height="auto"
               alt=""
@@ -57,7 +57,7 @@ export default function TabLaddersRules() {
           <div className="flex-1">
             <img
               className="mx-auto"
-              src="https://res.cloudinary.com/gloot/image/upload/v1676324455/Stryda/illustrations/stryda-rules-multipleaccountsstryda.png"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1676324455/Stryda/illustrations/stryda-rules-multipleaccountsstryda.png"
               width="200"
               height="auto"
               alt=""
@@ -71,7 +71,7 @@ export default function TabLaddersRules() {
           <div className="flex-1">
             <img
               className="mx-auto"
-              src="https://res.cloudinary.com/gloot/image/upload/v1676893079/Stryda/illustrations/stryda-rules-punish.png"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1676893079/Stryda/illustrations/stryda-rules-punish.png"
               width="200"
               height="auto"
               alt=""
@@ -94,7 +94,7 @@ export default function TabLaddersRules() {
           <div className="col-span-1 md:col-span-2 xl:col-span-1 surface sm:rounded-lg p-4 sm:p-8 flex items-center gap-8">
             <div className="flex flex-col justify-center items-center text-center w-32">
               <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1676324139/Stryda/logos/Stryda_Player_Protection.svg"
+                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1676324139/Stryda/logos/Stryda_Player_Protection.svg"
                 width="100"
                 height="auto"
               />

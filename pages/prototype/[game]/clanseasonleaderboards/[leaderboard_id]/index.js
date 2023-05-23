@@ -21,8 +21,8 @@ const TabsItems = [
     component: TabClanLeaderboardsLeaderboards,
   },
   {
-    label: "All seasons",
-    url: "all-seasons",
+    label: "Completed",
+    url: "completed",
     component: TabClanLeaderboardsHistory,
   },
   {
@@ -42,6 +42,7 @@ export default function Ladders() {
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedLeaderboard, setSelectedLeaderboard] = useState(null);
+  const [hasOptedIn, setHasOptedIn] = useState(false);
   const [selectedClanLeaderboard, setSelectedClanLeaderboard] = useState(null);
   const [laddersFinishedLength, setLaddersFinishedLength] = useState(null);
 
@@ -81,7 +82,7 @@ export default function Ladders() {
   return (
     <>
       {selectedGame && selectedLeaderboard && (
-        <PrototypeStructure title="Clan Season Leaderboard">
+        <PrototypeStructure title="Clan Seasons">
           <Ad width="1005" height="300" />
           <section className="surface sm:rounded overflow-hidden mb-4">
             <div className="h-44 relative w-full flex items-center justify-center">
@@ -99,13 +100,23 @@ export default function Ladders() {
               />
             </div>
             <div className="border-t border-ui-700 p-4">
-              <div className="flex gap-2 md:items-center justify-between">
+              <div className="flex flex-col md:flex-row gap-2 md:items-center justify-between">
                 <div className="flex items-center gap-2">
                   <h1 className="h4">{selectedLeaderboard.name}</h1>
                   {selectedLeaderboard.isCurrent && (
-                    <span className="chip chip-secondary">
-                      <span className="text-main animate-pulse">Ongoing</span>
-                    </span>
+                    <>
+                      {!hasOptedIn ? (
+                        <span className="chip chip-secondary">
+                          <span className="text-blue-500">Ongoing</span>
+                        </span>
+                      ) : (
+                        <span className="chip chip-secondary" onClick={() => setHasOptedIn(!hasOptedIn)}>
+                          <span className="text-main animate-pulse">
+                            Enrolled
+                          </span>
+                        </span>
+                      )}
+                    </>
                   )}
                 </div>
                 {selectedLeaderboard.isCurrent ? (
@@ -130,6 +141,7 @@ export default function Ladders() {
 
                     <p className="text-sm">
                       {selectedLeaderboard.meta.objective}{" "}
+                      {/*
                       <Tooltip
                         tooltip={
                           <div className="max-w-xs text-sm leading-tight">
@@ -142,7 +154,13 @@ export default function Ladders() {
                           <span className="icon text-sm icon-c-info" />
                         </button>
                       </Tooltip>
+                      */}
                     </p>
+                    {!hasOptedIn && (
+                      <button type="button" className="button button-sm button-primary -my-4" onClick={() => setHasOptedIn(!hasOptedIn)}>
+                        <span>Enroll my clan</span>
+                      </button>
+                    )}
                   </li>
                   <li className="flex gap-2 items-center">
                     <Tooltip

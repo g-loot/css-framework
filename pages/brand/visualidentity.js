@@ -15,7 +15,7 @@ const BrandPage = () => (
           </div>
           <div className="absolute z-10 hidden lg:block bottom-8 -left-24 scale-110">
             <video autoPlay playsInline loop preload width="700" height="auto">
-              <source type="video/webm" src="https://res.cloudinary.com/gloot/video/upload/v1649858076/Marketing/202109_gloot2/GMSD_Trophy_Tilted_360_Rotaion_Loop_0001.webm" />
+              <source type="video/webm" src="https://res.cloudinary.com/gloot/video/upload/f_auto/v1649858076/Marketing/202109_gloot2/GMSD_Trophy_Tilted_360_Rotaion_Loop_0001.webm" />
             </video>
           </div>
         </div>

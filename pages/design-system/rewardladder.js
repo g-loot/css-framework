@@ -51,7 +51,7 @@ const DSpage = () => {
                         <div className="avatar avatar-circle avatar-sm">
                           <div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
                               alt=""
                             />
                           </div>
@@ -76,7 +76,7 @@ const DSpage = () => {
                             <span className="icon icon-xp-symbol-outline" />
                           </div>
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                             width="100%"
                             height="auto"
                             alt="Reward"
@@ -100,7 +100,7 @@ const DSpage = () => {
                             <span className="icon icon-xp-symbol-outline" />
                           </div>
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                             width="100%"
                             height="auto"
                             alt="Reward"
@@ -124,7 +124,7 @@ const DSpage = () => {
                             <span className="icon icon-xp-symbol-outline" />
                           </div>
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                             width="100%"
                             height="auto"
                             alt="Reward"
@@ -148,7 +148,7 @@ const DSpage = () => {
                             <span className="icon icon-xp-symbol-outline" />
                           </div>
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                             width="100%"
                             height="auto"
                             alt="Reward"
@@ -172,7 +172,7 @@ const DSpage = () => {
                             <span className="icon icon-xp-symbol-outline" />
                           </div>
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                             width="100%"
                             height="auto"
                             alt="Reward"
@@ -196,7 +196,7 @@ const DSpage = () => {
                             <span className="icon icon-xp-symbol-outline" />
                           </div>
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                             width="100%"
                             height="auto"
                             alt="Reward"
@@ -220,7 +220,7 @@ const DSpage = () => {
                             <span className="icon icon-xp-symbol-outline" />
                           </div>
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-extrasmall.png"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-centered-token-extrasmall.png"
                             width="100%"
                             height="auto"
                             alt="Reward"
@@ -248,7 +248,7 @@ const DSpage = () => {
                             <span className="icon icon-xp-symbol-outline" />
                           </div>
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
                             width="100%"
                             height="auto"
                             alt="Reward"
@@ -279,7 +279,7 @@ const DSpage = () => {
                             <span className="icon icon-xp-symbol-outline" />
                           </div>
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
                             width="100%"
                             height="auto"
                             alt="Reward"
@@ -310,7 +310,7 @@ const DSpage = () => {
                             <span className="icon icon-xp-symbol-outline" />
                           </div>
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-medium.png"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671800047/Stryda/currencies/Reward-centered-mixed-medium.png"
                             width="100%"
                             height="auto"
                             alt="Reward"
@@ -391,28 +391,28 @@ const DSpage = () => {
                         <div className="absolute z-0 inset-0 pointer-events-none">
                           <img
                             className="absolute top-10 left-[calc(50%-300px)] -rotate-[33deg]"
-                            src="https://res.cloudinary.com/gloot/image/upload/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-1.webp"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-1.webp"
                             width="100"
                             height="auto"
                             alt=""
                           />
                           <img
                             className="absolute bottom-10 left-[calc(50%-200px)] -rotate-[120deg]"
-                            src="https://res.cloudinary.com/gloot/image/upload/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-2.webp"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-2.webp"
                             width="60"
                             height="auto"
                             alt=""
                           />
                           <img
                             className="absolute bottom-24 right-[calc(50%-250px)] rotate-[45deg]"
-                            src="https://res.cloudinary.com/gloot/image/upload/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-1.webp"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-1.webp"
                             width="50"
                             height="auto"
                             alt=""
                           />
                           <img
                             className="absolute top-12 right-[calc(50%-350px)] rotate-[33deg]"
-                            src="https://res.cloudinary.com/gloot/image/upload/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-2.webp"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-2.webp"
                             width="110"
                             height="auto"
                             alt=""
@@ -431,7 +431,7 @@ const DSpage = () => {
                           <div className="avatar avatar-circle avatar-sm">
                             <div>
                               <img
-                                src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
                                 alt=""
                               />
                             </div>
@@ -456,7 +456,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -480,7 +480,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -504,7 +504,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -528,7 +528,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -552,7 +552,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -576,7 +576,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -600,7 +600,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-extrasmall.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-centered-token-extrasmall.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -628,7 +628,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -659,7 +659,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -690,7 +690,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-medium.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671800047/Stryda/currencies/Reward-centered-mixed-medium.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -743,28 +743,28 @@ const DSpage = () => {
                       <div className="absolute z-0 inset-0 pointer-events-none">
                         <img
                           className="absolute top-10 left-[calc(50%-300px)] -rotate-[33deg]"
-                          src="https://res.cloudinary.com/gloot/image/upload/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-1.webp"
+                          src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-1.webp"
                           width="100"
                           height="auto"
                           alt=""
                         />
                         <img
                           className="absolute bottom-10 left-[calc(50%-200px)] -rotate-[120deg]"
-                          src="https://res.cloudinary.com/gloot/image/upload/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-2.webp"
+                          src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-2.webp"
                           width="60"
                           height="auto"
                           alt=""
                         />
                         <img
                           className="absolute bottom-24 right-[calc(50%-250px)] rotate-[45deg]"
-                          src="https://res.cloudinary.com/gloot/image/upload/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-1.webp"
+                          src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-1.webp"
                           width="50"
                           height="auto"
                           alt=""
                         />
                         <img
                           className="absolute top-12 right-[calc(50%-350px)] rotate-[33deg]"
-                          src="https://res.cloudinary.com/gloot/image/upload/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-2.webp"
+                          src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660128022/Marketing/2022_prototype/3Dobjects/3dobject-star-2.webp"
                           width="110"
                           height="auto"
                           alt=""
@@ -782,7 +782,7 @@ const DSpage = () => {
                           <div className="avatar avatar-circle avatar-sm">
                             <div>
                               <img
-                                src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
                                 alt=""
                               />
                             </div>
@@ -807,7 +807,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -831,7 +831,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -855,7 +855,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -879,7 +879,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -903,7 +903,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -927,7 +927,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -951,7 +951,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-extrasmall.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-centered-token-extrasmall.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -979,7 +979,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -1010,7 +1010,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -1041,7 +1041,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-medium.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671800047/Stryda/currencies/Reward-centered-mixed-medium.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -1103,7 +1103,7 @@ const DSpage = () => {
                           <div className="avatar avatar-circle avatar-sm">
                             <div>
                               <img
-                                src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
                                 alt=""
                               />
                             </div>
@@ -1128,7 +1128,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -1152,7 +1152,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -1176,7 +1176,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -1200,7 +1200,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -1224,7 +1224,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-unique.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -1248,7 +1248,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-small.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -1272,7 +1272,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-extrasmall.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-centered-token-extrasmall.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -1300,7 +1300,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -1331,7 +1331,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671800047/Stryda/currencies/Reward-centered-mixed-small.png"
                               width="100%"
                               height="auto"
                               alt="Reward"
@@ -1362,7 +1362,7 @@ const DSpage = () => {
                               <span className="icon icon-xp-symbol-outline" />
                             </div>
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1671800047/Stryda/currencies/Reward-centered-mixed-medium.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671800047/Stryda/currencies/Reward-centered-mixed-medium.png"
                               width="100%"
                               height="auto"
                               alt="Reward"

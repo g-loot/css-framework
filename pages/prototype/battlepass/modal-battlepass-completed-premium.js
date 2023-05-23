@@ -69,7 +69,7 @@ export default function ModalBattlepassCompletedPremium(props) {
           <div className="modal-body">
             <h2 className="modal-title">Premium rewards unlocked</h2>
             <p className="mb-8">
-              Thank you for getting Premium, you have now unlocked exclusive
+              Congratulations for getting Premium, you have now unlocked exclusive
               Battlepass rewards.
             </p>
             <Battlepass

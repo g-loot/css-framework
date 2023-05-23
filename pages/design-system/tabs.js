@@ -262,7 +262,7 @@ const DSpage = () => {
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" />
                     </div>
                     <i className="radar" />
                   </div>

@@ -66,6 +66,7 @@
     items-center
     justify-center
     gap-4
+    animate-scale-in
     ;
   }
   .battlepass-reward-action {
@@ -213,15 +214,8 @@
     }
   }
 }
-
+.battlepass-reward-profilebanner,
 .battlepass-reward-image {
-  @apply
-  relative
-  w-72
-  aspect-square
-  rounded
-  overflow-hidden
-  ;
   > i {
     @apply
     z-30
@@ -238,7 +232,38 @@
     mask-repeat: no-repeat;
   }
 }
-
+.battlepass-reward-profilebanner {
+  @apply
+  flex
+  items-center
+  justify-center
+  h-72
+  ;
+  > .avatar {
+    @apply
+    absolute
+    z-40
+    ;
+  }
+  > i,
+  > img {
+    @apply
+    rounded
+    ;
+  }
+}
+.battlepass-reward-image {
+  @apply
+  relative
+  w-72
+  aspect-square
+  rounded
+  overflow-hidden
+  flex
+  items-center
+  justify-center
+  ;
+}
 .battlepass-reward-name {
   @apply
   leading-none
@@ -457,6 +482,7 @@
         inset-0
         object-cover
         object-center
+        aspect-square
         ;
       }
     }

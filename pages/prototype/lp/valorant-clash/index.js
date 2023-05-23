@@ -87,7 +87,7 @@ const PrototypePage = () => {
           <div>
             <img
               className="w-72 md:w-[450px] md:h-[320px] mx-auto md:mx-0"
-              src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/Stryda_Valorant_Clash_Logo.svg"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1663684817/Marketing/2022_Valorant_clash/Stryda_Valorant_Clash_Logo.svg"
               width="auto"
               height="auto"
               alt=""
@@ -144,10 +144,10 @@ const PrototypePage = () => {
           muted
           loop
           preload
-          poster="https://res.cloudinary.com/gloot/video/upload/v1638395219/Marketing/202109_gloot2/sparks_1_backup.webm"
+          poster="https://res.cloudinary.com/gloot/video/upload/f_auto/v1638395219/Marketing/202109_gloot2/sparks_1_backup.webm"
         >
-          <source src="https://res.cloudinary.com/gloot/video/upload/v1638395219/Marketing/202109_gloot2/sparks_1_backup.webm" />
-          <source src="https://res.cloudinary.com/gloot/video/upload/v1663664282/Marketing/2022_Valorant_clash/GVC_teaser-scenes_landing-page_v2.mp4" />
+          <source src="https://res.cloudinary.com/gloot/video/upload/f_auto/v1638395219/Marketing/202109_gloot2/sparks_1_backup.webm" />
+          <source src="https://res.cloudinary.com/gloot/video/upload/f_auto/v1663664282/Marketing/2022_Valorant_clash/GVC_teaser-scenes_landing-page_v2.mp4" />
         </video>
       </section>
       <section className="relative z-10 -mt-12">

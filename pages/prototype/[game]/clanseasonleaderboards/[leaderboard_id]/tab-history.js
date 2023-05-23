@@ -222,13 +222,13 @@ export default function TabClanLeaderboardsHistory() {
                           href={`/prototype/${game}/clanseasonleaderboards/${item.id}`}
                         >
                           <li
-                            className="item rounded p-0 animate-slide-in-bottom animate-delay"
+                            className="item flex-col sm:flex-row items-stretch sm:items-center rounded p-0 animate-slide-in-bottom animate-delay"
                             style={{
                               "--delay": "calc(" + itemIndex + " * 0.05s)",
                             }}
                           >
                             <div className="item-image p-0">
-                              <div className="w-48 aspect-video relative flex items-center justify-center overflow-hidden rounded-l">
+                              <div className="w-full sm:w-48 aspect-landscape sm:aspect-video relative flex items-center justify-center overflow-hidden sm:rounded-l">
                                 <img
                                   src={item.logo}
                                   alt={item.name}

@@ -17,7 +17,7 @@ const DSpage = () => {
                 <div className="card-image">
                   <figure>
                     <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1644831543/Marketing/202109_gloot2/mission-dota2_1.jpg"
+                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831543/Marketing/202109_gloot2/mission-dota2_1.jpg"
                       alt="Dota 2"
                     />
                   </figure>
@@ -61,7 +61,7 @@ const DSpage = () => {
                 <div className="card-image">
                   <figure>
                     <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1644831543/Marketing/202109_gloot2/mission-csgo_5.jpg"
+                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831543/Marketing/202109_gloot2/mission-csgo_5.jpg"
                       alt="CS:GO"
                     />
                   </figure>
@@ -114,7 +114,7 @@ const DSpage = () => {
                 <div className="card-image">
                   <figure>
                     <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1644831629/Marketing/202109_gloot2/mission-valorant_1.jpg"
+                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831629/Marketing/202109_gloot2/mission-valorant_1.jpg"
                       alt="CS:GO"
                     />
                   </figure>

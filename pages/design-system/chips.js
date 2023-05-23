@@ -399,7 +399,7 @@ const DSpage = () => {
                     <div className="chip chip-primary chip-sm">
                       <div className="avatar avatar-simple avatar-circle avatar-tiny">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                         </div>
                       </div>
                       <span>Label</span>
@@ -422,7 +422,7 @@ const DSpage = () => {
                     <div className="chip chip-secondary chip-sm">
                       <div className="avatar avatar-simple avatar-circle avatar-tiny">
                         <div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                          <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
                         </div>
                       </div>
                       <span>Label</span>

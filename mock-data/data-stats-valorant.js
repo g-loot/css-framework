@@ -1,5 +1,5 @@
 function getImageUrl(fileName) {
-  return `https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/${fileName}`;
+  return `https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/${fileName}`;
 }
 
 export const StatsValorantMaps = [

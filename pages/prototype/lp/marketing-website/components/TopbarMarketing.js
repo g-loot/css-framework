@@ -58,7 +58,7 @@ const TopBarMarketing = ({ props }) => {
                 <img
                   width={123}
                   height={64}
-                  src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-white.svg"
+                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672130648/Stryda/logos/stryda-logo-white.svg"
                   alt="Stryda logo"
                   className="py-3"
                 />

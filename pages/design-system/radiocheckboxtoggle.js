@@ -429,7 +429,7 @@ const DSpage = () => {
                         <div
                           className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
                           style={{
-                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644677000/Marketing/202109_gloot2/Game_cover_Valorant.jpg)`,
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644677000/Marketing/202109_gloot2/Game_cover_Valorant.jpg)`,
                           }}
                         />
                       </label>
@@ -439,7 +439,7 @@ const DSpage = () => {
                         <div
                           className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
                           style={{
-                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Apex_Legends.jpg)`,
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644676999/Marketing/202109_gloot2/Game_cover_Apex_Legends.jpg)`,
                           }}
                         />
                       </label>
@@ -449,7 +449,7 @@ const DSpage = () => {
                         <div
                           className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
                           style={{
-                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_PUBG_Battlegrounds.jpg)`,
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644676999/Marketing/202109_gloot2/Game_cover_PUBG_Battlegrounds.jpg)`,
                           }}
                         />
                       </label>
@@ -459,7 +459,7 @@ const DSpage = () => {
                         <div
                           className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
                           style={{
-                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_CSGO.jpg)`,
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644676999/Marketing/202109_gloot2/Game_cover_CSGO.jpg)`,
                           }}
                         />
                       </label>
@@ -469,7 +469,7 @@ const DSpage = () => {
                         <div
                           className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
                           style={{
-                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Rocket_League.jpg)`,
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644676999/Marketing/202109_gloot2/Game_cover_Rocket_League.jpg)`,
                           }}
                         />
                       </label>
@@ -479,7 +479,7 @@ const DSpage = () => {
                         <div
                           className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
                           style={{
-                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1645621586/Marketing/202109_gloot2/Game_cover_League_of_Legends.jpg)`,
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1645621586/Marketing/202109_gloot2/Game_cover_League_of_Legends.jpg)`,
                           }}
                         />
                       </label>
@@ -489,7 +489,7 @@ const DSpage = () => {
                         <div
                           className="w-24 h-32 lg:w-32 lg:h-48 bg-cover rounded-md"
                           style={{
-                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_Dota_2.jpg)`,
+                            backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1644676999/Marketing/202109_gloot2/Game_cover_Dota_2.jpg)`,
                           }}
                         />
                       </label>

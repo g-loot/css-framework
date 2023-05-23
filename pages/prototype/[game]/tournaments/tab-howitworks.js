@@ -6,7 +6,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Finding a tournament",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737014/Stryda/illustrations/cpu_install.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737014/Stryda/illustrations/cpu_install.jpg",
     paragraphs: [
       {
         text: "You can join lots of different types of tournaments on Stryda. Tournaments can have different rewards, entry fees.",
@@ -28,7 +28,7 @@ const MissionsHowitworksTabs = [
   {
     title: "How to register to a tournament",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
     paragraphs: [
       {
         text: "You can register to tournaments as a solo player or with your team.",
@@ -47,7 +47,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Solo party",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
     paragraphs: [
       {
         text: "You will be matched up with other solo players. When we have found a full party for you, your party will be registered.",
@@ -63,7 +63,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Getting server info",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
     paragraphs: [
       {
         text: "Log on to the Stryda website before the tournament is due to start!",
@@ -79,7 +79,7 @@ const MissionsHowitworksTabs = [
   {
     title: "During tournament",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
     paragraphs: [
       {
         text: "Join the Stryda Discord server to get up-to-date information about your tournament.",
@@ -95,7 +95,7 @@ const MissionsHowitworksTabs = [
   {
     title: "After tournament",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
     paragraphs: [
       {
         text: "After the tournament you will get your placement. That could be a place on the leaderboard or in a bracket.",
@@ -111,7 +111,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Why was my party cancelled?",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
     paragraphs: [
       {
         text: "There are a few reasons for your party to have been canceled.",
@@ -124,7 +124,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Can I leave a party?",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
     paragraphs: [
       {
         text: "You can always leave a party before the tournament has started.",
@@ -143,7 +143,7 @@ const MissionsHowitworksTabs = [
   {
     title: "My question isn't answer or I need more help",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737016/Stryda/illustrations/picture_gamer_gloot.jpg",
     paragraphs: [
       {
         text: "If you have further questions or need help, you can contact our support team.",

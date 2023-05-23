@@ -14,7 +14,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Before entering a Ladder",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/stryda_ladders.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737016/Stryda/illustrations/stryda_ladders.jpg",
     content: [
       {
         type: "p",
@@ -56,7 +56,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Pay tokens to activate Ladder matches",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674744257/Stryda/illustrations/double_tokens.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674744257/Stryda/illustrations/double_tokens.jpg",
     content: [
       {
         type: "p",
@@ -75,7 +75,6 @@ const MissionsHowitworksTabs = [
         text: [
           "Buy Tokens in the Stryda wallet.",
           "Earn Tokens by completing Missions and unlocking Mission Rewards.",
-          "Claim free Tokens in your Daily Login Streak.",
         ],
       },
     ],
@@ -83,7 +82,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Playing your matches & climbing the leaderboard",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674744427/Stryda/illustrations/leaderboard_details.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674744427/Stryda/illustrations/leaderboard_details.jpg",
     content: [
       {
         type: "p",
@@ -102,7 +101,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Ladder levels & groups",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/brawl-rank_levels.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737013/Stryda/illustrations/brawl-rank_levels.jpg",
     content: [
       {
         type: "h3",
@@ -133,7 +132,7 @@ const MissionsHowitworksTabs = [
   {
     title: "If there is a tie",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737017/Stryda/illustrations/tiebreaker.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737017/Stryda/illustrations/tiebreaker.jpg",
     content: [
       {
         type: "p",
@@ -148,7 +147,7 @@ const MissionsHowitworksTabs = [
   {
     title: "Playing with your clan",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/clans.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737013/Stryda/illustrations/clans.jpg",
     content: [
       {
         type: "p",
@@ -171,7 +170,7 @@ const MissionsHowitworksTabs = [
   {
     title: "If you leave your clan in the middle of a Ladder",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737016/Stryda/illustrations/picture_gamer.jpg",
     content: [
       {
         type: "p",
@@ -194,7 +193,7 @@ const MissionsHowitworksTabs = [
   {
     title: "If a game goes into maintenance",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/maintenance.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737015/Stryda/illustrations/maintenance.jpg",
     content: [
       {
         type: "p",
@@ -213,7 +212,7 @@ const MissionsHowitworksTabs = [
   {
     title: "I am experiencing issues with the Ladders",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737014/Stryda/illustrations/error.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674737014/Stryda/illustrations/error.jpg",
     content: [
       {
         type: "p",
@@ -382,7 +381,7 @@ export default function TabClanLeaderboardsAbout() {
               </div>
               <img
                 className="col-span-1 rounded-lg"
-                src="https://res.cloudinary.com/gloot/image/upload/v1682322125/Stryda/illustrations/clan_season.png"
+                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1682322125/Stryda/illustrations/clan_season.png"
                 width="100%"
                 height="auto"
                 alt=""
@@ -497,7 +496,7 @@ export default function TabClanLeaderboardsAbout() {
                 </button>
               </div>
               <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1676383443/Stryda/illustrations/ladders_howitworks_video.jpg"
+                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1676383443/Stryda/illustrations/ladders_howitworks_video.jpg"
                 width="100%"
                 height="auto"
                 alt=""

@@ -143,7 +143,7 @@ export default function ScoreboardOverview(props) {
                     <Tooltip tooltip={`Ascendant`}>
                       <img
                         className="h-6"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/rank-acendant.webp"
+                        src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/rank-acendant.webp"
                         height="auto"
                         width="auto"
                         alt=""
@@ -251,7 +251,7 @@ export default function ScoreboardOverview(props) {
                     <Tooltip tooltip={`Ascendant`}>
                       <img
                         className="h-6"
-                        src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/rank-acendant.webp"
+                        src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1671535680/Stryda/stats/valorant/rank-acendant.webp"
                         height="auto"
                         width="auto"
                         alt=""

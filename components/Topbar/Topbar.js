@@ -365,7 +365,7 @@ export default function Topbar() {
                           <h6 className="my-4 text-ui-100">Coins</h6>
                           <div className="absolute -top-8 -right-5 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-coin-face.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674640634/Stryda/currencies/Reward-coin-face.png"
                               className="w-14 h-14"
                               alt=""
                             />
@@ -387,8 +387,7 @@ export default function Topbar() {
                             <li className="flex gap-2 text-sm">
                               <div className=" w-12 uppercase">Get</div>
                               <div className="flex-1">
-                                From <strong>Daily Login</strong> Streak and{" "}
-                                <strong>Ladder winnings</strong>.
+                                From <strong>Ladder winnings</strong>.
                               </div>
                             </li>
                           </ul>
@@ -414,7 +413,7 @@ export default function Topbar() {
                           <h6 className="my-4 text-ui-100">Token</h6>
                           <div className="absolute -top-8 -right-5 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-token-face.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674640634/Stryda/currencies/Reward-token-face.png"
                               className="w-14 h-14"
                               alt=""
                             />
@@ -434,7 +433,7 @@ export default function Topbar() {
                             <li className="flex gap-2 text-sm">
                               <div className=" w-12 uppercase">Get</div>
                               <div className="flex-1">
-                                <strong>Missions, Daily Login Streak</strong> or{" "}
+                                <strong>Missions</strong> or{" "}
                                 <strong>buy them</strong> directly from the
                                 Wallet.
                               </div>
@@ -462,7 +461,7 @@ export default function Topbar() {
                           <h6 className="my-4 text-ui-100">Power token</h6>
                           <div className="absolute -top-8 -right-5 p-2">
                             <img
-                              src="https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-powertoken-face.png"
+                              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674640634/Stryda/currencies/Reward-powertoken-face.png"
                               className="w-14 h-14"
                               alt=""
                             />
@@ -513,7 +512,7 @@ export default function Topbar() {
                         <h6 className="mb-3 text-ui-100">Tickets</h6>
                         <div className="absolute -top-3 -right-2">
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
+                            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
                             width="50"
                             height="50"
                             alt="tickets"
@@ -547,7 +546,7 @@ export default function Topbar() {
                     <Link href={`/prototype/wallet${prototype.getURLparams()}`}>
                       <div className="flex items-center">
                         <img
-                          src="https://res.cloudinary.com/gloot/image/upload/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
+                          src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1638282344/Marketing/202109_gloot2/Square_tikethorizontal.png"
                           width="32"
                           height="32"
                           alt="tickets"

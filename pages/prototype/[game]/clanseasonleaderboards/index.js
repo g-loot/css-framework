@@ -53,7 +53,7 @@ export default function Ladders() {
 
   return (
     <>
-      <PrototypeStructure title="Clan Season Leaderboard">
+      <PrototypeStructure title="Clan Seasons">
         <Ad width="1005" height="300" />
         {selectedGame && (
           <>

@@ -132,7 +132,7 @@ export default function TabTournamentsOverview() {
                   <span className="absolute inset-0 z-10 bg-gradient-radial from-ui-700/95 to-ui-700/80" />
                   <img
                     className="absolute z-0 w-full h-full object-cover object-center"
-                    src="https://res.cloudinary.com/gloot/image/upload/v1660041580/Marketing/2022_prototype/tournament-solo.webp"
+                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660041580/Marketing/2022_prototype/tournament-solo.webp"
                     width="100%"
                     height="auto"
                     alt=""
@@ -167,7 +167,7 @@ export default function TabTournamentsOverview() {
                   <span className="absolute inset-0 z-10 bg-gradient-radial from-ui-700/95 to-ui-700/80" />
                   <img
                     className="absolute z-0 w-full h-full object-cover object-center"
-                    src="https://res.cloudinary.com/gloot/image/upload/v1660041580/Marketing/2022_prototype/tournament-team.webp"
+                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660041580/Marketing/2022_prototype/tournament-team.webp"
                     width="100%"
                     height="auto"
                     alt=""
@@ -404,7 +404,7 @@ export default function TabTournamentsOverview() {
                   <div className="flex items-center gap-1 pr-4">
                     <img
                       className="h-12"
-                      src="https://res.cloudinary.com/gloot/image/upload/v1653393860/Marketing/2022_prototype/CurrencyRewards/Reward-coin-small.png"
+                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1653393860/Marketing/2022_prototype/CurrencyRewards/Reward-coin-small.png"
                       width="auto"
                       height="auto"
                       alt=""

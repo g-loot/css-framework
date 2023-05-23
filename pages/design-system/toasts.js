@@ -180,7 +180,7 @@ const DSpage = () => {
                 <div className="toast" role="alert" aria-live="assertive">
                   <div className="avatar avatar-circle avatar-sm">
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg" alt="avatar" />
+                      <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_10.jpg" alt="avatar" />
                     </div>
                   </div>
                   <div>

@@ -45,76 +45,9 @@ export default function TabClanChat() {
     <>
       {selectedClan && (
         <>
-          <div className="flex flex-col lg:flex-row items-start gap-y-4 lg:gap-x-4 animate-slide-in-bottom">
-            <div className="w-full lg:w-80 space-y-4">
-              {/*
-              <section className="surface md:rounded relative">
-                <div className="relative flex items-center justify-center">
-                  <div className="relative z-10 mt-4">
-                    <div className="avatar avatar-sm avatar-squircle">
-                      <div>
-                        <img src={selectedClan.avatar} alt="avatar" />
-                      </div>
-                    </div>
-                    {isAdmin && (
-                      <button
-                        type="button"
-                        className="button button-sm button-tertiary rounded-full absolute z-20 bottom-0 -right-3"
-                      >
-                        <span className="icon icon-pen-2" />
-                      </button>
-                    )}
-                  </div>
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
-                    className="aspect-banner absolute z-0 inset-x-0 top-0 rounded-t bg-ui-800/75 border-b border-ui-700"
-                    alt=""
-                  />
-                </div>
-                <div className="p-4 pt-2">
-                  <h2
-                    className="h5 text-center leading-none"
-                    onClick={() => setIsAdmin(!isAdmin)}
-                  >
-                    &#91;
-                    {selectedClan.tag}
-                    &#93; {selectedClan.nickname}
-                  </h2>
-                  {isAdmin && (
-                    <>
-                      <Link href="settings">
-                        <button
-                          type="button"
-                          className="button button-sm button-tertiary w-full mt-4"
-                        >
-                          <span className="icon icon-cogwheel" />
-                          <span>Clan settings</span>
-                        </button>
-                      </Link>
-                      <div className="surface surface-ui-600 rounded p-2 space-y-2 mt-4">
-                        <div className="text-center text-ui-100">
-                          You have <b>3</b> pending applications
-                        </div>
-                        <div className="flex gap-2">
-                          <Link
-                            href={`/prototype/clans/1?tab=applications${prototype.getURLparams()}`}
-                          >
-                            <a
-                              type="button"
-                              className="button button-sm button-primary flex-1"
-                            >
-                              <span className="icon icon-a-time" />
-                              <span>View applicants</span>
-                            </a>
-                          </Link>
-                        </div>
-                      </div>
-                    </>
-                  )}
-                </div>
-              </section>
-                  */}
-              <section className="surface md:rounded">
+          <div className="flex flex-col lg:flex-row items-stretch gap-y-4 lg:gap-x-4 animate-slide-in-bottom h-[calc(100dvh-159px-1rem)]">
+            <div className="w-full lg:w-80 flex flex-col gap-y-4">
+              <section className="flex-1 flex flex-col surface md:rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">
                     Ladders ({selectedClan.ladders?.length})
@@ -129,97 +62,100 @@ export default function TabClanChat() {
                     </a>
                   </Link>
                 </div>
-                <div className="max-h-60 overflow-y-auto scrollbar-desktop">
-                  {selectedClan.ladders ? (
-                    <div className="p-4 space-y-4">
-                      {selectedClan.ladders?.map((ladder, ladderIndex) => (
-                        <Link
-                          key={ladderIndex}
-                          href={`/prototype/${
-                            prototype.getGameBySlug(ladder.gameSlug).slug
-                          }/ladders/${
-                            ladder.id
-                          }?tab=clan-leaderboard${prototype.getURLparams()}`}
-                        >
-                          <div className="rounded surface surface-ui-600 overflow-hidden interactive">
-                            <div className="relative">
-                              <div className="absolute top-1 left-1">
-                                <div className="rounded bg-ui-800/90 p-px pr-2 flex gap-1 items-center text-xs text-ui-200">
-                                  <GameIcon
-                                    game={
-                                      prototype.getGameBySlug(ladder.gameSlug)
-                                        .id
-                                    }
-                                    size="text-lg"
-                                  />
-                                  <span>
-                                    {
-                                      prototype.getLadderByID(
-                                        ladder.gameSlug,
-                                        ladder.id
-                                      ).gameMode
-                                    }
-                                  </span>
-                                  {prototype.getLadderByID(
-                                    ladder.gameSlug,
-                                    ladder.id
-                                  ).status !== "finished" && (
-                                    <span
-                                      className={`text-main card-status capitalize`}
-                                    >
-                                      {prototype.getLadderByID(
-                                        ladder.gameSlug,
-                                        ladder.id
-                                      ).isEnrolled ? (
-                                        <>Enrolled</>
-                                      ) : (
-                                        <>
-                                          {
-                                            prototype.getLadderByID(
-                                              ladder.gameSlug,
-                                              ladder.id
-                                            ).status
-                                          }
-                                        </>
-                                      )}
+                <div className="flex-1 relative">
+                  <div className="absolute inset-0 overflow-y-auto scrollbar-desktop">
+                    {selectedClan.ladders ? (
+                      <div className="p-4 space-y-4">
+                        {selectedClan.ladders?.map((ladder, ladderIndex) => (
+                          <Link
+                            key={ladderIndex}
+                            href={`/prototype/${
+                              prototype.getGameBySlug(ladder.gameSlug).slug
+                            }/ladders/${
+                              ladder.id
+                            }?tab=clan-leaderboard${prototype.getURLparams()}`}
+                          >
+                            <div className="rounded surface surface-ui-600 overflow-hidden interactive">
+                              <div className="relative">
+                                <div className="absolute top-1 left-1">
+                                  <div className="rounded bg-ui-800/90 p-px pr-2 flex gap-1 items-center text-xs text-ui-200">
+                                    <GameIcon
+                                      game={
+                                        prototype.getGameBySlug(ladder.gameSlug)
+                                          .id
+                                      }
+                                      size="text-lg"
+                                    />
+                                    <span>
+                                      {
+                                        prototype.getLadderByID(
+                                          ladder.gameSlug,
+                                          ladder.id
+                                        ).gameMode
+                                      }
                                     </span>
-                                  )}
+                                    {prototype.getLadderByID(
+                                      ladder.gameSlug,
+                                      ladder.id
+                                    ).status !== "finished" && (
+                                      <span
+                                        className={`text-main card-status capitalize`}
+                                      >
+                                        {prototype.getLadderByID(
+                                          ladder.gameSlug,
+                                          ladder.id
+                                        ).isEnrolled ? (
+                                          <>Enrolled</>
+                                        ) : (
+                                          <>
+                                            {
+                                              prototype.getLadderByID(
+                                                ladder.gameSlug,
+                                                ladder.id
+                                              ).status
+                                            }
+                                          </>
+                                        )}
+                                      </span>
+                                    )}
+                                  </div>
                                 </div>
+                                <img
+                                  src={
+                                    prototype.getLadderByID(
+                                      ladder.gameSlug,
+                                      ladder.id
+                                    ).cover
+                                  }
+                                  className="aspect-cover object-cover"
+                                  alt=""
+                                />
                               </div>
-                              <img
-                                src={
-                                  prototype.getLadderByID(
-                                    ladder.gameSlug,
-                                    ladder.id
-                                  ).cover
-                                }
-                                className="aspect-cover object-cover"
-                                alt=""
-                              />
+                              <div className="p-2 border-t border-ui-500 flex justify-between items-baseline gap-2">
+                                <p className="truncate flex-1">
+                                  {
+                                    prototype.getLadderByID(
+                                      ladder.gameSlug,
+                                      ladder.id
+                                    ).name
+                                  }
+                                </p>
+                                <p className="text-lg text-ui-100">#42</p>
+                              </div>
                             </div>
-                            <div className="p-2 border-t border-ui-500 flex justify-between items-baseline gap-2">
-                              <p className="truncate flex-1">
-                                {
-                                  prototype.getLadderByID(
-                                    ladder.gameSlug,
-                                    ladder.id
-                                  ).name
-                                }
-                              </p>
-                              <p className="text-lg text-ui-100">#42</p>
-                            </div>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  ) : (
-                    <div className="text-center p-4">
-                      <span className="icon icon-ladder text-6xl text-ui-500" />
-                      <p className="mt-2 text-ui-300">
-                        {selectedClan.nickname} is not competing in any ladders
-                      </p>
-                    </div>
-                  )}
+                          </Link>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="text-center p-4">
+                        <span className="icon icon-ladder text-6xl text-ui-500" />
+                        <p className="mt-2 text-ui-300">
+                          {selectedClan.nickname} is not competing in any
+                          ladders
+                        </p>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </section>
               <section className="surface md:rounded">
@@ -405,7 +341,7 @@ export default function TabClanChat() {
             )}
             */}
             </div>
-            <div className="flex-1 surface md:rounded lg:overflow-hidden max-w-[100%] h-[calc(100dvh-159px-1rem)] hidden lg:flex flex-col relative">
+            <div className="flex-1 surface md:rounded lg:overflow-hidden max-w-[100%] hidden lg:flex flex-col relative">
               <div className="absolute inset-0 overflow-hidden">
                 <Chat
                   variant="secondary"

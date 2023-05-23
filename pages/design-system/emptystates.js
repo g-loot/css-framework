@@ -116,7 +116,7 @@ const DSpage = () => {
           <div className="max-w-xs mx-auto">
             <img
               className="mx-auto"
-              src="https://res.cloudinary.com/gloot/image/upload/v1659691391/Marketing/2022_prototype/Decoration-chat.webp"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1659691391/Marketing/2022_prototype/Decoration-chat.webp"
               width="220"
               height="auto"
               alt=""

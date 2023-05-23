@@ -39,8 +39,8 @@ const DSpage = () => {
             <i />
             <i />
             <div className="achievement-level-1">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl1-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-missionhunter.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1678871888/Stryda/achievements/frames/achievement-frame-lvl1-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1678872380/Stryda/achievements/icons/achievement-icon-missionhunter.svg" />
             </div>
             <span></span>
           </div>
@@ -48,32 +48,32 @@ const DSpage = () => {
             <i />
             <i />
             <div className="achievement-level-2">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl2-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-juggernaut.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1678871888/Stryda/achievements/frames/achievement-frame-lvl2-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1678872380/Stryda/achievements/icons/achievement-icon-juggernaut.svg" />
             </div>
           </div>
           <div className="w-32 h-32 achievement">
             <i />
             <i />
             <div className="achievement-level-3">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl3-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-ladderchampion.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1678871888/Stryda/achievements/frames/achievement-frame-lvl3-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1678872380/Stryda/achievements/icons/achievement-icon-ladderchampion.svg" />
             </div>
           </div>
           <div className="w-32 h-32 achievement">
             <i />
             <i />
             <div className="achievement-level-4">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl4-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-kingoftokens.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1678871888/Stryda/achievements/frames/achievement-frame-lvl4-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1678872380/Stryda/achievements/icons/achievement-icon-kingoftokens.svg" />
             </div>
           </div>
           <div className="w-32 h-32 achievement">
             <i />
             <i />
             <div className="achievement-level-5">
-              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl5-animated.svg" />
-              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-strider.svg" />
+              <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1678871888/Stryda/achievements/frames/achievement-frame-lvl5-animated.svg" />
+              <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/f_auto/v1678872380/Stryda/achievements/icons/achievement-icon-strider.svg" />
             </div>
           </div>
         </div>
@@ -153,10 +153,10 @@ const DSpage = () => {
                   <i />
                   <div className={`achievement-level-${achievementLevel}`}>
                     <AchievementFrame
-                      url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${achievementLevel}-animated.svg`}
+                      url={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${achievementLevel}-animated.svg`}
                     />
                     <AchievementIcon
-                      url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${item.icon}.svg`}
+                      url={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1678872380/Stryda/achievements/icons/achievement-icon-${item.icon}.svg`}
                     />
                   </div>
                   {achievementLevel > 0 && (

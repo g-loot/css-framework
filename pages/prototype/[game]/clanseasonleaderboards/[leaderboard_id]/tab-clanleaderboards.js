@@ -118,6 +118,7 @@ export default function TabClanLeaderboardsLeaderboards() {
   const empty = query.empty === "true" ? true : false;
   const [isEmpty, setIsEmpty] = useState(empty);
   const [hasRanks, setHasRanks] = useState(false);
+  const [hasPlayersDetails, setHasPlayersDetails] = useState(false);
   const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
   const { leaderboard_id } = router.query;
@@ -199,11 +200,14 @@ export default function TabClanLeaderboardsLeaderboards() {
     <>
       {isEmpty ? (
         <div className="col-span-1 lg:col-span-3">
-          <div className="mt-10">
-            <h3 className="h4 mt-2 mb-6 text-ui-100 leading-tight text-center max-w-[20ch] mx-auto">
+          <div className="mt-10 text-center">
+            <h3 className="h4 mt-2 text-ui-100 leading-tight text-center max-w-[40ch] mx-auto">
               Play together with 5 members of your clan and be the first to join
               this leaderboard!
             </h3>
+            <button type="button" className="button button-primary w-60 my-6" onClick={() => setIsEmpty(false)}>
+              <span>Enroll my clan</span>
+            </button>
             <ul className="max-w-sm mx-auto">
               {rewardDistribClan.map((item, itemIndex) => (
                 <li
@@ -543,9 +547,9 @@ export default function TabClanLeaderboardsLeaderboards() {
                                   </>
                                 }
                               >
-                                <div className="p-2">
+                                <div className="p-2 border-t border-ui-700">
                                   <ul className="space-y-2">
-                                    <li className="bg-ui-800 p-3 flex justify-between leading-none">
+                                    <li className="bg-ui-850 rounded p-3 flex justify-between leading-none">
                                       <div className="">
                                         <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
                                           Matches played
@@ -593,133 +597,56 @@ export default function TabClanLeaderboardsLeaderboards() {
                                         </div>
                                       </div>
                                     </li>
-                                    <li className="bg-ui-800 p-3 text-center rounded max-h-[150px] overflow-y-auto scrollbar-desktop">
-                                      <ul className="text-sm space-y-1">
-                                        {prototype
-                                          .getClanByID(clan.clan)
-                                          .members.map((user, userIndex) => (
-                                            <li
-                                              key={userIndex}
-                                              className="border-t border-ui-700"
-                                            >
-                                              <Link
-                                                href={`/prototype/profile/${user}`}
-                                              >
-                                                <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
-                                                  <span className="text-ui-300">
-                                                    &#91;
-                                                    {
-                                                      prototype.getClanByID(
-                                                        clan.clan
-                                                      )?.tag
-                                                    }
-                                                    &#93;{" "}
-                                                    {
-                                                      prototype.getUserByID(
-                                                        user
-                                                      ).nickname
-                                                    }
-                                                  </span>
-                                                  <span className="font-bold">
-                                                    {numberWithSpaces(
-                                                      500 - userIndex
-                                                    )}
-                                                  </span>
-                                                </a>
-                                              </Link>
-                                            </li>
-                                          ))}
-                                        <li className="border-t border-ui-700">
-                                          <Link href="/prototype/profile/3">
-                                            <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
-                                              <span className="text-ui-300">
-                                                &#91;
-                                                {
-                                                  prototype.getClanByID(
-                                                    clan.clan
-                                                  )?.tag
-                                                }
-                                                &#93;{" "}
-                                                {
-                                                  prototype.getUserByID(3)
-                                                    .nickname
-                                                }
-                                              </span>
-                                              <span className="font-bold">
-                                                {numberWithSpaces(1875)}
-                                              </span>
-                                            </a>
-                                          </Link>
-                                        </li>
-                                        <li className="border-t border-ui-700">
-                                          <Link href="/prototype/profile/4">
-                                            <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
-                                              <span className="text-ui-300">
-                                                &#91;
-                                                {
-                                                  prototype.getClanByID(
-                                                    clan.clan
-                                                  )?.tag
-                                                }
-                                                &#93;{" "}
-                                                {
-                                                  prototype.getUserByID(4)
-                                                    .nickname
-                                                }
-                                              </span>
-                                              <span className="font-bold">
-                                                {numberWithSpaces(1675)}
-                                              </span>
-                                            </a>
-                                          </Link>
-                                        </li>
-                                        <li className="border-t border-ui-700">
-                                          <Link href="/prototype/profile/5">
-                                            <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
-                                              <span className="text-ui-300">
-                                                &#91;
-                                                {
-                                                  prototype.getClanByID(
-                                                    clan.clan
-                                                  )?.tag
-                                                }
-                                                &#93;{" "}
-                                                {
-                                                  prototype.getUserByID(5)
-                                                    .nickname
-                                                }
-                                              </span>
-                                              <span className="font-bold">
-                                                {numberWithSpaces(1324)}
-                                              </span>
-                                            </a>
-                                          </Link>
-                                        </li>
-                                        <li className="border-t border-ui-700">
-                                          <Link href="/prototype/profile/6">
-                                            <a className="flex gap-2 items-center justify-between transition duration-200 hover:opacity-50">
-                                              <span className="text-ui-300">
-                                                &#91;
-                                                {
-                                                  prototype.getClanByID(
-                                                    clan.clan
-                                                  )?.tag
-                                                }
-                                                &#93;{" "}
-                                                {
-                                                  prototype.getUserByID(6)
-                                                    .nickname
-                                                }
-                                              </span>
-                                              <span className="font-bold">
-                                                {numberWithSpaces(1124)}
-                                              </span>
-                                            </a>
-                                          </Link>
-                                        </li>
-                                      </ul>
-                                    </li>
-                                    <li className="bg-ui-800 p-3 flex gap-2 items-center justify-between">
+                                    {hasPlayersDetails && (
+                                      <li className="bg-ui-850 rounded text-center max-h-[150px] overflow-y-auto scrollbar-desktop">
+                                        <table className="table table-compact text-sm w-full">
+                                          <thead>
+                                            <tr>
+                                              <th className="bg-ui-900/0 text-ui-300 w-full">Players</th>
+                                              <th className="bg-ui-900/0 text-ui-300 text-center">Lost games</th>
+                                              <th className="bg-ui-900/0 text-ui-300 text-center">Won games</th>
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                            {prototype
+                                              .getClanByID(clan.clan)
+                                              .members.map(
+                                                (user, userIndex) => (
+                                                  <tr key={userIndex}>
+                                                    <td>
+                                                      <Link
+                                                        href={`/prototype/profile/${user}`}
+                                                      >
+                                                        <span className="interactive">
+                                                          &#91;
+                                                          {
+                                                            prototype.getClanByID(
+                                                              clan.clan
+                                                            )?.tag
+                                                          }
+                                                          &#93;{" "}
+                                                          {
+                                                            prototype.getUserByID(
+                                                              user
+                                                            ).nickname
+                                                          }
+                                                        </span>
+                                                      </Link>
+                                                    </td>
+                                                    <td className="text-center">
+                                                      {Math.round(clan.stats.wins / 2 - userIndex)}
+                                                    </td>
+                                                    <td className="text-center">
+                                                    {Math.round(clan.stats.losses - userIndex)}
+                                                    </td>
+                                                  </tr>
+                                                )
+                                              )}
+                                          </tbody>
+                                        </table>
+                                      </li>
+                                    )}
+                                    <li className="bg-ui-850 rounded p-3 flex gap-2 items-center justify-between">
                                       <div className="avatar-group -space-x-2">
                                         {prototype
                                           .getClanByID(clan.clan)
@@ -900,6 +827,9 @@ export default function TabClanLeaderboardsLeaderboards() {
       <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
         <a onClick={() => setIsEmpty(!isEmpty)}>Toggle empty state</a>
         <a onClick={() => setHasRanks(!hasRanks)}>Toggle ranks</a>
+        <a onClick={() => setHasPlayersDetails(!hasPlayersDetails)}>
+          Toggle players details
+        </a>
       </section>
     </>
   );

@@ -13,10 +13,10 @@ const WalletItems = [
     name: "coins",
     icon: "icon-coin",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-coin-face.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674640634/Stryda/currencies/Reward-coin-face.png",
     amount: "1328",
     use: "To purchase items in the <b>Shop</b>.",
-    get: "From <b>Daily Login Streak</b> and <b>Ladders</b>.",
+    get: "From the <b>Battlepass</b> and <b>Ladders</b>.",
     color: "text-currency-1-500",
     button: "visitshop",
     buttonLabel: "Visit shot",
@@ -26,10 +26,10 @@ const WalletItems = [
     name: "tokens",
     icon: "icon-token",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-token-face.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674640634/Stryda/currencies/Reward-token-face.png",
     amount: "10223",
     use: "To enter rounds in the <b>Ladders</b>.",
-    get: "From <b>Missions, Daily Login Streak</b> or buy them directly from the <b>Wallet</b>.",
+    get: "From the <b>Battlepass</b> or buy them directly from the <b>Wallet</b>.",
     color: "text-currency-2-500",
     button: "buy",
     buttonLabel: "Buy tokens",
@@ -39,7 +39,7 @@ const WalletItems = [
     name: "power tokens",
     icon: "icon-powertoken",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-powertoken-face.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674640634/Stryda/currencies/Reward-powertoken-face.png",
     amount: "30",
     use: "To enter rounds in the <b>Power Plays</b>.",
     get: "Buy them directly from the <b>Wallet</b>.",
@@ -51,7 +51,7 @@ const WalletItems = [
     id: 4,
     name: "prize money",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1676628558/Stryda/currencies/Reward-centered-wallet-unique.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1676628558/Stryda/currencies/Reward-centered-wallet-unique.png",
     amount: "0€",
     use: false,
     get: false,
@@ -64,7 +64,7 @@ const WalletItems = [
     id: 3,
     name: "tickets",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-ticket-unique.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654171544/Marketing/2022_prototype/CurrencyRewards/Reward-centered-ticket-unique.png",
     amount: "2",
     use: "To enter <b>Monthly Tournaments</b>.",
     get: "From <b>Ladders</b>.",
@@ -74,7 +74,7 @@ const WalletItems = [
     id: 4,
     name: "prize money",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1657618864/Marketing/2022_prototype/CurrencyRewards/Reward-centered-wallet-unique.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1657618864/Marketing/2022_prototype/CurrencyRewards/Reward-centered-wallet-unique.png",
     amount: "0.00€",
     use: "To purchase <b>Tokens</b> or <b>withdraw</b> them to your <b>bank</b> or <b>PayPal</b> account.",
     get: "From <b>Tournaments</b>.",

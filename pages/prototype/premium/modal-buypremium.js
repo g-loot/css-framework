@@ -14,7 +14,7 @@ const Offers = [
     previousAmount: "34€",
     save: "50%",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-small.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672159789/Stryda/currencies/Reward-centered-token-small.png",
     special: "bestvalue",
   },
   {
@@ -23,14 +23,14 @@ const Offers = [
     previousAmount: "5.70€",
     save: "24%",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-medium.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672159789/Stryda/currencies/Reward-centered-token-medium.png",
     special: "mostpopular",
   },
   {
     tokenNumber: 3,
     amount: "1.70€",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672159333/Stryda/currencies/Reward-centered-token-large.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672159333/Stryda/currencies/Reward-centered-token-large.png",
   },
 ];
 
@@ -81,7 +81,7 @@ export default function ModalBuyPremium(props) {
           </button>
           <div className="modal-content">
             <div className="modal-body text-center">
-              <PremiumLogo className="mx-auto mb-4" src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg" width="230" height="auto" />
+              <PremiumLogo className="mx-auto mb-4" src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg" width="230" height="auto" />
               <h2 className="modal-title">Choose your Premium plan</h2>
               <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto mt-4">
                 {Offers.map((item, itemIndex) => (

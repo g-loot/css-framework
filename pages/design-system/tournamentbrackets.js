@@ -14,14 +14,14 @@ const DSpage = () => {
             {
               name: "Angry Beavers",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png",
               score: 2,
               iswinning: true,
             },
             {
               name: "Kingzz",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_l10n.png",
               score: 1,
             },
           ],
@@ -34,14 +34,14 @@ const DSpage = () => {
             {
               name: "Bunny Hunger",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_Bunny_Hunger.png",
               score: 5,
               iswinning: true,
             },
             {
               name: "Croc Esports",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png",
               score: 1,
             },
           ],
@@ -54,13 +54,13 @@ const DSpage = () => {
             {
               name: "CockyStars",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_CockyStars.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_CockyStars.png",
               score: 2,
             },
             {
               name: "anUbis",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_anUbis.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_anUbis.png",
               score: 3,
               iswinning: true,
             },
@@ -74,13 +74,13 @@ const DSpage = () => {
             {
               name: "Squids",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Squides.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Squides.png",
               score: 7,
             },
             {
               name: "Gladion2",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png",
               score: 9,
               iswinning: true,
             },
@@ -99,14 +99,14 @@ const DSpage = () => {
             {
               name: "Angry Beavers",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png",
               score: 3,
               iswinning: true,
             },
             {
               name: "Croc Esports",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png",
               score: 1,
             },
           ],
@@ -119,13 +119,13 @@ const DSpage = () => {
             {
               name: "anUbis",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_anUbis.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_anUbis.png",
               score: 1,
             },
             {
               name: "Gladion2",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png",
               score: 5,
               iswinning: true,
             },
@@ -144,13 +144,13 @@ const DSpage = () => {
             {
               name: "Angry Beavers",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_AngryBeavers.png",
               score: "?",
             },
             {
               name: "Gladion2",
               image:
-                "https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png",
+                "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_Gladion2.png",
               score: "?",
             },
           ],

@@ -8,7 +8,7 @@ const slides = [
     description:
       "Ladder is our Stryda Special! You compete against other Stryda players to climb the leaderboard, get on top and win crazy rewards! Interested? Entry Ladder is on us! ",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672222065/Stryda/illustrations/Carousel_Free_entry_2.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672222065/Stryda/illustrations/Carousel_Free_entry_2.jpg",
     buttonLabel: "Compete now",
     buttonURL: "/prototype/valorant/ladders?freeentry=true",
   },
@@ -18,7 +18,7 @@ const slides = [
     description:
       "Check your damage/round, K/D ratio, headshots percentage, and more, for your last 20 matches. Plus, specific stats for your most played agents",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672237441/Stryda/illustrations/Carousel_Valorant_Stats.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672237441/Stryda/illustrations/Carousel_Valorant_Stats.jpg",
     buttonLabel: "Check it out",
     buttonURL: "/prototype/valorant/stats",
   },
@@ -28,7 +28,7 @@ const slides = [
     description:
       "Apex Legends Mobile is finally here, and it brings a new, mobile-exclusive Legend to the fold.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1654158114/Marketing/2022_prototype/DummyContent/carousel-item-apexlegends-fade.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654158114/Marketing/2022_prototype/DummyContent/carousel-item-apexlegends-fade.jpg",
     buttonLabel: "Read the blog",
     buttonExternal: true,
     buttonURL: "#",
@@ -39,7 +39,7 @@ const slides = [
     description:
       "This week you can get 2x the usual rewards by competing on Ladders.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674728003/Stryda/illustrations/Carousel_Power_Play.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1674728003/Stryda/illustrations/Carousel_Power_Play.jpg",
     buttonLabel: "Learn more",
     buttonURL: "#",
   },

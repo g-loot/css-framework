@@ -64,7 +64,7 @@ export default function Home() {
               <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
               <img
                 className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                src="https://res.cloudinary.com/gloot/image/upload/v1672215845/Stryda/illustrations/Wallet_bg.jpg"
+                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672215845/Stryda/illustrations/Wallet_bg.jpg"
               />
             </div>
           </div>

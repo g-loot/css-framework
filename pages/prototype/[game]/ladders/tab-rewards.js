@@ -295,7 +295,7 @@ export default function TabLaddersRewards() {
               >
                 <div className="absolute -top-6 -left-4 -rotate-12 pointer-events-none">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1658472557/Marketing/2022_prototype/Reward-decoration-ticket.webp"
+                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1658472557/Marketing/2022_prototype/Reward-decoration-ticket.webp"
                     width="140"
                     height="auto"
                     alt=""
@@ -319,7 +319,7 @@ export default function TabLaddersRewards() {
               >
                 <div className="absolute -top-6 -left-4 -rotate-12 pointer-events-none">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1658472557/Marketing/2022_prototype/Reward-decoration-showdown.webp"
+                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1658472557/Marketing/2022_prototype/Reward-decoration-showdown.webp"
                     width="140"
                     height="auto"
                     alt=""

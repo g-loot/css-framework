@@ -11,9 +11,9 @@ import LeaderboardWings from "../../../../components/LeaderboardWings/Leaderboar
 const TournamentLeaderboard = [
   {
     name: "Open Qualifer EU",
-    icon: "https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_white.svg",
+    icon: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_white.svg",
     iconcolor:
-      "https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_colored.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_colored.png",
     date: "June 27 - July 3",
     region: "EU",
     rounds: [
@@ -61,9 +61,9 @@ const TournamentLeaderboard = [
   },
   {
     name: "Open Qualifer MEA",
-    icon: "https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_white.svg",
+    icon: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_white.svg",
     iconcolor:
-      "https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_colored.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_open_colored.png",
     date: "June 27 - July 3",
     region: "EMEA",
     rounds: [
@@ -111,9 +111,9 @@ const TournamentLeaderboard = [
   },
   {
     name: "Super Weekend",
-    icon: "https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_superwkd_white.svg",
+    icon: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_superwkd_white.svg",
     iconcolor:
-      "https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_superwkd_colored.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_superwkd_colored.png",
     date: "July 7 - 10",
     region: "World",
     rounds: [
@@ -161,9 +161,9 @@ const TournamentLeaderboard = [
   },
   {
     name: "Grand Final",
-    icon: "https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_final_white.svg",
+    icon: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_final_white.svg",
     iconcolor:
-      "https://res.cloudinary.com/gloot/image/upload/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_final_colored.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1655191500/Marketing/2022_PUBG_season_6/pubg_season_6_icon_final_colored.png",
     date: "July 22-24",
     region: "World",
     disabled: true,

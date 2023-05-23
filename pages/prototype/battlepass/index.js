@@ -144,10 +144,10 @@ export default function BattlepassPage() {
               Open Battlepass completed: bonus steps
             </a>
             <a onClick={openModalBattlepassCompletedClaim}>
-              Open battlepass finished: claim previous rewards
+              Open Battlepass ended: claim previous rewards
             </a>
             <a onClick={openModalBattlepassCompletedSummary}>
-              Open battlepass finished: summary
+              Open Battlepass ended: summary
             </a>
             <a onClick={openModalBattlepassCompletedPremium}>
               Open Premium purchased

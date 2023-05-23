@@ -150,7 +150,7 @@ export default function Ladders() {
                 </div>
                 <img
                   className="hidden object-contain object-right absolute z-0 right-0 inset-y-0 w-full h-full"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1670317438/Marketing/2022_prototype/Ladder_how_it_works_card_right.jpg"
+                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1670317438/Marketing/2022_prototype/Ladder_how_it_works_card_right.jpg"
                   alt=""
                 />
               </div>
@@ -172,7 +172,7 @@ export default function Ladders() {
                 </div>
                 <img
                   className="hidden object-contain object-right absolute z-0 right-0 inset-y-0 w-full h-full"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1670317438/Marketing/2022_prototype/Ladder_how_it_rules_card_right.jpg"
+                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1670317438/Marketing/2022_prototype/Ladder_how_it_rules_card_right.jpg"
                   alt=""
                 />
               </div>

@@ -9,7 +9,7 @@ export default function ValorantClashCTA(props) {
         <div className="relative z-10 container max-w-lg mx-auto text-center">
           <img
             className="mx-auto"
-            src="https://res.cloudinary.com/gloot/image/upload/v1663684817/Marketing/2022_Valorant_clash/Stryda_Valorant_Clash_Logo.svg"
+            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1663684817/Marketing/2022_Valorant_clash/Stryda_Valorant_Clash_Logo.svg"
             width="600"
             height="auto"
             alt=""
@@ -19,13 +19,13 @@ export default function ValorantClashCTA(props) {
           className="absolute bg-contain bg-center bg-no-repeat animate-pulse inset-0 mix-blend-lighten"
           style={{
             backgroundImage:
-              'url(https://res.cloudinary.com/gloot/image/upload/v1663762472/Marketing/2022_Valorant_clash/Valorant_Clash_effect_triangle.svg)',
+              'url(https://res.cloudinary.com/gloot/image/upload/f_auto/v1663762472/Marketing/2022_Valorant_clash/Valorant_Clash_effect_triangle.svg)',
           }}
         />
         <div className="absolute top-0 right-0 mix-blend-lighten hidden md:block w-[650px] h-[458px]">
           <Image
             data-aos="fade-left"
-            src="https://res.cloudinary.com/gloot/image/upload/v1663762265/Marketing/2022_Valorant_clash/Valorant_Clash_hero_character_2.jpg"
+            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1663762265/Marketing/2022_Valorant_clash/Valorant_Clash_hero_character_2.jpg"
             alt=""
             layout="responsive"
             width={650}
@@ -37,7 +37,7 @@ export default function ValorantClashCTA(props) {
         <div className="absolute bottom-0 left-0 mix-blend-lighten hidden md:block w-[650px] h-[458px]">
           <Image
             data-aos="fade-right"
-            src="https://res.cloudinary.com/gloot/image/upload/v1663762265/Marketing/2022_Valorant_clash/Valorant_Clash_hero_character_1.jpg"
+            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1663762265/Marketing/2022_Valorant_clash/Valorant_Clash_hero_character_1.jpg"
             alt=""
             layout="responsive"
             width={650}

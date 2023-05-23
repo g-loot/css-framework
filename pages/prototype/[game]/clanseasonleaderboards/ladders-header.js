@@ -59,7 +59,7 @@ export default function LaddersHeader(props) {
           )}
           <div className="header-content">
             <div className="header-body">
-              <h1>Clan Season</h1>
+              <h1>Clan Seasons</h1>
               <p className="text-ui-300 max-w-[70ch] mt-4 mb-5">
                 No need for tokens or any extra steps, just create a 5 people
                 party within your clan, play Valorant together and check your

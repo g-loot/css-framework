@@ -201,7 +201,7 @@ export default function TabMissionsLeaderboard(props) {
                 </ul>
               )}
               {!isLoading && (
-                <div>
+                <div className="animate-fade-in">
                   <div className="flex gap-2 justify-center items-center my-4">
                     <button
                       type="button"

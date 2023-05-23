@@ -120,7 +120,7 @@ export default function Home() {
                 <div className="header-content">
                   <div className="header-image">
                     <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1674657396/Stryda/logos/stryda-logo-ladders.svg"
+                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674657396/Stryda/logos/stryda-logo-ladders.svg"
                       width="400"
                       height="auto"
                       alt=""

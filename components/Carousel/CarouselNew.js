@@ -8,7 +8,7 @@ const slides = [
     description:
       "Ladder is our Stryda Special! You compete against other Stryda players to climb the leaderboard, get on top and win crazy rewards! Interested? Entry Ladder is on us! ",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1675850211/Stryda/demo/carouselnew_1.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1675850211/Stryda/demo/carouselnew_1.jpg",
     buttonLabel: "Compete now",
     buttonURL: "/prototype/ladders?freeentry=true",
   },
@@ -18,7 +18,7 @@ const slides = [
     description:
       "Check your damage/round, K/D ratio, headshots percentage, and more, for your last 20 matches. Plus, specific stats for your most played agents",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1675850211/Stryda/demo/carouselnew_2.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1675850211/Stryda/demo/carouselnew_2.jpg",
     buttonLabel: "Check it out",
     buttonURL: "/prototype/valorant/stats",
   },
@@ -28,7 +28,7 @@ const slides = [
     description:
       "Finish at the top of this fast paced ladder to instantly win a gift card.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1675850211/Stryda/demo/carouselnew_3.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1675850211/Stryda/demo/carouselnew_3.jpg",
     buttonLabel: "View ladders",
     buttonURL: "/prototype/ladders",
   },
@@ -38,7 +38,7 @@ const slides = [
     description:
       "This week you can get 2x the usual rewards by competing on Ladders.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1675850211/Stryda/demo/carouselnew_4.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1675850211/Stryda/demo/carouselnew_4.jpg",
     buttonLabel: "Learn more",
     buttonURL: "#",
   },

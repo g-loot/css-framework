@@ -70,7 +70,7 @@ export default function ModalBattlepassCompletedClaim(props) {
         </button>
         <div className="modal-content">
           <div className="modal-body">
-            <h2 className="modal-title">Battlepass finished</h2>
+            <h2 className="modal-title">Battlepass ended</h2>
             <p>
               Time to claim your past rewards before jumping into the new Battlepass!
             </p>

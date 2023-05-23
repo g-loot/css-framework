@@ -10,7 +10,7 @@ const DSpage = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo diam quis ante mollis, ac elementum dolor elementum. In vel consectetur tortor, nec porta lectus.",
       image:
-        "https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831593/Marketing/202109_gloot2/tournament-pubg_1.jpg",
       buttonLabel: "Label",
       buttonURL: "#",
     },
@@ -19,7 +19,7 @@ const DSpage = () => {
       description:
         "Aliquam erat volutpat. Aenean iaculis, nunc molestie interdum consequat, urna tortor scelerisque ante, vel commodo mauris lectus sed massa.",
       image:
-        "https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-apexlegends_1.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831593/Marketing/202109_gloot2/tournament-apexlegends_1.jpg",
       buttonLabel: "Label",
       buttonURL: "#",
     },
@@ -28,7 +28,7 @@ const DSpage = () => {
       description:
         "Aenean at libero ligula. Sed gravida dapibus lectus nec finibus. Morbi egestas vitae tellus eget egestas. Donec scelerisque gravida metus, non pulvinar augue finibus eu. ",
       image:
-        "https://res.cloudinary.com/gloot/image/upload/v1644831593/Marketing/202109_gloot2/tournament-valorant_1.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1644831593/Marketing/202109_gloot2/tournament-valorant_1.jpg",
       buttonLabel: "Label",
       buttonURL: "#",
     },
@@ -40,7 +40,7 @@ const DSpage = () => {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam commodo diam quis ante mollis, ac elementum dolor elementum. ",
       image:
-        "https://res.cloudinary.com/gloot/image/upload/v1654611769/Marketing/2022_prototype/DummyContent/carouselonboarding-item-step1.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654611769/Marketing/2022_prototype/DummyContent/carouselonboarding-item-step1.jpg",
       buttonLabel: "Create an account",
       buttonURL: "#",
     },
@@ -49,7 +49,7 @@ const DSpage = () => {
       description:
         "Aliquam erat volutpat. Aenean iaculis, nunc molestie interdum consequat, urna tortor scelerisque ante, vel commodo mauris lectus sed massa.",
       image:
-        "https://res.cloudinary.com/gloot/image/upload/v1654611769/Marketing/2022_prototype/DummyContent/carouselonboarding-item-step2.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654611769/Marketing/2022_prototype/DummyContent/carouselonboarding-item-step2.jpg",
       buttonLabel: "Download the tracker",
       buttonURL: "#",
     },
@@ -58,7 +58,7 @@ const DSpage = () => {
       description:
         "Morbi egestas vitae tellus eget egestas. Donec scelerisque gravida metus, non pulvinar augue finibus eu. ",
       image:
-        "https://res.cloudinary.com/gloot/image/upload/v1654611769/Marketing/2022_prototype/DummyContent/carouselonboarding-item-step3.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654611769/Marketing/2022_prototype/DummyContent/carouselonboarding-item-step3.jpg",
       buttonLabel: "Browse Missions",
       buttonURL: "#",
     },
@@ -67,7 +67,7 @@ const DSpage = () => {
       description:
         "Aenean at libero ligula. Sed gravida dapibus lectus nec finibus. Morbi egestas vitae tellus eget egestas.",
       image:
-        "https://res.cloudinary.com/gloot/image/upload/v1654611769/Marketing/2022_prototype/DummyContent/carouselonboarding-item-step4.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654611769/Marketing/2022_prototype/DummyContent/carouselonboarding-item-step4.jpg",
       buttonLabel: "Browse Ladders",
       buttonURL: "#",
     },

@@ -1,4 +1,4 @@
-<img width="320px" src="https://res.cloudinary.com/gloot/image/upload/v1673531083/Stryda/logos/stryda-logo-dark-png.png">
+<img width="320px" src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1673531083/Stryda/logos/stryda-logo-dark-png.png">
 
 # Stryda CSS Framework
 

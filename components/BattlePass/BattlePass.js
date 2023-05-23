@@ -28,6 +28,7 @@ export default function Battlepass(props) {
   const isPremium = query.premium === "true" ? true : false;
   const size = props.size || "battlepass-lg";
   const isfinished = props.isFinished || false;
+  const hasSummary = props.hasSummary || false;
   const hasPremium = props.hasPremium || false;
   const selectedBattlepass = props.id || 0;
   const [currentStep, setCurrentStep] = useState(1);
@@ -242,34 +243,36 @@ export default function Battlepass(props) {
           <div className="battlepass-summary">
             <div>
               <ul>
-                <li>
-                  <div className="battlepass-reward-image">
-                    {explosion1 && (
-                      <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
-                        <Lottie
-                          animationData={LottieExplosion}
-                          loop={false}
-                          autoplay={true}
-                        />
-                      </div>
-                    )}
-                    <img
-                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                        getBattlepassRewardByID(41).image
-                      }.png`}
-                      width="100%"
-                      height="auto"
-                      alt=""
-                    />
-                  </div>
-                  <div className="battlepass-reward-text">
-                    <span>Total XP</span>
-                    <span className={!hasPremium ? 'text-premium-500' : ''}>
-                      2240
-                      {/*<AnimatedNumber number={2240} />*/}
-                    </span>
-                  </div>
-                </li>
+                {hasPremium && (
+                  <li>
+                    <div className="battlepass-reward-image">
+                      {explosion1 && (
+                        <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
+                          <Lottie
+                            animationData={LottieExplosion}
+                            loop={false}
+                            autoplay={true}
+                          />
+                        </div>
+                      )}
+                      <img
+                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                          getBattlepassRewardByID(41).image
+                        }`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </div>
+                    <div className="battlepass-reward-text">
+                      <span>Total XP</span>
+                      <span className={!hasPremium ? "text-premium-500" : ""}>
+                        2240
+                        {/*<AnimatedNumber number={2240} />*/}
+                      </span>
+                    </div>
+                  </li>
+                )}
                 <li>
                   <div className="battlepass-reward-image">
                     {explosion2 && (
@@ -292,7 +295,7 @@ export default function Battlepass(props) {
                   </div>
                   <div className="battlepass-reward-text">
                     <span>Coins</span>
-                    <span className={!hasPremium ? 'text-premium-500' : ''}>
+                    <span className={!hasPremium ? "text-premium-500" : ""}>
                       1411
                       {/*<AnimatedNumber number={1411} />*/}
                     </span>
@@ -320,7 +323,7 @@ export default function Battlepass(props) {
                   </div>
                   <div className="battlepass-reward-text">
                     <span>Tokens</span>
-                    <span className={!hasPremium ? 'text-premium-500' : ''}>
+                    <span className={!hasPremium ? "text-premium-500" : ""}>
                       879
                       {/* <AnimatedNumber number={879} />*/}
                     </span>
@@ -393,7 +396,9 @@ export default function Battlepass(props) {
                   </div>
                   <div className="battlepass-reward-text">
                     <span>Avatar frames</span>
-                    <span className={!hasPremium ? 'text-premium-500' : ''}>{!hasPremium ? <>4</> : <>3</>}</span>
+                    <span className={!hasPremium ? "text-premium-500" : ""}>
+                      {!hasPremium ? <>4</> : <>3</>}
+                    </span>
                   </div>{" "}
                 </li>
                 <li>
@@ -473,7 +478,9 @@ export default function Battlepass(props) {
                   </div>
                   <div className="battlepass-reward-text">
                     <span>Profile banners</span>
-                    <span className={!hasPremium ? 'text-premium-500' : ''}>{!hasPremium ? <>5</> : <>4</>}</span>
+                    <span className={!hasPremium ? "text-premium-500" : ""}>
+                      {!hasPremium ? <>5</> : <>4</>}
+                    </span>
                   </div>
                 </li>
               </ul>
@@ -554,32 +561,70 @@ export default function Battlepass(props) {
               }`}
             >
               <div className="battlepass-reward">
-                <div className="battlepass-reward-image">
-                  <i
-                    style={{
-                      "-webkit-mask-image":
-                        "url(https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/" +
+                {getBattlepassRewardByID(
+                  getBattlepassStepByID(activeStep).reward
+                ).type === "profilebanner" && (
+                  <>
+                    <div className="battlepass-reward-profilebanner">
+                      <Avatar
+                        size="avatar-sm sm:avatar-lg lg:avatar-xl xl:avatar-2xl"
+                        id={1}
+                        hasLevel={false}
+                        hasTooltip={false}
+                        hasTooltipXP={false}
+                      />
+                      <img
+                        src={prototype.getShopitemByID(2, getBattlepassRewardByID(
+                          getBattlepassStepByID(activeStep).reward
+                        ).shopItemID).image}
+                        width="100%"
+                        height="auto"
+                        alt={
+                          prototype.getShopitemByID(2, getBattlepassRewardByID(
+                            getBattlepassStepByID(activeStep).reward
+                          ).shopItemID).name
+                        }
+                      />
+                    </div>
+                  </>
+                )}
+                {getBattlepassRewardByID(
+                  getBattlepassStepByID(activeStep).reward
+                ).type === "avatarframe" && (
+                  <div className="battlepass-reward-image">
+                    <div className="avatar avatar-circle avatar-xl lg:avatar-2xl my-3">
+                        <img src={prototype.getShopitemByID(1, getBattlepassRewardByID(
+                          getBattlepassStepByID(activeStep).reward
+                        ).shopItemID).image} alt="" />
+                        <div>
+                          <img
+                            src={prototype.getUserByID(1)?.avatar}
+                            alt="avatar"
+                          />
+                        </div>
+                      </div>
+                  </div>
+                )}
+                {getBattlepassRewardByID(
+                  getBattlepassStepByID(activeStep).reward
+                ).type === "image" && (
+                  <div className="battlepass-reward-image">
+                    <img
+                      src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
                         getBattlepassRewardByID(
                           getBattlepassStepByID(activeStep).reward
-                        ).image +
-                        ".png)",
-                    }}
-                  />
-                  <img
-                    src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                      getBattlepassRewardByID(
-                        getBattlepassStepByID(activeStep).reward
-                      ).image
-                    }.png`}
-                    width="100%"
-                    height="auto"
-                    alt={
-                      getBattlepassRewardByID(
-                        getBattlepassStepByID(activeStep).reward
-                      ).name
-                    }
-                  />
-                </div>
+                        ).image
+                      }`}
+                      width="100%"
+                      height="auto"
+                      alt={
+                        getBattlepassRewardByID(
+                          getBattlepassStepByID(activeStep).reward
+                        ).name
+                      }
+                    />
+                  </div>
+                )}
                 <p className="battlepass-reward-name">
                   {size === "battlepass-md" && (
                     <span className="uppercase text-ui-300">
@@ -796,7 +841,7 @@ export default function Battlepass(props) {
                         <img
                           src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
                             getBattlepassRewardByID(item.reward).image
-                          }.png`}
+                          }`}
                           width="100%"
                           height="auto"
                           alt={getBattlepassRewardByID(item.reward).name}

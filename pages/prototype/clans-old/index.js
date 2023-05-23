@@ -63,7 +63,7 @@ export default function Clan() {
             </div>
             <div className="header-bg">
               <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1672219552/Stryda/illustrations/Clans_bg.jpg"
+                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672219552/Stryda/illustrations/Clans_bg.jpg"
                 alt=""
               />
             </div>
@@ -116,7 +116,7 @@ export default function Clan() {
             <div className="surface surface-dimmed sm:rounded-lg p-4 relative flex items-center gap-4">
               <div className="-rotate-45 pointer-events-none drop-shadow-lg">
                 <img
-                  src="https://res.cloudinary.com/gloot/image/upload/v1659430626/Marketing/2022_prototype/Decoration-magnifyingglass.webp"
+                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1659430626/Marketing/2022_prototype/Decoration-magnifyingglass.webp"
                   width="140"
                   height="auto"
                   alt=""
@@ -148,7 +148,7 @@ export default function Clan() {
             >
               <div className="-rotate-45 pointer-events-none drop-shadow-lg">
                 <img
-                  src="https://res.cloudinary.com/gloot/image/upload/v1659430626/Marketing/2022_prototype/Decoration-star.webp"
+                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1659430626/Marketing/2022_prototype/Decoration-star.webp"
                   width="140"
                   height="auto"
                   alt=""

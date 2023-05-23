@@ -47,7 +47,7 @@ export default function HomeLaddersSolo() {
           </div>
           <img
             className="absolute inset-0 h-full w-full object-cover object-right opacity-20 lg:opacity-100"
-            src="https://res.cloudinary.com/gloot/image/upload/v1673862737/Stryda/illustrations/home-laddernoladders.jpg"
+            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1673862737/Stryda/illustrations/home-laddernoladders.jpg"
             alt=""
           />
         </div>

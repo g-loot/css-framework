@@ -11,37 +11,37 @@ const PremiumBenefits = [
     id: 1,
     name: "Get a 50% XP boost",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_XP_2.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1680527672/Stryda/illustrations/picture_premium_XP_2.png",
   },
   {
     id: 2,
     name: "Get free extra tokens for each token purchase",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_extra_tokens_2.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1680527672/Stryda/illustrations/picture_premium_extra_tokens_2.png",
   },
   {
     id: 3,
     name: "Remove ads on the platform",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_ads_2.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1680527672/Stryda/illustrations/picture_premium_ads_2.png",
   },
   {
     id: 4,
     name: "Significantly higher chance for rare, epic and legendary missions",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_rarity_2.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1680527672/Stryda/illustrations/picture_premium_rarity_2.png",
   },
   {
     id: 5,
     name: "Ability to participate in premium only competitions",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_ladders_2.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1680527672/Stryda/illustrations/picture_premium_ladders_2.png",
   },
   {
     id: 6,
     name: "Get 2 mission discards per day in order to reroll new ones",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_missions_2.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1680527672/Stryda/illustrations/picture_premium_missions_2.png",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function Premium() {
             <section>
               <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start justify-center my-12">
                 <PremiumLogo
-                  src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
                   width="275"
                   height="auto"
                 />
@@ -121,7 +121,7 @@ export default function Premium() {
             <section>
               <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start justify-center my-12">
                 <PremiumLogo
-                  src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
                   width="275"
                   height="auto"
                 />
@@ -173,7 +173,7 @@ export default function Premium() {
         <section className="relative z-10 pt-12 md:pt-20 mb-40 container max-w-lg mx-auto">
           <img
             className="hidden lg:block absolute pointer-events-none z-20 top-0 -right-14 rotate-[33deg]"
-            src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
+            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
             width="190"
             height="auto"
             alt=""
@@ -181,28 +181,28 @@ export default function Premium() {
 
           <img
             className="hidden lg:block absolute pointer-events-none z-20 -bottom-32 -right-8 blur-sm rotate-[120deg]"
-            src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_2.png"
+            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-coin-side_2.png"
             width="179"
             height="auto"
             alt=""
           />
           <img
             className="hidden lg:block absolute pointer-events-none z-20 -top-14 left-8 blur-sm -rotate-[33deg] opacity-50"
-            src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
+            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
             width="140"
             height="auto"
             alt=""
           />
           <img
             className="hidden lg:block absolute pointer-events-none z-20 -bottom-14 -left-12 -rotate-[143deg]"
-            src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
+            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-coin-side_1.png"
             width="144"
             height="auto"
             alt=""
           />
           <img
             className="hidden lg:block absolute pointer-events-none z-20 top-32 -left-5 -rotate-[74deg]"
-            src="https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-coin-side_2.png"
+            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-coin-side_2.png"
             width="49"
             height="auto"
             alt=""

@@ -63,7 +63,7 @@ export default function Missions() {
               <div className="header-content">
                 <div className="header-image">
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1674657396/Stryda/logos/stryda-logo-missions.svg"
+                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674657396/Stryda/logos/stryda-logo-missions.svg"
                     alt="Missions"
                   />
                 </div>

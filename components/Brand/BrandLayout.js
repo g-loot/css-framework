@@ -49,7 +49,7 @@ const BrandLayout = ({ children }) => {
                       className=""
                       width="123"
                       height="64"
-                      src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
+                      src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
                       alt="Stryda logo"
                     />
                     <div className="text-xl uppercase not-italic leading-none text-ui-300 pb-1">

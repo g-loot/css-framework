@@ -310,7 +310,7 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <div className="alert" role="alert" aria-live="assertive">
                   <div>
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1660723695/Marketing/2022_prototype/Logo/logo-steam.svg" alt="Riot Games" width="120" height="auto"  />
+                    <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1660723695/Marketing/2022_prototype/Logo/logo-steam.svg" alt="Riot Games" width="120" height="auto"  />
                     <div>
                     <div className="uppercase">Important:</div>
                       <p className="max-w-[80ch]">

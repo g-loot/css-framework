@@ -90,7 +90,7 @@ export default function BattlePassStep(props) {
                     <div className="battlepass-decoration">{item.name}</div>
                     <div className="battlepass-body">
                       <img
-                        src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                        src={`https://res.cloudinary.com/gloot/image/upload/f_auto/v1680426016/Stryda/illustrations/battlepass/${
                           getBattlepassRewardByID(item.reward).image
                         }.png`}
                         width="100%"

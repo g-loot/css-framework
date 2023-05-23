@@ -4,7 +4,7 @@ import { getLayout } from '../../components/Brand/BrandLayout'
 
 const BrandPage = () => (
   <div>
-    <img className='mb-8' src='https://res.cloudinary.com/gloot/image/upload/v1655896333/Marketing/2022_prototype/Brand/brand-styleguide.webp' width="100%" height='auto' alt='Stryda style guide' />
+    <img className='mb-8' src='https://res.cloudinary.com/gloot/image/upload/f_auto/v1655896333/Marketing/2022_prototype/Brand/brand-styleguide.webp' width="100%" height='auto' alt='Stryda style guide' />
     <div className='max-w-md mx-auto space-y-24 text-ui-100 leading-none mb-6'>
       <div className='flex gap-8 flex-col lg:flex-row items-stretch justify-start'>
         <div className='flex-1 lg:border-r border-ui-400/25 pr-8 space-y-2 lg:pt-2'>

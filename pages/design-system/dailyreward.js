@@ -12,43 +12,43 @@ const DailyRewards = [
     name: "Day 1",
     reward: "",
     rewardImage:
-      "https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-unique.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-centered-token-unique.png",
   },
   {
     name: "Day 2",
     reward: "",
     rewardImage:
-      "https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-small.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-small.png",
   },
   {
     name: "Day 3",
     reward: "",
     rewardImage:
-      "https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-token-unique.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-centered-token-unique.png",
   },
   {
     name: "Day 4",
     reward: "",
     rewardImage:
-      "https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-medium.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-medium.png",
   },
   {
     name: "Day 5",
     reward: "",
     rewardImage:
-      "https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-coin-large.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-coin-large.png",
   },
   {
     name: "Day 6",
     reward: "",
     rewardImage:
-      "https://res.cloudinary.com/gloot/image/upload/v1672157995/Stryda/currencies/Reward-centered-mixed-medium.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157995/Stryda/currencies/Reward-centered-mixed-medium.png",
   },
   {
     name: "Day 7",
     reward: "",
     rewardImage:
-      "https://res.cloudinary.com/gloot/image/upload/v1672157994/Stryda/currencies/Reward-centered-mixed-large.png",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157994/Stryda/currencies/Reward-centered-mixed-large.png",
   },
 ];
 

@@ -583,7 +583,7 @@ const DSpage = () => {
                     <div className="avatar avatar-circle avatar-xs">
                       <div>
                         <img
-                          src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg"
+                          src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_5.jpg"
                           alt="avatar"
                         />
                       </div>

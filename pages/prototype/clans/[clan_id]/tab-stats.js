@@ -339,7 +339,7 @@ export default function TabClanStats() {
                 </>
               )}
               {!isLoading && !isEmpty && (
-                <div>
+                <div className="animate-fade-in">
                   <div className="flex gap-2 justify-center items-center my-4">
                     <button
                       type="button"

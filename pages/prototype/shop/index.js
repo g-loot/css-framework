@@ -34,7 +34,7 @@ export default function Home() {
               </div>
             </div>
             <div className="header-bg">
-              <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
+              <img src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
             </div>
           </div>
         </section>
@@ -64,7 +64,7 @@ export default function Home() {
               <div className="relative z-10 xl:order-2 flex-2 px-8 mt-8 md:mt-0 grid place-items-center">
                 <img
                   className="object-contain"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1674739870/Stryda/illustrations/shop_avatarframes.png"
+                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674739870/Stryda/illustrations/shop_avatarframes.png"
                   alt=""
                 />
               </div>
@@ -94,7 +94,7 @@ export default function Home() {
               <div className="relative z-10 xl:order-2 flex-2 px-8 mt-8 md:mt-0 grid place-items-center">
                 <img
                   className="object-contain"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1677760500/Stryda/illustrations/shop_profilebanners.png"
+                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1677760500/Stryda/illustrations/shop_profilebanners.png"
                   alt=""
                 />
               </div>
@@ -125,7 +125,7 @@ export default function Home() {
               <div className="relative z-10 xl:order-2 flex-2 px-8 mt-8 md:mt-0 grid place-items-center">
                 <img
                   className="object-contain"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1674739870/Stryda/illustrations/shop_tokens.png"
+                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1674739870/Stryda/illustrations/shop_tokens.png"
                   alt=""
                 />
               </div>
@@ -147,7 +147,7 @@ export default function Home() {
                 </div>
                 <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center" />
                 <img
-                  src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_tokens.jpg"
+                  src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1677840913/Stryda/shop/giftcards/store_stryda_tokens.jpg"
                   className="w-4/5 rounded-xl shadow-2xl my-3"
                   height="auto"
                   alt="Tokens"
@@ -180,7 +180,7 @@ export default function Home() {
                   </div>
                   <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center" />
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_avatarframes.jpg"
+                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1677840913/Stryda/shop/giftcards/store_stryda_avatarframes.jpg"
                     className="w-4/5 rounded-xl shadow-2xl my-3"
                     height="auto"
                     alt="Avatar frames"
@@ -214,7 +214,7 @@ export default function Home() {
                   </div>
                   <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center" />
                   <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_profilebanners.jpg"
+                    src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1677840913/Stryda/shop/giftcards/store_stryda_profilebanners.jpg"
                     className="w-4/5 rounded-xl shadow-2xl my-3"
                     height="auto"
                     alt="Profile banners"
@@ -311,42 +311,42 @@ export default function Home() {
           <div className="relative">
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -top-20 -right-4 rotate-[33deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-token-side_1.png"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157996/Stryda/currencies/Reward-token-side_1.png"
               width="160"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-32 right-32 rotate-[67deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-powertoken-side_2.png"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157996/Stryda/currencies/Reward-powertoken-side_2.png"
               width="75"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -bottom-20 right-0 blur-sm rotate-[120deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-token-side_1.png"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157996/Stryda/currencies/Reward-token-side_1.png"
               width="210"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -top-14 left-32 blur-sm -rotate-[33deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-powertoken-side_2.png"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157996/Stryda/currencies/Reward-powertoken-side_2.png"
               width="168"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 -bottom-14 left-20 -rotate-[143deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-token-side_2.png"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157996/Stryda/currencies/Reward-token-side_2.png"
               width="144"
               height="auto"
               alt=""
             />
             <img
               className="hidden lg:block absolute pointer-events-none z-20 top-16 left-16 -rotate-[74deg]"
-              src="https://res.cloudinary.com/gloot/image/upload/v1672157996/Stryda/currencies/Reward-powertoken-side_1.png"
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1672157996/Stryda/currencies/Reward-powertoken-side_1.png"
               width="49"
               height="auto"
               alt=""

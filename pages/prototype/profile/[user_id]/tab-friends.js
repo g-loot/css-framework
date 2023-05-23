@@ -372,7 +372,7 @@ export default function TabProfileFriends() {
                   </div>
                 </div>
               ) : (
-                <div className="text-center mt-4 mb-8">
+                <div className="text-center mt-4 mb-8 animate-fade-in">
                   <ul className="pagination">
                     <li>
                       <a href="#" tabIndex="-1">

@@ -3,7 +3,7 @@ export const dataVouchers = [
     id: 1,
     validity: "United States & Europe",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1677838794/Stryda/shop/giftcards/store_giftcard_riot.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677838794/Stryda/shop/giftcards/store_giftcard_riot.jpg",
     url: "riot-games",
     name: "Riot Games",
     description:
@@ -175,7 +175,7 @@ export const dataVouchers = [
     id: 2,
     validity: "Worldwide",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1677838794/Stryda/shop/giftcards/store_giftcard_amazon.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677838794/Stryda/shop/giftcards/store_giftcard_amazon.jpg",
     url: "amazon",
     name: "Amazon.com",
     exception:
@@ -215,7 +215,7 @@ export const dataVouchers = [
     id: 3,
     validity: "United States, Europe, Philippines & Brazil",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1677838794/Stryda/shop/giftcards/store_giftcard_steam.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677838794/Stryda/shop/giftcards/store_giftcard_steam.jpg",
     url: "steam",
     name: "Steam",
     description:
@@ -402,7 +402,7 @@ export const dataVouchers = [
     id: 4,
     validity: "Worldwide",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1677838912/Stryda/shop/giftcards/store_giftcard_drkn.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677838912/Stryda/shop/giftcards/store_giftcard_drkn.jpg",
     url: "drkn",
     name: "DRKN Gaming Streetwear",
     description:
@@ -456,7 +456,7 @@ export const dataVouchers = [
     id: 5,
     validity: "Worldwide",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1677838794/Stryda/shop/giftcards/store_giftcard_gcoins.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/f_auto/v1677838794/Stryda/shop/giftcards/store_giftcard_gcoins.jpg",
     url: "pubg",
     name: "PUBG G-COINS",
     description:
