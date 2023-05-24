@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion-7.json";
 import LottieExplosionLvl1 from "../../assets/animations/explosion_stryda_5.json";
 import LottieExplosionLvl2 from "../../assets/animations/explosion_stryda_6.json";
 import LottieExplosionLvl3 from "../../assets/animations/explosion_stryda_7.json";

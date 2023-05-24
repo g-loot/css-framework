@@ -114,9 +114,10 @@
 }
 
 .animate-paused {
-  animation-play-state: paused;
+  animation-play-state: paused !important;
 }
-.animate-running {
+.animate-running,
+.animate-paused.animate-running {
   animation-play-state: running !important;
 }
 

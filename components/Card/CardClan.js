@@ -46,7 +46,7 @@ export default function CardClan(props) {
     <>
       <div
         key={clan.id}
-        className="surface rounded-lg p-4 flex flex-col items-between justify-center min-w-sm"
+        className="surface rounded-lg p-4 flex flex-col items-between justify-center w-96"
       >
         <div className="flex gap-4 items-center">
           <Link href={`/prototype/clans/${clan.id}${prototype.getURLparams()}`}>

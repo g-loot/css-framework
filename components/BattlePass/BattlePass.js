@@ -201,12 +201,14 @@ export default function Battlepass(props) {
   }
 
   function handlePrevBatch() {
+    console.log("currentStep", currentStep, "activeStep", activeStep, "originStep", originStep, "maxSteps", maxSteps);
     if (activeStep === originStep + 1) {
       setOriginStep(originStep - maxSteps);
     }
   }
 
   function handleNextBatch() {
+    console.log("currentStep", currentStep, "activeStep", activeStep, "originStep", originStep, "maxSteps", maxSteps);
     if (activeStep === originStep + maxSteps) {
       setOriginStep(activeStep);
     }

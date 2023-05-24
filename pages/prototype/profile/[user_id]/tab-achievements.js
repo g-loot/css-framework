@@ -128,7 +128,7 @@ export default function TabProfileAchievements() {
               )}
             </>
           ) : (
-            <section className="grid lg:grid-cols-2 gap-4">
+            <section className="grid xl:grid-cols-2 gap-4">
               {selectedUser.achievements?.badges?.map((item, itemIndex) => (
                 <div
                   key={itemIndex}

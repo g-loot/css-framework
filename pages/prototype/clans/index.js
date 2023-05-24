@@ -71,7 +71,7 @@ export default function Clan() {
             Clan(s) you have been invited to:
           </h2>
           <div className="relative">
-            <Slider itemWidth={480+16} bgColor="from-ui-900 via-ui-900/90 to-ui-900/0">
+            <Slider direction="left" itemWidth={480+16} bgColor="from-ui-900 via-ui-900/90 to-ui-900/0">
               {prototype.clans.map((clan, clanIndex) => (
                 <>
                   {clan.hasInvitedYou && (

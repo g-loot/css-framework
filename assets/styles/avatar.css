@@ -320,7 +320,7 @@
     > b,
     > strong {
       @apply
-        text-xs
+        text-[10px]
         py-px
         px-1
         gap-0.5
@@ -853,7 +853,7 @@
       > b,
       > strong {
         @apply
-          text-xs
+          text-[10px]
           py-px
           px-1
           gap-0.5
@@ -1066,7 +1066,7 @@
       > b,
       > strong {
         @apply
-          text-xs
+          text-[10px]
           py-px
           px-1
           gap-0.5
@@ -1279,7 +1279,7 @@
       > b,
       > strong {
         @apply
-          text-xs
+          text-[10px]
           py-px
           px-1
           gap-0.5
@@ -1492,7 +1492,7 @@
       > b,
       > strong {
         @apply
-          text-xs
+          text-[10px]
           py-px
           px-1
           gap-0.5

@@ -75,6 +75,7 @@ export default function TabLaddersOngoing() {
             ) : (
               <div className="relative">
                 <Slider
+                  direction="left"
                   itemWidth={397 + 16}
                   bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
                 >

@@ -19,7 +19,7 @@ export default function TabClanChat() {
   const [selectedClan, setSelectedClan] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
   const [hasMembersActionsInPlayerCard, setHasMembersActionsInPlayerCard] =
-    useState(false);
+    useState(true);
   const hasAccepted = query.hasaccepted === "true" ? true : false;
   const { clan_id } = router.query;
 
