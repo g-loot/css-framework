@@ -76,13 +76,13 @@ export default function ModalClaimBattlepassReward(props) {
                           "-webkit-mask-image":
                             "url(https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/" +
                             getBattlepassRewardByID(rewardID).image +
-                            ".png)",
+                            ")",
                         }}
                       />
                       <img
                         src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
                           getBattlepassRewardByID(rewardID).image
-                        }.png`}
+                        }`}
                         width="100%"
                         height="auto"
                         alt={getBattlepassRewardByID(rewardID).name}

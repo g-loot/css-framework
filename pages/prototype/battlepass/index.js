@@ -69,27 +69,27 @@ export default function BattlepassPage() {
 
   useEffect(() => {
     if (modalpremium) {
-      openModalBattlepassCompletedSummary();
-    }
-  }, [modalpremium]);
-
-  function openModalBattlepassCompletedSummary() {
-    uiContext.openModal(
-      <ModalBattlepassCompletedSummary id={selectedBattlepassID} />
-    );
-  }
-
-  useEffect(() => {
-    if (modalsummary) {
       openModalBattlepassCompletedPremium();
     }
-  }, [modalsummary]);
+  }, [modalpremium]);
 
   function openModalBattlepassCompletedPremium() {
     uiContext.openModal(
       <ModalBattlepassCompletedPremium id={selectedBattlepassID} />
     );
   }
+  
+  useEffect(() => {
+    if (modalsummary) {
+      openModalBattlepassCompletedSummary();
+    }
+  }, [modalsummary]);
+  
+    function openModalBattlepassCompletedSummary() {
+      uiContext.openModal(
+        <ModalBattlepassCompletedSummary id={selectedBattlepassID} />
+      );
+    }
 
   return (
     <>
