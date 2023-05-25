@@ -38,7 +38,7 @@ const PrototypePage = () => {
         <section className="relative pt-96 pb-24">
           <div className="container relative z-10 sm:text-center px-6 sm:px-0">
             <h1
-              className="h1 max-w-[22ch] sm:mx-auto mb-24 animate-slide-in-bottom animate-paused animate-delay"
+              className="h1 max-w-[22ch] sm:mx-auto mb-12 sm:mb-24 animate-slide-in-bottom animate-paused animate-delay"
               style={{
                 "--delay": "calc(2 * 0.05s)",
               }}

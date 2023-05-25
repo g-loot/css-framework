@@ -70,13 +70,6 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
   return (
     <>
       <div className="modal max-w-md modal-center">
-        <button
-          type="button"
-          className="button button-secondary button-close"
-          onClick={uiContext.closeModal}
-        >
-          <span className="icon icon-e-remove" />
-        </button>
         <div className="modal-content">
           <div className="modal-body">
             <h2 className="modal-title">Battlepass completed</h2>

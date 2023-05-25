@@ -217,7 +217,7 @@ const PrototypePage = () => {
                   {agent.abilities?.map((ability, abilityIndex) => (
                     <li
                       key={abilityIndex}
-                      className="flex items-start gap-4 px-8 animate-slide-in-bottom animate-paused animate-delay"
+                      className="flex items-start gap-4 px-6 animate-slide-in-bottom animate-paused animate-delay"
                       style={{
                         "--delay": "calc(" + abilityIndex + " * 0.05s)",
                       }}
@@ -237,7 +237,7 @@ const PrototypePage = () => {
               </section>
             ))}
             <section className="container max-w-xl relative my-24">
-              <div className="text-center">
+              <div className="lg:text-center px-6 xl:px-0 mb-12 md:mb-0">
                 <h2 className="h1 mb-4">Discover other roles</h2>
                 <p className="text-lg leading-relaxed max-w-md mx-auto">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam

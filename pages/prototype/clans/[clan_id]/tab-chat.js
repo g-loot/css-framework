@@ -99,7 +99,7 @@ export default function TabClanChat() {
                                       ladder.id
                                     ).status !== "finished" && (
                                       <span
-                                        className={`text-main card-status capitalize`}
+                                        className={`text-main card-status capitalize animate-pulse`}
                                       >
                                         {prototype.getLadderByID(
                                           ladder.gameSlug,

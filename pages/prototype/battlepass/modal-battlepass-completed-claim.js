@@ -59,13 +59,6 @@ export default function ModalBattlepassCompletedClaim(props) {
   return (
     <>
       <div className="modal">
-        <button
-          type="button"
-          className="button button-secondary button-close"
-          onClick={uiContext.closeModal}
-        >
-          <span className="icon icon-e-remove" />
-        </button>
         <div className="modal-image">
           <img src={getBattlepassByID(selectedBattlepass).meta?.logo} alt={getBattlepassByID(selectedBattlepass).meta?.name} className=" w-80" />
           <span
@@ -88,7 +81,7 @@ export default function ModalBattlepassCompletedClaim(props) {
           <div className="modal-action">
             <button
               type="button"
-              className={`button button-claim w-full ${
+              className={`button button-claim ${
                 submitting ? "is-loading" : ""
               }`}
               onClick={closeModalWithDelay}

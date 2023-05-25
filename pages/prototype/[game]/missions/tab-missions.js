@@ -10,6 +10,7 @@ import PremiumLogo from "../../../../components/PremiumLogo/PremiumLogo";
 import CardMissionTableTr from "../../../../components/Card/CardMissionTableTr";
 import ButtonStatsUpdate from "../../../../components/ButtonStatsUpdate/ButtonStatsUpdate";
 import LoadMore from "../../../../components/LoadMore/LoadMore";
+import Tooltip from "../../../../components/Tooltip/Tooltip";
 
 export default function TabMissionsMissions() {
   const router = useRouter();
@@ -188,7 +189,20 @@ export default function TabMissionsMissions() {
             className="py-8 animate-slide-in-bottom animate-delay"
             style={{ "--delay": "calc(3 * 0.05s)" }}
           >
-            <h2 className="h3 mb-4 mx-4 sm:mx-0">Completed missions</h2>
+            <div className="flex gap-2 items-baseline">
+              <h2 className="h3 mb-4 mx-4 sm:mx-0">Completed missions</h2>
+              <Tooltip
+                tooltip={
+                  <div className="max-w-xs text-sm text-center leading-tight">
+                    Your completed missions within the current Battlepass
+                  </div>
+                }
+              >
+                <button className="text-ui-300 text-0">
+                  <span className="icon icon-16 icon-c-info" />
+                </button>
+              </Tooltip>
+            </div>
             {isEmpty ? (
               <div className="surface surface-dimmed rounded px-4 py-8 text-center">
                 <div className="max-w-xs mx-auto">
