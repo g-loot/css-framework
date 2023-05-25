@@ -1,10 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useContext, useState } from "react";
 
 import Footer from "../../../../../components/Footer/Footer";
 import TopbarMarketing from "../../../../../components/TopBarMarketing/TopbarMarketing";
 import { getLayout } from "../../../../../components/Prototype/PrototypeLayout";
 import { useRouter } from "next/router";
 import { dataValorantGuideRoles } from "../../../../../mock-data/data-valorant-guide";
+import ModalValorantGuideVideo from "../modal-video";
+import { UiContext } from "../../../../../contexts/ui";
 import Link from "next/link";
 
 const inViewport = (elem) => {
@@ -29,6 +31,7 @@ const PrototypePage = () => {
   const router = useRouter();
   const { role_id } = router.query;
   const [item, setItem] = useState(null);
+  const uiContext = useContext(UiContext);
 
   const getRoleBySlug = (slug) => {
     return dataValorantGuideRoles.find((role) => {
@@ -44,6 +47,10 @@ const PrototypePage = () => {
     inViewport("[class*=animate-]");
   }, [item]);
 
+  function openModalValorantGuideVideo() {
+    uiContext.openModal(<ModalValorantGuideVideo />);
+  }
+
   return (
     <>
       <TopbarMarketing />
@@ -53,7 +60,7 @@ const PrototypePage = () => {
           <>
             <section className="relative mt-24 mb-12">
               <div
-                className="relative z-0 after:content-[''] after:h-1/4 after:w-full after:absolute after:bottom-0 after:inset-x-0 after:bg-gradient-to-t after:from-ui-900 after:to-ui-900/0 scale-150 md:scale-100 animate-slide-in-bottom animate-paused animate-delay"
+                className="relative z-0 animate-slide-in-bottom animate-paused animate-delay after:content-[''] after:h-1/4 after:w-full after:absolute after:bottom-0 after:inset-x-0 after:bg-gradient-to-t after:from-ui-900 after:to-ui-900/0 scale-150 md:scale-100"
                 style={{
                   "--delay": "calc(1 * 0.05s)",
                 }}
@@ -157,16 +164,44 @@ const PrototypePage = () => {
                       }}
                     />
                   </div>
-                  <div className="flex-4 relative pointer-events-none">
+                  <div className="flex-4 relative animate-fade-in animate-paused">
+                    <div
+                      className="md:absolute inset-0 grid place-content-center p-4 animate-slide-in-bottom animate-paused animate-delay"
+                      style={{
+                        "--delay": "calc(5 * 0.05s)",
+                      }}
+                    >
+                      <div
+                        className="surface rounded-[.75rem] overflow-hidden max-w-sm mx-auto md:mt-32 relative animate-scale-in drop-shadow-xl cursor-pointer group"
+                        onClick={openModalValorantGuideVideo}
+                      >
+                        <div className="absolute z-30 inset-0 flex items-center justify-center pointer-events-none">
+                          <button
+                            type="button"
+                            className="button button-primary button-lg button-play group-hover:scale-125"
+                          >
+                            <span className="icon icon-circle-caret-right"></span>
+                          </button>
+                        </div>
+                        <span className="absolute inset-0 z-10 bg-ui-900 opacity-50 group-hover:opacity-20 transition-opacity duration-300 ease" />
+                        <img
+                          src="https://res.cloudinary.com/gloot/image/upload/v1684999497/Stryda/marketing/website/valorant-guide/valorant-stats-video-cover.jpg"
+                          width="100%"
+                          height="auto"
+                          alt=""
+                          className="relative z-0 aspect-video object-cover object-center"
+                        />
+                      </div>
+                    </div>
                     <img
                       src={agent.image}
                       alt={agent.name}
-                      className="w-1/2 lg:w-full h-auto mx-auto"
+                      className="pointer-events-none w-1/2 lg:w-full h-auto mx-auto"
                     />
                     <img
                       src={agent.image}
                       alt={agent.name}
-                      className="absolute -left-1/3 top-2/3 sm:-left-1/2 sm:-bottom-1/2 opacity-20 blur-md sm:blur-2xl sm:scale-150 brightness-150 -scale-y-100 transform-gpu"
+                      className="pointer-events-none absolute -left-1/3 top-2/3 sm:-left-1/2 sm:-bottom-1/2 opacity-20 blur-md sm:blur-2xl sm:scale-150 brightness-150 -scale-y-100 transform-gpu"
                     />
                   </div>
                 </div>
@@ -207,7 +242,10 @@ const PrototypePage = () => {
                 {dataValorantGuideRoles.map((item, itemIndex) => (
                   <li
                     key={itemIndex}
-                    className="relative py-12 overflow-hidden"
+                    className="relative py-12 overflow-hidden animate-slide-in-bottom animate-paused animate-delay"
+                    style={{
+                      "--delay": "calc(" + itemIndex + " * 0.05s)",
+                    }}
                   >
                     <div className="relative w-full z-0 after:content-[''] after:h-1/3 after:w-full after:absolute after:bottom-0 after:inset-x-0 after:bg-gradient-to-t after:from-ui-900 after:to-ui-900/0 scale-150 md:scale-100">
                       <img

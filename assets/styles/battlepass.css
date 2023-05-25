@@ -353,11 +353,13 @@
       @apply
       border-ui-400
       ;
-      .battlepass-decoration::before {
-        @apply
-        bg-ui-400
-        text-ui-900
-        ;
+      .battlepass-decoration {
+        &::before {
+          @apply
+          bg-ui-400
+          text-ui-900
+          ;
+        }
       }
     }
   }
@@ -366,10 +368,12 @@
       @apply
       border-ui-600
       ;
-      .battlepass-decoration::before {
-        @apply
-        bg-ui-600
-        ;
+      .battlepass-decoration {
+        &::before {
+          @apply
+          bg-ui-600
+          ;
+        }
       }
     }
   }
@@ -657,10 +661,12 @@
         @apply
         border-interaction-500
         ;
-        .battlepass-decoration::before {
-          @apply
-          bg-interaction-500
-          ;
+        .battlepass-decoration {
+          &::before {
+            @apply
+            bg-interaction-500
+            ;
+          }
         }
       }
     }
@@ -669,10 +675,12 @@
         @apply
         border-interaction-700
         ;
-        .battlepass-decoration::before {
-          @apply
-          bg-interaction-700
-          ;
+        .battlepass-decoration {
+          &::before {
+            @apply
+            bg-interaction-700
+            ;
+          }
         }
       }
     }
@@ -730,6 +738,13 @@
         @apply
         border-premium-700
         ;
+        .battlepass-decoration {
+          &::before {
+            @apply
+            bg-premium-700
+            ;
+          }
+        }
       }
     }
     &::before {

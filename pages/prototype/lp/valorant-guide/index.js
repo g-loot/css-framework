@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 
 import Footer from "../../../../components/Footer/Footer";
 import TopbarMarketing from "../../../../components/TopBarMarketing/TopbarMarketing";

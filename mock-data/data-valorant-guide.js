@@ -244,10 +244,10 @@ export const dataValorantGuideRoles = [
     agents: [
       {
         id: 1,
-        name: "Jamie Adeyemi",
+        name: "Phoenix",
         image:
           "https://res.cloudinary.com/gloot/image/upload/Stryda/marketing/website/valorant-guide/valorant-guide-agent-phoenix.png",
-        realName: "Erik Torsten",
+        realName: "Jamie Adeyemi",
         bio: "<p>Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare.</p><p>Whether he's got backup or not, he'll rush into a fight on his own terms.</p>",
         country: "United Kingdom",
         abilities: [

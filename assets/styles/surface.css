@@ -90,7 +90,7 @@
     duration-1000;
   }
   &:not(.is-loading) {
-    > * {
+    > *:not([class*=opacity-]) {
       @apply
       opacity-100;
     }

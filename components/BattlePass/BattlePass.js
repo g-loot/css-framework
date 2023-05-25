@@ -17,7 +17,6 @@ import Link from "next/link";
 import Avatar from "../Avatar/Avatar";
 import Lottie from "lottie-react";
 import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
-import AnimatedNumber from "../AnimatedNumber/AnimatedNumber";
 import CarouselSingle, { CarouselItem } from "../Carousel/CarouselSingle";
 import PremiumLogo from "../PremiumLogo/PremiumLogo";
 import ModalBattlepassCompletedPremium from "../../pages/prototype/battlepass/modal-battlepass-completed-premium";
@@ -268,9 +267,8 @@ export default function Battlepass(props) {
                     </div>
                     <div className="battlepass-reward-text">
                       <span>Total XP</span>
-                      <span className={!hasPremium ? "text-premium-500" : ""}>
+                      <span>
                         2240
-                        {/*<AnimatedNumber number={2240} />*/}
                       </span>
                     </div>
                   </li>
@@ -297,9 +295,8 @@ export default function Battlepass(props) {
                   </div>
                   <div className="battlepass-reward-text">
                     <span>Coins</span>
-                    <span className={!hasPremium ? "text-premium-500" : ""}>
+                    <span>
                       1411
-                      {/*<AnimatedNumber number={1411} />*/}
                     </span>
                   </div>{" "}
                 </li>
@@ -325,9 +322,8 @@ export default function Battlepass(props) {
                   </div>
                   <div className="battlepass-reward-text">
                     <span>Tokens</span>
-                    <span className={!hasPremium ? "text-premium-500" : ""}>
+                    <span>
                       879
-                      {/* <AnimatedNumber number={879} />*/}
                     </span>
                   </div>{" "}
                 </li>
@@ -402,7 +398,7 @@ export default function Battlepass(props) {
                   </div>
                   <div className="battlepass-reward-text">
                     <span>Avatar frames</span>
-                    <span className={!hasPremium ? "text-premium-500" : ""}>
+                    <span>
                       {!hasPremium ? <>4</> : <>3</>}
                     </span>
                   </div>{" "}
@@ -492,7 +488,7 @@ export default function Battlepass(props) {
                   </div>
                   <div className="battlepass-reward-text">
                     <span>Profile banners</span>
-                    <span className={!hasPremium ? "text-premium-500" : ""}>
+                    <span>
                       {!hasPremium ? <>5</> : <>4</>}
                     </span>
                   </div>
