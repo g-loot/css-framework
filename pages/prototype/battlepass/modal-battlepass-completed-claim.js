@@ -67,10 +67,11 @@ export default function ModalBattlepassCompletedClaim(props) {
           <span className="icon icon-e-remove" />
         </button>
         <div className="modal-image">
+          <img src={getBattlepassByID(selectedBattlepass).meta?.logo} alt={getBattlepassByID(selectedBattlepass).meta?.name} className=" w-80" />
           <span
             style={{
               backgroundImage:
-                "url(https://res.cloudinary.com/gloot/image/upload/v1684830804/Stryda/illustrations/modal-battlepass-claim.jpg)",
+                "url("+ getBattlepassByID(selectedBattlepass).meta?.backgroundImage +")",
             }}
           />
         </div>
@@ -78,7 +79,7 @@ export default function ModalBattlepassCompletedClaim(props) {
           <div className="modal-body">
             <h2 className="modal-title">Battlepass ended</h2>
             <p>
-              The <strong className="text-ui-100">HyperX Battlepass</strong> has ended. Congratulations for reaching <strong className="text-ui-100 uppercase">Tier 11</strong>.
+              The Battlepass has ended. Congratulations for reaching <strong className="text-ui-100 uppercase">Tier 11</strong>.
             </p>
             <p>
               It is now time to <strong className="text-ui-100">claim your past rewards</strong> before jumping into the new Battlepass!

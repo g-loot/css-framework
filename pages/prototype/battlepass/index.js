@@ -97,10 +97,14 @@ export default function BattlepassPage() {
         <PrototypeStructure title="Battlepass">
           <section className="mb-8 surface surface-dimmed p-4 relative sm:rounded overflow-hidden animate-slide-in-bottom">
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-start text-center lg:text-left lg:justify-between pb-4 mb-4 gap-4 lg:gap-8 border-b border-ui-100/10">
-              <div className="flex-1 flex flex-col items-center lg:items-start 2xl:flex-row gap-4 2xl:gap-8">
-                <h1 onClick={switchBattlepasses} className="pt-1.5">
+              <div className="flex-1 flex flex-col items-center 2xl:flex-row gap-4 2xl:gap-8">
+                {/*<h1 onClick={switchBattlepasses} className="pt-1.5">
                   {getBattlepassByID(selectedBattlepassID).meta?.name}
                 </h1>
+      */}
+                <div onClick={switchBattlepasses} className="px-4 md:px-8 py-4 flex flex-col items-center justify-center gap-4 w-full md:w-1/2 lg:w-[375px]">
+                  <img src={getBattlepassByID(selectedBattlepassID).meta?.logo} alt={getBattlepassByID(selectedBattlepassID).meta?.name} />
+                </div>
                 <div className="flex-1 2xl:border-l 2xl:border-ui-100/10 2xl:pl-8 flex items-center">
                   <p className="2xl:max-w-[50ch] text-ui-300">
                     {getBattlepassByID(selectedBattlepassID).meta?.description}
