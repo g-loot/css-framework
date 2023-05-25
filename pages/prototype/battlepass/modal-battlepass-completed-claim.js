@@ -79,7 +79,7 @@ export default function ModalBattlepassCompletedClaim(props) {
           <div className="modal-body">
             <h2 className="modal-title">Battlepass ended</h2>
             <p>
-              The Battlepass has ended. Congratulations for reaching <strong className="text-ui-100 uppercase">Tier 11</strong>.
+              The Battlepass has ended. Congratulations for reaching <strong className="text-ui-100">tier 11</strong> of 15 tiers.
             </p>
             <p>
               It is now time to <strong className="text-ui-100">claim your past rewards</strong> before jumping into the new Battlepass!

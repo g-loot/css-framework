@@ -34,7 +34,7 @@ const PrototypePage = () => {
     <>
       <TopbarMarketing />
 
-      <div className="min-h-screen">
+      <div className="min-h-screen pb-24">
         <section className="relative pt-96 pb-24">
           <div className="container relative z-10 sm:text-center px-6 sm:px-0">
             <h1
@@ -92,7 +92,7 @@ const PrototypePage = () => {
                 className="w-full max-w-xl mx-auto"
               />
             </div>
-            <div className="container max-w-lg relative z-20 -mt-12 md:-mt-24 px-6 xl:px-0 after:content-[''] after:absolute after:z-10 after:blur-xl after:bg-ui-900 after:inset-0">
+            <div className="container max-w-md relative z-20 -mt-12 md:-mt-24 px-6 xl:px-0 after:content-[''] after:absolute after:z-10 after:blur-xl after:bg-ui-900 after:inset-0">
               <div className="relative z-20">
                 <h3 className="h4 font-headings text-5xl sm:text-6xl leading-[0.85] text-ui-200 uppercase animate-slide-in-bottom animate-paused animate-delay"
                   style={{

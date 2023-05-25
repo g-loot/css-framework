@@ -89,7 +89,7 @@ const PrototypePage = () => {
                   {role_id}
                 </h1>
                 <div
-                  className="max-w-[50ch] mx-auto space-y-4 leading-relaxed text-lg animate-slide-in-bottom animate-paused animate-delay"
+                  className="max-w-lg mx-auto space-y-4 leading-relaxed text-lg animate-slide-in-bottom animate-paused animate-delay"
                   style={{
                     "--delay": "calc(4 * 0.05s)",
                   }}
@@ -124,31 +124,39 @@ const PrototypePage = () => {
                         {agent.name}
                       </h3>
                       <img
-                        className="w-12 h-12 -translate-y-1 sm:-translate-y-3"
+                        className="w-12 h-12 -translate-y-2 sm:-translate-y-3"
                         src={item.icon}
                         alt={item.name}
                       />
                     </div>
+                    <img
+                      src={agent.image}
+                      alt={agent.name}
+                      className="block md:hidden animate-slide-in-bottom animate-paused animate-delay"
+                      style={{
+                        "--delay": "calc(3 * 0.05s)",
+                      }}
+                    />
                     <ul
-                      className="mt-6 mb-7 flex items-start gap-8 overflow-x-auto scrollbar-hidden child:border-l child:border-l-ui-600 child:pl-4 animate-slide-in-bottom animate-paused animate-delay"
+                      className="mt-6 mb-7 flex items-stretch gap-8 leading-none overflow-x-auto scrollbar-hidden child:border-l child:border-l-ui-500 child:pl-4 animate-slide-in-bottom animate-paused animate-delay"
                       style={{
                         "--delay": "calc(3 * 0.05s)",
                       }}
                     >
                       <li>
-                        <div className="uppercase text-sm text-ui-300">
+                        <div className="uppercase text-sm text-ui-300 mb-1">
                           Role
                         </div>
                         <div>{item.nameSingular}</div>
                       </li>
                       <li>
-                        <div className="uppercase text-sm text-ui-300">
+                        <div className="uppercase text-sm text-ui-300 mb-1">
                           Real name
                         </div>
                         <div>{agent.realName}</div>
                       </li>
                       <li>
-                        <div className="uppercase text-sm text-ui-300">
+                        <div className="uppercase text-sm text-ui-300 mb-1">
                           Country
                         </div>
                         <div>{agent.country}</div>
@@ -166,13 +174,13 @@ const PrototypePage = () => {
                   </div>
                   <div className="flex-4 relative animate-fade-in animate-paused">
                     <div
-                      className="md:absolute inset-0 grid place-content-center p-4 animate-slide-in-bottom animate-paused animate-delay"
+                      className="md:absolute inset-0 grid place-content-center pt-0 md:pt-4 p-4 animate-slide-in-bottom animate-paused animate-delay"
                       style={{
                         "--delay": "calc(5 * 0.05s)",
                       }}
                     >
                       <div
-                        className="surface rounded-[.75rem] overflow-hidden max-w-sm mx-auto md:mt-32 relative animate-scale-in drop-shadow-xl cursor-pointer group"
+                        className="surface rounded-[.75rem] overflow-hidden w-full md:w-96 mx-auto md:mt-36 relative animate-scale-in drop-shadow-xl cursor-pointer group"
                         onClick={openModalValorantGuideVideo}
                       >
                         <div className="absolute z-30 inset-0 flex items-center justify-center pointer-events-none">
@@ -196,12 +204,12 @@ const PrototypePage = () => {
                     <img
                       src={agent.image}
                       alt={agent.name}
-                      className="pointer-events-none w-1/2 lg:w-full h-auto mx-auto"
+                      className="hidden md:block pointer-events-none w-1/2 lg:w-full h-auto mx-auto"
                     />
                     <img
                       src={agent.image}
                       alt={agent.name}
-                      className="pointer-events-none absolute -left-1/3 top-2/3 sm:-left-1/2 sm:-bottom-1/2 opacity-20 blur-md sm:blur-2xl sm:scale-150 brightness-150 -scale-y-100 transform-gpu"
+                      className="hidden md:block pointer-events-none absolute -left-1/3 top-2/3 sm:-left-1/2 sm:-bottom-1/2 opacity-20 blur-md sm:blur-2xl sm:scale-150 brightness-150 -scale-y-100 transform-gpu"
                     />
                   </div>
                 </div>
