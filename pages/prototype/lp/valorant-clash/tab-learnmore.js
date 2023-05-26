@@ -22,7 +22,6 @@ export default function ValorantClashTabLearnMore() {
 
           <div
             className="text-center space-y-8 !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000"
-            data-aos="fade-up"
           >
             <h2 className="text-center text-ui-100 max-w-md mx-auto">
               <span className="text-main">Stryda</span> VALORANT Clash for the
@@ -72,21 +71,21 @@ export default function ValorantClashTabLearnMore() {
           >
             <h2 className="mb-8">Clash dates</h2>
             <div className="flex flex-col lg:flex-row gap-4 items-stretch justify-center whitespace-nowrap px-4 lg:px-0">
-              <div className="p-4 transition-delay !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000" data-aos="fade-up" style={{ "--delay": "calc(1 * 0.1s)" }}>
+              <div className="p-4 transition-delay !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000">
                 <h3 className="text-ui-200">Qualifiers</h3>
                 <p className="uppercase tracking-wider text-xl text-ui-300">
                   October
                 </p>
               </div>
-              <span className="bg-ui-100 opacity-25 h-px w-full lg:w-px lg:h-auto" data-aos="flip-up" />
-              <div className="p-4 transition-delay !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000" data-aos="fade-up" style={{ "--delay": "calc(2 * 0.1s)" }}>
+              <span className="bg-ui-100 opacity-25 h-px w-full lg:w-px lg:h-auto" />
+              <div className="p-4 transition-delay !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000">
                 <h3 className="text-ui-100">Showdown</h3>
                 <p className="uppercase tracking-wider text-xl text-ui-300">
                   October 28-30
                 </p>
               </div>
-              <span className="bg-ui-100 opacity-25 h-px w-full lg:w-px lg:h-auto" data-aos="flip-up" />
-              <div className="p-4 transition-delay !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000" data-aos="fade-up" style={{ "--delay": "calc(3 * 0.1s)" }}>
+              <span className="bg-ui-100 opacity-25 h-px w-full lg:w-px lg:h-auto" />
+              <div className="p-4 transition-delay !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000">
                 <h3 className="text-main">Grand Final</h3>
                 <p className="uppercase tracking-wider text-xl text-ui-300">
                   November 25-27
@@ -103,7 +102,6 @@ export default function ValorantClashTabLearnMore() {
       >
         <div
           className="container max-w-lg mx-auto text-center !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000"
-          data-aos="fade-up"
         >
           <h2 className="mb-8">Format</h2>
           <div className="max-w-[60ch] mx-auto space-y-8 px-4 lg:px-0">
@@ -143,7 +141,7 @@ export default function ValorantClashTabLearnMore() {
         >
           <div
             className="relative z-10 container max-w-sm mx-auto text-center !ease-[cubic-bezier(.7,0,.3,1)] !duration-1000"
-            data-aos="fade-up"
+
           >
             <h2 className="mb-8">Contact us</h2>
             <p

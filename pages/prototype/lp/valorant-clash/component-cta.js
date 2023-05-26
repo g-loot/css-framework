@@ -24,7 +24,6 @@ export default function ValorantClashCTA(props) {
         />
         <div className="absolute top-0 right-0 mix-blend-lighten hidden md:block w-[650px] h-[458px]">
           <Image
-            data-aos="fade-left"
             src="https://res.cloudinary.com/gloot/image/upload/v1663762265/Marketing/2022_Valorant_clash/Valorant_Clash_hero_character_2.jpg"
             alt=""
             layout="responsive"
@@ -36,7 +35,6 @@ export default function ValorantClashCTA(props) {
         </div>
         <div className="absolute bottom-0 left-0 mix-blend-lighten hidden md:block w-[650px] h-[458px]">
           <Image
-            data-aos="fade-right"
             src="https://res.cloudinary.com/gloot/image/upload/v1663762265/Marketing/2022_Valorant_clash/Valorant_Clash_hero_character_1.jpg"
             alt=""
             layout="responsive"

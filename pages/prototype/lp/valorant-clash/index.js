@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import Aos from "aos";
 import Footer from "../../../../components/Footer/Footer";
 import ValorantClashTabFollow from "./tab-follow";
 import ValorantClashTabItem from "./component-tabItem";
@@ -66,14 +65,6 @@ const PrototypePage = () => {
     } else {
       console.log("Competition status:", "unknown");
     }
-  }, []);
-
-  useEffect(() => {
-    Aos.init({
-      easing: "ease-out-quad",
-    });
-
-    window.addEventListener("load", Aos.refresh);
   }, []);
 
   const router = useRouter();
