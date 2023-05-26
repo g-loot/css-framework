@@ -6,7 +6,7 @@ import PrototypeStructure from "../../../../../components/Prototype/PrototypeStr
 import { UiContext } from "../../../../../contexts/ui";
 import { usePrototypeData } from "../../../../../contexts/prototype";
 import { useRouter } from "next/router";
-import AnimatedNumber from "../../../../../components/AnimatedNumber/AnimatedNumber";
+import ModalInfoClanSeasonEnroll from "../modal-info-clanseasonenroll";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import TabClanLeaderboardsLeaderboards from "./tab-clanleaderboards";
 import TabClanLeaderboardsHowItWorks from "./tab-howitworks";
@@ -79,6 +79,15 @@ export default function Ladders() {
     }
   }, [selectedGame]);
 
+  function handleEnroll() {
+    setHasOptedIn(!hasOptedIn);
+    uiContext.openModal(
+      <ModalInfoClanSeasonEnroll />
+    );
+  }
+
+  ModalInfoClanSeasonEnroll
+
   return (
     <>
       {selectedGame && selectedLeaderboard && (
@@ -120,7 +129,7 @@ export default function Ladders() {
                   )}
                 </div>
                 {selectedLeaderboard.isCurrent ? (
-                  <ResetsIn label="Finishes" />
+                  <ResetsIn label="Ends" />
                 ) : (
                   <span className="chip chip-secondary">
                     <span>Ended {selectedLeaderboard.id * 2} months ago</span>
@@ -141,23 +150,9 @@ export default function Ladders() {
 
                     <p className="text-sm">
                       {selectedLeaderboard.meta.objective}{" "}
-                      {/*
-                      <Tooltip
-                        tooltip={
-                          <div className="max-w-xs text-sm leading-tight">
-                            The content of this tooltip can be customized in the
-                            backend.
-                          </div>
-                        }
-                      >
-                        <button className="text-ui-300 text-0">
-                          <span className="icon text-sm icon-c-info" />
-                        </button>
-                      </Tooltip>
-                      */}
                     </p>
                     {!hasOptedIn && (
-                      <button type="button" className="button button-sm button-primary -my-4" onClick={() => setHasOptedIn(!hasOptedIn)}>
+                      <button type="button" className="button button-sm button-primary -my-4" onClick={() => handleEnroll()}>
                         <span>Enroll my clan</span>
                       </button>
                     )}

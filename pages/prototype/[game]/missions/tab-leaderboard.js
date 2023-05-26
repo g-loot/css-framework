@@ -12,6 +12,7 @@ import { DataBattlepass } from "../../../../mock-data/data-battlepass";
 export default function TabMissionsLeaderboard(props) {
   const prototype = usePrototypeData();
   const [isLoading, setIsLoading] = useState(true);
+  const [isEligible, setIsEligible] = useState(true);
 
   useEffect(() => {
     const clear = loadList();
@@ -39,11 +40,17 @@ export default function TabMissionsLeaderboard(props) {
     </div>
   );
 
+  function RandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
   return (
     <>
-      <section className="flex items-center gap-x-4 gap-y-2 mb-4 px-2 md:px-0 whitespace-nowrap overflow-x-auto scrollbar-hidden">
+      <section className="flex items-center gap-x-4 gap-y-2 px-2 md:px-0 whitespace-nowrap overflow-x-auto scrollbar-hidden">
         <div className="form-group form-select flex gap-2 items-center">
-          <label className="mb-0" htmlFor="favorite-game">Battlepass:</label>
+          <label className="mb-0" htmlFor="favorite-game">
+            Battlepass:
+          </label>
           <select id="favorite-game" onChange={loadList}>
             <option selected>All</option>
             {DataBattlepass.map((item, itemIndex) => (
@@ -81,11 +88,93 @@ export default function TabMissionsLeaderboard(props) {
         style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="flex flex-col lg:flex-row gap-8">
+          <div className="w-80 hidden lg:block pt-9 space-y-4">
+            <div
+              className={`surface p-2 pt-4 rounded text-center ${
+                isLoading ? "is-loading" : ""
+              }`}
+            >
+              <Avatar id={1} hasLevel={false} size="avatar-lg" />
+              <p>
+                {prototype.getUserByID(1).clan && (
+                  <>
+                    &#91;
+                    {prototype.getClanByID(prototype.getUserByID(1).clan)?.tag}
+                    &#93;{" "}
+                  </>
+                )}{" "}
+                {prototype.getUserByID(1).nickname}
+              </p>
+              {isEligible ? (
+                <>
+                  <div className="py-2 space-y-2">
+                    <h3>#23</h3>
+                    <p className="text-ui-300 text-sm uppercase flex gap-3 justify-center">
+                      <span></span>
+                      <span>Top 45%</span>
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    className="button button-sm button-secondary w-full"
+                  >
+                    <span>Go to my position</span>
+                  </button>
+                </>
+              ) : (
+                <>
+                  <div className="py-2 space-y-2">
+                    <h3>——</h3>
+                  </div>
+                  <p className="text-ui-300 py-2">
+                    Play more matches to be eligible for this scoreboard.
+                  </p>
+                </>
+              )}
+            </div>
+            <div
+              className={`surface rounded text-center ${
+                isLoading ? "is-loading" : ""
+              }`}
+            >
+              <p className="text-ui-300 p-3">Friends placement</p>
+              <ul className="border-t border-ui-700 child:flex child:items-center child:justify-between child:py-2 child:px-2 child:gap-3">
+                {prototype.getUserByID(1).friends.map((item, itemIndex) => (
+                  <Link
+                    key={itemIndex}
+                    href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                  >
+                    <li className="interactive even:bg-ui-700 overflow-hidden">
+                      <span className="w-9 text-center">
+                        {RandomNumber(4, 200)}
+                      </span>
+                      <Avatar id={item} hasTooltip={true} />
+                      <span className="flex-1 text-left truncate">
+                        {prototype.getUserByID(item).clan && (
+                          <>
+                            &#91;
+                            {
+                              prototype.getClanByID(
+                                prototype.getUserByID(item).clan
+                              )?.tag
+                            }
+                            &#93;{" "}
+                          </>
+                        )}
+                        {prototype.getUserByID(item).nickname}
+                      </span>
+                      <span className="text-right">{(10 - itemIndex) * 5}</span>
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+            </div>
+          </div>
           <div className="flex-1">
             <div className="px-2 md:px-0">
               <div className="item border-0 text-sm uppercase text-ui-300">
                 <div className="w-14" />
-                <div className="item-image w-9" />
+                <div className="item-image w-7" />
                 <div className="item-body">Player</div>
                 <div className="w-28 text-center">Missions No.</div>
                 <div className="w-28 text-center">All XP</div>

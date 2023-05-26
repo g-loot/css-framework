@@ -102,7 +102,7 @@ export default function LadderHeader() {
                
                 {prototype.getLadderByID(game, ladder_id)?.status !== "finished" && (
                     <>
-                      <ResetsIn label="Finishes" />
+                      <ResetsIn label="Ends" />
                       {/*
                       <div className="text-right flex items-center gap-1">
                         <span className="icon text-sm text-ui-300 icon-clock" />

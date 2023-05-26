@@ -41,9 +41,9 @@ const TopBarMarketing = ({ props }) => {
 
   const navLinks = [
     ["home", "/", "Home"],
-    ["features", "/features", "Features"],
     ["howItWorks", "/how-it-works", "How it works"],
-    ["blog", "/blog", "Blog"],
+    ["games", "/games", "Games"],
+    ["news", "/news", "News"],
   ];
 
   return (

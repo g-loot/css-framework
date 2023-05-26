@@ -60,7 +60,7 @@ export default function ModalBattlepassCompletedClaim(props) {
     <>
       <div className="modal">
         <div className="modal-image">
-          <img src={getBattlepassByID(selectedBattlepass).meta?.logo} alt={getBattlepassByID(selectedBattlepass).meta?.name} className=" w-80" />
+          <img src={getBattlepassByID(selectedBattlepass).meta?.logo} alt={getBattlepassByID(selectedBattlepass).meta?.name} className="w-80" />
           <span
             style={{
               backgroundImage:

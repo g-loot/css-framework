@@ -229,7 +229,7 @@ const conversationFull = [
   },
   {
     id: 10,
-    time: "2 min. ago",
+    time: "3 min. ago",
     author: 2,
     isEvent: true,
     messages: [
@@ -244,6 +244,18 @@ const conversationFull = [
             author: [7],
           },
         ],
+      },
+    ],
+  },
+  {
+    id: 11,
+    time: "2 min. ago",
+    author: 2,
+    isEvent: true,
+    messages: [
+      {
+        id: 1,
+        type: "clanseasonstarted",
       },
     ],
   },
@@ -580,6 +592,133 @@ export default function Chat(props) {
                                         See stats and more results on the{" "}
                                         <a className="link">full leaderboard</a>
                                       </div>
+                                    </div>
+                                  </div>
+                                </Link>
+                              </div>
+                            )}
+                            {messageBubble.type === "clanseasonstarted" && (
+                              <div className="space-y-4">
+                                <p>
+                                  <a className="link" href="#" target="_blank">
+                                    Nomadiction
+                                  </a>{" "}
+                                  has enrolled the Clan to the{" "}
+                                  {
+                                    prototype.getClanLeaderboardByID(
+                                      "valorant",
+                                      0
+                                    )?.name
+                                  }{" "}
+                                  Clan Season
+                                </p>
+                                <Link
+                                  href={`/prototype/valorant/clanseasonleaderboards/0${prototype.getURLparams()}`}
+                                >
+                                  <div className="inline-flex flex-col 2xl:flex-row 2xl:items-center gap-4 justify-center text-left surface-ui-600 p-2 rounded interactive">
+                                    <div className="relative">
+                                      <div className="absolute top-1 left-1">
+                                        <Tooltip tooltip="Valorant">
+                                          <GameIcon game={1} />
+                                        </Tooltip>
+                                      </div>
+                                      <div className="absolute inset-0 flex items-center justify-center">
+                                        <img
+                                          src={
+                                            prototype.getClanLeaderboardByID(
+                                              "valorant",
+                                              0
+                                            )?.logo
+                                          }
+                                          alt=""
+                                          className="w-2/3"
+                                        />
+                                      </div>
+                                      <img
+                                        src={
+                                          prototype.getClanLeaderboardByID(
+                                            "valorant",
+                                            0
+                                          )?.bg
+                                        }
+                                        className="aspect-cover object-cover rounded w-full 2xl:w-96"
+                                        alt=""
+                                      />
+                                    </div>
+                                    <div className="space-y-3 px-2 pb-2 2xl:p-0">
+                                      <h4 className="text-xl">
+                                        {
+                                          prototype.getClanLeaderboardByID(
+                                            "valorant",
+                                            0
+                                          )?.name
+                                        }
+                                      </h4>
+                                      <ul className="space-y-1 leading-tight">
+                                        <li className="flex gap-2 items-center">
+                                          <Tooltip
+                                            className="tooltip-sm"
+                                            tooltip={
+                                              <span className="text-sm">
+                                                Objective
+                                              </span>
+                                            }
+                                          >
+                                            <button className="text-ui-300 text-0">
+                                              <span className="icon icon-20 icon-archery-target" />
+                                            </button>
+                                          </Tooltip>
+                                          <p className="text-sm">
+                                            {
+                                              prototype.getClanLeaderboardByID(
+                                                "valorant",
+                                                0
+                                              ).meta.objective
+                                            }{" "}
+                                          </p>
+                                        </li>
+                                        <li className="flex gap-2 items-center">
+                                          <Tooltip
+                                            className="tooltip-sm"
+                                            tooltip={
+                                              <span className="text-sm">
+                                                Game mode
+                                              </span>
+                                            }
+                                          >
+                                            <button className="text-ui-300 text-0">
+                                              <span className="icon icon-20 icon-handheld-console-2" />
+                                            </button>
+                                          </Tooltip>
+
+                                          <p className="text-sm">
+                                            {
+                                              prototype.getClanLeaderboardByID(
+                                                "valorant",
+                                                0
+                                              ).meta.gameMode
+                                            }
+                                          </p>
+                                        </li>
+                                        <li className="flex gap-2 items-center">
+                                          <Tooltip
+                                            className="tooltip-sm"
+                                            tooltip={
+                                              <span className="text-sm">
+                                                Tie Breaker
+                                              </span>
+                                            }
+                                          >
+                                            <button className="text-ui-300 text-0">
+                                              <span className="icon icon-20 icon-lightning" />
+                                            </button>
+                                          </Tooltip>
+                                          <p className="text-sm">
+                                            Headshots from your 3 best matches
+                                            decide a tie
+                                          </p>
+                                        </li>
+                                      </ul>
                                     </div>
                                   </div>
                                 </Link>

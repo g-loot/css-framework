@@ -194,7 +194,7 @@ export default function TabMissionsMissions() {
               <Tooltip
                 tooltip={
                   <div className="max-w-xs text-sm text-center leading-tight">
-                    Your completed missions within the current Battlepass
+                    Your completed missions within the current Battlepass.
                   </div>
                 }
               >

@@ -549,7 +549,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                               >
                                 <div className="p-2 border-t border-ui-700">
                                   <ul className="space-y-2">
-                                    <li className="bg-ui-850 rounded p-3 flex justify-between leading-none">
+                                    <li className="bg-ui-850/50 rounded p-3 flex justify-between leading-none">
                                       <div className="">
                                         <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
                                           Matches played
@@ -598,7 +598,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                       </div>
                                     </li>
                                     {hasPlayersDetails && (
-                                      <li className="bg-ui-850 rounded text-center max-h-[150px] overflow-y-auto scrollbar-desktop">
+                                      <li className="bg-ui-850/50 rounded text-center max-h-[150px] overflow-y-auto scrollbar-desktop">
                                         <table className="table table-compact text-sm w-full">
                                           <thead>
                                             <tr>
@@ -633,11 +633,11 @@ export default function TabClanLeaderboardsLeaderboards() {
                                                         </span>
                                                       </Link>
                                                     </td>
-                                                    <td className="text-center">
-                                                      {Math.round(clan.stats.wins / 2 - userIndex)}
+                                                    <td className="text-center px-2 text-success-500">
+                                                      {Math.max(0, Math.round(clan.stats.wins / 2 - userIndex))}
                                                     </td>
-                                                    <td className="text-center">
-                                                    {Math.round(clan.stats.losses - userIndex)}
+                                                    <td className="text-center px-2 text-error-500">
+                                                    {Math.max(0, Math.round(clan.stats.losses - userIndex))}
                                                     </td>
                                                   </tr>
                                                 )
@@ -646,7 +646,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                         </table>
                                       </li>
                                     )}
-                                    <li className="bg-ui-850 rounded p-3 flex gap-2 items-center justify-between">
+                                    <li className="bg-ui-850/50 rounded p-3 flex gap-2 items-center justify-between">
                                       <div className="avatar-group -space-x-2">
                                         {prototype
                                           .getClanByID(clan.clan)

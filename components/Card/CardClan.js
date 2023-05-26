@@ -51,18 +51,18 @@ export default function CardClan(props) {
         <div className="flex gap-4 items-center">
           <Link href={`/prototype/clans/${clan.id}${prototype.getURLparams()}`}>
             <div className="flex-1 flex gap-4 items-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
-              <div className="avatar avatar-squircle avatar-md">
+              <div className="avatar avatar-squircle avatar-sm">
                 <div>
                   <img src={clan.avatar} alt="avatar" />
                 </div>
               </div>
               <div className="flex-1">
-                <h2 className="text-2xl">
+                <p className="text-ui-100">
                   &#91;
                   {clan.tag}
                   &#93; {clan.nickname}
-                </h2>
-                <div className="text-ui-300">
+                </p>
+                <div className="text-ui-300 text-sm">
                   {clan.members?.length} / 30 members
                 </div>
               </div>
@@ -158,7 +158,7 @@ export default function CardClan(props) {
           )}
         </div>
         <div className="flex-1 py-4">
-          <p className="text-ui-300">{clan.bio?.substr(0, 150)}...</p>
+          <p className="text-ui-300">{clan.bio?.substr(0, 100)}...</p>
         </div>
         <div className="flex gap-4 items-center justify-between border-t border-ui-700 pt-4">
           <div className="flex gap-3">
@@ -211,7 +211,7 @@ export default function CardClan(props) {
               </>
             )}
           </div>
-          <div className="text-sm">
+          <div className="text-sm text-center">
             <span className="text-ui-300">We speak: </span>
             <span className="text-main">{clan.lang}</span>
           </div>

@@ -1,5 +1,21 @@
 export const dataNotifications = [
   {
+    name: "Clan seasons",
+    notifications: [
+      {
+        description: "Clan Season has started",
+        type: "clan",
+        intro: "Clan Season",
+        title: "The Clan Season has started",
+        text: "Someone from your clan has enrolled you to the <a href='#' class='link font-bold'>Clan season</a>!",
+        cta: "View",
+        url: "/prototype/valorant/clanseasonleaderboards/0",
+        time: "2 min.",
+        read: false,
+      },
+    ],
+  },
+  {
     name: "Achievements",
     notifications: [
       {

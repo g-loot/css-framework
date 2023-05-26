@@ -320,7 +320,7 @@ export default function TabScoreboard(props) {
                     </ul>
                     <div className="item border-0 text-sm uppercase text-ui-300">
                       <div className="w-14" />
-                      <div className="item-image w-9" />
+                      <div className="item-image w-7" />
                       <div className="item-body">Player</div>
                       <div className="item-body text-center flex-0 w-10">
                         Rank

@@ -152,6 +152,7 @@ export default function TabClanLeaderboardsRewards() {
               </ul>
             </div>
           </div>
+          {/*
           <div className="flex-1 surface sm:rounded-lg p-4 relative flex flex-col items-stretch">
             <div className="border-b border-ui-700 pb-4">
               <h2 className="text-2xl">Coins</h2>
@@ -167,6 +168,7 @@ export default function TabClanLeaderboardsRewards() {
               </p>
             </div>
           </div>
+                      */}
         </div>
       </section>
     </>
