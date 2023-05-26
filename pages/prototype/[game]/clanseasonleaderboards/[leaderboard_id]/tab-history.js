@@ -277,7 +277,7 @@ export default function TabClanLeaderboardsHistory() {
                                   </div>
                                 </div>
                                 <div className="w-64 flex items-center">
-                                  {variablesContext.clanLeaderboardEnrolled ? (
+                                  {variablesContext.clanLeaderboardEnrolled && item.isCurrent ? (
                                     <div className="flex items-center gap-4">
                                       <div className="flex-none avatar avatar-squircle avatar-xs">
                                         <div>
@@ -330,9 +330,7 @@ export default function TabClanLeaderboardsHistory() {
                                       </div>
                                       <span className="text-sm text-ui-300">
                                         234
-                                        {prototype.getCurrentClanLeaderboard(
-                                          game
-                                        ).isCurrent ? (
+                                        {item.isCurrent ? (
                                           <> are enrolled</>
                                         ) : (
                                           <>have partaken</>

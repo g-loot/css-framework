@@ -99,7 +99,7 @@
   .modal-image {
     @apply
     flex-1
-    aspect-square
+    aspect-video
     relative
     bg-ui-900
     flex

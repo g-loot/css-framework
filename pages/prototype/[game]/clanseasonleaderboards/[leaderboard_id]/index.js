@@ -81,13 +81,6 @@ export default function Ladders() {
     }
   }, [selectedGame]);
 
-  function handleEnroll() {
-    variablesContext.clanSeasonEnroll();
-    uiContext.openModal(
-      <ModalInfoClanSeasonEnroll />
-    );
-  }
-
   ModalInfoClanSeasonEnroll
 
   return (
