@@ -7,7 +7,7 @@ export const dataNotifications = [
         type: "clan",
         intro: "Clan Season",
         title: "The Clan Season has started",
-        text: "Someone from your clan has enrolled you to the <a href='#' class='link font-bold'>Clan season</a>!",
+        text: "<a className='link' href='#' target='_blank'>Nomadiction</a> has enrolled your Clan to the <a href='#' class='link font-bold'>Nordic Uprising Clan Season</a>!",
         cta: "View",
         url: "/prototype/valorant/clanseasonleaderboards/0",
         time: "2 min.",

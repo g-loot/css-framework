@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Reward from "../../../../../components/Reward/Reward";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import { usePrototypeData } from "../../../../../contexts/prototype";
+import { VariablesContext } from "../../../../../contexts/variables";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -10,6 +11,7 @@ export default function TabClanLeaderboardsHistory() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
+  const variablesContext = useContext(VariablesContext);
   const [selectedGame, setSelectedGame] = useState(null);
   const { game } = router.query;
   const isEmpty = query.empty === "true" ? true : false;
@@ -249,11 +251,21 @@ export default function TabClanLeaderboardsHistory() {
                                       {item.name}
                                     </div>
                                     {item.isCurrent && (
-                                      <span className="chip chip-secondary chip-sm">
-                                        <span className="text-main animate-pulse">
-                                          Ongoing
-                                        </span>
-                                      </span>
+                                      <>
+                                        {!variablesContext.clanLeaderboardEnrolled ? (
+                                          <span className="chip chip-secondary">
+                                            <span className="text-blue-500">
+                                              Ongoing
+                                            </span>
+                                          </span>
+                                        ) : (
+                                          <span className="chip chip-secondary">
+                                            <span className="text-main animate-pulse">
+                                              Enrolled
+                                            </span>
+                                          </span>
+                                        )}
+                                      </>
                                     )}
                                   </div>
                                   <div className="text-sm text-ui-300">
@@ -265,8 +277,8 @@ export default function TabClanLeaderboardsHistory() {
                                   </div>
                                 </div>
                                 <div className="w-64 flex items-center">
-                                  {item.isCurrent ? (
-                                    <div className="flex-1 flex items-center gap-4">
+                                  {variablesContext.clanLeaderboardEnrolled ? (
+                                    <div className="flex items-center gap-4">
                                       <div className="flex-none avatar avatar-squircle avatar-xs">
                                         <div>
                                           <img
@@ -295,8 +307,9 @@ export default function TabClanLeaderboardsHistory() {
                                   ) : (
                                     <div className="flex items-center gap-2">
                                       <div className="avatar-group -space-x-2">
-                                        {item.leaderboard
-                                          .slice(0, 3)
+                                        {prototype
+                                          .getCurrentClanLeaderboard(game)
+                                          .leaderboard.slice(0, 3)
                                           .map((clan, clanIndex) => (
                                             <div
                                               key={clanIndex}
@@ -316,8 +329,10 @@ export default function TabClanLeaderboardsHistory() {
                                           ))}
                                       </div>
                                       <span className="text-sm text-ui-300">
-                                        {RandomNumber(10, 100)} clans{" "}
-                                        {item.isCurrent ? (
+                                        234
+                                        {prototype.getCurrentClanLeaderboard(
+                                          game
+                                        ).isCurrent ? (
                                           <> are enrolled</>
                                         ) : (
                                           <>have partaken</>

@@ -34,6 +34,7 @@ export default function ModalInfoClanSeasonEnroll(props) {
     setSubmitting(true);
 
     setTimeout(() => {
+      variablesContext.clanSeasonEnroll();
       uiContext.openToastr({
         size: "medium",
         text: "You have successfully enrolled your Clan to the Clan Season",

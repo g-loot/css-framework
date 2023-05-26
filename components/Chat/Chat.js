@@ -603,14 +603,20 @@ export default function Chat(props) {
                                   <a className="link" href="#" target="_blank">
                                     Nomadiction
                                   </a>{" "}
-                                  has enrolled the Clan to the{" "}
-                                  {
-                                    prototype.getClanLeaderboardByID(
-                                      "valorant",
-                                      0
-                                    )?.name
-                                  }{" "}
-                                  Clan Season
+                                  has enrolled your Clan to the{" "}
+                                  <Link
+                                    href={`/prototype/valorant/clanseasonleaderboards/0${prototype.getURLparams()}`}
+                                  >
+                                    <a className="link">
+                                      {
+                                        prototype.getClanLeaderboardByID(
+                                          "valorant",
+                                          0
+                                        )?.name
+                                      }{" "}
+                                      Clan Season
+                                    </a>
+                                  </Link>
                                 </p>
                                 <Link
                                   href={`/prototype/valorant/clanseasonleaderboards/0${prototype.getURLparams()}`}

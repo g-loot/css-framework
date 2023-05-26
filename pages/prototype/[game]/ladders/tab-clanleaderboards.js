@@ -328,7 +328,7 @@ export default function TabLaddersSoloLeaderboards() {
                               </div>
                             }
                           >
-                            <button className="text-ui-300 text-0 translate-y-0.5">
+                            <button className="text-ui-300 text-0">
                               <span className="icon icon-16 icon-c-info" />
                             </button>
                           </Tooltip>

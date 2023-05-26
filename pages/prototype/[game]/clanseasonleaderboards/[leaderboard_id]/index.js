@@ -13,6 +13,7 @@ import TabClanLeaderboardsHowItWorks from "./tab-howitworks";
 import TabClanLeaderboardsHistory from "./tab-history";
 import TabClanLeaderboardsRewards from "./tab-rewards";
 import ResetsIn from "../../../../../components/Countdown/ResetsIn";
+import { VariablesContext } from "../../../../../contexts/variables";
 
 const TabsItems = [
   {
@@ -40,9 +41,10 @@ const TabsItems = [
 export default function Ladders() {
   const router = useRouter();
   const prototype = usePrototypeData();
+  const variablesContext = useContext(VariablesContext);
   const [selectedGame, setSelectedGame] = useState(null);
-  const [selectedLeaderboard, setSelectedLeaderboard] = useState(null);
-  const [hasOptedIn, setHasOptedIn] = useState(false);
+  const [selectedLeaderboard, setSelectedLeaderboard] = useState(null);  
+  const [isEnrolled, setIsEnrolled] = useState(false);
   const [selectedClanLeaderboard, setSelectedClanLeaderboard] = useState(null);
   const [laddersFinishedLength, setLaddersFinishedLength] = useState(null);
 
@@ -80,7 +82,7 @@ export default function Ladders() {
   }, [selectedGame]);
 
   function handleEnroll() {
-    setHasOptedIn(!hasOptedIn);
+    variablesContext.clanSeasonEnroll();
     uiContext.openModal(
       <ModalInfoClanSeasonEnroll />
     );
@@ -114,12 +116,12 @@ export default function Ladders() {
                   <h1 className="h4">{selectedLeaderboard.name}</h1>
                   {selectedLeaderboard.isCurrent && (
                     <>
-                      {!hasOptedIn ? (
+                      {!variablesContext.clanLeaderboardEnrolled ? (
                         <span className="chip chip-secondary">
                           <span className="text-blue-500">Ongoing</span>
                         </span>
                       ) : (
-                        <span className="chip chip-secondary" onClick={() => setHasOptedIn(!hasOptedIn)}>
+                        <span className="chip chip-secondary">
                           <span className="text-main animate-pulse">
                             Enrolled
                           </span>
@@ -151,11 +153,6 @@ export default function Ladders() {
                     <p className="text-sm">
                       {selectedLeaderboard.meta.objective}{" "}
                     </p>
-                    {!hasOptedIn && (
-                      <button type="button" className="button button-sm button-primary -my-4" onClick={() => handleEnroll()}>
-                        <span>Enroll my clan</span>
-                      </button>
-                    )}
                   </li>
                   <li className="flex gap-2 items-center">
                     <Tooltip

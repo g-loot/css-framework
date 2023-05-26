@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
+import { VariablesContext } from "../../../../contexts/variables";
 import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
 import Slider from "../../../../components/Slider/Slider";
 import AnimatedNumber from "../../../../components/AnimatedNumber/AnimatedNumber";
@@ -11,8 +12,11 @@ import ResetsIn from "../../../../components/Countdown/ResetsIn";
 export default function TabClanSeasonLeaderboardOverview() {
   const router = useRouter();
   const { query } = useRouter();
+  const variablesContext = useContext(VariablesContext);
+
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
+  const [isEnrolled, setIsEnrolled] = useState(false);
   const isEmpty = query.empty === "true" ? true : false;
   const { game } = router.query;
 
@@ -62,65 +66,126 @@ export default function TabClanSeasonLeaderboardOverview() {
                         className="absolute inset-0 z-0 object-cover w-full h-full"
                       />
                     </div>
-                    <div className="border-t border-ui-700 p-4 flex flex-col lg:flex-row gap-2 lg:gap-4 lg:items-center">
-                      <div className="lg:pr-4 lg:border-r border-ui-600">
-                        <h2 className="h4">
-                          {prototype.getCurrentClanLeaderboard(game).name}
-                        </h2>
+                    <div className="border-t border-ui-700 p-4 flex flex-col xl:flex-row gap-2 xl:gap-4 xl:items-center xl:justify-between">
+                      <div className="flex flex-col md:flex-row gap-2 lg:gap-4 lg:items-center">
+                        <div className="lg:pr-4 lg:border-r border-ui-600">
+                          <h2 className="h4">
+                            {prototype.getCurrentClanLeaderboard(game).name}
+                          </h2>
+                        </div>
+                        <div className="lg:pr-4 lg:border-r border-ui-600 flex flex-col md:flex-row md:gap-4 md:items-center">
+                          <div className="flex items-center whitespace-nowrap gap-1">
+                            <span className="icon icon-coin text-currency-1-500" />
+                            <span className="text-currency-1-500 text-sm">
+                              {prototype.getCurrentClanLeaderboard(game)
+                                .isPowerPlay ? (
+                                <>50 000 - 5 000 000</>
+                              ) : (
+                                <>5 000 - 30 000</>
+                              )}
+                            </span>
+                          </div>
+                          {prototype.getCurrentClanLeaderboard(game).status ===
+                          "finished" ? (
+                            <div className="text-sm text-ui-300">
+                              Ended on April 23
+                            </div>
+                          ) : (
+                            <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">
+                              <ResetsIn
+                                label={
+                                  prototype.getCurrentClanLeaderboard(game)
+                                    .status === "upcoming"
+                                    ? "Starts"
+                                    : "Finishes"
+                                }
+                              />
+                            </div>
+                          )}
+                        </div>
                       </div>
-                      <div className="lg:pr-4 lg:border-r border-ui-600 flex gap-4 items-center">
-                        <div className="flex items-center whitespace-nowrap gap-1">
-                          <span className="icon icon-coin text-currency-1-500" />
-                          <span className="text-currency-1-500 text-sm">
-                            {prototype.getCurrentClanLeaderboard(game)
-                              .isPowerPlay ? (
-                              <>50 000 - 5 000 000</>
-                            ) : (
-                              <>5 000 - 30 000</>
-                            )}
+                      {variablesContext.clanLeaderboardEnrolled && (
+                        <div>
+                          <span
+                            className="chip chip-secondary"
+                            onClick={() => variablesContext.clanSeasonEnroll()}
+                          >
+                            <span className="text-main animate-pulse">
+                              Enrolled
+                            </span>
                           </span>
                         </div>
-                        {prototype.getCurrentClanLeaderboard(game).status ===
-                        "finished" ? (
-                          <div className="text-sm text-ui-300">
-                            Ended on April {RandomNumber(1, 30)}
+                      )}
+                      <div className="flex flex-1 xl:justify-end">
+                        {variablesContext.clanLeaderboardEnrolled ? (
+                          <div className="flex items-center gap-4">
+                            <div className="flex-none avatar avatar-squircle avatar-xs">
+                              <div>
+                                <img
+                                  src={prototype.getClanByID(1)?.avatar}
+                                  alt="avatar"
+                                />
+                              </div>
+                            </div>
+                            <div className="flex gap-2">
+                              <div>
+                                <div className="uppercase text-xs text-ui-300">
+                                  Points
+                                </div>
+                                <div className="text-sm">1120</div>
+                              </div>
+                              <div>
+                                <div className="uppercase text-xs text-ui-300">
+                                  Position
+                                </div>
+                                <div className="text-sm">#243</div>
+                              </div>
+                            </div>
                           </div>
                         ) : (
-                          <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">
-                            <ResetsIn label={prototype.getCurrentClanLeaderboard(game).status === 'upcoming' ? 'Starts' : 'Finishes'} />
+                          <div className="flex items-center gap-2">
+                            <div className="avatar-group -space-x-2">
+                              {prototype
+                                .getCurrentClanLeaderboard(game)
+                                .leaderboard.slice(0, 3)
+                                .map((clan, clanIndex) => (
+                                  <div
+                                    key={clanIndex}
+                                    className="avatar avatar-squircle avatar-tiny"
+                                  >
+                                    <div>
+                                      <img
+                                        src={
+                                          prototype.getClanByID(clan.clan)
+                                            .avatar
+                                        }
+                                        alt="avatar"
+                                      />
+                                    </div>
+                                  </div>
+                                ))}
+                            </div>
+                            <span className="text-sm text-ui-300">
+                              234
+                              {prototype.getCurrentClanLeaderboard(game)
+                                .isCurrent ? (
+                                <> are enrolled</>
+                              ) : (
+                                <>have partaken</>
+                              )}
+                            </span>
                           </div>
                         )}
-                      </div>
-                      <div className="flex items-center gap-4">
-                        <div className="avatar-group -space-x-2">
-                          {prototype
-                            .getCurrentClanLeaderboard(game)
-                            .leaderboard.slice(0, 3)
-                            .map((clan, clanIndex) => (
-                              <div
-                                key={clanIndex}
-                                className="avatar avatar-squircle avatar-tiny"
-                              >
-                                <div>
-                                  <img
-                                    src={
-                                      prototype.getClanByID(clan.clan)?.avatar
-                                    }
-                                  />
-                                </div>
-                              </div>
-                            ))}
-                        </div>
-                        <span className="text-sm text-ui-300">
-                          {prototype.getCurrentClanLeaderboard(game).leaderboard.length}{" "}
-                          clan{prototype.getCurrentClanLeaderboard(game).leaderboard.length > 1 ? 's are' : 'is'} partaking
-                        </span>
                       </div>
                     </div>
                   </button>
                 </Link>
               </>
             )}
+          </section>
+          {/* for demo purposes only */}
+          <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+            <a onClick={() => variablesContext.clanSeasonEnroll()}>Toggle enrolled</a>
           </section>
           {/*
           <section className="py-4 flex flex-col xl:flex-row gap-4 items-stretch">

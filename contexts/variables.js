@@ -5,6 +5,7 @@ export const VariablesContext = React.createContext({
   availableMissions: 4,
   rewardClaimed: false,
   dailyRewardClaimed: false,
+  clanLeaderboardEnrolled: false,
   incrementLadderStep: function () {},
   claimReward: function () {},
   unclaimReward: function () {},
@@ -17,6 +18,7 @@ const defaultVariablesState = {
   availableMissions: 4,
   rewardClaimed: false,
   dailyRewardClaimed: false,
+  clanLeaderboardEnrolled: false,
 };
 
 const variablesReducer = (state, action) => {
@@ -63,6 +65,11 @@ const variablesReducer = (state, action) => {
       ...state,
       dailyRewardClaimed: false,
     };
+  } else if (action.type === "CLAN_SEASON_ENROLL") {
+    return {
+      ...state,
+      clanLeaderboardEnrolled: true,
+    };
   }
 };
 
@@ -108,12 +115,18 @@ const VariablesContextProvider = (props) => {
       type: "DAILY_REWARD_UNCLAIM",
     });
   };
+  const clanSeasonEnroll = () => {
+    dispatchVariablesAction({
+      type: "CLAN_SEASON_ENROLL",
+    });
+  };
 
   const variablesContext = {
     ladderStep: variablesState.ladderStep,
     availableMissions: variablesState.availableMissions,
     rewardClaimed: variablesState.rewardClaimed,
     dailyRewardClaimed: variablesState.dailyRewardClaimed,
+    clanLeaderboardEnrolled: variablesState.clanLeaderboardEnrolled,
     newBrand: variablesState.newBrand,
     incrementLadderStep,
     incrementAvailableMissions,
@@ -121,6 +134,7 @@ const VariablesContextProvider = (props) => {
     unclaimReward,
     claimDailyReward,
     unclaimDailyReward,
+    clanSeasonEnroll,
   };
   return (
     <VariablesContext.Provider value={variablesContext}>
