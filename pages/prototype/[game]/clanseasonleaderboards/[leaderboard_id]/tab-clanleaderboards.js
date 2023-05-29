@@ -119,7 +119,7 @@ export default function TabClanLeaderboardsLeaderboards() {
   const uiContext = useContext(UiContext);
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedClanLeaderboard, setSelectedClanLeaderboard] = useState(null);
-  const modalenrol = query.modalenrol === "true" ? true : false;
+  const modalenroll = query.modalenroll === "true" ? true : false;
   const empty = query.empty === "true" ? true : false;
   const [isEnrolled, setIsEnrolled] = useState(false);
   const [isEmpty, setIsEmpty] = useState(empty);
@@ -138,10 +138,10 @@ export default function TabClanLeaderboardsLeaderboards() {
   }
 
   useEffect(() => {
-    if (modalenrol) {
+    if (modalenroll) {
       handleEnroll();
     }
-  }, [modalenrol]);
+  }, [modalenroll]);
 
   useEffect(() => {
     if (loading) {
@@ -234,7 +234,7 @@ export default function TabClanLeaderboardsLeaderboards() {
               className="button button-primary w-60 my-6"
               onClick={() => setIsEmpty(false)}
             >
-              <span>Enrol my clan</span>
+              <span>Enroll my Clan</span>
             </button>
             <ul className="max-w-sm mx-auto">
               {rewardDistribClan.map((item, itemIndex) => (
@@ -451,7 +451,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                         className="button button-sm button-primary w-full"
                         onClick={() => handleEnroll()}
                       >
-                        <span>Enrol my clan</span>
+                        <span>Enroll my Clan</span>
                       </button>
                     </>
                   )}
@@ -463,9 +463,9 @@ export default function TabClanLeaderboardsLeaderboards() {
                   }`}
                 >
                   <span className="icon icon-warning-sign text-3xl text-attention-500" />
-                  <p className="text-attention-500 my-2">
+                  <p className="text-attention-500 mb-3">
                     You need to be part of a Clan to participate to this
-                    leaderboard
+                    leaderboard.
                   </p>
                   <Link href={`/prototype/clans${prototype.getURLparams()}`}>
                     <button
@@ -603,10 +603,10 @@ export default function TabClanLeaderboardsLeaderboards() {
                         className="button button-sm button-primary"
                         onClick={() => handleEnroll()}
                       >
-                        <span>Enrol my clan</span>
+                        <span>Enroll my Clan</span>
                       </button>
                       <p className="text-ui-300 mt-4 mb-5 md:border-l md:border-ui-600 md:pl-4">
-                        Enrol your Clan and play matches with party composed of
+                        Enroll your Clan and play matches with party composed of
                         5 Clan members to be placed on the leaderboard.
                       </p>
                     </div>
@@ -869,10 +869,10 @@ export default function TabClanLeaderboardsLeaderboards() {
                                                     Players
                                                   </th>
                                                   <th className="bg-ui-900/0 text-ui-300 text-center">
-                                                    Lost games
+                                                    Wins
                                                   </th>
                                                   <th className="bg-ui-900/0 text-ui-300 text-center">
-                                                    Won games
+                                                    Total
                                                   </th>
                                                 </tr>
                                               </thead>
@@ -912,7 +912,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                                             )
                                                           )}
                                                         </td>
-                                                        <td className="text-center px-2 text-error-500">
+                                                        <td className="text-center px-2">
                                                           {Math.max(
                                                             0,
                                                             Math.round(

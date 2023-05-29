@@ -329,7 +329,7 @@ export default function TabClanLeaderboardsHistory() {
                                           ))}
                                       </div>
                                       <span className="text-sm text-ui-300">
-                                        234
+                                        234{" "}
                                         {item.isCurrent ? (
                                           <> are enrolled</>
                                         ) : (

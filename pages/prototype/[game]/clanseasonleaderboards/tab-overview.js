@@ -143,37 +143,42 @@ export default function TabClanSeasonLeaderboardOverview() {
                             </div>
                           </div>
                         ) : (
-                          <div className="flex items-center gap-2">
-                            <div className="avatar-group -space-x-2">
-                              {prototype
-                                .getCurrentClanLeaderboard(game)
-                                .leaderboard.slice(0, 3)
-                                .map((clan, clanIndex) => (
-                                  <div
-                                    key={clanIndex}
-                                    className="avatar avatar-squircle avatar-tiny"
-                                  >
-                                    <div>
-                                      <img
-                                        src={
-                                          prototype.getClanByID(clan.clan)
-                                            .avatar
-                                        }
-                                        alt="avatar"
-                                      />
+                          <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-2">
+                              <div className="avatar-group -space-x-2">
+                                {prototype
+                                  .getCurrentClanLeaderboard(game)
+                                  .leaderboard.slice(0, 3)
+                                  .map((clan, clanIndex) => (
+                                    <div
+                                      key={clanIndex}
+                                      className="avatar avatar-squircle avatar-tiny"
+                                    >
+                                      <div>
+                                        <img
+                                          src={
+                                            prototype.getClanByID(clan.clan)
+                                              .avatar
+                                          }
+                                          alt="avatar"
+                                        />
+                                      </div>
                                     </div>
-                                  </div>
-                                ))}
+                                  ))}
+                              </div>
+                              <span className="text-sm text-ui-300">
+                                234
+                                {prototype.getCurrentClanLeaderboard(game)
+                                  .isCurrent ? (
+                                  <> are enrolled</>
+                                ) : (
+                                  <>have partaken</>
+                                )}
+                              </span>
                             </div>
-                            <span className="text-sm text-ui-300">
-                              234
-                              {prototype.getCurrentClanLeaderboard(game)
-                                .isCurrent ? (
-                                <> are enrolled</>
-                              ) : (
-                                <>have partaken</>
-                              )}
-                            </span>
+                            <button type="button" className="button button-sm button-primary">
+                              <span>View Clan Season</span>
+                            </button>
                           </div>
                         )}
                       </div>

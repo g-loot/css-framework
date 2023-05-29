@@ -189,7 +189,7 @@ export default function LadderCardSecondary(props) {
                 </div>
               ) : (
                 <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">
-                  <ResetsIn label={ladder.status === 'upcoming' ? 'Starts' : 'Finishes'} status={ladder.status === 'upcoming' ? 2 : 1} />
+                  <ResetsIn label={ladder.status === 'upcoming' ? 'Starts' : 'Ends'} status={ladder.status === 'upcoming' ? 2 : 1} />
                 </div>
               )}
             </div>

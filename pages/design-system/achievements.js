@@ -135,41 +135,45 @@ const DSpage = () => {
           {prototype
             .getAchievementsectionByID(1)
             .items.map((item, itemIndex) => (
-              <div
-                key={itemIndex}
-                className={`surface sm:rounded-lg p-2 pr-4 flex items-center gap-6`}
-              >
-                <div
-                  className={`w-32 h-32 achievement cursor-pointer ${
-                    achievementLevel === "5" ? "is-completed" : ""
-                  }`}
-                  onClick={openModalAchievementReceived.bind(
-                    this,
-                    item,
-                    achievementLevel
-                  )}
-                >
-                  <i />
-                  <i />
-                  <div className={`achievement-level-${achievementLevel}`}>
-                    <AchievementFrame
-                      url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${achievementLevel}-animated.svg`}
-                    />
-                    <AchievementIcon
-                      url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${item.icon}.svg`}
-                    />
+              <>
+                {!item.isDisabled && (
+                  <div
+                    key={itemIndex}
+                    className={`surface sm:rounded-lg p-2 pr-4 flex items-center gap-6`}
+                  >
+                    <div
+                      className={`w-32 h-32 achievement cursor-pointer ${
+                        achievementLevel === "5" ? "is-completed" : ""
+                      }`}
+                      onClick={openModalAchievementReceived.bind(
+                        this,
+                        item,
+                        achievementLevel
+                      )}
+                    >
+                      <i />
+                      <i />
+                      <div className={`achievement-level-${achievementLevel}`}>
+                        <AchievementFrame
+                          url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${achievementLevel}-animated.svg`}
+                        />
+                        <AchievementIcon
+                          url={`https://res.cloudinary.com/gloot/image/upload/v1685365593/Stryda/achievements/icons/achievement-icon-${item.icon}.svg`}
+                        />
+                      </div>
+                      {achievementLevel > 0 && (
+                        <span className="text-sm uppercase">
+                          Level {achievementLevel}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="h5">{item.name}</h3>
+                      <p className="text-ui-300 mt-2">{item.description}</p>
+                    </div>
                   </div>
-                  {achievementLevel > 0 && (
-                    <span className="text-sm uppercase">
-                      Level {achievementLevel}
-                    </span>
-                  )}
-                </div>
-                <div className="flex-1">
-                  <h3 className="h5">{item.name}</h3>
-                  <p className="text-ui-300 mt-2">{item.description}</p>
-                </div>
-              </div>
+                )}
+              </>
             ))}
         </div>
       </div>

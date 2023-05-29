@@ -114,7 +114,7 @@ export default function LadderHeader() {
                           prototype.getLadderByID(game, ladder_id)?.status ===
                           "upcoming"
                             ? "Starts"
-                            : "Finishes"
+                            : "Ends"
                         }
                         status={
                           prototype.getLadderByID(game, ladder_id)?.status ===

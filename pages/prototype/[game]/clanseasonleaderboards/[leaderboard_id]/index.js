@@ -27,14 +27,14 @@ const TabsItems = [
     component: TabClanLeaderboardsHistory,
   },
   {
-    label: "How it works",
-    url: "how-it-works",
-    component: TabClanLeaderboardsHowItWorks,
-  },
-  {
     label: "Rewards",
     url: "rewards",
     component: TabClanLeaderboardsRewards,
+  },
+  {
+    label: "How it works",
+    url: "how-it-works",
+    component: TabClanLeaderboardsHowItWorks,
   },
 ];
 

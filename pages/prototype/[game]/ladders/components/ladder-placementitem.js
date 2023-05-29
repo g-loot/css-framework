@@ -20,6 +20,7 @@ export default function LadderPlacementItem(props) {
   const router = useRouter();
   const { game } = router.query;
   const { ladder_id } = router.query;
+  const matchXP = 250;
 
   useEffect(() => {
     setSelectedLadder(prototype.getLadderByID(game, ladder_id));
@@ -167,14 +168,14 @@ export default function LadderPlacementItem(props) {
                   }
                 >
                   <div className="chip chip-sm chip-ghost">
-                    <span>{Math.round(300 * 1.65)}</span>
+                    <span>{Math.round(matchXP * 1.65)}</span>
                     <span className="icon icon-xp-symbol" />
                   </div>
                 </Tooltip>
               ) : (
                 <div className="flex flex-col items-end -space-y-1">
                   <div className="chip chip-sm chip-ghost">
-                    <span>{300}</span>
+                    <span>{matchXP}</span>
                     <span className="icon icon-xp-symbol" />
                   </div>
                   <Tooltip
@@ -200,7 +201,7 @@ export default function LadderPlacementItem(props) {
                     }
                   >
                     <button type="button" className="chip chip-sm chip-premium chip-ghost">
-                      <span>+{300 / 2}</span>
+                      <span>+{matchXP / 2}</span>
                       <span className="icon icon-crown" />
                     </button>
                   </Tooltip>
@@ -256,8 +257,8 @@ export default function LadderPlacementItem(props) {
                     <div className="chip chip-sm chip-ghost">
                       <span>
                         {isPremium
-                          ? Math.round(300 * 1.65)
-                          : Math.round(300 * 1)}
+                          ? Math.round(matchXP * 1.65)
+                          : Math.round(matchXP * 1)}
                       </span>
                       <span className="icon icon-xp-symbol" />
                       <span className="icon icon-c-info text-xs" />
@@ -271,18 +272,18 @@ export default function LadderPlacementItem(props) {
                     <Tooltip
                       placement="top"
                       tooltip={
-                        <XPBoostList isCompleted={false} size="sm" xp={300} />
+                        <XPBoostList isCompleted={false} size="sm" xp={matchXP} />
                       }
                     >
                       <div className="chip chip-sm chip-xp chip-ghost">
-                        <span>{Math.round(300 * 1.65)}</span>
+                        <span>{Math.round(matchXP * 1.65)}</span>
                         <span className="icon icon-xp-symbol" />
                       </div>
                     </Tooltip>
                   ) : (
                     <div className="flex flex-col items-end -space-y-1">
                       <div className="chip chip-sm chip-ghost">
-                        <span>{300}</span>
+                        <span>{matchXP}</span>
                         <span className="icon icon-xp-symbol" />
                       </div>
                       <Tooltip
@@ -308,7 +309,7 @@ export default function LadderPlacementItem(props) {
                         }
                       >
                         <button type="button" className="chip chip-sm chip-premium chip-ghost">
-                          <span>+{300 / 2}</span>
+                          <span>+{matchXP / 2}</span>
                           <span className="icon icon-crown" />
                         </button>
                       </Tooltip>
