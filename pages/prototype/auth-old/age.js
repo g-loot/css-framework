@@ -108,7 +108,7 @@ export default function Login() {
               />
             </div>
           </div>
-          <Link href="/prototype/auth/location">
+          <Link href="/prototype/auth-old/location">
             <button
               type="button"
               className="button button-primary w-full mb-6"

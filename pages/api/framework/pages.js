@@ -27,8 +27,20 @@ export const FrameworkPages = {
           tags: "auth,oauth,authentication,login,sign in",
         },
         {
-          label: "Sign up",
+          label: "Sign up 1/3",
           url: "auth/signup",
+          query: "",
+          tags: "auth,oauth,authentication,sign up,register",
+        },
+        {
+          label: "Sign up 2/3",
+          url: "auth/step2",
+          query: "",
+          tags: "auth,oauth,authentication,sign up,register",
+        },
+        {
+          label: "Sign up 3/3",
+          url: "auth/step3",
           query: "",
           tags: "auth,oauth,authentication,sign up,register",
         },
@@ -37,30 +49,6 @@ export const FrameworkPages = {
           url: "auth/recoverpassword",
           query: "",
           tags: "auth,oauth,authentication,forgotten password,password,recover password,recovery",
-        },
-        {
-          label: "Choose a nickname",
-          url: "auth/nickname",
-          query: "",
-          tags: "auth,oauth,authentication,nickname,username",
-        },
-        {
-          label: "Verify your age",
-          url: "auth/age",
-          query: "",
-          tags: "auth,oauth,authentication,age verification,verification,date",
-        },
-        {
-          label: "Confirm your location",
-          url: "auth/location",
-          query: "",
-          tags: "auth,oauth,authentication,location",
-        },
-        {
-          label: "Verify your email",
-          url: "auth/emailverification",
-          query: "",
-          tags: "auth,oauth,authentication,email verification,verification",
         },
         {
           label: "Change your email",

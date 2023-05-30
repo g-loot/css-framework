@@ -60,7 +60,7 @@ export default function Login() {
               onChange={(event) => setNicknameStr(event.target.value)}
             />
           </div>
-          <Link href="/prototype/auth/age">
+          <Link href="/prototype/auth-old/age">
             <button
               type="button"
               className="button button-primary w-full mb-6"

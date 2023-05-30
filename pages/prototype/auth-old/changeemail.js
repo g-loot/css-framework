@@ -72,17 +72,17 @@ export default function Login() {
               onChange={(event) => setEmailStr(event.target.value)}
             />
           </div>
-          <Link href="/prototype/auth/step3">
+          <Link href="/prototype/auth-old/emailverification">
             <button
               type="button"
               className="button button-primary w-full mb-8"
-              disabled={!isEmail(emailStr)}
+              disabled={!checkAll(passwordStr)}
             >
               <span>Continue</span>
             </button>
           </Link>
           <p className="text-sm text-center mb-4">
-            <Link href="/prototype/auth/step3">
+            <Link href="/prototype/auth-old/emailverification">
               <a href="#" className="link link-main">
                 Go back
               </a>

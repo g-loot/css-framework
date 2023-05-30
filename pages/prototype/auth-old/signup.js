@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import PrototypeAuth from "../../../components/Prototype/PrototypeAuth";
 
-export default function AuthLogin() {
+export default function Login() {
   const [emailStr, setEmailStr] = useState(0);
   const [passwordStr, setPasswordStr] = useState(0);
   const [passwordShown, setPasswordShown] = useState(false);
@@ -74,28 +74,23 @@ export default function AuthLogin() {
               id="email"
               autoFocus
               autoComplete="off"
-              tabIndex={1}
-              placeholder="Email..."
               onChange={(event) => setEmailStr(event.target.value)}
             />
           </div>
           <div className="form-group mb-8" data-success={checkAll(passwordStr)}>
-            <label htmlFor="password">Create password</label>
+            <label htmlFor="password">Choose password</label>
             <div className="input-group">
               <button
                 onClick={togglePassword}
-                tabIndex={2}
                 className="button button-sm button-ghost"
               >
                 {!passwordShown ? <span>Show</span> : <span>Hide</span>}
               </button>
               <input
                 type={passwordShown ? "text" : "password"}
-                tabIndex={1}
                 name="password"
                 id="password"
                 autoComplete="off"
-                placeholder="Password..."
                 onChange={(event) => setPasswordStr(event.target.value)}
               />
             </div>
@@ -174,7 +169,7 @@ export default function AuthLogin() {
               />
             </li>
           </ul>
-          <Link href="/prototype/auth/step2">
+          <Link href="/prototype/auth-old/nickname">
             <button
               type="button"
               className="button button-primary w-full mb-6"
@@ -195,7 +190,7 @@ export default function AuthLogin() {
             </a>
           </p>
           <p className="text-sm mb-6">
-            <Link href="/prototype/auth/login">
+            <Link href="/prototype/auth-old/login">
               <a className="link link-main">Already have an account? Log in</a>
             </Link>
           </p>

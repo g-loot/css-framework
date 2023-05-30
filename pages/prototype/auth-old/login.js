@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import PrototypeAuth from "../../../components/Prototype/PrototypeAuth";
 
-export default function AuthLogin() {
+export default function Login() {
   const [emailStr, setEmailStr] = useState(0);
   const [passwordStr, setPasswordStr] = useState(0);
   const [passwordShown, setPasswordShown] = useState(false);
@@ -60,12 +60,6 @@ export default function AuthLogin() {
             src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
             alt="Stryda logo"
           />
-          {/*
-          <h2 className="mb-6">Welcome</h2>
-          <p className="mb-6">
-            You are only a few clicks from a whole new esports experience!
-          </p>
-  */}
           <div className="form-group mb-3" data-success={isEmail(emailStr)}>
             <label htmlFor="email">Email address</label>
             <input
@@ -73,119 +67,55 @@ export default function AuthLogin() {
               name="email"
               id="email"
               autoFocus
-              autoComplete="off"
               tabIndex={1}
-              placeholder="Email..."
               onChange={(event) => setEmailStr(event.target.value)}
             />
           </div>
           <div className="form-group mb-8" data-success={checkAll(passwordStr)}>
-            <label htmlFor="password">Create password</label>
+            <div className="flex justify-between items-baseline mb-1">
+              <label className="label" htmlFor="password">
+                Password
+              </label>
+              <Link href="/prototype/auth-old/recoverpassword">
+                <a className="link text-sm text-ui-300" tabIndex={3}>
+                  Forgot your password?
+                </a>
+              </Link>
+            </div>
             <div className="input-group">
               <button
                 onClick={togglePassword}
-                tabIndex={2}
                 className="button button-sm button-ghost"
+                tabIndex={2}
               >
                 {!passwordShown ? <span>Show</span> : <span>Hide</span>}
               </button>
               <input
                 type={passwordShown ? "text" : "password"}
-                tabIndex={1}
                 name="password"
                 id="password"
-                autoComplete="off"
-                placeholder="Password..."
+                tabIndex={1}
                 onChange={(event) => setPasswordStr(event.target.value)}
               />
             </div>
           </div>
-          <ul className="mb-8 flex items-start justify-between text-sm">
-            <li className="flex flex-col items-center gap-1">
-              <span
-                className={`transition-all duration-500 ease-in-out ${
-                  containsLowercase(passwordStr)
-                    ? "text-success-500"
-                    : "text-ui-400"
-                }`}
-              >
-                lowercase
-              </span>
-              <span
-                className={`transition-all duration-500 ease-in-out rounded-full h-1 ${
-                  containsLowercase(passwordStr)
-                    ? "w-7 bg-success-500"
-                    : "w-1 bg-ui-400"
-                }`}
-              />
-            </li>
-            <li className="flex flex-col items-center gap-1">
-              <span
-                className={`transition-all duration-500 ease-in-out ${
-                  containsUppercase(passwordStr)
-                    ? "text-success-500"
-                    : "text-ui-400"
-                }`}
-              >
-                uppercase
-              </span>
-              <span
-                className={`transition-all duration-500 ease-in-out rounded-full h-1 ${
-                  containsUppercase(passwordStr)
-                    ? "w-7 bg-success-500"
-                    : "w-1 bg-ui-400"
-                }`}
-              />
-            </li>
-            <li className="flex flex-col items-center gap-1">
-              <span
-                className={`transition-all duration-500 ease-in-out ${
-                  containsDigit(passwordStr)
-                    ? "text-success-500"
-                    : "text-ui-400"
-                }`}
-              >
-                digit
-              </span>
-              <span
-                className={`transition-all duration-500 ease-in-out rounded-full h-1 ${
-                  containsDigit(passwordStr)
-                    ? "w-7 bg-success-500"
-                    : "w-1 bg-ui-400"
-                }`}
-              />
-            </li>
-            <li className="flex flex-col items-center gap-1">
-              <span
-                className={`transition-all duration-500 ease-in-out ${
-                  isLongEnough(passwordStr, 8)
-                    ? "text-success-500"
-                    : "text-ui-400"
-                }`}
-              >
-                8 characters
-              </span>
-              <span
-                className={`transition-all duration-500 ease-in-out rounded-full h-1 ${
-                  isLongEnough(passwordStr, 8)
-                    ? "w-7 bg-success-500"
-                    : "w-1 bg-ui-400"
-                }`}
-              />
-            </li>
-          </ul>
-          <Link href="/prototype/auth/step2">
+          <Link href="/prototype/home">
             <button
               type="button"
               className="button button-primary w-full mb-6"
               disabled={!checkAll(passwordStr)}
             >
-              <span>Create free account</span>
+              <span>Sign in</span>
             </button>
           </Link>
-          <p className="text-sm mb-6">
-            By clicking CREATE FREE ACCOUNT, you certify that you are at least
-            16 years old, and you have read and agree to the{" "}
+          <p className="mb-6">
+            No account?{" "}
+            <Link href="/prototype/auth-old/signup">
+              <a className="link link-main">Create one</a>
+            </Link>
+          </p>
+          <p className="text-sm mb-6 text-ui-300">
+            By clicking SIGN IN, you certify that you have read and agree to the{" "}
             <a href="#" className="link">
               Terms & Conditions
             </a>{" "}
@@ -194,11 +124,16 @@ export default function AuthLogin() {
               Privacy Policy
             </a>
           </p>
-          <p className="text-sm mb-6">
-            <Link href="/prototype/auth/login">
-              <a className="link link-main">Already have an account? Log in</a>
+
+          {/*
+          <div className="mb-6">
+            <Link href="/prototype/auth-old/signup">
+              <button type="button" className="button button-secondary w-full">
+                <span>Sign up</span>
+              </button>
             </Link>
-          </p>
+          </div>
+          */}
         </div>
       </PrototypeAuth>
     </>

@@ -10,6 +10,7 @@
   flex
   flex-nowrap
   list-none
+  items-center
   ;
 
   > li {
@@ -113,7 +114,6 @@
           duration-1000
           ease-[cubic-bezier(0.9,0,0.1,1)]
           ;
-          clip-path: polygon(0% 0%, 100% 0%, calc(100% - 0.25em) 100%, 0% 100%);
         }
       }
     }
@@ -136,7 +136,7 @@
         span {
           &::before {
             @apply
-            -translate-x-[50%]
+            -translate-x-1/2
             ;
           }
         }
@@ -236,17 +236,18 @@
       flex
       items-center
       text-ui-200
+      gap-2
       ;
       > i {
         @apply 
         h-3
         w-3
-        shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
+        shadow-[0_0_0_3px_rgb(var(--color-interaction-500))]
         text-main/0
         ;
         &::before {
           @apply
-          inset-0.5
+          inset-[3px]
           ;
         }
         &::after {
@@ -262,23 +263,33 @@
       }
       > span {
         @apply
-        h-px
+        h-1
+        rounded-full
         ;
+        &::before {
+          @apply
+          rounded-full
+          ;
+        }
       }
     }
     &:last-child {
       @apply
       flex-none
       ;
-      
     }
     &.is-active {
-      a {
+      > a,
+      > div {
         @apply
         text-main
         ;
-        i {
-          
+        > span {
+          &::before {
+            @apply
+            -translate-x-1/2
+            ;
+          }
         }
       }
     }
@@ -291,7 +302,8 @@
       bg-ui-400
       ;
     }
-    a {
+    > a,
+    > div {
       @apply
       text-ui-400
       ;
@@ -302,9 +314,9 @@
       }
       i {
         @apply
-        shadow-[0_0_0_2px_rgb(var(--color-ui-400))]
-        from-ui-800
-        to-ui-700
+        shadow-[0_0_0_3px_rgb(var(--color-ui-400))]
+        from-ui-700
+        to-ui-600
         text-ui-400
         ;
       }
@@ -369,7 +381,8 @@
       bg-ui-400
       ;
     }
-    a {
+    > a,
+    > div {
       @apply
       text-ui-400
       ;
@@ -430,7 +443,8 @@
   }
   & > li.is-active ~ li,
   &.is-inactive > li {
-    a {
+    > a,
+    > div {
       i {
         @apply
         shadow-[0_0_0_2px_rgb(var(--color-ui-400))]
@@ -493,13 +507,13 @@
   &.step-secondary,
   &.step-tertiary {
     @apply
-    gap-4
+    gap-2
     ;
     > li {
       > a,
       > div {
         @apply
-        gap-4
+        gap-2
         ;
       }
     }

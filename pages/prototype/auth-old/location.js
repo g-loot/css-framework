@@ -286,7 +286,7 @@ export default function Login() {
               <option value="ZWE">Zimbabwe</option>
             </select>
           </div>
-          <Link href="/prototype/auth/emailverification">
+          <Link href="/prototype/auth-old/emailverification">
             <button
               type="button"
               className="button button-primary w-full mb-6"

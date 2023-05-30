@@ -59,7 +59,7 @@ export default function Login() {
           </p>
           <p className="text-sm text-ui-300">
             Wrong email address?{" "}
-            <Link href="/prototype/auth/changeemail">
+            <Link href="/prototype/auth-old/changeemail">
               <a href="#" className="link link-main">
                 Change email address
               </a>

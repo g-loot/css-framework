@@ -5,8 +5,6 @@ import PrototypeAuth from "../../../components/Prototype/PrototypeAuth";
 
 export default function Login() {
   const [emailStr, setEmailStr] = useState(0);
-  const [passwordStr, setPasswordStr] = useState(0);
-  const [passwordShown, setPasswordShown] = useState(false);
 
   function isEmail(str) {
     const expression =
@@ -14,45 +12,10 @@ export default function Login() {
     return expression.test(String(str).toLowerCase());
   }
 
-  function containsUppercase(str) {
-    return /[A-Z]/.test(str);
-  }
-  function containsLowercase(str) {
-    return /[a-z]/.test(str);
-  }
-  function containsDigit(str) {
-    if (str.length) {
-      return /[0-9]/.test(str);
-    }
-  }
-  function isLongEnough(str, length) {
-    if (str.length >= length) {
-      return true;
-    }
-  }
-
-  function checkAll(str) {
-    if (
-      containsUppercase(str) &&
-      containsLowercase(str) &&
-      containsDigit(str) &&
-      isLongEnough(str, 8) &&
-      isEmail(emailStr)
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  const togglePassword = () => {
-    setPasswordShown(!passwordShown);
-  };
-
   return (
     <>
-      <PrototypeAuth title="Change email">
-        <div className="p-4 w-full max-w-xs text-center">
+      <PrototypeAuth title="Recover password">
+        <div className="p-4 w-full max-w-xs">
           <img
             className="mb-10 mx-auto"
             width="175"
@@ -60,7 +23,6 @@ export default function Login() {
             src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
             alt="Stryda logo"
           />
-          <h1 className="h3 mb-8">Change email</h1>
           <div className="form-group mb-8" data-success={isEmail(emailStr)}>
             <label htmlFor="email">Email address</label>
             <input
@@ -68,21 +30,20 @@ export default function Login() {
               name="email"
               id="email"
               autoFocus
-              autoComplete="off"
               onChange={(event) => setEmailStr(event.target.value)}
             />
           </div>
-          <Link href="/prototype/auth/step3">
+          <Link href="/prototype/home">
             <button
               type="button"
-              className="button button-primary w-full mb-8"
+              className="button button-primary w-full mb-6"
               disabled={!isEmail(emailStr)}
             >
-              <span>Continue</span>
+              <span>Send recovery email</span>
             </button>
           </Link>
           <p className="text-sm text-center mb-4">
-            <Link href="/prototype/auth/step3">
+            <Link href="/prototype/auth-old/login">
               <a href="#" className="link link-main">
                 Go back
               </a>
