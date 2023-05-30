@@ -106,11 +106,11 @@ export const dataUsers = [
         {
           id: 4,
           item: 4,
-          level: 3,
-          percent: 75,
-          progress: 10,
-          from: "150",
-          to: "200",
+          level: 5,
+          percent: 100,
+          progress: 0,
+          from: "1",
+          to: "1",
         },
         {
           id: 5,
@@ -137,7 +137,7 @@ export const dataUsers = [
           percent: 0,
           progress: 0,
           from: "0",
-          to: "1",
+          to: "5",
         },
         {
           id: 8,
@@ -155,7 +155,7 @@ export const dataUsers = [
           percent: 0,
           progress: 0,
           from: "0",
-          to: "100",
+          to: "666",
         },
         {
           id: 10,
@@ -164,7 +164,7 @@ export const dataUsers = [
           percent: 0,
           progress: 0,
           from: "0",
-          to: "5",
+          to: "1",
         },
         {
           id: 11,
@@ -173,7 +173,7 @@ export const dataUsers = [
           percent: 0,
           progress: 0,
           from: "0",
-          to: "5",
+          to: "1",
         },
         {
           id: 12,
@@ -182,7 +182,7 @@ export const dataUsers = [
           percent: 0,
           progress: 0,
           from: "0",
-          to: "5",
+          to: "1",
         },
         {
           id: 13,
@@ -191,7 +191,7 @@ export const dataUsers = [
           percent: 0,
           progress: 0,
           from: "0",
-          to: "5",
+          to: "1",
         },
         {
           id: 14,
@@ -200,7 +200,7 @@ export const dataUsers = [
           percent: 0,
           progress: 0,
           from: "0",
-          to: "5",
+          to: "700",
         },
         {
           id: 15,
@@ -209,7 +209,7 @@ export const dataUsers = [
           percent: 0,
           progress: 0,
           from: "0",
-          to: "5",
+          to: "1",
         },
       ],
     },

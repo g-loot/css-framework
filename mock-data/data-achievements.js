@@ -85,7 +85,7 @@ export const dataAchievements = [
       },
       {
         id: 14,
-        name: "Over achiever",
+        name: "Overachiever",
         description: "Get more than [X] primary score in a Ladder round",
         icon: "overachiever",
       },
