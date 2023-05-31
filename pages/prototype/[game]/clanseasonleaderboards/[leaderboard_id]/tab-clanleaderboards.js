@@ -1159,12 +1159,12 @@ export default function TabClanLeaderboardsLeaderboards() {
       )}
       {/* for demo purposes only */}
       <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-        <a onClick={() => setHasRiot(!hasRiot)}>Toggle has Riot</a>
-        <a onClick={() => setIsInAClan(!isInAClan)}>Toggle in a clan</a>
-        <a onClick={() => setIsEmpty(!isEmpty)}>Toggle empty state</a>
-        <a onClick={() => setHasRanks(!hasRanks)}>Toggle ranks</a>
+        <a onClick={() => setHasRiot(!hasRiot)}>Toggle has Riot {hasRiot ? 'ON' : 'OFF'}</a>
+        <a onClick={() => setIsInAClan(!isInAClan)}>Toggle in a clan {isInAClan ? 'ON' : 'OFF'}</a>
+        <a onClick={() => setIsEmpty(!isEmpty)}>Toggle empty state {isEmpty ? 'ON' : 'OFF'}</a>
+        <a onClick={() => setHasRanks(!hasRanks)}>Toggle ranks {hasRanks ? 'ON' : 'OFF'}</a>
         <a onClick={() => setHasPlayersDetails(!hasPlayersDetails)}>
-          Toggle players details
+          Toggle players details {hasPlayersDetails ? 'ON' : 'OFF'}
         </a>
       </section>
     </>

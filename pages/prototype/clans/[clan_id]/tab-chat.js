@@ -353,14 +353,14 @@ export default function TabClanChat() {
           </div>
           {/* for demo purposes only */}
           <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-            <div onClick={() => setIsAdmin(!isAdmin)}>Toggle admin view</div>
-            <div
+            <a onClick={() => setIsAdmin(!isAdmin)}>Toggle admin view {isAdmin ? 'ON' : 'OFF'}</a>
+            <a
               onClick={() =>
                 setHasMembersActionsInPlayerCard(!hasMembersActionsInPlayerCard)
               }
             >
-              Toggle members view
-            </div>
+              Toggle members view {hasMembersActionsInPlayerCard ? 'ON' : 'OFF'}
+            </a>
           </section>
         </>
       )}

@@ -5,6 +5,8 @@ import Ad from "../Ad/Ad";
 import Button from "../Button/Button";
 import Link from "next/link";
 import ModalFavoriteGames from "../../pages/prototype/modal-favoritegames";
+import ModalSelectYourGame from "../../pages/prototype/modal-selectyourgame";
+import ModalWelcome from "../../pages/prototype/modal-welcome";
 import ModalTournamentSchedule from "../../pages/prototype/modal-tournamentschedule";
 import ModalBuyTokens from "../../pages/prototype/wallet/modal-buytokens";
 import PrototypeGamesNavNew from "./PrototypeGamesNavNew";
@@ -18,6 +20,10 @@ export default function PrototypeLeftMenuNew(props) {
   const uiContext = useContext(UiContext);
   const { user_id } = router.query;
   const modalFavoriteGames = query.modalfavoritegames === "true" ? true : false;
+  const modalSelectYourGame =
+    query.modalselectyourgame === "true" ? true : false;
+  const modalWelcome =
+    query.modalwelcome === "true" ? true : false;
   const statusLoading = query.loading === "true" ? true : false;
   const [loading, setLoading] = useState(false);
   const prototype = usePrototypeData();
@@ -32,11 +38,31 @@ export default function PrototypeLeftMenuNew(props) {
     uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
   }
 
+  function openModalWelcome() {
+    uiContext.openModal(<ModalWelcome></ModalWelcome>);
+  }
+
   useEffect(() => {
     if (modalFavoriteGames) {
       openModalFavoriteGames();
     }
   }, [modalFavoriteGames]);
+
+  useEffect(() => {
+    if (modalSelectYourGame) {
+      openModalSelectYourGame();
+    }
+  }, [modalSelectYourGame]);
+
+  useEffect(() => {
+    if (modalWelcome) {
+      openModalWelcome();
+    }
+  }, [modalWelcome]);
+
+  function openModalSelectYourGame() {
+    uiContext.openModal(<ModalSelectYourGame></ModalSelectYourGame>);
+  }
 
   useEffect(() => {
     if (statusLoading || router.pathname.includes("home")) {

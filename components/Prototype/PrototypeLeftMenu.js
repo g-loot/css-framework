@@ -4,6 +4,7 @@ import Ad from '../Ad/Ad';
 import Button from '../Button/Button';
 import Link from 'next/link';
 import ModalFavoriteGames from '../../pages/prototype/modal-favoritegames';
+import ModalSelectYourGame from '../../pages/prototype/modal-selectyourgame';
 import ModalTournamentSchedule from '../../pages/prototype/modal-tournamentschedule';
 import PrototypeGamesNav from './PrototypeGamesNav';
 import { UiContext } from '../../contexts/ui';
@@ -17,6 +18,7 @@ export default function PrototypeLeftMenu(props) {
   const uiContext = useContext(UiContext);
   const { user_id } = router.query;
   const modalFavoriteGames = query.modalfavoritegames === "true" ? true : false;
+  const ModalSelectYourGame = query.modalselectyourgame === "true" ? true : false;
   const modalTournamentSchedule = query.modaltournamentschedule === "true" ? true : false;
 
   function openModalFavoriteGames() {
@@ -28,9 +30,19 @@ export default function PrototypeLeftMenu(props) {
       openModalFavoriteGames();
     }
   }, [modalFavoriteGames]);
-
+  
   function openModalTournamentSchedule() {
-    uiContext.openModal(<ModalTournamentSchedule></ModalTournamentSchedule>);
+    uiContext.openModal(<ModalTournamentSchedule />);
+  }
+  
+    useEffect(() => {
+      if (ModalSelectYourGame) {
+        openModalSelectYourGame();
+      }
+    }, [ModalSelectYourGame]);
+  
+  function openModalSelectYourGame() {
+    uiContext.openModal(<ModalSelectYourGame />);
   }
 
   useEffect(() => {

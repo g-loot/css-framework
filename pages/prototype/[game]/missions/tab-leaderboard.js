@@ -176,8 +176,12 @@ export default function TabMissionsLeaderboard(props) {
                 <div className="w-14" />
                 <div className="item-image w-7" />
                 <div className="item-body">Player</div>
-                <div className="w-28 text-center">Missions No.</div>
-                <div className="w-28 text-center">All XP</div>
+                <div className="w-20 text-center">Common</div>
+                <div className="w-20 text-center">Rare</div>
+                <div className="w-20 text-center">Epic</div>
+                <div className="w-20 text-center">Legendary</div>
+                <div className="w-24 text-center hidden">Missions</div>
+                <div className="w-28 text-center hidden">Total XP</div>
               </div>
               {isLoading ? (
                 <ul className="items-spaced is-loading space-y-2">
@@ -211,7 +215,6 @@ export default function TabMissionsLeaderboard(props) {
                 <ul className="items-spaced space-y-2">
                   {[2, 10, 11, 6, 1, 8, 4, 5, 3].map((item, itemIndex) => {
                     const missionsNo = (10 - itemIndex) * 5;
-
                     return (
                       <li
                         key={itemIndex}
@@ -270,10 +273,42 @@ export default function TabMissionsLeaderboard(props) {
                             </div>
                           </Link>
                         </div>
-                        <div className="item-actions text-center w-28 text-sm">
+                        <div className="item-actions text-center w-20 text-sm">
+                          <Tooltip placement="top" tooltip="Common">
+                            <div className="rarity rarity-category-1">
+                              <span className="icon icon-category-1" />
+                              <span>42</span>
+                            </div>
+                          </Tooltip>
+                        </div>
+                        <div className="item-actions text-center w-20 text-sm">
+                          <Tooltip placement="top" tooltip="Rare">
+                            <div className="rarity rarity-category-2">
+                              <span className="icon icon-category-2" />
+                              <span>32</span>
+                            </div>
+                          </Tooltip>
+                        </div>
+                        <div className="item-actions text-center w-20 text-sm">
+                          <Tooltip placement="top" tooltip="Epic">
+                            <div className="rarity rarity-category-3">
+                              <span className="icon icon-category-3" />
+                              <span>12</span>
+                            </div>
+                          </Tooltip>
+                        </div>
+                        <div className="item-actions text-center w-20 text-sm">
+                          <Tooltip placement="top" tooltip="Legendary">
+                            <div className="rarity rarity-category-4">
+                              <span className="icon icon-category-4" />
+                              <span>4</span>
+                            </div>
+                          </Tooltip>
+                        </div>
+                        <div className="!hidden item-actions text-center w-24 text-sm">
                           <span>{missionsNo}</span>
                         </div>
-                        <div className="item-actions w-28 text-center">
+                        <div className="!hidden item-actions w-28 text-center">
                           <Tooltip
                             placement="top"
                             tooltip={<MissionsCompletedList />}
