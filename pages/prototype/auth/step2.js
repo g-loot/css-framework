@@ -30,19 +30,19 @@ export default function AuthStep2() {
         <div className="p-4 w-full max-w-xs text-center">
           <h1 className="h4 mb-8">Create your profile</h1>
           <ul className="step step-secondary mb-8">
-            <li className={`${!isLongEnough(nicknameStr, 2) ? 'is-active' : ''}`}>
+            <li className={`${!isAdult  ? 'is-active' : ''}`}>
               <div>
                 <i>1</i>
                 <span></span>
               </div>
             </li>
-            <li className={`${!isAdult && isLongEnough(nicknameStr, 2) ? 'is-active' : ''}`}>
+            <li className={`${isAdult && isLongEnough(nicknameStr, 2) ? 'is-active' : ''}`}>
               <div>
                 <i>2</i>
                 <span></span>
               </div>
             </li>
-            <li className={`${isAdult && isLongEnough(nicknameStr, 2) ? 'is-active' : ''}`}>
+            <li>
               <div>
                 <i>3</i>
                 <span></span>

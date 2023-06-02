@@ -45,13 +45,13 @@ export default function BattlepassPage() {
 
   useEffect(() => {
     if (modalbonussteps) {
-      openModalBattlepassCompletedBonusSteps();
+      openModalBattlepassCompletedBonusSteps(false);
     }
   }, [modalbonussteps]);
 
-  function openModalBattlepassCompletedBonusSteps() {
+  function openModalBattlepassCompletedBonusSteps(premium) {
     uiContext.openModal(
-      <ModalBattlepassCompletedBonusSteps id={selectedBattlepassID} />
+      <ModalBattlepassCompletedBonusSteps id={selectedBattlepassID} isPremium={premium} />
     );
   }
 
@@ -144,8 +144,14 @@ export default function BattlepassPage() {
 
           {/* for demo purposes only */}
           <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+            <a onClick={switchBattlepasses}>
+              Switch between various Battlepasses
+            </a>
             <a onClick={openModalBattlepassCompletedBonusSteps}>
               Open Battlepass completed: bonus steps
+            </a>
+            <a onClick={() => openModalBattlepassCompletedBonusSteps(premium)}>
+              Open Battlepass completed: bonus steps (premium)
             </a>
             <a onClick={openModalBattlepassCompletedClaim}>
               Open Battlepass ended: claim previous rewards

@@ -19,8 +19,8 @@ export default function ModalAchievementReceived(props) {
   const level = props.level || 5;
   const percent = props.percent || 50;
   const progress = props.progress || 12;
-  const from = props.from || "24";
-  const to = props.to || "300 XP";
+  const from = props.from || "150";
+  const to = props.to || "300";
 
   function LottieExplosion(level) {
     if(level === 1) {

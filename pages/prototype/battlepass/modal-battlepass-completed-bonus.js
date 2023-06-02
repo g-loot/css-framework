@@ -20,7 +20,8 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
   const uiContext = useContext(UiContext);
   const { query } = useRouter();
   const prototype = usePrototypeData();
-  const isPremium = query.premium === "true" ? true : false;
+  const ispremium = props.isPremium || false;
+  const isPremium = query.premium === "true" ? true : ispremium;
   const selectedBattlepass = props.id || 0;
   const [submitting, setSubmitting] = useState(false);
 

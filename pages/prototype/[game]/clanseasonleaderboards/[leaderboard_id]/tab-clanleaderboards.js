@@ -230,11 +230,6 @@ export default function TabClanLeaderboardsLeaderboards() {
               Play together with 5 members of your clan and be the first to join
               this leaderboard!
             </h3>
-            {!hasRiot && (
-              <p className="text-attention-500 mt-4 mb-2">
-                Connect your RIOT account to participate in Clan Seasons!
-              </p>
-            )}
             {!isInAClan ? (
               <Link href={`/prototype/clans${prototype.getURLparams()}`}>
                 <button
@@ -242,7 +237,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                   className="button button-primary w-60 mt-4 mb-6"
                 >
                   <span className="icon icon-multiple-12" />
-                  <span>Join a clan</span>
+                  <span>Search for clans</span>
                 </button>
               </Link>
             ) : (
@@ -294,6 +289,29 @@ export default function TabClanLeaderboardsLeaderboards() {
         >
           <div className="flex flex-col lg:flex-row gap-8">
             <div className="w-80 hidden lg:block shrink-0 pt-12 space-y-4">
+              {!hasRiot && (
+                <div
+                  className={`surface p-2 pt-4 rounded text-center ${
+                    isLoadingRank ? "is-loading" : ""
+                  }`}
+                >
+                  <span className="icon icon-warning-sign text-3xl text-attention-500" />
+                  <p className="text-attention-500 mb-3">
+                    Connect your RIOT account to participate in Clan Seasons!
+                  </p>
+                  <Link
+                    href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                  >
+                    <button
+                      type="button"
+                      className="button button-sm button-primary w-full"
+                    >
+                      <span className="icon icon-riotgames-symbol" />
+                      <span>Connect with RIOT ID</span>
+                    </button>
+                  </Link>
+                </div>
+              )}
               {isInAClan ? (
                 <div
                   className={`surface surface-dimmed p-2 pt-4 rounded text-center ${
@@ -476,48 +494,31 @@ export default function TabClanLeaderboardsLeaderboards() {
                   )}
                 </div>
               ) : (
-                <div
-                  className={`surface p-2 pt-4 rounded text-center ${
-                    isLoadingRank ? "is-loading" : ""
-                  }`}
-                >
-                  <span className="icon icon-warning-sign text-3xl text-attention-500" />
-                  <p className="text-attention-500 mb-3">
-                    Join a Clan to participate to Clan Seasons!
-                  </p>
-                  <Link href={`/prototype/clans${prototype.getURLparams()}`}>
-                    <button
-                      type="button"
-                      className="button button-sm button-primary w-full"
+                <>
+                  {selectedClanLeaderboard.isCurrent && (
+                    <div
+                      className={`surface p-2 pt-4 rounded text-center ${
+                        isLoadingRank ? "is-loading" : ""
+                      }`}
                     >
-                      <span className="icon icon-multiple-12" />
-                      <span>Join a clan</span>
-                    </button>
-                  </Link>
-                </div>
-              )}
-              {!hasRiot && (
-                <div
-                  className={`surface p-2 pt-4 rounded text-center ${
-                    isLoadingRank ? "is-loading" : ""
-                  }`}
-                >
-                  <span className="icon icon-warning-sign text-3xl text-attention-500" />
-                  <p className="text-attention-500 mb-3">
-                    Connect your RIOT account to participate in Clan Seasons!
-                  </p>
-                  <Link
-                    href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                  >
-                    <button
-                      type="button"
-                      className="button button-sm button-primary w-full"
-                    >
-                      <span className="icon icon-riotgames-symbol" />
-                      <span>Connect with RIOT ID</span>
-                    </button>
-                  </Link>
-                </div>
+                      <span className="icon icon-warning-sign text-3xl text-attention-500" />
+                      <p className="text-attention-500 mb-3">
+                        Join a Clan to participate to Clan Seasons!
+                      </p>
+                      <Link
+                        href={`/prototype/clans${prototype.getURLparams()}`}
+                      >
+                        <button
+                          type="button"
+                          className="button button-sm button-primary w-full"
+                        >
+                          <span className="icon icon-multiple-12" />
+                          <span>Search for clans</span>
+                        </button>
+                      </Link>
+                    </div>
+                  )}
+                </>
               )}
             </div>
             <div className="flex-1">
@@ -1159,12 +1160,20 @@ export default function TabClanLeaderboardsLeaderboards() {
       )}
       {/* for demo purposes only */}
       <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-        <a onClick={() => setHasRiot(!hasRiot)}>Toggle has Riot {hasRiot ? 'ON' : 'OFF'}</a>
-        <a onClick={() => setIsInAClan(!isInAClan)}>Toggle in a clan {isInAClan ? 'ON' : 'OFF'}</a>
-        <a onClick={() => setIsEmpty(!isEmpty)}>Toggle empty state {isEmpty ? 'ON' : 'OFF'}</a>
-        <a onClick={() => setHasRanks(!hasRanks)}>Toggle ranks {hasRanks ? 'ON' : 'OFF'}</a>
+        <a onClick={() => setHasRiot(!hasRiot)}>
+          Toggle has Riot {hasRiot ? "ON" : "OFF"}
+        </a>
+        <a onClick={() => setIsInAClan(!isInAClan)}>
+          Toggle in a clan {isInAClan ? "ON" : "OFF"}
+        </a>
+        <a onClick={() => setIsEmpty(!isEmpty)}>
+          Toggle empty state {isEmpty ? "ON" : "OFF"}
+        </a>
+        <a onClick={() => setHasRanks(!hasRanks)}>
+          Toggle ranks {hasRanks ? "ON" : "OFF"}
+        </a>
         <a onClick={() => setHasPlayersDetails(!hasPlayersDetails)}>
-          Toggle players details {hasPlayersDetails ? 'ON' : 'OFF'}
+          Toggle players details {hasPlayersDetails ? "ON" : "OFF"}
         </a>
       </section>
     </>
