@@ -56,8 +56,8 @@ export default function AuthLogin() {
       containsLowercase(str) &&
       containsDigit(str) &&
       isLongEnough(str, 8) &&
-      isEmail(emailStr) &&
-      isAdult
+      isLongEnough(nicknameStr, 1) &&
+      isEmail(emailStr)
     ) {
       return true;
     } else {
@@ -115,7 +115,7 @@ export default function AuthLogin() {
             </div>
           </div>
           <div
-            className="transition-all duration-300 ease overflow-hidden"
+            className="transition-all duration-500 ease overflow-hidden"
             style={{
               height: `${isLongEnough(passwordStr, 1) ? passwordHeight : 0}px`,
             }}
@@ -208,14 +208,14 @@ export default function AuthLogin() {
               </label>
               <Tooltip
                 tooltip={
-                  <div className=" w-28 text-sm text-center leading-tight">
+                  <div className="w-28 text-sm text-center leading-tight">
                     This is how users will see you on leaderboards or stats
                     pages.
                   </div>
                 }
               >
                 <button className="text-0">
-                  <span className="icon icon-16 icon-c-info text-ui-400" />
+                  <span className="icon icon-16 icon-c-info !text-ui-400" />
                 </button>
               </Tooltip>
             </div>
@@ -466,6 +466,7 @@ export default function AuthLogin() {
               <option value="ZWE">Zimbabwe</option>
             </select>
           </div>
+          {/*
           <div className="form-group text-left mb-2">
             <div className="flex items-center justify-between gap-4">
               <label className="label" htmlFor="ageConfirm">
@@ -473,14 +474,14 @@ export default function AuthLogin() {
               </label>
               <Tooltip
                 tooltip={
-                  <div className=" w-28 text-sm text-center leading-tight">
+                  <div className="w-28 text-sm text-center leading-tight">
                     Here we explain why we need why we need the user to verify
                     his age.
                   </div>
                 }
               >
                 <button className="text-0">
-                  <span className="icon icon-16 icon-c-info text-ui-400" />
+                  <span className="icon icon-16 icon-c-info !text-ui-400" />
                 </button>
               </Tooltip>
             </div>
@@ -496,24 +497,24 @@ export default function AuthLogin() {
               </label>
             </div>
           </div>
-
+              */}
           <Link href="/prototype/auth/step3">
             <button
               type="button"
-              className="button button-primary w-full mb-4"
+              className="button button-primary w-full mt-2 mb-4"
               disabled={!checkAll(passwordStr)}
             >
               <span>Create free account</span>
             </button>
           </Link>
           <div
-            className="transition-all duration-300 ease overflow-hidden"
+            className="transition-all duration-500 ease overflow-hidden"
             style={{
               height: `${checkAll(passwordStr) ? confirmHeight : 0}px`,
             }}
           >
             <div ref={refConfirm}>
-              <p className="text-sm ">
+              <p className="text-sm">
                 By clicking CREATE FREE ACCOUNT, you certify that you are at
                 least 16 years old, and you have read and agree to the{" "}
                 <a href="#" className="link">
