@@ -156,12 +156,12 @@ export default function TabClanAbout() {
                         <span className="text-ui-100">{selectedClan.lang}</span>
                       </p>
                       <p className="text-ui-300 mt-1 text-left">
+                        <span className="text-ui-300">Clan captain: </span>
+                        <span className="text-ui-100">{prototype.getUserByID(selectedClan.admin).nickname}</span>
+                      </p>
+                      <p className="text-ui-300 mt-1 text-left">
                         <span className="text-ui-300">Created on </span>
-                        <span className="text-ui-100">November 6 2022 </span>
-                        <span className="text-ui-300">by </span>
-                        <span className="text-ui-100">
-                          {prototype.getUserByID(selectedClan.admin).nickname}
-                        </span>
+                        <span className="text-ui-100">November 6 2022</span>
                       </p>
                     </div>
                   </div>
@@ -479,7 +479,7 @@ export default function TabClanAbout() {
                           </a>
                         </Link>
                       </div>
-                      <ul className="flex gap-4 p-4">
+                      <ul className="flex gap-2 px-4 py-2">
                         {selectedClan.games?.map((game, gameIndex) => (
                           <li key={gameIndex}>
                             <GameIcon game={game} />
@@ -525,7 +525,7 @@ export default function TabClanAbout() {
                       </div>
                       <div className="pl-4 border-l border-ui-600">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Avg. placement
+                          Best placement
                         </div>
                         <div className="text-ui-100 text-xl lg:text-3xl">
                           #{selectedClan.stats.avgPlacement}

@@ -93,7 +93,7 @@ select:-webkit-autofill:focus {
     shadow-sm
     bg-ui-700
     border
-    border-ui-600
+    border-ui-500
     focus-visible:-outline-offset-1
     focus-visible:outline
     focus-visible:outline-1
@@ -364,8 +364,8 @@ label.button {
     + label {
       &::before {
         @apply
-        bg-ui-700
-        shadow-[0_0_0_1px_rgb(var(--color-ui-500))]
+        bg-ui-500
+        shadow-[0_0_0_1px_rgb(var(--color-ui-400))]
         ;
       }
     }
@@ -996,7 +996,7 @@ input.input-number,
     text-0
     px-1
     border
-    border-ui-600
+    border-ui-500
     bg-ui-700
     hover:bg-ui-600
     duration-300
@@ -1535,7 +1535,7 @@ div.react-select-container {
 div.react-select__control {
   @apply
   bg-ui-700
-  border-ui-600
+  border-ui-500
   text-ui-200
   min-h-[42px]
   min-w-[150px]

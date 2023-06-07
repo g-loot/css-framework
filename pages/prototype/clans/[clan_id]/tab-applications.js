@@ -90,14 +90,6 @@ export default function TabClanApplications() {
           </div>
         </div>
         <div className="flex gap-4 items-center">
-          <div className="form-group form-select">
-            <select id="status">
-              <option selected>Any</option>
-              <option>Pending</option>
-              <option>Approved</option>
-              <option>Pending</option>
-            </select>
-          </div>
           <div className="form-group flex-1">
             <div className="input-group">
               <span className="icon icon-zoom"></span>
@@ -205,13 +197,13 @@ export default function TabClanApplications() {
                         <ButtonSorting>Date</ButtonSorting>
                       </th>
                       <th>
-                        <ButtonSorting>Country</ButtonSorting>
+                        <ButtonSorting hasArrow={false}>Country</ButtonSorting>
                       </th>
                       <th>
                         <ButtonSorting>No. of Ladders played</ButtonSorting>
                       </th>
                       <th>
-                        <ButtonSorting>Avg. Ladder position</ButtonSorting>
+                        <ButtonSorting>Best Ladder position</ButtonSorting>
                       </th>
                       <th className="text-right">
                         <ButtonSorting>Status</ButtonSorting>

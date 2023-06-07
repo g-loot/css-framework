@@ -28,7 +28,7 @@ export default function Footer(props) {
             />
 
             <p className="my-8 text-sm leading-relaxed">
-              © Stryda Global Esports AB. <br />
+              © Stryda AB. <br />
               <span className="text-ui-300">
                 All rights reserved. Made in Stockholm, Sweden
               </span>

@@ -25,11 +25,6 @@ const TabsItemsOwn = [
     component: TabClanAbout,
   },
   {
-    label: "Stats",
-    url: "stats",
-    component: TabClanStats,
-  },
-  {
     label: "Applications (3)",
     url: "applications",
     component: TabClanApplications,
@@ -44,7 +39,7 @@ const TabsItemsOwn = [
     label: "Activity",
     url: "activity",
     component: TabClanActivity,
-    hasBadge: true,
+    hasBadge: false,
   },
 ];
 

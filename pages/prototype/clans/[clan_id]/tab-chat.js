@@ -181,7 +181,7 @@ export default function TabClanChat() {
                   </Link>
                 </div>
                 {hasMembersActionsInPlayerCard ? (
-                  <ul className="flex flex-wrap p-4 gap-4">
+                  <ul className="flex flex-wrap px-4 py-3 gap-3">
                     {getClanMembers().map((item, itemIndex) => (
                       <li className="" key={itemIndex}>
                         <Avatar

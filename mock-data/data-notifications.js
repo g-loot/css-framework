@@ -141,6 +141,7 @@ export const dataNotifications = [
         title: "You won a prize!",
         text: "You finished <b class='text-ui-100'>#X</b> in the <a href='#' class='link font-bold'>ladder.name</a> Ladder and you won <span class='whitespace-nowrap text-currency-1-500'><span class='translate-y-0.5 icon icon-coin'></span> <span class='font-bold'>1000 coins</span></span>! Congrats!",
         time: "5 days",
+        cta: "Claim here",
         read: true,
         accepted: true,
       },

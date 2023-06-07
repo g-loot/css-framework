@@ -45,28 +45,6 @@ export default function AuthStep3() {
             <span className="text-ui-100 text-bold">joppe@gmail.com</span>
           </p>
           <p
-            className={`text-sm text-ui-300 mb-8 transition-opacity duration-1000 ${
-              showHelp ? "" : "opacity-0 pointer-events-none select-none"
-            }`}
-          >
-            Haven&#39;t received the email?{" "}
-            <button
-              type="button"
-              className="link link-main"
-              onClick={() => uiContext.openToastr({
-                text: "Confirmation email sent",
-                color: "green",
-                autoDelete: true,
-                autoDeleteDelay: 2500,
-              })}
-            >
-              Resend now
-            </button>
-          </p>
-          <p className="mb-2">
-            Click the link in the email to complete the registration process.
-          </p>
-          <p
             className={`text-sm text-ui-300 mb-4 transition-opacity duration-1000 ${
               showHelp ? "" : "opacity-0 pointer-events-none select-none"
             }`}
@@ -77,6 +55,31 @@ export default function AuthStep3() {
                 Change email address
               </a>
             </Link>
+          </p>
+
+          <p className="mb-2">
+            Click the link in the email to complete the registration process.
+          </p>
+          <p
+            className={`text-sm text-ui-300 mb-8 transition-opacity duration-1000 ${
+              showHelp ? "" : "opacity-0 pointer-events-none select-none"
+            }`}
+          >
+            Haven&#39;t received the email?{" "}
+            <button
+              type="button"
+              className="link link-main"
+              onClick={() =>
+                uiContext.openToastr({
+                  text: "Confirmation email sent",
+                  color: "green",
+                  autoDelete: true,
+                  autoDeleteDelay: 2500,
+                })
+              }
+            >
+              Resend now
+            </button>
           </p>
         </div>
       </PrototypeAuth>
