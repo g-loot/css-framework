@@ -93,7 +93,7 @@ export default function TabMissionsHistory() {
                 <div className="mx-auto mt-2">
                   <Link href={`/prototype/premium${prototype.getURLparams()}`}>
                     <a className="button button-premium is-shining">
-                      <span>Join Premium</span>
+                      <span>Get Premium</span>
                     </a>
                   </Link>
                 </div>

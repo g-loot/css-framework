@@ -49,7 +49,7 @@ export default function BattlepassPage() {
     }
   }, [modalbonussteps]);
 
-  function openModalBattlepassCompletedBonusSteps(premium) {
+  const openModalBattlepassCompletedBonusSteps = (premium) => {
     uiContext.openModal(
       <ModalBattlepassCompletedBonusSteps id={selectedBattlepassID} isPremium={premium} />
     );
@@ -147,10 +147,10 @@ export default function BattlepassPage() {
             <a onClick={switchBattlepasses}>
               Switch between various Battlepasses
             </a>
-            <a onClick={openModalBattlepassCompletedBonusSteps}>
+            <a onClick={() => openModalBattlepassCompletedBonusSteps(false)}>
               Open Battlepass completed: bonus steps
             </a>
-            <a onClick={() => openModalBattlepassCompletedBonusSteps(premium)}>
+            <a onClick={() => openModalBattlepassCompletedBonusSteps(true)}>
               Open Battlepass completed: bonus steps (premium)
             </a>
             <a onClick={openModalBattlepassCompletedClaim}>

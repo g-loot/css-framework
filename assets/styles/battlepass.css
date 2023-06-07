@@ -238,7 +238,8 @@
     bg-[linear-gradient(130deg,_rgba(255,255,255,0)_44%,_rgba(255,255,255,.3)_46%,_rgba(255,255,255,0)_60%,_rgba(255,255,255,.4)_61%,_rgba(255,255,255,0)_70%)]
     bg-no-repeat
     ;
-    mask-size: cover;
+    mask-position: center;
+    mask-size: contain;
     mask-repeat: no-repeat;
   }
 }

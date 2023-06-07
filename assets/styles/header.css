@@ -137,6 +137,11 @@
           ;
         }
       }
+      > *:last-child {
+        @apply
+        !mb-0
+        ;
+      }
     }
   }
   > .header-meta {

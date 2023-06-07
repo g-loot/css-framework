@@ -10,6 +10,7 @@ export default function ModalProfileBannerPurchaseCompleted(props) {
   const variablesContext = useContext(VariablesContext);
   const [submitting, setSubmitting] = useState(false);
   const id = props.id || 1;
+  const text = props.text || 'You have purchased the following item:';
   const prototype = usePrototypeData();
   const selectedItem = prototype.getShopitemByID(2, id);
 
@@ -35,7 +36,7 @@ export default function ModalProfileBannerPurchaseCompleted(props) {
           <div className="modal-content">
             <div className="modal-body text-center">
               <h2 className="modal-title">Congratulations</h2>
-              <p>You have purchased the following item:</p>
+              <p>{text}</p>
               <div className="border-t border-ui-700 mt-4 pt-8 pb-4">
                 <img
                   src={selectedItem.image}

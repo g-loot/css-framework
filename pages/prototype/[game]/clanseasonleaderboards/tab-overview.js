@@ -17,7 +17,8 @@ export default function TabClanSeasonLeaderboardOverview() {
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const [isEnrolled, setIsEnrolled] = useState(false);
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const { game } = router.query;
 
   useEffect(() => {
@@ -30,7 +31,7 @@ export default function TabClanSeasonLeaderboardOverview() {
         <>
           <section className="mb-8 animate-slide-in-bottom">
             <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0 mb-2">
-              <h2 className="h5">Current Season</h2>
+              <h2 className="h5">Ongoing Season</h2>
             </div>
             {isEmpty ? (
               <>
@@ -38,7 +39,7 @@ export default function TabClanSeasonLeaderboardOverview() {
                   <div className="max-w-xs mx-auto">
                     <span className="icon icon-ladder text-6xl text-ui-500" />
                     <div className="mt-2 text-ui-300">
-                      There are no ongoing Solo Ladders
+                      There are no ongoing Clan Season.
                     </div>
                   </div>
                 </div>
@@ -176,7 +177,10 @@ export default function TabClanSeasonLeaderboardOverview() {
                                 )}
                               </span>
                             </div>
-                            <button type="button" className="button button-sm button-primary">
+                            <button
+                              type="button"
+                              className="button button-sm button-primary"
+                            >
                               <span>View Clan Season</span>
                             </button>
                           </div>
@@ -190,7 +194,13 @@ export default function TabClanSeasonLeaderboardOverview() {
           </section>
           {/* for demo purposes only */}
           <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-            <a onClick={() => variablesContext.clanSeasonEnroll()}>Toggle enrolled</a>
+            <a onClick={() => variablesContext.clanSeasonEnroll()}>
+              Toggle enrolled{" "}
+              {variablesContext.clanLeaderboardEnrolled ? "ON" : "OFF"}
+            </a>
+            <a onClick={() => setIsEmpty(!isEmpty)}>
+              Toggle empty state {isEmpty ? "ON" : "OFF"}
+            </a>
           </section>
           {/*
           <section className="py-4 flex flex-col xl:flex-row gap-4 items-stretch">

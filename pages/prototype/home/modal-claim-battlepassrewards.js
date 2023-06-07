@@ -5,6 +5,8 @@ import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json"
 import { UiContext } from "../../../contexts/ui.js";
 import { VariablesContext } from "../../../contexts/variables";
 import { DataBattlepassRewards } from "../../../mock-data/data-battlepass";
+import ModalProfileBannerPurchaseCompleted from "../shop/profile-banner/modal-profilebannerpurchasecompleted";
+import ModalAvatarFramePurchaseCompleted from "../shop/avatar-frame/modal-avatarframepurchasecompleted";
 
 export default function ModalClaimBattlepassReward(props) {
   const uiContext = useContext(UiContext);
@@ -42,6 +44,26 @@ export default function ModalClaimBattlepassReward(props) {
     }, 400);
   }, []);
 
+  const EquipProfileBanner = (id) => {
+    setSubmitting(true);
+    window.location.href = `/prototype/profile/1?profilebanner=${id}`;
+    setTimeout(() => {
+      setSubmitting(false);
+      uiContext.closeModal();
+      //uiContext.openModal(<ModalProfileBannerPurchaseCompleted id={id} />);
+    }, 1000);
+  };
+
+  const EquipAvatarFrame = (id) => {
+    setSubmitting(true);
+    window.location.href = `/prototype/profile/1?avatarframe=${id}`;
+    setTimeout(() => {
+      setSubmitting(false);
+      uiContext.closeModal();
+      //uiContext.openModal(<ModalAvatarFramePurchaseCompleted id={id} />);
+    }, 1000);
+  };
+
   return (
     <>
       <div className="relative z-10 max-w-sm w-full">
@@ -73,7 +95,7 @@ export default function ModalClaimBattlepassReward(props) {
                     <div className="battlepass-reward-image">
                       <i
                         style={{
-                          "-webkit-mask-image":
+                          WebkitMaskImage:
                             "url(https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/" +
                             getBattlepassRewardByID(rewardID).image +
                             ")",
@@ -96,12 +118,45 @@ export default function ModalClaimBattlepassReward(props) {
                 </div>
               </div>
             </div>
-            <div className="mt-12 flex justify-center">
+            <div className="modal-action">
+              {getBattlepassRewardByID(rewardID).type === "avatarframe" && (
+                <button
+                  type="button"
+                  className={`button button-claim button-lg flex-1 ${
+                    submitting ? "is-loading" : ""
+                  }`}
+                  onClick={() =>
+                    EquipAvatarFrame(
+                      getBattlepassRewardByID(rewardID).shopItemID
+                    )
+                  }
+                >
+                  <span>Equip</span>
+                </button>
+              )}
+              {getBattlepassRewardByID(rewardID).type === "profilebanner" && (
+                <button
+                  type="button"
+                  className={`button button-claim button-lg flex-1 ${
+                    submitting ? "is-loading" : ""
+                  }`}
+                  onClick={() =>
+                    EquipProfileBanner(
+                      getBattlepassRewardByID(rewardID).shopItemID
+                    )
+                  }
+                >
+                  <span>Equip</span>
+                </button>
+              )}
               <button
                 type="button"
-                className={`button button-claim button-lg w-72 ${
-                  submitting ? "is-loading" : ""
-                }`}
+                className={`button button-lg flex-1 ${
+                  getBattlepassRewardByID(rewardID).type === "avatarframe" ||
+                  getBattlepassRewardByID(rewardID).type === "profilebanner"
+                    ? "button-secondary"
+                    : "button-claim"
+                } ${submitting ? "is-loading" : ""}`}
                 onClick={closeModalWithDelay}
               >
                 <span>Close</span>

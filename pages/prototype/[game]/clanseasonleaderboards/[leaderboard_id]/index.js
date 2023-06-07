@@ -17,8 +17,8 @@ import { VariablesContext } from "../../../../../contexts/variables";
 
 const TabsItems = [
   {
-    label: "Current season",
-    url: "current-season",
+    label: "Ongoing season",
+    url: "ongoing-season",
     component: TabClanLeaderboardsLeaderboards,
   },
   {
@@ -52,7 +52,7 @@ export default function Ladders() {
   const { leaderboard_id } = router.query;
   const uiContext = useContext(UiContext);
   const { tab } = router.query;
-  const defaultTab = "current-season";
+  const defaultTab = "ongoing-season";
   const selectedTab = tab ? tab : defaultTab;
 
   useEffect(() => {

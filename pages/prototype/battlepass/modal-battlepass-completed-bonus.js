@@ -22,6 +22,7 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
   const prototype = usePrototypeData();
   const ispremium = props.isPremium || false;
   const isPremium = query.premium === "true" ? true : ispremium;
+  console.log("isPremium", ispremium, isPremium);
   const selectedBattlepass = props.id || 0;
   const [submitting, setSubmitting] = useState(false);
 
@@ -70,67 +71,90 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
 
   return (
     <>
-      <div className="modal max-w-md modal-center">
+      <div className={`modal max-w-md ${isPremium ? "" : "modal-center"}`}>
+        {isPremium && (
+          <div className="modal-image">
+            <img
+              src={getBattlepassByID(selectedBattlepass).meta?.logo}
+              alt={getBattlepassByID(selectedBattlepass).meta?.name}
+              className="w-80"
+            />
+            <span
+              style={{
+                backgroundImage:
+                  "url(" +
+                  getBattlepassByID(selectedBattlepass).meta?.backgroundImage +
+                  ")",
+              }}
+            />
+          </div>
+        )}
         <div className="modal-content">
           <div className="modal-body">
             <h2 className="modal-title">Battlepass completed</h2>
             <p className="mb-8">
-              Congratulations on reaching the final step of the Battlepass.<br />
+              Congratulations on reaching the final step of the Battlepass.
+              <br />
               Continue earning rewards through the bonus steps.
             </p>
-            <div className="relative">
-              <div className="border-t border-ui-700 p-4 flex flex-col xl:flex-row gap-6 items-center justify-center">
-                <PremiumLogo
-                  src="https://res.cloudinary.com/gloot/image/upload/v1684315905/Stryda/logos/stryda-premium-logo-main-white.svg"
-                  width="auto"
-                  height="60"
-                  className="h-16"
-                />
-                <div className="max-w-[30ch] text-center xl:text-left space-y-2 xl:border-l xl:border-ui-700 xl:pl-6">
-                  <p>
-                    Unlock exclusive Premium rewards before the Battlepass ends.
-                  </p>
-                  <button
-                    type="button"
-                    className="button button-premium is-shining"
-                    onClick={buyPremium}
-                  >
-                    <span className="icon icon-crown" />
-                    <span>Get Premium</span>
-                  </button>
+            {!isPremium && (
+              <div className="relative">
+                <div className="border-t border-ui-700 p-4 flex flex-col xl:flex-row gap-6 items-center justify-center">
+                  <PremiumLogo
+                    src="https://res.cloudinary.com/gloot/image/upload/v1684315905/Stryda/logos/stryda-premium-logo-main-white.svg"
+                    width="auto"
+                    height="60"
+                    className="h-16"
+                  />
+                  <div className="max-w-[30ch] text-center xl:text-left space-y-2 xl:border-l xl:border-ui-700 xl:pl-6">
+                    <p>
+                      Unlock exclusive Premium rewards before the Battlepass
+                      ends.
+                    </p>
+                    <button
+                      type="button"
+                      className="button button-premium is-shining"
+                      onClick={buyPremium}
+                    >
+                      <span className="icon icon-crown" />
+                      <span>Get Premium</span>
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <Slider
-                itemWidth={397 + 16}
-                bgColor="from-ui-800 via-ui-800/90 to-ui-800/0"
-              >
-                {getBattlepassPremiumSteps().map((item, itemIndex) => (
-                  <div
-                    key={itemIndex}
-                    className="battlepass-step is-premium is-locked mt-5 animate-slide-in-bottom animate-delay"
-                    style={{
-                      "--delay": "calc(" + itemIndex + " * 0.1s)",
-                    }}
-                  >
-                    <div className="battlepass-content">
-                      <div className="battlepass-decoration">
-                        <span>{getBattlepassRewardByID(item.reward).name}</span>
-                      </div>
-                      <div className="battlepass-body">
-                        <img
-                          src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
-                            getBattlepassRewardByID(item.reward).image
-                          }`}
-                          width="100%"
-                          height="auto"
-                          alt={getBattlepassRewardByID(item.reward).name}
-                        />
+                <Slider
+                  itemWidth={397 + 16}
+                  bgColor="from-ui-800 via-ui-800/90 to-ui-800/0"
+                >
+                  {getBattlepassPremiumSteps().map((item, itemIndex) => (
+                    <div
+                      key={itemIndex}
+                      className="battlepass-step is-premium is-locked mt-5 animate-slide-in-bottom animate-delay"
+                      style={{
+                        "--delay": "calc(" + itemIndex + " * 0.1s)",
+                      }}
+                    >
+                      <div className="battlepass-content">
+                        <div className="battlepass-decoration">
+                          <span>
+                            {getBattlepassRewardByID(item.reward).name}
+                          </span>
+                        </div>
+                        <div className="battlepass-body">
+                          <img
+                            src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                              getBattlepassRewardByID(item.reward).image
+                            }`}
+                            width="100%"
+                            height="auto"
+                            alt={getBattlepassRewardByID(item.reward).name}
+                          />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </Slider>
-            </div>
+                  ))}
+                </Slider>
+              </div>
+            )}
 
             {/*
             <Battlepass id={selectedBattlepass} isFinished={true} hasSummary={false} hasPremium={true} />
@@ -140,14 +164,16 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
             </p>
           </div>
           <div className="modal-action">
-            <button
-              type="button"
-              className="button button-tertiary flex-1"
-              onClick={buyPremium}
-            >
-              <span className="icon icon-crown text-premium-500" />
-              <span className="text-premium-500">Get Premium</span>
-            </button>
+            {!isPremium && (
+              <button
+                type="button"
+                className="button button-tertiary flex-1"
+                onClick={buyPremium}
+              >
+                <span className="icon icon-crown text-premium-500" />
+                <span className="text-premium-500">Get Premium</span>
+              </button>
+            )}
             <button
               type="button"
               className="button button-primary flex-1"

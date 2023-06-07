@@ -56,7 +56,7 @@ export default function ModalBattlepassCompletedSummary(props) {
           <div className="modal-body">
             <h2 className="modal-title">Battlepass ended</h2>
             <p className="mb-8">Here is a summary of your Battlepass rewards</p>
-            <Battlepass id={selectedBattlepass} isFinished={true} hasPremium={false} hasCountdown={false} />
+            <Battlepass id={selectedBattlepass} isFinished={true} hasPremium={isPremium} hasCountdown={false} />
           </div>
           <div className="modal-action">
             <button

@@ -130,7 +130,7 @@ export default function ModalDiscardMission(props) {
                 }`}
                 onClick={handleBecomePremium}
               >
-                <span>Join Premium</span>
+                <span>Get Premium</span>
               </button>
               <button
                 type="button"

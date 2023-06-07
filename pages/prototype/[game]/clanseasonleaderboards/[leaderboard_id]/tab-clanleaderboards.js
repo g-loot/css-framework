@@ -121,8 +121,8 @@ export default function TabClanLeaderboardsLeaderboards() {
   const [selectedClanLeaderboard, setSelectedClanLeaderboard] = useState(null);
   const modalenroll = query.modalenroll === "true" ? true : false;
   const empty = query.empty === "true" ? true : false;
-  const [isEnrolled, setIsEnrolled] = useState(false);
   const [isEmpty, setIsEmpty] = useState(empty);
+  const [isEnrolled, setIsEnrolled] = useState(false);
   const [hasRanks, setHasRanks] = useState(false);
   const [isInAClan, setIsInAClan] = useState(true);
   const [hasRiot, setHasRiot] = useState(true);

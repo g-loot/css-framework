@@ -15,7 +15,7 @@ export const DataBattlepass = [
         name: "tier 1",
         reward: 29,
         isPremium: false,
-        hasClaimed: true,
+        hasClaimed: false,
       },
       {
         id: 2,
