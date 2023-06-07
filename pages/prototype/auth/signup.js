@@ -227,36 +227,6 @@ export default function AuthLogin() {
               onChange={(event) => setNicknameStr(event.target.value)}
             />
           </div>
-          <div className="form-group text-left mb-2">
-            <div className="flex items-center justify-between gap-4">
-              <label className="label" htmlFor="ageConfirm">
-                Verify your age
-              </label>
-              <Tooltip
-                tooltip={
-                  <div className=" w-28 text-sm text-center leading-tight">
-                    Here we explain why we need why we need the user to verify
-                    his age.
-                  </div>
-                }
-              >
-                <button className="text-0">
-                  <span className="icon icon-16 icon-c-info text-ui-400" />
-                </button>
-              </Tooltip>
-            </div>
-            <div className="form-checkbox">
-              <input
-                type="checkbox"
-                name="policy"
-                id="ageConfirm"
-                onChange={(event) => setIsAdult(event.target.checked)}
-              />
-              <label htmlFor="ageConfirm">
-                I confirm that am 16 years of age or older.
-              </label>
-            </div>
-          </div>
           <div className="form-group form-select text-left mb-4">
             <label htmlFor="favorite-game">Confirm location</label>
             <select id="favorite-game">
@@ -496,6 +466,37 @@ export default function AuthLogin() {
               <option value="ZWE">Zimbabwe</option>
             </select>
           </div>
+          <div className="form-group text-left mb-2">
+            <div className="flex items-center justify-between gap-4">
+              <label className="label" htmlFor="ageConfirm">
+                Verify your age
+              </label>
+              <Tooltip
+                tooltip={
+                  <div className=" w-28 text-sm text-center leading-tight">
+                    Here we explain why we need why we need the user to verify
+                    his age.
+                  </div>
+                }
+              >
+                <button className="text-0">
+                  <span className="icon icon-16 icon-c-info text-ui-400" />
+                </button>
+              </Tooltip>
+            </div>
+            <div className="form-checkbox">
+              <input
+                type="checkbox"
+                name="policy"
+                id="ageConfirm"
+                onChange={(event) => setIsAdult(event.target.checked)}
+              />
+              <label htmlFor="ageConfirm">
+                I confirm that am 16 years of age or older.
+              </label>
+            </div>
+          </div>
+
           <Link href="/prototype/auth/step3">
             <button
               type="button"
