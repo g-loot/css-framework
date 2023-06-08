@@ -124,7 +124,7 @@
 
         > * {
           @apply
-          lg:max-w-xs
+          lg:max-w-sm
           lg:mx-4
           ;
         }

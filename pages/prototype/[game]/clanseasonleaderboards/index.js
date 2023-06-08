@@ -10,12 +10,30 @@ import LaddersHeader from "./ladders-header";
 import AnimatedNumber from "../../../../components/AnimatedNumber/AnimatedNumber";
 
 import TabClanSeasonLeaderboardOverview from "./tab-overview";
+import TabClanLeaderboardsRewards from "./[leaderboard_id]/tab-rewards";
+import TabClanLeaderboardsHowItWorks from "./[leaderboard_id]/tab-howitworks";
+import TabClanLeaderboardsHistory from "./[leaderboard_id]/tab-history";
 
 const TabsItems = [
   {
-    label: "Overview",
-    url: "overview",
+    label: "Ongoing",
+    url: "ongoing",
     component: TabClanSeasonLeaderboardOverview,
+  },
+  {
+    label: "Completed",
+    url: "completed",
+    component: TabClanLeaderboardsHistory,
+  },
+  {
+    label: "Rewards",
+    url: "rewards",
+    component: TabClanLeaderboardsRewards,
+  },
+  {
+    label: "How it works",
+    url: "how-it-works",
+    component: TabClanLeaderboardsHowItWorks,
   },
 ];
 
@@ -28,7 +46,7 @@ export default function Ladders() {
   const { game } = router.query;
   const uiContext = useContext(UiContext);
   const { tab } = router.query;
-  const defaultTab = "overview";
+  const defaultTab = "ongoing";
   const selectedTab = tab ? tab : defaultTab;
 
   useEffect(() => {
@@ -58,12 +76,12 @@ export default function Ladders() {
         {selectedGame && (
           <>
             <LaddersHeader breadcrumbs={false} />
-            <nav className="hidden">
+            <nav>
               <ul className="tabs border-b border-ui-700">
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype/${game}/ladders?tab=${
+                      href={`/prototype/${game}/clanseasonleaderboards?tab=${
                         item.url
                       }${prototype.getURLparams("&")}`}
                     >
