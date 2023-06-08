@@ -1036,6 +1036,25 @@ export const FrameworkPages = {
         },
       ],
     },
+    {
+      title: "Patch notes",
+      pages: [
+        {
+          label: "Patch notes listing",
+          url: "patch-notes",
+          query: "",
+          tags: "patch,notes,announcement,social",
+          tab: 0,
+        },
+        {
+          label: "Patch note detail",
+          url: "patch-notes/0",
+          query: "",
+          tags: "patch,notes,announcement,social",
+          tab: 0,
+        },
+      ],
+    },
   ],
 };
 
