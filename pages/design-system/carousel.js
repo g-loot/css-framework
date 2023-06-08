@@ -197,6 +197,30 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Small */}
+      <div className="mb-12" id="small">
+        <div className="">
+          <div className="">
+            <div className="flex gap-4 flex-col">
+              <div className="flex-1 space-y-4">
+                <h2 className="h3 mb-3">Small</h2>
+                <section className="surface sm:rounded-lg overflow-hidden mb-8">
+                  <Carousel size="carousel-sm" />
+                </section>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="400"
+                  src="//jsfiddle.net/augustin_hiebel/kjq7t1rd/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* With buttons */}
       <div className="mb-12" id="with-buttons">
         <div className="">

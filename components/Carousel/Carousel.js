@@ -3,24 +3,24 @@ import React, { useEffect, useRef, useState } from "react";
 
 const slides = [
   {
-    subtitle: "Free entry",
-    title: "Compete for free!",
+    subtitle: "Achievements",
+    title: "Achieve more with stryda!",
     description:
-      "Ladder is our Stryda Special! You compete against other Stryda players to climb the leaderboard, get on top and win crazy rewards! Interested? Entry Ladder is on us! ",
+      "Complete Missions, compete in Ladders and build your Stryda player legacy, once achievement at a time! Fresh off the press, our new achievements system will allow our players to track their progress and immortalize their competitive feats on Stryda.",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672222065/Stryda/illustrations/Carousel_Free_entry_2.jpg",
-    buttonLabel: "Compete now",
-    buttonURL: "/prototype/valorant/ladders?freeentry=true",
+      "https://cdn.braze.eu/appboy/communication/marketing/content_cards_message_variations/images/6478915e34c0421749a4ca6b/beb8d4963480ac5543e913fba1d757e23f5d22a7/original.png",
+    buttonLabel: "See achievements",
+    buttonURL: "/prototype/profile/1?tab=achievements",
   },
   {
-    subtitle: "Stryda",
-    title: "Who's your top VALORANT agent?",
+    subtitle: "Clan Champ",
+    title: "Will your clan be champions?",
     description:
-      "Check your damage/round, K/D ratio, headshots percentage, and more, for your last 20 matches. Plus, specific stats for your most played agents",
+      "This week only, join your fellow Stryda players in a fierce battle of the community’s own choosing! Get points for planting and defusing the spike in Swiftplay and fight your way to the top of the leaderboard. We've also lowered the token fee to make sure everyone can join in. Enjoy!",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672237441/Stryda/illustrations/Carousel_Valorant_Stats.jpg",
-    buttonLabel: "Check it out",
-    buttonURL: "/prototype/valorant/stats",
+      "https://cdn.braze.eu/appboy/communication/marketing/content_cards_message_variations/images/648087e9b4a0ec450f060990/d089f81484c554690a93d9348a20b41ac79728d7/original.png",
+    buttonLabel: "Compete now",
+    buttonURL: "/prototype/valorant/ladders?freeentry=true",
   },
   {
     subtitle: "Shop",

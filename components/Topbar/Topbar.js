@@ -691,6 +691,18 @@ export default function Topbar() {
                       </Link>
                     </li>
                     <li>
+                      <Link
+                        href={`/prototype/patch-notes${
+                          hasAds ? "&ads=true" : ""
+                        }`}
+                      >
+                        <a tabIndex="1">
+                          <span className="icon icon-notification" />
+                          <span>Patch notes</span>
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
                       <Link href={`/prototype/recruit-a-friend/`}>
                         <button
                           type="button"
