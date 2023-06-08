@@ -6,7 +6,8 @@ import { DataBattlepass } from "../../../mock-data/data-battlepass.js";
 import { DataBattlepassRewards } from "../../../mock-data/data-battlepass.js";
 import { useRouter } from "next/router.js";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion_stryda_7.json";
+import LottieExplosion from "../../../assets/animations/Battlepass_Behind_1500ms.json";
+import LottieExplosion2 from "../../../assets/animations/Battlepass_Front_1500ms.json";
 import ModalBattlepassCompletedSummary from "./modal-battlepass-completed-summary.js";
 
 export default function ModalBattlepassCompletedClaim(props) {
@@ -58,7 +59,10 @@ export default function ModalBattlepassCompletedClaim(props) {
 
   return (
     <>
-      <div className="modal">
+      <div className="modal animate-delay"
+        style={{
+          "--delay": "calc(1 * 1s)",
+        }}>
         <div className="modal-image">
           <img src={getBattlepassByID(selectedBattlepass).meta?.logo} alt={getBattlepassByID(selectedBattlepass).meta?.name} className="w-80" />
           <span
@@ -93,9 +97,18 @@ export default function ModalBattlepassCompletedClaim(props) {
         </div>
       </div>
       <div className="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
-        <div className="lottie-blur h-[75vh] w-[75vh] flex items-center justify-center">
+        <div className="lottie-blur h-[85vh] w-[85vh] flex items-center justify-center">
           <Lottie
             animationData={LottieExplosion}
+            loop={false}
+            autoplay={true}
+          />
+        </div>
+      </div>
+      <div className="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
+        <div className="lottie-blur h-[85vh] w-[85vh] flex items-center justify-center">
+          <Lottie
+            animationData={LottieExplosion2}
             loop={false}
             autoplay={true}
           />

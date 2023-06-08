@@ -23,17 +23,17 @@ export default function ModalAchievementReceived(props) {
   const to = props.to || "300";
 
   function LottieExplosion(level) {
-    if(level === 1) {
+    if (level === 1) {
       return LottieExplosionLvl1;
-    } else if(level === 2) {
+    } else if (level === 2) {
       return LottieExplosionLvl2;
-    } else if(level === 3) {
+    } else if (level === 3) {
       return LottieExplosionLvl3;
-    } else if(level === 4) {
+    } else if (level === 4) {
       return LottieExplosionLvl4;
-    } else if(level === 5) {
+    } else if (level === 5) {
       return LottieExplosionLvl5;
-    } 
+    }
   }
 
   function closeModalWithDelay() {
@@ -48,7 +48,7 @@ export default function ModalAchievementReceived(props) {
   return (
     <>
       <div className="relative z-10 max-w-sm w-full">
-        <div className="modal surface-transparent w-full">
+        <div className="modal w-full">
           <button
             type="button"
             className="button button-secondary button-close"
@@ -59,57 +59,57 @@ export default function ModalAchievementReceived(props) {
           <div className="modal-content">
             <div className="modal-body text-center">
               <h2 className="h4 modal-title animate-slide-in-top">
-                Achievement unlocked
+                Achievement unlocked!
               </h2>
-              <div className="animate-slide-in-bottom space-y-4 my-4 w-4/5 mx-auto">
-                <div className="surface surface-halo rounded-xl mx-auto p-2">
-                  <div className="w-full achievement">
-                    <i />
-                    <i />
-                    <div className={`achievement-level-${level}`}>
-                      <AchievementFrame
-                        url={`https://res.cloudinary.com/gloot/image/upload/Stryda/achievements/frames/achievement-frame-lvl${level}-animated.svg`}
-                      />
-                      <AchievementIcon
-                        url={`https://res.cloudinary.com/gloot/image/upload/Stryda/achievements/icons/achievement-icon-${item.icon}.svg`}
-                      />
-                    </div>
-                    <div>
-                      <div className="h4">{item.name}</div>
-                      <div className="text-sm text-ui-300 uppercase font-bold">
-                        Level {level}
-                      </div>
+              <div className="animate-slide-in-bottom space-y-4 w-4/5 mx-auto">
+                <div className="w-full achievement">
+                  <i />
+                  <i />
+                  <div className={`achievement-level-${level}`}>
+                    <AchievementFrame
+                      url={`https://res.cloudinary.com/gloot/image/upload/Stryda/achievements/frames/achievement-frame-lvl${level}-animated.svg`}
+                    />
+                    <AchievementIcon
+                      url={`https://res.cloudinary.com/gloot/image/upload/Stryda/achievements/icons/achievement-icon-${item.icon}.svg`}
+                    />
+                  </div>
+                  <div>
+                    <div className="h4">{item.name}</div>
+                    <div className="text-sm text-ui-300 uppercase font-bold">
+                      Level {level}
                     </div>
                   </div>
-                  <div className="space-y-2 relative z-10">
-                    <p>{item.description}</p>
-                    <div className="flex items-center gap-4 leading-none pb-2">
-                      <div
-                        className="progressbar progressbar-secondary w-full"
-                        style={{
-                          "--percent": percent,
-                          "--progress": progress,
-                        }}
-                      >
-                        <div />
-                        <div />
-                      </div>
-                      <div className="flex-none mb-0.5">
-                        <span>{from}</span> / <span>{to}</span>
-                      </div>
+                </div>
+                <div className="space-y-2 relative z-10">
+                  <p>{item.description}</p>
+                  <div className="flex items-center gap-4 leading-none">
+                    <div
+                      className="progressbar progressbar-secondary w-full"
+                      style={{
+                        "--percent": percent,
+                        "--progress": progress,
+                      }}
+                    >
+                      <div />
+                      <div />
                     </div>
-                    <button
-                    type="button"
-                    className={`button button-claim w-full ${
-                      submitting ? "is-loading" : ""
-                    }`}
-                    onClick={closeModalWithDelay}
-                  >
-                    <span>View achievements</span>
-                  </button>
+                    <div className="flex-none mb-0.5">
+                      <span>{from}</span> / <span>{to}</span>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="modal-action">
+              <button
+                type="button"
+                className={`button button-claim w-full ${
+                  submitting ? "is-loading" : ""
+                }`}
+                onClick={closeModalWithDelay}
+              >
+                <span>View achievements</span>
+              </button>
             </div>
           </div>
         </div>

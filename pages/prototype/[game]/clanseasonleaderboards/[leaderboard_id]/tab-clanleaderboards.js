@@ -291,7 +291,7 @@ export default function TabClanLeaderboardsLeaderboards() {
             <div className="w-80 hidden lg:block shrink-0 pt-12 space-y-4">
               {!hasRiot && (
                 <div
-                  className={`surface p-2 pt-4 rounded text-center ${
+                  className={`surface p-2 pt-6 rounded text-center ${
                     isLoadingRank ? "is-loading" : ""
                   }`}
                 >

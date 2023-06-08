@@ -30,9 +30,6 @@ export default function TabClanSeasonLeaderboardOverview() {
       {selectedGame && (
         <>
           <section className="mb-8 animate-slide-in-bottom">
-            <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0 mb-2">
-              <h2 className="h5">Ongoing Season</h2>
-            </div>
             {isEmpty ? (
               <>
                 <div className="mt-2 surface sm:rounded px-4 py-8 text-center">

@@ -17,14 +17,10 @@ import { VariablesContext } from "../../../../../contexts/variables";
 
 const TabsItems = [
   {
-    label: "Ongoing season",
-    url: "ongoing-season",
+    label: "Leaderboard",
+    labelWhenCompleted: "Final placement",
+    url: "leaderboard",
     component: TabClanLeaderboardsLeaderboards,
-  },
-  {
-    label: "Completed",
-    url: "completed",
-    component: TabClanLeaderboardsHistory,
   },
   {
     label: "Rewards",
@@ -43,7 +39,7 @@ export default function Ladders() {
   const prototype = usePrototypeData();
   const variablesContext = useContext(VariablesContext);
   const [selectedGame, setSelectedGame] = useState(null);
-  const [selectedLeaderboard, setSelectedLeaderboard] = useState(null);  
+  const [selectedLeaderboard, setSelectedLeaderboard] = useState(null);
   const [isEnrolled, setIsEnrolled] = useState(false);
   const [selectedClanLeaderboard, setSelectedClanLeaderboard] = useState(null);
   const [laddersFinishedLength, setLaddersFinishedLength] = useState(null);
@@ -52,7 +48,7 @@ export default function Ladders() {
   const { leaderboard_id } = router.query;
   const uiContext = useContext(UiContext);
   const { tab } = router.query;
-  const defaultTab = "ongoing-season";
+  const defaultTab = "leaderboard";
   const selectedTab = tab ? tab : defaultTab;
 
   useEffect(() => {
@@ -81,7 +77,7 @@ export default function Ladders() {
     }
   }, [selectedGame]);
 
-  ModalInfoClanSeasonEnroll
+  ModalInfoClanSeasonEnroll;
 
   return (
     <>
@@ -193,7 +189,9 @@ export default function Ladders() {
                         selectedTab === item.url ? "is-active" : ""
                       }`}
                     >
-                      <span>{item.label}</span>
+                      <span>
+                        {item.labelWhenCompleted && !selectedLeaderboard.isCurrent ? item.labelWhenCompleted : item.label}
+                      </span>
                     </a>
                   </Link>
                 </li>

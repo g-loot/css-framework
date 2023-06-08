@@ -7,6 +7,11 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+.scroll-smooth {
+  --scroll-behavior: smooth;
+  scroll-behavior: var(--scroll-behavior);
+}
+
 * {
   &::-webkit-scrollbar {
     @apply

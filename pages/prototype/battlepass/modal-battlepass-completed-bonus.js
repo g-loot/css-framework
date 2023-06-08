@@ -6,13 +6,10 @@ import { DataBattlepass } from "../../../mock-data/data-battlepass.js";
 import { DataBattlepassRewards } from "../../../mock-data/data-battlepass.js";
 import { useRouter } from "next/router.js";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
-import Battlepass from "../../../components/BattlePass/BattlePass.js";
+import LottieExplosion from "../../../assets/animations/Battlepass_Behind_1500ms.json";
+import LottieExplosion2 from "../../../assets/animations/Battlepass_Front_1500ms.json";
 import ModalBattlepassCompletedPremium from "./modal-battlepass-completed-premium.js";
 import ResetsIn from "../../../components/Countdown/ResetsIn.js";
-import CarouselSingle, {
-  CarouselItem,
-} from "../../../components/Carousel/CarouselSingle.js";
 import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo.js";
 import Slider from "../../../components/Slider/Slider.js";
 
@@ -71,7 +68,14 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
 
   return (
     <>
-      <div className={`modal max-w-md ${isPremium ? "" : "modal-center"}`}>
+      <div
+        className={`modal max-w-md ${
+          isPremium ? "" : "modal-center"
+        } animate-delay`}
+        style={{
+          "--delay": "calc(1 * 1s)",
+        }}
+      >
         {isPremium && (
           <div className="modal-image">
             <img
@@ -182,6 +186,24 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
               <span>Explore bonus steps</span>
             </button>
           </div>
+        </div>
+      </div>
+      <div className="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
+        <div className="lottie-blur h-[85vh] w-[85vh] flex items-center justify-center">
+          <Lottie
+            animationData={LottieExplosion}
+            loop={false}
+            autoplay={true}
+          />
+        </div>
+      </div>
+      <div className="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
+        <div className="lottie-blur h-[85vh] w-[85vh] flex items-center justify-center">
+          <Lottie
+            animationData={LottieExplosion2}
+            loop={false}
+            autoplay={true}
+          />
         </div>
       </div>
     </>

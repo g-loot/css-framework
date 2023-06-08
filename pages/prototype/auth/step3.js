@@ -20,32 +20,14 @@ export default function AuthStep3() {
       <PrototypeAuth title="Nickname">
         <div className="p-4 w-full max-w-xs text-center">
           <h1 className="h4 mb-8">Verify your email</h1>
-          <ul className="step step-secondary mb-8">
-            <li>
-              <div>
-                <i>1</i>
-                <span></span>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i>2</i>
-                <span></span>
-              </div>
-            </li>
-            <li className="is-active">
-              <div>
-                <i>3</i>
-                <span></span>
-              </div>
-            </li>
-          </ul>
           <p className="mb-2">
             A verification link was just sent to:{" "}
-            <span className="text-ui-100 text-bold">joppe@gmail.com</span>
+            <button type="button" className="chip chip-secondary">
+              <span className="text-ui-100 font-bold">joppe@gmail.com</span>
+            </button>
           </p>
           <p
-            className={`text-sm text-ui-300 mb-4 transition-opacity duration-1000 ${
+            className={`text-sm text-ui-300 mb-8 transition-opacity duration-1000 ${
               showHelp ? "" : "opacity-0 pointer-events-none select-none"
             }`}
           >
