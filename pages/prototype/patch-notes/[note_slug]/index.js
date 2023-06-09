@@ -46,7 +46,7 @@ export default function Premium() {
 
   return (
     <>
-      <PrototypeStructure title="Premium">
+      <PrototypeStructure title={note?.name}>
       {note && (
           <>
             <section className="relative pt-36 pb-36 overflow-hidden">

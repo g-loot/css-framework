@@ -21,14 +21,14 @@ const inViewport = (elem) => {
   window.addEventListener("scroll", elems);
 };
 
-export default function Premium() {
+export default function PatchNotes() {
   useEffect(() => {
     inViewport("[class*=animate-]");
   }, []);
 
   return (
     <>
-      <PrototypeStructure title="Premium">
+      <PrototypeStructure title="Patch notes">
         <section className="relative pt-36 pb-36 overflow-hidden">
           <div className="container relative z-20 text-center px-6 sm:px-0 drop-shadow-md">
             <img
@@ -63,7 +63,9 @@ export default function Premium() {
                 }}
               >
                 <div className="p-4 border-b border-ui-700 flex items-center gap-4 group">
-                  <h2>{item.name}</h2>
+                  <Link href={`/prototype/patch-notes/${item.slug}`}>
+                    <h2 className="interactive">{item.name}</h2>
+                  </Link>
                   <Link href={`/prototype/patch-notes/${item.slug}`}>
                     <a class="button button-secondary rounded-full opacity-0 group-hover:opacity-100">
                       <span class="icon icon-url" />

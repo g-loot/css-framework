@@ -9,7 +9,13 @@
   justify-center
   items-center
   gap-4
+  relative
   ;
+  &:not([class*='z-']){
+    @apply
+    z-10
+    ;
+  }
   .battlepass-summary {
     @apply
     z-40

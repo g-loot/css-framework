@@ -235,7 +235,7 @@ export default function Battlepass(props) {
   return (
     <>
       <div
-        className={`battlepass-container relative z-50 ${
+        className={`battlepass-container ${
           loading ? "is-loading" : ""
         } ${size === "battlepass-md" ? "battlepass-md" : ""}`}
         ref={componentRef}

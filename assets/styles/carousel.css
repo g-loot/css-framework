@@ -809,7 +809,6 @@
 
           > span {
             @apply
-            content-['']
             absolute
             inset-0
             w-1.5
@@ -948,6 +947,11 @@
             @apply
             bg-ui-600/0
             ;
+            > span {
+              @apply
+              rounded-full
+              ;
+            }
           }
           > i,
           > i > span {

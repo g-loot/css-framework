@@ -85,6 +85,11 @@
     @apply
     shadow-none
     ;
+    .modal-action {
+      @apply
+      border-t-0
+      ;
+    }
   }
 
   > .button-close {
