@@ -11,6 +11,7 @@ import Avatar from "../../../../../components/Avatar/Avatar";
 import LeaderboardWings from "../../../../../components/LeaderboardWings/LeaderboardWings";
 import { VariablesContext } from "../../../../../contexts/variables";
 import ModalInfoClanSeasonEnroll from "../modal-info-clanseasonenroll";
+import AvatarClan from "../../../../../components/Avatar/AvatarClan";
 
 const rewardDistribClan = [
   {
@@ -223,950 +224,929 @@ export default function TabClanLeaderboardsLeaderboards() {
 
   return (
     <>
-      {isEmpty ? (
-        <div className="col-span-1 lg:col-span-3">
-          <div className="mt-10 text-center">
-            <h3 className="h4 mt-2 text-ui-100 leading-tight text-center max-w-[40ch] mx-auto">
-              Play together with 5 members of your clan and be the first to join
-              this leaderboard!
-            </h3>
-            {!isInAClan ? (
-              <Link href={`/prototype/clans${prototype.getURLparams()}`}>
+    {selectedClanLeaderboard && (
+      <>
+        {isEmpty ? (
+          <div className="col-span-1 lg:col-span-3">
+            <div className="mt-10 text-center">
+              <h3 className="h4 mt-2 text-ui-100 leading-tight text-center max-w-[40ch] mx-auto">
+                Play together with 5 members of your clan and be the first to join
+                this leaderboard!
+              </h3>
+              {!isInAClan ? (
+                <Link href={`/prototype/clans${prototype.getURLparams()}`}>
+                  <button
+                    type="button"
+                    className="button button-primary w-60 mt-4 mb-6"
+                  >
+                    <span className="icon icon-multiple-12" />
+                    <span>Search for clans</span>
+                  </button>
+                </Link>
+              ) : (
                 <button
                   type="button"
                   className="button button-primary w-60 mt-4 mb-6"
+                  onClick={() => setIsEmpty(false)}
                 >
-                  <span className="icon icon-multiple-12" />
-                  <span>Search for clans</span>
+                  <span>Enroll my Clan</span>
                 </button>
-              </Link>
-            ) : (
-              <button
-                type="button"
-                className="button button-primary w-60 mt-4 mb-6"
-                onClick={() => setIsEmpty(false)}
-              >
-                <span>Enroll my Clan</span>
-              </button>
-            )}
+              )}
 
-            <ul className="max-w-sm mx-auto">
-              {rewardDistribClan.map((item, itemIndex) => (
-                <li
-                  key={itemIndex}
-                  className="surface rounded-lg h-[58px] flex items-stretch overflow-hidden mb-2 animate-slide-in-bottom animate-delay"
-                  style={{
-                    "--delay": "calc(" + itemIndex + " * 0.05s)",
-                  }}
-                >
+              <ul className="max-w-sm mx-auto">
+                {rewardDistribClan.map((item, itemIndex) => (
+                  <li
+                    key={itemIndex}
+                    className="surface rounded-lg h-[58px] flex items-stretch overflow-hidden mb-2 animate-slide-in-bottom animate-delay"
+                    style={{
+                      "--delay": "calc(" + itemIndex + " * 0.05s)",
+                    }}
+                  >
+                    <div
+                      className={`w-2/5 text-center px-2 flex items-center justify-center ${
+                        itemIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
+                      }`}
+                    >
+                      <LeaderboardWings id={itemIndex} value={item.name} />
+                    </div>
+                    <div className="flex-1 flex items-center justify-center gap-4">
+                      {item.rewards?.map((reward, rewardIndex) => (
+                        <Reward
+                          key={rewardIndex}
+                          reward={reward}
+                          gap="gap-2"
+                          iconClassNames="text-lg"
+                          textClassNames="text-lg"
+                        />
+                      ))}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ) : (
+          <section
+            className="pb-8 animate-slide-in-bottom animate-delay"
+            style={{ "--delay": "calc(1 * 0.05s)" }}
+          >
+            <div className="flex flex-col lg:flex-row gap-8">
+              <div className="w-80 hidden lg:block shrink-0 pt-12 space-y-4">
+                {!hasRiot && (
                   <div
-                    className={`w-2/5 text-center px-2 flex items-center justify-center ${
-                      itemIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
+                    className={`surface p-2 pt-6 rounded text-center ${
+                      isLoadingRank ? "is-loading" : ""
                     }`}
                   >
-                    <LeaderboardWings id={itemIndex} value={item.name} />
-                  </div>
-                  <div className="flex-1 flex items-center justify-center gap-4">
-                    {item.rewards?.map((reward, rewardIndex) => (
-                      <Reward
-                        key={rewardIndex}
-                        reward={reward}
-                        gap="gap-2"
-                        iconClassNames="text-lg"
-                        textClassNames="text-lg"
-                      />
-                    ))}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      ) : (
-        <section
-          className="pb-8 animate-slide-in-bottom animate-delay"
-          style={{ "--delay": "calc(1 * 0.05s)" }}
-        >
-          <div className="flex flex-col lg:flex-row gap-8">
-            <div className="w-80 hidden lg:block shrink-0 pt-12 space-y-4">
-              {!hasRiot && (
-                <div
-                  className={`surface p-2 pt-6 rounded text-center ${
-                    isLoadingRank ? "is-loading" : ""
-                  }`}
-                >
-                  <svg
-                    width="120"
-                    height="38"
-                    viewBox="0 0 158 51"
-                    fill="none"
-                    className="fill-attention-500 mx-auto"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M144.346 43.1142L153.128 44.5889L153.668 50.086H140.633L140.864 48.0057L150.199 47.6304V46.6298L141.239 45.0958L141.779 39.5988H152.635L152.845 41.7844L144.517 42.1004L144.346 43.1142ZM68.9275 45.7476L69.0592 43.6738H75.0039L75.366 50.086H61.7385L62.805 39.5066H74.7143L74.8591 41.6923L65.6424 41.9029L65.3462 47.7094L72.048 47.8937V45.8134L68.9275 45.7476V45.7476ZM126.466 45.8332V47.6699L134.998 47.8806V49.9543H122.865L123.22 39.3749H134.741V41.5211L126.196 41.7054V43.5356H132.674V45.6159L126.466 45.8332V45.8332ZM91.3569 50.0465H95.0172L92.1206 39.4671H83.582L80.7051 50.0465H84.3654L84.925 47.3802H90.8632L91.3569 50.0465ZM85.32 45.3592L86.0508 41.9029L89.5728 41.7383L90.3233 45.2275L85.32 45.3592V45.3592ZM117.203 50.0465L116.123 39.4671H113.062L108.651 44.5099L104.254 39.4671H101.166L100.067 50.0465H103.734L104.089 43.1998L108.665 47.8608L113.247 43.1998L113.602 50.0465H117.203V50.0465ZM89.9942 33.4565H80.4944L77.973 21.9093L71.8768 25.2273L71.6662 33.4697H63.1934L65.8136 7.63008L60.3955 7.81442L61.1855 0.717585H85.3661L88.7236 16.0831L83.7993 18.7493L89.9876 33.4499L89.9942 33.4565ZM79.3489 7.189L72.3969 7.41942L72.1204 17.4919L80.1389 13.7526L79.3489 7.189ZM101.772 0.704419H94.5696L93.9047 33.4433H102.634L101.772 0.704419ZM157.25 0.704419L158 7.86708L149.172 7.57742L151.752 33.4433H143.023L142.292 7.32725L135.195 7.09683L135.011 0.691247L157.25 0.704419V0.704419ZM108.665 0.73733H131.16L132.766 33.4565H107.769L108.665 0.73733V0.73733ZM116.222 26.6164L124.188 26.3728V7.63008L115.86 7.3865L116.222 26.6164V26.6164ZM0 14.5821L30.9483 0L49.0524 4.37133L45.8266 36.3795H36.6626L34.9641 13.0613L33.9766 13.3708L32.2847 36.3795H25.3327L22.0213 17.0377L21.0338 17.3339L21.2839 36.3795H14.7269L10.9744 20.4478L9.98692 20.7638L11.1061 36.3993H4.80583L0 14.5821ZM23.3708 39.5329L25.6355 45.3921L44.3783 50.0268L45.3592 40.6784L23.3708 39.5329V39.5329Z"></path>
-                  </svg>
-                  <p className="text-attention-500 my-3 leading-tight">
-                    Connect your RIOT account to participate in Clan Seasons!
-                  </p>
-                  <Link
-                    href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                  >
-                    <button
-                      type="button"
-                      className="button button-sm button-primary w-full"
+                    <svg
+                      width="120"
+                      height="38"
+                      viewBox="0 0 158 51"
+                      fill="none"
+                      className="fill-attention-500 mx-auto"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <span className="icon icon-riotgames-symbol" />
-                      <span>Connect with RIOT ID</span>
-                    </button>
-                  </Link>
-                </div>
-              )}
-              {isInAClan ? (
-                <div
-                  className={`surface surface-dimmed p-2 pt-4 rounded text-center ${
-                    isLoadingRank ? "is-loading" : ""
-                  }`}
-                >
-                  <div className="avatar avatar-lg avatar-squircle">
-                    <div>
-                      <img
-                        src={
-                          prototype.getClanByID(prototype.getUserByID(1).clan)
-                            .avatar
-                        }
-                        alt="avatar"
-                      />
-                    </div>
-                  </div>
-                  <p>
-                    {prototype.getUserByID(1).clan && (
-                      <>
-                        &#91;
-                        {
-                          prototype.getClanByID(prototype.getUserByID(1).clan)
-                            ?.tag
-                        }
-                        &#93;{" "}
-                      </>
-                    )}{" "}
-                    {
-                      prototype.getClanByID(prototype.getUserByID(1).clan)
-                        ?.nickname
-                    }
-                  </p>
-                  {variablesContext.clanLeaderboardEnrolled ? (
-                    <>
-                      <div className="py-2 space-y-2">
-                        <h3>#5</h3>
-                        <p className="text-ui-300 text-sm uppercase flex gap-3 justify-center">
-                          <span>Score: 3</span>
-                          <span>Top 5%</span>
-                        </p>
-                      </div>
+                      <path d="M144.346 43.1142L153.128 44.5889L153.668 50.086H140.633L140.864 48.0057L150.199 47.6304V46.6298L141.239 45.0958L141.779 39.5988H152.635L152.845 41.7844L144.517 42.1004L144.346 43.1142ZM68.9275 45.7476L69.0592 43.6738H75.0039L75.366 50.086H61.7385L62.805 39.5066H74.7143L74.8591 41.6923L65.6424 41.9029L65.3462 47.7094L72.048 47.8937V45.8134L68.9275 45.7476V45.7476ZM126.466 45.8332V47.6699L134.998 47.8806V49.9543H122.865L123.22 39.3749H134.741V41.5211L126.196 41.7054V43.5356H132.674V45.6159L126.466 45.8332V45.8332ZM91.3569 50.0465H95.0172L92.1206 39.4671H83.582L80.7051 50.0465H84.3654L84.925 47.3802H90.8632L91.3569 50.0465ZM85.32 45.3592L86.0508 41.9029L89.5728 41.7383L90.3233 45.2275L85.32 45.3592V45.3592ZM117.203 50.0465L116.123 39.4671H113.062L108.651 44.5099L104.254 39.4671H101.166L100.067 50.0465H103.734L104.089 43.1998L108.665 47.8608L113.247 43.1998L113.602 50.0465H117.203V50.0465ZM89.9942 33.4565H80.4944L77.973 21.9093L71.8768 25.2273L71.6662 33.4697H63.1934L65.8136 7.63008L60.3955 7.81442L61.1855 0.717585H85.3661L88.7236 16.0831L83.7993 18.7493L89.9876 33.4499L89.9942 33.4565ZM79.3489 7.189L72.3969 7.41942L72.1204 17.4919L80.1389 13.7526L79.3489 7.189ZM101.772 0.704419H94.5696L93.9047 33.4433H102.634L101.772 0.704419ZM157.25 0.704419L158 7.86708L149.172 7.57742L151.752 33.4433H143.023L142.292 7.32725L135.195 7.09683L135.011 0.691247L157.25 0.704419V0.704419ZM108.665 0.73733H131.16L132.766 33.4565H107.769L108.665 0.73733V0.73733ZM116.222 26.6164L124.188 26.3728V7.63008L115.86 7.3865L116.222 26.6164V26.6164ZM0 14.5821L30.9483 0L49.0524 4.37133L45.8266 36.3795H36.6626L34.9641 13.0613L33.9766 13.3708L32.2847 36.3795H25.3327L22.0213 17.0377L21.0338 17.3339L21.2839 36.3795H14.7269L10.9744 20.4478L9.98692 20.7638L11.1061 36.3993H4.80583L0 14.5821ZM23.3708 39.5329L25.6355 45.3921L44.3783 50.0268L45.3592 40.6784L23.3708 39.5329V39.5329Z"></path>
+                    </svg>
+                    <p className="text-attention-500 my-3 leading-tight">
+                      Connect your RIOT account to participate in Clan Seasons!
+                    </p>
+                    <Link
+                      href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                    >
                       <button
                         type="button"
-                        className="button button-sm button-secondary w-full"
+                        className="button button-sm button-primary w-full"
                       >
-                        <span>Go to Clan position</span>
+                        <span className="icon icon-riotgames-symbol" />
+                        <span>Connect with RIOT ID</span>
                       </button>
-                      <div className="surface rounded mt-4">
-                        <div className="text-center p-4">
-                          <div className="text-xs uppercase text-ui-300">
-                            Top performing Clan members
-                          </div>
+                    </Link>
+                  </div>
+                )}
+                {isInAClan ? (
+                  <div
+                    className={`surface surface-dimmed p-2 pt-4 rounded text-center ${
+                      isLoadingRank ? "is-loading" : ""
+                    }`}
+                  >
+                    <AvatarClan id={1} size="avatar-lg" />
+                    <p>
+                      {prototype.getUserByID(1).clan && (
+                        <>
+                          &#91;
+                          {
+                            prototype.getClanByID(prototype.getUserByID(1).clan)
+                              ?.tag
+                          }
+                          &#93;{" "}
+                        </>
+                      )}{" "}
+                      {
+                        prototype.getClanByID(prototype.getUserByID(1).clan)
+                          ?.nickname
+                      }
+                    </p>
+                    {variablesContext.clanLeaderboardEnrolled || selectedClanLeaderboard.isCurrent === false ? (
+                      <>
+                        <div className="py-2 space-y-2">
+                          <h3>#5</h3>
+                          <p className="text-ui-300 text-sm uppercase flex gap-3 justify-center">
+                            <span>Score: 3</span>
+                            <span>Top 5%</span>
+                          </p>
                         </div>
-                        <div className="border-t border-ui-700 max-h-[200px] overflow-y-auto scrollbar-desktop">
-                          <table className="table table-compact w-full">
-                            <tbody>
-                              <tr>
-                                <td>
-                                  <div className="text-xs text-ui-300 uppercase">
-                                    Clan member
-                                  </div>
-                                </td>
-                                <td>
-                                  <div className="text-xs text-ui-300 uppercase text-right">
-                                    Wins
-                                  </div>
-                                </td>
-                              </tr>
-                              {getMyClanMembers().map((item, itemIndex) => (
-                                <tr key={itemIndex}>
+                        <button
+                          type="button"
+                          className="button button-sm button-secondary w-full"
+                        >
+                          <span>Go to Clan position</span>
+                        </button>
+                        <div className="surface rounded mt-4">
+                          <div className="text-center p-4">
+                            <div className="text-xs uppercase text-ui-300">
+                              Top performing Clan members
+                            </div>
+                          </div>
+                          <div className="border-t border-ui-700 max-h-[200px] overflow-y-auto scrollbar-desktop">
+                            <table className="table table-compact w-full">
+                              <tbody>
+                                <tr>
                                   <td>
-                                    <Link
-                                      href={`/prototype/profile/${
-                                        prototype.getUserByID(item.id).id
-                                      }${prototype.getURLparams()}`}
-                                    >
+                                    <div className="text-xs text-ui-300 uppercase">
+                                      Clan member
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div className="text-xs text-ui-300 uppercase text-right">
+                                      Wins
+                                    </div>
+                                  </td>
+                                </tr>
+                                {getMyClanMembers().map((item, itemIndex) => (
+                                  <tr key={itemIndex}>
+                                    <td>
+                                      <Link
+                                        href={`/prototype/profile/${
+                                          prototype.getUserByID(item.id).id
+                                        }${prototype.getURLparams()}`}
+                                      >
+                                        <a
+                                          className={`text-xs interactive ${
+                                            prototype.getUserByID(item.id)
+                                              .isPremium
+                                              ? "text-premium-500"
+                                              : "text-ui-300"
+                                          }`}
+                                        >
+                                          {
+                                            prototype.getUserByID(item.id)
+                                              .nickname
+                                          }
+                                        </a>
+                                      </Link>
+                                    </td>
+                                    <td>
+                                      <div className="text-xs text-right text-ui-100 font-bold">
+                                        {41 - itemIndex}
+                                      </div>
+                                    </td>
+                                  </tr>
+                                ))}
+                                <tr>
+                                  <td>
+                                    <Link href="/prototype/profile/3">
                                       <a
                                         className={`text-xs interactive ${
-                                          prototype.getUserByID(item.id)
-                                            .isPremium
+                                          prototype.getUserByID(3).isPremium
                                             ? "text-premium-500"
                                             : "text-ui-300"
                                         }`}
                                       >
-                                        {
-                                          prototype.getUserByID(item.id)
-                                            .nickname
-                                        }
+                                        {prototype.getUserByID(3).nickname}
                                       </a>
                                     </Link>
                                   </td>
                                   <td>
                                     <div className="text-xs text-right text-ui-100 font-bold">
-                                      {41 - itemIndex}
+                                      6
                                     </div>
                                   </td>
                                 </tr>
-                              ))}
-
-                              <tr>
-                                <td>
-                                  <Link href="/prototype/profile/3">
-                                    <a
-                                      className={`text-xs interactive ${
-                                        prototype.getUserByID(3).isPremium
-                                          ? "text-premium-500"
-                                          : "text-ui-300"
-                                      }`}
-                                    >
-                                      {prototype.getUserByID(3).nickname}
-                                    </a>
-                                  </Link>
-                                </td>
-                                <td>
-                                  <div className="text-xs text-right text-ui-100 font-bold">
-                                    6
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <Link href="/prototype/profile/4">
-                                    <a
-                                      className={`text-xs interactive ${
-                                        prototype.getUserByID(4).isPremium
-                                          ? "text-premium-500"
-                                          : "text-ui-300"
-                                      }`}
-                                    >
-                                      {prototype.getUserByID(4).nickname}
-                                    </a>
-                                  </Link>
-                                </td>
-                                <td>
-                                  <div className="text-xs text-right text-ui-100 font-bold">
-                                    6
-                                  </div>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <Link href="/prototype/profile/5">
-                                    <a
-                                      className={`text-xs interactive ${
-                                        prototype.getUserByID(5).isPremium
-                                          ? "text-premium-500"
-                                          : "text-ui-300"
-                                      }`}
-                                    >
-                                      {prototype.getUserByID(5).nickname}
-                                    </a>
-                                  </Link>
-                                </td>
-                                <td>
-                                  <div className="text-xs text-right text-ui-100 font-bold">
-                                    5
-                                  </div>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
+                                <tr>
+                                  <td>
+                                    <Link href="/prototype/profile/4">
+                                      <a
+                                        className={`text-xs interactive ${
+                                          prototype.getUserByID(4).isPremium
+                                            ? "text-premium-500"
+                                            : "text-ui-300"
+                                        }`}
+                                      >
+                                        {prototype.getUserByID(4).nickname}
+                                      </a>
+                                    </Link>
+                                  </td>
+                                  <td>
+                                    <div className="text-xs text-right text-ui-100 font-bold">
+                                      6
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <Link href="/prototype/profile/5">
+                                      <a
+                                        className={`text-xs interactive ${
+                                          prototype.getUserByID(5).isPremium
+                                            ? "text-premium-500"
+                                            : "text-ui-300"
+                                        }`}
+                                      >
+                                        {prototype.getUserByID(5).nickname}
+                                      </a>
+                                    </Link>
+                                  </td>
+                                  <td>
+                                    <div className="text-xs text-right text-ui-100 font-bold">
+                                      5
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
                         </div>
-                      </div>
-                    </>
-                  ) : (
-                    <>
-                      <p className="text-ui-300 mt-4 mb-5">
-                        Enroll your Clan and play matches with party composed of
-                        5 Clan members to be placed on the leaderboard.
-                      </p>
-                      <button
-                        type="button"
-                        className="button button-sm button-primary w-full"
-                        onClick={() => handleEnroll()}
-                      >
-                        <span>Enroll my Clan</span>
-                      </button>
-                    </>
-                  )}
-                </div>
-              ) : (
-                <>
-                  {selectedClanLeaderboard.isCurrent && (
-                    <div
-                      className={`surface p-2 pt-4 rounded text-center ${
-                        isLoadingRank ? "is-loading" : ""
-                      }`}
-                    >
-                      <span className="icon icon-warning-sign text-3xl text-attention-500" />
-                      <p className="text-attention-500 mb-3">
-                        Join a Clan to participate to Clan Seasons!
-                      </p>
-                      <Link
-                        href={`/prototype/clans${prototype.getURLparams()}`}
-                      >
+                      </>
+                    ) : (
+                      <>
+                        <p className="text-ui-300 mt-4 mb-5">
+                          Enroll your Clan and play matches with party composed of
+                          5 Clan members to be placed on the leaderboard.
+                        </p>
                         <button
                           type="button"
                           className="button button-sm button-primary w-full"
+                          onClick={() => handleEnroll()}
                         >
-                          <span className="icon icon-multiple-12" />
-                          <span>Search for clans</span>
+                          <span>Enroll my Clan</span>
                         </button>
-                      </Link>
-                    </div>
-                  )}
-                </>
-              )}
-            </div>
-            <div className="flex-1">
-              {hasRanks && (
-                <div className="relative z-0 overflow-x-auto scrollbar-hidden h-16 flex items-center my-4">
-                  <div className="hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r from-ui-900 via-ui-900 to-ui-900/0 pl-4 pr-8">
-                    <button
-                      type="button"
-                      className="button button-lg button-ghost rounded-full"
-                      onClick={() => {
-                        sideScroll(
-                          sliderRankWrapper.current,
-                          25,
-                          sliderRankWidth,
-                          -sliderRankWidth
-                        );
-                      }}
-                    >
-                      <span className="icon icon-ctrl-left" />
-                    </button>
+                      </>
+                    )}
                   </div>
-
-                  <div className="hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l from-ui-900 via-ui-900 to-ui-900/0 pr-4 pl-8">
-                    <button
-                      type="button"
-                      className="button button-lg button-ghost rounded-full"
-                      onClick={() => {
-                        sideScroll(
-                          sliderRankWrapper.current,
-                          25,
-                          sliderRankWidth,
-                          sliderRankWidth
-                        );
-                      }}
-                    >
-                      <span className="icon icon-ctrl-right" />
-                    </button>
-                  </div>
-                  <ul
-                    ref={sliderRankWrapper}
-                    className="absolute z-0 inset-0 tabs tabs-rank scrollbar-hidden px-10 md:px-20"
-                  >
-                    <li className="tab-bronze" ref={sliderRankItem}>
-                      <a
-                        onClick={loadRank.bind(this, 1)}
-                        className={selectedRank === 1 ? "is-active" : ""}
+                ) : (
+                  <>
+                    {selectedClanLeaderboard.isCurrent && (
+                      <div
+                        className={`surface p-2 pt-4 rounded text-center ${
+                          isLoadingRank ? "is-loading" : ""
+                        }`}
                       >
-                        <div>
-                          <div>
-                            <span className="icon text-4xl icon-rank-bronze" />
-                            <span className="h4">Bronze</span>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li className="tab-silver">
-                      <a
-                        onClick={loadRank.bind(this, 2)}
-                        className={selectedRank === 2 ? "is-active" : ""}
-                      >
-                        <div>
-                          <div>
-                            <span className="icon text-4xl icon-rank-silver" />
-                            <span className="h4">Silver</span>
-                          </div>
-                          <div className="avatar avatar-squircle avatar-xs">
-                            <div>
-                              <img src={prototype.getClanByID(1).avatar} />
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li className="tab-gold">
-                      <a
-                        onClick={loadRank.bind(this, 3)}
-                        className={selectedRank === 3 ? "is-active" : ""}
-                      >
-                        <div>
-                          <div>
-                            <span className="icon text-4xl icon-rank-gold" />
-                            <span className="h4">Gold</span>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li className="tab-platinum">
-                      <a
-                        onClick={loadRank.bind(this, 4)}
-                        className={selectedRank === 4 ? "is-active" : ""}
-                      >
-                        <div>
-                          <div>
-                            <span className="icon text-4xl icon-rank-platinum" />
-                            <span className="h4">Platinum</span>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li className="tab-diamond">
-                      <a
-                        onClick={loadRank.bind(this, 5)}
-                        className={selectedRank === 5 ? "is-active" : ""}
-                      >
-                        <div>
-                          <div>
-                            <span className="icon text-4xl icon-rank-diamond" />
-                            <span className="h4">Diamond</span>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              )}
-              <div className="mt-4 overflow-x-auto scrollbar-hidden">
-                <div className="lg:hidden">
-                  {variablesContext.clanLeaderboardEnrolled ? (
-                    <></>
-                  ) : (
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                        <span className="icon icon-warning-sign text-3xl text-attention-500" />
+                        <p className="text-attention-500 mb-3">
+                          Join a Clan to participate to Clan Seasons!
+                        </p>
+                        <Link
+                          href={`/prototype/clans${prototype.getURLparams()}`}
+                        >
+                          <button
+                            type="button"
+                            className="button button-sm button-primary w-full"
+                          >
+                            <span className="icon icon-multiple-12" />
+                            <span>Search for clans</span>
+                          </button>
+                        </Link>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+              <div className="flex-1">
+                {hasRanks && (
+                  <div className="relative z-0 overflow-x-auto scrollbar-hidden h-16 flex items-center my-4">
+                    <div className="hidden md:flex absolute z-10 left-0 inset-y-0 self-stretch items-center bg-gradient-to-r from-ui-900 via-ui-900 to-ui-900/0 pl-4 pr-8">
                       <button
                         type="button"
-                        className="button button-sm button-primary"
-                        onClick={() => handleEnroll()}
+                        className="button button-lg button-ghost rounded-full"
+                        onClick={() => {
+                          sideScroll(
+                            sliderRankWrapper.current,
+                            25,
+                            sliderRankWidth,
+                            -sliderRankWidth
+                          );
+                        }}
                       >
-                        <span>Enroll my Clan</span>
+                        <span className="icon icon-ctrl-left" />
                       </button>
-                      <p className="text-ui-300 mt-4 mb-5 md:border-l md:border-ui-600 md:pl-4">
-                        Enroll your Clan and play matches with party composed of
-                        5 Clan members to be placed on the leaderboard.
-                      </p>
                     </div>
-                  )}
-                </div>
-                <div className="min-w-md px-2 md:px-0">
-                  <div className="flex gap-2 items-center text-center text-sm text-ui-300 uppercase mb-2 relative z-10 h-6">
-                    <div className="w-80 flex items-stretch overflow-hidden">
-                      <div className="w-1/3 px-2">#</div>
-                      <div className="flex-1 flex gap-2 items-center justify-center">
-                        <span>Rewards</span>
-                        <Tooltip
-                          tooltip={
-                            <div className="max-w-xs text-sm text-left text-ui-200 leading-tight normal-case space-y-2">
-                              <p>
-                                Rewards will be distributed evenly to everyone
-                                in the clan once the Ladder has ended.
-                              </p>
-                              <p>
-                                For example, if the Clan reward is [number]
-                                Coins and [number] Golden tickets - each Clan
-                                member will split on the [number] Coins and
-                                [number] Golden tickets.
-                              </p>
-                            </div>
-                          }
+
+                    <div className="hidden md:flex absolute z-10 right-0 inset-y-0 self-stretch items-center bg-gradient-to-l from-ui-900 via-ui-900 to-ui-900/0 pr-4 pl-8">
+                      <button
+                        type="button"
+                        className="button button-lg button-ghost rounded-full"
+                        onClick={() => {
+                          sideScroll(
+                            sliderRankWrapper.current,
+                            25,
+                            sliderRankWidth,
+                            sliderRankWidth
+                          );
+                        }}
+                      >
+                        <span className="icon icon-ctrl-right" />
+                      </button>
+                    </div>
+                    <ul
+                      ref={sliderRankWrapper}
+                      className="absolute z-0 inset-0 tabs tabs-rank scrollbar-hidden px-10 md:px-20"
+                    >
+                      <li className="tab-bronze" ref={sliderRankItem}>
+                        <a
+                          onClick={loadRank.bind(this, 1)}
+                          className={selectedRank === 1 ? "is-active" : ""}
                         >
-                          <button className="text-ui-300 text-0">
-                            <span className="icon icon-16 icon-c-info" />
-                          </button>
-                        </Tooltip>
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <div className="item py-0">
-                        <div className="item-body text-left">
-                          <span>Clan</span>
-                        </div>
-                        <div className="item-body text-right">
-                          <span>Score</span>
-                        </div>
-                        <div className="item-actions flex items-center gap-2 opacity-0">
                           <div>
-                            <span className="icon icon-24 icon-arrow-sm-down" />
+                            <div>
+                              <span className="icon text-4xl icon-rank-bronze" />
+                              <span className="h4">Bronze</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li className="tab-silver">
+                        <a
+                          onClick={loadRank.bind(this, 2)}
+                          className={selectedRank === 2 ? "is-active" : ""}
+                        >
+                          <div>
+                            <div>
+                              <span className="icon text-4xl icon-rank-silver" />
+                              <span className="h4">Silver</span>
+                            </div>
+                            <AvatarClan id={1} size="avatar-xs" />
+                          </div>
+                        </a>
+                      </li>
+                      <li className="tab-gold">
+                        <a
+                          onClick={loadRank.bind(this, 3)}
+                          className={selectedRank === 3 ? "is-active" : ""}
+                        >
+                          <div>
+                            <div>
+                              <span className="icon text-4xl icon-rank-gold" />
+                              <span className="h4">Gold</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li className="tab-platinum">
+                        <a
+                          onClick={loadRank.bind(this, 4)}
+                          className={selectedRank === 4 ? "is-active" : ""}
+                        >
+                          <div>
+                            <div>
+                              <span className="icon text-4xl icon-rank-platinum" />
+                              <span className="h4">Platinum</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                      <li className="tab-diamond">
+                        <a
+                          onClick={loadRank.bind(this, 5)}
+                          className={selectedRank === 5 ? "is-active" : ""}
+                        >
+                          <div>
+                            <div>
+                              <span className="icon text-4xl icon-rank-diamond" />
+                              <span className="h4">Diamond</span>
+                            </div>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                )}
+                <div className="mt-4 overflow-x-auto scrollbar-hidden">
+                  <div className="lg:hidden">
+                    {variablesContext.clanLeaderboardEnrolled ? (
+                      <></>
+                    ) : (
+                      <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                        <button
+                          type="button"
+                          className="button button-sm button-primary"
+                          onClick={() => handleEnroll()}
+                        >
+                          <span>Enroll my Clan</span>
+                        </button>
+                        <p className="text-ui-300 mt-4 mb-5 md:border-l md:border-ui-600 md:pl-4">
+                          Enroll your Clan and play matches with party composed of
+                          5 Clan members to be placed on the leaderboard.
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                  <div className="min-w-md px-2 md:px-0">
+                    <div className="flex gap-2 items-center text-center text-sm text-ui-300 uppercase mb-2 relative z-10 h-6">
+                      <div className="w-80 flex items-stretch overflow-hidden">
+                        <div className="w-1/3 px-2">#</div>
+                        <div className="flex-1 flex gap-2 items-center justify-center">
+                          <span>Rewards</span>
+                          <Tooltip
+                            tooltip={
+                              <div className="max-w-xs text-sm text-left text-ui-200 leading-tight normal-case space-y-2">
+                                <p>
+                                  Rewards will be distributed evenly to everyone
+                                  in the clan once the Ladder has ended.
+                                </p>
+                                <p>
+                                  For example, if the Clan reward is [number]
+                                  Coins and [number] Golden tickets - each Clan
+                                  member will split on the [number] Coins and
+                                  [number] Golden tickets.
+                                </p>
+                              </div>
+                            }
+                          >
+                            <button className="text-ui-300 text-0">
+                              <span className="icon icon-16 icon-c-info" />
+                            </button>
+                          </Tooltip>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="item py-0">
+                          <div className="item-body text-left">
+                            <span>Clan</span>
+                          </div>
+                          <div className="item-body text-right">
+                            <span>Score</span>
+                          </div>
+                          <div className="item-actions flex items-center gap-2 opacity-0">
+                            <div>
+                              <span className="icon icon-24 icon-arrow-sm-down" />
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  {isLoadingGroup && (
-                    <ul className="items-spaced space-y-2 is-loading relative z-0">
-                      {selectedClanLeaderboard &&
-                        selectedClanLeaderboard.leaderboard.map(
-                          (clan, clanIndex) => (
-                            <>
-                              <div
-                                className="item rounded-lg h-[58px]"
-                                key={clanIndex}
-                              >
-                                <div className="item-image">
-                                  <div className="avatar avatar-squircle avatar-xs">
-                                    <div />
-                                  </div>
-                                </div>
-                                <div className="item-body">
-                                  <div className="item-title">Loading</div>
-                                </div>
-                                <div className="item-body flex justify-around items-center">
-                                  <span className="text-ui-300 leading-none">
-                                    Loading
-                                  </span>
-                                  <div className="avatar avatar-squircle avatar-xs">
-                                    <div />
-                                  </div>
-                                </div>
-                                <div className="item-actions flex items-center gap-2">
-                                  <div>
-                                    <span className="icon icon-24 icon-arrow-sm-down" />
-                                  </div>
-                                </div>
-                              </div>
-                            </>
-                          )
-                        )}
-                    </ul>
-                  )}
-                  {!isLoadingGroup && (
-                    <>
-                      {selectedClanLeaderboard &&
-                        selectedClanLeaderboard.leaderboard?.map(
-                          (clan, clanIndex) => (
-                            <>
-                              <div
-                                className={`flex gap-2 items-start mb-2 ${
-                                  isLoadingGroup
-                                    ? ""
-                                    : "animate-slide-in-bottom animate-delay"
-                                }`}
-                                style={{
-                                  "--delay": "calc(" + clanIndex + " * 0.05s)",
-                                }}
-                              >
+                    {isLoadingGroup && (
+                      <ul className="items-spaced space-y-2 is-loading relative z-0">
+                        {selectedClanLeaderboard &&
+                          selectedClanLeaderboard.leaderboard.map(
+                            (clan, clanIndex) => (
+                              <>
                                 <div
-                                  className={`surface rounded-lg w-80 h-[58px] flex items-stretch overflow-hidden ${
-                                    prototype.getClanByID(clan.clan)?.isYou
+                                  className="item rounded-lg h-[58px]"
+                                  key={clanIndex}
+                                >
+                                  <div className="item-image">
+                                    <div className="avatar avatar-squircle avatar-xs">
+                                      <div />
+                                    </div>
+                                  </div>
+                                  <div className="item-body">
+                                    <div className="item-title">Loading</div>
+                                  </div>
+                                  <div className="item-body flex justify-around items-center">
+                                    <span className="text-ui-300 leading-none">
+                                      Loading
+                                    </span>
+                                    <div className="avatar avatar-squircle avatar-xs">
+                                      <div />
+                                    </div>
+                                  </div>
+                                  <div className="item-actions flex items-center gap-2">
+                                    <div>
+                                      <span className="icon icon-24 icon-arrow-sm-down" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </>
+                            )
+                          )}
+                      </ul>
+                    )}
+                    {!isLoadingGroup && (
+                      <>
+                        {selectedClanLeaderboard &&
+                          selectedClanLeaderboard.leaderboard?.map(
+                            (clan, clanIndex) => (
+                              <>
+                                <div
+                                  className={`flex gap-2 items-start mb-2 ${
+                                    isLoadingGroup
                                       ? ""
-                                      : ""
+                                      : "animate-slide-in-bottom animate-delay"
                                   }`}
+                                  style={{
+                                    "--delay": "calc(" + clanIndex + " * 0.05s)",
+                                  }}
                                 >
                                   <div
-                                    className={`w-16 relative text-center px-2 flex items-center justify-center ${
-                                      clanIndex > 2
-                                        ? "bg-ui-700/25"
-                                        : "bg-ui-700"
+                                    className={`surface rounded-lg w-80 h-[58px] flex items-stretch overflow-hidden ${
+                                      prototype.getClanByID(clan.clan)?.isYou
+                                        ? ""
+                                        : ""
                                     }`}
                                   >
-                                    <LeaderboardWings id={clanIndex} />
+                                    <div
+                                      className={`w-16 relative text-center px-2 flex items-center justify-center ${
+                                        clanIndex > 2
+                                          ? "bg-ui-700/25"
+                                          : "bg-ui-700"
+                                      }`}
+                                    >
+                                      <LeaderboardWings id={clanIndex} />
+                                    </div>
+                                    <div className="flex-1 flex items-center justify-center gap-4">
+                                      {clan.rewards?.map(
+                                        (reward, rewardIndex) => (
+                                          <Reward
+                                            key={rewardIndex}
+                                            reward={reward}
+                                            gap="gap-2"
+                                            iconClassNames="text-lg"
+                                            textClassNames="text-lg"
+                                          />
+                                        )
+                                      )}
+                                    </div>
                                   </div>
-                                  <div className="flex-1 flex items-center justify-center gap-4">
-                                    {clan.rewards?.map(
-                                      (reward, rewardIndex) => (
-                                        <Reward
-                                          key={rewardIndex}
-                                          reward={reward}
-                                          gap="gap-2"
-                                          iconClassNames="text-lg"
-                                          textClassNames="text-lg"
-                                        />
-                                      )
-                                    )}
-                                  </div>
-                                </div>
-                                <div
-                                  className={`flex-1 accordion surface rounded-lg ${
-                                    prototype.getClanByID(clan.clan)?.isYou
-                                      ? ""
-                                      : ""
-                                  }`}
-                                >
-                                  <Accordion
-                                    isNoHover={true}
-                                    buttonActivation={true}
-                                    buttonActivationSimple={true}
-                                    header={
-                                      <>
-                                        <div className="item h-[56px]">
-                                          <div className="item-body">
-                                            <Link
-                                              href={`/prototype/clans/${
-                                                clan.clan
-                                              }${prototype.getURLparams()}`}
-                                            >
-                                              <div className="flex gap-2 items-center interactive">
-                                                <div className="avatar avatar-squircle avatar-xs">
-                                                  <div>
-                                                    <img
-                                                      src={
+                                  <div
+                                    className={`flex-1 accordion surface rounded-lg ${
+                                      prototype.getClanByID(clan.clan)?.isYou
+                                        ? ""
+                                        : ""
+                                    }`}
+                                  >
+                                    <Accordion
+                                      isNoHover={true}
+                                      buttonActivation={true}
+                                      buttonActivationSimple={true}
+                                      header={
+                                        <>
+                                          <div className="item h-[56px]">
+                                            <div className="item-body">
+                                              <Link
+                                                href={`/prototype/clans/${
+                                                  clan.clan
+                                                }${prototype.getURLparams()}`}
+                                              >
+                                                <div className="flex gap-2 items-center interactive">
+                                                  <AvatarClan id={clan.clan} size="avatar-xs" />
+                                                  <div className="item-title whitespace-nowrap">
+                                                    <span
+                                                      className={`${
                                                         prototype.getClanByID(
                                                           clan.clan
-                                                        )?.avatar
+                                                        )?.isYou
+                                                          ? "text-main font-bold"
+                                                          : ""
+                                                      }`}
+                                                    >
+                                                      &#91;
+                                                      {
+                                                        prototype.getClanByID(
+                                                          clan.clan
+                                                        )?.tag
                                                       }
-                                                    />
+                                                      &#93;{" "}
+                                                      {
+                                                        prototype.getClanByID(
+                                                          clan.clan
+                                                        )?.nickname
+                                                      }
+                                                    </span>
                                                   </div>
                                                 </div>
-                                                <div className="item-title whitespace-nowrap">
-                                                  <span
-                                                    className={`${
-                                                      prototype.getClanByID(
-                                                        clan.clan
-                                                      )?.isYou
-                                                        ? "text-main font-bold"
-                                                        : ""
-                                                    }`}
-                                                  >
-                                                    &#91;
-                                                    {
-                                                      prototype.getClanByID(
-                                                        clan.clan
-                                                      )?.tag
-                                                    }
-                                                    &#93;{" "}
-                                                    {
-                                                      prototype.getClanByID(
-                                                        clan.clan
-                                                      )?.nickname
-                                                    }
-                                                  </span>
-                                                </div>
-                                              </div>
-                                            </Link>
-                                          </div>
-                                          <div className="item-body text-right">
-                                            {clan.stats.wins -
-                                              clan.stats.losses}
-                                          </div>
-                                        </div>
-                                      </>
-                                    }
-                                  >
-                                    <div className="p-2 border-t border-ui-700">
-                                      <ul className="space-y-2">
-                                        <li className="bg-ui-850/50 rounded p-3 flex justify-between leading-none">
-                                          <div className="">
-                                            <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
-                                              Matches played
-                                            </h5>
-                                            <div className="text-ui-100 text-xl lg:text-3xl">
-                                              {clan.stats.wins +
+                                              </Link>
+                                            </div>
+                                            <div className="item-body text-right">
+                                              {clan.stats.wins -
                                                 clan.stats.losses}
                                             </div>
                                           </div>
-                                          <div className="flex gap-3 text-right">
+                                        </>
+                                      }
+                                    >
+                                      <div className="p-2 border-t border-ui-700">
+                                        <ul className="space-y-2">
+                                          <li className="bg-ui-850/50 rounded p-3 flex justify-between leading-none">
                                             <div className="">
                                               <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
-                                                Win
-                                                {clan.stats.wins > 1 && <>s</>}
-                                              </h5>
-                                              <div className="text-success-500 text-xl lg:text-3xl">
-                                                {clan.stats.wins}
-                                              </div>
-                                            </div>
-                                            <div className="">
-                                              <div className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
-                                                -
-                                              </div>
-                                            </div>
-                                            <div className="">
-                                              <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
-                                                Loss
-                                                {clan.stats.losses > 1 && (
-                                                  <>es</>
-                                                )}
-                                              </h5>
-                                              <div className="text-error-500 text-xl lg:text-3xl">
-                                                {clan.stats.losses}
-                                              </div>
-                                            </div>
-                                            <div className="">
-                                              <div className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
-                                                =
-                                              </div>
-                                            </div>
-                                            <div className="">
-                                              <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
-                                                Score
+                                                Matches played
                                               </h5>
                                               <div className="text-ui-100 text-xl lg:text-3xl">
-                                                {clan.stats.wins -
+                                                {clan.stats.wins +
                                                   clan.stats.losses}
                                               </div>
                                             </div>
-                                          </div>
-                                        </li>
-                                        {hasPlayersDetails && (
-                                          <li className="bg-ui-850/50 rounded text-center max-h-[150px] overflow-y-auto scrollbar-desktop">
-                                            <table className="table table-compact text-sm w-full">
-                                              <thead>
-                                                <tr>
-                                                  <th className="bg-ui-900/0 text-ui-300 w-full">
-                                                    Players
-                                                  </th>
-                                                  <th className="bg-ui-900/0 text-ui-300 text-center">
-                                                    Wins
-                                                  </th>
-                                                  <th className="bg-ui-900/0 text-ui-300 text-center">
-                                                    Total
-                                                  </th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                {prototype
-                                                  .getClanByID(clan.clan)
-                                                  .members.map(
-                                                    (user, userIndex) => (
-                                                      <tr key={userIndex}>
-                                                        <td>
-                                                          <Link
-                                                            href={`/prototype/profile/${user}`}
-                                                          >
-                                                            <span className="interactive">
-                                                              &#91;
-                                                              {
-                                                                prototype.getClanByID(
-                                                                  clan.clan
-                                                                )?.tag
-                                                              }
-                                                              &#93;{" "}
-                                                              {
-                                                                prototype.getUserByID(
-                                                                  user
-                                                                ).nickname
-                                                              }
-                                                            </span>
-                                                          </Link>
-                                                        </td>
-                                                        <td className="text-center px-2 text-success-500">
-                                                          {Math.max(
-                                                            0,
-                                                            Math.round(
-                                                              clan.stats.wins /
-                                                                2 -
-                                                                userIndex
-                                                            )
-                                                          )}
-                                                        </td>
-                                                        <td className="text-center px-2">
-                                                          {Math.max(
-                                                            0,
-                                                            Math.round(
-                                                              clan.stats
-                                                                .losses -
-                                                                userIndex
-                                                            )
-                                                          )}
-                                                        </td>
-                                                      </tr>
-                                                    )
-                                                  )}
-                                              </tbody>
-                                            </table>
-                                          </li>
-                                        )}
-                                        <li className="bg-ui-850/50 rounded p-3 flex gap-2 items-center justify-between">
-                                          <div className="avatar-group -space-x-2">
-                                            {prototype
-                                              .getClanByID(clan.clan)
-                                              .members?.slice(0, 5)
-                                              .map((item, itemIndex) => (
-                                                <Avatar
-                                                  key={itemIndex}
-                                                  hasTooltip={true}
-                                                  id={item}
-                                                  hasLevel={false}
-                                                  size="avatar-xs"
-                                                />
-                                              ))}
-                                            {prototype.getClanByID(clan.clan)
-                                              .members?.length > 5 && (
-                                              <div className="avatar avatar-circle avatar-xs">
-                                                <div>
-                                                  <span>
-                                                    +
-                                                    {prototype.getClanByID(
-                                                      clan.clan
-                                                    ).members?.length - 5}
-                                                  </span>
+                                            <div className="flex gap-3 text-right">
+                                              <div className="">
+                                                <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                                  Win
+                                                  {clan.stats.wins > 1 && <>s</>}
+                                                </h5>
+                                                <div className="text-success-500 text-xl lg:text-3xl">
+                                                  {clan.stats.wins}
                                                 </div>
                                               </div>
-                                            )}
-                                          </div>
-                                          <div className="text-center text-ui-300 text-sm">
-                                            {prototype.getClanByID(clan.clan)
-                                              .members?.length < 20 && (
-                                              <>
-                                                {20 -
-                                                  prototype.getClanByID(
+                                              <div className="">
+                                                <div className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                                  -
+                                                </div>
+                                              </div>
+                                              <div className="">
+                                                <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                                  Loss
+                                                  {clan.stats.losses > 1 && (
+                                                    <>es</>
+                                                  )}
+                                                </h5>
+                                                <div className="text-error-500 text-xl lg:text-3xl">
+                                                  {clan.stats.losses}
+                                                </div>
+                                              </div>
+                                              <div className="">
+                                                <div className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                                  =
+                                                </div>
+                                              </div>
+                                              <div className="">
+                                                <h5 className="uppercase font-normal font-body text-sm text-ui-300 mb-1">
+                                                  Score
+                                                </h5>
+                                                <div className="text-ui-100 text-xl lg:text-3xl">
+                                                  {clan.stats.wins -
+                                                    clan.stats.losses}
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </li>
+                                          {hasPlayersDetails && (
+                                            <li className="bg-ui-850/50 rounded text-center max-h-[150px] overflow-y-auto scrollbar-desktop">
+                                              <table className="table table-compact text-sm w-full">
+                                                <thead>
+                                                  <tr>
+                                                    <th className="bg-ui-900/0 text-ui-300 w-full">
+                                                      Players
+                                                    </th>
+                                                    <th className="bg-ui-900/0 text-ui-300 text-center">
+                                                      Wins
+                                                    </th>
+                                                    <th className="bg-ui-900/0 text-ui-300 text-center">
+                                                      Total
+                                                    </th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  {prototype
+                                                    .getClanByID(clan.clan)
+                                                    .members.map(
+                                                      (user, userIndex) => (
+                                                        <tr key={userIndex}>
+                                                          <td>
+                                                            <Link
+                                                              href={`/prototype/profile/${user}`}
+                                                            >
+                                                              <span className="interactive">
+                                                                &#91;
+                                                                {
+                                                                  prototype.getClanByID(
+                                                                    clan.clan
+                                                                  )?.tag
+                                                                }
+                                                                &#93;{" "}
+                                                                {
+                                                                  prototype.getUserByID(
+                                                                    user
+                                                                  ).nickname
+                                                                }
+                                                              </span>
+                                                            </Link>
+                                                          </td>
+                                                          <td className="text-center px-2 text-success-500">
+                                                            {Math.max(
+                                                              0,
+                                                              Math.round(
+                                                                clan.stats.wins /
+                                                                  2 -
+                                                                  userIndex
+                                                              )
+                                                            )}
+                                                          </td>
+                                                          <td className="text-center px-2">
+                                                            {Math.max(
+                                                              0,
+                                                              Math.round(
+                                                                clan.stats
+                                                                  .losses -
+                                                                  userIndex
+                                                              )
+                                                            )}
+                                                          </td>
+                                                        </tr>
+                                                      )
+                                                    )}
+                                                </tbody>
+                                              </table>
+                                            </li>
+                                          )}
+                                          <li className="bg-ui-850/50 rounded p-3 flex gap-2 items-center justify-between">
+                                            <div className="avatar-group -space-x-2">
+                                              {prototype
+                                                .getClanByID(clan.clan)
+                                                .members?.slice(0, 5)
+                                                .map((item, itemIndex) => (
+                                                  <Avatar
+                                                    key={itemIndex}
+                                                    hasTooltip={true}
+                                                    id={item}
+                                                    hasLevel={false}
+                                                    size="avatar-xs"
+                                                  />
+                                                ))}
+                                              {prototype.getClanByID(clan.clan)
+                                                .members?.length > 5 && (
+                                                <div className="avatar avatar-circle avatar-xs">
+                                                  <div>
+                                                    <span>
+                                                      +
+                                                      {prototype.getClanByID(
+                                                        clan.clan
+                                                      ).members?.length - 5}
+                                                    </span>
+                                                  </div>
+                                                </div>
+                                              )}
+                                            </div>
+                                            <div className="text-center text-ui-300 text-sm">
+                                              {prototype.getClanByID(clan.clan)
+                                                .members?.length < 20 && (
+                                                <>
+                                                  {20 -
+                                                    prototype.getClanByID(
+                                                      clan.clan
+                                                    ).members?.length}{" "}
+                                                  available slots
+                                                </>
+                                              )}
+                                            </div>
+                                            <div>
+                                              {prototype.getClanByID(clan.clan)
+                                                .isPublic ? (
+                                                <>
+                                                  <Link href="#">
+                                                    <a
+                                                      type="button"
+                                                      className="button button-sm button-secondary flex-1"
+                                                    >
+                                                      <span>Join clan</span>
+                                                    </a>
+                                                  </Link>
+                                                </>
+                                              ) : (
+                                                <>
+                                                  {prototype.getClanByID(
                                                     clan.clan
-                                                  ).members?.length}{" "}
-                                                available slots
-                                              </>
-                                            )}
-                                          </div>
-                                          <div>
-                                            {prototype.getClanByID(clan.clan)
-                                              .isPublic ? (
-                                              <>
-                                                <Link href="#">
-                                                  <a
-                                                    type="button"
-                                                    className="button button-sm button-secondary flex-1"
-                                                  >
-                                                    <span>Join clan</span>
-                                                  </a>
-                                                </Link>
-                                              </>
-                                            ) : (
-                                              <>
-                                                {prototype.getClanByID(
-                                                  clan.clan
-                                                ).hasInvitedYou ? (
-                                                  <>
-                                                    <div className="flex gap-2">
+                                                  ).hasInvitedYou ? (
+                                                    <>
+                                                      <div className="flex gap-2">
+                                                        <Link href="#">
+                                                          <a
+                                                            type="button"
+                                                            className="button button-sm button-success flex-1"
+                                                          >
+                                                            <span>Accept</span>
+                                                          </a>
+                                                        </Link>
+                                                        <Link href="#">
+                                                          <a
+                                                            type="button"
+                                                            className="button button-sm button-error flex-1"
+                                                          >
+                                                            <span>Decline</span>
+                                                          </a>
+                                                        </Link>
+                                                      </div>
+                                                    </>
+                                                  ) : (
+                                                    <>
                                                       <Link href="#">
                                                         <a
                                                           type="button"
-                                                          className="button button-sm button-success flex-1"
+                                                          className="button button-sm button-secondary flex-1"
                                                         >
-                                                          <span>Accept</span>
+                                                          <span>
+                                                            Apply to join
+                                                          </span>
                                                         </a>
                                                       </Link>
-                                                      <Link href="#">
-                                                        <a
-                                                          type="button"
-                                                          className="button button-sm button-error flex-1"
-                                                        >
-                                                          <span>Decline</span>
-                                                        </a>
-                                                      </Link>
-                                                    </div>
-                                                  </>
-                                                ) : (
-                                                  <>
-                                                    <Link href="#">
-                                                      <a
-                                                        type="button"
-                                                        className="button button-sm button-secondary flex-1"
-                                                      >
-                                                        <span>
-                                                          Apply to join
-                                                        </span>
-                                                      </a>
-                                                    </Link>
-                                                  </>
-                                                )}
-                                              </>
-                                            )}
+                                                    </>
+                                                  )}
+                                                </>
+                                              )}
+                                            </div>
+                                          </li>
+                                        </ul>
+                                        <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
+                                          <div className="flex items-center gap-4">
+                                            <Link
+                                              href={`/prototype/clans/${
+                                                prototype.getClanByID(clan.clan)
+                                                  ?.id
+                                              }`}
+                                            >
+                                              <a className="link link-main link-hover flex items-center gap-1 text-sm">
+                                                <span className="icon icon-multiple-12" />
+                                                <span>Go to Clan page</span>
+                                              </a>
+                                            </Link>
                                           </div>
-                                        </li>
-                                      </ul>
-                                      <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
-                                        <div className="flex items-center gap-4">
-                                          <Link
-                                            href={`/prototype/clans/${
-                                              prototype.getClanByID(clan.clan)
-                                                ?.id
-                                            }`}
+                                          <button
+                                            type="button"
+                                            className="button button-tertiary button-sm"
                                           >
-                                            <a className="link link-main link-hover flex items-center gap-1 text-sm">
-                                              <span className="icon icon-multiple-12" />
-                                              <span>Go to Clan page</span>
-                                            </a>
-                                          </Link>
+                                            <span className="icon icon-c-warning" />
+                                            <span>Report abuse</span>
+                                          </button>
                                         </div>
-                                        <button
-                                          type="button"
-                                          className="button button-tertiary button-sm"
-                                        >
-                                          <span className="icon icon-c-warning" />
-                                          <span>Report abuse</span>
-                                        </button>
                                       </div>
-                                    </div>
-                                  </Accordion>
+                                    </Accordion>
+                                  </div>
                                 </div>
-                              </div>
-                            </>
-                          )
-                        )}
-                    </>
-                  )}
+                              </>
+                            )
+                          )}
+                      </>
+                    )}
+                  </div>
                 </div>
+                {!isLoadingRank && (
+                  <div>
+                    <div className="flex gap-2 justify-center items-center my-4">
+                      <button
+                        type="button"
+                        onClick={loadGroup.bind(this, selectedGroup)}
+                        className="button button-ghost"
+                      >
+                        <span className="icon icon-arrow-up" />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={loadGroup.bind(this, selectedGroup)}
+                        className="button button-ghost"
+                      >
+                        <span>Top 15</span>
+                      </button>
+                      <button
+                        type="button"
+                        className="button button-ghost is-active"
+                      >
+                        <span>My position</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={loadGroup.bind(this, selectedGroup)}
+                        className="button button-ghost"
+                      >
+                        <span>Bottom 15</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={loadGroup.bind(this, selectedGroup)}
+                        className="button button-ghost"
+                      >
+                        <span className="icon icon-arrow-down" />
+                      </button>
+                    </div>
+                    <div className="text-center my-4 text-sm">
+                      <div className="text-ui-400">
+                        The leaderboard is updated every X minute,{" "}
+                        <a href="#" className="link link-main">
+                          reload the page
+                        </a>{" "}
+                        for an update
+                      </div>
+                      <div className="text-ui-300">
+                        Leaderboard ID:{" "}
+                        <span className="text-ui-100 font-bold">225VG19</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
-              {!isLoadingRank && (
-                <div>
-                  <div className="flex gap-2 justify-center items-center my-4">
-                    <button
-                      type="button"
-                      onClick={loadGroup.bind(this, selectedGroup)}
-                      className="button button-ghost"
-                    >
-                      <span className="icon icon-arrow-up" />
-                    </button>
-                    <button
-                      type="button"
-                      onClick={loadGroup.bind(this, selectedGroup)}
-                      className="button button-ghost"
-                    >
-                      <span>Top 15</span>
-                    </button>
-                    <button
-                      type="button"
-                      className="button button-ghost is-active"
-                    >
-                      <span>My position</span>
-                    </button>
-                    <button
-                      type="button"
-                      onClick={loadGroup.bind(this, selectedGroup)}
-                      className="button button-ghost"
-                    >
-                      <span>Bottom 15</span>
-                    </button>
-                    <button
-                      type="button"
-                      onClick={loadGroup.bind(this, selectedGroup)}
-                      className="button button-ghost"
-                    >
-                      <span className="icon icon-arrow-down" />
-                    </button>
-                  </div>
-                  <div className="text-center my-4 text-sm">
-                    <div className="text-ui-400">
-                      The leaderboard is updated every X minute,{" "}
-                      <a href="#" className="link link-main">
-                        reload the page
-                      </a>{" "}
-                      for an update
-                    </div>
-                    <div className="text-ui-300">
-                      Leaderboard ID:{" "}
-                      <span className="text-ui-100 font-bold">225VG19</span>
-                    </div>
-                  </div>
-                </div>
-              )}
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
+      </>
+    )}
       {/* for demo purposes only */}
       <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
         <a onClick={() => setHasRiot(!hasRiot)}>

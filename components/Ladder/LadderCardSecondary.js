@@ -34,7 +34,7 @@ export default function LadderCardSecondary(props) {
   function openmodalLadderResults() {
     uiContext.openModal(
       <ModalLadderResults
-        ladder={prototype.getLadderByID(
+        item={prototype.getLadderByID(
           prototype.getGameBySlug(game_slug).slug,
           ladder.id
         )}

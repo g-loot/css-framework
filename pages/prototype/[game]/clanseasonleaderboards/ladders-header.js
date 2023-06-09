@@ -61,9 +61,9 @@ export default function LaddersHeader(props) {
             <div className="header-body">
               <h1>Clan Seasons</h1>
               <p className="text-ui-300 max-w-[70ch] mt-4 mb-5">
-                No need for tokens or any extra steps, just create a 5 people
-                party within your clan, play Valorant together and check your
-                results.
+                Create a 5 people party with members from your Clan. Play
+                VALORANT together and start climbing the leaderboard! No need
+                for tokens or any extra steps.
               </p>
               <div className="flex flex-col md:flex-row gap-2">
                 <Link

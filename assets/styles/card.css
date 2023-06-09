@@ -27,55 +27,53 @@
   }
 }
 
-.card-ladder,
-.card-mission {
-  > .card-overlay {
+
+.card-overlay {
+  @apply 
+  absolute
+  z-20
+  inset-0
+  backdrop-blur-sm
+  rounded-lg
+  flex
+  flex-col
+  items-center
+  justify-center
+  bg-ui-800/90
+  shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))];
+  > div {
     @apply 
-    absolute
-    z-20
-    inset-0
-    backdrop-blur-sm
-    rounded-lg
+    relative
+    z-10
     flex
     flex-col
     items-center
     justify-center
-    bg-ui-800/90
-    shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))];
-    > div {
+    gap-2;
+  }
+  > img {
+    @apply 
+    absolute
+    z-0
+    w-full
+    h-full
+    object-cover
+    object-center;
+  }
+  ~ * {
+    @apply 
+    pointer-events-none;
+    &.card-image-bg {
       @apply 
-      relative
-      z-10
-      flex
-      flex-col
-      items-center
-      justify-center
-      gap-2;
-    }
-    > img {
-      @apply 
-      absolute
-      z-0
-      w-full
-      h-full
-      object-cover
-      object-center;
-    }
-    ~ * {
-      @apply 
-      pointer-events-none;
-      &.card-image-bg {
+      mix-blend-luminosity;
+      > img {
         @apply 
-        mix-blend-luminosity;
-        > img {
-          @apply 
-          grayscale;
-        }
+        grayscale;
       }
-      .card-status {
-        @apply 
-        text-ui-300;
-      }
+    }
+    .card-status {
+      @apply 
+      text-ui-300;
     }
   }
 }

@@ -102,7 +102,7 @@ export default function Home() {
   
   function openmodalLadderResults() {
     uiContext.openModal(
-      <ModalLadderResults ladder={selectedLadder} />
+      <ModalLadderResults item={selectedLadder} />
     );
   }
 

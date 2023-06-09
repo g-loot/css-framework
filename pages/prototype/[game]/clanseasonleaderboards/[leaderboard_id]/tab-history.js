@@ -4,12 +4,16 @@ import Reward from "../../../../../components/Reward/Reward";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import { usePrototypeData } from "../../../../../contexts/prototype";
 import { VariablesContext } from "../../../../../contexts/variables";
+import ModalClanSeasonResults from "../modal-clanseasonresults";
+import { UiContext } from "../../../../../contexts/ui";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 
 export default function TabClanLeaderboardsHistory() {
   const router = useRouter();
   const { query } = useRouter();
+  const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const variablesContext = useContext(VariablesContext);
   const [selectedGame, setSelectedGame] = useState(null);
@@ -33,10 +37,15 @@ export default function TabClanLeaderboardsHistory() {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game, prototype]);
 
-  function numberWithSpaces(x) {
-    var parts = x.toString().split(".");
-    parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-    return parts.join(".");
+  function openmodalLadderResults(id) {
+    uiContext.openModal(
+      <ModalClanSeasonResults
+        item={prototype.getClanLeaderboardByID(
+          prototype.getGameBySlug(game).slug,
+          id
+        )}
+      />
+    );
   }
 
   return (
@@ -229,6 +238,21 @@ export default function TabClanLeaderboardsHistory() {
                               "--delay": "calc(" + itemIndex + " * 0.05s)",
                             }}
                           >
+                            {item.hasClaim && (
+                              <div className="card-overlay">
+                                <div>
+                                  <button
+                                    type="button"
+                                    className="button button-primary"
+                                    onClick={() =>
+                                      openmodalLadderResults(item.id)
+                                    }
+                                  >
+                                    <span>View results</span>
+                                  </button>
+                                </div>
+                              </div>
+                            )}
                             <div className="item-image p-0">
                               <div className="w-full sm:w-48 aspect-landscape sm:aspect-video relative flex items-center justify-center overflow-hidden sm:rounded-l">
                                 <img
@@ -270,14 +294,18 @@ export default function TabClanLeaderboardsHistory() {
                                   </div>
                                   <div className="text-sm text-ui-300">
                                     {item.isCurrent ? (
-                                      <>12 days left</>
+                                      <>
+                                        <ResetsIn label="Ends" />
+                                      </>
                                     ) : (
                                       <>Ended {item.id * 2} months ago</>
                                     )}
                                   </div>
                                 </div>
                                 <div className="w-64 flex items-center">
-                                  {variablesContext.clanLeaderboardEnrolled && item.isCurrent ? (
+                                  {(variablesContext.clanLeaderboardEnrolled &&
+                                    item.isCurrent) ||
+                                  !item.hasClaim ? (
                                     <div className="flex items-center gap-4">
                                       <div className="flex-none avatar avatar-squircle avatar-xs">
                                         <div>
@@ -294,13 +322,17 @@ export default function TabClanLeaderboardsHistory() {
                                           <div className="uppercase text-xs text-ui-300">
                                             Points
                                           </div>
-                                          <div className="text-sm">1120</div>
+                                          <div className="text-sm">
+                                            {RandomNumber(300, 2000)}
+                                          </div>
                                         </div>
                                         <div>
                                           <div className="uppercase text-xs text-ui-300">
                                             Position
                                           </div>
-                                          <div className="text-sm">#243</div>
+                                          <div className="text-sm">
+                                            #{RandomNumber(5, 50)}
+                                          </div>
                                         </div>
                                       </div>
                                     </div>

@@ -167,7 +167,7 @@ export default function Ladders() {
                       </button>
                     </Tooltip>
                     <p className="text-sm">
-                      Headshots from your 3 best matches decide a tie
+                      {selectedLeaderboard.meta.tieBreaker}
                     </p>
                   </li>
                 </ul>

@@ -4,11 +4,10 @@ import { UiContext } from "../../../../contexts/ui.js";
 import { usePrototypeData } from "../../../../contexts/prototype.js";
 import ModalClaimLadderRewards from "../../home/modal-claim-ladderrewards.js";
 import { useRouter } from "next/router";
-import Avatar from "../../../../components/Avatar/Avatar.js";
+import AvatarClan from "../../../../components/Avatar/AvatarClan.js";
 import Slider from "../../../../components/Slider/Slider.js";
-import Reward from "../../../../components/Reward/Reward.js";
 
-export default function ModalLadderResults(props) {
+export default function ModalClanSeasonResults(props) {
   const router = useRouter();
   const { query } = useRouter();
   const uiContext = useContext(UiContext);
@@ -29,7 +28,7 @@ export default function ModalLadderResults(props) {
     <>
       {item && (
         <div className="relative z-10">
-          <div className="modal max-w-md">
+          <div className="modal max-w-lg">
             <button
               type="button"
               className="button button-secondary button-close"
@@ -39,15 +38,24 @@ export default function ModalLadderResults(props) {
             </button>
             <div className="modal-content p-0">
               <div className="modal-body">
-                <img
-                  src={item?.cover}
-                  className="aspect-cover object-cover w-full border border-ui-600"
-                  alt=""
-                />
-                <div className="p-4 space-y-4 text-left">
+                <div className="w-full aspect-landscape relative flex items-center justify-center overflow-hidden rounded">
+                  <img
+                    src={item.logo}
+                    alt={item.name}
+                    className="relative z-10 w-32 h-auto"
+                  />
+                  <img
+                    src={item.bg}
+                    alt={item.name}
+                    className="absolute inset-0 z-0 object-cover w-full h-full"
+                  />
+                </div>
+                <div className="p-4 space-y-4">
                   <div className="flex items-center justify-between mb-4">
                     <h2 className="h4">{item.name}</h2>
+                    {/*
                     <span className="icon text-3xl icon-rank-bronze text-gold-500"></span>
+      */}
                   </div>
                   <div>
                     <h3 className="h6 text-ui-300 mb-2">Your final result</h3>
@@ -57,21 +65,21 @@ export default function ModalLadderResults(props) {
                         bgColor="from-ui-850 via-ui-850 to-ui-850/0"
                       >
                         <div className="flex items-center gap-6 whitespace-nowrap leading-tight">
-                          <div className="pl-10 pr-4 py-1 text-center flex flex-col gap-3 items-center">
-                            <Avatar id={1} size="avatar-sm" />
-                            <div
-                              className={`${
-                                prototype.getUserByID(1)?.isPremium
-                                  ? "text-premium-500"
-                                  : ""
-                              }`}
-                            >
-                              {prototype.getUserByID(1)?.nickname}
+                          <div className="px-10 pr-4 py-1 text-center flex flex-col gap-3 items-center">
+                            <AvatarClan id={1} size="avatar-sm" />
+                            <div>
+                              &#91;
+                              {prototype.getClanByID(1)?.tag}
+                              &#93; {prototype.getClanByID(1)?.nickname}
                             </div>
                           </div>
-                          <div className="flex flex-col justify-center gap-4">
+                          <div className="flex flex-col justify-center gap-4 pr-4">
                             <div className="flex gap-2 items-center">
-                              <span>You were <span className="text-ui-100">58 points</span> from winning</span>
+                              <span>
+                                You were{" "}
+                                <span className="text-ui-100">4 points</span>{" "}
+                                from winning
+                              </span>
                               <div className="flex items-center whitespace-nowrap gap-1 text-currency-1-500">
                                 <span className="icon icon-coin text-lg" />
                                 <span>4222</span>
@@ -84,34 +92,18 @@ export default function ModalLadderResults(props) {
                             <div className="flex items-top gap-6">
                               <div className="px-4 border-l border-ui-600">
                                 <div className="text-xs text-ui-300 uppercase font-bold">
-                                  Earned XP
+                                  Score
                                 </div>
                                 <div className="text-main text-xl lg:text-2xl">
-                                  +250 xp
-                                </div>
-                              </div>
-                              <div className="px-4 border-l border-ui-600">
-                                <div className="text-xs text-ui-300 uppercase font-bold">
-                                  Total score
-                                </div>
-                                <div className="text-ui-100 text-xl lg:text-2xl">
-                                  324 pts
+                                  3 pts
                                 </div>
                               </div>
                               <div className="px-4 border-l border-ui-600">
                                 <div className="text-xs text-ui-300 uppercase font-bold">
                                   Position
                                 </div>
-                                <div className="text-ui-100 text-xl lg:text-2xl">
-                                  #89
-                                </div>
-                              </div>
-                              <div className="px-4 border-l border-ui-600">
-                                <div className="text-xs text-ui-300 uppercase font-bold">
-                                  Top match score
-                                </div>
-                                <div className="text-ui-100 text-xl lg:text-2xl">
-                                  231 pts
+                                <div className="text-main text-xl lg:text-2xl">
+                                  #5
                                 </div>
                               </div>
                             </div>
@@ -140,18 +132,14 @@ export default function ModalLadderResults(props) {
                             </svg>
                           </div>
                         </div>
-                        <Avatar id={9} size="avatar-sm" />
+                        <AvatarClan id={5} size="avatar-sm" />
                         <div className="leading-tight mt-4">
-                          <div
-                            className={`text-sm ${
-                              prototype.getUserByID(9).isPremium
-                                ? "text-premium-500"
-                                : ""
-                            }`}
-                          >
-                            {prototype.getUserByID(9).nickname}
+                          <div className={`text-sm`}>
+                            &#91;
+                            {prototype.getClanByID(5)?.tag}
+                            &#93; {prototype.getClanByID(5)?.nickname}
                           </div>
-                          <div className="text-ui-100 text-lg">732 pts</div>
+                          <div className="text-ui-100 text-lg">12 points</div>
                         </div>
                       </div>
                       <div className="rounded surface-ui-700 text-center px-2 pt-0 pb-3 flex-1 flex flex-col items-center">
@@ -171,18 +159,14 @@ export default function ModalLadderResults(props) {
                             </svg>
                           </div>
                         </div>
-                        <Avatar id={2} size="avatar-sm" />
+                        <AvatarClan id={4} size="avatar-sm" />
                         <div className="leading-tight mt-4">
-                          <div
-                            className={`text-sm ${
-                              prototype.getUserByID(2).isPremium
-                                ? "text-premium-500"
-                                : ""
-                            }`}
-                          >
-                            {prototype.getUserByID(2).nickname}
+                          <div className={`text-sm`}>
+                            &#91;
+                            {prototype.getClanByID(4)?.tag}
+                            &#93; {prototype.getClanByID(4)?.nickname}
                           </div>
-                          <div className="text-ui-100 text-lg">699 pts</div>
+                          <div className="text-ui-100 text-lg">8 points</div>
                         </div>
                       </div>
                       <div className="rounded surface-ui-700 text-center px-2 pt-0 pb-3 flex-1 flex flex-col items-center">
@@ -202,18 +186,14 @@ export default function ModalLadderResults(props) {
                             </svg>
                           </div>
                         </div>
-                        <Avatar id={6} size="avatar-sm" />
+                        <AvatarClan id={7} size="avatar-sm" />
                         <div className="leading-tight mt-4">
-                          <div
-                            className={`text-sm ${
-                              prototype.getUserByID(6).isPremium
-                                ? "text-premium-500"
-                                : ""
-                            }`}
-                          >
-                            {prototype.getUserByID(6).nickname}
+                          <div className={`text-sm`}>
+                            &#91;
+                            {prototype.getClanByID(7)?.tag}
+                            &#93; {prototype.getClanByID(7)?.nickname}
                           </div>
-                          <div className="text-ui-100 text-lg">653 pts</div>
+                          <div className="text-ui-100 text-lg">7 points</div>
                         </div>
                       </div>
                     </div>

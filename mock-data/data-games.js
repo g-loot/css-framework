@@ -3439,9 +3439,9 @@ export const dataGames = [
         bg:
           "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-bg.jpg",
         meta: {
-          objective: "Play in a party composed of 5 clan members.",
+          objective: "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",
-          tieBreaker: "Headshots from your 3 best matches decide a tie.",
+          tieBreaker: "Total number of kills decide a tie.",
         },
         rewards: [
           {
@@ -3614,14 +3614,15 @@ export const dataGames = [
       {
         id: 1,
         isCurrent: false,
+        hasClaim: true,
         name: "Easter Battle",
         logo: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/easterbattle-logo.png",
         bg:
           "https://res.cloudinary.com/gloot/image/upload/v1681913805/Stryda/demo/easterbattle-bg.jpg",
         meta: {
-          objective: "Play in a party composed of 5 clan members.",
+          objective: "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",
-          tieBreaker: "Headshots from your 3 best matches decide a tie.",
+          tieBreaker: "Total number of kills decide a tie.",
         },
         rewards: [
           {
@@ -3803,13 +3804,13 @@ export const dataGames = [
         id: 2,
         isCurrent: false,
         name: "Winter Mayhem",
-        logo: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/easterbattle-logo.png",
+        logo: "https://res.cloudinary.com/gloot/image/upload/v1686313273/Stryda/demo/wintermayhem-logo.png",
         bg:
-          "https://res.cloudinary.com/gloot/image/upload/v1681913805/Stryda/demo/easterbattle-bg.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1686313274/Stryda/demo/wintermayhem-bg.jpg",
         meta: {
-          objective: "Play in a party composed of 5 clan members.",
+          objective: "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",
-          tieBreaker: "Headshots from your 3 best matches decide a tie.",
+          tieBreaker: "Total number of kills decide a tie.",
         },
         rewards: [
           {
