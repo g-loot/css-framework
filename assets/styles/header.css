@@ -39,7 +39,8 @@
       inset-y-0
       right-0
       w-full
-      xl:w-2/3
+      xl:w-1/2
+      2xl:w-1/3
       h-full
     }
     &::before {
@@ -48,8 +49,10 @@
       z-10
       bg-gradient-to-r
       from-ui-800
-      via-ui-800
-      to-ui-800/30
+      via-ui-800/90
+      to-ui-800/75
+      2xl:via-ui-800/30
+      2xl:to-ui-800/0
       ;
     }
     > img {
@@ -57,7 +60,6 @@
       z-0
       object-right
       object-cover
-      xl:object-cover
       ;
     }
   }

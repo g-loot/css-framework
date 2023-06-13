@@ -61,11 +61,26 @@
   @apply
   flex
   flex-col
-  lg:flex-row
   items-stretch
   overflow-hidden
   relative
   ;
+
+  &:not(.modal-stacked) {
+    @apply
+    lg:flex-row
+    ;
+    .modal-content {
+      @apply
+      lg:text-left
+      ;
+    }
+    .modal-action {
+      @apply
+      lg:justify-start
+      ;
+    }
+  }
 
   &:not([class*='rounded']) {
     @apply
@@ -104,8 +119,11 @@
   .modal-image {
     @apply
     flex-1
-    aspect-video
+    min-w-xs
+    2xl:min-w-[0px]
+    aspect-landscape
     relative
+    z-0
     bg-ui-900
     flex
     items-center
@@ -162,9 +180,8 @@
     flex
     flex-col
     items-stretch
-    text-center
-    lg:text-left
     max-w-[100%]
+    text-center
     ;
 
     &:not([class*="p-"]) {
@@ -233,7 +250,6 @@
   flex
   items-center
   justify-center
-  lg:justify-start
   gap-4
   border-t
   border-ui-700

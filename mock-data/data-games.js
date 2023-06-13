@@ -19,6 +19,8 @@ export const dataGames = [
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
       heroTournament:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
+      heroClanSeason:
+        "https://res.cloudinary.com/gloot/image/upload/v1686643453/Stryda/illustrations/ClansSeason_bg.jpg",
     },
     missions: [
       {

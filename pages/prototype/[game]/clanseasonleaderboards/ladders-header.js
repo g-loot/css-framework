@@ -84,7 +84,7 @@ export default function LaddersHeader(props) {
             </div>
           </div>
           <div className="header-bg">
-            <img src={selectedGame.assets.heroLadder} alt="Ladders" />
+            <img src={selectedGame.assets.heroClanSeason} alt="Ladders" />
           </div>
         </section>
       )}
