@@ -27,19 +27,13 @@ export const FrameworkPages = {
           tags: "auth,oauth,authentication,login,sign in",
         },
         {
-          label: "Sign up 1/3",
+          label: "Sign up 1/2",
           url: "auth/signup",
           query: "",
           tags: "auth,oauth,authentication,sign up,register",
         },
         {
-          label: "Sign up 2/3",
-          url: "auth/step2",
-          query: "",
-          tags: "auth,oauth,authentication,sign up,register",
-        },
-        {
-          label: "Sign up 3/3",
+          label: "Sign up 2/2",
           url: "auth/step3",
           query: "",
           tags: "auth,oauth,authentication,sign up,register",

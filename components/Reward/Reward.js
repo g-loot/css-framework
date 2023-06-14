@@ -74,17 +74,15 @@ export default function Reward(props) {
             props.gap ? props.gap : "gap-1"
           }`}
         >
-          <Tooltip tooltip="1 avatar frame">
-            <div className="avatar avatar-circle avatar-tiny">
-              <img
-                src={prototype.getShopitemByID(1, props.reward.value).image}
-                alt=""
-              />
-              <div>
-                <img src={prototype.getUserByID(1)?.avatar} alt="avatar" />
-              </div>
+          <div className="avatar avatar-circle avatar-tiny">
+            <img
+              src={prototype.getShopitemByID(1, props.reward.value).image}
+              alt=""
+            />
+            <div>
+              <span className="icon icon-circle-08" />
             </div>
-          </Tooltip>
+          </div>
         </div>
       )}
       {props.reward.type === "profilebanner" && (
@@ -93,13 +91,11 @@ export default function Reward(props) {
             props.gap ? props.gap : "gap-1"
           }`}
         >
-          <Tooltip tooltip="1 profile banner">
-            <img
-              src={prototype.getShopitemByID(2, props.reward.value).image}
-              alt=""
-              className="w-7 h-7 rounded object-cover border border-ui-600"
-            />
-          </Tooltip>
+          <img
+            src={prototype.getShopitemByID(2, props.reward.value).image}
+            alt=""
+            className="w-7 h-7 rounded object-cover border border-ui-600"
+          />
         </div>
       )}
     </>

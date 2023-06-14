@@ -151,6 +151,6 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(calc(-9em + (var(--value) * -1em)));
+    transform: translateY(calc(-8.95em + (var(--value) * -1em)));
   }
 }

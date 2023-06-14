@@ -381,7 +381,7 @@ export default function TabLaddersSoloLeaderboards() {
                             width="auto"
                             height="auto"
                             alt=""
-                            className="-mt-14 mb-4"
+                            className="mb-4"
                           />
                           <h2 className="h4 mb-4">
                             Welcome to

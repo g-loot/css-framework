@@ -1,4 +1,5 @@
 import Reward from "../../../../../components/Reward/Reward";
+import Rewards from "../../../../../components/Reward/Rewards";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import { usePrototypeData } from "../../../../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -135,17 +136,7 @@ export default function TabClanLeaderboardsRewards() {
                   >
                     <span className="text-lg">{reward.name}</span>
                     <div className="flex items-center justify-center gap-4">
-                      {reward.rewards.map((reward, rewardIndex) => (
-                        <>
-                          <Reward
-                            key={rewardIndex}
-                            reward={reward}
-                            gap="gap-2"
-                            iconClassNames="text-lg"
-                            textClassNames="text-lg"
-                          />
-                        </>
-                      ))}
+                      {reward.rewards && <Rewards rewards={reward.rewards} />}
                     </div>
                   </li>
                 ))}

@@ -90,41 +90,6 @@ export default function LadderCardSecondary(props) {
               <div className="card-image-content">
                 <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
                   <GameIcon game={gameID} />
-                  {/*
-              <div className="ml-0 p-1 border border-ui-700 rounded-sm bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
-                <span
-                  className={`icon text-xl ${
-                    prototype.getGameByID(gameID).slug === "apexlegends"
-                      ? "icon-game-apexlegends-symbol text-game-apexlegends"
-                      : ""
-                  } ${
-                    prototype.getGameByID(gameID).slug === "csgo"
-                      ? "icon-game-csgo-symbol text-game-csgo"
-                      : ""
-                  }  ${
-                    prototype.getGameByID(gameID).slug === "dota2"
-                      ? "icon-game-dota2-symbol text-game-dota2"
-                      : ""
-                  }  ${
-                    prototype.getGameByID(gameID).slug === "leagueoflegends"
-                      ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
-                      : ""
-                  }  ${
-                    prototype.getGameByID(gameID).slug === "rocketleague"
-                      ? "icon-game-rocketleague-symbol text-game-rocketleague"
-                      : ""
-                  } ${
-                    prototype.getGameByID(gameID).slug === "pubg"
-                      ? "icon-game-pubg-symbol text-game-pubg"
-                      : ""
-                  }  ${
-                    prototype.getGameByID(gameID).slug === "valorant"
-                      ? "icon-game-valorant-symbol text-game-valorant"
-                      : ""
-                  }`}
-                />
-              </div>
-                */}
                   <span>{ladder.gameMode}</span>
                   {ladder.status !== "finished" ||
                     (ladder.hasClaim && selectedUser.isYou && (

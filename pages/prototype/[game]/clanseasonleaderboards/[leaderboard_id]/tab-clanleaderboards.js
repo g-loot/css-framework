@@ -13,6 +13,8 @@ import { VariablesContext } from "../../../../../contexts/variables";
 import ModalInfoClanSeasonEnroll from "../modal-info-clanseasonenroll";
 import AvatarClan from "../../../../../components/Avatar/AvatarClan";
 import ModalClanSeasonResults from "../modal-clanseasonresults";
+import ResetsIn from "../../../../../components/Countdown/ResetsIn";
+import Rewards from "../../../../../components/Reward/Rewards";
 
 const rewardDistribClan = [
   {
@@ -238,14 +240,19 @@ export default function TabClanLeaderboardsLeaderboards() {
     <>
       {selectedClanLeaderboard && (
         <>
-          {isEmpty ? (
+          {isEmpty || selectedClanLeaderboard.status === "upcoming" ? (
             <div className="col-span-1 lg:col-span-3">
               <div className="mt-10 text-center">
-                <h3 className="h4 mt-2 text-ui-100 leading-tight text-center max-w-[40ch] mx-auto">
+                <h3 className="h4 mt-2 text-ui-100 leading-tight text-center max-w-[40ch] mx-auto mb-4">
                   Play together with 5 members of your clan and be the first to
                   join this leaderboard!
                 </h3>
-                {!selectedClanLeaderboard.isCurrent && (
+                {selectedClanLeaderboard.status === "upcoming" && (
+                  <h3 className="h4 mt-2 mb-6 text-ui-100 leading-tight text-center">
+                    This Ladder starts <ResetsIn label=" " status={2} />
+                  </h3>
+                )}
+                {!selectedClanLeaderboard.status === "ongoing" && (
                   <>
                     {!isInAClan ? (
                       <Link
@@ -253,7 +260,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                       >
                         <button
                           type="button"
-                          className="button button-primary w-60 mt-4 mb-6"
+                          className="button button-primary w-60 mb-6"
                         >
                           <span className="icon icon-multiple-12" />
                           <span>Search for clans</span>
@@ -286,17 +293,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                       >
                         <LeaderboardWings id={itemIndex} value={item.name} />
                       </div>
-                      <div className="flex-1 flex items-center justify-center gap-4">
-                        {item.rewards?.map((reward, rewardIndex) => (
-                          <Reward
-                            key={rewardIndex}
-                            reward={reward}
-                            gap="gap-2"
-                            iconClassNames="text-lg"
-                            textClassNames="text-lg"
-                          />
-                        ))}
-                      </div>
+                      {item.rewards && <Rewards rewards={item.rewards} />}
                     </li>
                   ))}
                 </ul>
@@ -367,30 +364,42 @@ export default function TabClanLeaderboardsLeaderboards() {
                         }
                       </p>
                       {variablesContext.clanLeaderboardEnrolled ||
-                      selectedClanLeaderboard.isCurrent === false ? (
+                      selectedClanLeaderboard.status === "finished" ? (
                         <>
-                          <div className="py-2 space-y-2">
-                            <h3>#5</h3>
-                            <p className="text-ui-300 text-sm uppercase flex gap-3 justify-center">
-                              <span>Score: 3</span>
-                              <span>Top 5%</span>
-                            </p>
+                          <div
+                            className={`infobanner ${
+                              selectedClanLeaderboard.status === "ongoing"
+                                ? "is-active"
+                                : ""
+                            }`}
+                          >
+                            <div className="py-2 space-y-2 infobanner-front">
+                              <h3>#5</h3>
+                              <p className="text-ui-300 text-sm uppercase flex gap-3 justify-center">
+                                <span>Score: 3</span>
+                                <span>Top 5%</span>
+                              </p>
+                            </div>
+                            <div className="infobanner-back absolute inset-0 flex justify-center text-center text-sm">
+                              <div className="animate-pulse text-ui-100">
+                                Auto-enrolled...
+                              </div>
+                            </div>
                           </div>
-                          {selectedClanLeaderboard.hasClaim ||
-                            (!selectedClanLeaderboard.hasClaim &&
-                              selectedClanLeaderboard.isCurrent === false && (
-                                <button
-                                  type="button"
-                                  className="button button-sm button-primary w-full mb-2"
-                                  onClick={() =>
-                                    openmodalLadderResults(
-                                      selectedClanLeaderboard.id
-                                    )
-                                  }
-                                >
-                                  <span>View results</span>
-                                </button>
-                              ))}
+
+                          {selectedClanLeaderboard.status === "finished" && (
+                            <button
+                              type="button"
+                              className="button button-sm button-primary w-full mb-2"
+                              onClick={() =>
+                                openmodalLadderResults(
+                                  selectedClanLeaderboard.id
+                                )
+                              }
+                            >
+                              <span>View results</span>
+                            </button>
+                          )}
                           <button
                             type="button"
                             className="button button-sm button-secondary w-full"
@@ -520,19 +529,12 @@ export default function TabClanLeaderboardsLeaderboards() {
                             composed of 5 Clan members to be placed on the
                             leaderboard.
                           </p>
-                          <button
-                            type="button"
-                            className="button button-sm button-primary w-full"
-                            onClick={() => handleEnroll()}
-                          >
-                            <span>Enroll my Clan</span>
-                          </button>
                         </>
                       )}
                     </div>
                   ) : (
                     <>
-                      {selectedClanLeaderboard.isCurrent && (
+                      {selectedClanLeaderboard.status === "ongoing" && (
                         <div
                           className={`surface p-2 pt-4 rounded text-center ${
                             isLoadingRank ? "is-loading" : ""
@@ -803,19 +805,9 @@ export default function TabClanLeaderboardsLeaderboards() {
                                       >
                                         <LeaderboardWings id={clanIndex} />
                                       </div>
-                                      <div className="flex-1 flex items-center justify-center gap-4">
-                                        {clan.rewards?.map(
-                                          (reward, rewardIndex) => (
-                                            <Reward
-                                              key={rewardIndex}
-                                              reward={reward}
-                                              gap="gap-2"
-                                              iconClassNames="text-lg"
-                                              textClassNames="text-lg"
-                                            />
-                                          )
-                                        )}
-                                      </div>
+                                      {clan.rewards && (
+                                        <Rewards rewards={clan.rewards} />
+                                      )}
                                     </div>
                                     <div
                                       className={`flex-1 accordion surface rounded-lg ${
@@ -991,8 +983,9 @@ export default function TabClanLeaderboardsLeaderboards() {
                                                                 0,
                                                                 Math.round(
                                                                   clan.stats
-                                                                    .losses -
-                                                                    userIndex
+                                                                    .losses +
+                                                                    userIndex *
+                                                                      2
                                                                 )
                                                               )}
                                                             </td>

@@ -61,7 +61,7 @@ export default function LaddersHeader(props) {
             <div className="header-body">
               <h1>Clan Seasons</h1>
               <p className="text-ui-300 max-w-[70ch] mt-4 mb-5">
-                Create a 5 people party with members from your Clan. Play
+                Create a 5 people party with members from your Stryda Clan. Play
                 VALORANT together and start climbing the leaderboard! No need
                 for tokens or any extra steps.
               </p>
@@ -77,7 +77,7 @@ export default function LaddersHeader(props) {
                 <Link href={`/prototype/clans${prototype.getURLparams()}`}>
                   <button type="button" className="button button-secondary">
                     <span className="icon icon-multiple-12" />
-                    <span>Join a clan</span>
+                    <span>Search for Clans</span>
                   </button>
                 </Link>
               </div>

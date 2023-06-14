@@ -21,38 +21,44 @@ export default function ModalLevelUp(props) {
     <>
       <div className="relative z-10 max-w-sm w-full">
         <div className="modal modal-center">
-          <div className="modal-content px-6 py-8 gap-6">
+          <div className="modal-content">
             <div className="modal-body">
-              <div className="flex flex-col items-center gap-6 rounded-xl w-full">
-                <h2 className="animate-slide-in-top">You have leveled up!</h2>
-                <div className="animate-slide-in-bottom flex flex-col items-center gap-6">
-                  <div className="w-full relative">
-                    <Avatar size="avatar-2xl" id={11} hasLevel={false} />
-                    <div className="absolute left-1/2 -bottom-1 -translate-x-1/2 z-30 bg-ui-700 rounded-full px-6 border border-ui-500">
-                      <span className="stepper pt-1 font-medium text-4xl text-white">
-                        <span style={{ "--value": "3" }} />
-                        <span style={{ "--value": "1" }} />
-                        <span style={{ "--value": "2" }} />
-                      </span>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl text-main">
-                      You have reached{" "}
-                      <span className="text-main inline-flex items-center justify-center gap-2">
-                        <span className="font-medium">15000</span>
-                        <span className="icon icon-xp-symbol text-4xl text-main" />
-                      </span>
-                    </h3>
-                    <p>You are 10000 XP from next level.</p>
-                  </div>
+              <h2>You have leveled up!</h2>
+              <div className="mt-8 mb-4 relative flex items-center justify-center">
+                <div
+                  className="animate-fire-in animate-delay"
+                  style={{
+                    "--delay": "calc(1 * 0.5s)",
+                  }}
+                >
+                  <Avatar size="avatar-2xl" id={1} hasLevel={false} />
+                </div>
+                <div
+                  className="absolute bottom-0 z-30 bg-ui-700 rounded-full px-6 border border-ui-400 animate-fire-in animate-delay"
+                  style={{
+                    "--delay": "calc(2 * 0.5s)",
+                  }}
+                >
+                  <span className="stepper font-medium text-4xl text-white leading-tight">
+                    <span style={{ "--value": "3" }} />
+                    <span style={{ "--value": "1" }} />
+                    <span style={{ "--value": "2" }} />
+                  </span>
                 </div>
               </div>
+              <h3 className="text-2xl text-main">
+                You have reached{" "}
+                <span className="text-main inline-flex items-center justify-center gap-2">
+                  <span className="font-medium">15000</span>
+                  <span className="icon icon-xp-symbol text-5xl text-main" />
+                </span>
+              </h3>
+              <p>You are 10000 XP from next level.</p>
             </div>
-            <div className="modal-actions">
+            <div className="modal-action">
               <button
                 type="button"
-                className={`button button-main ${
+                className={`button button-main w-full md:w-1/2 ${
                   submitting ? "is-loading" : ""
                 } animate-slide-in-bottom`}
                 onClick={closeModalWithDelay}

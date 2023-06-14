@@ -13,12 +13,18 @@ import TabClanSeasonLeaderboardOverview from "./tab-overview";
 import TabClanLeaderboardsRewards from "./[leaderboard_id]/tab-rewards";
 import TabClanLeaderboardsHowItWorks from "./[leaderboard_id]/tab-howitworks";
 import TabClanLeaderboardsHistory from "./[leaderboard_id]/tab-history";
+import TabClanLeaderboardUpcoming from "./[leaderboard_id]/tab-upcoming";
 
 const TabsItems = [
   {
     label: "Ongoing",
     url: "ongoing",
     component: TabClanSeasonLeaderboardOverview,
+  },
+  {
+    label: "Upcoming",
+    url: "upcoming",
+    component: TabClanLeaderboardUpcoming,
   },
   {
     label: "Completed",
