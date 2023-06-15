@@ -23,20 +23,31 @@ export default function ModalLevelUp(props) {
         <div className="modal modal-center">
           <div className="modal-content">
             <div className="modal-body">
-              <h2>You have leveled up!</h2>
+              <h2
+                className="animate-fade-in animate-delay"
+                style={{
+                  "--delay": "calc(5 * 0.5s)",
+                }}
+              >
+                You have leveled up!
+              </h2>
               <div className="mt-8 mb-4 relative flex items-center justify-center">
-                <div
-                  className="animate-fire-in animate-delay"
-                  style={{
-                    "--delay": "calc(1 * 0.5s)",
-                  }}
-                >
+                <div className="absolute -inset-16 z-20 flex items-center justify-center pointer-events-none">
+                  <div className="lottie-blur h-full aspect-square flex items-center justify-center">
+                    <Lottie
+                      animationData={LottieExplosion}
+                      loop={false}
+                      autoplay={true}
+                    />
+                  </div>
+                </div>
+                <div className="animate-fire-in relative">
                   <Avatar size="avatar-2xl" id={1} hasLevel={false} />
                 </div>
                 <div
                   className="absolute bottom-0 z-30 bg-ui-700 rounded-full px-6 border border-ui-400 animate-fire-in animate-delay"
                   style={{
-                    "--delay": "calc(2 * 0.5s)",
+                    "--delay": "calc(1 * 0.5s)",
                   }}
                 >
                   <span className="stepper font-medium text-4xl text-white leading-tight">
@@ -46,14 +57,26 @@ export default function ModalLevelUp(props) {
                   </span>
                 </div>
               </div>
-              <h3 className="text-2xl text-main">
+              <h3
+                className="text-2xl text-main animate-fade-in animate-delay"
+                style={{
+                  "--delay": "calc(5 * 0.5s)",
+                }}
+              >
                 You have reached{" "}
                 <span className="text-main inline-flex items-center justify-center gap-2">
                   <span className="font-medium">15000</span>
                   <span className="icon icon-xp-symbol text-5xl text-main" />
                 </span>
               </h3>
-              <p>You are 10000 XP from next level.</p>
+              <p
+                className="animate-fade-in animate-delay"
+                style={{
+                  "--delay": "calc(5 * 0.5s)",
+                }}
+              >
+                You are 10000 XP from next level.
+              </p>
             </div>
             <div className="modal-action">
               <button
@@ -67,15 +90,6 @@ export default function ModalLevelUp(props) {
               </button>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="fixed inset-0 z-20 flex items-center justify-center pointer-events-none">
-        <div className="lottie-blur h-[75vh] w-[75vh] flex items-center justify-center">
-          <Lottie
-            animationData={LottieExplosion}
-            loop={false}
-            autoplay={true}
-          />
         </div>
       </div>
     </>
