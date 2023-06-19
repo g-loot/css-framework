@@ -10,7 +10,7 @@ export const dataPatchNotes = [
         notes: [
           {
             id: 0,
-            text: "Added a banner to highlight the top 3 placed clans in the <a href='#' class='link'>BIG CLAN BATTLE - May Edition</a>!",
+            text: "Added a banner to highlight the top 3 placed clans in the <a href='#'>BIG CLAN BATTLE - May Edition</a>!",
           },
         ],
       },
@@ -24,7 +24,7 @@ export const dataPatchNotes = [
           },
           {
             id: 1,
-            text: "Added notifications that shows every time you earn an achievement.",
+            text: "Added notifications that shows every time you earn an <i>achievement</i>.",
           },
           {
             id: 2,
@@ -61,7 +61,7 @@ export const dataPatchNotes = [
         notes: [
           {
             id: 0,
-            text: "The <a href='#' class='link'>premium</a> page and the <a href='#' class='link'>how-it-works</a> page can now be reached without logging in to the platform.",
+            text: "The <a href='#'>premium</a> page and the <a href='#'>how-it-works</a> page can now be reached without logging in to the platform.",
             image:
               "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_missions_2.png",
           },
@@ -114,7 +114,7 @@ export const dataPatchNotes = [
         notes: [
           {
             id: 0,
-            text: "Changed the color of the avatar frame for <a href='#' class='link'>premium</a> back to purple.",
+            text: "Changed the color of the avatar frame for <a href='#'>premium</a> back to purple.",
             image:
               "https://res.cloudinary.com/gloot/image/upload/v1680527489/Stryda/illustrations/picture_premium_ladders_2.png",
           },

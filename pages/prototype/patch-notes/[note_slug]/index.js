@@ -47,15 +47,17 @@ export default function Premium() {
   return (
     <>
       <PrototypeStructure title={note?.name}>
-      {note && (
+        {note && (
           <>
-            <section className="relative pt-36 pb-36 overflow-hidden">
+            <section className="relative py-36 overflow-hidden">
               <div className="absolute z-30 top-0 inset-x-0">
                 <div className="container max-w-md mx-auto px-6 md:px-0">
                   <nav className="breadcrumbs" aria-label="Breadcrumb">
                     <ol>
                       <li>
-                        <Link href={`/prototype/patch-notes${prototype.getURLparams()}`}>
+                        <Link
+                          href={`/prototype/patch-notes${prototype.getURLparams()}`}
+                        >
                           <a>
                             <span>Patch notes</span>
                           </a>
@@ -88,11 +90,11 @@ export default function Premium() {
                   {note.name}
                 </h1>
               </div>
-              <div className="absolute inset-0 z-0 flex items-center justify-center">
+              <div className="absolute inset-0 z-0 flex items-center justify-center opacity-50">
                 <img
                   src="https://res.cloudinary.com/gloot/image/upload/v1686211336/Stryda/illustrations/Stryda_patch_notes_hero_bg.png"
                   alt=""
-                  className="fixed z-0 top-[20dvh] sm:top-8 md:top-0 h-auto w-full md:max-w-md mx-auto animate-slide-in-bottom animate-paused animate-delay"
+                  className="absolute z-0 h-full w-auto md:max-w-sm mx-auto animate-slide-in-bottom animate-delay"
                   style={{
                     "--delay": "calc(3 * 0.05s)",
                   }}
@@ -116,6 +118,7 @@ export default function Premium() {
                     {section.notes.map((note, noteIndex) => (
                       <li key={noteIndex} className="space-y-4">
                         <div
+                          className="[&>a]:underline [&>a]:active:no-underline [&>a]:cursor-pointer [&>a]:hover:opacity-80 [&>a]:active:opacity-80 [&>a]:rounded [&>a]:outline-offset-2 [&>a]:focus-visible:outline [&>a]:focus-visible:outline-main [&>a]:transition-[color,background,transform,opacity] [&>a]:duration-200 [&>a]:ease-in-out [&>b]:text-ui-100"
                           dangerouslySetInnerHTML={{
                             __html: note.text,
                           }}

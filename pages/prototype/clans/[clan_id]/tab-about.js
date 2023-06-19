@@ -140,7 +140,7 @@ export default function TabClanAbout() {
               </section>
 
               <div className="flex flex-col xl:flex-row items-stretch gap-y-4 xl:gap-x-4 animate-slide-in-bottom">
-                <section className="flex-1 surface md:rounded xl:flex xl:flex-col">
+                <section className="flex-3 surface md:rounded xl:flex xl:flex-col">
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                     <h2 className="h6 text-ui-100">About</h2>
                   </div>
@@ -148,32 +148,29 @@ export default function TabClanAbout() {
                     <div className="p-4 space-y-4">
                       {selectedClan.bio && (
                         <p className="text-ui-300 mt-1 text-left">
-                          <ReadMore content={selectedClan.bio} max={125} />
+                          <ReadMore content={selectedClan.bio} max={200} />
                         </p>
                       )}
-                      <p className="text-ui-300 mt-1 text-left">
+                    </div>
+                    <ul className="border-t border-ui-700 py-2.5">
+                      <li className="px-4 py-1">
                         <span className="text-ui-300">Main language: </span>
                         <span className="text-ui-100">{selectedClan.lang}</span>
-                      </p>
-                      <p className="text-ui-300 mt-1 text-left">
+                      </li>
+                      <li className="px-4 py-1">
                         <span className="text-ui-300">Clan captain: </span>
-                        <span className="text-ui-100">{prototype.getUserByID(selectedClan.admin).nickname}</span>
-                      </p>
-                      <p className="text-ui-300 mt-1 text-left">
+                        <span className="text-ui-100">
+                          {prototype.getUserByID(selectedClan.admin).nickname}
+                        </span>
+                      </li>
+                      <li className="px-4 py-1">
                         <span className="text-ui-300">Created on </span>
                         <span className="text-ui-100">November 6 2022</span>
-                      </p>
-                    </div>
-                  </div>
-                </section>
-                <section className="flex-1 surface md:rounded xl:flex xl:flex-col">
-                  <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                    <h2 className="h6 text-ui-100">Social</h2>
-                  </div>
-                  <div className="xl:flex-1 xl:grid xl:place-content-stretch xl:content-center">
-                    <ul className="divide-y divide-ui-700">
+                      </li>
+                    </ul>
+                    <ul className="border-t border-ui-700 py-2.5">
                       {selectedClan.social?.twitch && (
-                        <li className="flex items-center gap-4 text-ui-300 pl-4 pr-2 py-1">
+                        <li className="flex items-center gap-4 text-ui-300 pl-4 pr-2 py-0.5">
                           <span className="icon icon-20 icon-twitch" />
                           <a
                             className="flex-1 link link-hover"
@@ -194,7 +191,7 @@ export default function TabClanAbout() {
                         </li>
                       )}
                       {selectedClan.social?.discord && (
-                        <li className="flex items-center gap-4 text-ui-300 pl-4 pr-2 py-1">
+                        <li className="flex items-center gap-4 text-ui-300 pl-4 pr-2 py-0.5">
                           <span className="icon icon-20 icon-discord" />
                           <a
                             className="flex-1 link link-hover"
@@ -215,7 +212,7 @@ export default function TabClanAbout() {
                         </li>
                       )}
                       {selectedClan.social?.youtube && (
-                        <li className="flex items-center gap-4 text-ui-300 pl-4 pr-2 py-1">
+                        <li className="flex items-center gap-4 text-ui-300 pl-4 pr-2 py-0.5">
                           <span className="icon icon-20 icon-logo-youtube" />
                           <a
                             className="flex-1 link link-hover"
@@ -236,7 +233,7 @@ export default function TabClanAbout() {
                         </li>
                       )}
                       {selectedClan.social?.twitter && (
-                        <li className="flex items-center gap-4 text-ui-300 pl-4 pr-2 py-1">
+                        <li className="flex items-center gap-4 text-ui-300 pl-4 pr-2 py-0.5">
                           <span className="icon icon-20 icon-logo-twitter" />
                           <a
                             className="flex-1 link link-hover"
@@ -259,7 +256,7 @@ export default function TabClanAbout() {
                     </ul>
                   </div>
                 </section>
-                <section className="flex-1 surface md:rounded xl:flex xl:flex-col">
+                <section className="flex-2 surface md:rounded xl:flex xl:flex-col">
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                     <h2 className="h6 text-ui-100">
                       Games ({selectedClan.games.length})

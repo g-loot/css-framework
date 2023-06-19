@@ -478,7 +478,8 @@
   flex
   flex-row
   items-stretch
-  overflow-hidden;
+  overflow-hidden
+  ;
 
   &,
   &::before,
@@ -514,10 +515,13 @@
   &::before {
     @apply shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))];
   }
+  
   .card-bg {
-    @apply relative
+    @apply
+    relative
     order-1
-    flex-none;
+    flex-none
+    ;
   }
   .card-body {
     @apply 
@@ -539,7 +543,10 @@
       @apply py-1;
     }
     + .card-bg {
-      @apply aspect-card;
+      @apply 
+      aspect-card
+      ;
+
       &,
       > * {
         &:not([class*=rounded]) {
@@ -788,6 +795,16 @@
     .card-bg::before {
       @apply
       bg-attention-300
+      ;
+    }
+  }
+}
+
+@media not all and (min-resolution:.001dpcm) { 
+  @media {
+    .card-bg {
+      @apply
+      flex-[min-content]
       ;
     }
   }

@@ -29,7 +29,7 @@ export default function ModalLevelUp(props) {
                   "--delay": "calc(5 * 0.5s)",
                 }}
               >
-                You have leveled up!
+                Level up!
               </h2>
               <div className="mt-8 mb-4 relative flex items-center justify-center">
                 <div className="absolute -inset-16 z-20 flex items-center justify-center pointer-events-none">
@@ -70,12 +70,12 @@ export default function ModalLevelUp(props) {
                 </span>
               </h3>
               <p
-                className="animate-fade-in animate-delay"
+                className="text-ui-100 animate-fade-in animate-delay"
                 style={{
                   "--delay": "calc(5 * 0.5s)",
                 }}
               >
-                You are 10000 XP from next level.
+                10 000 XP until next level
               </p>
             </div>
             <div className="modal-action">
