@@ -15,6 +15,7 @@ import AvatarClan from "../../../../../components/Avatar/AvatarClan";
 import ModalClanSeasonResults from "../modal-clanseasonresults";
 import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 import Rewards from "../../../../../components/Reward/Rewards";
+import ButtonFeedback from "../../../../../components/Button/ButtonFeedback";
 
 const rewardDistribClan = [
   {
@@ -382,7 +383,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                             </div>
                             <div className="infobanner-back absolute inset-0 flex justify-center text-center text-sm">
                               <div className="animate-pulse text-ui-100">
-                                Auto-enrolled...
+                                Waiting for matches...
                               </div>
                             </div>
                           </div>
@@ -406,121 +407,6 @@ export default function TabClanLeaderboardsLeaderboards() {
                           >
                             <span>Go to Clan position</span>
                           </button>
-                          <div className="surface rounded mt-4">
-                            <div className="text-center p-4">
-                              <div className="text-xs uppercase text-ui-300">
-                                Top performing Clan members
-                              </div>
-                            </div>
-                            <div className="border-t border-ui-700 max-h-[200px] overflow-y-auto scrollbar-desktop">
-                              <table className="table table-compact w-full">
-                                <tbody>
-                                  <tr>
-                                    <td>
-                                      <div className="text-xs text-ui-300 uppercase">
-                                        Clan member
-                                      </div>
-                                    </td>
-                                    <td>
-                                      <div className="text-xs text-ui-300 uppercase text-right">
-                                        Wins
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  {getMyClanMembers().map((item, itemIndex) => (
-                                    <tr key={itemIndex}>
-                                      <td>
-                                        <Link
-                                          href={`/prototype/profile/${
-                                            prototype.getUserByID(item.id).id
-                                          }${prototype.getURLparams()}`}
-                                        >
-                                          <a
-                                            className={`text-xs interactive ${
-                                              prototype.getUserByID(item.id)
-                                                .isPremium
-                                                ? "text-premium-500"
-                                                : "text-ui-300"
-                                            }`}
-                                          >
-                                            {
-                                              prototype.getUserByID(item.id)
-                                                .nickname
-                                            }
-                                          </a>
-                                        </Link>
-                                      </td>
-                                      <td>
-                                        <div className="text-xs text-right text-ui-100 font-bold">
-                                          {41 - itemIndex}
-                                        </div>
-                                      </td>
-                                    </tr>
-                                  ))}
-                                  <tr>
-                                    <td>
-                                      <Link href="/prototype/profile/3">
-                                        <a
-                                          className={`text-xs interactive ${
-                                            prototype.getUserByID(3).isPremium
-                                              ? "text-premium-500"
-                                              : "text-ui-300"
-                                          }`}
-                                        >
-                                          {prototype.getUserByID(3).nickname}
-                                        </a>
-                                      </Link>
-                                    </td>
-                                    <td>
-                                      <div className="text-xs text-right text-ui-100 font-bold">
-                                        6
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <Link href="/prototype/profile/4">
-                                        <a
-                                          className={`text-xs interactive ${
-                                            prototype.getUserByID(4).isPremium
-                                              ? "text-premium-500"
-                                              : "text-ui-300"
-                                          }`}
-                                        >
-                                          {prototype.getUserByID(4).nickname}
-                                        </a>
-                                      </Link>
-                                    </td>
-                                    <td>
-                                      <div className="text-xs text-right text-ui-100 font-bold">
-                                        6
-                                      </div>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <Link href="/prototype/profile/5">
-                                        <a
-                                          className={`text-xs interactive ${
-                                            prototype.getUserByID(5).isPremium
-                                              ? "text-premium-500"
-                                              : "text-ui-300"
-                                          }`}
-                                        >
-                                          {prototype.getUserByID(5).nickname}
-                                        </a>
-                                      </Link>
-                                    </td>
-                                    <td>
-                                      <div className="text-xs text-right text-ui-100 font-bold">
-                                        5
-                                      </div>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
                         </>
                       ) : (
                         <>
@@ -531,6 +417,96 @@ export default function TabClanLeaderboardsLeaderboards() {
                           </p>
                         </>
                       )}
+
+                      <div className="surface rounded mt-4">
+                        <div className="text-center py-2 pr-2">
+                          <table className="table table-compact w-full">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <div className="text-sm uppercase">
+                                    Clan members
+                                  </div>
+                                </td>
+                                {selectedClanLeaderboard.status !== "upcoming" && variablesContext.clanLeaderboardEnrolled  ? (
+                                  <td className="text-right">
+                                    <div className="text-sm uppercase">
+                                      Wins
+                                    </div>
+                                  </td>
+                                ) : (
+                                  <td className="text-right">
+                                    <Link href="/prototype/clans/1?tab=members">
+                                      <a className="text-sm link">
+                                        View all
+                                      </a>
+                                    </Link>
+                                  </td>
+                                )}
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div className="border-t border-ui-700 max-h-[250px] overflow-y-auto scrollbar-desktop">
+                          <table className="table table-compact w-full">
+                            <tbody>
+                              {getMyClanMembers().map((item, itemIndex) => (
+                                <tr key={itemIndex}>
+                                  <td>
+                                    <Link
+                                      href={`/prototype/profile/${
+                                        prototype.getUserByID(item.id).id
+                                      }${prototype.getURLparams()}`}
+                                    >
+                                      <a
+                                        className={`text-sm interactive ${
+                                          prototype.getUserByID(item.id)
+                                            .isPremium
+                                            ? "text-premium-500"
+                                            : "text-ui-200"
+                                        }`}
+                                      >
+                                        {
+                                          prototype.getUserByID(item.id)
+                                            .nickname
+                                        }{" "}
+                                        #1111
+                                      </a>
+                                    </Link>
+                                  </td>
+                                  <td className="text-right">
+                                    <Tooltip
+                                      placement="top"
+                                      tooltip={
+                                        <span className="text-sm">
+                                          Click to copy
+                                        </span>
+                                      }
+                                    >
+                                      <ButtonFeedback
+                                        value={`${
+                                          prototype.getUserByID(item.id)
+                                            .nickname
+                                        } #1111`}
+                                        variant="button-ghost rounded-full"
+                                        icon="icon-document-copy"
+                                        message="RIOT ID copied to your clipboard"
+                                      />
+                                    </Tooltip>
+                                  </td>
+                                  {selectedClanLeaderboard.status !== "upcoming" && variablesContext.clanLeaderboardEnrolled && (
+                                  <td>
+                                    <div className="text-sm font-bold">
+                                      {41 - itemIndex}
+                                    </div>
+                                  </td>
+                                  )}
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
                     </div>
                   ) : (
                     <>

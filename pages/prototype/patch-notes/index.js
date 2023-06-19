@@ -79,12 +79,13 @@ export default function PatchNotes() {
                       <ul className="list-bullet">
                         {section.notes.map((note, noteIndex) => (
                           <li key={noteIndex} className="space-y-4">
-                            <div
-                            className="[&>a]:underline [&>a]:active:no-underline [&>a]:cursor-pointer [&>a]:hover:opacity-80 [&>a]:active:opacity-80 [&>a]:rounded [&>a]:outline-offset-2 [&>a]:focus-visible:outline [&>a]:focus-visible:outline-main [&>a]:transition-[color,background,transform,opacity] [&>a]:duration-200 [&>a]:ease-in-out [&>b]:text-ui-100"
-                              dangerouslySetInnerHTML={{
-                                __html: note.text,
-                              }}
-                            />
+                            <div className="[&_a]:underline [&_a]:active:no-underline [&_a]:cursor-pointer [&_a]:hover:opacity-80 [&_a]:active:opacity-80 [&_a]:rounded [&_a]:outline-offset-2 [&_a]:focus-visible:outline [&_a]:focus-visible:outline-main [&_a]:transition-[color,background,transform,opacity] [&_a]:duration-200 [&_a]:ease-in-out [&_b]:text-ui-100 [&_strong]:text-ui-100">
+                              <p
+                                dangerouslySetInnerHTML={{
+                                  __html: note.text,
+                                }}
+                              />
+                            </div>
                             {note.image && (
                               <div className="max-w-md">
                                 <img

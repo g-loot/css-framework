@@ -18,7 +18,7 @@ export default function Rewards(props) {
           <Tooltip
             placement="top"
             tooltip={
-              <ul className="divide-y divide-ui-500 child:p-1">
+              <ul className="divide-y divide-ui-500 child:py-1.5 child:pr-1.5">
                 {rewards.map((reward, rewardIndex) => (
                   <>
                     {reward.type === "coin" && (

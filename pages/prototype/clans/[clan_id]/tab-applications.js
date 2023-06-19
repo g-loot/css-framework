@@ -4,6 +4,7 @@ import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import ButtonSorting from "../../../../components/Button/ButtonSorting";
 import Avatar from "../../../../components/Avatar/Avatar";
+import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
 
 const PlayerApplications = [
   {
@@ -196,8 +197,11 @@ export default function TabClanApplications() {
                       <th>
                         <ButtonSorting>Date</ButtonSorting>
                       </th>
-                      <th>
-                        <ButtonSorting hasArrow={false}>Country</ButtonSorting>
+                      <th className="text-left">
+                        <ButtonSorting hasArrow={false}>Riot ID</ButtonSorting>
+                      </th>
+                      <th className="text-left">
+                        <ButtonSorting hasArrow={false}>Steam ID</ButtonSorting>
                       </th>
                       <th>
                         <ButtonSorting>No. of Ladders played</ButtonSorting>
@@ -261,6 +265,23 @@ export default function TabClanApplications() {
                           </td>
                           <td>
                             <div
+                              className="text-ui-300 text-left"
+                              data-tooltip={
+                                `${prototype.getUserByID(item.user)?.country} #${RandomNumber(1000, 9999)}`
+                              }
+                            >
+                              {prototype.getUserByID(item.user)?.nickname} #{RandomNumber(1000, 9999)}
+
+                              <ButtonFeedback
+                                variant="button-ghost rounded-full"
+                                icon="icon-document-copy"
+                                message="Game tag copied to your clipboard"
+                              />
+                            </div>
+                          </td>
+                          {/*
+                          <td>
+                            <div
                               className="text-ui-300 text-center"
                               data-tooltip={
                                 prototype.getUserByID(item.user)?.country
@@ -274,6 +295,7 @@ export default function TabClanApplications() {
                               />
                             </div>
                           </td>
+                          */}
                           <td>
                             <div className="text-ui-300 text-center">
                               {

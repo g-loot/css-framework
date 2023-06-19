@@ -8,6 +8,7 @@ export default function ButtonFeedback(props) {
     props.variant !== undefined
       ? props.variant
       : "rounded-full button-secondary";
+  const value = props.value || "";
   const message = props.message !== undefined ? props.message : "success";
   const type = props.type !== undefined ? props.type : "success";
   const icon =
@@ -21,6 +22,7 @@ export default function ButtonFeedback(props) {
       autoDelete: true,
       autoDeleteDelay: 2500,
     });
+    navigator.clipboard.writeText(value);
     setButtonFeedbackMessage(message);
     const interval = setTimeout(() => {
       setButtonFeedbackMessage("");

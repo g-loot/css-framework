@@ -19,6 +19,13 @@ export default function ModalClanSeasonResults(props) {
     setSubmitting(true);
     setTimeout(() => {
       uiContext.closeModal();
+      setSubmitting(false);
+    }, 1000);
+  }
+  function claimRewardsWithDelay() {
+    setSubmitting(true);
+    setTimeout(() => {
+      uiContext.closeModal();
       uiContext.openModal(<ModalClaimLadderRewards />);
       setSubmitting(false);
     }, 1000);
@@ -70,8 +77,8 @@ export default function ModalClanSeasonResults(props) {
                           <div className="flex gap-2 items-center">
                             <span>
                               You were{" "}
-                              <span className="text-ui-100">4 points</span>{" "}
-                              from winning
+                              <span className="text-ui-100">4 points</span> from
+                              winning
                             </span>
                             <div className="flex items-center whitespace-nowrap gap-1 text-currency-1-500">
                               <span className="icon icon-coin text-lg" />
@@ -193,16 +200,28 @@ export default function ModalClanSeasonResults(props) {
                 </div>
               </div>
               <div className="modal-action">
-                <button
-                  type="button"
-                  className={`button button-primary ${
-                    submitting ? "is-loading" : ""
-                  }`}
-                  onClick={closeModalWithDelay}
-                >
-                  <span className="icon icon-present animate-bounce" />
-                  <span>Claim rewards</span>
-                </button>
+                {item.status === "ongoing" ? (
+                  <button
+                    type="button"
+                    className={`button button-primary lg:w-1/2 ${
+                      submitting ? "is-loading" : ""
+                    }`}
+                    onClick={claimRewardsWithDelay}
+                  >
+                    <span className="icon icon-present animate-bounce" />
+                    <span>Claim rewards</span>
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className={`button button-primary lg:w-1/2 ${
+                      submitting ? "is-loading" : ""
+                    }`}
+                    onClick={() => uiContext.closeModal()}
+                  >
+                    <span>Close</span>
+                  </button>
+                )}
               </div>
             </div>
           </div>

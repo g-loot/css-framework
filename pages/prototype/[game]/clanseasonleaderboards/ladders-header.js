@@ -62,8 +62,7 @@ export default function LaddersHeader(props) {
               <h1>Clan Seasons</h1>
               <p className="text-ui-300 max-w-[70ch] mt-4 mb-5">
                 Create a 5 people party with members from your Stryda Clan. Play
-                VALORANT together and start climbing the leaderboard! No need
-                for tokens or any extra steps.
+                VALORANT together and start climbing the leaderboard!
               </p>
               <div className="flex flex-col md:flex-row gap-2">
                 <Link

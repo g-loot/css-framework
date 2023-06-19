@@ -70,9 +70,9 @@ export default function ModalInfoClanSeasonEnroll(props) {
             </div>
             <div className="modal-content">
               <div className="modal-body">
-                <h2 className="modal-title">Enroll your clan</h2>
+                <h2 className="modal-title">Enter the Clan Season</h2>
                 <p>
-                  You are about to enroll your Clan to the {selectedLeaderboard.name} Clan Season.
+                  You are about to enter your Clan to the {selectedLeaderboard.name} Clan Season.
                 </p>
                 <p>
                   To climb the leaderboard, play matches in Competitive mode with a party composed only by members of your Clan.
@@ -97,7 +97,7 @@ export default function ModalInfoClanSeasonEnroll(props) {
                   }`}
                   onClick={closeModalWithDelay}
                 >
-                  <span>Yes, Enroll my Clan</span>
+                  <span>Yes, Enter with my Clan</span>
                 </button>
                 <button
                   type="button"

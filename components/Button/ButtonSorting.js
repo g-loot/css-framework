@@ -11,7 +11,7 @@ export default function ButtonSorting({ children, ...props }) {
   }
 
   return (
-    <button type="button" className="button button-sm button-ghost" onClick={handleSorted}>
+    <button type="button" className="button button-sm button-ghost -mx-2.5" onClick={handleSorted}>
       <span>{children}</span>
       {hasArrow && (
         <span

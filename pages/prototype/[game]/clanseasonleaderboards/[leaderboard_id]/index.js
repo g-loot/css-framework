@@ -222,7 +222,7 @@ export default function Ladders() {
                       className="button button-sm button-primary xl:w-1/3 mx-4"
                       onClick={() => handleEnroll()}
                     >
-                      <span>Enroll my Clan</span>
+                      <span>Enter with my Clan</span>
                     </button>
                     <span
                       className="icon icon-ctrl-left text-xl text-main/60 animate-slide-in-right animate-delay"
