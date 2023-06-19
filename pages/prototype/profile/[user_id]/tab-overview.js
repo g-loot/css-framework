@@ -13,6 +13,7 @@ import Tooltip from "../../../../components/Tooltip/Tooltip";
 import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
 import GameIcon from "../../../../components/GameIcon/GameIcon";
 import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
+import ModalLevelUp from "../../modal-levelup";
 import ProfileHeader from "../header";
 
 export default function TabProfileOverview() {
@@ -39,6 +40,10 @@ export default function TabProfileOverview() {
     uiContext.openModal(
       <ModalAchievementReceived level={level} name={name} icon={icon} />
     );
+  }
+
+  function openmodalLeveLUp() {
+    uiContext.openModal(<ModalLevelUp />);
   }
 
   return (
@@ -632,6 +637,15 @@ export default function TabProfileOverview() {
           </div>
         </>
       )}
+      {/* for demo purposes only */}
+      <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col mt-4">
+        <a onClick={() => openModalAchievementReceived()}>
+          Open achievemnts received modal
+        </a>
+        <a onClick={() => openmodalLeveLUp()}>
+          Open level up modal
+        </a>
+      </section>
     </>
   );
 }

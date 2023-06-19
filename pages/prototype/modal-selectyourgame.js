@@ -79,7 +79,7 @@ export default function ModalSelectYourGame(props) {
                 {selectedGame === 'valorant' && (
                   <button type="button" onClick={() => uiContext.closeModal()} className="button w-80 button-primary">
                     <span className="icon icon-riotgames-symbol" />
-                    <span>Connect with RIOT ID</span>
+                    <span>Connect my RIOT ID</span>
                   </button>
                 )}
                 {selectedGame === 'pubg' && (

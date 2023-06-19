@@ -143,7 +143,7 @@ const DSpage = () => {
               </div>
               <button type="button" className="button button-primary button-sm">
                 <span className="icon icon-16 icon-refresh-02" />
-                <span>Request a stats update</span>
+                <span>Update my stats</span>
               </button>
             </div>
           </div>

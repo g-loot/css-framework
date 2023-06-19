@@ -112,7 +112,7 @@ export default function ModalBannerEdit(props) {
                         shop
                       </a>
                     </Link>{" "}
-                    and check out our latest profile banners.
+                    and check out our latest player banners.
                   </p>
                 </div>
                 <img

@@ -487,7 +487,7 @@ export default function Battlepass(props) {
                     </CarouselSingle>
                   </div>
                   <div className="battlepass-reward-text">
-                    <span>Profile banners</span>
+                    <span>Player banners</span>
                     <span>
                       {!hasPremium ? <>5</> : <>4</>}
                     </span>

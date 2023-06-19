@@ -419,24 +419,22 @@ export default function LadderCardSecondary(props) {
                           <li>
                             843 players{" "}
                             {ladder.status === "finished" ? (
-                              <>have</>
+                              <>have competed</>
                             ) : (
-                              <>are</>
-                            )}{" "}
-                            enrolled
+                              <>competing</>
+                            )}
                           </li>
-                          <li>in 5 groups</li>
+                          <li>across 5 groups</li>
                         </ul>
                       ) : (
                         <ul className="text-sm border-l border-ui-700 pl-4 text-ui-300 flex flex-col items-start justify-center">
                           <li>
                             143 clans{" "}
                             {ladder.status === "finished" ? (
-                              <>have</>
+                              <>have competed</>
                             ) : (
-                              <>are</>
-                            )}{" "}
-                            enrolled
+                              <>competing</>
+                            )}
                           </li>
                         </ul>
                       )}

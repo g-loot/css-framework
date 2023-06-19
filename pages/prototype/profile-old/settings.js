@@ -228,7 +228,7 @@ export default function Home() {
                         {!isConnected && (
                           <button className="button button-primary w-full">
                             <span className="icon icon-riotgames-symbol" />
-                            <span>Connect with Riot ID</span>
+                            <span>Connect my RIOT ID</span>
                           </button>
                         )}
 

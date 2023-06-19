@@ -168,8 +168,8 @@ const TabsItems = [
     component: TabProfileStats,
   },
   {
-    label: "Friends (3)",
-    url: "friends",
+    label: "Followers (3)",
+    url: "followers",
     component: TabProfileFriends,
   },
 ];

@@ -102,7 +102,7 @@ export default function Rewards(props) {
                             className="w-7 h-7 rounded object-cover border border-ui-600"
                           />
                         </div>
-                        <div>1 profile banner</div>
+                        <div>1 player banner</div>
                       </li>
                     )}
                   </>

@@ -77,7 +77,7 @@ export default function TabMissionsMissions() {
                   >
                     <span className="icon icon-16 icon-refresh-02" />
                     <span className="hidden sm:block">
-                      Request a stats update
+                      Update my stats
                     </span>
                     <span className="block sm:hidden">Update</span>
                   </button>

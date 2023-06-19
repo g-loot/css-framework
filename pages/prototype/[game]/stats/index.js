@@ -444,7 +444,7 @@ export default function Stats() {
                         })}
                       >
                         <span className="icon icon-16 icon-refresh-02" />
-                        <span>Request a stats update</span>
+                        <span>Update my stats</span>
                       </button>
                     </div>
                     <div className="md:text-right leading-none mb-2">
@@ -488,7 +488,7 @@ export default function Stats() {
                       })}
                     >
                       <span className="icon icon-16 icon-refresh-02" />
-                      <span>Request a stats update</span>
+                      <span>Update my stats</span>
                     </button>
                   </div>
                 </div>

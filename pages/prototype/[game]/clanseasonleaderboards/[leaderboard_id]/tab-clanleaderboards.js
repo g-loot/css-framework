@@ -335,7 +335,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                           className="button button-sm button-primary w-full"
                         >
                           <span className="icon icon-riotgames-symbol" />
-                          <span>Connect with RIOT ID</span>
+                          <span>Connect my RIOT ID</span>
                         </button>
                       </Link>
                     </div>

@@ -52,7 +52,7 @@ export default function ButtonStatsUpdate(props) {
           })}
         >
           <span className="icon icon-16 icon-refresh-02" />
-          <span className="hidden sm:block">Request a stats update</span>
+          <span className="hidden sm:block">Update my stats</span>
           <span className="block sm:hidden">Update</span>
         </button>
       </div>

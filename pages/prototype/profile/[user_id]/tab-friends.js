@@ -335,7 +335,7 @@ export default function TabProfileFriends() {
                                           )}
                                         >
                                           <span className="icon icon-a-remove" />
-                                          <span>Remove as friend</span>
+                                          <span>Unfollow</span>
                                         </button>
                                       </li>
                                     </ul>

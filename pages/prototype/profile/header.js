@@ -226,7 +226,7 @@ export default function ProfileHeader(props) {
                     className="button button-sm button-primary w-full"
                   >
                     <span className="icon icon-add-27" />
-                    <span>Add as friend</span>
+                    <span>Follow</span>
                   </a>
                 </Link>
               )}

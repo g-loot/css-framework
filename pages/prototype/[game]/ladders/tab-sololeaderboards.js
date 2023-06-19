@@ -1030,7 +1030,7 @@ export default function TabLaddersSoloLeaderboards() {
                                                  placement="left"
                                                  tooltip={
                                                    <div className="max-w-xs text-sm text-center leading-tight">
-                                                     Add as friend
+                                                     Follow
                                                    </div>
                                                  }
                                                >

@@ -190,7 +190,7 @@ export default function Home() {
                       <div className="flex-3">
                         <button className="button button-primary w-full">
                           <span className="icon icon-discord" />
-                          <span>Connect with Discord</span>
+                          <span>Connect my Discord account</span>
                         </button>
                       </div>
                     </div>
@@ -210,7 +210,7 @@ export default function Home() {
                       <div className="flex-3">
                         <button className="button button-primary w-full">
                           <span className="icon icon-steam" />
-                          <span>Connect with Steam</span>
+                          <span>Connect my Steam account</span>
                         </button>
                         <p className="text-ui-300 text-sm mt-2 leading-tight">
                           This site is not associated with Valve Corp.
@@ -285,10 +285,10 @@ export default function Home() {
                               className="button button-primary w-full"
                             >
                               <span className="icon icon-riotgames-symbol" />
-                              <span>Connect with Riot ID</span>
+                              <span>Connect my Riot ID</span>
                             </button>
                             <p className="text-ui-300 text-sm mt-2 leading-tight">
-                              By connecting with Riot I acknowledge making my
+                              By connecting my Riot ID I acknowledge making my
                               profile public to all users.
                             </p>
                           </>

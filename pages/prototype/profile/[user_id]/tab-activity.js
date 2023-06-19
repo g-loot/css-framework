@@ -9,6 +9,7 @@ import LadderCardSecondary from "../../../../components/Ladder/LadderCardSeconda
 import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
 import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
 import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
+import Avatar from "../../../../components/Avatar/Avatar";
 
 const ActivityFeed = [
   {
@@ -181,17 +182,35 @@ export default function TabProfileActivity() {
                         </div>
                       )}
                       {item.level && (
-                        <div className="relative flex items-baselie justify-center gap-1 rounded bg-main p-8 mb-4 max-w-xs">
-                          <span className="stepper text-7xl lg:text-8xl font-headings text-ui-800">
-                            <span style={{ "--value": item.level.level1 }} />
-                            <span style={{ "--value": item.level.level2 }} />
-                            <span style={{ "--value": item.level.level3 }} />
-                          </span>
-                          <span className="absolute h-4 w-4 top-2 left-2 border-t border-t-ui-800 border-l border-l-ui-800" />
-                          <span className="absolute h-4 w-4 top-2 right-2 border-t border-t-ui-800 border-r border-r-ui-800" />
-                          <span className="absolute h-4 w-4 bottom-2 left-2 border-b border-b-ui-800 border-l border-l-ui-800" />
-                          <span className="absolute h-4 w-4 bottom-2 right-2 border-b border-b-ui-800 border-r border-r-ui-800" />
-                        </div>
+                        <>
+                          <div className="relative flex items-center justify-center max-w-xs">
+                            <div className="animate-fire-in relative">
+                              <Avatar
+                                size="avatar-2xl"
+                                id={1}
+                                hasLevel={false}
+                              />
+                            </div>
+                            <div
+                              className="absolute bottom-0 z-30 bg-ui-700 rounded-full px-6 border border-ui-400 animate-fire-in animate-delay"
+                              style={{
+                                "--delay": "calc(1 * 0.5s)",
+                              }}
+                            >
+                              <span className="stepper font-medium text-4xl text-white leading-tight">
+                                <span
+                                  style={{ "--value": item.level.level1 }}
+                                />
+                                <span
+                                  style={{ "--value": item.level.level2 }}
+                                />
+                                <span
+                                  style={{ "--value": item.level.level3 }}
+                                />
+                              </span>
+                            </div>
+                          </div>
+                        </>
                       )}
                       {item.mission && (
                         <div className="max-w-sm">

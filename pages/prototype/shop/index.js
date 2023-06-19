@@ -217,10 +217,10 @@ export default function Home() {
                     src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_profilebanners.jpg"
                     className="w-4/5 rounded-xl shadow-2xl my-3"
                     height="auto"
-                    alt="Profile banners"
+                    alt="Player banners"
                   />
                   <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
-                    <span>Profile banners</span>
+                    <span>Player banners</span>
                   </h3>
                 </div>
                 <div className="border-t border-ui-700 pt-4">

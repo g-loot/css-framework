@@ -536,7 +536,7 @@ export const dataShopitems = [
   },
   {
     id: 2,
-    name: "Profile banners",
+    name: "Player banners",
     title: "Stand out",
     description: "Customize your profile with one of our yummy banners.",
     items: [
