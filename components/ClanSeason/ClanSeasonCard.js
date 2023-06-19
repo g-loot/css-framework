@@ -32,7 +32,7 @@ const ClanSeasonCard = (props) => {
               <img
                 src={item.logo}
                 alt={item.name}
-                className="relative z-10 max-w-[200px] max-h-[85px] h-auto w-full"
+                className="relative z-10 max-w-[200px] max-h-[85px] h-auto w-auto"
               />
               <img
                 src={item.bg}
@@ -51,6 +51,8 @@ const ClanSeasonCard = (props) => {
                     <span className="text-currency-1-500 text-sm">
                       5 000 - 30 000
                     </span>
+                    <span className="mx-2">+</span>
+                    <span className="icon icon-present" />
                   </div>
                 </div>
                 <div className="flex flex-col md:flex-row md:gap-4 md:items-center">

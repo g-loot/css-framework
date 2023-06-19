@@ -428,7 +428,10 @@ export default function TabClanLeaderboardsLeaderboards() {
                                     Clan members
                                   </div>
                                 </td>
-                                {selectedClanLeaderboard.status !== "upcoming" && variablesContext.clanLeaderboardEnrolled  ? (
+                                {selectedClanLeaderboard.status ===
+                                  "finished" ||
+                                (selectedClanLeaderboard.status === "ongoing" &&
+                                  variablesContext.clanLeaderboardEnrolled) ? (
                                   <td className="text-right">
                                     <div className="text-sm uppercase">
                                       Wins
@@ -437,9 +440,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                 ) : (
                                   <td className="text-right">
                                     <Link href="/prototype/clans/1?tab=members">
-                                      <a className="text-sm link">
-                                        View all
-                                      </a>
+                                      <a className="text-sm link">View all</a>
                                     </Link>
                                   </td>
                                 )}
@@ -494,13 +495,18 @@ export default function TabClanLeaderboardsLeaderboards() {
                                       />
                                     </Tooltip>
                                   </td>
-                                  {selectedClanLeaderboard.status !== "upcoming" && variablesContext.clanLeaderboardEnrolled && (
-                                  <td>
-                                    <div className="text-sm font-bold">
-                                      {41 - itemIndex}
-                                    </div>
-                                  </td>
-                                  )}
+                                  {selectedClanLeaderboard.status ===
+                                  "finished" ||
+                                (selectedClanLeaderboard.status === "ongoing" &&
+                                  variablesContext.clanLeaderboardEnrolled) ? (
+                                        <td>
+                                          <div className="text-sm font-bold">
+                                            {41 - itemIndex}
+                                          </div>
+                                        </td>
+                                      ) : (
+                                        <></>
+                                      )}
                                 </tr>
                               ))}
                             </tbody>

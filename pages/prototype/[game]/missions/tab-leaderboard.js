@@ -176,12 +176,11 @@ export default function TabMissionsLeaderboard(props) {
                 <div className="w-14" />
                 <div className="item-image w-7" />
                 <div className="item-body">Player</div>
-                <div className="w-20 text-center">Common</div>
-                <div className="w-20 text-center">Rare</div>
-                <div className="w-20 text-center">Epic</div>
-                <div className="w-20 text-center">Legendary</div>
-                <div className="w-24 text-center hidden">Missions</div>
-                <div className="w-28 text-center hidden">Total XP</div>
+                <div className="w-20 text-center max-2xl:hidden">Common</div>
+                <div className="w-20 text-center max-2xl:hidden">Rare</div>
+                <div className="w-20 text-center max-2xl:hidden">Epic</div>
+                <div className="w-20 text-center max-2xl:hidden">Legendary</div>
+                <div className="w-28 text-center">Total XP</div>
               </div>
               {isLoading ? (
                 <ul className="items-spaced is-loading space-y-2">
@@ -273,7 +272,7 @@ export default function TabMissionsLeaderboard(props) {
                             </div>
                           </Link>
                         </div>
-                        <div className="item-actions text-center w-20 text-sm">
+                        <div className="item-actions max-2xl:hidden text-center w-20 text-sm">
                           <Tooltip placement="top" tooltip="Common">
                             <div className="rarity rarity-category-1">
                               <span className="icon icon-category-1" />
@@ -281,7 +280,7 @@ export default function TabMissionsLeaderboard(props) {
                             </div>
                           </Tooltip>
                         </div>
-                        <div className="item-actions text-center w-20 text-sm">
+                        <div className="item-actions max-2xl:hidden text-center w-20 text-sm">
                           <Tooltip placement="top" tooltip="Rare">
                             <div className="rarity rarity-category-2">
                               <span className="icon icon-category-2" />
@@ -289,7 +288,7 @@ export default function TabMissionsLeaderboard(props) {
                             </div>
                           </Tooltip>
                         </div>
-                        <div className="item-actions text-center w-20 text-sm">
+                        <div className="item-actions max-2xl:hidden text-center w-20 text-sm">
                           <Tooltip placement="top" tooltip="Epic">
                             <div className="rarity rarity-category-3">
                               <span className="icon icon-category-3" />
@@ -297,7 +296,7 @@ export default function TabMissionsLeaderboard(props) {
                             </div>
                           </Tooltip>
                         </div>
-                        <div className="item-actions text-center w-20 text-sm">
+                        <div className="item-actions max-2xl:hidden text-center w-20 text-sm">
                           <Tooltip placement="top" tooltip="Legendary">
                             <div className="rarity rarity-category-4">
                               <span className="icon icon-category-4" />
@@ -305,10 +304,8 @@ export default function TabMissionsLeaderboard(props) {
                             </div>
                           </Tooltip>
                         </div>
-                        <div className="!hidden item-actions text-center w-24 text-sm">
-                          <span>{missionsNo}</span>
-                        </div>
-                        <div className="!hidden item-actions w-28 text-center">
+                        <div className="item-actions w-28 text-center">
+                          {/*
                           <Tooltip
                             placement="top"
                             tooltip={<MissionsCompletedList />}
@@ -318,6 +315,11 @@ export default function TabMissionsLeaderboard(props) {
                               <span class="icon icon-xp-symbol"></span>
                             </button>
                           </Tooltip>
+                                  */}
+                            <div class="chip chip-xp chip-sm">
+                              <span>{missionsNo * 75}</span>
+                              <span class="icon icon-xp-symbol"></span>
+                            </div>
                         </div>
                       </li>
                     );

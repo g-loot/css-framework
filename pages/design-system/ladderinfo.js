@@ -155,7 +155,7 @@ const DSpage = () => {
                       Tiebreaker
                     </h4>
                     <p className="text-sm text-ui-200 leading-tight">
-                      Headshots from your 3 best rounds decides a tie
+                      Headshots from your 3 best matches decides a tie
                     </p>
                   </div>
                 </li>
@@ -241,7 +241,7 @@ const DSpage = () => {
                     Tiebreaker
                   </h4>
                   <p className="text-sm text-ui-200 leading-tight">
-                    Headshots from your 3 best rounds decides a tie
+                    Headshots from your 3 best matches decides a tie
                   </p>
                 </li>
                 <li

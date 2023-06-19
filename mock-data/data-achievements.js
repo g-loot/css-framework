@@ -14,7 +14,7 @@ export const dataAchievements = [
       {
         id: 2,
         name: "Ladder Player",
-        description: "Register [X] Ladder Rounds",
+        description: "Register [X] Ladder Matches",
         icon: "ladderplayer",
       },
       {
@@ -44,7 +44,7 @@ export const dataAchievements = [
       {
         id: 7,
         name: "Clan grinder",
-        description: "Register more than [X] rounds in the same Ladder",
+        description: "Register more than [X] matches in the same Ladder",
         icon: "clangrinder",
       },
       {

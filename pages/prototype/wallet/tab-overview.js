@@ -28,7 +28,7 @@ const WalletItems = [
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-token-face.png",
     amount: "10223",
-    use: "To enter rounds in the <b>Ladders</b>.",
+    use: "To enter matches in the <b>Ladders</b>.",
     get: "From the <b>Battlepass</b> or buy them directly from the <b>Wallet</b>.",
     color: "text-currency-2-500",
     button: "buy",
@@ -41,7 +41,7 @@ const WalletItems = [
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674640634/Stryda/currencies/Reward-powertoken-face.png",
     amount: "30",
-    use: "To enter rounds in the <b>Power Plays</b>.",
+    use: "To enter matches in the <b>Power Plays</b>.",
     get: "Buy them directly from the <b>Wallet</b>.",
     color: "text-currency-3-500",
     button: "buy",

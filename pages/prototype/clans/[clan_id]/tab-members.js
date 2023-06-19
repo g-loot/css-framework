@@ -9,6 +9,7 @@ import GameIcon from "../../../../components/GameIcon/GameIcon";
 import ModalGiftTokens from "../modal-gift-tokens";
 import ButtonSorting from "../../../../components/Button/ButtonSorting";
 import Tooltip from "../../../../components/Tooltip/Tooltip";
+import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
 
 export default function TabClanMembers() {
   const router = useRouter();
@@ -117,8 +118,17 @@ export default function TabClanMembers() {
                       <th>
                         <ButtonSorting>User</ButtonSorting>
                       </th>
-                      <th className="text-center">
-                        <ButtonSorting>Joined on</ButtonSorting>
+                      <th className="max-xl:hidden text-left">
+                        <ButtonSorting hasArrow={false}>Riot ID</ButtonSorting>
+                      </th>
+                      <th className="max-xl:hidden text-left">
+                        <ButtonSorting hasArrow={false}>Steam ID</ButtonSorting>
+                      </th>
+                      <th className="max-xl:hidden">
+                        <ButtonSorting>Ladders played</ButtonSorting>
+                      </th>
+                      <th className="max-xl:hidden">
+                        <ButtonSorting>Best placement</ButtonSorting>
                       </th>
                       <th />
                     </tr>
@@ -147,9 +157,8 @@ export default function TabClanMembers() {
                           >
                             <td>
                               <Link
-                                href={`/prototype/profile/${
-                                  prototype.getUserByID(item.id).id
-                                }${prototype.getURLparams()}`}
+                                href={`/prototype/profile/${item.id}
+                          `}
                               >
                                 <button
                                   type="button"
@@ -160,46 +169,91 @@ export default function TabClanMembers() {
                                     size="avatar-xs"
                                     hasTooltip={true}
                                   />
-                                  <div>
-                                    <div>
-                                      <span
-                                        className={`${
-                                          prototype.getUserByID(item.id)
-                                            ?.isPremium
-                                            ? "text-premium-500"
-                                            : ""
-                                        }`}
-                                      >
-                                        {
-                                          prototype.getUserByID(item.id)
-                                            .nickname
-                                        }
-                                      </span>
-                                      {selectedClan.admin ===
-                                        prototype.getUserByID(item.id).id && (
-                                        <span className="icon icon-chess-king text-sm" />
-                                      )}
-                                    </div>
-                                    <div className="text-ui-300 text-xs flex gap-1 items-center">
-                                      {prototype.getUserByID(item.id)
-                                        ?.isOnline ? (
-                                        <div className="chip chip-status chip-success chip-xs">
-                                          <span className="badge" />
-                                          <span>online</span>
-                                        </div>
-                                      ) : (
-                                        <div className="chip chip-status chip-xs">
-                                          <span className="badge" />
-                                          <span>last seen 3 days ago</span>
-                                        </div>
-                                      )}
-                                    </div>
+                                  <div
+                                    className={`${
+                                      prototype.getUserByID(item.id)?.isPremium
+                                        ? "text-premium-500"
+                                        : ""
+                                    }`}
+                                  >
+                                    {prototype.getUserByID(item.id)?.nickname}
                                   </div>
                                 </button>
                               </Link>
                             </td>
-                            <td className="text-center text-ui-300">
-                              October 20 2023
+                            <td className="max-xl:hidden">
+                              <div className="text-ui-300 text-left">
+                                {prototype.getUserByID(item.id)?.nickname} #1111
+                                <Tooltip
+                                  placement="top"
+                                  tooltip={
+                                    <span className="text-sm">
+                                      Click to copy
+                                    </span>
+                                  }
+                                >
+                                  <ButtonFeedback
+                                    value={`${
+                                      prototype.getUserByID(item.id)?.nickname
+                                    } #1111`}
+                                    variant="button-ghost rounded-full"
+                                    icon="icon-document-copy"
+                                    message="RIOT ID copied to your clipboard"
+                                  />
+                                </Tooltip>
+                              </div>
+                            </td>
+                            {/*
+                          <td>
+                            <div
+                              className="text-ui-300 text-center"
+                              data-tooltip={
+                                prototype.getUserByID(item.id)?.country
+                              }
+                            >
+                              <img
+                                src={`https://flagcdn.com/${
+                                  prototype.getUserByID(item.id)?.countryFlag
+                                }.svg`}
+                                className="aspect-video rounded-sm max-w-[1.5rem] mx-auto"
+                              />
+                            </div>
+                          </td>
+                          */}
+                            <td className="max-xl:hidden">
+                              <div className="text-ui-300">
+                                {prototype
+                                  .getUserByID(item.id)
+                                  ?.nickname.substring(0, 10)}
+                                _1111
+                                <Tooltip
+                                  placement="top"
+                                  tooltip={
+                                    <span className="text-sm">
+                                      Click to copy
+                                    </span>
+                                  }
+                                >
+                                  <ButtonFeedback
+                                    value={`${prototype
+                                      .getUserByID(item.id)
+                                      ?.nickname.substring(0, 10)}_1111`}
+                                    variant="button-ghost rounded-full"
+                                    icon="icon-document-copy"
+                                    message="Steam ID copied to your clipboard"
+                                  />
+                                </Tooltip>
+                              </div>
+                            </td>
+                            <td className="max-xl:hidden">
+                              <div className="text-ui-300 text-center">
+                                {RandomNumber(10, 9999)}
+                              </div>
+                            </td>
+                            <td className="max-xl:hidden">
+                              <div className="text-ui-300 text-center">
+                                #{RandomNumber(10, 300)}
+                              </div>
                             </td>
                             <td className="text-right">
                               {selectedClan.isYou && (

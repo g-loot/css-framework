@@ -7,7 +7,7 @@ const valorantLadders = {
         name: 'Ladder #205',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder matches as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -735,7 +735,7 @@ const valorantLadders = {
         name: 'Ladder #205',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder matches as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -1463,7 +1463,7 @@ const valorantLadders = {
         name: 'Ladder #206',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder matches as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -2191,7 +2191,7 @@ const valorantLadders = {
         name: 'Ladder #206',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder matches as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -2919,7 +2919,7 @@ const valorantLadders = {
         name: 'Ladder #207',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder matches as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -3647,7 +3647,7 @@ const valorantLadders = {
         name: 'Ladder #207',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder matches as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -4375,7 +4375,7 @@ const valorantLadders = {
         name: 'Ladder #209',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder matches as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -5103,7 +5103,7 @@ const valorantLadders = {
         name: 'Ladder #209',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder matches as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -5831,7 +5831,7 @@ const valorantLadders = {
         name: 'Ladder #209',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder matches as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -6559,7 +6559,7 @@ const valorantLadders = {
         name: 'Ladder #210',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder matches as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -7286,7 +7286,7 @@ const valorantLadders = {
       details: {
         name: 'Ladder #210',
         objective: 'this is an objective',
-        description: 'This is a placement ladder. Play 3 rounds and progress to the ladder and win fett med para',
+        description: 'This is a placement ladder. Play 3 matches and progress to the ladder and win fett med para',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -8013,7 +8013,7 @@ const valorantLadders = {
       details: {
         name: 'Ladder #210',
         objective: 'this is an objective',
-        description: 'This is a placement ladder. Play 3 rounds and progress to the ladder and win fett med para',
+        description: 'This is a placement ladder. Play 3 matchess and progress to the ladder and win fett med para',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -8741,7 +8741,7 @@ const valorantLadders = {
         name: 'Ladder #210',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder matches as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -9469,7 +9469,7 @@ const valorantLadders = {
         name: 'Ladder #211',
         objective: 'this is an objective',
         description:
-          'Each week, you have 5 days to play as many Ladder rounds as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
+          'Each week, you have 5 days to play as many Ladder matches as you want. Your 3 best scores will be added together and that total score will be used to rank you in the leaderboard.',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',
@@ -10926,7 +10926,7 @@ const valorantLadders = {
       details: {
         name: 'Ladder #217',
         objective: 'this is an objective',
-        description: 'This is a placement ladder. Play 3 rounds and progress to the ladder and win fett med para',
+        description: 'This is a placement ladder. Play 3 matches and progress to the ladder and win fett med para',
         termsAndConditions: 'terms and conditions',
         imageUrl: 'https: //http.cat/200',
         heroImage: 'https: //coolimage.com/1234.jpg',

@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import ButtonSorting from "../../../../components/Button/ButtonSorting";
 import Avatar from "../../../../components/Avatar/Avatar";
 import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
+import Tooltip from "../../../../components/Tooltip/Tooltip";
 
 const PlayerApplications = [
   {
@@ -197,17 +198,17 @@ export default function TabClanApplications() {
                       <th>
                         <ButtonSorting>Date</ButtonSorting>
                       </th>
-                      <th className="text-left">
+                      <th className="max-xl:hidden text-left">
                         <ButtonSorting hasArrow={false}>Riot ID</ButtonSorting>
                       </th>
-                      <th className="text-left">
+                      <th className="max-xl:hidden text-left">
                         <ButtonSorting hasArrow={false}>Steam ID</ButtonSorting>
                       </th>
-                      <th>
-                        <ButtonSorting>No. of Ladders played</ButtonSorting>
+                      <th className="max-xl:hidden">
+                        <ButtonSorting>Ladders played</ButtonSorting>
                       </th>
-                      <th>
-                        <ButtonSorting>Best Ladder position</ButtonSorting>
+                      <th className="max-xl:hidden">
+                        <ButtonSorting>Best placement</ButtonSorting>
                       </th>
                       <th className="text-right">
                         <ButtonSorting>Status</ButtonSorting>
@@ -263,20 +264,24 @@ export default function TabClanApplications() {
                           <td>
                             <div className="text-ui-300">{item.time}</div>
                           </td>
-                          <td>
-                            <div
-                              className="text-ui-300 text-left"
-                              data-tooltip={
-                                `${prototype.getUserByID(item.user)?.country} #${RandomNumber(1000, 9999)}`
-                              }
-                            >
-                              {prototype.getUserByID(item.user)?.nickname} #{RandomNumber(1000, 9999)}
-
-                              <ButtonFeedback
-                                variant="button-ghost rounded-full"
-                                icon="icon-document-copy"
-                                message="Game tag copied to your clipboard"
-                              />
+                          <td className="max-xl:hidden">
+                            <div className="text-ui-300 text-left">
+                              {prototype.getUserByID(item.user)?.nickname} #1111
+                              <Tooltip
+                                placement="top"
+                                tooltip={
+                                  <span className="text-sm">Click to copy</span>
+                                }
+                              >
+                                <ButtonFeedback
+                                  value={`${
+                                    prototype.getUserByID(item.user)?.nickname
+                                  } #1111`}
+                                  variant="button-ghost rounded-full"
+                                  icon="icon-document-copy"
+                                  message="RIOT ID copied to your clipboard"
+                                />
+                              </Tooltip>
                             </div>
                           </td>
                           {/*
@@ -296,15 +301,34 @@ export default function TabClanApplications() {
                             </div>
                           </td>
                           */}
-                          <td>
-                            <div className="text-ui-300 text-center">
-                              {
-                                prototype.getUserByID(item.user)?.stats
-                                  .playedLadders
-                              }
+                          <td className="max-xl:hidden">
+                            <div className="text-ui-300">
+                              {prototype
+                                .getUserByID(item.user)
+                                ?.nickname.substring(0, 10)}_1111
+                              <Tooltip
+                                placement="top"
+                                tooltip={
+                                  <span className="text-sm">Click to copy</span>
+                                }
+                              >
+                                <ButtonFeedback
+                                  value={`${prototype
+                                    .getUserByID(item.user)
+                                    ?.nickname.substring(0, 10)}_1111`}
+                                  variant="button-ghost rounded-full"
+                                  icon="icon-document-copy"
+                                  message="Steam ID copied to your clipboard"
+                                />
+                              </Tooltip>
                             </div>
                           </td>
-                          <td>
+                          <td className="max-xl:hidden">
+                            <div className="text-ui-300 text-center">
+                              {RandomNumber(10, 9999)}
+                            </div>
+                          </td>
+                          <td className="max-xl:hidden">
                             <div className="text-ui-300 text-center">
                               #{RandomNumber(10, 300)}
                             </div>
