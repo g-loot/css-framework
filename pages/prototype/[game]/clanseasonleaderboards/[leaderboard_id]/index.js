@@ -96,7 +96,7 @@ export default function Ladders() {
               <img
                 src={selectedClanLeaderboard.logo}
                 alt={selectedClanLeaderboard.name}
-                className="relative z-10 max-w-[200px] max-h-[85px] h-auto w-full"
+                className="relative z-10 max-w-[200px] max-h-[85px] h-auto w-auto"
               />
               <img
                 src={selectedClanLeaderboard.bg}

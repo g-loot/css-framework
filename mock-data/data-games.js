@@ -3998,9 +3998,9 @@ export const dataGames = [
         isCurrent: false,
         status: "upcoming",
         name: "Upcoming Season",
-        logo: "https://res.cloudinary.com/gloot/image/upload/v1686313273/Stryda/demo/wintermayhem-logo.png",
+        logo: "https://res.cloudinary.com/gloot/image/upload/v1687160240/Stryda/demo/spaceclash-logo.png",
         bg:
-          "https://res.cloudinary.com/gloot/image/upload/v1686313274/Stryda/demo/wintermayhem-bg.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1687160240/Stryda/demo/spaceclash-bg.jpg",
         meta: {
           objective: "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",

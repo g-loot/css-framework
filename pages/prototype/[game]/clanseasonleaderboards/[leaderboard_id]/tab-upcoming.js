@@ -162,7 +162,7 @@ export default function TabClanLeaderboardUpcoming() {
                                 <img
                                   src={item.logo}
                                   alt={item.name}
-                                  className="relative z-10 max-w-[200px] max-h-[85px] h-auto w-full"
+                                  className="relative z-10 max-w-[200px] max-h-[85px] h-auto w-auto"
                                 />
                                 <img
                                   src={item.bg}
