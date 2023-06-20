@@ -88,7 +88,7 @@ const ClanSeasonCard = (props) => {
                           </div>
                         </div>
                         <div className="infobanner-back absolute inset-0 flex items-center text-sm">
-                          <div className="animate-pulse text-ui-100">
+                          <div className="animate-pulse text-ui-100 leading-none">
                             Waiting for matches...
                           </div>
                         </div>

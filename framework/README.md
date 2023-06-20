@@ -1,12 +1,12 @@
-![G-Loot CSS Framework](https://res.cloudinary.com/gloot/image/upload/v1657002851/Marketing/2022_prototype/G-Loot_Framework_logo.svg)
+![Stryda CSS Framework](https://res.cloudinary.com/gloot/image/upload/v1673531083/Stryda/logos/stryda-logo-dark-png.png)
 
-A **CSS Framework** built on [Tailwind CSS](https://www.npmjs.com/package/tailwindcss) to bring consistency and speed to **G-Loot products**.
+A **CSS Framework** built on [Tailwind CSS](https://www.npmjs.com/package/tailwindcss) to bring consistency and speed to **Stryda products**.
 
 ------
 
 ## Documentation
 
-For full documentation, visit [gloot-framework.netlify.app](https://gloot-framework.netlify.app/).
+For full documentation, visit [stryda.netlify.app](https://stryda.netlify.app/).
 
 ## Using the framework
 
@@ -65,9 +65,9 @@ module.exports = {
 
 ### Example repository
 
-Check [this example setup](https://stackblitz.com/edit/gloot-framework) of the G-Loot Framework and Tailwind CSS on React (webpack).
+Check [this example setup](https://stackblitz.com/edit/stryda) of the Stryda Framework and Tailwind CSS on React (webpack).
 
 ## That's it!
 
-Your projects can now consume the G-Loot theme and components. ✨
+Your projects can now consume the Stryda theme and components. ✨
 

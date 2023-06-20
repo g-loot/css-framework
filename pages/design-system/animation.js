@@ -1030,31 +1030,31 @@ const DSpage = () => {
               <div className="flex-1 space-y-4 text-center">
                 <ul className="items-spaced space-y-2">
                   <li
-                    className={`w-full h-16 bg-ui-400 rounded-lg  animate-delay ${
+                    className={`w-full h-16 bg-ui-400 rounded-lg animate-delay ${
                       StartAnim8 === true ? "animate-slide-in-bottom" : ""
                     }`}
                     style={{ "--delay": "calc(1 * 0.05s)" }}
                   ></li>
                   <li
-                    className={`w-full h-16 bg-ui-400 rounded-lg  animate-delay ${
+                    className={`w-full h-16 bg-ui-400 rounded-lg animate-delay ${
                       StartAnim8 === true ? "animate-slide-in-bottom" : ""
                     }`}
                     style={{ "--delay": "calc(2 * 0.05s)" }}
                   ></li>
                   <li
-                    className={`w-full h-16 bg-ui-400 rounded-lg  animate-delay ${
+                    className={`w-full h-16 bg-ui-400 rounded-lg animate-delay ${
                       StartAnim8 === true ? "animate-slide-in-bottom" : ""
                     }`}
                     style={{ "--delay": "calc(3 * 0.05s)" }}
                   ></li>
                   <li
-                    className={`w-full h-16 bg-ui-400 rounded-lg  animate-delay ${
+                    className={`w-full h-16 bg-ui-400 rounded-lg animate-delay ${
                       StartAnim8 === true ? "animate-slide-in-bottom" : ""
                     }`}
                     style={{ "--delay": "calc(4 * 0.05s)" }}
                   ></li>
                   <li
-                    className={`w-full h-16 bg-ui-400 rounded-lg  animate-delay ${
+                    className={`w-full h-16 bg-ui-400 rounded-lg animate-delay ${
                       StartAnim8 === true ? "animate-slide-in-bottom" : ""
                     }`}
                     style={{ "--delay": "calc(5 * 0.05s)" }}
@@ -1075,6 +1075,63 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/3cLmazgt/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* With delay (class names) */}
+      <div className="mb-12" id="with-delay-classnames">
+        <h2 className="h3 mb-3">With delay (class names)</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <ul className="items-spaced space-y-2 child:animate-delay">
+                  <li
+                    className={`w-full h-16 bg-ui-400 rounded-lg ${
+                      StartAnim9 === true ? "animate-slide-in-bottom" : ""
+                    }`}
+                  ></li>
+                  <li
+                    className={`w-full h-16 bg-ui-400 rounded-lg ${
+                      StartAnim9 === true ? "animate-slide-in-bottom" : ""
+                    }`}
+                  ></li>
+                  <li
+                    className={`w-full h-16 bg-ui-400 rounded-lg ${
+                      StartAnim9 === true ? "animate-slide-in-bottom" : ""
+                    }`}
+                  ></li>
+                  <li
+                    className={`w-full h-16 bg-ui-400 rounded-lg ${
+                      StartAnim9 === true ? "animate-slide-in-bottom" : ""
+                    }`}
+                  ></li>
+                  <li
+                    className={`w-full h-16 bg-ui-400 rounded-lg ${
+                      StartAnim9 === true ? "animate-slide-in-bottom" : ""
+                    }`}
+                  ></li>
+                </ul>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim9.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/k8uosLmp/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

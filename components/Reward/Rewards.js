@@ -18,16 +18,16 @@ export default function Rewards(props) {
           <Tooltip
             placement="top"
             tooltip={
-              <ul className="divide-y divide-ui-500 child:py-1.5 child:pr-1.5">
+              <ul className="divide-y divide-ui-500 child:py-1.5 child:pr-1.5 child:animate-delay">
                 {rewards.map((reward, rewardIndex) => (
                   <>
                     {reward.type === "coin" && (
                       <li
-                        className={`flex items-center whitespace-nowrap ${
+                        className={`flex items-center whitespace-nowrap animate-slide-in-right ${
                           props.gap ? props.gap : "gap-1"
                         }`}
                       >
-                        <div className="w-9 mr-2 flex items-center justify-center">
+                        <div className="w-8 mr-2 flex items-center justify-center">
                           <span className="text-2xl icon icon-coin text-currency-1-500" />
                         </div>
                         <div className="text-currency-1-500">
@@ -37,11 +37,11 @@ export default function Rewards(props) {
                     )}
                     {reward.type === "token" && (
                       <li
-                        className={`flex items-center whitespace-nowrap ${
+                        className={`flex items-center whitespace-nowrap animate-slide-in-right ${
                           props.gap ? props.gap : "gap-1"
                         }`}
                       >
-                        <div className="w-9 mr-2 flex items-center justify-center">
+                        <div className="w-8 mr-2 flex items-center justify-center">
                           <span className="text-2xl icon icon-token text-currency-2-500" />
                         </div>
                         <div className="text-currency-2-500">
@@ -52,11 +52,11 @@ export default function Rewards(props) {
                     )}
                     {reward.type === "powertoken" && (
                       <li
-                        className={`flex items-center whitespace-nowrap ${
+                        className={`flex items-center whitespace-nowrap animate-slide-in-right ${
                           props.gap ? props.gap : "gap-1"
                         }`}
                       >
-                        <div className="w-9 mr-2 flex items-center justify-center">
+                        <div className="w-8 mr-2 flex items-center justify-center">
                           <span className="text-2xl icon icon-powertoken text-currency-3-500" />
                         </div>
                         <div className="text-currency-3-500">
@@ -67,11 +67,11 @@ export default function Rewards(props) {
                     )}
                     {reward.type === "avatarframe" && (
                       <li
-                        className={`flex items-center whitespace-nowrap ${
+                        className={`flex items-center whitespace-nowrap animate-slide-in-right ${
                           props.gap ? props.gap : "gap-1"
                         }`}
                       >
-                        <div className="w-9 mr-2 flex items-center justify-center">
+                        <div className="w-8 mr-2 flex items-center justify-center">
                           <div className="avatar avatar-circle avatar-tiny">
                             <img
                               src={
@@ -89,11 +89,11 @@ export default function Rewards(props) {
                     )}
                     {reward.type === "profilebanner" && (
                       <li
-                        className={`flex items-center whitespace-nowrap ${
+                        className={`flex items-center whitespace-nowrap animate-slide-in-right ${
                           props.gap ? props.gap : "gap-1"
                         }`}
                       >
-                        <div className="w-9 mr-2 flex items-center justify-center">
+                        <div className="w-8 mr-2 flex items-center justify-center">
                           <img
                             src={
                               prototype.getShopitemByID(2, reward.value).image

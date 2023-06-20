@@ -58,7 +58,7 @@ export default function CardMissionTableTr(props) {
           <img
             src={mission.image}
             alt={mission.name}
-            className="relative z-0 aspect-square object-cover h-full rounded-l mix-blend-luminosity grayscale opacity-50"
+            className="relative z-0 aspect-square object-cover h-24 rounded-l mix-blend-luminosity grayscale opacity-50"
           />
         </td>
         <td>{mission.name}</td>

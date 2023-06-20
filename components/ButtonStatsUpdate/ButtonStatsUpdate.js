@@ -34,13 +34,19 @@ export default function ButtonStatsUpdate(props) {
   return (
     <>
       <div
-        className={`tooltip-left ${
+        className={`md:tooltip-left ${
           isMoreProminent && !submitting ? "tooltip tooltip-attention" : ""
         }`}
-        data-tooltip={`${isMoreProminent ? 'Missing progress? Press here!' : ''}${submitting ? 'This might take up to 15 minutes. Make sure the match you’re trying to fetch is 100% completed.' : ''}`}
+        data-tooltip={`${
+          isMoreProminent ? "Missing progress? Click here!" : ""
+        }${
+          submitting
+            ? "This might take up to 15 minutes. Make sure the match you’re trying to fetch is 100% completed."
+            : ""
+        }`}
       >
         <button
-          className={`button button-xs ${
+          className={`w-full button button-xs ${
             isMoreProminent ? "button-primary" : "button-secondary"
           } ${submitting ? "is-loading" : undefined}`}
           onClick={addToastWithDelay.bind(this, {
@@ -52,8 +58,7 @@ export default function ButtonStatsUpdate(props) {
           })}
         >
           <span className="icon icon-16 icon-refresh-02" />
-          <span className="hidden sm:block">Update my stats</span>
-          <span className="block sm:hidden">Update</span>
+          <span>Update my stats</span>
         </button>
       </div>
     </>

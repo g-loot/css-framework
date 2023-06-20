@@ -515,17 +515,16 @@
   &::before {
     @apply shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))];
   }
-  
   .card-bg {
     @apply
     relative
     order-1
-    flex-none
+    flex-1
     ;
   }
   .card-body {
-    @apply 
-    flex-3
+    @apply
+    flex-2
     order-2
     justify-end
     items-stretch

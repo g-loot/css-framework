@@ -38,7 +38,7 @@ const SubMenuItem = [
     slug: "stats",
     url: "stats",
     icon: "icon-statistics",
-    label: "Stats",
+    label: "My stats",
   },
   /*
   {

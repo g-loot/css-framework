@@ -282,7 +282,7 @@ export default function PrototypeLeftMenuNew(props) {
                   </div>
                   <div className="item-body">
                     <div className="item-title">
-                      <span className="text-sm uppercase">Friends</span>
+                      <span className="text-sm uppercase">Followers</span>
                     </div>
                   </div>
                 </button>

@@ -362,7 +362,7 @@ export default function LadderPlacements() {
                   })}
                 >
                   <span className="icon icon-refresh-01" />
-                  <span>Request status update</span>
+                  <span>Update my stats</span>
                 </button>
                 <button
                   type="button"

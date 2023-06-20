@@ -121,7 +121,8 @@ export default function LadderPlacementItem(props) {
                 <div className="absolute z-20 inset-0 p-4 flex items-center justify-center overflow-hidden rounded-lg">
                   <button
                     type="button"
-                    className={`button button-sm button-currency w-full animate-slide-in-bottom ${selectedLadder?.isPowerPlay ? 'button-powertoken' : 'button-token'} ${selectedLadder?.isPremium ? 'button-premium' : 'button-secondary'}`}
+                    className={`button button-sm button-currency w-full animate-slide-in-bottom ${selectedLadder?.isPowerPlay ? 'button-powertoken' : 'button-token'} ${selectedLadder?.isPremium ? 'button-premium' : 'button-primary'}`}
+                    onClick={() => incrementLadderStep()}
                   >
                     <div>
                       <span>Activate</span>
