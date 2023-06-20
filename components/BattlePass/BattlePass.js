@@ -793,12 +793,6 @@ export default function Battlepass(props) {
                             ? `is-current`
                             : ""
                         }
-                        ${
-                          getBattlepassByID(selectedBattlepass).currentStep >
-                          item.id
-                            ? `is-past`
-                            : ""
-                        }
                         `}
                   >
                     <div

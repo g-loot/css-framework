@@ -32,11 +32,6 @@ const TabsItems = [
     component: TabClanLeaderboardsHistory,
   },
   {
-    label: "Rewards",
-    url: "rewards",
-    component: TabClanLeaderboardsRewards,
-  },
-  {
     label: "How it works",
     url: "how-it-works",
     component: TabClanLeaderboardsHowItWorks,
