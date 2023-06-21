@@ -16,10 +16,14 @@ export default function ScoreboardOverview(props) {
   }, [item]);
 
   function handleVideoPlay() {
-    video.play();
+    if(video) {
+      video.play();
+    }
   }
   function handleVideoPause() {
-    video.pause();
+    if(video) {
+      video.pause();
+    }
   }
 
   return (

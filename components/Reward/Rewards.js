@@ -23,7 +23,7 @@ export default function Rewards(props) {
                   <>
                     {reward.type === "coin" && (
                       <li
-                        className={`flex items-center whitespace-nowrap animate-slide-in-right ${
+                        className={`flex items-center whitespace-nowrap animate-slide-in-bottom ${
                           props.gap ? props.gap : "gap-1"
                         }`}
                       >
@@ -37,7 +37,7 @@ export default function Rewards(props) {
                     )}
                     {reward.type === "token" && (
                       <li
-                        className={`flex items-center whitespace-nowrap animate-slide-in-right ${
+                        className={`flex items-center whitespace-nowrap animate-slide-in-bottom ${
                           props.gap ? props.gap : "gap-1"
                         }`}
                       >
@@ -52,7 +52,7 @@ export default function Rewards(props) {
                     )}
                     {reward.type === "powertoken" && (
                       <li
-                        className={`flex items-center whitespace-nowrap animate-slide-in-right ${
+                        className={`flex items-center whitespace-nowrap animate-slide-in-bottom ${
                           props.gap ? props.gap : "gap-1"
                         }`}
                       >
@@ -67,7 +67,7 @@ export default function Rewards(props) {
                     )}
                     {reward.type === "avatarframe" && (
                       <li
-                        className={`flex items-center whitespace-nowrap animate-slide-in-right ${
+                        className={`flex items-center whitespace-nowrap animate-slide-in-bottom ${
                           props.gap ? props.gap : "gap-1"
                         }`}
                       >
@@ -89,7 +89,7 @@ export default function Rewards(props) {
                     )}
                     {reward.type === "profilebanner" && (
                       <li
-                        className={`flex items-center whitespace-nowrap animate-slide-in-right ${
+                        className={`flex items-center whitespace-nowrap animate-slide-in-bottom ${
                           props.gap ? props.gap : "gap-1"
                         }`}
                       >

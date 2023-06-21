@@ -87,7 +87,7 @@ export default function Ladders() {
         <PrototypeStructure title="Clan Seasons">
           <Ad width="1005" height="300" />
           <section className="surface sm:rounded overflow-hidden mb-4">
-            <div className="h-44 relative w-full flex items-center justify-center">
+            <div className="h-44 relative w-full flex items-center justify-center overflow-hidden">
               <div className="absolute z-10 top-1 left-1">
                 <Tooltip tooltip={<div>{selectedGame.name}</div>}>
                   <GameIcon game={selectedGame.id} />
@@ -98,15 +98,28 @@ export default function Ladders() {
                 alt={selectedClanLeaderboard.name}
                 className="relative z-10 max-w-[200px] max-h-[85px] h-auto w-auto"
               />
-              <img
-                src={selectedClanLeaderboard.bg}
-                alt={selectedClanLeaderboard.name}
-                className={`absolute inset-0 z-0 object-cover w-full h-full ${
-                  selectedClanLeaderboard.status === "finished"
-                    ? "grayscale opacity-50"
-                    : ""
-                }`}
-              />
+              {selectedClanLeaderboard.video ? (
+                <div className="absolute z-0 inset-0 grid place-content-center bg-ui-900/95">
+                  <video
+                    autoPlay={true}
+                    playsInline
+                    loop
+                    muted
+                    preload
+                    width="100%"
+                    height="100%"
+                    id={`video_${selectedClanLeaderboard.id}`}
+                    className="w-full opacity-20"
+                    src={`${selectedClanLeaderboard.video}#t=1`}
+                  ></video>
+                </div>
+              ) : (
+                <img
+                  src={selectedClanLeaderboard.bg}
+                  alt={selectedClanLeaderboard.name}
+                  className="absolute inset-0 z-0 object-cover w-full h-full"
+                />
+              )}
             </div>
             <div className="border-t border-ui-700 p-4">
               <div className="flex flex-col md:flex-row gap-2 md:items-center justify-between">

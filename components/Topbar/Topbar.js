@@ -124,7 +124,7 @@ export default function Topbar() {
                         router.pathname.includes("battlepass") ? "is-active" : ""
                       }`}
                     >
-                      <span className="text-sm uppercase">Battlepass</span>
+                      <span className="text-sm uppercase">Battle Pass</span>
                     </a>
                   </Link>
                 </li>

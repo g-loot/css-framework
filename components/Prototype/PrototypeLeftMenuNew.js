@@ -66,7 +66,7 @@ export default function PrototypeLeftMenuNew(props) {
 
   useEffect(() => {
     if (statusLoading || router.pathname.includes("home")) {
-      setLoading(true);
+      /*setLoading(true);*/
     }
   }, []);
 
@@ -265,7 +265,7 @@ export default function PrototypeLeftMenuNew(props) {
                 </div>
               </Link>
               <Link
-                href={`/prototype/profile/1?tab=friends${prototype.getURLparams()}`}
+                href={`/prototype/profile/1?tab=followers${prototype.getURLparams()}`}
               >
                 <button
                   type="button"

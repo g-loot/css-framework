@@ -131,6 +131,7 @@ export default function TabClanLeaderboardsLeaderboards() {
   const [hasRanks, setHasRanks] = useState(false);
   const [isInAClan, setIsInAClan] = useState(true);
   const [hasRiot, setHasRiot] = useState(true);
+  const [hasRewards, setHasRewards] = useState(true);
   const [hasPlayersDetails, setHasPlayersDetails] = useState(false);
   const hasAds = query.ads === "true" ? true : false;
   const { game } = router.query;
@@ -278,26 +279,28 @@ export default function TabClanLeaderboardsLeaderboards() {
                     )}
                   </>
                 )}
-                <ul className="max-w-sm mx-auto">
-                  {rewardDistribClan.map((item, itemIndex) => (
-                    <li
-                      key={itemIndex}
-                      className="surface rounded-lg h-[58px] flex items-stretch overflow-hidden mb-2 animate-slide-in-bottom animate-delay"
-                      style={{
-                        "--delay": "calc(" + itemIndex + " * 0.05s)",
-                      }}
-                    >
-                      <div
-                        className={`w-2/5 text-center px-2 flex items-center justify-center ${
-                          itemIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
-                        }`}
+                {hasRewards && (
+                  <ul className="max-w-sm mx-auto">
+                    {rewardDistribClan.map((item, itemIndex) => (
+                      <li
+                        key={itemIndex}
+                        className="surface rounded-lg h-[58px] flex items-stretch overflow-hidden mb-2 animate-slide-in-bottom animate-delay"
+                        style={{
+                          "--delay": "calc(" + itemIndex + " * 0.05s)",
+                        }}
                       >
-                        <LeaderboardWings id={itemIndex} value={item.name} />
-                      </div>
-                      {item.rewards && <Rewards rewards={item.rewards} />}
-                    </li>
-                  ))}
-                </ul>
+                        <div
+                          className={`w-2/5 text-center px-2 flex items-center justify-center ${
+                            itemIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
+                          }`}
+                        >
+                          <LeaderboardWings id={itemIndex} value={item.name} />
+                        </div>
+                        {item.rewards && <Rewards rewards={item.rewards} />}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           ) : (
@@ -674,32 +677,34 @@ export default function TabClanLeaderboardsLeaderboards() {
                     </div>
                     <div className="min-w-md px-2 md:px-0">
                       <div className="flex gap-2 items-center text-center text-sm text-ui-300 uppercase mb-2 relative z-10 h-6">
-                        <div className="w-80 flex items-stretch overflow-hidden">
-                          <div className="w-1/3 px-2">#</div>
-                          <div className="flex-1 flex gap-2 items-center justify-center">
-                            <span>Rewards</span>
-                            <Tooltip
-                              tooltip={
-                                <div className="max-w-xs text-sm text-left text-ui-200 leading-tight normal-case space-y-2">
-                                  <p>
-                                    Rewards will be distributed evenly to
-                                    everyone in the clan once the Ladder has
-                                    ended.
-                                  </p>
-                                  <p>
-                                    For example, if the Clan reward is [number]
-                                    Coins and [number] Golden tickets - each
-                                    Clan member will split on the [number] Coins
-                                    and [number] Golden tickets.
-                                  </p>
-                                </div>
-                              }
-                            >
-                              <button className="text-ui-300 text-0">
-                                <span className="icon icon-16 icon-c-info" />
-                              </button>
-                            </Tooltip>
-                          </div>
+                        <div className={`flex items-stretch overflow-hidden ${hasRewards ? 'w-80' : 'w-20'}`}>
+                          <div className={`px-2 ${hasRewards ? 'w-1/3' : ''}`}>#</div>
+                          {hasRewards && (
+                            <div className="flex-1 flex gap-2 items-center justify-center">
+                              <span>Rewards</span>
+                              <Tooltip
+                                tooltip={
+                                  <div className="max-w-xs text-sm text-left text-ui-200 leading-tight normal-case space-y-2">
+                                    <p>
+                                      Rewards will be distributed evenly to
+                                      everyone in the clan once the Ladder has
+                                      ended.
+                                    </p>
+                                    <p>
+                                      For example, if the Clan reward is [number]
+                                      Coins and [number] Golden tickets - each
+                                      Clan member will split on the [number] Coins
+                                      and [number] Golden tickets.
+                                    </p>
+                                  </div>
+                                }
+                              >
+                                <button className="text-ui-300 text-0">
+                                  <span className="icon icon-16 icon-c-info" />
+                                </button>
+                              </Tooltip>
+                            </div>
+                          )}
                         </div>
                         <div className="flex-1">
                           <div className="item py-0">
@@ -772,22 +777,22 @@ export default function TabClanLeaderboardsLeaderboards() {
                                     }}
                                   >
                                     <div
-                                      className={`surface rounded-lg w-80 h-[58px] flex items-stretch overflow-hidden ${
+                                      className={`surface rounded-lg h-[58px] flex items-stretch overflow-hidden ${
                                         prototype.getClanByID(clan.clan)?.isYou
                                           ? ""
                                           : ""
-                                      }`}
+                                      } ${hasRewards ? 'w-80' : 'w-20'}`}
                                     >
                                       <div
-                                        className={`w-16 relative text-center px-2 flex items-center justify-center ${
+                                        className={`relative text-center px-2 flex items-center justify-center ${
                                           clanIndex > 2
                                             ? "bg-ui-700/25"
                                             : "bg-ui-700"
-                                        }`}
+                                        } ${hasRewards ? 'w-16' : 'w-full'}`}
                                       >
                                         <LeaderboardWings id={clanIndex} />
                                       </div>
-                                      {clan.rewards && (
+                                      {clan.rewards && hasRewards && (
                                         <Rewards rewards={clan.rewards} />
                                       )}
                                     </div>
@@ -1179,6 +1184,9 @@ export default function TabClanLeaderboardsLeaderboards() {
       <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
         <a onClick={() => setHasRiot(!hasRiot)}>
           Toggle has Riot {hasRiot ? "ON" : "OFF"}
+        </a>
+        <a onClick={() => setHasRewards(!hasRewards)}>
+          Toggle has Rewards {hasRewards ? "ON" : "OFF"}
         </a>
         <a onClick={() => setIsInAClan(!isInAClan)}>
           Toggle in a clan {isInAClan ? "ON" : "OFF"}

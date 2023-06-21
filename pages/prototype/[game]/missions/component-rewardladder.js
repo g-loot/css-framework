@@ -70,7 +70,7 @@ export default function ComponentRewardLadder() {
     <>
       <div className="flex flex-col gap-2 lg:flex-row items-baseline justify-between mb-2 px-4 sm:px-0">
         <div className="flex gap-2 items-baseline">
-          <h2 className="h3 flex-none" onClick={() => switchBattlepasses()}>Battlepass</h2>
+          <h2 className="h3 flex-none" onClick={() => switchBattlepasses()}>Battle Pass</h2>
 
           <Tooltip
             tooltip={
@@ -100,7 +100,7 @@ export default function ComponentRewardLadder() {
           <ResetsIn />
           <Link href={`/prototype/battlepass${prototype.getURLparams()}`}>
             <a className="link text-ui-300 text-sm">
-              View Battlepass
+              View Battle Pass
             </a>
           </Link>
         </div>

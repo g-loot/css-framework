@@ -95,9 +95,9 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
         )}
         <div className="modal-content">
           <div className="modal-body">
-            <h2 className="modal-title">Battlepass completed</h2>
+            <h2 className="modal-title">Battle Pass completed</h2>
             <p className="mb-8">
-              Congratulations on reaching the final step of the Battlepass.
+              Congratulations on reaching the final step of the Battle Pass.
               <br />
               Continue earning rewards through the bonus steps.
             </p>
@@ -112,7 +112,7 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
                   />
                   <div className="max-w-[30ch] text-center xl:text-left space-y-2 xl:border-l xl:border-ui-700 xl:pl-6">
                     <p>
-                      Unlock exclusive Premium rewards before the Battlepass
+                      Unlock exclusive Premium rewards before the Battle Pass
                       ends.
                     </p>
                     <button
@@ -160,11 +160,8 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
               </div>
             )}
 
-            {/*
-            <Battlepass id={selectedBattlepass} isFinished={true} hasSummary={false} hasPremium={true} />
-  */}
             <p className="text-ui-300">
-              <ResetsIn label="New Battlepass" status={2} />
+              <ResetsIn label="New Battle Pass" status={2} />
             </p>
           </div>
           <div className="modal-action">

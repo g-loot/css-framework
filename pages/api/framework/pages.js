@@ -279,7 +279,7 @@ export const FrameworkPages = {
         {
           label: "Friends",
           url: "profile/1",
-          query: "tab=friends",
+          query: "tab=followers",
           tags: "profile, view, user, friends",
           tab: 1,
           new: false,
@@ -288,7 +288,7 @@ export const FrameworkPages = {
           label: "Friends",
           chip: "empty state",
           url: "profile/1",
-          query: "tab=friends&empty=true",
+          query: "tab=followers&empty=true",
           tags: "profile, view, user, friends, empty state",
           tab: 1,
           new: false,

@@ -54,8 +54,8 @@ export default function ModalBattlepassCompletedSummary(props) {
       <div className="modal max-w-lg modal-center">
         <div className="modal-content">
           <div className="modal-body">
-            <h2 className="modal-title">Battlepass ended</h2>
-            <p className="mb-8">Here is a summary of your Battlepass rewards</p>
+            <h2 className="modal-title">Battle Pass ended</h2>
+            <p className="mb-8">Here is a summary of your Battle Pass rewards</p>
             <Battlepass id={selectedBattlepass} isFinished={true} hasPremium={isPremium} hasCountdown={false} />
           </div>
           <div className="modal-action">
@@ -66,7 +66,7 @@ export default function ModalBattlepassCompletedSummary(props) {
               }`}
               onClick={closeModalWithDelay}
             >
-              <span>Explore new Battlepass</span>
+              <span>Explore new Battle Pass</span>
             </button>
           </div>
         </div>

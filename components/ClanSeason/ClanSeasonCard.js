@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import GameIcon from "../GameIcon/GameIcon";
 import Link from "next/link";
 import ResetsIn from "../Countdown/ResetsIn";
@@ -12,6 +12,22 @@ const ClanSeasonCard = (props) => {
   const item = props.item || undefined;
   const itemIndex = props.key || 1;
   const game = props.game || "valorant";
+  const [video, setVideo] = useState(null);
+
+  useEffect(() => {
+    setVideo(document.getElementById(`video_${item.id}`));
+  }, [item]);
+
+  function handleVideoPlay() {
+    if(video) {
+      video.play();
+    }
+  }
+  function handleVideoPause() {
+    if(video) {
+      video.pause();
+    }
+  }
 
   return (
     <>
@@ -20,11 +36,13 @@ const ClanSeasonCard = (props) => {
           <button
             type="button"
             className="w-full surface sm:rounded overflow-hidden interactive animate-slide-in-bottom animate-delay"
+            onMouseOver={handleVideoPlay}
+            onMouseOut={handleVideoPause}
             style={{
               "--delay": "calc(" + itemIndex + " * 0.05s)",
             }}
           >
-            <div className="h-44 relative w-full flex items-center justify-center">
+            <div className="h-44 relative w-full flex items-center justify-center overflow-hidden">
               <div className="absolute z-20 top-2 left-2 rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
                 <GameIcon game={1} />
                 <span>Competitive</span>
@@ -34,11 +52,28 @@ const ClanSeasonCard = (props) => {
                 alt={item.name}
                 className="relative z-10 max-w-[200px] max-h-[85px] h-auto w-auto"
               />
-              <img
-                src={item.bg}
-                alt={item.name}
-                className="absolute inset-0 z-0 object-cover w-full h-full"
-              />
+              {item.video ? (
+                <div className="absolute z-0 inset-0 grid place-content-center bg-ui-900/95">
+                  <video
+                    autoPlay={false}
+                    playsInline
+                    loop
+                    muted
+                    preload
+                    width="100%"
+                    height="100%"
+                    id={`video_${item.id}`}
+                    className="w-full opacity-20"
+                    src={`${item.video}#t=1`}
+                  ></video>
+                </div>
+              ) : (
+                <img
+                  src={item.bg}
+                  alt={item.name}
+                  className="absolute inset-0 z-0 object-cover w-full h-full"
+                />
+              )}
             </div>
             <div className="border-t border-ui-700 p-4 flex flex-col xl:flex-row gap-2 xl:gap-4 xl:items-center xl:justify-between">
               <div className="flex-1 flex flex-col md:flex-row gap-2 lg:gap-4 lg:items-center">

@@ -90,22 +90,14 @@ export default function Battlepass(props) {
   const componentRef = useRef();
 
   const handleResize = useCallback(() => {
+    const divWidthResized = componentRef?.current?.offsetWidth;
+    const maxStepsToDisplay = Math.floor(divWidthResized / 144);
+    setmaxSteps(maxStepsToDisplay);
     setTimeout(() => {
       const divWidthResized = componentRef?.current?.offsetWidth;
-      if (divWidthResized > 1288) {
-        setmaxSteps(9);
-      } else if (divWidthResized < 1288 && divWidthResized > 1160) {
-        setmaxSteps(7);
-      } else if (divWidthResized < 1160 && divWidthResized > 992) {
-        setmaxSteps(7);
-      } else if (divWidthResized < 992 && divWidthResized > 848) {
-        setmaxSteps(4);
-      } else if (divWidthResized < 848 && divWidthResized > 750) {
-        setmaxSteps(3);
-      } else if (divWidthResized < 750) {
-        setmaxSteps(2);
-      }
-    }, 200);
+      const maxStepsToDisplay = Math.floor(divWidthResized / 144);
+      setmaxSteps(maxStepsToDisplay);
+    }, 100);
   }, [componentRef]);
 
   useEffect(() => {

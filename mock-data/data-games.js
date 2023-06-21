@@ -3997,10 +3997,11 @@ export const dataGames = [
         id: 3,
         isCurrent: false,
         status: "upcoming",
-        name: "Upcoming Season",
-        logo: "https://res.cloudinary.com/gloot/image/upload/v1687160240/Stryda/demo/spaceclash-logo.png",
+        name: "Phoenix Clash",
+        logo: "https://res.cloudinary.com/gloot/image/upload/v1687335838/Stryda/demo/phoenixclash-logo.png",
         bg:
           "https://res.cloudinary.com/gloot/image/upload/v1687160240/Stryda/demo/spaceclash-bg.jpg",
+          video: "https://res.cloudinary.com/gloot/video/upload/v1687273070/Stryda/videos/Stryda_ClanSeason_Phoenix.mp4",
         meta: {
           objective: "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",

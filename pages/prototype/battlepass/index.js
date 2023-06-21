@@ -94,7 +94,7 @@ export default function BattlepassPage() {
   return (
     <>
       {selectedBattlepass && (
-        <PrototypeStructure title="Battlepass">
+        <PrototypeStructure title="Battle Pass">
           <section className="mb-8 surface surface-dimmed p-4 relative sm:rounded overflow-hidden animate-slide-in-bottom">
             <div className="relative z-10 flex flex-col lg:flex-row lg:items-start text-center lg:text-left lg:justify-between pb-4 mb-4 gap-4 lg:gap-8 border-b border-ui-100/10">
               <div className="flex-1 flex flex-col items-center 2xl:flex-row gap-4 2xl:gap-8">
@@ -115,9 +115,9 @@ export default function BattlepassPage() {
                 <Tooltip
                   tooltip={
                     <div className="max-w-xs text-sm text-center leading-tight">
-                      The Battlepass is how you turn your XP into useful stuff
+                      The Battle Pass is how you turn your XP into useful stuff
                       like Coins or Tokens. Each time you reach a milestone in
-                      the Battlepass, you unlock another reward. Battlepass and
+                      the Battle Pass, you unlock another reward. Battle Pass and
                       XP reset each week so you will always have something new
                       to work towards.
                     </div>
@@ -145,19 +145,19 @@ export default function BattlepassPage() {
           {/* for demo purposes only */}
           <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
             <a onClick={switchBattlepasses}>
-              Switch between various Battlepasses
+              Switch between various Battle Passes
             </a>
             <a onClick={() => openModalBattlepassCompletedBonusSteps(false)}>
-              Open Battlepass completed: bonus steps
+              Open Battle Pass completed: bonus steps
             </a>
             <a onClick={() => openModalBattlepassCompletedBonusSteps(true)}>
-              Open Battlepass completed: bonus steps (premium)
+              Open Battle Pass completed: bonus steps (premium)
             </a>
             <a onClick={openModalBattlepassCompletedClaim}>
-              Open Battlepass ended: claim previous rewards
+              Open Battle Pass ended: claim previous rewards
             </a>
             <a onClick={openModalBattlepassCompletedSummary}>
-              Open Battlepass ended: summary
+              Open Battle Pass ended: summary
             </a>
             <a onClick={openModalBattlepassCompletedPremium}>
               Open Premium purchased
