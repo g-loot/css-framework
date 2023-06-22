@@ -3439,6 +3439,7 @@ export const dataGames = [
         status: "ongoing",
         name: "Nordic Uprising",
         logo: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-logo.png",
+        video: "https://res.cloudinary.com/gloot/video/upload/v1687351106/Stryda/videos/Stryda_ClanSeason_NordicUprising.mp4",
         bg:
           "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-bg.jpg",
         meta: {
@@ -4001,7 +4002,7 @@ export const dataGames = [
         logo: "https://res.cloudinary.com/gloot/image/upload/v1687335838/Stryda/demo/phoenixclash-logo.png",
         bg:
           "https://res.cloudinary.com/gloot/image/upload/v1687160240/Stryda/demo/spaceclash-bg.jpg",
-          video: "https://res.cloudinary.com/gloot/video/upload/v1687273070/Stryda/videos/Stryda_ClanSeason_Phoenix.mp4",
+          video: "https://res.cloudinary.com/gloot/video/upload/v1687351323/Stryda/videos/Stryda_ClanSeason_PhoenixClash.mp4",
         meta: {
           objective: "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",

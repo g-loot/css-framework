@@ -10,9 +10,9 @@ import { useRouter } from "next/router";
 
 const HowitworksTabs = [
   {
-    title: "Before entering a Ladder",
+    title: "Before entering a Clan Season",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/stryda_ladders.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1687351788/Stryda/illustrations/Clan_Seasons_HiW_Before_entering.jpg",
     content: [
       {
         type: "p",
@@ -20,213 +20,102 @@ const HowitworksTabs = [
       },
       {
         type: "p",
-        text: "<span class='text-lg text-ui-100'>Playing Valorant</span>",
-      },
-      {
-        type: "ul",
-        text: ["Make sure you connected your Riot account on Stryda"],
-      },
-      {
-        type: "p",
-        text: "<span class='text-lg text-ui-100'>Playing PUBG: BATTLEGROUNDS</span>",
-      },
-      {
-        type: "ul",
-        text: ["Make sure you connected your Steam account on Stryda"],
-      },
-      {
-        type: "p",
-        text: "<span class='text-lg text-ui-100'>Playing any other game</span>",
-      },
-      {
-        type: "ul",
-        text: [
-          "Make sure you have installed the Stryda App and the Tracker Plugin.",
-          "The Stryda icon should appear in your game at the top left of your screen meaning everything is up and running to track your progress.",
-        ],
-      },
-      {
-        type: "p",
-        text: "<a href='#' class='link link-main'>Download Stryda tracker</a>",
+        text: "Make sure you connected your Stryda account with your RIOT ID in your <a href='https://stryda.netlify.app/prototype/profile/setting' class='link'>settings</a>.",
       },
     ],
   },
   {
-    title: "Pay tokens to activate Ladder matches",
+    title: "Playing with Clan members and climbing the leaderboard",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674744257/Stryda/illustrations/double_tokens.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1687351788/Stryda/illustrations/Clan_Seasons_HiW_playing.jpg",
     content: [
       {
         type: "p",
-        text: "Playing in a ladder requires Tokens. Each match costs a certain number of Tokens.",
+        text: "To join the leaderboard, you or another member need to enter the season by registering the Clan (which is only needed once).",
       },
       {
         type: "p",
-        text: "When you have spent a Token and activated a Ladder match, your next game match in the correct game mode will count towards the Ladder.",
+        text: "Several parties from the Clan can play at the same time.",
       },
       {
         type: "p",
-        text: "If you run out of Tokens, there are several ways to get more:",
+        text: "The scores for each match played will be counted into the total of the Clan scoring.",
       },
       {
-        type: "ul",
-        text: [
-          "Buy Tokens in the Stryda wallet.",
-          "Earn Tokens by completing Missions and unlocking Mission Rewards.",
-        ],
+        type: "p",
+        text: "You and your Clan members can play as many matches as you want...",
+      },
+      {
+        type: "p",
+        text: "You and your Clan members can play as many matches as you want...",
+      },
+      {
+        type: "p",
+        text: "Start playing matches in-game with a full party of players from your Clan. Make sure the party consists of players from your Clan only. ",
       },
     ],
   },
   {
-    title: "Playing your matches & climbing the leaderboard",
+    title: "If there is a tie between Clans",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674744427/Stryda/illustrations/leaderboard_details.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1687351789/Stryda/illustrations/Clan_Seasons_HiW_tie.jpg",
     content: [
       {
         type: "p",
-        text: "To join the leaderboard, you need to complete a certain number of matches depending on the rules of the Ladder you want to compete in.",
+        text: "If there is a tie, the tiebreaker in how many matches that have been played decides who wins.",
       },
       {
         type: "p",
-        text: "When you have played the minimum amount of matches, your Ladder points will be added to the leaderboard. ",
-      },
-      {
-        type: "p",
-        text: "You can always play more matches as long as you have Tokens. Only your best matches will count.",
+        text: "If two Clans have the same scores and the same tiebreaker score, a second tiebreaker will be used to determine the winner.",
       },
     ],
   },
   {
-    title: "Ladder levels & groups",
+    title: "If you leave your Clan in the middle of a Clan Season",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/brawl-rank_levels.jpg",
-    content: [
-      {
-        type: "h3",
-        text: "Ladder levels",
-      },
-      {
-        type: "p",
-        text: "Some Ladders put players into different levels based on their performance in previous ladders while others are open for everyone no matter the skill level. ",
-      },
-      {
-        type: "p",
-        text: "Note that your in-game rank and your Ladder level have no correlation whatsoever.",
-      },
-      {
-        type: "h3",
-        text: "Groups & leaderboards",
-      },
-      {
-        type: "p",
-        text: "Some Ladders are so big that they are split into smaller groups to give everyone a better chance to win.",
-      },
-      {
-        type: "p",
-        text: "Each group has its own leaderboard and rewards.",
-      },
-    ],
-  },
-  {
-    title: "If there is a tie",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737017/Stryda/illustrations/tiebreaker.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1687351788/Stryda/illustrations/Clan_Seasons_HiW_leave.jpg",
     content: [
       {
         type: "p",
-        text: "If there is a tie, the tiebreaker in your 3 best matches decides who wins.",
+        text: "If you leave a Clan in an ongoing season and have contributed to the Clan by playing matches, you will still get rewarded if that Clan wins any rewards when the Clan season ends.",
       },
       {
         type: "p",
-        text: "If 2 users have the same points and the same tiebreaker score, a second tiebreaker will be used to determine the winner.",
-      },
-    ],
-  },
-  {
-    title: "Playing with your clan",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/clans.jpg",
-    content: [
-      {
-        type: "p",
-        text: "In Clan Ladders, your Ladder matches count for both the Solo and the Clan leaderboards.",
-      },
-      {
-        type: "p",
-        text: "To play in a Clan Ladder, your Clan must have that game as one of their played games on the Clan profile.",
-      },
-      {
-        type: "p",
-        text: "Enough Clan members must play in the Ladder for the Clan to appear on the leaderboard.",
-      },
-      {
-        type: "p",
-        text: "The Clan Ladder points are made up of the best Ladder points from the best Clan players.",
-      },
-    ],
-  },
-  {
-    title: "If you leave your clan in the middle of a Ladder",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer.jpg",
-    content: [
-      {
-        type: "p",
-        text: "If you leave a Clan in an ongoing Ladder and have contributed to the Clan by playing matches, you will still get rewarded if that Clan wins any rewards when the Ladder ends.",
-      },
-      {
-        type: "p",
-        text: "If you change Clans during an ongoing Ladder and have already played a Ladder match with the old Clan, you will not get rewards with the new Clan. ",
-      },
-      {
-        type: "p",
-        text: "The points you contribute with still belong to the old Clan until the Ladder ends. ",
-      },
-      {
-        type: "p",
-        text: "You are free to join a new Clan and get rewards with that Clan if you haven’t played matches in an ongoing Ladder with a previous Clan.",
+        text: "The scores you contribute with still belong to the old Clan until the Clan Season ends.",
       },
     ],
   },
   {
     title: "If a game goes into maintenance",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737015/Stryda/illustrations/maintenance.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1687351788/Stryda/illustrations/Clan_Seasons_HiW_maintenance.jpg",
     content: [
       {
         type: "p",
-        text: "If Stryda or the game goes into maintenance, all stats stops being recorded. If you have started a Ladder match, you will get your Tokens back.",
+        text: "If Stryda or the game goes into maintenance, all stats stops being recorded.",
       },
       {
         type: "p",
-        text: "Any pending tokens activated to a ladder will be automatically refunded once it has been canceled/ended.",
+        text: "Once the maintenance is over, the season will continue. If there is a bigger issue or if the maintenance lasts for several days, Stryda will decide if the season will continue.",
       },
       {
         type: "p",
-        text: "Once the maintenance is over, the Ladder will continue. If there is a bigger issue or if the maintenance lasts for several days, Stryda will decide if the Ladder will continue. If the Ladder is canceled, you will get your Tokens back",
+        text: "Every player and Clan will be notified.",
       },
     ],
   },
   {
-    title: "I am experiencing issues with the Ladders",
+    title: "I am experiencing issues with the Clan Seasons",
     image:
-      "https://res.cloudinary.com/gloot/image/upload/v1674737014/Stryda/illustrations/error.jpg",
+      "https://res.cloudinary.com/gloot/image/upload/v1687351788/Stryda/illustrations/Clan_Seasons_HiW_issue.jpg",
     content: [
       {
         type: "p",
-        text: "If you are playing VALORANT, make sure your Riot and Stryda accounts are linked in <a href='#' class='link'>your settings</a>.",
-      },
-      {
-        type: "p",
-        text: "If you are playing PUBG: BATTLEGROUNDS, make sure your Steam and Stryda accounts are linked in <a href='#' class='link'>your settings</a>.",
-      },
-      {
-        type: "p",
-        text: "If you are playing any other game, make sure you have installed the Stryda App and the Tracker Plugin. Make sure the overlay is running with a green dot.",
-      },
-      {
-        type: "p",
         text: "Note that stats can take some time to be updated.",
+      },
+      {
+        type: "p",
+        text: "Make sure you connected your Stryda account with your RIOT ID in your <a href='https://stryda.netlify.app/prototype/profile/setting' class='link'>settings</a>.",
       },
       {
         type: "p",
@@ -260,7 +149,7 @@ export default function TabClanLeaderboardsHowItWorks() {
             <div className="grid gap-8 grid-cols-1 xl:grid-cols-3 items-center">
               <img
                 className="col-span-1 rounded-lg"
-                src="https://res.cloudinary.com/gloot/image/upload/v1674745238/Stryda/illustrations/ladder_leaderboard.jpg"
+                src="https://res.cloudinary.com/gloot/image/upload/v1687351788/Stryda/illustrations/Clan_Seasons_HiW_intro.jpg"
                 width="100%"
                 height="auto"
                 alt=""
@@ -269,33 +158,28 @@ export default function TabClanLeaderboardsHowItWorks() {
                 <h2 className="h4 mb-4">What is a Clan Season?</h2>
                 <div className="columns-2 space-y-4 gap-8">
                   <p className="text-ui-300 leading-relaxed">
-                    In Ladders you compete against other Stryda players and/or
-                    Clans to climb a leaderboard.
+                    In Clan Seasons you and members from your Clan play games
+                    together. You compete against other Clans on Stryda to climb
+                    a leaderboard.
                   </p>
                   <ul className="list-inside list-disc space-y-4 text-ui-300 leading-relaxed">
                     <li>
-                      Ladders are based on your stats, just like Missions. You
-                      don’t need to be in the same server as the other Ladder
-                      players.
+                      Your party in the game need to be filled up with members
+                      from your clan only.
                     </li>
                     <li>
-                      You earn Ladder points based on the objective, e.g. kills,
-                      goals or score from the game.
+                      The scores coming in are based on your teams performance
+                      while playing in the same party, in the game.
                     </li>
                     <li>
-                      For Valorant and PUBG: BATTLEGROUNDS you need to connect
-                      your Riot and Steam accounts respectively to Stryda; for
-                      all the other games you need the Stryda App running while
-                      you play.
+                      The scores are based on the specific objective described
+                      for the season, e.g. wins minus losses.
                     </li>
                     <li>
-                      Ladders use a “best-of” format. You can enter as many
-                      times as you want, and only your best scores count.
+                      You or someone from your Clan need to setup the Clan for
+                      the season. This is only needed once.
                     </li>
-                    <li>
-                      You need to complete a set numbers of matches before you
-                      can join and see the Ladder leaderboard.
-                    </li>
+                    <li>You can play as many matches as you want.</li>
                   </ul>
                 </div>
               </div>
@@ -314,9 +198,7 @@ export default function TabClanLeaderboardsHowItWorks() {
                   <div>
                     <i>1</i>
                     <div className="text-sm text-ui-300">
-                      Make sure you meet the requirements. Dependent on the
-                      game; either connect your game or install the Tracker
-                      Plugin
+                      Make sure you connect your account with your RIOT ID
                     </div>
                     <span />
                   </div>
@@ -325,7 +207,8 @@ export default function TabClanLeaderboardsHowItWorks() {
                   <a href="#">
                     <i>2</i>
                     <div className="text-sm text-ui-300">
-                      Use Tokens to activate Ladder matches
+                      Join the leaderboard by registering your Clan to the
+                      ongoing Season
                     </div>
                     <span />
                   </a>
@@ -334,7 +217,8 @@ export default function TabClanLeaderboardsHowItWorks() {
                   <a href="#">
                     <i>3</i>
                     <div className="text-sm text-ui-300">
-                      Launch the game and play matches in the correct game mode
+                      Launch the game and create a full party with your Clan
+                      members only
                     </div>
                     <span />
                   </a>
@@ -343,8 +227,7 @@ export default function TabClanLeaderboardsHowItWorks() {
                   <a href="#">
                     <i>4</i>
                     <div className="text-sm text-ui-300">
-                      Your total Ladder points are based on the specific amount
-                      of matches required
+                      Play as many matches as you want in the correct game mode
                     </div>
                     <span />
                   </a>
@@ -353,7 +236,8 @@ export default function TabClanLeaderboardsHowItWorks() {
                   <a href="#">
                     <i>5</i>
                     <div className="text-sm text-ui-300">
-                      Once the Ladder finishes you can see the final results
+                      The total score of the Clan are based on the specific
+                      objective
                     </div>
                     <span />
                   </a>
@@ -362,7 +246,8 @@ export default function TabClanLeaderboardsHowItWorks() {
                   <a href="#">
                     <i>6</i>
                     <div className="text-sm text-ui-300">
-                      Top players/Clans will be able to claim their rewards
+                      Once the Clan season has ended, you can see the final
+                      results
                     </div>
                     <span />
                   </a>
@@ -375,7 +260,9 @@ export default function TabClanLeaderboardsHowItWorks() {
             style={{ "--delay": "calc(3 * 0.05s)" }}
           >
             <div className="px-4 sm:px-0">
-              <h2 className="h4 mb-6">Learn everything about the Clan Seasons</h2>
+              <h2 className="h4 mb-6">
+                Learn everything about the Clan Seasons
+              </h2>
             </div>
             <div className="accordion accordion-highlighted surface sm:rounded-lg">
               {HowitworksTabs.map((tab, tabIndex) => (

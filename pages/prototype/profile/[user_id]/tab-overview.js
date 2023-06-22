@@ -36,9 +36,9 @@ export default function TabProfileOverview() {
     }
   }, [modalAchievement]);
 
-  function openModalAchievementReceived(level, name, icon) {
+  function openModalAchievementReceived(item) {
     uiContext.openModal(
-      <ModalAchievementReceived level={level} name={name} icon={icon} />
+      <ModalAchievementReceived item={item} />
     );
   }
 
@@ -342,7 +342,7 @@ export default function TabProfileOverview() {
                   <Link
                     href={`${
                       selectedUser.id
-                    }?tab=achievements${prototype.getURLparams()}`}
+                    }?tab=stats${prototype.getURLparams()}`}
                   >
                     <a className="link link-hover text-ui-300 text-sm leading-none">
                       View
@@ -515,8 +515,7 @@ export default function TabProfileOverview() {
                                 }  ${item.level === 5 ? "is-completed" : ""}`}
                                 onClick={openModalAchievementReceived.bind(
                                   this,
-                                  item.item,
-                                  item.level
+                                  item
                                 )}
                               >
                                 <i />

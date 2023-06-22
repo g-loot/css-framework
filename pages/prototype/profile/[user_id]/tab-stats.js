@@ -38,9 +38,9 @@ export default function TabProfileStats() {
     }
   }, [modalAchievement]);
 
-  function openModalAchievementReceived(level, name, icon) {
+  function openModalAchievementReceived(item) {
     uiContext.openModal(
-      <ModalAchievementReceived level={level} name={name} icon={icon} />
+      <ModalAchievementReceived item={item} />
     );
   }
 

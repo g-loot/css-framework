@@ -139,13 +139,23 @@ export default function Achievements() {
     }
   }, [modalAchievement]);
 
+  const generateDescription = (description, to) => {
+    const variable = to;
+    const regex = /\[X\]/g;
+    const string = description;
+    const replacedString = string.replace(regex, variable);
+    return (
+      replacedString
+    );
+  };
+
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(user_id));
   }, [user_id]);
 
-  function openModalAchievementReceived(level, name, icon) {
+  function openModalAchievementReceived(item) {
     uiContext.openModal(
-      <ModalAchievementReceived level={level} name={name} icon={icon} />
+      <ModalAchievementReceived item={item} />
     );
   }
 
@@ -159,7 +169,7 @@ export default function Achievements() {
             <ProfileHeader breadcrumbs="Achievements" />
 
             <section className="grid lg:grid-cols-2 gap-4">
-              {achievementsList.map((item, itemIndex) => (
+              {selectedUser.achievements.badges.map((item, itemIndex) => (
                 <div
                   key={itemIndex}
                   className="relative surface sm:rounded-lg p-2 pr-4 flex items-center gap-6 animate-slide-in-bottom animate-delay"
@@ -167,12 +177,12 @@ export default function Achievements() {
                 >
                   
                   <div
-                    className="w-36 h-36 achievement cursor-pointer"
-                    onClick={openModalAchievementReceived.bind(
+                    className={`w-36 h-36 achievement cursor-pointer ${
+                      item.level === 5 ? "is-completed" : ""
+                    }`}
+                    onClick={item.level !== 0 && openModalAchievementReceived.bind(
                       this,
-                      item.level,
-                      item.name,
-                      item.icon
+                      item
                     )}
                   >
                     <i />
@@ -182,7 +192,7 @@ export default function Achievements() {
                         url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl${item.level}-animated.svg`}
                       />
                       <AchievementIcon
-                        url={`https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-${item.icon}.svg`}
+                        url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${prototype.getAchievementitemByID(1, item.item).icon}.svg`}
                       />
                     </div>
                     <span className="text-sm text-ui-300 uppercase">
@@ -190,8 +200,8 @@ export default function Achievements() {
                     </span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="h5">{item.name}</h3>
-                    <p className="text-ui-300 mt-2 mb-3">{item.description}</p>
+                    <h3 className="h5">{prototype.getAchievementitemByID(1, item.item).name}</h3>
+                    <p className="text-ui-300 mt-2 mb-3">{generateDescription(prototype.getAchievementitemByID(1, item.item).description, item.to)}</p>
                     <div className="flex items-center gap-4 leading-none font-bold">
                       <div
                         className="progressbar progressbar-secondary w-full"

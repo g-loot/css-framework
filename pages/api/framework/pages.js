@@ -155,60 +155,6 @@ export const FrameworkPages = {
       ],
     },
     {
-      title: "Profile (old)",
-      pages: [
-        {
-          title: true,
-          label: "Profile (old, self)",
-          tab: 0,
-        },
-        {
-          label: "Profile (old, self)",
-          url: "profile-old/1",
-          query: "",
-          tags: "profile, view, user",
-          tab: 1,
-        },
-        {
-          label: "Profile (old, self, no clan)",
-          chip: "empty state",
-          url: "profile-old/1",
-          query: "emptyclan=true",
-          tags: "profile, view, user, empty state",
-          tab: 1,
-          new: false,
-        },
-        {
-          label: "Achievements",
-          url: "profile-old/1/achievements",
-          query: "",
-          tags: "profile, view, user, achievements, badges, level",
-          tab: 2,
-        },
-        {
-          title: true,
-          label: "Profile (others)",
-          tab: 0,
-        },
-        {
-          label: "Profile (old, others)",
-          url: "profile-old/2",
-          query: "",
-          tags: "profile, view, user",
-          tab: 1,
-        },
-        {
-          label: "Profile (old, others, no stats, no clan)",
-          chip: "empty state",
-          url: "profile-old/10",
-          query: "",
-          tags: "profile, view, user, empty state",
-          tab: 1,
-          new: false,
-        },
-      ],
-    },
-    {
       title: "Profile",
       pages: [
         {

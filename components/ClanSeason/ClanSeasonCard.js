@@ -19,12 +19,12 @@ const ClanSeasonCard = (props) => {
   }, [item]);
 
   function handleVideoPlay() {
-    if(video) {
+    if (video) {
       video.play();
     }
   }
   function handleVideoPause() {
-    if(video) {
+    if (video) {
       video.pause();
     }
   }
@@ -36,8 +36,8 @@ const ClanSeasonCard = (props) => {
           <button
             type="button"
             className="w-full surface sm:rounded overflow-hidden interactive animate-slide-in-bottom animate-delay"
-            onMouseOver={handleVideoPlay}
-            onMouseOut={handleVideoPause}
+            //onMouseOver={handleVideoPause}
+            //onMouseOut={handleVideoPlay}
             style={{
               "--delay": "calc(" + itemIndex + " * 0.05s)",
             }}
@@ -55,7 +55,7 @@ const ClanSeasonCard = (props) => {
               {item.video ? (
                 <div className="absolute z-0 inset-0 grid place-content-center bg-ui-900/95">
                   <video
-                    autoPlay={false}
+                    autoPlay={true}
                     playsInline
                     loop
                     muted
@@ -63,9 +63,11 @@ const ClanSeasonCard = (props) => {
                     width="100%"
                     height="100%"
                     id={`video_${item.id}`}
-                    className="w-full opacity-20"
+                    className="w-full"
                     src={`${item.video}#t=1`}
-                  ></video>
+                  >
+                    <img src={item.bg} />
+                  </video>
                 </div>
               ) : (
                 <img
@@ -80,7 +82,13 @@ const ClanSeasonCard = (props) => {
                 <div className="lg:pr-4 lg:border-r border-ui-600">
                   <h2 className="h4">{item.name}</h2>
                 </div>
-                <div className={`flex flex-col md:flex-row md:gap-4 md:items-center ${item.status === 'upcoming' ? 'flex-1' : 'lg:pr-4 lg:border-r border-ui-600'}`}>
+                <div
+                  className={`flex flex-col md:flex-row md:gap-4 md:items-center ${
+                    item.status === "upcoming"
+                      ? "flex-1"
+                      : "lg:pr-4 lg:border-r border-ui-600"
+                  }`}
+                >
                   <div className="flex items-center whitespace-nowrap gap-1">
                     <span className="icon icon-coin text-currency-1-500" />
                     <span className="text-currency-1-500 text-sm">
@@ -143,7 +151,9 @@ const ClanSeasonCard = (props) => {
                               >
                                 <div>
                                   <img
-                                    src={prototype.getClanByID(clan.clan).avatar}
+                                    src={
+                                      prototype.getClanByID(clan.clan).avatar
+                                    }
                                     alt="avatar"
                                   />
                                 </div>

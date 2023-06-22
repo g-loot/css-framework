@@ -109,9 +109,11 @@ export default function Ladders() {
                     width="100%"
                     height="100%"
                     id={`video_${selectedClanLeaderboard.id}`}
-                    className="w-full opacity-20"
+                    className="w-full"
                     src={`${selectedClanLeaderboard.video}#t=1`}
-                  ></video>
+                  >
+                    <img src={selectedClanLeaderboard.bg} />
+                  </video>
                 </div>
               ) : (
                 <img

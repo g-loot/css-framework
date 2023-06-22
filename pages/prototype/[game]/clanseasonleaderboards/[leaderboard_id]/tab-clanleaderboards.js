@@ -13,6 +13,7 @@ import { VariablesContext } from "../../../../../contexts/variables";
 import ModalInfoClanSeasonEnroll from "../modal-info-clanseasonenroll";
 import AvatarClan from "../../../../../components/Avatar/AvatarClan";
 import ModalClanSeasonResults from "../modal-clanseasonresults";
+import ModalClanSeasonOnboarding from "../modal-clanseasononboarding";
 import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 import Rewards from "../../../../../components/Reward/Rewards";
 import ButtonFeedback from "../../../../../components/Button/ButtonFeedback";
@@ -125,6 +126,7 @@ export default function TabClanLeaderboardsLeaderboards() {
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedClanLeaderboard, setSelectedClanLeaderboard] = useState(null);
   const modalenroll = query.modalenroll === "true" ? true : false;
+  const modalonboarding = query.modalonboarding === "true" ? true : false;
   const empty = query.empty === "true" ? true : false;
   const [isEmpty, setIsEmpty] = useState(empty);
   const [isEnrolled, setIsEnrolled] = useState(false);
@@ -151,6 +153,12 @@ export default function TabClanLeaderboardsLeaderboards() {
   }, [modalenroll]);
 
   useEffect(() => {
+    if (modalonboarding) {
+      openmodalClanSeasonOnboarding();
+    }
+  }, [modalonboarding]);
+
+  useEffect(() => {
     if (loading) {
       setTimeout(() => {
         setLoading(false);
@@ -163,6 +171,12 @@ export default function TabClanLeaderboardsLeaderboards() {
       prototype.getClanLeaderboardByID(game, leaderboard_id)
     );
   }, [leaderboard_id]);
+
+  useEffect(() => {
+    if(selectedClanLeaderboard && selectedClanLeaderboard?.status === 'ongoing') {
+      openmodalClanSeasonOnboarding();
+    }
+  }, [selectedClanLeaderboard]);
 
   const sliderRankWrapper = useRef(null);
   const sliderRankItem = useRef(null);
@@ -236,6 +250,9 @@ export default function TabClanLeaderboardsLeaderboards() {
         )}
       />
     );
+  }
+  function openmodalClanSeasonOnboarding() {
+    uiContext.openModal(<ModalClanSeasonOnboarding />);
   }
 
   return (
@@ -499,17 +516,18 @@ export default function TabClanLeaderboardsLeaderboards() {
                                     </Tooltip>
                                   </td>
                                   {selectedClanLeaderboard.status ===
-                                  "finished" ||
-                                (selectedClanLeaderboard.status === "ongoing" &&
-                                  variablesContext.clanLeaderboardEnrolled) ? (
-                                        <td>
-                                          <div className="text-sm font-bold">
-                                            {41 - itemIndex}
-                                          </div>
-                                        </td>
-                                      ) : (
-                                        <></>
-                                      )}
+                                    "finished" ||
+                                  (selectedClanLeaderboard.status ===
+                                    "ongoing" &&
+                                    variablesContext.clanLeaderboardEnrolled) ? (
+                                    <td>
+                                      <div className="text-sm font-bold">
+                                        {41 - itemIndex}
+                                      </div>
+                                    </td>
+                                  ) : (
+                                    <></>
+                                  )}
                                 </tr>
                               ))}
                             </tbody>
@@ -677,8 +695,14 @@ export default function TabClanLeaderboardsLeaderboards() {
                     </div>
                     <div className="min-w-md px-2 md:px-0">
                       <div className="flex gap-2 items-center text-center text-sm text-ui-300 uppercase mb-2 relative z-10 h-6">
-                        <div className={`flex items-stretch overflow-hidden ${hasRewards ? 'w-80' : 'w-20'}`}>
-                          <div className={`px-2 ${hasRewards ? 'w-1/3' : ''}`}>#</div>
+                        <div
+                          className={`flex items-stretch overflow-hidden ${
+                            hasRewards ? "w-80" : "w-20"
+                          }`}
+                        >
+                          <div className={`px-2 ${hasRewards ? "w-1/3" : ""}`}>
+                            #
+                          </div>
                           {hasRewards && (
                             <div className="flex-1 flex gap-2 items-center justify-center">
                               <span>Rewards</span>
@@ -691,10 +715,11 @@ export default function TabClanLeaderboardsLeaderboards() {
                                       ended.
                                     </p>
                                     <p>
-                                      For example, if the Clan reward is [number]
-                                      Coins and [number] Golden tickets - each
-                                      Clan member will split on the [number] Coins
-                                      and [number] Golden tickets.
+                                      For example, if the Clan reward is
+                                      [number] Coins and [number] Golden tickets
+                                      - each Clan member will split on the
+                                      [number] Coins and [number] Golden
+                                      tickets.
                                     </p>
                                   </div>
                                 }
@@ -781,14 +806,14 @@ export default function TabClanLeaderboardsLeaderboards() {
                                         prototype.getClanByID(clan.clan)?.isYou
                                           ? ""
                                           : ""
-                                      } ${hasRewards ? 'w-80' : 'w-20'}`}
+                                      } ${hasRewards ? "w-80" : "w-20"}`}
                                     >
                                       <div
                                         className={`relative text-center px-2 flex items-center justify-center ${
                                           clanIndex > 2
                                             ? "bg-ui-700/25"
                                             : "bg-ui-700"
-                                        } ${hasRewards ? 'w-16' : 'w-full'}`}
+                                        } ${hasRewards ? "w-16" : "w-full"}`}
                                       >
                                         <LeaderboardWings id={clanIndex} />
                                       </div>
@@ -1199,6 +1224,9 @@ export default function TabClanLeaderboardsLeaderboards() {
         </a>
         <a onClick={() => setHasPlayersDetails(!hasPlayersDetails)}>
           Toggle players details {hasPlayersDetails ? "ON" : "OFF"}
+        </a>
+        <a onClick={() => openmodalClanSeasonOnboarding()}>
+          Open Modal Onboarding
         </a>
       </section>
     </>

@@ -133,9 +133,9 @@ export default function Achievements() {
     setSelectedUser(prototype.getUserByID(user_id));
   }, [user_id]);
 
-  function openModalAchievementReceived(level, name, icon) {
+  function openModalAchievementReceived(item) {
     uiContext.openModal(
-      <ModalAchievementReceived level={level} name={name} icon={icon} />
+      <ModalAchievementReceived item={item} />
     );
   }
 
@@ -159,9 +159,7 @@ export default function Achievements() {
                     className="w-36 h-36 achievement cursor-pointer"
                     onClick={openModalAchievementReceived.bind(
                       this,
-                      item.level,
-                      item.name,
-                      item.icon
+                      item
                     )}
                   >
                     <i />

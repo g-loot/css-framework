@@ -31,11 +31,18 @@ export default function TabProfileAchievements() {
     }
   }, [modalAchievement]);
 
-  function openModalAchievementReceived(level, name, icon) {
-    uiContext.openModal(
-      <ModalAchievementReceived level={level} name={name} icon={icon} />
-    );
+  function openModalAchievementReceived(item) {
+    console.log(item);
+    uiContext.openModal(<ModalAchievementReceived item={item} />);
   }
+
+  const generateDescription = (description, to) => {
+    const variable = to;
+    const regex = /\[X\]/g;
+    const string = description;
+    const replacedString = string.replace(regex, variable);
+    return replacedString;
+  };
 
   function handleFavorite(id) {
     setFavoriteItem(id);
@@ -55,7 +62,9 @@ export default function TabProfileAchievements() {
             <>
               {selectedUser.isYou ? (
                 <section className="grid lg:grid-cols-2 gap-4">
-                  {prototype.getAchievementsectionByID(1).items.map((item, itemIndex) => (
+                  {prototype
+                    .getAchievementsectionByID(1)
+                    .items.map((item, itemIndex) => (
                       <div
                         key={itemIndex}
                         className={`surface sm:rounded-lg p-2 pr-4 flex items-center gap-6 animate-slide-in-bottom animate-delay ${
@@ -71,7 +80,10 @@ export default function TabProfileAchievements() {
                               url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl0-animated.svg`}
                             />
                             <AchievementIcon
-                              url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${prototype.getAchievementitemByID(1, item.id).icon}.svg`}
+                              url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${
+                                prototype.getAchievementitemByID(1, item.item)
+                                  .icon
+                              }.svg`}
                             />
                           </div>
                           {item.level > 0 && (
@@ -82,33 +94,29 @@ export default function TabProfileAchievements() {
                         </div>
                         <div className="flex-1">
                           <h3 className="h5">
-                            {
-                              prototype.getAchievementitemByID(1, item.id)
-                                .name
-                            }
+                            {prototype.getAchievementitemByID(1, item.item).name}
                           </h3>
                           <p className="text-ui-300 mt-2 mb-3">
                             {
-                              prototype.getAchievementitemByID(1, item.id)
+                              prototype.getAchievementitemByID(1, item.item)
                                 .description
                             }
                           </p>
                           <div className="flex items-center gap-4 leading-none font-bold">
-                              <div
-                                className="progressbar progressbar-secondary w-full"
-                                style={{
-                                  "--percent": 0,
-                                  "--progress": 0,
-                                }}
-                              >
-                                <div />
-                                <div />
-                              </div>
-                              <div className="flex-none mb-0.5">
-                                <span>0</span> /{" "}
-                                <span>100</span>
-                              </div>
+                            <div
+                              className="progressbar progressbar-secondary w-full"
+                              style={{
+                                "--percent": 0,
+                                "--progress": 0,
+                              }}
+                            >
+                              <div />
+                              <div />
                             </div>
+                            <div className="flex-none mb-0.5">
+                              <span>0</span> / <span>100</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     ))}
@@ -167,11 +175,7 @@ export default function TabProfileAchievements() {
                     className={`w-36 h-36 achievement ${
                       item.level === 5 ? "is-completed" : ""
                     }`}
-                    onClick={openModalAchievementReceived.bind(
-                      this,
-                      item.item,
-                      item.level
-                    )}
+                    onClick={openModalAchievementReceived.bind(this, item)}
                   >
                     <i />
                     <i />
@@ -196,10 +200,11 @@ export default function TabProfileAchievements() {
                       {prototype.getAchievementitemByID(1, item.item).name}
                     </h3>
                     <p className="text-ui-300 mt-2 mb-3">
-                      {
+                      {generateDescription(
                         prototype.getAchievementitemByID(1, item.item)
-                          .description
-                      }
+                          .description,
+                        item.to
+                      )}
                     </p>
                     {item.level < 5 && (
                       <div className="flex items-center gap-4 leading-none font-bold">

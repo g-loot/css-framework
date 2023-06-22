@@ -71,9 +71,9 @@ export default function TabProfileActivity() {
     setSelectedUser(prototype.getUserByID(user_id));
   }, [user_id]);
 
-  function openModalAchievementReceived(level, name, icon) {
+  function openModalAchievementReceived(item) {
     uiContext.openModal(
-      <ModalAchievementReceived level={level} name={name} icon={icon} />
+      <ModalAchievementReceived item={item} />
     );
   }
 
@@ -155,9 +155,7 @@ export default function TabProfileActivity() {
                             className="w-full aspect-square achievement cursor-pointer"
                             onClick={openModalAchievementReceived.bind(
                               this,
-                              item.achievement.level,
-                              item.achievement.name,
-                              item.achievement.icon
+                              item.achievement
                             )}
                           >
                             <i />
