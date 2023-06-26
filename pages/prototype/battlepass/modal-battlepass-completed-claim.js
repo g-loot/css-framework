@@ -81,6 +81,9 @@ export default function ModalBattlepassCompletedClaim(props) {
             <p>
               It is now time to <strong className="text-ui-100">claim your past rewards</strong> before jumping into the new Battle Pass!
             </p>
+            <p>
+              Any ongoing missions have been resetted.
+            </p>
           </div>
           <div className="modal-action">
             <button
