@@ -893,7 +893,6 @@ export default function Chat(props) {
                                       ? "dropdown-open"
                                       : "dropdown-closed"
                                   }`}
-                                  data-tooltip="React"
                                 >
                                   <button
                                     type="button"

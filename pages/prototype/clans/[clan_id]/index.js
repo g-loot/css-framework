@@ -65,7 +65,6 @@ const TabsItems = [
     label: "Activity",
     url: "activity",
     component: TabClanActivity,
-    hasBadge: true,
   },
 ];
 

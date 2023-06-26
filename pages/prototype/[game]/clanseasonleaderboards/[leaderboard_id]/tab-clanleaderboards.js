@@ -173,7 +173,10 @@ export default function TabClanLeaderboardsLeaderboards() {
   }, [leaderboard_id]);
 
   useEffect(() => {
-    if(selectedClanLeaderboard && selectedClanLeaderboard?.status === 'ongoing') {
+    if (
+      selectedClanLeaderboard &&
+      selectedClanLeaderboard?.status === "ongoing"
+    ) {
       openmodalClanSeasonOnboarding();
     }
   }, [selectedClanLeaderboard]);
@@ -445,7 +448,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                               <tr>
                                 <td>
                                   <div className="text-sm uppercase">
-                                    Clan members
+                                    Clan members Riot ID
                                   </div>
                                 </td>
                                 {selectedClanLeaderboard.status ===
@@ -473,29 +476,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                             <tbody>
                               {getMyClanMembers().map((item, itemIndex) => (
                                 <tr key={itemIndex}>
-                                  <td>
-                                    <Link
-                                      href={`/prototype/profile/${
-                                        prototype.getUserByID(item.id).id
-                                      }${prototype.getURLparams()}`}
-                                    >
-                                      <a
-                                        className={`text-sm interactive ${
-                                          prototype.getUserByID(item.id)
-                                            .isPremium
-                                            ? "text-premium-500"
-                                            : "text-ui-200"
-                                        }`}
-                                      >
-                                        {
-                                          prototype.getUserByID(item.id)
-                                            .nickname
-                                        }{" "}
-                                        #1111
-                                      </a>
-                                    </Link>
-                                  </td>
-                                  <td className="text-right">
+                                  <td className="py-0.5">
                                     <Tooltip
                                       placement="top"
                                       tooltip={
@@ -504,15 +485,31 @@ export default function TabClanLeaderboardsLeaderboards() {
                                         </span>
                                       }
                                     >
-                                      <ButtonFeedback
-                                        value={`${
+                                      <a
+                                        className={`text-sm interactive flex items-center gap-1 ${
                                           prototype.getUserByID(item.id)
-                                            .nickname
-                                        } #1111`}
-                                        variant="button-ghost rounded-full"
-                                        icon="icon-document-copy"
-                                        message="RIOT ID copied to your clipboard"
-                                      />
+                                            .isPremium
+                                            ? "text-premium-500"
+                                            : "text-ui-200"
+                                        }`}
+                                      >
+                                        <span>
+                                          {
+                                            prototype.getUserByID(item.id)
+                                              .nickname
+                                          }
+                                          #1111
+                                        </span>
+                                        <ButtonFeedback
+                                          value={`${
+                                            prototype.getUserByID(item.id)
+                                              .nickname
+                                          } #1111`}
+                                          variant="button-ghost rounded-full"
+                                          icon="icon-document-copy"
+                                          message="RIOT ID copied to your clipboard"
+                                        />
+                                      </a>
                                     </Tooltip>
                                   </td>
                                   {selectedClanLeaderboard.status ===
