@@ -39,7 +39,7 @@ const TabsItemsOwn = [
     label: "Activity",
     url: "activity",
     component: TabClanActivity,
-    hasBadge: false,
+    hasBadge: true,
   },
 ];
 
@@ -49,11 +49,13 @@ const TabsItems = [
     url: "about",
     component: TabClanAbout,
   },
+  /*
   {
     label: "Stats",
     url: "stats",
     component: TabClanStats,
   },
+  */
   {
     label: "Members",
     url: "members",

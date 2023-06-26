@@ -73,7 +73,7 @@ export const dataClans = [
     ladders: [
       {
         gameSlug: "valorant",
-        id: 1,
+        id: 4,
       },
       {
         gameSlug: "pubg",
@@ -115,7 +115,7 @@ export const dataClans = [
     ladders: [
       {
         gameSlug: "valorant",
-        id: 1,
+        id: 4,
       },
       {
         gameSlug: "pubg",
@@ -157,7 +157,7 @@ export const dataClans = [
     ladders: [
       {
         gameSlug: "valorant",
-        id: 1,
+        id: 4,
       },
       {
         gameSlug: "pubg",
@@ -199,7 +199,7 @@ export const dataClans = [
     ladders: [
       {
         gameSlug: "valorant",
-        id: 1,
+        id: 4,
       },
       {
         gameSlug: "pubg",
@@ -241,7 +241,7 @@ export const dataClans = [
     ladders: [
       {
         gameSlug: "valorant",
-        id: 1,
+        id: 4,
       },
       {
         gameSlug: "pubg",
@@ -283,7 +283,7 @@ export const dataClans = [
     ladders: [
       {
         gameSlug: "valorant",
-        id: 1,
+        id: 4,
       },
       {
         gameSlug: "pubg",

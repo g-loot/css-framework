@@ -99,7 +99,7 @@ export default function Ladders() {
                 className="relative z-10 max-w-[200px] max-h-[85px] h-auto w-auto"
               />
               {selectedClanLeaderboard.video ? (
-                <div className="absolute z-0 inset-0 grid place-content-center bg-ui-900/95">
+                <div className={`absolute z-0 inset-0 grid place-content-center bg-ui-900/95 ${selectedClanLeaderboard.status !== "upcoming" && selectedClanLeaderboard.status !== "ongoing" ? 'grayscale' : ''}`}>
                   <video
                     autoPlay={true}
                     playsInline
@@ -119,7 +119,7 @@ export default function Ladders() {
                 <img
                   src={selectedClanLeaderboard.bg}
                   alt={selectedClanLeaderboard.name}
-                  className="absolute inset-0 z-0 object-cover w-full h-full"
+                  className={`absolute inset-0 z-0 object-cover w-full h-full ${selectedClanLeaderboard.status !== "upcoming" && selectedClanLeaderboard.status !== "ongoing" ? 'grayscale' : ''}`}
                 />
               )}
             </div>

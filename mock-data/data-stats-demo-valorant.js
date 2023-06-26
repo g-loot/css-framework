@@ -125,12 +125,18 @@ export const StatsValorantDemoGeneral = [
     rank: 8,
     topweapon: 18,
   },
+  {
+    id: 21,
+    agent: 21,
+    rank: 8,
+    topweapon: 18,
+  },
 ];
 
 export const StatsValorantDemoFavoriteAgents = [
   {
     id: 3,
-    agent: 20,
+    agent: 21,
     timePlayed: "25H",
     matches: 59,
     win: 73.2,
@@ -973,7 +979,7 @@ export const StatsValorantDemoWeapons = [
   },
   {
     id: 1,
-    weapon: 2,
+    weapon: 32,
     kills: 254,
     deaths: 233,
     headshots: 85,
@@ -1026,7 +1032,7 @@ export const StatsValorantDemoWeapons = [
 export const StatsValorantDemoMaps = [
   {
     id: 0,
-    map: 8,
+    map: 11,
     winpercent: 45.4,
     wins: 67,
     losses: 32,
@@ -1036,7 +1042,7 @@ export const StatsValorantDemoMaps = [
   },
   {
     id: 1,
-    map: 1,
+    map: 10,
     winpercent: 42.4,
     wins: 56,
     losses: 33,
@@ -1046,7 +1052,7 @@ export const StatsValorantDemoMaps = [
   },
   {
     id: 2,
-    map: 2,
+    map: 9,
     winpercent: 39.4,
     wins: 45,
     losses: 38,
@@ -1057,6 +1063,16 @@ export const StatsValorantDemoMaps = [
   {
     id: 3,
     map: 7,
+    winpercent: 39.4,
+    wins: 45,
+    losses: 38,
+    kd: 1.43,
+    adr: 185.4,
+    acs: 283.1,
+  },
+  {
+    id: 4,
+    map: 8,
     winpercent: 39.4,
     wins: 45,
     losses: 38,

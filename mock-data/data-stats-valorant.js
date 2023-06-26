@@ -48,6 +48,21 @@ export const StatsValorantMaps = [
     name: 'lotus',
     picturePath: getImageUrl('map-lotus.jpg'),
   },
+  {
+    id: 9,
+    name: 'district',
+    picturePath: getImageUrl('map-district.jpg'),
+  },
+  {
+    id: 10,
+    name: 'piazza',
+    picturePath: getImageUrl('map-piazza.jpg'),
+  },
+  {
+    id: 11,
+    name: 'kasbah',
+    picturePath: getImageUrl('map-kasbah.jpg'),
+  },
 ];
 
 export const StatsValorantRanks = [
@@ -431,6 +446,18 @@ export const StatsValorantAgents = [
     picturePath: getImageUrl('agent-avatar-gekko.png'),
     backgroundPath: getImageUrl('valorant-stats-hero-gekko.jpg'),
   },
+  {
+    id: 21,
+    name: 'deadlock',
+    role: {
+      id: 3,
+      name: 'sentinel',
+      color: '#941C73',
+      picturePath: getImageUrl('role-sentinel.webp'),
+    },
+    picturePath: getImageUrl('agent-avatar-deadlock.png'),
+    backgroundPath: getImageUrl('valorant-stats-hero-deadlock.jpg'),
+  },
 ];
 
 export const StatsValorantWeapons = [
@@ -619,5 +646,17 @@ export const StatsValorantWeapons = [
     name: 'mosh pit',
     type: 'melee',
     picturePath: getImageUrl('weapon-moshpit.png'),
+  },
+  {
+    id: 31,
+    name: 'mosh pit',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-moshpit.png'),
+  },
+  {
+    id: 32,
+    name: 'annihilation',
+    type: 'melee',
+    picturePath: getImageUrl('weapon-annihilation.png'),
   },
 ];

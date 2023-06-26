@@ -27,26 +27,24 @@ export default function TabLaddersCompleted() {
       {selectedGame && (
         <>
           {isEmpty ? (
-            <>
-              <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
-                <div className="max-w-xs mx-auto">
-                  <span className="icon icon-ladder text-6xl text-ui-500" />
-                  <div className="mt-2 mb-6">
-                    <p className="text-sm text-ui-400">
-                      You have not entered in any Ladders yet
-                    </p>
-                    <p className="text-lg text-ui-300">
-                      Join Ladders and start earning rewards
-                    </p>
-                  </div>
-                  <Link href="/prototype/valorant/ladders">
-                    <a className="button button-main">
-                      <span>Browse Ladders</span>
-                    </a>
-                  </Link>
+            <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
+              <div className="max-w-xs mx-auto">
+                <span className="icon icon-ladder text-6xl text-ui-500" />
+                <div className="mt-2 mb-6">
+                  <p className="text-sm text-ui-400">
+                    You have not entered any Ladders yet
+                  </p>
+                  <p className="text-lg text-ui-300">
+                    Join Ladders and start earning rewards
+                  </p>
                 </div>
+                <Link href="/prototype/valorant/ladders">
+                  <a className="button button-main">
+                    <span>Browse Ladders</span>
+                  </a>
+                </Link>
               </div>
-            </>
+            </div>
           ) : (
             <>
               <section className="my-8 animate-slide-in-bottom">

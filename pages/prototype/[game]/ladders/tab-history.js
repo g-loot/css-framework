@@ -29,7 +29,7 @@ export default function TabLaddersHistory() {
               <span className="icon icon-smile text-6xl text-ui-500" />
               <div className="mt-2 mb-6">
                 <p className="text-sm text-ui-400">
-                  You have not entered in any Ladders yet.
+                  You have not entered any Ladders yet.
                 </p>
                 <p className="text-lg text-ui-300">
                   Play tournaments and competitions to see the history of your
