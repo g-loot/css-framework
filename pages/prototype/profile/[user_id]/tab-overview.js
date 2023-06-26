@@ -620,11 +620,11 @@ export default function TabProfileOverview() {
                       <span className="icon icon-ladder text-6xl text-ui-500" />
                       <p className="mt-2 text-ui-300">
                         {selectedUser.isYou ? (
-                          <>You are not competing in any Ladders</>
+                          <>You have not joined any Ladders</>
                         ) : (
                           <>
-                            {selectedUser.nickname} is not competing in any
-                            ladders
+                            {selectedUser.nickname} has not joined any
+                            Ladders
                           </>
                         )}
                       </p>

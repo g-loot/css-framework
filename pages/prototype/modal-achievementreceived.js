@@ -65,7 +65,7 @@ export default function ModalAchievementReceived(props) {
     {selectedAchievement && (
       <>
         <div className="relative z-10 max-w-sm w-full">
-          <div className="modal w-full">
+          <div className="modal modal-center">
             <button
               type="button"
               className="button button-secondary button-close"

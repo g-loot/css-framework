@@ -23,6 +23,8 @@ export default function TabClanAbout() {
   const [hasOnlyOne, setHasOnlyOne] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const hasAccepted = query.hasaccepted === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const [selectedUser, setSelectedUser] = useState(
     prototype.getUserByID(2).nickname
   );
@@ -311,53 +313,55 @@ export default function TabClanAbout() {
                         <span className="text-ui-300">We speak: </span>
                         <span className="text-ui-100">{selectedClan.lang}</span>
                       </p>
-                      {selectedClan.bio && (
+                      {selectedClan.bio && !isEmpty && (
                         <p className="text-ui-300 mt-1 text-left">
                           <ReadMore content={selectedClan.bio} max={150} />
                         </p>
                       )}
-                      <div className="flex gap-1">
-                        {selectedClan.social?.twitch && (
-                          <a
-                            href={selectedClan.social.twitch}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="link p-1 text-0"
-                          >
-                            <span className="icon icon-20 text-ui-300 icon-twitch" />
-                          </a>
-                        )}
-                        {selectedClan.social?.discord && (
-                          <a
-                            href={selectedClan.social.discord}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="link p-1 text-0"
-                          >
-                            <span className="icon icon-20 text-ui-300 icon-discord" />
-                          </a>
-                        )}
-                        {selectedClan.social?.youtube && (
-                          <a
-                            href={selectedClan.social.youtube}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="link p-1 text-0"
-                          >
-                            <span className="icon icon-20 text-ui-300 icon-logo-youtube" />
-                          </a>
-                        )}
-                        {selectedClan.social?.twitter && (
-                          <a
-                            href={selectedClan.social.twitter}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="link p-1 text-0"
-                          >
-                            <span className="icon icon-20 text-ui-300 icon-logo-twitter" />
-                          </a>
-                        )}
-                      </div>
+                      {!isEmpty && (
+                        <div className="flex gap-1">
+                          {selectedClan.social?.twitch && (
+                            <a
+                              href={selectedClan.social.twitch}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="link p-1 text-0"
+                            >
+                              <span className="icon icon-20 text-ui-300 icon-twitch" />
+                            </a>
+                          )}
+                          {selectedClan.social?.discord && (
+                            <a
+                              href={selectedClan.social.discord}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="link p-1 text-0"
+                            >
+                              <span className="icon icon-20 text-ui-300 icon-discord" />
+                            </a>
+                          )}
+                          {selectedClan.social?.youtube && (
+                            <a
+                              href={selectedClan.social.youtube}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="link p-1 text-0"
+                            >
+                              <span className="icon icon-20 text-ui-300 icon-logo-youtube" />
+                            </a>
+                          )}
+                          {selectedClan.social?.twitter && (
+                            <a
+                              href={selectedClan.social.twitter}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="link p-1 text-0"
+                            >
+                              <span className="icon icon-20 text-ui-300 icon-logo-twitter" />
+                            </a>
+                          )}
+                        </div>
+                      )}
                       {selectedClan.isYou ? (
                         <div className="space-y-2">
                           <div className="surface surface-ui-600 rounded p-3 space-y-3">
@@ -508,7 +512,11 @@ export default function TabClanAbout() {
                         <div className="flex items-center gap-1 text-currency-1-500 text-xl lg:text-3xl">
                           <span className="icon icon-coin" />
                           <span>
-                            {numberWithSpaces(selectedClan.stats.totalCoins)}
+                            {isEmpty ? (
+                              <>0</>
+                            ) : (
+                              numberWithSpaces(selectedClan.stats.totalCoins)
+                            )}
                           </span>
                         </div>
                       </div>
@@ -517,7 +525,11 @@ export default function TabClanAbout() {
                           Ladders played
                         </div>
                         <div className="text-ui-100 text-xl lg:text-3xl">
-                          {numberWithSpaces(selectedClan.stats.totalLadders)}
+                          {isEmpty ? (
+                            <>--</>
+                          ) : (
+                            numberWithSpaces(selectedClan.stats.totalLadders)
+                          )}
                         </div>
                       </div>
                       <div className="pl-4 border-l border-ui-600">
@@ -525,7 +537,11 @@ export default function TabClanAbout() {
                           Best placement
                         </div>
                         <div className="text-ui-100 text-xl lg:text-3xl">
-                          #{selectedClan.stats.avgPlacement}
+                          {isEmpty ? (
+                            <>--</>
+                          ) : (
+                            <>#{selectedClan.stats.avgPlacement}</>
+                          )}
                         </div>
                       </div>
                       <div className="pl-4 border-l border-ui-600">
@@ -533,7 +549,11 @@ export default function TabClanAbout() {
                           Avg. Ladders / week
                         </div>
                         <div className="text-ui-100 text-xl lg:text-3xl">
-                          {selectedClan.stats.avgLaddersWeek}
+                          {isEmpty ? (
+                            <>--</>
+                          ) : (
+                            selectedClan.stats.avgLaddersWeek
+                          )}
                         </div>
                       </div>
                     </div>
@@ -600,7 +620,7 @@ export default function TabClanAbout() {
                   <section className="surface md:rounded">
                     <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                       <h2 className="h6 text-ui-100">
-                        Ladders ({selectedClan.ladders?.length})
+                        Ladders ({isEmpty ? (<>0</>):(selectedClan.ladders?.length)})
                       </h2>
                       <Link
                         href={`${
@@ -613,7 +633,7 @@ export default function TabClanAbout() {
                       </Link>
                     </div>
                     <div>
-                      {selectedClan.ladders ? (
+                      {selectedClan.ladders && !isEmpty ? (
                         <Slider
                           itemWidth={397 + 16}
                           bgColor="from-ui-800 via-ui-800 to-ui-800/0"
@@ -642,8 +662,8 @@ export default function TabClanAbout() {
                         <div className="text-center p-4">
                           <span className="icon icon-ladder text-6xl text-ui-500" />
                           <p className="mt-2 text-ui-300">
-                            {selectedClan.nickname} is not competing in any
-                            ladders
+                            {selectedClan.nickname} has not joined any
+                            Ladders
                           </p>
                         </div>
                       )}
@@ -655,6 +675,12 @@ export default function TabClanAbout() {
           )}
         </>
       )}
+      {/* for demo purposes only */}
+      <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+        <a onClick={() => setIsEmpty(!isEmpty)}>
+          Toggle empty state {isEmpty ? "ON" : "OFF"}
+        </a>
+      </section>
     </>
   );
 }

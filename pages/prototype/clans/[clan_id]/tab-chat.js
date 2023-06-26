@@ -150,8 +150,7 @@ export default function TabClanChat() {
                       <div className="text-center p-4">
                         <span className="icon icon-ladder text-6xl text-ui-500" />
                         <p className="mt-2 text-ui-300">
-                          {selectedClan.nickname} is not competing in any
-                          ladders
+                          {selectedClan.nickname} has not joined any Ladders
                         </p>
                       </div>
                     )}
