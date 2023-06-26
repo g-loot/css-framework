@@ -191,7 +191,7 @@ export default function TabClanOverview() {
                     <div className="text-center p-4">
                       <span className="icon icon-ladder text-6xl text-ui-500" />
                       <p className="mt-2 text-ui-300">
-                        {selectedClan.nickname} has not joined any Ladders
+                        {selectedClan.nickname} has not entered any Ladders
                       </p>
                     </div>
                   )}
@@ -739,7 +739,7 @@ export default function TabClanOverview() {
                   <div className="text-center p-4">
                     <span className="icon icon-ladder text-6xl text-ui-500" />
                     <p className="mt-2 text-ui-300">
-                      {selectedClan.nickname} has not joined any Ladders
+                      {selectedClan.nickname} has not entered any Ladders
                     </p>
                   </div>
                 )}

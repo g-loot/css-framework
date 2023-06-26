@@ -623,7 +623,7 @@ export default function TabProfileOverview() {
                           <>You have not joined any Ladders</>
                         ) : (
                           <>
-                            {selectedUser.nickname} has not joined any
+                            {selectedUser.nickname} has not entered any
                             Ladders
                           </>
                         )}
