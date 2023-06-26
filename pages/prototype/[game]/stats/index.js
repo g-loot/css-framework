@@ -383,7 +383,11 @@ export default function Stats() {
             </>
           ) : (
             <>
-              <section className="surface sm:rounded-lg p-4 pb-16 relative overflow-hidden">
+              <section
+                className={`surface sm:rounded-lg p-4 pb-16 relative overflow-hidden ${
+                  loading ? "is-loading" : ""
+                }`}
+              >
                 <div className="relative z-10 flex flex-col md:flex-row gap-4 items-stretch justify-between min-h-[250px]">
                   <div className="flex flex-col gap-4 justify-between">
                     <div className="flex gap-4 items-start leading-tight">
@@ -393,7 +397,7 @@ export default function Stats() {
                       <div>
                         <h1 className="uppercase text-6xl">Valorant stats</h1>
                         <div className="text-sm text-ui-300">
-                          Last updated on 11 NOV 2022, 16:38 PM
+                          Last updated on 11 NOV 2024, 16:38 PM
                         </div>
                       </div>
                     </div>
@@ -417,11 +421,11 @@ export default function Stats() {
                           {prototype.getUserByID(1)?.nickname}
                         </div>
                         <div>
-                          riotname
+                          jackjack
                           <span className="text-sm text-ui-300">#8492</span>
                         </div>
                         <div className="text-ui-300 uppercase text-xs lg:text-sm">
-                          Match played: <b>1000</b>
+                          Match played: <b>862</b>
                         </div>
                         <div className="text-ui-300 uppercase text-xs lg:text-sm">
                           Play time: <b>1439H</b>
@@ -504,7 +508,11 @@ export default function Stats() {
                 <div className="max-w-lg mx-auto accordion accordion-highlighted">
                   <Accordion
                     header={
-                      <div className="item lg:h-24 surface surface-ui-700 shadow-xl rounded-lg p-4">
+                      <div
+                        className={`item lg:h-24 surface surface-ui-700 shadow-xl rounded-lg p-4 ${
+                          loading ? "is-loading" : ""
+                        }`}
+                      >
                         <div className="item-body leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around flex-1 gap-4">
                           <div
                             className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"

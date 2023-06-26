@@ -26,6 +26,15 @@ export default function ProfileHeader(props) {
   const hasProfileBanner = query.profilebanner || false;
   const [avatarFrame, setAvatarFrame] = useState(false);
   const [profileBanner, setProfileBanner] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1200);
+    }
+  }, [loading]);
 
   useEffect(() => {
     if (hasAvatarFrame) {
@@ -97,7 +106,9 @@ export default function ProfileHeader(props) {
   return (
     <>
       {selectedUser && (
-        <section className="header header-secondary surface surface-dimmed sm:rounded-lg">
+        <section className={`header header-secondary surface surface-dimmed sm:rounded-lg ${
+          loading ? "is-loading" : ""
+        }`}>
           {breadcrumbs && (
             <div className="header-breadcrumbs">
               <nav className="breadcrumbs" aria-label="Breadcrumb">

@@ -25,6 +25,15 @@ export default function TabProfileOverview() {
   const { user_id } = router.query;
   const isEmpty = query.empty === "true" ? true : false;
   const modalAchievement = query.modalachievement === "true" ? true : false;
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1200);
+    }
+  }, [loading]);
 
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(user_id));
@@ -37,9 +46,7 @@ export default function TabProfileOverview() {
   }, [modalAchievement]);
 
   function openModalAchievementReceived(item) {
-    uiContext.openModal(
-      <ModalAchievementReceived item={item} />
-    );
+    uiContext.openModal(<ModalAchievementReceived item={item} />);
   }
 
   function openmodalLeveLUp() {
@@ -55,7 +62,9 @@ export default function TabProfileOverview() {
       */}
           <div className="flex flex-col lg:flex-row items-start gap-y-4 lg:gap-x-4 animate-slide-in-bottom">
             <div className="w-full lg:w-80 space-y-4">
-              <section className="surface md:rounded">
+              <section
+                className={`surface md:rounded ${loading ? "is-loading" : ""}`}
+              >
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">About</h2>
                   {selectedUser.isYou && (
@@ -180,7 +189,9 @@ export default function TabProfileOverview() {
                     )}
                 </div>
               </section>
-              <section className="surface md:rounded">
+              <section
+                className={`surface md:rounded ${loading ? "is-loading" : ""}`}
+              >
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">Level {selectedUser.level}</h2>
                   <Tooltip
@@ -212,7 +223,9 @@ export default function TabProfileOverview() {
                   </div>
                 </div>
               </section>
-              <section className="surface md:rounded">
+              <section
+                className={`surface md:rounded ${loading ? "is-loading" : ""}`}
+              >
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">Clan</h2>
                   {selectedUser.clan && !isEmpty && (
@@ -310,7 +323,11 @@ export default function TabProfileOverview() {
                 </div>
               </section>
               {selectedUser.games && (
-                <section className="surface md:rounded">
+                <section
+                  className={`surface md:rounded ${
+                    loading ? "is-loading" : ""
+                  }`}
+                >
                   <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                     <h2 className="h6 text-ui-100">
                       Games ({selectedUser.games.length})
@@ -336,7 +353,9 @@ export default function TabProfileOverview() {
               )}
             </div>
             <div className="flex-1 space-y-4 lg:overflow-hidden max-w-[100%]">
-              <section className="surface md:rounded">
+              <section
+                className={`surface md:rounded ${loading ? "is-loading" : ""}`}
+              >
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">Stats</h2>
                   <Link
@@ -459,7 +478,9 @@ export default function TabProfileOverview() {
                   )}
                 </div>
               </section>
-              <section className="surface md:rounded">
+              <section
+                className={`surface md:rounded ${loading ? "is-loading" : ""}`}
+              >
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">
                     Achievements{" "}
@@ -623,8 +644,7 @@ export default function TabProfileOverview() {
                           <>You have not joined any Ladders</>
                         ) : (
                           <>
-                            {selectedUser.nickname} has not entered any
-                            Ladders
+                            {selectedUser.nickname} has not entered any Ladders
                           </>
                         )}
                       </p>
@@ -641,9 +661,7 @@ export default function TabProfileOverview() {
         <a onClick={() => openModalAchievementReceived()}>
           Open achievemnts received modal
         </a>
-        <a onClick={() => openmodalLeveLUp()}>
-          Open level up modal
-        </a>
+        <a onClick={() => openmodalLeveLUp()}>Open level up modal</a>
       </section>
     </>
   );
