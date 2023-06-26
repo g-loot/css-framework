@@ -10,6 +10,7 @@ import { UiContext } from "../../../../contexts/ui";
 import Tooltip from "../../../../components/Tooltip/Tooltip";
 import ModalClanLeave from "../modal-clan-leave";
 import ModalGiftTokens from "../modal-gift-tokens";
+import ModalLadderResults from "../../[game]/ladders/modal-ladderresults";
 
 export default function TabClanChat() {
   const router = useRouter();
@@ -39,6 +40,10 @@ export default function TabClanChat() {
 
   function openModalGiftTokens(nickname) {
     uiContext.openModal(<ModalGiftTokens selectedUser={nickname} />);
+  }
+
+  function openmodalLadderResults(ladder) {
+    uiContext.openModal(<ModalLadderResults item={ladder} />);
   }
 
   return (
@@ -76,6 +81,29 @@ export default function TabClanChat() {
                             }?tab=clan-leaderboard${prototype.getURLparams()}`}
                           >
                             <div className="rounded surface surface-ui-600 overflow-hidden interactive">
+                              {prototype.getLadderByID(
+                                ladder.gameSlug,
+                                ladder.id
+                              )?.hasClaim && (
+                                <div className="card-overlay">
+                                  <div>
+                                    <button
+                                      type="button"
+                                      className="button button-primary"
+                                      onClick={() =>
+                                        openmodalLadderResults(
+                                          prototype.getLadderByID(
+                                            ladder.gameSlug,
+                                            ladder.id
+                                          )
+                                        )
+                                      }
+                                    >
+                                      <span>View results</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              )}
                               <div className="relative">
                                 <div className="absolute top-1 left-1">
                                   <div className="rounded bg-ui-800/90 p-px pr-2 flex gap-1 items-center text-xs text-ui-200">
@@ -140,7 +168,15 @@ export default function TabClanChat() {
                                     ).name
                                   }
                                 </p>
-                                <p className="text-lg text-ui-100">#42</p>
+                                <p className="text-lg text-ui-100">
+                                  #
+                                  {
+                                    prototype.getLadderByID(
+                                      ladder.gameSlug,
+                                      ladder.id
+                                    )?.clanLeaderboard?.stats?.placement
+                                  }
+                                </p>
                               </div>
                             </div>
                           </Link>
@@ -352,13 +388,15 @@ export default function TabClanChat() {
           </div>
           {/* for demo purposes only */}
           <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-            <a onClick={() => setIsAdmin(!isAdmin)}>Toggle admin view {isAdmin ? 'ON' : 'OFF'}</a>
+            <a onClick={() => setIsAdmin(!isAdmin)}>
+              Toggle admin view {isAdmin ? "ON" : "OFF"}
+            </a>
             <a
               onClick={() =>
                 setHasMembersActionsInPlayerCard(!hasMembersActionsInPlayerCard)
               }
             >
-              Toggle members view {hasMembersActionsInPlayerCard ? 'ON' : 'OFF'}
+              Toggle members view {hasMembersActionsInPlayerCard ? "ON" : "OFF"}
             </a>
           </section>
         </>
