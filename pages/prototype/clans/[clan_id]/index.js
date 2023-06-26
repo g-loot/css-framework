@@ -144,10 +144,13 @@ export default function Home() {
                               selectedTab === item.url ? "is-active" : ""
                             }`}
                           >
-                            <span data-badge={item.hasBadge ? "." : undefined}>
+                            <span>
                               {item.label}{" "}
                               {item.url === "members" && (
                                 <>({getClanMembers().length})</>
+                              )}
+                              {item.hasBadge && (
+                                <span className="ml-1 icon icon-present animate-bounce" />
                               )}
                             </span>
                           </a>
@@ -166,10 +169,13 @@ export default function Home() {
                               selectedTab === item.url ? "is-active" : ""
                             }`}
                           >
-                            <span data-badge={item.hasBadge ? "." : undefined}>
+                            <span>
                               {item.label}{" "}
                               {item.url === "members" && (
                                 <>({getClanMembers().length})</>
+                              )}
+                              {item.hasBadge && (
+                                <span className="ml-1 icon icon-present animate-bounce" />
                               )}
                             </span>
                           </a>
