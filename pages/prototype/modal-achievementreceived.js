@@ -53,7 +53,6 @@ export default function ModalAchievementReceived(props) {
 
   function closeModalWithDelay() {
     setSubmitting(true);
-    window.location.href = "/prototype/profile/1/achievements";
     setTimeout(() => {
       setSubmitting(false);
       uiContext.closeModal();
@@ -123,9 +122,9 @@ export default function ModalAchievementReceived(props) {
                   className={`button button-claim w-full ${
                     submitting ? "is-loading" : ""
                   }`}
-                  onClick={closeModalWithDelay}
+                  onClick={() => uiContext.closeModal()}
                 >
-                  <span>View achievements</span>
+                  <span>Close</span>
                 </button>
               </div>
             </div>

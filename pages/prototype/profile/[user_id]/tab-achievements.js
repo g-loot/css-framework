@@ -27,12 +27,19 @@ export default function TabProfileAchievements() {
 
   useEffect(() => {
     if (modalAchievement) {
-      openModalAchievementReceived();
+      openModalAchievementReceived({
+        id: 16,
+        item: 22,
+        level: 5,
+        percent: 80,
+        progress: 20,
+        from: "10",
+        to: "10",
+      });
     }
   }, [modalAchievement]);
 
   function openModalAchievementReceived(item) {
-    console.log(item);
     uiContext.openModal(<ModalAchievementReceived item={item} />);
   }
 

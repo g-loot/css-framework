@@ -24,8 +24,8 @@ export const dataUsers = [
       twitch: "@jackattack123",
     },
     shopItems: {
-      avatarFrame: false,
-      profileBanner: 26,
+      avatarFrame: 3,
+      profileBanner: 33,
     },
     stats: {
       xp: 10000,
@@ -106,10 +106,10 @@ export const dataUsers = [
         {
           id: 16,
           item: 22,
-          level: 4,
-          percent: 60,
+          level: 5,
+          percent: 80,
           progress: 20,
-          from: "8",
+          from: "10",
           to: "10",
         },
         {

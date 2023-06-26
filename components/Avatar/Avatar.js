@@ -57,7 +57,10 @@ export default function Avatar(props) {
         >
           {hasLevel && <b>{selectedUser.level}</b>}
           {selectedUser.isYou ? (
-            <>{hasAvatarFrame && <img src={avatarFrame.image} alt="" />}</>
+            <>{avatarFrame && <img src={prototype.getShopitemByID(
+              1,
+              selectedUser.shopItems.avatarFrame
+            ).image} alt="" />}</>
           ) : (
             <>
               {selectedUser.shopItems.avatarFrame && (
