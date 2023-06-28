@@ -84,7 +84,7 @@ export default function ModalSelectYourGame(props) {
                 )}
                 {selectedGame === 'pubg' && (
                   <button type="button" onClick={() => uiContext.closeModal()} className="button w-80 button-primary">
-                    <span className="icon icon-steam" />
+                    <span className={`icon icon-${selectedGame}`} />
                     <span>Connect with Steam</span>
                   </button>
                 )}

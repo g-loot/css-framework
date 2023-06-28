@@ -20,21 +20,21 @@ const SubMenuItem = [
     label: "ladders",
   },
   {
-    onlygame: "valorant",
+    onlygame: ["valorant"],
     slug: "scoreboards",
     url: "scoreboards",
     icon: "icon-stairs",
     label: "Scoreboards",
   },
   {
-    onlygame: "valorant",
+    onlygame: ["valorant"],
     slug: "clanseasonleaderboards",
     url: "clanseasonleaderboards",
     icon: "icon-multiple-11",
     label: "Clan Seasons",
   },
   {
-    onlygame: "valorant",
+    onlygame: ["valorant", "leagueoflegends"],
     slug: "stats",
     url: "stats",
     icon: "icon-statistics",
@@ -46,7 +46,6 @@ const SubMenuItem = [
     icon: "icon-showdown",
     label: "Tournaments",
   },
- 
   */
 ];
 
@@ -120,7 +119,7 @@ export default function PrototypeGamesNavNew({ children }) {
                   {SubMenuItem.map((subItem, subItemIndex) => (
                     <>
                       {(!subItem.onlygame ||
-                        subItem.onlygame === item.slug) && (
+                        subItem.onlygame.includes(item.slug)) && (
                         <li key={subItemIndex}>
                           <Link
                             href={`/prototype/${item.slug}/${
@@ -140,8 +139,8 @@ export default function PrototypeGamesNavNew({ children }) {
                               />
                               <span className="uppercase">
                                 <span>{subItem.label}</span>
-                                {item.slug === "valorant" &&
-                                  subItem.url === "ladders" && (
+                                {(item.slug === "valorant" || item.slug === "leagueoflegends") &&
+                                  (subItem.url === "missions" || subItem.url === "ladders") && (
                                     <span className="ml-2 icon icon-present animate-bounce" />
                                   )}
                               </span>

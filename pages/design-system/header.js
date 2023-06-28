@@ -207,7 +207,7 @@ const DSpage = () => {
                           className="button button-secondary"
                         >
                           <span className="icon icon-steam" />
-                          <span>Steam required</span>
+                          <span>Connect my account</span>
                         </button>
                       </div>
                     </div>

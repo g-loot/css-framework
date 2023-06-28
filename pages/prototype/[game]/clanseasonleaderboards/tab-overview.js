@@ -43,9 +43,9 @@ export default function TabClanSeasonLeaderboardOverview() {
               <>
                 <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
                   <div className="max-w-xs mx-auto">
-                    <span className="icon icon-ladder text-6xl text-ui-500" />
+                    <span className="icon icon-multiple-11 text-6xl text-ui-500" />
                     <div className="mt-2 text-ui-300">
-                      There are no ongoing Clan Season.
+                      There is no ongoing Clan Season.
                     </div>
                   </div>
                 </div>

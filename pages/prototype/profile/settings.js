@@ -227,7 +227,7 @@ export default function Home() {
                                 <div className="flex items-center gap-3 text-attention-500">
                                   <span className="icon text-xl icon-warning-sign" />
                                   <p>
-                                    This Riot ID is already connected to a
+                                    This Valorant account is already connected to a
                                     Stryda account. Click the following button
                                     to generate a recovery e-mail for that
                                     address.
@@ -253,20 +253,20 @@ export default function Home() {
                                   }
                                 >
                                   <span>
-                                    <span className="icon icon-riotgames-symbol" />
+                                    <span className="icon icon-game-valorant-symbol" />
                                   </span>
                                   <input
                                     type="text"
-                                    name="gameaccount-riot"
-                                    id="gameaccount-riot"
+                                    name="gameaccount-valorant"
+                                    id="gameaccount-valorant"
                                     disabled
-                                    value="jackattack#3827"
+                                    value="myvalorantaccount#3827"
                                   />
                                 </div>
                                 <Tooltip
                                   tooltip={
                                     <div className="max-w-xs">
-                                      If you have updated your RIOT ID recently,
+                                      If you have updated your Valorant account recently,
                                       it can take up to 15 minutes to see the
                                       changes.
                                     </div>
@@ -284,11 +284,89 @@ export default function Home() {
                               onClick={() => setIsConnected(!isConnected)}
                               className="button button-primary w-full"
                             >
-                              <span className="icon icon-riotgames-symbol" />
-                              <span>Connect my Riot ID</span>
+                              <span className="icon icon-game-valorant-symbol" />
+                              <span>Connect my account</span>
                             </button>
                             <p className="text-ui-300 text-sm mt-2 leading-tight">
-                              By connecting my Riot ID I acknowledge making my
+                              By connecting my Valorant account I acknowledge making my
+                              profile public to all users.
+                            </p>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="social-steam">League of Legends</label>
+                      <div className="flex-3">
+                        {isConnected ? (
+                          <>
+                            {isAlreadyConnected ? (
+                              <div className="space-y-3">
+                                <div className="flex items-center gap-3 text-attention-500">
+                                  <span className="icon text-xl icon-warning-sign" />
+                                  <p>
+                                    This League of Legends account is already connected to a
+                                    Stryda account. Click the following button
+                                    to generate a recovery e-mail for that
+                                    address.
+                                  </p>
+                                </div>
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    setIsConnected(!isConnected);
+                                    setIsAlreadyConnected(!isAlreadyConnected);
+                                  }}
+                                  className="button button-primary w-full"
+                                >
+                                  <span>Send recovery email</span>
+                                </button>
+                              </div>
+                            ) : (
+                              <div className="flex gap-4 items-center">
+                                <div
+                                  className="flex-1 input-group cursor-pointer"
+                                  onClick={() =>
+                                    setIsAlreadyConnected(!isAlreadyConnected)
+                                  }
+                                >
+                                  <span>
+                                    <span className="icon icon-game-leagueoflegends-symbol" />
+                                  </span>
+                                  <input
+                                    type="text"
+                                    name="gameaccount-leagueoflegends"
+                                    id="gameaccount-leagueoflegends"
+                                    disabled
+                                    value="mylolaccount#3827"
+                                  />
+                                </div>
+                                <Tooltip
+                                  tooltip={
+                                    <div className="max-w-xs">
+                                      If you have updated your League of Legends account recently,
+                                      it can take up to 15 minutes to see the
+                                      changes.
+                                    </div>
+                                  }
+                                >
+                                  <span className="icon icon-c-info" />
+                                </Tooltip>
+                              </div>
+                            )}
+                          </>
+                        ) : (
+                          <>
+                            <button
+                              type="button"
+                              onClick={() => setIsConnected(!isConnected)}
+                              className="button button-primary w-full"
+                            >
+                              <span className="icon icon-game-leagueoflegends-symbol" />
+                              <span>Connect my account</span>
+                            </button>
+                            <p className="text-ui-300 text-sm mt-2 leading-tight">
+                              By connecting my League of Legends I acknowledge making my
                               profile public to all users.
                             </p>
                           </>

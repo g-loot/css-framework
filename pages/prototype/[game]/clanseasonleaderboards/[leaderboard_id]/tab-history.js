@@ -18,7 +18,8 @@ export default function TabClanLeaderboardsHistory() {
   const variablesContext = useContext(VariablesContext);
   const [selectedGame, setSelectedGame] = useState(null);
   const { game } = router.query;
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const [loading, setLoading] = useState(true);
 
   function RandomNumber(min, max) {
@@ -55,26 +56,15 @@ export default function TabClanLeaderboardsHistory() {
           <section className="pb-8">
             {isEmpty && (
               <>
-                <div className="surface rounded-lg px-4 py-8 text-center">
-                  <div className="max-w-xs mx-auto">
-                    <span className="icon icon-smile text-6xl text-ui-500" />
-                    <div className="mt-2 mb-6">
-                      <p className="text-sm text-ui-400">
-                        There are no events to be displayed yet.
-                      </p>
-                      <p className="text-lg text-ui-300">
-                        Play tournaments and competitions to see the history of
-                        your earnings.
-                      </p>
-                    </div>
-                    <Link href="/prototype/valorant/tournaments">
-                      <a className="button button-main">
-                        <span>Browse tournaments</span>
-                      </a>
-                    </Link>
+              <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
+                <div className="max-w-xs mx-auto">
+                  <span className="icon icon-multiple-11 text-6xl text-ui-500" />
+                  <div className="mt-2 text-ui-300">
+                    You haven&#39;t joined any Clan Seasons yet.
                   </div>
                 </div>
-              </>
+              </div>
+            </>
             )}
             {!isEmpty && (
               <>
@@ -389,6 +379,12 @@ export default function TabClanLeaderboardsHistory() {
                 )}
               </>
             )}
+          </section>
+          {/* for demo purposes only */}
+          <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+            <a onClick={() => setIsEmpty(!isEmpty)}>
+              Toggle empty state {isEmpty ? "ON" : "OFF"}
+            </a>
           </section>
         </>
       )}

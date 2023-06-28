@@ -27,7 +27,7 @@ export default function LadderCardSecondary(props) {
   const isClan = props.isClan || false;
   const clanID = props.clanID || 1;
   const ladder = props.ladder;
-  const game_slug = props.game_slug || "valorant";
+  const game_slug = prototype.getGameByID(gameID).slug;
   const isGlobal = props.isGlobal || false;
   const className = props.className || "";
 
@@ -35,7 +35,7 @@ export default function LadderCardSecondary(props) {
     uiContext.openModal(
       <ModalLadderResults
         item={prototype.getLadderByID(
-          prototype.getGameBySlug(game_slug).slug,
+          prototype.getGameByID(gameID).slug,
           ladder.id
         )}
       />
@@ -51,7 +51,7 @@ export default function LadderCardSecondary(props) {
       {ladder && prototype.getGameByID(gameID) && (
         <Link
           href={`/prototype/${
-            prototype.getGameBySlug(game_slug).slug
+            prototype.getGameByID(gameID).slug
           }/ladders/${ladder.id}${prototype.getURLparams()}`}
         >
           <div

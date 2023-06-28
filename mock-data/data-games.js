@@ -3122,6 +3122,759 @@ export const dataGames = [
         topPerformers: [2, 3, 4],
       },
     ],
+    clanLeaderboards: [
+      {
+        id: 0,
+        isCurrent: true,
+        status: "ongoing",
+        name: "Nordic Uprising",
+        logo: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-logo.png",
+        video: "https://res.cloudinary.com/gloot/video/upload/v1687351106/Stryda/videos/Stryda_ClanSeason_NordicUprising.mp4",
+        bg:
+          "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-bg.jpg",
+        meta: {
+          objective: "Have the most wins in a party composed of 5 clan members.",
+          gameMode: "Competitive",
+          tieBreaker: "Total number of kills decide a tie.",
+        },
+        rewards: [
+          {
+            type: "coin",
+            value: 3000000,
+          },
+        ],
+        isEnrolled: false,
+        progress: 0,
+        progressClan: 0,
+        leaderboard: [
+          {
+            clan: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 700,
+              },
+              {
+                type: "avatarframe",
+                value: 4,
+              },
+              {
+                type: "profilebanner",
+                value: 33,
+              },
+            ],
+            stats: {
+              wins: 42,
+              losses: 12,
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 500,
+              },
+              {
+                type: "profilebanner",
+                value: 31,
+              },
+            ],
+            stats: {
+              wins: 41,
+              losses: 11,
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 400,
+              },
+            ],
+            stats: {
+              wins: 38,
+              losses: 9,
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 33,
+              losses: 4,
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 41,
+              losses: 14,
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 44,
+              losses: 25,
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 29,
+              losses: 10,
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 29,
+              losses: 14,
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+      },
+      {
+        id: 1,
+        isCurrent: false,
+        status: "finished",
+        hasClaim: true,
+        name: "Easter Battle",
+        logo: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/easterbattle-logo.png",
+        bg:
+          "https://res.cloudinary.com/gloot/image/upload/v1681913805/Stryda/demo/easterbattle-bg.jpg",
+        meta: {
+          objective: "Have the most wins in a party composed of 5 clan members.",
+          gameMode: "Competitive",
+          tieBreaker: "Total number of kills decide a tie.",
+        },
+        rewards: [
+          {
+            type: "coin",
+            value: 1000,
+          },
+          {
+            type: "token",
+            value: 100,
+          },
+          {
+            type: "powertoken",
+            value: 5,
+          },
+        ],
+        isEnrolled: false,
+        progress: 0,
+        progressClan: 0,
+        leaderboard: [
+          {
+            clan: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 700,
+              },
+              {
+                type: "avatarframe",
+                value: 4,
+              },
+              {
+                type: "profilebanner",
+                value: 33,
+              },
+            ],
+            stats: {
+              wins: 13,
+              losses: 1,
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 500,
+              },
+              {
+                type: "profilebanner",
+                value: 31,
+              },
+            ],
+            stats: {
+              wins: 10,
+              losses: 2,
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 400,
+              },
+            ],
+            stats: {
+              wins: 10,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 8,
+              losses: 2,
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 6,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 5,
+              losses: 2,
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 5,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 4,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+      },
+      {
+        id: 2,
+        isCurrent: false,
+        status: "finished",
+        name: "Winter Mayhem",
+        logo: "https://res.cloudinary.com/gloot/image/upload/v1686313273/Stryda/demo/wintermayhem-logo.png",
+        bg:
+          "https://res.cloudinary.com/gloot/image/upload/v1686313274/Stryda/demo/wintermayhem-bg.jpg",
+        meta: {
+          objective: "Have the most wins in a party composed of 5 clan members.",
+          gameMode: "Competitive",
+          tieBreaker: "Total number of kills decide a tie.",
+        },
+        rewards: [
+          {
+            type: "coin",
+            value: 1000,
+          },
+          {
+            type: "token",
+            value: 100,
+          },
+          {
+            type: "powertoken",
+            value: 5,
+          },
+        ],
+        isEnrolled: false,
+        progress: 0,
+        progressClan: 0,
+        leaderboard: [
+          {
+            clan: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 700,
+              },
+              {
+                type: "avatarframe",
+                value: 4,
+              },
+              {
+                type: "profilebanner",
+                value: 33,
+              },
+            ],
+            stats: {
+              wins: 13,
+              losses: 1,
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 500,
+              },
+              {
+                type: "profilebanner",
+                value: 31,
+              },
+            ],
+            stats: {
+              wins: 10,
+              losses: 2,
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 400,
+              },
+            ],
+            stats: {
+              wins: 10,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 8,
+              losses: 2,
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 6,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 5,
+              losses: 2,
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 5,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 4,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+      },
+      {
+        id: 3,
+        isCurrent: false,
+        status: "upcoming",
+        name: "Phoenix Clash",
+        logo: "https://res.cloudinary.com/gloot/image/upload/v1687335838/Stryda/demo/phoenixclash-logo.png",
+        bg:
+          "https://res.cloudinary.com/gloot/image/upload/v1687160240/Stryda/demo/spaceclash-bg.jpg",
+          video: "https://res.cloudinary.com/gloot/video/upload/v1687351323/Stryda/videos/Stryda_ClanSeason_PhoenixClash.mp4",
+        meta: {
+          objective: "Have the most wins in a party composed of 5 clan members.",
+          gameMode: "Competitive",
+          tieBreaker: "Total number of kills decide a tie.",
+        },
+        rewards: [
+          {
+            type: "coin",
+            value: 1000,
+          },
+          {
+            type: "token",
+            value: 100,
+          },
+          {
+            type: "powertoken",
+            value: 5,
+          },
+        ],
+        isEnrolled: false,
+        progress: 0,
+        progressClan: 0,
+        leaderboard: [
+          {
+            clan: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 700,
+              },
+              {
+                type: "avatarframe",
+                value: 4,
+              },
+              {
+                type: "profilebanner",
+                value: 33,
+              },
+            ],
+            stats: {
+              wins: 13,
+              losses: 1,
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 500,
+              },
+              {
+                type: "profilebanner",
+                value: 31,
+              },
+            ],
+            stats: {
+              wins: 10,
+              losses: 2,
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 400,
+              },
+            ],
+            stats: {
+              wins: 10,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 8,
+              losses: 2,
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 6,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 5,
+              losses: 2,
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 5,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 4,
+              losses: 3,
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+      },
+    ],
     tournaments: [
       {
         id: 1,
@@ -3430,6 +4183,1650 @@ export const dataGames = [
           placement: 0,
           kills: 0,
         },
+      },
+    ],
+  },
+  {
+    id: 6,
+    maintenance: false,
+    needsSteam: false,
+    needsRiot: false,
+    isFavorite: true,
+    name: "League of Legends",
+    shortName: "League of Legends",
+    slug: "leagueoflegends",
+    type: "MOBA",
+    assets: {
+      cover:
+        "https://res.cloudinary.com/gloot/image/upload/v1622103228/GNOG%20assets/Games/league_of_legends/cover.png",
+      heroMission:
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-2.webp",
+      heroLadder:
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-1.webp",
+      heroTournament:
+        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-3.webp",
+    },
+    missions: [
+      {
+        id: 1,
+        name: "Get 12 assists",
+        category: 1,
+        label: "assists",
+        current: 12,
+        target: 12,
+        isPremium: false,
+        isVisible: true,
+        hasClaimed: false,
+        xp: 50,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1679059843/Missions/League%20Of%20Legends/assists-7.jpg",
+      },
+      {
+        id: 2,
+        name: "Get 9 assists",
+        category: 1,
+        label: "assists",
+        current: 0,
+        target: 9,
+        isPremium: false,
+        isVisible: true,
+        hasClaimed: false,
+        xp: 50,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1679059849/Missions/League%20Of%20Legends/assists-4.jpg",
+      },
+      {
+        id: 3,
+        name: "Get 60 jungle CS",
+        category: 2,
+        label: "jungle CS",
+        current: 0,
+        target: 60,
+        isPremium: false,
+        isVisible: true,
+        hasClaimed: false,
+        xp: 75,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1679059845/Missions/League%20Of%20Legends/getjunglecs-1.jpg",
+      },
+      {
+        id: 4,
+        name: "Get 100 CS",
+        category: 1,
+        label: "headshots",
+        current: 50,
+        target: 100,
+        isPremium: true,
+        isVisible: false,
+        hasClaimed: false,
+        xp: 50,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1679059843/Missions/League%20Of%20Legends/getcs-1.jpg",
+      },
+      {
+        id: 5,
+        name: "Get 20 assists",
+        category: 3,
+        label: "win",
+        current: 0,
+        target: 20,
+        isPremium: true,
+        isVisible: false,
+        hasClaimed: false,
+        xp: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1679059843/Missions/League%20Of%20Legends/assists-5.jpg",
+      },
+      {
+        id: 6,
+        name: "Get 40 assists",
+        category: 4,
+        label: "kills",
+        current: 0,
+        target: 40,
+        isPremium: true,
+        isVisible: false,
+        hasClaimed: false,
+        xp: 125,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1679059843/Missions/League%20Of%20Legends/assists-6.jpg",
+      },
+      {
+        id: 7,
+        name: "Get 100 jungle CS",
+        category: 4,
+        label: "jungle CS",
+        current: 0,
+        target: 100,
+        isPremium: true,
+        isVisible: false,
+        hasClaimed: false,
+        xp: 125,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1679059845/Missions/League%20Of%20Legends/getjunglecs-2.jpg",
+      },
+      {
+        id: 8,
+        name: "Get 200 CS",
+        category: 4,
+        label: "clan",
+        current: 0,
+        target: 200,
+        isPremium: true,
+        isVisible: false,
+        hasClaimed: false,
+        xp: 125,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1679059843/Missions/League%20Of%20Legends/getcs-2.jpg",
+      },
+      {
+        id: 9,
+        name: "Earn 500 coins",
+        category: 2,
+        label: "coins",
+        current: 0,
+        target: 500,
+        isPremium: true,
+        isVisible: false,
+        hasClaimed: false,
+        xp: 100,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/Missions/Specials/Platform%20missions/mission-platform-1.jpg",
+      },
+    ],
+    ladders: [
+      {
+        id: 0,
+        solo: true,
+        clan: true,
+        name: "Competitive & Clan Ladder",
+        isPremium: false,
+        cover:
+          "https://res.cloudinary.com/gloot/image/upload/v1676474968/Ladders/League%20Of%20Legends/LeagueOfLegends_Competitive2.jpg",
+        status: "ongoing",
+        gameMode: "Ranked Flex & Solo/Duo",
+        sponsor: false,
+        isPowerPlay: false,
+        rewards: [
+          {
+            type: "coin",
+            value: 4000,
+          },
+        ],
+        isEnrolled: false,
+        progress: 0,
+        progressClan: 0,
+        soloLeaderboard: [
+          {
+            user: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 4000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 3500,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 3000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 2500,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 2000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 1500,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 1000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 800,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+        clanLeaderboard: [
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 30000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 20000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 12000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 8000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 7000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 6000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+        soloResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        clanResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        topPerformers: [1, 5, 6],
+      },
+      {
+        id: 1,
+        solo: true,
+        clan: false,
+        name: "Weekly Aram Ladder",
+        cover:
+          "https://res.cloudinary.com/gloot/image/upload/v1676474968/Ladders/League%20Of%20Legends/LeagueOfLegends_ARAM1.jpg",
+        status: "ongoing",
+        gameMode: "ARAM",
+        sponsor: false,
+        isPowerPlay: false,
+        rewards: [
+          {
+            type: "coin",
+            value: 3000,
+          },
+        ],
+        isEnrolled: true,
+        progress: 0,
+        progressClan: 0,
+        soloLeaderboard: [
+          {
+            user: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 1500,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 1250,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 1000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 900,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 800,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 700,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 600,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 500,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+        clanLeaderboard: [
+          {
+            clan: 1,
+            rewards: [],
+            stats: {
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 100000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 100000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 100000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 100000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 100000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 6,
+            rewards: null,
+            stats: {
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 7,
+            rewards: null,
+            stats: {
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+        soloResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        clanResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        topPerformers: [1, 5, 6],
+      },
+      {
+        id: 2,
+        solo: true,
+        clan: true,
+        name: "Weekly Blind/Draft Pick Ladder",
+        isPremium: true,
+        cover:
+          "https://res.cloudinary.com/gloot/image/upload/v1676474968/Ladders/League%20Of%20Legends/LeagueOfLegends_Blind_Draft_Pick_1.jpg",
+        status: "upcoming",
+        gameMode: "Blind Pick & Draft Pick",
+        sponsor:
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+        rewards: [
+          {
+            type: "coin",
+            value: 10000,
+          },
+        ],
+        isEnrolled: true,
+        progress: 2,
+        progressClan: 1,
+        soloLeaderboard: [
+          {
+            user: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 250000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 200000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 150000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 75000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 50000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 25000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 25000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 10000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+        clanLeaderboard: [
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 30000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 20000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 12000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 8000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 7000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 6000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+        soloResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        clanResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        topPerformers: [2, 3, 4],
+      },
+      {
+        id: 3,
+        solo: true,
+        clan: true,
+        name: "Competitive & Clan Ladder",
+        cover:
+          "https://res.cloudinary.com/gloot/image/upload/v1676474968/Ladders/League%20Of%20Legends/LeagueOfLegends_Competitive2.jpg",
+        status: "finished",
+        gameMode: "Competitive",
+        sponsor:
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+        rewards: [
+          {
+            type: "coin",
+            value: 10000,
+          },
+        ],
+        isEnrolled: true,
+        progress: 2,
+        progressClan: 1,
+        soloLeaderboard: [
+          {
+            user: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 250000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 200000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 150000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 75000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 50000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 25000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 25000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 10000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+        clanLeaderboard: [
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 30000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 20000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 12000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 8000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 7000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 6000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+        soloResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        clanResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        topPerformers: [2, 3, 4],
+      },
+      {
+        id: 4,
+        solo: true,
+        clan: true,
+        name: "Weekly Aram Ladder",
+        cover:
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-7.webp",
+        status: "finished",
+        gameMode: "ARAM",
+        sponsor:
+          "https://res.cloudinary.com/gloot/image/upload/v1637592332/GNOG%20assets/Icons/hyperx_logo.png",
+        rewards: [
+          {
+            type: "coin",
+            value: 10000,
+          },
+        ],
+        isEnrolled: true,
+        hasClaim: true,
+        progress: 3,
+        progressClan: 0,
+        soloLeaderboard: [
+          {
+            user: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 250000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 200000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 150000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 75000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 50000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 25000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 25000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            user: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 10000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+        clanLeaderboard: [
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 30000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 20000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 12000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 8000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 7000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 6000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 5000,
+              },
+            ],
+            stats: {
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+        soloResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        clanResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        topPerformers: [2, 3, 4],
+      },
+      {
+        id: 5,
+        solo: true,
+        clan: false,
+        name: "Empty Ladder",
+        cover:
+          "https://res.cloudinary.com/gloot/image/upload/v1676474968/Ladders/League%20Of%20Legends/LeagueOfLegends_Blind_Draft_Pick_1.jpg",
+        status: "ongoing",
+        gameMode: "Unrated",
+        rewards: [
+          {
+            type: "coin",
+            value: 10000,
+          },
+        ],
+        isEnrolled: false,
+        hasClaim: false,
+        progress: 3,
+        progressClan: 0,
+        soloLeaderboard: false,
+        clanLeaderboard: false,
+        soloResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        clanResults: {
+          placement: 23,
+          points: 84,
+          movement: 2,
+          isPositive: true,
+        },
+        topPerformers: [2, 3, 4],
       },
     ],
     clanLeaderboards: [
@@ -4184,7 +6581,7 @@ export const dataGames = [
           },
         ],
       },
-    ]
+    ],
   },
   {
     id: 2,
@@ -5099,60 +7496,11 @@ export const dataGames = [
     ],
   },
   {
-    id: 6,
-    maintenance: false,
-    needsSteam: false,
-    needsRiot: false,
-    isFavorite: false,
-    name: "League of Legends",
-    shortName: "League of Legends",
-    slug: "leagueoflegends",
-    type: "MOBA",
-    assets: {
-      cover:
-        "https://res.cloudinary.com/gloot/image/upload/v1645621586/Marketing/202109_gloot2/Game_cover_League_of_Legends.jpg",
-      heroMission:
-        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-1.webp",
-      heroLadder:
-        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-2.webp",
-      heroTournament:
-        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-3.webp",
-    },
-    missions: [
-      {
-        name: "Get 22 kills",
-        category: 1,
-        label: "kills",
-        current: 11,
-        target: 22,
-        isPremium: false,
-        xp: 50,
-        isVisible: false,
-        hasClaimed: false,
-        image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-leagueoflegends_1.webp",
-      },
-      {
-        name: "Get 40 kills",
-        category: 4,
-        label: "kills",
-        current: 11,
-        target: 22,
-        isPremium: true,
-        xp: 50,
-        isVisible: false,
-        hasClaimed: false,
-        image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-leagueoflegends_2.webp",
-      },
-    ],
-  },
-  {
     id: 7,
     maintenance: false,
     needsSteam: false,
     needsRiot: false,
-    isFavorite: true,
+    isFavorite: false,
     name: "Rocket League",
     shortName: "Rocket League",
     slug: "rocketleague",

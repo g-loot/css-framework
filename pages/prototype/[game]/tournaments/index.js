@@ -81,8 +81,8 @@ export default function Home() {
                         type="button"
                         className="button button-sm button-secondary"
                       >
-                        <span className="icon icon-steam" />
-                        <span>Steam required</span>
+                        <span className={`icon icon-game-${selectedGame.slug}-symbol`} />
+                        <span>Connect my account</span>
                       </button>
                     </Link>
                   )}
