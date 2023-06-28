@@ -69,8 +69,8 @@ export default function LaddersHeader(props) {
                   href={`/prototype/profile/settings${prototype.getURLparams()}`}
                 >
                   <button type="button" className="button button-primary">
-                    <span className="icon icon-riotgames-symbol" />
-                    <span>Connect my RIOT ID</span>
+                    <span className={`icon icon-game-${selectedGame.slug}-symbol`} />
+                    <span>Connect my account</span>
                   </button>
                 </Link>
                 <Link href={`/prototype/clans${prototype.getURLparams()}`}>

@@ -137,23 +137,25 @@ export default function StatsValorant() {
                         <div className="text-sm text-ui-300"></div>
                       </div>
                     </div>
-                    <div className="flex flex-col mt-8 md:mb-8 gap-4">
+                    <div className="mt-8 md:mb-8 space-y-4">
                       <p className="text-ui-300">
                         You have no stats tracked yet.
                         <br />
-                        Connect your Riot account and start playing.
+                        Connect your Valorant account and start playing.
                       </p>
                       <button type="button" className="button button-primary">
-                        <span className="icon icon-riotgames-symbol" />
-                        <span>Connect Riot ID</span>
+                        <span
+                          className={`icon icon-game-${selectedGame.slug}-symbol`}
+                        />
+                        <span>Connect my account</span>
                       </button>
                     </div>
                   </div>
                 </div>
                 <div className="absolute z-0 inset-0 flex items-end md:items-center justify-center opacity-25 md:opacity-100">
                   <img
-                    className="absolute z-0 object-cover left-[33%] md:left-auto object-center animate-slide-in-bottom"
-                    src="https://res.cloudinary.com/gloot/image/upload/v1669897461/Marketing/2022_VALORANT_agent_generator/images/valorant-stats-hero-empty.jpg"
+                    className="absolute h-full w-full z-0 left-[33%] md:left-auto object-center object-cover"
+                    src="https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/valorant-stats-hero-empty.jpg"
                     alt=""
                   />
                 </div>
@@ -370,16 +372,17 @@ export default function StatsValorant() {
                     <div className="max-w-xs mx-auto">
                       <h2 className="h4">Connect and play!</h2>
                       <p className="mt-4 mb-6 text-ui-300">
-                        Connect your Riot account and start playing to see who
-                        your top agents are, how well you performed in your last
-                        20 matches or how much time you have spent in Valorant.
+                        Connect your Valorant account and start playing to see
+                        who your top agents are, how well you performed in your
+                        last 20 matches or how much time you have spent in
+                        Valorant.
                       </p>
                       <button
                         type="button"
                         className="button button-primary w-full"
                       >
                         <span className="icon icon-game-valorant-symbol" />
-                        <span>Connect my Riot ID</span>
+                        <span>Connect my account</span>
                       </button>
                     </div>
                   </>
@@ -413,7 +416,10 @@ export default function StatsValorant() {
                   loading ? "is-loading" : ""
                 }`}
               >
-                <div className="relative z-10 flex flex-col md:flex-row gap-4 items-stretch justify-between min-h-[250px]">
+                <div
+                  onClick={switchVariants}
+                  className="relative z-10 flex flex-col md:flex-row gap-4 items-stretch justify-between min-h-[250px]"
+                >
                   <div className="flex flex-col gap-4 justify-between">
                     <div className="flex gap-4 items-start leading-tight">
                       <div className="p-2 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
@@ -480,9 +486,9 @@ export default function StatsValorant() {
                       <div className="text-sm uppercase text-ui-300">
                         Top agent
                       </div>
-                      <h3 className="capitalize">
+                      <h2 className="font-headings font-bold uppercase text-5xl">
                         {getAgentByID(selectedStat.agent).name}
-                      </h3>
+                      </h2>
                       <div className="text-sm uppercase text-ui-300">
                         {getAgentByID(selectedStat.agent).role.name}
                       </div>
@@ -538,15 +544,10 @@ export default function StatsValorant() {
                           loading ? "is-loading" : ""
                         }`}
                       >
-                        <div className="item-body leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around flex-1 gap-4">
-                          <div
-                            className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
-                            style={{
-                              "--delay": "calc(1 * 0.05s)",
-                            }}
-                          >
+                        <div className="item-body leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around flex-1 gap-4 child:animate-delay">
+                          <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                              Damage/round
+                              Win Ratio %
                             </div>
                             <div className="text-main text-xl lg:text-3xl">
                               180.0
@@ -555,14 +556,9 @@ export default function StatsValorant() {
                               Top 2.4%
                             </div>
                           </div>
-                          <div
-                            className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
-                            style={{
-                              "--delay": "calc(2 * 0.05s)",
-                            }}
-                          >
+                          <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                              K/D ratio
+                              KDA
                             </div>
                             <div className="text-main text-xl lg:text-3xl">
                               1.49
@@ -571,14 +567,9 @@ export default function StatsValorant() {
                               Top 2%
                             </div>
                           </div>
-                          <div
-                            className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
-                            style={{
-                              "--delay": "calc(3 * 0.05s)",
-                            }}
-                          >
+                          <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                              Headshots %
+                              Avg K / D / A
                             </div>
                             <div className="text-main text-xl lg:text-3xl">
                               27.9%
@@ -587,20 +578,26 @@ export default function StatsValorant() {
                               Top 4.8%
                             </div>
                           </div>
-                          <div
-                            className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
-                            style={{
-                              "--delay": "calc(4 * 0.05s)",
-                            }}
-                          >
+                          <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
                             <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                              Win %
+                              CS/min
                             </div>
                             <div className="text-main text-xl lg:text-3xl">
                               71.9%
                             </div>
                             <div className="text-xs lg:text-sm text-ui-300">
                               Top 2.4%
+                            </div>
+                          </div>
+                          <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
+                            <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                              Vision Score
+                            </div>
+                            <div className="text-main text-xl lg:text-3xl">
+                              61.9%
+                            </div>
+                            <div className="text-xs lg:text-sm text-ui-300">
+                              Top 8.9%
                             </div>
                           </div>
                         </div>
@@ -1966,9 +1963,7 @@ export default function StatsValorant() {
           )}
           {/* for demo purposes only */}
           <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-            <a onClick={switchVariants}>
-              Switch between various users
-            </a>
+            <a onClick={switchVariants}>Switch between various users</a>
             <a
               onClick={() => {
                 setIsEmpty(false);

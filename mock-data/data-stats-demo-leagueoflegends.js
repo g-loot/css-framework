@@ -2,7 +2,7 @@ export const StatsLeagueOfLegendsDemoGeneral = [
   {
     id: 0,
     champion: "266",
-    rank: 3,
+    rank: 8,
   },
   {
     id: 1,
@@ -13,6 +13,26 @@ export const StatsLeagueOfLegendsDemoGeneral = [
     id: 2,
     champion: "103",
     rank: 7,
+  },
+  {
+    id: 3,
+    champion: "203",
+    rank: 1,
+  },
+  {
+    id: 4,
+    champion: "127",
+    rank: 2,
+  },
+  {
+    id: 5,
+    champion: "236",
+    rank: 3,
+  },
+  {
+    id: 6,
+    champion: "89",
+    rank: 3,
   },
 ];
 

@@ -131,23 +131,26 @@ export default function StatsLeagueOfLegends() {
                         <div className="text-sm text-ui-300"></div>
                       </div>
                     </div>
-                    <div className="flex flex-col mt-8 md:mb-8 gap-4">
+                    <div className="mt-8 md:mb-8 space-y-4">
                       <p className="text-ui-300">
                         You have no stats tracked yet.
                         <br />
-                        Connect your Riot account and start playing.
+                        Connect your League of Legends account and start
+                        playing.
                       </p>
                       <button type="button" className="button button-primary">
-                        <span className="icon icon-riotgames-symbol" />
-                        <span>Connect Riot ID</span>
+                        <span
+                          className={`icon icon-game-${selectedGame.slug}-symbol`}
+                        />
+                        <span>Connect my account</span>
                       </button>
                     </div>
                   </div>
                 </div>
                 <div className="absolute z-0 inset-0 flex items-end md:items-center justify-center opacity-25 md:opacity-100">
                   <img
-                    className="absolute z-0 object-cover left-[33%] md:left-auto object-center animate-slide-in-bottom"
-                    src="https://res.cloudinary.com/gloot/image/upload/v1669897461/Marketing/2022_VALORANT_agent_generator/images/valorant-stats-hero-empty.jpg"
+                    className="absolute h-full w-full z-0 left-[33%] md:left-auto object-center object-cover"
+                    src="https://res.cloudinary.com/gloot/image/upload/Stryda/stats/leagueoflegends/leagueoflegends-stats-hero-empty.jpg"
                     alt=""
                   />
                 </div>
@@ -155,48 +158,34 @@ export default function StatsLeagueOfLegends() {
               <section className="-mt-12 mb-16 px-4 lg:px-0">
                 <div className="max-w-lg mx-auto accordion accordion-highlighted">
                   <div className="item lg:h-24 surface surface-ui-700 shadow-xl rounded-lg p-4">
-                    <div className="item-body leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around flex-1 gap-4">
-                      <div
-                        className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
-                        style={{
-                          "--delay": "calc(1 * 0.05s)",
-                        }}
-                      >
+                    <div className="item-body leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around flex-1 gap-4 child:animate-delay">
+                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Damage/round
+                          Win Ratio %
                         </div>
                         <div className="text-main text-xl lg:text-3xl">--</div>
                       </div>
-                      <div
-                        className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
-                        style={{
-                          "--delay": "calc(2 * 0.05s)",
-                        }}
-                      >
+                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          K/D ratio
+                          Kda
                         </div>
                         <div className="text-main text-xl lg:text-3xl">--</div>
                       </div>
-                      <div
-                        className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
-                        style={{
-                          "--delay": "calc(3 * 0.05s)",
-                        }}
-                      >
+                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Headshots %
+                          Avg K / D / A
                         </div>
                         <div className="text-main text-xl lg:text-3xl">--</div>
                       </div>
-                      <div
-                        className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
-                        style={{
-                          "--delay": "calc(4 * 0.05s)",
-                        }}
-                      >
+                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Win %
+                          CS/min
+                        </div>
+                        <div className="text-main text-xl lg:text-3xl">--</div>
+                      </div>
+                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
+                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                          Vision Score
                         </div>
                         <div className="text-main text-xl lg:text-3xl">--</div>
                       </div>
@@ -211,17 +200,17 @@ export default function StatsLeagueOfLegends() {
                     <div className="max-w-xs mx-auto">
                       <h2 className="h4">Connect and play!</h2>
                       <p className="mt-4 mb-6 text-ui-300">
-                        Connect your Riot account and start playing to see who
-                        your top champions are, how well you performed in your
-                        last 20 matches or how much time you have spent in
-                        League of Legends.
+                        Connect your League of Legends account and start playing
+                        to see who your top champions are, how well you
+                        performed in your last 20 matches or how much time you
+                        have spent in League of Legends.
                       </p>
                       <button
                         type="button"
                         className="button button-primary w-full"
                       >
                         <span className="icon icon-game-leagueoflegends-symbol" />
-                        <span>Connect my Riot ID</span>
+                        <span>Connect my account</span>
                       </button>
                     </div>
                   </>
@@ -255,7 +244,10 @@ export default function StatsLeagueOfLegends() {
                   loading ? "is-loading" : ""
                 }`}
               >
-                <div className="relative z-10 flex flex-col md:flex-row gap-4 items-stretch justify-between min-h-[250px]">
+                <div
+                  onClick={switchVariants}
+                  className="relative z-10 flex flex-col md:flex-row gap-4 items-stretch justify-between min-h-[250px]"
+                >
                   <div className="flex flex-col gap-4 justify-between">
                     <div className="flex gap-4 items-start leading-tight">
                       <div className="p-2 rounded bg-gradient-to-b from-ui-900 to-ui-900/50 flex items-center justify-center">
@@ -389,15 +381,10 @@ export default function StatsLeagueOfLegends() {
                       loading ? "is-loading" : ""
                     }`}
                   >
-                    <div className="item-body leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around flex-1 gap-4">
-                      <div
-                        className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
-                        style={{
-                          "--delay": "calc(1 * 0.05s)",
-                        }}
-                      >
+                    <div className="item-body leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around flex-1 gap-4 child:animate-delay">
+                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Damage/round
+                          Win Ratio %
                         </div>
                         <div className="text-main text-xl lg:text-3xl">
                           180.0
@@ -406,14 +393,9 @@ export default function StatsLeagueOfLegends() {
                           Top 2.4%
                         </div>
                       </div>
-                      <div
-                        className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
-                        style={{
-                          "--delay": "calc(2 * 0.05s)",
-                        }}
-                      >
+                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          K/D ratio
+                          Kda
                         </div>
                         <div className="text-main text-xl lg:text-3xl">
                           1.49
@@ -422,14 +404,9 @@ export default function StatsLeagueOfLegends() {
                           Top 2%
                         </div>
                       </div>
-                      <div
-                        className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
-                        style={{
-                          "--delay": "calc(3 * 0.05s)",
-                        }}
-                      >
+                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Headshots %
+                          Avg K / D / A
                         </div>
                         <div className="text-main text-xl lg:text-3xl">
                           27.9%
@@ -438,20 +415,26 @@ export default function StatsLeagueOfLegends() {
                           Top 4.8%
                         </div>
                       </div>
-                      <div
-                        className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
-                        style={{
-                          "--delay": "calc(4 * 0.05s)",
-                        }}
-                      >
+                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
                         <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Win %
+                          CS/min
                         </div>
                         <div className="text-main text-xl lg:text-3xl">
                           71.9%
                         </div>
                         <div className="text-xs lg:text-sm text-ui-300">
                           Top 2.4%
+                        </div>
+                      </div>
+                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
+                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                          Vision Score
+                        </div>
+                        <div className="text-main text-xl lg:text-3xl">
+                          67.9%
+                        </div>
+                        <div className="text-xs lg:text-sm text-ui-300">
+                          Top 9.4%
                         </div>
                       </div>
                     </div>

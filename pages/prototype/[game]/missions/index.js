@@ -95,8 +95,8 @@ export default function Missions() {
                           type="button"
                           className="button button-secondary"
                         >
-                          <span className="icon icon-riotgames-symbol" />
-                          <span>Connect my RIOT ID</span>
+                          <span className={`icon icon-game-${selectedGame.slug}-symbol`} />
+                          <span>Connect my account</span>
                         </button>
                       </Link>
                     )}

@@ -4190,7 +4190,7 @@ export const dataGames = [
     id: 6,
     maintenance: false,
     needsSteam: false,
-    needsRiot: false,
+    needsRiot: true,
     isFavorite: true,
     name: "League of Legends",
     shortName: "League of Legends",
