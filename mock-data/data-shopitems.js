@@ -836,7 +836,7 @@ export const dataShopitems = [
         name: "Spider",
         price: 50010,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/Spider.jpg",
+          "https://res.cloudinary.com/gloot/image/upload/v1677851088/Stryda/shop/profilebanners/Spider.jpg",
       },
     ],
   }

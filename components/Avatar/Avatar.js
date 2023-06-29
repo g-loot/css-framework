@@ -16,8 +16,8 @@ export default function Avatar(props) {
   const userId = props.id || 1;
   const size = props.size || "avatar-xs";
   const className = props.className || "";
-  const [avatarFrame, setAvatarFrame] = useState(false);
   const hasAvatarFrame = query.avatarframe || false;
+  const [avatarFrame, setAvatarFrame] = useState(false);
   const hasLevel = props.hasLevel !== undefined ? props.hasLevel : true;
   const isOnline = props.isOnline !== undefined ? props.isOnline : false;
   const hasTooltip = props.hasTooltip !== undefined ? props.hasTooltip : false;
@@ -36,12 +36,16 @@ export default function Avatar(props) {
   }, [userId]);
 
   useEffect(() => {
-    if (hasAvatarFrame) {
-      setAvatarFrame(prototype.getShopitemByID(1, hasAvatarFrame));
-    } else {
-      setAvatarFrame(prototype.getShopitemByID(1, 1));
+    if(selectedUser) {
+      if (hasAvatarFrame) {
+        setAvatarFrame(prototype.getShopitemByID(1, hasAvatarFrame).image);
+      } else if(selectedUser.shopItems?.avatarFrame) {
+        setAvatarFrame(prototype.getShopitemByID(1, selectedUser.shopItems?.avatarFrame).image);
+      } else {
+        setAvatarFrame(false);
+      }
     }
-  }, [hasAvatarFrame]);
+    }, [hasAvatarFrame, selectedUser]);
 
   function RandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -57,10 +61,7 @@ export default function Avatar(props) {
         >
           {hasLevel && <b>{selectedUser.level}</b>}
           {selectedUser.isYou ? (
-            <>{avatarFrame && <img src={prototype.getShopitemByID(
-              1,
-              selectedUser.shopItems.avatarFrame
-            ).image} alt="" />}</>
+            <>{avatarFrame && <img src={avatarFrame} alt="" />}</>
           ) : (
             <>
               {selectedUser.shopItems.avatarFrame && (
