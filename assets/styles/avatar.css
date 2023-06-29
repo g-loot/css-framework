@@ -45,13 +45,9 @@
       flex
       items-center
       justify-center
+      text-ui-400
+      text-4xl
       ;
-      &:not([class*="text-"]) {
-        @apply
-        text-ui-400
-        text-4xl
-        ;
-      }
     }
     
     &.icon {
@@ -71,7 +67,7 @@
     }
   }
 
-  &:not([class*=rounded]):not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
+  &:not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
     > div {
       @apply
       rounded-[calc(var(--inner-padding-one)*2)]

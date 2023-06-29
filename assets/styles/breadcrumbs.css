@@ -53,12 +53,8 @@
           whitespace-nowrap
           overflow-hidden
           overflow-ellipsis
+          max-w-[20ch]
           ;
-          &:not([class*="max-w"]) {
-            @apply
-            max-w-[20ch]
-            ;
-          }
         }
       }
   

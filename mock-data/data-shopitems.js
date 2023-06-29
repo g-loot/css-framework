@@ -528,9 +528,30 @@ export const dataShopitems = [
       {
         id: 159,
         name: "Malta",
-        price: 750000,
+        price: 1381,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Malta.svg",
+      },
+      {
+        id: 160,
+        name: "Spider",
+        price: 550000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1674213693/Stryda/shop/avatarframes/Spider.svg",
+      },
+      {
+        id: 161,
+        name: "Cloudy",
+        price: 550000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1674213697/Stryda/shop/avatarframes/Cloudy.svg",
+      },
+      {
+        id: 162,
+        name: "Sapphire",
+        price: 550000,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1674213697/Stryda/shop/avatarframes/Sapphire.svg",
       },
     ],
   },
@@ -809,6 +830,13 @@ export const dataShopitems = [
         price: 50000,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/shop_profilebanner_38.jpg",
+      },
+      {
+        id: 39,
+        name: "Spider",
+        price: 50010,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1677851087/Stryda/shop/profilebanners/Spider.jpg",
       },
     ],
   }

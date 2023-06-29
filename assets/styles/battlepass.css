@@ -10,12 +10,8 @@
   items-center
   gap-4
   relative
+  z-10
   ;
-  &:not([class*='z-']){
-    @apply
-    z-10
-    ;
-  }
   .battlepass-summary {
     @apply
     z-40
@@ -199,12 +195,8 @@
               @apply
               text-xl
               md:text-4xl
+              text-main
               ;
-              &:not([class*=text-]) {
-                @apply
-                text-main
-                ;
-              }
             }
           }
         }
@@ -439,12 +431,8 @@
       @apply
       absolute
       inset-0
+      text-left
       ;
-      &:not([class*=text-]) {
-        @apply
-        text-left
-        ;
-      }
       > span {
         @apply
         absolute

@@ -365,7 +365,7 @@ export default function StatsLeagueOfLegends() {
                     <span className="absolute z-10 inset-y-0 w-1/3 left-0 bg-gradient-to-r from-ui-800 to-ui-800/0" />
                     <span className="absolute top-1/ z-10 inset-y-0 w-1/3 right-0 bg-gradient-to-l from-ui-800 to-ui-800/0" />
                     <img
-                      className="absolute z-0 w-full h-full object-cover object-[50%_10%] xl:object-[0%_20%] animate-slide-in-bottom"
+                      className="absolute z-0 w-full h-full object-cover object-[50%_10%] xl:object-[50%_20%] animate-slide-in-bottom"
                       src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${
                         getChampionByID(selectedStat.champion)?.name
                       }_0.jpg`}

@@ -98,12 +98,8 @@
   h-2
   min-w-[0.5rem]
   rounded-full
+  bg-main
   ;
-  &:not([class*='bg-']) {
-    @apply
-    bg-main
-    ;
-  }
 }
 .tabs {
   > li {
