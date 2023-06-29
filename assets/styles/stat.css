@@ -5,13 +5,15 @@
 .stats {
   @apply
   inline-grid
+  rounded-2xl
   ;
 
+  /*
   &:not([class*='rounded']){
     @apply
-    rounded-2xl
     ;
   }
+  */
 
   > .stat {
     @apply

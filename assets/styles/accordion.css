@@ -6,11 +6,15 @@
   @apply
   overflow-hidden
   ;
+  
+  /*
   &:not([class*='rounded']) {
     @apply
     rounded
     ;
   }
+  */
+
   .accordion-item,
   .accordion-header {
     @apply

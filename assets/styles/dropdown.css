@@ -194,14 +194,17 @@
   duration-200
   ease-[cubic-bezier(.7,0,.3,1)]
   outline-none
+  overflow-hidden
   ;
 
+  /*
   &:not([class*='rounded']) {
     @apply
     rounded-lg
-    overflow-hidden
     ;
   }
+  */
+  
   &:not([class*='shadow']) {
     @apply
     shadow-xl

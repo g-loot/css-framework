@@ -31,7 +31,8 @@ export default function StatsValorant() {
   const [maxMap, setMaxMap] = useState(3);
   const empty = query.empty === "true" ? true : false;
   const [isEmpty, setIsEmpty] = useState(empty);
-  const [hasRiot, setHasRiot] = useState(true);
+  const noriot = query.noriot === "true" ? true : false;
+  const [hasRiot, setHasRiot] = useState(!noriot);
   const premium = query.premium === "true" ? true : false;
   const [isPremium, setIsPremium] = useState(premium);
 

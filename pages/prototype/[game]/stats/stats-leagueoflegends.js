@@ -294,7 +294,7 @@ export default function StatsLeagueOfLegends() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-row md:flex-col gap-2 md:gap-4 items-center md:items-end justify-between border-t border-ui-700 md:border-none pt-4 md:pt-0">
+                  <div className="flex flex-row md:flex-col gap-2 md:gap-4 items-center md:items-end justify-between pt-4 md:pt-0">
                     <div className="hidden md:block">
                       <button
                         className={`button button-sm button-tertiary ${
@@ -342,7 +342,7 @@ export default function StatsLeagueOfLegends() {
                       />
                     </div>
                   </div>
-                  <div className="block md:hidden border-t border-ui-700 md:border-none pt-4 md:pt-0">
+                  <div className="block md:hidden pt-4 md:pt-0">
                     <button
                       className={`button button-sm button-tertiary w-full ${
                         submitting ? "is-loading" : ""
@@ -360,13 +360,13 @@ export default function StatsLeagueOfLegends() {
                     </button>
                   </div>
                 </div>
-                <div className="absolute z-0 inset-0 opacity-25 md:opacity-50 mix-blend-luminosity">
-                  <div className="absolute inset-y-0 right-[20%] left-[40%] transform-gpu">
+                <div className="absolute z-0 inset-0 opacity-25 md:opacity-40">
+                  <div className="absolute inset-y-0 right-[10%] left-[20%] transform-gpu">
                     <span className="absolute z-10 inset-y-0 w-1/3 left-0 bg-gradient-to-r from-ui-800 to-ui-800/0" />
                     <span className="absolute top-1/ z-10 inset-y-0 w-1/3 right-0 bg-gradient-to-l from-ui-800 to-ui-800/0" />
                     <img
-                      className="absolute z-0 w-full h-full object-cover object-[0%_10%] xl:object-[0%_20%] animate-slide-in-bottom"
-                      src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${
+                      className="absolute z-0 w-full h-full object-cover object-[50%_10%] xl:object-[0%_20%] animate-slide-in-bottom"
+                      src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${
                         getChampionByID(selectedStat.champion)?.name
                       }_0.jpg`}
                       alt={getChampionByID(selectedStat.champion)?.name}
@@ -686,6 +686,7 @@ export default function StatsLeagueOfLegends() {
                                 </div>
                               }
                             >
+                              
                               <table className="table table-compact w-full text-center text-xs lg:text-sm">
                                 <tbody>
                                   <tr className="bg-error-300/20 uppercase">
@@ -985,6 +986,7 @@ export default function StatsLeagueOfLegends() {
                                   )}
                                 </tbody>
                               </table>
+                                                
                             </Accordion>
                           </div>
                         ))}

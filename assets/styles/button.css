@@ -36,6 +36,7 @@ button {
   uppercase
   transform-gpu
   shrink-0
+  rounded-full
   ;
   outline-radius: 100%;
 
@@ -79,11 +80,14 @@ button {
       ;
     }
   }
+
+  /*
   &:not([class*='rounded']) {
     @apply
     rounded-full
     ;
   }
+  */
 
   &:not(.switch) {
     @apply

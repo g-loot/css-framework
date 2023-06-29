@@ -64,6 +64,7 @@
   items-stretch
   overflow-hidden
   relative
+  rounded
   ;
 
   &:not(.modal-stacked) {
@@ -82,11 +83,13 @@
     }
   }
 
+  /*
   &:not([class*='rounded']) {
     @apply
     rounded-xl
     ;
   }
+  */
 
   &:not([class*='surface']) {
     @apply

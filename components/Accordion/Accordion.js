@@ -7,6 +7,7 @@ import React, {
 } from "react";
 
 export default function Accordion(props) {
+  const isAnimated = props.isanimated !== undefined ? props.isanimated : true;
   const isOpen = props.isopen !== undefined ? props.isopen : false;
   const isSelected = props.isselected !== undefined ? props.isselected : false;
   const isClosed = props.isclosed !== undefined ? props.isclosed : false;
@@ -66,6 +67,30 @@ export default function Accordion(props) {
   const handleToggle = (e) => {
     e.preventDefault();
     setActive(!isActive);
+  };
+
+  const handleHeight = () => {
+    if(isAnimated) {
+      if (isActive) {
+        return heightValue + "px";
+      } else {
+        return "0px";
+      }
+    } else {
+      return "auto";
+    }
+  };
+
+  const handleDisplay = () => {
+    if(!isAnimated) {
+      if (isActive) {
+        return "block";
+      } else {
+        return "none";
+      }
+    } else {
+      return "auto";
+    }
   };
 
   return (
@@ -133,7 +158,7 @@ export default function Accordion(props) {
         )}
         <div
           className={`accordion-collapse ${isClosed ? "h-0" : ""}`}
-          style={{ height: `${isActive ? heightValue : 0}px` }}
+          style={{ height: `${handleHeight()}`, display: `${handleDisplay()}` }}
           id={`${id}-accordion-content`}
           aria-hidden={!isActive}
           aria-labelledby={`${id}-accordion-button`}
