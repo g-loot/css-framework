@@ -218,7 +218,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="form-group">
-                      <label htmlFor="social-steam">Riot</label>
+                      <label htmlFor="social-steam">Valorant</label>
                       <div className="flex-3">
                         {isConnected ? (
                           <>
@@ -265,7 +265,7 @@ export default function Home() {
                                 </div>
                                 <Tooltip
                                   tooltip={
-                                    <div className="max-w-xs">
+                                    <div className="max-w-xs text-sm">
                                       If you have updated your Valorant account recently,
                                       it can take up to 15 minutes to see the
                                       changes.
@@ -343,7 +343,7 @@ export default function Home() {
                                 </div>
                                 <Tooltip
                                   tooltip={
-                                    <div className="max-w-xs">
+                                    <div className="max-w-xs text-sm">
                                       If you have updated your League of Legends account recently,
                                       it can take up to 15 minutes to see the
                                       changes.
@@ -366,7 +366,7 @@ export default function Home() {
                               <span>Connect my account</span>
                             </button>
                             <p className="text-ui-300 text-sm mt-2 leading-tight">
-                              By connecting my League of Legends I acknowledge making my
+                              By connecting my League of Legends account I acknowledge making my
                               profile public to all users.
                             </p>
                           </>
