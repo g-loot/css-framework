@@ -139,7 +139,7 @@ export default function Home() {
                   </div>
                   <div className="form-group">
                     <label htmlFor="first-name">Your bio</label>
-                    <TextareaExpandable text={selectedUser.bio} rows={7} />
+                    <TextareaExpandable text={selectedUser.bio} rows={10} />
                   </div>
                   <div className="form-group">
                     <label htmlFor="account-country">Country</label>

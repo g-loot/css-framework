@@ -189,9 +189,9 @@ export default function TabProfileStats() {
                       </div>
                     </div>
                     <div className="leading-tight grid grid-cols-2 lg:flex flex-wrap justify-between p-4 lg:my-8 gap-4 child:border-l child:border-l-ui-600">
-                      {item.demo?.mainStats ? (
+                      {prototype.getGameByID(item).demo?.mainStats ? (
                         <>
-                          {selectedGame.demo?.mainStats.map(
+                          {prototype.getGameByID(item).demo?.mainStats.map(
                             (stat, statIndex) => (
                               <div key={statIndex} className="pl-4">
                                 <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">

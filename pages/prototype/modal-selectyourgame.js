@@ -14,8 +14,7 @@ export default function ModalSelectYourGame(props) {
   const [disabled, setDisable] = useState(false);
 
   const handlechange = (event) => {
-    setSelectedGame(event.target.id);
-    console.log("selectedGame", selectedGame);
+    setSelectedGame(prototype.getGameBySlug(event.target.id));
   };
 
   function closeModalWithDelay() {
@@ -35,7 +34,7 @@ export default function ModalSelectYourGame(props) {
   return (
     <>
       <div className="relative z-10 max-w-md w-full">
-        <div className="modal w-full">
+        <div className="modal modal-center w-full">
           <button
             type="button"
             className="button button-secondary button-close"
@@ -76,10 +75,10 @@ export default function ModalSelectYourGame(props) {
                 </button>
               ) : (
                 <>
-                {selectedGame === 'valorant' && (
+                {selectedGame.hasAPI && (
                   <button type="button" onClick={() => uiContext.closeModal()} className="button w-80 button-primary">
-                    <span className="icon icon-riotgames-symbol" />
-                    <span>Connect my RIOT ID</span>
+                    <span className={`icon icon-game-${selectedGame.slug}-symbol`} />
+                    <span>Connect my account</span>
                   </button>
                 )}
                 {selectedGame === 'pubg' && (
@@ -88,7 +87,7 @@ export default function ModalSelectYourGame(props) {
                     <span>Connect with Steam</span>
                   </button>
                 )}
-                {selectedGame !== 'pubg' && selectedGame !== 'valorant'  && (
+                {selectedGame !== 'pubg' && !selectedGame.hasAPI  && (
                   <button type="button" onClick={() => uiContext.closeModal()} className="button w-80 button-primary">
                     <span className="icon icon-data-download" />
                     <span>Download Stryda</span>
