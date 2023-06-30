@@ -21,6 +21,16 @@ export default function Home() {
   const modalItemPurchaseCompleted =
     query.modalpurchasecompleted === "true" ? true : false;
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+    }
+  }, [loading]);
+
   useEffect(() => {
     if (modalItemPurchaseConfirmation) {
       openModalItemPurchaseConfirmation();
@@ -98,87 +108,110 @@ export default function Home() {
 
         <section className="mb-4 lg:mb-8">
           <ul className="grid lg:grid-cols-2 justify-items-center gap-4 mt-3">
-            {selectedShopsection.items
-              ?.sort((itemA, itemB) => itemB.price - itemA.price)
-              .map((item, itemIndex) => (
-                <>
-                  <li
-                    key={item.id}
-                    className="w-full surface rounded-2xl flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
-                    style={{
-                      "--delay": `calc( ${itemIndex} * 0.05s)`,
-                    }}
-                  >
-                    <div className="flex-1 flex flex-col items-center gap-2">
-                      <img src={item.image} alt={item.name} className="aspect-banner rounded-t object-cover" />
-                    </div>
-                    <div className="border-t border-ui-700 p-4 flex items-center justify-between leading-none">
-                      <div className="text-ui-300 uppercase md:text-xl">
-                        {item.name}
-                      </div>
-                      {!item.isOwned ? (
-                        <>
-                          {item.price && (
+            {loading ? (
+              <>
+                {selectedShopsection.items
+                  ?.sort((itemA, itemB) => itemB.price - itemA.price)
+                  .map((item, itemIndex) => (
+                    <>
+                      <li
+                        key={item.id}
+                        className="w-full surface rounded-2xl is-loading aspect-banner"
+                      />
+                    </>
+                  ))}
+              </>
+            ) : (
+              <>
+                {selectedShopsection.items
+                  ?.sort((itemA, itemB) => itemB.price - itemA.price)
+                  .map((item, itemIndex) => (
+                    <>
+                      <li
+                        key={item.id}
+                        className="w-full surface rounded-2xl flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+                        style={{
+                          "--delay": `calc( ${itemIndex} * 0.05s)`,
+                        }}
+                      >
+                        <div className="flex-1 flex flex-col items-center gap-2">
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="aspect-banner rounded-t object-cover"
+                          />
+                        </div>
+                        <div className="border-t border-ui-700 p-4 flex items-center justify-between leading-none">
+                          <div className="text-ui-300 uppercase md:text-xl">
+                            {item.name}
+                          </div>
+                          {!item.isOwned ? (
                             <>
-                              {90000 >= item.price && (
-                                <button
-                                  type="button"
-                                  onClick={openModalItemPurchaseConfirmation.bind(
-                                    this,
-                                    item.id
+                              {item.price && (
+                                <>
+                                  {90000 >= item.price && (
+                                    <button
+                                      type="button"
+                                      onClick={openModalItemPurchaseConfirmation.bind(
+                                        this,
+                                        item.id
+                                      )}
+                                      className="button button-primary button-currency button-coin"
+                                    >
+                                      <div>
+                                        <span>Purchase</span>
+                                      </div>
+                                      <div>
+                                        <span className="icon icon-coin" />
+                                        <span>
+                                          {numberWithSpaces(item.price)}
+                                        </span>
+                                      </div>
+                                    </button>
                                   )}
-                                  className="button button-primary button-currency button-coin"
-                                >
-                                  <div>
-                                    <span>Purchase</span>
-                                  </div>
-                                  <div>
-                                    <span className="icon icon-coin" />
-                                    <span>{numberWithSpaces(item.price)}</span>
-                                  </div>
-                                </button>
-                              )}
-                              {90000 < item.price && (
-                                <div
-                                  className="tooltip"
-                                  data-tooltip="Not enough funds"
-                                >
-                                  <button
-                                    type="button"
-                                    className="button button-primary button-currency button-coin is-disabled"
-                                  >
-                                    <div>
-                                      <span>Purchase</span>
+                                  {90000 < item.price && (
+                                    <div
+                                      className="tooltip"
+                                      data-tooltip="Not enough funds"
+                                    >
+                                      <button
+                                        type="button"
+                                        className="button button-primary button-currency button-coin is-disabled"
+                                      >
+                                        <div>
+                                          <span>Purchase</span>
+                                        </div>
+                                        <div>
+                                          <span className="icon icon-coin" />
+                                          <span>
+                                            {numberWithSpaces(item.price)}
+                                          </span>
+                                        </div>
+                                      </button>
                                     </div>
-                                    <div>
-                                      <span className="icon icon-coin" />
-                                      <span>
-                                        {numberWithSpaces(item.price)}
-                                      </span>
-                                    </div>
-                                  </button>
-                                </div>
+                                  )}
+                                </>
                               )}
                             </>
+                          ) : (
+                            <div className="h-9 text-ui-300 uppercase grid place-content-center">
+                              <span>Owned</span>
+                            </div>
                           )}
-                        </>
-                      ) : (
-                        <div className="h-9 text-ui-300 uppercase grid place-content-center">
-                          <span>Owned</span>
+                          {!item.price && (
+                            <button
+                              type="button"
+                              className="button button-primary is-disabled w-full"
+                            >
+                              <span>Out of stock</span>
+                            </button>
+                          )}
                         </div>
-                      )}
-                      {!item.price && (
-                        <button
-                          type="button"
-                          className="button button-primary is-disabled w-full"
-                        >
-                          <span>Out of stock</span>
-                        </button>
-                      )}
-                    </div>
-                  </li>
-                </>
-              ))}
+                      </li>
+                    </>
+                  ))}
+              </>
+            )}
           </ul>
         </section>
       </PrototypeStructure>

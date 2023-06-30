@@ -57,7 +57,8 @@ export default function LadderPlacements() {
   const variablesContext = useContext(VariablesContext);
   const modalInfoBeforeYouPlay =
     query.modalinfobeforeyouplay === "true" ? true : false;
-  const freeEntry = query.freeentry === "true" ? true : false;
+  const freeentry = query.freeentry === "true" ? true : false;
+  const [freeEntry, setFreeEntry] = useState(freeentry);
   const [heightValue, setHeightValue] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const sliderWrapper = useRef(null);
@@ -66,7 +67,8 @@ export default function LadderPlacements() {
   const [sliderContainerWidth, setSliderContainerWidth] = useState(192);
   const [sliderItemWidth, setSliderItemWidth] = useState(192);
   const [resultsDone, setResultsDone] = useState(false);
-  const isPremium = query.premium === "true" ? true : false;
+  const premium = query.premium === "true" ? true : false;
+  const [isPremium, setIsPremium] = useState(premium);
   const prototype = usePrototypeData();
   const [selectedLadder, setSelectedLadder] = useState(undefined);
   const router = useRouter();

@@ -5,6 +5,7 @@ export const dataGames = [
     needsSteam: false,
     needsRiot: true,
     isFavorite: true,
+    hasAPI: true,
     hasReward: false,
     name: "Valorant",
     shortName: "Valorant",
@@ -3086,7 +3087,7 @@ export const dataGames = [
         },
         topPerformers: [1, 5, 6],
       },
-       {
+      {
         id: 11,
         solo: true,
         clan: true,
@@ -3129,11 +3130,12 @@ export const dataGames = [
         status: "ongoing",
         name: "Nordic Uprising",
         logo: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-logo.png",
-        video: "https://res.cloudinary.com/gloot/video/upload/v1687351106/Stryda/videos/Stryda_ClanSeason_NordicUprising.mp4",
-        bg:
-          "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-bg.jpg",
+        video:
+          "https://res.cloudinary.com/gloot/video/upload/v1687351106/Stryda/videos/Stryda_ClanSeason_NordicUprising.mp4",
+        bg: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-bg.jpg",
         meta: {
-          objective: "Have the most wins in a party composed of 5 clan members.",
+          objective:
+            "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie.",
         },
@@ -3312,10 +3314,10 @@ export const dataGames = [
         hasClaim: true,
         name: "Easter Battle",
         logo: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/easterbattle-logo.png",
-        bg:
-          "https://res.cloudinary.com/gloot/image/upload/v1681913805/Stryda/demo/easterbattle-bg.jpg",
+        bg: "https://res.cloudinary.com/gloot/image/upload/v1681913805/Stryda/demo/easterbattle-bg.jpg",
         meta: {
-          objective: "Have the most wins in a party composed of 5 clan members.",
+          objective:
+            "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie.",
         },
@@ -3501,10 +3503,10 @@ export const dataGames = [
         status: "finished",
         name: "Winter Mayhem",
         logo: "https://res.cloudinary.com/gloot/image/upload/v1686313273/Stryda/demo/wintermayhem-logo.png",
-        bg:
-          "https://res.cloudinary.com/gloot/image/upload/v1686313274/Stryda/demo/wintermayhem-bg.jpg",
+        bg: "https://res.cloudinary.com/gloot/image/upload/v1686313274/Stryda/demo/wintermayhem-bg.jpg",
         meta: {
-          objective: "Have the most wins in a party composed of 5 clan members.",
+          objective:
+            "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie.",
         },
@@ -3690,11 +3692,12 @@ export const dataGames = [
         status: "upcoming",
         name: "Phoenix Clash",
         logo: "https://res.cloudinary.com/gloot/image/upload/v1687335838/Stryda/demo/phoenixclash-logo.png",
-        bg:
-          "https://res.cloudinary.com/gloot/image/upload/v1687160240/Stryda/demo/spaceclash-bg.jpg",
-          video: "https://res.cloudinary.com/gloot/video/upload/v1687351323/Stryda/videos/Stryda_ClanSeason_PhoenixClash.mp4",
+        bg: "https://res.cloudinary.com/gloot/image/upload/v1687160240/Stryda/demo/spaceclash-bg.jpg",
+        video:
+          "https://res.cloudinary.com/gloot/video/upload/v1687351323/Stryda/videos/Stryda_ClanSeason_PhoenixClash.mp4",
         meta: {
-          objective: "Have the most wins in a party composed of 5 clan members.",
+          objective:
+            "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie.",
         },
@@ -4185,6 +4188,26 @@ export const dataGames = [
         },
       },
     ],
+    demo: {
+      mainStats: [
+        {
+          label: "Dmg/round",
+          value: "111",
+        },
+        {
+          label: "K/D ratio",
+          value: "1.22",
+        },
+        {
+          label: "Headshot %",
+          value: "33.53%",
+        },
+        {
+          label: "Win %",
+          value: "75.2%",
+        },
+      ],
+    },
   },
   {
     id: 6,
@@ -4192,6 +4215,7 @@ export const dataGames = [
     needsSteam: false,
     needsRiot: true,
     isFavorite: true,
+    hasAPI: true,
     name: "League of Legends",
     shortName: "League of Legends",
     slug: "leagueoflegends",
@@ -5836,11 +5860,12 @@ export const dataGames = [
         status: "ongoing",
         name: "Nordic Uprising",
         logo: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-logo.png",
-        video: "https://res.cloudinary.com/gloot/video/upload/v1687351106/Stryda/videos/Stryda_ClanSeason_NordicUprising.mp4",
-        bg:
-          "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-bg.jpg",
+        video:
+          "https://res.cloudinary.com/gloot/video/upload/v1687351106/Stryda/videos/Stryda_ClanSeason_NordicUprising.mp4",
+        bg: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-bg.jpg",
         meta: {
-          objective: "Have the most wins in a party composed of 5 clan members.",
+          objective:
+            "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie.",
         },
@@ -6019,10 +6044,10 @@ export const dataGames = [
         hasClaim: true,
         name: "Easter Battle",
         logo: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/easterbattle-logo.png",
-        bg:
-          "https://res.cloudinary.com/gloot/image/upload/v1681913805/Stryda/demo/easterbattle-bg.jpg",
+        bg: "https://res.cloudinary.com/gloot/image/upload/v1681913805/Stryda/demo/easterbattle-bg.jpg",
         meta: {
-          objective: "Have the most wins in a party composed of 5 clan members.",
+          objective:
+            "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie.",
         },
@@ -6208,10 +6233,10 @@ export const dataGames = [
         status: "finished",
         name: "Winter Mayhem",
         logo: "https://res.cloudinary.com/gloot/image/upload/v1686313273/Stryda/demo/wintermayhem-logo.png",
-        bg:
-          "https://res.cloudinary.com/gloot/image/upload/v1686313274/Stryda/demo/wintermayhem-bg.jpg",
+        bg: "https://res.cloudinary.com/gloot/image/upload/v1686313274/Stryda/demo/wintermayhem-bg.jpg",
         meta: {
-          objective: "Have the most wins in a party composed of 5 clan members.",
+          objective:
+            "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie.",
         },
@@ -6397,11 +6422,12 @@ export const dataGames = [
         status: "upcoming",
         name: "Phoenix Clash",
         logo: "https://res.cloudinary.com/gloot/image/upload/v1687335838/Stryda/demo/phoenixclash-logo.png",
-        bg:
-          "https://res.cloudinary.com/gloot/image/upload/v1687160240/Stryda/demo/spaceclash-bg.jpg",
-          video: "https://res.cloudinary.com/gloot/video/upload/v1687351323/Stryda/videos/Stryda_ClanSeason_PhoenixClash.mp4",
+        bg: "https://res.cloudinary.com/gloot/image/upload/v1687160240/Stryda/demo/spaceclash-bg.jpg",
+        video:
+          "https://res.cloudinary.com/gloot/video/upload/v1687351323/Stryda/videos/Stryda_ClanSeason_PhoenixClash.mp4",
         meta: {
-          objective: "Have the most wins in a party composed of 5 clan members.",
+          objective:
+            "Have the most wins in a party composed of 5 clan members.",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie.",
         },
@@ -6582,6 +6608,26 @@ export const dataGames = [
         ],
       },
     ],
+    demo: {
+      mainStats: [
+        {
+          label: "Win ratio %",
+          value: "57.2",
+        },
+        {
+          label: "KDA",
+          value: "7.3 / 6.4 / 8.2",
+        },
+        {
+          label: "CS/min",
+          value: "104",
+        },
+        {
+          label: "Vision score",
+          value: "71%",
+        },
+      ],
+    },
   },
   {
     id: 2,

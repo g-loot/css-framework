@@ -39,9 +39,7 @@ export default function TabProfileStats() {
   }, [modalAchievement]);
 
   function openModalAchievementReceived(item) {
-    uiContext.openModal(
-      <ModalAchievementReceived item={item} />
-    );
+    uiContext.openModal(<ModalAchievementReceived item={item} />);
   }
 
   return (
@@ -175,7 +173,10 @@ export default function TabProfileStats() {
                   <div
                     key={itemIndex}
                     className="surface rounded animate-slide-in-bottom animate-delay"
-                    style={{ "--delay": "calc(" + Math.round(itemIndex + 1)  + " * 0.05s)" }}
+                    style={{
+                      "--delay":
+                        "calc(" + Math.round(itemIndex + 1) + " * 0.05s)",
+                    }}
                   >
                     <div className="item">
                       <div className="item-image">
@@ -188,47 +189,72 @@ export default function TabProfileStats() {
                       </div>
                     </div>
                     <div className="leading-tight grid grid-cols-2 lg:flex flex-wrap justify-between p-4 lg:my-8 gap-4 child:border-l child:border-l-ui-600">
-                      <div className="pl-4">
-                        <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                          Win rate
-                        </div>
-                        <div className="text-ui-100 text-xl lg:text-3xl">
-                          {RandomNumber(50, 300)}
-                        </div>
-                      </div>
-                      <div className="pl-4">
-                        <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                          K/D ratio
-                        </div>
-                        <div className="text-ui-100 text-xl lg:text-3xl">
-                          {RandomNumber(50, 300)}
-                        </div>
-                      </div>
-                      <div className="pl-4">
-                        <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                          Headshots kill avg.
-                        </div>
-                        <div className="text-ui-100 text-xl lg:text-3xl">
-                          {RandomNumber(50, 300)}
-                        </div>
-                      </div>
-                      <div className="pl-4">
-                        <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
-                          Assist avg.
-                        </div>
-                        <div className="text-ui-100 text-xl lg:text-3xl">
-                          {RandomNumber(50, 300)}
-                        </div>
-                      </div>
+                      {item.demo?.mainStats ? (
+                        <>
+                          {selectedGame.demo?.mainStats.map(
+                            (stat, statIndex) => (
+                              <div key={statIndex} className="pl-4">
+                                <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
+                                  {stat.label}
+                                </div>
+                                <div className="text-ui-100 text-xl lg:text-3xl">
+                                  {stat.value}
+                                </div>
+                              </div>
+                            )
+                          )}
+                        </>
+                      ) : (
+                        <>
+                          <div className="pl-4">
+                            <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
+                              Win rate
+                            </div>
+                            <div className="text-ui-100 text-xl lg:text-3xl">
+                              {RandomNumber(50, 300)}
+                            </div>
+                          </div>
+                          <div className="pl-4">
+                            <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
+                              K/D ratio
+                            </div>
+                            <div className="text-ui-100 text-xl lg:text-3xl">
+                              {RandomNumber(50, 300)}
+                            </div>
+                          </div>
+                          <div className="pl-4">
+                            <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
+                              Headshots kill avg.
+                            </div>
+                            <div className="text-ui-100 text-xl lg:text-3xl">
+                              {RandomNumber(50, 300)}
+                            </div>
+                          </div>
+                          <div className="pl-4">
+                            <div className="text-xs lg:text-sm text-ui-300 uppercase font-bold">
+                              Assist avg.
+                            </div>
+                            <div className="text-ui-100 text-xl lg:text-3xl">
+                              {RandomNumber(50, 300)}
+                            </div>
+                          </div>
+                        </>
+                      )}
                     </div>
-                    {prototype.getGameByID(item).slug === "valorant" ? (
+                    {prototype.getGameByID(item).hasAPI ? (
                       <div className="border-t border-ui-700 text-center p-3 flex items-center justify-center">
-                        <Link href="/prototype/valorant/stats">
+                        <Link
+                          href={`/prototype/${
+                            prototype.getGameByID(item).slug
+                          }/stats`}
+                        >
                           <button
                             type="button"
                             className="button button-sm button-primary"
                           >
-                            <span>View all Valorant stats</span>
+                            <span>
+                              View all {prototype.getGameByID(item).name} stats
+                            </span>
                           </button>
                         </Link>
                       </div>

@@ -159,36 +159,22 @@ export default function StatsLeagueOfLegends() {
                 <div className="max-w-lg mx-auto accordion accordion-highlighted">
                   <div className="item lg:h-24 surface surface-ui-700 shadow-xl rounded-lg p-4">
                     <div className="item-body leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around flex-1 gap-4 child:animate-delay">
-                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Win Ratio %
+                      {selectedGame.demo?.mainStats.map((item, itemIndex) => (
+                        <div
+                          key={itemIndex}
+                          className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
+                          style={{
+                            "--delay": `calc(${itemIndex} * 0.05s)`,
+                          }}
+                        >
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                            {item.label}
+                          </div>
+                          <div className="text-main text-xl lg:text-3xl">
+                            --
+                          </div>
                         </div>
-                        <div className="text-main text-xl lg:text-3xl">--</div>
-                      </div>
-                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Kda
-                        </div>
-                        <div className="text-main text-xl lg:text-3xl">--</div>
-                      </div>
-                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Avg K / D / A
-                        </div>
-                        <div className="text-main text-xl lg:text-3xl">--</div>
-                      </div>
-                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          CS/min
-                        </div>
-                        <div className="text-main text-xl lg:text-3xl">--</div>
-                      </div>
-                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Vision Score
-                        </div>
-                        <div className="text-main text-xl lg:text-3xl">--</div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -382,61 +368,25 @@ export default function StatsLeagueOfLegends() {
                     }`}
                   >
                     <div className="item-body leading-tight grid grid-cols-2 lg:flex flex-wrap justify-around flex-1 gap-4 child:animate-delay">
-                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Win Ratio %
+                      {selectedGame.demo?.mainStats.map((item, itemIndex) => (
+                        <div
+                          key={itemIndex}
+                          className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay"
+                          style={{
+                            "--delay": `calc(${itemIndex} * 0.05s)`,
+                          }}
+                        >
+                          <div className="text-xs lg:text-sm text-ui-200 uppercase">
+                            {item.label}
+                          </div>
+                          <div className="text-main text-xl lg:text-3xl">
+                            {item.value}
+                          </div>
+                          <div className="text-xs lg:text-sm text-ui-300">
+                            Top 2.4%
+                          </div>
                         </div>
-                        <div className="text-main text-xl lg:text-3xl">
-                          180.0
-                        </div>
-                        <div className="text-xs lg:text-sm text-ui-300">
-                          Top 2.4%
-                        </div>
-                      </div>
-                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Kda
-                        </div>
-                        <div className="text-main text-xl lg:text-3xl">
-                          1.49
-                        </div>
-                        <div className="text-xs lg:text-sm text-ui-300">
-                          Top 2%
-                        </div>
-                      </div>
-                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Avg K / D / A
-                        </div>
-                        <div className="text-main text-xl lg:text-3xl">
-                          27.9%
-                        </div>
-                        <div className="text-xs lg:text-sm text-ui-300">
-                          Top 4.8%
-                        </div>
-                      </div>
-                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          CS/min
-                        </div>
-                        <div className="text-main text-xl lg:text-3xl">
-                          71.9%
-                        </div>
-                        <div className="text-xs lg:text-sm text-ui-300">
-                          Top 2.4%
-                        </div>
-                      </div>
-                      <div className="pl-4 border-l border-ui-600 animate-slide-in-bottom animate-delay">
-                        <div className="text-xs lg:text-sm text-ui-200 uppercase">
-                          Vision Score
-                        </div>
-                        <div className="text-main text-xl lg:text-3xl">
-                          67.9%
-                        </div>
-                        <div className="text-xs lg:text-sm text-ui-300">
-                          Top 9.4%
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -686,7 +636,6 @@ export default function StatsLeagueOfLegends() {
                                 </div>
                               }
                             >
-                              
                               <table className="table table-compact w-full text-center text-xs lg:text-sm">
                                 <tbody>
                                   <tr className="bg-error-300/20 uppercase">
@@ -986,7 +935,6 @@ export default function StatsLeagueOfLegends() {
                                   )}
                                 </tbody>
                               </table>
-                                                
                             </Accordion>
                           </div>
                         ))}

@@ -15,7 +15,6 @@ import { useRouter } from "next/router";
 import LadderHeader from "./components/ladder-header";
 import LadderPlacements from "./components/ladder-placements";
 
-
 const TabsItems = [
   {
     label: "Solo Leaderboard",
@@ -99,13 +98,10 @@ export default function Home() {
       openmodalLadderResults();
     }
   }, [modalLadderResults]);
-  
-  function openmodalLadderResults() {
-    uiContext.openModal(
-      <ModalLadderResults item={selectedLadder} />
-    );
-  }
 
+  function openmodalLadderResults() {
+    uiContext.openModal(<ModalLadderResults item={selectedLadder} />);
+  }
 
   return (
     <>
@@ -193,9 +189,7 @@ export default function Home() {
               */}
               <LadderHeader />
 
-              {selectedLadder.status === "ongoing" && (
-                <LadderPlacements />
-              )}
+              {selectedLadder.status === "ongoing" && <LadderPlacements />}
 
               <nav>
                 <ul className="tabs border-b border-ui-700">
@@ -252,6 +246,25 @@ export default function Home() {
                   }
                 })}
               </section>
+
+              {/* for demo purposes only */}
+              {/* <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+                <a
+                  onClick={() => {
+                    setIsPremium(!isPremium);
+                  }}
+                >
+                  Toggle Premium {isPremium ? "ON" : "OFF"}
+                </a>
+                <a
+                  onClick={() => {
+                    setFreeEntry(!freeEntry);
+                  }}
+                >
+                  Toggle Free Entry {freeEntry ? "ON" : "OFF"}
+                </a>
+              </section>
+               */}
             </>
           )}
         </PrototypeStructure>
