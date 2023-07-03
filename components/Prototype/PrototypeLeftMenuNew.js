@@ -22,8 +22,7 @@ export default function PrototypeLeftMenuNew(props) {
   const modalFavoriteGames = query.modalfavoritegames === "true" ? true : false;
   const modalSelectYourGame =
     query.modalselectyourgame === "true" ? true : false;
-  const modalWelcome =
-    query.modalwelcome === "true" ? true : false;
+  const modalWelcome = query.modalwelcome === "true" ? true : false;
   const statusLoading = query.loading === "true" ? true : false;
   const [loading, setLoading] = useState(false);
   const prototype = usePrototypeData();
@@ -31,15 +30,23 @@ export default function PrototypeLeftMenuNew(props) {
     query.modaltournamentschedule === "true" ? true : false;
 
   function openModalFavoriteGames() {
-    uiContext.openModal(<ModalFavoriteGames></ModalFavoriteGames>);
+    uiContext.openModal(<ModalFavoriteGames />);
   }
 
   function openModalBuyTokens() {
-    uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
+    uiContext.openModal(<ModalBuyTokens />);
   }
 
-  function openModalWelcome() {
-    uiContext.openModal(<ModalWelcome></ModalWelcome>);
+  function openModalSelectYourGame() {
+    uiContext.openModal(<ModalSelectYourGame />);
+  }
+
+  function openModalModalWelcome() {
+    uiContext.openModal(<ModalWelcome />);
+  }
+
+  function openModalTournamentSchedule() {
+    uiContext.openModal(<ModalTournamentSchedule />);
   }
 
   useEffect(() => {
@@ -56,19 +63,23 @@ export default function PrototypeLeftMenuNew(props) {
 
   useEffect(() => {
     if (modalWelcome) {
-      openModalWelcome();
+      openModalModalWelcome();
     }
   }, [modalWelcome]);
 
-  function openModalSelectYourGame() {
-    uiContext.openModal(<ModalSelectYourGame></ModalSelectYourGame>);
-  }
+  useEffect(() => {
+    if (modalTournamentSchedule) {
+      openModalTournamentSchedule();
+    }
+  }, [modalTournamentSchedule]);
 
+  /*
   useEffect(() => {
     if (statusLoading || router.pathname.includes("home")) {
-      /*setLoading(true);*/
+      setLoading(true);
     }
   }, []);
+  */
 
   useEffect(() => {
     if (loading) {
@@ -77,16 +88,6 @@ export default function PrototypeLeftMenuNew(props) {
       }, 2000);
     }
   }, [loading]);
-
-  function openModalTournamentSchedule() {
-    uiContext.openModal(<ModalTournamentSchedule></ModalTournamentSchedule>);
-  }
-
-  useEffect(() => {
-    if (modalTournamentSchedule) {
-      openModalTournamentSchedule();
-    }
-  }, [modalTournamentSchedule]);
 
   return (
     <>

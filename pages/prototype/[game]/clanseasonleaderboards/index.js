@@ -86,7 +86,7 @@ export default function Ladders() {
                         item.url
                       }${prototype.getURLparams("&")}`}
                     >
-                      <a
+                      <button type="button"
                         className={`${
                           selectedTab === item.url ? "is-active" : ""
                         }`}
@@ -98,7 +98,7 @@ export default function Ladders() {
                               <span className="ml-2 icon icon-present animate-bounce" />
                             )}
                         </span>
-                      </a>
+                      </button>
                     </Link>
                   </li>
                 ))}

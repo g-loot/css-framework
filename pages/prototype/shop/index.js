@@ -193,9 +193,9 @@ export default function Home() {
                   <Link
                     href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
                   >
-                    <a type="button" className="button button-secondary w-full">
+                    <button type="button" className="button button-secondary w-full">
                       <span>View frames</span>
-                    </a>
+                    </button>
                   </Link>
                 </div>
               </li>
@@ -227,9 +227,9 @@ export default function Home() {
                   <Link
                     href={`/prototype/shop/profile-banner${prototype.getURLparams()}`}
                   >
-                    <a type="button" className="button button-secondary w-full">
+                    <button type="button" className="button button-secondary w-full">
                       <span>View banners</span>
-                    </a>
+                    </button>
                   </Link>
                 </div>
               </li>
@@ -289,12 +289,12 @@ export default function Home() {
                           voucher.id
                         }${prototype.getURLparams()}`}
                       >
-                        <a
+                        <button
                           type="button"
                           className="button button-secondary w-full"
                         >
                           <span>View gift cards</span>
-                        </a>
+                        </button>
                       </Link>
                     </div>
                   </li>

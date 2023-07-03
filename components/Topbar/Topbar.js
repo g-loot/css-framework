@@ -16,8 +16,6 @@ import Countdown from "../Countdown/Countdown";
 import Avatar from "../Avatar/Avatar";
 import { dataNotifications } from "../../mock-data/data-notifications";
 
-
-
 export default function Topbar() {
   const router = useRouter();
   const { query } = useRouter();
@@ -108,46 +106,54 @@ export default function Topbar() {
               <ul className="hidden lg:flex tabs tabs-secondary overflow-visible">
                 <li>
                   <Link href={`/prototype/home${prototype.getURLparams()}`}>
-                    <a
+                    <button
+                      type="button"
                       className={` ${
                         router.pathname.endsWith("prototype") ? "is-active" : ""
                       } ${router.pathname.includes("home") ? "is-active" : ""}`}
                     >
                       <span className="text-sm uppercase">Home</span>
-                    </a>
+                    </button>
                   </Link>
                 </li>
                 <li className="!hidden xl:!flex">
-                  <Link href={`/prototype/battlepass${prototype.getURLparams()}`}>
-                    <a
+                  <Link
+                    href={`/prototype/battlepass${prototype.getURLparams()}`}
+                  >
+                    <button
+                      type="button"
                       className={` ${
-                        router.pathname.includes("battlepass") ? "is-active" : ""
+                        router.pathname.includes("battlepass")
+                          ? "is-active"
+                          : ""
                       }`}
                     >
                       <span className="text-sm uppercase">Battle Pass</span>
-                    </a>
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link href={`/prototype/premium${prototype.getURLparams()}`}>
-                    <a
+                    <button
+                      type="button"
                       className={` ${
                         router.pathname.includes("premium") ? "is-active" : ""
                       }`}
                     >
                       <span className="text-sm uppercase">Premium</span>
-                    </a>
+                    </button>
                   </Link>
                 </li>
                 <li>
                   <Link href={`/prototype/shop${prototype.getURLparams()}`}>
-                    <a
+                    <button
+                      type="button"
                       className={` ${
                         router.pathname.includes("shop") ? "is-active" : ""
                       }`}
                     >
                       <span className="text-sm uppercase">Shop</span>
-                    </a>
+                    </button>
                   </Link>
                 </li>
                 <button
@@ -184,7 +190,6 @@ export default function Topbar() {
                     */}
             </div>
             <div className="flex justify-end items-center gap-1 sm:gap-2">
-
               <Tooltip
                 placement="bottom"
                 tooltip={
@@ -242,7 +247,9 @@ export default function Topbar() {
                       <div className="flex items-center justify-between p-2">
                         <div className="form-group form-select">
                           <select id="favorite-game" className="input-sm">
-                            <option defaultValue={true}>Show all categories</option>
+                            <option defaultValue={true}>
+                              Show all categories
+                            </option>
                             <option>Clans</option>
                             <option>Ladders</option>
                             <option>Missions</option>
@@ -661,20 +668,20 @@ export default function Topbar() {
                           hasAds ? "&ads=true" : ""
                         }`}
                       >
-                        <a tabIndex="1">
+                        <button type="button" tabIndex="1">
                           <span className="icon icon-circle-09" />
                           <span>Profile</span>
-                        </a>
+                        </button>
                       </Link>
                     </li>
                     <li>
                       <Link
                         href={`/prototype/wallet${prototype.getURLparams()}`}
                       >
-                        <a tabIndex="1">
+                        <button type="button" tabIndex="1">
                           <span className="icon icon-wallet-43" />
                           <span>Wallet</span>
-                        </a>
+                        </button>
                       </Link>
                     </li>
                     <li className="separator"></li>
@@ -684,10 +691,10 @@ export default function Topbar() {
                           hasAds ? "&ads=true" : ""
                         }`}
                       >
-                        <a tabIndex="1">
+                        <button type="button" tabIndex="1">
                           <span className="icon icon-cogwheel" />
                           <span>Settings</span>
-                        </a>
+                        </button>
                       </Link>
                     </li>
                     <li>
@@ -696,17 +703,15 @@ export default function Topbar() {
                           hasAds ? "&ads=true" : ""
                         }`}
                       >
-                        <a tabIndex="1">
+                        <button type="button" tabIndex="1">
                           <span className="icon icon-notification" />
                           <span>Patch notes</span>
-                        </a>
+                        </button>
                       </Link>
                     </li>
                     <li>
                       <Link href={`/prototype/recruit-a-friend/`}>
-                        <button
-                          type="button"
-                        >
+                        <button type="button">
                           <span className="icon icon-b-love" />
                           <span>Recruit a friend</span>
                         </button>
@@ -718,14 +723,15 @@ export default function Topbar() {
                           hasAds ? "&ads=true" : ""
                         }`}
                       >
-                        <a tabIndex="1">
+                        <button type="button" tabIndex="1">
                           <span className="icon icon-file-article" />
                           <span>How Stryda works</span>
-                        </a>
+                        </button>
                       </Link>
                     </li>
                     <li>
-                      <a
+                      <button
+                        type="button"
                         tabIndex="1"
                         onClick={openModalDownloadStarted}
                         href="#"
@@ -733,15 +739,15 @@ export default function Topbar() {
                       >
                         <span className="icon icon-data-download" />
                         <span>Download tracker</span>
-                      </a>
+                      </button>
                     </li>
                     <li className="separator"></li>
                     <li>
                       <Link href={`/`}>
-                        <a tabIndex="1">
+                        <button type="button" tabIndex="1">
                           <span className="icon icon-leave" />
                           <span>Log out</span>
-                        </a>
+                        </button>
                       </Link>
                     </li>
                   </ul>

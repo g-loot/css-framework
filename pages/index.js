@@ -105,9 +105,7 @@ const Index = () => {
                 <div className="col-span-12 lg:col-span-12 flex flex-col">
                   <div className="flex-1 lg:border-l border-ui-500 lg:pl-8 mb-12">
                     <div>
-                      <div className="h4 text-ui-100 ">
-                        Welcome to the
-                      </div>
+                      <div className="h4 text-ui-100 ">Welcome to the</div>
                       <h1 className="mb-8 lg:text-8xl mt-2">
                         <div>Stryda design system</div>
                       </h1>
@@ -123,93 +121,115 @@ const Index = () => {
                   </div>
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
                     <div
-                      className="rounded surface overflow-hidden transform-gpu flex flex-col gap-4 items-stretch w-full p-2 animate-slide-in-bottom animate-delay"
+                      className="rounded surface overflow-hidden transform-gpu flex flex-col items-stretch w-full animate-slide-in-bottom animate-delay"
                       style={{ "--delay": "calc(1 * 0.05s)" }}
                     >
-                      <div
-                        className="flex-none aspect-landscape bg-cover bg-center rounded border border-ui-700"
-                        style={{
-                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668756/Stryda/framework/cover-designsystem.jpg)`,
-                        }}
-                      ></div>
-                      <div className="flex-1 flex flex-col items-start justify-start p-2">
+                      <Link href="design-system/about">
+                        <img
+                          className="flex-none object-cover object-center aspect-[10/5] interactive active:!-outline-offset-1 border-b border-ui-700"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1672668758/Stryda/framework/cover-designsystem.jpg"
+                          width="100%"
+                          height="auto"
+                          alt=""
+                        />
+                      </Link>
+                      <div className="flex-1 flex flex-col items-start justify-start p-4">
                         <div className="flex items-baseline gap-2 mb-3">
-                          <h2 className="h4">
-                            CSS Framework
-                          </h2>
+                          <h2 className="h4">CSS Framework</h2>
                         </div>
                         <div className="text-ui-300 leading-tight">
                           A centralized CSS framework for speed and consistency.
                         </div>
                       </div>
-                      <div className="flex flex-col lg:flex-row gap-2 px-2 pb-2">
+                      <div className="flex flex-col lg:flex-row gap-2 p-4 border-t border-ui-700">
                         <Link href="design-system/about">
-                          <a className="button button-sm button-primary">
+                          <button
+                            type="button"
+                            className="button button-sm button-primary"
+                          >
                             <span>Read the docs</span>
-                          </a>
+                          </button>
                         </Link>
                         <Link href="design-system/gettingstarted">
-                          <a className="button button-sm button-secondary">
+                          <button
+                            type="button"
+                            className="button button-sm button-secondary"
+                          >
                             <span>Get started</span>
-                          </a>
+                          </button>
                         </Link>
                       </div>
                     </div>
                     <div
-                      className="rounded surface overflow-hidden transform-gpu flex flex-col gap-4 items-stretch w-full p-2 animate-slide-in-bottom animate-delay"
+                      className="rounded surface overflow-hidden transform-gpu flex flex-col items-stretch w-full animate-slide-in-bottom animate-delay"
                       style={{ "--delay": "calc(2 * 0.05s)" }}
                     >
-                      <div
-                        className="flex-none aspect-landscape bg-cover bg-center rounded border border-ui-700"
-                        style={{
-                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668756/Stryda/framework/cover-prototype.jpg)`,
-                        }}
-                      ></div>
-                      <div className="flex-1 flex flex-col items-start justify-start p-2">
+                      <Link href="prototype/home">
+                        <img
+                          className="flex-none object-cover object-center aspect-[10/5] interactive active:!-outline-offset-1 border-b border-ui-700"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1672668758/Stryda/framework/cover-prototype.jpg"
+                          width="100%"
+                          height="auto"
+                          alt=""
+                        />
+                      </Link>
+                      <div className="flex-1 flex flex-col items-start justify-start p-4">
                         <div className="flex items-baseline gap-2 mb-3">
                           <h2 className="h4">Prototype</h2>
                         </div>
                         <div className="text-ui-300 leading-tight">
-                          Functional prototype for testing purposes.
+                          A place for exploring and defining the design of our
+                          product.
                         </div>
                       </div>
-                      <div className="flex flex-col lg:flex-row gap-2 px-2 pb-2">
+                      <div className="flex flex-col lg:flex-row gap-2 p-4 border-t border-ui-700">
                         <Link href="prototype/home">
-                          <a className="button button-sm button-primary">
+                          <button
+                            type="button"
+                            className="button button-sm button-primary"
+                          >
                             <span>View prototype</span>
-                          </a>
+                          </button>
                         </Link>
                         <Link href="prototype">
-                          <a className="button button-sm button-secondary">
+                          <button
+                            type="button"
+                            className="button button-sm button-secondary"
+                          >
                             <span>Page listing</span>
-                          </a>
+                          </button>
                         </Link>
                       </div>
                     </div>
                     <div
-                      className="rounded surface overflow-hidden transform-gpu flex flex-col gap-4 items-stretch w-full p-2 animate-slide-in-bottom animate-delay"
+                      className="hidden rounded surface overflow-hidden transform-gpu flex flex-col items-stretch w-full animate-slide-in-bottom animate-delay"
                       style={{ "--delay": "calc(3 * 0.05s)" }}
                     >
                       <div
-                        className="flex-none aspect-landscape bg-cover bg-center rounded border border-ui-700"
+                        className="flex-none aspect-landscape bg-cover bg-center rounded border-b border-ui-700"
                         style={{
                           backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668756/Stryda/framework/cover-componentlibrary.jpg)`,
                         }}
                       ></div>
-                      <div className="flex-1 flex flex-col items-start justify-start p-2">
+                      <div className="flex-1 flex flex-col items-start justify-start p-4">
                         <div className="flex items-baseline gap-2 mb-3">
                           <h2 className="h4">Component library</h2>
                         </div>
                         <div className="text-ui-300 leading-tight">
-                          Stryda react component library consuming the framework.
+                          Stryda react component library consuming the
+                          framework.
                         </div>
                       </div>
-                      <div className="flex flex-col lg:flex-row gap-2 px-2 pb-2">
+                      <div className="flex flex-col lg:flex-row gap-2 p-4 border-t border-ui-700">
                         <Link href="https://developers.gloot.com/component-library/?path=/story/docs-getting-started-quick-start--page">
-                          <a className="button button-sm button-primary" target="_blank">
+                          <button
+                            type="button"
+                            className="button button-sm button-primary"
+                            target="_blank"
+                          >
                             <span>View components</span>
                             <span className="icon icon-box-arrow-top-right" />
-                          </a>
+                          </button>
                         </Link>
                       </div>
                     </div>
@@ -263,6 +283,20 @@ const Index = () => {
               </div>
             </div>
           </div>
+          <video
+            className="absolute z-0 right-0 bottom-0 h-full w-full md:h-auto xl:w-3/4 object-cover opacity-25 mix-blend-lighten blur-sm"
+            autoPlay
+            playsInline
+            muted
+            loop
+            preload="true"
+          >
+            <source src="https://res.cloudinary.com/gloot/video/upload/v1675240209/Stryda/marketing/website/Stryda_homepage-loop_02.mp4" />
+            <img
+              src="https://res.cloudinary.com/gloot/image/upload/v1676294294/Stryda/marketing/website/Stryda_homepage-loop_02-png.png"
+              alt=""
+            />
+          </video>
           <Footer />
         </div>
         <div className="drawer-side scrollbar-hidden">

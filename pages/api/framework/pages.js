@@ -107,6 +107,24 @@ export const FrameworkPages = {
           tags: "home, start, index, claim, rewards, daily missions, content card, braze, marketing, status",
         },
         {
+          label: "Welcome",
+          chip: "modal",
+          url: "home",
+          query: "modalwelcome=true",
+          tab: 1,
+          new: false,
+          tags: "home, start, index, welcome, onboarding, modal, prompt",
+        },
+        {
+          label: "Select your game",
+          chip: "modal",
+          url: "home",
+          query: "modalselectyourgame=true",
+          tab: 1,
+          new: false,
+          tags: "home, start, index, welcome, onboarding, game, selector, picker, modal, prompt",
+        },
+        {
           label: "Claim daily rewards",
           chip: "modal",
           url: "home",
@@ -114,6 +132,7 @@ export const FrameworkPages = {
           tab: 1,
           new: false,
           tags: "home, start, index, claim, rewards, daily missions, modal, prompt",
+          deprecated: true,
         },
         {
           label: "Claim mission rewards",

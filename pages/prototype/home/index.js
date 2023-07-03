@@ -136,9 +136,9 @@ export default function Home() {
             <h3 className="h6">Solo</h3>
             {!hasNoLadders && (
               <Link href="/prototype/valorant/ladders/">
-                <a className="link text-ui-300 text-sm">
+                <button type="button" className="link text-ui-300 text-sm">
                   View Ladder history
-                </a>
+                </button>
               </Link>
             )}
           </div>
@@ -149,15 +149,15 @@ export default function Home() {
             <h3 className="h6">Clan</h3>
             {hasNoClan ? (
               <Link href="/prototype/clans/">
-                <a className="link text-ui-300 text-sm">
+                <button type="button" className="link text-ui-300 text-sm">
                   Discover Clans
-                </a>
+                </button>
               </Link>
             ) : (
               <Link href="/prototype/valorant/ladders/">
-                <a className="link text-ui-300 text-sm">
+                <button type="button" className="link text-ui-300 text-sm">
                   View your Clan
-                </a>
+                </button>
               </Link>
             )}
           </div>
@@ -199,7 +199,7 @@ export default function Home() {
             <p>
               Get{" "}
               <Link href="/prototype/premium">
-                <a className="text-premium-500 link">Premium</a>
+                <button type="button" className="text-premium-500 link">Premium</button>
               </Link>{" "}
               and earn +50% of XP on all missions
             </p>

@@ -163,7 +163,7 @@ const PrototypePage = () => {
                       </li>
                     </ul>
                     <div
-                      className="space-y-4 leading-relaxed sm:max-w-[40ch] animate-slide-in-bottom animate-paused animate-delay"
+                      className="space-y-4 leading-relaxed sm:max-w-[60ch] animate-slide-in-bottom animate-paused animate-delay"
                       style={{
                         "--delay": "calc(4 * 0.05s)",
                       }}

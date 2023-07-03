@@ -126,7 +126,8 @@ export default function PrototypeGamesNavNew({ children }) {
                               subItem.url
                             }${prototype.getURLparams()}`}
                           >
-                            <a
+                            <button
+                              type="button"
                               className={`${
                                 router.pathname.includes(subItem.slug) &&
                                 item.slug === game
@@ -144,7 +145,7 @@ export default function PrototypeGamesNavNew({ children }) {
                                     <span className="ml-2 icon icon-present animate-bounce" />
                                   )}
                               </span>
-                            </a>
+                            </button>
                           </Link>
                         </li>
                       )}

@@ -172,13 +172,14 @@ export default function Scoreboards() {
                             <Link
                               href={`/prototype/valorant/scoreboards?tab=${item.slug}`}
                             >
-                              <a
+                              <button
+                                type="button"
                                 className={`${
                                   selectedTab === item.slug ? "is-active" : ""
                                 }`}
                               >
                                 <span>{item.name}</span>
-                              </a>
+                              </button>
                             </Link>
                           </li>
                         )

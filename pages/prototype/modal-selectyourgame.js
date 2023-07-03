@@ -9,7 +9,9 @@ export default function ModalSelectYourGame(props) {
   const prototype = usePrototypeData();
   const variablesContext = useContext(VariablesContext);
   const [submitting, setSubmitting] = useState(false);
-  const [selectedGamesCount, setSelectedGamesCount] = useState(prototype.games.filter(g => g.isFavorite).length);
+  const [selectedGamesCount, setSelectedGamesCount] = useState(
+    prototype.games.filter((g) => g.isFavorite).length
+  );
   const [selectedGame, setSelectedGame] = useState(null);
   const [disabled, setDisable] = useState(false);
 
@@ -21,7 +23,13 @@ export default function ModalSelectYourGame(props) {
     setSubmitting(true);
 
     setTimeout(() => {
-      uiContext.openToastr({size: "medium", text: "Favorite games updated", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+      uiContext.openToastr({
+        size: "medium",
+        text: "Your profile has been updated",
+        color: "green",
+        autoDelete: true,
+        autoDeleteDelay: 2500,
+      });
       uiContext.closeModal();
       setSubmitting(false);
     }, 1000);
@@ -44,9 +52,7 @@ export default function ModalSelectYourGame(props) {
           </button>
           <div className="modal-content">
             <div className="modal-body text-center">
-              <h2 className="modal-title">
-                Select your game
-              </h2>
+              <h2 className="modal-title">Select your game</h2>
               <p>Add or edit more games later.</p>
               <div className="border-t border-ui-700 mt-4 pt-4">
                 <div className="form-group flex flex-wrap justify-center gap-4">
@@ -70,29 +76,52 @@ export default function ModalSelectYourGame(props) {
             </div>
             <div className="modal-action justify-center">
               {!selectedGame ? (
-                <button type="button" className="button w-80 button-primary is-disabled">
+                <button
+                  type="button"
+                  className="button w-80 button-primary is-disabled"
+                >
                   <span>Connect</span>
                 </button>
               ) : (
                 <>
-                {selectedGame.hasAPI && (
-                  <button type="button" onClick={() => uiContext.closeModal()} className="button w-80 button-primary">
-                    <span className={`icon icon-game-${selectedGame.slug}-symbol`} />
-                    <span>Connect my account</span>
-                  </button>
-                )}
-                {selectedGame === 'pubg' && (
-                  <button type="button" onClick={() => uiContext.closeModal()} className="button w-80 button-primary">
-                    <span className={`icon icon-${selectedGame}`} />
-                    <span>Connect with Steam</span>
-                  </button>
-                )}
-                {selectedGame !== 'pubg' && !selectedGame.hasAPI  && (
-                  <button type="button" onClick={() => uiContext.closeModal()} className="button w-80 button-primary">
-                    <span className="icon icon-data-download" />
-                    <span>Download Stryda</span>
-                  </button>
-                )}
+                  {selectedGame.hasAPI && (
+                    <button
+                      type="button"
+                      onClick={() => closeModalWithDelay()}
+                      className={`button w-80 button-primary ${
+                        submitting ? "is-loading" : ""
+                      }`}
+                    >
+                      <span
+                        className={`icon icon-game-${selectedGame.slug}-symbol`}
+                      />
+                      <span>Connect my account</span>
+                    </button>
+                  )}
+                  {selectedGame === "pubg" && (
+                    <button
+                      type="button"
+                      onClick={() => closeModalWithDelay()}
+                      className={`button w-80 button-primary ${
+                        submitting ? "is-loading" : ""
+                      }`}
+                    >
+                      <span className={`icon icon-${selectedGame}`} />
+                      <span>Connect with Steam</span>
+                    </button>
+                  )}
+                  {selectedGame !== "pubg" && !selectedGame.hasAPI && (
+                    <button
+                      type="button"
+                      onClick={() => closeModalWithDelay()}
+                      className={`button w-80 button-primary ${
+                        submitting ? "is-loading" : ""
+                      }`}
+                    >
+                      <span className="icon icon-data-download" />
+                      <span>Download Stryda</span>
+                    </button>
+                  )}
                 </>
               )}
             </div>

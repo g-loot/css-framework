@@ -136,13 +136,13 @@ export default function Ladders() {
                     <Link
                       href={`/prototype/${game}/ladders?tab=${item.url}${prototype.getURLparams("&")}`}
                     >
-                      <a
+                      <button type="button"
                         className={`${
                           selectedTab === item.url ? "is-active" : ""
                         }`}
                       >
                         <span>{item.label}</span>
-                      </a>
+                      </button>
                     </Link>
                   </li>
                 ))}
