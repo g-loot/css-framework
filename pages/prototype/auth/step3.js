@@ -22,7 +22,7 @@ export default function AuthStep3() {
           <h1 className="h4 mb-8">Verify your email</h1>
           <p className="mb-2">
             A verification link was just sent to:{" "}
-            <Link href="/prototype/home?modalselectyourgame=true">
+            <Link href="/prototype/home?modalwelcome=true">
             <button type="button" className="chip chip-secondary">
               <span className="text-ui-100 font-bold">joppe@gmail.com</span>
             </button>

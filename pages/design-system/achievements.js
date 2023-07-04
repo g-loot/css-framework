@@ -22,7 +22,16 @@ const DSpage = () => {
   }
 
   function openModalAchievementReceived(item) {
-    uiContext.openModal(<ModalAchievementReceived item={item} />);
+    const achievement = {
+      id: 1,
+      item: item,
+      level: achievementLevel,
+      percent: 90,
+      progress: 10,
+      from: "10",
+      to: "10",
+    };
+    uiContext.openModal(<ModalAchievementReceived item={achievement} />);
   }
 
   return (
@@ -96,7 +105,7 @@ const DSpage = () => {
                   className="button button-primary"
                   onClick={openModalAchievementReceived.bind(
                     this,
-                    prototype.getAchievementitemByID(1, 1),
+                    1,
                   )}
                 >
                   <span>Open modal</span>
@@ -142,7 +151,7 @@ const DSpage = () => {
                       className={`w-32 h-32 achievement cursor-pointer ${
                         achievementLevel === "5" ? "is-completed" : ""
                       }`}
-                      onClick={openModalAchievementReceived.bind(this, item)}
+                      onClick={openModalAchievementReceived.bind(this, item.id)}
                     >
                       <i />
                       <i />

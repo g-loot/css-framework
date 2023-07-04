@@ -135,7 +135,7 @@ const Index = () => {
                       </Link>
                       <div className="flex-1 flex flex-col items-start justify-start p-4">
                         <div className="flex items-baseline gap-2 mb-3">
-                          <h2 className="h4">CSS Framework</h2>
+                          <h2 className="h4">Framework</h2>
                         </div>
                         <div className="text-ui-300 leading-tight">
                           A centralized CSS framework for speed and consistency.

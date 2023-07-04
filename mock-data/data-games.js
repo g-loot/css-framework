@@ -5528,7 +5528,7 @@ export const dataGames = [
         clan: true,
         name: "Weekly Aram Ladder",
         cover:
-          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-7.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-2.webp",
         status: "finished",
         gameMode: "ARAM",
         sponsor:

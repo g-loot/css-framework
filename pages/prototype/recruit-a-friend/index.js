@@ -80,8 +80,7 @@ export default function ReferAFriend() {
   const modalrefersendinvite = query.modal === "true" ? true : false;
   const uiContext = useContext(UiContext);
   const empty = query.empty === "true" ? true : false;
-
-  const [isEmpty, setIsEmpty] = useState(false);
+  const [isEmpty, setIsEmpty] = useState(empty);
   const statusLoading = query.loading === "true" ? true : false;
   const [loading, setLoading] = useState(true);
   const [hasInvited, setHasInvited] = useState(false);
@@ -92,23 +91,17 @@ export default function ReferAFriend() {
   }
 
   useEffect(() => {
-    if (statusLoading) {
-      setLoading(true);
-    }
-  }, []);
-  useEffect(() => {
     if (empty) {
       setIsEmpty(true);
     }
   }, [empty]);
 
   useEffect(() => {
-    if (loading) {
-      setTimeout(() => {
-        setLoading(false);
-      }, RandomNumber(100, 2000));
-    }
-  }, [loading]);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   const modalRemoveFriends = query.modalremovefriends === "true" ? true : false;
 
@@ -266,24 +259,6 @@ export default function ReferAFriend() {
                     ))}
                   </div>
                 </div>
-                {/*
-                <div className="max-w-xs mx-auto">
-                  <span className="icon icon-smile text-6xl text-ui-500" />
-                  <div className="mt-2 mb-6">
-                    <p className="text-sm text-ui-400">No invitations yet</p>
-                    <p className="text-lg text-ui-300">
-                      Refer your friends and earn rewards!
-                    </p>
-                  </div>
-                  <button
-                    type="button"
-                    className="button button-primary"
-                    onClick={openModalReferSendInvite}
-                  >
-                    <span>Invite a friend</span>
-                  </button>
-                </div>
-                        */}
               </div>
             ) : (
               <>
@@ -491,6 +466,12 @@ export default function ReferAFriend() {
             )}
           </>
         )}
+        {/* for demo purposes only */}
+        <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+          <a onClick={() => setIsEmpty(!isEmpty)}>
+            Toggle empty state {isEmpty ? "ON" : "OFF"}
+          </a>
+        </section>
       </PrototypeStructure>
     </>
   );

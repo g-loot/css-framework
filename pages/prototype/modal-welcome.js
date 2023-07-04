@@ -75,6 +75,10 @@ export default function ModalWelcome(props) {
                   type="video/webm"
                   src="https://res.cloudinary.com/gloot/video/upload/v1688385745/Stryda/videos/Stryda_Anouncement_video_1.webm"
                 />
+                <source
+                  type="video/mp4"
+                  src="https://res.cloudinary.com/gloot/video/upload/v1688387320/Stryda/videos/Stryda_Anouncement_video_2.mp4"
+                />
                 <img
                   src="https://res.cloudinary.com/gloot/image/upload/v1688386123/Stryda/illustrations/Welcome_video_thumbnail.png"
                   alt=""

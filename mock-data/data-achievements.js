@@ -275,6 +275,12 @@ export const dataAchievements = [
         description: "Discard a Legendary Mission",
         icon: "discardlegendarymission",
       },
+      {
+        id: 29,
+        name: "The Strydarian",
+        description: "Complete platform missions",
+        icon: "completeplatformmissions",
+      },
     ],
   },
 ];
