@@ -50,8 +50,8 @@ const enrollSteps = [
 ];
 
 export default function LadderPlacements() {
-  const prototype = usePrototypeData();
   const { query } = useRouter();
+  const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
   const modalInfoBeforeYouPlay =

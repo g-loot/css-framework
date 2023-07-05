@@ -53,6 +53,7 @@ const enrollSteps = [
 
 export default function LadderPlacements() {
   const { query } = useRouter();
+  const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
   const modalInfoBeforeYouPlay =
@@ -68,7 +69,6 @@ export default function LadderPlacements() {
   const [sliderItemWidth, setSliderItemWidth] = useState(192);
   const [resultsDone, setResultsDone] = useState(false);
   const isPremium = prototype.isPremium;
-  const prototype = usePrototypeData();
   const [selectedLadder, setSelectedLadder] = useState(undefined);
   const router = useRouter();
   const { game } = router.query;
