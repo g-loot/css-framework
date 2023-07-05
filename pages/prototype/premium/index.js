@@ -155,7 +155,7 @@ export default function Premium() {
           </>
         )}
 
-        <section className="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-y-4 justify-center mb-24 max-w-lg mx-auto text-center leading-none">
+        <section className="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-y-4 justify-center mb-24 max-w-lg mx-auto text-center leading-none min-h-[800px]">
           {PremiumBenefits.map((item, itemIndex) => (
             <div
               className={`animate-slide-in-bottom animate-delay ${itemIndex + 1 === PremiumBenefits.length ? 'lg:col-start-2' : ''}`}
@@ -334,7 +334,7 @@ export default function Premium() {
             loop
             preload="true"
           >
-            <source src="https://res.cloudinary.com/gloot/video/upload/v1688545810/Stryda/videos/premium_glitter.mp4" />
+            <source src="https://res.cloudinary.com/gloot/video/upload/v1688547363/Stryda/videos/premium_glitter.mp4" />
           </video>
       </PrototypeStructure>
     </>

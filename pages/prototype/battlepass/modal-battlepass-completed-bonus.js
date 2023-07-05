@@ -127,6 +127,7 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
                 </div>
                 <Slider
                   itemWidth={397 + 16}
+                  direction="center"
                   bgColor="from-ui-800 via-ui-800/90 to-ui-800/0"
                 >
                   {getBattlepassPremiumSteps().map((item, itemIndex) => (
