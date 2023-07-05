@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { UiContext } from "../../../contexts/ui";
 import ModalBuyPremium from "./modal-buypremium";
 import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
+import { usePrototypeData } from "../../../contexts/prototype";
 
 const PremiumBenefits = [
   {
@@ -53,8 +54,9 @@ const PremiumBenefits = [
 
 export default function Premium() {
   const { query } = useRouter();
+  const prototype = usePrototypeData();
   const modalBuyPremium = query.modalpremium === "true" ? true : false;
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
   const uiContext = useContext(UiContext);
   useEffect(() => {
     if (modalBuyPremium) {
@@ -87,9 +89,7 @@ export default function Premium() {
             </section>
 
             <section className="relative z-10 px-4 md:px-0 my-20 flex flex-col md:flex-row items-stretch gap-8 max-w-md mx-auto animate-slide-in-bottom">
-              <div
-                className="flex-1 surface rounded flex flex-col items-stretch justify-start"
-              >
+              <div className="flex-1 surface rounded flex flex-col items-stretch justify-start">
                 <h2 className="h5 text-center p-3 border-b border-ui-700">
                   Subscription details
                 </h2>
@@ -108,9 +108,7 @@ export default function Premium() {
                 </div>
               </div>
 
-              <div
-                className="flex-1 surface rounded flex flex-col items-stretch justify-start"
-              >
+              <div className="flex-1 surface rounded flex flex-col items-stretch justify-start">
                 <h2 className="h5 text-center p-3 border-b border-ui-700">
                   Payment method
                 </h2>
@@ -158,7 +156,9 @@ export default function Premium() {
         <section className="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-y-4 justify-center mb-24 max-w-lg mx-auto text-center leading-none min-h-[800px]">
           {PremiumBenefits.map((item, itemIndex) => (
             <div
-              className={`animate-slide-in-bottom animate-delay ${itemIndex + 1 === PremiumBenefits.length ? 'lg:col-start-2' : ''}`}
+              className={`animate-slide-in-bottom animate-delay ${
+                itemIndex + 1 === PremiumBenefits.length ? "lg:col-start-2" : ""
+              }`}
               key={itemIndex}
               style={{
                 "--delay": "calc((" + itemIndex + " + 5) * 0.05s)",
@@ -327,15 +327,20 @@ export default function Premium() {
         </section>
 
         <video
-            className="absolute z-0 right-0 top-0 h-full w-full md:h-auto object-cover opacity-50 pointer-events-none mix-blend-screen"
-            autoPlay
-            playsInline
-            muted
-            loop
-            preload="true"
-          >
-            <source src="https://res.cloudinary.com/gloot/video/upload/v1688547363/Stryda/videos/premium_glitter.mp4" />
-          </video>
+          className="absolute z-0 right-0 top-0 h-full w-full md:h-auto object-cover opacity-50 pointer-events-none mix-blend-screen"
+          autoPlay
+          playsInline
+          muted
+          loop
+          preload="true"
+        >
+          <source src="https://res.cloudinary.com/gloot/video/upload/v1688547363/Stryda/videos/premium_glitter.mp4" />
+        </video>
+        
+        {/* for demo purposes only */}
+        <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+          <a onClick={() => prototype.togglePremium()}>Toggle Premium state</a>
+        </section>
       </PrototypeStructure>
     </>
   );

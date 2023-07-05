@@ -19,7 +19,7 @@ export default function TabMissionsMissions() {
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
   const isEmpty = query.empty === "true" ? true : false;
   const { game } = router.query;
   const [submitting, setSubmitting] = useState(false);

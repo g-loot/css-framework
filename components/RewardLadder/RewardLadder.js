@@ -15,7 +15,7 @@ export default function RewardLadder(props) {
   const [showWellDone, setShowWellDone] = useState(false);
   const prototype = usePrototypeData();
   const { query } = useRouter();
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
 
   function openModalClaimLadderRewards() {
     uiContext.openModal(<ModalClaimLadderRewards></ModalClaimLadderRewards>);

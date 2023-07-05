@@ -136,7 +136,7 @@ export default function TabLaddersSoloLeaderboards() {
   const { ladder_id } = router.query;
   const hasClaim = query.hasclaim === "true" ? true : false;
   const isEmpty = query.empty === "true" ? true : false;
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
   const freeEntry = query.freeentry === "true" ? true : false;
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
@@ -902,7 +902,10 @@ export default function TabLaddersSoloLeaderboards() {
                                               : "bg-ui-700"
                                           }`}
                                         >
-                                          <LeaderboardWings id={userIndex} value={user.name} />
+                                          <LeaderboardWings
+                                            id={userIndex}
+                                            value={user.name}
+                                          />
                                         </div>
                                         <div className="flex-1 flex items-center justify-center gap-4">
                                           {user.rewards?.map(
@@ -1262,7 +1265,10 @@ export default function TabLaddersSoloLeaderboards() {
                               itemIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
                             }`}
                           >
-                            <LeaderboardWings id={itemIndex} value={user.name} />
+                            <LeaderboardWings
+                              id={itemIndex}
+                              value={user.name}
+                            />
                           </div>
                           <div className="flex-1 flex items-center justify-center gap-4">
                             {item.rewards?.map((reward, rewardIndex) => (
@@ -1298,6 +1304,11 @@ export default function TabLaddersSoloLeaderboards() {
           </div>
         </section>
       )}
+
+      {/* for demo purposes only */}
+      <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+        <a onClick={() => prototype.togglePremium()}>Toggle Premium state</a>
+      </section>
     </>
   );
 }

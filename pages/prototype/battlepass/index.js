@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
+import { usePrototypeData } from "../../../contexts/prototype";
 import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
 import Battlepass from "../../../components/BattlePass/BattlePass";
 import { DataBattlepass } from "../../../mock-data/data-battlepass";
@@ -12,6 +13,8 @@ import { UiContext } from "../../../contexts/ui";
 import { useRouter } from "next/router";
 
 export default function BattlepassPage() {
+  const uiContext = useContext(UiContext);
+  const prototype = usePrototypeData();
   const { query } = useRouter();
   const modalbonussteps = query.modalbonussteps === "true" ? true : false;
   const modalclaim = query.modalclaim === "true" ? true : false;
@@ -22,7 +25,6 @@ export default function BattlepassPage() {
   const [selectedBattlepassID, setSelectedBattlepassID] =
     useState(battlepassID);
   const [selectedBattlepass, setSelectedBattlepass] = useState(null);
-  const uiContext = useContext(UiContext);
 
   useEffect(() => {
     setSelectedBattlepassID(battlepassID);
@@ -153,6 +155,9 @@ export default function BattlepassPage() {
 
             {/* for demo purposes only */}
             <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+              <a onClick={() => prototype.togglePremium()}>
+                Toggle Premium state
+              </a>
               <a onClick={switchBattlepasses}>
                 Switch between various Battle Passes
               </a>

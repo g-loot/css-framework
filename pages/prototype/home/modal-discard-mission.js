@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import XPBoostList from "../../../components/XPBoostList/XPBoostList";
 import Link from "next/link";
 import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
+import { usePrototypeData } from "../../../contexts/prototype";
 
 const missionDefault = {
   name: "Get 6 assists",
@@ -26,11 +27,12 @@ const missionDefault = {
 
 export default function ModalDiscardMission(props) {
   const uiContext = useContext(UiContext);
+  const prototype = usePrototypeData();
   const mission = props.mission || missionDefault;
   const variablesContext = useContext(VariablesContext);
   const [submitting, setSubmitting] = useState(false);
   const { query } = useRouter();
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
 
   function closeModalWithDelay() {
     setSubmitting(true);

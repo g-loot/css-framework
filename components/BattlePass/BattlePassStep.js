@@ -20,7 +20,7 @@ import Avatar from "../Avatar/Avatar";
 export default function BattlePassStep(props) {
   const { query } = useRouter();
   const prototype = usePrototypeData();
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
 
   return (
     <li className={`battlepass-step ${

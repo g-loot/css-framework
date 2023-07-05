@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import { usePrototypeData } from "../../contexts/prototype";
 
 export default function XPBoostList(props) {
   const isAnimated = props.isAnimated || false;
   const { query } = useRouter();
-  const isPremium = query.premium === "true" ? true : false;
+  const prototype = usePrototypeData();
+  const isPremium = prototype.isPremium;
   const xp = props.xp || 50;
   const size = props.size || "md";
   const type = props.type || "Mission completed";

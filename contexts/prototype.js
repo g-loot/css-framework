@@ -26,6 +26,7 @@ export const PrototypeProvider = ({ children }) => {
   const shopitems = dataShopitems;
   const achievements = dataAchievements;
   const [defaultGameID, setDefaultGameID] = useState(1);
+  const [isPremium, setIsPremium] = useState(false);
   
   const getGameByID = (id) => {
     return games.find(game => {
@@ -145,6 +146,9 @@ export const PrototypeProvider = ({ children }) => {
   const defineDefaultGameID = (id) => {
     setDefaultGameID(id);
   }
+  const togglePremium = () => {
+    setIsPremium(!isPremium);
+  }
   return (
     <Provider
       value={{
@@ -154,6 +158,7 @@ export const PrototypeProvider = ({ children }) => {
         vouchers,
         achievements,
         defaultGameID,
+        isPremium,
         getGameByID,
         getGameBySlug,
         getUserByID,
@@ -170,6 +175,7 @@ export const PrototypeProvider = ({ children }) => {
         getAchievementitemByID,
         getURLparams,
         defineDefaultGameID,
+        togglePremium,
         getClanLeaderboardByID,
         getCurrentClanLeaderboard
       }}

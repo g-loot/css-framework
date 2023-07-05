@@ -10,7 +10,7 @@ export default function CardMission(props) {
   const mission = props.mission;
   const index = props.index;
   const { query } = useRouter();
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
 
   function calculatePercent(current, max) {
     return (100 * max) / current;

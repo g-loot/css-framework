@@ -19,14 +19,14 @@ import { usePrototypeData } from "../../../contexts/prototype";
 export default function Home() {
   const { query } = useRouter();
   const uiContext = useContext(UiContext);
+  const prototype = usePrototypeData();
   const modalClaimLadder = query.modalclaim === "true" ? true : false;
   const modalClaimDaily = query.modalclaimdaily === "true" ? true : false;
   const modalVideo = query.modalvideo === "true" ? true : false;
   const [submitting, setSubmitting] = useState(false);
   const hasNoClan = query.noclan === "true" ? true : false;
   const hasNoLadders = query.noladders === "true" ? true : false;
-  const isPremium = query.premium === "true" ? true : false;
-  const prototype = usePrototypeData();
+  const isPremium = prototype.isPremium;
 
   function openModalLadderHowitworksVideo() {
     uiContext.openModal(
@@ -163,43 +163,47 @@ export default function Home() {
           </div>
           <HomeLaddersClan />
         </section>
-        <section className="my-16 py-4 surface flex-1 sm:rounded-lg overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-end">
-          <div className="flex-2 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 lg:order-1 text-center lg:text-left">
-            <h3 className="h1 text-6xl lg:text-7xl">
-              Make your gg more
-              <br />
-              rewarding with <span className="text-premium-500">Premium</span>
-            </h3>
-            <p className="text-ui-300 mt-2 mb-4 max-w-[40ch] mx-auto lg:mx-0">
-              Get a 50% XP boost on all completed missions & Ladders matches,
-              remove ads and much more.
-            </p>
-            <Link href={`/prototype/premium${prototype.getURLparams()}`}>
-              <button type="button" className="button button-premium">
-                <span>Learn more</span>
-              </button>
-            </Link>
-          </div>
-          <div className="relative z-10 lg:order-2 flex-1 px-8 grid place-items-center">
+        {!isPremium && (
+          <section className="my-16 py-4 surface flex-1 sm:rounded-lg overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-end">
+            <div className="flex-2 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 lg:order-1 text-center lg:text-left">
+              <h3 className="h1 text-6xl lg:text-7xl">
+                Make your gg more
+                <br />
+                rewarding with <span className="text-premium-500">Premium</span>
+              </h3>
+              <p className="text-ui-300 mt-2 mb-4 max-w-[40ch] mx-auto lg:mx-0">
+                Get a 50% XP boost on all completed missions & Ladders matches,
+                remove ads and much more.
+              </p>
+              <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                <button type="button" className="button button-premium">
+                  <span>Learn more</span>
+                </button>
+              </Link>
+            </div>
+            <div className="relative z-10 lg:order-2 flex-1 px-8 grid place-items-center">
+              <img
+                className="object-contain max-h-60"
+                src="https://res.cloudinary.com/gloot/image/upload/v1675777113/Stryda/illustrations/home_premium_banner.png"
+                alt=""
+              />
+            </div>
             <img
-              className="object-contain max-h-60"
-              src="https://res.cloudinary.com/gloot/image/upload/v1675777113/Stryda/illustrations/home_premium_banner.png"
+              className="absolute inset-0 h-full w-full object-cover object-right opacity-50"
+              src="https://res.cloudinary.com/gloot/image/upload/v1674045863/Stryda/illustrations/home-premium.jpg"
               alt=""
             />
-          </div>
-          <img
-            className="absolute inset-0 h-full w-full object-cover object-right opacity-50"
-            src="https://res.cloudinary.com/gloot/image/upload/v1674045863/Stryda/illustrations/home-premium.jpg"
-            alt=""
-          />
-        </section>
+          </section>
+        )}
         <h2 className="h3 mt-8 mb-4 mx-4 sm:mx-0">Missions</h2>
         <div className="mb-2 mx-4 sm:mx-0 text-sm text-ui-300">
           {!isPremium && (
             <p>
               Get{" "}
               <Link href="/prototype/premium">
-                <button type="button" className="text-premium-500 link">Premium</button>
+                <button type="button" className="text-premium-500 link">
+                  Premium
+                </button>
               </Link>{" "}
               and earn +50% of XP on all missions
             </p>
@@ -208,6 +212,11 @@ export default function Home() {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300"></div>
         <HomeLadderMissions gameSlug="valorant" />
         <HomeLadderMissions gameSlug="pubg" />
+
+        {/* for demo purposes only */}
+        <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+          <a onClick={() => prototype.togglePremium()}>Toggle Premium state</a>
+        </section>
       </PrototypeStructure>
     </>
   );

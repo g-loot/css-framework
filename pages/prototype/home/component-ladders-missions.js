@@ -15,7 +15,7 @@ export default function HomeLadderMissions(props) {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
   const [submitting, setSubmitting] = useState(false);
 
   function addToastWithDelay(toast) {

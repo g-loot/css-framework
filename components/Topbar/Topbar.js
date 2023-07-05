@@ -26,7 +26,7 @@ export default function Topbar() {
   const isEmpty = query.empty === "true" ? true : false;
   const modalDownloadStarted =
     query.modaldownloadstarted === "true" ? true : false;
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
   const [hasBack, setHasBack] = useState(false);
   const [hasForward, setHasForward] = useState(false);
 

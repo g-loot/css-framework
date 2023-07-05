@@ -15,7 +15,7 @@ export default function LadderPlacementItem(props) {
   const [StartAnim, setStartAnim] = useState(false);
   const [resultsDone, setResultsDone] = useState(false);
   const [shining, setShining] = useState(false);
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
   const [selectedLadder, setSelectedLadder] = useState(undefined);
   const router = useRouter();
   const { game } = router.query;

@@ -7,15 +7,17 @@ import { VariablesContext } from "../../../contexts/variables";
 import AnimatedNumber from "../../../components/AnimatedNumber/AnimatedNumber";
 import { useRouter } from "next/router";
 import XPBoostList from "../../../components/XPBoostList/XPBoostList";
+import { usePrototypeData } from "../../../contexts/prototype";
 
 export default function ModalClaimMission(props) {
   const uiContext = useContext(UiContext);
   const mission = props.mission;
+  const prototype = usePrototypeData();
   const variablesContext = useContext(VariablesContext);
   const xp = 50; //mission.xp !== undefined ? mission.xp : 50;
   const [submitting, setSubmitting] = useState(false);
   const { query } = useRouter();
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
 
   function percent() {
     if (isPremium) {

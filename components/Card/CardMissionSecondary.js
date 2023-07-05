@@ -23,7 +23,7 @@ export default function CardMissionSecondary(props) {
   const mission = props.mission;
   const index = props.index;
   const { query } = useRouter();
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
   const modalClaimMission = query.modalclaimmission === "true" ? true : false;
   const modalDiscardMission =
     query.modaldiscardmission === "true" ? true : false;

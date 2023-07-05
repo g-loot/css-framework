@@ -23,7 +23,7 @@ export default function TabMissionsHistory() {
   const uiContext = useContext(UiContext);
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
   const { game } = router.query;
   const [submitting, setSubmitting] = useState(false);
 

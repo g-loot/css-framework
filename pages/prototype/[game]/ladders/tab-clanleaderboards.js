@@ -100,7 +100,7 @@ export default function TabLaddersSoloLeaderboards() {
   const { game } = router.query;
   const { ladder_id } = router.query;
   const isEmpty = query.empty === "true" ? true : false;
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
 
   useEffect(() => {
     setSelectedLadder(prototype.getLadderByID(game, ladder_id));

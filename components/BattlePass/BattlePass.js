@@ -24,7 +24,7 @@ import ModalBattlepassCompletedPremium from "../../pages/prototype/battlepass/mo
 export default function Battlepass(props) {
   const { query } = useRouter();
   const prototype = usePrototypeData();
-  const isPremium = query.premium === "true" ? true : false;
+  const isPremium = prototype.isPremium;
   const size = props.size || "battlepass-lg";
   const isfinished = props.isFinished || false;
   const hasSummary = props.hasSummary || false;
@@ -192,14 +192,32 @@ export default function Battlepass(props) {
   }
 
   function handlePrevBatch() {
-    console.log("currentStep", currentStep, "activeStep", activeStep, "originStep", originStep, "maxSteps", maxSteps);
+    console.log(
+      "currentStep",
+      currentStep,
+      "activeStep",
+      activeStep,
+      "originStep",
+      originStep,
+      "maxSteps",
+      maxSteps
+    );
     if (activeStep === originStep + 1) {
       setOriginStep(originStep - maxSteps);
     }
   }
 
   function handleNextBatch() {
-    console.log("currentStep", currentStep, "activeStep", activeStep, "originStep", originStep, "maxSteps", maxSteps);
+    console.log(
+      "currentStep",
+      currentStep,
+      "activeStep",
+      activeStep,
+      "originStep",
+      originStep,
+      "maxSteps",
+      maxSteps
+    );
     if (activeStep === originStep + maxSteps) {
       setOriginStep(activeStep);
     }
@@ -227,9 +245,9 @@ export default function Battlepass(props) {
   return (
     <>
       <div
-        className={`battlepass-container ${
-          loading ? "is-loading" : ""
-        } ${size === "battlepass-md" ? "battlepass-md" : ""}`}
+        className={`battlepass-container ${loading ? "is-loading" : ""} ${
+          size === "battlepass-md" ? "battlepass-md" : ""
+        }`}
         ref={componentRef}
       >
         {isFinished ? (
@@ -259,9 +277,7 @@ export default function Battlepass(props) {
                     </div>
                     <div className="battlepass-reward-text">
                       <span>Total XP</span>
-                      <span>
-                        2240
-                      </span>
+                      <span>2240</span>
                     </div>
                   </li>
                 )}
@@ -287,9 +303,7 @@ export default function Battlepass(props) {
                   </div>
                   <div className="battlepass-reward-text">
                     <span>Coins</span>
-                    <span>
-                      1411
-                    </span>
+                    <span>1411</span>
                   </div>{" "}
                 </li>
                 <li>
@@ -314,9 +328,7 @@ export default function Battlepass(props) {
                   </div>
                   <div className="battlepass-reward-text">
                     <span>Tokens</span>
-                    <span>
-                      879
-                    </span>
+                    <span>879</span>
                   </div>{" "}
                 </li>
                 <li>
@@ -349,7 +361,9 @@ export default function Battlepass(props) {
                             </div>
                           </CarouselItem>
                         </>
-                      ) : (<></>)}
+                      ) : (
+                        <></>
+                      )}
                       <CarouselItem>
                         <div className="battlepass-reward-image">
                           <img
@@ -390,9 +404,7 @@ export default function Battlepass(props) {
                   </div>
                   <div className="battlepass-reward-text">
                     <span>Avatar frames</span>
-                    <span>
-                      {!hasPremium ? <>4</> : <>3</>}
-                    </span>
+                    <span>{!hasPremium ? <>4</> : <>3</>}</span>
                   </div>{" "}
                 </li>
                 <li>
@@ -480,9 +492,7 @@ export default function Battlepass(props) {
                   </div>
                   <div className="battlepass-reward-text">
                     <span>Player banners</span>
-                    <span>
-                      {!hasPremium ? <>5</> : <>4</>}
-                    </span>
+                    <span>{!hasPremium ? <>5</> : <>4</>}</span>
                   </div>
                 </li>
               </ul>
@@ -822,13 +832,21 @@ export default function Battlepass(props) {
                               {item.isPremium ? (
                                 <>
                                   {isPremium && (
-                                    <button
-                                      type="button"
-                                      className="button button-sm whitespace-nowrap button-claim"
-                                    >
-                                      <span className="icon icon-present animate-bounce" />
-                                      <span>Claim</span>
-                                    </button>
+                                    <>
+                                      {size === "battlepass-md" ? (
+                                        <button
+                                          type="button"
+                                          className="button button-sm whitespace-nowrap button-claim"
+                                        >
+                                          <span className="icon icon-present animate-bounce" />
+                                          <span>Claim</span>
+                                        </button>
+                                      ) : (
+                                        <div className="bg-main rounded-full w-12 h-12 grid place-content-center text-2xl text-ui-900">
+                                          <span className="icon icon-present animate-bounce" />
+                                        </div>
+                                      )}
+                                    </>
                                   )}
                                 </>
                               ) : (
