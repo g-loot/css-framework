@@ -215,7 +215,9 @@ export default function Home() {
 
         {/* for demo purposes only */}
         <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-          <a onClick={() => prototype.togglePremium()}>Toggle Premium state</a>
+          <a onClick={() => prototype.togglePremium()}>
+            Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
+          </a>
         </section>
       </PrototypeStructure>
     </>

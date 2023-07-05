@@ -67,8 +67,7 @@ export default function LadderPlacements() {
   const [sliderContainerWidth, setSliderContainerWidth] = useState(192);
   const [sliderItemWidth, setSliderItemWidth] = useState(192);
   const [resultsDone, setResultsDone] = useState(false);
-  const premium = query.premium === "true" ? true : false;
-  const [isPremium, setIsPremium] = useState(premium);
+  const isPremium = prototype.isPremium;
   const prototype = usePrototypeData();
   const [selectedLadder, setSelectedLadder] = useState(undefined);
   const router = useRouter();

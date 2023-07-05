@@ -33,8 +33,7 @@ export default function StatsValorant() {
   const [isEmpty, setIsEmpty] = useState(empty);
   const noriot = query.noriot === "true" ? true : false;
   const [hasRiot, setHasRiot] = useState(!noriot);
-  const premium = query.premium === "true" ? true : false;
-  const [isPremium, setIsPremium] = useState(premium);
+  const isPremium = prototype.isPremium;
 
   useEffect(() => {
     if (loading) {
@@ -1913,12 +1912,8 @@ export default function StatsValorant() {
             >
               Toggle empty state {isEmpty ? "ON" : "OFF"}
             </a>
-            <a
-              onClick={() => {
-                setIsPremium(!isPremium);
-              }}
-            >
-              Toggle Premium {isPremium ? "ON" : "OFF"}
+            <a onClick={() => prototype.togglePremium()}>
+              Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
             </a>
           </section>
         </>

@@ -156,7 +156,7 @@ export default function BattlepassPage() {
             {/* for demo purposes only */}
             <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
               <a onClick={() => prototype.togglePremium()}>
-                Toggle Premium state
+                Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
               </a>
               <a onClick={switchBattlepasses}>
                 Switch between various Battle Passes
