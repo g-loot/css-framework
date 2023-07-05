@@ -51,9 +51,12 @@ export default function BattlepassPage() {
 
   const openModalBattlepassCompletedBonusSteps = (premium) => {
     uiContext.openModal(
-      <ModalBattlepassCompletedBonusSteps id={selectedBattlepassID} isPremium={premium} />
+      <ModalBattlepassCompletedBonusSteps
+        id={selectedBattlepassID}
+        isPremium={premium}
+      />
     );
-  }
+  };
 
   useEffect(() => {
     if (modalclaim) {
@@ -78,93 +81,100 @@ export default function BattlepassPage() {
       <ModalBattlepassCompletedPremium id={selectedBattlepassID} />
     );
   }
-  
+
   useEffect(() => {
     if (modalsummary) {
       openModalBattlepassCompletedSummary();
     }
   }, [modalsummary]);
-  
-    function openModalBattlepassCompletedSummary() {
-      uiContext.openModal(
-        <ModalBattlepassCompletedSummary id={selectedBattlepassID} />
-      );
-    }
+
+  function openModalBattlepassCompletedSummary() {
+    uiContext.openModal(
+      <ModalBattlepassCompletedSummary id={selectedBattlepassID} />
+    );
+  }
 
   return (
     <>
-      {selectedBattlepass && (
-        <PrototypeStructure title="Battle Pass">
-          <section className="mb-8 surface surface-dimmed p-4 relative sm:rounded overflow-hidden animate-slide-in-bottom">
-            <div className="relative z-10 flex flex-col lg:flex-row lg:items-start text-center lg:text-left lg:justify-between pb-4 mb-4 gap-4 lg:gap-8 border-b border-ui-100/10">
-              <div className="flex-1 flex flex-col items-center 2xl:flex-row gap-4 2xl:gap-8">
-                {/*<h1 onClick={switchBattlepasses} className="pt-1.5">
-                  {getBattlepassByID(selectedBattlepassID).meta?.name}
-                </h1>
-      */}
-                <div onClick={switchBattlepasses} className="px-4 md:px-8 py-4 flex flex-col items-center justify-center gap-4 w-full md:w-1/2 lg:w-[375px]">
-                  <img src={getBattlepassByID(selectedBattlepassID).meta?.logo} alt={getBattlepassByID(selectedBattlepassID).meta?.name} />
+      <PrototypeStructure title="Battle Pass">
+        {selectedBattlepass && (
+          <>
+            <section className="mb-8 surface surface-dimmed p-4 relative sm:rounded overflow-hidden animate-slide-in-bottom">
+              <div className="relative z-10 flex flex-col lg:flex-row lg:items-start text-center lg:text-left lg:justify-between pb-4 mb-4 gap-4 lg:gap-8 border-b border-ui-100/10">
+                <div className="flex-1 flex flex-col items-center 2xl:flex-row gap-4 2xl:gap-8">
+                  <div
+                    onClick={switchBattlepasses}
+                    className="px-4 md:px-8 py-4 flex flex-col items-center justify-center gap-4 w-full md:w-1/2 lg:w-[375px]"
+                  >
+                    <img
+                      src={getBattlepassByID(selectedBattlepassID).meta?.logo}
+                      alt={getBattlepassByID(selectedBattlepassID).meta?.name}
+                    />
+                  </div>
+                  <div className="flex-1 2xl:border-l 2xl:border-ui-100/10 2xl:pl-8 flex items-center">
+                    <p className="2xl:max-w-[50ch] text-ui-300">
+                      {
+                        getBattlepassByID(selectedBattlepassID).meta
+                          ?.description
+                      }
+                    </p>
+                  </div>
                 </div>
-                <div className="flex-1 2xl:border-l 2xl:border-ui-100/10 2xl:pl-8 flex items-center">
-                  <p className="2xl:max-w-[50ch] text-ui-300">
-                    {getBattlepassByID(selectedBattlepassID).meta?.description}
-                  </p>
+                <div className="text-center lg:text-right flex justify-center lg:justify-end gap-2">
+                  <Tooltip
+                    tooltip={
+                      <div className="max-w-xs text-sm text-center leading-tight">
+                        The Battle Pass is how you turn your XP into useful
+                        stuff like Coins or Tokens. Each time you reach a
+                        milestone in the Battle Pass, you unlock another reward.
+                        Battle Pass and XP reset each week so you will always
+                        have something new to work towards.
+                      </div>
+                    }
+                  >
+                    <button className="text-ui-300 text-0">
+                      <span className="icon icon-16 icon-c-info" />
+                    </button>
+                  </Tooltip>
+                  <div className="chip chip-secondary">
+                    <ResetsIn />
+                  </div>
                 </div>
               </div>
-              <div className="text-center lg:text-right flex justify-center lg:justify-end gap-2">
-                <Tooltip
-                  tooltip={
-                    <div className="max-w-xs text-sm text-center leading-tight">
-                      The Battle Pass is how you turn your XP into useful stuff
-                      like Coins or Tokens. Each time you reach a milestone in
-                      the Battle Pass, you unlock another reward. Battle Pass and
-                      XP reset each week so you will always have something new
-                      to work towards.
-                    </div>
-                  }
-                >
-                  <button className="text-ui-300 text-0">
-                    <span className="icon icon-16 icon-c-info" />
-                  </button>
-                </Tooltip>
-                <div className="chip chip-secondary">
-                  <ResetsIn />
-                </div>
-              </div>
-            </div>
-            <Battlepass id={selectedBattlepassID} />
-            <img
-              src={
-                getBattlepassByID(selectedBattlepassID).meta?.backgroundImage
-              }
-              alt=""
-              className="absolute w-full h-full inset-0 pointer-events-none object-cover object-bottom animate-fade-in"
-            />
-          </section>
+              <Battlepass id={selectedBattlepassID} />
+              <img
+                src={
+                  getBattlepassByID(selectedBattlepassID).meta?.backgroundImage
+                }
+                alt=""
+                className="absolute w-full h-full inset-0 pointer-events-none object-cover object-bottom animate-fade-in"
+              />
+            </section>
 
-          {/* for demo purposes only */}
-          <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-            <a onClick={switchBattlepasses}>
-              Switch between various Battle Passes
-            </a>
-            <a onClick={() => openModalBattlepassCompletedBonusSteps(false)}>
-              Open Battle Pass completed: bonus steps
-            </a>
-            <a onClick={() => openModalBattlepassCompletedBonusSteps(true)}>
-              Open Battle Pass completed: bonus steps (premium)
-            </a>
-            <a onClick={openModalBattlepassCompletedClaim}>
-              Open Battle Pass ended: claim previous rewards
-            </a>
-            <a onClick={openModalBattlepassCompletedSummary}>
-              Open Battle Pass ended: summary
-            </a>
-            <a onClick={openModalBattlepassCompletedPremium}>
-              Open Premium purchased
-            </a>
-          </section>
-        </PrototypeStructure>
-      )}
+            {/* for demo purposes only */}
+            <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+              <a onClick={switchBattlepasses}>
+                Switch between various Battle Passes
+              </a>
+              <a onClick={() => openModalBattlepassCompletedBonusSteps(false)}>
+                Open Battle Pass completed: bonus steps
+              </a>
+              <a onClick={() => openModalBattlepassCompletedBonusSteps(true)}>
+                Open Battle Pass completed: bonus steps (premium)
+              </a>
+              <a onClick={openModalBattlepassCompletedClaim}>
+                Open Battle Pass ended: claim previous rewards
+              </a>
+              <a onClick={openModalBattlepassCompletedSummary}>
+                Open Battle Pass ended: summary
+              </a>
+              <a onClick={openModalBattlepassCompletedPremium}>
+                Open Premium purchased
+              </a>
+            </section>
+          </>
+        )}
+      </PrototypeStructure>
     </>
   );
 }

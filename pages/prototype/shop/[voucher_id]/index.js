@@ -23,6 +23,16 @@ export default function Home() {
   const modalPurchaseCompleted =
     query.modalpurchasecompleted === "true" ? true : false;
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+    }
+  }, [loading]);
+
   useEffect(() => {
     if (modalPurchaseConfirmation) {
       openModalPurchaseConfirmation();
@@ -176,96 +186,113 @@ export default function Home() {
                     )}
 
                     <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4 mt-3">
-                      {section.giftcards.map((giftcard, giftcardIndex) => (
+                      {loading ? (
                         <>
-                          <li
-                            key={giftcard.id}
-                            className="surface rounded-2xl w-3/4 sm:w-2/3 md:w-auto p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
-                            style={{
-                              "--delay": `calc( ${giftcardIndex} * 0.05s)`,
-                            }}
-                          >
-                            <div className="flex-1 flex flex-col items-center gap-2">
-                              <div className="py-2 relative">
-                                <div className="w-6 h-6 rounded-full border border-t-ui-700 border-l-ui-700 border-b-ui-700/0 border-r-ui-700/0 bg-ui-900 absolute z-20 rotate-45 left-[calc(50%-0.75rem)] -top-1"></div>
-                                <div className="w-28 h-4 rounded-full border border-ui-700 bg-ui-900 relative z-10"></div>
-                              </div>
-                              <img
-                                src={selectedVoucher.image}
-                                className="w-4/5 rounded-xl shadow-2xl mb-3"
-                                height="auto"
-                                alt="Gift card"
+                          {section.giftcards.map((giftcard, giftcardIndex) => (
+                            <>
+                              <li
+                                key={giftcardIndex}
+                                className="w-full surface rounded-2xl is-loading aspect-square"
                               />
-                              <h3 className="uppercase text-3xl leading-none">
-                                Gift card {giftcard.amount}
-                              </h3>
-                              <div className="mb-3 text-ui-300 uppercase text-xl">
-                                {selectedVoucher.name}
-                              </div>
-                            </div>
-                            <div className="border-t border-ui-700 pt-4">
-                              {giftcard.price && (
-                                <>
-                                  {prototype.getUserProfile().wallet.coins >=
-                                    giftcard.price && (
+                            </>
+                          ))}
+                        </>
+                      ) : (
+                        <>
+                          {section.giftcards.map((giftcard, giftcardIndex) => (
+                            <>
+                              <li
+                                key={giftcard.id}
+                                className="surface rounded-2xl w-3/4 sm:w-2/3 md:w-auto p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
+                                style={{
+                                  "--delay": `calc( ${giftcardIndex} * 0.05s)`,
+                                }}
+                              >
+                                <div className="flex-1 flex flex-col items-center gap-2">
+                                  <div className="py-2 relative">
+                                    <div className="w-6 h-6 rounded-full border border-t-ui-700 border-l-ui-700 border-b-ui-700/0 border-r-ui-700/0 bg-ui-900 absolute z-20 rotate-45 left-[calc(50%-0.75rem)] -top-1"></div>
+                                    <div className="w-28 h-4 rounded-full border border-ui-700 bg-ui-900 relative z-10"></div>
+                                  </div>
+                                  <img
+                                    src={selectedVoucher.image}
+                                    className="w-4/5 rounded-xl shadow-2xl mb-3"
+                                    height="auto"
+                                    alt="Gift card"
+                                  />
+                                  <h3 className="uppercase text-3xl leading-none">
+                                    Gift card {giftcard.amount}
+                                  </h3>
+                                  <div className="mb-3 text-ui-300 uppercase text-xl">
+                                    {selectedVoucher.name}
+                                  </div>
+                                </div>
+                                <div className="border-t border-ui-700 pt-4">
+                                  {giftcard.price && (
+                                    <>
+                                      {prototype.getUserProfile().wallet
+                                        .coins >= giftcard.price && (
+                                        <button
+                                          type="button"
+                                          className="button button-primary button-currency button-coin w-full"
+                                          onClick={() =>
+                                            openModalPurchaseConfirmation(
+                                              selectedVoucher.id,
+                                              section.id,
+                                              giftcard.id
+                                            )
+                                          }
+                                        >
+                                          <div>
+                                            <span>Purchase</span>
+                                          </div>
+                                          <div>
+                                            <span className="icon icon-coin" />
+                                            <span>
+                                              {numberWithSpaces(giftcard.price)}
+                                            </span>
+                                          </div>
+                                        </button>
+                                      )}
+                                      {prototype.getUserProfile().wallet.coins <
+                                        giftcard.price && (
+                                        <div
+                                          className="tooltip"
+                                          data-tooltip="Not enough funds"
+                                        >
+                                          <button
+                                            type="button"
+                                            className="button button-primary button-currency button-coin w-full is-disabled"
+                                          >
+                                            <div>
+                                              <span>Purchase</span>
+                                            </div>
+                                            <div>
+                                              <span className="icon icon-coin" />
+                                              <span>
+                                                {numberWithSpaces(
+                                                  giftcard.price
+                                                )}
+                                              </span>
+                                            </div>
+                                          </button>
+                                        </div>
+                                      )}
+                                    </>
+                                  )}
+                                  {!giftcard.price && (
                                     <button
                                       type="button"
-                                      className="button button-primary button-currency button-coin w-full"
-                                      onClick={() =>
-                                        openModalPurchaseConfirmation(
-                                          selectedVoucher.id,
-                                          section.id,
-                                          giftcard.id
-                                        )
-                                      }
+                                      className="button button-primary is-disabled w-full"
                                     >
-                                      <div>
-                                        <span>Purchase</span>
-                                      </div>
-                                      <div>
-                                        <span className="icon icon-coin" />
-                                        <span>
-                                          {numberWithSpaces(giftcard.price)}
-                                        </span>
-                                      </div>
+                                      <span>Out of stock</span>
                                     </button>
                                   )}
-                                  {prototype.getUserProfile().wallet.coins <
-                                    giftcard.price && (
-                                    <div
-                                      className="tooltip"
-                                      data-tooltip="Not enough funds"
-                                    >
-                                      <button
-                                        type="button"
-                                        className="button button-primary button-currency button-coin w-full is-disabled"
-                                      >
-                                        <div>
-                                          <span>Purchase</span>
-                                        </div>
-                                        <div>
-                                          <span className="icon icon-coin" />
-                                          <span>
-                                            {numberWithSpaces(giftcard.price)}
-                                          </span>
-                                        </div>
-                                      </button>
-                                    </div>
-                                  )}
-                                </>
-                              )}
-                              {!giftcard.price && (
-                                <button
-                                  type="button"
-                                  className="button button-primary is-disabled w-full"
-                                >
-                                  <span>Out of stock</span>
-                                </button>
-                              )}
-                            </div>
-                          </li>
+                                </div>
+                              </li>
+                            </>
+                          ))}
                         </>
-                      ))}
+                      )}
                     </ul>
                   </section>
                 )}

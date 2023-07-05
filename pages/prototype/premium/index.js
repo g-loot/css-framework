@@ -43,6 +43,12 @@ const PremiumBenefits = [
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_missions_2.png",
   },
+  {
+    id: 7,
+    name: "See the full overview of your stats",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1688544126/Stryda/illustrations/picture_premium_more_stats.png",
+  },
 ];
 
 export default function Premium() {
@@ -65,7 +71,7 @@ export default function Premium() {
       <PrototypeStructure title="Premium">
         {isPremium ? (
           <>
-            <section>
+            <section className="relative z-10">
               <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start justify-center my-12">
                 <PremiumLogo
                   src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
@@ -80,7 +86,7 @@ export default function Premium() {
               </div>
             </section>
 
-            <section className="px-4 md:px-0 my-20 flex flex-col md:flex-row items-stretch gap-8 max-w-md mx-auto animate-slide-in-bottom">
+            <section className="relative z-10 px-4 md:px-0 my-20 flex flex-col md:flex-row items-stretch gap-8 max-w-md mx-auto animate-slide-in-bottom">
               <div
                 className="flex-1 surface rounded flex flex-col items-stretch justify-start"
               >
@@ -118,7 +124,7 @@ export default function Premium() {
           </>
         ) : (
           <>
-            <section>
+            <section className="relative z-10">
               <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start justify-center my-12">
                 <PremiumLogo
                   src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
@@ -149,10 +155,10 @@ export default function Premium() {
           </>
         )}
 
-        <section className="grid md:grid-cols-2 lg:grid-cols-3 justify-center mb-24 max-w-lg mx-auto text-center leading-none">
+        <section className="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-y-4 justify-center mb-24 max-w-lg mx-auto text-center leading-none">
           {PremiumBenefits.map((item, itemIndex) => (
             <div
-              className="animate-slide-in-bottom animate-delay"
+              className={`animate-slide-in-bottom animate-delay ${itemIndex + 1 === PremiumBenefits.length ? 'lg:col-start-2' : ''}`}
               key={itemIndex}
               style={{
                 "--delay": "calc((" + itemIndex + " + 5) * 0.05s)",
@@ -162,7 +168,7 @@ export default function Premium() {
                 className="mx-auto block"
                 src={item.image}
                 width="300"
-                height="auto"
+                height="225"
                 alt=""
               />
               <p className="text-ui-100 max-w-[25ch] mx-auto">{item.name}</p>
@@ -319,6 +325,17 @@ export default function Premium() {
             </div>
           </div>
         </section>
+
+        <video
+            className="absolute z-0 right-0 top-0 h-full w-full md:h-auto object-cover opacity-50 pointer-events-none mix-blend-screen"
+            autoPlay
+            playsInline
+            muted
+            loop
+            preload="true"
+          >
+            <source src="https://res.cloudinary.com/gloot/video/upload/v1688545810/Stryda/videos/premium_glitter.mp4" />
+          </video>
       </PrototypeStructure>
     </>
   );
