@@ -146,7 +146,7 @@ export default function ModalBattlepassCompletedBonusSteps(props) {
                         </div>
                         <div className="battlepass-body">
                           <img
-                            src={`https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/${
+                            src={`${
                               getBattlepassRewardByID(item.reward).image
                             }`}
                             width="100%"
