@@ -94,7 +94,7 @@ export default function ModalBattlepassCompletedClaim(props) {
               onClick={closeModalWithDelay}
             >
               <span className="icon icon-present animate-bounce" />
-              <span>Claim rewards</span>
+              <span>Claim &amp; see summary</span>
             </button>
           </div>
         </div>

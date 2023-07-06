@@ -109,12 +109,12 @@ export default function TabProfileOverview() {
                       <span className="icon icon-20 text-ui-300 icon-discord" />
                     </a>
                   </div>
-                  {selectedUser.socials?.riotNickname &&
+                  {selectedUser.socials?.riotValorantNickname &&
                     selectedUser.socials?.discord && (
                       <ul className="space-y-2 pt-3 border-t border-y-ui-700">
-                        {selectedUser.socials?.riotNickname && (
+                        {selectedUser.socials?.riotValorantNickname && (
                           <li className="flex items-center gap-2 text-ui-300">
-                            <span className="icon icon-20 icon-riotgames-symbol" />
+                            <span className="icon icon-20 icon-game-valorant-symbol" />
                             <a
                               className="flex-1 link link-hover"
                               onClick={() => {
@@ -126,12 +126,49 @@ export default function TabProfileOverview() {
                                   autoDeleteDelay: 2500,
                                 });
                                 navigator.clipboard.writeText(
-                                  `${selectedUser.socials?.riotNickname}+#+${selectedUser.socials?.riotHashtag}`
+                                  `${selectedUser.socials?.riotValorantNickname}+#+${selectedUser.socials?.riotValorantHashtag}`
                                 );
                               }}
                             >
-                              {selectedUser.socials?.riotNickname}#
-                              {selectedUser.socials?.riotHashtag}
+                              {selectedUser.socials?.riotValorantNickname}#
+                              {selectedUser.socials?.riotValorantHashtag}
+                            </a>
+                            <Tooltip
+                              placement="left"
+                              tooltip={
+                                <div className="max-w-xs text-sm text-center leading-tight">
+                                  Copy
+                                </div>
+                              }
+                            >
+                              <ButtonFeedback
+                                variant="button-ghost rounded-full"
+                                icon="icon-document-copy"
+                                message="Game tag copied to your clipboard"
+                              />
+                            </Tooltip>
+                          </li>
+                        )}
+                        {selectedUser.socials?.riotLeagueofLegendsNickname && (
+                          <li className="flex items-center gap-2 text-ui-300">
+                            <span className="icon icon-20 icon-game-leagueoflegends-symbol" />
+                            <a
+                              className="flex-1 link link-hover"
+                              onClick={() => {
+                                uiContext.openToastr({
+                                  size: "medium",
+                                  text: "Game tag copied to your clipboard",
+                                  color: "green",
+                                  autoDelete: true,
+                                  autoDeleteDelay: 2500,
+                                });
+                                navigator.clipboard.writeText(
+                                  `${selectedUser.socials?.riotLeagueofLegendsNickname}+#+${selectedUser.socials?.riotLeagueofLegendsHashtag}`
+                                );
+                              }}
+                            >
+                              {selectedUser.socials?.riotLeagueofLegendsNickname}#
+                              {selectedUser.socials?.riotLeagueofLegendsHashtag}
                             </a>
                             <Tooltip
                               placement="left"

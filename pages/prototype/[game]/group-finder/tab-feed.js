@@ -168,12 +168,12 @@ export default function TabGroupFinderFeed() {
               </div>
             </div>
             <div className="border-t border-ui-700 p-1 flex items-center justify-center gap-1">
-              {prototype.getUserByID(item.author)?.socials.riotNickname && (
+              {prototype.getUserByID(item.author)?.socials.riotValorantNickname && (
                 <button type="button" className="button button-ghost flex-1">
                   <span className="icon icon-riotgames-symbol" />
                   <span className="normal-case">
-                    {prototype.getUserByID(item.author)?.socials.riotNickname}#
-                    {prototype.getUserByID(item.author)?.socials.riotHashtag}
+                    {prototype.getUserByID(item.author)?.socials.riotValorantNickname}#
+                    {prototype.getUserByID(item.author)?.socials.riotValorantHashtag}
                   </span>
                 </button>
               )}
