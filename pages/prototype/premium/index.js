@@ -334,7 +334,7 @@ export default function Premium() {
           loop
           preload="true"
         >
-          <source src="https://res.cloudinary.com/gloot/video/upload/v1688630053/Stryda/videos/premium_glitter_2.mp4" />
+          <source src="https://res.cloudinary.com/gloot/video/upload/v1688630053/Stryda/videos/premium_glitter.mp4" />
         </video>
 
         {/* for demo purposes only */}
