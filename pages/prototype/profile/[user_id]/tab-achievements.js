@@ -164,7 +164,7 @@ export default function TabProfileAchievements() {
                       ) : (
                         <Tooltip
                           tooltip={
-                            <span className="text-sm">Show on playercard</span>
+                            <span className="text-sm">Show on player card</span>
                           }
                         >
                           <button
