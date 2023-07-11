@@ -20,17 +20,24 @@ export default function ButtonSorting({ children, ...props }) {
       ) : (
         <button
           type="button"
-          className={`button button-sm -mx-2.5 ${
-            isSorted ? "button-secondary" : "button-ghost"
+          className={`button button-sm button-ghost -mx-2.5 ${
+            isActive ? "child:text-ui-100" : ""
           }`}
-          onClick={() => setIsSorted(!isSorted)}
+          onClick={() => {
+            setIsSorted(!isSorted);
+            setIsActive(true);
+          }}
         >
           <span>{children}</span>
-          <span
-            className={`icon ${
-              isSorted ? "icon-arrow-sm-down" : "icon-arrow-sm-up"
-            }`}
-          />
+          {isActive ? (
+            <span
+              className={`icon ${
+                isSorted ? "icon-arrow-sm-down" : "icon-arrow-sm-up"
+              }`}
+            />
+          ) : (
+            <span className="icon icon-i-delete" />
+          )}
         </button>
       )}
     </>

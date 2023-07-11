@@ -183,24 +183,32 @@ export default function TabClanMembers() {
                             </td>
                             <td className="max-xl:hidden">
                               <div className="text-ui-300 text-left">
-                                {prototype.getUserByID(item.id)?.nickname} #1111
-                                <Tooltip
-                                  placement="top"
-                                  tooltip={
-                                    <span className="text-sm">
-                                      Click to copy
-                                    </span>
-                                  }
-                                >
-                                  <ButtonFeedback
-                                    value={`${
-                                      prototype.getUserByID(item.id)?.nickname
-                                    } #1111`}
-                                    variant="button-ghost rounded-full"
-                                    icon="icon-document-copy"
-                                    message="RIOT ID copied to your clipboard"
-                                  />
-                                </Tooltip>
+                                {itemIndex === 2 ? (
+                                  <>--</>
+                                ) : (
+                                  <>
+                                    {prototype.getUserByID(item.id)?.nickname}{" "}
+                                    #1111
+                                    <Tooltip
+                                      placement="top"
+                                      tooltip={
+                                        <span className="text-sm">
+                                          Click to copy
+                                        </span>
+                                      }
+                                    >
+                                      <ButtonFeedback
+                                        value={`${
+                                          prototype.getUserByID(item.id)
+                                            ?.nickname
+                                        } #1111`}
+                                        variant="button-ghost rounded-full"
+                                        icon="icon-document-copy"
+                                        message="RIOT ID copied to your clipboard"
+                                      />
+                                    </Tooltip>
+                                  </>
+                                )}
                               </div>
                             </td>
                             {/*
@@ -222,36 +230,42 @@ export default function TabClanMembers() {
                           */}
                             <td className="max-xl:hidden">
                               <div className="text-ui-300">
-                                {prototype
-                                  .getUserByID(item.id)
-                                  ?.nickname.substring(0, 10)}
-                                _1111
-                                <Tooltip
-                                  placement="top"
-                                  tooltip={
-                                    <span className="text-sm">
-                                      Click to copy
-                                    </span>
-                                  }
-                                >
-                                  <ButtonFeedback
-                                    value={`${prototype
+                                {itemIndex === 2 ? (
+                                  <>--</>
+                                ) : (
+                                  <>
+                                    {prototype
                                       .getUserByID(item.id)
-                                      ?.nickname.substring(0, 10)}_1111`}
-                                    variant="button-ghost rounded-full"
-                                    icon="icon-document-copy"
-                                    message="Steam ID copied to your clipboard"
-                                  />
-                                </Tooltip>
+                                      ?.nickname.substring(0, 10)}
+                                    _1111
+                                    <Tooltip
+                                      placement="top"
+                                      tooltip={
+                                        <span className="text-sm">
+                                          Click to copy
+                                        </span>
+                                      }
+                                    >
+                                      <ButtonFeedback
+                                        value={`${prototype
+                                          .getUserByID(item.id)
+                                          ?.nickname.substring(0, 10)}_1111`}
+                                        variant="button-ghost rounded-full"
+                                        icon="icon-document-copy"
+                                        message="Steam ID copied to your clipboard"
+                                      />
+                                    </Tooltip>
+                                  </>
+                                )}
                               </div>
                             </td>
                             <td className="max-xl:hidden">
-                              <div className="text-ui-300 text-center">
+                              <div className="text-ui-300">
                                 {RandomNumber(10, 9999)}
                               </div>
                             </td>
                             <td className="max-xl:hidden">
-                              <div className="text-ui-300 text-center">
+                              <div className="text-ui-300">
                                 #{RandomNumber(10, 300)}
                               </div>
                             </td>
