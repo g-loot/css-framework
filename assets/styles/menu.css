@@ -266,6 +266,7 @@
   @apply
   inline-flex
   flex-row
+  whitespace-nowrap
   ;
   :where(a, button, div) {
     &:not([class*="p-"]) {
@@ -294,6 +295,7 @@
       @apply
       inline-flex
       flex-row
+      whitespace-nowrap
       ;
       :where(a, button, div) {
         @apply 
@@ -314,6 +316,7 @@
       @apply
       inline-flex
       flex-row
+      whitespace-nowrap
       ;
       :where(a, button, div) {
         @apply 
@@ -334,6 +337,7 @@
       @apply
       inline-flex
       flex-row
+      whitespace-nowrap
       ;
       :where(a, button, div) {
         @apply 
@@ -354,6 +358,7 @@
       @apply
       inline-flex
       flex-row
+      whitespace-nowrap
       ;
       :where(a, button, div) {
         @apply 

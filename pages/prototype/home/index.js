@@ -24,8 +24,10 @@ export default function Home() {
   const modalClaimDaily = query.modalclaimdaily === "true" ? true : false;
   const modalVideo = query.modalvideo === "true" ? true : false;
   const [submitting, setSubmitting] = useState(false);
-  const hasNoClan = query.noclan === "true" ? true : false;
-  const hasNoLadders = query.noladders === "true" ? true : false;
+  const noclan = query.noclan === "true" ? true : false;
+  const [hasNoClan, setHasNoClan] = useState(noclan);
+  const noladders = query.noladders === "true" ? true : false;
+  const [hasNoLadders, setHasNoLadders] = useState(noladders);
   const isPremium = prototype.isPremium;
 
   function openModalLadderHowitworksVideo() {
@@ -161,7 +163,7 @@ export default function Home() {
               </Link>
             )}
           </div>
-          <HomeLaddersClan />
+          <HomeLaddersClan hasNoClan={hasNoClan} hasNoLadders={hasNoLadders} />
         </section>
         {!isPremium && (
           <section className="my-16 py-4 surface flex-1 sm:rounded-lg overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-end">
@@ -218,6 +220,20 @@ export default function Home() {
           <a onClick={() => prototype.togglePremium()}>
             Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
           </a>
+          <a
+              onClick={() => {
+                setHasNoClan(!hasNoClan);
+              }}
+            >
+              Toggle has no Clan {hasNoClan ? "ON" : "OFF"}
+            </a>
+          <a
+              onClick={() => {
+                setHasNoLadders(!hasNoLadders);
+              }}
+            >
+              Toggle empty state Ladders {hasNoLadders ? "ON" : "OFF"}
+            </a>
         </section>
       </PrototypeStructure>
     </>

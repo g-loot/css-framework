@@ -3135,9 +3135,9 @@ export const dataGames = [
         bg: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-bg.jpg",
         meta: {
           objective:
-            "Have the most wins in a party composed of 5 clan members.",
+            "Have the most wins in a party composed of 5 clan members",
           gameMode: "Competitive",
-          tieBreaker: "Total number of kills decide a tie.",
+          tieBreaker: "Total number of kills decide a tie",
         },
         rewards: [
           {
@@ -3317,9 +3317,9 @@ export const dataGames = [
         bg: "https://res.cloudinary.com/gloot/image/upload/v1681913805/Stryda/demo/easterbattle-bg.jpg",
         meta: {
           objective:
-            "Have the most wins in a party composed of 5 clan members.",
+            "Have the most wins in a party composed of 5 clan members",
           gameMode: "Competitive",
-          tieBreaker: "Total number of kills decide a tie.",
+          tieBreaker: "Total number of kills decide a tie",
         },
         rewards: [
           {
@@ -3506,9 +3506,9 @@ export const dataGames = [
         bg: "https://res.cloudinary.com/gloot/image/upload/v1686313274/Stryda/demo/wintermayhem-bg.jpg",
         meta: {
           objective:
-            "Have the most wins in a party composed of 5 clan members.",
+            "Have the most wins in a party composed of 5 clan members",
           gameMode: "Competitive",
-          tieBreaker: "Total number of kills decide a tie.",
+          tieBreaker: "Total number of kills decide a tie",
         },
         rewards: [
           {
@@ -3697,9 +3697,9 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/video/upload/v1687351323/Stryda/videos/Stryda_ClanSeason_PhoenixClash.mp4",
         meta: {
           objective:
-            "Have the most wins in a party composed of 5 clan members.",
+            "Have the most wins in a party composed of 5 clan members",
           gameMode: "Competitive",
-          tieBreaker: "Total number of kills decide a tie.",
+          tieBreaker: "Total number of kills decide a tie",
         },
         rewards: [
           {
