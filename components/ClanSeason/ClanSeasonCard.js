@@ -50,7 +50,7 @@ const ClanSeasonCard = (props) => {
               <img
                 src={item.logo}
                 alt={item.name}
-                className="relative z-10 max-w-[200px] max-h-[85px] h-auto w-auto"
+                className="relative z-10 max-w-[240px] max-h-[85px] h-auto w-auto"
               />
               {item.video ? (
                 <div className="absolute z-0 inset-0 grid place-content-center bg-ui-900/95">

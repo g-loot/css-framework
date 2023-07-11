@@ -587,9 +587,11 @@ export default function StatsLeagueOfLegends() {
                                       </span>
                                     )}
                                   </div>
+                                  {/*
                                   <div className="item-body flex-0 text-center w-40">
                                     {match.placement} place
                                   </div>
+                                  */}
                                   <div className="item-body flex items-center justify-center gap-4">
                                     <div className="flex items-center gap-2">
                                       {match.spells?.map((item, itemIndex) => (
@@ -646,7 +648,7 @@ export default function StatsLeagueOfLegends() {
                                     </td>
                                     <td></td>
                                     <td>Spells</td>
-                                    <td>Party</td>
+                                    {/*<td>Party</td>*/}
                                     <td>Rank</td>
                                     <td>K/D/A</td>
                                     <td>CS</td>
@@ -688,9 +690,11 @@ export default function StatsLeagueOfLegends() {
                                             <span className="text-base">
                                               {item.nickname}
                                             </span>
+                                            {/*
                                             <div className="rounded bg-gradient-to-b from-ui-100/20 to-ui-100/5 text-xs lg:text-sm uppercase p-1">
                                               #{item.tag}
                                             </div>
+                                          */}
                                           </div>
                                         </td>
                                         <td className="w-24">
@@ -718,12 +722,14 @@ export default function StatsLeagueOfLegends() {
                                             )}
                                           </div>
                                         </td>
+                                        {/*
                                         <td className="w-13">
                                           <div className="flex items-center justify-center gap-1 opacity-50 hover:opacity-100">
                                             <span className="icon icon-multiple-11" />
                                             <span>5</span>
                                           </div>
                                         </td>
+                                                  */}
                                         <td className="w-13">
                                           <div
                                             data-tooltip={
@@ -797,7 +803,7 @@ export default function StatsLeagueOfLegends() {
                                     </td>
                                     <td></td>
                                     <td>Spells</td>
-                                    <td>Party</td>
+                                    {/*<td>Party</td>*/}
                                     <td>Rank</td>
                                     <td>K/D/A</td>
                                     <td>CS</td>
@@ -823,18 +829,16 @@ export default function StatsLeagueOfLegends() {
                                         </td>
                                         <td>
                                           <div
-                                            className={`flex items-center gap-2 ${
-                                              itemIndex === 1
-                                                ? "text-main"
-                                                : "font-normal"
-                                            }`}
+                                            className={`flex items-center gap-2`}
                                           >
                                             <span className="text-base">
                                               {item.nickname}
                                             </span>
+                                            {/*
                                             <div className="rounded bg-gradient-to-b from-ui-100/20 to-ui-100/5 text-xs lg:text-sm uppercase p-1">
                                               #{item.tag}
                                             </div>
+                                          */}
                                           </div>
                                         </td>
                                         <td className="w-24">
@@ -862,12 +866,14 @@ export default function StatsLeagueOfLegends() {
                                             )}
                                           </div>
                                         </td>
+                                        {/*
                                         <td className="w-13">
                                           <div className="flex items-center justify-center gap-1 opacity-50 hover:opacity-100">
                                             <span className="icon icon-multiple-11" />
                                             <span>5</span>
                                           </div>
                                         </td>
+                                                  */}
                                         <td className="w-13">
                                           <div
                                             data-tooltip={

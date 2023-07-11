@@ -212,19 +212,21 @@ export default function CardMissionSecondary(props) {
           >
             <div className="card-decoration"></div>
             <div className="card-body">
-              <div className="absolute z-10 top-2 right-2 m-0">
-                <Tooltip
-                  tooltip={<span className="text-sm">Discard mission</span>}
-                >
-                  <button
-                    type="button"
-                    className={`button button-ghost rounded-full`}
-                    onClick={openModalDiscardMission}
+              {!hasClaimed && mission.target !== mission.current && (
+                <div className="absolute z-10 top-2 right-2 m-0">
+                  <Tooltip
+                    tooltip={<span className="text-sm">Discard mission</span>}
                   >
-                    <span className="icon icon-trash-can text-ui-400" />
-                  </button>
-                </Tooltip>
-              </div>
+                    <button
+                      type="button"
+                      className={`button button-ghost rounded-full`}
+                      onClick={openModalDiscardMission}
+                    >
+                      <span className="icon icon-trash-can text-ui-400" />
+                    </button>
+                  </Tooltip>
+                </div>
+              )}
               <div className="card-category">
                 <div
                   className={`rarity ${

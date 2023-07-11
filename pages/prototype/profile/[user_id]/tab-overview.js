@@ -615,7 +615,9 @@ export default function TabProfileOverview() {
                   )}
                 </div>
               </section>
-              <section className="surface md:rounded">
+              <section
+                className={`surface md:rounded ${loading ? "is-loading" : ""}`}
+              >
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">Ladders</h2>
                 </div>

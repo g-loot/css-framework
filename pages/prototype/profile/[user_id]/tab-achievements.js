@@ -152,7 +152,7 @@ export default function TabProfileAchievements() {
                   }`}
                   style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                 >
-                  {item.level > 0 && (
+                  {item.level > 0 && selectedUser.isYou && (
                     <div className="absolute z-10 top-2 right-2 m-0">
                       {favoriteItem === item.id ? (
                         <button
