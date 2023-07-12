@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { usePrototypeData } from "../../../contexts/prototype";
-import Structure from "../components/structure";
+import Structure from "../components/Structure";
 import Battlepass from "../../../components/BattlePass/BattlePass";
 import { DataBattlepass } from "../../../mock-data/data-battlepass";
 import Tooltip from "../../../components/Tooltip/Tooltip";

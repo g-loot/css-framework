@@ -133,7 +133,7 @@ export default function TabWalletOverview() {
             {WalletItems.map((item, itemIndex) => (
               <div
                 key={item.id}
-                className="surface rounded flex flex-col items-stretch p-2 w-full mx-auto animate-slide-in-bottom animate-delay"
+                className="surface rounded-3 flex flex-col items-stretch p-2 w-full mx-auto animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
               >
                 <div

@@ -19,23 +19,21 @@ export default function Home() {
       <Structure title="Shop">
         <Ad width="1005" height="300" />
 
-        <section className="mb-4">
-          <div className="header surface surface-dimmed sm:rounded-3">
-            <div className="header-content">
-              <div className="header-body">
-                <h1>Shop</h1>
-                <p className="text-ui-300 max-w-[70ch] mt-4">
-                  Turn your hard work and successes into rewards you can enjoy!
-                  Will you invest in some new gaming gear or just treat yourself
-                  to something you&#39;ve had your eye on? Earn more coins to
-                  spend in the shop by finishing Missions or competing in
-                  Ladders.
-                </p>
-              </div>
+        <section className="header surface sm:rounded-3 mb-4">
+          <div className="header-content">
+            <div className="header-body">
+              <h1>Shop</h1>
+              <p className="text-ui-300 max-w-[70ch] mt-4">
+                Turn your hard work and successes into rewards you can enjoy!
+                Will you invest in some new gaming gear or just treat yourself
+                to something you&#39;ve had your eye on? Earn more coins to
+                spend in the shop by finishing Missions or competing in
+                Ladders.
+              </p>
             </div>
-            <div className="header-bg">
-              <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
-            </div>
+          </div>
+          <div className="header-bg">
+            <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
           </div>
         </section>
         {/*

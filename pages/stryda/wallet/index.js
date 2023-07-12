@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Ad from "../../../components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
+import Structure from "../components/Structure";
 import TabWalletHistory from "./tab-history";
 import TabWalletOverview from "./tab-overview";
 import TabWalletVoucher from "./tab-vouchers";
@@ -44,38 +44,32 @@ export default function Home() {
 
   return (
     <>
-      <PrototypeStructure title="Wallet">
+      <Structure title="Wallet">
         <Ad width="1005" height="300" />
 
-        <section className="mb-4">
-          <div className="relative surface sm:rounded-lg overflow-hidden p-4 lg:p-8 lg:min-h-[250px] lg:flex items-center">
-            <div className="relative z-10">
+
+        <section className="header surface sm:rounded-3 mb-4">
+          <div className="header-content">
+            <div className="header-body">
               <h1>Wallet</h1>
               <p className="text-ui-300 max-w-[70ch] mt-4">
-                Get to know the different currencies and rewards by clicking on
+              Get to know the different currencies and rewards by clicking on
                 the icons and keep track of your earnings from Missions, Weekly
                 Ladders and Monthly Tournaments.
               </p>
             </div>
-            <div
-              className="absolute hidden md:block z-0 right-0 inset-y-0 w-full animate-slide-in-right animate-delay"
-              style={{ "--delay": "calc(1 * 0.05s)" }}
-            >
-              <div className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800 via-ui-800/50 to-ui-800/0"></div>
-              <img
-                className="absolute z-0 object-right object-cover xl:object-cover inset-0 w-full h-full"
-                src="https://res.cloudinary.com/gloot/image/upload/v1672215845/Stryda/illustrations/Wallet_bg.jpg"
-              />
-            </div>
+          </div>
+          <div className="header-bg">
+            <img src="https://res.cloudinary.com/gloot/image/upload/v1672215845/Stryda/illustrations/Wallet_bg.jpg" />
           </div>
         </section>
 
         <nav>
-          <ul className="tabs border-b border-ui-700">
+          <ul className="tabs tabs-tertiary">
             {TabsItems.map((item, itemIndex) => (
               <li key={item}>
                 <Link
-                  href={`/prototype/wallet/?tab=${
+                  href={`/stryda/wallet/?tab=${
                     item.url
                   }${prototype.getURLparams("&")}`}
                 >
@@ -97,7 +91,7 @@ export default function Home() {
             }
           })}
         </section>
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }
