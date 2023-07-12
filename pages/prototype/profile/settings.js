@@ -20,8 +20,12 @@ export default function Home() {
   const delay = 4000;
   const prototype = usePrototypeData();
   const [selectedUser, setSelectedUser] = useState(prototype.getUserByID(1));
-  const [isConnected, setIsConnected] = useState(false);
-  const [isAlreadyConnected, setIsAlreadyConnected] = useState(false);
+  const [isValorantConnected, setIsValorantConnected] = useState(false);
+  const [isLoLConnected, setIsLoLConnected] = useState(false);
+  const [isLoLRegionSelected, setIsLoLRegionSelected] = useState(false);
+  const [isAlreadyValorantConnected, setIsAlreadyValorantConnected] =
+    useState(false);
+  const [isAlreadyLoLConnected, setIsAlreadyLoLConnected] = useState(false);
 
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(1));
@@ -29,7 +33,7 @@ export default function Home() {
 
   useEffect(() => {
     if (query.connected === "true") {
-      setIsConnected(true);
+      setIsValorantConnected(true);
     }
   }, []);
 
@@ -46,6 +50,11 @@ export default function Home() {
       setButtonFeedbackMessage2("");
     }, delay);
     return;
+  }
+
+  function selectLoLRegion(e) {
+    const selectLoLRegionTarget = e.target.value;
+    setIsLoLRegionSelected(true);
   }
 
   function addToastWithDelay(toast) {
@@ -220,24 +229,28 @@ export default function Home() {
                     <div className="form-group">
                       <label htmlFor="social-steam">Valorant</label>
                       <div className="flex-3">
-                        {isConnected ? (
+                        {isValorantConnected ? (
                           <>
-                            {isAlreadyConnected ? (
+                            {isAlreadyValorantConnected ? (
                               <div className="space-y-3">
                                 <div className="flex items-center gap-3 text-attention-500">
                                   <span className="icon text-xl icon-warning-sign" />
                                   <p>
-                                    This Valorant account is already connected to a
-                                    Stryda account. Click the following button
-                                    to generate a recovery e-mail for that
-                                    address.
+                                    This Valorant account is already connected
+                                    to a Stryda account. Click the following
+                                    button to generate a recovery e-mail for
+                                    that address.
                                   </p>
                                 </div>
                                 <button
                                   type="button"
                                   onClick={() => {
-                                    setIsConnected(!isConnected);
-                                    setIsAlreadyConnected(!isAlreadyConnected);
+                                    setIsValorantConnected(
+                                      !isValorantConnected
+                                    );
+                                    setIsAlreadyValorantConnected(
+                                      !isAlreadyValorantConnected
+                                    );
                                   }}
                                   className="button button-primary w-full"
                                 >
@@ -249,7 +262,9 @@ export default function Home() {
                                 <div
                                   className="flex-1 input-group cursor-pointer"
                                   onClick={() =>
-                                    setIsAlreadyConnected(!isAlreadyConnected)
+                                    setIsAlreadyValorantConnected(
+                                      !isAlreadyValorantConnected
+                                    )
                                   }
                                 >
                                   <span>
@@ -266,9 +281,9 @@ export default function Home() {
                                 <Tooltip
                                   tooltip={
                                     <div className="max-w-xs text-sm">
-                                      If you have updated your Valorant account recently,
-                                      it can take up to 15 minutes to see the
-                                      changes.
+                                      If you have updated your Valorant account
+                                      recently, it can take up to 15 minutes to
+                                      see the changes.
                                     </div>
                                   }
                                 >
@@ -281,15 +296,17 @@ export default function Home() {
                           <>
                             <button
                               type="button"
-                              onClick={() => setIsConnected(!isConnected)}
+                              onClick={() =>
+                                setIsValorantConnected(!isValorantConnected)
+                              }
                               className="button button-primary w-full"
                             >
                               <span className="icon icon-game-valorant-symbol" />
                               <span>Connect my account</span>
                             </button>
                             <p className="text-ui-300 text-sm mt-2 leading-tight">
-                              By connecting my Valorant account I acknowledge making my
-                              profile public to all users.
+                              By connecting my Valorant account I acknowledge
+                              making my profile public to all users.
                             </p>
                           </>
                         )}
@@ -298,24 +315,27 @@ export default function Home() {
                     <div className="form-group">
                       <label htmlFor="social-steam">League of Legends</label>
                       <div className="flex-3">
-                        {isConnected ? (
+                        {isLoLConnected ? (
                           <>
-                            {isAlreadyConnected ? (
+                            {isAlreadyLoLConnected ? (
                               <div className="space-y-3">
                                 <div className="flex items-center gap-3 text-attention-500">
                                   <span className="icon text-xl icon-warning-sign" />
                                   <p>
-                                    This League of Legends account is already connected to a
-                                    Stryda account. Click the following button
-                                    to generate a recovery e-mail for that
-                                    address.
+                                    This League of Legends account is already
+                                    connected to a Stryda account. Click the
+                                    following button to generate a recovery
+                                    e-mail for that address.
                                   </p>
                                 </div>
                                 <button
                                   type="button"
                                   onClick={() => {
-                                    setIsConnected(!isConnected);
-                                    setIsAlreadyConnected(!isAlreadyConnected);
+                                    setIsLoLRegionSelected(false);
+                                    setIsLoLConnected(!isLoLConnected);
+                                    setIsAlreadyLoLConnected(
+                                      !isAlreadyLoLConnected
+                                    );
                                   }}
                                   className="button button-primary w-full"
                                 >
@@ -327,7 +347,9 @@ export default function Home() {
                                 <div
                                   className="flex-1 input-group cursor-pointer"
                                   onClick={() =>
-                                    setIsAlreadyConnected(!isAlreadyConnected)
+                                    setIsAlreadyLoLConnected(
+                                      !isAlreadyLoLConnected
+                                    )
                                   }
                                 >
                                   <span>
@@ -344,9 +366,9 @@ export default function Home() {
                                 <Tooltip
                                   tooltip={
                                     <div className="max-w-xs text-sm">
-                                      If you have updated your League of Legends account recently,
-                                      it can take up to 15 minutes to see the
-                                      changes.
+                                      If you have updated your League of Legends
+                                      account recently, it can take up to 15
+                                      minutes to see the changes.
                                     </div>
                                   }
                                 >
@@ -357,17 +379,45 @@ export default function Home() {
                           </>
                         ) : (
                           <>
-                            <button
-                              type="button"
-                              onClick={() => setIsConnected(!isConnected)}
-                              className="button button-primary w-full"
-                            >
-                              <span className="icon icon-game-leagueoflegends-symbol" />
-                              <span>Connect my account</span>
-                            </button>
+                              <div className="form-group form-select mb-2">
+                                <select id="Leagueoflegends-region" onChange={(e) => selectLoLRegion(e)}>
+                                  <option disabled selected>Choose an region</option>
+                                  <option>Brazil</option>
+                                  <option>Europe Nordic & East</option>
+                                  <option>Europe West</option>
+                                  <option>North America</option>
+                                  <option>Latin America North</option>
+                                  <option>Latin America South</option>
+                                  <option>Oceania</option>
+                                  <option>Russia</option>
+                                  <option>Turkey</option>
+                                  <option>Japan</option>
+                                  <option>Republic of Korea</option>
+                                  <option>The Philippines</option>
+                                  <option>Singapore</option>
+                                  <option>Malaysia</option>
+                                  <option>& Indonesia</option>
+                                  <option>Taiwan</option>
+                                  <option>Hong Kong</option>
+                                  <option>and Macao</option>
+                                  <option>Thailand</option>
+                                  <option>Vietnam</option>
+                                </select>
+                              </div>
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  setIsLoLConnected(!isLoLConnected)
+                                }
+                                disabled={!isLoLRegionSelected}
+                                className="button button-primary w-full"
+                              >
+                                <span className="icon icon-game-leagueoflegends-symbol" />
+                                <span>Connect my account</span>
+                              </button>
                             <p className="text-ui-300 text-sm mt-2 leading-tight">
-                              By connecting my League of Legends account I acknowledge making my
-                              profile public to all users.
+                              By connecting my League of Legends account I
+                              acknowledge making my profile public to all users.
                             </p>
                           </>
                         )}
