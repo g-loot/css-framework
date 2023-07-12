@@ -704,7 +704,7 @@ export default function StatsLeagueOfLegends() {
                                                 <button
                                                   key={itemIndex}
                                                   type="button"
-                                                  className="tooltip-left"
+                                                  className="tooltip-left relative"
                                                   data-tooltip={
                                                     getSpellByID(item)?.name
                                                   }
@@ -715,8 +715,9 @@ export default function StatsLeagueOfLegends() {
                                                         .full
                                                     }`}
                                                     alt=""
-                                                    className="w-8 h-8 object-cover rounded"
+                                                    className="relative z-0 w-8 h-8 object-cover rounded"
                                                   />
+                                                  <span className="absolute -bottom-2 -right-2 z-10 rounded-full px-1 py-0.5 text-xs text-center font-bold bg-ui-100 text-ui-800 leading-none">x11</span>
                                                 </button>
                                               )
                                             )}
@@ -848,7 +849,7 @@ export default function StatsLeagueOfLegends() {
                                                 <button
                                                   key={itemIndex}
                                                   type="button"
-                                                  className="tooltip-left"
+                                                  className="tooltip-left relative"
                                                   data-tooltip={
                                                     getSpellByID(item)?.name
                                                   }
@@ -859,8 +860,11 @@ export default function StatsLeagueOfLegends() {
                                                         .full
                                                     }`}
                                                     alt=""
-                                                    className="w-8 h-8 object-cover rounded"
+                                                    className="relative z-10 w-8 h-8 object-cover rounded"
                                                   />
+                                                  <span className="absolute -bottom-2 -right-2 z-10 rounded-full px-1 py-0.5 text-xs text-center font-bold bg-ui-100 text-ui-800 leading-none">
+                                                    x3
+                                                  </span>
                                                 </button>
                                               )
                                             )}
