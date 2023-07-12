@@ -110,7 +110,7 @@ export default function ModalClanEventOnboarding(props) {
                   className={`button button-primary`}
                   onClick={uiContext.closeModal}
                 >
-                  <span>Explore Season</span>
+                  <span>Explore Clan event</span>
                 </button>
               </div>
             </div>

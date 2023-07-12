@@ -381,7 +381,7 @@ export default function Home() {
                           <>
                               <div className="form-group form-select mb-2">
                                 <select id="Leagueoflegends-region" onChange={(e) => selectLoLRegion(e)}>
-                                  <option disabled selected>Choose an region</option>
+                                  <option disabled selected>Select your region</option>
                                   <option>Brazil</option>
                                   <option>Europe Nordic & East</option>
                                   <option>Europe West</option>
@@ -394,12 +394,8 @@ export default function Home() {
                                   <option>Japan</option>
                                   <option>Republic of Korea</option>
                                   <option>The Philippines</option>
-                                  <option>Singapore</option>
-                                  <option>Malaysia</option>
-                                  <option>& Indonesia</option>
-                                  <option>Taiwan</option>
-                                  <option>Hong Kong</option>
-                                  <option>and Macao</option>
+                                  <option>Singapore, Malaysia, Indonesia</option>
+                                  <option>Taiwan, Hong Kong, Macao</option>
                                   <option>Thailand</option>
                                   <option>Vietnam</option>
                                 </select>

@@ -20,10 +20,10 @@ export default function WidgetUser(props) {
   return (
     <>
       {selectedUser && (
-        <div className="surface rounded text-center">
+        <div className="surface rounded-3 text-center">
           <div className="relative">
             <div className="absolute z-10 inset-0 flex items-center justify-center">
-              <Avatar id={user_id} hasTooltip={false} size="avatar-sm" />
+              <Avatar id={user_id} hasTooltip={false} size="avatar-md" />
             </div>
             {selectedUser.shopItems?.profileBanner ? (
               <>
@@ -35,7 +35,7 @@ export default function WidgetUser(props) {
                     ).image
                   }
                   alt=""
-                  className="rounded-t"
+                  className="rounded-t-3"
                 />
               </>
             ) : (
@@ -43,13 +43,13 @@ export default function WidgetUser(props) {
                 <img
                   src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
                   alt=""
-                  className="rounded-t"
+                  className="rounded-t-3"
                 />
               </>
             )}
           </div>
           <div className="p-2">
-            <h2 className="text-xl leading-tight mt-2">
+            <h2 className="text-xl leading-tight mt-4">
               {" "}
               {selectedUser.clan && (
                 <>
@@ -71,13 +71,13 @@ export default function WidgetUser(props) {
                 <div className="text-sm text-ui-300">following</div>
               </li>
             </ul>
-            <div className="p-2 rounded bg-ui-700">
-              {selectedUser.clan ? (
-                <Link
-                  href={`/prototype/clans/${
-                    selectedUser.clan
-                  }${prototype.getURLparams()}`}
-                >
+            {selectedUser.clan ? (
+              <Link
+                href={`/prototype/clans/${
+                  selectedUser.clan
+                }${prototype.getURLparams()}`}
+              >
+                <div className="p-2 rounded-1 bg-ui-700 interactive">
                   <div className="flex gap-2 items-center justify-center">
                     <div className="avatar avatar-tiny avatar-squircle">
                       <div>
@@ -93,8 +93,10 @@ export default function WidgetUser(props) {
                       &#93; {prototype.getClanByID(selectedUser.clan).nickname}
                     </div>
                   </div>
-                </Link>
-              ) : (
+                </div>
+              </Link>
+            ) : (
+              <div className="p-2 rounded-1 bg-ui-700">
                 <div className="space-y-2">
                   <div className="text-center text-sm">
                     {selectedUser.nickname} is not part of a clan.
@@ -108,8 +110,8 @@ export default function WidgetUser(props) {
                     </a>
                   </Link>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
       )}
