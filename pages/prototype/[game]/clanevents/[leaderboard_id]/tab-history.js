@@ -4,7 +4,7 @@ import Reward from "../../../../../components/Reward/Reward";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import { usePrototypeData } from "../../../../../contexts/prototype";
 import { VariablesContext } from "../../../../../contexts/variables";
-import ModalClanSeasonResults from "../modal-clanseasonresults";
+import ModalClanEventResults from "../modal-claneventresults";
 import { UiContext } from "../../../../../contexts/ui";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -40,7 +40,7 @@ export default function TabClanLeaderboardsHistory() {
 
   function openmodalLadderResults(id) {
     uiContext.openModal(
-      <ModalClanSeasonResults
+      <ModalClanEventResults
         item={prototype.getClanLeaderboardByID(
           prototype.getGameBySlug(game).slug,
           id
@@ -60,7 +60,7 @@ export default function TabClanLeaderboardsHistory() {
                 <div className="max-w-xs mx-auto">
                   <span className="icon icon-multiple-11 text-6xl text-ui-500" />
                   <div className="mt-2 text-ui-300">
-                    You haven&#39;t joined any Clan Seasons yet.
+                    You haven&#39;t joined any Clan Events yet.
                   </div>
                 </div>
               </div>
@@ -136,7 +136,7 @@ export default function TabClanLeaderboardsHistory() {
                                 {item.status != "upcoming" && (
                                   <Link
                                     key={itemIndex}
-                                    href={`/prototype/${game}/clanseasonleaderboards/${item.id}`}
+                                    href={`/prototype/${game}/clanevents/${item.id}`}
                                   >
                                     <tr
                                       className="interactive animate-slide-in-bottom animate-delay"
@@ -228,7 +228,7 @@ export default function TabClanLeaderboardsHistory() {
                         .map((item, itemIndex) => (
                           <Link
                             key={itemIndex}
-                            href={`/prototype/${game}/clanseasonleaderboards/${item.id}`}
+                            href={`/prototype/${game}/clanevents/${item.id}`}
                           >
                             <li
                               className="item flex-col sm:flex-row items-stretch sm:items-center rounded p-0 animate-slide-in-bottom animate-delay"

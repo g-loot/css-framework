@@ -6,7 +6,7 @@ import { VariablesContext } from "../../../../contexts/variables.js";
 import { useRouter } from "next/router";
 import ResetsIn from "../../../../components/Countdown/ResetsIn.js";
 
-export default function ModalInfoClanSeasonEnroll(props) {
+export default function ModalInfoClanEventEnroll(props) {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
@@ -34,10 +34,10 @@ export default function ModalInfoClanSeasonEnroll(props) {
     setSubmitting(true);
 
     setTimeout(() => {
-      variablesContext.clanSeasonEnroll();
+      variablesContext.clanEventEnroll();
       uiContext.openToastr({
         size: "medium",
-        text: "You have successfully enrolled your Clan to the Clan Season",
+        text: "You have successfully enrolled your Clan to the Clan Event",
         color: "green",
         autoDelete: true,
         autoDeleteDelay: 2500,
@@ -70,15 +70,15 @@ export default function ModalInfoClanSeasonEnroll(props) {
             </div>
             <div className="modal-content">
               <div className="modal-body">
-                <h2 className="modal-title">Enter the Clan Season</h2>
+                <h2 className="modal-title">Enter the Clan Event</h2>
                 <p>
-                  You are about to enter your Clan to the {selectedLeaderboard.name} Clan Season.
+                  You are about to enter your Clan to the {selectedLeaderboard.name} Clan Event.
                 </p>
                 <p>
                   To climb the leaderboard, play matches in Competitive mode with a party composed only by members of your Clan.
                 </p>
                 <p>
-                  This Clan Season <ResetsIn label="ends" />.
+                  This Clan Event <ResetsIn label="ends" />.
                 </p>
               </div>
               <div className="modal-action">

@@ -3,9 +3,9 @@ import React, { useEffect, useState, useContext } from "react";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import { VariablesContext } from "../../../../contexts/variables";
-import ClanSeasonCard from "../../../../components/ClanSeason/ClanSeasonCard";
+import ClanEventCard from "../../../../components/ClanEvent/ClanEventCard";
 
-export default function TabClanSeasonLeaderboardOverview() {
+export default function TabClanEventLeaderboardOverview() {
   const router = useRouter();
   const { query } = useRouter();
   const variablesContext = useContext(VariablesContext);
@@ -38,14 +38,14 @@ export default function TabClanSeasonLeaderboardOverview() {
     <>
       {selectedGame && (
         <>
-          <section className="mb-8">
+          <section className="mb-8 space-y-4">
             {isEmpty ? (
               <>
                 <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
                   <div className="max-w-xs mx-auto">
                     <span className="icon icon-multiple-11 text-6xl text-ui-500" />
                     <div className="mt-2 text-ui-300">
-                      There is no ongoing Clan Season.
+                      There is no ongoing Clan Event.
                     </div>
                   </div>
                 </div>
@@ -114,7 +114,7 @@ export default function TabClanSeasonLeaderboardOverview() {
                     {selectedGame.clanLeaderboards
                       .filter((g) => g.status === "ongoing")
                       .map((item, itemIndex) => (
-                        <ClanSeasonCard key={itemIndex} game={game} item={item} />
+                        <ClanEventCard key={itemIndex} game={game} item={item} />
                       ))}
                   </>
                 )}
@@ -123,7 +123,7 @@ export default function TabClanSeasonLeaderboardOverview() {
           </section>
           {/* for demo purposes only */}
           <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-            <a onClick={() => variablesContext.clanSeasonEnroll()}>
+            <a onClick={() => variablesContext.clanEventEnroll()}>
               Toggle enrolled{" "}
               {variablesContext.clanLeaderboardEnrolled ? "ON" : "OFF"}
             </a>

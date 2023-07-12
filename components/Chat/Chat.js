@@ -255,7 +255,7 @@ const conversationFull = [
     messages: [
       {
         id: 1,
-        type: "clanseasonstarted",
+        type: "claneventstarted",
       },
     ],
   },
@@ -597,7 +597,7 @@ export default function Chat(props) {
                                 </Link>
                               </div>
                             )}
-                            {messageBubble.type === "clanseasonstarted" && (
+                            {messageBubble.type === "claneventstarted" && (
                               <div className="space-y-4">
                                 <p>
                                   <a className="link" href="#" target="_blank">
@@ -605,7 +605,7 @@ export default function Chat(props) {
                                   </a>{" "}
                                   has enrolled your Clan to the{" "}
                                   <Link
-                                    href={`/prototype/valorant/clanseasonleaderboards/0${prototype.getURLparams()}`}
+                                    href={`/prototype/valorant/clanevents/0${prototype.getURLparams()}`}
                                   >
                                     <a className="link">
                                       {
@@ -614,12 +614,12 @@ export default function Chat(props) {
                                           0
                                         )?.name
                                       }{" "}
-                                      Clan Season
+                                      Clan Event
                                     </a>
                                   </Link>
                                 </p>
                                 <Link
-                                  href={`/prototype/valorant/clanseasonleaderboards/0${prototype.getURLparams()}`}
+                                  href={`/prototype/valorant/clanevents/0${prototype.getURLparams()}`}
                                 >
                                   <div className="inline-flex flex-col 2xl:flex-row 2xl:items-center gap-4 justify-center text-left surface-ui-600 p-2 rounded interactive">
                                     <div className="relative">

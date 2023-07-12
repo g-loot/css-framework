@@ -59,7 +59,7 @@ export default function LaddersHeader(props) {
           )}
           <div className="header-content">
             <div className="header-body">
-              <h1>Clan Seasons</h1>
+              <h1>Clan Events</h1>
               <p className="text-ui-300 max-w-[70ch] mt-4 mb-5">
                 Create a 5 people party with members from your Stryda Clan. Play
                 VALORANT together and start climbing the leaderboard!
@@ -83,7 +83,7 @@ export default function LaddersHeader(props) {
             </div>
           </div>
           <div className="header-bg">
-            <img src={selectedGame.assets.heroClanSeason} alt="Ladders" />
+            <img src={selectedGame.assets.heroClanEvent} alt="Ladders" />
           </div>
         </section>
       )}

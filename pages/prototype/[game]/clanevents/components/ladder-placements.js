@@ -4,7 +4,7 @@ import { UiContext } from "../../../../../contexts/ui";
 import { VariablesContext } from "../../../../../contexts/variables";
 import { usePrototypeData } from "../../../../../contexts/prototype";
 import { useRouter } from "next/router";
-import ModalInfoBeforeYouPlay from "../modal-info-clanseasonenroll";
+import ModalInfoBeforeYouPlay from "../modal-info-claneventenroll";
 import LadderPlacementItem from "./ladder-placementitem";
 import ModalBuyTokens from "../../../wallet/modal-buytokens";
 import Link from "next/link";

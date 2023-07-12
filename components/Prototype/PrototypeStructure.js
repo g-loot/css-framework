@@ -168,14 +168,14 @@ export default function PrototypeStructure({ children, title }) {
               <aside className="w-72 bg-ui-850 border-r border-ui-700 flex flex-col shadow-2xl">
                 <div className="h-12 flex items-center lg:items-start justify-between border-b border-ui-700 lg:pt-1 pl-7 pr-2 sticky z-10 top-0">
                   <Link href={`/prototype/home${prototype.getURLparams()}`}>
-                  <a className="flex items-center gap-2 interactive">
-                        <img
-                          width="110"
-                          height="auto"
-                          src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
-                          alt="Stryda logo"
-                        />
-                      </a>
+                    <a className="flex items-center gap-2 interactive">
+                      <img
+                        width="110"
+                        height="auto"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
+                        alt="Stryda logo"
+                      />
+                    </a>
                   </Link>
                   <div className="block md:hidden">
                     <label

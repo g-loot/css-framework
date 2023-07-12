@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import LaddersHeader from "./ladders-header";
 import AnimatedNumber from "../../../../components/AnimatedNumber/AnimatedNumber";
 
-import TabClanSeasonLeaderboardOverview from "./tab-overview";
+import TabClanEventLeaderboardOverview from "./tab-overview";
 import TabClanLeaderboardsRewards from "./[leaderboard_id]/tab-rewards";
 import TabClanLeaderboardsHowItWorks from "./[leaderboard_id]/tab-howitworks";
 import TabClanLeaderboardsHistory from "./[leaderboard_id]/tab-history";
@@ -19,7 +19,7 @@ const TabsItems = [
   {
     label: "Ongoing",
     url: "ongoing",
-    component: TabClanSeasonLeaderboardOverview,
+    component: TabClanEventLeaderboardOverview,
   },
   {
     label: "Upcoming",
@@ -72,7 +72,7 @@ export default function Ladders() {
 
   return (
     <>
-      <PrototypeStructure title="Clan Seasons">
+      <PrototypeStructure title="Clan Events">
         <Ad width="1005" height="300" />
         {selectedGame && (
           <>
@@ -82,7 +82,7 @@ export default function Ladders() {
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype/${game}/clanseasonleaderboards?tab=${
+                      href={`/prototype/${game}/clanevents?tab=${
                         item.url
                       }${prototype.getURLparams("&")}`}
                     >

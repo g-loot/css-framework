@@ -20,7 +20,7 @@ export const dataGames = [
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-2.webp",
       heroTournament:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-3.webp",
-      heroClanSeason:
+      heroClanEvent:
         "https://res.cloudinary.com/gloot/image/upload/v1686817579/Stryda/illustrations/ClansSeason_bg.jpg",
     },
     missions: [
@@ -3128,11 +3128,11 @@ export const dataGames = [
         id: 0,
         isCurrent: true,
         status: "ongoing",
-        name: "Nordic Clash",
-        logo: "https://res.cloudinary.com/gloot/image/upload/v1689065104/Stryda/demo/nordicclash-logo.png",
+        name: "Nordic Clash qualifiers",
+        logo: "https://res.cloudinary.com/gloot/image/upload/v1689149063/Stryda/demo/NordicClash_logo.png",
         video:
-          "https://res.cloudinary.com/gloot/video/upload/v1687351106/Stryda/videos/Stryda_ClanSeason_NordicUprising.mp4",
-        bg: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/nordicuprising-bg.jpg",
+          null,
+        bg: "https://res.cloudinary.com/gloot/image/upload/v1689149063/Stryda/demo/NordicClash_bg.jpg",
         meta: {
           objective:
             "Have the most wins in a party composed of 5 clan members",
@@ -3691,7 +3691,7 @@ export const dataGames = [
         isCurrent: false,
         status: "upcoming",
         name: "Phoenix Clash",
-        logo: "https://res.cloudinary.com/gloot/image/upload/v1687335838/Stryda/demo/phoenixclash-logo.png",
+        logo: "https://res.cloudinary.com/gloot/image/upload/v1687335839/Stryda/demo/phoenixclash-logo.png",
         bg: "https://res.cloudinary.com/gloot/image/upload/v1687160240/Stryda/demo/spaceclash-bg.jpg",
         video:
           "https://res.cloudinary.com/gloot/video/upload/v1687351323/Stryda/videos/Stryda_ClanSeason_PhoenixClash.mp4",
@@ -3868,6 +3868,189 @@ export const dataGames = [
             stats: {
               wins: 4,
               losses: 3,
+              placement: 27,
+              ladderPoints: 77,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+        ],
+      },
+      {
+        id: 5,
+        isCurrent: true,
+        status: "ongoing",
+        name: "Clan Rush",
+        logo: "https://res.cloudinary.com/gloot/image/upload/v1689151603/Stryda/demo/Spike_Clan_Rush_logo.png",
+        video:
+          null,
+        bg: "https://res.cloudinary.com/gloot/image/upload/v1689151404/Stryda/demo/Spike_Clan_Rush_bg.jpg",
+        meta: {
+          objective:
+            "Have the most wins in a party composed of 5 clan members",
+          gameMode: "Spike Rush",
+          tieBreaker: "Total number of kills decide a tie",
+        },
+        rewards: [
+          {
+            type: "coin",
+            value: 3000000,
+          },
+        ],
+        isEnrolled: false,
+        progress: 0,
+        progressClan: 0,
+        leaderboard: [
+          {
+            clan: 5,
+            rewards: [
+              {
+                type: "coin",
+                value: 700,
+              },
+              {
+                type: "avatarframe",
+                value: 4,
+              },
+              {
+                type: "profilebanner",
+                value: 33,
+              },
+            ],
+            stats: {
+              wins: 42,
+              losses: 12,
+              placement: 27,
+              ladderPoints: 123,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 4,
+            rewards: [
+              {
+                type: "coin",
+                value: 500,
+              },
+              {
+                type: "profilebanner",
+                value: 31,
+              },
+            ],
+            stats: {
+              wins: 41,
+              losses: 11,
+              placement: 27,
+              ladderPoints: 115,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 7,
+            rewards: [
+              {
+                type: "coin",
+                value: 400,
+              },
+            ],
+            stats: {
+              wins: 38,
+              losses: 9,
+              placement: 27,
+              ladderPoints: 113,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 2,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 33,
+              losses: 4,
+              placement: 27,
+              ladderPoints: 108,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 1,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 41,
+              losses: 14,
+              placement: 27,
+              ladderPoints: 98,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 8,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 44,
+              losses: 25,
+              placement: 27,
+              ladderPoints: 97,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 3,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 29,
+              losses: 10,
+              placement: 27,
+              ladderPoints: 78,
+              matchPlayed: 11,
+              tiebreakerPoints: 1402,
+              gameScore: 143,
+            },
+          },
+          {
+            clan: 6,
+            rewards: [
+              {
+                type: "coin",
+                value: 200,
+              },
+            ],
+            stats: {
+              wins: 29,
+              losses: 14,
               placement: 27,
               ladderPoints: 77,
               matchPlayed: 11,

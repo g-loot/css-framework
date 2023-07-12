@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 const HowitworksTabs = [
   {
-    title: "Before entering a Clan Season",
+    title: "Before entering a Clan Event",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1687351788/Stryda/illustrations/Clan_Seasons_HiW_Before_entering.jpg",
     content: [
@@ -71,7 +71,7 @@ const HowitworksTabs = [
     ],
   },
   {
-    title: "If you leave your Clan in the middle of a Clan Season",
+    title: "If you leave your Clan in the middle of a Clan Event",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1687351788/Stryda/illustrations/Clan_Seasons_HiW_leave.jpg",
     content: [
@@ -81,7 +81,7 @@ const HowitworksTabs = [
       },
       {
         type: "p",
-        text: "The scores you contribute with still belong to the old Clan until the Clan Season ends.",
+        text: "The scores you contribute with still belong to the old Clan until the Clan Event ends.",
       },
     ],
   },
@@ -105,7 +105,7 @@ const HowitworksTabs = [
     ],
   },
   {
-    title: "I am experiencing issues with the Clan Seasons",
+    title: "I am experiencing issues with the Clan Events",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1687351788/Stryda/illustrations/Clan_Seasons_HiW_issue.jpg",
     content: [
@@ -155,10 +155,10 @@ export default function TabClanLeaderboardsHowItWorks() {
                 alt=""
               />
               <div className="col-span-2 px-4 sm:px-0">
-                <h2 className="h4 mb-4">What is a Clan Season?</h2>
+                <h2 className="h4 mb-4">What is a Clan Event?</h2>
                 <div className="columns-2 space-y-4 gap-8">
                   <p className="text-ui-300 leading-relaxed">
-                    In Clan Seasons you and members from your Clan play games
+                    In Clan Events you and members from your Clan play games
                     together. You compete against other Clans on Stryda to climb
                     a leaderboard.
                   </p>
@@ -190,7 +190,7 @@ export default function TabClanLeaderboardsHowItWorks() {
             style={{ "--delay": "calc(2 * 0.05s)" }}
           >
             <div className="px-4 sm:px-0">
-              <h2 className="h4 mb-4">How the Clan Seasons work</h2>
+              <h2 className="h4 mb-4">How the Clan Events work</h2>
             </div>
             <div className="overflow-x-auto scrollbar-desktop overflow-y-hidden pt-4">
               <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px] !pb-44">
@@ -207,8 +207,8 @@ export default function TabClanLeaderboardsHowItWorks() {
                   <a href="#">
                     <i>2</i>
                     <div className="text-sm text-ui-300">
-                      Join the leaderboard by registering your Clan to the
-                      ongoing Season
+                      Join the leaderboard by registering your Clan to an
+                      ongoing Event
                     </div>
                     <span />
                   </a>
@@ -261,7 +261,7 @@ export default function TabClanLeaderboardsHowItWorks() {
           >
             <div className="px-4 sm:px-0">
               <h2 className="h4 mb-6">
-                Learn everything about the Clan Seasons
+                Learn everything about the Clan Events
               </h2>
             </div>
             <div className="accordion accordion-highlighted surface sm:rounded-lg">

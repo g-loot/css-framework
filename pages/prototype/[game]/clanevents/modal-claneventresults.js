@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 import AvatarClan from "../../../../components/Avatar/AvatarClan.js";
 import Slider from "../../../../components/Slider/Slider.js";
 
-export default function ModalClanSeasonResults(props) {
+export default function ModalClanEventResults(props) {
   const router = useRouter();
   const { query } = useRouter();
   const uiContext = useContext(UiContext);

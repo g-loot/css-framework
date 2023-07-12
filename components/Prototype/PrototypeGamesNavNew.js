@@ -28,10 +28,10 @@ const SubMenuItem = [
   },
   {
     onlygame: ["valorant"],
-    slug: "clanseasonleaderboards",
-    url: "clanseasonleaderboards",
+    slug: "clanevents",
+    url: "clanevents",
     icon: "icon-multiple-11",
-    label: "Clan Seasons",
+    label: "Clan Events",
   },
   {
     onlygame: ["valorant", "leagueoflegends"],

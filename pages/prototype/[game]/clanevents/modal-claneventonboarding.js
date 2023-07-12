@@ -6,7 +6,7 @@ import { VariablesContext } from "../../../../contexts/variables.js";
 import { useRouter } from "next/router";
 import ResetsIn from "../../../../components/Countdown/ResetsIn.js";
 
-export default function ModalClanSeasonOnboarding(props) {
+export default function ModalClanEventOnboarding(props) {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
@@ -34,10 +34,10 @@ export default function ModalClanSeasonOnboarding(props) {
     setSubmitting(true);
 
     setTimeout(() => {
-      variablesContext.clanSeasonEnroll();
+      variablesContext.clanEventEnroll();
       uiContext.openToastr({
         size: "medium",
-        text: "You have successfully enrolled your Clan to the Clan Season",
+        text: "You have successfully enrolled your Clan to the Clan Event",
         color: "green",
         autoDelete: true,
         autoDeleteDelay: 2500,
@@ -62,7 +62,7 @@ export default function ModalClanSeasonOnboarding(props) {
             </button>
             <div className="modal-content">
               <div className="modal-body">
-                <h2 className="modal-title">Welcome to Clan Seasons</h2>
+                <h2 className="modal-title">Welcome to Clan Events</h2>
                 <p>Play with your Clan and compete against other Clans.</p>
                 <div className="flex flex-col lg:flex-row gap-8 items-start mt-4 max-w-md mx-auto child:animate-delay">
                   <div className="flex-1 space-y-8 animate-fade-in">

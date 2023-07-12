@@ -310,7 +310,7 @@ export default function TabClanLeaderboardsAbout() {
           >
             <div className="flex-1 surface sm:rounded-lg p-4 relative flex flex-col items-stretch">
               <div className="border-b border-ui-700 pb-4">
-                <h2 className="text-2xl">About Clan Seasons</h2>
+                <h2 className="text-2xl">About Clan Events</h2>
               </div>
               <div className="p-4 flex flex-col lg:flex-row items-center gap-8 leading-relaxed">
                 <div className="flex-3 xl:columns-2 gap-8 space-y-4 order-2 lg:order-1 text-ui-300 leading-relaxed">
@@ -354,7 +354,7 @@ export default function TabClanLeaderboardsAbout() {
 
             <div className="grid gap-8 grid-cols-1 xl:grid-cols-3 items-center">
               <div className="col-span-2 px-4 sm:px-0">
-                <h2 className="h4 mb-4">Welcome to the Clan Seasons</h2>
+                <h2 className="h4 mb-4">Welcome to the Clan Events</h2>
                 <div className="columns-2 space-y-4 gap-8">
                   <p className="text-ui-300 leading-relaxed">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.

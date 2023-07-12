@@ -3,13 +3,13 @@ export const dataNotifications = [
     name: "Clan seasons",
     notifications: [
       {
-        description: "Clan Season has started",
+        description: "Clan Event has started",
         type: "clan",
-        intro: "Clan Season",
-        title: "The Clan Season has started",
-        text: "<a className='link' href='#' target='_blank'>Nomadiction</a> has enrolled your Clan to the <a href='#' class='link font-bold'>Nordic Clash Clan Season</a>!",
+        intro: "Clan Event",
+        title: "A Clan Event has started",
+        text: "<a className='link' href='#' target='_blank'>Nomadiction</a> has enrolled your Clan to the <a href='#' class='link font-bold'>Nordic Clash Clan Event</a>!",
         cta: "View",
-        url: "/prototype/valorant/clanseasonleaderboards/0",
+        url: "/prototype/valorant/clanevents/0",
         time: "2 min.",
         read: false,
       },

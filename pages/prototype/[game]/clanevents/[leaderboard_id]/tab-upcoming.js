@@ -4,14 +4,14 @@ import Reward from "../../../../../components/Reward/Reward";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import { usePrototypeData } from "../../../../../contexts/prototype";
 import { VariablesContext } from "../../../../../contexts/variables";
-import ModalClanSeasonResults from "../modal-clanseasonresults";
+import ModalClanEventResults from "../modal-claneventresults";
 import { UiContext } from "../../../../../contexts/ui";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 import AvatarClan from "../../../../../components/Avatar/AvatarClan";
 import GameIcon from "../../../../../components/GameIcon/GameIcon";
-import ClanSeasonCard from "../../../../../components/ClanSeason/ClanSeasonCard";
+import ClanEventCard from "../../../../../components/ClanEvent/ClanEventCard";
 
 export default function TabClanLeaderboardUpcoming() {
   const router = useRouter();
@@ -43,7 +43,7 @@ export default function TabClanLeaderboardUpcoming() {
 
   function openmodalLadderResults(id) {
     uiContext.openModal(
-      <ModalClanSeasonResults
+      <ModalClanEventResults
         item={prototype.getClanLeaderboardByID(
           prototype.getGameBySlug(game).slug,
           id
@@ -63,7 +63,7 @@ export default function TabClanLeaderboardUpcoming() {
                   <div className="max-w-xs mx-auto">
                     <span className="icon icon-multiple-11 text-6xl text-ui-500" />
                     <div className="mt-2 text-ui-300">
-                      There is no upcoming Clan Season.
+                      There is no upcoming Clan Event.
                     </div>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ export default function TabClanLeaderboardUpcoming() {
                       {selectedGame.clanLeaderboards
                         .filter((g) => g.status === "upcoming")
                         .map((item, itemIndex) => (
-                          <ClanSeasonCard
+                          <ClanEventCard
                             key={itemIndex}
                             game={game}
                             item={item}

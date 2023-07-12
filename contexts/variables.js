@@ -115,7 +115,7 @@ const VariablesContextProvider = (props) => {
       type: "DAILY_REWARD_UNCLAIM",
     });
   };
-  const clanSeasonEnroll = () => {
+  const clanEventEnroll = () => {
     dispatchVariablesAction({
       type: "CLAN_SEASON_ENROLL",
     });
@@ -134,7 +134,7 @@ const VariablesContextProvider = (props) => {
     unclaimReward,
     claimDailyReward,
     unclaimDailyReward,
-    clanSeasonEnroll,
+    clanEventEnroll,
   };
   return (
     <VariablesContext.Provider value={variablesContext}>

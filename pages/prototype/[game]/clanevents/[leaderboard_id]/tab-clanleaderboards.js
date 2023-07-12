@@ -10,10 +10,10 @@ import { useRouter } from "next/router";
 import Avatar from "../../../../../components/Avatar/Avatar";
 import LeaderboardWings from "../../../../../components/LeaderboardWings/LeaderboardWings";
 import { VariablesContext } from "../../../../../contexts/variables";
-import ModalInfoClanSeasonEnroll from "../modal-info-clanseasonenroll";
+import ModalInfoClanEventEnroll from "../modal-info-claneventenroll";
 import AvatarClan from "../../../../../components/Avatar/AvatarClan";
-import ModalClanSeasonResults from "../modal-clanseasonresults";
-import ModalClanSeasonOnboarding from "../modal-clanseasononboarding";
+import ModalClanEventResults from "../modal-claneventresults";
+import ModalClanEventOnboarding from "../modal-claneventonboarding";
 import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 import Rewards from "../../../../../components/Reward/Rewards";
 import ButtonFeedback from "../../../../../components/Button/ButtonFeedback";
@@ -158,7 +158,7 @@ export default function TabClanLeaderboardsLeaderboards() {
 
   useEffect(() => {
     if (modalonboarding) {
-      openmodalClanSeasonOnboarding();
+      openmodalClanEventOnboarding();
     }
   }, [modalonboarding]);
 
@@ -179,9 +179,9 @@ export default function TabClanLeaderboardsLeaderboards() {
   useEffect(() => {
     if (
       selectedClanLeaderboard &&
-      selectedClanLeaderboard?.status === "ongoing"
+      selectedClanLeaderboard?.id === 0
     ) {
-      openmodalClanSeasonOnboarding();
+      openmodalClanEventOnboarding();
     }
   }, [selectedClanLeaderboard]);
 
@@ -239,7 +239,7 @@ export default function TabClanLeaderboardsLeaderboards() {
   }
 
   function handleEnroll() {
-    uiContext.openModal(<ModalInfoClanSeasonEnroll />);
+    uiContext.openModal(<ModalInfoClanEventEnroll />);
   }
 
   const getMyClanMembers = () => {
@@ -250,7 +250,7 @@ export default function TabClanLeaderboardsLeaderboards() {
 
   function openmodalLadderResults(id) {
     uiContext.openModal(
-      <ModalClanSeasonResults
+      <ModalClanEventResults
         item={prototype.getClanLeaderboardByID(
           prototype.getGameBySlug(game).slug,
           id
@@ -258,8 +258,8 @@ export default function TabClanLeaderboardsLeaderboards() {
       />
     );
   }
-  function openmodalClanSeasonOnboarding() {
-    uiContext.openModal(<ModalClanSeasonOnboarding />);
+  function openmodalClanEventOnboarding() {
+    uiContext.openModal(<ModalClanEventOnboarding />);
   }
 
   return (
@@ -352,7 +352,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                       </svg>
                       <p className="text-attention-500 my-4 leading-tight">
                         Connect your Valorant account to participate in Clan
-                        Seasons!
+                        Events!
                       </p>
                       <Link
                         href={`/prototype/profile/settings${prototype.getURLparams()}`}
@@ -546,7 +546,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                         >
                           <span className="icon icon-warning-sign text-3xl text-attention-500" />
                           <p className="text-attention-500 mb-3">
-                            Join a Clan to participate to Clan Seasons!
+                            Join a Clan to participate to Clan Events!
                           </p>
                           <Link
                             href={`/prototype/clans${prototype.getURLparams()}`}
@@ -1226,7 +1226,7 @@ export default function TabClanLeaderboardsLeaderboards() {
         <a onClick={() => setHasPlayersDetails(!hasPlayersDetails)}>
           Toggle players details {hasPlayersDetails ? "ON" : "OFF"}
         </a>
-        <a onClick={() => openmodalClanSeasonOnboarding()}>
+        <a onClick={() => openmodalClanEventOnboarding()}>
           Open Modal Onboarding
         </a>
       </section>

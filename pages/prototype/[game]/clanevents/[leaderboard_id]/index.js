@@ -6,7 +6,7 @@ import PrototypeStructure from "../../../../../components/Prototype/PrototypeStr
 import { UiContext } from "../../../../../contexts/ui";
 import { usePrototypeData } from "../../../../../contexts/prototype";
 import { useRouter } from "next/router";
-import ModalInfoClanSeasonEnroll from "../modal-info-clanseasonenroll";
+import ModalInfoClanEventEnroll from "../modal-info-claneventenroll";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import TabClanLeaderboardsLeaderboards from "./tab-clanleaderboards";
 import TabClanLeaderboardsHowItWorks from "./tab-howitworks";
@@ -78,13 +78,13 @@ export default function Ladders() {
   }, [selectedGame]);
 
   function handleEnroll() {
-    uiContext.openModal(<ModalInfoClanSeasonEnroll />);
+    uiContext.openModal(<ModalInfoClanEventEnroll />);
   }
 
   return (
     <>
       {selectedGame && selectedClanLeaderboard && (
-        <PrototypeStructure title="Clan Seasons">
+        <PrototypeStructure title="Clan Events">
           <Ad width="1005" height="300" />
           <section className="surface sm:rounded overflow-hidden mb-4">
             <div className="h-44 relative w-full flex items-center justify-center overflow-hidden">
@@ -96,7 +96,7 @@ export default function Ladders() {
               <img
                 src={selectedClanLeaderboard.logo}
                 alt={selectedClanLeaderboard.name}
-                className="relative z-10 max-w-[240px] max-h-[85px] h-auto w-auto"
+                className="relative z-10 max-w-[280px] max-h-[150px] h-auto w-auto"
               />
               {selectedClanLeaderboard.video ? (
                 <div className={`absolute z-0 inset-0 grid place-content-center bg-ui-900/95 ${selectedClanLeaderboard.status !== "upcoming" && selectedClanLeaderboard.status !== "ongoing" ? 'grayscale' : ''}`}>
@@ -276,7 +276,7 @@ export default function Ladders() {
               {TabsItems.map((item, itemIndex) => (
                 <li key={itemIndex}>
                   <Link
-                    href={`/prototype/${game}/clanseasonleaderboards/${leaderboard_id}?tab=${
+                    href={`/prototype/${game}/clanevents/${leaderboard_id}?tab=${
                       item.url
                     }${prototype.getURLparams("&")}`}
                   >

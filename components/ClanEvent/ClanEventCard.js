@@ -6,7 +6,7 @@ import AvatarClan from "../Avatar/AvatarClan";
 import { VariablesContext } from "../../contexts/variables";
 import { usePrototypeData } from "../../contexts/prototype";
 
-const ClanSeasonCard = (props) => {
+const ClanEventCard = (props) => {
   const variablesContext = useContext(VariablesContext);
   const prototype = usePrototypeData();
   const item = props.item || undefined;
@@ -32,7 +32,7 @@ const ClanSeasonCard = (props) => {
   return (
     <>
       {item && (
-        <Link href={`/prototype/${game}/clanseasonleaderboards/${item.id}`}>
+        <Link href={`/prototype/${game}/clanevents/${item.id}`}>
           <button
             type="button"
             className="w-full surface sm:rounded overflow-hidden interactive animate-slide-in-bottom animate-delay"
@@ -45,12 +45,12 @@ const ClanSeasonCard = (props) => {
             <div className="h-44 relative w-full flex items-center justify-center overflow-hidden">
               <div className="absolute z-20 top-2 left-2 rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
                 <GameIcon game={1} />
-                <span>Competitive</span>
+                <span>{item.meta?.gameMode}</span>
               </div>
               <img
                 src={item.logo}
                 alt={item.name}
-                className="relative z-10 max-w-[240px] max-h-[85px] h-auto w-auto"
+                className="relative z-10 max-w-[280px] max-h-[150px] h-auto w-auto"
               />
               {item.video ? (
                 <div className="absolute z-0 inset-0 grid place-content-center bg-ui-900/95">
@@ -111,7 +111,7 @@ const ClanSeasonCard = (props) => {
                 </div>
               </div>
               {item.status === "ongoing" ? (
-                <div className="flex flex-1 xl:justify-end">
+                <div className="flex flex-0 xl:justify-end">
                   {variablesContext.clanLeaderboardEnrolled ? (
                     <div className="flex items-center gap-4">
                       <AvatarClan id={1} />
@@ -173,7 +173,7 @@ const ClanSeasonCard = (props) => {
                         type="button"
                         className="button button-sm button-primary"
                       >
-                        <span>View Clan Season</span>
+                        <span>View event</span>
                       </button>
                     </div>
                   )}
@@ -189,4 +189,4 @@ const ClanSeasonCard = (props) => {
   );
 };
 
-export default ClanSeasonCard;
+export default ClanEventCard;
