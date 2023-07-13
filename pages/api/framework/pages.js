@@ -609,6 +609,14 @@ export const FrameworkPages = {
           tab: 1,
         },
         {
+          label: "Connect League of Legends",
+          chip: "modal",
+          url: "leagueoflegends/missions",
+          query: "modalconnect=true",
+          tags: "game, missions, claim, modal, prompt, dialog, league of legends, connect, account, riot id",
+          tab: 1,
+        },
+        {
           label: "Leaderboard",
           url: "valorant/missions",
           query: "tab=leaderboard",

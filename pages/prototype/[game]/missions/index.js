@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
@@ -7,6 +7,8 @@ import TabMissionsHowItWorks from "./tab-howitworks";
 import TabMissionsMissions from "./tab-missions";
 import TabMissionsHistory from "./tab-history";
 import TabMissionsLeaderboard from "./tab-leaderboard";
+import ModalConnectIDLeagueOfLegends from "../../modal-connectIDleagueoflegends";
+import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 
@@ -35,12 +37,21 @@ const TabsItems = [
 
 export default function Missions() {
   const router = useRouter();
+  const { query } = useRouter();
+  const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const { game } = router.query;
   const { tab } = router.query;
   const defaultTab = "missions";
   const selectedTab = tab ? tab : defaultTab;
+  const modalConnectIDLeagueOfLegends = query.modalconnect === "true" ? true : false;
+
+  useEffect(() => {
+    if (modalConnectIDLeagueOfLegends) {
+      openModalConnectIDLeagueOfLegends();
+    }
+  }, [modalConnectIDLeagueOfLegends]);
 
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
@@ -51,6 +62,10 @@ export default function Missions() {
       prototype.defineDefaultGameID(selectedGame.id);
     }
   }, [selectedGame]);
+
+  function openModalConnectIDLeagueOfLegends() {
+    uiContext.openModal(<ModalConnectIDLeagueOfLegends />);
+  }
 
   return (
     <>
@@ -82,23 +97,42 @@ export default function Missions() {
                           type="button"
                           className="button button-secondary"
                         >
-                          <span className={`icon icon-game-${selectedGame.slug}-symbol`} />
+                          <span
+                            className={`icon icon-game-${selectedGame.slug}-symbol`}
+                          />
                           <span>Connect my account</span>
                         </button>
                       </Link>
                     )}
                     {selectedGame.needsRiot && (
-                      <Link
-                        href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                      >
-                        <button
-                          type="button"
-                          className="button button-secondary"
-                        >
-                          <span className={`icon icon-game-${selectedGame.slug}-symbol`} />
-                          <span>Connect my account</span>
-                        </button>
-                      </Link>
+                      <>
+                        {selectedGame.slug === "leagueoflegends" ? (
+                          <button
+                            type="button"
+                            className="button button-secondary"
+                            onClick={openModalConnectIDLeagueOfLegends}
+                          >
+                            <span
+                              className={`icon icon-game-${selectedGame.slug}-symbol`}
+                            />
+                            <span>Connect my account</span>
+                          </button>
+                        ) : (
+                          <Link
+                            href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                          >
+                            <button
+                              type="button"
+                              className="button button-secondary"
+                            >
+                              <span
+                                className={`icon icon-game-${selectedGame.slug}-symbol`}
+                              />
+                              <span>Connect my account</span>
+                            </button>
+                          </Link>
+                        )}
+                      </>
                     )}
                     {!selectedGame.needsSteam && !selectedGame.needsRiot && (
                       <Link
@@ -171,7 +205,8 @@ export default function Missions() {
                         item.url
                       }${prototype.getURLparams("&")}`}
                     >
-                      <button type="button"
+                      <button
+                        type="button"
                         className={`${
                           selectedTab === item.url ? "is-active" : ""
                         }`}

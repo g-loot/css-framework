@@ -21,12 +21,17 @@ export default function Home() {
   const prototype = usePrototypeData();
   const [selectedUser, setSelectedUser] = useState(prototype.getUserByID(1));
   const [isValorantConnected, setIsValorantConnected] = useState(false);
+  const [isAlreadyValorantConnected, setIsAlreadyValorantConnected] =
+  useState(false);
   const [isLoLConnected, setIsLoLConnected] = useState(false);
   const [isLoLRegionSelected, setIsLoLRegionSelected] = useState(false);
-  const [isAlreadyValorantConnected, setIsAlreadyValorantConnected] =
-    useState(false);
   const [isAlreadyLoLConnected, setIsAlreadyLoLConnected] = useState(false);
 
+  function selectLoLRegion(e) {
+    const selectLoLRegionTarget = e.target.value;
+    setIsLoLRegionSelected(true);
+  }
+  
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(1));
   }, []);
@@ -52,10 +57,6 @@ export default function Home() {
     return;
   }
 
-  function selectLoLRegion(e) {
-    const selectLoLRegionTarget = e.target.value;
-    setIsLoLRegionSelected(true);
-  }
 
   function addToastWithDelay(toast) {
     setSubmitting(true);

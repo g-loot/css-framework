@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
+import ModalConnectIDLeagueOfLegends from "../../modal-connectIDleagueoflegends";
 import { UiContext } from "../../../../contexts/ui";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -18,8 +19,12 @@ export default function LaddersHeader(props) {
 
   function openModalLadderHowitworksVideo() {
     uiContext.openModal(
-      <ModalLadderHowitworksVideo></ModalLadderHowitworksVideo>
+      <ModalLadderHowitworksVideo />
     );
+  }
+
+  function openModalConnectIDLeagueOfLegends() {
+    uiContext.openModal(<ModalConnectIDLeagueOfLegends />);
   }
 
   useEffect(() => {
@@ -75,13 +80,10 @@ export default function LaddersHeader(props) {
             <div className="header-body">
               {freeEntry ? (
                 <>
-                  <h1 className="h3 mb-2">
-                    Compete for free!
-                  </h1>
+                  <h1 className="h3 mb-2">Compete for free!</h1>
                   <p className="text-ui-300 mb-2">
-                    Use your stats to climb the ladders and win
-                    prizes. No waiting, no dedicated servers. Play on your own
-                    schedule!
+                    Use your stats to climb the ladders and win prizes. No
+                    waiting, no dedicated servers. Play on your own schedule!
                   </p>
                   <p className="text-main mb-4">
                     <span className="font-bold">First time competing?</span>{" "}
@@ -92,9 +94,8 @@ export default function LaddersHeader(props) {
               ) : (
                 <>
                   <p className="text-ui-300 mb-4">
-                    Use your stats to climb the ladders and win
-                    prizes. No waiting, no dedicated servers. Play on your own
-                    schedule!
+                    Use your stats to climb the ladders and win prizes. No
+                    waiting, no dedicated servers. Play on your own schedule!
                   </p>
                 </>
               )}
@@ -108,43 +109,56 @@ export default function LaddersHeader(props) {
                   <span>How to join the Ladder</span>
                 </button>
                 {selectedGame.needsSteam && (
-                <Link
-                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                >
-                  <button
-                    type="button"
-                    className="button button-secondary"
+                  <Link
+                    href={`/prototype/profile/settings${prototype.getURLparams()}`}
                   >
-                    <span className={`icon icon-game-${selectedGame.slug}-symbol`} />
-                    <span>Connect my account</span>
-                  </button>
-                </Link>
+                    <button type="button" className="button button-secondary">
+                      <span
+                        className={`icon icon-game-${selectedGame.slug}-symbol`}
+                      />
+                      <span>Connect my account</span>
+                    </button>
+                  </Link>
                 )}
                 {selectedGame.needsRiot && (
-                <Link
-                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                >
-                  <button
-                    type="button"
-                    className="button button-secondary"
-                  >
-                    <span className={`icon icon-game-${selectedGame.slug}-symbol`} />
-                    <span>Connect my account</span>
-                  </button>
-                </Link>
+                  <>
+                    {selectedGame.slug === "leagueoflegends" ? (
+                      <button
+                        type="button"
+                        className="button button-secondary"
+                        onClick={openModalConnectIDLeagueOfLegends}
+                      >
+                        <span
+                          className={`icon icon-game-${selectedGame.slug}-symbol`}
+                        />
+                        <span>Connect my account</span>
+                      </button>
+                    ) : (
+                      <Link
+                        href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                      >
+                        <button
+                          type="button"
+                          className="button button-secondary"
+                        >
+                          <span
+                            className={`icon icon-game-${selectedGame.slug}-symbol`}
+                          />
+                          <span>Connect my account</span>
+                        </button>
+                      </Link>
+                    )}
+                  </>
                 )}
                 {!selectedGame.needsSteam && !selectedGame.needsRiot && (
-                <Link
-                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
-                >
-                  <button
-                    type="button"
-                    className="button button-secondary"
+                  <Link
+                    href={`/prototype/profile/settings${prototype.getURLparams()}`}
                   >
-                    <span className="icon icon-windows-symbol" />
-                    <span>Stryda App required</span>
-                  </button>
-                </Link>
+                    <button type="button" className="button button-secondary">
+                      <span className="icon icon-windows-symbol" />
+                      <span>Stryda App required</span>
+                    </button>
+                  </Link>
                 )}
               </div>
             </div>
