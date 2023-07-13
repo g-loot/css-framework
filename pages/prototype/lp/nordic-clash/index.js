@@ -187,7 +187,7 @@ const PrototypePage = () => {
               North and a slice of the exciting <b>$20,000</b> prize pool!
             </p>
             <p className="text-ui-900 leading-relaxed mt-6">
-              Whether you're an experienced esports professional or not,
+              Whether you&#39;re an experienced esports professional or not,
               VALORANT Nordic Clash is open to players of all skills level to
               compete in a unique new way. The only requirement: you must have
               at least 3 players from the Nordic regions in your team. Are you
