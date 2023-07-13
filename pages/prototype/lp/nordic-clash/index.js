@@ -35,22 +35,22 @@ const PrototypePage = () => {
 
       <div className="min-h-screen bg-ui-900 pb-24 relative">
         <i className="absolute inset-0 pointer-events-none z-50 mix-blend-overlay opacity-30 bg-fixed bg-[length:100px_100px] bg-[url('https://res.cloudinary.com/gloot/image/upload/v1689232741/Stryda/marketing/campaigns/Nordic%20Clash/noise-black.jpg')]" />
-        <section className="relative z-10 pt-24 pb-80">
+        <section className="relative z-10 pt-28 pb-80">
           <div className="relative z-20 px-4">
             <div className="drop-shadow-[0_4px_0_rgba(0,0,0,0.2)]">
-            <img
-              src="https://res.cloudinary.com/gloot/image/upload/v1689235015/Stryda/logos/stryda-logo-ui-100.svg"
-              width="auto"
-              height="auto"
-              alt="Stryda"
-              className="mx-auto w-auto h-12 mb-8"
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1689235015/Stryda/logos/stryda-logo-ui-100.svg"
+                width="auto"
+                height="auto"
+                alt="Stryda"
+                className="mx-auto w-auto h-12 mb-10"
               />
-            <img
-              src="https://res.cloudinary.com/gloot/image/upload/v1689166223/Stryda/marketing/campaigns/Nordic%20Clash/Stryda_Nordic_Clash_logo.svg"
-              width="auto"
-              height="auto"
-              alt="Stryda"
-              className="relative z-0 mx-auto w-full max-w-md mb-8"
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1689166223/Stryda/marketing/campaigns/Nordic%20Clash/Stryda_Nordic_Clash_logo.svg"
+                width="auto"
+                height="auto"
+                alt="Stryda"
+                className="relative z-0 mx-auto w-full max-w-md mb-8"
               />
             </div>
             {/*
@@ -131,31 +131,33 @@ const PrototypePage = () => {
             <div className="w-full max-w-md mx-auto px-10 drop-shadow-[0_2px_0_rgba(0,0,0,0.2)]">
               <div className="grid grid-cols-1 md:grid-cols-3 text-center p-4 gap-4 leading-none relative">
                 <div>
-                  <div className="text-ui-100 uppercase font-headings font-bold text-5xl">
-                    $20 000
+                  <div className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal">
+                    <span>$20 000</span>
                   </div>
-                  <div className="uppercase text-sm text-ui-100">
-                    Prize pool
-                  </div>
-                </div>
-                <div>
-                  <div className="text-ui-100 uppercase font-headings font-bold text-5xl">
-                    OCT-DEC
-                  </div>
-                  <div className="uppercase text-sm text-ui-100">
-                    Event duration
+                  <div className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-delay" style={{ '--delay': '0.1s'}}>
+                    <span>Prize pool</span>
                   </div>
                 </div>
                 <div>
-                  <div className="text-ui-100 uppercase font-headings font-bold text-5xl">
-                    ALL RANKS
+                  <div className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-delay" style={{ '--delay': '0.2s'}}>
+                    <span>OCT-DEC</span>
                   </div>
-                  <div className="uppercase text-sm text-ui-100">inclusive</div>
+                  <div className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-delay" style={{ '--delay': '0.3s'}}>
+                    <span>Event duration</span>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-delay" style={{ '--delay': '0.4s'}}>
+                    <span>ALL RANKS</span>
+                  </div>
+                  <div className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-delay" style={{ '--delay': '0.5s'}}>
+                    <span>inclusive</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="pointer-events-none absolute z-0 inset-0 flex items-end justify-center bg-ui-900/95 overflow-hidden">
+          <div className="pointer-events-none absolute z-0 inset-0 flex items-center justify-center bg-ui-900/95 overflow-hidden">
             <img
               src="https://res.cloudinary.com/gloot/image/upload/v1689166178/Stryda/marketing/campaigns/Nordic%20Clash/Hero_agent_silhouette.png"
               className="absolute z-10 -bottom-1 h-80 w-auto max-w-[none]"
@@ -170,33 +172,51 @@ const PrototypePage = () => {
               width="100%"
               height="100%"
               className="scale-[3] lg:scale-100 w-auto h-full lg:w-full lg:h-auto relative z-0"
-              src="https://res.cloudinary.com/gloot/video/upload/v1689166247/Stryda/marketing/campaigns/Nordic%20Clash/SNC_5s_VB_Loop.mp4"
+              src="https://res.cloudinary.com/gloot/video/upload/v1689166247/Stryda/marketing/campaigns/Nordic%20Clash/SNC_5s_VB_Loop_1.mp4"
             ></video>
           </div>
         </section>
-        <section className="relative z-10 py-24 bg-ui-100 bg-fixed text-center">
-          <div className="max-w-[70ch] mx-auto">
-            <h2 className="text-ui-900 font-headings font-bold leading-[0.93]">
-              <span className="text-6xl">Who will be the Valorant</span>
-              <br />
-              <span className="text-8xl">Nordic Champions?</span>
-            </h2>
-            <p className="text-ui-900 text-xl leading-relaxed mt-4">
-              Join the Stryda Nordic Clash, part of the VALORANT Championship
-              Tour OFF//SEASON 2023. Compete for the title of Champions in the
-              North and a slice of the exciting <b>$20,000</b> prize pool!
-            </p>
-            <p className="text-ui-900 leading-relaxed mt-6">
-              Whether you&#39;re an experienced esports professional or not,
-              VALORANT Nordic Clash is open to players of all skills level to
-              compete in a unique new way. The only requirement: you must have
-              at least 3 players from the Nordic regions in your team. Are you
-              ready to test yourself against the modern-days Vikings? The
-              tournament will kick off in October with a series of qualifiers
-              played off with the Stryda leaderboards in Clans Events. Only the
-              most skilled teams will emerge victorious and secure their place
-              in the Grand Finale.
-            </p>
+        <section className="relative z-10 bg-ui-100 bg-fixed text-center">
+          <div className="container flex items-end justify-center">
+            <div className="flex-1 max-w-lg:hidden">
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1689239647/Stryda/marketing/campaigns/Nordic%20Clash/agent_deadlock.png"
+                className="w-full h-auto -mt-12"
+                alt=""
+              />
+            </div>
+            <div className="flex-0 max-w-sm 2xl:max-w-[70ch] mx-auto py-24">
+              <h2 className="text-ui-900 font-headings font-bold leading-[0.93]">
+                <span className="text-5xl 2xl:text-6xl">
+                  Who will be the Valorant
+                </span>
+                <br />
+                <span className="text-7xl 2xl:text-8xl">Nordic Champions?</span>
+              </h2>
+              <p className="text-ui-900 text-xl leading-relaxed mt-4">
+                Join the Stryda Nordic Clash, part of the VALORANT Championship
+                Tour OFF//SEASON 2023. Compete for the title of Champions in the
+                North and a slice of the exciting <b>$20,000</b> prize pool!
+              </p>
+              <p className="text-ui-900 leading-relaxed mt-6">
+                Whether you&#39;re an experienced esports professional or not,
+                VALORANT Nordic Clash is open to players of all skills level to
+                compete in a unique new way. The only requirement: you must have
+                at least 3 players from the Nordic regions in your team. Are you
+                ready to test yourself against the modern-days Vikings? The
+                tournament will kick off in October with a series of qualifiers
+                played off with the Stryda leaderboards in Clans Events. Only
+                the most skilled teams will emerge victorious and secure their
+                place in the Grand Finale.
+              </p>
+            </div>
+            <div className="flex-1 max-w-lg:hidden">
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1689239647/Stryda/marketing/campaigns/Nordic%20Clash/agent_breach.png"
+                className="w-full h-auto -mt-12"
+                alt=""
+              />
+            </div>
           </div>
         </section>
       </div>

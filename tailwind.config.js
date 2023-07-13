@@ -96,14 +96,14 @@ module.exports = {
       "2xl": "0.25rem",
       "3xl": "3rem",
       full: "9999px",
-      "0.5": "0.125rem",
-      "1": "0.25rem",
-      "1.5": "0.375rem",
-      "2": "0.5rem",
-      "2.5": "0.625rem",
-      "3": "0.75rem",
-      "3.5": "0.875rem",
-      "4": "1rem",
+      0.5: "0.125rem",
+      1: "0.25rem",
+      1.5: "0.375rem",
+      2: "0.5rem",
+      2.5: "0.625rem",
+      3: "0.75rem",
+      3.5: "0.875rem",
+      4: "1rem",
     },
     extend: {
       colors: {
@@ -292,15 +292,58 @@ module.exports = {
         rotate: "rotate 12s linear infinite",
         floating: "floating 6s cubic-bezier(.45,0,.4,1) infinite",
         shake: "shake 0.8s cubic-bezier(.455,.030,.515,.955) both",
-        "scale-in-x-left": "scaleInXLeft 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
-        "scale-out-x-left": "scaleOutXLeft 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
-        "scale-in-x-right": "scaleInXRight 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
-        "scale-out-x-right": "scaleOutXRight 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "scale-in-x-left":
+          "scaleInXLeft 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "scale-out-x-left":
+          "scaleOutXLeft 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "scale-in-x-right":
+          "scaleInXRight 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "scale-out-x-right":
+          "scaleOutXRight 0.75s cubic-bezier(0.7, 0, 0.1, 1) both",
         "fire-in": "fireIn 0.88s cubic-bezier(0.7, 0, 0.1, 1) both",
         "fire-out": "fireOut 0.44s cubic-bezier(0.7, 0, 0.1, 1) both",
         "text-attention": "textAttention 2s ease-in-out infinite both",
+        blockreveal: "blockReveal .66s cubic-bezier(1,0,.2,1) both",
+        "blockreveal-before":
+          "blockRevealBefore .66s cubic-bezier(1,0,.2,1) both",
+        "blockreveal-content":
+          "blockRevealContent .66s cubic-bezier(1,0,.2,1) both",
       },
       keyframes: {
+        blockReveal: {
+          "0%": {
+            opacity: "0",
+          },
+          "1%, 100%": {
+            opacity: "1",
+          },
+        },
+        blockRevealBefore: {
+          "0%": {
+            transformOrigin: "0% center",
+            transform: "scaleX(0)",
+          },
+          "50%": {
+            transformOrigin: "0% center",
+            transform: "scaleX(1)",
+          },
+          "51%": {
+            transformOrigin: "100% center",
+            transform: "scaleX(1)",
+          },
+          "100%": {
+            transformOrigin: "100% center",
+            transform: "scaleX(0)",
+          },
+        },
+        blockRevealContent: {
+          "0%, 50%": {
+            opacity: "0",
+          },
+          "51%, 100%": {
+            opacity: "1",
+          },
+        },
         slideInLeft: {
           "0%": {
             transform: "translateX(-2rem)",
@@ -507,7 +550,7 @@ module.exports = {
           "100%": {
             transform: "scaleX(1)",
             transformOrigin: "0% 0%",
-          }
+          },
         },
         scaleOutXLeft: {
           "0%": {
@@ -517,7 +560,7 @@ module.exports = {
           "100%": {
             transform: "scaleX(0)",
             transformOrigin: "0% 0%",
-          }
+          },
         },
         scaleInXRight: {
           "0%": {
@@ -527,7 +570,7 @@ module.exports = {
           "100%": {
             transform: "scaleX(1)",
             transformOrigin: "100% 100%",
-          }
+          },
         },
         scaleOutXRight: {
           "0%": {
@@ -537,7 +580,7 @@ module.exports = {
           "100%": {
             transform: "scaleX(0)",
             transformOrigin: "100% 100%",
-          }
+          },
         },
         fireIn: {
           "0%": {

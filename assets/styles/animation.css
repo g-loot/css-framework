@@ -395,6 +395,40 @@
   }
 }
 
+/* blockreveal */
+
+.blockreveal {
+  @apply
+  relative
+  origin-center
+  animate-blockreveal
+  before:animate-blockreveal-before
+  before:content-['']
+  before:absolute
+  before:z-10
+  before:inset-0
+  before:bg-white
+  before:origin-left
+  ;
+
+  > * {
+    @apply
+    relative
+    z-0
+    opacity-0
+    animate-blockreveal-content
+    ;
+  }
+
+  &.animate-delay {
+    &,
+    &::before,
+    > * {
+      animation-delay: var(--delay, 0.3s) !important;
+    }
+  }
+}
+
 /* no anim */
 
 .noanimation {
