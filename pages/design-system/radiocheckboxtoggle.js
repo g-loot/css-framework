@@ -220,7 +220,12 @@ const DSpage = () => {
                   <div className="flex-1 space-y-4">
                     <div className="form-group">
                       <div className="form-radio is-disabled">
-                        <input type="radio" name="radio" id="radioDisabled" />
+                        <input
+                          type="radio"
+                          name="radio"
+                          id="radioDisabled"
+                          disabled={true}
+                        />
                         <label htmlFor="radioDisabled">Male</label>
                       </div>
                     </div>
@@ -230,6 +235,7 @@ const DSpage = () => {
                           type="checkbox"
                           name="toggle"
                           id="toggleDisabled"
+                          disabled={true}
                         />
                         <label htmlFor="toggleDisabled">
                           I agree with your policy
@@ -242,6 +248,7 @@ const DSpage = () => {
                           type="checkbox"
                           name="checkbox"
                           id="checkboxDisabled"
+                          disabled={true}
                         />
                         <label htmlFor="checkboxDisabled">
                           I confirm that I have read the policity

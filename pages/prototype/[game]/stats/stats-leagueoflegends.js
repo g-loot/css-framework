@@ -325,7 +325,7 @@ export default function StatsLeagueOfLegends() {
                         </div>
                       </div>
                       <img
-                        className="h-24"
+                        className="h-28"
                         src={getRankByID(selectedStat.rank)?.picturePath}
                         height="auto"
                         width="auto"

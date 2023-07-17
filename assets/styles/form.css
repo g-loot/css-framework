@@ -315,6 +315,18 @@ label.button {
         }
       }
     }
+
+    &:focus-visible {
+      + label {
+        &::before {
+          @apply
+          outline
+          outline-interaction-300
+          outline-offset-2
+          ;
+        }
+      }
+    }
   }
 
   label {
@@ -331,10 +343,9 @@ label.button {
       block
       left-0
       my-auto
-      transition-all
-      transform-gpu
-      duration-300
-      ease-[cubic-bezier(.9,0,.2,1)]
+      transition-[color,background,transform]
+      duration-200
+      ease-in-out
       shadow-[0_0_0_1px_rgb(var(--color-ui-600))]
       ;
     }
@@ -669,6 +680,7 @@ label.button {
 .form-radio,
 .form-checkbox,
 .form-toggle {
+  
   &.form-image {
     perspective: 1000px;
     @apply
@@ -685,8 +697,8 @@ label.button {
         bg-center
         border-0
         overflow-hidden
-        transition-all
-        duration-300
+        transition-[color,background,transform,filter]
+        duration-200
         ease-in-out
         origin-center
         opacity-50
@@ -705,7 +717,7 @@ label.button {
           content-['']
           absolute
           transition-all
-          transform-gpu
+          duration-200
           ease-[cubic-bezier(0.9,0,0.1,1)]
           w-8
           h-8
@@ -753,7 +765,17 @@ label.button {
           }
         }
       }
-      
+
+      &:focus-visible:not(:disabled) {
+        ~ div:not(.bg-transparent) {
+          @apply
+          outline
+          outline-interaction-300
+          outline-offset-2
+          ;
+        }
+      }
+
       &:checked:not(:disabled) {
         ~ div:not(.bg-transparent) {
           @apply

@@ -34,7 +34,84 @@ const PrototypePage = () => {
       <TopbarMarketing />
 
       <div className="min-h-screen bg-ui-900 pb-24 relative">
-        <i className="absolute inset-0 pointer-events-none z-50 mix-blend-overlay opacity-30 bg-fixed bg-[length:100px_100px] bg-[url('https://res.cloudinary.com/gloot/image/upload/v1689232741/Stryda/marketing/campaigns/Nordic%20Clash/noise-black.jpg')]" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="0"
+          height="0"
+          viewBox="0 0 480 480"
+        >
+          <defs>
+            <filter id="glitchshadow">
+              <feGaussianBlur
+                in="SourceAlpha"
+                stdDeviation="0"
+                result="blur"
+              ></feGaussianBlur>
+              <feOffset dx="0" dy="0" result="offsetblur">
+                <animate
+                  attributeName="dx"
+                  from="0"
+                  to="0"
+                  begin="0s"
+                  dur="0.1s"
+                  repeatCount="indefinite"
+                  values="-5;-2;-2;-2;5;0"
+                  keyTimes="0;0.125;0.275;0.625;0.875;1"
+                ></animate>
+                <animate
+                  attributeName="dy"
+                  from="0"
+                  to="0"
+                  begin="0s"
+                  dur="0.1s"
+                  repeatCount="indefinite"
+                  values="1;1.5;3;1.7;-1.7;0"
+                  keyTimes="0;0.125;0.275;0.625;0.875;1"
+                ></animate>
+              </feOffset>
+              <feOffset dx="60" dy="-12" result="offsetblur2" in="blur">
+                <animate
+                  attributeName="dx"
+                  from="0"
+                  to="0"
+                  begin="0s"
+                  dur="0.1s"
+                  repeatCount="indefinite"
+                  values="0;5;-2;-2;-2;-5"
+                  keyTimes="0;0.125;0.275;0.625;0.875;1"
+                ></animate>
+                <animate
+                  attributeName="dy"
+                  from="0"
+                  to="0"
+                  begin="0s"
+                  dur="0.1s"
+                  repeatCount="indefinite"
+                  values="0;-1.7;1.7;-3;1.5;1"
+                  keyTimes="0;0.125;0.275;0.625;0.875;1"
+                ></animate>
+              </feOffset>
+              <feComponentTransfer result="shadow1" in="offsetblur">
+                <feFuncA type="linear" slope=".8"></feFuncA>
+                <feFuncR type="discrete" tableValues="0"></feFuncR>
+                <feFuncG type="discrete" tableValues="1"></feFuncG>
+                <feFuncB type="discrete" tableValues="1"></feFuncB>
+              </feComponentTransfer>
+              <feComponentTransfer result="shadow2" in="offsetblur2">
+                <feFuncA type="linear" slope=".8"></feFuncA>
+                <feFuncR type="discrete" tableValues="1"></feFuncR>
+                <feFuncG type="discrete" tableValues="0"></feFuncG>
+                <feFuncB type="discrete" tableValues="1"></feFuncB>
+              </feComponentTransfer>
+              <feMerge>
+                <feMergeNode in="shadow1"></feMergeNode>
+                <feMergeNode in="shadow2"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+              </feMerge>
+            </filter>
+          </defs>
+        </svg>
+        <i className="absolute inset-0 pointer-events-none z-50 mix-blend-overlay opacity-40 bg-fixed bg-[length:100px_100px] bg-[url('https://res.cloudinary.com/gloot/image/upload/v1689232741/Stryda/marketing/campaigns/Nordic%20Clash/noise-black.jpg')]" />
         <section className="relative z-10 pt-28 pb-80">
           <div className="relative z-20 px-4">
             <div className="drop-shadow-[0_4px_0_rgba(0,0,0,0.2)]">
@@ -51,6 +128,7 @@ const PrototypePage = () => {
                 height="auto"
                 alt="Stryda"
                 className="relative z-0 mx-auto w-full max-w-md mb-8"
+                style={{ filter: 'url(#glitchshadow)'}}
               />
             </div>
             {/*
@@ -134,23 +212,38 @@ const PrototypePage = () => {
                   <div className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal">
                     <span>$20 000</span>
                   </div>
-                  <div className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-delay" style={{ '--delay': '0.1s'}}>
+                  <div
+                    className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-delay"
+                    style={{ "--delay": "0.1s" }}
+                  >
                     <span>Prize pool</span>
                   </div>
                 </div>
                 <div>
-                  <div className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-delay" style={{ '--delay': '0.2s'}}>
+                  <div
+                    className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-delay"
+                    style={{ "--delay": "0.2s" }}
+                  >
                     <span>OCT-DEC</span>
                   </div>
-                  <div className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-delay" style={{ '--delay': '0.3s'}}>
+                  <div
+                    className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-delay"
+                    style={{ "--delay": "0.3s" }}
+                  >
                     <span>Event duration</span>
                   </div>
                 </div>
                 <div>
-                  <div className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-delay" style={{ '--delay': '0.4s'}}>
+                  <div
+                    className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-delay"
+                    style={{ "--delay": "0.4s" }}
+                  >
                     <span>ALL RANKS</span>
                   </div>
-                  <div className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-delay" style={{ '--delay': '0.5s'}}>
+                  <div
+                    className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-delay"
+                    style={{ "--delay": "0.5s" }}
+                  >
                     <span>inclusive</span>
                   </div>
                 </div>
@@ -176,9 +269,21 @@ const PrototypePage = () => {
             ></video>
           </div>
         </section>
-        <section className="relative z-10 bg-ui-100 bg-fixed text-center">
-          <div className="container flex items-end justify-center">
-            <div className="flex-1 max-w-lg:hidden">
+        <section className="relative z-10 bg-ui-100 text-center">
+          <i
+            className="absolute z-0 inset-x-0 h-8 bg-repeat-x bg-contain -top-px"
+            style={{
+              backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1689578093/Stryda/marketing/campaigns/Nordic%20Clash/ripped_paper.svg)`,
+            }}
+          />
+          <i
+            className="absolute z-0 inset-x-0 h-8 bg-repeat-x bg-contain -bottom-[calc(2rem-1px)]"
+            style={{
+              backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1689579057/Stryda/marketing/campaigns/Nordic%20Clash/ripped_paper_bottom.svg)`,
+            }}
+          />
+          <div className="relative z-10 container flex items-end justify-center">
+            <div className="flex-1 max-w-lg:hidden animate-slide-in-bottom animate-paused animate-delay">
               <img
                 src="https://res.cloudinary.com/gloot/image/upload/v1689239647/Stryda/marketing/campaigns/Nordic%20Clash/agent_deadlock.png"
                 className="w-full h-auto -mt-12"
@@ -186,19 +291,34 @@ const PrototypePage = () => {
               />
             </div>
             <div className="flex-0 max-w-sm 2xl:max-w-[70ch] mx-auto py-24">
-              <h2 className="text-ui-900 font-headings font-bold leading-[0.93]">
+              <h2
+                className="text-ui-900 font-headings font-bold leading-[0.93] animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(2 * 0.05s)",
+                }}
+              >
                 <span className="text-5xl 2xl:text-6xl">
                   Who will be the Valorant
                 </span>
                 <br />
                 <span className="text-7xl 2xl:text-8xl">Nordic Champions?</span>
               </h2>
-              <p className="text-ui-900 text-xl leading-relaxed mt-4">
+              <p
+                className="text-ui-900 text-xl leading-relaxed mt-4 animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(3 * 0.05s)",
+                }}
+              >
                 Join the Stryda Nordic Clash, part of the VALORANT Championship
                 Tour OFF//SEASON 2023. Compete for the title of Champions in the
                 North and a slice of the exciting <b>$20,000</b> prize pool!
               </p>
-              <p className="text-ui-900 leading-relaxed mt-6">
+              <p
+                className="text-ui-900 leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(4 * 0.05s)",
+                }}
+              >
                 Whether you&#39;re an experienced esports professional or not,
                 VALORANT Nordic Clash is open to players of all skills level to
                 compete in a unique new way. The only requirement: you must have
@@ -210,13 +330,95 @@ const PrototypePage = () => {
                 place in the Grand Finale.
               </p>
             </div>
-            <div className="flex-1 max-w-lg:hidden">
+            <div className="flex-1 max-w-lg:hidden animate-slide-in-bottom animate-paused animate-delay">
               <img
                 src="https://res.cloudinary.com/gloot/image/upload/v1689239647/Stryda/marketing/campaigns/Nordic%20Clash/agent_breach.png"
                 className="w-full h-auto -mt-12"
                 alt=""
               />
             </div>
+          </div>
+        </section>
+        <section className="relative z-0 bg-ui-900 text-center">
+          <div className="relative z-10 container max-w-sm 2xl:max-w-[70ch] mx-auto py-24">
+            <div className="drop-shadow-[0_4px_0_rgba(0,0,0,0.2)]">
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1689235015/Stryda/logos/stryda-logo-ui-100.svg"
+                width="auto"
+                height="auto"
+                alt="Stryda"
+                className="mx-auto w-auto h-12 mb-10 animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(1 * 0.05s)",
+                }}
+              />
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1689166223/Stryda/marketing/campaigns/Nordic%20Clash/Stryda_Nordic_Clash_logo.svg"
+                width="auto"
+                height="auto"
+                alt="Stryda"
+                className="relative z-0 mx-auto w-full max-w-md mb-12 animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(2 * 0.05s)",
+                }}
+              />
+            </div>
+            <div className="drop-shadow-[0_2px_0_rgba(0,0,0,0.2)]">
+              <p
+                className="text-ui-100 text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(3 * 0.05s)",
+                }}
+              >
+                Legends speak of an ancient Radianite-powered relic hidden in
+                the farthest reaches of the North.
+              </p>
+              <p
+                className="text-ui-100 text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(4 * 0.05s)",
+                }}
+              >
+                For generations, brave warriors have fought and died trying to
+                claim it for themselves.
+              </p>
+              <p
+                className="text-ui-100 text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(5 * 0.05s)",
+                }}
+              >
+                But now, a new battle begins! The Clans of the North have
+                gathered for the ultimate test of skills; the last straw before
+                conquering the powerful relic. Here, in the Nordic Clash
+                Tournament, new VALORANT champions will rise and old legends
+                might fall.
+              </p>
+              <p
+                className="text-ui-100 text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(6 * 0.05s)",
+                }}
+              >
+                Are you ready for the challenge? Only the worthy will secure
+                their position as the strongest Clan in the North, claim the
+                relic, and maybe - just maybe- a place in Valhalla itself.
+              </p>
+            </div>
+          </div>
+          <div className="pointer-events-none absolute z-0 inset-0 flex items-center justify-center bg-ui-900/95 overflow-hidden">
+            <i className="absolute z-10 inset-0 bg-ui-900 opacity-30" />
+            <video
+              autoPlay={true}
+              playsInline
+              loop
+              muted
+              preload
+              width="100%"
+              height="100%"
+              className="scale-[3] lg:scale-100 w-auto h-full lg:w-full lg:h-auto relative z-0"
+              src="https://res.cloudinary.com/gloot/video/upload/v1689577806/Stryda/marketing/campaigns/Nordic%20Clash/SNC_LOGO_Fill_5s_VB_Loop.mp4"
+            ></video>
           </div>
         </section>
       </div>
