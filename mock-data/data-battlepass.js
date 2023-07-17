@@ -146,7 +146,7 @@ export const DataBattlepass = [
   },
   {
     id: 1,
-    currentStep: 1,
+    currentStep: 4,
     currentProgress: 75,
     meta: {
       name: "Battlepass",
@@ -160,14 +160,14 @@ export const DataBattlepass = [
         name: "tier 1",
         reward: 8,
         isPremium: false,
-        hasClaimed: false,
+        hasClaimed: true,
       },
       {
         id: 2,
         name: "tier 2",
         reward: 1,
         isPremium: false,
-        hasClaimed: false,
+        hasClaimed: true,
       },
       {
         id: 3,

@@ -34,7 +34,7 @@ const PrototypePage = () => {
       <TopbarMarketing />
 
       <div className="min-h-screen bg-ui-900 relative">
-        <i className="absolute inset-0 pointer-events-none z-50 mix-blend-overlay opacity-40 bg-fixed bg-[length:100px_100px] bg-[url('https://res.cloudinary.com/gloot/image/upload/v1689232741/Stryda/marketing/campaigns/Nordic%20Clash/noise-black.jpg')]" />
+        <i className="absolute inset-0 pointer-events-none z-50 mix-blend-overlay opacity-30 bg-fixed bg-[length:100px_100px] bg-[url('https://res.cloudinary.com/gloot/image/upload/v1689232741/Stryda/marketing/campaigns/Nordic%20Clash/noise-black.jpg')]" />
         <section className="relative z-10 pt-28 pb-80">
           <div className="relative z-20 px-4">
             <div className="drop-shadow-[0_4px_0_rgba(0,0,0,0.2)]">
@@ -218,7 +218,7 @@ const PrototypePage = () => {
             ></video>
           </div>
         </section>
-        <section className="relative z-10 px-8 lg:px-0 bg-ui-100 text-center">
+        <section className="relative z-10 px-6 lg:px-0 bg-ui-100 text-center">
           <i
             className="absolute z-0 inset-x-0 h-8 bg-repeat-x bg-contain -top-px"
             style={{
@@ -325,7 +325,7 @@ const PrototypePage = () => {
             </div>
           </div>
         </section>
-        <section className="relative z-0 px-8 lg:px-0 bg-ui-900 text-center">
+        <section className="relative z-0 px-6 lg:px-0 bg-ui-900 text-center">
           <div className="relative z-20 container max-w-sm 2xl:max-w-[70ch] mx-auto py-32">
             <div className="drop-shadow-[0_4px_0_rgba(0,0,0,0.2)]">
               <div
@@ -358,7 +358,7 @@ const PrototypePage = () => {
             </div>
             <div className="drop-shadow-[0_2px_0_rgba(0,0,0,0.2)]">
               <p
-                className="text-ui-100 text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
                 style={{
                   "--delay": "calc(3 * 0.05s)",
                 }}
@@ -367,7 +367,7 @@ const PrototypePage = () => {
                 the farthest reaches of the North.
               </p>
               <p
-                className="text-ui-100 text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
                 style={{
                   "--delay": "calc(4 * 0.05s)",
                 }}
@@ -376,7 +376,7 @@ const PrototypePage = () => {
                 claim it for themselves.
               </p>
               <p
-                className="text-ui-100 text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
                 style={{
                   "--delay": "calc(5 * 0.05s)",
                 }}
@@ -388,7 +388,7 @@ const PrototypePage = () => {
                 might fall.
               </p>
               <p
-                className="text-ui-100 text-xl leading-relaxed my-6 animate-slide-in-bottom animate-paused animate-delay"
+                className="text-ui-100 text-lg md:text-xl leading-relaxed my-6 animate-slide-in-bottom animate-paused animate-delay"
                 style={{
                   "--delay": "calc(6 * 0.05s)",
                 }}
@@ -433,8 +433,8 @@ const PrototypePage = () => {
             ></video>
           </div>
         </section>
-        <section className="relative z-0 px-8 lg:px-0 bg-ui-900 text-center lg:text-left">
-          <div className="relative z-10 container flex flex-col lg:flex-row gap-8 items-center justify-center py-24">
+        <section className="relative z-0 bg-ui-900 text-center lg:text-left">
+          <div className="relative z-10 container px-6 flex flex-col lg:flex-row gap-8 items-center justify-center py-24">
             <div className="flex-3 lg:order-2">
               <video
                 className="w-full h-auto"
@@ -477,7 +477,7 @@ const PrototypePage = () => {
                 </span>
               </h2>
               <p
-                className="text-ui-100 text-xl leading-relaxed mt-4 animate-slide-in-bottom animate-paused animate-delay"
+                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-4 animate-slide-in-bottom animate-paused animate-delay"
                 style={{
                   "--delay": "calc(3 * 0.05s)",
                 }}
@@ -489,7 +489,7 @@ const PrototypePage = () => {
                 and fun for everyone.
               </p>
               <p
-                className="text-ui-100 text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
                 style={{
                   "--delay": "calc(4 * 0.05s)",
                 }}
@@ -499,7 +499,7 @@ const PrototypePage = () => {
                 will clash head-to-head to claim the title of Nordic Champions.
               </p>
               <p
-                className="text-ui-100 text-xl leading-relaxed my-6 animate-slide-in-bottom animate-paused animate-delay"
+                className="text-ui-100 text-lg md:text-xl leading-relaxed my-6 animate-slide-in-bottom animate-paused animate-delay"
                 style={{
                   "--delay": "calc(5 * 0.05s)",
                 }}
@@ -532,11 +532,11 @@ const PrototypePage = () => {
             </div>
           </div>
         </section>
-        <section className="relative z-0 px-8 lg:px-0 bg-ui-900 text-center lg:text-left">
-          <div className="relative z-10 container flex flex-col lg:flex-row gap-8 items-center justify-center pb-24">
+        <section className="relative z-0 bg-ui-900 text-center lg:text-left">
+          <div className="relative z-10 container px-6 flex flex-col lg:flex-row gap-8 items-center justify-center pb-24">
             <div className="flex-3">
               <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1689603007/Stryda/marketing/campaigns/Nordic%20Clash/stryda_app.png"
+                src="https://res.cloudinary.com/gloot/image/upload/v1689603008/Stryda/marketing/campaigns/Nordic%20Clash/stryda_app.png"
                 alt=""
                 className="w-full h-auto"
               />
@@ -562,7 +562,7 @@ const PrototypePage = () => {
                 </span>
               </h2>
               <p
-                className="text-ui-100 text-xl leading-relaxed mt-4 animate-slide-in-bottom animate-paused animate-delay"
+                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-4 animate-slide-in-bottom animate-paused animate-delay"
                 style={{
                   "--delay": "calc(3 * 0.05s)",
                 }}
@@ -571,7 +571,7 @@ const PrototypePage = () => {
                 on the Stryda platform with specific leaderboards.
               </p>
               <p
-                className="text-ui-100 text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
                 style={{
                   "--delay": "calc(4 * 0.05s)",
                 }}
@@ -582,7 +582,7 @@ const PrototypePage = () => {
                 Stryda now!
               </p>
               <p
-                className="text-ui-100 text-xl leading-relaxed my-6 animate-slide-in-bottom animate-paused animate-delay"
+                className="text-ui-100 text-lg md:text-xl leading-relaxed my-6 animate-slide-in-bottom animate-paused animate-delay"
                 style={{
                   "--delay": "calc(5 * 0.05s)",
                 }}
@@ -613,10 +613,10 @@ const PrototypePage = () => {
           </div>
         </section>
         <section className="relative z-10 pt-80 text-center">
-          <div className="relative z-20 px-8 lg:px-0 pb-32 bg-ui-100">
+          <div className="relative z-20 px-6 lg:px-0 pb-32 bg-ui-100">
             <div className="w-full max-w-md mx-auto">
               <h3
-                className="text-ui-900 text-2xl uppercase blockreveal before:!bg-ui-900 animate-paused animate-delay"
+                className="text-ui-900 text-2xl uppercase blockreveal before:!bg-ui-900 animate-paused animate-delay mb-2"
                 style={{
                   "--delay": "calc(2 * 0.05s)",
                 }}

@@ -553,6 +553,13 @@ export const dataShopitems = [
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1674213697/Stryda/shop/avatarframes/Sapphire.svg",
       },
+      {
+        id: 163,
+        name: "Pride",
+        price: 550010,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1674213697/Stryda/shop/avatarframes/Pride.svg",
+      },
     ],
   },
   {

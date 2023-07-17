@@ -63,10 +63,6 @@ export default function Battlepass(props) {
     }, delay + offset * 5);
   }, []);
 
-  function RandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
   useEffect(() => {
     if (isfinished) {
       setIsFinished(true);
@@ -83,16 +79,13 @@ export default function Battlepass(props) {
     if (loading) {
       setTimeout(() => {
         setLoading(false);
-      }, RandomNumber(300, 3000));
+      }, 500);
     }
   }, [loading]);
 
   const componentRef = useRef();
 
   const handleResize = useCallback(() => {
-    const divWidthResized = componentRef?.current?.offsetWidth;
-    const maxStepsToDisplay = Math.floor(divWidthResized / 144);
-    setmaxSteps(maxStepsToDisplay);
     setTimeout(() => {
       const divWidthResized = componentRef?.current?.offsetWidth;
       const maxStepsToDisplay = Math.floor(divWidthResized / 144);
