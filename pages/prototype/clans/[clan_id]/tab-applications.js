@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Link from "next/link";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -6,6 +6,8 @@ import ButtonSorting from "../../../../components/Button/ButtonSorting";
 import Avatar from "../../../../components/Avatar/Avatar";
 import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
 import Tooltip from "../../../../components/Tooltip/Tooltip";
+import ModalClanInvite from "../modal-clan-invite";
+import { UiContext } from "../../../../contexts/ui";
 
 const PlayerApplications = [
   {
@@ -49,11 +51,13 @@ const PlayerApplications = [
 export default function TabClanApplications() {
   const router = useRouter();
   const { query } = useRouter();
+  const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const [selectedClan, setSelectedClan] = useState(null);
   const { clan_id } = router.query;
   const isEmpty = query.empty === "true" ? true : false;
   const [filter, setFilter] = useState("");
+  const modalClanInvite = query.modalclaninvite === "true" ? true : false;
 
   useEffect(() => {
     setSelectedClan(prototype.getClanByID(clan_id));
@@ -77,18 +81,42 @@ export default function TabClanApplications() {
     return parts.join(".");
   }
 
+  function openModalClanInvite() {
+    uiContext.openModal(<ModalClanInvite />);
+  }
+
+  useEffect(() => {
+    if (modalClanInvite) {
+      openModalClanInvite();
+    }
+  }, [modalClanInvite]);
+
+
   return (
     <div className="animate-slide-in-bottom">
       <div className="flex flex-col gap-4 md:flex-row md:justify-between md:items-stretch px-4 sm:px-0 mb-0.5">
-        <div className="leading-none text-center surface rounded py-2 p-4 flex justify-between items-center gap-4">
-          <div className="text-ui-300">
-            <b className="text-ui-200">2</b>/32 slots available
+        <div className="flex flex-1 gap-4 items-center">
+          <div className="whitespace-nowrap leading-none text-center surface rounded py-2 p-4 flex justify-between items-center gap-4">
+            <div className="text-ui-300">
+              <b className="text-ui-200">2</b>/32 slots available
+            </div>
+            <div
+              className="progressbar progressbar-sm w-full sm:w-36"
+              style={{ "--percent": "95" }}
+            >
+              <div />
+            </div>
           </div>
-          <div
-            className="progressbar progressbar-sm w-full sm:w-36"
-            style={{ "--percent": "95" }}
-          >
-            <div />
+          <div data-tooltip="Invite players" className="tooltip-right">
+            <button
+              type="button"
+              className="button rounded-full button-tertiary"
+              onClick={() => {
+                openModalClanInvite();
+              }}
+            >
+              <span className="icon icon-a-add" />
+            </button>
           </div>
         </div>
         <div className="flex gap-4 items-center">
@@ -305,7 +333,8 @@ export default function TabClanApplications() {
                             <div className="text-ui-300">
                               {prototype
                                 .getUserByID(item.user)
-                                ?.nickname.substring(0, 10)}_1111
+                                ?.nickname.substring(0, 10)}
+                              _1111
                               <Tooltip
                                 placement="top"
                                 tooltip={

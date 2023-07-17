@@ -411,6 +411,15 @@ export const FrameworkPages = {
           tab: 2,
           new: false,
         },
+        {
+          label: "Invite players",
+          chip: "modal",
+          url: "clans/1",
+          query: "tab=applications&modalclaninvite=true",
+          tags: "clan, team, modal, prompt, invite, players, members",
+          tab: 2,
+          new: false,
+        },
       ],
     },
     {

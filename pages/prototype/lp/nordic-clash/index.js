@@ -41,6 +41,178 @@ const PrototypePage = () => {
           viewBox="0 0 480 480"
         >
           <defs>
+            <filter
+              id="screenLines"
+              x="0vw"
+              y="0vh"
+              width="100vw"
+              height="100vh"
+            >
+              <feFlood flood-color="#808080" result="neutral-gray" />
+              <feTurbulence
+                in="neutral-gray"
+                type="fractalNoise"
+                baseFrequency="0.001 10"
+                numOctaves="10"
+                stitchTiles="stitch"
+                result="noise"
+              />
+              <feColorMatrix
+                in="noise"
+                type="saturate"
+                values="0"
+                result="destaturatedNoise"
+              ></feColorMatrix>
+              <feComponentTransfer in="desaturatedNoise" result="theNoise">
+                <feFuncA type="table" tableValues="0 0 0.2 0"></feFuncA>
+              </feComponentTransfer>
+              <feBlend
+                in="SourceGraphic"
+                in2="theNoise"
+                mode="soft-light"
+                result="noisy-image"
+              />
+            </filter>
+
+            <filter id="noise" x="0vw" y="0vh" width="100vw" height="100vh">
+              <feFlood flood-color="#808080" result="neutral-gray" />
+              <feTurbulence
+                in="neutral-gray"
+                type="fractalNoise"
+                baseFrequency="0.3"
+                seed="1"
+                numOctaves="10"
+                stitchTiles="stitch"
+                result="noise"
+              />
+              <feColorMatrix
+                in="noise"
+                type="saturate"
+                values="0"
+                result="destaturatedNoise"
+              ></feColorMatrix>
+              <feComponentTransfer in="desaturatedNoise" result="theNoise">
+                <feFuncA type="table" tableValues="0 0 0.2 0"></feFuncA>
+              </feComponentTransfer>
+              <feBlend
+                in="SourceGraphic"
+                in2="theNoise"
+                mode="soft-light"
+                result="noisy-image"
+              />
+            </filter>
+
+            <filter id="Chromatic_aberration">
+              <feOffset
+                in="SourceGraphic"
+                result="pre-red"
+                dx="-6"
+                dy="-0"
+              ></feOffset>
+              <feOffset
+                in="SourceGraphic"
+                result="yellow"
+                dx="-6"
+                dy="-0"
+              ></feOffset>
+              <feOffset
+                in="SourceGraphic"
+                result="pre-blue"
+                dx="4"
+                dy="4"
+              ></feOffset>
+              <feColorMatrix
+                in="pre-red"
+                type="matrix"
+                result="red"
+                values="0 0 0 0 1
+                                                       0 0 0 0 0 
+                                                       0 0 0 0 0 
+                                                       0 0 0 1 0"
+              ></feColorMatrix>
+              <feColorMatrix
+                in="pre-blue"
+                type="matrix"
+                result="blue"
+                values="0 0 0 0 0
+                                                       0 0 0 0 0 
+                                                       0 0 0 0 1 
+                                                       0 0 0 1 0"
+              ></feColorMatrix>
+              <feBlend
+                mode="lighten"
+                in="red"
+                in2="blue"
+                result="main"
+              ></feBlend>
+              <feBlend
+                mode="multiply"
+                in="main"
+                in2="SourceGraphic"
+                result="main1"
+              ></feBlend>
+              <feComposite
+                in="SourceGraphic"
+                in2="main1"
+                operator="xor"
+                result="comp"
+              ></feComposite>
+              <feMerge>
+                <feMergeNode in="yellow"></feMergeNode>
+                <feMergeNode in="comp"></feMergeNode>
+              </feMerge>
+            </filter>
+
+            <filter id="Analog_noise">
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.0001 0.0001"
+                numOctaves="1"
+                result="warp"
+              ></feTurbulence>
+              <feDisplacementMap
+                xChannelSelector="R"
+                yChannelSelector="G"
+                scale="30"
+                in="SourceGraphic"
+                in2="warp"
+              />
+            </filter>
+
+            <filter id="strangify">
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency=".013"
+                numOctaves="1"
+                seed="46"
+              />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.1 0"
+              />
+              <feComposite
+                operator="in"
+                in="SourceGraphic"
+                result="intermediate-1"
+              />
+
+              <feComponentTransfer>
+                <feFuncA type="table" tableValues="0 0 0 0 1 1 1" />
+              </feComponentTransfer>
+              <feGaussianBlur stdDeviation="4" />
+              <feComponentTransfer>
+                <feFuncA type="linear" slope="1.5">
+                  <animate
+                    attributeName="slope"
+                    values="1.5;1.5;1.8;1.5;1.5;3;0;3;1.1'1.5;1.1;1.4;1.5;1.4;2;1;0;1.5;1;1.5;1.5;1.5;1.5;"
+                    dur="0.25s"
+                    repeatCount="indefinite"
+                  />
+                </feFuncA>
+              </feComponentTransfer>
+
+              <feComposite operator="over" in2="intermediate-1" />
+            </filter>
             <filter id="glitchshadow">
               <feGaussianBlur
                 in="SourceAlpha"
@@ -55,7 +227,7 @@ const PrototypePage = () => {
                   begin="0s"
                   dur="0.1s"
                   repeatCount="indefinite"
-                  values="-5;-2;-2;-2;5;0"
+                  values="-2.5;-1;-1;-1;2.5;0"
                   keyTimes="0;0.125;0.275;0.625;0.875;1"
                 ></animate>
                 <animate
@@ -77,7 +249,7 @@ const PrototypePage = () => {
                   begin="0s"
                   dur="0.1s"
                   repeatCount="indefinite"
-                  values="0;5;-2;-2;-2;-5"
+                  values="0;2.5;-1;-1;-1;-2"
                   keyTimes="0;0.125;0.275;0.625;0.875;1"
                 ></animate>
                 <animate
@@ -87,7 +259,7 @@ const PrototypePage = () => {
                   begin="0s"
                   dur="0.1s"
                   repeatCount="indefinite"
-                  values="0;-1.7;1.7;-3;1.5;1"
+                  values="0;-0.5;0.6;-1.5;0.75;0.5"
                   keyTimes="0;0.125;0.275;0.625;0.875;1"
                 ></animate>
               </feOffset>
@@ -128,7 +300,7 @@ const PrototypePage = () => {
                 height="auto"
                 alt="Stryda"
                 className="relative z-0 mx-auto w-full max-w-md mb-8"
-                style={{ filter: 'url(#glitchshadow)'}}
+                style={{ filter: "url(#glitchshadow)" }}
               />
             </div>
             {/*
@@ -288,6 +460,7 @@ const PrototypePage = () => {
                 src="https://res.cloudinary.com/gloot/image/upload/v1689239647/Stryda/marketing/campaigns/Nordic%20Clash/agent_deadlock.png"
                 className="w-full h-auto -mt-12"
                 alt=""
+                style={{ filter: "url(#glitchshadow)" }}
               />
             </div>
             <div className="flex-0 max-w-sm 2xl:max-w-[70ch] mx-auto py-24">
