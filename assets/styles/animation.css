@@ -407,7 +407,7 @@
   before:absolute
   before:z-10
   before:inset-0
-  before:bg-white
+  before:bg-ui-100
   before:origin-left
   ;
 
@@ -425,6 +425,23 @@
     &::before,
     > * {
       animation-delay: var(--delay, 0.3s) !important;
+    }
+  }
+
+  &.animate-paused {
+    &,
+    &::before,
+    > * {
+      animation-play-state: paused !important;
+    }
+  }
+
+  &.animate-running,
+  &.animate-paused.animate-running {
+    &,
+    &::before,
+    > * {
+      animation-play-state: running !important;
     }
   }
 }

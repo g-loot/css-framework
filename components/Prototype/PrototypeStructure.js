@@ -103,7 +103,7 @@ export default function PrototypeStructure({ children, title }) {
               type="checkbox"
               className="drawer-toggle"
             />
-            <div className="drawer-content scrollbar-desktop scrollbar-secondary">
+            <div className="drawer-content scrollbar-hidden">
               <Topbar />
               <div className="container relative">
                 <div id="alerts" className="alert-container"></div>
