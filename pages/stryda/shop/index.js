@@ -19,7 +19,7 @@ export default function Home() {
       <Structure title="Shop">
         <Ad width="1005" height="300" />
 
-        <section className="header surface sm:rounded-3 mb-4">
+        <section className="header header-quaternary my-8">
           <div className="header-content">
             <div className="header-body">
               <h1>Shop</h1>
@@ -35,7 +35,20 @@ export default function Home() {
           <div className="header-bg">
             <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
           </div>
+
+{/*
+          <div className="absolute w-full h-full opacity-60 inset-0 pointer-events-none">
+            <i className="absolute z-10 h-36 inset-x-0 -bottom-px bg-gradient-to-b from-ui-900/0 via-ui-900/40 to-ui-900" />
+            <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg"
+                alt=""
+                className="absolute w-full h-full inset-0 object-cover"
+              />
+            </div>
+  */}
         </section>
+
+        
         {/*
         <section className="px-4 md:px-0 mb-8 grid md:grid-cols-2 items-stretch gap-8 md:gap-4">
           <div className="flex flex-col">
@@ -52,7 +65,7 @@ export default function Home() {
                   {prototype.getShopsectionByID(1).description}
                 </p>
                 <Link
-                  href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
+                  href={`/stryda/shop/avatar-frame${prototype.getURLparams()}`}
                 >
                   <button type="button" className="button button-primary">
                     <span>View {prototype.getShopsectionByID(1).name}</span>
@@ -82,7 +95,7 @@ export default function Home() {
                   {prototype.getShopsectionByID(2).description}
                 </p>
                 <Link
-                  href={`/prototype/shop/profile-banner${prototype.getURLparams()}`}
+                  href={`/stryda/shop/profile-banner${prototype.getURLparams()}`}
                 >
                   <button type="button" className="button button-primary">
                     <span>View {prototype.getShopsectionByID(2).name}</span>
@@ -165,7 +178,7 @@ export default function Home() {
               </div>
             </li>
             <Link
-              href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
+              href={`/stryda/shop/avatar-frame${prototype.getURLparams()}`}
             >
               <li
                 className="interactive surface rounded-3 w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
@@ -189,7 +202,7 @@ export default function Home() {
                 </div>
                 <div className="border-t border-ui-700 pt-4">
                   <Link
-                    href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
+                    href={`/stryda/shop/avatar-frame${prototype.getURLparams()}`}
                   >
                     <button type="button" className="button button-secondary w-full">
                       <span>View frames</span>
@@ -199,7 +212,7 @@ export default function Home() {
               </li>
             </Link>
             <Link
-              href={`/prototype/shop/profile-banner${prototype.getURLparams()}`}
+              href={`/stryda/shop/profile-banner${prototype.getURLparams()}`}
             >
               <li
                 className="interactive surface rounded-3 w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
@@ -223,7 +236,7 @@ export default function Home() {
                 </div>
                 <div className="border-t border-ui-700 pt-4">
                   <Link
-                    href={`/prototype/shop/profile-banner${prototype.getURLparams()}`}
+                    href={`/stryda/shop/profile-banner${prototype.getURLparams()}`}
                   >
                     <button type="button" className="button button-secondary w-full">
                       <span>View banners</span>
@@ -235,7 +248,7 @@ export default function Home() {
             {prototype.vouchers.map((voucher, voucherIndex) => (
               <>
                 <Link
-                  href={`/prototype/shop/${
+                  href={`/stryda/shop/${
                     voucher.id
                   }${prototype.getURLparams()}`}
                 >
@@ -283,7 +296,7 @@ export default function Home() {
                     </div>
                     <div className="border-t border-ui-700 pt-4">
                       <Link
-                        href={`/prototype/shop/${
+                        href={`/stryda/shop/${
                           voucher.id
                         }${prototype.getURLparams()}`}
                       >

@@ -270,6 +270,69 @@
   }
 }
 
+.header.header-quaternary {
+  @apply
+  static
+  bg-ui-800/0
+  border-0
+  lg:flex-col
+  gap-4
+  overflow-visible
+  ;
+
+  > .header-breadcrumbs {
+    @apply
+    relative
+    ;
+  }
+
+  > .header-content > *:first-child {
+    @apply
+    p-0
+    ;
+  }
+
+  .header-bg {
+    @apply
+    absolute
+    w-full
+    h-full
+    opacity-60
+    inset-0
+    pointer-events-none
+    animate-none
+    ;
+
+    &::before {
+      @apply
+      absolute
+      z-10
+      h-1/2
+      inset-x-0
+      top-auto
+      -bottom-px
+      bg-gradient-to-b
+      from-ui-900/0
+      via-ui-900/40
+      to-ui-900
+      w-full
+      ;
+    }
+    > img {
+      @apply
+      absolute
+      z-0
+      w-full
+      h-full
+      inset-0
+      object-cover
+      object-top
+      opacity-10
+      ;
+    }
+  }
+}
+
 /* no surface */
 
 .header.no-surface {

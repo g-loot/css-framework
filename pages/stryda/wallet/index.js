@@ -48,7 +48,7 @@ export default function Home() {
         <Ad width="1005" height="300" />
 
 
-        <section className="header surface sm:rounded-3 mb-4">
+        <section className="header header-quaternary my-8">
           <div className="header-content">
             <div className="header-body">
               <h1>Wallet</h1>

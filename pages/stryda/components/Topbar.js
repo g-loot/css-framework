@@ -68,7 +68,7 @@ export default function Topbar() {
   }
 
   return (
-    <div className="sticky top-0 z-50 bg-ui-850/90 navbar h-12 flex items-center border-b border-ui-700">
+    <div className="sticky top-0 z-50 bg-ui-800/90 navbar h-12 flex items-center border-b border-ui-700">
       <div className="container relative">
         <div
           className={`flex lg:gap-8 mx-auto px-2  ${hasAds ? "3xl:m-0" : ""}`}

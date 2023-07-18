@@ -2,12 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import { UiContext } from "../../../../contexts/ui";
 import ModalProfileBannerPurchaseConfirmation from "./modal-profilebannerpurchaseconfirmation";
 import ModalProfileBannerPurchaseCompleted from "./modal-profilebannerpurchasecompleted";
+import Structure from "../../components/Structure";
 
 export default function Home() {
   const router = useRouter();
@@ -61,7 +61,7 @@ export default function Home() {
 
   return (
     <>
-      <PrototypeStructure title="Shop">
+      <Structure title="Shop">
         <Ad width="1005" height="300" />
 
         <section className="mb-4">
@@ -70,7 +70,7 @@ export default function Home() {
               <nav className="breadcrumbs" aria-label="Breadcrumb">
                 <ol>
                   <li>
-                    <Link href={`/prototype/home`}>
+                    <Link href={`/stryda/home`}>
                       <a href="#">
                         <span className="icon icon-20 icon-home-2" />
                         <span>Home</span>
@@ -78,7 +78,7 @@ export default function Home() {
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/prototype/shop`}>
+                    <Link href={`/stryda/shop`}>
                       <a href="#">
                         <span>Shop</span>
                       </a>
@@ -214,7 +214,7 @@ export default function Home() {
             )}
           </ul>
         </section>
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }

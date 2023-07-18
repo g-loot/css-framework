@@ -2,12 +2,12 @@ import React, { useEffect, useState, useContext } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "../../../../contexts/prototype";
 import { useRouter } from "next/router";
 import { UiContext } from "../../../../contexts/ui";
 import ModalPurchaseConfirmation from "./modal-purchaseconfirmation";
 import ModalPurchaseCompleted from "./modal-purchasecompleted";
+import Structure from "../../components/Structure";
 
 export default function Home() {
   const router = useRouter();
@@ -76,18 +76,18 @@ export default function Home() {
 
   return (
     <>
-      <PrototypeStructure title="Shop">
+      <Structure title="Shop">
         <Ad width="1005" height="300" />
 
         {selectedVoucher && (
           <>
             <section className="mb-4">
-              <div className="header surface sm:rounded-lg">
+              <div className="header header-quaternary">
                 <div className="header-breadcrumbs">
                   <nav className="breadcrumbs" aria-label="Breadcrumb">
                     <ol>
                       <li>
-                        <Link href={`/prototype/home`}>
+                        <Link href={`/stryda/home`}>
                           <a href="#">
                             <span className="icon icon-20 icon-home-2" />
                             <span>Home</span>
@@ -95,7 +95,7 @@ export default function Home() {
                         </Link>
                       </li>
                       <li>
-                        <Link href={`/prototype/shop`}>
+                        <Link href={`/stryda/shop`}>
                           <a href="#">
                             <span>Shop</span>
                           </a>
@@ -139,7 +139,7 @@ export default function Home() {
             )}
 
             <nav>
-              <ul className="tabs border-b border-ui-700">
+              <ul className="tabs tabs-tertiary">
                 {selectedVoucher.sections?.map((section, sectionIndex) => (
                   <li key={sectionIndex}>
                     <button
@@ -192,7 +192,7 @@ export default function Home() {
                             <>
                               <li
                                 key={giftcardIndex}
-                                className="w-full surface rounded-2xl is-loading aspect-square"
+                                className="w-full surface rounded-3 is-loading aspect-square"
                               />
                             </>
                           ))}
@@ -203,7 +203,7 @@ export default function Home() {
                             <>
                               <li
                                 key={giftcard.id}
-                                className="surface rounded-2xl w-3/4 sm:w-2/3 md:w-auto p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
+                                className="surface rounded-3 w-3/4 sm:w-2/3 md:w-auto p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
                                 style={{
                                   "--delay": `calc( ${giftcardIndex} * 0.05s)`,
                                 }}
@@ -300,7 +300,7 @@ export default function Home() {
             ))}
           </>
         )}
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }

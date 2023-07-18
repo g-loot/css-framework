@@ -6,6 +6,22 @@ import { getLayout } from "../../../../components/Prototype/PrototypeLayout";
 import Link from "next/link";
 import { dataValorantGuideRoles } from "../../../../mock-data/data-valorant-guide";
 
+const ButtonSignUp = (props) => {
+  return (
+    <button
+      type="button"
+      className={`group relative uppercase text-lg bg-game-valorant px-6 py-4 leading-none overflow-hidden active:opacity-90 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-game-valorant active:outline active:outline-offset-2 ${props.isInverted ? 'active:outline-ui-100' : 'active:outline-ui-900'}`}
+    >
+      <span className={`block ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12 ${props.isInverted ? 'caca' : ''}`}>
+        Sign up
+      </span>
+      <span className={`ease-[cubic-bezier(1,0,.2,1)] duration-[.4s] group-hover:duration-300 absolute inset-0 flex items-center justify-center transition-all -skew-x-12 -translate-x-[calc(100%+1rem)] group-hover:translate-x-0 group-hover:skew-x-0 ${props.isInverted ? 'bg-ui-100 text-ui-900' : 'bg-ui-900 text-ui-100'}`}>
+        <span>Sign up</span>
+      </span>
+    </button>
+  );
+};
+
 const inViewport = (elem) => {
   let allElements = document.querySelectorAll(elem);
   let windowHeight = window.innerHeight;
@@ -39,7 +55,7 @@ const PrototypePage = () => {
           <div className="relative z-20 px-4">
             <div className="drop-shadow-[0_4px_0_rgba(0,0,0,0.2)]">
               <div
-                className="blockreveal animate-paused animate-delay mx-auto w-44 mb-10"
+                className="blockreveal animate-paused animate-delay mx-auto w-44 mb-8"
                 style={{
                   "--delay": "calc(0 * 0.05s)",
                 }}
@@ -52,7 +68,7 @@ const PrototypePage = () => {
                 />
               </div>
               <div
-                className="blockreveal animate-paused animate-delay mx-auto w-full max-w-md mb-8"
+                className="blockreveal animate-paused animate-delay mx-auto w-full max-w-md mb-4"
                 style={{
                   "--delay": "calc(2 * 0.05s)",
                 }}
@@ -65,63 +81,128 @@ const PrototypePage = () => {
                 />
               </div>
             </div>
-            <div className="w-full max-w-md mx-auto px-10 drop-shadow-[0_2px_0_rgba(0,0,0,0.2)]">
-              <div className="grid grid-cols-1 md:grid-cols-3 text-center p-4 gap-4 leading-none relative">
-                <div>
-                  <div
-                    className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
-                    style={{
-                      "--delay": "calc(10 * 0.05s)",
-                    }}
-                  >
-                    <span>$20 000</span>
-                  </div>
-                  <div
-                    className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-paused animate-delay"
-                    style={{
-                      "--delay": "calc(11 * 0.05s)",
-                    }}
-                  >
-                    <span>Prize pool</span>
-                  </div>
+            <div className="w-full max-w-md mx-auto px-10 drop-shadow-[0_2px_0_rgba(0,0,0,0.2)] grid grid-cols-1 md:grid-cols-3 text-center p-4 gap-4 leading-none relative mb-4">
+              <div>
+                <div
+                  className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
+                  style={{
+                    "--delay": "calc(10 * 0.05s)",
+                  }}
+                >
+                  <span>$20 000</span>
                 </div>
-                <div>
-                  <div
-                    className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
-                    style={{
-                      "--delay": "calc(12 * 0.05s)",
-                    }}
-                  >
-                    <span>OCT-DEC</span>
-                  </div>
-                  <div
-                    className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-paused animate-delay"
-                    style={{
-                      "--delay": "calc(13 * 0.05s)",
-                    }}
-                  >
-                    <span>Event duration</span>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
-                    style={{
-                      "--delay": "calc(14 * 0.05s)",
-                    }}
-                  >
-                    <span>ALL RANKS</span>
-                  </div>
-                  <div
-                    className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-paused animate-delay"
-                    style={{
-                      "--delay": "calc(15 * 0.05s)",
-                    }}
-                  >
-                    <span>inclusive</span>
-                  </div>
+                <div
+                  className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-paused animate-delay"
+                  style={{
+                    "--delay": "calc(11 * 0.05s)",
+                  }}
+                >
+                  <span>Prize pool</span>
                 </div>
               </div>
+              <div>
+                <div
+                  className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
+                  style={{
+                    "--delay": "calc(12 * 0.05s)",
+                  }}
+                >
+                  <span>OCT-DEC</span>
+                </div>
+                <div
+                  className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-paused animate-delay"
+                  style={{
+                    "--delay": "calc(13 * 0.05s)",
+                  }}
+                >
+                  <span>Event duration</span>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
+                  style={{
+                    "--delay": "calc(14 * 0.05s)",
+                  }}
+                >
+                  <span>ALL RANKS</span>
+                </div>
+                <div
+                  className="uppercase text-sm xl:text-base text-ui-100 blockreveal animate-paused animate-delay"
+                  style={{
+                    "--delay": "calc(15 * 0.05s)",
+                  }}
+                >
+                  <span>inclusive</span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="text-center animate-slide-in-bottom animate-paused animate-delay"
+              style={{
+                "--delay": "calc(16 * 0.05s)",
+              }}
+            >
+              <div className="flex items-center justify-center">
+                  <span
+                    className="icon icon-ctrl-right text-xl text-ui-100/20 animate-slide-in-left animate-delay"
+                    style={{
+                      "--delay": "calc(3 * 0.05s)",
+                      animationIterationCount: "infinite",
+                      animationDuration: "2s",
+                      animationDirection: "alternate",
+                    }}
+                  />
+                  <span
+                    className="icon icon-ctrl-right text-xl text-ui-100/40 animate-slide-in-left animate-delay"
+                    style={{
+                      "--delay": "calc(2 * 0.05s)",
+                      animationIterationCount: "infinite",
+                      animationDuration: "2s",
+                      animationDirection: "alternate",
+                    }}
+                  />
+                  <span
+                    className="icon icon-ctrl-right text-xl text-ui-100/60 animate-slide-in-left animate-delay"
+                    style={{
+                      "--delay": "calc(1 * 0.05s)",
+                      animationIterationCount: "infinite",
+                      animationDuration: "2s",
+                      animationDirection: "alternate",
+                    }}
+                  />
+                  <div className="drop-shadow-[0_2px_0_rgba(0,0,0,0.2)] px-4">
+                    <ButtonSignUp isInverted={true} />
+                  </div>
+                  <span
+                    className="icon icon-ctrl-left text-xl text-ui-100/60 animate-slide-in-right animate-delay"
+                    style={{
+                      "--delay": "calc(1 * 0.05s)",
+                      animationIterationCount: "infinite",
+                      animationDuration: "2s",
+                      animationDirection: "alternate",
+                    }}
+                  />
+                  <span
+                    className="icon icon-ctrl-left text-xl text-ui-100/40 animate-slide-in-right animate-delay"
+                    style={{
+                      "--delay": "calc(2 * 0.05s)",
+                      animationIterationCount: "infinite",
+                      animationDuration: "2s",
+                      animationDirection: "alternate",
+                    }}
+                  />
+                  <span
+                    className="icon icon-ctrl-left text-xl text-ui-100/20 animate-slide-in-right animate-delay"
+                    style={{
+                      "--delay": "calc(3 * 0.05s)",
+                      animationIterationCount: "infinite",
+                      animationDuration: "2s",
+                      animationDirection: "alternate",
+                    }}
+                  />
+                </div>
+              
             </div>
           </div>
           <div className="pointer-events-none absolute z-0 inset-0 flex items-center justify-center bg-ui-900/95 overflow-hidden">
@@ -230,17 +311,7 @@ const PrototypePage = () => {
                   "--delay": "calc(6 * 0.05s)",
                 }}
               >
-                <button
-                  type="button"
-                  className="group relative uppercase text-lg bg-game-valorant px-6 py-4 leading-none overflow-hidden active:opacity-90 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-game-valorant active:outline active:outline-offset-2 active:outline-ui-900"
-                >
-                  <span className="block ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12">
-                    Sign up
-                  </span>
-                  <span className="ease-[cubic-bezier(1,0,.2,1)] duration-[.4s] group-hover:duration-300 absolute inset-0 flex bg-ui-900 text-ui-100 items-center justify-center transition-all -skew-x-12 -translate-x-[calc(100%+1rem)] group-hover:translate-x-0 group-hover:skew-x-0">
-                    <span>Sign up</span>
-                  </span>
-                </button>
+                <ButtonSignUp />
               </div>
             </div>
             <div
@@ -336,17 +407,7 @@ const PrototypePage = () => {
                 "--delay": "calc(7 * 0.05s)",
               }}
             >
-              <button
-                type="button"
-                className="group relative uppercase text-lg bg-game-valorant px-6 py-4 leading-none overflow-hidden active:opacity-90 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-game-valorant active:outline active:outline-offset-2 active:outline-ui-100"
-              >
-                <span className="block ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12">
-                  Sign up
-                </span>
-                <span className="ease-[cubic-bezier(1,0,.2,1)] duration-[.4s] group-hover:duration-300 absolute inset-0 flex bg-ui-100 text-ui-900 items-center justify-center transition-all -skew-x-12 -translate-x-[calc(100%+1rem)] group-hover:translate-x-0 group-hover:skew-x-0">
-                  <span>Sign up</span>
-                </span>
-              </button>
+              <ButtonSignUp isInverted={true} />
             </div>
           </div>
           <i className="absolute z-10 h-36 inset-x-0 -bottom-px bg-gradient-to-b from-ui-900/0 via-ui-900/40 to-ui-900" />
@@ -457,17 +518,7 @@ const PrototypePage = () => {
                   "--delay": "calc(6 * 0.05s)",
                 }}
               >
-                <button
-                  type="button"
-                  className="group relative uppercase text-lg bg-game-valorant px-6 py-4 leading-none overflow-hidden active:opacity-90 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-game-valorant active:outline active:outline-offset-2 active:outline-ui-100"
-                >
-                  <span className="block ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12">
-                    Sign up
-                  </span>
-                  <span className="ease-[cubic-bezier(1,0,.2,1)] duration-[.4s] group-hover:duration-300 absolute inset-0 flex bg-ui-100 text-ui-900 items-center justify-center transition-all -skew-x-12 -translate-x-[calc(100%+1rem)] group-hover:translate-x-0 group-hover:skew-x-0">
-                    <span>Sign up</span>
-                  </span>
-                </button>
+                <ButtonSignUp isInverted={true} />
               </div>
             </div>
           </div>
@@ -537,17 +588,7 @@ const PrototypePage = () => {
                   "--delay": "calc(6 * 0.05s)",
                 }}
               >
-                <button
-                  type="button"
-                  className="group relative uppercase text-lg bg-game-valorant px-6 py-4 leading-none overflow-hidden active:opacity-90 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-game-valorant active:outline active:outline-offset-2 active:outline-ui-100"
-                >
-                  <span className="block ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12">
-                    Sign up
-                  </span>
-                  <span className="ease-[cubic-bezier(1,0,.2,1)] duration-[.4s] group-hover:duration-300 absolute inset-0 flex bg-ui-100 text-ui-900 items-center justify-center transition-all -skew-x-12 -translate-x-[calc(100%+1rem)] group-hover:translate-x-0 group-hover:skew-x-0">
-                    <span>Sign up</span>
-                  </span>
-                </button>
+                <ButtonSignUp isInverted={true} />
               </div>
             </div>
           </div>
@@ -593,17 +634,7 @@ const PrototypePage = () => {
                   "--delay": "calc(6 * 0.05s)",
                 }}
               >
-                <button
-                  type="button"
-                  className="group relative uppercase text-lg bg-game-valorant px-6 py-4 leading-none overflow-hidden active:opacity-90 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-game-valorant active:outline active:outline-offset-2 active:outline-ui-900"
-                >
-                  <span className="block ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12">
-                    Sign up
-                  </span>
-                  <span className="ease-[cubic-bezier(1,0,.2,1)] duration-[.4s] group-hover:duration-300 absolute inset-0 flex bg-ui-900 text-ui-100 items-center justify-center transition-all -skew-x-12 -translate-x-[calc(100%+1rem)] group-hover:translate-x-0 group-hover:skew-x-0">
-                    <span>Sign up</span>
-                  </span>
-                </button>
+                <ButtonSignUp />
               </div>
             </div>
           </div>
