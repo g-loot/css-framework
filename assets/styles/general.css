@@ -7,10 +7,12 @@
 *::after {
   box-sizing: border-box;
 }
+
 * {
   --scroll-behavior: auto;
   scroll-behavior: var(--scroll-behavior);
 }
+
 body {
   @apply
   max-w-[100vw]

@@ -165,16 +165,19 @@ body {
 
 ::selection {
   @apply
-  text-ui-800
+  text-ui-900
   bg-ui-100
   ;
 }
 
-/*
-a:-webkit-any-link,
-a {
-  @apply
-  text-ui-100
-  ;
+.selection-inverted {
+  &,
+  * {
+    &::selection {
+      @apply
+      text-ui-100
+      bg-ui-900
+      ;
+    }
+  }
 }
-*/
