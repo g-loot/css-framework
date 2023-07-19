@@ -133,7 +133,7 @@ export const dataClans = [
     isPublic: false,
     hasInvitedYou: false,
     isFeatured: false,
-    nickname: "Gorillas Esports",
+    nickname: "Gorillas Esports Lonely Boys",
     tag: "GOR",
     avatar:
       "https://res.cloudinary.com/gloot/image/upload/f_auto/v1654063976/Marketing/2022_prototype/DummyContent/teams/teamlogo_GhOOOsTS.png",

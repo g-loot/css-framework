@@ -50,14 +50,14 @@ export default function CardClan(props) {
       >
         <div className="flex gap-4 items-center">
           <Link href={`/prototype/clans/${clan.id}${prototype.getURLparams()}`}>
-            <div className="flex-1 flex gap-4 items-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
+            <div className="flex-1 min-w-[0] flex gap-4 items-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
               <div className="avatar avatar-squircle avatar-sm">
                 <div>
                   <img src={clan.avatar} alt="avatar" />
                 </div>
               </div>
-              <div className="flex-1">
-                <p className="text-ui-100">
+              <div className="flex-1 overflow-hidden">
+                <p className="text-ui-100 truncate">
                   &#91;
                   {clan.tag}
                   &#93; {clan.nickname}
@@ -69,7 +69,7 @@ export default function CardClan(props) {
             </div>
           </Link>
           {clan.hasInvitedYou ? (
-            <div className="flex flex-col gap-2 text-center leading-tight">
+            <div className="flex-0 flex flex-col gap-2 text-center leading-tight">
               {hasAccepted === null && (
                 <>
                   <Link href={`/prototype/clans/${clan.id}?hasaccepted=true`}>
@@ -146,7 +146,7 @@ export default function CardClan(props) {
                 <Link href={`/prototype/clans/${clan.id}?hasaccepted=true`}>
                   <button
                     type="button"
-                    className={`button button-sm button-secondary self-start ${
+                    className={`flex-0 button button-sm button-secondary self-start ${
                       submitting ? "is-loading" : ""
                     }`}
                   >
