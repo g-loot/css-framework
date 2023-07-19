@@ -196,10 +196,13 @@
     > div {
       @apply
       rounded-full
-      py-2
+      py-1.5
       px-4
       leading-tight
       transition-[color,background,transform]
+      inline-flex
+      gap-2
+      items-center
       duration-75
       bg-ui-700
       hover:bg-ui-600

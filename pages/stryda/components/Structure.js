@@ -2,8 +2,10 @@ import React, { useContext } from "react";
 import Head from "next/head";
 import Topbar from "./Topbar";
 import Footer from "./Footer";
+import { usePrototypeData } from "../../../contexts/prototype";
 
-export default function Structure({ children, title, fullWidth }) {
+export default function Structure({ children, title, gamePicker }) {
+  const prototype = usePrototypeData();
   return (
     <>
       <Head>
@@ -18,9 +20,40 @@ export default function Structure({ children, title, fullWidth }) {
         <input id="drawer-1" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
           <Topbar />
-          <div className={`min-h-screen ${!fullWidth ? "container py-4" : ""}`}>
-            {children}
-          </div>
+          {gamePicker && (
+            <div className="relative z-10 bg-gradient-to-b from-ui-900 to-ui-900/0 h-12 flex items-center">
+              <div className="container relative">
+                <nav>
+                  <ul className="tabs tabs-tertiary justify-center">
+                    {prototype.games
+                      .filter((g) => g.isFavorite)
+                      .map((item, itemIndex) => (
+                        <li key={itemIndex}>
+                          <button
+                            type="button"
+                            className={`${
+                              item.id === prototype.defaultGameID
+                                ? "is-active"
+                                : ""
+                            }`}
+                            onClick={() => prototype.defineDefaultGameID(item.id)}
+                          >
+                            <span
+                              className={`icon icon-game-${item.slug.replace(
+                                /#|_/g,
+                                ""
+                              )}-symbol`}
+                            />
+                            <span>{item.name}</span>
+                          </button>
+                        </li>
+                      ))}
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          )}
+          <div className="min-h-screen container">{children}</div>
           <Footer />
         </div>
         <div className="drawer-side">

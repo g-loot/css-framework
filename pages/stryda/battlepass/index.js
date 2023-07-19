@@ -101,10 +101,9 @@ export default function BattlepassPage() {
     <>
       <Structure title="Battle Pass">
         <Loader loader={
-          <div className="flex gap-4 items-stretch mt-4">
-            <div className="flex-1 surface is-loading rounded-3 min-h-[calc(100vh-100px)]" />
-            <div className="flex-2 surface is-loading rounded-3 min-h-[calc(100vh-100px)]" />
-            <div className="flex-1 surface is-loading rounded-3 min-h-[calc(100vh-100px)]" />
+          <div className="flex flex-col gap-4 items-stretch mt-4 min-h-[calc(100vh-116px)]">
+            <div className="flex-1 surface is-loading rounded-3" />
+            <div className="flex-4 surface is-loading rounded-3" />
           </div>
         }>
           {selectedBattlepass && (

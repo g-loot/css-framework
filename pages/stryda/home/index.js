@@ -34,9 +34,9 @@ export default function Home() {
         <Loader
           loader={
             <section className="min-h-full container flex flex-col lg:flex-row gap-4 py-4">
-              <div className="w-80 xl:w-96 rounded-3 surface is-loading h-44" />
-              <div className="flex-1 rounded-3 surface is-loading h-44" />
-              <div className="w-80 xl:w-96 rounded-3 max-w-xl:hidden surface is-loading h-44" />
+              <div className="w-80 xl:w-96 rounded-3 surface is-loading min-h-[calc(100vh-116px)]" />
+              <div className="flex-1 rounded-3 surface is-loading min-h-[calc(100vh-116px)]" />
+              <div className="w-80 xl:w-96 rounded-3 max-w-xl:hidden surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >

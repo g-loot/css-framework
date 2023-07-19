@@ -33,19 +33,8 @@ export default function Home() {
             </div>
           </div>
           <div className="header-bg">
-            <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
+            <img src="https://res.cloudinary.com/gloot/image/upload/v1689683516/Stryda/illustrations/stryda_v2_pagebg_shop.jpg" />
           </div>
-
-{/*
-          <div className="absolute w-full h-full opacity-60 inset-0 pointer-events-none">
-            <i className="absolute z-10 h-36 inset-x-0 -bottom-px bg-gradient-to-b from-ui-900/0 via-ui-900/40 to-ui-900" />
-            <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg"
-                alt=""
-                className="absolute w-full h-full inset-0 object-cover"
-              />
-            </div>
-  */}
         </section>
 
         

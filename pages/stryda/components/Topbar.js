@@ -73,7 +73,7 @@ export default function Topbar() {
         <div
           className={`flex lg:gap-8 mx-auto px-2  ${hasAds ? "3xl:m-0" : ""}`}
         >
-          <div className="flex-0 text-0 flex gap-2 items-center">
+          <div className="flex-1 text-0 flex gap-2 items-center">
             <div className="hidden gap-2">
               <button
                 type="button"
@@ -113,7 +113,7 @@ export default function Topbar() {
               </label>
             </div>
           </div>
-          <div className="flex-1 flex justify-center items-center">
+          <div className="flex-2 flex justify-center items-center">
             <ul className="hidden lg:flex tabs tabs-secondary overflow-visible">
               <li>
                 <Link href={`/stryda/home${prototype.getURLparams()}`}>
@@ -140,7 +140,7 @@ export default function Topbar() {
                 </Link>
               </li>
               <li className="!hidden xl:!flex">
-                <Link href={`/stryda/battlepass${prototype.getURLparams()}`}>
+                <Link href={`/stryda/missions${prototype.getURLparams()}`}>
                   <button
                     type="button"
                     className={` ${
@@ -198,7 +198,7 @@ export default function Topbar() {
                   */}
             </ul>
           </div>
-          <div className="flex justify-end items-center gap-1 sm:gap-2">
+          <div className="flex-1 flex justify-end items-center gap-1 sm:gap-2">
             <Tooltip
               placement="bottom"
               tooltip={
