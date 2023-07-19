@@ -94,7 +94,7 @@ export default function Scoreboards() {
       {selectedScoreboard && (
         <>
           {selectedGame && (
-            <PrototypeStructure title="Scoreboards">
+            <Structure title="Scoreboards">
               <Ad width="1005" height="300" />
 
               <section className="mb-4">
@@ -198,7 +198,7 @@ export default function Scoreboards() {
                   </section>
                 </>
               )}
-            </PrototypeStructure>
+            </Structure>
           )}
         </>
       )}

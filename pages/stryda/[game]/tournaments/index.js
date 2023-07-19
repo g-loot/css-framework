@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <>
-      <PrototypeStructure title="Ladders">
+      <Structure title="Ladders">
         <Ad width="1005" height="300" />
 
         {selectedGame && (
@@ -125,7 +125,7 @@ export default function Home() {
             </section>
           </>
         )}
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }

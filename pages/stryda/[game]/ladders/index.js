@@ -85,7 +85,7 @@ export default function Ladders() {
 
   return (
     <>
-      <PrototypeStructure title="Ladders">
+      <Structure title="Ladders">
         <Ad width="1005" height="300" />
         {selectedGame && (
           <>
@@ -233,7 +233,7 @@ export default function Ladders() {
                             */}
           </>
         )}
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }

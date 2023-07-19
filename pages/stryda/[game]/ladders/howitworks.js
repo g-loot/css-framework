@@ -37,7 +37,7 @@ export default function LaddersHowItWorks() {
 
   return (
     <>
-      <PrototypeStructure title="Ladders">
+      <Structure title="Ladders">
         <Ad width="1005" height="300" />
         {selectedGame && (
           <>
@@ -45,7 +45,7 @@ export default function LaddersHowItWorks() {
             <TabLaddersHowItWorks />
           </>
         )}
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }

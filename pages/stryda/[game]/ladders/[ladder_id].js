@@ -106,7 +106,7 @@ export default function Home() {
   return (
     <>
       {selectedLadder && (
-        <PrototypeStructure title="Ladders">
+        <Structure title="Ladders">
           <Ad width="1005" height="300" />
 
           {selectedGame && (
@@ -267,7 +267,7 @@ export default function Home() {
                */}
             </>
           )}
-        </PrototypeStructure>
+        </Structure>
       )}
     </>
   );

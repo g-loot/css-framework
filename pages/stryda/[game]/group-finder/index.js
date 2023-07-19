@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <>
-      <PrototypeStructure title="Wallet">
+      <Structure title="Wallet">
         <Ad width="1005" height="300" />
 
         <section className="mb-4">
@@ -93,7 +93,7 @@ export default function Home() {
             }
           })}
         </section>
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }

@@ -34,7 +34,7 @@ export default function LaddersRules() {
 
   return (
     <>
-      <PrototypeStructure title="Ladders">
+      <Structure title="Ladders">
         <Ad width="1005" height="300" />
         {selectedGame && (
           <>
@@ -42,7 +42,7 @@ export default function LaddersRules() {
             <TabLaddersRules />
           </>
         )}
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }

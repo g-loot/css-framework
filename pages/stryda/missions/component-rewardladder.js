@@ -8,6 +8,7 @@ import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 import Slider from "../../../components/Slider/Slider";
+import ModalClaimLadderRewards from "../home/modal-claim-ladderrewards";
 import ModalClaimBattlepassReward from "../home/modal-claim-battlepassrewards";
 import Battlepass from "../../../components/BattlePass/BattlePass";
 import ResetsIn from "../../../components/Countdown/ResetsIn";

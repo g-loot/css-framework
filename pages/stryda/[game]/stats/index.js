@@ -20,11 +20,11 @@ export default function Stats() {
   return (
     <>
       {selectedGame && (
-        <PrototypeStructure title="Stats">
+        <Structure title="Stats">
           <Ad width="1005" height="300" />
           {selectedGame.slug === "valorant" && <StatsValorant />}
           {selectedGame.slug === "leagueoflegends" && <StatsLeagueOfLegends />}
-        </PrototypeStructure>
+        </Structure>
       )}
     </>
   );

@@ -72,7 +72,7 @@ export default function Ladders() {
 
   return (
     <>
-      <PrototypeStructure title="Clan Events">
+      <Structure title="Clan Events">
         <Ad width="1005" height="300" />
         {selectedGame && (
           <>
@@ -116,7 +116,7 @@ export default function Ladders() {
             </section>
           </>
         )}
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }

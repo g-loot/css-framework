@@ -65,7 +65,7 @@ export default function Home() {
 
   return (
     <>
-      <PrototypeStructure title="Tournaments">
+      <Structure title="Tournaments">
         <Ad width="1005" height="300" />
 
         {selectedGame && (
@@ -249,7 +249,7 @@ export default function Home() {
             </div>
           </>
         )}
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }

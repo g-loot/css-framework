@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../../../components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../../../components/Prototype/PrototypeStructure";
+import Structure from "../../../../../components/Prototype/Structure";
 import { UiContext } from "../../../../../contexts/ui";
 import { usePrototypeData } from "../../../../../contexts/prototype";
 import { useRouter } from "next/router";
@@ -84,7 +84,7 @@ export default function Ladders() {
   return (
     <>
       {selectedGame && selectedClanLeaderboard && (
-        <PrototypeStructure title="Clan Events">
+        <Structure title="Clan Events">
           <Ad width="1005" height="300" />
           <section className="surface sm:rounded overflow-hidden mb-4">
             <div className="h-44 relative w-full flex items-center justify-center overflow-hidden">
@@ -307,7 +307,7 @@ export default function Ladders() {
               }
             })}
           </section>
-        </PrototypeStructure>
+        </Structure>
       )}
     </>
   );
