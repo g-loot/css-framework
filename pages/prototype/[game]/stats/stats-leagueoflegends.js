@@ -135,19 +135,24 @@ export default function StatsLeagueOfLegends() {
                         <div className="text-sm text-ui-300"></div>
                       </div>
                     </div>
-                    <div className="mt-8 md:mb-8 space-y-4">
+                    <div className="mt-8 md:mb-8">
                       <p className="text-ui-300">
                         You have no stats tracked yet.
-                        <br />
-                        Connect your League of Legends account and start
-                        playing.
                       </p>
-                      <button type="button" className="button button-primary" onClick={openModalConnectIDLeagueOfLegends}>
-                        <span
-                          className={`icon icon-game-${selectedGame.slug}-symbol`}
-                        />
-                        <span>Connect my account</span>
-                      </button>
+                      {!hasRiot && (
+                        <>
+                          <p className="text-ui-300 mt-2 mb-4">
+                            Connect your League of Legends account and start
+                            playing.
+                          </p>
+                          <button type="button" className="button button-primary" onClick={openModalConnectIDLeagueOfLegends}>
+                            <span
+                              className={`icon icon-game-${selectedGame.slug}-symbol`}
+                            />
+                            <span>Connect my account</span>
+                          </button>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
