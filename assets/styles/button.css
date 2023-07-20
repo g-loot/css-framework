@@ -937,17 +937,19 @@ button {
   &[data-feedback-icon="success"]:not([data-feedback=""]) {
     &::before {
       @apply
-      text-interaction-500
+      text-success-500
       ;
     }
     &::after {
       @apply
       content-['\ec14']
-      text-interaction-500
+      text-success-500
       ;
     }
     &.button-primary,
+    &.button-success,
     &.button-error,
+    &.button-attention,
     &.button-premium {
       &::after {
         @apply
@@ -976,7 +978,9 @@ button {
       ;
     }
     &.button-primary,
+    &.button-success,
     &.button-error,
+    &.button-attention,
     &.button-premium {
       &::after {
         @apply
@@ -1005,7 +1009,9 @@ button {
       ;
     }
     &.button-primary,
+    &.button-success,
     &.button-error,
+    &.button-attention,
     &.button-premium {
       &::after {
         @apply

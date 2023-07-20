@@ -28,8 +28,8 @@ export default function Structure({ children, title, gamePicker }) {
           <Topbar />
           {gamePicker && (
             <div className="relative z-10 bg-gradient-to-b from-ui-900 to-ui-900/0 h-12 flex items-center">
-              <div className="container relative">
-                <nav className="flex gap-4 items-center justify-center">
+              <div className="container relative flex justify-center overflow-x-auto scrollbar-hidden py-2">
+                <nav className="flex gap-2 items-center justify-start">
                   <ul className="tabs tabs-tertiary justify-center">
                     {prototype.games
                       .filter((g) => g.isFavorite)
@@ -59,7 +59,7 @@ export default function Structure({ children, title, gamePicker }) {
                   </ul>
                   <button
                     type="button"
-                    className="button-tertiary rounded-full"
+                    className="button button-sm button-tertiary rounded-full"
                     onClick={openModalFavoriteGames}
                   >
                     <span className="icon icon-pen-2" />

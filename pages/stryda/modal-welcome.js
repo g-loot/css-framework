@@ -18,7 +18,6 @@ export default function ModalWelcome(props) {
 
   const handlechange = (event) => {
     setSelectedGame(event.target.id);
-    console.log("selectedGame", selectedGame);
   };
 
   function closeModalWithDelay() {

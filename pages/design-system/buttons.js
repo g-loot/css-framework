@@ -554,7 +554,7 @@ const DSpage = () => {
                   className="rounded"
                   width="100%"
                   height="300"
-                  src="//jsfiddle.net/augustin_hiebel/wj6bdfxy/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                  src="//jsfiddle.net/augustin_hiebel/uo0z3f5k/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>
@@ -1556,7 +1556,7 @@ const DSpage = () => {
                   </div>
                   <div className="flex-1 flex gap-8 items-center">
                     <button
-                      className="button rounded-full button-primary"
+                      className="button rounded-full button-success"
                       data-feedback={buttonFeedbackMessage6}
                       data-feedback-icon="success"
                       onClick={buttonFeedback6.bind(this, "Link copied successfully")}
@@ -1595,7 +1595,7 @@ const DSpage = () => {
                   </div>
                   <div className="flex-1 flex gap-8 items-center">
                     <button
-                      className="button rounded-full button-primary"
+                      className="button rounded-full button-error"
                       data-feedback={buttonFeedbackMessage10}
                       data-feedback-icon="error"
                       onClick={buttonFeedback10.bind(this, "An error occurred")}
@@ -1634,7 +1634,7 @@ const DSpage = () => {
                   </div>
                   <div className="flex-1 flex gap-8 items-center">
                     <button
-                      className="button rounded-full button-primary"
+                      className="button rounded-full button-attention"
                       data-feedback={buttonFeedbackMessage14}
                       data-feedback-icon="attention"
                       onClick={buttonFeedback14.bind(this, "Please be careful")}

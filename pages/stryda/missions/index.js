@@ -81,13 +81,8 @@ export default function Missions() {
           <>
             <section className="header header-quaternary my-8">
               <div className="header-content">
-                <div className="header-image">
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1674657396/Stryda/logos/stryda-logo-missions.svg"
-                    alt="Missions"
-                  />
-                </div>
                 <div className="header-body">
+                  <h1 className="mb-2">Missions</h1>
                   <p className="text-ui-300 mb-4">
                     Play Stryda Missions in {selectedGame.name}, gather XP, and
                     earn Mission Rewards. You can complete the Daily Missions in
@@ -160,7 +155,7 @@ export default function Missions() {
               </div>
             </section>
             <nav>
-              <ul className="tabs border-b border-ui-700">
+              <ul className="tabs border-b border-ui-500/20">
                 {TabsItems.map((item, itemIndex) => (
                   <li key={itemIndex}>
                     <Link
