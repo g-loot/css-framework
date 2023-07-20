@@ -2,10 +2,16 @@ import React, { useContext } from "react";
 import Head from "next/head";
 import Topbar from "./Topbar";
 import Footer from "./Footer";
+import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
+import ModalFavoriteGames from "../modal-favoritegames";
 
 export default function Structure({ children, title, gamePicker }) {
+  const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
+  function openModalFavoriteGames() {
+    uiContext.openModal(<ModalFavoriteGames />);
+  }
   return (
     <>
       <Head>
@@ -23,7 +29,7 @@ export default function Structure({ children, title, gamePicker }) {
           {gamePicker && (
             <div className="relative z-10 bg-gradient-to-b from-ui-900 to-ui-900/0 h-12 flex items-center">
               <div className="container relative">
-                <nav>
+                <nav className="flex gap-4 items-center justify-center">
                   <ul className="tabs tabs-tertiary justify-center">
                     {prototype.games
                       .filter((g) => g.isFavorite)
@@ -36,7 +42,9 @@ export default function Structure({ children, title, gamePicker }) {
                                 ? "is-active"
                                 : ""
                             }`}
-                            onClick={() => prototype.defineDefaultGameID(item.id)}
+                            onClick={() =>
+                              prototype.defineDefaultGameID(item.id)
+                            }
                           >
                             <span
                               className={`icon icon-game-${item.slug.replace(
@@ -49,6 +57,13 @@ export default function Structure({ children, title, gamePicker }) {
                         </li>
                       ))}
                   </ul>
+                  <button
+                    type="button"
+                    className="button-tertiary rounded-full"
+                    onClick={openModalFavoriteGames}
+                  >
+                    <span className="icon icon-pen-2" />
+                  </button>
                 </nav>
               </div>
             </div>

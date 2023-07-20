@@ -11,6 +11,7 @@ import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 import Structure from "../components/Structure";
+import Loader from "../components/Loader";
 
 const TabsItems = [
   {
@@ -61,7 +62,21 @@ export default function Missions() {
     <>
       <Structure title="Missions" gamePicker>
         <Ad width="1005" height="300" />
-        
+        <Loader
+          loader={
+              <section className="min-h-full container grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0 mt-8">
+                <div className="surface is-loading rounded-3 aspect-video w-full" />
+                <div className="surface is-loading rounded-3 aspect-video w-full" />
+                <div className="surface is-loading rounded-3 aspect-video w-full" />
+                <div className="surface is-loading rounded-3 aspect-video w-full" />
+                <div className="surface is-loading rounded-3 aspect-video w-full" />
+                <div className="surface is-loading rounded-3 aspect-video w-full" />
+                <div className="surface is-loading rounded-3 aspect-video w-full" />
+                <div className="surface is-loading rounded-3 aspect-video w-full" />
+                <div className="surface is-loading rounded-3 aspect-video w-full" />
+              </section>
+          }
+        >
         {selectedGame && (
           <>
             <section className="header header-quaternary my-8">
@@ -178,6 +193,8 @@ export default function Missions() {
             </section>
           </>
         )}
+          </Loader>
+        
       </Structure>
     </>
   );

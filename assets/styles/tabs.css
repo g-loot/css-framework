@@ -9,7 +9,6 @@
   items-stretch
   whitespace-nowrap
   relative
-  overflow-x-auto
   pt-0.5
   ;
 
@@ -131,8 +130,48 @@
         ;
       }
     }
+
+    ul {
+      @apply
+      flex
+      flex-col
+      items-stretch
+      ;
+    }
+    > ul {
+      @apply
+      absolute
+      hidden
+      w-full
+      rounded-lg
+      bg-ui-600
+      border
+      border-ui-500
+      shadow-xl
+      overflow-hidden
+      top-full
+      ;
+      li {
+        @apply
+        w-full
+        whitespace-nowrap
+        ;
+        > * {
+          @apply
+          w-full
+          justify-center
+          ;
+        }
+      }
+    }
+    &:hover {
+      > ul {
+        @apply
+        block
+        ;
+      }
+    }
   }
- 
   &::after {
     @apply
     content-['']
@@ -158,7 +197,7 @@
 */
 
 .tabs:not(.tabs-rank):not(.tabs-tertiary) {
-  > li {
+  li {
     > a,
     > button,
     > div {

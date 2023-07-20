@@ -132,12 +132,17 @@
         lg:pl-8
         ;
       }
-      :where(p, ul, li) {
+      :where(p, ul, ol, li) {
         &:not([class*='max-w']) {
           @apply
           max-w-[50ch]
           ;
         }
+      }
+      :where(ul, ol) {
+        @apply
+        text-left
+        ;
       }
       > *:last-child {
         @apply

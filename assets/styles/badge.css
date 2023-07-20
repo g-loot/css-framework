@@ -106,7 +106,7 @@
     > * {
       [data-badge]::after {
         @apply
-        absolute
+        -right-4
         -translate-y-2
       }
     }

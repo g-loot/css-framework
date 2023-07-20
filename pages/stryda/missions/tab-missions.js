@@ -50,38 +50,7 @@ export default function TabMissionsMissions() {
             className="py-8 animate-slide-in-bottom animate-delay"
             style={{ "--delay": "calc(2 * 0.05s)" }}
           >
-            {/*
-            <div className="flex items-center justify-between mb-2 mx-4 sm:mx-0">
-             
-              <h3 className="h5">Daily missions in {selectedGame.name}</h3>
-        
-              <div className="hidden sm:flex items-center gap-2">
-                <div
-                  className="tooltip tooltip-left"
-                  data-tooltip="This might take up to 15 minutes. Make sure the match you’re trying to fetch is 100% completed."
-                >
-                  <button
-                    className={`button button-xs button-secondary ${
-                      submitting ? "is-loading" : ""
-                    }`}
-                    onClick={addToastWithDelay.bind(this, {
-                      icon: "f-check",
-                      color: "green",
-                      text: "Your stats have been updated.",
-                      autoDelete: true,
-                      autoDeleteDelay: 2500,
-                    })}
-                  >
-                    <span className="icon icon-16 icon-refresh-02" />
-                    <span className="hidden sm:block">
-                      Update my stats
-                    </span>
-                    <span className="block sm:hidden">Update</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-            */}
+            
 
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
               <div className="max-w-md:pb-2 max-w-md:text-center">
@@ -89,26 +58,7 @@ export default function TabMissionsMissions() {
               </div>
               <ButtonStatsUpdate />
             </div>
-
-            {/*
-
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
-              <p>
-                {!isPremium && (
-                  <>
-                    Get{" "}
-                    <Link href="/prototype/premium">
-                      <a className="text-premium-500 link">Premium</a>
-                    </Link>{" "}
-                    and earn +50% of XP on all missions
-                  </>
-                )}
-              </p>
-              <p className="md:text-right">You have completed 1 out of 6 missions</p>
-            </div>
-
-            */}
-
+          
             {selectedGame.needsSteam && (
               <>
                 <div className="px-4 sm:px-0">

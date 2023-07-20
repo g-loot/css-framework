@@ -10,12 +10,22 @@ const ButtonSignUp = (props) => {
   return (
     <button
       type="button"
-      className={`group relative uppercase text-lg bg-game-valorant px-6 py-4 leading-none overflow-hidden active:opacity-90 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-game-valorant active:outline active:outline-offset-2 ${props.isInverted ? 'active:outline-ui-100' : 'active:outline-ui-900'}`}
+      className={`group relative uppercase text-lg bg-game-valorant px-6 py-4 leading-none overflow-hidden active:opacity-90 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-game-valorant active:outline active:outline-offset-2 ${
+        props.isInverted ? "active:outline-ui-100" : "active:outline-ui-900"
+      }`}
     >
-      <span className={`block ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12 ${props.isInverted ? 'caca' : ''}`}>
+      <span
+        className={`block ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12 ${
+          props.isInverted ? "caca" : ""
+        }`}
+      >
         Sign up
       </span>
-      <span className={`ease-[cubic-bezier(1,0,.2,1)] duration-[.4s] group-hover:duration-300 absolute inset-0 flex items-center justify-center transition-all -skew-x-12 -translate-x-[calc(100%+1rem)] group-hover:translate-x-0 group-hover:skew-x-0 ${props.isInverted ? 'bg-ui-100 text-ui-900' : 'bg-ui-900 text-ui-100'}`}>
+      <span
+        className={`ease-[cubic-bezier(1,0,.2,1)] duration-[.4s] group-hover:duration-300 absolute inset-0 flex items-center justify-center transition-all -skew-x-12 -translate-x-[calc(100%+1rem)] group-hover:translate-x-0 group-hover:skew-x-0 ${
+          props.isInverted ? "bg-ui-100 text-ui-900" : "bg-ui-900 text-ui-100"
+        }`}
+      >
         <span>Sign up</span>
       </span>
     </button>
@@ -144,65 +154,64 @@ const PrototypePage = () => {
               }}
             >
               <div className="flex items-center justify-center">
-                  <span
-                    className="icon icon-ctrl-right text-xl text-ui-100/20 animate-slide-in-left animate-delay"
-                    style={{
-                      "--delay": "calc(3 * 0.05s)",
-                      animationIterationCount: "infinite",
-                      animationDuration: "2s",
-                      animationDirection: "alternate",
-                    }}
-                  />
-                  <span
-                    className="icon icon-ctrl-right text-xl text-ui-100/40 animate-slide-in-left animate-delay"
-                    style={{
-                      "--delay": "calc(2 * 0.05s)",
-                      animationIterationCount: "infinite",
-                      animationDuration: "2s",
-                      animationDirection: "alternate",
-                    }}
-                  />
-                  <span
-                    className="icon icon-ctrl-right text-xl text-ui-100/60 animate-slide-in-left animate-delay"
-                    style={{
-                      "--delay": "calc(1 * 0.05s)",
-                      animationIterationCount: "infinite",
-                      animationDuration: "2s",
-                      animationDirection: "alternate",
-                    }}
-                  />
-                  <div className="drop-shadow-[0_2px_0_rgba(0,0,0,0.2)] px-4">
-                    <ButtonSignUp isInverted={true} />
-                  </div>
-                  <span
-                    className="icon icon-ctrl-left text-xl text-ui-100/60 animate-slide-in-right animate-delay"
-                    style={{
-                      "--delay": "calc(1 * 0.05s)",
-                      animationIterationCount: "infinite",
-                      animationDuration: "2s",
-                      animationDirection: "alternate",
-                    }}
-                  />
-                  <span
-                    className="icon icon-ctrl-left text-xl text-ui-100/40 animate-slide-in-right animate-delay"
-                    style={{
-                      "--delay": "calc(2 * 0.05s)",
-                      animationIterationCount: "infinite",
-                      animationDuration: "2s",
-                      animationDirection: "alternate",
-                    }}
-                  />
-                  <span
-                    className="icon icon-ctrl-left text-xl text-ui-100/20 animate-slide-in-right animate-delay"
-                    style={{
-                      "--delay": "calc(3 * 0.05s)",
-                      animationIterationCount: "infinite",
-                      animationDuration: "2s",
-                      animationDirection: "alternate",
-                    }}
-                  />
+                <span
+                  className="icon icon-ctrl-right text-xl text-ui-100/20 animate-slide-in-left animate-delay"
+                  style={{
+                    "--delay": "calc(3 * 0.05s)",
+                    animationIterationCount: "infinite",
+                    animationDuration: "2s",
+                    animationDirection: "alternate",
+                  }}
+                />
+                <span
+                  className="icon icon-ctrl-right text-xl text-ui-100/40 animate-slide-in-left animate-delay"
+                  style={{
+                    "--delay": "calc(2 * 0.05s)",
+                    animationIterationCount: "infinite",
+                    animationDuration: "2s",
+                    animationDirection: "alternate",
+                  }}
+                />
+                <span
+                  className="icon icon-ctrl-right text-xl text-ui-100/60 animate-slide-in-left animate-delay"
+                  style={{
+                    "--delay": "calc(1 * 0.05s)",
+                    animationIterationCount: "infinite",
+                    animationDuration: "2s",
+                    animationDirection: "alternate",
+                  }}
+                />
+                <div className="drop-shadow-[0_2px_0_rgba(0,0,0,0.2)] px-4">
+                  <ButtonSignUp isInverted={true} />
                 </div>
-              
+                <span
+                  className="icon icon-ctrl-left text-xl text-ui-100/60 animate-slide-in-right animate-delay"
+                  style={{
+                    "--delay": "calc(1 * 0.05s)",
+                    animationIterationCount: "infinite",
+                    animationDuration: "2s",
+                    animationDirection: "alternate",
+                  }}
+                />
+                <span
+                  className="icon icon-ctrl-left text-xl text-ui-100/40 animate-slide-in-right animate-delay"
+                  style={{
+                    "--delay": "calc(2 * 0.05s)",
+                    animationIterationCount: "infinite",
+                    animationDuration: "2s",
+                    animationDirection: "alternate",
+                  }}
+                />
+                <span
+                  className="icon icon-ctrl-left text-xl text-ui-100/20 animate-slide-in-right animate-delay"
+                  style={{
+                    "--delay": "calc(3 * 0.05s)",
+                    animationIterationCount: "infinite",
+                    animationDuration: "2s",
+                    animationDirection: "alternate",
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="pointer-events-none absolute z-0 inset-0 flex items-center justify-center bg-ui-900/95 overflow-hidden">
@@ -289,6 +298,54 @@ const PrototypePage = () => {
                 North and a slice of the exciting{" "}
                 <b className="bg-game-valorant/50 px-1">$20,000</b> prize pool!
               </p>
+              <ul
+                className="border-y border-ui-900/20 divide-y divide-ui-900/20 animate-slide-in-bottomNO text-ui-900 child:py-2 my-6 animate-paused animate-delay child:overflow-hidden"
+                style={{
+                  "--delay": "calc(4 * 0.05s)",
+                }}
+              >
+                <li>
+                  <div
+                    className="animate-slide-in-bottom animate-paused animate-delay"
+                    style={{
+                      "--delay": "calc(4 * 0.05s)",
+                    }}
+                  >
+                    Open to players of all skill levels.
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="animate-slide-in-bottom animate-paused animate-delay"
+                    style={{
+                      "--delay": "calc(5 * 0.05s)",
+                    }}
+                  >
+                    Need at least 3 players from the Nordic Region.
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="animate-slide-in-bottom animate-paused animate-delay"
+                    style={{
+                      "--delay": "calc(6 * 0.05s)",
+                    }}
+                  >
+                    Kick-off in October.
+                  </div>
+                </li>
+                <li>
+                  <div
+                    className="animate-slide-in-bottom animate-paused animate-delay"
+                    style={{
+                      "--delay": "calc(7 * 0.05s)",
+                    }}
+                  >
+                    Unique Stryda qualifiers.
+                  </div>
+                </li>
+              </ul>
+              {/*
               <p
                 className="text-ui-900 text-lg leading-relaxed my-6 animate-slide-in-bottom animate-paused animate-delay"
                 style={{
@@ -305,6 +362,7 @@ const PrototypePage = () => {
                 the most skilled teams will emerge victorious and secure their
                 place in the Grand Finale.
               </p>
+              */}
               <div
                 className="animate-slide-in-bottom animate-paused animate-delay"
                 style={{
@@ -328,112 +386,7 @@ const PrototypePage = () => {
             </div>
           </div>
         </section>
-        <section className="relative z-0 px-6 lg:px-0 bg-ui-900 text-center">
-          <div className="relative z-20 container max-w-sm 2xl:max-w-[70ch] mx-auto py-32">
-            <div className="drop-shadow-[0_4px_0_rgba(0,0,0,0.2)]">
-              <div
-                className="blockreveal animate-paused animate-delay mx-auto w-44 mb-10"
-                style={{
-                  "--delay": "calc(0 * 0.05s)",
-                }}
-              >
-                <img
-                  src="https://res.cloudinary.com/gloot/image/upload/v1689235015/Stryda/logos/stryda-logo-ui-100.svg"
-                  width="auto"
-                  height="auto"
-                  alt="Stryda"
-                />
-              </div>
-              <div
-                className="blockreveal animate-paused animate-delay"
-                style={{
-                  "--delay": "calc(2 * 0.05s)",
-                }}
-              >
-                <img
-                  src="https://res.cloudinary.com/gloot/image/upload/v1689166223/Stryda/marketing/campaigns/Nordic%20Clash/Stryda_Nordic_Clash_logo.svg"
-                  width="auto"
-                  height="auto"
-                  alt="Stryda"
-                  className="relative z-0 mx-auto w-full max-w-md mb-12"
-                />
-              </div>
-            </div>
-            <div className="drop-shadow-[0_2px_0_rgba(0,0,0,0.2)]">
-              <p
-                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
-                style={{
-                  "--delay": "calc(3 * 0.05s)",
-                }}
-              >
-                Legends speak of an ancient Radianite-powered relic hidden in
-                the farthest reaches of the North.
-              </p>
-              <p
-                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
-                style={{
-                  "--delay": "calc(4 * 0.05s)",
-                }}
-              >
-                For generations, brave warriors have fought and died trying to
-                claim it for themselves.
-              </p>
-              <p
-                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
-                style={{
-                  "--delay": "calc(5 * 0.05s)",
-                }}
-              >
-                But now, a new battle begins! The Clans of the North have
-                gathered for the ultimate test of skills; the last straw before
-                conquering the powerful relic. Here, in the Nordic Clash
-                Tournament, new VALORANT champions will rise and old legends
-                might fall.
-              </p>
-              <p
-                className="text-ui-100 text-lg md:text-xl leading-relaxed my-6 animate-slide-in-bottom animate-paused animate-delay"
-                style={{
-                  "--delay": "calc(6 * 0.05s)",
-                }}
-              >
-                Are you ready for the challenge? Only the worthy will secure
-                their position as the strongest Clan in the North, claim the
-                relic, and maybe - just maybe- a place in Valhalla itself.
-              </p>
-            </div>
-            <div
-              className="animate-slide-in-bottom animate-paused animate-delay"
-              style={{
-                "--delay": "calc(7 * 0.05s)",
-              }}
-            >
-              <ButtonSignUp isInverted={true} />
-            </div>
-          </div>
-          <i className="absolute z-10 h-36 inset-x-0 -bottom-px bg-gradient-to-b from-ui-900/0 via-ui-900/40 to-ui-900" />
-          <div className="pointer-events-none absolute z-0 inset-0 flex items-center justify-center overflow-hidden">
-            <i className="absolute z-10 inset-0 bg-ui-900 opacity-30" />
-            <video
-              autoPlay={true}
-              playsInline
-              loop
-              muted
-              preload
-              width="100%"
-              height="100%"
-              className="scale-[6] md:scale-[3] lg:scale-[2] 2xl:scale-100 w-auto h-full lg:w-full lg:h-auto relative z-0"
-            >
-              <source
-                src="https://res.cloudinary.com/gloot/video/upload/v1689577806/Stryda/marketing/campaigns/Nordic%20Clash/SNC_LOGO_Fill_5s_VB_Loop.mp4"
-                type="video/mp4"
-              />
-              <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1689664255/Stryda/marketing/campaigns/Nordic%20Clash/SNC_LOGO_Fill_5s_VB_Loop_fallback.jpg"
-                title=""
-              />
-            </video>
-          </div>
-        </section>
+       
         <section className="relative z-0 bg-ui-900 text-center lg:text-left">
           <div className="relative z-10 container px-6 flex flex-col lg:flex-row gap-8 items-center justify-center py-24">
             <div className="flex-3 lg:order-2">
@@ -591,6 +544,113 @@ const PrototypePage = () => {
                 <ButtonSignUp isInverted={true} />
               </div>
             </div>
+          </div>
+        </section>
+        <section className="relative z-0 px-6 lg:px-0 bg-ui-900 text-center">
+          <div className="relative z-20 container max-w-sm 2xl:max-w-[70ch] mx-auto py-32">
+            <div className="drop-shadow-[0_4px_0_rgba(0,0,0,0.2)]">
+              <div
+                className="blockreveal animate-paused animate-delay mx-auto w-44 mb-10"
+                style={{
+                  "--delay": "calc(0 * 0.05s)",
+                }}
+              >
+                <img
+                  src="https://res.cloudinary.com/gloot/image/upload/v1689235015/Stryda/logos/stryda-logo-ui-100.svg"
+                  width="auto"
+                  height="auto"
+                  alt="Stryda"
+                />
+              </div>
+              <div
+                className="blockreveal animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(2 * 0.05s)",
+                }}
+              >
+                <img
+                  src="https://res.cloudinary.com/gloot/image/upload/v1689166223/Stryda/marketing/campaigns/Nordic%20Clash/Stryda_Nordic_Clash_logo.svg"
+                  width="auto"
+                  height="auto"
+                  alt="Stryda"
+                  className="relative z-0 mx-auto w-full max-w-md mb-12"
+                />
+              </div>
+            </div>
+            <div className="drop-shadow-[0_2px_0_rgba(0,0,0,0.2)]">
+              <p
+                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(3 * 0.05s)",
+                }}
+              >
+                Legends speak of an ancient Radianite-powered relic hidden in
+                the farthest reaches of the North.
+              </p>
+              <p
+                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(4 * 0.05s)",
+                }}
+              >
+                For generations, brave warriors have fought and died trying to
+                claim it for themselves.
+              </p>
+              <p
+                className="text-ui-100 text-lg md:text-xl leading-relaxed mt-6 animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(5 * 0.05s)",
+                }}
+              >
+                But now, a new battle begins! The Clans of the North have
+                gathered for the ultimate test of skills; the last straw before
+                conquering the powerful relic. Here, in the Nordic Clash
+                Tournament, new VALORANT champions will rise and old legends
+                might fall.
+              </p>
+              <p
+                className="text-ui-100 text-lg md:text-xl leading-relaxed my-6 animate-slide-in-bottom animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(6 * 0.05s)",
+                }}
+              >
+                Are you ready for the challenge? Only the worthy will secure
+                their position as the strongest Clan in the North, claim the
+                relic, and maybe - just maybe- a place in Valhalla itself.
+              </p>
+            </div>
+            <div
+              className="animate-slide-in-bottom animate-paused animate-delay"
+              style={{
+                "--delay": "calc(7 * 0.05s)",
+              }}
+            >
+              <ButtonSignUp isInverted={true} />
+            </div>
+          </div>
+          <i className="absolute z-10 h-36 inset-x-0 top-0 bg-gradient-to-t from-ui-900/0 via-ui-900/40 to-ui-900" />
+          <i className="absolute z-10 h-36 inset-x-0 bottom-0 bg-gradient-to-b from-ui-900/0 via-ui-900/40 to-ui-900" />
+          <div className="pointer-events-none absolute z-0 inset-0 flex items-center justify-center overflow-hidden">
+            <i className="absolute z-10 inset-0 bg-ui-900 opacity-30" />
+            <video
+              autoPlay={true}
+              playsInline
+              loop
+              muted
+              preload
+              width="100%"
+              height="100%"
+              className="scale-[6] md:scale-[3] lg:scale-[2] 2xl:scale-100 w-auto h-full lg:w-full lg:h-auto relative z-0"
+            >
+              <source
+                src="https://res.cloudinary.com/gloot/video/upload/v1689577806/Stryda/marketing/campaigns/Nordic%20Clash/SNC_LOGO_Fill_5s_VB_Loop.mp4"
+                type="video/mp4"
+              />
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1689664255/Stryda/marketing/campaigns/Nordic%20Clash/SNC_LOGO_Fill_5s_VB_Loop_fallback.jpg"
+                title=""
+              />
+            </video>
           </div>
         </section>
         <section className="relative z-10 pt-80 text-center">

@@ -159,9 +159,27 @@ export default function Topbar() {
                       router.pathname.includes("ladders") ? "is-active" : ""
                     }`}
                   >
-                    <span className="text-sm uppercase">Ladders</span>
+                    <span className="text-sm uppercase">Competitions</span>
+                    <span className="icon icon-arrow-sm-down" />
                   </button>
                 </Link>
+                <ul>
+                  <li>
+                    <a>
+                      <span>Ladders</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span>Scoreboards</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a>
+                      <span>Clan events</span>
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link href={`/stryda/shop${prototype.getURLparams()}`}>
