@@ -24,7 +24,6 @@ const enrollSteps = [
 export default function TabLaddersYourLadderMatches() {
   const { query } = useRouter();
   const hasAds = query.ads === "true" ? true : false;
-  const selectedGame = prototype.getGameByID(prototype.defaultGameID);
   const elementRef = useRef(null);
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);

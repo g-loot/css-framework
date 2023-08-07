@@ -238,10 +238,10 @@ export default function TabLaddersHowItWorks() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
+  const selectedGame = prototype.getGameByID(prototype.defaultGameID);
   const hasAds = query.ads === "true" ? true : false;
   const uiContext = useContext(UiContext);
   const modalVideo = query.modalvideo === "true" ? true : false;
-  const selectedGame = prototype.getGameByID(prototype.defaultGameID);
 
 
 
