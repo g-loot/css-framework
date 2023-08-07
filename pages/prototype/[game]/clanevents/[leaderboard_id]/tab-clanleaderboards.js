@@ -457,7 +457,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                               <tr>
                                 <td>
                                   <div className="text-sm uppercase">
-                                    Clan members Riot ID
+                                    Clan members
                                   </div>
                                 </td>
                                 {selectedClanLeaderboard.status ===
