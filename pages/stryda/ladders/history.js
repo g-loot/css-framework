@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../components/Ad/Ad";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import PrototypeStructure from "../../../components/stryda/PrototypeStructure";
+import Structure from "../components/Structure";
 import TabLaddersHistory from "./tab-history";
 import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
@@ -27,7 +27,7 @@ export default function LaddersHistory() {
 
   return (
     <>
-      <PrototypeStructure title="Ladders">
+      <Structure title="Ladders">
         <Ad width="1005" height="300" />
         {selectedGame && (
           <>
@@ -35,7 +35,7 @@ export default function LaddersHistory() {
             <TabLaddersHistory />
           </>
         )}
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }
