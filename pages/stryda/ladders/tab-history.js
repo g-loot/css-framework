@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 import Link from "next/link";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
+import Tooltip from "../../../components/Tooltip/Tooltip";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../../assets/animations/explosion_stryda_1.json";
+import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
 
 export default function TabLaddersHistory() {
   const router = useRouter();
