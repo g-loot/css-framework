@@ -46,7 +46,7 @@ export default function ModalClaimBattlepassReward(props) {
 
   const EquipProfileBanner = (id) => {
     setSubmitting(true);
-    window.location.href = `/prototype/profile/1?profilebanner=${id}`;
+    window.location.href = `/stryda/profile/1?profilebanner=${id}`;
     setTimeout(() => {
       setSubmitting(false);
       uiContext.closeModal();
@@ -56,7 +56,7 @@ export default function ModalClaimBattlepassReward(props) {
 
   const EquipAvatarFrame = (id) => {
     setSubmitting(true);
-    window.location.href = `/prototype/profile/1?avatarframe=${id}`;
+    window.location.href = `/stryda/profile/1?avatarframe=${id}`;
     setTimeout(() => {
       setSubmitting(false);
       uiContext.closeModal();

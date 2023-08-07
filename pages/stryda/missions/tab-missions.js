@@ -201,7 +201,7 @@ export default function TabMissionsMissions() {
                 </h4>
                 <p className="max-w-[50ch] text-sm text-ui-300 mx-auto mt-2 mb-5">
                   Increase your amount of XP you can earn each day with a{" "}
-                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                  <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                     <a className="link text-premium-500">
                       Premium subscription
                     </a>
@@ -209,7 +209,7 @@ export default function TabMissionsMissions() {
                   .
                 </p>
                 <div className="mx-auto mt-2">
-                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                  <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                     <a className="button button-premium is-shining">
                       <span>Get Premium</span>
                     </a>

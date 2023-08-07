@@ -82,7 +82,7 @@ export default function Home() {
         {selectedVoucher && (
           <>
             <section className="mb-4">
-              <div className="header header-quaternary">
+              <div className="header header-quaternary my-8">
                 <div className="header-breadcrumbs">
                   <nav className="breadcrumbs" aria-label="Breadcrumb">
                     <ol>
@@ -112,13 +112,13 @@ export default function Home() {
                 <div className="header-content">
                   <div className="header-body">
                     <h1>{selectedVoucher.name}</h1>
-                    <p className="text-ui-300 max-w-[70ch] mt-4">
+                    <p className="max-w-[70ch] mt-4">
                       {selectedVoucher.description}
                     </p>
                   </div>
                 </div>
                 <div className="header-bg">
-                  <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
+                  <img src="https://res.cloudinary.com/gloot/image/upload/v1689683517/Stryda/illustrations/stryda_v2_pagebg_shop.jpg" />
                 </div>
               </div>
             </section>
@@ -160,11 +160,8 @@ export default function Home() {
               <>
                 {section.id === selectedSection && (
                   <section className="my-4 lg:my-8">
-                    {/*
-                  <h2 className="text-2xl flex-none py-2">{section.name}</h2>
-                  */}
                     {section.countries && (
-                      <ul className="flex gap-x-3 items-center flex-wrap text-ui-300 mt-2">
+                      <ul className="flex gap-x-3 items-center flex-wrap mt-2 text-ui-100">
                         <li>
                           <span className="uppercase font-bold">Valid in:</span>
                         </li>
@@ -192,7 +189,7 @@ export default function Home() {
                             <>
                               <li
                                 key={giftcardIndex}
-                                className="w-full surface rounded-3 is-loading aspect-square"
+                                className="w-full surface rounded is-loading aspect-square"
                               />
                             </>
                           ))}
@@ -203,7 +200,7 @@ export default function Home() {
                             <>
                               <li
                                 key={giftcard.id}
-                                className="surface rounded-3 w-3/4 sm:w-2/3 md:w-auto p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
+                                className="surface rounded w-3/4 sm:w-2/3 md:w-auto p-4 flex flex-col items-stretch text-center animate-slide-in-right animate-delay"
                                 style={{
                                   "--delay": `calc( ${giftcardIndex} * 0.05s)`,
                                 }}
@@ -222,7 +219,7 @@ export default function Home() {
                                   <h3 className="uppercase text-3xl leading-none">
                                     Gift card {giftcard.amount}
                                   </h3>
-                                  <div className="mb-3 text-ui-300 uppercase text-xl">
+                                  <div className="mb-3 uppercase text-xl">
                                     {selectedVoucher.name}
                                   </div>
                                 </div>

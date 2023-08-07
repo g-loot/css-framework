@@ -4,14 +4,14 @@ import Link from "next/link";
 import Lottie from "lottie-react";
 import { useRouter } from "next/router";
 import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
-import ModalDownloadStarted from "../../../pages/prototype/modal-downloadstarted";
+import ModalDownloadStarted from "../../../pages/stryda/modal-downloadstarted";
 import Tooltip from "../../../components/Tooltip/Tooltip";
 import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
 import Notification from "../../../components/Notification/Notification";
 import { VariablesContext } from "../../../contexts/variables";
 import TopBarClaim from "../../../components/TopBarClaim/TopBarClaim";
-import ModalBuyTokens from "../../../pages/prototype/wallet/modal-buytokens";
+import ModalBuyTokens from "../../../pages/stryda/wallet/modal-buytokens";
 import Countdown from "../../../components/Countdown/Countdown";
 import Avatar from "../../../components/Avatar/Avatar";
 import { dataNotifications } from "../../../mock-data/data-notifications";
@@ -73,7 +73,7 @@ export default function Topbar() {
         <div
           className={`flex lg:gap-8 mx-auto px-2  ${hasAds ? "3xl:m-0" : ""}`}
         >
-          <div className="flex-1 text-0 flex gap-2 items-center">
+          <div className="flex-1 flex gap-2 items-center">
             <div className="hidden gap-2">
               <button
                 type="button"
@@ -104,6 +104,20 @@ export default function Topbar() {
                 />
               </a>
             </Link>
+            <Tooltip
+              placement="bottom"
+              tooltip={
+                <div className="relative text-sm">
+                  <span>Search</span>
+                </div>
+              }
+            >
+              <Link href={`/stryda/search${prototype.getURLparams()}`}>
+                  <a className="button button-ghost rounded-full">
+                    <span className="icon icon-zoom text-ui-200" />
+                  </a>
+                </Link>
+            </Tooltip>
             <div className="md:hidden">
               <label
                 htmlFor="drawer-prototype"
@@ -152,7 +166,7 @@ export default function Topbar() {
                 </Link>
               </li>
               <li className="!hidden xl:!flex">
-                <Link href={`/stryda/battlepass${prototype.getURLparams()}`}>
+                <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
                   <button
                     type="button"
                     className={` ${
@@ -165,9 +179,11 @@ export default function Topbar() {
                 </Link>
                 <ul>
                   <li>
-                    <a>
-                      <span>Ladders</span>
-                    </a>
+                    <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
+                      <a>
+                        <span>Ladders</span>
+                      </a>
+                    </Link>
                   </li>
                   <li>
                     <a>
@@ -217,22 +233,6 @@ export default function Topbar() {
             </ul>
           </div>
           <div className="flex-1 flex justify-end items-center gap-1 sm:gap-2">
-            <Tooltip
-              placement="bottom"
-              tooltip={
-                <div className="relative text-sm">
-                  <span>Search</span>
-                </div>
-              }
-            >
-              <div className="rounded-full bg-ui-700 interactive">
-                <Link href={`/stryda/search${prototype.getURLparams()}`}>
-                  <a className="button button-ghost rounded-full">
-                    <span className="icon icon-zoom text-ui-200" />
-                  </a>
-                </Link>
-              </div>
-            </Tooltip>
 
             <div className="dropdown dropdown-end">
               <div

@@ -65,15 +65,15 @@ export default function Missions() {
         <Loader
           loader={
               <section className="min-h-full container grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0 mt-8">
-                <div className="surface is-loading rounded-3 aspect-video w-full" />
-                <div className="surface is-loading rounded-3 aspect-video w-full" />
-                <div className="surface is-loading rounded-3 aspect-video w-full" />
-                <div className="surface is-loading rounded-3 aspect-video w-full" />
-                <div className="surface is-loading rounded-3 aspect-video w-full" />
-                <div className="surface is-loading rounded-3 aspect-video w-full" />
-                <div className="surface is-loading rounded-3 aspect-video w-full" />
-                <div className="surface is-loading rounded-3 aspect-video w-full" />
-                <div className="surface is-loading rounded-3 aspect-video w-full" />
+                <div className="surface is-loading rounded aspect-video w-full" />
+                <div className="surface is-loading rounded aspect-video w-full" />
+                <div className="surface is-loading rounded aspect-video w-full" />
+                <div className="surface is-loading rounded aspect-video w-full" />
+                <div className="surface is-loading rounded aspect-video w-full" />
+                <div className="surface is-loading rounded aspect-video w-full" />
+                <div className="surface is-loading rounded aspect-video w-full" />
+                <div className="surface is-loading rounded aspect-video w-full" />
+                <div className="surface is-loading rounded aspect-video w-full" />
               </section>
           }
         >
@@ -91,7 +91,7 @@ export default function Missions() {
                   <div className="flex flex-col md:flex-row gap-2">
                     {selectedGame.needsSteam && (
                       <Link
-                        href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                        href={`/stryda/profile/settings${prototype.getURLparams()}`}
                       >
                         <button
                           type="button"
@@ -119,7 +119,7 @@ export default function Missions() {
                           </button>
                         ) : (
                           <Link
-                            href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                            href={`/stryda/profile/settings${prototype.getURLparams()}`}
                           >
                             <button
                               type="button"
@@ -136,7 +136,7 @@ export default function Missions() {
                     )}
                     {!selectedGame.needsSteam && !selectedGame.needsRiot && (
                       <Link
-                        href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                        href={`/stryda/profile/settings${prototype.getURLparams()}`}
                       >
                         <button
                           type="button"
@@ -155,7 +155,7 @@ export default function Missions() {
               </div>
             </section>
             <nav>
-              <ul className="tabs border-b border-ui-500/20">
+              <ul className="tabs border-b border-ui-500/50">
                 {TabsItems.map((item, itemIndex) => (
                   <li key={itemIndex}>
                     <Link

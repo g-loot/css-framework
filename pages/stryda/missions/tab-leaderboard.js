@@ -142,7 +142,7 @@ export default function TabMissionsLeaderboard(props) {
                 {prototype.getUserByID(1).friends.map((item, itemIndex) => (
                   <Link
                     key={itemIndex}
-                    href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                    href={`/stryda/profile/${item}${prototype.getURLparams()}`}
                   >
                     <li className="interactive even:bg-ui-700 overflow-hidden">
                       <span className="w-9 text-center">
@@ -231,7 +231,7 @@ export default function TabMissionsLeaderboard(props) {
                         </div>
                         <div className="item-image">
                           <Link
-                            href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                            href={`/stryda/profile/${item}${prototype.getURLparams()}`}
                           >
                             <Avatar
                               id={item}
@@ -242,7 +242,7 @@ export default function TabMissionsLeaderboard(props) {
                         </div>
                         <div className="item-body">
                           <Link
-                            href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                            href={`/stryda/profile/${item}${prototype.getURLparams()}`}
                           >
                             <div className="item-title interactive truncate">
                               <span

@@ -52,7 +52,7 @@ export default function ModalClanEventOnboarding(props) {
     <>
       {selectedLeaderboard && (
         <div className="relative z-10">
-          <div className="modal modal-center w-full max-w-lg">
+          <div className="modal modal-center w-full max-w-xl">
             <button
               type="button"
               className="button button-secondary button-close"
@@ -64,7 +64,7 @@ export default function ModalClanEventOnboarding(props) {
               <div className="modal-body">
                 <h2 className="modal-title">Welcome to Clan Events</h2>
                 <p>Play with your Clan and compete against other Clans.</p>
-                <div className="flex flex-col lg:flex-row gap-8 items-start mt-4 max-w-md mx-auto child:animate-delay">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mt-4 max-w-md mx-auto child:animate-delay">
                   <div className="flex-1 space-y-8 animate-fade-in">
                     <video
                       autoPlay={true}
@@ -79,7 +79,7 @@ export default function ModalClanEventOnboarding(props) {
                     >
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1687418644/Stryda/illustrations/Clan_Season_onboarding_playing.jpg" />
                     </video>
-                    <p className="px-4">
+                    <p className="px-4 leading-tight">
                       Create a party in VALORANT with <b className="text-ui-100">5 Clan members</b>.
                     </p>
                   </div>
@@ -97,7 +97,7 @@ export default function ModalClanEventOnboarding(props) {
                     >
                       <img src="https://res.cloudinary.com/gloot/image/upload/v1687418642/Stryda/illustrations/Clan_Season_onboarding_leaderboard.jpg" />
                     </video>
-                    <p className="px-4">
+                    <p className="px-4 leading-tight">
                       Play matches and beat other Clans on Stryda to climb the
                       leaderboard.
                     </p>

@@ -133,11 +133,11 @@ export default function TabWalletOverview() {
             {WalletItems.map((item, itemIndex) => (
               <div
                 key={item.id}
-                className="surface rounded-3 flex flex-col items-stretch p-2 w-full mx-auto animate-slide-in-bottom animate-delay"
+                className="surface rounded flex flex-col items-stretch w-full mx-auto animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
               >
                 <div
-                  className={`flex items-center justify-center my-8 leading-none ${item.color}`}
+                  className={`flex items-center justify-center my-8 leading-none p-2 ${item.color}`}
                 >
                   {item.video ? (
                     <video
@@ -185,7 +185,7 @@ export default function TabWalletOverview() {
                   )}
                 </div>
                 {item.button && (
-                  <>
+                  <div className="border-t border-ui-700 p-2">
                     {item.button === "buy" && (
                       <button
                         type="button"
@@ -196,7 +196,7 @@ export default function TabWalletOverview() {
                       </button>
                     )}
                     {item.button === "visitshop" && (
-                      <Link href={`/prototype/shop${prototype.getURLparams()}`}>
+                      <Link href={`/stryda/shop${prototype.getURLparams()}`}>
                         <button
                           type="button"
                           className="button button-secondary w-full"
@@ -213,7 +213,7 @@ export default function TabWalletOverview() {
                         <span>{item.buttonLabel}</span>
                       </button>
                     )}
-                  </>
+                  </div>
                 )}
               </div>
             ))}
@@ -261,7 +261,7 @@ export default function TabWalletOverview() {
                                   )}
                                   {item.button === "visitshop" && (
                                     <Link
-                                      href={`/prototype/shop${prototype.getURLparams()}`}
+                                      href={`/stryda/shop${prototype.getURLparams()}`}
                                     >
                                       <button
                                         type="button"
@@ -316,7 +316,7 @@ export default function TabWalletOverview() {
                             )}
                             {item.button === "visitshop" && (
                               <Link
-                                href={`/prototype/shop${prototype.getURLparams()}`}
+                                href={`/stryda/shop${prototype.getURLparams()}`}
                               >
                                 <button
                                   type="button"

@@ -51,7 +51,7 @@ export default function TabWalletHistory() {
                   earnings.
                 </p>
               </div>
-              <Link href="/prototype/valorant/tournaments">
+              <Link href="/stryda/valorant/tournaments">
                 <a className="button button-main">
                   <span>Browse tournaments</span>
                 </a>

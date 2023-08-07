@@ -226,7 +226,7 @@ export default function ModalBuyTokens(props) {
                 </div>
                 <div />
                 <div className="py-4">
-                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                  <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                     <a className="button button-premium whitespace-nowrap">
                       <span>Subscribe now</span>
                     </a>

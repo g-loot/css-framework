@@ -4408,6 +4408,8 @@ export const dataGames = [
     assets: {
       cover:
         "https://res.cloudinary.com/gloot/image/upload/v1622103228/GNOG%20assets/Games/league_of_legends/cover.png",
+        heroV2:
+        "https://res.cloudinary.com/gloot/image/upload/v1689937831/Stryda/illustrations/stryda_v2_pagebg_leagueoflegends.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-2.webp",
       heroLadder:
@@ -6073,6 +6075,8 @@ export const dataGames = [
     assets: {
       cover:
         "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_PUBG_Battlegrounds.jpg",
+        heroV2:
+        "https://res.cloudinary.com/gloot/image/upload/v1689686525/Stryda/illustrations/stryda_v2_pagebg_pubg.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
       heroLadder:
@@ -6886,6 +6890,8 @@ export const dataGames = [
     assets: {
       cover:
         "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_CSGO.jpg",
+        heroV2:
+        "https://res.cloudinary.com/gloot/image/upload/v1689686521/Stryda/illustrations/stryda_v2_pagebg_valorant.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-1.webp",
       heroLadder:

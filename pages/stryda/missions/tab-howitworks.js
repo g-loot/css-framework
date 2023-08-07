@@ -92,7 +92,6 @@ export default function TabMissionsHowItWorks() {
   const prototype = usePrototypeData();
   const selectedGame = prototype.getGameByID(prototype.defaultGameID);
   const router = useRouter();
-  const { game } = router.query;
 
 
 

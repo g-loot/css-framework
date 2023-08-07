@@ -23,7 +23,6 @@ export default function ComponentRewardLadder() {
   const hasAds = query.ads === "true" ? true : false;
   const oldBattlepass = query.oldbattlepass === "true" ? true : false;
   const isPremium = prototype.isPremium;
-  const { game } = router.query;
   const [submitting, setSubmitting] = useState(false);
   const unclaimedRewards = query.unclaimedrewards === "true" ? true : false;
   const [hasUnclaimedRewards, setHasUnclaimedRewards] = useState(false);
@@ -97,7 +96,7 @@ export default function ComponentRewardLadder() {
         )}
         <div className="text-sm text-ui-300 flex gap-2 items-baseline">
           <ResetsIn />
-          <Link href={`/prototype/battlepass${prototype.getURLparams()}`}>
+          <Link href={`/stryda/battlepass${prototype.getURLparams()}`}>
             <a className="link text-ui-300 text-sm">
               View Battle Pass
             </a>
@@ -114,7 +113,7 @@ export default function ComponentRewardLadder() {
       ) : (
         <div className="mb-2 mx-4 sm:mx-0">
           <p className="text-sm text-ui-300">
-            <Link href="/prototype/premium">
+            <Link href="/stryda/premium">
               <a className="text-premium-500 link">Premium</a>
             </Link>{" "}
             users earn an additional 50% XP for each completed Mission and registered Ladder match.
@@ -141,7 +140,7 @@ export default function ComponentRewardLadder() {
                   <p className="max-w-[80ch]">
                     To complete Missions and earn rewards, you need to{" "}
                     <Link
-                      href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                      href={`/stryda/profile/settings${prototype.getURLparams()}`}
                     >
                       <a className="link">
                         connect your Steam account to Stryda
@@ -153,7 +152,7 @@ export default function ComponentRewardLadder() {
               </div>
               <div className="flex-none">
                 <Link
-                  href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                  href={`/stryda/profile/settings${prototype.getURLparams()}`}
                 >
                   <a className="button button-sm button-tertiary">
                     <span>

@@ -53,7 +53,7 @@ export default function ModalDiscardMission(props) {
 
   function handleBecomePremium() {
     uiContext.closeModal();
-    window.location.href = "/prototype/premium";
+    window.location.href = "/stryda/premium";
   }
 
   return (

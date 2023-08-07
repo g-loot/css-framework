@@ -43,7 +43,7 @@ export default function ModalBattlepassCompletedSummary(props) {
   function closeModalWithDelay() {
     setSubmitting(true);
     setTimeout(() => {
-      window.location.href = "/prototype/battlepass";
+      window.location.href = "/stryda/battlepass";
       uiContext.closeModal();
       setSubmitting(false);
     }, 500);

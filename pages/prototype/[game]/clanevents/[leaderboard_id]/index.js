@@ -99,7 +99,14 @@ export default function Ladders() {
                 className="relative z-10 max-w-[280px] max-h-[150px] h-auto w-auto"
               />
               {selectedClanLeaderboard.video ? (
-                <div className={`absolute z-0 inset-0 grid place-content-center bg-ui-900/95 ${selectedClanLeaderboard.status !== "upcoming" && selectedClanLeaderboard.status !== "ongoing" ? 'grayscale' : ''}`}>
+                <div
+                  className={`absolute z-0 inset-0 grid place-content-center bg-ui-900/95 ${
+                    selectedClanLeaderboard.status !== "upcoming" &&
+                    selectedClanLeaderboard.status !== "ongoing"
+                      ? "grayscale"
+                      : ""
+                  }`}
+                >
                   <video
                     autoPlay={true}
                     playsInline
@@ -119,7 +126,12 @@ export default function Ladders() {
                 <img
                   src={selectedClanLeaderboard.bg}
                   alt={selectedClanLeaderboard.name}
-                  className={`absolute inset-0 z-0 object-cover w-full h-full ${selectedClanLeaderboard.status !== "upcoming" && selectedClanLeaderboard.status !== "ongoing" ? 'grayscale' : ''}`}
+                  className={`absolute inset-0 z-0 object-cover w-full h-full ${
+                    selectedClanLeaderboard.status !== "upcoming" &&
+                    selectedClanLeaderboard.status !== "ongoing"
+                      ? "grayscale"
+                      : ""
+                  }`}
                 />
               )}
             </div>
@@ -204,68 +216,112 @@ export default function Ladders() {
               )}
               {!variablesContext.clanLeaderboardEnrolled &&
                 selectedClanLeaderboard.status === "ongoing" && (
-                  <div className="border-t border-ui-700 mt-4 pt-4 text-center flex items-center justify-center">
-                    <span
-                      className="icon icon-ctrl-right text-xl text-main/20 animate-slide-in-left animate-delay"
-                      style={{
-                        "--delay": "calc(3 * 0.05s)",
-                        animationIterationCount: "infinite",
-                        animationDuration: "2s",
-                        animationDirection: "alternate",
-                      }}
-                    />
-                    <span
-                      className="icon icon-ctrl-right text-xl text-main/40 animate-slide-in-left animate-delay"
-                      style={{
-                        "--delay": "calc(2 * 0.05s)",
-                        animationIterationCount: "infinite",
-                        animationDuration: "2s",
-                        animationDirection: "alternate",
-                      }}
-                    />
-                    <span
-                      className="icon icon-ctrl-right text-xl text-main/60 animate-slide-in-left animate-delay"
-                      style={{
-                        "--delay": "calc(1 * 0.05s)",
-                        animationIterationCount: "infinite",
-                        animationDuration: "2s",
-                        animationDirection: "alternate",
-                      }}
-                    />
-                    <button
-                      type="button"
-                      className="button button-sm button-primary xl:w-1/3 mx-4"
-                      onClick={() => handleEnroll()}
-                    >
-                      <span>Enter with my Clan</span>
-                    </button>
-                    <span
-                      className="icon icon-ctrl-left text-xl text-main/60 animate-slide-in-right animate-delay"
-                      style={{
-                        "--delay": "calc(1 * 0.05s)",
-                        animationIterationCount: "infinite",
-                        animationDuration: "2s",
-                        animationDirection: "alternate",
-                      }}
-                    />
-                    <span
-                      className="icon icon-ctrl-left text-xl text-main/40 animate-slide-in-right animate-delay"
-                      style={{
-                        "--delay": "calc(2 * 0.05s)",
-                        animationIterationCount: "infinite",
-                        animationDuration: "2s",
-                        animationDirection: "alternate",
-                      }}
-                    />
-                    <span
-                      className="icon icon-ctrl-left text-xl text-main/20 animate-slide-in-right animate-delay"
-                      style={{
-                        "--delay": "calc(3 * 0.05s)",
-                        animationIterationCount: "infinite",
-                        animationDuration: "2s",
-                        animationDirection: "alternate",
-                      }}
-                    />
+                  <div className="border-t border-ui-700 mt-4 pt-4 text-center xl:text-left flex flex-col xl:flex-row items-center gap-4">
+                    <div className="flex-1 text-sm">
+                      <p>
+                        In order for your clan to be eligible for the event, at
+                        least 3 out of 5 party member have to be from the
+                        following nordic countries:{" "}
+                        <span className="whitespace-nowrap">
+                          <img
+                            src={`https://flagcdn.com/dk.svg`}
+                            className="inline aspect-video rounded-sm max-w-[1.5rem]"
+                          />{" "}
+                          Denmark
+                        </span>{"  "}
+                        <span className="whitespace-nowrap">
+                          <img
+                            src={`https://flagcdn.com/fi.svg`}
+                            className="inline aspect-video rounded-sm max-w-[1.5rem]"
+                          />{" "}
+                          Finland
+                        </span>{"  "}
+                        <span className="whitespace-nowrap">
+                          <img
+                            src={`https://flagcdn.com/is.svg`}
+                            className="inline aspect-video rounded-sm max-w-[1.5rem]"
+                          />{" "}
+                          Iceland
+                        </span>{"  "}
+                        <span className="whitespace-nowrap">
+                          <img
+                            src={`https://flagcdn.com/no.svg`}
+                            className="inline aspect-video rounded-sm max-w-[1.5rem]"
+                          />{" "}
+                          Norway
+                        </span>{"  "}
+                        <span className="whitespace-nowrap">
+                          <img
+                            src={`https://flagcdn.com/se.svg`}
+                            className="inline aspect-video rounded-sm max-w-[1.5rem]"
+                          />{" "}
+                          Sweden
+                        </span>
+                      </p>
+                    </div>
+                    <div className="flex-1 whitespace-nowrap flex items-center justify-center">
+                      <span
+                        className="icon icon-ctrl-right text-xl text-main/20 animate-slide-in-left animate-delay"
+                        style={{
+                          "--delay": "calc(3 * 0.05s)",
+                          animationIterationCount: "infinite",
+                          animationDuration: "2s",
+                          animationDirection: "alternate",
+                        }}
+                      />
+                      <span
+                        className="icon icon-ctrl-right text-xl text-main/40 animate-slide-in-left animate-delay"
+                        style={{
+                          "--delay": "calc(2 * 0.05s)",
+                          animationIterationCount: "infinite",
+                          animationDuration: "2s",
+                          animationDirection: "alternate",
+                        }}
+                      />
+                      <span
+                        className="icon icon-ctrl-right text-xl text-main/60 animate-slide-in-left animate-delay"
+                        style={{
+                          "--delay": "calc(1 * 0.05s)",
+                          animationIterationCount: "infinite",
+                          animationDuration: "2s",
+                          animationDirection: "alternate",
+                        }}
+                      />
+                      <button
+                        type="button"
+                        className="button button-sm button-primary mx-4"
+                        onClick={() => handleEnroll()}
+                      >
+                        <span>Enter with my Clan</span>
+                      </button>
+                      <span
+                        className="icon icon-ctrl-left text-xl text-main/60 animate-slide-in-right animate-delay"
+                        style={{
+                          "--delay": "calc(1 * 0.05s)",
+                          animationIterationCount: "infinite",
+                          animationDuration: "2s",
+                          animationDirection: "alternate",
+                        }}
+                      />
+                      <span
+                        className="icon icon-ctrl-left text-xl text-main/40 animate-slide-in-right animate-delay"
+                        style={{
+                          "--delay": "calc(2 * 0.05s)",
+                          animationIterationCount: "infinite",
+                          animationDuration: "2s",
+                          animationDirection: "alternate",
+                        }}
+                      />
+                      <span
+                        className="icon icon-ctrl-left text-xl text-main/20 animate-slide-in-right animate-delay"
+                        style={{
+                          "--delay": "calc(3 * 0.05s)",
+                          animationIterationCount: "infinite",
+                          animationDuration: "2s",
+                          animationDirection: "alternate",
+                        }}
+                      />
+                    </div>
                   </div>
                 )}
             </div>

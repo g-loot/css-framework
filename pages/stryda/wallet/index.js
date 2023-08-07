@@ -31,16 +31,13 @@ export default function Home() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
-  const [selectedGame, setSelectedGame] = useState(null);
+  const selectedGame = prototype.getGameByID(prototype.defaultGameID);
   const hasAds = query.ads === "true" ? true : false;
-  const { game } = router.query;
   const { tab } = router.query;
   const defaultTab = "overview";
   const selectedTab = tab ? tab : defaultTab;
 
-  useEffect(() => {
-    setSelectedGame(prototype.getGameBySlug(game));
-  }, [game]);
+
 
   return (
     <>
@@ -60,7 +57,7 @@ export default function Home() {
             </div>
           </div>
           <div className="header-bg">
-            <img src="https://res.cloudinary.com/gloot/image/upload/v1689683516/Stryda/illustrations/stryda_v2_pagebg_wallet.jpg" />
+            <img src="https://res.cloudinary.com/gloot/image/upload/v1689683517/Stryda/illustrations/stryda_v2_pagebg_wallet.jpg" />
           </div>
         </section>
 

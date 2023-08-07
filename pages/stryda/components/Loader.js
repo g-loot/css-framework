@@ -3,7 +3,7 @@ import { usePrototypeData } from "../../../contexts/prototype";
 
 export default function Loader(props) {
   const prototype = usePrototypeData();
-  const loader = props.loader || (<div className='surface rounded-3 is-loading min-h-200px' />)
+  const loader = props.loader || (<div className='surface rounded is-loading min-h-200px' />)
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

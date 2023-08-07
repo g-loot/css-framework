@@ -13,7 +13,7 @@ export default function ModalWelcome(props) {
   const [selectedGamesCount, setSelectedGamesCount] = useState(
     prototype.games.filter((g) => g.isFavorite).length
   );
-  const [selectedGame, setSelectedGame] = useState(null);
+  const selectedGame = prototype.getGameByID(prototype.defaultGameID);
   const [disabled, setDisable] = useState(false);
 
   const handlechange = (event) => {

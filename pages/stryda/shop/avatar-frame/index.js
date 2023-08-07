@@ -101,7 +101,7 @@ export default function Home() {
               </div>
             </div>
             <div className="header-bg">
-              <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
+              <img src="https://res.cloudinary.com/gloot/image/upload/v1689683517/Stryda/illustrations/stryda_v2_pagebg_shop.jpg" />
             </div>
           </div>
         </section>
@@ -116,7 +116,7 @@ export default function Home() {
                     <>
                       <li
                         key={item.id}
-                        className="w-full surface rounded-3 is-loading aspect-[4/3]"
+                        className="w-full surface rounded is-loading aspect-[4/3]"
                       />
                     </>
                   ))}
@@ -129,7 +129,7 @@ export default function Home() {
                     <>
                       <li
                         key={item.id}
-                        className="w-full surface rounded-3 p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+                        className="w-full surface rounded p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
                         style={{
                           "--delay": `calc( ${itemIndex} * 0.05s)`,
                         }}

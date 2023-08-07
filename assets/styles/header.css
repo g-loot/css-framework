@@ -291,10 +291,22 @@
     ;
   }
 
-  > .header-content > *:first-child {
-    @apply
-    p-0
-    ;
+  > .header-content { 
+    > *:first-child {
+      @apply
+      p-0
+      ;
+    }
+    
+    .header-body {
+      :where(p, ul, ol, li) {
+        &:not([class*='max-w']) {
+          @apply
+          max-w-[70ch]
+          ;
+        }
+      }
+    }
   }
 
   .header-bg {
@@ -302,7 +314,7 @@
     absolute
     w-full
     h-full
-    opacity-60
+    opacity-100
     inset-0
     pointer-events-none
     animate-none

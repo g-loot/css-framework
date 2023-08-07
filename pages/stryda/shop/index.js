@@ -33,7 +33,7 @@ export default function Home() {
             </div>
           </div>
           <div className="header-bg">
-            <img src="https://res.cloudinary.com/gloot/image/upload/v1689683516/Stryda/illustrations/stryda_v2_pagebg_shop.jpg" />
+            <img src="https://res.cloudinary.com/gloot/image/upload/v1689683517/Stryda/illustrations/stryda_v2_pagebg_shop.jpg" />
           </div>
         </section>
 
@@ -137,7 +137,7 @@ export default function Home() {
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4">
             <li
               onClick={openModalBuyTokens}
-              className="interactive surface rounded-3 w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+              className="interactive surface rounded w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
               style={{ "--delay": `calc( 0 * 0.05s)` }}
             >
               <div className="flex-1 flex flex-col items-center gap-2">
@@ -170,7 +170,7 @@ export default function Home() {
               href={`/stryda/shop/avatar-frame${prototype.getURLparams()}`}
             >
               <li
-                className="interactive surface rounded-3 w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+                className="interactive surface rounded w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
                 style={{ "--delay": `calc( 1 * 0.05s)` }}
               >
                 <div className="flex-1 flex flex-col items-center gap-2">
@@ -204,7 +204,7 @@ export default function Home() {
               href={`/stryda/shop/profile-banner${prototype.getURLparams()}`}
             >
               <li
-                className="interactive surface rounded-3 w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+                className="interactive surface rounded w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
                 style={{ "--delay": `calc( 2 * 0.05s)` }}
               >
                 <div className="flex-1 flex flex-col items-center gap-2">
@@ -243,7 +243,7 @@ export default function Home() {
                 >
                   <li
                     key={voucher.id}
-                    className="interactive surface rounded-3 w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+                    className="interactive surface rounded w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
                     style={{ "--delay": `calc( ${voucherIndex + 3} * 0.05s)` }}
                   >
                     <div className="flex-1 flex flex-col items-center gap-2">

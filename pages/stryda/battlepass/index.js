@@ -102,13 +102,13 @@ export default function BattlepassPage() {
       <Structure title="Battle Pass">
         <Loader loader={
           <div className="flex flex-col gap-4 items-stretch mt-4 min-h-[calc(100vh-116px)]">
-            <div className="flex-1 surface is-loading rounded-3" />
-            <div className="flex-4 surface is-loading rounded-3" />
+            <div className="flex-1 surface is-loading rounded" />
+            <div className="flex-4 surface is-loading rounded" />
           </div>
         }>
           {selectedBattlepass && (
             <>
-              <section className="mb-8 p-4 relative sm:rounded-3 overflow-hidden">
+              <section className="mb-8 p-4 relative sm:rounded overflow-hidden">
                 <div className="relative z-10 flex flex-col lg:flex-row lg:items-start text-center lg:text-left lg:justify-between gap-4 lg:gap-8">
                   <div className="flex-1 flex flex-col items-center 2xl:flex-row gap-4 2xl:gap-8">
                     <div

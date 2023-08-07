@@ -18,9 +18,8 @@
   focus-visible:outline-main;
   &:not([class*="rounded"]) {
     @apply 
-    rounded-lg;
+    rounded;
   }
-
   &:not([class*="surface"]) {
     @apply 
     bg-ui-800;
@@ -34,7 +33,7 @@
   z-20
   inset-0
   backdrop-blur-sm
-  rounded-lg
+  rounded
   flex
   flex-col
   items-center
@@ -314,7 +313,8 @@
     @apply 
     bg-ui-800
     p-2
-    rounded-b;
+    rounded-b
+    ;
 
     .card-title {
       @apply 
@@ -484,36 +484,52 @@
   &,
   &::before,
   &::after {
-    @apply rounded;
+    @apply 
+    rounded
+    ;
   }
   .card-overlay {
-    @apply rounded
+    @apply 
+    rounded
     bg-ui-900/80
     backdrop-blur-0
-    z-50;
+    z-50
+    ;
   }
   .card-decoration {
-    @apply absolute
+    @apply 
+    absolute
     inset-0
     flex
     items-start
     justify-between
-    p-2;
+    p-2
+    ;
   }
-  .card-bg,
+  .card-bg {
+    @apply 
+    rounded
+    ;
+  }
   .card-bg > * {
-    @apply rounded;
+    @apply 
+    rounded
+    ;
   }
   &::before,
   &::after {
-    @apply content-['']
+    @apply 
+    content-['']
     absolute
     inset-0
     pointer-events-none
-    z-50;
+    z-50
+    ;
   }
   &::before {
-    @apply shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))];
+    @apply 
+    shadow-[inset_0_0_0_1px_rgb(var(--color-ui-700))]
+    ;
   }
   .card-bg {
     @apply
@@ -529,7 +545,7 @@
     justify-end
     items-stretch
     p-4
-    rounded-r
+    rounded-r-3
     space-y-2
     ;
     .card-category {
@@ -539,7 +555,9 @@
       ;
     }
     .card-meta {
-      @apply py-1;
+      @apply
+      py-1
+      ;
     }
     + .card-bg {
       @apply 
@@ -549,7 +567,9 @@
       &,
       > * {
         &:not([class*=rounded]) {
-          @apply rounded-r-none;
+          @apply
+          rounded-r-none
+          ;
         }
       }
     }
@@ -626,8 +646,8 @@
       bg-ui-900/0
       text-ui-900
       inset-1
-      rounded-none
       shadow-[inset_0_0_0_1px_rgb(var(--color-mono-100)_/_0.75)]
+      rounded
       ;
       &::before {
         @apply
@@ -659,6 +679,7 @@
         -z-10
         inset-1
         bg-main
+        rounded
         ;
       }
       &::before {
@@ -678,7 +699,6 @@
         @apply
         absolute
         z-0
-        rounded-none
         inset-1
         bg-blend-darken
         opacity-10
@@ -686,6 +706,7 @@
         duration-300
         ease-[cubic-bezier(.2,0,.2,1)]
         bg-[length:110%]
+        rounded
         ;
         filter: grayscale(100%) brightness(130%) contrast(130%);
       }
@@ -920,7 +941,7 @@
     bg-center
     inset-0
     bg-no-repeat
-    rounded-lg;
+    rounded;
   }
 }
 
@@ -951,15 +972,20 @@
 /* card-ladder */
 
 .card-ladder {
-  @apply grid
+  @apply
+  grid
   grid-cols-3
-  items-stretch;
+  items-stretch
+  ;
   &:not([class*="h-"]) {
-    @apply min-h-[15rem];
+    @apply 
+    min-h-[15rem]
+    ;
   }
 
   .card-image {
-    @apply relative
+    @apply 
+    relative
     col-span-3
     md:col-span-1
     flex
@@ -968,94 +994,122 @@
     justify-between
     h-full
     aspect-video
-    md:aspect-auto;
+    md:aspect-auto
+    ;
 
     > .card-image-content {
-      @apply relative
+      @apply
+      relative
       z-10
       flex
       flex-col
       h-full
       items-start
       justify-between
-      p-4;
+      p-4
+      ;
     }
 
     > .card-image-bg {
-      @apply absolute
+      @apply
+      absolute
       z-0
       right-0
       inset-y-0
-      w-full;
+      w-full
+      ;
       &::before,
       &::after {
-        @apply content-[""]
+        @apply
+        content-[""]
         absolute
         z-10
         inset-y-0
-        w-1/2;
+        w-1/2
+        ;
       }
       &::before {
-        @apply left-0
+        @apply
+        left-0
         bg-gradient-to-r
         from-ui-800/95
         via-ui-800/70
-        to-ui-800/0;
+        to-ui-800/0
+        ;
       }
       &::after {
-        @apply right-0
+        @apply
+        right-0
         bg-gradient-to-r
         from-ui-800/0
-        to-ui-800;
+        to-ui-800
+        ;
       }
       > img {
-        @apply absolute
+        @apply
+        absolute
         z-0
         object-right
         object-cover
         xl:object-cover
         inset-0
         w-full
-        h-full;
+        h-full
+        ;
       }
     }
   }
 
   .card-content {
-    @apply relative
+    @apply
+    relative
     col-span-3
     md:col-span-2
     flex
     flex-col
     md:flex-row
-    p-4;
+    p-4
+    ;
 
     &:not([class*="items-"]) {
-      @apply items-stretch;
+      @apply
+      items-stretch
+      ;
     }
     &:not([class*="justify-"]) {
-      @apply justify-between;
+      @apply
+      justify-between
+      ;
     }
 
     > .card-body,
     > .card-meta {
-      @apply flex
-      gap-4;
+      @apply
+      flex
+      gap-4
+      ;
     }
 
     > .card-body {
-      @apply flex-col
-      items-start;
+      @apply
+      flex-col
+      items-start
+      ;
       &:not([class*="items-"]) {
-        @apply items-stretch;
+        @apply
+        items-stretch
+        ;
       }
       &:not([class*="justify-"]) {
-        @apply justify-between;
+        @apply
+        justify-between
+        ;
       }
     }
 
     > .card-meta {
-      @apply grid
+      @apply
+      grid
       grid-flow-row
       auto-rows-auto
       justify-center
@@ -1065,24 +1119,33 @@
       border-t
       border-ui-700
       md:mt-0
-      md:pt-0;
+      md:pt-0
+      ;
       &:not([class*="items-"]) {
-        @apply items-start
-        md:items-end;
+        @apply
+        items-start
+        md:items-end
+        ;
       }
       &:not([class*="justify-"]) {
-        @apply justify-center
-        md:justify-between;
+        @apply
+        justify-center
+        md:justify-between
+        ;
       }
       > *:first-child:last-child {
-        @apply row-span-2;
+        @apply
+        row-span-2
+        ;
       }
     }
   }
   &:not(.card-secondary) {
     .card-content {
       > .card-meta {
-        @apply md:border-t-0;
+        @apply
+        md:border-t-0
+        ;
       }
     }
   }
@@ -1152,20 +1215,28 @@
         }
       }
       > .card-meta {
-        @apply mt-4
+        @apply 
+        mt-4
         flex
         justify-between
-        items-center;
+        items-center
+        ;
         &:not([class*="items-"]) {
-          @apply md:items-stretch;
+          @apply 
+          md:items-stretch
+          ;
         }
         &:not([class*="justify-"]) {
-          @apply md:justify-between;
+          @apply 
+          md:justify-between
+          ;
         }
         &:last-child {
-          @apply pt-4
+          @apply 
+          pt-4
           border-t
-          border-ui-700;
+          border-ui-700
+          ;
         }
       }
     }
@@ -1175,15 +1246,18 @@
       aspect-cover
       ;
       > .card-image-content {
-        @apply w-full
+        @apply 
+        w-full
         flex-row
         items-start
         justify-between
-        p-2;
+        p-2
+        ;
       }
     }
     > .card-image-bg {
-      @apply absolute
+      @apply 
+      absolute
       z-0
       right-0
       inset-y-0
@@ -1191,7 +1265,8 @@
       rounded
       rounded-b-none
       overflow-hidden
-      aspect-cover;
+      aspect-cover
+      ;
       > img {
         @apply 
         aspect-auto
@@ -1201,7 +1276,8 @@
         object-center
         transition-all
         duration-500
-        ease-[cubic-bezier(.2,0,.2,1)];
+        ease-[cubic-bezier(.2,0,.2,1)]
+        ;
       }
     }
     .card-status {
@@ -1217,11 +1293,15 @@
     md:max-w-[397px]
     ;
     > .card-image {
-      @apply md:col-span-3
-      aspect-cover;
+      @apply 
+      md:col-span-3
+      aspect-cover
+      ;
     }
     > .card-content {
-      @apply rounded-b;
+      @apply 
+      rounded-b
+      ;
     }
   }
 
@@ -1230,33 +1310,38 @@
     flex
     flex-row
     md:max-w-[809px]
-    min-h-10;
+    min-h-10
+    ;
     > .card-image {
       @apply 
       w-auto
-      order-2;
+      order-2
+      ;
     }
     > .card-content {
       @apply 
       order-1
       flex-1
-      rounded-l
+      rounded-l-3
       rounded-r-none
       ;
     }
     > .card-image-bg {
       @apply 
       w-auto
-      rounded-r
-      rounded-l-none;
+      rounded-r-3
+      rounded-l-none
+      ;
       &::before {
         @apply 
-        hidden;
+        hidden
+        ;
       }
       > img {
         @apply 
         z-0
-        left-auto;
+        left-auto
+        ;
       }
     }
   }
@@ -1328,14 +1413,14 @@
         @apply 
         order-1
         flex-1
-        rounded-l
+        rounded-l-3
         rounded-r-none
         ;
       }
       > .card-image-bg {
         @apply 
         w-auto
-        rounded-r
+        rounded-r-3
         rounded-l-none;
         &::before {
           @apply 
@@ -1367,14 +1452,14 @@
         @apply 
         order-1
         flex-1
-        rounded-l
+        rounded-l-3
         rounded-r-none
         ;
       }
       > .card-image-bg {
         @apply 
         w-auto
-        rounded-r
+        rounded-r-3
         rounded-l-none;
         &::before {
           @apply 
@@ -1406,14 +1491,14 @@
         @apply 
         order-1
         flex-1
-        rounded-l
+        rounded-l-3
         rounded-r-none
         ;
       }
       > .card-image-bg {
         @apply 
         w-auto
-        rounded-r
+        rounded-r-3
         rounded-l-none;
         &::before {
           @apply 
@@ -1445,14 +1530,14 @@
         @apply 
         order-1
         flex-1
-        rounded-l
+        rounded-l-3
         rounded-r-none
         ;
       }
       > .card-image-bg {
         @apply 
         w-auto
-        rounded-r
+        rounded-r-3
         rounded-l-none;
         &::before {
           @apply 
@@ -1528,7 +1613,8 @@
       > span {
         @apply 
         grayscale
-        opacity-50;
+        opacity-50
+        ;
       }
     }
     .card-image-bg {
@@ -1598,7 +1684,8 @@
     .card-meta > *:not(.chip)  {
       @apply 
       relative
-      text-ui-300/0;
+      text-ui-300/0
+      ;
       &::after {
         @apply 
         absolute
@@ -1607,7 +1694,8 @@
         content-['']
         block
         bg-ui-600/25
-        rounded;
+        rounded
+        ;
       }
     }
     .card-title {
@@ -1619,17 +1707,20 @@
     }
     .card-meta > * {
       @apply 
-      text-ui-200/0;
+      text-ui-200/0
+      ;
       &::after {
         @apply 
         w-1/2
-        h-full;
+        h-full
+        ;
       }
     }
     > * {
       @apply 
       text-ui-200/0
-      bg-ui-200/0;
+      bg-ui-200/0
+      ;
     }
     div,
     a {
@@ -1640,37 +1731,44 @@
         bg-none
         bg-ui-600/25
         border-0
-        shadow-[inset_0_0_0_1px_rgba(255,255,255,0)];
+        shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
+        ;
         > div {
           @apply 
-          opacity-0;
+          opacity-0
+          ;
         }
       }
     }
     button {
       @apply 
-      opacity-0;
+      opacity-0
+      ;
     }
     .card-image-bg {
       &::before,
       &::after {
         @apply 
-        hidden;
+        hidden
+        ;
       }
     }
     .card-ladder.card-secondary {
       > div {
         @apply 
         bg-none
-        bg-ui-600/25;
+        bg-ui-600/25
+        ;
         > * {
           @apply 
-          opacity-0;
+          opacity-0
+          ;
         }
       }
       > i {
         @apply 
-        hidden;
+        hidden
+        ;
       }
     }
   }

@@ -24,7 +24,6 @@ export default function TabMissionsHistory() {
   const selectedGame = prototype.getGameByID(prototype.defaultGameID);
   const hasAds = query.ads === "true" ? true : false;
   const isPremium = prototype.isPremium;
-  const { game } = router.query;
   const [submitting, setSubmitting] = useState(false);
 
   function addToastWithDelay(toast) {
@@ -83,13 +82,13 @@ export default function TabMissionsHistory() {
                 </h4>
                 <p className="max-w-[50ch] text-sm text-ui-300 mx-auto mt-2 mb-5">
                   Increase your amount of XP you can earn each day with a{" "}
-                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                  <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                     <a className="link text-premium-500">Premium subscription</a>
                   </Link>
                   .
                 </p>
                 <div className="mx-auto mt-2">
-                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                  <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                     <a className="button button-premium is-shining">
                       <span>Get Premium</span>
                     </a>

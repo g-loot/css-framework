@@ -28,8 +28,8 @@ export default function Structure({ children, title, gamePicker }) {
           <Topbar />
           {gamePicker && (
             <div className="relative z-10 bg-gradient-to-b from-ui-900 to-ui-900/0 h-12 flex items-center">
-              <div className="container relative flex justify-center overflow-x-auto scrollbar-hidden py-2">
-                <nav className="flex gap-2 items-center justify-start">
+              <div className="container relative flex justify-start overflow-x-auto scrollbar-hidden py-2">
+                <nav className="flex gap-2 items-center justify-center mx-auto">
                   <ul className="tabs tabs-tertiary justify-center">
                     {prototype.games
                       .filter((g) => g.isFavorite)

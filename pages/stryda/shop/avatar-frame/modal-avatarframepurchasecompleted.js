@@ -16,7 +16,7 @@ export default function ModalAvatarFramePurchaseCompleted(props) {
 
   function closeModalWithDelay(id) {
     setSubmitting(true);
-    window.location.href = `/prototype/profile/1?avatarframe=${id}`;
+    window.location.href = `/stryda/profile/1?avatarframe=${id}`;
     setTimeout(() => {
       setSubmitting(false);
       uiContext.closeModal();

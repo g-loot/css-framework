@@ -131,7 +131,7 @@ const Index = () => {
                                 >
                                   <div className="item-title text-ui-300 flex gap-2">
                                     <Link
-                                      href={`/prototype/${item.url}${
+                                      href={`/stryda/${item.url}${
                                         item.query ? "?" : ""
                                       }${item.query}`}
                                     >
@@ -157,7 +157,7 @@ const Index = () => {
                                 <div className="item-actions hidden xl:flex">
                                   <div className="flex gap-2">
                                     <Link
-                                      href={`/prototype/${item.url}${
+                                      href={`/stryda/${item.url}${
                                         item.query ? "?" : ""
                                       }${item.query}`}
                                     >

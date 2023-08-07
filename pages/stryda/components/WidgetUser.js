@@ -20,7 +20,7 @@ export default function WidgetUser(props) {
   return (
     <>
       {selectedUser && (
-        <div className="surface rounded-3 text-center">
+        <div className="surface rounded text-center">
           <div className="relative">
             <div className="absolute z-10 inset-0 flex items-center justify-center">
               <Avatar id={user_id} hasTooltip={false} size="avatar-md" />
@@ -35,7 +35,7 @@ export default function WidgetUser(props) {
                     ).image
                   }
                   alt=""
-                  className="rounded-t-3"
+                  className="rounded-t"
                 />
               </>
             ) : (
@@ -43,7 +43,7 @@ export default function WidgetUser(props) {
                 <img
                   src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
                   alt=""
-                  className="rounded-t-3"
+                  className="rounded-t"
                 />
               </>
             )}
@@ -73,7 +73,7 @@ export default function WidgetUser(props) {
             </ul>
             {selectedUser.clan ? (
               <Link
-                href={`/prototype/clans/${
+                href={`/stryda/clans/${
                   selectedUser.clan
                 }${prototype.getURLparams()}`}
               >

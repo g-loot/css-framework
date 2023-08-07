@@ -34,16 +34,16 @@ export default function Home() {
         <Loader
           loader={
             <section className="min-h-full container flex flex-col lg:flex-row gap-4 py-4">
-              <div className="w-80 xl:w-96 rounded-3 surface is-loading min-h-[calc(100vh-116px)]" />
-              <div className="flex-1 rounded-3 surface is-loading min-h-[calc(100vh-116px)]" />
-              <div className="w-80 xl:w-96 rounded-3 max-w-xl:hidden surface is-loading min-h-[calc(100vh-116px)]" />
+              <div className="w-80 xl:w-96 rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              <div className="flex-1 rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              <div className="w-80 xl:w-96 rounded max-w-xl:hidden surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >
           <section className="min-h-full container flex flex-col lg:flex-row gap-4 py-4">
             <div className="w-80 xl:w-96 space-y-4">
               <WidgetUser />
-              <div className="surface rounded-3">
+              <div className="surface rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">Online</h2>
                   <Link
@@ -104,7 +104,7 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="surface rounded-3">
+              <div className="surface rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">Suggestions</h2>
                   <Link
@@ -167,10 +167,10 @@ export default function Home() {
               </div>
             </div>
             <div className="flex-1">
-              <div className="surface h-12 rounded-3"></div>
+              <div className="surface h-12 rounded"></div>
             </div>
             <div className="w-80 xl:w-96 max-w-xl:hidden">
-              <div className="surface h-12 rounded-3"></div>
+              <div className="surface h-12 rounded"></div>
             </div>
           </section>
         </Loader>

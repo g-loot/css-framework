@@ -16,7 +16,7 @@ export default function ModalProfileBannerPurchaseCompleted(props) {
 
   function closeModalWithDelay(id) {
     setSubmitting(true);
-    window.location.href = `/prototype/profile/1?profilebanner=${id}`;
+    window.location.href = `/stryda/profile/1?profilebanner=${id}`;
     setTimeout(() => {
       setSubmitting(false);
       uiContext.closeModal();

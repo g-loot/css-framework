@@ -65,7 +65,7 @@ export default function Home() {
         <Ad width="1005" height="300" />
 
         <section className="mb-4">
-          <div className="header surface sm:rounded-lg">
+          <div className="header header-quaternary my-8">
             <div className="header-breadcrumbs">
               <nav className="breadcrumbs" aria-label="Breadcrumb">
                 <ol>
@@ -101,7 +101,7 @@ export default function Home() {
               </div>
             </div>
             <div className="header-bg">
-              <img src="https://res.cloudinary.com/gloot/image/upload/v1672216041/Stryda/illustrations/Shop_bg.jpg" />
+              <img src="https://res.cloudinary.com/gloot/image/upload/v1689683517/Stryda/illustrations/stryda_v2_pagebg_shop.jpg" />
             </div>
           </div>
         </section>
